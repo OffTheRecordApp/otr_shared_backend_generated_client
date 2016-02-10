@@ -1,4 +1,18 @@
 ## Setup
+- Add a dependency on OTRSharedLibs in bower.json. TBD: the repo below will be made private 
+
+```js
+   ...
+   "otr-shared-libs": "https://github.com/alexg313/OTRSharedLibs.git#v1.0.2",
+   ...
+```
+
+- After running the proper build command to pull in all the bower dependencies, then in your index.html include the script(s)
+
+```html
+   <script src="{path/to/bower_components}/otr-shared-libs/dist/otrBackendService.min.js"></script>
+```
+
 - In your app.js, inject the otrBackendService module
 
 ```js
