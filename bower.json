@@ -1,0 +1,20 @@
+{
+  "name": "otr-shared-libs",
+  "description": "Generate client-side and service-side code using swagger CLI",
+  "main": "",
+  "authors": [
+    "Off the Record",
+    "Inc."
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/alexg313/OTRSharedLibs",
+  "moduleType": [],
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
