@@ -12,6 +12,10 @@
   "private": true,
   "ignore": [
     "**/.*",
+    "api",
+    "input",
+    "package.json",
+    "gulpfile.js",
     "node_modules",
     "bower_components",
     "test",
