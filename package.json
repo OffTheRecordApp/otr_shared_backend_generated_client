@@ -1,0 +1,19 @@
+{
+  "name": "@otr/otr-backend-js-clients",
+  "version": "1.0.6",
+  "description": "Generate client-side and service-side code using swagger CLI",
+  "homepage": "https://offtherecord.com",
+  "author": "Off the Record, Inc.",
+  "devDependencies": {
+    "del": "^2.2.0",
+    "file-system": "2.2.1",
+    "gulp": "^3.9.0",
+    "gulp-concat": "^2.6.0",
+    "gulp-notify": "^2.2.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-uglify": "1.5.2",
+    "gulp-util": "3.0.7",
+    "run-sequence": "^1.1.5",
+    "swagger-js-codegen": "1.1.8"
+  }
+}
