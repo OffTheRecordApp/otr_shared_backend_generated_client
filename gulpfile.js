@@ -27,7 +27,7 @@ gulp.task('otr-angular', function(done){
             angularjs: true
         }
     ];
-    var dest = 'dist/modules';
+    var dest = 'dist';
     apis.forEach(function(api){
         var swagger = JSON.parse(fs.readFileSync(api.swagger, 'utf-8'));
         var source = CodeGen.getAngularCode({ moduleName: api.moduleName, className: api.className, swagger: swagger });

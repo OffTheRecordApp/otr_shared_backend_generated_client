@@ -1,5 +1,5 @@
 {
-  "name": "@otr/otr-backend-js-clients",
+  "name": "OTRSharedLibs",
   "version": "1.0.6",
   "description": "Generate client-side and service-side code using swagger CLI",
   "homepage": "https://offtherecord.com",
