@@ -1,3 +1,6 @@
+.DS_store
+api/
+myclient/
 node_modules/
 exportToHTML/
 .idea/
