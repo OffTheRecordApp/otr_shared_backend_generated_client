@@ -13,6 +13,7 @@
   "ignore": [
     "**/.*",
     "api",
+    "swagger-codegen-cli.jar",
     "input",
     "package.json",
     "gulpfile.js",
