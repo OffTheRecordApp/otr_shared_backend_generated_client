@@ -2603,6 +2603,141 @@ angular.module('otrBackendService', [])
             /**
              * 
              * @method
+             * @name OtrService#listConfirmedCasesNotAcceptedUsingGET
+             * 
+             */
+            OtrService.prototype.listConfirmedCasesNotAcceptedUsingGET = function(parameters) {
+                if (parameters === undefined) {
+                    parameters = {};
+                }
+                var deferred = $q.defer();
+
+                var domain = this.domain;
+                var path = '/api/v1/console/cases/confirmed';
+
+                var body;
+                var queryParameters = {};
+                var headers = {};
+                var form = {};
+
+                if (parameters.$queryParameters) {
+                    Object.keys(parameters.$queryParameters)
+                        .forEach(function(parameterName) {
+                            var parameter = parameters.$queryParameters[parameterName];
+                            queryParameters[parameterName] = parameter;
+                        });
+                }
+
+                var url = domain + path;
+                var cached = parameters.$cache && parameters.$cache.get(url);
+                if (cached !== undefined && parameters.$refresh !== true) {
+                    deferred.resolve(cached);
+                    return deferred.promise;
+                }
+                var options = {
+                    timeout: parameters.$timeout,
+                    method: 'GET',
+                    url: url,
+                    params: queryParameters,
+                    data: body,
+                    headers: headers
+                };
+                if (Object.keys(form).length > 0) {
+                    options.data = form;
+                    options.headers['Content-Type'] = 'application/x-www-form-urlencoded';
+                    options.transformRequest = OtrService.transformRequest;
+                }
+                $http(options)
+                    .success(function(data, status, headers, config) {
+                        deferred.resolve(data);
+                        if (parameters.$cache !== undefined) {
+                            parameters.$cache.put(url, data, parameters.$cacheItemOpts ? parameters.$cacheItemOpts : {});
+                        }
+                    })
+                    .error(function(data, status, headers, config) {
+                        deferred.reject({
+                            status: status,
+                            headers: headers,
+                            config: config,
+                            body: data
+                        });
+                    });
+
+                return deferred.promise;
+            };
+            /**
+             * 
+             * @method
+             * @name OtrService#getRegisteredUsersUsingGET
+             * @param {string} period - request
+             * 
+             */
+            OtrService.prototype.getRegisteredUsersUsingGET = function(parameters) {
+                if (parameters === undefined) {
+                    parameters = {};
+                }
+                var deferred = $q.defer();
+
+                var domain = this.domain;
+                var path = '/api/v1/console/users';
+
+                var body;
+                var queryParameters = {};
+                var headers = {};
+                var form = {};
+
+                if (parameters['period'] !== undefined) {
+                    queryParameters['period'] = parameters['period'];
+                }
+
+                if (parameters.$queryParameters) {
+                    Object.keys(parameters.$queryParameters)
+                        .forEach(function(parameterName) {
+                            var parameter = parameters.$queryParameters[parameterName];
+                            queryParameters[parameterName] = parameter;
+                        });
+                }
+
+                var url = domain + path;
+                var cached = parameters.$cache && parameters.$cache.get(url);
+                if (cached !== undefined && parameters.$refresh !== true) {
+                    deferred.resolve(cached);
+                    return deferred.promise;
+                }
+                var options = {
+                    timeout: parameters.$timeout,
+                    method: 'GET',
+                    url: url,
+                    params: queryParameters,
+                    data: body,
+                    headers: headers
+                };
+                if (Object.keys(form).length > 0) {
+                    options.data = form;
+                    options.headers['Content-Type'] = 'application/x-www-form-urlencoded';
+                    options.transformRequest = OtrService.transformRequest;
+                }
+                $http(options)
+                    .success(function(data, status, headers, config) {
+                        deferred.resolve(data);
+                        if (parameters.$cache !== undefined) {
+                            parameters.$cache.put(url, data, parameters.$cacheItemOpts ? parameters.$cacheItemOpts : {});
+                        }
+                    })
+                    .error(function(data, status, headers, config) {
+                        deferred.reject({
+                            status: status,
+                            headers: headers,
+                            config: config,
+                            body: data
+                        });
+                    });
+
+                return deferred.promise;
+            };
+            /**
+             * 
+             * @method
              * @name OtrService#getAllCourtsUsingGET
              * 
              */
@@ -2619,6 +2754,81 @@ angular.module('otrBackendService', [])
                 var queryParameters = {};
                 var headers = {};
                 var form = {};
+
+                if (parameters.$queryParameters) {
+                    Object.keys(parameters.$queryParameters)
+                        .forEach(function(parameterName) {
+                            var parameter = parameters.$queryParameters[parameterName];
+                            queryParameters[parameterName] = parameter;
+                        });
+                }
+
+                var url = domain + path;
+                var cached = parameters.$cache && parameters.$cache.get(url);
+                if (cached !== undefined && parameters.$refresh !== true) {
+                    deferred.resolve(cached);
+                    return deferred.promise;
+                }
+                var options = {
+                    timeout: parameters.$timeout,
+                    method: 'GET',
+                    url: url,
+                    params: queryParameters,
+                    data: body,
+                    headers: headers
+                };
+                if (Object.keys(form).length > 0) {
+                    options.data = form;
+                    options.headers['Content-Type'] = 'application/x-www-form-urlencoded';
+                    options.transformRequest = OtrService.transformRequest;
+                }
+                $http(options)
+                    .success(function(data, status, headers, config) {
+                        deferred.resolve(data);
+                        if (parameters.$cache !== undefined) {
+                            parameters.$cache.put(url, data, parameters.$cacheItemOpts ? parameters.$cacheItemOpts : {});
+                        }
+                    })
+                    .error(function(data, status, headers, config) {
+                        deferred.reject({
+                            status: status,
+                            headers: headers,
+                            config: config,
+                            body: data
+                        });
+                    });
+
+                return deferred.promise;
+            };
+            /**
+             * 
+             * @method
+             * @name OtrService#paginateCourtsUsingGET
+             * @param {integer} page - page
+             * @param {integer} length - length
+             * 
+             */
+            OtrService.prototype.paginateCourtsUsingGET = function(parameters) {
+                if (parameters === undefined) {
+                    parameters = {};
+                }
+                var deferred = $q.defer();
+
+                var domain = this.domain;
+                var path = '/api/v1/courts/traffic/paginate';
+
+                var body;
+                var queryParameters = {};
+                var headers = {};
+                var form = {};
+
+                if (parameters['page'] !== undefined) {
+                    queryParameters['page'] = parameters['page'];
+                }
+
+                if (parameters['length'] !== undefined) {
+                    queryParameters['length'] = parameters['length'];
+                }
 
                 if (parameters.$queryParameters) {
                     Object.keys(parameters.$queryParameters)
