@@ -2668,11 +2668,81 @@ angular.module('otrBackendService', [])
             /**
              * 
              * @method
-             * @name OtrService#getRegisteredUsersUsingGET
-             * @param {string} period - request
+             * @name OtrService#listCasesByStatusUsingPOST
+             * @param {} graphRequest - graphRequest
              * 
              */
-            OtrService.prototype.getRegisteredUsersUsingGET = function(parameters) {
+            OtrService.prototype.listCasesByStatusUsingPOST = function(parameters) {
+                if (parameters === undefined) {
+                    parameters = {};
+                }
+                var deferred = $q.defer();
+
+                var domain = this.domain;
+                var path = '/api/v1/console/cases/status';
+
+                var body;
+                var queryParameters = {};
+                var headers = {};
+                var form = {};
+
+                if (parameters['graphRequest'] !== undefined) {
+                    body = parameters['graphRequest'];
+                }
+
+                if (parameters['graphRequest'] === undefined) {
+                    deferred.reject(new Error('Missing required  parameter: graphRequest'));
+                    return deferred.promise;
+                }
+
+                if (parameters.$queryParameters) {
+                    Object.keys(parameters.$queryParameters)
+                        .forEach(function(parameterName) {
+                            var parameter = parameters.$queryParameters[parameterName];
+                            queryParameters[parameterName] = parameter;
+                        });
+                }
+
+                var url = domain + path;
+                var options = {
+                    timeout: parameters.$timeout,
+                    method: 'POST',
+                    url: url,
+                    params: queryParameters,
+                    data: body,
+                    headers: headers
+                };
+                if (Object.keys(form).length > 0) {
+                    options.data = form;
+                    options.headers['Content-Type'] = 'application/x-www-form-urlencoded';
+                    options.transformRequest = OtrService.transformRequest;
+                }
+                $http(options)
+                    .success(function(data, status, headers, config) {
+                        deferred.resolve(data);
+                        if (parameters.$cache !== undefined) {
+                            parameters.$cache.put(url, data, parameters.$cacheItemOpts ? parameters.$cacheItemOpts : {});
+                        }
+                    })
+                    .error(function(data, status, headers, config) {
+                        deferred.reject({
+                            status: status,
+                            headers: headers,
+                            config: config,
+                            body: data
+                        });
+                    });
+
+                return deferred.promise;
+            };
+            /**
+             * 
+             * @method
+             * @name OtrService#getRegisteredUsersUsingPOST
+             * @param {} graphRequest - graphRequest
+             * 
+             */
+            OtrService.prototype.getRegisteredUsersUsingPOST = function(parameters) {
                 if (parameters === undefined) {
                     parameters = {};
                 }
@@ -2686,8 +2756,13 @@ angular.module('otrBackendService', [])
                 var headers = {};
                 var form = {};
 
-                if (parameters['period'] !== undefined) {
-                    queryParameters['period'] = parameters['period'];
+                if (parameters['graphRequest'] !== undefined) {
+                    body = parameters['graphRequest'];
+                }
+
+                if (parameters['graphRequest'] === undefined) {
+                    deferred.reject(new Error('Missing required  parameter: graphRequest'));
+                    return deferred.promise;
                 }
 
                 if (parameters.$queryParameters) {
@@ -2699,14 +2774,9 @@ angular.module('otrBackendService', [])
                 }
 
                 var url = domain + path;
-                var cached = parameters.$cache && parameters.$cache.get(url);
-                if (cached !== undefined && parameters.$refresh !== true) {
-                    deferred.resolve(cached);
-                    return deferred.promise;
-                }
                 var options = {
                     timeout: parameters.$timeout,
-                    method: 'GET',
+                    method: 'POST',
                     url: url,
                     params: queryParameters,
                     data: body,
@@ -3623,19 +3693,19 @@ angular.module('otrBackendService', [])
             /**
              * 
              * @method
-             * @name OtrService#addCourtUsingPUT
+             * @name OtrService#addCourtUsingPOST
              * @param {string} lawfirmIdString - lawfirmIdString
-             * @param {string} courtIdString - courtIdString
+             * @param {} request - request
              * 
              */
-            OtrService.prototype.addCourtUsingPUT = function(parameters) {
+            OtrService.prototype.addCourtUsingPOST = function(parameters) {
                 if (parameters === undefined) {
                     parameters = {};
                 }
                 var deferred = $q.defer();
 
                 var domain = this.domain;
-                var path = '/api/v1/lawfirms/{lawfirmIdString}/courts/{courtIdString}';
+                var path = '/api/v1/lawfirms/{lawfirmIdString}/courts';
 
                 var body;
                 var queryParameters = {};
@@ -3649,10 +3719,12 @@ angular.module('otrBackendService', [])
                     return deferred.promise;
                 }
 
-                path = path.replace('{courtIdString}', parameters['courtIdString']);
+                if (parameters['request'] !== undefined) {
+                    body = parameters['request'];
+                }
 
-                if (parameters['courtIdString'] === undefined) {
-                    deferred.reject(new Error('Missing required  parameter: courtIdString'));
+                if (parameters['request'] === undefined) {
+                    deferred.reject(new Error('Missing required  parameter: request'));
                     return deferred.promise;
                 }
 
@@ -3667,7 +3739,7 @@ angular.module('otrBackendService', [])
                 var url = domain + path;
                 var options = {
                     timeout: parameters.$timeout,
-                    method: 'PUT',
+                    method: 'POST',
                     url: url,
                     params: queryParameters,
                     data: body,
@@ -5907,8 +5979,77 @@ angular.module('otrBackendService', [])
             /**
              * 
              * @method
+             * @name OtrService#resetUserPasswordUsingPOST
+             * @param {} request - request
+             * 
+             */
+            OtrService.prototype.resetUserPasswordUsingPOST = function(parameters) {
+                if (parameters === undefined) {
+                    parameters = {};
+                }
+                var deferred = $q.defer();
+
+                var domain = this.domain;
+                var path = '/api/v1/user/p/reset';
+
+                var body;
+                var queryParameters = {};
+                var headers = {};
+                var form = {};
+
+                if (parameters['request'] !== undefined) {
+                    body = parameters['request'];
+                }
+
+                if (parameters['request'] === undefined) {
+                    deferred.reject(new Error('Missing required  parameter: request'));
+                    return deferred.promise;
+                }
+
+                if (parameters.$queryParameters) {
+                    Object.keys(parameters.$queryParameters)
+                        .forEach(function(parameterName) {
+                            var parameter = parameters.$queryParameters[parameterName];
+                            queryParameters[parameterName] = parameter;
+                        });
+                }
+
+                var url = domain + path;
+                var options = {
+                    timeout: parameters.$timeout,
+                    method: 'POST',
+                    url: url,
+                    params: queryParameters,
+                    data: body,
+                    headers: headers
+                };
+                if (Object.keys(form).length > 0) {
+                    options.data = form;
+                    options.headers['Content-Type'] = 'application/x-www-form-urlencoded';
+                    options.transformRequest = OtrService.transformRequest;
+                }
+                $http(options)
+                    .success(function(data, status, headers, config) {
+                        deferred.resolve(data);
+                        if (parameters.$cache !== undefined) {
+                            parameters.$cache.put(url, data, parameters.$cacheItemOpts ? parameters.$cacheItemOpts : {});
+                        }
+                    })
+                    .error(function(data, status, headers, config) {
+                        deferred.reject({
+                            status: status,
+                            headers: headers,
+                            config: config,
+                            body: data
+                        });
+                    });
+
+                return deferred.promise;
+            };
+            /**
+             * 
+             * @method
              * @name OtrService#verifyPwdResetTokenUsingGET
-             * @param {integer} id - userId
              * @param {string} token - token
              * 
              */
@@ -5925,15 +6066,6 @@ angular.module('otrBackendService', [])
                 var queryParameters = {};
                 var headers = {};
                 var form = {};
-
-                if (parameters['id'] !== undefined) {
-                    queryParameters['id'] = parameters['id'];
-                }
-
-                if (parameters['id'] === undefined) {
-                    deferred.reject(new Error('Missing required  parameter: id'));
-                    return deferred.promise;
-                }
 
                 if (parameters['token'] !== undefined) {
                     queryParameters['token'] = parameters['token'];

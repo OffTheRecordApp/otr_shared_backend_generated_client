@@ -21,7 +21,7 @@ gulp.task('otr-angular', function(done){
     var CodeGen = require('swagger-js-codegen').CodeGen;
     var apis = [
         {
-            swagger: 'api/otr-service-v3.json',
+            swagger: 'api/otr-service.json',
             moduleName: 'otrBackendService',
             className: 'OtrService',
             angularjs: true
