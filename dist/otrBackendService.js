@@ -913,7 +913,7 @@ angular.module('otrBackendService', [])
              * @method
              * @name OtrService#removeViolationsFromCitationUsingDELETE
              * @param {string} caseId - caseId
-             * @param {array} violationNames - violationNames
+             * @param {array} violationTypes - violationTypes
              * 
              */
             OtrService.prototype.removeViolationsFromCitationUsingDELETE = function(parameters) {
@@ -923,7 +923,7 @@ angular.module('otrBackendService', [])
                 var deferred = $q.defer();
 
                 var domain = this.domain;
-                var path = '/api/v1/cases/{caseId}/citation/violations/{violationNames}';
+                var path = '/api/v1/cases/{caseId}/citation/violations/{violationTypes}';
 
                 var body;
                 var queryParameters = {};
@@ -937,10 +937,10 @@ angular.module('otrBackendService', [])
                     return deferred.promise;
                 }
 
-                path = path.replace('{violationNames}', parameters['violationNames']);
+                path = path.replace('{violationTypes}', parameters['violationTypes']);
 
-                if (parameters['violationNames'] === undefined) {
-                    deferred.reject(new Error('Missing required  parameter: violationNames'));
+                if (parameters['violationTypes'] === undefined) {
+                    deferred.reject(new Error('Missing required  parameter: violationTypes'));
                     return deferred.promise;
                 }
 
@@ -1881,6 +1881,71 @@ angular.module('otrBackendService', [])
             /**
              * 
              * @method
+             * @name OtrService#isRefundEligibleUsingPOST
+             * @param {} caseId - caseId
+             * 
+             */
+            OtrService.prototype.isRefundEligibleUsingPOST = function(parameters) {
+                if (parameters === undefined) {
+                    parameters = {};
+                }
+                var deferred = $q.defer();
+
+                var domain = this.domain;
+                var path = '/api/v1/cases/{caseId}/refund/eligibility';
+
+                var body;
+                var queryParameters = {};
+                var headers = {};
+                var form = {};
+
+                if (parameters['caseId'] !== undefined) {
+                    body = parameters['caseId'];
+                }
+
+                if (parameters.$queryParameters) {
+                    Object.keys(parameters.$queryParameters)
+                        .forEach(function(parameterName) {
+                            var parameter = parameters.$queryParameters[parameterName];
+                            queryParameters[parameterName] = parameter;
+                        });
+                }
+
+                var url = domain + path;
+                var options = {
+                    timeout: parameters.$timeout,
+                    method: 'POST',
+                    url: url,
+                    params: queryParameters,
+                    data: body,
+                    headers: headers
+                };
+                if (Object.keys(form).length > 0) {
+                    options.data = form;
+                    options.headers['Content-Type'] = 'application/x-www-form-urlencoded';
+                    options.transformRequest = OtrService.transformRequest;
+                }
+                $http(options)
+                    .success(function(data, status, headers, config) {
+                        deferred.resolve(data);
+                        if (parameters.$cache !== undefined) {
+                            parameters.$cache.put(url, data, parameters.$cacheItemOpts ? parameters.$cacheItemOpts : {});
+                        }
+                    })
+                    .error(function(data, status, headers, config) {
+                        deferred.reject({
+                            status: status,
+                            headers: headers,
+                            config: config,
+                            body: data
+                        });
+                    });
+
+                return deferred.promise;
+            };
+            /**
+             * 
+             * @method
              * @name OtrService#requestLawyerUsingPOST
              * @param {string} caseId - caseId
              * @param {} lawyerRequest - lawyerRequest
@@ -2404,6 +2469,7 @@ angular.module('otrBackendService', [])
              * @method
              * @name OtrService#createCaseUsingPOST
              * @param {string} citationIdString - citationIdString
+             * @param {} request - request
              * 
              */
             OtrService.prototype.createCaseUsingPOST = function(parameters) {
@@ -2425,6 +2491,10 @@ angular.module('otrBackendService', [])
                 if (parameters['citationIdString'] === undefined) {
                     deferred.reject(new Error('Missing required  parameter: citationIdString'));
                     return deferred.promise;
+                }
+
+                if (parameters['request'] !== undefined) {
+                    body = parameters['request'];
                 }
 
                 if (parameters.$queryParameters) {
@@ -3707,6 +3777,76 @@ angular.module('otrBackendService', [])
 
                 var domain = this.domain;
                 var path = '/api/v1/feedback';
+
+                var body;
+                var queryParameters = {};
+                var headers = {};
+                var form = {};
+
+                if (parameters['request'] !== undefined) {
+                    body = parameters['request'];
+                }
+
+                if (parameters['request'] === undefined) {
+                    deferred.reject(new Error('Missing required  parameter: request'));
+                    return deferred.promise;
+                }
+
+                if (parameters.$queryParameters) {
+                    Object.keys(parameters.$queryParameters)
+                        .forEach(function(parameterName) {
+                            var parameter = parameters.$queryParameters[parameterName];
+                            queryParameters[parameterName] = parameter;
+                        });
+                }
+
+                var url = domain + path;
+                var options = {
+                    timeout: parameters.$timeout,
+                    method: 'POST',
+                    url: url,
+                    params: queryParameters,
+                    data: body,
+                    headers: headers
+                };
+                if (Object.keys(form).length > 0) {
+                    options.data = form;
+                    options.headers['Content-Type'] = 'application/x-www-form-urlencoded';
+                    options.transformRequest = OtrService.transformRequest;
+                }
+                $http(options)
+                    .success(function(data, status, headers, config) {
+                        deferred.resolve(data);
+                        if (parameters.$cache !== undefined) {
+                            parameters.$cache.put(url, data, parameters.$cacheItemOpts ? parameters.$cacheItemOpts : {});
+                        }
+                    })
+                    .error(function(data, status, headers, config) {
+                        deferred.reject({
+                            status: status,
+                            headers: headers,
+                            config: config,
+                            body: data
+                        });
+                    });
+
+                return deferred.promise;
+            };
+            /**
+             * 
+             * @method
+             * @name OtrService#calculateTicketSavingsUsingPOST
+             * @param {} request - request
+             * 
+             */
+            OtrService.prototype.calculateTicketSavingsUsingPOST = function(parameters) {
+                if (parameters === undefined) {
+                    parameters = {};
+                }
+                var deferred = $q.defer();
+
+                var domain = this.domain;
+                var path = '/api/v1/insurance/ticket/savings';
 
                 var body;
                 var queryParameters = {};
@@ -7065,10 +7205,11 @@ angular.module('otrBackendService', [])
             /**
              * 
              * @method
-             * @name OtrService#getTrafficViolationsUsingGET
+             * @name OtrService#getTrafficViolationTypesUsingGET
+             * @param {string} flavor - flavor
              * 
              */
-            OtrService.prototype.getTrafficViolationsUsingGET = function(parameters) {
+            OtrService.prototype.getTrafficViolationTypesUsingGET = function(parameters) {
                 if (parameters === undefined) {
                     parameters = {};
                 }
@@ -7081,6 +7222,10 @@ angular.module('otrBackendService', [])
                 var queryParameters = {};
                 var headers = {};
                 var form = {};
+
+                if (parameters['flavor'] !== undefined) {
+                    queryParameters['flavor'] = parameters['flavor'];
+                }
 
                 if (parameters.$queryParameters) {
                     Object.keys(parameters.$queryParameters)
