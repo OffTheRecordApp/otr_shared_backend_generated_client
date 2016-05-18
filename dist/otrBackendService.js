@@ -1881,11 +1881,11 @@ angular.module('otrBackendService', [])
             /**
              * 
              * @method
-             * @name OtrService#isRefundEligibleUsingPOST
-             * @param {} caseId - caseId
+             * @name OtrService#isRefundEligibleUsingGET
+             * @param {string} caseId - caseId
              * 
              */
-            OtrService.prototype.isRefundEligibleUsingPOST = function(parameters) {
+            OtrService.prototype.isRefundEligibleUsingGET = function(parameters) {
                 if (parameters === undefined) {
                     parameters = {};
                 }
@@ -1899,8 +1899,11 @@ angular.module('otrBackendService', [])
                 var headers = {};
                 var form = {};
 
-                if (parameters['caseId'] !== undefined) {
-                    body = parameters['caseId'];
+                path = path.replace('{caseId}', parameters['caseId']);
+
+                if (parameters['caseId'] === undefined) {
+                    deferred.reject(new Error('Missing required  parameter: caseId'));
+                    return deferred.promise;
                 }
 
                 if (parameters.$queryParameters) {
@@ -1912,9 +1915,14 @@ angular.module('otrBackendService', [])
                 }
 
                 var url = domain + path;
+                var cached = parameters.$cache && parameters.$cache.get(url);
+                if (cached !== undefined && parameters.$refresh !== true) {
+                    deferred.resolve(cached);
+                    return deferred.promise;
+                }
                 var options = {
                     timeout: parameters.$timeout,
-                    method: 'POST',
+                    method: 'GET',
                     url: url,
                     params: queryParameters,
                     data: body,
@@ -3835,18 +3843,18 @@ angular.module('otrBackendService', [])
             /**
              * 
              * @method
-             * @name OtrService#postDataUsingPOST
+             * @name OtrService#calculateTicketSavingsUsingPOST
              * @param {} request - request
              * 
              */
-            OtrService.prototype.postDataUsingPOST = function(parameters) {
+            OtrService.prototype.calculateTicketSavingsUsingPOST = function(parameters) {
                 if (parameters === undefined) {
                     parameters = {};
                 }
                 var deferred = $q.defer();
 
                 var domain = this.domain;
-                var path = '/api/v1/generic/data';
+                var path = '/api/v1/insurance/ticket/savings';
 
                 var body;
                 var queryParameters = {};
@@ -3905,18 +3913,18 @@ angular.module('otrBackendService', [])
             /**
              * 
              * @method
-             * @name OtrService#calculateTicketSavingsUsingPOST
+             * @name OtrService#postDataUsingPOST
              * @param {} request - request
              * 
              */
-            OtrService.prototype.calculateTicketSavingsUsingPOST = function(parameters) {
+            OtrService.prototype.postDataUsingPOST = function(parameters) {
                 if (parameters === undefined) {
                     parameters = {};
                 }
                 var deferred = $q.defer();
 
                 var domain = this.domain;
-                var path = '/api/v1/insurance/ticket/savings';
+                var path = '/api/v1/internal-notifications';
 
                 var body;
                 var queryParameters = {};
