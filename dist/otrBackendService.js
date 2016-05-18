@@ -3913,11 +3913,11 @@ angular.module('otrBackendService', [])
             /**
              * 
              * @method
-             * @name OtrService#postDataUsingPOST
+             * @name OtrService#submitInternalNotificationUsingPOST
              * @param {} request - request
              * 
              */
-            OtrService.prototype.postDataUsingPOST = function(parameters) {
+            OtrService.prototype.submitInternalNotificationUsingPOST = function(parameters) {
                 if (parameters === undefined) {
                     parameters = {};
                 }
