@@ -3914,7 +3914,6 @@ angular.module('otrBackendService', [])
              * 
              * @method
              * @name OtrService#sendEmailToUserUsingPOST
-             * @param {string} userIdToContact - userIdToContact
              * @param {} request - request
              * 
              */
@@ -3925,19 +3924,12 @@ angular.module('otrBackendService', [])
                 var deferred = $q.defer();
 
                 var domain = this.domain;
-                var path = '/api/v1/crm/user/{userIdToContact}/email';
+                var path = '/api/v1/crm/user/email';
 
                 var body;
                 var queryParameters = {};
                 var headers = {};
                 var form = {};
-
-                path = path.replace('{userIdToContact}', parameters['userIdToContact']);
-
-                if (parameters['userIdToContact'] === undefined) {
-                    deferred.reject(new Error('Missing required  parameter: userIdToContact'));
-                    return deferred.promise;
-                }
 
                 if (parameters['request'] !== undefined) {
                     body = parameters['request'];
