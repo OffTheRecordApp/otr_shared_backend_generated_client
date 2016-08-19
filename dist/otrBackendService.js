@@ -122,6 +122,76 @@ angular.module('otrBackendService', [])
             /**
              * 
              * @method
+             * @name OtrService#addToEmailBlackListUsingPOST
+             * @param {} request - request
+             * 
+             */
+            OtrService.prototype.addToEmailBlackListUsingPOST = function(parameters) {
+                if (parameters === undefined) {
+                    parameters = {};
+                }
+                var deferred = $q.defer();
+
+                var domain = this.domain;
+                var path = '/api/v1/blacklists/ses/emails/';
+
+                var body;
+                var queryParameters = {};
+                var headers = {};
+                var form = {};
+
+                if (parameters['request'] !== undefined) {
+                    body = parameters['request'];
+                }
+
+                if (parameters['request'] === undefined) {
+                    deferred.reject(new Error('Missing required  parameter: request'));
+                    return deferred.promise;
+                }
+
+                if (parameters.$queryParameters) {
+                    Object.keys(parameters.$queryParameters)
+                        .forEach(function(parameterName) {
+                            var parameter = parameters.$queryParameters[parameterName];
+                            queryParameters[parameterName] = parameter;
+                        });
+                }
+
+                var url = domain + path;
+                var options = {
+                    timeout: parameters.$timeout,
+                    method: 'POST',
+                    url: url,
+                    params: queryParameters,
+                    data: body,
+                    headers: headers
+                };
+                if (Object.keys(form).length > 0) {
+                    options.data = form;
+                    options.headers['Content-Type'] = 'application/x-www-form-urlencoded';
+                    options.transformRequest = OtrService.transformRequest;
+                }
+                $http(options)
+                    .success(function(data, status, headers, config) {
+                        deferred.resolve(data);
+                        if (parameters.$cache !== undefined) {
+                            parameters.$cache.put(url, data, parameters.$cacheItemOpts ? parameters.$cacheItemOpts : {});
+                        }
+                    })
+                    .error(function(data, status, headers, config) {
+                        deferred.reject({
+                            status: status,
+                            headers: headers,
+                            config: config,
+                            body: data
+                        });
+                    });
+
+                return deferred.promise;
+            };
+            /**
+             * 
+             * @method
              * @name OtrService#createBranchLinkUsingPOST
              * @param {} request - request
              * 
@@ -7642,6 +7712,79 @@ angular.module('otrBackendService', [])
 
                 if (parameters['userIdString'] === undefined) {
                     deferred.reject(new Error('Missing required  parameter: userIdString'));
+                    return deferred.promise;
+                }
+
+                if (parameters.$queryParameters) {
+                    Object.keys(parameters.$queryParameters)
+                        .forEach(function(parameterName) {
+                            var parameter = parameters.$queryParameters[parameterName];
+                            queryParameters[parameterName] = parameter;
+                        });
+                }
+
+                var url = domain + path;
+                var cached = parameters.$cache && parameters.$cache.get(url);
+                if (cached !== undefined && parameters.$refresh !== true) {
+                    deferred.resolve(cached);
+                    return deferred.promise;
+                }
+                var options = {
+                    timeout: parameters.$timeout,
+                    method: 'GET',
+                    url: url,
+                    params: queryParameters,
+                    data: body,
+                    headers: headers
+                };
+                if (Object.keys(form).length > 0) {
+                    options.data = form;
+                    options.headers['Content-Type'] = 'application/x-www-form-urlencoded';
+                    options.transformRequest = OtrService.transformRequest;
+                }
+                $http(options)
+                    .success(function(data, status, headers, config) {
+                        deferred.resolve(data);
+                        if (parameters.$cache !== undefined) {
+                            parameters.$cache.put(url, data, parameters.$cacheItemOpts ? parameters.$cacheItemOpts : {});
+                        }
+                    })
+                    .error(function(data, status, headers, config) {
+                        deferred.reject({
+                            status: status,
+                            headers: headers,
+                            config: config,
+                            body: data
+                        });
+                    });
+
+                return deferred.promise;
+            };
+            /**
+             * 
+             * @method
+             * @name OtrService#getCasesForUserUsingGET
+             * @param {string} userId - userId
+             * 
+             */
+            OtrService.prototype.getCasesForUserUsingGET = function(parameters) {
+                if (parameters === undefined) {
+                    parameters = {};
+                }
+                var deferred = $q.defer();
+
+                var domain = this.domain;
+                var path = '/api/v1/users/{userId}/cases';
+
+                var body;
+                var queryParameters = {};
+                var headers = {};
+                var form = {};
+
+                path = path.replace('{userId}', parameters['userId']);
+
+                if (parameters['userId'] === undefined) {
+                    deferred.reject(new Error('Missing required  parameter: userId'));
                     return deferred.promise;
                 }
 
