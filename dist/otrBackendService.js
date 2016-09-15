@@ -2914,7 +2914,7 @@ angular.module('otrBackendService', [])
                 var deferred = $q.defer();
 
                 var domain = this.domain;
-                var path = '/api/v1/citations/{citationId}/referrals/sources';
+                var path = '/api/v1/citations/{citationId}/referral-source';
 
                 var body;
                 var queryParameters = {};
