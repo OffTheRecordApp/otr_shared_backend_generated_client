@@ -3263,6 +3263,76 @@ angular.module('otrBackendService', [])
             /**
              * 
              * @method
+             * @name OtrService#listCustomersUsingPOST
+             * @param {} graphRequest - graphRequest
+             * 
+             */
+            OtrService.prototype.listCustomersUsingPOST = function(parameters) {
+                if (parameters === undefined) {
+                    parameters = {};
+                }
+                var deferred = $q.defer();
+
+                var domain = this.domain;
+                var path = '/api/v1/console/customers';
+
+                var body;
+                var queryParameters = {};
+                var headers = {};
+                var form = {};
+
+                if (parameters['graphRequest'] !== undefined) {
+                    body = parameters['graphRequest'];
+                }
+
+                if (parameters['graphRequest'] === undefined) {
+                    deferred.reject(new Error('Missing required  parameter: graphRequest'));
+                    return deferred.promise;
+                }
+
+                if (parameters.$queryParameters) {
+                    Object.keys(parameters.$queryParameters)
+                        .forEach(function(parameterName) {
+                            var parameter = parameters.$queryParameters[parameterName];
+                            queryParameters[parameterName] = parameter;
+                        });
+                }
+
+                var url = domain + path;
+                var options = {
+                    timeout: parameters.$timeout,
+                    method: 'POST',
+                    url: url,
+                    params: queryParameters,
+                    data: body,
+                    headers: headers
+                };
+                if (Object.keys(form).length > 0) {
+                    options.data = form;
+                    options.headers['Content-Type'] = 'application/x-www-form-urlencoded';
+                    options.transformRequest = OtrService.transformRequest;
+                }
+                $http(options)
+                    .success(function(data, status, headers, config) {
+                        deferred.resolve(data);
+                        if (parameters.$cache !== undefined) {
+                            parameters.$cache.put(url, data, parameters.$cacheItemOpts ? parameters.$cacheItemOpts : {});
+                        }
+                    })
+                    .error(function(data, status, headers, config) {
+                        deferred.reject({
+                            status: status,
+                            headers: headers,
+                            config: config,
+                            body: data
+                        });
+                    });
+
+                return deferred.promise;
+            };
+            /**
+             * 
+             * @method
              * @name OtrService#listDropoffsUsingPOST
              * @param {} graphRequest - graphRequest
              * 
