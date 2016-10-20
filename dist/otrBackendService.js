@@ -613,6 +613,7 @@ angular.module('otrBackendService', [])
              * @method
              * @name OtrService#cancelCaseForClientUsingDELETE
              * @param {string} caseId - caseId
+             * @param {string} cancellationStatus - cancellationStatus
              * 
              */
             OtrService.prototype.cancelCaseForClientUsingDELETE = function(parameters) {
@@ -634,6 +635,10 @@ angular.module('otrBackendService', [])
                 if (parameters['caseId'] === undefined) {
                     deferred.reject(new Error('Missing required  parameter: caseId'));
                     return deferred.promise;
+                }
+
+                if (parameters['cancellationStatus'] !== undefined) {
+                    queryParameters['cancellationStatus'] = parameters['cancellationStatus'];
                 }
 
                 if (parameters.$queryParameters) {
