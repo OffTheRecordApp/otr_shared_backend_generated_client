@@ -4240,6 +4240,7 @@ angular.module('otrBackendService', [])
              * 
              * @method
              * @name OtrService#getTemplatesUsingGET
+             * @param {array} category - category
              * 
              */
             OtrService.prototype.getTemplatesUsingGET = function(parameters) {
@@ -4255,6 +4256,10 @@ angular.module('otrBackendService', [])
                 var queryParameters = {};
                 var headers = {};
                 var form = {};
+
+                if (parameters['category'] !== undefined) {
+                    queryParameters['category'] = parameters['category'];
+                }
 
                 if (parameters.$queryParameters) {
                     Object.keys(parameters.$queryParameters)
@@ -8412,6 +8417,89 @@ angular.module('otrBackendService', [])
                 var options = {
                     timeout: parameters.$timeout,
                     method: 'POST',
+                    url: url,
+                    params: queryParameters,
+                    data: body,
+                    headers: headers
+                };
+                if (Object.keys(form).length > 0) {
+                    options.data = form;
+                    options.headers['Content-Type'] = 'application/x-www-form-urlencoded';
+                    options.transformRequest = OtrService.transformRequest;
+                }
+                $http(options)
+                    .success(function(data, status, headers, config) {
+                        deferred.resolve(data);
+                        if (parameters.$cache !== undefined) {
+                            parameters.$cache.put(url, data, parameters.$cacheItemOpts ? parameters.$cacheItemOpts : {});
+                        }
+                    })
+                    .error(function(data, status, headers, config) {
+                        deferred.reject({
+                            status: status,
+                            headers: headers,
+                            config: config,
+                            body: data
+                        });
+                    });
+
+                return deferred.promise;
+            };
+            /**
+             * 
+             * @method
+             * @name OtrService#getLawfirmCasesByPageUsingGET
+             * @param {string} lawfirmIdString - lawfirmIdString
+             * @param {integer} page - page
+             * @param {integer} length - length
+             * 
+             */
+            OtrService.prototype.getLawfirmCasesByPageUsingGET = function(parameters) {
+                if (parameters === undefined) {
+                    parameters = {};
+                }
+                var deferred = $q.defer();
+
+                var domain = this.domain;
+                var path = '/api/v2/lawfirm/{lawfirmIdString}/cases';
+
+                var body;
+                var queryParameters = {};
+                var headers = {};
+                var form = {};
+
+                path = path.replace('{lawfirmIdString}', parameters['lawfirmIdString']);
+
+                if (parameters['lawfirmIdString'] === undefined) {
+                    deferred.reject(new Error('Missing required  parameter: lawfirmIdString'));
+                    return deferred.promise;
+                }
+
+                if (parameters['page'] !== undefined) {
+                    queryParameters['page'] = parameters['page'];
+                }
+
+                if (parameters['length'] !== undefined) {
+                    queryParameters['length'] = parameters['length'];
+                }
+
+                if (parameters.$queryParameters) {
+                    Object.keys(parameters.$queryParameters)
+                        .forEach(function(parameterName) {
+                            var parameter = parameters.$queryParameters[parameterName];
+                            queryParameters[parameterName] = parameter;
+                        });
+                }
+
+                var url = domain + path;
+                var cached = parameters.$cache && parameters.$cache.get(url);
+                if (cached !== undefined && parameters.$refresh !== true) {
+                    deferred.resolve(cached);
+                    return deferred.promise;
+                }
+                var options = {
+                    timeout: parameters.$timeout,
+                    method: 'GET',
                     url: url,
                     params: queryParameters,
                     data: body,
