@@ -24,40 +24,8 @@ angular.module('otrBackendService', [])
                 this.cache = cache;
             }
 
-            OtrService.prototype.request = function(method, url, parameters, body, headers, queryParameters, form, deferred) {
-                var options = {
-                    timeout: parameters.$timeout,
-                    method: method,
-                    url: url,
-                    params: queryParameters,
-                    data: body,
-                    headers: headers
-                };
-                if (Object.keys(form).length > 0) {
-                    options.data = form;
-                    options.headers['Content-Type'] = 'application/x-www-form-urlencoded';
-                    options.transformRequest = OtrService.transformRequest;
-                }
-                $http(options)
-                    .then(function(data, status, headers, config) {
-                        deferred.resolve(data);
-                        if (parameters.$cache !== undefined) {
-                            parameters.$cache.put(url, data, parameters.$cacheItemOpts ? parameters.$cacheItemOpts : {});
-                        }
-                    })
-                    .catch(function(data, status, headers, config) {
-                        deferred.reject({
-                            status: status,
-                            headers: headers,
-                            config: config,
-                            body: data
-                        });
-                    });
-
-            };
-
             OtrService.prototype.$on = function($scope, path, handler) {
-                var url = this.domain + path;
+                var url = domain + path;
                 $scope.$on(url, function() {
                     handler();
                 });
@@ -65,7 +33,7 @@ angular.module('otrBackendService', [])
             };
 
             OtrService.prototype.$broadcast = function(path) {
-                var url = this.domain + path;
+                var url = domain + path;
                 //cache.remove(url);
                 $rootScope.$broadcast(url);
                 return this;
@@ -87,7 +55,7 @@ angular.module('otrBackendService', [])
             };
 
             /**
-             * getUserInfo
+             * 
              * @method
              * @name OtrService#getUserInfoUsingGET
              * 
@@ -106,9 +74,6 @@ angular.module('otrBackendService', [])
                 var headers = {};
                 var form = {};
 
-                headers['Accept'] = ['*/*'];
-                headers['Content-Type'] = ['application/json'];
-
                 if (parameters.$queryParameters) {
                     Object.keys(parameters.$queryParameters)
                         .forEach(function(parameterName) {
@@ -117,12 +82,45 @@ angular.module('otrBackendService', [])
                         });
                 }
 
-                this.request('GET', domain + path, parameters, body, headers, queryParameters, form, deferred);
+                var url = domain + path;
+                var cached = parameters.$cache && parameters.$cache.get(url);
+                if (cached !== undefined && parameters.$refresh !== true) {
+                    deferred.resolve(cached);
+                    return deferred.promise;
+                }
+                var options = {
+                    timeout: parameters.$timeout,
+                    method: 'GET',
+                    url: url,
+                    params: queryParameters,
+                    data: body,
+                    headers: headers
+                };
+                if (Object.keys(form).length > 0) {
+                    options.data = form;
+                    options.headers['Content-Type'] = 'application/x-www-form-urlencoded';
+                    options.transformRequest = OtrService.transformRequest;
+                }
+                $http(options)
+                    .success(function(data, status, headers, config) {
+                        deferred.resolve(data);
+                        if (parameters.$cache !== undefined) {
+                            parameters.$cache.put(url, data, parameters.$cacheItemOpts ? parameters.$cacheItemOpts : {});
+                        }
+                    })
+                    .error(function(data, status, headers, config) {
+                        deferred.reject({
+                            status: status,
+                            headers: headers,
+                            config: config,
+                            body: data
+                        });
+                    });
 
                 return deferred.promise;
             };
             /**
-             * addToEmailBlackList
+             * 
              * @method
              * @name OtrService#addToEmailBlackListUsingPOST
              * @param {} request - request
@@ -142,9 +140,6 @@ angular.module('otrBackendService', [])
                 var headers = {};
                 var form = {};
 
-                headers['Accept'] = ['*/*'];
-                headers['Content-Type'] = ['application/json,text/plain'];
-
                 if (parameters['request'] !== undefined) {
                     body = parameters['request'];
                 }
@@ -162,12 +157,40 @@ angular.module('otrBackendService', [])
                         });
                 }
 
-                this.request('POST', domain + path, parameters, body, headers, queryParameters, form, deferred);
+                var url = domain + path;
+                var options = {
+                    timeout: parameters.$timeout,
+                    method: 'POST',
+                    url: url,
+                    params: queryParameters,
+                    data: body,
+                    headers: headers
+                };
+                if (Object.keys(form).length > 0) {
+                    options.data = form;
+                    options.headers['Content-Type'] = 'application/x-www-form-urlencoded';
+                    options.transformRequest = OtrService.transformRequest;
+                }
+                $http(options)
+                    .success(function(data, status, headers, config) {
+                        deferred.resolve(data);
+                        if (parameters.$cache !== undefined) {
+                            parameters.$cache.put(url, data, parameters.$cacheItemOpts ? parameters.$cacheItemOpts : {});
+                        }
+                    })
+                    .error(function(data, status, headers, config) {
+                        deferred.reject({
+                            status: status,
+                            headers: headers,
+                            config: config,
+                            body: data
+                        });
+                    });
 
                 return deferred.promise;
             };
             /**
-             * createBranchLink
+             * 
              * @method
              * @name OtrService#createBranchLinkUsingPOST
              * @param {} request - request
@@ -187,9 +210,6 @@ angular.module('otrBackendService', [])
                 var headers = {};
                 var form = {};
 
-                headers['Accept'] = ['*/*'];
-                headers['Content-Type'] = ['application/json'];
-
                 if (parameters['request'] !== undefined) {
                     body = parameters['request'];
                 }
@@ -207,12 +227,40 @@ angular.module('otrBackendService', [])
                         });
                 }
 
-                this.request('POST', domain + path, parameters, body, headers, queryParameters, form, deferred);
+                var url = domain + path;
+                var options = {
+                    timeout: parameters.$timeout,
+                    method: 'POST',
+                    url: url,
+                    params: queryParameters,
+                    data: body,
+                    headers: headers
+                };
+                if (Object.keys(form).length > 0) {
+                    options.data = form;
+                    options.headers['Content-Type'] = 'application/x-www-form-urlencoded';
+                    options.transformRequest = OtrService.transformRequest;
+                }
+                $http(options)
+                    .success(function(data, status, headers, config) {
+                        deferred.resolve(data);
+                        if (parameters.$cache !== undefined) {
+                            parameters.$cache.put(url, data, parameters.$cacheItemOpts ? parameters.$cacheItemOpts : {});
+                        }
+                    })
+                    .error(function(data, status, headers, config) {
+                        deferred.reject({
+                            status: status,
+                            headers: headers,
+                            config: config,
+                            body: data
+                        });
+                    });
 
                 return deferred.promise;
             };
             /**
-             * getCasesForClient
+             * 
              * @method
              * @name OtrService#getCasesForClientUsingGET
              * 
@@ -231,9 +279,6 @@ angular.module('otrBackendService', [])
                 var headers = {};
                 var form = {};
 
-                headers['Accept'] = ['*/*'];
-                headers['Content-Type'] = ['application/json'];
-
                 if (parameters.$queryParameters) {
                     Object.keys(parameters.$queryParameters)
                         .forEach(function(parameterName) {
@@ -242,12 +287,45 @@ angular.module('otrBackendService', [])
                         });
                 }
 
-                this.request('GET', domain + path, parameters, body, headers, queryParameters, form, deferred);
+                var url = domain + path;
+                var cached = parameters.$cache && parameters.$cache.get(url);
+                if (cached !== undefined && parameters.$refresh !== true) {
+                    deferred.resolve(cached);
+                    return deferred.promise;
+                }
+                var options = {
+                    timeout: parameters.$timeout,
+                    method: 'GET',
+                    url: url,
+                    params: queryParameters,
+                    data: body,
+                    headers: headers
+                };
+                if (Object.keys(form).length > 0) {
+                    options.data = form;
+                    options.headers['Content-Type'] = 'application/x-www-form-urlencoded';
+                    options.transformRequest = OtrService.transformRequest;
+                }
+                $http(options)
+                    .success(function(data, status, headers, config) {
+                        deferred.resolve(data);
+                        if (parameters.$cache !== undefined) {
+                            parameters.$cache.put(url, data, parameters.$cacheItemOpts ? parameters.$cacheItemOpts : {});
+                        }
+                    })
+                    .error(function(data, status, headers, config) {
+                        deferred.reject({
+                            status: status,
+                            headers: headers,
+                            config: config,
+                            body: data
+                        });
+                    });
 
                 return deferred.promise;
             };
             /**
-             * getAllActions
+             * 
              * @method
              * @name OtrService#getAllActionsUsingGET
              * 
@@ -266,9 +344,6 @@ angular.module('otrBackendService', [])
                 var headers = {};
                 var form = {};
 
-                headers['Accept'] = ['*/*'];
-                headers['Content-Type'] = ['application/json'];
-
                 if (parameters.$queryParameters) {
                     Object.keys(parameters.$queryParameters)
                         .forEach(function(parameterName) {
@@ -277,12 +352,45 @@ angular.module('otrBackendService', [])
                         });
                 }
 
-                this.request('GET', domain + path, parameters, body, headers, queryParameters, form, deferred);
+                var url = domain + path;
+                var cached = parameters.$cache && parameters.$cache.get(url);
+                if (cached !== undefined && parameters.$refresh !== true) {
+                    deferred.resolve(cached);
+                    return deferred.promise;
+                }
+                var options = {
+                    timeout: parameters.$timeout,
+                    method: 'GET',
+                    url: url,
+                    params: queryParameters,
+                    data: body,
+                    headers: headers
+                };
+                if (Object.keys(form).length > 0) {
+                    options.data = form;
+                    options.headers['Content-Type'] = 'application/x-www-form-urlencoded';
+                    options.transformRequest = OtrService.transformRequest;
+                }
+                $http(options)
+                    .success(function(data, status, headers, config) {
+                        deferred.resolve(data);
+                        if (parameters.$cache !== undefined) {
+                            parameters.$cache.put(url, data, parameters.$cacheItemOpts ? parameters.$cacheItemOpts : {});
+                        }
+                    })
+                    .error(function(data, status, headers, config) {
+                        deferred.reject({
+                            status: status,
+                            headers: headers,
+                            config: config,
+                            body: data
+                        });
+                    });
 
                 return deferred.promise;
             };
             /**
-             * getCase
+             * 
              * @method
              * @name OtrService#getCaseUsingGET
              * @param {string} caseId - caseId
@@ -302,9 +410,6 @@ angular.module('otrBackendService', [])
                 var headers = {};
                 var form = {};
 
-                headers['Accept'] = ['*/*'];
-                headers['Content-Type'] = ['application/json'];
-
                 path = path.replace('{caseId}', parameters['caseId']);
 
                 if (parameters['caseId'] === undefined) {
@@ -320,12 +425,45 @@ angular.module('otrBackendService', [])
                         });
                 }
 
-                this.request('GET', domain + path, parameters, body, headers, queryParameters, form, deferred);
+                var url = domain + path;
+                var cached = parameters.$cache && parameters.$cache.get(url);
+                if (cached !== undefined && parameters.$refresh !== true) {
+                    deferred.resolve(cached);
+                    return deferred.promise;
+                }
+                var options = {
+                    timeout: parameters.$timeout,
+                    method: 'GET',
+                    url: url,
+                    params: queryParameters,
+                    data: body,
+                    headers: headers
+                };
+                if (Object.keys(form).length > 0) {
+                    options.data = form;
+                    options.headers['Content-Type'] = 'application/x-www-form-urlencoded';
+                    options.transformRequest = OtrService.transformRequest;
+                }
+                $http(options)
+                    .success(function(data, status, headers, config) {
+                        deferred.resolve(data);
+                        if (parameters.$cache !== undefined) {
+                            parameters.$cache.put(url, data, parameters.$cacheItemOpts ? parameters.$cacheItemOpts : {});
+                        }
+                    })
+                    .error(function(data, status, headers, config) {
+                        deferred.reject({
+                            status: status,
+                            headers: headers,
+                            config: config,
+                            body: data
+                        });
+                    });
 
                 return deferred.promise;
             };
             /**
-             * confirmBooking
+             * 
              * @method
              * @name OtrService#confirmBookingUsingPOST
              * @param {string} caseId - caseId
@@ -345,9 +483,6 @@ angular.module('otrBackendService', [])
                 var headers = {};
                 var form = {};
 
-                headers['Accept'] = ['*/*'];
-                headers['Content-Type'] = ['application/json'];
-
                 path = path.replace('{caseId}', parameters['caseId']);
 
                 if (parameters['caseId'] === undefined) {
@@ -363,12 +498,40 @@ angular.module('otrBackendService', [])
                         });
                 }
 
-                this.request('POST', domain + path, parameters, body, headers, queryParameters, form, deferred);
+                var url = domain + path;
+                var options = {
+                    timeout: parameters.$timeout,
+                    method: 'POST',
+                    url: url,
+                    params: queryParameters,
+                    data: body,
+                    headers: headers
+                };
+                if (Object.keys(form).length > 0) {
+                    options.data = form;
+                    options.headers['Content-Type'] = 'application/x-www-form-urlencoded';
+                    options.transformRequest = OtrService.transformRequest;
+                }
+                $http(options)
+                    .success(function(data, status, headers, config) {
+                        deferred.resolve(data);
+                        if (parameters.$cache !== undefined) {
+                            parameters.$cache.put(url, data, parameters.$cacheItemOpts ? parameters.$cacheItemOpts : {});
+                        }
+                    })
+                    .error(function(data, status, headers, config) {
+                        deferred.reject({
+                            status: status,
+                            headers: headers,
+                            config: config,
+                            body: data
+                        });
+                    });
 
                 return deferred.promise;
             };
             /**
-             * updateCase
+             * 
              * @method
              * @name OtrService#updateCaseUsingPUT
              * @param {string} caseId - caseId
@@ -388,9 +551,6 @@ angular.module('otrBackendService', [])
                 var queryParameters = {};
                 var headers = {};
                 var form = {};
-
-                headers['Accept'] = ['*/*'];
-                headers['Content-Type'] = ['application/json'];
 
                 path = path.replace('{caseId}', parameters['caseId']);
 
@@ -416,12 +576,40 @@ angular.module('otrBackendService', [])
                         });
                 }
 
-                this.request('PUT', domain + path, parameters, body, headers, queryParameters, form, deferred);
+                var url = domain + path;
+                var options = {
+                    timeout: parameters.$timeout,
+                    method: 'PUT',
+                    url: url,
+                    params: queryParameters,
+                    data: body,
+                    headers: headers
+                };
+                if (Object.keys(form).length > 0) {
+                    options.data = form;
+                    options.headers['Content-Type'] = 'application/x-www-form-urlencoded';
+                    options.transformRequest = OtrService.transformRequest;
+                }
+                $http(options)
+                    .success(function(data, status, headers, config) {
+                        deferred.resolve(data);
+                        if (parameters.$cache !== undefined) {
+                            parameters.$cache.put(url, data, parameters.$cacheItemOpts ? parameters.$cacheItemOpts : {});
+                        }
+                    })
+                    .error(function(data, status, headers, config) {
+                        deferred.reject({
+                            status: status,
+                            headers: headers,
+                            config: config,
+                            body: data
+                        });
+                    });
 
                 return deferred.promise;
             };
             /**
-             * cancelCaseForClient
+             * 
              * @method
              * @name OtrService#cancelCaseForClientUsingDELETE
              * @param {string} caseId - caseId
@@ -442,9 +630,6 @@ angular.module('otrBackendService', [])
                 var headers = {};
                 var form = {};
 
-                headers['Accept'] = ['*/*'];
-                headers['Content-Type'] = ['application/json'];
-
                 path = path.replace('{caseId}', parameters['caseId']);
 
                 if (parameters['caseId'] === undefined) {
@@ -464,12 +649,40 @@ angular.module('otrBackendService', [])
                         });
                 }
 
-                this.request('DELETE', domain + path, parameters, body, headers, queryParameters, form, deferred);
+                var url = domain + path;
+                var options = {
+                    timeout: parameters.$timeout,
+                    method: 'DELETE',
+                    url: url,
+                    params: queryParameters,
+                    data: body,
+                    headers: headers
+                };
+                if (Object.keys(form).length > 0) {
+                    options.data = form;
+                    options.headers['Content-Type'] = 'application/x-www-form-urlencoded';
+                    options.transformRequest = OtrService.transformRequest;
+                }
+                $http(options)
+                    .success(function(data, status, headers, config) {
+                        deferred.resolve(data);
+                        if (parameters.$cache !== undefined) {
+                            parameters.$cache.put(url, data, parameters.$cacheItemOpts ? parameters.$cacheItemOpts : {});
+                        }
+                    })
+                    .error(function(data, status, headers, config) {
+                        deferred.reject({
+                            status: status,
+                            headers: headers,
+                            config: config,
+                            body: data
+                        });
+                    });
 
                 return deferred.promise;
             };
             /**
-             * addActionToCase
+             * 
              * @method
              * @name OtrService#addActionToCaseUsingPOST
              * @param {string} caseId - caseId
@@ -490,9 +703,6 @@ angular.module('otrBackendService', [])
                 var headers = {};
                 var form = {};
 
-                headers['Accept'] = ['*/*'];
-                headers['Content-Type'] = ['application/json'];
-
                 path = path.replace('{caseId}', parameters['caseId']);
 
                 if (parameters['caseId'] === undefined) {
@@ -517,12 +727,40 @@ angular.module('otrBackendService', [])
                         });
                 }
 
-                this.request('POST', domain + path, parameters, body, headers, queryParameters, form, deferred);
+                var url = domain + path;
+                var options = {
+                    timeout: parameters.$timeout,
+                    method: 'POST',
+                    url: url,
+                    params: queryParameters,
+                    data: body,
+                    headers: headers
+                };
+                if (Object.keys(form).length > 0) {
+                    options.data = form;
+                    options.headers['Content-Type'] = 'application/x-www-form-urlencoded';
+                    options.transformRequest = OtrService.transformRequest;
+                }
+                $http(options)
+                    .success(function(data, status, headers, config) {
+                        deferred.resolve(data);
+                        if (parameters.$cache !== undefined) {
+                            parameters.$cache.put(url, data, parameters.$cacheItemOpts ? parameters.$cacheItemOpts : {});
+                        }
+                    })
+                    .error(function(data, status, headers, config) {
+                        deferred.reject({
+                            status: status,
+                            headers: headers,
+                            config: config,
+                            body: data
+                        });
+                    });
 
                 return deferred.promise;
             };
             /**
-             * getActionTimeline
+             * 
              * @method
              * @name OtrService#getActionTimelineUsingGET
              * @param {string} caseId - caseId
@@ -542,9 +780,6 @@ angular.module('otrBackendService', [])
                 var headers = {};
                 var form = {};
 
-                headers['Accept'] = ['application/json'];
-                headers['Content-Type'] = ['application/json'];
-
                 path = path.replace('{caseId}', parameters['caseId']);
 
                 if (parameters['caseId'] === undefined) {
@@ -560,12 +795,45 @@ angular.module('otrBackendService', [])
                         });
                 }
 
-                this.request('GET', domain + path, parameters, body, headers, queryParameters, form, deferred);
+                var url = domain + path;
+                var cached = parameters.$cache && parameters.$cache.get(url);
+                if (cached !== undefined && parameters.$refresh !== true) {
+                    deferred.resolve(cached);
+                    return deferred.promise;
+                }
+                var options = {
+                    timeout: parameters.$timeout,
+                    method: 'GET',
+                    url: url,
+                    params: queryParameters,
+                    data: body,
+                    headers: headers
+                };
+                if (Object.keys(form).length > 0) {
+                    options.data = form;
+                    options.headers['Content-Type'] = 'application/x-www-form-urlencoded';
+                    options.transformRequest = OtrService.transformRequest;
+                }
+                $http(options)
+                    .success(function(data, status, headers, config) {
+                        deferred.resolve(data);
+                        if (parameters.$cache !== undefined) {
+                            parameters.$cache.put(url, data, parameters.$cacheItemOpts ? parameters.$cacheItemOpts : {});
+                        }
+                    })
+                    .error(function(data, status, headers, config) {
+                        deferred.reject({
+                            status: status,
+                            headers: headers,
+                            config: config,
+                            body: data
+                        });
+                    });
 
                 return deferred.promise;
             };
             /**
-             * getCaseCharges
+             * 
              * @method
              * @name OtrService#getCaseChargesUsingGET
              * @param {string} caseId - caseId
@@ -585,9 +853,6 @@ angular.module('otrBackendService', [])
                 var headers = {};
                 var form = {};
 
-                headers['Accept'] = ['application/json'];
-                headers['Content-Type'] = ['application/json'];
-
                 path = path.replace('{caseId}', parameters['caseId']);
 
                 if (parameters['caseId'] === undefined) {
@@ -603,12 +868,45 @@ angular.module('otrBackendService', [])
                         });
                 }
 
-                this.request('GET', domain + path, parameters, body, headers, queryParameters, form, deferred);
+                var url = domain + path;
+                var cached = parameters.$cache && parameters.$cache.get(url);
+                if (cached !== undefined && parameters.$refresh !== true) {
+                    deferred.resolve(cached);
+                    return deferred.promise;
+                }
+                var options = {
+                    timeout: parameters.$timeout,
+                    method: 'GET',
+                    url: url,
+                    params: queryParameters,
+                    data: body,
+                    headers: headers
+                };
+                if (Object.keys(form).length > 0) {
+                    options.data = form;
+                    options.headers['Content-Type'] = 'application/x-www-form-urlencoded';
+                    options.transformRequest = OtrService.transformRequest;
+                }
+                $http(options)
+                    .success(function(data, status, headers, config) {
+                        deferred.resolve(data);
+                        if (parameters.$cache !== undefined) {
+                            parameters.$cache.put(url, data, parameters.$cacheItemOpts ? parameters.$cacheItemOpts : {});
+                        }
+                    })
+                    .error(function(data, status, headers, config) {
+                        deferred.reject({
+                            status: status,
+                            headers: headers,
+                            config: config,
+                            body: data
+                        });
+                    });
 
                 return deferred.promise;
             };
             /**
-             * addViolationsToCitation
+             * 
              * @method
              * @name OtrService#addViolationsToCitationUsingPOST
              * @param {string} caseId - caseId
@@ -629,9 +927,6 @@ angular.module('otrBackendService', [])
                 var headers = {};
                 var form = {};
 
-                headers['Accept'] = ['*/*'];
-                headers['Content-Type'] = ['application/json'];
-
                 path = path.replace('{caseId}', parameters['caseId']);
 
                 if (parameters['caseId'] === undefined) {
@@ -656,12 +951,40 @@ angular.module('otrBackendService', [])
                         });
                 }
 
-                this.request('POST', domain + path, parameters, body, headers, queryParameters, form, deferred);
+                var url = domain + path;
+                var options = {
+                    timeout: parameters.$timeout,
+                    method: 'POST',
+                    url: url,
+                    params: queryParameters,
+                    data: body,
+                    headers: headers
+                };
+                if (Object.keys(form).length > 0) {
+                    options.data = form;
+                    options.headers['Content-Type'] = 'application/x-www-form-urlencoded';
+                    options.transformRequest = OtrService.transformRequest;
+                }
+                $http(options)
+                    .success(function(data, status, headers, config) {
+                        deferred.resolve(data);
+                        if (parameters.$cache !== undefined) {
+                            parameters.$cache.put(url, data, parameters.$cacheItemOpts ? parameters.$cacheItemOpts : {});
+                        }
+                    })
+                    .error(function(data, status, headers, config) {
+                        deferred.reject({
+                            status: status,
+                            headers: headers,
+                            config: config,
+                            body: data
+                        });
+                    });
 
                 return deferred.promise;
             };
             /**
-             * removeViolationsFromCitation
+             * 
              * @method
              * @name OtrService#removeViolationsFromCitationUsingDELETE
              * @param {string} caseId - caseId
@@ -681,9 +1004,6 @@ angular.module('otrBackendService', [])
                 var queryParameters = {};
                 var headers = {};
                 var form = {};
-
-                headers['Accept'] = ['*/*'];
-                headers['Content-Type'] = ['application/json'];
 
                 path = path.replace('{caseId}', parameters['caseId']);
 
@@ -707,12 +1027,40 @@ angular.module('otrBackendService', [])
                         });
                 }
 
-                this.request('DELETE', domain + path, parameters, body, headers, queryParameters, form, deferred);
+                var url = domain + path;
+                var options = {
+                    timeout: parameters.$timeout,
+                    method: 'DELETE',
+                    url: url,
+                    params: queryParameters,
+                    data: body,
+                    headers: headers
+                };
+                if (Object.keys(form).length > 0) {
+                    options.data = form;
+                    options.headers['Content-Type'] = 'application/x-www-form-urlencoded';
+                    options.transformRequest = OtrService.transformRequest;
+                }
+                $http(options)
+                    .success(function(data, status, headers, config) {
+                        deferred.resolve(data);
+                        if (parameters.$cache !== undefined) {
+                            parameters.$cache.put(url, data, parameters.$cacheItemOpts ? parameters.$cacheItemOpts : {});
+                        }
+                    })
+                    .error(function(data, status, headers, config) {
+                        deferred.reject({
+                            status: status,
+                            headers: headers,
+                            config: config,
+                            body: data
+                        });
+                    });
 
                 return deferred.promise;
             };
             /**
-             * getCaseClient
+             * 
              * @method
              * @name OtrService#getCaseClientUsingGET
              * @param {string} caseId - caseId
@@ -732,9 +1080,6 @@ angular.module('otrBackendService', [])
                 var headers = {};
                 var form = {};
 
-                headers['Accept'] = ['*/*'];
-                headers['Content-Type'] = ['application/json'];
-
                 path = path.replace('{caseId}', parameters['caseId']);
 
                 if (parameters['caseId'] === undefined) {
@@ -750,12 +1095,45 @@ angular.module('otrBackendService', [])
                         });
                 }
 
-                this.request('GET', domain + path, parameters, body, headers, queryParameters, form, deferred);
+                var url = domain + path;
+                var cached = parameters.$cache && parameters.$cache.get(url);
+                if (cached !== undefined && parameters.$refresh !== true) {
+                    deferred.resolve(cached);
+                    return deferred.promise;
+                }
+                var options = {
+                    timeout: parameters.$timeout,
+                    method: 'GET',
+                    url: url,
+                    params: queryParameters,
+                    data: body,
+                    headers: headers
+                };
+                if (Object.keys(form).length > 0) {
+                    options.data = form;
+                    options.headers['Content-Type'] = 'application/x-www-form-urlencoded';
+                    options.transformRequest = OtrService.transformRequest;
+                }
+                $http(options)
+                    .success(function(data, status, headers, config) {
+                        deferred.resolve(data);
+                        if (parameters.$cache !== undefined) {
+                            parameters.$cache.put(url, data, parameters.$cacheItemOpts ? parameters.$cacheItemOpts : {});
+                        }
+                    })
+                    .error(function(data, status, headers, config) {
+                        deferred.reject({
+                            status: status,
+                            headers: headers,
+                            config: config,
+                            body: data
+                        });
+                    });
 
                 return deferred.promise;
             };
             /**
-             * getConversation
+             * 
              * @method
              * @name OtrService#getConversationUsingGET
              * @param {string} caseId - caseId
@@ -776,9 +1154,6 @@ angular.module('otrBackendService', [])
                 var queryParameters = {};
                 var headers = {};
                 var form = {};
-
-                headers['Accept'] = ['*/*'];
-                headers['Content-Type'] = ['application/json'];
 
                 path = path.replace('{caseId}', parameters['caseId']);
 
@@ -803,12 +1178,45 @@ angular.module('otrBackendService', [])
                         });
                 }
 
-                this.request('GET', domain + path, parameters, body, headers, queryParameters, form, deferred);
+                var url = domain + path;
+                var cached = parameters.$cache && parameters.$cache.get(url);
+                if (cached !== undefined && parameters.$refresh !== true) {
+                    deferred.resolve(cached);
+                    return deferred.promise;
+                }
+                var options = {
+                    timeout: parameters.$timeout,
+                    method: 'GET',
+                    url: url,
+                    params: queryParameters,
+                    data: body,
+                    headers: headers
+                };
+                if (Object.keys(form).length > 0) {
+                    options.data = form;
+                    options.headers['Content-Type'] = 'application/x-www-form-urlencoded';
+                    options.transformRequest = OtrService.transformRequest;
+                }
+                $http(options)
+                    .success(function(data, status, headers, config) {
+                        deferred.resolve(data);
+                        if (parameters.$cache !== undefined) {
+                            parameters.$cache.put(url, data, parameters.$cacheItemOpts ? parameters.$cacheItemOpts : {});
+                        }
+                    })
+                    .error(function(data, status, headers, config) {
+                        deferred.reject({
+                            status: status,
+                            headers: headers,
+                            config: config,
+                            body: data
+                        });
+                    });
 
                 return deferred.promise;
             };
             /**
-             * addMessageToConversation
+             * 
              * @method
              * @name OtrService#addMessageToConversationUsingPOST
              * @param {string} caseId - caseId
@@ -828,9 +1236,6 @@ angular.module('otrBackendService', [])
                 var queryParameters = {};
                 var headers = {};
                 var form = {};
-
-                headers['Accept'] = ['*/*'];
-                headers['Content-Type'] = ['application/json'];
 
                 path = path.replace('{caseId}', parameters['caseId']);
 
@@ -856,12 +1261,40 @@ angular.module('otrBackendService', [])
                         });
                 }
 
-                this.request('POST', domain + path, parameters, body, headers, queryParameters, form, deferred);
+                var url = domain + path;
+                var options = {
+                    timeout: parameters.$timeout,
+                    method: 'POST',
+                    url: url,
+                    params: queryParameters,
+                    data: body,
+                    headers: headers
+                };
+                if (Object.keys(form).length > 0) {
+                    options.data = form;
+                    options.headers['Content-Type'] = 'application/x-www-form-urlencoded';
+                    options.transformRequest = OtrService.transformRequest;
+                }
+                $http(options)
+                    .success(function(data, status, headers, config) {
+                        deferred.resolve(data);
+                        if (parameters.$cache !== undefined) {
+                            parameters.$cache.put(url, data, parameters.$cacheItemOpts ? parameters.$cacheItemOpts : {});
+                        }
+                    })
+                    .error(function(data, status, headers, config) {
+                        deferred.reject({
+                            status: status,
+                            headers: headers,
+                            config: config,
+                            body: data
+                        });
+                    });
 
                 return deferred.promise;
             };
             /**
-             * setCourtDateForCase
+             * 
              * @method
              * @name OtrService#setCourtDateForCaseUsingPOST
              * @param {string} caseId - caseId
@@ -882,9 +1315,6 @@ angular.module('otrBackendService', [])
                 var headers = {};
                 var form = {};
 
-                headers['Accept'] = ['*/*'];
-                headers['Content-Type'] = ['application/json'];
-
                 path = path.replace('{caseId}', parameters['caseId']);
 
                 if (parameters['caseId'] === undefined) {
@@ -909,12 +1339,40 @@ angular.module('otrBackendService', [])
                         });
                 }
 
-                this.request('POST', domain + path, parameters, body, headers, queryParameters, form, deferred);
+                var url = domain + path;
+                var options = {
+                    timeout: parameters.$timeout,
+                    method: 'POST',
+                    url: url,
+                    params: queryParameters,
+                    data: body,
+                    headers: headers
+                };
+                if (Object.keys(form).length > 0) {
+                    options.data = form;
+                    options.headers['Content-Type'] = 'application/x-www-form-urlencoded';
+                    options.transformRequest = OtrService.transformRequest;
+                }
+                $http(options)
+                    .success(function(data, status, headers, config) {
+                        deferred.resolve(data);
+                        if (parameters.$cache !== undefined) {
+                            parameters.$cache.put(url, data, parameters.$cacheItemOpts ? parameters.$cacheItemOpts : {});
+                        }
+                    })
+                    .error(function(data, status, headers, config) {
+                        deferred.reject({
+                            status: status,
+                            headers: headers,
+                            config: config,
+                            body: data
+                        });
+                    });
 
                 return deferred.promise;
             };
             /**
-             * getCaseFinancials
+             * 
              * @method
              * @name OtrService#getCaseFinancialsUsingGET
              * @param {string} caseId - caseId
@@ -934,9 +1392,6 @@ angular.module('otrBackendService', [])
                 var headers = {};
                 var form = {};
 
-                headers['Accept'] = ['application/json'];
-                headers['Content-Type'] = ['application/json'];
-
                 path = path.replace('{caseId}', parameters['caseId']);
 
                 if (parameters['caseId'] === undefined) {
@@ -952,12 +1407,45 @@ angular.module('otrBackendService', [])
                         });
                 }
 
-                this.request('GET', domain + path, parameters, body, headers, queryParameters, form, deferred);
+                var url = domain + path;
+                var cached = parameters.$cache && parameters.$cache.get(url);
+                if (cached !== undefined && parameters.$refresh !== true) {
+                    deferred.resolve(cached);
+                    return deferred.promise;
+                }
+                var options = {
+                    timeout: parameters.$timeout,
+                    method: 'GET',
+                    url: url,
+                    params: queryParameters,
+                    data: body,
+                    headers: headers
+                };
+                if (Object.keys(form).length > 0) {
+                    options.data = form;
+                    options.headers['Content-Type'] = 'application/x-www-form-urlencoded';
+                    options.transformRequest = OtrService.transformRequest;
+                }
+                $http(options)
+                    .success(function(data, status, headers, config) {
+                        deferred.resolve(data);
+                        if (parameters.$cache !== undefined) {
+                            parameters.$cache.put(url, data, parameters.$cacheItemOpts ? parameters.$cacheItemOpts : {});
+                        }
+                    })
+                    .error(function(data, status, headers, config) {
+                        deferred.reject({
+                            status: status,
+                            headers: headers,
+                            config: config,
+                            body: data
+                        });
+                    });
 
                 return deferred.promise;
             };
             /**
-             * findLawfirmMatchForCase
+             * 
              * @method
              * @name OtrService#findLawfirmMatchForCaseUsingPOST
              * @param {} request - request
@@ -978,9 +1466,6 @@ angular.module('otrBackendService', [])
                 var headers = {};
                 var form = {};
 
-                headers['Accept'] = ['*/*'];
-                headers['Content-Type'] = ['application/json'];
-
                 if (parameters['request'] !== undefined) {
                     body = parameters['request'];
                 }
@@ -1000,12 +1485,40 @@ angular.module('otrBackendService', [])
                         });
                 }
 
-                this.request('POST', domain + path, parameters, body, headers, queryParameters, form, deferred);
+                var url = domain + path;
+                var options = {
+                    timeout: parameters.$timeout,
+                    method: 'POST',
+                    url: url,
+                    params: queryParameters,
+                    data: body,
+                    headers: headers
+                };
+                if (Object.keys(form).length > 0) {
+                    options.data = form;
+                    options.headers['Content-Type'] = 'application/x-www-form-urlencoded';
+                    options.transformRequest = OtrService.transformRequest;
+                }
+                $http(options)
+                    .success(function(data, status, headers, config) {
+                        deferred.resolve(data);
+                        if (parameters.$cache !== undefined) {
+                            parameters.$cache.put(url, data, parameters.$cacheItemOpts ? parameters.$cacheItemOpts : {});
+                        }
+                    })
+                    .error(function(data, status, headers, config) {
+                        deferred.reject({
+                            status: status,
+                            headers: headers,
+                            config: config,
+                            body: data
+                        });
+                    });
 
                 return deferred.promise;
             };
             /**
-             * getCaseNotes
+             * 
              * @method
              * @name OtrService#getCaseNotesUsingGET
              * @param {string} caseId - caseId
@@ -1025,9 +1538,6 @@ angular.module('otrBackendService', [])
                 var headers = {};
                 var form = {};
 
-                headers['Accept'] = ['*/*'];
-                headers['Content-Type'] = ['application/json'];
-
                 path = path.replace('{caseId}', parameters['caseId']);
 
                 if (parameters['caseId'] === undefined) {
@@ -1043,12 +1553,45 @@ angular.module('otrBackendService', [])
                         });
                 }
 
-                this.request('GET', domain + path, parameters, body, headers, queryParameters, form, deferred);
+                var url = domain + path;
+                var cached = parameters.$cache && parameters.$cache.get(url);
+                if (cached !== undefined && parameters.$refresh !== true) {
+                    deferred.resolve(cached);
+                    return deferred.promise;
+                }
+                var options = {
+                    timeout: parameters.$timeout,
+                    method: 'GET',
+                    url: url,
+                    params: queryParameters,
+                    data: body,
+                    headers: headers
+                };
+                if (Object.keys(form).length > 0) {
+                    options.data = form;
+                    options.headers['Content-Type'] = 'application/x-www-form-urlencoded';
+                    options.transformRequest = OtrService.transformRequest;
+                }
+                $http(options)
+                    .success(function(data, status, headers, config) {
+                        deferred.resolve(data);
+                        if (parameters.$cache !== undefined) {
+                            parameters.$cache.put(url, data, parameters.$cacheItemOpts ? parameters.$cacheItemOpts : {});
+                        }
+                    })
+                    .error(function(data, status, headers, config) {
+                        deferred.reject({
+                            status: status,
+                            headers: headers,
+                            config: config,
+                            body: data
+                        });
+                    });
 
                 return deferred.promise;
             };
             /**
-             * saveCaseNotes
+             * 
              * @method
              * @name OtrService#saveCaseNotesUsingPOST
              * @param {string} caseId - caseId
@@ -1068,9 +1611,6 @@ angular.module('otrBackendService', [])
                 var queryParameters = {};
                 var headers = {};
                 var form = {};
-
-                headers['Accept'] = ['*/*'];
-                headers['Content-Type'] = ['application/json'];
 
                 path = path.replace('{caseId}', parameters['caseId']);
 
@@ -1096,12 +1636,40 @@ angular.module('otrBackendService', [])
                         });
                 }
 
-                this.request('POST', domain + path, parameters, body, headers, queryParameters, form, deferred);
+                var url = domain + path;
+                var options = {
+                    timeout: parameters.$timeout,
+                    method: 'POST',
+                    url: url,
+                    params: queryParameters,
+                    data: body,
+                    headers: headers
+                };
+                if (Object.keys(form).length > 0) {
+                    options.data = form;
+                    options.headers['Content-Type'] = 'application/x-www-form-urlencoded';
+                    options.transformRequest = OtrService.transformRequest;
+                }
+                $http(options)
+                    .success(function(data, status, headers, config) {
+                        deferred.resolve(data);
+                        if (parameters.$cache !== undefined) {
+                            parameters.$cache.put(url, data, parameters.$cacheItemOpts ? parameters.$cacheItemOpts : {});
+                        }
+                    })
+                    .error(function(data, status, headers, config) {
+                        deferred.reject({
+                            status: status,
+                            headers: headers,
+                            config: config,
+                            body: data
+                        });
+                    });
 
                 return deferred.promise;
             };
             /**
-             * assignOwner
+             * 
              * @method
              * @name OtrService#assignOwnerUsingPOST
              * @param {string} caseId - caseId
@@ -1121,9 +1689,6 @@ angular.module('otrBackendService', [])
                 var headers = {};
                 var form = {};
 
-                headers['Accept'] = ['*/*'];
-                headers['Content-Type'] = ['application/json'];
-
                 path = path.replace('{caseId}', parameters['caseId']);
 
                 if (parameters['caseId'] === undefined) {
@@ -1139,12 +1704,40 @@ angular.module('otrBackendService', [])
                         });
                 }
 
-                this.request('POST', domain + path, parameters, body, headers, queryParameters, form, deferred);
+                var url = domain + path;
+                var options = {
+                    timeout: parameters.$timeout,
+                    method: 'POST',
+                    url: url,
+                    params: queryParameters,
+                    data: body,
+                    headers: headers
+                };
+                if (Object.keys(form).length > 0) {
+                    options.data = form;
+                    options.headers['Content-Type'] = 'application/x-www-form-urlencoded';
+                    options.transformRequest = OtrService.transformRequest;
+                }
+                $http(options)
+                    .success(function(data, status, headers, config) {
+                        deferred.resolve(data);
+                        if (parameters.$cache !== undefined) {
+                            parameters.$cache.put(url, data, parameters.$cacheItemOpts ? parameters.$cacheItemOpts : {});
+                        }
+                    })
+                    .error(function(data, status, headers, config) {
+                        deferred.reject({
+                            status: status,
+                            headers: headers,
+                            config: config,
+                            body: data
+                        });
+                    });
 
                 return deferred.promise;
             };
             /**
-             * authorizeChargeForCase
+             * 
              * @method
              * @name OtrService#authorizeChargeForCaseUsingPOST
              * @param {string} caseId - caseId
@@ -1165,9 +1758,6 @@ angular.module('otrBackendService', [])
                 var headers = {};
                 var form = {};
 
-                headers['Accept'] = ['*/*'];
-                headers['Content-Type'] = ['application/json'];
-
                 path = path.replace('{caseId}', parameters['caseId']);
 
                 if (parameters['caseId'] === undefined) {
@@ -1187,12 +1777,40 @@ angular.module('otrBackendService', [])
                         });
                 }
 
-                this.request('POST', domain + path, parameters, body, headers, queryParameters, form, deferred);
+                var url = domain + path;
+                var options = {
+                    timeout: parameters.$timeout,
+                    method: 'POST',
+                    url: url,
+                    params: queryParameters,
+                    data: body,
+                    headers: headers
+                };
+                if (Object.keys(form).length > 0) {
+                    options.data = form;
+                    options.headers['Content-Type'] = 'application/x-www-form-urlencoded';
+                    options.transformRequest = OtrService.transformRequest;
+                }
+                $http(options)
+                    .success(function(data, status, headers, config) {
+                        deferred.resolve(data);
+                        if (parameters.$cache !== undefined) {
+                            parameters.$cache.put(url, data, parameters.$cacheItemOpts ? parameters.$cacheItemOpts : {});
+                        }
+                    })
+                    .error(function(data, status, headers, config) {
+                        deferred.reject({
+                            status: status,
+                            headers: headers,
+                            config: config,
+                            body: data
+                        });
+                    });
 
                 return deferred.promise;
             };
             /**
-             * captureChargeForCase
+             * 
              * @method
              * @name OtrService#captureChargeForCaseUsingPOST
              * @param {string} caseId - caseId
@@ -1212,9 +1830,6 @@ angular.module('otrBackendService', [])
                 var headers = {};
                 var form = {};
 
-                headers['Accept'] = ['*/*'];
-                headers['Content-Type'] = ['application/json'];
-
                 path = path.replace('{caseId}', parameters['caseId']);
 
                 if (parameters['caseId'] === undefined) {
@@ -1230,12 +1845,40 @@ angular.module('otrBackendService', [])
                         });
                 }
 
-                this.request('POST', domain + path, parameters, body, headers, queryParameters, form, deferred);
+                var url = domain + path;
+                var options = {
+                    timeout: parameters.$timeout,
+                    method: 'POST',
+                    url: url,
+                    params: queryParameters,
+                    data: body,
+                    headers: headers
+                };
+                if (Object.keys(form).length > 0) {
+                    options.data = form;
+                    options.headers['Content-Type'] = 'application/x-www-form-urlencoded';
+                    options.transformRequest = OtrService.transformRequest;
+                }
+                $http(options)
+                    .success(function(data, status, headers, config) {
+                        deferred.resolve(data);
+                        if (parameters.$cache !== undefined) {
+                            parameters.$cache.put(url, data, parameters.$cacheItemOpts ? parameters.$cacheItemOpts : {});
+                        }
+                    })
+                    .error(function(data, status, headers, config) {
+                        deferred.reject({
+                            status: status,
+                            headers: headers,
+                            config: config,
+                            body: data
+                        });
+                    });
 
                 return deferred.promise;
             };
             /**
-             * submitRequestForPriceMatch
+             * 
              * @method
              * @name OtrService#submitRequestForPriceMatchUsingPOST
              * @param {string} caseId - caseId
@@ -1255,9 +1898,6 @@ angular.module('otrBackendService', [])
                 var queryParameters = {};
                 var headers = {};
                 var form = {};
-
-                headers['Accept'] = ['application/json'];
-                headers['Content-Type'] = ['application/json'];
 
                 path = path.replace('{caseId}', parameters['caseId']);
 
@@ -1283,12 +1923,40 @@ angular.module('otrBackendService', [])
                         });
                 }
 
-                this.request('POST', domain + path, parameters, body, headers, queryParameters, form, deferred);
+                var url = domain + path;
+                var options = {
+                    timeout: parameters.$timeout,
+                    method: 'POST',
+                    url: url,
+                    params: queryParameters,
+                    data: body,
+                    headers: headers
+                };
+                if (Object.keys(form).length > 0) {
+                    options.data = form;
+                    options.headers['Content-Type'] = 'application/x-www-form-urlencoded';
+                    options.transformRequest = OtrService.transformRequest;
+                }
+                $http(options)
+                    .success(function(data, status, headers, config) {
+                        deferred.resolve(data);
+                        if (parameters.$cache !== undefined) {
+                            parameters.$cache.put(url, data, parameters.$cacheItemOpts ? parameters.$cacheItemOpts : {});
+                        }
+                    })
+                    .error(function(data, status, headers, config) {
+                        deferred.reject({
+                            status: status,
+                            headers: headers,
+                            config: config,
+                            body: data
+                        });
+                    });
 
                 return deferred.promise;
             };
             /**
-             * Apply referral code to a case to adjust the estimated cost and/or to assign the rightful lawfirm. This operation is idempotent
+             * 
              * @method
              * @name OtrService#applyReferralCodeUsingPOST
              * @param {string} caseId - caseId
@@ -1308,9 +1976,6 @@ angular.module('otrBackendService', [])
                 var queryParameters = {};
                 var headers = {};
                 var form = {};
-
-                headers['Accept'] = ['*/*'];
-                headers['Content-Type'] = ['application/json'];
 
                 path = path.replace('{caseId}', parameters['caseId']);
 
@@ -1334,12 +1999,40 @@ angular.module('otrBackendService', [])
                         });
                 }
 
-                this.request('POST', domain + path, parameters, body, headers, queryParameters, form, deferred);
+                var url = domain + path;
+                var options = {
+                    timeout: parameters.$timeout,
+                    method: 'POST',
+                    url: url,
+                    params: queryParameters,
+                    data: body,
+                    headers: headers
+                };
+                if (Object.keys(form).length > 0) {
+                    options.data = form;
+                    options.headers['Content-Type'] = 'application/x-www-form-urlencoded';
+                    options.transformRequest = OtrService.transformRequest;
+                }
+                $http(options)
+                    .success(function(data, status, headers, config) {
+                        deferred.resolve(data);
+                        if (parameters.$cache !== undefined) {
+                            parameters.$cache.put(url, data, parameters.$cacheItemOpts ? parameters.$cacheItemOpts : {});
+                        }
+                    })
+                    .error(function(data, status, headers, config) {
+                        deferred.reject({
+                            status: status,
+                            headers: headers,
+                            config: config,
+                            body: data
+                        });
+                    });
 
                 return deferred.promise;
             };
             /**
-             * refundChargeToClient
+             * 
              * @method
              * @name OtrService#refundChargeToClientUsingPOST
              * @param {string} caseId - caseId
@@ -1359,9 +2052,6 @@ angular.module('otrBackendService', [])
                 var headers = {};
                 var form = {};
 
-                headers['Accept'] = ['*/*'];
-                headers['Content-Type'] = ['application/json'];
-
                 path = path.replace('{caseId}', parameters['caseId']);
 
                 if (parameters['caseId'] === undefined) {
@@ -1377,12 +2067,40 @@ angular.module('otrBackendService', [])
                         });
                 }
 
-                this.request('POST', domain + path, parameters, body, headers, queryParameters, form, deferred);
+                var url = domain + path;
+                var options = {
+                    timeout: parameters.$timeout,
+                    method: 'POST',
+                    url: url,
+                    params: queryParameters,
+                    data: body,
+                    headers: headers
+                };
+                if (Object.keys(form).length > 0) {
+                    options.data = form;
+                    options.headers['Content-Type'] = 'application/x-www-form-urlencoded';
+                    options.transformRequest = OtrService.transformRequest;
+                }
+                $http(options)
+                    .success(function(data, status, headers, config) {
+                        deferred.resolve(data);
+                        if (parameters.$cache !== undefined) {
+                            parameters.$cache.put(url, data, parameters.$cacheItemOpts ? parameters.$cacheItemOpts : {});
+                        }
+                    })
+                    .error(function(data, status, headers, config) {
+                        deferred.reject({
+                            status: status,
+                            headers: headers,
+                            config: config,
+                            body: data
+                        });
+                    });
 
                 return deferred.promise;
             };
             /**
-             * isRefundEligible
+             * 
              * @method
              * @name OtrService#isRefundEligibleUsingGET
              * @param {string} caseId - caseId
@@ -1402,9 +2120,6 @@ angular.module('otrBackendService', [])
                 var headers = {};
                 var form = {};
 
-                headers['Accept'] = ['*/*'];
-                headers['Content-Type'] = ['application/json'];
-
                 path = path.replace('{caseId}', parameters['caseId']);
 
                 if (parameters['caseId'] === undefined) {
@@ -1420,12 +2135,45 @@ angular.module('otrBackendService', [])
                         });
                 }
 
-                this.request('GET', domain + path, parameters, body, headers, queryParameters, form, deferred);
+                var url = domain + path;
+                var cached = parameters.$cache && parameters.$cache.get(url);
+                if (cached !== undefined && parameters.$refresh !== true) {
+                    deferred.resolve(cached);
+                    return deferred.promise;
+                }
+                var options = {
+                    timeout: parameters.$timeout,
+                    method: 'GET',
+                    url: url,
+                    params: queryParameters,
+                    data: body,
+                    headers: headers
+                };
+                if (Object.keys(form).length > 0) {
+                    options.data = form;
+                    options.headers['Content-Type'] = 'application/x-www-form-urlencoded';
+                    options.transformRequest = OtrService.transformRequest;
+                }
+                $http(options)
+                    .success(function(data, status, headers, config) {
+                        deferred.resolve(data);
+                        if (parameters.$cache !== undefined) {
+                            parameters.$cache.put(url, data, parameters.$cacheItemOpts ? parameters.$cacheItemOpts : {});
+                        }
+                    })
+                    .error(function(data, status, headers, config) {
+                        deferred.reject({
+                            status: status,
+                            headers: headers,
+                            config: config,
+                            body: data
+                        });
+                    });
 
                 return deferred.promise;
             };
             /**
-             * requestLawyer
+             * 
              * @method
              * @name OtrService#requestLawyerUsingPOST
              * @param {string} caseId - caseId
@@ -1445,9 +2193,6 @@ angular.module('otrBackendService', [])
                 var queryParameters = {};
                 var headers = {};
                 var form = {};
-
-                headers['Accept'] = ['*/*'];
-                headers['Content-Type'] = ['application/json'];
 
                 path = path.replace('{caseId}', parameters['caseId']);
 
@@ -1473,12 +2218,40 @@ angular.module('otrBackendService', [])
                         });
                 }
 
-                this.request('POST', domain + path, parameters, body, headers, queryParameters, form, deferred);
+                var url = domain + path;
+                var options = {
+                    timeout: parameters.$timeout,
+                    method: 'POST',
+                    url: url,
+                    params: queryParameters,
+                    data: body,
+                    headers: headers
+                };
+                if (Object.keys(form).length > 0) {
+                    options.data = form;
+                    options.headers['Content-Type'] = 'application/x-www-form-urlencoded';
+                    options.transformRequest = OtrService.transformRequest;
+                }
+                $http(options)
+                    .success(function(data, status, headers, config) {
+                        deferred.resolve(data);
+                        if (parameters.$cache !== undefined) {
+                            parameters.$cache.put(url, data, parameters.$cacheItemOpts ? parameters.$cacheItemOpts : {});
+                        }
+                    })
+                    .error(function(data, status, headers, config) {
+                        deferred.reject({
+                            status: status,
+                            headers: headers,
+                            config: config,
+                            body: data
+                        });
+                    });
 
                 return deferred.promise;
             };
             /**
-             * markCaseAsResolved
+             * 
              * @method
              * @name OtrService#markCaseAsResolvedUsingPOST
              * @param {string} caseId - caseId
@@ -1498,9 +2271,6 @@ angular.module('otrBackendService', [])
                 var queryParameters = {};
                 var headers = {};
                 var form = {};
-
-                headers['Accept'] = ['*/*'];
-                headers['Content-Type'] = ['application/json'];
 
                 path = path.replace('{caseId}', parameters['caseId']);
 
@@ -1526,12 +2296,40 @@ angular.module('otrBackendService', [])
                         });
                 }
 
-                this.request('POST', domain + path, parameters, body, headers, queryParameters, form, deferred);
+                var url = domain + path;
+                var options = {
+                    timeout: parameters.$timeout,
+                    method: 'POST',
+                    url: url,
+                    params: queryParameters,
+                    data: body,
+                    headers: headers
+                };
+                if (Object.keys(form).length > 0) {
+                    options.data = form;
+                    options.headers['Content-Type'] = 'application/x-www-form-urlencoded';
+                    options.transformRequest = OtrService.transformRequest;
+                }
+                $http(options)
+                    .success(function(data, status, headers, config) {
+                        deferred.resolve(data);
+                        if (parameters.$cache !== undefined) {
+                            parameters.$cache.put(url, data, parameters.$cacheItemOpts ? parameters.$cacheItemOpts : {});
+                        }
+                    })
+                    .error(function(data, status, headers, config) {
+                        deferred.reject({
+                            status: status,
+                            headers: headers,
+                            config: config,
+                            body: data
+                        });
+                    });
 
                 return deferred.promise;
             };
             /**
-             * transferCase
+             * 
              * @method
              * @name OtrService#transferCaseUsingPUT
              * @param {string} caseId - caseId
@@ -1551,9 +2349,6 @@ angular.module('otrBackendService', [])
                 var queryParameters = {};
                 var headers = {};
                 var form = {};
-
-                headers['Accept'] = ['*/*'];
-                headers['Content-Type'] = ['application/json'];
 
                 path = path.replace('{caseId}', parameters['caseId']);
 
@@ -1577,12 +2372,40 @@ angular.module('otrBackendService', [])
                         });
                 }
 
-                this.request('PUT', domain + path, parameters, body, headers, queryParameters, form, deferred);
+                var url = domain + path;
+                var options = {
+                    timeout: parameters.$timeout,
+                    method: 'PUT',
+                    url: url,
+                    params: queryParameters,
+                    data: body,
+                    headers: headers
+                };
+                if (Object.keys(form).length > 0) {
+                    options.data = form;
+                    options.headers['Content-Type'] = 'application/x-www-form-urlencoded';
+                    options.transformRequest = OtrService.transformRequest;
+                }
+                $http(options)
+                    .success(function(data, status, headers, config) {
+                        deferred.resolve(data);
+                        if (parameters.$cache !== undefined) {
+                            parameters.$cache.put(url, data, parameters.$cacheItemOpts ? parameters.$cacheItemOpts : {});
+                        }
+                    })
+                    .error(function(data, status, headers, config) {
+                        deferred.reject({
+                            status: status,
+                            headers: headers,
+                            config: config,
+                            body: data
+                        });
+                    });
 
                 return deferred.promise;
             };
             /**
-             * getSSLPublicCertFile
+             * 
              * @method
              * @name OtrService#getSSLPublicCertFileUsingGET
              * @param {string} encoding - certEncoding
@@ -1602,9 +2425,6 @@ angular.module('otrBackendService', [])
                 var headers = {};
                 var form = {};
 
-                headers['Accept'] = ['*/*'];
-                headers['Content-Type'] = ['application/json'];
-
                 if (parameters['encoding'] !== undefined) {
                     queryParameters['encoding'] = parameters['encoding'];
                 }
@@ -1622,12 +2442,45 @@ angular.module('otrBackendService', [])
                         });
                 }
 
-                this.request('GET', domain + path, parameters, body, headers, queryParameters, form, deferred);
+                var url = domain + path;
+                var cached = parameters.$cache && parameters.$cache.get(url);
+                if (cached !== undefined && parameters.$refresh !== true) {
+                    deferred.resolve(cached);
+                    return deferred.promise;
+                }
+                var options = {
+                    timeout: parameters.$timeout,
+                    method: 'GET',
+                    url: url,
+                    params: queryParameters,
+                    data: body,
+                    headers: headers
+                };
+                if (Object.keys(form).length > 0) {
+                    options.data = form;
+                    options.headers['Content-Type'] = 'application/x-www-form-urlencoded';
+                    options.transformRequest = OtrService.transformRequest;
+                }
+                $http(options)
+                    .success(function(data, status, headers, config) {
+                        deferred.resolve(data);
+                        if (parameters.$cache !== undefined) {
+                            parameters.$cache.put(url, data, parameters.$cacheItemOpts ? parameters.$cacheItemOpts : {});
+                        }
+                    })
+                    .error(function(data, status, headers, config) {
+                        deferred.reject({
+                            status: status,
+                            headers: headers,
+                            config: config,
+                            body: data
+                        });
+                    });
 
                 return deferred.promise;
             };
             /**
-             * createNewCitation
+             * 
              * @method
              * @name OtrService#createNewCitationUsingPOST
              * @param {} request - request
@@ -1647,9 +2500,6 @@ angular.module('otrBackendService', [])
                 var headers = {};
                 var form = {};
 
-                headers['Accept'] = ['*/*'];
-                headers['Content-Type'] = ['application/json'];
-
                 if (parameters['request'] !== undefined) {
                     body = parameters['request'];
                 }
@@ -1667,12 +2517,40 @@ angular.module('otrBackendService', [])
                         });
                 }
 
-                this.request('POST', domain + path, parameters, body, headers, queryParameters, form, deferred);
+                var url = domain + path;
+                var options = {
+                    timeout: parameters.$timeout,
+                    method: 'POST',
+                    url: url,
+                    params: queryParameters,
+                    data: body,
+                    headers: headers
+                };
+                if (Object.keys(form).length > 0) {
+                    options.data = form;
+                    options.headers['Content-Type'] = 'application/x-www-form-urlencoded';
+                    options.transformRequest = OtrService.transformRequest;
+                }
+                $http(options)
+                    .success(function(data, status, headers, config) {
+                        deferred.resolve(data);
+                        if (parameters.$cache !== undefined) {
+                            parameters.$cache.put(url, data, parameters.$cacheItemOpts ? parameters.$cacheItemOpts : {});
+                        }
+                    })
+                    .error(function(data, status, headers, config) {
+                        deferred.reject({
+                            status: status,
+                            headers: headers,
+                            config: config,
+                            body: data
+                        });
+                    });
 
                 return deferred.promise;
             };
             /**
-             * getCitation
+             * 
              * @method
              * @name OtrService#getCitationUsingGET
              * @param {string} citationIdString - citationIdString
@@ -1692,9 +2570,6 @@ angular.module('otrBackendService', [])
                 var headers = {};
                 var form = {};
 
-                headers['Accept'] = ['*/*'];
-                headers['Content-Type'] = ['application/json'];
-
                 path = path.replace('{citationIdString}', parameters['citationIdString']);
 
                 if (parameters['citationIdString'] === undefined) {
@@ -1710,12 +2585,45 @@ angular.module('otrBackendService', [])
                         });
                 }
 
-                this.request('GET', domain + path, parameters, body, headers, queryParameters, form, deferred);
+                var url = domain + path;
+                var cached = parameters.$cache && parameters.$cache.get(url);
+                if (cached !== undefined && parameters.$refresh !== true) {
+                    deferred.resolve(cached);
+                    return deferred.promise;
+                }
+                var options = {
+                    timeout: parameters.$timeout,
+                    method: 'GET',
+                    url: url,
+                    params: queryParameters,
+                    data: body,
+                    headers: headers
+                };
+                if (Object.keys(form).length > 0) {
+                    options.data = form;
+                    options.headers['Content-Type'] = 'application/x-www-form-urlencoded';
+                    options.transformRequest = OtrService.transformRequest;
+                }
+                $http(options)
+                    .success(function(data, status, headers, config) {
+                        deferred.resolve(data);
+                        if (parameters.$cache !== undefined) {
+                            parameters.$cache.put(url, data, parameters.$cacheItemOpts ? parameters.$cacheItemOpts : {});
+                        }
+                    })
+                    .error(function(data, status, headers, config) {
+                        deferred.reject({
+                            status: status,
+                            headers: headers,
+                            config: config,
+                            body: data
+                        });
+                    });
 
                 return deferred.promise;
             };
             /**
-             * updateCitation
+             * 
              * @method
              * @name OtrService#updateCitationUsingPUT
              * @param {string} citationIdString - citationIdString
@@ -1735,9 +2643,6 @@ angular.module('otrBackendService', [])
                 var queryParameters = {};
                 var headers = {};
                 var form = {};
-
-                headers['Accept'] = ['*/*'];
-                headers['Content-Type'] = ['application/json'];
 
                 path = path.replace('{citationIdString}', parameters['citationIdString']);
 
@@ -1763,12 +2668,40 @@ angular.module('otrBackendService', [])
                         });
                 }
 
-                this.request('PUT', domain + path, parameters, body, headers, queryParameters, form, deferred);
+                var url = domain + path;
+                var options = {
+                    timeout: parameters.$timeout,
+                    method: 'PUT',
+                    url: url,
+                    params: queryParameters,
+                    data: body,
+                    headers: headers
+                };
+                if (Object.keys(form).length > 0) {
+                    options.data = form;
+                    options.headers['Content-Type'] = 'application/x-www-form-urlencoded';
+                    options.transformRequest = OtrService.transformRequest;
+                }
+                $http(options)
+                    .success(function(data, status, headers, config) {
+                        deferred.resolve(data);
+                        if (parameters.$cache !== undefined) {
+                            parameters.$cache.put(url, data, parameters.$cacheItemOpts ? parameters.$cacheItemOpts : {});
+                        }
+                    })
+                    .error(function(data, status, headers, config) {
+                        deferred.reject({
+                            status: status,
+                            headers: headers,
+                            config: config,
+                            body: data
+                        });
+                    });
 
                 return deferred.promise;
             };
             /**
-             * deleteCitation
+             * 
              * @method
              * @name OtrService#deleteCitationUsingDELETE
              * @param {string} citationIdString - citationIdString
@@ -1788,9 +2721,6 @@ angular.module('otrBackendService', [])
                 var headers = {};
                 var form = {};
 
-                headers['Accept'] = ['*/*'];
-                headers['Content-Type'] = ['application/json'];
-
                 path = path.replace('{citationIdString}', parameters['citationIdString']);
 
                 if (parameters['citationIdString'] === undefined) {
@@ -1806,12 +2736,40 @@ angular.module('otrBackendService', [])
                         });
                 }
 
-                this.request('DELETE', domain + path, parameters, body, headers, queryParameters, form, deferred);
+                var url = domain + path;
+                var options = {
+                    timeout: parameters.$timeout,
+                    method: 'DELETE',
+                    url: url,
+                    params: queryParameters,
+                    data: body,
+                    headers: headers
+                };
+                if (Object.keys(form).length > 0) {
+                    options.data = form;
+                    options.headers['Content-Type'] = 'application/x-www-form-urlencoded';
+                    options.transformRequest = OtrService.transformRequest;
+                }
+                $http(options)
+                    .success(function(data, status, headers, config) {
+                        deferred.resolve(data);
+                        if (parameters.$cache !== undefined) {
+                            parameters.$cache.put(url, data, parameters.$cacheItemOpts ? parameters.$cacheItemOpts : {});
+                        }
+                    })
+                    .error(function(data, status, headers, config) {
+                        deferred.reject({
+                            status: status,
+                            headers: headers,
+                            config: config,
+                            body: data
+                        });
+                    });
 
                 return deferred.promise;
             };
             /**
-             * createCase
+             * 
              * @method
              * @name OtrService#createCaseUsingPOST
              * @param {string} citationIdString - citationIdString
@@ -1832,9 +2790,6 @@ angular.module('otrBackendService', [])
                 var headers = {};
                 var form = {};
 
-                headers['Accept'] = ['*/*'];
-                headers['Content-Type'] = ['application/json'];
-
                 path = path.replace('{citationIdString}', parameters['citationIdString']);
 
                 if (parameters['citationIdString'] === undefined) {
@@ -1854,12 +2809,40 @@ angular.module('otrBackendService', [])
                         });
                 }
 
-                this.request('POST', domain + path, parameters, body, headers, queryParameters, form, deferred);
+                var url = domain + path;
+                var options = {
+                    timeout: parameters.$timeout,
+                    method: 'POST',
+                    url: url,
+                    params: queryParameters,
+                    data: body,
+                    headers: headers
+                };
+                if (Object.keys(form).length > 0) {
+                    options.data = form;
+                    options.headers['Content-Type'] = 'application/x-www-form-urlencoded';
+                    options.transformRequest = OtrService.transformRequest;
+                }
+                $http(options)
+                    .success(function(data, status, headers, config) {
+                        deferred.resolve(data);
+                        if (parameters.$cache !== undefined) {
+                            parameters.$cache.put(url, data, parameters.$cacheItemOpts ? parameters.$cacheItemOpts : {});
+                        }
+                    })
+                    .error(function(data, status, headers, config) {
+                        deferred.reject({
+                            status: status,
+                            headers: headers,
+                            config: config,
+                            body: data
+                        });
+                    });
 
                 return deferred.promise;
             };
             /**
-             * dismissFromContactList
+             * 
              * @method
              * @name OtrService#dismissFromContactListUsingPOST
              * @param {string} citationIdString - citationIdString
@@ -1879,9 +2862,6 @@ angular.module('otrBackendService', [])
                 var headers = {};
                 var form = {};
 
-                headers['Accept'] = ['*/*'];
-                headers['Content-Type'] = ['application/json'];
-
                 path = path.replace('{citationIdString}', parameters['citationIdString']);
 
                 if (parameters['citationIdString'] === undefined) {
@@ -1897,12 +2877,40 @@ angular.module('otrBackendService', [])
                         });
                 }
 
-                this.request('POST', domain + path, parameters, body, headers, queryParameters, form, deferred);
+                var url = domain + path;
+                var options = {
+                    timeout: parameters.$timeout,
+                    method: 'POST',
+                    url: url,
+                    params: queryParameters,
+                    data: body,
+                    headers: headers
+                };
+                if (Object.keys(form).length > 0) {
+                    options.data = form;
+                    options.headers['Content-Type'] = 'application/x-www-form-urlencoded';
+                    options.transformRequest = OtrService.transformRequest;
+                }
+                $http(options)
+                    .success(function(data, status, headers, config) {
+                        deferred.resolve(data);
+                        if (parameters.$cache !== undefined) {
+                            parameters.$cache.put(url, data, parameters.$cacheItemOpts ? parameters.$cacheItemOpts : {});
+                        }
+                    })
+                    .error(function(data, status, headers, config) {
+                        deferred.reject({
+                            status: status,
+                            headers: headers,
+                            config: config,
+                            body: data
+                        });
+                    });
 
                 return deferred.promise;
             };
             /**
-             * getCaseFromCitation
+             * 
              * @method
              * @name OtrService#getCaseFromCitationUsingGET
              * @param {string} citationId - citationId
@@ -1922,9 +2930,6 @@ angular.module('otrBackendService', [])
                 var headers = {};
                 var form = {};
 
-                headers['Accept'] = ['*/*'];
-                headers['Content-Type'] = ['application/json'];
-
                 path = path.replace('{citationId}', parameters['citationId']);
 
                 if (parameters['citationId'] === undefined) {
@@ -1940,12 +2945,45 @@ angular.module('otrBackendService', [])
                         });
                 }
 
-                this.request('GET', domain + path, parameters, body, headers, queryParameters, form, deferred);
+                var url = domain + path;
+                var cached = parameters.$cache && parameters.$cache.get(url);
+                if (cached !== undefined && parameters.$refresh !== true) {
+                    deferred.resolve(cached);
+                    return deferred.promise;
+                }
+                var options = {
+                    timeout: parameters.$timeout,
+                    method: 'GET',
+                    url: url,
+                    params: queryParameters,
+                    data: body,
+                    headers: headers
+                };
+                if (Object.keys(form).length > 0) {
+                    options.data = form;
+                    options.headers['Content-Type'] = 'application/x-www-form-urlencoded';
+                    options.transformRequest = OtrService.transformRequest;
+                }
+                $http(options)
+                    .success(function(data, status, headers, config) {
+                        deferred.resolve(data);
+                        if (parameters.$cache !== undefined) {
+                            parameters.$cache.put(url, data, parameters.$cacheItemOpts ? parameters.$cacheItemOpts : {});
+                        }
+                    })
+                    .error(function(data, status, headers, config) {
+                        deferred.reject({
+                            status: status,
+                            headers: headers,
+                            config: config,
+                            body: data
+                        });
+                    });
 
                 return deferred.promise;
             };
             /**
-             * createReferralSourceForCitation
+             * 
              * @method
              * @name OtrService#createReferralSourceForCitationUsingPOST
              * @param {string} citationId - citationId
@@ -1965,9 +3003,6 @@ angular.module('otrBackendService', [])
                 var queryParameters = {};
                 var headers = {};
                 var form = {};
-
-                headers['Accept'] = ['*/*'];
-                headers['Content-Type'] = ['application/json'];
 
                 path = path.replace('{citationId}', parameters['citationId']);
 
@@ -1993,12 +3028,40 @@ angular.module('otrBackendService', [])
                         });
                 }
 
-                this.request('POST', domain + path, parameters, body, headers, queryParameters, form, deferred);
+                var url = domain + path;
+                var options = {
+                    timeout: parameters.$timeout,
+                    method: 'POST',
+                    url: url,
+                    params: queryParameters,
+                    data: body,
+                    headers: headers
+                };
+                if (Object.keys(form).length > 0) {
+                    options.data = form;
+                    options.headers['Content-Type'] = 'application/x-www-form-urlencoded';
+                    options.transformRequest = OtrService.transformRequest;
+                }
+                $http(options)
+                    .success(function(data, status, headers, config) {
+                        deferred.resolve(data);
+                        if (parameters.$cache !== undefined) {
+                            parameters.$cache.put(url, data, parameters.$cacheItemOpts ? parameters.$cacheItemOpts : {});
+                        }
+                    })
+                    .error(function(data, status, headers, config) {
+                        deferred.reject({
+                            status: status,
+                            headers: headers,
+                            config: config,
+                            body: data
+                        });
+                    });
 
                 return deferred.promise;
             };
             /**
-             * getAppConfiguration
+             * 
              * @method
              * @name OtrService#getAppConfigurationUsingGET
              * 
@@ -2017,9 +3080,6 @@ angular.module('otrBackendService', [])
                 var headers = {};
                 var form = {};
 
-                headers['Accept'] = ['*/*'];
-                headers['Content-Type'] = ['application/json'];
-
                 if (parameters.$queryParameters) {
                     Object.keys(parameters.$queryParameters)
                         .forEach(function(parameterName) {
@@ -2028,12 +3088,45 @@ angular.module('otrBackendService', [])
                         });
                 }
 
-                this.request('GET', domain + path, parameters, body, headers, queryParameters, form, deferred);
+                var url = domain + path;
+                var cached = parameters.$cache && parameters.$cache.get(url);
+                if (cached !== undefined && parameters.$refresh !== true) {
+                    deferred.resolve(cached);
+                    return deferred.promise;
+                }
+                var options = {
+                    timeout: parameters.$timeout,
+                    method: 'GET',
+                    url: url,
+                    params: queryParameters,
+                    data: body,
+                    headers: headers
+                };
+                if (Object.keys(form).length > 0) {
+                    options.data = form;
+                    options.headers['Content-Type'] = 'application/x-www-form-urlencoded';
+                    options.transformRequest = OtrService.transformRequest;
+                }
+                $http(options)
+                    .success(function(data, status, headers, config) {
+                        deferred.resolve(data);
+                        if (parameters.$cache !== undefined) {
+                            parameters.$cache.put(url, data, parameters.$cacheItemOpts ? parameters.$cacheItemOpts : {});
+                        }
+                    })
+                    .error(function(data, status, headers, config) {
+                        deferred.reject({
+                            status: status,
+                            headers: headers,
+                            config: config,
+                            body: data
+                        });
+                    });
 
                 return deferred.promise;
             };
             /**
-             * facebookConnect
+             * 
              * @method
              * @name OtrService#facebookConnectUsingPOST
              * @param {string} providerId - providerId
@@ -2053,9 +3146,6 @@ angular.module('otrBackendService', [])
                 var queryParameters = {};
                 var headers = {};
                 var form = {};
-
-                headers['Accept'] = ['*/*'];
-                headers['Content-Type'] = ['application/json'];
 
                 path = path.replace('{providerId}', parameters['providerId']);
 
@@ -2081,12 +3171,40 @@ angular.module('otrBackendService', [])
                         });
                 }
 
-                this.request('POST', domain + path, parameters, body, headers, queryParameters, form, deferred);
+                var url = domain + path;
+                var options = {
+                    timeout: parameters.$timeout,
+                    method: 'POST',
+                    url: url,
+                    params: queryParameters,
+                    data: body,
+                    headers: headers
+                };
+                if (Object.keys(form).length > 0) {
+                    options.data = form;
+                    options.headers['Content-Type'] = 'application/x-www-form-urlencoded';
+                    options.transformRequest = OtrService.transformRequest;
+                }
+                $http(options)
+                    .success(function(data, status, headers, config) {
+                        deferred.resolve(data);
+                        if (parameters.$cache !== undefined) {
+                            parameters.$cache.put(url, data, parameters.$cacheItemOpts ? parameters.$cacheItemOpts : {});
+                        }
+                    })
+                    .error(function(data, status, headers, config) {
+                        deferred.reject({
+                            status: status,
+                            headers: headers,
+                            config: config,
+                            body: data
+                        });
+                    });
 
                 return deferred.promise;
             };
             /**
-             * listCasesByStatus
+             * 
              * @method
              * @name OtrService#listCasesByStatusUsingPOST
              * @param {} graphRequest - graphRequest
@@ -2106,9 +3224,6 @@ angular.module('otrBackendService', [])
                 var headers = {};
                 var form = {};
 
-                headers['Accept'] = ['application/json'];
-                headers['Content-Type'] = ['application/json'];
-
                 if (parameters['graphRequest'] !== undefined) {
                     body = parameters['graphRequest'];
                 }
@@ -2126,12 +3241,40 @@ angular.module('otrBackendService', [])
                         });
                 }
 
-                this.request('POST', domain + path, parameters, body, headers, queryParameters, form, deferred);
+                var url = domain + path;
+                var options = {
+                    timeout: parameters.$timeout,
+                    method: 'POST',
+                    url: url,
+                    params: queryParameters,
+                    data: body,
+                    headers: headers
+                };
+                if (Object.keys(form).length > 0) {
+                    options.data = form;
+                    options.headers['Content-Type'] = 'application/x-www-form-urlencoded';
+                    options.transformRequest = OtrService.transformRequest;
+                }
+                $http(options)
+                    .success(function(data, status, headers, config) {
+                        deferred.resolve(data);
+                        if (parameters.$cache !== undefined) {
+                            parameters.$cache.put(url, data, parameters.$cacheItemOpts ? parameters.$cacheItemOpts : {});
+                        }
+                    })
+                    .error(function(data, status, headers, config) {
+                        deferred.reject({
+                            status: status,
+                            headers: headers,
+                            config: config,
+                            body: data
+                        });
+                    });
 
                 return deferred.promise;
             };
             /**
-             * listCitationsAndCases
+             * 
              * @method
              * @name OtrService#listCitationsAndCasesUsingPOST
              * @param {} graphRequest - graphRequest
@@ -2151,9 +3294,6 @@ angular.module('otrBackendService', [])
                 var headers = {};
                 var form = {};
 
-                headers['Accept'] = ['application/json'];
-                headers['Content-Type'] = ['application/json'];
-
                 if (parameters['graphRequest'] !== undefined) {
                     body = parameters['graphRequest'];
                 }
@@ -2171,12 +3311,40 @@ angular.module('otrBackendService', [])
                         });
                 }
 
-                this.request('POST', domain + path, parameters, body, headers, queryParameters, form, deferred);
+                var url = domain + path;
+                var options = {
+                    timeout: parameters.$timeout,
+                    method: 'POST',
+                    url: url,
+                    params: queryParameters,
+                    data: body,
+                    headers: headers
+                };
+                if (Object.keys(form).length > 0) {
+                    options.data = form;
+                    options.headers['Content-Type'] = 'application/x-www-form-urlencoded';
+                    options.transformRequest = OtrService.transformRequest;
+                }
+                $http(options)
+                    .success(function(data, status, headers, config) {
+                        deferred.resolve(data);
+                        if (parameters.$cache !== undefined) {
+                            parameters.$cache.put(url, data, parameters.$cacheItemOpts ? parameters.$cacheItemOpts : {});
+                        }
+                    })
+                    .error(function(data, status, headers, config) {
+                        deferred.reject({
+                            status: status,
+                            headers: headers,
+                            config: config,
+                            body: data
+                        });
+                    });
 
                 return deferred.promise;
             };
             /**
-             * listCustomers
+             * 
              * @method
              * @name OtrService#listCustomersUsingPOST
              * @param {} graphRequest - graphRequest
@@ -2196,9 +3364,6 @@ angular.module('otrBackendService', [])
                 var headers = {};
                 var form = {};
 
-                headers['Accept'] = ['application/json'];
-                headers['Content-Type'] = ['application/json'];
-
                 if (parameters['graphRequest'] !== undefined) {
                     body = parameters['graphRequest'];
                 }
@@ -2216,12 +3381,40 @@ angular.module('otrBackendService', [])
                         });
                 }
 
-                this.request('POST', domain + path, parameters, body, headers, queryParameters, form, deferred);
+                var url = domain + path;
+                var options = {
+                    timeout: parameters.$timeout,
+                    method: 'POST',
+                    url: url,
+                    params: queryParameters,
+                    data: body,
+                    headers: headers
+                };
+                if (Object.keys(form).length > 0) {
+                    options.data = form;
+                    options.headers['Content-Type'] = 'application/x-www-form-urlencoded';
+                    options.transformRequest = OtrService.transformRequest;
+                }
+                $http(options)
+                    .success(function(data, status, headers, config) {
+                        deferred.resolve(data);
+                        if (parameters.$cache !== undefined) {
+                            parameters.$cache.put(url, data, parameters.$cacheItemOpts ? parameters.$cacheItemOpts : {});
+                        }
+                    })
+                    .error(function(data, status, headers, config) {
+                        deferred.reject({
+                            status: status,
+                            headers: headers,
+                            config: config,
+                            body: data
+                        });
+                    });
 
                 return deferred.promise;
             };
             /**
-             * listDropoffs
+             * 
              * @method
              * @name OtrService#listDropoffsUsingPOST
              * @param {} graphRequest - graphRequest
@@ -2241,8 +3434,75 @@ angular.module('otrBackendService', [])
                 var headers = {};
                 var form = {};
 
-                headers['Accept'] = ['application/json'];
-                headers['Content-Type'] = ['application/json'];
+                if (parameters['graphRequest'] !== undefined) {
+                    body = parameters['graphRequest'];
+                }
+
+                if (parameters['graphRequest'] === undefined) {
+                    deferred.reject(new Error('Missing required  parameter: graphRequest'));
+                    return deferred.promise;
+                }
+
+                if (parameters.$queryParameters) {
+                    Object.keys(parameters.$queryParameters)
+                        .forEach(function(parameterName) {
+                            var parameter = parameters.$queryParameters[parameterName];
+                            queryParameters[parameterName] = parameter;
+                        });
+                }
+
+                var url = domain + path;
+                var options = {
+                    timeout: parameters.$timeout,
+                    method: 'POST',
+                    url: url,
+                    params: queryParameters,
+                    data: body,
+                    headers: headers
+                };
+                if (Object.keys(form).length > 0) {
+                    options.data = form;
+                    options.headers['Content-Type'] = 'application/x-www-form-urlencoded';
+                    options.transformRequest = OtrService.transformRequest;
+                }
+                $http(options)
+                    .success(function(data, status, headers, config) {
+                        deferred.resolve(data);
+                        if (parameters.$cache !== undefined) {
+                            parameters.$cache.put(url, data, parameters.$cacheItemOpts ? parameters.$cacheItemOpts : {});
+                        }
+                    })
+                    .error(function(data, status, headers, config) {
+                        deferred.reject({
+                            status: status,
+                            headers: headers,
+                            config: config,
+                            body: data
+                        });
+                    });
+
+                return deferred.promise;
+            };
+            /**
+             * 
+             * @method
+             * @name OtrService#listExpensesUsingPOST
+             * @param {} graphRequest - graphRequest
+             * 
+             */
+            OtrService.prototype.listExpensesUsingPOST = function(parameters) {
+                if (parameters === undefined) {
+                    parameters = {};
+                }
+                var deferred = $q.defer();
+
+                var domain = this.domain;
+                var path = '/api/v1/console/expenses';
+
+                var body;
+                var queryParameters = {};
+                var headers = {};
+                var form = {};
 
                 if (parameters['graphRequest'] !== undefined) {
                     body = parameters['graphRequest'];
@@ -2261,12 +3521,40 @@ angular.module('otrBackendService', [])
                         });
                 }
 
-                this.request('POST', domain + path, parameters, body, headers, queryParameters, form, deferred);
+                var url = domain + path;
+                var options = {
+                    timeout: parameters.$timeout,
+                    method: 'POST',
+                    url: url,
+                    params: queryParameters,
+                    data: body,
+                    headers: headers
+                };
+                if (Object.keys(form).length > 0) {
+                    options.data = form;
+                    options.headers['Content-Type'] = 'application/x-www-form-urlencoded';
+                    options.transformRequest = OtrService.transformRequest;
+                }
+                $http(options)
+                    .success(function(data, status, headers, config) {
+                        deferred.resolve(data);
+                        if (parameters.$cache !== undefined) {
+                            parameters.$cache.put(url, data, parameters.$cacheItemOpts ? parameters.$cacheItemOpts : {});
+                        }
+                    })
+                    .error(function(data, status, headers, config) {
+                        deferred.reject({
+                            status: status,
+                            headers: headers,
+                            config: config,
+                            body: data
+                        });
+                    });
 
                 return deferred.promise;
             };
             /**
-             * listLawyerLeads
+             * 
              * @method
              * @name OtrService#listLawyerLeadsUsingPOST
              * @param {} graphRequest - graphRequest
@@ -2286,9 +3574,6 @@ angular.module('otrBackendService', [])
                 var headers = {};
                 var form = {};
 
-                headers['Accept'] = ['application/json'];
-                headers['Content-Type'] = ['application/json'];
-
                 if (parameters['graphRequest'] !== undefined) {
                     body = parameters['graphRequest'];
                 }
@@ -2306,12 +3591,40 @@ angular.module('otrBackendService', [])
                         });
                 }
 
-                this.request('POST', domain + path, parameters, body, headers, queryParameters, form, deferred);
+                var url = domain + path;
+                var options = {
+                    timeout: parameters.$timeout,
+                    method: 'POST',
+                    url: url,
+                    params: queryParameters,
+                    data: body,
+                    headers: headers
+                };
+                if (Object.keys(form).length > 0) {
+                    options.data = form;
+                    options.headers['Content-Type'] = 'application/x-www-form-urlencoded';
+                    options.transformRequest = OtrService.transformRequest;
+                }
+                $http(options)
+                    .success(function(data, status, headers, config) {
+                        deferred.resolve(data);
+                        if (parameters.$cache !== undefined) {
+                            parameters.$cache.put(url, data, parameters.$cacheItemOpts ? parameters.$cacheItemOpts : {});
+                        }
+                    })
+                    .error(function(data, status, headers, config) {
+                        deferred.reject({
+                            status: status,
+                            headers: headers,
+                            config: config,
+                            body: data
+                        });
+                    });
 
                 return deferred.promise;
             };
             /**
-             * listPotentialCustomers
+             * 
              * @method
              * @name OtrService#listPotentialCustomersUsingPOST
              * @param {} graphRequest - graphRequest
@@ -2331,9 +3644,6 @@ angular.module('otrBackendService', [])
                 var headers = {};
                 var form = {};
 
-                headers['Accept'] = ['application/json'];
-                headers['Content-Type'] = ['application/json'];
-
                 if (parameters['graphRequest'] !== undefined) {
                     body = parameters['graphRequest'];
                 }
@@ -2351,12 +3661,40 @@ angular.module('otrBackendService', [])
                         });
                 }
 
-                this.request('POST', domain + path, parameters, body, headers, queryParameters, form, deferred);
+                var url = domain + path;
+                var options = {
+                    timeout: parameters.$timeout,
+                    method: 'POST',
+                    url: url,
+                    params: queryParameters,
+                    data: body,
+                    headers: headers
+                };
+                if (Object.keys(form).length > 0) {
+                    options.data = form;
+                    options.headers['Content-Type'] = 'application/x-www-form-urlencoded';
+                    options.transformRequest = OtrService.transformRequest;
+                }
+                $http(options)
+                    .success(function(data, status, headers, config) {
+                        deferred.resolve(data);
+                        if (parameters.$cache !== undefined) {
+                            parameters.$cache.put(url, data, parameters.$cacheItemOpts ? parameters.$cacheItemOpts : {});
+                        }
+                    })
+                    .error(function(data, status, headers, config) {
+                        deferred.reject({
+                            status: status,
+                            headers: headers,
+                            config: config,
+                            body: data
+                        });
+                    });
 
                 return deferred.promise;
             };
             /**
-             * listRevenue
+             * 
              * @method
              * @name OtrService#listRevenueUsingPOST
              * @param {} graphRequest - graphRequest
@@ -2376,9 +3714,6 @@ angular.module('otrBackendService', [])
                 var headers = {};
                 var form = {};
 
-                headers['Accept'] = ['application/json'];
-                headers['Content-Type'] = ['application/json'];
-
                 if (parameters['graphRequest'] !== undefined) {
                     body = parameters['graphRequest'];
                 }
@@ -2396,12 +3731,40 @@ angular.module('otrBackendService', [])
                         });
                 }
 
-                this.request('POST', domain + path, parameters, body, headers, queryParameters, form, deferred);
+                var url = domain + path;
+                var options = {
+                    timeout: parameters.$timeout,
+                    method: 'POST',
+                    url: url,
+                    params: queryParameters,
+                    data: body,
+                    headers: headers
+                };
+                if (Object.keys(form).length > 0) {
+                    options.data = form;
+                    options.headers['Content-Type'] = 'application/x-www-form-urlencoded';
+                    options.transformRequest = OtrService.transformRequest;
+                }
+                $http(options)
+                    .success(function(data, status, headers, config) {
+                        deferred.resolve(data);
+                        if (parameters.$cache !== undefined) {
+                            parameters.$cache.put(url, data, parameters.$cacheItemOpts ? parameters.$cacheItemOpts : {});
+                        }
+                    })
+                    .error(function(data, status, headers, config) {
+                        deferred.reject({
+                            status: status,
+                            headers: headers,
+                            config: config,
+                            body: data
+                        });
+                    });
 
                 return deferred.promise;
             };
             /**
-             * listSubscribers
+             * 
              * @method
              * @name OtrService#listSubscribersUsingPOST
              * @param {} graphRequest - graphRequest
@@ -2421,9 +3784,6 @@ angular.module('otrBackendService', [])
                 var headers = {};
                 var form = {};
 
-                headers['Accept'] = ['application/json'];
-                headers['Content-Type'] = ['application/json'];
-
                 if (parameters['graphRequest'] !== undefined) {
                     body = parameters['graphRequest'];
                 }
@@ -2441,12 +3801,40 @@ angular.module('otrBackendService', [])
                         });
                 }
 
-                this.request('POST', domain + path, parameters, body, headers, queryParameters, form, deferred);
+                var url = domain + path;
+                var options = {
+                    timeout: parameters.$timeout,
+                    method: 'POST',
+                    url: url,
+                    params: queryParameters,
+                    data: body,
+                    headers: headers
+                };
+                if (Object.keys(form).length > 0) {
+                    options.data = form;
+                    options.headers['Content-Type'] = 'application/x-www-form-urlencoded';
+                    options.transformRequest = OtrService.transformRequest;
+                }
+                $http(options)
+                    .success(function(data, status, headers, config) {
+                        deferred.resolve(data);
+                        if (parameters.$cache !== undefined) {
+                            parameters.$cache.put(url, data, parameters.$cacheItemOpts ? parameters.$cacheItemOpts : {});
+                        }
+                    })
+                    .error(function(data, status, headers, config) {
+                        deferred.reject({
+                            status: status,
+                            headers: headers,
+                            config: config,
+                            body: data
+                        });
+                    });
 
                 return deferred.promise;
             };
             /**
-             * getRegisteredUsers
+             * 
              * @method
              * @name OtrService#getRegisteredUsersUsingPOST
              * @param {} graphRequest - graphRequest
@@ -2466,9 +3854,6 @@ angular.module('otrBackendService', [])
                 var headers = {};
                 var form = {};
 
-                headers['Accept'] = ['application/json'];
-                headers['Content-Type'] = ['application/json'];
-
                 if (parameters['graphRequest'] !== undefined) {
                     body = parameters['graphRequest'];
                 }
@@ -2486,12 +3871,115 @@ angular.module('otrBackendService', [])
                         });
                 }
 
-                this.request('POST', domain + path, parameters, body, headers, queryParameters, form, deferred);
+                var url = domain + path;
+                var options = {
+                    timeout: parameters.$timeout,
+                    method: 'POST',
+                    url: url,
+                    params: queryParameters,
+                    data: body,
+                    headers: headers
+                };
+                if (Object.keys(form).length > 0) {
+                    options.data = form;
+                    options.headers['Content-Type'] = 'application/x-www-form-urlencoded';
+                    options.transformRequest = OtrService.transformRequest;
+                }
+                $http(options)
+                    .success(function(data, status, headers, config) {
+                        deferred.resolve(data);
+                        if (parameters.$cache !== undefined) {
+                            parameters.$cache.put(url, data, parameters.$cacheItemOpts ? parameters.$cacheItemOpts : {});
+                        }
+                    })
+                    .error(function(data, status, headers, config) {
+                        deferred.reject({
+                            status: status,
+                            headers: headers,
+                            config: config,
+                            body: data
+                        });
+                    });
 
                 return deferred.promise;
             };
             /**
-             * searchCourts
+             * 
+             * @method
+             * @name OtrService#getCountiesUsingGET
+             * @param {string} state - state
+             * 
+             */
+            OtrService.prototype.getCountiesUsingGET = function(parameters) {
+                if (parameters === undefined) {
+                    parameters = {};
+                }
+                var deferred = $q.defer();
+
+                var domain = this.domain;
+                var path = '/api/v1/counties';
+
+                var body;
+                var queryParameters = {};
+                var headers = {};
+                var form = {};
+
+                if (parameters['state'] !== undefined) {
+                    queryParameters['state'] = parameters['state'];
+                }
+
+                if (parameters['state'] === undefined) {
+                    deferred.reject(new Error('Missing required  parameter: state'));
+                    return deferred.promise;
+                }
+
+                if (parameters.$queryParameters) {
+                    Object.keys(parameters.$queryParameters)
+                        .forEach(function(parameterName) {
+                            var parameter = parameters.$queryParameters[parameterName];
+                            queryParameters[parameterName] = parameter;
+                        });
+                }
+
+                var url = domain + path;
+                var cached = parameters.$cache && parameters.$cache.get(url);
+                if (cached !== undefined && parameters.$refresh !== true) {
+                    deferred.resolve(cached);
+                    return deferred.promise;
+                }
+                var options = {
+                    timeout: parameters.$timeout,
+                    method: 'GET',
+                    url: url,
+                    params: queryParameters,
+                    data: body,
+                    headers: headers
+                };
+                if (Object.keys(form).length > 0) {
+                    options.data = form;
+                    options.headers['Content-Type'] = 'application/x-www-form-urlencoded';
+                    options.transformRequest = OtrService.transformRequest;
+                }
+                $http(options)
+                    .success(function(data, status, headers, config) {
+                        deferred.resolve(data);
+                        if (parameters.$cache !== undefined) {
+                            parameters.$cache.put(url, data, parameters.$cacheItemOpts ? parameters.$cacheItemOpts : {});
+                        }
+                    })
+                    .error(function(data, status, headers, config) {
+                        deferred.reject({
+                            status: status,
+                            headers: headers,
+                            config: config,
+                            body: data
+                        });
+                    });
+
+                return deferred.promise;
+            };
+            /**
+             * 
              * @method
              * @name OtrService#searchCourtsUsingGET
              * @param {string} q - q
@@ -2513,9 +4001,6 @@ angular.module('otrBackendService', [])
                 var queryParameters = {};
                 var headers = {};
                 var form = {};
-
-                headers['Accept'] = ['*/*'];
-                headers['Content-Type'] = ['application/json'];
 
                 if (parameters['q'] !== undefined) {
                     queryParameters['q'] = parameters['q'];
@@ -2541,12 +4026,45 @@ angular.module('otrBackendService', [])
                         });
                 }
 
-                this.request('GET', domain + path, parameters, body, headers, queryParameters, form, deferred);
+                var url = domain + path;
+                var cached = parameters.$cache && parameters.$cache.get(url);
+                if (cached !== undefined && parameters.$refresh !== true) {
+                    deferred.resolve(cached);
+                    return deferred.promise;
+                }
+                var options = {
+                    timeout: parameters.$timeout,
+                    method: 'GET',
+                    url: url,
+                    params: queryParameters,
+                    data: body,
+                    headers: headers
+                };
+                if (Object.keys(form).length > 0) {
+                    options.data = form;
+                    options.headers['Content-Type'] = 'application/x-www-form-urlencoded';
+                    options.transformRequest = OtrService.transformRequest;
+                }
+                $http(options)
+                    .success(function(data, status, headers, config) {
+                        deferred.resolve(data);
+                        if (parameters.$cache !== undefined) {
+                            parameters.$cache.put(url, data, parameters.$cacheItemOpts ? parameters.$cacheItemOpts : {});
+                        }
+                    })
+                    .error(function(data, status, headers, config) {
+                        deferred.reject({
+                            status: status,
+                            headers: headers,
+                            config: config,
+                            body: data
+                        });
+                    });
 
                 return deferred.promise;
             };
             /**
-             * paginateCourts
+             * 
              * @method
              * @name OtrService#paginateCourtsUsingGET
              * @param {integer} page - page
@@ -2567,9 +4085,6 @@ angular.module('otrBackendService', [])
                 var headers = {};
                 var form = {};
 
-                headers['Accept'] = ['*/*'];
-                headers['Content-Type'] = ['application/json'];
-
                 if (parameters['page'] !== undefined) {
                     queryParameters['page'] = parameters['page'];
                 }
@@ -2586,12 +4101,45 @@ angular.module('otrBackendService', [])
                         });
                 }
 
-                this.request('GET', domain + path, parameters, body, headers, queryParameters, form, deferred);
+                var url = domain + path;
+                var cached = parameters.$cache && parameters.$cache.get(url);
+                if (cached !== undefined && parameters.$refresh !== true) {
+                    deferred.resolve(cached);
+                    return deferred.promise;
+                }
+                var options = {
+                    timeout: parameters.$timeout,
+                    method: 'GET',
+                    url: url,
+                    params: queryParameters,
+                    data: body,
+                    headers: headers
+                };
+                if (Object.keys(form).length > 0) {
+                    options.data = form;
+                    options.headers['Content-Type'] = 'application/x-www-form-urlencoded';
+                    options.transformRequest = OtrService.transformRequest;
+                }
+                $http(options)
+                    .success(function(data, status, headers, config) {
+                        deferred.resolve(data);
+                        if (parameters.$cache !== undefined) {
+                            parameters.$cache.put(url, data, parameters.$cacheItemOpts ? parameters.$cacheItemOpts : {});
+                        }
+                    })
+                    .error(function(data, status, headers, config) {
+                        deferred.reject({
+                            status: status,
+                            headers: headers,
+                            config: config,
+                            body: data
+                        });
+                    });
 
                 return deferred.promise;
             };
             /**
-             * getCourts
+             * 
              * @method
              * @name OtrService#getCourtsUsingGET
              * @param {string} state - state
@@ -2613,9 +4161,6 @@ angular.module('otrBackendService', [])
                 var queryParameters = {};
                 var headers = {};
                 var form = {};
-
-                headers['Accept'] = ['*/*'];
-                headers['Content-Type'] = ['application/json'];
 
                 if (parameters['state'] !== undefined) {
                     queryParameters['state'] = parameters['state'];
@@ -2641,12 +4186,45 @@ angular.module('otrBackendService', [])
                         });
                 }
 
-                this.request('GET', domain + path, parameters, body, headers, queryParameters, form, deferred);
+                var url = domain + path;
+                var cached = parameters.$cache && parameters.$cache.get(url);
+                if (cached !== undefined && parameters.$refresh !== true) {
+                    deferred.resolve(cached);
+                    return deferred.promise;
+                }
+                var options = {
+                    timeout: parameters.$timeout,
+                    method: 'GET',
+                    url: url,
+                    params: queryParameters,
+                    data: body,
+                    headers: headers
+                };
+                if (Object.keys(form).length > 0) {
+                    options.data = form;
+                    options.headers['Content-Type'] = 'application/x-www-form-urlencoded';
+                    options.transformRequest = OtrService.transformRequest;
+                }
+                $http(options)
+                    .success(function(data, status, headers, config) {
+                        deferred.resolve(data);
+                        if (parameters.$cache !== undefined) {
+                            parameters.$cache.put(url, data, parameters.$cacheItemOpts ? parameters.$cacheItemOpts : {});
+                        }
+                    })
+                    .error(function(data, status, headers, config) {
+                        deferred.reject({
+                            status: status,
+                            headers: headers,
+                            config: config,
+                            body: data
+                        });
+                    });
 
                 return deferred.promise;
             };
             /**
-             * getCourtsByQuery
+             * 
              * @method
              * @name OtrService#getCourtsByQueryUsingGET
              * @param {string} searchQuery - searchQuery
@@ -2668,9 +4246,6 @@ angular.module('otrBackendService', [])
                 var queryParameters = {};
                 var headers = {};
                 var form = {};
-
-                headers['Accept'] = ['*/*'];
-                headers['Content-Type'] = ['application/json'];
 
                 path = path.replace('{searchQuery}', parameters['searchQuery']);
 
@@ -2699,12 +4274,45 @@ angular.module('otrBackendService', [])
                         });
                 }
 
-                this.request('GET', domain + path, parameters, body, headers, queryParameters, form, deferred);
+                var url = domain + path;
+                var cached = parameters.$cache && parameters.$cache.get(url);
+                if (cached !== undefined && parameters.$refresh !== true) {
+                    deferred.resolve(cached);
+                    return deferred.promise;
+                }
+                var options = {
+                    timeout: parameters.$timeout,
+                    method: 'GET',
+                    url: url,
+                    params: queryParameters,
+                    data: body,
+                    headers: headers
+                };
+                if (Object.keys(form).length > 0) {
+                    options.data = form;
+                    options.headers['Content-Type'] = 'application/x-www-form-urlencoded';
+                    options.transformRequest = OtrService.transformRequest;
+                }
+                $http(options)
+                    .success(function(data, status, headers, config) {
+                        deferred.resolve(data);
+                        if (parameters.$cache !== undefined) {
+                            parameters.$cache.put(url, data, parameters.$cacheItemOpts ? parameters.$cacheItemOpts : {});
+                        }
+                    })
+                    .error(function(data, status, headers, config) {
+                        deferred.reject({
+                            status: status,
+                            headers: headers,
+                            config: config,
+                            body: data
+                        });
+                    });
 
                 return deferred.promise;
             };
             /**
-             * getAwsCredentials
+             * 
              * @method
              * @name OtrService#getAwsCredentialsUsingPOST
              * @param {} request - request
@@ -2724,9 +4332,6 @@ angular.module('otrBackendService', [])
                 var headers = {};
                 var form = {};
 
-                headers['Accept'] = ['*/*'];
-                headers['Content-Type'] = ['application/json'];
-
                 if (parameters['request'] !== undefined) {
                     body = parameters['request'];
                 }
@@ -2744,12 +4349,40 @@ angular.module('otrBackendService', [])
                         });
                 }
 
-                this.request('POST', domain + path, parameters, body, headers, queryParameters, form, deferred);
+                var url = domain + path;
+                var options = {
+                    timeout: parameters.$timeout,
+                    method: 'POST',
+                    url: url,
+                    params: queryParameters,
+                    data: body,
+                    headers: headers
+                };
+                if (Object.keys(form).length > 0) {
+                    options.data = form;
+                    options.headers['Content-Type'] = 'application/x-www-form-urlencoded';
+                    options.transformRequest = OtrService.transformRequest;
+                }
+                $http(options)
+                    .success(function(data, status, headers, config) {
+                        deferred.resolve(data);
+                        if (parameters.$cache !== undefined) {
+                            parameters.$cache.put(url, data, parameters.$cacheItemOpts ? parameters.$cacheItemOpts : {});
+                        }
+                    })
+                    .error(function(data, status, headers, config) {
+                        deferred.reject({
+                            status: status,
+                            headers: headers,
+                            config: config,
+                            body: data
+                        });
+                    });
 
                 return deferred.promise;
             };
             /**
-             * getTemplates
+             * 
              * @method
              * @name OtrService#getTemplatesUsingGET
              * @param {array} category - category
@@ -2769,9 +4402,6 @@ angular.module('otrBackendService', [])
                 var headers = {};
                 var form = {};
 
-                headers['Accept'] = ['application/json'];
-                headers['Content-Type'] = ['application/json'];
-
                 if (parameters['category'] !== undefined) {
                     queryParameters['category'] = parameters['category'];
                 }
@@ -2784,12 +4414,45 @@ angular.module('otrBackendService', [])
                         });
                 }
 
-                this.request('GET', domain + path, parameters, body, headers, queryParameters, form, deferred);
+                var url = domain + path;
+                var cached = parameters.$cache && parameters.$cache.get(url);
+                if (cached !== undefined && parameters.$refresh !== true) {
+                    deferred.resolve(cached);
+                    return deferred.promise;
+                }
+                var options = {
+                    timeout: parameters.$timeout,
+                    method: 'GET',
+                    url: url,
+                    params: queryParameters,
+                    data: body,
+                    headers: headers
+                };
+                if (Object.keys(form).length > 0) {
+                    options.data = form;
+                    options.headers['Content-Type'] = 'application/x-www-form-urlencoded';
+                    options.transformRequest = OtrService.transformRequest;
+                }
+                $http(options)
+                    .success(function(data, status, headers, config) {
+                        deferred.resolve(data);
+                        if (parameters.$cache !== undefined) {
+                            parameters.$cache.put(url, data, parameters.$cacheItemOpts ? parameters.$cacheItemOpts : {});
+                        }
+                    })
+                    .error(function(data, status, headers, config) {
+                        deferred.reject({
+                            status: status,
+                            headers: headers,
+                            config: config,
+                            body: data
+                        });
+                    });
 
                 return deferred.promise;
             };
             /**
-             * sendEmailToUser
+             * 
              * @method
              * @name OtrService#sendEmailToUserUsingPOST
              * @param {} request - request
@@ -2809,9 +4472,6 @@ angular.module('otrBackendService', [])
                 var headers = {};
                 var form = {};
 
-                headers['Accept'] = ['application/json'];
-                headers['Content-Type'] = ['application/json'];
-
                 if (parameters['request'] !== undefined) {
                     body = parameters['request'];
                 }
@@ -2829,12 +4489,40 @@ angular.module('otrBackendService', [])
                         });
                 }
 
-                this.request('POST', domain + path, parameters, body, headers, queryParameters, form, deferred);
+                var url = domain + path;
+                var options = {
+                    timeout: parameters.$timeout,
+                    method: 'POST',
+                    url: url,
+                    params: queryParameters,
+                    data: body,
+                    headers: headers
+                };
+                if (Object.keys(form).length > 0) {
+                    options.data = form;
+                    options.headers['Content-Type'] = 'application/x-www-form-urlencoded';
+                    options.transformRequest = OtrService.transformRequest;
+                }
+                $http(options)
+                    .success(function(data, status, headers, config) {
+                        deferred.resolve(data);
+                        if (parameters.$cache !== undefined) {
+                            parameters.$cache.put(url, data, parameters.$cacheItemOpts ? parameters.$cacheItemOpts : {});
+                        }
+                    })
+                    .error(function(data, status, headers, config) {
+                        deferred.reject({
+                            status: status,
+                            headers: headers,
+                            config: config,
+                            body: data
+                        });
+                    });
 
                 return deferred.promise;
             };
             /**
-             * postFeedback
+             * 
              * @method
              * @name OtrService#postFeedbackUsingPOST
              * @param {} request - request
@@ -2854,9 +4542,6 @@ angular.module('otrBackendService', [])
                 var headers = {};
                 var form = {};
 
-                headers['Accept'] = ['*/*'];
-                headers['Content-Type'] = ['application/json'];
-
                 if (parameters['request'] !== undefined) {
                     body = parameters['request'];
                 }
@@ -2874,12 +4559,40 @@ angular.module('otrBackendService', [])
                         });
                 }
 
-                this.request('POST', domain + path, parameters, body, headers, queryParameters, form, deferred);
+                var url = domain + path;
+                var options = {
+                    timeout: parameters.$timeout,
+                    method: 'POST',
+                    url: url,
+                    params: queryParameters,
+                    data: body,
+                    headers: headers
+                };
+                if (Object.keys(form).length > 0) {
+                    options.data = form;
+                    options.headers['Content-Type'] = 'application/x-www-form-urlencoded';
+                    options.transformRequest = OtrService.transformRequest;
+                }
+                $http(options)
+                    .success(function(data, status, headers, config) {
+                        deferred.resolve(data);
+                        if (parameters.$cache !== undefined) {
+                            parameters.$cache.put(url, data, parameters.$cacheItemOpts ? parameters.$cacheItemOpts : {});
+                        }
+                    })
+                    .error(function(data, status, headers, config) {
+                        deferred.reject({
+                            status: status,
+                            headers: headers,
+                            config: config,
+                            body: data
+                        });
+                    });
 
                 return deferred.promise;
             };
             /**
-             * calculateTicketSavings
+             * 
              * @method
              * @name OtrService#calculateTicketSavingsUsingPOST
              * @param {} request - request
@@ -2899,9 +4612,6 @@ angular.module('otrBackendService', [])
                 var headers = {};
                 var form = {};
 
-                headers['Accept'] = ['application/json'];
-                headers['Content-Type'] = ['application/json'];
-
                 if (parameters['request'] !== undefined) {
                     body = parameters['request'];
                 }
@@ -2919,12 +4629,40 @@ angular.module('otrBackendService', [])
                         });
                 }
 
-                this.request('POST', domain + path, parameters, body, headers, queryParameters, form, deferred);
+                var url = domain + path;
+                var options = {
+                    timeout: parameters.$timeout,
+                    method: 'POST',
+                    url: url,
+                    params: queryParameters,
+                    data: body,
+                    headers: headers
+                };
+                if (Object.keys(form).length > 0) {
+                    options.data = form;
+                    options.headers['Content-Type'] = 'application/x-www-form-urlencoded';
+                    options.transformRequest = OtrService.transformRequest;
+                }
+                $http(options)
+                    .success(function(data, status, headers, config) {
+                        deferred.resolve(data);
+                        if (parameters.$cache !== undefined) {
+                            parameters.$cache.put(url, data, parameters.$cacheItemOpts ? parameters.$cacheItemOpts : {});
+                        }
+                    })
+                    .error(function(data, status, headers, config) {
+                        deferred.reject({
+                            status: status,
+                            headers: headers,
+                            config: config,
+                            body: data
+                        });
+                    });
 
                 return deferred.promise;
             };
             /**
-             * submitInternalNotification
+             * 
              * @method
              * @name OtrService#submitInternalNotificationUsingPOST
              * @param {} request - request
@@ -2944,9 +4682,6 @@ angular.module('otrBackendService', [])
                 var headers = {};
                 var form = {};
 
-                headers['Accept'] = ['*/*'];
-                headers['Content-Type'] = ['application/json'];
-
                 if (parameters['request'] !== undefined) {
                     body = parameters['request'];
                 }
@@ -2964,12 +4699,40 @@ angular.module('otrBackendService', [])
                         });
                 }
 
-                this.request('POST', domain + path, parameters, body, headers, queryParameters, form, deferred);
+                var url = domain + path;
+                var options = {
+                    timeout: parameters.$timeout,
+                    method: 'POST',
+                    url: url,
+                    params: queryParameters,
+                    data: body,
+                    headers: headers
+                };
+                if (Object.keys(form).length > 0) {
+                    options.data = form;
+                    options.headers['Content-Type'] = 'application/x-www-form-urlencoded';
+                    options.transformRequest = OtrService.transformRequest;
+                }
+                $http(options)
+                    .success(function(data, status, headers, config) {
+                        deferred.resolve(data);
+                        if (parameters.$cache !== undefined) {
+                            parameters.$cache.put(url, data, parameters.$cacheItemOpts ? parameters.$cacheItemOpts : {});
+                        }
+                    })
+                    .error(function(data, status, headers, config) {
+                        deferred.reject({
+                            status: status,
+                            headers: headers,
+                            config: config,
+                            body: data
+                        });
+                    });
 
                 return deferred.promise;
             };
             /**
-             * setLawfirmCaseDecision
+             * 
              * @method
              * @name OtrService#setLawfirmCaseDecisionUsingPOST
              * @param {string} caseId - caseId
@@ -2989,9 +4752,6 @@ angular.module('otrBackendService', [])
                 var queryParameters = {};
                 var headers = {};
                 var form = {};
-
-                headers['Accept'] = ['*/*'];
-                headers['Content-Type'] = ['application/json'];
 
                 path = path.replace('{caseId}', parameters['caseId']);
 
@@ -3017,12 +4777,40 @@ angular.module('otrBackendService', [])
                         });
                 }
 
-                this.request('POST', domain + path, parameters, body, headers, queryParameters, form, deferred);
+                var url = domain + path;
+                var options = {
+                    timeout: parameters.$timeout,
+                    method: 'POST',
+                    url: url,
+                    params: queryParameters,
+                    data: body,
+                    headers: headers
+                };
+                if (Object.keys(form).length > 0) {
+                    options.data = form;
+                    options.headers['Content-Type'] = 'application/x-www-form-urlencoded';
+                    options.transformRequest = OtrService.transformRequest;
+                }
+                $http(options)
+                    .success(function(data, status, headers, config) {
+                        deferred.resolve(data);
+                        if (parameters.$cache !== undefined) {
+                            parameters.$cache.put(url, data, parameters.$cacheItemOpts ? parameters.$cacheItemOpts : {});
+                        }
+                    })
+                    .error(function(data, status, headers, config) {
+                        deferred.reject({
+                            status: status,
+                            headers: headers,
+                            config: config,
+                            body: data
+                        });
+                    });
 
                 return deferred.promise;
             };
             /**
-             * getLawfirmCases
+             * 
              * @method
              * @name OtrService#getLawfirmCasesUsingGET
              * @param {string} lawfirmIdString - lawfirmIdString
@@ -3042,9 +4830,6 @@ angular.module('otrBackendService', [])
                 var headers = {};
                 var form = {};
 
-                headers['Accept'] = ['*/*'];
-                headers['Content-Type'] = ['application/json'];
-
                 path = path.replace('{lawfirmIdString}', parameters['lawfirmIdString']);
 
                 if (parameters['lawfirmIdString'] === undefined) {
@@ -3060,12 +4845,45 @@ angular.module('otrBackendService', [])
                         });
                 }
 
-                this.request('GET', domain + path, parameters, body, headers, queryParameters, form, deferred);
+                var url = domain + path;
+                var cached = parameters.$cache && parameters.$cache.get(url);
+                if (cached !== undefined && parameters.$refresh !== true) {
+                    deferred.resolve(cached);
+                    return deferred.promise;
+                }
+                var options = {
+                    timeout: parameters.$timeout,
+                    method: 'GET',
+                    url: url,
+                    params: queryParameters,
+                    data: body,
+                    headers: headers
+                };
+                if (Object.keys(form).length > 0) {
+                    options.data = form;
+                    options.headers['Content-Type'] = 'application/x-www-form-urlencoded';
+                    options.transformRequest = OtrService.transformRequest;
+                }
+                $http(options)
+                    .success(function(data, status, headers, config) {
+                        deferred.resolve(data);
+                        if (parameters.$cache !== undefined) {
+                            parameters.$cache.put(url, data, parameters.$cacheItemOpts ? parameters.$cacheItemOpts : {});
+                        }
+                    })
+                    .error(function(data, status, headers, config) {
+                        deferred.reject({
+                            status: status,
+                            headers: headers,
+                            config: config,
+                            body: data
+                        });
+                    });
 
                 return deferred.promise;
             };
             /**
-             * getLawfirms
+             * 
              * @method
              * @name OtrService#getLawfirmsUsingGET
              * 
@@ -3084,9 +4902,6 @@ angular.module('otrBackendService', [])
                 var headers = {};
                 var form = {};
 
-                headers['Accept'] = ['*/*'];
-                headers['Content-Type'] = ['application/json'];
-
                 if (parameters.$queryParameters) {
                     Object.keys(parameters.$queryParameters)
                         .forEach(function(parameterName) {
@@ -3095,12 +4910,45 @@ angular.module('otrBackendService', [])
                         });
                 }
 
-                this.request('GET', domain + path, parameters, body, headers, queryParameters, form, deferred);
+                var url = domain + path;
+                var cached = parameters.$cache && parameters.$cache.get(url);
+                if (cached !== undefined && parameters.$refresh !== true) {
+                    deferred.resolve(cached);
+                    return deferred.promise;
+                }
+                var options = {
+                    timeout: parameters.$timeout,
+                    method: 'GET',
+                    url: url,
+                    params: queryParameters,
+                    data: body,
+                    headers: headers
+                };
+                if (Object.keys(form).length > 0) {
+                    options.data = form;
+                    options.headers['Content-Type'] = 'application/x-www-form-urlencoded';
+                    options.transformRequest = OtrService.transformRequest;
+                }
+                $http(options)
+                    .success(function(data, status, headers, config) {
+                        deferred.resolve(data);
+                        if (parameters.$cache !== undefined) {
+                            parameters.$cache.put(url, data, parameters.$cacheItemOpts ? parameters.$cacheItemOpts : {});
+                        }
+                    })
+                    .error(function(data, status, headers, config) {
+                        deferred.reject({
+                            status: status,
+                            headers: headers,
+                            config: config,
+                            body: data
+                        });
+                    });
 
                 return deferred.promise;
             };
             /**
-             * createLawfirm
+             * 
              * @method
              * @name OtrService#createLawfirmUsingPOST
              * @param {} request - request
@@ -3120,9 +4968,6 @@ angular.module('otrBackendService', [])
                 var headers = {};
                 var form = {};
 
-                headers['Accept'] = ['*/*'];
-                headers['Content-Type'] = ['application/json'];
-
                 if (parameters['request'] !== undefined) {
                     body = parameters['request'];
                 }
@@ -3140,12 +4985,40 @@ angular.module('otrBackendService', [])
                         });
                 }
 
-                this.request('POST', domain + path, parameters, body, headers, queryParameters, form, deferred);
+                var url = domain + path;
+                var options = {
+                    timeout: parameters.$timeout,
+                    method: 'POST',
+                    url: url,
+                    params: queryParameters,
+                    data: body,
+                    headers: headers
+                };
+                if (Object.keys(form).length > 0) {
+                    options.data = form;
+                    options.headers['Content-Type'] = 'application/x-www-form-urlencoded';
+                    options.transformRequest = OtrService.transformRequest;
+                }
+                $http(options)
+                    .success(function(data, status, headers, config) {
+                        deferred.resolve(data);
+                        if (parameters.$cache !== undefined) {
+                            parameters.$cache.put(url, data, parameters.$cacheItemOpts ? parameters.$cacheItemOpts : {});
+                        }
+                    })
+                    .error(function(data, status, headers, config) {
+                        deferred.reject({
+                            status: status,
+                            headers: headers,
+                            config: config,
+                            body: data
+                        });
+                    });
 
                 return deferred.promise;
             };
             /**
-             * getActiveLawfirms
+             * 
              * @method
              * @name OtrService#getActiveLawfirmsUsingGET
              * 
@@ -3164,9 +5037,6 @@ angular.module('otrBackendService', [])
                 var headers = {};
                 var form = {};
 
-                headers['Accept'] = ['*/*'];
-                headers['Content-Type'] = ['application/json'];
-
                 if (parameters.$queryParameters) {
                     Object.keys(parameters.$queryParameters)
                         .forEach(function(parameterName) {
@@ -3175,12 +5045,45 @@ angular.module('otrBackendService', [])
                         });
                 }
 
-                this.request('GET', domain + path, parameters, body, headers, queryParameters, form, deferred);
+                var url = domain + path;
+                var cached = parameters.$cache && parameters.$cache.get(url);
+                if (cached !== undefined && parameters.$refresh !== true) {
+                    deferred.resolve(cached);
+                    return deferred.promise;
+                }
+                var options = {
+                    timeout: parameters.$timeout,
+                    method: 'GET',
+                    url: url,
+                    params: queryParameters,
+                    data: body,
+                    headers: headers
+                };
+                if (Object.keys(form).length > 0) {
+                    options.data = form;
+                    options.headers['Content-Type'] = 'application/x-www-form-urlencoded';
+                    options.transformRequest = OtrService.transformRequest;
+                }
+                $http(options)
+                    .success(function(data, status, headers, config) {
+                        deferred.resolve(data);
+                        if (parameters.$cache !== undefined) {
+                            parameters.$cache.put(url, data, parameters.$cacheItemOpts ? parameters.$cacheItemOpts : {});
+                        }
+                    })
+                    .error(function(data, status, headers, config) {
+                        deferred.reject({
+                            status: status,
+                            headers: headers,
+                            config: config,
+                            body: data
+                        });
+                    });
 
                 return deferred.promise;
             };
             /**
-             * getLawfirmStatuses
+             * 
              * @method
              * @name OtrService#getLawfirmStatusesUsingGET
              * 
@@ -3199,9 +5102,6 @@ angular.module('otrBackendService', [])
                 var headers = {};
                 var form = {};
 
-                headers['Accept'] = ['*/*'];
-                headers['Content-Type'] = ['application/json'];
-
                 if (parameters.$queryParameters) {
                     Object.keys(parameters.$queryParameters)
                         .forEach(function(parameterName) {
@@ -3210,12 +5110,45 @@ angular.module('otrBackendService', [])
                         });
                 }
 
-                this.request('GET', domain + path, parameters, body, headers, queryParameters, form, deferred);
+                var url = domain + path;
+                var cached = parameters.$cache && parameters.$cache.get(url);
+                if (cached !== undefined && parameters.$refresh !== true) {
+                    deferred.resolve(cached);
+                    return deferred.promise;
+                }
+                var options = {
+                    timeout: parameters.$timeout,
+                    method: 'GET',
+                    url: url,
+                    params: queryParameters,
+                    data: body,
+                    headers: headers
+                };
+                if (Object.keys(form).length > 0) {
+                    options.data = form;
+                    options.headers['Content-Type'] = 'application/x-www-form-urlencoded';
+                    options.transformRequest = OtrService.transformRequest;
+                }
+                $http(options)
+                    .success(function(data, status, headers, config) {
+                        deferred.resolve(data);
+                        if (parameters.$cache !== undefined) {
+                            parameters.$cache.put(url, data, parameters.$cacheItemOpts ? parameters.$cacheItemOpts : {});
+                        }
+                    })
+                    .error(function(data, status, headers, config) {
+                        deferred.reject({
+                            status: status,
+                            headers: headers,
+                            config: config,
+                            body: data
+                        });
+                    });
 
                 return deferred.promise;
             };
             /**
-             * getLawfirm
+             * 
              * @method
              * @name OtrService#getLawfirmUsingGET
              * @param {string} lawfirmIdString - lawfirmIdString
@@ -3236,9 +5169,6 @@ angular.module('otrBackendService', [])
                 var headers = {};
                 var form = {};
 
-                headers['Accept'] = ['*/*'];
-                headers['Content-Type'] = ['application/json'];
-
                 path = path.replace('{lawfirmIdString}', parameters['lawfirmIdString']);
 
                 if (parameters['lawfirmIdString'] === undefined) {
@@ -3258,12 +5188,45 @@ angular.module('otrBackendService', [])
                         });
                 }
 
-                this.request('GET', domain + path, parameters, body, headers, queryParameters, form, deferred);
+                var url = domain + path;
+                var cached = parameters.$cache && parameters.$cache.get(url);
+                if (cached !== undefined && parameters.$refresh !== true) {
+                    deferred.resolve(cached);
+                    return deferred.promise;
+                }
+                var options = {
+                    timeout: parameters.$timeout,
+                    method: 'GET',
+                    url: url,
+                    params: queryParameters,
+                    data: body,
+                    headers: headers
+                };
+                if (Object.keys(form).length > 0) {
+                    options.data = form;
+                    options.headers['Content-Type'] = 'application/x-www-form-urlencoded';
+                    options.transformRequest = OtrService.transformRequest;
+                }
+                $http(options)
+                    .success(function(data, status, headers, config) {
+                        deferred.resolve(data);
+                        if (parameters.$cache !== undefined) {
+                            parameters.$cache.put(url, data, parameters.$cacheItemOpts ? parameters.$cacheItemOpts : {});
+                        }
+                    })
+                    .error(function(data, status, headers, config) {
+                        deferred.reject({
+                            status: status,
+                            headers: headers,
+                            config: config,
+                            body: data
+                        });
+                    });
 
                 return deferred.promise;
             };
             /**
-             * updateLawfirm
+             * 
              * @method
              * @name OtrService#updateLawfirmUsingPUT
              * @param {string} lawfirmIdString - lawfirmIdString
@@ -3284,9 +5247,6 @@ angular.module('otrBackendService', [])
                 var headers = {};
                 var form = {};
 
-                headers['Accept'] = ['*/*'];
-                headers['Content-Type'] = ['application/json'];
-
                 path = path.replace('{lawfirmIdString}', parameters['lawfirmIdString']);
 
                 if (parameters['lawfirmIdString'] === undefined) {
@@ -3311,12 +5271,40 @@ angular.module('otrBackendService', [])
                         });
                 }
 
-                this.request('PUT', domain + path, parameters, body, headers, queryParameters, form, deferred);
+                var url = domain + path;
+                var options = {
+                    timeout: parameters.$timeout,
+                    method: 'PUT',
+                    url: url,
+                    params: queryParameters,
+                    data: body,
+                    headers: headers
+                };
+                if (Object.keys(form).length > 0) {
+                    options.data = form;
+                    options.headers['Content-Type'] = 'application/x-www-form-urlencoded';
+                    options.transformRequest = OtrService.transformRequest;
+                }
+                $http(options)
+                    .success(function(data, status, headers, config) {
+                        deferred.resolve(data);
+                        if (parameters.$cache !== undefined) {
+                            parameters.$cache.put(url, data, parameters.$cacheItemOpts ? parameters.$cacheItemOpts : {});
+                        }
+                    })
+                    .error(function(data, status, headers, config) {
+                        deferred.reject({
+                            status: status,
+                            headers: headers,
+                            config: config,
+                            body: data
+                        });
+                    });
 
                 return deferred.promise;
             };
             /**
-             * addCourt
+             * 
              * @method
              * @name OtrService#addCourtUsingPOST
              * @param {string} lawfirmIdString - lawfirmIdString
@@ -3337,9 +5325,6 @@ angular.module('otrBackendService', [])
                 var headers = {};
                 var form = {};
 
-                headers['Accept'] = ['*/*'];
-                headers['Content-Type'] = ['application/json'];
-
                 path = path.replace('{lawfirmIdString}', parameters['lawfirmIdString']);
 
                 if (parameters['lawfirmIdString'] === undefined) {
@@ -3364,12 +5349,40 @@ angular.module('otrBackendService', [])
                         });
                 }
 
-                this.request('POST', domain + path, parameters, body, headers, queryParameters, form, deferred);
+                var url = domain + path;
+                var options = {
+                    timeout: parameters.$timeout,
+                    method: 'POST',
+                    url: url,
+                    params: queryParameters,
+                    data: body,
+                    headers: headers
+                };
+                if (Object.keys(form).length > 0) {
+                    options.data = form;
+                    options.headers['Content-Type'] = 'application/x-www-form-urlencoded';
+                    options.transformRequest = OtrService.transformRequest;
+                }
+                $http(options)
+                    .success(function(data, status, headers, config) {
+                        deferred.resolve(data);
+                        if (parameters.$cache !== undefined) {
+                            parameters.$cache.put(url, data, parameters.$cacheItemOpts ? parameters.$cacheItemOpts : {});
+                        }
+                    })
+                    .error(function(data, status, headers, config) {
+                        deferred.reject({
+                            status: status,
+                            headers: headers,
+                            config: config,
+                            body: data
+                        });
+                    });
 
                 return deferred.promise;
             };
             /**
-             * removeCourt
+             * 
              * @method
              * @name OtrService#removeCourtUsingDELETE
              * @param {string} lawfirmIdString - lawfirmIdString
@@ -3389,9 +5402,6 @@ angular.module('otrBackendService', [])
                 var queryParameters = {};
                 var headers = {};
                 var form = {};
-
-                headers['Accept'] = ['*/*'];
-                headers['Content-Type'] = ['application/json'];
 
                 path = path.replace('{lawfirmIdString}', parameters['lawfirmIdString']);
 
@@ -3415,15 +5425,43 @@ angular.module('otrBackendService', [])
                         });
                 }
 
-                this.request('DELETE', domain + path, parameters, body, headers, queryParameters, form, deferred);
+                var url = domain + path;
+                var options = {
+                    timeout: parameters.$timeout,
+                    method: 'DELETE',
+                    url: url,
+                    params: queryParameters,
+                    data: body,
+                    headers: headers
+                };
+                if (Object.keys(form).length > 0) {
+                    options.data = form;
+                    options.headers['Content-Type'] = 'application/x-www-form-urlencoded';
+                    options.transformRequest = OtrService.transformRequest;
+                }
+                $http(options)
+                    .success(function(data, status, headers, config) {
+                        deferred.resolve(data);
+                        if (parameters.$cache !== undefined) {
+                            parameters.$cache.put(url, data, parameters.$cacheItemOpts ? parameters.$cacheItemOpts : {});
+                        }
+                    })
+                    .error(function(data, status, headers, config) {
+                        deferred.reject({
+                            status: status,
+                            headers: headers,
+                            config: config,
+                            body: data
+                        });
+                    });
 
                 return deferred.promise;
             };
             /**
-             * getLawfirmCoverage
+             * 
              * @method
              * @name OtrService#getLawfirmCoverageUsingGET
-             * @param {string} lawfirmIdString - lawfirmIdString
+             * @param {integer} lawfirmIdString - lawfirmIdString
              * 
              */
             OtrService.prototype.getLawfirmCoverageUsingGET = function(parameters) {
@@ -3440,9 +5478,6 @@ angular.module('otrBackendService', [])
                 var headers = {};
                 var form = {};
 
-                headers['Accept'] = ['*/*'];
-                headers['Content-Type'] = ['application/json'];
-
                 path = path.replace('{lawfirmIdString}', parameters['lawfirmIdString']);
 
                 if (parameters['lawfirmIdString'] === undefined) {
@@ -3458,12 +5493,45 @@ angular.module('otrBackendService', [])
                         });
                 }
 
-                this.request('GET', domain + path, parameters, body, headers, queryParameters, form, deferred);
+                var url = domain + path;
+                var cached = parameters.$cache && parameters.$cache.get(url);
+                if (cached !== undefined && parameters.$refresh !== true) {
+                    deferred.resolve(cached);
+                    return deferred.promise;
+                }
+                var options = {
+                    timeout: parameters.$timeout,
+                    method: 'GET',
+                    url: url,
+                    params: queryParameters,
+                    data: body,
+                    headers: headers
+                };
+                if (Object.keys(form).length > 0) {
+                    options.data = form;
+                    options.headers['Content-Type'] = 'application/x-www-form-urlencoded';
+                    options.transformRequest = OtrService.transformRequest;
+                }
+                $http(options)
+                    .success(function(data, status, headers, config) {
+                        deferred.resolve(data);
+                        if (parameters.$cache !== undefined) {
+                            parameters.$cache.put(url, data, parameters.$cacheItemOpts ? parameters.$cacheItemOpts : {});
+                        }
+                    })
+                    .error(function(data, status, headers, config) {
+                        deferred.reject({
+                            status: status,
+                            headers: headers,
+                            config: config,
+                            body: data
+                        });
+                    });
 
                 return deferred.promise;
             };
             /**
-             * getLawfirmLawyers
+             * 
              * @method
              * @name OtrService#getLawfirmLawyersUsingGET
              * @param {string} lawfirmIdString - lawfirmIdString
@@ -3483,9 +5551,6 @@ angular.module('otrBackendService', [])
                 var headers = {};
                 var form = {};
 
-                headers['Accept'] = ['*/*'];
-                headers['Content-Type'] = ['application/json'];
-
                 path = path.replace('{lawfirmIdString}', parameters['lawfirmIdString']);
 
                 if (parameters['lawfirmIdString'] === undefined) {
@@ -3501,12 +5566,45 @@ angular.module('otrBackendService', [])
                         });
                 }
 
-                this.request('GET', domain + path, parameters, body, headers, queryParameters, form, deferred);
+                var url = domain + path;
+                var cached = parameters.$cache && parameters.$cache.get(url);
+                if (cached !== undefined && parameters.$refresh !== true) {
+                    deferred.resolve(cached);
+                    return deferred.promise;
+                }
+                var options = {
+                    timeout: parameters.$timeout,
+                    method: 'GET',
+                    url: url,
+                    params: queryParameters,
+                    data: body,
+                    headers: headers
+                };
+                if (Object.keys(form).length > 0) {
+                    options.data = form;
+                    options.headers['Content-Type'] = 'application/x-www-form-urlencoded';
+                    options.transformRequest = OtrService.transformRequest;
+                }
+                $http(options)
+                    .success(function(data, status, headers, config) {
+                        deferred.resolve(data);
+                        if (parameters.$cache !== undefined) {
+                            parameters.$cache.put(url, data, parameters.$cacheItemOpts ? parameters.$cacheItemOpts : {});
+                        }
+                    })
+                    .error(function(data, status, headers, config) {
+                        deferred.reject({
+                            status: status,
+                            headers: headers,
+                            config: config,
+                            body: data
+                        });
+                    });
 
                 return deferred.promise;
             };
             /**
-             * updateLawfirmSettings
+             * 
              * @method
              * @name OtrService#updateLawfirmSettingsUsingPOST
              * @param {string} lawfirmIdString - lawfirmIdString
@@ -3526,9 +5624,6 @@ angular.module('otrBackendService', [])
                 var queryParameters = {};
                 var headers = {};
                 var form = {};
-
-                headers['Accept'] = ['*/*'];
-                headers['Content-Type'] = ['application/json'];
 
                 path = path.replace('{lawfirmIdString}', parameters['lawfirmIdString']);
 
@@ -3554,12 +5649,40 @@ angular.module('otrBackendService', [])
                         });
                 }
 
-                this.request('POST', domain + path, parameters, body, headers, queryParameters, form, deferred);
+                var url = domain + path;
+                var options = {
+                    timeout: parameters.$timeout,
+                    method: 'POST',
+                    url: url,
+                    params: queryParameters,
+                    data: body,
+                    headers: headers
+                };
+                if (Object.keys(form).length > 0) {
+                    options.data = form;
+                    options.headers['Content-Type'] = 'application/x-www-form-urlencoded';
+                    options.transformRequest = OtrService.transformRequest;
+                }
+                $http(options)
+                    .success(function(data, status, headers, config) {
+                        deferred.resolve(data);
+                        if (parameters.$cache !== undefined) {
+                            parameters.$cache.put(url, data, parameters.$cacheItemOpts ? parameters.$cacheItemOpts : {});
+                        }
+                    })
+                    .error(function(data, status, headers, config) {
+                        deferred.reject({
+                            status: status,
+                            headers: headers,
+                            config: config,
+                            body: data
+                        });
+                    });
 
                 return deferred.promise;
             };
             /**
-             * getStripeConnectedAccount
+             * 
              * @method
              * @name OtrService#getStripeConnectedAccountUsingGET
              * @param {string} lawfirmIdString - lawfirmIdString
@@ -3579,9 +5702,6 @@ angular.module('otrBackendService', [])
                 var headers = {};
                 var form = {};
 
-                headers['Accept'] = ['*/*'];
-                headers['Content-Type'] = ['application/json'];
-
                 path = path.replace('{lawfirmIdString}', parameters['lawfirmIdString']);
 
                 if (parameters['lawfirmIdString'] === undefined) {
@@ -3597,12 +5717,45 @@ angular.module('otrBackendService', [])
                         });
                 }
 
-                this.request('GET', domain + path, parameters, body, headers, queryParameters, form, deferred);
+                var url = domain + path;
+                var cached = parameters.$cache && parameters.$cache.get(url);
+                if (cached !== undefined && parameters.$refresh !== true) {
+                    deferred.resolve(cached);
+                    return deferred.promise;
+                }
+                var options = {
+                    timeout: parameters.$timeout,
+                    method: 'GET',
+                    url: url,
+                    params: queryParameters,
+                    data: body,
+                    headers: headers
+                };
+                if (Object.keys(form).length > 0) {
+                    options.data = form;
+                    options.headers['Content-Type'] = 'application/x-www-form-urlencoded';
+                    options.transformRequest = OtrService.transformRequest;
+                }
+                $http(options)
+                    .success(function(data, status, headers, config) {
+                        deferred.resolve(data);
+                        if (parameters.$cache !== undefined) {
+                            parameters.$cache.put(url, data, parameters.$cacheItemOpts ? parameters.$cacheItemOpts : {});
+                        }
+                    })
+                    .error(function(data, status, headers, config) {
+                        deferred.reject({
+                            status: status,
+                            headers: headers,
+                            config: config,
+                            body: data
+                        });
+                    });
 
                 return deferred.promise;
             };
             /**
-             * getLawfirmTransactions
+             * 
              * @method
              * @name OtrService#getLawfirmTransactionsUsingGET
              * @param {string} lawfirmIdString - lawfirmIdString
@@ -3622,9 +5775,6 @@ angular.module('otrBackendService', [])
                 var headers = {};
                 var form = {};
 
-                headers['Accept'] = ['*/*'];
-                headers['Content-Type'] = ['application/json'];
-
                 path = path.replace('{lawfirmIdString}', parameters['lawfirmIdString']);
 
                 if (parameters['lawfirmIdString'] === undefined) {
@@ -3640,12 +5790,45 @@ angular.module('otrBackendService', [])
                         });
                 }
 
-                this.request('GET', domain + path, parameters, body, headers, queryParameters, form, deferred);
+                var url = domain + path;
+                var cached = parameters.$cache && parameters.$cache.get(url);
+                if (cached !== undefined && parameters.$refresh !== true) {
+                    deferred.resolve(cached);
+                    return deferred.promise;
+                }
+                var options = {
+                    timeout: parameters.$timeout,
+                    method: 'GET',
+                    url: url,
+                    params: queryParameters,
+                    data: body,
+                    headers: headers
+                };
+                if (Object.keys(form).length > 0) {
+                    options.data = form;
+                    options.headers['Content-Type'] = 'application/x-www-form-urlencoded';
+                    options.transformRequest = OtrService.transformRequest;
+                }
+                $http(options)
+                    .success(function(data, status, headers, config) {
+                        deferred.resolve(data);
+                        if (parameters.$cache !== undefined) {
+                            parameters.$cache.put(url, data, parameters.$cacheItemOpts ? parameters.$cacheItemOpts : {});
+                        }
+                    })
+                    .error(function(data, status, headers, config) {
+                        deferred.reject({
+                            status: status,
+                            headers: headers,
+                            config: config,
+                            body: data
+                        });
+                    });
 
                 return deferred.promise;
             };
             /**
-             * getLawfirmInboxMessages
+             * 
              * @method
              * @name OtrService#getLawfirmInboxMessagesUsingGET
              * @param {integer} lawfirmId - lawfirmId
@@ -3666,9 +5849,6 @@ angular.module('otrBackendService', [])
                 var queryParameters = {};
                 var headers = {};
                 var form = {};
-
-                headers['Accept'] = ['*/*'];
-                headers['Content-Type'] = ['application/json'];
 
                 path = path.replace('{lawfirmId}', parameters['lawfirmId']);
 
@@ -3693,12 +5873,45 @@ angular.module('otrBackendService', [])
                         });
                 }
 
-                this.request('GET', domain + path, parameters, body, headers, queryParameters, form, deferred);
+                var url = domain + path;
+                var cached = parameters.$cache && parameters.$cache.get(url);
+                if (cached !== undefined && parameters.$refresh !== true) {
+                    deferred.resolve(cached);
+                    return deferred.promise;
+                }
+                var options = {
+                    timeout: parameters.$timeout,
+                    method: 'GET',
+                    url: url,
+                    params: queryParameters,
+                    data: body,
+                    headers: headers
+                };
+                if (Object.keys(form).length > 0) {
+                    options.data = form;
+                    options.headers['Content-Type'] = 'application/x-www-form-urlencoded';
+                    options.transformRequest = OtrService.transformRequest;
+                }
+                $http(options)
+                    .success(function(data, status, headers, config) {
+                        deferred.resolve(data);
+                        if (parameters.$cache !== undefined) {
+                            parameters.$cache.put(url, data, parameters.$cacheItemOpts ? parameters.$cacheItemOpts : {});
+                        }
+                    })
+                    .error(function(data, status, headers, config) {
+                        deferred.reject({
+                            status: status,
+                            headers: headers,
+                            config: config,
+                            body: data
+                        });
+                    });
 
                 return deferred.promise;
             };
             /**
-             * getOtrLawfirmNotes
+             * 
              * @method
              * @name OtrService#getOtrLawfirmNotesUsingGET
              * 
@@ -3717,9 +5930,6 @@ angular.module('otrBackendService', [])
                 var headers = {};
                 var form = {};
 
-                headers['Accept'] = ['*/*'];
-                headers['Content-Type'] = ['application/json'];
-
                 if (parameters.$queryParameters) {
                     Object.keys(parameters.$queryParameters)
                         .forEach(function(parameterName) {
@@ -3728,12 +5938,45 @@ angular.module('otrBackendService', [])
                         });
                 }
 
-                this.request('GET', domain + path, parameters, body, headers, queryParameters, form, deferred);
+                var url = domain + path;
+                var cached = parameters.$cache && parameters.$cache.get(url);
+                if (cached !== undefined && parameters.$refresh !== true) {
+                    deferred.resolve(cached);
+                    return deferred.promise;
+                }
+                var options = {
+                    timeout: parameters.$timeout,
+                    method: 'GET',
+                    url: url,
+                    params: queryParameters,
+                    data: body,
+                    headers: headers
+                };
+                if (Object.keys(form).length > 0) {
+                    options.data = form;
+                    options.headers['Content-Type'] = 'application/x-www-form-urlencoded';
+                    options.transformRequest = OtrService.transformRequest;
+                }
+                $http(options)
+                    .success(function(data, status, headers, config) {
+                        deferred.resolve(data);
+                        if (parameters.$cache !== undefined) {
+                            parameters.$cache.put(url, data, parameters.$cacheItemOpts ? parameters.$cacheItemOpts : {});
+                        }
+                    })
+                    .error(function(data, status, headers, config) {
+                        deferred.reject({
+                            status: status,
+                            headers: headers,
+                            config: config,
+                            body: data
+                        });
+                    });
 
                 return deferred.promise;
             };
             /**
-             * updateLawfirmWithPicture
+             * 
              * @method
              * @name OtrService#updateLawfirmWithPictureUsingPUT
              * @param {string} lawfirmId - lawfirmId
@@ -3753,9 +5996,6 @@ angular.module('otrBackendService', [])
                 var queryParameters = {};
                 var headers = {};
                 var form = {};
-
-                headers['Accept'] = ['*/*'];
-                headers['Content-Type'] = ['application/json'];
 
                 path = path.replace('{lawfirmId}', parameters['lawfirmId']);
 
@@ -3781,12 +6021,40 @@ angular.module('otrBackendService', [])
                         });
                 }
 
-                this.request('PUT', domain + path, parameters, body, headers, queryParameters, form, deferred);
+                var url = domain + path;
+                var options = {
+                    timeout: parameters.$timeout,
+                    method: 'PUT',
+                    url: url,
+                    params: queryParameters,
+                    data: body,
+                    headers: headers
+                };
+                if (Object.keys(form).length > 0) {
+                    options.data = form;
+                    options.headers['Content-Type'] = 'application/x-www-form-urlencoded';
+                    options.transformRequest = OtrService.transformRequest;
+                }
+                $http(options)
+                    .success(function(data, status, headers, config) {
+                        deferred.resolve(data);
+                        if (parameters.$cache !== undefined) {
+                            parameters.$cache.put(url, data, parameters.$cacheItemOpts ? parameters.$cacheItemOpts : {});
+                        }
+                    })
+                    .error(function(data, status, headers, config) {
+                        deferred.reject({
+                            status: status,
+                            headers: headers,
+                            config: config,
+                            body: data
+                        });
+                    });
 
                 return deferred.promise;
             };
             /**
-             * upsertLawyer
+             * 
              * @method
              * @name OtrService#upsertLawyerUsingPOST
              * @param {} request - request
@@ -3806,9 +6074,6 @@ angular.module('otrBackendService', [])
                 var headers = {};
                 var form = {};
 
-                headers['Accept'] = ['*/*'];
-                headers['Content-Type'] = ['application/json'];
-
                 if (parameters['request'] !== undefined) {
                     body = parameters['request'];
                 }
@@ -3826,12 +6091,40 @@ angular.module('otrBackendService', [])
                         });
                 }
 
-                this.request('POST', domain + path, parameters, body, headers, queryParameters, form, deferred);
+                var url = domain + path;
+                var options = {
+                    timeout: parameters.$timeout,
+                    method: 'POST',
+                    url: url,
+                    params: queryParameters,
+                    data: body,
+                    headers: headers
+                };
+                if (Object.keys(form).length > 0) {
+                    options.data = form;
+                    options.headers['Content-Type'] = 'application/x-www-form-urlencoded';
+                    options.transformRequest = OtrService.transformRequest;
+                }
+                $http(options)
+                    .success(function(data, status, headers, config) {
+                        deferred.resolve(data);
+                        if (parameters.$cache !== undefined) {
+                            parameters.$cache.put(url, data, parameters.$cacheItemOpts ? parameters.$cacheItemOpts : {});
+                        }
+                    })
+                    .error(function(data, status, headers, config) {
+                        deferred.reject({
+                            status: status,
+                            headers: headers,
+                            config: config,
+                            body: data
+                        });
+                    });
 
                 return deferred.promise;
             };
             /**
-             * saveLawyerLead
+             * 
              * @method
              * @name OtrService#saveLawyerLeadUsingPOST
              * @param {} request - request
@@ -3851,9 +6144,6 @@ angular.module('otrBackendService', [])
                 var headers = {};
                 var form = {};
 
-                headers['Accept'] = ['*/*'];
-                headers['Content-Type'] = ['application/json'];
-
                 if (parameters['request'] !== undefined) {
                     body = parameters['request'];
                 }
@@ -3871,12 +6161,40 @@ angular.module('otrBackendService', [])
                         });
                 }
 
-                this.request('POST', domain + path, parameters, body, headers, queryParameters, form, deferred);
+                var url = domain + path;
+                var options = {
+                    timeout: parameters.$timeout,
+                    method: 'POST',
+                    url: url,
+                    params: queryParameters,
+                    data: body,
+                    headers: headers
+                };
+                if (Object.keys(form).length > 0) {
+                    options.data = form;
+                    options.headers['Content-Type'] = 'application/x-www-form-urlencoded';
+                    options.transformRequest = OtrService.transformRequest;
+                }
+                $http(options)
+                    .success(function(data, status, headers, config) {
+                        deferred.resolve(data);
+                        if (parameters.$cache !== undefined) {
+                            parameters.$cache.put(url, data, parameters.$cacheItemOpts ? parameters.$cacheItemOpts : {});
+                        }
+                    })
+                    .error(function(data, status, headers, config) {
+                        deferred.reject({
+                            status: status,
+                            headers: headers,
+                            config: config,
+                            body: data
+                        });
+                    });
 
                 return deferred.promise;
             };
             /**
-             * getLawyerEmailGuesses
+             * 
              * @method
              * @name OtrService#getLawyerEmailGuessesUsingGET
              * @param {integer} lawyerId - lawyerId
@@ -3896,9 +6214,6 @@ angular.module('otrBackendService', [])
                 var headers = {};
                 var form = {};
 
-                headers['Accept'] = ['*/*'];
-                headers['Content-Type'] = ['application/json'];
-
                 path = path.replace('{lawyerId}', parameters['lawyerId']);
 
                 if (parameters['lawyerId'] === undefined) {
@@ -3914,12 +6229,45 @@ angular.module('otrBackendService', [])
                         });
                 }
 
-                this.request('GET', domain + path, parameters, body, headers, queryParameters, form, deferred);
+                var url = domain + path;
+                var cached = parameters.$cache && parameters.$cache.get(url);
+                if (cached !== undefined && parameters.$refresh !== true) {
+                    deferred.resolve(cached);
+                    return deferred.promise;
+                }
+                var options = {
+                    timeout: parameters.$timeout,
+                    method: 'GET',
+                    url: url,
+                    params: queryParameters,
+                    data: body,
+                    headers: headers
+                };
+                if (Object.keys(form).length > 0) {
+                    options.data = form;
+                    options.headers['Content-Type'] = 'application/x-www-form-urlencoded';
+                    options.transformRequest = OtrService.transformRequest;
+                }
+                $http(options)
+                    .success(function(data, status, headers, config) {
+                        deferred.resolve(data);
+                        if (parameters.$cache !== undefined) {
+                            parameters.$cache.put(url, data, parameters.$cacheItemOpts ? parameters.$cacheItemOpts : {});
+                        }
+                    })
+                    .error(function(data, status, headers, config) {
+                        deferred.reject({
+                            status: status,
+                            headers: headers,
+                            config: config,
+                            body: data
+                        });
+                    });
 
                 return deferred.promise;
             };
             /**
-             * pushCaseMessage
+             * 
              * @method
              * @name OtrService#pushCaseMessageUsingPOST
              * @param {string} caseId - caseId
@@ -3939,9 +6287,6 @@ angular.module('otrBackendService', [])
                 var queryParameters = {};
                 var headers = {};
                 var form = {};
-
-                headers['Accept'] = ['*/*'];
-                headers['Content-Type'] = ['application/json'];
 
                 path = path.replace('{caseId}', parameters['caseId']);
 
@@ -3967,12 +6312,40 @@ angular.module('otrBackendService', [])
                         });
                 }
 
-                this.request('POST', domain + path, parameters, body, headers, queryParameters, form, deferred);
+                var url = domain + path;
+                var options = {
+                    timeout: parameters.$timeout,
+                    method: 'POST',
+                    url: url,
+                    params: queryParameters,
+                    data: body,
+                    headers: headers
+                };
+                if (Object.keys(form).length > 0) {
+                    options.data = form;
+                    options.headers['Content-Type'] = 'application/x-www-form-urlencoded';
+                    options.transformRequest = OtrService.transformRequest;
+                }
+                $http(options)
+                    .success(function(data, status, headers, config) {
+                        deferred.resolve(data);
+                        if (parameters.$cache !== undefined) {
+                            parameters.$cache.put(url, data, parameters.$cacheItemOpts ? parameters.$cacheItemOpts : {});
+                        }
+                    })
+                    .error(function(data, status, headers, config) {
+                        deferred.reject({
+                            status: status,
+                            headers: headers,
+                            config: config,
+                            body: data
+                        });
+                    });
 
                 return deferred.promise;
             };
             /**
-             * register
+             * 
              * @method
              * @name OtrService#registerUsingPOST
              * @param {} request - request
@@ -3992,9 +6365,6 @@ angular.module('otrBackendService', [])
                 var headers = {};
                 var form = {};
 
-                headers['Accept'] = ['*/*'];
-                headers['Content-Type'] = ['application/json'];
-
                 if (parameters['request'] !== undefined) {
                     body = parameters['request'];
                 }
@@ -4012,12 +6382,40 @@ angular.module('otrBackendService', [])
                         });
                 }
 
-                this.request('POST', domain + path, parameters, body, headers, queryParameters, form, deferred);
+                var url = domain + path;
+                var options = {
+                    timeout: parameters.$timeout,
+                    method: 'POST',
+                    url: url,
+                    params: queryParameters,
+                    data: body,
+                    headers: headers
+                };
+                if (Object.keys(form).length > 0) {
+                    options.data = form;
+                    options.headers['Content-Type'] = 'application/x-www-form-urlencoded';
+                    options.transformRequest = OtrService.transformRequest;
+                }
+                $http(options)
+                    .success(function(data, status, headers, config) {
+                        deferred.resolve(data);
+                        if (parameters.$cache !== undefined) {
+                            parameters.$cache.put(url, data, parameters.$cacheItemOpts ? parameters.$cacheItemOpts : {});
+                        }
+                    })
+                    .error(function(data, status, headers, config) {
+                        deferred.reject({
+                            status: status,
+                            headers: headers,
+                            config: config,
+                            body: data
+                        });
+                    });
 
                 return deferred.promise;
             };
             /**
-             * getUnreadCounts
+             * 
              * @method
              * @name OtrService#getUnreadCountsUsingGET
              * 
@@ -4036,9 +6434,6 @@ angular.module('otrBackendService', [])
                 var headers = {};
                 var form = {};
 
-                headers['Accept'] = ['*/*'];
-                headers['Content-Type'] = ['application/json'];
-
                 if (parameters.$queryParameters) {
                     Object.keys(parameters.$queryParameters)
                         .forEach(function(parameterName) {
@@ -4047,12 +6442,45 @@ angular.module('otrBackendService', [])
                         });
                 }
 
-                this.request('GET', domain + path, parameters, body, headers, queryParameters, form, deferred);
+                var url = domain + path;
+                var cached = parameters.$cache && parameters.$cache.get(url);
+                if (cached !== undefined && parameters.$refresh !== true) {
+                    deferred.resolve(cached);
+                    return deferred.promise;
+                }
+                var options = {
+                    timeout: parameters.$timeout,
+                    method: 'GET',
+                    url: url,
+                    params: queryParameters,
+                    data: body,
+                    headers: headers
+                };
+                if (Object.keys(form).length > 0) {
+                    options.data = form;
+                    options.headers['Content-Type'] = 'application/x-www-form-urlencoded';
+                    options.transformRequest = OtrService.transformRequest;
+                }
+                $http(options)
+                    .success(function(data, status, headers, config) {
+                        deferred.resolve(data);
+                        if (parameters.$cache !== undefined) {
+                            parameters.$cache.put(url, data, parameters.$cacheItemOpts ? parameters.$cacheItemOpts : {});
+                        }
+                    })
+                    .error(function(data, status, headers, config) {
+                        deferred.reject({
+                            status: status,
+                            headers: headers,
+                            config: config,
+                            body: data
+                        });
+                    });
 
                 return deferred.promise;
             };
             /**
-             * markRead
+             * 
              * @method
              * @name OtrService#markReadUsingDELETE
              * @param {string} caseId - caseId
@@ -4072,9 +6500,6 @@ angular.module('otrBackendService', [])
                 var queryParameters = {};
                 var headers = {};
                 var form = {};
-
-                headers['Accept'] = ['*/*'];
-                headers['Content-Type'] = ['application/json'];
 
                 path = path.replace('{caseId}', parameters['caseId']);
 
@@ -4100,12 +6525,40 @@ angular.module('otrBackendService', [])
                         });
                 }
 
-                this.request('DELETE', domain + path, parameters, body, headers, queryParameters, form, deferred);
+                var url = domain + path;
+                var options = {
+                    timeout: parameters.$timeout,
+                    method: 'DELETE',
+                    url: url,
+                    params: queryParameters,
+                    data: body,
+                    headers: headers
+                };
+                if (Object.keys(form).length > 0) {
+                    options.data = form;
+                    options.headers['Content-Type'] = 'application/x-www-form-urlencoded';
+                    options.transformRequest = OtrService.transformRequest;
+                }
+                $http(options)
+                    .success(function(data, status, headers, config) {
+                        deferred.resolve(data);
+                        if (parameters.$cache !== undefined) {
+                            parameters.$cache.put(url, data, parameters.$cacheItemOpts ? parameters.$cacheItemOpts : {});
+                        }
+                    })
+                    .error(function(data, status, headers, config) {
+                        deferred.reject({
+                            status: status,
+                            headers: headers,
+                            config: config,
+                            body: data
+                        });
+                    });
 
                 return deferred.promise;
             };
             /**
-             * getReferralHistory
+             * 
              * @method
              * @name OtrService#getReferralHistoryUsingGET
              * 
@@ -4124,9 +6577,6 @@ angular.module('otrBackendService', [])
                 var headers = {};
                 var form = {};
 
-                headers['Accept'] = ['application/json'];
-                headers['Content-Type'] = ['application/json'];
-
                 if (parameters.$queryParameters) {
                     Object.keys(parameters.$queryParameters)
                         .forEach(function(parameterName) {
@@ -4135,12 +6585,45 @@ angular.module('otrBackendService', [])
                         });
                 }
 
-                this.request('GET', domain + path, parameters, body, headers, queryParameters, form, deferred);
+                var url = domain + path;
+                var cached = parameters.$cache && parameters.$cache.get(url);
+                if (cached !== undefined && parameters.$refresh !== true) {
+                    deferred.resolve(cached);
+                    return deferred.promise;
+                }
+                var options = {
+                    timeout: parameters.$timeout,
+                    method: 'GET',
+                    url: url,
+                    params: queryParameters,
+                    data: body,
+                    headers: headers
+                };
+                if (Object.keys(form).length > 0) {
+                    options.data = form;
+                    options.headers['Content-Type'] = 'application/x-www-form-urlencoded';
+                    options.transformRequest = OtrService.transformRequest;
+                }
+                $http(options)
+                    .success(function(data, status, headers, config) {
+                        deferred.resolve(data);
+                        if (parameters.$cache !== undefined) {
+                            parameters.$cache.put(url, data, parameters.$cacheItemOpts ? parameters.$cacheItemOpts : {});
+                        }
+                    })
+                    .error(function(data, status, headers, config) {
+                        deferred.reject({
+                            status: status,
+                            headers: headers,
+                            config: config,
+                            body: data
+                        });
+                    });
 
                 return deferred.promise;
             };
             /**
-             * getReferralCodes
+             * 
              * @method
              * @name OtrService#getReferralCodesUsingGET
              * @param {boolean} isActive - isActive
@@ -4160,9 +6643,6 @@ angular.module('otrBackendService', [])
                 var headers = {};
                 var form = {};
 
-                headers['Accept'] = ['application/json'];
-                headers['Content-Type'] = ['application/json'];
-
                 if (parameters['isActive'] !== undefined) {
                     queryParameters['isActive'] = parameters['isActive'];
                 }
@@ -4175,12 +6655,45 @@ angular.module('otrBackendService', [])
                         });
                 }
 
-                this.request('GET', domain + path, parameters, body, headers, queryParameters, form, deferred);
+                var url = domain + path;
+                var cached = parameters.$cache && parameters.$cache.get(url);
+                if (cached !== undefined && parameters.$refresh !== true) {
+                    deferred.resolve(cached);
+                    return deferred.promise;
+                }
+                var options = {
+                    timeout: parameters.$timeout,
+                    method: 'GET',
+                    url: url,
+                    params: queryParameters,
+                    data: body,
+                    headers: headers
+                };
+                if (Object.keys(form).length > 0) {
+                    options.data = form;
+                    options.headers['Content-Type'] = 'application/x-www-form-urlencoded';
+                    options.transformRequest = OtrService.transformRequest;
+                }
+                $http(options)
+                    .success(function(data, status, headers, config) {
+                        deferred.resolve(data);
+                        if (parameters.$cache !== undefined) {
+                            parameters.$cache.put(url, data, parameters.$cacheItemOpts ? parameters.$cacheItemOpts : {});
+                        }
+                    })
+                    .error(function(data, status, headers, config) {
+                        deferred.reject({
+                            status: status,
+                            headers: headers,
+                            config: config,
+                            body: data
+                        });
+                    });
 
                 return deferred.promise;
             };
             /**
-             * Referral codes are currently immutable. Meaning, once a referral code is created then no modification is allowed. In urgent scenarios, we can update the values via SQL. If you want to apply a discount to the referee then enter a negative value (applies both for percentage_discount and cents_value types), and enter a positive value if you want to increase the price.
+             * 
              * @method
              * @name OtrService#generateReferralCodeUsingPOST
              * @param {} request - request
@@ -4200,9 +6713,6 @@ angular.module('otrBackendService', [])
                 var headers = {};
                 var form = {};
 
-                headers['Accept'] = ['application/json'];
-                headers['Content-Type'] = ['application/json'];
-
                 if (parameters['request'] !== undefined) {
                     body = parameters['request'];
                 }
@@ -4220,12 +6730,40 @@ angular.module('otrBackendService', [])
                         });
                 }
 
-                this.request('POST', domain + path, parameters, body, headers, queryParameters, form, deferred);
+                var url = domain + path;
+                var options = {
+                    timeout: parameters.$timeout,
+                    method: 'POST',
+                    url: url,
+                    params: queryParameters,
+                    data: body,
+                    headers: headers
+                };
+                if (Object.keys(form).length > 0) {
+                    options.data = form;
+                    options.headers['Content-Type'] = 'application/x-www-form-urlencoded';
+                    options.transformRequest = OtrService.transformRequest;
+                }
+                $http(options)
+                    .success(function(data, status, headers, config) {
+                        deferred.resolve(data);
+                        if (parameters.$cache !== undefined) {
+                            parameters.$cache.put(url, data, parameters.$cacheItemOpts ? parameters.$cacheItemOpts : {});
+                        }
+                    })
+                    .error(function(data, status, headers, config) {
+                        deferred.reject({
+                            status: status,
+                            headers: headers,
+                            config: config,
+                            body: data
+                        });
+                    });
 
                 return deferred.promise;
             };
             /**
-             * getReferralCode
+             * 
              * @method
              * @name OtrService#getReferralCodeUsingGET
              * @param {string} codeId - codeId
@@ -4245,9 +6783,6 @@ angular.module('otrBackendService', [])
                 var headers = {};
                 var form = {};
 
-                headers['Accept'] = ['application/json'];
-                headers['Content-Type'] = ['application/json'];
-
                 path = path.replace('{codeId}', parameters['codeId']);
 
                 if (parameters['codeId'] === undefined) {
@@ -4263,12 +6798,45 @@ angular.module('otrBackendService', [])
                         });
                 }
 
-                this.request('GET', domain + path, parameters, body, headers, queryParameters, form, deferred);
+                var url = domain + path;
+                var cached = parameters.$cache && parameters.$cache.get(url);
+                if (cached !== undefined && parameters.$refresh !== true) {
+                    deferred.resolve(cached);
+                    return deferred.promise;
+                }
+                var options = {
+                    timeout: parameters.$timeout,
+                    method: 'GET',
+                    url: url,
+                    params: queryParameters,
+                    data: body,
+                    headers: headers
+                };
+                if (Object.keys(form).length > 0) {
+                    options.data = form;
+                    options.headers['Content-Type'] = 'application/x-www-form-urlencoded';
+                    options.transformRequest = OtrService.transformRequest;
+                }
+                $http(options)
+                    .success(function(data, status, headers, config) {
+                        deferred.resolve(data);
+                        if (parameters.$cache !== undefined) {
+                            parameters.$cache.put(url, data, parameters.$cacheItemOpts ? parameters.$cacheItemOpts : {});
+                        }
+                    })
+                    .error(function(data, status, headers, config) {
+                        deferred.reject({
+                            status: status,
+                            headers: headers,
+                            config: config,
+                            body: data
+                        });
+                    });
 
                 return deferred.promise;
             };
             /**
-             * markCodeAsInactive
+             * 
              * @method
              * @name OtrService#markCodeAsInactiveUsingDELETE
              * @param {string} codeId - codeId
@@ -4288,9 +6856,6 @@ angular.module('otrBackendService', [])
                 var headers = {};
                 var form = {};
 
-                headers['Accept'] = ['application/json'];
-                headers['Content-Type'] = ['application/json'];
-
                 path = path.replace('{codeId}', parameters['codeId']);
 
                 if (parameters['codeId'] === undefined) {
@@ -4306,12 +6871,40 @@ angular.module('otrBackendService', [])
                         });
                 }
 
-                this.request('DELETE', domain + path, parameters, body, headers, queryParameters, form, deferred);
+                var url = domain + path;
+                var options = {
+                    timeout: parameters.$timeout,
+                    method: 'DELETE',
+                    url: url,
+                    params: queryParameters,
+                    data: body,
+                    headers: headers
+                };
+                if (Object.keys(form).length > 0) {
+                    options.data = form;
+                    options.headers['Content-Type'] = 'application/x-www-form-urlencoded';
+                    options.transformRequest = OtrService.transformRequest;
+                }
+                $http(options)
+                    .success(function(data, status, headers, config) {
+                        deferred.resolve(data);
+                        if (parameters.$cache !== undefined) {
+                            parameters.$cache.put(url, data, parameters.$cacheItemOpts ? parameters.$cacheItemOpts : {});
+                        }
+                    })
+                    .error(function(data, status, headers, config) {
+                        deferred.reject({
+                            status: status,
+                            headers: headers,
+                            config: config,
+                            body: data
+                        });
+                    });
 
                 return deferred.promise;
             };
             /**
-             * Only for admins. This will approve and activate a given referral code
+             * 
              * @method
              * @name OtrService#approveReferralCodeUsingPUT
              * @param {string} codeId - codeId
@@ -4331,9 +6924,6 @@ angular.module('otrBackendService', [])
                 var headers = {};
                 var form = {};
 
-                headers['Accept'] = ['application/json'];
-                headers['Content-Type'] = ['application/json'];
-
                 path = path.replace('{codeId}', parameters['codeId']);
 
                 if (parameters['codeId'] === undefined) {
@@ -4349,12 +6939,40 @@ angular.module('otrBackendService', [])
                         });
                 }
 
-                this.request('PUT', domain + path, parameters, body, headers, queryParameters, form, deferred);
+                var url = domain + path;
+                var options = {
+                    timeout: parameters.$timeout,
+                    method: 'PUT',
+                    url: url,
+                    params: queryParameters,
+                    data: body,
+                    headers: headers
+                };
+                if (Object.keys(form).length > 0) {
+                    options.data = form;
+                    options.headers['Content-Type'] = 'application/x-www-form-urlencoded';
+                    options.transformRequest = OtrService.transformRequest;
+                }
+                $http(options)
+                    .success(function(data, status, headers, config) {
+                        deferred.resolve(data);
+                        if (parameters.$cache !== undefined) {
+                            parameters.$cache.put(url, data, parameters.$cacheItemOpts ? parameters.$cacheItemOpts : {});
+                        }
+                    })
+                    .error(function(data, status, headers, config) {
+                        deferred.reject({
+                            status: status,
+                            headers: headers,
+                            config: config,
+                            body: data
+                        });
+                    });
 
                 return deferred.promise;
             };
             /**
-             * Validates and returns the referral code. Validation includes: Are we passed the expiration date? Has the code exceeded it's max use count?
+             * 
              * @method
              * @name OtrService#validateReferralCodeUsingGET
              * @param {string} codeId - codeId
@@ -4374,9 +6992,6 @@ angular.module('otrBackendService', [])
                 var headers = {};
                 var form = {};
 
-                headers['Accept'] = ['application/json'];
-                headers['Content-Type'] = ['application/json'];
-
                 path = path.replace('{codeId}', parameters['codeId']);
 
                 if (parameters['codeId'] === undefined) {
@@ -4392,12 +7007,45 @@ angular.module('otrBackendService', [])
                         });
                 }
 
-                this.request('GET', domain + path, parameters, body, headers, queryParameters, form, deferred);
+                var url = domain + path;
+                var cached = parameters.$cache && parameters.$cache.get(url);
+                if (cached !== undefined && parameters.$refresh !== true) {
+                    deferred.resolve(cached);
+                    return deferred.promise;
+                }
+                var options = {
+                    timeout: parameters.$timeout,
+                    method: 'GET',
+                    url: url,
+                    params: queryParameters,
+                    data: body,
+                    headers: headers
+                };
+                if (Object.keys(form).length > 0) {
+                    options.data = form;
+                    options.headers['Content-Type'] = 'application/x-www-form-urlencoded';
+                    options.transformRequest = OtrService.transformRequest;
+                }
+                $http(options)
+                    .success(function(data, status, headers, config) {
+                        deferred.resolve(data);
+                        if (parameters.$cache !== undefined) {
+                            parameters.$cache.put(url, data, parameters.$cacheItemOpts ? parameters.$cacheItemOpts : {});
+                        }
+                    })
+                    .error(function(data, status, headers, config) {
+                        deferred.reject({
+                            status: status,
+                            headers: headers,
+                            config: config,
+                            body: data
+                        });
+                    });
 
                 return deferred.promise;
             };
             /**
-             * getUserReferralSourceTypes
+             * 
              * @method
              * @name OtrService#getUserReferralSourceTypesUsingGET
              * 
@@ -4416,9 +7064,6 @@ angular.module('otrBackendService', [])
                 var headers = {};
                 var form = {};
 
-                headers['Accept'] = ['application/json'];
-                headers['Content-Type'] = ['application/json'];
-
                 if (parameters.$queryParameters) {
                     Object.keys(parameters.$queryParameters)
                         .forEach(function(parameterName) {
@@ -4427,12 +7072,45 @@ angular.module('otrBackendService', [])
                         });
                 }
 
-                this.request('GET', domain + path, parameters, body, headers, queryParameters, form, deferred);
+                var url = domain + path;
+                var cached = parameters.$cache && parameters.$cache.get(url);
+                if (cached !== undefined && parameters.$refresh !== true) {
+                    deferred.resolve(cached);
+                    return deferred.promise;
+                }
+                var options = {
+                    timeout: parameters.$timeout,
+                    method: 'GET',
+                    url: url,
+                    params: queryParameters,
+                    data: body,
+                    headers: headers
+                };
+                if (Object.keys(form).length > 0) {
+                    options.data = form;
+                    options.headers['Content-Type'] = 'application/x-www-form-urlencoded';
+                    options.transformRequest = OtrService.transformRequest;
+                }
+                $http(options)
+                    .success(function(data, status, headers, config) {
+                        deferred.resolve(data);
+                        if (parameters.$cache !== undefined) {
+                            parameters.$cache.put(url, data, parameters.$cacheItemOpts ? parameters.$cacheItemOpts : {});
+                        }
+                    })
+                    .error(function(data, status, headers, config) {
+                        deferred.reject({
+                            status: status,
+                            headers: headers,
+                            config: config,
+                            body: data
+                        });
+                    });
 
                 return deferred.promise;
             };
             /**
-             * setReferralSource
+             * 
              * @method
              * @name OtrService#setReferralSourceUsingPOST
              * @param {} request - request
@@ -4452,9 +7130,6 @@ angular.module('otrBackendService', [])
                 var headers = {};
                 var form = {};
 
-                headers['Accept'] = ['application/json'];
-                headers['Content-Type'] = ['application/json'];
-
                 if (parameters['request'] !== undefined) {
                     body = parameters['request'];
                 }
@@ -4472,12 +7147,40 @@ angular.module('otrBackendService', [])
                         });
                 }
 
-                this.request('POST', domain + path, parameters, body, headers, queryParameters, form, deferred);
+                var url = domain + path;
+                var options = {
+                    timeout: parameters.$timeout,
+                    method: 'POST',
+                    url: url,
+                    params: queryParameters,
+                    data: body,
+                    headers: headers
+                };
+                if (Object.keys(form).length > 0) {
+                    options.data = form;
+                    options.headers['Content-Type'] = 'application/x-www-form-urlencoded';
+                    options.transformRequest = OtrService.transformRequest;
+                }
+                $http(options)
+                    .success(function(data, status, headers, config) {
+                        deferred.resolve(data);
+                        if (parameters.$cache !== undefined) {
+                            parameters.$cache.put(url, data, parameters.$cacheItemOpts ? parameters.$cacheItemOpts : {});
+                        }
+                    })
+                    .error(function(data, status, headers, config) {
+                        deferred.reject({
+                            status: status,
+                            headers: headers,
+                            config: config,
+                            body: data
+                        });
+                    });
 
                 return deferred.promise;
             };
             /**
-             * getRefLinksForUser
+             * 
              * @method
              * @name OtrService#getRefLinksForUserUsingGET
              * @param {string} userIdString - userIdString
@@ -4497,9 +7200,6 @@ angular.module('otrBackendService', [])
                 var headers = {};
                 var form = {};
 
-                headers['Accept'] = ['*/*'];
-                headers['Content-Type'] = ['application/json'];
-
                 path = path.replace('{userIdString}', parameters['userIdString']);
 
                 if (parameters['userIdString'] === undefined) {
@@ -4515,12 +7215,45 @@ angular.module('otrBackendService', [])
                         });
                 }
 
-                this.request('GET', domain + path, parameters, body, headers, queryParameters, form, deferred);
+                var url = domain + path;
+                var cached = parameters.$cache && parameters.$cache.get(url);
+                if (cached !== undefined && parameters.$refresh !== true) {
+                    deferred.resolve(cached);
+                    return deferred.promise;
+                }
+                var options = {
+                    timeout: parameters.$timeout,
+                    method: 'GET',
+                    url: url,
+                    params: queryParameters,
+                    data: body,
+                    headers: headers
+                };
+                if (Object.keys(form).length > 0) {
+                    options.data = form;
+                    options.headers['Content-Type'] = 'application/x-www-form-urlencoded';
+                    options.transformRequest = OtrService.transformRequest;
+                }
+                $http(options)
+                    .success(function(data, status, headers, config) {
+                        deferred.resolve(data);
+                        if (parameters.$cache !== undefined) {
+                            parameters.$cache.put(url, data, parameters.$cacheItemOpts ? parameters.$cacheItemOpts : {});
+                        }
+                    })
+                    .error(function(data, status, headers, config) {
+                        deferred.reject({
+                            status: status,
+                            headers: headers,
+                            config: config,
+                            body: data
+                        });
+                    });
 
                 return deferred.promise;
             };
             /**
-             * putSetting
+             * 
              * @method
              * @name OtrService#putSettingUsingPOST
              * @param {} request - request
@@ -4540,9 +7273,6 @@ angular.module('otrBackendService', [])
                 var headers = {};
                 var form = {};
 
-                headers['Accept'] = ['*/*'];
-                headers['Content-Type'] = ['application/json'];
-
                 if (parameters['request'] !== undefined) {
                     body = parameters['request'];
                 }
@@ -4560,12 +7290,40 @@ angular.module('otrBackendService', [])
                         });
                 }
 
-                this.request('POST', domain + path, parameters, body, headers, queryParameters, form, deferred);
+                var url = domain + path;
+                var options = {
+                    timeout: parameters.$timeout,
+                    method: 'POST',
+                    url: url,
+                    params: queryParameters,
+                    data: body,
+                    headers: headers
+                };
+                if (Object.keys(form).length > 0) {
+                    options.data = form;
+                    options.headers['Content-Type'] = 'application/x-www-form-urlencoded';
+                    options.transformRequest = OtrService.transformRequest;
+                }
+                $http(options)
+                    .success(function(data, status, headers, config) {
+                        deferred.resolve(data);
+                        if (parameters.$cache !== undefined) {
+                            parameters.$cache.put(url, data, parameters.$cacheItemOpts ? parameters.$cacheItemOpts : {});
+                        }
+                    })
+                    .error(function(data, status, headers, config) {
+                        deferred.reject({
+                            status: status,
+                            headers: headers,
+                            config: config,
+                            body: data
+                        });
+                    });
 
                 return deferred.promise;
             };
             /**
-             * registerNewUser
+             * 
              * @method
              * @name OtrService#registerNewUserUsingPOST
              * @param {} request - request
@@ -4585,9 +7343,6 @@ angular.module('otrBackendService', [])
                 var headers = {};
                 var form = {};
 
-                headers['Accept'] = ['*/*'];
-                headers['Content-Type'] = ['application/json'];
-
                 if (parameters['request'] !== undefined) {
                     body = parameters['request'];
                 }
@@ -4605,12 +7360,40 @@ angular.module('otrBackendService', [])
                         });
                 }
 
-                this.request('POST', domain + path, parameters, body, headers, queryParameters, form, deferred);
+                var url = domain + path;
+                var options = {
+                    timeout: parameters.$timeout,
+                    method: 'POST',
+                    url: url,
+                    params: queryParameters,
+                    data: body,
+                    headers: headers
+                };
+                if (Object.keys(form).length > 0) {
+                    options.data = form;
+                    options.headers['Content-Type'] = 'application/x-www-form-urlencoded';
+                    options.transformRequest = OtrService.transformRequest;
+                }
+                $http(options)
+                    .success(function(data, status, headers, config) {
+                        deferred.resolve(data);
+                        if (parameters.$cache !== undefined) {
+                            parameters.$cache.put(url, data, parameters.$cacheItemOpts ? parameters.$cacheItemOpts : {});
+                        }
+                    })
+                    .error(function(data, status, headers, config) {
+                        deferred.reject({
+                            status: status,
+                            headers: headers,
+                            config: config,
+                            body: data
+                        });
+                    });
 
                 return deferred.promise;
             };
             /**
-             * connectStripeAccount
+             * 
              * @method
              * @name OtrService#connectStripeAccountUsingPOST
              * @param {string} code - authorizationCode
@@ -4630,9 +7413,6 @@ angular.module('otrBackendService', [])
                 var headers = {};
                 var form = {};
 
-                headers['Accept'] = ['*/*'];
-                headers['Content-Type'] = ['application/json'];
-
                 if (parameters['code'] !== undefined) {
                     queryParameters['code'] = parameters['code'];
                 }
@@ -4650,12 +7430,40 @@ angular.module('otrBackendService', [])
                         });
                 }
 
-                this.request('POST', domain + path, parameters, body, headers, queryParameters, form, deferred);
+                var url = domain + path;
+                var options = {
+                    timeout: parameters.$timeout,
+                    method: 'POST',
+                    url: url,
+                    params: queryParameters,
+                    data: body,
+                    headers: headers
+                };
+                if (Object.keys(form).length > 0) {
+                    options.data = form;
+                    options.headers['Content-Type'] = 'application/x-www-form-urlencoded';
+                    options.transformRequest = OtrService.transformRequest;
+                }
+                $http(options)
+                    .success(function(data, status, headers, config) {
+                        deferred.resolve(data);
+                        if (parameters.$cache !== undefined) {
+                            parameters.$cache.put(url, data, parameters.$cacheItemOpts ? parameters.$cacheItemOpts : {});
+                        }
+                    })
+                    .error(function(data, status, headers, config) {
+                        deferred.reject({
+                            status: status,
+                            headers: headers,
+                            config: config,
+                            body: data
+                        });
+                    });
 
                 return deferred.promise;
             };
             /**
-             * retrieveConnectedAccountDetails
+             * 
              * @method
              * @name OtrService#retrieveConnectedAccountDetailsUsingGET
              * @param {string} accountId - accountId
@@ -4675,9 +7483,6 @@ angular.module('otrBackendService', [])
                 var headers = {};
                 var form = {};
 
-                headers['Accept'] = ['*/*'];
-                headers['Content-Type'] = ['application/json'];
-
                 path = path.replace('{accountId}', parameters['accountId']);
 
                 if (parameters['accountId'] === undefined) {
@@ -4693,12 +7498,45 @@ angular.module('otrBackendService', [])
                         });
                 }
 
-                this.request('GET', domain + path, parameters, body, headers, queryParameters, form, deferred);
+                var url = domain + path;
+                var cached = parameters.$cache && parameters.$cache.get(url);
+                if (cached !== undefined && parameters.$refresh !== true) {
+                    deferred.resolve(cached);
+                    return deferred.promise;
+                }
+                var options = {
+                    timeout: parameters.$timeout,
+                    method: 'GET',
+                    url: url,
+                    params: queryParameters,
+                    data: body,
+                    headers: headers
+                };
+                if (Object.keys(form).length > 0) {
+                    options.data = form;
+                    options.headers['Content-Type'] = 'application/x-www-form-urlencoded';
+                    options.transformRequest = OtrService.transformRequest;
+                }
+                $http(options)
+                    .success(function(data, status, headers, config) {
+                        deferred.resolve(data);
+                        if (parameters.$cache !== undefined) {
+                            parameters.$cache.put(url, data, parameters.$cacheItemOpts ? parameters.$cacheItemOpts : {});
+                        }
+                    })
+                    .error(function(data, status, headers, config) {
+                        deferred.reject({
+                            status: status,
+                            headers: headers,
+                            config: config,
+                            body: data
+                        });
+                    });
 
                 return deferred.promise;
             };
             /**
-             * subscribe
+             * 
              * @method
              * @name OtrService#subscribeUsingPOST
              * @param {} request - request
@@ -4718,9 +7556,6 @@ angular.module('otrBackendService', [])
                 var headers = {};
                 var form = {};
 
-                headers['Accept'] = ['*/*'];
-                headers['Content-Type'] = ['application/json'];
-
                 if (parameters['request'] !== undefined) {
                     body = parameters['request'];
                 }
@@ -4738,12 +7573,40 @@ angular.module('otrBackendService', [])
                         });
                 }
 
-                this.request('POST', domain + path, parameters, body, headers, queryParameters, form, deferred);
+                var url = domain + path;
+                var options = {
+                    timeout: parameters.$timeout,
+                    method: 'POST',
+                    url: url,
+                    params: queryParameters,
+                    data: body,
+                    headers: headers
+                };
+                if (Object.keys(form).length > 0) {
+                    options.data = form;
+                    options.headers['Content-Type'] = 'application/x-www-form-urlencoded';
+                    options.transformRequest = OtrService.transformRequest;
+                }
+                $http(options)
+                    .success(function(data, status, headers, config) {
+                        deferred.resolve(data);
+                        if (parameters.$cache !== undefined) {
+                            parameters.$cache.put(url, data, parameters.$cacheItemOpts ? parameters.$cacheItemOpts : {});
+                        }
+                    })
+                    .error(function(data, status, headers, config) {
+                        deferred.reject({
+                            status: status,
+                            headers: headers,
+                            config: config,
+                            body: data
+                        });
+                    });
 
                 return deferred.promise;
             };
             /**
-             * persistTicketEvaluationRequest
+             * 
              * @method
              * @name OtrService#persistTicketEvaluationRequestUsingPOST
              * @param {} request - request
@@ -4763,9 +7626,6 @@ angular.module('otrBackendService', [])
                 var headers = {};
                 var form = {};
 
-                headers['Accept'] = ['*/*'];
-                headers['Content-Type'] = ['application/json'];
-
                 if (parameters['request'] !== undefined) {
                     body = parameters['request'];
                 }
@@ -4783,12 +7643,40 @@ angular.module('otrBackendService', [])
                         });
                 }
 
-                this.request('POST', domain + path, parameters, body, headers, queryParameters, form, deferred);
+                var url = domain + path;
+                var options = {
+                    timeout: parameters.$timeout,
+                    method: 'POST',
+                    url: url,
+                    params: queryParameters,
+                    data: body,
+                    headers: headers
+                };
+                if (Object.keys(form).length > 0) {
+                    options.data = form;
+                    options.headers['Content-Type'] = 'application/x-www-form-urlencoded';
+                    options.transformRequest = OtrService.transformRequest;
+                }
+                $http(options)
+                    .success(function(data, status, headers, config) {
+                        deferred.resolve(data);
+                        if (parameters.$cache !== undefined) {
+                            parameters.$cache.put(url, data, parameters.$cacheItemOpts ? parameters.$cacheItemOpts : {});
+                        }
+                    })
+                    .error(function(data, status, headers, config) {
+                        deferred.reject({
+                            status: status,
+                            headers: headers,
+                            config: config,
+                            body: data
+                        });
+                    });
 
                 return deferred.promise;
             };
             /**
-             * updateTicketEvaluationRequest
+             * 
              * @method
              * @name OtrService#updateTicketEvaluationRequestUsingPOST
              * @param {integer} ticketEvaluationId - ticketEvaluationId
@@ -4808,9 +7696,6 @@ angular.module('otrBackendService', [])
                 var queryParameters = {};
                 var headers = {};
                 var form = {};
-
-                headers['Accept'] = ['*/*'];
-                headers['Content-Type'] = ['application/json'];
 
                 path = path.replace('{ticketEvaluationId}', parameters['ticketEvaluationId']);
 
@@ -4836,12 +7721,40 @@ angular.module('otrBackendService', [])
                         });
                 }
 
-                this.request('POST', domain + path, parameters, body, headers, queryParameters, form, deferred);
+                var url = domain + path;
+                var options = {
+                    timeout: parameters.$timeout,
+                    method: 'POST',
+                    url: url,
+                    params: queryParameters,
+                    data: body,
+                    headers: headers
+                };
+                if (Object.keys(form).length > 0) {
+                    options.data = form;
+                    options.headers['Content-Type'] = 'application/x-www-form-urlencoded';
+                    options.transformRequest = OtrService.transformRequest;
+                }
+                $http(options)
+                    .success(function(data, status, headers, config) {
+                        deferred.resolve(data);
+                        if (parameters.$cache !== undefined) {
+                            parameters.$cache.put(url, data, parameters.$cacheItemOpts ? parameters.$cacheItemOpts : {});
+                        }
+                    })
+                    .error(function(data, status, headers, config) {
+                        deferred.reject({
+                            status: status,
+                            headers: headers,
+                            config: config,
+                            body: data
+                        });
+                    });
 
                 return deferred.promise;
             };
             /**
-             * getCurrentUserInfo
+             * 
              * @method
              * @name OtrService#getCurrentUserInfoUsingGET
              * 
@@ -4860,9 +7773,6 @@ angular.module('otrBackendService', [])
                 var headers = {};
                 var form = {};
 
-                headers['Accept'] = ['*/*'];
-                headers['Content-Type'] = ['application/json'];
-
                 if (parameters.$queryParameters) {
                     Object.keys(parameters.$queryParameters)
                         .forEach(function(parameterName) {
@@ -4871,12 +7781,45 @@ angular.module('otrBackendService', [])
                         });
                 }
 
-                this.request('GET', domain + path, parameters, body, headers, queryParameters, form, deferred);
+                var url = domain + path;
+                var cached = parameters.$cache && parameters.$cache.get(url);
+                if (cached !== undefined && parameters.$refresh !== true) {
+                    deferred.resolve(cached);
+                    return deferred.promise;
+                }
+                var options = {
+                    timeout: parameters.$timeout,
+                    method: 'GET',
+                    url: url,
+                    params: queryParameters,
+                    data: body,
+                    headers: headers
+                };
+                if (Object.keys(form).length > 0) {
+                    options.data = form;
+                    options.headers['Content-Type'] = 'application/x-www-form-urlencoded';
+                    options.transformRequest = OtrService.transformRequest;
+                }
+                $http(options)
+                    .success(function(data, status, headers, config) {
+                        deferred.resolve(data);
+                        if (parameters.$cache !== undefined) {
+                            parameters.$cache.put(url, data, parameters.$cacheItemOpts ? parameters.$cacheItemOpts : {});
+                        }
+                    })
+                    .error(function(data, status, headers, config) {
+                        deferred.reject({
+                            status: status,
+                            headers: headers,
+                            config: config,
+                            body: data
+                        });
+                    });
 
                 return deferred.promise;
             };
             /**
-             * updateUserDetails
+             * 
              * @method
              * @name OtrService#updateUserDetailsUsingPUT
              * @param {} request - request
@@ -4896,9 +7839,6 @@ angular.module('otrBackendService', [])
                 var headers = {};
                 var form = {};
 
-                headers['Accept'] = ['*/*'];
-                headers['Content-Type'] = ['application/json'];
-
                 if (parameters['request'] !== undefined) {
                     body = parameters['request'];
                 }
@@ -4916,12 +7856,40 @@ angular.module('otrBackendService', [])
                         });
                 }
 
-                this.request('PUT', domain + path, parameters, body, headers, queryParameters, form, deferred);
+                var url = domain + path;
+                var options = {
+                    timeout: parameters.$timeout,
+                    method: 'PUT',
+                    url: url,
+                    params: queryParameters,
+                    data: body,
+                    headers: headers
+                };
+                if (Object.keys(form).length > 0) {
+                    options.data = form;
+                    options.headers['Content-Type'] = 'application/x-www-form-urlencoded';
+                    options.transformRequest = OtrService.transformRequest;
+                }
+                $http(options)
+                    .success(function(data, status, headers, config) {
+                        deferred.resolve(data);
+                        if (parameters.$cache !== undefined) {
+                            parameters.$cache.put(url, data, parameters.$cacheItemOpts ? parameters.$cacheItemOpts : {});
+                        }
+                    })
+                    .error(function(data, status, headers, config) {
+                        deferred.reject({
+                            status: status,
+                            headers: headers,
+                            config: config,
+                            body: data
+                        });
+                    });
 
                 return deferred.promise;
             };
             /**
-             * changeUserPassword
+             * 
              * @method
              * @name OtrService#changeUserPasswordUsingPUT
              * @param {} request - request
@@ -4941,9 +7909,6 @@ angular.module('otrBackendService', [])
                 var headers = {};
                 var form = {};
 
-                headers['Accept'] = ['*/*'];
-                headers['Content-Type'] = ['application/json'];
-
                 if (parameters['request'] !== undefined) {
                     body = parameters['request'];
                 }
@@ -4961,12 +7926,40 @@ angular.module('otrBackendService', [])
                         });
                 }
 
-                this.request('PUT', domain + path, parameters, body, headers, queryParameters, form, deferred);
+                var url = domain + path;
+                var options = {
+                    timeout: parameters.$timeout,
+                    method: 'PUT',
+                    url: url,
+                    params: queryParameters,
+                    data: body,
+                    headers: headers
+                };
+                if (Object.keys(form).length > 0) {
+                    options.data = form;
+                    options.headers['Content-Type'] = 'application/x-www-form-urlencoded';
+                    options.transformRequest = OtrService.transformRequest;
+                }
+                $http(options)
+                    .success(function(data, status, headers, config) {
+                        deferred.resolve(data);
+                        if (parameters.$cache !== undefined) {
+                            parameters.$cache.put(url, data, parameters.$cacheItemOpts ? parameters.$cacheItemOpts : {});
+                        }
+                    })
+                    .error(function(data, status, headers, config) {
+                        deferred.reject({
+                            status: status,
+                            headers: headers,
+                            config: config,
+                            body: data
+                        });
+                    });
 
                 return deferred.promise;
             };
             /**
-             * resetUserPassword
+             * 
              * @method
              * @name OtrService#resetUserPasswordUsingPOST
              * @param {} request - request
@@ -4986,9 +7979,6 @@ angular.module('otrBackendService', [])
                 var headers = {};
                 var form = {};
 
-                headers['Accept'] = ['*/*'];
-                headers['Content-Type'] = ['application/json'];
-
                 if (parameters['request'] !== undefined) {
                     body = parameters['request'];
                 }
@@ -5006,12 +7996,40 @@ angular.module('otrBackendService', [])
                         });
                 }
 
-                this.request('POST', domain + path, parameters, body, headers, queryParameters, form, deferred);
+                var url = domain + path;
+                var options = {
+                    timeout: parameters.$timeout,
+                    method: 'POST',
+                    url: url,
+                    params: queryParameters,
+                    data: body,
+                    headers: headers
+                };
+                if (Object.keys(form).length > 0) {
+                    options.data = form;
+                    options.headers['Content-Type'] = 'application/x-www-form-urlencoded';
+                    options.transformRequest = OtrService.transformRequest;
+                }
+                $http(options)
+                    .success(function(data, status, headers, config) {
+                        deferred.resolve(data);
+                        if (parameters.$cache !== undefined) {
+                            parameters.$cache.put(url, data, parameters.$cacheItemOpts ? parameters.$cacheItemOpts : {});
+                        }
+                    })
+                    .error(function(data, status, headers, config) {
+                        deferred.reject({
+                            status: status,
+                            headers: headers,
+                            config: config,
+                            body: data
+                        });
+                    });
 
                 return deferred.promise;
             };
             /**
-             * verifyPwdResetToken
+             * 
              * @method
              * @name OtrService#verifyPwdResetTokenUsingGET
              * @param {string} token - token
@@ -5031,9 +8049,6 @@ angular.module('otrBackendService', [])
                 var headers = {};
                 var form = {};
 
-                headers['Accept'] = ['*/*'];
-                headers['Content-Type'] = ['application/json'];
-
                 if (parameters['token'] !== undefined) {
                     queryParameters['token'] = parameters['token'];
                 }
@@ -5051,12 +8066,45 @@ angular.module('otrBackendService', [])
                         });
                 }
 
-                this.request('GET', domain + path, parameters, body, headers, queryParameters, form, deferred);
+                var url = domain + path;
+                var cached = parameters.$cache && parameters.$cache.get(url);
+                if (cached !== undefined && parameters.$refresh !== true) {
+                    deferred.resolve(cached);
+                    return deferred.promise;
+                }
+                var options = {
+                    timeout: parameters.$timeout,
+                    method: 'GET',
+                    url: url,
+                    params: queryParameters,
+                    data: body,
+                    headers: headers
+                };
+                if (Object.keys(form).length > 0) {
+                    options.data = form;
+                    options.headers['Content-Type'] = 'application/x-www-form-urlencoded';
+                    options.transformRequest = OtrService.transformRequest;
+                }
+                $http(options)
+                    .success(function(data, status, headers, config) {
+                        deferred.resolve(data);
+                        if (parameters.$cache !== undefined) {
+                            parameters.$cache.put(url, data, parameters.$cacheItemOpts ? parameters.$cacheItemOpts : {});
+                        }
+                    })
+                    .error(function(data, status, headers, config) {
+                        deferred.reject({
+                            status: status,
+                            headers: headers,
+                            config: config,
+                            body: data
+                        });
+                    });
 
                 return deferred.promise;
             };
             /**
-             * sendResetPasswordToken
+             * 
              * @method
              * @name OtrService#sendResetPasswordTokenUsingPOST
              * @param {string} email - userEmail
@@ -5076,9 +8124,6 @@ angular.module('otrBackendService', [])
                 var headers = {};
                 var form = {};
 
-                headers['Accept'] = ['*/*'];
-                headers['Content-Type'] = ['application/json'];
-
                 if (parameters['email'] !== undefined) {
                     queryParameters['email'] = parameters['email'];
                 }
@@ -5096,12 +8141,40 @@ angular.module('otrBackendService', [])
                         });
                 }
 
-                this.request('POST', domain + path, parameters, body, headers, queryParameters, form, deferred);
+                var url = domain + path;
+                var options = {
+                    timeout: parameters.$timeout,
+                    method: 'POST',
+                    url: url,
+                    params: queryParameters,
+                    data: body,
+                    headers: headers
+                };
+                if (Object.keys(form).length > 0) {
+                    options.data = form;
+                    options.headers['Content-Type'] = 'application/x-www-form-urlencoded';
+                    options.transformRequest = OtrService.transformRequest;
+                }
+                $http(options)
+                    .success(function(data, status, headers, config) {
+                        deferred.resolve(data);
+                        if (parameters.$cache !== undefined) {
+                            parameters.$cache.put(url, data, parameters.$cacheItemOpts ? parameters.$cacheItemOpts : {});
+                        }
+                    })
+                    .error(function(data, status, headers, config) {
+                        deferred.reject({
+                            status: status,
+                            headers: headers,
+                            config: config,
+                            body: data
+                        });
+                    });
 
                 return deferred.promise;
             };
             /**
-             * findMatchingUsers
+             * 
              * @method
              * @name OtrService#findMatchingUsersUsingPOST
              * @param {} request - request
@@ -5121,9 +8194,6 @@ angular.module('otrBackendService', [])
                 var headers = {};
                 var form = {};
 
-                headers['Accept'] = ['*/*'];
-                headers['Content-Type'] = ['application/json'];
-
                 if (parameters['request'] !== undefined) {
                     body = parameters['request'];
                 }
@@ -5141,12 +8211,40 @@ angular.module('otrBackendService', [])
                         });
                 }
 
-                this.request('POST', domain + path, parameters, body, headers, queryParameters, form, deferred);
+                var url = domain + path;
+                var options = {
+                    timeout: parameters.$timeout,
+                    method: 'POST',
+                    url: url,
+                    params: queryParameters,
+                    data: body,
+                    headers: headers
+                };
+                if (Object.keys(form).length > 0) {
+                    options.data = form;
+                    options.headers['Content-Type'] = 'application/x-www-form-urlencoded';
+                    options.transformRequest = OtrService.transformRequest;
+                }
+                $http(options)
+                    .success(function(data, status, headers, config) {
+                        deferred.resolve(data);
+                        if (parameters.$cache !== undefined) {
+                            parameters.$cache.put(url, data, parameters.$cacheItemOpts ? parameters.$cacheItemOpts : {});
+                        }
+                    })
+                    .error(function(data, status, headers, config) {
+                        deferred.reject({
+                            status: status,
+                            headers: headers,
+                            config: config,
+                            body: data
+                        });
+                    });
 
                 return deferred.promise;
             };
             /**
-             * addCardToStripeAccount
+             * 
              * @method
              * @name OtrService#addCardToStripeAccountUsingPOST
              * @param {} request - request
@@ -5166,9 +8264,6 @@ angular.module('otrBackendService', [])
                 var headers = {};
                 var form = {};
 
-                headers['Accept'] = ['*/*'];
-                headers['Content-Type'] = ['application/json'];
-
                 if (parameters['request'] !== undefined) {
                     body = parameters['request'];
                 }
@@ -5186,12 +8281,40 @@ angular.module('otrBackendService', [])
                         });
                 }
 
-                this.request('POST', domain + path, parameters, body, headers, queryParameters, form, deferred);
+                var url = domain + path;
+                var options = {
+                    timeout: parameters.$timeout,
+                    method: 'POST',
+                    url: url,
+                    params: queryParameters,
+                    data: body,
+                    headers: headers
+                };
+                if (Object.keys(form).length > 0) {
+                    options.data = form;
+                    options.headers['Content-Type'] = 'application/x-www-form-urlencoded';
+                    options.transformRequest = OtrService.transformRequest;
+                }
+                $http(options)
+                    .success(function(data, status, headers, config) {
+                        deferred.resolve(data);
+                        if (parameters.$cache !== undefined) {
+                            parameters.$cache.put(url, data, parameters.$cacheItemOpts ? parameters.$cacheItemOpts : {});
+                        }
+                    })
+                    .error(function(data, status, headers, config) {
+                        deferred.reject({
+                            status: status,
+                            headers: headers,
+                            config: config,
+                            body: data
+                        });
+                    });
 
                 return deferred.promise;
             };
             /**
-             * getCard
+             * 
              * @method
              * @name OtrService#getCardUsingGET
              * @param {string} cardId - cardId
@@ -5211,9 +8334,6 @@ angular.module('otrBackendService', [])
                 var headers = {};
                 var form = {};
 
-                headers['Accept'] = ['*/*'];
-                headers['Content-Type'] = ['application/json'];
-
                 path = path.replace('{cardId}', parameters['cardId']);
 
                 if (parameters['cardId'] === undefined) {
@@ -5229,12 +8349,45 @@ angular.module('otrBackendService', [])
                         });
                 }
 
-                this.request('GET', domain + path, parameters, body, headers, queryParameters, form, deferred);
+                var url = domain + path;
+                var cached = parameters.$cache && parameters.$cache.get(url);
+                if (cached !== undefined && parameters.$refresh !== true) {
+                    deferred.resolve(cached);
+                    return deferred.promise;
+                }
+                var options = {
+                    timeout: parameters.$timeout,
+                    method: 'GET',
+                    url: url,
+                    params: queryParameters,
+                    data: body,
+                    headers: headers
+                };
+                if (Object.keys(form).length > 0) {
+                    options.data = form;
+                    options.headers['Content-Type'] = 'application/x-www-form-urlencoded';
+                    options.transformRequest = OtrService.transformRequest;
+                }
+                $http(options)
+                    .success(function(data, status, headers, config) {
+                        deferred.resolve(data);
+                        if (parameters.$cache !== undefined) {
+                            parameters.$cache.put(url, data, parameters.$cacheItemOpts ? parameters.$cacheItemOpts : {});
+                        }
+                    })
+                    .error(function(data, status, headers, config) {
+                        deferred.reject({
+                            status: status,
+                            headers: headers,
+                            config: config,
+                            body: data
+                        });
+                    });
 
                 return deferred.promise;
             };
             /**
-             * deleteCard
+             * 
              * @method
              * @name OtrService#deleteCardUsingDELETE
              * @param {string} cardId - cardId
@@ -5254,9 +8407,6 @@ angular.module('otrBackendService', [])
                 var headers = {};
                 var form = {};
 
-                headers['Accept'] = ['*/*'];
-                headers['Content-Type'] = ['application/json'];
-
                 path = path.replace('{cardId}', parameters['cardId']);
 
                 if (parameters['cardId'] === undefined) {
@@ -5272,12 +8422,40 @@ angular.module('otrBackendService', [])
                         });
                 }
 
-                this.request('DELETE', domain + path, parameters, body, headers, queryParameters, form, deferred);
+                var url = domain + path;
+                var options = {
+                    timeout: parameters.$timeout,
+                    method: 'DELETE',
+                    url: url,
+                    params: queryParameters,
+                    data: body,
+                    headers: headers
+                };
+                if (Object.keys(form).length > 0) {
+                    options.data = form;
+                    options.headers['Content-Type'] = 'application/x-www-form-urlencoded';
+                    options.transformRequest = OtrService.transformRequest;
+                }
+                $http(options)
+                    .success(function(data, status, headers, config) {
+                        deferred.resolve(data);
+                        if (parameters.$cache !== undefined) {
+                            parameters.$cache.put(url, data, parameters.$cacheItemOpts ? parameters.$cacheItemOpts : {});
+                        }
+                    })
+                    .error(function(data, status, headers, config) {
+                        deferred.reject({
+                            status: status,
+                            headers: headers,
+                            config: config,
+                            body: data
+                        });
+                    });
 
                 return deferred.promise;
             };
             /**
-             * getUserDetails
+             * 
              * @method
              * @name OtrService#getUserDetailsUsingGET
              * @param {string} userIdString - userIdString
@@ -5297,9 +8475,6 @@ angular.module('otrBackendService', [])
                 var headers = {};
                 var form = {};
 
-                headers['Accept'] = ['application/json'];
-                headers['Content-Type'] = ['application/json'];
-
                 path = path.replace('{userIdString}', parameters['userIdString']);
 
                 if (parameters['userIdString'] === undefined) {
@@ -5315,12 +8490,45 @@ angular.module('otrBackendService', [])
                         });
                 }
 
-                this.request('GET', domain + path, parameters, body, headers, queryParameters, form, deferred);
+                var url = domain + path;
+                var cached = parameters.$cache && parameters.$cache.get(url);
+                if (cached !== undefined && parameters.$refresh !== true) {
+                    deferred.resolve(cached);
+                    return deferred.promise;
+                }
+                var options = {
+                    timeout: parameters.$timeout,
+                    method: 'GET',
+                    url: url,
+                    params: queryParameters,
+                    data: body,
+                    headers: headers
+                };
+                if (Object.keys(form).length > 0) {
+                    options.data = form;
+                    options.headers['Content-Type'] = 'application/x-www-form-urlencoded';
+                    options.transformRequest = OtrService.transformRequest;
+                }
+                $http(options)
+                    .success(function(data, status, headers, config) {
+                        deferred.resolve(data);
+                        if (parameters.$cache !== undefined) {
+                            parameters.$cache.put(url, data, parameters.$cacheItemOpts ? parameters.$cacheItemOpts : {});
+                        }
+                    })
+                    .error(function(data, status, headers, config) {
+                        deferred.reject({
+                            status: status,
+                            headers: headers,
+                            config: config,
+                            body: data
+                        });
+                    });
 
                 return deferred.promise;
             };
             /**
-             * Retrieves all the payment methods available on the user's account. For now, payment methods are retrieved and stored exclusively on Stripe.
+             * 
              * @method
              * @name OtrService#getPaymentMethodsForUserUsingGET
              * @param {string} userIdString - userIdString
@@ -5340,9 +8548,6 @@ angular.module('otrBackendService', [])
                 var headers = {};
                 var form = {};
 
-                headers['Accept'] = ['*/*'];
-                headers['Content-Type'] = ['application/json'];
-
                 path = path.replace('{userIdString}', parameters['userIdString']);
 
                 if (parameters['userIdString'] === undefined) {
@@ -5358,12 +8563,45 @@ angular.module('otrBackendService', [])
                         });
                 }
 
-                this.request('GET', domain + path, parameters, body, headers, queryParameters, form, deferred);
+                var url = domain + path;
+                var cached = parameters.$cache && parameters.$cache.get(url);
+                if (cached !== undefined && parameters.$refresh !== true) {
+                    deferred.resolve(cached);
+                    return deferred.promise;
+                }
+                var options = {
+                    timeout: parameters.$timeout,
+                    method: 'GET',
+                    url: url,
+                    params: queryParameters,
+                    data: body,
+                    headers: headers
+                };
+                if (Object.keys(form).length > 0) {
+                    options.data = form;
+                    options.headers['Content-Type'] = 'application/x-www-form-urlencoded';
+                    options.transformRequest = OtrService.transformRequest;
+                }
+                $http(options)
+                    .success(function(data, status, headers, config) {
+                        deferred.resolve(data);
+                        if (parameters.$cache !== undefined) {
+                            parameters.$cache.put(url, data, parameters.$cacheItemOpts ? parameters.$cacheItemOpts : {});
+                        }
+                    })
+                    .error(function(data, status, headers, config) {
+                        deferred.reject({
+                            status: status,
+                            headers: headers,
+                            config: config,
+                            body: data
+                        });
+                    });
 
                 return deferred.promise;
             };
             /**
-             * getCasesForUser
+             * 
              * @method
              * @name OtrService#getCasesForUserUsingGET
              * @param {string} userId - userId
@@ -5383,9 +8621,6 @@ angular.module('otrBackendService', [])
                 var headers = {};
                 var form = {};
 
-                headers['Accept'] = ['*/*'];
-                headers['Content-Type'] = ['application/json'];
-
                 path = path.replace('{userId}', parameters['userId']);
 
                 if (parameters['userId'] === undefined) {
@@ -5401,12 +8636,45 @@ angular.module('otrBackendService', [])
                         });
                 }
 
-                this.request('GET', domain + path, parameters, body, headers, queryParameters, form, deferred);
+                var url = domain + path;
+                var cached = parameters.$cache && parameters.$cache.get(url);
+                if (cached !== undefined && parameters.$refresh !== true) {
+                    deferred.resolve(cached);
+                    return deferred.promise;
+                }
+                var options = {
+                    timeout: parameters.$timeout,
+                    method: 'GET',
+                    url: url,
+                    params: queryParameters,
+                    data: body,
+                    headers: headers
+                };
+                if (Object.keys(form).length > 0) {
+                    options.data = form;
+                    options.headers['Content-Type'] = 'application/x-www-form-urlencoded';
+                    options.transformRequest = OtrService.transformRequest;
+                }
+                $http(options)
+                    .success(function(data, status, headers, config) {
+                        deferred.resolve(data);
+                        if (parameters.$cache !== undefined) {
+                            parameters.$cache.put(url, data, parameters.$cacheItemOpts ? parameters.$cacheItemOpts : {});
+                        }
+                    })
+                    .error(function(data, status, headers, config) {
+                        deferred.reject({
+                            status: status,
+                            headers: headers,
+                            config: config,
+                            body: data
+                        });
+                    });
 
                 return deferred.promise;
             };
             /**
-             * getTrafficViolationTypes
+             * 
              * @method
              * @name OtrService#getTrafficViolationTypesUsingGET
              * @param {string} flavor - flavor
@@ -5426,9 +8694,6 @@ angular.module('otrBackendService', [])
                 var headers = {};
                 var form = {};
 
-                headers['Accept'] = ['*/*'];
-                headers['Content-Type'] = ['application/json'];
-
                 if (parameters['flavor'] !== undefined) {
                     queryParameters['flavor'] = parameters['flavor'];
                 }
@@ -5441,12 +8706,45 @@ angular.module('otrBackendService', [])
                         });
                 }
 
-                this.request('GET', domain + path, parameters, body, headers, queryParameters, form, deferred);
+                var url = domain + path;
+                var cached = parameters.$cache && parameters.$cache.get(url);
+                if (cached !== undefined && parameters.$refresh !== true) {
+                    deferred.resolve(cached);
+                    return deferred.promise;
+                }
+                var options = {
+                    timeout: parameters.$timeout,
+                    method: 'GET',
+                    url: url,
+                    params: queryParameters,
+                    data: body,
+                    headers: headers
+                };
+                if (Object.keys(form).length > 0) {
+                    options.data = form;
+                    options.headers['Content-Type'] = 'application/x-www-form-urlencoded';
+                    options.transformRequest = OtrService.transformRequest;
+                }
+                $http(options)
+                    .success(function(data, status, headers, config) {
+                        deferred.resolve(data);
+                        if (parameters.$cache !== undefined) {
+                            parameters.$cache.put(url, data, parameters.$cacheItemOpts ? parameters.$cacheItemOpts : {});
+                        }
+                    })
+                    .error(function(data, status, headers, config) {
+                        deferred.reject({
+                            status: status,
+                            headers: headers,
+                            config: config,
+                            body: data
+                        });
+                    });
 
                 return deferred.promise;
             };
             /**
-             * addActionToCaseV2
+             * 
              * @method
              * @name OtrService#addActionToCaseV2UsingPOST
              * @param {string} caseId - caseId
@@ -5466,9 +8764,6 @@ angular.module('otrBackendService', [])
                 var queryParameters = {};
                 var headers = {};
                 var form = {};
-
-                headers['Accept'] = ['*/*'];
-                headers['Content-Type'] = ['application/json'];
 
                 path = path.replace('{caseId}', parameters['caseId']);
 
@@ -5494,12 +8789,40 @@ angular.module('otrBackendService', [])
                         });
                 }
 
-                this.request('POST', domain + path, parameters, body, headers, queryParameters, form, deferred);
+                var url = domain + path;
+                var options = {
+                    timeout: parameters.$timeout,
+                    method: 'POST',
+                    url: url,
+                    params: queryParameters,
+                    data: body,
+                    headers: headers
+                };
+                if (Object.keys(form).length > 0) {
+                    options.data = form;
+                    options.headers['Content-Type'] = 'application/x-www-form-urlencoded';
+                    options.transformRequest = OtrService.transformRequest;
+                }
+                $http(options)
+                    .success(function(data, status, headers, config) {
+                        deferred.resolve(data);
+                        if (parameters.$cache !== undefined) {
+                            parameters.$cache.put(url, data, parameters.$cacheItemOpts ? parameters.$cacheItemOpts : {});
+                        }
+                    })
+                    .error(function(data, status, headers, config) {
+                        deferred.reject({
+                            status: status,
+                            headers: headers,
+                            config: config,
+                            body: data
+                        });
+                    });
 
                 return deferred.promise;
             };
             /**
-             * getLawfirmCasesByPage
+             * 
              * @method
              * @name OtrService#getLawfirmCasesByPageUsingPOST
              * @param {string} lawfirmIdString - lawfirmIdString
@@ -5521,9 +8844,6 @@ angular.module('otrBackendService', [])
                 var queryParameters = {};
                 var headers = {};
                 var form = {};
-
-                headers['Accept'] = ['*/*'];
-                headers['Content-Type'] = ['application/json'];
 
                 path = path.replace('{lawfirmIdString}', parameters['lawfirmIdString']);
 
@@ -5557,12 +8877,40 @@ angular.module('otrBackendService', [])
                         });
                 }
 
-                this.request('POST', domain + path, parameters, body, headers, queryParameters, form, deferred);
+                var url = domain + path;
+                var options = {
+                    timeout: parameters.$timeout,
+                    method: 'POST',
+                    url: url,
+                    params: queryParameters,
+                    data: body,
+                    headers: headers
+                };
+                if (Object.keys(form).length > 0) {
+                    options.data = form;
+                    options.headers['Content-Type'] = 'application/x-www-form-urlencoded';
+                    options.transformRequest = OtrService.transformRequest;
+                }
+                $http(options)
+                    .success(function(data, status, headers, config) {
+                        deferred.resolve(data);
+                        if (parameters.$cache !== undefined) {
+                            parameters.$cache.put(url, data, parameters.$cacheItemOpts ? parameters.$cacheItemOpts : {});
+                        }
+                    })
+                    .error(function(data, status, headers, config) {
+                        deferred.reject({
+                            status: status,
+                            headers: headers,
+                            config: config,
+                            body: data
+                        });
+                    });
 
                 return deferred.promise;
             };
             /**
-             * deleteActionFromCase
+             * 
              * @method
              * @name OtrService#deleteActionFromCaseUsingDELETE
              * @param {string} caseActionIdString - caseActionIdString
@@ -5582,9 +8930,6 @@ angular.module('otrBackendService', [])
                 var queryParameters = {};
                 var headers = {};
                 var form = {};
-
-                headers['Accept'] = ['*/*'];
-                headers['Content-Type'] = ['application/json'];
 
                 path = path.replace('{caseActionIdString}', parameters['caseActionIdString']);
 
@@ -5608,7 +8953,35 @@ angular.module('otrBackendService', [])
                         });
                 }
 
-                this.request('DELETE', domain + path, parameters, body, headers, queryParameters, form, deferred);
+                var url = domain + path;
+                var options = {
+                    timeout: parameters.$timeout,
+                    method: 'DELETE',
+                    url: url,
+                    params: queryParameters,
+                    data: body,
+                    headers: headers
+                };
+                if (Object.keys(form).length > 0) {
+                    options.data = form;
+                    options.headers['Content-Type'] = 'application/x-www-form-urlencoded';
+                    options.transformRequest = OtrService.transformRequest;
+                }
+                $http(options)
+                    .success(function(data, status, headers, config) {
+                        deferred.resolve(data);
+                        if (parameters.$cache !== undefined) {
+                            parameters.$cache.put(url, data, parameters.$cacheItemOpts ? parameters.$cacheItemOpts : {});
+                        }
+                    })
+                    .error(function(data, status, headers, config) {
+                        deferred.reject({
+                            status: status,
+                            headers: headers,
+                            config: config,
+                            body: data
+                        });
+                    });
 
                 return deferred.promise;
             };
