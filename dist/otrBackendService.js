@@ -2581,6 +2581,81 @@ angular.module('otrBackendService', [])
                 return deferred.promise;
             };
             /**
+             * fetchCourts
+             * @method
+             * @name OtrService#fetchCourtsUsingGET
+             * @param {string} state - state
+             * @param {string} city - city
+             * @param {string} county - county
+             * @param {string} q - q
+             * @param {integer} page - page
+             * @param {integer} length - length
+             * @param {string} flavor - courtFlavor
+             * 
+             */
+            OtrService.prototype.fetchCourtsUsingGET = function(parameters) {
+                if (parameters === undefined) {
+                    parameters = {};
+                }
+                var deferred = $q.defer();
+
+                var domain = this.domain;
+                var path = '/api/v1/courts';
+
+                var body;
+                var queryParameters = {};
+                var headers = {};
+                var form = {};
+
+                headers['Accept'] = ['*/*'];
+                headers['Content-Type'] = ['application/json'];
+
+                if (parameters['state'] !== undefined) {
+                    queryParameters['state'] = parameters['state'];
+                }
+
+                if (parameters['state'] === undefined) {
+                    deferred.reject(new Error('Missing required  parameter: state'));
+                    return deferred.promise;
+                }
+
+                if (parameters['city'] !== undefined) {
+                    queryParameters['city'] = parameters['city'];
+                }
+
+                if (parameters['county'] !== undefined) {
+                    queryParameters['county'] = parameters['county'];
+                }
+
+                if (parameters['q'] !== undefined) {
+                    queryParameters['q'] = parameters['q'];
+                }
+
+                if (parameters['page'] !== undefined) {
+                    queryParameters['page'] = parameters['page'];
+                }
+
+                if (parameters['length'] !== undefined) {
+                    queryParameters['length'] = parameters['length'];
+                }
+
+                if (parameters['flavor'] !== undefined) {
+                    queryParameters['flavor'] = parameters['flavor'];
+                }
+
+                if (parameters.$queryParameters) {
+                    Object.keys(parameters.$queryParameters)
+                        .forEach(function(parameterName) {
+                            var parameter = parameters.$queryParameters[parameterName];
+                            queryParameters[parameterName] = parameter;
+                        });
+                }
+
+                this.request('GET', domain + path, parameters, body, headers, queryParameters, form, deferred);
+
+                return deferred.promise;
+            };
+            /**
              * searchCourts
              * @method
              * @name OtrService#searchCourtsUsingGET
