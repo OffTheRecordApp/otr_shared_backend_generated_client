@@ -122,13 +122,13 @@ angular.module('otrBackendService', [])
                 return deferred.promise;
             };
             /**
-             * addToEmailBlackList
+             * handleBounceComplaintEmails
              * @method
-             * @name OtrService#addToEmailBlackListUsingPOST
+             * @name OtrService#handleBounceComplaintEmailsUsingPOST
              * @param {} request - request
              * 
              */
-            OtrService.prototype.addToEmailBlackListUsingPOST = function(parameters) {
+            OtrService.prototype.handleBounceComplaintEmailsUsingPOST = function(parameters) {
                 if (parameters === undefined) {
                     parameters = {};
                 }
@@ -1339,13 +1339,14 @@ angular.module('otrBackendService', [])
                 return deferred.promise;
             };
             /**
-             * refundChargeToClient
+             * refundCaseCharges
              * @method
-             * @name OtrService#refundChargeToClientUsingPOST
+             * @name OtrService#refundCaseChargesUsingPOST
              * @param {string} caseId - caseId
+             * @param {} request - request
              * 
              */
-            OtrService.prototype.refundChargeToClientUsingPOST = function(parameters) {
+            OtrService.prototype.refundCaseChargesUsingPOST = function(parameters) {
                 if (parameters === undefined) {
                     parameters = {};
                 }
@@ -1366,6 +1367,15 @@ angular.module('otrBackendService', [])
 
                 if (parameters['caseId'] === undefined) {
                     deferred.reject(new Error('Missing required  parameter: caseId'));
+                    return deferred.promise;
+                }
+
+                if (parameters['request'] !== undefined) {
+                    body = parameters['request'];
+                }
+
+                if (parameters['request'] === undefined) {
+                    deferred.reject(new Error('Missing required  parameter: request'));
                     return deferred.promise;
                 }
 
@@ -1994,6 +2004,59 @@ angular.module('otrBackendService', [])
                 }
 
                 this.request('POST', domain + path, parameters, body, headers, queryParameters, form, deferred);
+
+                return deferred.promise;
+            };
+            /**
+             * updateViolationCategory
+             * @method
+             * @name OtrService#updateViolationCategoryUsingPUT
+             * @param {string} citationId - citationId
+             * @param {} violationCategoryRequest - violationCategoryRequest
+             * 
+             */
+            OtrService.prototype.updateViolationCategoryUsingPUT = function(parameters) {
+                if (parameters === undefined) {
+                    parameters = {};
+                }
+                var deferred = $q.defer();
+
+                var domain = this.domain;
+                var path = '/api/v1/citations/{citationId}/violation-category';
+
+                var body;
+                var queryParameters = {};
+                var headers = {};
+                var form = {};
+
+                headers['Accept'] = ['*/*'];
+                headers['Content-Type'] = ['application/json'];
+
+                path = path.replace('{citationId}', parameters['citationId']);
+
+                if (parameters['citationId'] === undefined) {
+                    deferred.reject(new Error('Missing required  parameter: citationId'));
+                    return deferred.promise;
+                }
+
+                if (parameters['violationCategoryRequest'] !== undefined) {
+                    body = parameters['violationCategoryRequest'];
+                }
+
+                if (parameters['violationCategoryRequest'] === undefined) {
+                    deferred.reject(new Error('Missing required  parameter: violationCategoryRequest'));
+                    return deferred.promise;
+                }
+
+                if (parameters.$queryParameters) {
+                    Object.keys(parameters.$queryParameters)
+                        .forEach(function(parameterName) {
+                            var parameter = parameters.$queryParameters[parameterName];
+                            queryParameters[parameterName] = parameter;
+                        });
+                }
+
+                this.request('PUT', domain + path, parameters, body, headers, queryParameters, form, deferred);
 
                 return deferred.promise;
             };
@@ -4685,6 +4748,51 @@ angular.module('otrBackendService', [])
                 return deferred.promise;
             };
             /**
+             * handleIncomingEmails
+             * @method
+             * @name OtrService#handleIncomingEmailsUsingPOST
+             * @param {} request - request
+             * 
+             */
+            OtrService.prototype.handleIncomingEmailsUsingPOST = function(parameters) {
+                if (parameters === undefined) {
+                    parameters = {};
+                }
+                var deferred = $q.defer();
+
+                var domain = this.domain;
+                var path = '/api/v1/ses/inbound-emails';
+
+                var body;
+                var queryParameters = {};
+                var headers = {};
+                var form = {};
+
+                headers['Accept'] = ['*/*'];
+                headers['Content-Type'] = ['application/json,text/plain'];
+
+                if (parameters['request'] !== undefined) {
+                    body = parameters['request'];
+                }
+
+                if (parameters['request'] === undefined) {
+                    deferred.reject(new Error('Missing required  parameter: request'));
+                    return deferred.promise;
+                }
+
+                if (parameters.$queryParameters) {
+                    Object.keys(parameters.$queryParameters)
+                        .forEach(function(parameterName) {
+                            var parameter = parameters.$queryParameters[parameterName];
+                            queryParameters[parameterName] = parameter;
+                        });
+                }
+
+                this.request('POST', domain + path, parameters, body, headers, queryParameters, form, deferred);
+
+                return deferred.promise;
+            };
+            /**
              * putSetting
              * @method
              * @name OtrService#putSettingUsingPOST
@@ -5002,6 +5110,51 @@ angular.module('otrBackendService', [])
                 }
 
                 this.request('POST', domain + path, parameters, body, headers, queryParameters, form, deferred);
+
+                return deferred.promise;
+            };
+            /**
+             * getTrafficInfractionList
+             * @method
+             * @name OtrService#getTrafficInfractionListUsingGET
+             * @param {string} stateCode - stateCode
+             * @param {integer} infractionTypeId - infractionTypeId
+             * 
+             */
+            OtrService.prototype.getTrafficInfractionListUsingGET = function(parameters) {
+                if (parameters === undefined) {
+                    parameters = {};
+                }
+                var deferred = $q.defer();
+
+                var domain = this.domain;
+                var path = '/api/v1/traffic-infractions';
+
+                var body;
+                var queryParameters = {};
+                var headers = {};
+                var form = {};
+
+                headers['Accept'] = ['*/*'];
+                headers['Content-Type'] = ['application/json'];
+
+                if (parameters['stateCode'] !== undefined) {
+                    queryParameters['stateCode'] = parameters['stateCode'];
+                }
+
+                if (parameters['infractionTypeId'] !== undefined) {
+                    queryParameters['infractionTypeId'] = parameters['infractionTypeId'];
+                }
+
+                if (parameters.$queryParameters) {
+                    Object.keys(parameters.$queryParameters)
+                        .forEach(function(parameterName) {
+                            var parameter = parameters.$queryParameters[parameterName];
+                            queryParameters[parameterName] = parameter;
+                        });
+                }
+
+                this.request('GET', domain + path, parameters, body, headers, queryParameters, form, deferred);
 
                 return deferred.promise;
             };
@@ -5597,6 +5750,41 @@ angular.module('otrBackendService', [])
                 if (parameters['flavor'] !== undefined) {
                     queryParameters['flavor'] = parameters['flavor'];
                 }
+
+                if (parameters.$queryParameters) {
+                    Object.keys(parameters.$queryParameters)
+                        .forEach(function(parameterName) {
+                            var parameter = parameters.$queryParameters[parameterName];
+                            queryParameters[parameterName] = parameter;
+                        });
+                }
+
+                this.request('GET', domain + path, parameters, body, headers, queryParameters, form, deferred);
+
+                return deferred.promise;
+            };
+            /**
+             * getViolationCategories
+             * @method
+             * @name OtrService#getViolationCategoriesUsingGET
+             * 
+             */
+            OtrService.prototype.getViolationCategoriesUsingGET = function(parameters) {
+                if (parameters === undefined) {
+                    parameters = {};
+                }
+                var deferred = $q.defer();
+
+                var domain = this.domain;
+                var path = '/api/v1/violations/categories';
+
+                var body;
+                var queryParameters = {};
+                var headers = {};
+                var form = {};
+
+                headers['Accept'] = ['*/*'];
+                headers['Content-Type'] = ['application/json'];
 
                 if (parameters.$queryParameters) {
                     Object.keys(parameters.$queryParameters)
