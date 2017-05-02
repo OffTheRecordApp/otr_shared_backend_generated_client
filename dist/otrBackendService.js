@@ -1914,13 +1914,14 @@ angular.module('otrBackendService', [])
                 return deferred.promise;
             };
             /**
-             * dismissFromContactList
+             * setCitationContactListFlag
              * @method
-             * @name OtrService#dismissFromContactListUsingPOST
+             * @name OtrService#setCitationContactListFlagUsingPOST
              * @param {string} citationIdString - citationIdString
+             * @param {boolean} isDismissed - isDismissed
              * 
              */
-            OtrService.prototype.dismissFromContactListUsingPOST = function(parameters) {
+            OtrService.prototype.setCitationContactListFlagUsingPOST = function(parameters) {
                 if (parameters === undefined) {
                     parameters = {};
                 }
@@ -1941,6 +1942,15 @@ angular.module('otrBackendService', [])
 
                 if (parameters['citationIdString'] === undefined) {
                     deferred.reject(new Error('Missing required  parameter: citationIdString'));
+                    return deferred.promise;
+                }
+
+                if (parameters['isDismissed'] !== undefined) {
+                    queryParameters['isDismissed'] = parameters['isDismissed'];
+                }
+
+                if (parameters['isDismissed'] === undefined) {
+                    deferred.reject(new Error('Missing required  parameter: isDismissed'));
                     return deferred.promise;
                 }
 
@@ -4113,6 +4123,59 @@ angular.module('otrBackendService', [])
                 }
 
                 this.request('POST', domain + path, parameters, body, headers, queryParameters, form, deferred);
+
+                return deferred.promise;
+            };
+            /**
+             * uploadDocument
+             * @method
+             * @name OtrService#uploadDocumentUsingPUT
+             * @param {string} lawfirmId - lawfirmId
+             * @param {} request - request
+             * 
+             */
+            OtrService.prototype.uploadDocumentUsingPUT = function(parameters) {
+                if (parameters === undefined) {
+                    parameters = {};
+                }
+                var deferred = $q.defer();
+
+                var domain = this.domain;
+                var path = '/api/v1/lawfirms/{lawfirmId}/documents';
+
+                var body;
+                var queryParameters = {};
+                var headers = {};
+                var form = {};
+
+                headers['Accept'] = ['*/*'];
+                headers['Content-Type'] = ['application/json'];
+
+                path = path.replace('{lawfirmId}', parameters['lawfirmId']);
+
+                if (parameters['lawfirmId'] === undefined) {
+                    deferred.reject(new Error('Missing required  parameter: lawfirmId'));
+                    return deferred.promise;
+                }
+
+                if (parameters['request'] !== undefined) {
+                    body = parameters['request'];
+                }
+
+                if (parameters['request'] === undefined) {
+                    deferred.reject(new Error('Missing required  parameter: request'));
+                    return deferred.promise;
+                }
+
+                if (parameters.$queryParameters) {
+                    Object.keys(parameters.$queryParameters)
+                        .forEach(function(parameterName) {
+                            var parameter = parameters.$queryParameters[parameterName];
+                            queryParameters[parameterName] = parameter;
+                        });
+                }
+
+                this.request('PUT', domain + path, parameters, body, headers, queryParameters, form, deferred);
 
                 return deferred.promise;
             };
