@@ -4169,13 +4169,64 @@ angular.module('otrBackendService', [])
             /**
              * getDocument
              * @method
-             * @name OtrService#getDocumentUsingPOST
+             * @name OtrService#getDocumentUsingGET
+             * @param {string} lawfirmId - lawfirmId
+
+             * 
+             */
+            OtrService.prototype.getDocumentUsingGET = function(parameters) {
+                if (parameters === undefined) {
+                    parameters = {};
+                }
+                var deferred = $q.defer();
+
+                var domain = this.domain;
+                var path = '/api/v1/lawfirms/{lawfirmId}/documents';
+
+                var body;
+                var queryParameters = {};
+                var headers = {};
+                var form = {};
+
+                headers['Accept'] = ['*/*'];
+                headers['Content-Type'] = ['application/json'];
+
+                path = path.replace('{lawfirmId}', parameters['lawfirmId']);
+
+                if (parameters['lawfirmId'] === undefined) {
+                    deferred.reject(new Error('Missing required  parameter: lawfirmId'));
+                    return deferred.promise;
+                }
+
+                queryParameters['doc_type'] = 'ENGAGEMENT_LETTER';
+
+                if (parameters['docType'] === undefined) {
+                    deferred.reject(new Error('Missing required  parameter: docType'));
+                    return deferred.promise;
+                }
+
+                if (parameters.$queryParameters) {
+                    Object.keys(parameters.$queryParameters)
+                        .forEach(function(parameterName) {
+                            var parameter = parameters.$queryParameters[parameterName];
+                            queryParameters[parameterName] = parameter;
+                        });
+                }
+
+                this.request('GET', domain + path, parameters, body, headers, queryParameters, form, deferred);
+
+                return deferred.promise;
+            };
+            /**
+             * generateDoc
+             * @method
+             * @name OtrService#generateDocUsingPOST
              * @param {string} lawfirmId - lawfirmId
 
              * @param {} request - request
              * 
              */
-            OtrService.prototype.getDocumentUsingPOST = function(parameters) {
+            OtrService.prototype.generateDocUsingPOST = function(parameters) {
                 if (parameters === undefined) {
                     parameters = {};
                 }
@@ -4223,14 +4274,14 @@ angular.module('otrBackendService', [])
                 return deferred.promise;
             };
             /**
-             * uploadDocument
+             * uploadCopy
              * @method
-             * @name OtrService#uploadDocumentUsingPUT
+             * @name OtrService#uploadCopyUsingPUT
              * @param {string} lawfirmId - lawfirmId
              * @param {} request - request
              * 
              */
-            OtrService.prototype.uploadDocumentUsingPUT = function(parameters) {
+            OtrService.prototype.uploadCopyUsingPUT = function(parameters) {
                 if (parameters === undefined) {
                     parameters = {};
                 }
@@ -4272,6 +4323,67 @@ angular.module('otrBackendService', [])
                 }
 
                 this.request('PUT', domain + path, parameters, body, headers, queryParameters, form, deferred);
+
+                return deferred.promise;
+            };
+            /**
+             * previewDoc
+             * @method
+             * @name OtrService#previewDocUsingPOST
+             * @param {string} lawfirmId - lawfirmId
+
+             * @param {} request - request
+             * 
+             */
+            OtrService.prototype.previewDocUsingPOST = function(parameters) {
+                if (parameters === undefined) {
+                    parameters = {};
+                }
+                var deferred = $q.defer();
+
+                var domain = this.domain;
+                var path = '/api/v1/lawfirms/{lawfirmId}/documents/preview';
+
+                var body;
+                var queryParameters = {};
+                var headers = {};
+                var form = {};
+
+                headers['Accept'] = ['*/*'];
+                headers['Content-Type'] = ['application/json'];
+
+                path = path.replace('{lawfirmId}', parameters['lawfirmId']);
+
+                if (parameters['lawfirmId'] === undefined) {
+                    deferred.reject(new Error('Missing required  parameter: lawfirmId'));
+                    return deferred.promise;
+                }
+
+                queryParameters['doc_type'] = 'ENGAGEMENT_LETTER';
+
+                if (parameters['docType'] === undefined) {
+                    deferred.reject(new Error('Missing required  parameter: docType'));
+                    return deferred.promise;
+                }
+
+                if (parameters['request'] !== undefined) {
+                    body = parameters['request'];
+                }
+
+                if (parameters['request'] === undefined) {
+                    deferred.reject(new Error('Missing required  parameter: request'));
+                    return deferred.promise;
+                }
+
+                if (parameters.$queryParameters) {
+                    Object.keys(parameters.$queryParameters)
+                        .forEach(function(parameterName) {
+                            var parameter = parameters.$queryParameters[parameterName];
+                            queryParameters[parameterName] = parameter;
+                        });
+                }
+
+                this.request('POST', domain + path, parameters, body, headers, queryParameters, form, deferred);
 
                 return deferred.promise;
             };
