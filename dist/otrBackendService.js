@@ -87,6 +87,92 @@ angular.module('otrBackendService', [])
             };
 
             /**
+             * markAlertAsRead
+             * @method
+             * @name OtrService#markAlertAsReadUsingDELETE
+             * @param {string} alertId - userId
+             * 
+             */
+            OtrService.prototype.markAlertAsReadUsingDELETE = function(parameters) {
+                if (parameters === undefined) {
+                    parameters = {};
+                }
+                var deferred = $q.defer();
+
+                var domain = this.domain;
+                var path = '/api/v1/alerts/{alertId}';
+
+                var body;
+                var queryParameters = {};
+                var headers = {};
+                var form = {};
+
+                headers['Accept'] = ['*/*'];
+                headers['Content-Type'] = ['application/json'];
+
+                path = path.replace('{alertId}', parameters['alertId']);
+
+                if (parameters['alertId'] === undefined) {
+                    deferred.reject(new Error('Missing required  parameter: alertId'));
+                    return deferred.promise;
+                }
+
+                if (parameters.$queryParameters) {
+                    Object.keys(parameters.$queryParameters)
+                        .forEach(function(parameterName) {
+                            var parameter = parameters.$queryParameters[parameterName];
+                            queryParameters[parameterName] = parameter;
+                        });
+                }
+
+                this.request('DELETE', domain + path, parameters, body, headers, queryParameters, form, deferred);
+
+                return deferred.promise;
+            };
+            /**
+             * getAlerts
+             * @method
+             * @name OtrService#getAlertsUsingGET
+             * @param {string} userId - userId
+             * 
+             */
+            OtrService.prototype.getAlertsUsingGET = function(parameters) {
+                if (parameters === undefined) {
+                    parameters = {};
+                }
+                var deferred = $q.defer();
+
+                var domain = this.domain;
+                var path = '/api/v1/alerts/{userId}';
+
+                var body;
+                var queryParameters = {};
+                var headers = {};
+                var form = {};
+
+                headers['Accept'] = ['*/*'];
+                headers['Content-Type'] = ['application/json'];
+
+                path = path.replace('{userId}', parameters['userId']);
+
+                if (parameters['userId'] === undefined) {
+                    deferred.reject(new Error('Missing required  parameter: userId'));
+                    return deferred.promise;
+                }
+
+                if (parameters.$queryParameters) {
+                    Object.keys(parameters.$queryParameters)
+                        .forEach(function(parameterName) {
+                            var parameter = parameters.$queryParameters[parameterName];
+                            queryParameters[parameterName] = parameter;
+                        });
+                }
+
+                this.request('GET', domain + path, parameters, body, headers, queryParameters, form, deferred);
+
+                return deferred.promise;
+            };
+            /**
              * getUserInfo
              * @method
              * @name OtrService#getUserInfoUsingGET
@@ -2368,6 +2454,59 @@ angular.module('otrBackendService', [])
                 return deferred.promise;
             };
             /**
+             * updateCitationAddress
+             * @method
+             * @name OtrService#updateCitationAddressUsingPOST
+             * @param {string} citationId - citationId
+             * @param {} request - request
+             * 
+             */
+            OtrService.prototype.updateCitationAddressUsingPOST = function(parameters) {
+                if (parameters === undefined) {
+                    parameters = {};
+                }
+                var deferred = $q.defer();
+
+                var domain = this.domain;
+                var path = '/api/v1/citations/{citationId}/address';
+
+                var body;
+                var queryParameters = {};
+                var headers = {};
+                var form = {};
+
+                headers['Accept'] = ['*/*'];
+                headers['Content-Type'] = ['application/json'];
+
+                path = path.replace('{citationId}', parameters['citationId']);
+
+                if (parameters['citationId'] === undefined) {
+                    deferred.reject(new Error('Missing required  parameter: citationId'));
+                    return deferred.promise;
+                }
+
+                if (parameters['request'] !== undefined) {
+                    body = parameters['request'];
+                }
+
+                if (parameters['request'] === undefined) {
+                    deferred.reject(new Error('Missing required  parameter: request'));
+                    return deferred.promise;
+                }
+
+                if (parameters.$queryParameters) {
+                    Object.keys(parameters.$queryParameters)
+                        .forEach(function(parameterName) {
+                            var parameter = parameters.$queryParameters[parameterName];
+                            queryParameters[parameterName] = parameter;
+                        });
+                }
+
+                this.request('POST', domain + path, parameters, body, headers, queryParameters, form, deferred);
+
+                return deferred.promise;
+            };
+            /**
              * getCaseFromCitation
              * @method
              * @name OtrService#getCaseFromCitationUsingGET
@@ -2995,51 +3134,6 @@ angular.module('otrBackendService', [])
 
                 var domain = this.domain;
                 var path = '/api/v1/console/potential-customers';
-
-                var body;
-                var queryParameters = {};
-                var headers = {};
-                var form = {};
-
-                headers['Accept'] = ['application/json'];
-                headers['Content-Type'] = ['application/json'];
-
-                if (parameters['request'] !== undefined) {
-                    body = parameters['request'];
-                }
-
-                if (parameters['request'] === undefined) {
-                    deferred.reject(new Error('Missing required  parameter: request'));
-                    return deferred.promise;
-                }
-
-                if (parameters.$queryParameters) {
-                    Object.keys(parameters.$queryParameters)
-                        .forEach(function(parameterName) {
-                            var parameter = parameters.$queryParameters[parameterName];
-                            queryParameters[parameterName] = parameter;
-                        });
-                }
-
-                this.request('POST', domain + path, parameters, body, headers, queryParameters, form, deferred);
-
-                return deferred.promise;
-            };
-            /**
-             * listPotentialCustomers2
-             * @method
-             * @name OtrService#listPotentialCustomers2UsingPOST
-             * @param {} request - request
-             * 
-             */
-            OtrService.prototype.listPotentialCustomers2UsingPOST = function(parameters) {
-                if (parameters === undefined) {
-                    parameters = {};
-                }
-                var deferred = $q.defer();
-
-                var domain = this.domain;
-                var path = '/api/v1/console/potential-customers2';
 
                 var body;
                 var queryParameters = {};
