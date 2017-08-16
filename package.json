@@ -15,5 +15,8 @@
     "gulp-util": "3.0.7",
     "run-sequence": "^1.1.5",
     "swagger-js-codegen": "1.7.11"
+  },
+  "dependencies": {
+    "swagger-js-react-native-codegen": "^0.1.4"
   }
 }
