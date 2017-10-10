@@ -1922,6 +1922,49 @@ angular.module('otrBackendService', [])
                 return deferred.promise;
             };
             /**
+             * reopenCase
+             * @method
+             * @name OtrService#reopenCaseUsingPUT
+             * @param {string} caseId - caseId
+             * 
+             */
+            OtrService.prototype.reopenCaseUsingPUT = function(parameters) {
+                if (parameters === undefined) {
+                    parameters = {};
+                }
+                var deferred = $q.defer();
+
+                var domain = this.domain;
+                var path = '/api/v1/cases/{caseId}/reopen';
+
+                var body;
+                var queryParameters = {};
+                var headers = {};
+                var form = {};
+
+                headers['Accept'] = ['*/*'];
+                headers['Content-Type'] = ['application/json'];
+
+                path = path.replace('{caseId}', parameters['caseId']);
+
+                if (parameters['caseId'] === undefined) {
+                    deferred.reject(new Error('Missing required  parameter: caseId'));
+                    return deferred.promise;
+                }
+
+                if (parameters.$queryParameters) {
+                    Object.keys(parameters.$queryParameters)
+                        .forEach(function(parameterName) {
+                            var parameter = parameters.$queryParameters[parameterName];
+                            queryParameters[parameterName] = parameter;
+                        });
+                }
+
+                this.request('PUT', domain + path, parameters, body, headers, queryParameters, form, deferred);
+
+                return deferred.promise;
+            };
+            /**
              * requestLawyer
              * @method
              * @name OtrService#requestLawyerUsingPOST
@@ -3926,6 +3969,51 @@ angular.module('otrBackendService', [])
                     deferred.reject(new Error('Missing required  parameter: ticketId'));
                     return deferred.promise;
                 }
+
+                if (parameters['request'] !== undefined) {
+                    body = parameters['request'];
+                }
+
+                if (parameters['request'] === undefined) {
+                    deferred.reject(new Error('Missing required  parameter: request'));
+                    return deferred.promise;
+                }
+
+                if (parameters.$queryParameters) {
+                    Object.keys(parameters.$queryParameters)
+                        .forEach(function(parameterName) {
+                            var parameter = parameters.$queryParameters[parameterName];
+                            queryParameters[parameterName] = parameter;
+                        });
+                }
+
+                this.request('POST', domain + path, parameters, body, headers, queryParameters, form, deferred);
+
+                return deferred.promise;
+            };
+            /**
+             * sendConsolidatedEmailToUser
+             * @method
+             * @name OtrService#sendConsolidatedEmailToUserUsingPOST
+             * @param {} request - request
+             * 
+             */
+            OtrService.prototype.sendConsolidatedEmailToUserUsingPOST = function(parameters) {
+                if (parameters === undefined) {
+                    parameters = {};
+                }
+                var deferred = $q.defer();
+
+                var domain = this.domain;
+                var path = '/api/v1/crm/user/consolidate-email';
+
+                var body;
+                var queryParameters = {};
+                var headers = {};
+                var form = {};
+
+                headers['Accept'] = ['application/json'];
+                headers['Content-Type'] = ['application/json'];
 
                 if (parameters['request'] !== undefined) {
                     body = parameters['request'];
