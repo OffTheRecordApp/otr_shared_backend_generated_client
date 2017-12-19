@@ -2936,6 +2936,51 @@ angular.module('otrBackendService', [])
                 return deferred.promise;
             };
             /**
+             * getInvalidCasesWithStripeCharge
+             * @method
+             * @name OtrService#getInvalidCasesWithStripeChargeUsingPOST
+             * @param {} request - request
+             * 
+             */
+            OtrService.prototype.getInvalidCasesWithStripeChargeUsingPOST = function(parameters) {
+                if (parameters === undefined) {
+                    parameters = {};
+                }
+                var deferred = $q.defer();
+
+                var domain = this.domain;
+                var path = '/api/v1/console/cases/invalid-with-charge';
+
+                var body;
+                var queryParameters = {};
+                var headers = {};
+                var form = {};
+
+                headers['Accept'] = ['application/json'];
+                headers['Content-Type'] = ['application/json'];
+
+                if (parameters['request'] !== undefined) {
+                    body = parameters['request'];
+                }
+
+                if (parameters['request'] === undefined) {
+                    deferred.reject(new Error('Missing required  parameter: request'));
+                    return deferred.promise;
+                }
+
+                if (parameters.$queryParameters) {
+                    Object.keys(parameters.$queryParameters)
+                        .forEach(function(parameterName) {
+                            var parameter = parameters.$queryParameters[parameterName];
+                            queryParameters[parameterName] = parameter;
+                        });
+                }
+
+                this.request('POST', domain + path, parameters, body, headers, queryParameters, form, deferred);
+
+                return deferred.promise;
+            };
+            /**
              * listCasesByStatus
              * @method
              * @name OtrService#listCasesByStatusUsingPOST
@@ -6629,6 +6674,56 @@ angular.module('otrBackendService', [])
                 if (parameters['userIdString'] === undefined) {
                     deferred.reject(new Error('Missing required  parameter: userIdString'));
                     return deferred.promise;
+                }
+
+                if (parameters.$queryParameters) {
+                    Object.keys(parameters.$queryParameters)
+                        .forEach(function(parameterName) {
+                            var parameter = parameters.$queryParameters[parameterName];
+                            queryParameters[parameterName] = parameter;
+                        });
+                }
+
+                this.request('GET', domain + path, parameters, body, headers, queryParameters, form, deferred);
+
+                return deferred.promise;
+            };
+            /**
+             * listCustomerReviews
+             * @method
+             * @name OtrService#listCustomerReviewsUsingGET
+             * @param {integer} page - page
+             * @param {integer} size - size
+             * @param {boolean} isFeatured - isFeatured
+             * 
+             */
+            OtrService.prototype.listCustomerReviewsUsingGET = function(parameters) {
+                if (parameters === undefined) {
+                    parameters = {};
+                }
+                var deferred = $q.defer();
+
+                var domain = this.domain;
+                var path = '/api/v1/reviews';
+
+                var body;
+                var queryParameters = {};
+                var headers = {};
+                var form = {};
+
+                headers['Accept'] = ['*/*'];
+                headers['Content-Type'] = ['application/json'];
+
+                if (parameters['page'] !== undefined) {
+                    queryParameters['page'] = parameters['page'];
+                }
+
+                if (parameters['size'] !== undefined) {
+                    queryParameters['size'] = parameters['size'];
+                }
+
+                if (parameters['isFeatured'] !== undefined) {
+                    queryParameters['isFeatured'] = parameters['isFeatured'];
                 }
 
                 if (parameters.$queryParameters) {
