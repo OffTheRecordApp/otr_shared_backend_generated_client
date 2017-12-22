@@ -7576,6 +7576,49 @@ angular.module('otrBackendService', [])
                 return deferred.promise;
             };
             /**
+             * getSupportTicketsforUser
+             * @method
+             * @name OtrService#getSupportTicketsforUserUsingGET
+             * @param {string} email - email
+             * 
+             */
+            OtrService.prototype.getSupportTicketsforUserUsingGET = function(parameters) {
+                if (parameters === undefined) {
+                    parameters = {};
+                }
+                var deferred = $q.defer();
+
+                var domain = this.domain;
+                var path = '/api/v1/users/{email}/support-tickets';
+
+                var body;
+                var queryParameters = {};
+                var headers = {};
+                var form = {};
+
+                headers['Accept'] = ['*/*'];
+                headers['Content-Type'] = ['application/json'];
+
+                path = path.replace('{email}', parameters['email']);
+
+                if (parameters['email'] === undefined) {
+                    deferred.reject(new Error('Missing required  parameter: email'));
+                    return deferred.promise;
+                }
+
+                if (parameters.$queryParameters) {
+                    Object.keys(parameters.$queryParameters)
+                        .forEach(function(parameterName) {
+                            var parameter = parameters.$queryParameters[parameterName];
+                            queryParameters[parameterName] = parameter;
+                        });
+                }
+
+                this.request('GET', domain + path, parameters, body, headers, queryParameters, form, deferred);
+
+                return deferred.promise;
+            };
+            /**
              * getUserDetails
              * @method
              * @name OtrService#getUserDetailsUsingGET
