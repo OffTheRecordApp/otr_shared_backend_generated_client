@@ -7334,6 +7334,59 @@ angular.module('otrBackendService', [])
                 return deferred.promise;
             };
             /**
+             * updateTicketEvaluationRequest
+             * @method
+             * @name OtrService#updateTicketEvaluationRequestUsingPUT
+             * @param {integer} ticketEvaluationRequestId - ticketEvaluationRequestId
+             * @param {} request - request
+             * 
+             */
+            OtrService.prototype.updateTicketEvaluationRequestUsingPUT = function(parameters) {
+                if (parameters === undefined) {
+                    parameters = {};
+                }
+                var deferred = $q.defer();
+
+                var domain = this.domain;
+                var path = '/api/v1/ticket-evaluation/{ticketEvaluationRequestId}';
+
+                var body;
+                var queryParameters = {};
+                var headers = {};
+                var form = {};
+
+                headers['Accept'] = ['*/*'];
+                headers['Content-Type'] = ['application/json'];
+
+                path = path.replace('{ticketEvaluationRequestId}', parameters['ticketEvaluationRequestId']);
+
+                if (parameters['ticketEvaluationRequestId'] === undefined) {
+                    deferred.reject(new Error('Missing required  parameter: ticketEvaluationRequestId'));
+                    return deferred.promise;
+                }
+
+                if (parameters['request'] !== undefined) {
+                    body = parameters['request'];
+                }
+
+                if (parameters['request'] === undefined) {
+                    deferred.reject(new Error('Missing required  parameter: request'));
+                    return deferred.promise;
+                }
+
+                if (parameters.$queryParameters) {
+                    Object.keys(parameters.$queryParameters)
+                        .forEach(function(parameterName) {
+                            var parameter = parameters.$queryParameters[parameterName];
+                            queryParameters[parameterName] = parameter;
+                        });
+                }
+
+                this.request('PUT', domain + path, parameters, body, headers, queryParameters, form, deferred);
+
+                return deferred.promise;
+            };
+            /**
              * getTrafficInfractionList
              * @method
              * @name OtrService#getTrafficInfractionListUsingGET
