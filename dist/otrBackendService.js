@@ -2795,6 +2795,49 @@ angular.module('otrBackendService', [])
                 return deferred.promise;
             };
             /**
+             * assignCitationOwner
+             * @method
+             * @name OtrService#assignCitationOwnerUsingPOST
+             * @param {integer} citationId - citationId
+             * 
+             */
+            OtrService.prototype.assignCitationOwnerUsingPOST = function(parameters) {
+                if (parameters === undefined) {
+                    parameters = {};
+                }
+                var deferred = $q.defer();
+
+                var domain = this.domain;
+                var path = '/api/v1/citations/{citationId}/owner';
+
+                var body;
+                var queryParameters = {};
+                var headers = {};
+                var form = {};
+
+                headers['Accept'] = ['*/*'];
+                headers['Content-Type'] = ['application/json'];
+
+                path = path.replace('{citationId}', parameters['citationId']);
+
+                if (parameters['citationId'] === undefined) {
+                    deferred.reject(new Error('Missing required  parameter: citationId'));
+                    return deferred.promise;
+                }
+
+                if (parameters.$queryParameters) {
+                    Object.keys(parameters.$queryParameters)
+                        .forEach(function(parameterName) {
+                            var parameter = parameters.$queryParameters[parameterName];
+                            queryParameters[parameterName] = parameter;
+                        });
+                }
+
+                this.request('POST', domain + path, parameters, body, headers, queryParameters, form, deferred);
+
+                return deferred.promise;
+            };
+            /**
              * updateCitationPicture
              * @method
              * @name OtrService#updateCitationPictureUsingPUT
@@ -4078,6 +4121,59 @@ angular.module('otrBackendService', [])
 
                 if (parameters['length'] !== undefined) {
                     queryParameters['length'] = parameters['length'];
+                }
+
+                if (parameters.$queryParameters) {
+                    Object.keys(parameters.$queryParameters)
+                        .forEach(function(parameterName) {
+                            var parameter = parameters.$queryParameters[parameterName];
+                            queryParameters[parameterName] = parameter;
+                        });
+                }
+
+                this.request('GET', domain + path, parameters, body, headers, queryParameters, form, deferred);
+
+                return deferred.promise;
+            };
+            /**
+             * fetchCourtsByZip
+             * @method
+             * @name OtrService#fetchCourtsByZipUsingGET
+             * @param {string} zipCode - zipCode
+             * @param {integer} radiusInMiles - radius
+             * 
+             */
+            OtrService.prototype.fetchCourtsByZipUsingGET = function(parameters) {
+                if (parameters === undefined) {
+                    parameters = {};
+                }
+                var deferred = $q.defer();
+
+                var domain = this.domain;
+                var path = '/api/v1/courts/zip/{zipCode}';
+
+                var body;
+                var queryParameters = {};
+                var headers = {};
+                var form = {};
+
+                headers['Accept'] = ['*/*'];
+                headers['Content-Type'] = ['application/json'];
+
+                path = path.replace('{zipCode}', parameters['zipCode']);
+
+                if (parameters['zipCode'] === undefined) {
+                    deferred.reject(new Error('Missing required  parameter: zipCode'));
+                    return deferred.promise;
+                }
+
+                if (parameters['radiusInMiles'] !== undefined) {
+                    queryParameters['radiusInMiles'] = parameters['radiusInMiles'];
+                }
+
+                if (parameters['radiusInMiles'] === undefined) {
+                    deferred.reject(new Error('Missing required  parameter: radiusInMiles'));
+                    return deferred.promise;
                 }
 
                 if (parameters.$queryParameters) {
@@ -6220,6 +6316,51 @@ angular.module('otrBackendService', [])
                 }
 
                 this.request('GET', domain + path, parameters, body, headers, queryParameters, form, deferred);
+
+                return deferred.promise;
+            };
+            /**
+             * notifyClientActionRequirement
+             * @method
+             * @name OtrService#notifyClientActionRequirementUsingPOST
+             * @param {} request - request
+             * 
+             */
+            OtrService.prototype.notifyClientActionRequirementUsingPOST = function(parameters) {
+                if (parameters === undefined) {
+                    parameters = {};
+                }
+                var deferred = $q.defer();
+
+                var domain = this.domain;
+                var path = '/api/v1/notifications/action-required';
+
+                var body;
+                var queryParameters = {};
+                var headers = {};
+                var form = {};
+
+                headers['Accept'] = ['*/*'];
+                headers['Content-Type'] = ['application/json'];
+
+                if (parameters['request'] !== undefined) {
+                    body = parameters['request'];
+                }
+
+                if (parameters['request'] === undefined) {
+                    deferred.reject(new Error('Missing required  parameter: request'));
+                    return deferred.promise;
+                }
+
+                if (parameters.$queryParameters) {
+                    Object.keys(parameters.$queryParameters)
+                        .forEach(function(parameterName) {
+                            var parameter = parameters.$queryParameters[parameterName];
+                            queryParameters[parameterName] = parameter;
+                        });
+                }
+
+                this.request('POST', domain + path, parameters, body, headers, queryParameters, form, deferred);
 
                 return deferred.promise;
             };
