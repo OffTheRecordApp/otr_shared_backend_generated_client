@@ -1497,6 +1497,118 @@ angular.module('otrBackendService', [])
                 return deferred.promise;
             };
             /**
+             * updateCaseLineItem
+             * @method
+             * @name OtrService#updateCaseLineItemUsingPUT
+             * @param {string} caseId - caseId
+             * @param {string} lineItemId - lineItemId
+             * @param {} request - request
+             * 
+             */
+            OtrService.prototype.updateCaseLineItemUsingPUT = function(parameters) {
+                if (parameters === undefined) {
+                    parameters = {};
+                }
+                var deferred = $q.defer();
+
+                var domain = this.domain;
+                var path = '/api/v1/cases/{caseId}/lineitems/{lineItemId}';
+
+                var body;
+                var queryParameters = {};
+                var headers = {};
+                var form = {};
+
+                headers['Accept'] = ['application/json'];
+                headers['Content-Type'] = ['application/json'];
+
+                path = path.replace('{caseId}', parameters['caseId']);
+
+                if (parameters['caseId'] === undefined) {
+                    deferred.reject(new Error('Missing required  parameter: caseId'));
+                    return deferred.promise;
+                }
+
+                path = path.replace('{lineItemId}', parameters['lineItemId']);
+
+                if (parameters['lineItemId'] === undefined) {
+                    deferred.reject(new Error('Missing required  parameter: lineItemId'));
+                    return deferred.promise;
+                }
+
+                if (parameters['request'] !== undefined) {
+                    body = parameters['request'];
+                }
+
+                if (parameters['request'] === undefined) {
+                    deferred.reject(new Error('Missing required  parameter: request'));
+                    return deferred.promise;
+                }
+
+                if (parameters.$queryParameters) {
+                    Object.keys(parameters.$queryParameters)
+                        .forEach(function(parameterName) {
+                            var parameter = parameters.$queryParameters[parameterName];
+                            queryParameters[parameterName] = parameter;
+                        });
+                }
+
+                this.request('PUT', domain + path, parameters, body, headers, queryParameters, form, deferred);
+
+                return deferred.promise;
+            };
+            /**
+             * deleteCaseLineItem
+             * @method
+             * @name OtrService#deleteCaseLineItemUsingDELETE
+             * @param {string} caseId - caseId
+             * @param {string} lineItemId - lineItemId
+             * 
+             */
+            OtrService.prototype.deleteCaseLineItemUsingDELETE = function(parameters) {
+                if (parameters === undefined) {
+                    parameters = {};
+                }
+                var deferred = $q.defer();
+
+                var domain = this.domain;
+                var path = '/api/v1/cases/{caseId}/lineitems/{lineItemId}';
+
+                var body;
+                var queryParameters = {};
+                var headers = {};
+                var form = {};
+
+                headers['Accept'] = ['application/json'];
+                headers['Content-Type'] = ['application/json'];
+
+                path = path.replace('{caseId}', parameters['caseId']);
+
+                if (parameters['caseId'] === undefined) {
+                    deferred.reject(new Error('Missing required  parameter: caseId'));
+                    return deferred.promise;
+                }
+
+                path = path.replace('{lineItemId}', parameters['lineItemId']);
+
+                if (parameters['lineItemId'] === undefined) {
+                    deferred.reject(new Error('Missing required  parameter: lineItemId'));
+                    return deferred.promise;
+                }
+
+                if (parameters.$queryParameters) {
+                    Object.keys(parameters.$queryParameters)
+                        .forEach(function(parameterName) {
+                            var parameter = parameters.$queryParameters[parameterName];
+                            queryParameters[parameterName] = parameter;
+                        });
+                }
+
+                this.request('DELETE', domain + path, parameters, body, headers, queryParameters, form, deferred);
+
+                return deferred.promise;
+            };
+            /**
              * findLawfirmMatchForCase
              * @method
              * @name OtrService#findLawfirmMatchForCaseUsingPOST
