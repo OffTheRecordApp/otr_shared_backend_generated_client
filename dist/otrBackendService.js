@@ -298,6 +298,46 @@ angular.module('otrBackendService', [])
                 return deferred.promise;
             };
             /**
+             * getCaseResolutionStatuses
+             * @method
+             * @name OtrService#getCaseResolutionStatusesUsingGET
+             * @param {string} stateAbbreviation - stateAbbreviation
+             * 
+             */
+            OtrService.prototype.getCaseResolutionStatusesUsingGET = function(parameters) {
+                if (parameters === undefined) {
+                    parameters = {};
+                }
+                var deferred = $q.defer();
+
+                var domain = this.domain;
+                var path = '/api/v1/case-statuses/resolution-statuses';
+
+                var body;
+                var queryParameters = {};
+                var headers = {};
+                var form = {};
+
+                headers['Accept'] = ['*/*'];
+                headers['Content-Type'] = ['application/json'];
+
+                if (parameters['stateAbbreviation'] !== undefined) {
+                    queryParameters['stateAbbreviation'] = parameters['stateAbbreviation'];
+                }
+
+                if (parameters.$queryParameters) {
+                    Object.keys(parameters.$queryParameters)
+                        .forEach(function(parameterName) {
+                            var parameter = parameters.$queryParameters[parameterName];
+                            queryParameters[parameterName] = parameter;
+                        });
+                }
+
+                this.request('GET', domain + path, parameters, body, headers, queryParameters, form, deferred);
+
+                return deferred.promise;
+            };
+            /**
              * getCasesForClient
              * @method
              * @name OtrService#getCasesForClientUsingGET
@@ -1192,6 +1232,57 @@ angular.module('otrBackendService', [])
                 }
 
                 this.request('GET', domain + path, parameters, body, headers, queryParameters, form, deferred);
+
+                return deferred.promise;
+            };
+            /**
+             * deleteMessage
+             * @method
+             * @name OtrService#deleteMessageUsingDELETE
+             * @param {string} caseId - caseId
+             * @param {string} messageId - messageId
+             * 
+             */
+            OtrService.prototype.deleteMessageUsingDELETE = function(parameters) {
+                if (parameters === undefined) {
+                    parameters = {};
+                }
+                var deferred = $q.defer();
+
+                var domain = this.domain;
+                var path = '/api/v1/cases/{caseId}/conversation/{messageId}';
+
+                var body;
+                var queryParameters = {};
+                var headers = {};
+                var form = {};
+
+                headers['Accept'] = ['*/*'];
+                headers['Content-Type'] = ['application/json'];
+
+                path = path.replace('{caseId}', parameters['caseId']);
+
+                if (parameters['caseId'] === undefined) {
+                    deferred.reject(new Error('Missing required  parameter: caseId'));
+                    return deferred.promise;
+                }
+
+                path = path.replace('{messageId}', parameters['messageId']);
+
+                if (parameters['messageId'] === undefined) {
+                    deferred.reject(new Error('Missing required  parameter: messageId'));
+                    return deferred.promise;
+                }
+
+                if (parameters.$queryParameters) {
+                    Object.keys(parameters.$queryParameters)
+                        .forEach(function(parameterName) {
+                            var parameter = parameters.$queryParameters[parameterName];
+                            queryParameters[parameterName] = parameter;
+                        });
+                }
+
+                this.request('DELETE', domain + path, parameters, body, headers, queryParameters, form, deferred);
 
                 return deferred.promise;
             };
