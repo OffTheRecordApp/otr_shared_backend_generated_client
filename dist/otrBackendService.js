@@ -4220,6 +4220,51 @@ angular.module('otrBackendService', [])
                 return deferred.promise;
             };
             /**
+             * addCourt
+             * @method
+             * @name OtrService#addCourtUsingPOST
+             * @param {} request - request
+             * 
+             */
+            OtrService.prototype.addCourtUsingPOST = function(parameters) {
+                if (parameters === undefined) {
+                    parameters = {};
+                }
+                var deferred = $q.defer();
+
+                var domain = this.domain;
+                var path = '/api/v1/courts';
+
+                var body;
+                var queryParameters = {};
+                var headers = {};
+                var form = {};
+
+                headers['Accept'] = ['*/*'];
+                headers['Content-Type'] = ['application/json'];
+
+                if (parameters['request'] !== undefined) {
+                    body = parameters['request'];
+                }
+
+                if (parameters['request'] === undefined) {
+                    deferred.reject(new Error('Missing required  parameter: request'));
+                    return deferred.promise;
+                }
+
+                if (parameters.$queryParameters) {
+                    Object.keys(parameters.$queryParameters)
+                        .forEach(function(parameterName) {
+                            var parameter = parameters.$queryParameters[parameterName];
+                            queryParameters[parameterName] = parameter;
+                        });
+                }
+
+                this.request('POST', domain + path, parameters, body, headers, queryParameters, form, deferred);
+
+                return deferred.promise;
+            };
+            /**
              * searchCourts
              * @method
              * @name OtrService#searchCourtsUsingGET
@@ -5736,12 +5781,12 @@ angular.module('otrBackendService', [])
             /**
              * addCourt
              * @method
-             * @name OtrService#addCourtUsingPOST
+             * @name OtrService#addCourtUsingPOST_1
              * @param {string} lawfirmIdString - lawfirmIdString
              * @param {} request - request
              * 
              */
-            OtrService.prototype.addCourtUsingPOST = function(parameters) {
+            OtrService.prototype.addCourtUsingPOST_1 = function(parameters) {
                 if (parameters === undefined) {
                     parameters = {};
                 }
