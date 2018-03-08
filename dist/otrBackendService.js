@@ -5779,14 +5779,14 @@ angular.module('otrBackendService', [])
                 return deferred.promise;
             };
             /**
-             * addCourt
+             * addCourtToCoverage
              * @method
-             * @name OtrService#addCourtUsingPOST_1
+             * @name OtrService#addCourtToCoverageUsingPOST
              * @param {string} lawfirmIdString - lawfirmIdString
              * @param {} request - request
              * 
              */
-            OtrService.prototype.addCourtUsingPOST_1 = function(parameters) {
+            OtrService.prototype.addCourtToCoverageUsingPOST = function(parameters) {
                 if (parameters === undefined) {
                     parameters = {};
                 }
