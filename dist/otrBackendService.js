@@ -1380,6 +1380,49 @@ angular.module('otrBackendService', [])
                 return deferred.promise;
             };
             /**
+             * listCostItemsForCustomer
+             * @method
+             * @name OtrService#listCostItemsForCustomerUsingGET
+             * @param {string} caseId - caseId
+             * 
+             */
+            OtrService.prototype.listCostItemsForCustomerUsingGET = function(parameters) {
+                if (parameters === undefined) {
+                    parameters = {};
+                }
+                var deferred = $q.defer();
+
+                var domain = this.domain;
+                var path = '/api/v1/cases/{caseId}/customer/cost';
+
+                var body;
+                var queryParameters = {};
+                var headers = {};
+                var form = {};
+
+                headers['Accept'] = ['application/json'];
+                headers['Content-Type'] = ['application/json'];
+
+                path = path.replace('{caseId}', parameters['caseId']);
+
+                if (parameters['caseId'] === undefined) {
+                    deferred.reject(new Error('Missing required  parameter: caseId'));
+                    return deferred.promise;
+                }
+
+                if (parameters.$queryParameters) {
+                    Object.keys(parameters.$queryParameters)
+                        .forEach(function(parameterName) {
+                            var parameter = parameters.$queryParameters[parameterName];
+                            queryParameters[parameterName] = parameter;
+                        });
+                }
+
+                this.request('GET', domain + path, parameters, body, headers, queryParameters, form, deferred);
+
+                return deferred.promise;
+            };
+            /**
              * updateDeclineTickets
              * @method
              * @name OtrService#updateDeclineTicketsUsingPUT
@@ -1571,49 +1614,6 @@ angular.module('otrBackendService', [])
                 }
 
                 this.request('POST', domain + path, parameters, body, headers, queryParameters, form, deferred);
-
-                return deferred.promise;
-            };
-            /**
-             * getCaseFinancialLineItems
-             * @method
-             * @name OtrService#getCaseFinancialLineItemsUsingGET
-             * @param {string} caseId - caseId
-             * 
-             */
-            OtrService.prototype.getCaseFinancialLineItemsUsingGET = function(parameters) {
-                if (parameters === undefined) {
-                    parameters = {};
-                }
-                var deferred = $q.defer();
-
-                var domain = this.domain;
-                var path = '/api/v1/cases/{caseId}/line-items';
-
-                var body;
-                var queryParameters = {};
-                var headers = {};
-                var form = {};
-
-                headers['Accept'] = ['application/json'];
-                headers['Content-Type'] = ['application/json'];
-
-                path = path.replace('{caseId}', parameters['caseId']);
-
-                if (parameters['caseId'] === undefined) {
-                    deferred.reject(new Error('Missing required  parameter: caseId'));
-                    return deferred.promise;
-                }
-
-                if (parameters.$queryParameters) {
-                    Object.keys(parameters.$queryParameters)
-                        .forEach(function(parameterName) {
-                            var parameter = parameters.$queryParameters[parameterName];
-                            queryParameters[parameterName] = parameter;
-                        });
-                }
-
-                this.request('GET', domain + path, parameters, body, headers, queryParameters, form, deferred);
 
                 return deferred.promise;
             };
@@ -5030,13 +5030,13 @@ angular.module('otrBackendService', [])
                 return deferred.promise;
             };
             /**
-             * createCustomerLead
+             * postCustomerLead
              * @method
-             * @name OtrService#createCustomerLeadUsingPOST
+             * @name OtrService#postCustomerLeadUsingPOST
              * @param {} request - request
              * 
              */
-            OtrService.prototype.createCustomerLeadUsingPOST = function(parameters) {
+            OtrService.prototype.postCustomerLeadUsingPOST = function(parameters) {
                 if (parameters === undefined) {
                     parameters = {};
                 }
