@@ -4359,81 +4359,6 @@ angular.module('otrBackendService', [])
                 return deferred.promise;
             };
             /**
-             * fetchCourts
-             * @method
-             * @name OtrService#fetchCourtsUsingGET
-             * @param {string} state - state
-             * @param {string} city - city
-             * @param {string} county - county
-             * @param {string} q - q
-             * @param {integer} page - page
-             * @param {integer} length - length
-             * @param {string} flavor - courtFlavor
-             * 
-             */
-            OtrService.prototype.fetchCourtsUsingGET = function(parameters) {
-                if (parameters === undefined) {
-                    parameters = {};
-                }
-                var deferred = $q.defer();
-
-                var domain = this.domain;
-                var path = '/api/v1/courts';
-
-                var body;
-                var queryParameters = {};
-                var headers = {};
-                var form = {};
-
-                headers['Accept'] = ['*/*'];
-                headers['Content-Type'] = ['application/json'];
-
-                if (parameters['state'] !== undefined) {
-                    queryParameters['state'] = parameters['state'];
-                }
-
-                if (parameters['state'] === undefined) {
-                    deferred.reject(new Error('Missing required  parameter: state'));
-                    return deferred.promise;
-                }
-
-                if (parameters['city'] !== undefined) {
-                    queryParameters['city'] = parameters['city'];
-                }
-
-                if (parameters['county'] !== undefined) {
-                    queryParameters['county'] = parameters['county'];
-                }
-
-                if (parameters['q'] !== undefined) {
-                    queryParameters['q'] = parameters['q'];
-                }
-
-                if (parameters['page'] !== undefined) {
-                    queryParameters['page'] = parameters['page'];
-                }
-
-                if (parameters['length'] !== undefined) {
-                    queryParameters['length'] = parameters['length'];
-                }
-
-                if (parameters['flavor'] !== undefined) {
-                    queryParameters['flavor'] = parameters['flavor'];
-                }
-
-                if (parameters.$queryParameters) {
-                    Object.keys(parameters.$queryParameters)
-                        .forEach(function(parameterName) {
-                            var parameter = parameters.$queryParameters[parameterName];
-                            queryParameters[parameterName] = parameter;
-                        });
-                }
-
-                this.request('GET', domain + path, parameters, body, headers, queryParameters, form, deferred);
-
-                return deferred.promise;
-            };
-            /**
              * addCourt
              * @method
              * @name OtrService#addCourtUsingPOST
@@ -4484,7 +4409,9 @@ angular.module('otrBackendService', [])
              * @name OtrService#searchCourtsUsingGET
              * @param {string} q - q
              * @param {string} state - state
-             * @param {integer} page - page
+             * @param {string} city - city
+             * @param {string} county - county
+             * @param {integer} offset - offset
              * @param {integer} length - length
              * 
              */
@@ -4513,102 +4440,6 @@ angular.module('otrBackendService', [])
                     queryParameters['state'] = parameters['state'];
                 }
 
-                if (parameters['page'] !== undefined) {
-                    queryParameters['page'] = parameters['page'];
-                }
-
-                if (parameters['length'] !== undefined) {
-                    queryParameters['length'] = parameters['length'];
-                }
-
-                if (parameters.$queryParameters) {
-                    Object.keys(parameters.$queryParameters)
-                        .forEach(function(parameterName) {
-                            var parameter = parameters.$queryParameters[parameterName];
-                            queryParameters[parameterName] = parameter;
-                        });
-                }
-
-                this.request('GET', domain + path, parameters, body, headers, queryParameters, form, deferred);
-
-                return deferred.promise;
-            };
-            /**
-             * paginateCourts
-             * @method
-             * @name OtrService#paginateCourtsUsingGET
-             * @param {integer} page - page
-             * @param {integer} length - length
-             * 
-             */
-            OtrService.prototype.paginateCourtsUsingGET = function(parameters) {
-                if (parameters === undefined) {
-                    parameters = {};
-                }
-                var deferred = $q.defer();
-
-                var domain = this.domain;
-                var path = '/api/v1/courts/traffic/paginate';
-
-                var body;
-                var queryParameters = {};
-                var headers = {};
-                var form = {};
-
-                headers['Accept'] = ['*/*'];
-                headers['Content-Type'] = ['application/json'];
-
-                if (parameters['page'] !== undefined) {
-                    queryParameters['page'] = parameters['page'];
-                }
-
-                if (parameters['length'] !== undefined) {
-                    queryParameters['length'] = parameters['length'];
-                }
-
-                if (parameters.$queryParameters) {
-                    Object.keys(parameters.$queryParameters)
-                        .forEach(function(parameterName) {
-                            var parameter = parameters.$queryParameters[parameterName];
-                            queryParameters[parameterName] = parameter;
-                        });
-                }
-
-                this.request('GET', domain + path, parameters, body, headers, queryParameters, form, deferred);
-
-                return deferred.promise;
-            };
-            /**
-             * getCourts
-             * @method
-             * @name OtrService#getCourtsUsingGET
-             * @param {string} state - state
-             * @param {string} city - city
-             * @param {string} county - county
-             * @param {string} flavor - courtFlavor
-             * 
-             */
-            OtrService.prototype.getCourtsUsingGET = function(parameters) {
-                if (parameters === undefined) {
-                    parameters = {};
-                }
-                var deferred = $q.defer();
-
-                var domain = this.domain;
-                var path = '/api/v1/courts/traffic/search';
-
-                var body;
-                var queryParameters = {};
-                var headers = {};
-                var form = {};
-
-                headers['Accept'] = ['*/*'];
-                headers['Content-Type'] = ['application/json'];
-
-                if (parameters['state'] !== undefined) {
-                    queryParameters['state'] = parameters['state'];
-                }
-
                 if (parameters['city'] !== undefined) {
                     queryParameters['city'] = parameters['city'];
                 }
@@ -4617,62 +4448,8 @@ angular.module('otrBackendService', [])
                     queryParameters['county'] = parameters['county'];
                 }
 
-                if (parameters['flavor'] !== undefined) {
-                    queryParameters['flavor'] = parameters['flavor'];
-                }
-
-                if (parameters.$queryParameters) {
-                    Object.keys(parameters.$queryParameters)
-                        .forEach(function(parameterName) {
-                            var parameter = parameters.$queryParameters[parameterName];
-                            queryParameters[parameterName] = parameter;
-                        });
-                }
-
-                this.request('GET', domain + path, parameters, body, headers, queryParameters, form, deferred);
-
-                return deferred.promise;
-            };
-            /**
-             * getCourtsByQuery
-             * @method
-             * @name OtrService#getCourtsByQueryUsingGET
-             * @param {string} searchQuery - searchQuery
-             * @param {string} state - state
-             * @param {integer} page - page
-             * @param {integer} length - length
-             * 
-             */
-            OtrService.prototype.getCourtsByQueryUsingGET = function(parameters) {
-                if (parameters === undefined) {
-                    parameters = {};
-                }
-                var deferred = $q.defer();
-
-                var domain = this.domain;
-                var path = '/api/v1/courts/traffic/{searchQuery}';
-
-                var body;
-                var queryParameters = {};
-                var headers = {};
-                var form = {};
-
-                headers['Accept'] = ['*/*'];
-                headers['Content-Type'] = ['application/json'];
-
-                path = path.replace('{searchQuery}', parameters['searchQuery']);
-
-                if (parameters['searchQuery'] === undefined) {
-                    deferred.reject(new Error('Missing required  parameter: searchQuery'));
-                    return deferred.promise;
-                }
-
-                if (parameters['state'] !== undefined) {
-                    queryParameters['state'] = parameters['state'];
-                }
-
-                if (parameters['page'] !== undefined) {
-                    queryParameters['page'] = parameters['page'];
+                if (parameters['offset'] !== undefined) {
+                    queryParameters['offset'] = parameters['offset'];
                 }
 
                 if (parameters['length'] !== undefined) {
@@ -4729,6 +4506,49 @@ angular.module('otrBackendService', [])
 
                 if (parameters['radiusInMiles'] === undefined) {
                     deferred.reject(new Error('Missing required  parameter: radiusInMiles'));
+                    return deferred.promise;
+                }
+
+                if (parameters.$queryParameters) {
+                    Object.keys(parameters.$queryParameters)
+                        .forEach(function(parameterName) {
+                            var parameter = parameters.$queryParameters[parameterName];
+                            queryParameters[parameterName] = parameter;
+                        });
+                }
+
+                this.request('GET', domain + path, parameters, body, headers, queryParameters, form, deferred);
+
+                return deferred.promise;
+            };
+            /**
+             * getCourt
+             * @method
+             * @name OtrService#getCourtUsingGET
+             * @param {integer} courtId - courtId
+             * 
+             */
+            OtrService.prototype.getCourtUsingGET = function(parameters) {
+                if (parameters === undefined) {
+                    parameters = {};
+                }
+                var deferred = $q.defer();
+
+                var domain = this.domain;
+                var path = '/api/v1/courts/{courtId}';
+
+                var body;
+                var queryParameters = {};
+                var headers = {};
+                var form = {};
+
+                headers['Accept'] = ['*/*'];
+                headers['Content-Type'] = ['application/json'];
+
+                path = path.replace('{courtId}', parameters['courtId']);
+
+                if (parameters['courtId'] === undefined) {
+                    deferred.reject(new Error('Missing required  parameter: courtId'));
                     return deferred.promise;
                 }
 
