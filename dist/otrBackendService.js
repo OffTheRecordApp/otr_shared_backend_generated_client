@@ -3267,7 +3267,7 @@ angular.module('otrBackendService', [])
              * @method
              * @name OtrService#postMissingCourtForCitationUsingPOST
              * @param {string} citationId - citationId
-             * @param {string} stateCode - stateCode
+             * @param {string} state - state
              * 
              */
             OtrService.prototype.postMissingCourtForCitationUsingPOST = function(parameters) {
@@ -3294,12 +3294,12 @@ angular.module('otrBackendService', [])
                     return deferred.promise;
                 }
 
-                if (parameters['stateCode'] !== undefined) {
-                    queryParameters['state_code'] = parameters['stateCode'];
+                if (parameters['state'] !== undefined) {
+                    queryParameters['state'] = parameters['state'];
                 }
 
-                if (parameters['stateCode'] === undefined) {
-                    deferred.reject(new Error('Missing required  parameter: stateCode'));
+                if (parameters['state'] === undefined) {
+                    deferred.reject(new Error('Missing required  parameter: state'));
                     return deferred.promise;
                 }
 
@@ -7632,6 +7632,59 @@ angular.module('otrBackendService', [])
                 }
 
                 this.request('GET', domain + path, parameters, body, headers, queryParameters, form, deferred);
+
+                return deferred.promise;
+            };
+            /**
+             * rescheduleTask
+             * @method
+             * @name OtrService#rescheduleTaskUsingPUT
+             * @param {string} taskReferenceId - taskReferenceId
+             * @param {} request - request
+             * 
+             */
+            OtrService.prototype.rescheduleTaskUsingPUT = function(parameters) {
+                if (parameters === undefined) {
+                    parameters = {};
+                }
+                var deferred = $q.defer();
+
+                var domain = this.domain;
+                var path = '/api/v1/scheduled-tasks/{taskReferenceId}/reschedule';
+
+                var body;
+                var queryParameters = {};
+                var headers = {};
+                var form = {};
+
+                headers['Accept'] = ['*/*'];
+                headers['Content-Type'] = ['application/json'];
+
+                path = path.replace('{taskReferenceId}', parameters['taskReferenceId']);
+
+                if (parameters['taskReferenceId'] === undefined) {
+                    deferred.reject(new Error('Missing required  parameter: taskReferenceId'));
+                    return deferred.promise;
+                }
+
+                if (parameters['request'] !== undefined) {
+                    body = parameters['request'];
+                }
+
+                if (parameters['request'] === undefined) {
+                    deferred.reject(new Error('Missing required  parameter: request'));
+                    return deferred.promise;
+                }
+
+                if (parameters.$queryParameters) {
+                    Object.keys(parameters.$queryParameters)
+                        .forEach(function(parameterName) {
+                            var parameter = parameters.$queryParameters[parameterName];
+                            queryParameters[parameterName] = parameter;
+                        });
+                }
+
+                this.request('PUT', domain + path, parameters, body, headers, queryParameters, form, deferred);
 
                 return deferred.promise;
             };
