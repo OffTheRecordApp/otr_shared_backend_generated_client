@@ -7684,7 +7684,7 @@ angular.module('otrBackendService', [])
              * rescheduleTask
              * @method
              * @name OtrService#rescheduleTaskUsingPUT
-             * @param {string} taskReferenceId - taskReferenceId
+             * @param {string} taskId - taskId
              * @param {} request - request
              * 
              */
@@ -7695,7 +7695,7 @@ angular.module('otrBackendService', [])
                 var deferred = $q.defer();
 
                 var domain = this.domain;
-                var path = '/api/v1/scheduled-tasks/{taskReferenceId}/reschedule';
+                var path = '/api/v1/scheduled-tasks/{taskId}/reschedule';
 
                 var body;
                 var queryParameters = {};
@@ -7705,10 +7705,10 @@ angular.module('otrBackendService', [])
                 headers['Accept'] = ['*/*'];
                 headers['Content-Type'] = ['application/json'];
 
-                path = path.replace('{taskReferenceId}', parameters['taskReferenceId']);
+                path = path.replace('{taskId}', parameters['taskId']);
 
-                if (parameters['taskReferenceId'] === undefined) {
-                    deferred.reject(new Error('Missing required  parameter: taskReferenceId'));
+                if (parameters['taskId'] === undefined) {
+                    deferred.reject(new Error('Missing required  parameter: taskId'));
                     return deferred.promise;
                 }
 
