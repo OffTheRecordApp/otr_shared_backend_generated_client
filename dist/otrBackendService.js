@@ -3692,6 +3692,51 @@ angular.module('otrBackendService', [])
                 return deferred.promise;
             };
             /**
+             * getCasesWithCoverageObtained
+             * @method
+             * @name OtrService#getCasesWithCoverageObtainedUsingPOST
+             * @param {} request - request
+             * 
+             */
+            OtrService.prototype.getCasesWithCoverageObtainedUsingPOST = function(parameters) {
+                if (parameters === undefined) {
+                    parameters = {};
+                }
+                var deferred = $q.defer();
+
+                var domain = this.domain;
+                var path = '/api/v1/console/cases-with-coverage-obtained';
+
+                var body;
+                var queryParameters = {};
+                var headers = {};
+                var form = {};
+
+                headers['Accept'] = ['application/json'];
+                headers['Content-Type'] = ['application/json'];
+
+                if (parameters['request'] !== undefined) {
+                    body = parameters['request'];
+                }
+
+                if (parameters['request'] === undefined) {
+                    deferred.reject(new Error('Missing required  parameter: request'));
+                    return deferred.promise;
+                }
+
+                if (parameters.$queryParameters) {
+                    Object.keys(parameters.$queryParameters)
+                        .forEach(function(parameterName) {
+                            var parameter = parameters.$queryParameters[parameterName];
+                            queryParameters[parameterName] = parameter;
+                        });
+                }
+
+                this.request('POST', domain + path, parameters, body, headers, queryParameters, form, deferred);
+
+                return deferred.promise;
+            };
+            /**
              * getInvalidCasesWithStripeCharge
              * @method
              * @name OtrService#getInvalidCasesWithStripeChargeUsingPOST
