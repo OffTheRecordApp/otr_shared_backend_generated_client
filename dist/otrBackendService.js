@@ -5753,6 +5753,11 @@ angular.module('otrBackendService', [])
              * getLawfirms
              * @method
              * @name OtrService#getLawfirmsUsingGET
+             * @param {string} q - q
+             * @param {array} states - states
+             * @param {array} statuses - statuses
+             * @param {boolean} includeTestLawfirms - includeTestLawfirms
+             * @param {boolean} includeVacationMode - includeVacationMode
              * 
              */
             OtrService.prototype.getLawfirmsUsingGET = function(parameters) {
@@ -5771,6 +5776,26 @@ angular.module('otrBackendService', [])
 
                 headers['Accept'] = ['*/*'];
                 headers['Content-Type'] = ['application/json'];
+
+                if (parameters['q'] !== undefined) {
+                    queryParameters['q'] = parameters['q'];
+                }
+
+                if (parameters['states'] !== undefined) {
+                    queryParameters['states'] = parameters['states'];
+                }
+
+                if (parameters['statuses'] !== undefined) {
+                    queryParameters['statuses'] = parameters['statuses'];
+                }
+
+                if (parameters['includeTestLawfirms'] !== undefined) {
+                    queryParameters['includeTestLawfirms'] = parameters['includeTestLawfirms'];
+                }
+
+                if (parameters['includeVacationMode'] !== undefined) {
+                    queryParameters['includeVacationMode'] = parameters['includeVacationMode'];
+                }
 
                 if (parameters.$queryParameters) {
                     Object.keys(parameters.$queryParameters)
@@ -5826,41 +5851,6 @@ angular.module('otrBackendService', [])
                 }
 
                 this.request('POST', domain + path, parameters, body, headers, queryParameters, form, deferred);
-
-                return deferred.promise;
-            };
-            /**
-             * getActiveLawfirms
-             * @method
-             * @name OtrService#getActiveLawfirmsUsingGET
-             * 
-             */
-            OtrService.prototype.getActiveLawfirmsUsingGET = function(parameters) {
-                if (parameters === undefined) {
-                    parameters = {};
-                }
-                var deferred = $q.defer();
-
-                var domain = this.domain;
-                var path = '/api/v1/lawfirms/active';
-
-                var body;
-                var queryParameters = {};
-                var headers = {};
-                var form = {};
-
-                headers['Accept'] = ['*/*'];
-                headers['Content-Type'] = ['application/json'];
-
-                if (parameters.$queryParameters) {
-                    Object.keys(parameters.$queryParameters)
-                        .forEach(function(parameterName) {
-                            var parameter = parameters.$queryParameters[parameterName];
-                            queryParameters[parameterName] = parameter;
-                        });
-                }
-
-                this.request('GET', domain + path, parameters, body, headers, queryParameters, form, deferred);
 
                 return deferred.promise;
             };
