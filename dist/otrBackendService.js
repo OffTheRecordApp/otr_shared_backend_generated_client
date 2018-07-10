@@ -3604,6 +3604,49 @@ angular.module('otrBackendService', [])
                 return deferred.promise;
             };
             /**
+             * getAnonymousTicketUploads
+             * @method
+             * @name OtrService#getAnonymousTicketUploadsUsingGET
+             * @param {string} emailAddress - emailAddress
+             * 
+             */
+            OtrService.prototype.getAnonymousTicketUploadsUsingGET = function(parameters) {
+                if (parameters === undefined) {
+                    parameters = {};
+                }
+                var deferred = $q.defer();
+
+                var domain = this.domain;
+                var path = '/api/v1/citations/{emailAddress}/anonymous-tickets';
+
+                var body;
+                var queryParameters = {};
+                var headers = {};
+                var form = {};
+
+                headers['Accept'] = ['*/*'];
+                headers['Content-Type'] = ['application/json'];
+
+                path = path.replace('{emailAddress}', parameters['emailAddress']);
+
+                if (parameters['emailAddress'] === undefined) {
+                    deferred.reject(new Error('Missing required  parameter: emailAddress'));
+                    return deferred.promise;
+                }
+
+                if (parameters.$queryParameters) {
+                    Object.keys(parameters.$queryParameters)
+                        .forEach(function(parameterName) {
+                            var parameter = parameters.$queryParameters[parameterName];
+                            queryParameters[parameterName] = parameter;
+                        });
+                }
+
+                this.request('GET', domain + path, parameters, body, headers, queryParameters, form, deferred);
+
+                return deferred.promise;
+            };
+            /**
              * getAppConfiguration
              * @method
              * @name OtrService#getAppConfigurationUsingGET
@@ -5560,6 +5603,59 @@ angular.module('otrBackendService', [])
                 }
 
                 this.request('POST', domain + path, parameters, body, headers, queryParameters, form, deferred);
+
+                return deferred.promise;
+            };
+            /**
+             * updateFreshdeskTicket
+             * @method
+             * @name OtrService#updateFreshdeskTicketUsingPUT
+             * @param {integer} ticketId - ticketId
+             * @param {} request - request
+             * 
+             */
+            OtrService.prototype.updateFreshdeskTicketUsingPUT = function(parameters) {
+                if (parameters === undefined) {
+                    parameters = {};
+                }
+                var deferred = $q.defer();
+
+                var domain = this.domain;
+                var path = '/api/v1/freshdesk/ticket/{ticketId}';
+
+                var body;
+                var queryParameters = {};
+                var headers = {};
+                var form = {};
+
+                headers['Accept'] = ['application/json'];
+                headers['Content-Type'] = ['application/json'];
+
+                path = path.replace('{ticketId}', parameters['ticketId']);
+
+                if (parameters['ticketId'] === undefined) {
+                    deferred.reject(new Error('Missing required  parameter: ticketId'));
+                    return deferred.promise;
+                }
+
+                if (parameters['request'] !== undefined) {
+                    body = parameters['request'];
+                }
+
+                if (parameters['request'] === undefined) {
+                    deferred.reject(new Error('Missing required  parameter: request'));
+                    return deferred.promise;
+                }
+
+                if (parameters.$queryParameters) {
+                    Object.keys(parameters.$queryParameters)
+                        .forEach(function(parameterName) {
+                            var parameter = parameters.$queryParameters[parameterName];
+                            queryParameters[parameterName] = parameter;
+                        });
+                }
+
+                this.request('PUT', domain + path, parameters, body, headers, queryParameters, form, deferred);
 
                 return deferred.promise;
             };
