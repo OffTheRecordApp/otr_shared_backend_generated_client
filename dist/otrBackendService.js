@@ -464,7 +464,7 @@ angular.module('otrBackendService', [])
              * getCaseStatuses
              * @method
              * @name OtrService#getCaseStatusesUsingGET
-             * @param {array} category - category
+             * @param {array} categories - categories
              * 
              */
             OtrService.prototype.getCaseStatusesUsingGET = function(parameters) {
@@ -484,8 +484,8 @@ angular.module('otrBackendService', [])
                 headers['Accept'] = ['*/*'];
                 headers['Content-Type'] = ['application/json'];
 
-                if (parameters['category'] !== undefined) {
-                    queryParameters['category'] = parameters['category'];
+                if (parameters['categories'] !== undefined) {
+                    queryParameters['categories'] = parameters['categories'];
                 }
 
                 if (parameters.$queryParameters) {
@@ -5660,6 +5660,59 @@ angular.module('otrBackendService', [])
                 return deferred.promise;
             };
             /**
+             * ticketStatusChangeHook
+             * @method
+             * @name OtrService#ticketStatusChangeHookUsingPUT
+             * @param {string} ticketId - ticketId
+             * @param {} request - request
+             * 
+             */
+            OtrService.prototype.ticketStatusChangeHookUsingPUT = function(parameters) {
+                if (parameters === undefined) {
+                    parameters = {};
+                }
+                var deferred = $q.defer();
+
+                var domain = this.domain;
+                var path = '/api/v1/freshdesk/ticket/{ticketId}/webhook/status-change';
+
+                var body;
+                var queryParameters = {};
+                var headers = {};
+                var form = {};
+
+                headers['Accept'] = ['application/json'];
+                headers['Content-Type'] = ['application/json'];
+
+                path = path.replace('{ticketId}', parameters['ticketId']);
+
+                if (parameters['ticketId'] === undefined) {
+                    deferred.reject(new Error('Missing required  parameter: ticketId'));
+                    return deferred.promise;
+                }
+
+                if (parameters['request'] !== undefined) {
+                    body = parameters['request'];
+                }
+
+                if (parameters['request'] === undefined) {
+                    deferred.reject(new Error('Missing required  parameter: request'));
+                    return deferred.promise;
+                }
+
+                if (parameters.$queryParameters) {
+                    Object.keys(parameters.$queryParameters)
+                        .forEach(function(parameterName) {
+                            var parameter = parameters.$queryParameters[parameterName];
+                            queryParameters[parameterName] = parameter;
+                        });
+                }
+
+                this.request('PUT', domain + path, parameters, body, headers, queryParameters, form, deferred);
+
+                return deferred.promise;
+            };
+            /**
              * calculateTicketSavings
              * @method
              * @name OtrService#calculateTicketSavingsUsingPOST
@@ -6140,57 +6193,6 @@ angular.module('otrBackendService', [])
                 return deferred.promise;
             };
             /**
-             * removeCourt
-             * @method
-             * @name OtrService#removeCourtUsingDELETE
-             * @param {string} lawfirmIdString - lawfirmIdString
-             * @param {string} courtIdString - courtIdString
-             * 
-             */
-            OtrService.prototype.removeCourtUsingDELETE = function(parameters) {
-                if (parameters === undefined) {
-                    parameters = {};
-                }
-                var deferred = $q.defer();
-
-                var domain = this.domain;
-                var path = '/api/v1/lawfirms/{lawfirmIdString}/courts/{courtIdString}';
-
-                var body;
-                var queryParameters = {};
-                var headers = {};
-                var form = {};
-
-                headers['Accept'] = ['*/*'];
-                headers['Content-Type'] = ['application/json'];
-
-                path = path.replace('{lawfirmIdString}', parameters['lawfirmIdString']);
-
-                if (parameters['lawfirmIdString'] === undefined) {
-                    deferred.reject(new Error('Missing required  parameter: lawfirmIdString'));
-                    return deferred.promise;
-                }
-
-                path = path.replace('{courtIdString}', parameters['courtIdString']);
-
-                if (parameters['courtIdString'] === undefined) {
-                    deferred.reject(new Error('Missing required  parameter: courtIdString'));
-                    return deferred.promise;
-                }
-
-                if (parameters.$queryParameters) {
-                    Object.keys(parameters.$queryParameters)
-                        .forEach(function(parameterName) {
-                            var parameter = parameters.$queryParameters[parameterName];
-                            queryParameters[parameterName] = parameter;
-                        });
-                }
-
-                this.request('DELETE', domain + path, parameters, body, headers, queryParameters, form, deferred);
-
-                return deferred.promise;
-            };
-            /**
              * getLawfirmCoverage
              * @method
              * @name OtrService#getLawfirmCoverageUsingGET
@@ -6369,6 +6371,59 @@ angular.module('otrBackendService', [])
                 }
 
                 this.request('GET', domain + path, parameters, body, headers, queryParameters, form, deferred);
+
+                return deferred.promise;
+            };
+            /**
+             * removeCourts
+             * @method
+             * @name OtrService#removeCourtsUsingDELETE
+             * @param {integer} lawfirmId - lawfirmId
+             * @param {array} courtsToRemove - courtsToRemove
+             * 
+             */
+            OtrService.prototype.removeCourtsUsingDELETE = function(parameters) {
+                if (parameters === undefined) {
+                    parameters = {};
+                }
+                var deferred = $q.defer();
+
+                var domain = this.domain;
+                var path = '/api/v1/lawfirms/{lawfirmId}/courts';
+
+                var body;
+                var queryParameters = {};
+                var headers = {};
+                var form = {};
+
+                headers['Accept'] = ['*/*'];
+                headers['Content-Type'] = ['application/json'];
+
+                path = path.replace('{lawfirmId}', parameters['lawfirmId']);
+
+                if (parameters['lawfirmId'] === undefined) {
+                    deferred.reject(new Error('Missing required  parameter: lawfirmId'));
+                    return deferred.promise;
+                }
+
+                if (parameters['courtsToRemove'] !== undefined) {
+                    queryParameters['courtsToRemove'] = parameters['courtsToRemove'];
+                }
+
+                if (parameters['courtsToRemove'] === undefined) {
+                    deferred.reject(new Error('Missing required  parameter: courtsToRemove'));
+                    return deferred.promise;
+                }
+
+                if (parameters.$queryParameters) {
+                    Object.keys(parameters.$queryParameters)
+                        .forEach(function(parameterName) {
+                            var parameter = parameters.$queryParameters[parameterName];
+                            queryParameters[parameterName] = parameter;
+                        });
+                }
+
+                this.request('DELETE', domain + path, parameters, body, headers, queryParameters, form, deferred);
 
                 return deferred.promise;
             };
