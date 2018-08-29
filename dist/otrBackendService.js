@@ -1619,7 +1619,7 @@ angular.module('otrBackendService', [])
              * @method
              * @name OtrService#authorizeChargeForInvoiceLineItemUsingPOST
              * @param {string} caseId - caseId
-             * @param {integer} invoiceLineItemId - invoiceLineItemId
+             * @param {string} invoiceLineItemId - invoiceLineItemId
              * @param {} request - request
              * 
              */
@@ -8569,6 +8569,51 @@ angular.module('otrBackendService', [])
                 }
 
                 this.request('GET', domain + path, parameters, body, headers, queryParameters, form, deferred);
+
+                return deferred.promise;
+            };
+            /**
+             * getCountOfMatchingUsers
+             * @method
+             * @name OtrService#getCountOfMatchingUsersUsingPOST
+             * @param {} request - request
+             * 
+             */
+            OtrService.prototype.getCountOfMatchingUsersUsingPOST = function(parameters) {
+                if (parameters === undefined) {
+                    parameters = {};
+                }
+                var deferred = $q.defer();
+
+                var domain = this.domain;
+                var path = '/api/v1/users/matches';
+
+                var body;
+                var queryParameters = {};
+                var headers = {};
+                var form = {};
+
+                headers['Accept'] = ['*/*'];
+                headers['Content-Type'] = ['application/json'];
+
+                if (parameters['request'] !== undefined) {
+                    body = parameters['request'];
+                }
+
+                if (parameters['request'] === undefined) {
+                    deferred.reject(new Error('Missing required  parameter: request'));
+                    return deferred.promise;
+                }
+
+                if (parameters.$queryParameters) {
+                    Object.keys(parameters.$queryParameters)
+                        .forEach(function(parameterName) {
+                            var parameter = parameters.$queryParameters[parameterName];
+                            queryParameters[parameterName] = parameter;
+                        });
+                }
+
+                this.request('POST', domain + path, parameters, body, headers, queryParameters, form, deferred);
 
                 return deferred.promise;
             };
