@@ -9158,6 +9158,51 @@ angular.module('otrBackendService', [])
                 return deferred.promise;
             };
             /**
+             * validateEmailAddress
+             * @method
+             * @name OtrService#validateEmailAddressUsingGET
+             * @param {string} email - email
+             * 
+             */
+            OtrService.prototype.validateEmailAddressUsingGET = function(parameters) {
+                if (parameters === undefined) {
+                    parameters = {};
+                }
+                var deferred = $q.defer();
+
+                var domain = this.domain;
+                var path = '/api/v1/validate/email';
+
+                var body;
+                var queryParameters = {};
+                var headers = {};
+                var form = {};
+
+                headers['Accept'] = ['*/*'];
+                headers['Content-Type'] = ['application/json'];
+
+                if (parameters['email'] !== undefined) {
+                    queryParameters['email'] = parameters['email'];
+                }
+
+                if (parameters['email'] === undefined) {
+                    deferred.reject(new Error('Missing required  parameter: email'));
+                    return deferred.promise;
+                }
+
+                if (parameters.$queryParameters) {
+                    Object.keys(parameters.$queryParameters)
+                        .forEach(function(parameterName) {
+                            var parameter = parameters.$queryParameters[parameterName];
+                            queryParameters[parameterName] = parameter;
+                        });
+                }
+
+                this.request('GET', domain + path, parameters, body, headers, queryParameters, form, deferred);
+
+                return deferred.promise;
+            };
+            /**
              * getTrafficViolationTypes
              * @method
              * @name OtrService#getTrafficViolationTypesUsingGET
