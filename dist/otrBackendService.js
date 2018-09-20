@@ -1879,54 +1879,6 @@ angular.module('otrBackendService', [])
                 return deferred.promise;
             };
             /**
-             * findLawfirmMatchForCase
-             * @method
-             * @name OtrService#findLawfirmMatchForCaseUsingPOST
-             * @param {} request - request
-             * @param {string} caseId - caseId
-             * 
-             */
-            OtrService.prototype.findLawfirmMatchForCaseUsingPOST = function(parameters) {
-                if (parameters === undefined) {
-                    parameters = {};
-                }
-                var deferred = $q.defer();
-
-                var domain = this.domain;
-                var path = '/api/v1/cases/{caseId}/match';
-
-                var body;
-                var queryParameters = {};
-                var headers = {};
-                var form = {};
-
-                headers['Accept'] = ['*/*'];
-                headers['Content-Type'] = ['application/json'];
-
-                if (parameters['request'] !== undefined) {
-                    body = parameters['request'];
-                }
-
-                path = path.replace('{caseId}', parameters['caseId']);
-
-                if (parameters['caseId'] === undefined) {
-                    deferred.reject(new Error('Missing required  parameter: caseId'));
-                    return deferred.promise;
-                }
-
-                if (parameters.$queryParameters) {
-                    Object.keys(parameters.$queryParameters)
-                        .forEach(function(parameterName) {
-                            var parameter = parameters.$queryParameters[parameterName];
-                            queryParameters[parameterName] = parameter;
-                        });
-                }
-
-                this.request('POST', domain + path, parameters, body, headers, queryParameters, form, deferred);
-
-                return deferred.promise;
-            };
-            /**
              * getCaseNotes
              * @method
              * @name OtrService#getCaseNotesUsingGET
@@ -9320,6 +9272,8 @@ angular.module('otrBackendService', [])
              * getTrafficViolationTypes
              * @method
              * @name OtrService#getTrafficViolationTypesUsingGET
+             * @param {string} state - stateAbbreviation
+             * @param {string} audience - audience
              * @param {string} flavor - flavor
              * 
              */
@@ -9339,6 +9293,14 @@ angular.module('otrBackendService', [])
 
                 headers['Accept'] = ['*/*'];
                 headers['Content-Type'] = ['application/json'];
+
+                if (parameters['state'] !== undefined) {
+                    queryParameters['state'] = parameters['state'];
+                }
+
+                if (parameters['audience'] !== undefined) {
+                    queryParameters['audience'] = parameters['audience'];
+                }
 
                 if (parameters['flavor'] !== undefined) {
                     queryParameters['flavor'] = parameters['flavor'];
