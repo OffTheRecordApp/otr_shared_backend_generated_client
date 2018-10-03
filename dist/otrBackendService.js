@@ -9128,6 +9128,57 @@ angular.module('otrBackendService', [])
                 return deferred.promise;
             };
             /**
+             * setCardAsPrimary
+             * @method
+             * @name OtrService#setCardAsPrimaryUsingPUT
+             * @param {string} userId - userId
+             * @param {string} cardId - cardId
+             * 
+             */
+            OtrService.prototype.setCardAsPrimaryUsingPUT = function(parameters) {
+                if (parameters === undefined) {
+                    parameters = {};
+                }
+                var deferred = $q.defer();
+
+                var domain = this.domain;
+                var path = '/api/v1/users/{userId}/account/cards/{cardId}/primary';
+
+                var body;
+                var queryParameters = {};
+                var headers = {};
+                var form = {};
+
+                headers['Accept'] = ['*/*'];
+                headers['Content-Type'] = ['application/json'];
+
+                path = path.replace('{userId}', parameters['userId']);
+
+                if (parameters['userId'] === undefined) {
+                    deferred.reject(new Error('Missing required  parameter: userId'));
+                    return deferred.promise;
+                }
+
+                path = path.replace('{cardId}', parameters['cardId']);
+
+                if (parameters['cardId'] === undefined) {
+                    deferred.reject(new Error('Missing required  parameter: cardId'));
+                    return deferred.promise;
+                }
+
+                if (parameters.$queryParameters) {
+                    Object.keys(parameters.$queryParameters)
+                        .forEach(function(parameterName) {
+                            var parameter = parameters.$queryParameters[parameterName];
+                            queryParameters[parameterName] = parameter;
+                        });
+                }
+
+                this.request('PUT', domain + path, parameters, body, headers, queryParameters, form, deferred);
+
+                return deferred.promise;
+            };
+            /**
              * getCasesForUser
              * @method
              * @name OtrService#getCasesForUserUsingGET
