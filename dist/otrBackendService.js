@@ -9370,6 +9370,142 @@ angular.module('otrBackendService', [])
                 return deferred.promise;
             };
             /**
+             * getPenaltyTypes
+             * @method
+             * @name OtrService#getPenaltyTypesUsingGET
+             * 
+             */
+            OtrService.prototype.getPenaltyTypesUsingGET = function(parameters) {
+                if (parameters === undefined) {
+                    parameters = {};
+                }
+                var deferred = $q.defer();
+
+                var domain = this.domain;
+                var path = '/api/v1/violations/penalties';
+
+                var body;
+                var queryParameters = {};
+                var headers = {};
+                var form = {};
+
+                headers['Accept'] = ['*/*'];
+                headers['Content-Type'] = ['application/json'];
+
+                if (parameters.$queryParameters) {
+                    Object.keys(parameters.$queryParameters)
+                        .forEach(function(parameterName) {
+                            var parameter = parameters.$queryParameters[parameterName];
+                            queryParameters[parameterName] = parameter;
+                        });
+                }
+
+                this.request('GET', domain + path, parameters, body, headers, queryParameters, form, deferred);
+
+                return deferred.promise;
+            };
+            /**
+             * getPenaltiesByViolation
+             * @method
+             * @name OtrService#getPenaltiesByViolationUsingGET
+             * @param {string} violationId - violationId
+             * @param {string} flavor - flavor
+             * 
+             */
+            OtrService.prototype.getPenaltiesByViolationUsingGET = function(parameters) {
+                if (parameters === undefined) {
+                    parameters = {};
+                }
+                var deferred = $q.defer();
+
+                var domain = this.domain;
+                var path = '/api/v1/violations/{violationId}/penalties';
+
+                var body;
+                var queryParameters = {};
+                var headers = {};
+                var form = {};
+
+                headers['Accept'] = ['*/*'];
+                headers['Content-Type'] = ['application/json'];
+
+                path = path.replace('{violationId}', parameters['violationId']);
+
+                if (parameters['violationId'] === undefined) {
+                    deferred.reject(new Error('Missing required  parameter: violationId'));
+                    return deferred.promise;
+                }
+
+                if (parameters['flavor'] !== undefined) {
+                    queryParameters['flavor'] = parameters['flavor'];
+                }
+
+                if (parameters.$queryParameters) {
+                    Object.keys(parameters.$queryParameters)
+                        .forEach(function(parameterName) {
+                            var parameter = parameters.$queryParameters[parameterName];
+                            queryParameters[parameterName] = parameter;
+                        });
+                }
+
+                this.request('GET', domain + path, parameters, body, headers, queryParameters, form, deferred);
+
+                return deferred.promise;
+            };
+            /**
+             * upsertPenalty
+             * @method
+             * @name OtrService#upsertPenaltyUsingPOST
+             * @param {string} violationId - violationId
+             * @param {} penaltyToAdd - penaltyToAdd
+             * 
+             */
+            OtrService.prototype.upsertPenaltyUsingPOST = function(parameters) {
+                if (parameters === undefined) {
+                    parameters = {};
+                }
+                var deferred = $q.defer();
+
+                var domain = this.domain;
+                var path = '/api/v1/violations/{violationId}/penalties';
+
+                var body;
+                var queryParameters = {};
+                var headers = {};
+                var form = {};
+
+                headers['Accept'] = ['*/*'];
+                headers['Content-Type'] = ['application/json'];
+
+                path = path.replace('{violationId}', parameters['violationId']);
+
+                if (parameters['violationId'] === undefined) {
+                    deferred.reject(new Error('Missing required  parameter: violationId'));
+                    return deferred.promise;
+                }
+
+                if (parameters['penaltyToAdd'] !== undefined) {
+                    body = parameters['penaltyToAdd'];
+                }
+
+                if (parameters['penaltyToAdd'] === undefined) {
+                    deferred.reject(new Error('Missing required  parameter: penaltyToAdd'));
+                    return deferred.promise;
+                }
+
+                if (parameters.$queryParameters) {
+                    Object.keys(parameters.$queryParameters)
+                        .forEach(function(parameterName) {
+                            var parameter = parameters.$queryParameters[parameterName];
+                            queryParameters[parameterName] = parameter;
+                        });
+                }
+
+                this.request('POST', domain + path, parameters, body, headers, queryParameters, form, deferred);
+
+                return deferred.promise;
+            };
+            /**
              * handleBounceOrComplaintEvent
              * @method
              * @name OtrService#handleBounceOrComplaintEventUsingPOST
