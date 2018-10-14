@@ -9405,6 +9405,59 @@ angular.module('otrBackendService', [])
                 return deferred.promise;
             };
             /**
+             * updateViolation
+             * @method
+             * @name OtrService#updateViolationUsingPUT
+             * @param {string} violationId - violationId
+             * @param {} request - request
+             * 
+             */
+            OtrService.prototype.updateViolationUsingPUT = function(parameters) {
+                if (parameters === undefined) {
+                    parameters = {};
+                }
+                var deferred = $q.defer();
+
+                var domain = this.domain;
+                var path = '/api/v1/violations/{violationId}';
+
+                var body;
+                var queryParameters = {};
+                var headers = {};
+                var form = {};
+
+                headers['Accept'] = ['*/*'];
+                headers['Content-Type'] = ['application/json'];
+
+                path = path.replace('{violationId}', parameters['violationId']);
+
+                if (parameters['violationId'] === undefined) {
+                    deferred.reject(new Error('Missing required  parameter: violationId'));
+                    return deferred.promise;
+                }
+
+                if (parameters['request'] !== undefined) {
+                    body = parameters['request'];
+                }
+
+                if (parameters['request'] === undefined) {
+                    deferred.reject(new Error('Missing required  parameter: request'));
+                    return deferred.promise;
+                }
+
+                if (parameters.$queryParameters) {
+                    Object.keys(parameters.$queryParameters)
+                        .forEach(function(parameterName) {
+                            var parameter = parameters.$queryParameters[parameterName];
+                            queryParameters[parameterName] = parameter;
+                        });
+                }
+
+                this.request('PUT', domain + path, parameters, body, headers, queryParameters, form, deferred);
+
+                return deferred.promise;
+            };
+            /**
              * getPenaltiesByViolation
              * @method
              * @name OtrService#getPenaltiesByViolationUsingGET
@@ -9509,8 +9562,8 @@ angular.module('otrBackendService', [])
              * removePenalty
              * @method
              * @name OtrService#removePenaltyUsingDELETE
-             * @param {string} penaltyTypeId - penaltyTypeId
              * @param {string} violationId - violationId
+             * @param {string} penaltyTypeId - penaltyTypeId
              * 
              */
             OtrService.prototype.removePenaltyUsingDELETE = function(parameters) {
@@ -9530,17 +9583,17 @@ angular.module('otrBackendService', [])
                 headers['Accept'] = ['*/*'];
                 headers['Content-Type'] = ['application/json'];
 
-                path = path.replace('{penaltyTypeId}', parameters['penaltyTypeId']);
-
-                if (parameters['penaltyTypeId'] === undefined) {
-                    deferred.reject(new Error('Missing required  parameter: penaltyTypeId'));
-                    return deferred.promise;
-                }
-
                 path = path.replace('{violationId}', parameters['violationId']);
 
                 if (parameters['violationId'] === undefined) {
                     deferred.reject(new Error('Missing required  parameter: violationId'));
+                    return deferred.promise;
+                }
+
+                path = path.replace('{penaltyTypeId}', parameters['penaltyTypeId']);
+
+                if (parameters['penaltyTypeId'] === undefined) {
+                    deferred.reject(new Error('Missing required  parameter: penaltyTypeId'));
                     return deferred.promise;
                 }
 
