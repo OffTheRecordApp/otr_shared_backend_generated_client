@@ -3112,14 +3112,14 @@ angular.module('otrBackendService', [])
                 return deferred.promise;
             };
             /**
-             * createCase
+             * matchCase
              * @method
-             * @name OtrService#createCaseUsingPOST
+             * @name OtrService#matchCaseUsingPOST
              * @param {string} citationIdString - citationIdString
              * @param {} request - request
              * 
              */
-            OtrService.prototype.createCaseUsingPOST = function(parameters) {
+            OtrService.prototype.matchCaseUsingPOST = function(parameters) {
                 if (parameters === undefined) {
                     parameters = {};
                 }
@@ -6779,6 +6779,49 @@ angular.module('otrBackendService', [])
                 return deferred.promise;
             };
             /**
+             * description goes here.
+             * @method
+             * @name OtrService#getPaymentMethodsForLawfirmUsingGET
+             * @param {string} lawfirmId - lawfirmId
+             * 
+             */
+            OtrService.prototype.getPaymentMethodsForLawfirmUsingGET = function(parameters) {
+                if (parameters === undefined) {
+                    parameters = {};
+                }
+                var deferred = $q.defer();
+
+                var domain = this.domain;
+                var path = '/api/v1/lawfirms/{lawfirmId}/paymentmethods';
+
+                var body;
+                var queryParameters = {};
+                var headers = {};
+                var form = {};
+
+                headers['Accept'] = ['*/*'];
+                headers['Content-Type'] = ['application/json'];
+
+                path = path.replace('{lawfirmId}', parameters['lawfirmId']);
+
+                if (parameters['lawfirmId'] === undefined) {
+                    deferred.reject(new Error('Missing required  parameter: lawfirmId'));
+                    return deferred.promise;
+                }
+
+                if (parameters.$queryParameters) {
+                    Object.keys(parameters.$queryParameters)
+                        .forEach(function(parameterName) {
+                            var parameter = parameters.$queryParameters[parameterName];
+                            queryParameters[parameterName] = parameter;
+                        });
+                }
+
+                this.request('GET', domain + path, parameters, body, headers, queryParameters, form, deferred);
+
+                return deferred.promise;
+            };
+            /**
              * updateLawfirmWithPicture
              * @method
              * @name OtrService#updateLawfirmWithPictureUsingPUT
@@ -9032,7 +9075,7 @@ angular.module('otrBackendService', [])
                 return deferred.promise;
             };
             /**
-             * Retrieves all the payment methods available on the user's account. For now, payment methods are retrieved and stored exclusively on Stripe.
+             * Retrieves all the payment methods available on the user's Stripe account.
              * @method
              * @name OtrService#getPaymentMethodsForUserUsingGET
              * @param {string} userIdString - userIdString
