@@ -1572,6 +1572,49 @@ angular.module('otrBackendService', [])
                 return deferred.promise;
             };
             /**
+             * findChargeDisputesByCaseId
+             * @method
+             * @name OtrService#findChargeDisputesByCaseIdUsingGET
+             * @param {string} caseId - caseId
+             * 
+             */
+            OtrService.prototype.findChargeDisputesByCaseIdUsingGET = function(parameters) {
+                if (parameters === undefined) {
+                    parameters = {};
+                }
+                var deferred = $q.defer();
+
+                var domain = this.domain;
+                var path = '/api/v1/cases/{caseId}/disputes';
+
+                var body;
+                var queryParameters = {};
+                var headers = {};
+                var form = {};
+
+                headers['Accept'] = ['*/*'];
+                headers['Content-Type'] = ['application/json'];
+
+                path = path.replace('{caseId}', parameters['caseId']);
+
+                if (parameters['caseId'] === undefined) {
+                    deferred.reject(new Error('Missing required  parameter: caseId'));
+                    return deferred.promise;
+                }
+
+                if (parameters.$queryParameters) {
+                    Object.keys(parameters.$queryParameters)
+                        .forEach(function(parameterName) {
+                            var parameter = parameters.$queryParameters[parameterName];
+                            queryParameters[parameterName] = parameter;
+                        });
+                }
+
+                this.request('GET', domain + path, parameters, body, headers, queryParameters, form, deferred);
+
+                return deferred.promise;
+            };
+            /**
              * getLawfirmCaseDocuments
              * @method
              * @name OtrService#getLawfirmCaseDocumentsUsingGET
@@ -5900,6 +5943,8 @@ angular.module('otrBackendService', [])
              * @param {array} statuses - statuses
              * @param {boolean} includeTestLawfirms - includeTestLawfirms
              * @param {boolean} includeVacationMode - includeVacationMode
+             * @param {boolean} acceptsAccidentTickets - acceptsAccidentTickets
+             * @param {boolean} acceptsPastDueTickets - acceptsPastDueTickets
              * 
              */
             OtrService.prototype.getLawfirmsUsingGET = function(parameters) {
@@ -5937,6 +5982,14 @@ angular.module('otrBackendService', [])
 
                 if (parameters['includeVacationMode'] !== undefined) {
                     queryParameters['includeVacationMode'] = parameters['includeVacationMode'];
+                }
+
+                if (parameters['acceptsAccidentTickets'] !== undefined) {
+                    queryParameters['acceptsAccidentTickets'] = parameters['acceptsAccidentTickets'];
+                }
+
+                if (parameters['acceptsPastDueTickets'] !== undefined) {
+                    queryParameters['acceptsPastDueTickets'] = parameters['acceptsPastDueTickets'];
                 }
 
                 if (parameters.$queryParameters) {
@@ -9236,6 +9289,49 @@ angular.module('otrBackendService', [])
 
                 var domain = this.domain;
                 var path = '/api/v1/users/{userId}/cases';
+
+                var body;
+                var queryParameters = {};
+                var headers = {};
+                var form = {};
+
+                headers['Accept'] = ['*/*'];
+                headers['Content-Type'] = ['application/json'];
+
+                path = path.replace('{userId}', parameters['userId']);
+
+                if (parameters['userId'] === undefined) {
+                    deferred.reject(new Error('Missing required  parameter: userId'));
+                    return deferred.promise;
+                }
+
+                if (parameters.$queryParameters) {
+                    Object.keys(parameters.$queryParameters)
+                        .forEach(function(parameterName) {
+                            var parameter = parameters.$queryParameters[parameterName];
+                            queryParameters[parameterName] = parameter;
+                        });
+                }
+
+                this.request('GET', domain + path, parameters, body, headers, queryParameters, form, deferred);
+
+                return deferred.promise;
+            };
+            /**
+             * findChargeDisputesByUserId
+             * @method
+             * @name OtrService#findChargeDisputesByUserIdUsingGET
+             * @param {string} userId - userId
+             * 
+             */
+            OtrService.prototype.findChargeDisputesByUserIdUsingGET = function(parameters) {
+                if (parameters === undefined) {
+                    parameters = {};
+                }
+                var deferred = $q.defer();
+
+                var domain = this.domain;
+                var path = '/api/v1/users/{userId}/disputes';
 
                 var body;
                 var queryParameters = {};
