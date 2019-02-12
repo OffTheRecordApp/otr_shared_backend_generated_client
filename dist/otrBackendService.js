@@ -6930,13 +6930,13 @@ angular.module('otrBackendService', [])
                 return deferred.promise;
             };
             /**
-             * description goes here.
+             * Retrieves all the payment methods available on the lawfirm's Stripe account.
              * @method
-             * @name OtrService#getPaymentMethodsForLawfirmUsingGET
-             * @param {string} lawfirmId - lawfirmId
+             * @name OtrService#getLawfirmPaymentMethodsUsingGET
+             * @param {integer} lawfirmId - lawfirmId
              * 
              */
-            OtrService.prototype.getPaymentMethodsForLawfirmUsingGET = function(parameters) {
+            OtrService.prototype.getLawfirmPaymentMethodsUsingGET = function(parameters) {
                 if (parameters === undefined) {
                     parameters = {};
                 }
@@ -7075,6 +7075,57 @@ angular.module('otrBackendService', [])
                 }
 
                 this.request('POST', domain + path, parameters, body, headers, queryParameters, form, deferred);
+
+                return deferred.promise;
+            };
+            /**
+             * deleteBankAccountFromLawfirmStripeAccount
+             * @method
+             * @name OtrService#deleteBankAccountFromLawfirmStripeAccountUsingDELETE
+             * @param {integer} lawfirmId - lawfirmId
+             * @param {string} bankAccountId - bankAccountId
+             * 
+             */
+            OtrService.prototype.deleteBankAccountFromLawfirmStripeAccountUsingDELETE = function(parameters) {
+                if (parameters === undefined) {
+                    parameters = {};
+                }
+                var deferred = $q.defer();
+
+                var domain = this.domain;
+                var path = '/api/v1/lawfirms/{lawfirmId}/stripe/bank-accounts/{bankAccountId}';
+
+                var body;
+                var queryParameters = {};
+                var headers = {};
+                var form = {};
+
+                headers['Accept'] = ['*/*'];
+                headers['Content-Type'] = ['application/json'];
+
+                path = path.replace('{lawfirmId}', parameters['lawfirmId']);
+
+                if (parameters['lawfirmId'] === undefined) {
+                    deferred.reject(new Error('Missing required  parameter: lawfirmId'));
+                    return deferred.promise;
+                }
+
+                path = path.replace('{bankAccountId}', parameters['bankAccountId']);
+
+                if (parameters['bankAccountId'] === undefined) {
+                    deferred.reject(new Error('Missing required  parameter: bankAccountId'));
+                    return deferred.promise;
+                }
+
+                if (parameters.$queryParameters) {
+                    Object.keys(parameters.$queryParameters)
+                        .forEach(function(parameterName) {
+                            var parameter = parameters.$queryParameters[parameterName];
+                            queryParameters[parameterName] = parameter;
+                        });
+                }
+
+                this.request('DELETE', domain + path, parameters, body, headers, queryParameters, form, deferred);
 
                 return deferred.promise;
             };
