@@ -7130,6 +7130,59 @@ angular.module('otrBackendService', [])
                 return deferred.promise;
             };
             /**
+             * setDefaultPaymentMethodForLawfirm
+             * @method
+             * @name OtrService#setDefaultPaymentMethodForLawfirmUsingPUT
+             * @param {integer} lawfirmId - lawfirmId
+             * @param {string} stripePaymentSourceId - stripePaymentSourceId
+             * 
+             */
+            OtrService.prototype.setDefaultPaymentMethodForLawfirmUsingPUT = function(parameters) {
+                if (parameters === undefined) {
+                    parameters = {};
+                }
+                var deferred = $q.defer();
+
+                var domain = this.domain;
+                var path = '/api/v1/lawfirms/{lawfirmId}/stripe/payment-methods/default';
+
+                var body;
+                var queryParameters = {};
+                var headers = {};
+                var form = {};
+
+                headers['Accept'] = ['*/*'];
+                headers['Content-Type'] = ['application/json'];
+
+                path = path.replace('{lawfirmId}', parameters['lawfirmId']);
+
+                if (parameters['lawfirmId'] === undefined) {
+                    deferred.reject(new Error('Missing required  parameter: lawfirmId'));
+                    return deferred.promise;
+                }
+
+                if (parameters['stripePaymentSourceId'] !== undefined) {
+                    queryParameters['stripePaymentSourceId'] = parameters['stripePaymentSourceId'];
+                }
+
+                if (parameters['stripePaymentSourceId'] === undefined) {
+                    deferred.reject(new Error('Missing required  parameter: stripePaymentSourceId'));
+                    return deferred.promise;
+                }
+
+                if (parameters.$queryParameters) {
+                    Object.keys(parameters.$queryParameters)
+                        .forEach(function(parameterName) {
+                            var parameter = parameters.$queryParameters[parameterName];
+                            queryParameters[parameterName] = parameter;
+                        });
+                }
+
+                this.request('PUT', domain + path, parameters, body, headers, queryParameters, form, deferred);
+
+                return deferred.promise;
+            };
+            /**
              * getLawfirmTransactions
              * @method
              * @name OtrService#getLawfirmTransactionsUsingGET
