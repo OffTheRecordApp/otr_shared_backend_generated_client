@@ -8582,6 +8582,46 @@ angular.module('otrBackendService', [])
                 return deferred.promise;
             };
             /**
+             * handleStripeWebhookOnDemand
+             * @method
+             * @name OtrService#handleStripeWebhookOnDemandUsingPOST
+             * @param {} request - request
+             * 
+             */
+            OtrService.prototype.handleStripeWebhookOnDemandUsingPOST = function(parameters) {
+                if (parameters === undefined) {
+                    parameters = {};
+                }
+                var deferred = $q.defer();
+
+                var domain = this.domain;
+                var path = '/api/v1/stripe/webhook/manual';
+
+                var body;
+                var queryParameters = {};
+                var headers = {};
+                var form = {};
+
+                headers['Accept'] = ['*/*'];
+                headers['Content-Type'] = ['application/json'];
+
+                if (parameters['request'] !== undefined) {
+                    body = parameters['request'];
+                }
+
+                if (parameters.$queryParameters) {
+                    Object.keys(parameters.$queryParameters)
+                        .forEach(function(parameterName) {
+                            var parameter = parameters.$queryParameters[parameterName];
+                            queryParameters[parameterName] = parameter;
+                        });
+                }
+
+                this.request('POST', domain + path, parameters, body, headers, queryParameters, form, deferred);
+
+                return deferred.promise;
+            };
+            /**
              * retrieveConnectedAccountDetails
              * @method
              * @name OtrService#retrieveConnectedAccountDetailsUsingGET
