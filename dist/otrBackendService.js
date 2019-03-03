@@ -354,7 +354,7 @@ angular.module('otrBackendService', [])
              * getCaseResolutionStatuses
              * @method
              * @name OtrService#getCaseResolutionStatusesUsingGET
-             * @param {string} stateAbbreviation - stateAbbreviation
+             * @param {string} stateCode - stateCode
              * 
              */
             OtrService.prototype.getCaseResolutionStatusesUsingGET = function(parameters) {
@@ -374,8 +374,8 @@ angular.module('otrBackendService', [])
                 headers['Accept'] = ['*/*'];
                 headers['Content-Type'] = ['application/json'];
 
-                if (parameters['stateAbbreviation'] !== undefined) {
-                    queryParameters['stateAbbreviation'] = parameters['stateAbbreviation'];
+                if (parameters['stateCode'] !== undefined) {
+                    queryParameters['stateCode'] = parameters['stateCode'];
                 }
 
                 if (parameters.$queryParameters) {
