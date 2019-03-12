@@ -72,7 +72,7 @@ gulp.task('otr-ts', function(done){
         var source = CodeGen.getTypescriptCode({ moduleName: api.moduleName, className: api.className, swagger: swagger });
         gutil.log('Generated ' + api.moduleName + '.js from ' + api.swagger);
 
-        var generatedApiFile = dest + '/' + api.moduleName + '.js';
+        var generatedApiFile = dest + '/' + api.moduleName + '.ts';
         fs.writeFileSync(generatedApiFile, source, 'UTF-8');
 
         //var otherSources = 'input/**/*.js';
