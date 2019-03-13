@@ -12,7 +12,6 @@
   "private": true,
   "ignore": [
     "**/.*",
-    "api",
     "swagger-codegen-cli.jar",
     "input",
     "package.json",
