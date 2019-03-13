@@ -1,5 +1,5 @@
 .DS_store
-api/
+./api/
 myclient/
 node_modules/
 exportToHTML/
