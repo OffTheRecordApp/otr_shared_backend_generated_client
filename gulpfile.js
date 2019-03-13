@@ -55,42 +55,6 @@ gulp.task('otr-react-native', function(done) {
     done();
 });
 
-gulp.task('otr-ts', function(done){
-
-     var apis = [
-        {
-            swagger: 'api/otr-service.json',
-            moduleName: 'otrBackendServiceTS',
-            className: 'OtrService'
-        }
-    ];
-   
-    var CodeGen = require('swagger-js-codegen').CodeGen;
-    var dest = 'dist';
-    apis.forEach(function(api){
-        var swagger = JSON.parse(fs.readFileSync(api.swagger, 'utf-8'));
-        var source = CodeGen.getTypescriptCode({ moduleName: api.moduleName, className: api.className, swagger: swagger });
-        gutil.log('Generated ' + api.moduleName + '.js from ' + api.swagger);
-
-        var generatedApiFile = dest + '/' + api.moduleName + '.ts';
-        fs.writeFileSync(generatedApiFile, source, 'UTF-8');
-
-        //var otherSources = 'input/**/*.js';
-
-        gulp.src([generatedApiFile]) //otherSources])
-            //.pipe(concat('concat.js'))
-            //.pipe(rename(api.moduleName + '.js')) //concat file back into module.js
-            //.pipe(gulp.dest(dest))
-
-            .pipe(gulp.dest(dest))
-
-            .pipe(notify("TS generated!"));
-
-    });
-    done();
-});
-
-
 gulp.task('otr-angular', function(done){
     
     var CodeGen = require('swagger-js-codegen').CodeGen;
@@ -121,4 +85,4 @@ gulp.task('otr-angular', function(done){
 });
 
 
-gulp.task('codegen', ['otr-angular', 'otr-ts']);
+gulp.task('codegen', ['otr-angular']);
