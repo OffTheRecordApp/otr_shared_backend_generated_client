@@ -784,6 +784,49 @@ angular.module('otrBackendService', [])
                 return deferred.promise;
             };
             /**
+             * getAppearanceAttorneyForCase
+             * @method
+             * @name OtrService#getAppearanceAttorneyForCaseUsingGET
+             * @param {string} caseId - caseId
+             * 
+             */
+            OtrService.prototype.getAppearanceAttorneyForCaseUsingGET = function(parameters) {
+                if (parameters === undefined) {
+                    parameters = {};
+                }
+                var deferred = $q.defer();
+
+                var domain = this.domain;
+                var path = '/api/v1/cases/{caseId}/appearance-attorneys';
+
+                var body;
+                var queryParameters = {};
+                var headers = {};
+                var form = {};
+
+                headers['Accept'] = ['*/*'];
+                headers['Content-Type'] = ['application/json'];
+
+                path = path.replace('{caseId}', parameters['caseId']);
+
+                if (parameters['caseId'] === undefined) {
+                    deferred.reject(new Error('Missing required  parameter: caseId'));
+                    return deferred.promise;
+                }
+
+                if (parameters.$queryParameters) {
+                    Object.keys(parameters.$queryParameters)
+                        .forEach(function(parameterName) {
+                            var parameter = parameters.$queryParameters[parameterName];
+                            queryParameters[parameterName] = parameter;
+                        });
+                }
+
+                this.request('GET', domain + path, parameters, body, headers, queryParameters, form, deferred);
+
+                return deferred.promise;
+            };
+            /**
              * listCostItemsForAttorney
              * @method
              * @name OtrService#listCostItemsForAttorneyUsingGET
