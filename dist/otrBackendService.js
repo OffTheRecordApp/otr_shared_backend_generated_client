@@ -9784,6 +9784,163 @@ angular.module('otrBackendService', [])
                 return deferred.promise;
             };
             /**
+             * getUserAddresses
+             * @method
+             * @name OtrService#getUserAddressesUsingGET
+             * @param {integer} userId - userId
+             * 
+             */
+            OtrService.prototype.getUserAddressesUsingGET = function(parameters) {
+                if (parameters === undefined) {
+                    parameters = {};
+                }
+                var deferred = $q.defer();
+
+                var domain = this.domain;
+                var path = '/api/v1/users/{userId}/addresses';
+
+                var body;
+                var queryParameters = {};
+                var headers = {};
+                var form = {};
+
+                headers['Accept'] = ['*/*'];
+                headers['Content-Type'] = ['application/json'];
+
+                path = path.replace('{userId}', parameters['userId']);
+
+                if (parameters['userId'] === undefined) {
+                    deferred.reject(new Error('Missing required  parameter: userId'));
+                    return deferred.promise;
+                }
+
+                if (parameters.$queryParameters) {
+                    Object.keys(parameters.$queryParameters)
+                        .forEach(function(parameterName) {
+                            var parameter = parameters.$queryParameters[parameterName];
+                            queryParameters[parameterName] = parameter;
+                        });
+                }
+
+                this.request('GET', domain + path, parameters, body, headers, queryParameters, form, deferred);
+
+                return deferred.promise;
+            };
+            /**
+             * addUserAddress
+             * @method
+             * @name OtrService#addUserAddressUsingPOST
+             * @param {integer} userId - userId
+             * @param {} request - request
+             * 
+             */
+            OtrService.prototype.addUserAddressUsingPOST = function(parameters) {
+                if (parameters === undefined) {
+                    parameters = {};
+                }
+                var deferred = $q.defer();
+
+                var domain = this.domain;
+                var path = '/api/v1/users/{userId}/addresses';
+
+                var body;
+                var queryParameters = {};
+                var headers = {};
+                var form = {};
+
+                headers['Accept'] = ['*/*'];
+                headers['Content-Type'] = ['application/json'];
+
+                path = path.replace('{userId}', parameters['userId']);
+
+                if (parameters['userId'] === undefined) {
+                    deferred.reject(new Error('Missing required  parameter: userId'));
+                    return deferred.promise;
+                }
+
+                if (parameters['request'] !== undefined) {
+                    body = parameters['request'];
+                }
+
+                if (parameters['request'] === undefined) {
+                    deferred.reject(new Error('Missing required  parameter: request'));
+                    return deferred.promise;
+                }
+
+                if (parameters.$queryParameters) {
+                    Object.keys(parameters.$queryParameters)
+                        .forEach(function(parameterName) {
+                            var parameter = parameters.$queryParameters[parameterName];
+                            queryParameters[parameterName] = parameter;
+                        });
+                }
+
+                this.request('POST', domain + path, parameters, body, headers, queryParameters, form, deferred);
+
+                return deferred.promise;
+            };
+            /**
+             * updateUserAddress
+             * @method
+             * @name OtrService#updateUserAddressUsingPUT
+             * @param {integer} userId - userId
+             * @param {integer} addressId - addressId
+             * @param {} request - request
+             * 
+             */
+            OtrService.prototype.updateUserAddressUsingPUT = function(parameters) {
+                if (parameters === undefined) {
+                    parameters = {};
+                }
+                var deferred = $q.defer();
+
+                var domain = this.domain;
+                var path = '/api/v1/users/{userId}/addresses/{addressId}';
+
+                var body;
+                var queryParameters = {};
+                var headers = {};
+                var form = {};
+
+                headers['Accept'] = ['*/*'];
+                headers['Content-Type'] = ['application/json'];
+
+                path = path.replace('{userId}', parameters['userId']);
+
+                if (parameters['userId'] === undefined) {
+                    deferred.reject(new Error('Missing required  parameter: userId'));
+                    return deferred.promise;
+                }
+
+                path = path.replace('{addressId}', parameters['addressId']);
+
+                if (parameters['addressId'] === undefined) {
+                    deferred.reject(new Error('Missing required  parameter: addressId'));
+                    return deferred.promise;
+                }
+
+                if (parameters['request'] !== undefined) {
+                    body = parameters['request'];
+                }
+
+                if (parameters['request'] === undefined) {
+                    deferred.reject(new Error('Missing required  parameter: request'));
+                    return deferred.promise;
+                }
+
+                if (parameters.$queryParameters) {
+                    Object.keys(parameters.$queryParameters)
+                        .forEach(function(parameterName) {
+                            var parameter = parameters.$queryParameters[parameterName];
+                            queryParameters[parameterName] = parameter;
+                        });
+                }
+
+                this.request('PUT', domain + path, parameters, body, headers, queryParameters, form, deferred);
+
+                return deferred.promise;
+            };
+            /**
              * getCasesForUser
              * @method
              * @name OtrService#getCasesForUserUsingGET
