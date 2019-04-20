@@ -87,59 +87,6 @@ angular.module('otrBackendService', [])
             };
 
             /**
-             * updateAddress
-             * @method
-             * @name OtrService#updateAddressUsingPUT
-             * @param {integer} addressId - addressId
-             * @param {} request - request
-             * 
-             */
-            OtrService.prototype.updateAddressUsingPUT = function(parameters) {
-                if (parameters === undefined) {
-                    parameters = {};
-                }
-                var deferred = $q.defer();
-
-                var domain = this.domain;
-                var path = '/api/v1/addresses/{addressId}';
-
-                var body;
-                var queryParameters = {};
-                var headers = {};
-                var form = {};
-
-                headers['Accept'] = ['*/*'];
-                headers['Content-Type'] = ['application/json'];
-
-                path = path.replace('{addressId}', parameters['addressId']);
-
-                if (parameters['addressId'] === undefined) {
-                    deferred.reject(new Error('Missing required  parameter: addressId'));
-                    return deferred.promise;
-                }
-
-                if (parameters['request'] !== undefined) {
-                    body = parameters['request'];
-                }
-
-                if (parameters['request'] === undefined) {
-                    deferred.reject(new Error('Missing required  parameter: request'));
-                    return deferred.promise;
-                }
-
-                if (parameters.$queryParameters) {
-                    Object.keys(parameters.$queryParameters)
-                        .forEach(function(parameterName) {
-                            var parameter = parameters.$queryParameters[parameterName];
-                            queryParameters[parameterName] = parameter;
-                        });
-                }
-
-                this.request('PUT', domain + path, parameters, body, headers, queryParameters, form, deferred);
-
-                return deferred.promise;
-            };
-            /**
              * markAlertAsRead
              * @method
              * @name OtrService#markAlertAsReadUsingDELETE
@@ -4887,6 +4834,8 @@ angular.module('otrBackendService', [])
              * @name OtrService#searchCourtsUsingGET
              * @param {string} q - q
              * @param {string} state - state
+             * @param {string} regionCode - regionCode
+             * @param {string} countryCode - countryCode
              * @param {string} city - city
              * @param {string} county - county
              * @param {integer} offset - offset
@@ -4916,6 +4865,14 @@ angular.module('otrBackendService', [])
 
                 if (parameters['state'] !== undefined) {
                     queryParameters['state'] = parameters['state'];
+                }
+
+                if (parameters['regionCode'] !== undefined) {
+                    queryParameters['regionCode'] = parameters['regionCode'];
+                }
+
+                if (parameters['countryCode'] !== undefined) {
+                    queryParameters['countryCode'] = parameters['countryCode'];
                 }
 
                 if (parameters['city'] !== undefined) {
@@ -5018,6 +4975,67 @@ angular.module('otrBackendService', [])
 
                 if (parameters['courtId'] === undefined) {
                     deferred.reject(new Error('Missing required  parameter: courtId'));
+                    return deferred.promise;
+                }
+
+                if (parameters['request'] !== undefined) {
+                    body = parameters['request'];
+                }
+
+                if (parameters['request'] === undefined) {
+                    deferred.reject(new Error('Missing required  parameter: request'));
+                    return deferred.promise;
+                }
+
+                if (parameters.$queryParameters) {
+                    Object.keys(parameters.$queryParameters)
+                        .forEach(function(parameterName) {
+                            var parameter = parameters.$queryParameters[parameterName];
+                            queryParameters[parameterName] = parameter;
+                        });
+                }
+
+                this.request('PUT', domain + path, parameters, body, headers, queryParameters, form, deferred);
+
+                return deferred.promise;
+            };
+            /**
+             * updateCourtAddress
+             * @method
+             * @name OtrService#updateCourtAddressUsingPUT
+             * @param {integer} courtId - courtId
+             * @param {integer} addressId - addressId
+             * @param {} request - request
+             * 
+             */
+            OtrService.prototype.updateCourtAddressUsingPUT = function(parameters) {
+                if (parameters === undefined) {
+                    parameters = {};
+                }
+                var deferred = $q.defer();
+
+                var domain = this.domain;
+                var path = '/api/v1/courts/{courtId}/addresses/{addressId}';
+
+                var body;
+                var queryParameters = {};
+                var headers = {};
+                var form = {};
+
+                headers['Accept'] = ['*/*'];
+                headers['Content-Type'] = ['application/json'];
+
+                path = path.replace('{courtId}', parameters['courtId']);
+
+                if (parameters['courtId'] === undefined) {
+                    deferred.reject(new Error('Missing required  parameter: courtId'));
+                    return deferred.promise;
+                }
+
+                path = path.replace('{addressId}', parameters['addressId']);
+
+                if (parameters['addressId'] === undefined) {
+                    deferred.reject(new Error('Missing required  parameter: addressId'));
                     return deferred.promise;
                 }
 
@@ -6669,6 +6687,49 @@ angular.module('otrBackendService', [])
 
                 if (parameters['lawfirmIdString'] === undefined) {
                     deferred.reject(new Error('Missing required  parameter: lawfirmIdString'));
+                    return deferred.promise;
+                }
+
+                if (parameters.$queryParameters) {
+                    Object.keys(parameters.$queryParameters)
+                        .forEach(function(parameterName) {
+                            var parameter = parameters.$queryParameters[parameterName];
+                            queryParameters[parameterName] = parameter;
+                        });
+                }
+
+                this.request('GET', domain + path, parameters, body, headers, queryParameters, form, deferred);
+
+                return deferred.promise;
+            };
+            /**
+             * getLawfirmAddresses
+             * @method
+             * @name OtrService#getLawfirmAddressesUsingGET
+             * @param {integer} lawfirmId - lawfirmId
+             * 
+             */
+            OtrService.prototype.getLawfirmAddressesUsingGET = function(parameters) {
+                if (parameters === undefined) {
+                    parameters = {};
+                }
+                var deferred = $q.defer();
+
+                var domain = this.domain;
+                var path = '/api/v1/lawfirms/{lawfirmId}/addresses';
+
+                var body;
+                var queryParameters = {};
+                var headers = {};
+                var form = {};
+
+                headers['Accept'] = ['*/*'];
+                headers['Content-Type'] = ['application/json'];
+
+                path = path.replace('{lawfirmId}', parameters['lawfirmId']);
+
+                if (parameters['lawfirmId'] === undefined) {
+                    deferred.reject(new Error('Missing required  parameter: lawfirmId'));
                     return deferred.promise;
                 }
 
