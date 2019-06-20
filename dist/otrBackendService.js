@@ -8768,7 +8768,7 @@ angular.module('otrBackendService', [])
                 headers['Content-Type'] = ['application/json'];
 
                 if (parameters['urWindowInDays'] !== undefined) {
-                    queryParameters['ur_window_in_days'] = parameters['urWindowInDays'];
+                    queryParameters['urWindowInDays'] = parameters['urWindowInDays'];
                 }
 
                 if (parameters.$queryParameters) {
@@ -8833,6 +8833,7 @@ angular.module('otrBackendService', [])
              * @method
              * @name OtrService#getCourtCoverageForStateReportUsingGET
              * @param {string} stateCode - stateCode
+             * @param {integer} countyId - countyId
              * @param {integer} urWindowInDays - urWindowInDays
              * 
              */
@@ -8860,8 +8861,12 @@ angular.module('otrBackendService', [])
                     return deferred.promise;
                 }
 
+                if (parameters['countyId'] !== undefined) {
+                    queryParameters['countyId'] = parameters['countyId'];
+                }
+
                 if (parameters['urWindowInDays'] !== undefined) {
-                    queryParameters['ur_window_in_days'] = parameters['urWindowInDays'];
+                    queryParameters['urWindowInDays'] = parameters['urWindowInDays'];
                 }
 
                 if (parameters.$queryParameters) {
@@ -8909,7 +8914,7 @@ angular.module('otrBackendService', [])
                 }
 
                 if (parameters['urWindowInDays'] !== undefined) {
-                    queryParameters['ur_window_in_days'] = parameters['urWindowInDays'];
+                    queryParameters['urWindowInDays'] = parameters['urWindowInDays'];
                 }
 
                 if (parameters.$queryParameters) {
@@ -11028,6 +11033,61 @@ angular.module('otrBackendService', [])
                 }
 
                 this.request('GET', domain + path, parameters, body, headers, queryParameters, form, deferred);
+
+                return deferred.promise;
+            };
+            /**
+             * addViolation
+             * @method
+             * @name OtrService#addViolationUsingPOST
+             * @param {boolean} isLive - isLive
+             * @param {} request - request
+             * 
+             */
+            OtrService.prototype.addViolationUsingPOST = function(parameters) {
+                if (parameters === undefined) {
+                    parameters = {};
+                }
+                var deferred = $q.defer();
+
+                var domain = this.domain;
+                var path = '/api/v1/violations';
+
+                var body;
+                var queryParameters = {};
+                var headers = {};
+                var form = {};
+
+                headers['Accept'] = ['*/*'];
+                headers['Content-Type'] = ['application/json'];
+
+                if (parameters['isLive'] !== undefined) {
+                    queryParameters['isLive'] = parameters['isLive'];
+                }
+
+                if (parameters['isLive'] === undefined) {
+                    deferred.reject(new Error('Missing required  parameter: isLive'));
+                    return deferred.promise;
+                }
+
+                if (parameters['request'] !== undefined) {
+                    body = parameters['request'];
+                }
+
+                if (parameters['request'] === undefined) {
+                    deferred.reject(new Error('Missing required  parameter: request'));
+                    return deferred.promise;
+                }
+
+                if (parameters.$queryParameters) {
+                    Object.keys(parameters.$queryParameters)
+                        .forEach(function(parameterName) {
+                            var parameter = parameters.$queryParameters[parameterName];
+                            queryParameters[parameterName] = parameter;
+                        });
+                }
+
+                this.request('POST', domain + path, parameters, body, headers, queryParameters, form, deferred);
 
                 return deferred.promise;
             };
