@@ -8832,7 +8832,7 @@ angular.module('otrBackendService', [])
              * getCourtCoverageForStateReport
              * @method
              * @name OtrService#getCourtCoverageForStateReportUsingGET
-             * @param {string} stateCode - stateCode
+             * @param {string} regionCode - regionCode
              * @param {integer} countyId - countyId
              * @param {integer} urWindowInDays - urWindowInDays
              * 
@@ -8844,7 +8844,7 @@ angular.module('otrBackendService', [])
                 var deferred = $q.defer();
 
                 var domain = this.domain;
-                var path = '/api/v1/reports/court-coverage/{stateCode}';
+                var path = '/api/v1/reports/court-coverage/{regionCode}';
 
                 var body;
                 var queryParameters = {};
@@ -8854,10 +8854,10 @@ angular.module('otrBackendService', [])
                 headers['Accept'] = ['application/json'];
                 headers['Content-Type'] = ['application/json'];
 
-                path = path.replace('{stateCode}', parameters['stateCode']);
+                path = path.replace('{regionCode}', parameters['regionCode']);
 
-                if (parameters['stateCode'] === undefined) {
-                    deferred.reject(new Error('Missing required  parameter: stateCode'));
+                if (parameters['regionCode'] === undefined) {
+                    deferred.reject(new Error('Missing required  parameter: regionCode'));
                     return deferred.promise;
                 }
 
@@ -8885,6 +8885,7 @@ angular.module('otrBackendService', [])
              * getCourtCoverageForCountyReport
              * @method
              * @name OtrService#getCourtCoverageForCountyReportUsingGET
+             * @param {string} regionCode - regionCode
              * @param {integer} countyId - countyId
              * @param {integer} urWindowInDays - urWindowInDays
              * 
@@ -8896,7 +8897,7 @@ angular.module('otrBackendService', [])
                 var deferred = $q.defer();
 
                 var domain = this.domain;
-                var path = '/api/v1/reports/court-coverage/{stateCode}/{countyId}';
+                var path = '/api/v1/reports/court-coverage/{regionCode}/{countyId}';
 
                 var body;
                 var queryParameters = {};
@@ -8905,6 +8906,13 @@ angular.module('otrBackendService', [])
 
                 headers['Accept'] = ['application/json'];
                 headers['Content-Type'] = ['application/json'];
+
+                path = path.replace('{regionCode}', parameters['regionCode']);
+
+                if (parameters['regionCode'] === undefined) {
+                    deferred.reject(new Error('Missing required  parameter: regionCode'));
+                    return deferred.promise;
+                }
 
                 path = path.replace('{countyId}', parameters['countyId']);
 
