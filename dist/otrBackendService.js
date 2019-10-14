@@ -1747,6 +1747,59 @@ angular.module('otrBackendService', [])
                 return deferred.promise;
             };
             /**
+             * authorizeChargeForLineItems
+             * @method
+             * @name OtrService#authorizeChargeForLineItemsUsingPOST
+             * @param {string} caseId - caseId
+             * @param {} request - request
+             * 
+             */
+            OtrService.prototype.authorizeChargeForLineItemsUsingPOST = function(parameters) {
+                if (parameters === undefined) {
+                    parameters = {};
+                }
+                var deferred = $q.defer();
+
+                var domain = this.domain;
+                var path = '/api/v1/cases/{caseId}/line-items/authorize';
+
+                var body;
+                var queryParameters = {};
+                var headers = {};
+                var form = {};
+
+                headers['Accept'] = ['*/*'];
+                headers['Content-Type'] = ['application/json'];
+
+                path = path.replace('{caseId}', parameters['caseId']);
+
+                if (parameters['caseId'] === undefined) {
+                    deferred.reject(new Error('Missing required  parameter: caseId'));
+                    return deferred.promise;
+                }
+
+                if (parameters['request'] !== undefined) {
+                    body = parameters['request'];
+                }
+
+                if (parameters['request'] === undefined) {
+                    deferred.reject(new Error('Missing required  parameter: request'));
+                    return deferred.promise;
+                }
+
+                if (parameters.$queryParameters) {
+                    Object.keys(parameters.$queryParameters)
+                        .forEach(function(parameterName) {
+                            var parameter = parameters.$queryParameters[parameterName];
+                            queryParameters[parameterName] = parameter;
+                        });
+                }
+
+                this.request('POST', domain + path, parameters, body, headers, queryParameters, form, deferred);
+
+                return deferred.promise;
+            };
+            /**
              * insertCaseLineItem
              * @method
              * @name OtrService#insertCaseLineItemUsingPOST
@@ -2154,7 +2207,7 @@ angular.module('otrBackendService', [])
              * @method
              * @name OtrService#generateCasePaymentPlanUsingGET
              * @param {string} caseId - caseId
-             * @param {string} paymentPlanId - paymentPlanId
+             * @param {string} paymentPlanTypeId - paymentPlanTypeId
              * 
              */
             OtrService.prototype.generateCasePaymentPlanUsingGET = function(parameters) {
@@ -2164,7 +2217,7 @@ angular.module('otrBackendService', [])
                 var deferred = $q.defer();
 
                 var domain = this.domain;
-                var path = '/api/v1/cases/{caseId}/payment-plans/{paymentPlanId}';
+                var path = '/api/v1/cases/{caseId}/payment-plans/{paymentPlanTypeId}';
 
                 var body;
                 var queryParameters = {};
@@ -2181,10 +2234,10 @@ angular.module('otrBackendService', [])
                     return deferred.promise;
                 }
 
-                path = path.replace('{paymentPlanId}', parameters['paymentPlanId']);
+                path = path.replace('{paymentPlanTypeId}', parameters['paymentPlanTypeId']);
 
-                if (parameters['paymentPlanId'] === undefined) {
-                    deferred.reject(new Error('Missing required  parameter: paymentPlanId'));
+                if (parameters['paymentPlanTypeId'] === undefined) {
+                    deferred.reject(new Error('Missing required  parameter: paymentPlanTypeId'));
                     return deferred.promise;
                 }
 
@@ -2228,6 +2281,59 @@ angular.module('otrBackendService', [])
 
                 if (parameters['caseId'] === undefined) {
                     deferred.reject(new Error('Missing required  parameter: caseId'));
+                    return deferred.promise;
+                }
+
+                if (parameters.$queryParameters) {
+                    Object.keys(parameters.$queryParameters)
+                        .forEach(function(parameterName) {
+                            var parameter = parameters.$queryParameters[parameterName];
+                            queryParameters[parameterName] = parameter;
+                        });
+                }
+
+                this.request('POST', domain + path, parameters, body, headers, queryParameters, form, deferred);
+
+                return deferred.promise;
+            };
+            /**
+             * authorizeChargeForCasePayments
+             * @method
+             * @name OtrService#authorizeChargeForCasePaymentsUsingPOST
+             * @param {string} caseId - caseId
+             * @param {} request - request
+             * 
+             */
+            OtrService.prototype.authorizeChargeForCasePaymentsUsingPOST = function(parameters) {
+                if (parameters === undefined) {
+                    parameters = {};
+                }
+                var deferred = $q.defer();
+
+                var domain = this.domain;
+                var path = '/api/v1/cases/{caseId}/payments/authorize';
+
+                var body;
+                var queryParameters = {};
+                var headers = {};
+                var form = {};
+
+                headers['Accept'] = ['*/*'];
+                headers['Content-Type'] = ['application/json'];
+
+                path = path.replace('{caseId}', parameters['caseId']);
+
+                if (parameters['caseId'] === undefined) {
+                    deferred.reject(new Error('Missing required  parameter: caseId'));
+                    return deferred.promise;
+                }
+
+                if (parameters['request'] !== undefined) {
+                    body = parameters['request'];
+                }
+
+                if (parameters['request'] === undefined) {
+                    deferred.reject(new Error('Missing required  parameter: request'));
                     return deferred.promise;
                 }
 
