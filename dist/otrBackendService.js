@@ -774,13 +774,13 @@ angular.module('otrBackendService', [])
                 return deferred.promise;
             };
             /**
-             * listCostItemsForAttorney2
+             * listCostItemsForAttorney
              * @method
-             * @name OtrService#listCostItemsForAttorney2UsingGET
+             * @name OtrService#listCostItemsForAttorneyUsingGET
              * @param {string} caseId - caseId
              * 
              */
-            OtrService.prototype.listCostItemsForAttorney2UsingGET = function(parameters) {
+            OtrService.prototype.listCostItemsForAttorneyUsingGET = function(parameters) {
                 if (parameters === undefined) {
                     parameters = {};
                 }
@@ -794,50 +794,7 @@ angular.module('otrBackendService', [])
                 var headers = {};
                 var form = {};
 
-                headers['Accept'] = ['application/json'];
-                headers['Content-Type'] = ['application/json'];
-
-                path = path.replace('{caseId}', parameters['caseId']);
-
-                if (parameters['caseId'] === undefined) {
-                    deferred.reject(new Error('Missing required  parameter: caseId'));
-                    return deferred.promise;
-                }
-
-                if (parameters.$queryParameters) {
-                    Object.keys(parameters.$queryParameters)
-                        .forEach(function(parameterName) {
-                            var parameter = parameters.$queryParameters[parameterName];
-                            queryParameters[parameterName] = parameter;
-                        });
-                }
-
-                this.request('GET', domain + path, parameters, body, headers, queryParameters, form, deferred);
-
-                return deferred.promise;
-            };
-            /**
-             * getCaseCharges
-             * @method
-             * @name OtrService#getCaseChargesUsingGET
-             * @param {string} caseId - caseId
-             * 
-             */
-            OtrService.prototype.getCaseChargesUsingGET = function(parameters) {
-                if (parameters === undefined) {
-                    parameters = {};
-                }
-                var deferred = $q.defer();
-
-                var domain = this.domain;
-                var path = '/api/v1/cases/{caseId}/charges';
-
-                var body;
-                var queryParameters = {};
-                var headers = {};
-                var form = {};
-
-                headers['Accept'] = ['application/json'];
+                headers['Accept'] = ['*/*'];
                 headers['Content-Type'] = ['application/json'];
 
                 path = path.replace('{caseId}', parameters['caseId']);
@@ -1486,7 +1443,7 @@ angular.module('otrBackendService', [])
                 var headers = {};
                 var form = {};
 
-                headers['Accept'] = ['application/json'];
+                headers['Accept'] = ['*/*'];
                 headers['Content-Type'] = ['application/json'];
 
                 path = path.replace('{caseId}', parameters['caseId']);
@@ -1626,49 +1583,6 @@ angular.module('otrBackendService', [])
                 var form = {};
 
                 headers['Accept'] = ['*/*'];
-                headers['Content-Type'] = ['application/json'];
-
-                path = path.replace('{caseId}', parameters['caseId']);
-
-                if (parameters['caseId'] === undefined) {
-                    deferred.reject(new Error('Missing required  parameter: caseId'));
-                    return deferred.promise;
-                }
-
-                if (parameters.$queryParameters) {
-                    Object.keys(parameters.$queryParameters)
-                        .forEach(function(parameterName) {
-                            var parameter = parameters.$queryParameters[parameterName];
-                            queryParameters[parameterName] = parameter;
-                        });
-                }
-
-                this.request('GET', domain + path, parameters, body, headers, queryParameters, form, deferred);
-
-                return deferred.promise;
-            };
-            /**
-             * getCaseFinancials
-             * @method
-             * @name OtrService#getCaseFinancialsUsingGET
-             * @param {string} caseId - caseId
-             * 
-             */
-            OtrService.prototype.getCaseFinancialsUsingGET = function(parameters) {
-                if (parameters === undefined) {
-                    parameters = {};
-                }
-                var deferred = $q.defer();
-
-                var domain = this.domain;
-                var path = '/api/v1/cases/{caseId}/financials';
-
-                var body;
-                var queryParameters = {};
-                var headers = {};
-                var form = {};
-
-                headers['Accept'] = ['application/json'];
                 headers['Content-Type'] = ['application/json'];
 
                 path = path.replace('{caseId}', parameters['caseId']);
@@ -2304,7 +2218,7 @@ angular.module('otrBackendService', [])
                 var headers = {};
                 var form = {};
 
-                headers['Accept'] = ['application/json'];
+                headers['Accept'] = ['*/*'];
                 headers['Content-Type'] = ['application/json'];
 
                 path = path.replace('{caseId}', parameters['caseId']);
@@ -2323,6 +2237,59 @@ angular.module('otrBackendService', [])
                 }
 
                 this.request('GET', domain + path, parameters, body, headers, queryParameters, form, deferred);
+
+                return deferred.promise;
+            };
+            /**
+             * scheduleNewPayment
+             * @method
+             * @name OtrService#scheduleNewPaymentUsingPOST
+             * @param {string} caseId - caseId
+             * @param {} request - request
+             * 
+             */
+            OtrService.prototype.scheduleNewPaymentUsingPOST = function(parameters) {
+                if (parameters === undefined) {
+                    parameters = {};
+                }
+                var deferred = $q.defer();
+
+                var domain = this.domain;
+                var path = '/api/v1/cases/{caseId}/payments';
+
+                var body;
+                var queryParameters = {};
+                var headers = {};
+                var form = {};
+
+                headers['Accept'] = ['*/*'];
+                headers['Content-Type'] = ['application/json'];
+
+                path = path.replace('{caseId}', parameters['caseId']);
+
+                if (parameters['caseId'] === undefined) {
+                    deferred.reject(new Error('Missing required  parameter: caseId'));
+                    return deferred.promise;
+                }
+
+                if (parameters['request'] !== undefined) {
+                    body = parameters['request'];
+                }
+
+                if (parameters['request'] === undefined) {
+                    deferred.reject(new Error('Missing required  parameter: request'));
+                    return deferred.promise;
+                }
+
+                if (parameters.$queryParameters) {
+                    Object.keys(parameters.$queryParameters)
+                        .forEach(function(parameterName) {
+                            var parameter = parameters.$queryParameters[parameterName];
+                            queryParameters[parameterName] = parameter;
+                        });
+                }
+
+                this.request('POST', domain + path, parameters, body, headers, queryParameters, form, deferred);
 
                 return deferred.promise;
             };
@@ -2401,7 +2368,7 @@ angular.module('otrBackendService', [])
                 var headers = {};
                 var form = {};
 
-                headers['Accept'] = ['application/json'];
+                headers['Accept'] = ['*/*'];
                 headers['Content-Type'] = ['application/json'];
 
                 path = path.replace('{caseId}', parameters['caseId']);
@@ -2802,7 +2769,7 @@ angular.module('otrBackendService', [])
                 var headers = {};
                 var form = {};
 
-                headers['Accept'] = ['application/json'];
+                headers['Accept'] = ['*/*'];
                 headers['Content-Type'] = ['application/json'];
 
                 path = path.replace('{caseId}', parameters['caseId']);
