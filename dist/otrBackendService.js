@@ -4175,13 +4175,13 @@ angular.module('otrBackendService', [])
                 return deferred.promise;
             };
             /**
-             * getCasesWithUncapturedCharges
+             * getCasesWithOverduePayments
              * @method
-             * @name OtrService#getCasesWithUncapturedChargesUsingPOST
+             * @name OtrService#getCasesWithOverduePaymentsUsingPOST
              * @param {} request - request
              * 
              */
-            OtrService.prototype.getCasesWithUncapturedChargesUsingPOST = function(parameters) {
+            OtrService.prototype.getCasesWithOverduePaymentsUsingPOST = function(parameters) {
                 if (parameters === undefined) {
                     parameters = {};
                 }
