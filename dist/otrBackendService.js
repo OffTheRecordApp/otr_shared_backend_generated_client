@@ -2347,6 +2347,57 @@ angular.module('otrBackendService', [])
                 return deferred.promise;
             };
             /**
+             * deleteCasePayment
+             * @method
+             * @name OtrService#deleteCasePaymentUsingDELETE
+             * @param {string} caseId - caseId
+             * @param {string} casePaymentId - casePaymentId
+             * 
+             */
+            OtrService.prototype.deleteCasePaymentUsingDELETE = function(parameters) {
+                if (parameters === undefined) {
+                    parameters = {};
+                }
+                var deferred = $q.defer();
+
+                var domain = this.domain;
+                var path = '/api/v1/cases/{caseId}/payments/{casePaymentId}';
+
+                var body;
+                var queryParameters = {};
+                var headers = {};
+                var form = {};
+
+                headers['Accept'] = ['*/*'];
+                headers['Content-Type'] = ['application/json'];
+
+                path = path.replace('{caseId}', parameters['caseId']);
+
+                if (parameters['caseId'] === undefined) {
+                    deferred.reject(new Error('Missing required  parameter: caseId'));
+                    return deferred.promise;
+                }
+
+                path = path.replace('{casePaymentId}', parameters['casePaymentId']);
+
+                if (parameters['casePaymentId'] === undefined) {
+                    deferred.reject(new Error('Missing required  parameter: casePaymentId'));
+                    return deferred.promise;
+                }
+
+                if (parameters.$queryParameters) {
+                    Object.keys(parameters.$queryParameters)
+                        .forEach(function(parameterName) {
+                            var parameter = parameters.$queryParameters[parameterName];
+                            queryParameters[parameterName] = parameter;
+                        });
+                }
+
+                this.request('DELETE', domain + path, parameters, body, headers, queryParameters, form, deferred);
+
+                return deferred.promise;
+            };
+            /**
              * submitRequestForPriceMatch
              * @method
              * @name OtrService#submitRequestForPriceMatchUsingPOST
