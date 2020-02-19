@@ -4968,51 +4968,6 @@ angular.module('otrBackendService', [])
                 return deferred.promise;
             };
             /**
-             * updateDispute
-             * @method
-             * @name OtrService#updateDisputeUsingPUT
-             * @param {object} parameters - method options and parameters
-             * @param {string} parameters.disputeId - disputeId
-             * @param {} parameters.request - request
-             */
-            OtrService.prototype.updateDisputeUsingPUT = function(parameters) {
-                if (parameters === undefined) {
-                    parameters = {};
-                }
-                var deferred = $q.defer();
-                var domain = this.domain,
-                    path = '/api/v1/disputes/{disputeId}';
-                var body = {},
-                    queryParameters = {},
-                    headers = {},
-                    form = {};
-
-                headers['Accept'] = ['application/json'];
-                headers['Content-Type'] = ['application/json'];
-
-                path = path.replace('{disputeId}', parameters['disputeId']);
-
-                if (parameters['disputeId'] === undefined) {
-                    deferred.reject(new Error('Missing required  parameter: disputeId'));
-                    return deferred.promise;
-                }
-
-                if (parameters['request'] !== undefined) {
-                    body = parameters['request'];
-                }
-
-                if (parameters['request'] === undefined) {
-                    deferred.reject(new Error('Missing required  parameter: request'));
-                    return deferred.promise;
-                }
-
-                queryParameters = mergeQueryParams(parameters, queryParameters);
-
-                this.request('PUT', domain + path, parameters, body, headers, queryParameters, form, deferred);
-
-                return deferred.promise;
-            };
-            /**
              * markDocumentWithDecision
              * @method
              * @name OtrService#markDocumentWithDecisionUsingPOST
@@ -8025,6 +7980,113 @@ angular.module('otrBackendService', [])
                 return deferred.promise;
             };
             /**
+             * syncAllDisputes
+             * @method
+             * @name OtrService#syncAllDisputesUsingPOST
+             * @param {object} parameters - method options and parameters
+             */
+            OtrService.prototype.syncAllDisputesUsingPOST = function(parameters) {
+                if (parameters === undefined) {
+                    parameters = {};
+                }
+                var deferred = $q.defer();
+                var domain = this.domain,
+                    path = '/api/v1/stripe/disputes/sync-all';
+                var body = {},
+                    queryParameters = {},
+                    headers = {},
+                    form = {};
+
+                headers['Accept'] = ['*/*'];
+                headers['Content-Type'] = ['application/json'];
+
+                queryParameters = mergeQueryParams(parameters, queryParameters);
+
+                this.request('POST', domain + path, parameters, body, headers, queryParameters, form, deferred);
+
+                return deferred.promise;
+            };
+            /**
+             * updateDispute
+             * @method
+             * @name OtrService#updateDisputeUsingPUT
+             * @param {object} parameters - method options and parameters
+             * @param {string} parameters.disputeId - disputeId
+             * @param {} parameters.request - request
+             */
+            OtrService.prototype.updateDisputeUsingPUT = function(parameters) {
+                if (parameters === undefined) {
+                    parameters = {};
+                }
+                var deferred = $q.defer();
+                var domain = this.domain,
+                    path = '/api/v1/stripe/disputes/{disputeId}';
+                var body = {},
+                    queryParameters = {},
+                    headers = {},
+                    form = {};
+
+                headers['Accept'] = ['*/*'];
+                headers['Content-Type'] = ['application/json'];
+
+                path = path.replace('{disputeId}', parameters['disputeId']);
+
+                if (parameters['disputeId'] === undefined) {
+                    deferred.reject(new Error('Missing required  parameter: disputeId'));
+                    return deferred.promise;
+                }
+
+                if (parameters['request'] !== undefined) {
+                    body = parameters['request'];
+                }
+
+                if (parameters['request'] === undefined) {
+                    deferred.reject(new Error('Missing required  parameter: request'));
+                    return deferred.promise;
+                }
+
+                queryParameters = mergeQueryParams(parameters, queryParameters);
+
+                this.request('PUT', domain + path, parameters, body, headers, queryParameters, form, deferred);
+
+                return deferred.promise;
+            };
+            /**
+             * syncDispute
+             * @method
+             * @name OtrService#syncDisputeUsingPOST
+             * @param {object} parameters - method options and parameters
+             * @param {string} parameters.disputeId - disputeId
+             */
+            OtrService.prototype.syncDisputeUsingPOST = function(parameters) {
+                if (parameters === undefined) {
+                    parameters = {};
+                }
+                var deferred = $q.defer();
+                var domain = this.domain,
+                    path = '/api/v1/stripe/disputes/{disputeId}/sync';
+                var body = {},
+                    queryParameters = {},
+                    headers = {},
+                    form = {};
+
+                headers['Accept'] = ['*/*'];
+                headers['Content-Type'] = ['application/json'];
+
+                path = path.replace('{disputeId}', parameters['disputeId']);
+
+                if (parameters['disputeId'] === undefined) {
+                    deferred.reject(new Error('Missing required  parameter: disputeId'));
+                    return deferred.promise;
+                }
+
+                queryParameters = mergeQueryParams(parameters, queryParameters);
+
+                this.request('POST', domain + path, parameters, body, headers, queryParameters, form, deferred);
+
+                return deferred.promise;
+            };
+            /**
              * syncStripeCharges
              * @method
              * @name OtrService#syncStripeChargesUsingPOST
@@ -8054,33 +8116,6 @@ angular.module('otrBackendService', [])
                     deferred.reject(new Error('Missing required  parameter: request'));
                     return deferred.promise;
                 }
-
-                queryParameters = mergeQueryParams(parameters, queryParameters);
-
-                this.request('POST', domain + path, parameters, body, headers, queryParameters, form, deferred);
-
-                return deferred.promise;
-            };
-            /**
-             * updateDisputes
-             * @method
-             * @name OtrService#updateDisputesUsingPOST
-             * @param {object} parameters - method options and parameters
-             */
-            OtrService.prototype.updateDisputesUsingPOST = function(parameters) {
-                if (parameters === undefined) {
-                    parameters = {};
-                }
-                var deferred = $q.defer();
-                var domain = this.domain,
-                    path = '/api/v1/stripe/update-disputes';
-                var body = {},
-                    queryParameters = {},
-                    headers = {},
-                    form = {};
-
-                headers['Accept'] = ['*/*'];
-                headers['Content-Type'] = ['application/json'];
 
                 queryParameters = mergeQueryParams(parameters, queryParameters);
 
