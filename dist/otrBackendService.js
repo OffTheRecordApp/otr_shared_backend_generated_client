@@ -181,6 +181,43 @@ angular.module('otrBackendService', [])
                 return deferred.promise;
             };
             /**
+             * addAppEvent
+             * @method
+             * @name OtrService#addAppEventUsingPOST
+             * @param {object} parameters - method options and parameters
+             * @param {} parameters.request - request
+             */
+            OtrService.prototype.addAppEventUsingPOST = function(parameters) {
+                if (parameters === undefined) {
+                    parameters = {};
+                }
+                var deferred = $q.defer();
+                var domain = this.domain,
+                    path = '/api/v1/app-events';
+                var body = {},
+                    queryParameters = {},
+                    headers = {},
+                    form = {};
+
+                headers['Accept'] = ['*/*'];
+                headers['Content-Type'] = ['application/json'];
+
+                if (parameters['request'] !== undefined) {
+                    body = parameters['request'];
+                }
+
+                if (parameters['request'] === undefined) {
+                    deferred.reject(new Error('Missing required  parameter: request'));
+                    return deferred.promise;
+                }
+
+                queryParameters = mergeQueryParams(parameters, queryParameters);
+
+                this.request('POST', domain + path, parameters, body, headers, queryParameters, form, deferred);
+
+                return deferred.promise;
+            };
+            /**
              * getUserInfo
              * @method
              * @name OtrService#getUserInfoUsingGET
@@ -7909,43 +7946,6 @@ angular.module('otrBackendService', [])
                 return deferred.promise;
             };
             /**
-             * putSetting
-             * @method
-             * @name OtrService#putSettingUsingPOST
-             * @param {object} parameters - method options and parameters
-             * @param {} parameters.request - request
-             */
-            OtrService.prototype.putSettingUsingPOST = function(parameters) {
-                if (parameters === undefined) {
-                    parameters = {};
-                }
-                var deferred = $q.defer();
-                var domain = this.domain,
-                    path = '/api/v1/settings';
-                var body = {},
-                    queryParameters = {},
-                    headers = {},
-                    form = {};
-
-                headers['Accept'] = ['*/*'];
-                headers['Content-Type'] = ['application/json'];
-
-                if (parameters['request'] !== undefined) {
-                    body = parameters['request'];
-                }
-
-                if (parameters['request'] === undefined) {
-                    deferred.reject(new Error('Missing required  parameter: request'));
-                    return deferred.promise;
-                }
-
-                queryParameters = mergeQueryParams(parameters, queryParameters);
-
-                this.request('POST', domain + path, parameters, body, headers, queryParameters, form, deferred);
-
-                return deferred.promise;
-            };
-            /**
              * registerNewUser
              * @method
              * @name OtrService#registerNewUserUsingPOST
@@ -8300,13 +8300,13 @@ angular.module('otrBackendService', [])
                 return deferred.promise;
             };
             /**
-             * persistTicketEvaluationRequest
+             * persistTicketEvaluation
              * @method
-             * @name OtrService#persistTicketEvaluationRequestUsingPOST
+             * @name OtrService#persistTicketEvaluationUsingPOST
              * @param {object} parameters - method options and parameters
              * @param {} parameters.request - request
              */
-            OtrService.prototype.persistTicketEvaluationRequestUsingPOST = function(parameters) {
+            OtrService.prototype.persistTicketEvaluationUsingPOST = function(parameters) {
                 if (parameters === undefined) {
                     parameters = {};
                 }
