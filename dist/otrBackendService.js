@@ -1660,7 +1660,7 @@ angular.module('otrBackendService', [])
              * @name OtrService#assignCaseToUserUsingPOST
              * @param {object} parameters - method options and parameters
              * @param {string} parameters.caseId - caseId
-             * @param {string} parameters.userId - userId
+             * @param {integer} parameters.userId - userId
              */
             OtrService.prototype.assignCaseToUserUsingPOST = function(parameters) {
                 if (parameters === undefined) {
@@ -5598,7 +5598,7 @@ angular.module('otrBackendService', [])
              * @method
              * @name OtrService#getLawfirmCoverageUsingGET
              * @param {object} parameters - method options and parameters
-             * @param {integer} parameters.lawfirmIdString - lawfirmIdString
+             * @param {string} parameters.lawfirmIdString - lawfirmIdString
              */
             OtrService.prototype.getLawfirmCoverageUsingGET = function(parameters) {
                 if (parameters === undefined) {
@@ -5951,7 +5951,7 @@ angular.module('otrBackendService', [])
              * @method
              * @name OtrService#removeCourtsUsingDELETE
              * @param {object} parameters - method options and parameters
-             * @param {integer} parameters.lawfirmId - lawfirmId
+             * @param {string} parameters.lawfirmId - lawfirmId
              * @param {array} parameters.courtsToRemove - courtsToRemove
              */
             OtrService.prototype.removeCourtsUsingDELETE = function(parameters) {
@@ -10289,6 +10289,78 @@ angular.module('otrBackendService', [])
                 queryParameters = mergeQueryParams(parameters, queryParameters);
 
                 this.request('POST', domain + path, parameters, body, headers, queryParameters, form, deferred);
+
+                return deferred.promise;
+            };
+            /**
+             * findCourts
+             * @method
+             * @name OtrService#findCourtsUsingGET
+             * @param {object} parameters - method options and parameters
+             * @param {string} parameters.q - q
+             * @param {string} parameters.state - state
+             * @param {string} parameters.regionCode - regionCode
+             * @param {string} parameters.countryCode - countryCode
+             * @param {string} parameters.city - city
+             * @param {string} parameters.county - county
+             * @param {integer} parameters.offset - offset
+             * @param {integer} parameters.length - length
+             * @param {integer} parameters.citationId - citationId
+             */
+            OtrService.prototype.findCourtsUsingGET = function(parameters) {
+                if (parameters === undefined) {
+                    parameters = {};
+                }
+                var deferred = $q.defer();
+                var domain = this.domain,
+                    path = '/api/v2/courts/traffic';
+                var body = {},
+                    queryParameters = {},
+                    headers = {},
+                    form = {};
+
+                headers['Accept'] = ['*/*'];
+                headers['Content-Type'] = ['application/json'];
+
+                if (parameters['q'] !== undefined) {
+                    queryParameters['q'] = parameters['q'];
+                }
+
+                if (parameters['state'] !== undefined) {
+                    queryParameters['state'] = parameters['state'];
+                }
+
+                if (parameters['regionCode'] !== undefined) {
+                    queryParameters['regionCode'] = parameters['regionCode'];
+                }
+
+                if (parameters['countryCode'] !== undefined) {
+                    queryParameters['countryCode'] = parameters['countryCode'];
+                }
+
+                if (parameters['city'] !== undefined) {
+                    queryParameters['city'] = parameters['city'];
+                }
+
+                if (parameters['county'] !== undefined) {
+                    queryParameters['county'] = parameters['county'];
+                }
+
+                if (parameters['offset'] !== undefined) {
+                    queryParameters['offset'] = parameters['offset'];
+                }
+
+                if (parameters['length'] !== undefined) {
+                    queryParameters['length'] = parameters['length'];
+                }
+
+                if (parameters['citationId'] !== undefined) {
+                    queryParameters['citationId'] = parameters['citationId'];
+                }
+
+                queryParameters = mergeQueryParams(parameters, queryParameters);
+
+                this.request('GET', domain + path, parameters, body, headers, queryParameters, form, deferred);
 
                 return deferred.promise;
             };
