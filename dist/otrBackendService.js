@@ -5744,6 +5744,41 @@ angular.module('otrBackendService', [])
                 return deferred.promise;
             };
             /**
+             * getAccountFees
+             * @method
+             * @name OtrService#getAccountFeesUsingGET
+             * @param {object} parameters - method options and parameters
+             * @param {string} parameters.lawfirmId - lawfirmId
+             */
+            OtrService.prototype.getAccountFeesUsingGET = function(parameters) {
+                if (parameters === undefined) {
+                    parameters = {};
+                }
+                var deferred = $q.defer();
+                var domain = this.domain,
+                    path = '/api/v1/lawfirms/{lawfirmId}/account-fees';
+                var body = {},
+                    queryParameters = {},
+                    headers = {},
+                    form = {};
+
+                headers['Accept'] = ['*/*'];
+                headers['Content-Type'] = ['application/json'];
+
+                path = path.replace('{lawfirmId}', parameters['lawfirmId']);
+
+                if (parameters['lawfirmId'] === undefined) {
+                    deferred.reject(new Error('Missing required  parameter: lawfirmId'));
+                    return deferred.promise;
+                }
+
+                queryParameters = mergeQueryParams(parameters, queryParameters);
+
+                this.request('GET', domain + path, parameters, body, headers, queryParameters, form, deferred);
+
+                return deferred.promise;
+            };
+            /**
              * saveAccountFees
              * @method
              * @name OtrService#saveAccountFeesUsingPOST
