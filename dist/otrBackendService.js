@@ -5044,6 +5044,33 @@ angular.module('otrBackendService', [])
                 return deferred.promise;
             };
             /**
+             * getFeeCollectionMethods
+             * @method
+             * @name OtrService#getFeeCollectionMethodsUsingGET
+             * @param {object} parameters - method options and parameters
+             */
+            OtrService.prototype.getFeeCollectionMethodsUsingGET = function(parameters) {
+                if (parameters === undefined) {
+                    parameters = {};
+                }
+                var deferred = $q.defer();
+                var domain = this.domain,
+                    path = '/api/v1/fee-collection-methods';
+                var body = {},
+                    queryParameters = {},
+                    headers = {},
+                    form = {};
+
+                headers['Accept'] = ['*/*'];
+                headers['Content-Type'] = ['application/json'];
+
+                queryParameters = mergeQueryParams(parameters, queryParameters);
+
+                this.request('GET', domain + path, parameters, body, headers, queryParameters, form, deferred);
+
+                return deferred.promise;
+            };
+            /**
              * postFeedback
              * @method
              * @name OtrService#postFeedbackUsingPOST
@@ -6225,6 +6252,51 @@ angular.module('otrBackendService', [])
                 queryParameters = mergeQueryParams(parameters, queryParameters);
 
                 this.request('POST', domain + path, parameters, body, headers, queryParameters, form, deferred);
+
+                return deferred.promise;
+            };
+            /**
+             * updateFeeCollectionMethod
+             * @method
+             * @name OtrService#updateFeeCollectionMethodUsingPUT
+             * @param {object} parameters - method options and parameters
+             * @param {integer} parameters.lawfirmId - lawfirmId
+             * @param {} parameters.request - request
+             */
+            OtrService.prototype.updateFeeCollectionMethodUsingPUT = function(parameters) {
+                if (parameters === undefined) {
+                    parameters = {};
+                }
+                var deferred = $q.defer();
+                var domain = this.domain,
+                    path = '/api/v1/lawfirms/{lawfirmId}/fee-collection-method';
+                var body = {},
+                    queryParameters = {},
+                    headers = {},
+                    form = {};
+
+                headers['Accept'] = ['*/*'];
+                headers['Content-Type'] = ['application/json'];
+
+                path = path.replace('{lawfirmId}', parameters['lawfirmId']);
+
+                if (parameters['lawfirmId'] === undefined) {
+                    deferred.reject(new Error('Missing required  parameter: lawfirmId'));
+                    return deferred.promise;
+                }
+
+                if (parameters['request'] !== undefined) {
+                    body = parameters['request'];
+                }
+
+                if (parameters['request'] === undefined) {
+                    deferred.reject(new Error('Missing required  parameter: request'));
+                    return deferred.promise;
+                }
+
+                queryParameters = mergeQueryParams(parameters, queryParameters);
+
+                this.request('PUT', domain + path, parameters, body, headers, queryParameters, form, deferred);
 
                 return deferred.promise;
             };
@@ -8159,6 +8231,43 @@ angular.module('otrBackendService', [])
 
                 if (parameters['disputeId'] === undefined) {
                     deferred.reject(new Error('Missing required  parameter: disputeId'));
+                    return deferred.promise;
+                }
+
+                queryParameters = mergeQueryParams(parameters, queryParameters);
+
+                this.request('POST', domain + path, parameters, body, headers, queryParameters, form, deferred);
+
+                return deferred.promise;
+            };
+            /**
+             * findMissingCharges
+             * @method
+             * @name OtrService#findMissingChargesUsingPOST
+             * @param {object} parameters - method options and parameters
+             * @param {integer} parameters.limit - limit
+             */
+            OtrService.prototype.findMissingChargesUsingPOST = function(parameters) {
+                if (parameters === undefined) {
+                    parameters = {};
+                }
+                var deferred = $q.defer();
+                var domain = this.domain,
+                    path = '/api/v1/stripe/find-missing-charges';
+                var body = {},
+                    queryParameters = {},
+                    headers = {},
+                    form = {};
+
+                headers['Accept'] = ['*/*'];
+                headers['Content-Type'] = ['application/json'];
+
+                if (parameters['limit'] !== undefined) {
+                    queryParameters['limit'] = parameters['limit'];
+                }
+
+                if (parameters['limit'] === undefined) {
+                    deferred.reject(new Error('Missing required  parameter: limit'));
                     return deferred.promise;
                 }
 
