@@ -517,46 +517,6 @@ angular.module('otrBackendService', [])
                 return deferred.promise;
             };
             /**
-             * cancelCaseForClient
-             * @method
-             * @name OtrService#cancelCaseForClientUsingDELETE
-             * @param {object} parameters - method options and parameters
-             * @param {string} parameters.caseId - caseId
-             * @param {string} parameters.cancellationStatus - cancellationStatus
-             */
-            OtrService.prototype.cancelCaseForClientUsingDELETE = function(parameters) {
-                if (parameters === undefined) {
-                    parameters = {};
-                }
-                var deferred = $q.defer();
-                var domain = this.domain,
-                    path = '/api/v1/cases/{caseId}';
-                var body = {},
-                    queryParameters = {},
-                    headers = {},
-                    form = {};
-
-                headers['Accept'] = ['*/*'];
-                headers['Content-Type'] = ['application/json'];
-
-                path = path.replace('{caseId}', parameters['caseId']);
-
-                if (parameters['caseId'] === undefined) {
-                    deferred.reject(new Error('Missing required  parameter: caseId'));
-                    return deferred.promise;
-                }
-
-                if (parameters['cancellationStatus'] !== undefined) {
-                    queryParameters['cancellationStatus'] = parameters['cancellationStatus'];
-                }
-
-                queryParameters = mergeQueryParams(parameters, queryParameters);
-
-                this.request('DELETE', domain + path, parameters, body, headers, queryParameters, form, deferred);
-
-                return deferred.promise;
-            };
-            /**
              * getCaseActions
              * @method
              * @name OtrService#getCaseActionsUsingGET
@@ -697,14 +657,14 @@ angular.module('otrBackendService', [])
                 return deferred.promise;
             };
             /**
-             * refundCharges
+             * refundCharge
              * @method
-             * @name OtrService#refundChargesUsingPOST
+             * @name OtrService#refundChargeUsingPOST
              * @param {object} parameters - method options and parameters
              * @param {string} parameters.caseId - caseId
              * @param {} parameters.request - request
              */
-            OtrService.prototype.refundChargesUsingPOST = function(parameters) {
+            OtrService.prototype.refundChargeUsingPOST = function(parameters) {
                 if (parameters === undefined) {
                     parameters = {};
                 }
