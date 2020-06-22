@@ -4,7 +4,11 @@
   "description": "Generate client-side and service-side code using swagger CLI",
   "homepage": "https://offtherecord.com",
   "author": "Off the Record, Inc.",
+  "scripts": {
+    "otr-client-typescript": "openapi-generator generate -i api/otr-service.json -g typescript-angularjs -o dist/otr-ts-client"
+  },
   "devDependencies": {
+    "@openapitools/openapi-generator-cli": "^1.0.13-4.3.1",
     "del": "2.2.0",
     "file-system": "2.2.1",
     "gulp": "3.9.0",
