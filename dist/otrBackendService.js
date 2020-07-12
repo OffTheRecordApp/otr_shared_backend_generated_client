@@ -9915,19 +9915,20 @@ angular.module('otrBackendService', [])
                 return deferred.promise;
             };
             /**
-             * handleOrphanedStripeCharge
+             * backfillLawfirmTransactionRecords
              * @method
-             * @name OtrService#handleOrphanedStripeChargeUsingPOST
+             * @name OtrService#backfillLawfirmTransactionRecordsUsingPOST
              * @param {object} parameters - method options and parameters
-             * @param {} parameters.request - request
+             * @param {string} parameters.caseId - caseId
+             * @param {boolean} parameters.deleteExistingRecords - deleteExistingRecords
              */
-            OtrService.prototype.handleOrphanedStripeChargeUsingPOST = function(parameters) {
+            OtrService.prototype.backfillLawfirmTransactionRecordsUsingPOST = function(parameters) {
                 if (parameters === undefined) {
                     parameters = {};
                 }
                 var deferred = $q.defer();
                 var domain = this.domain,
-                    path = '/api/v1/utility/handle-orphaned-stripe-charge';
+                    path = '/api/v1/utility/backfill-lawfirm-transaction-records';
                 var body = {},
                     queryParameters = {},
                     headers = {},
@@ -9936,12 +9937,21 @@ angular.module('otrBackendService', [])
                 headers['Accept'] = ['*/*'];
                 headers['Content-Type'] = ['application/json'];
 
-                if (parameters['request'] !== undefined) {
-                    body = parameters['request'];
+                if (parameters['caseId'] !== undefined) {
+                    queryParameters['caseId'] = parameters['caseId'];
                 }
 
-                if (parameters['request'] === undefined) {
-                    deferred.reject(new Error('Missing required  parameter: request'));
+                if (parameters['caseId'] === undefined) {
+                    deferred.reject(new Error('Missing required  parameter: caseId'));
+                    return deferred.promise;
+                }
+
+                if (parameters['deleteExistingRecords'] !== undefined) {
+                    queryParameters['deleteExistingRecords'] = parameters['deleteExistingRecords'];
+                }
+
+                if (parameters['deleteExistingRecords'] === undefined) {
+                    deferred.reject(new Error('Missing required  parameter: deleteExistingRecords'));
                     return deferred.promise;
                 }
 
