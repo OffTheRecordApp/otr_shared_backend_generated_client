@@ -2053,6 +2053,41 @@ angular.module('otrBackendService', [])
                 return deferred.promise;
             };
             /**
+             * getLawfirmPayouts
+             * @method
+             * @name OtrService#getLawfirmPayoutsUsingGET
+             * @param {object} parameters - method options and parameters
+             * @param {string} parameters.caseId - caseId
+             */
+            OtrService.prototype.getLawfirmPayoutsUsingGET = function(parameters) {
+                if (parameters === undefined) {
+                    parameters = {};
+                }
+                var deferred = $q.defer();
+                var domain = this.domain,
+                    path = '/api/v1/cases/{caseId}/payouts';
+                var body = {},
+                    queryParameters = {},
+                    headers = {},
+                    form = {};
+
+                headers['Accept'] = ['*/*'];
+                headers['Content-Type'] = ['application/json'];
+
+                path = path.replace('{caseId}', parameters['caseId']);
+
+                if (parameters['caseId'] === undefined) {
+                    deferred.reject(new Error('Missing required  parameter: caseId'));
+                    return deferred.promise;
+                }
+
+                queryParameters = mergeQueryParams(parameters, queryParameters);
+
+                this.request('GET', domain + path, parameters, body, headers, queryParameters, form, deferred);
+
+                return deferred.promise;
+            };
+            /**
              * submitRequestForPriceMatch
              * @method
              * @name OtrService#submitRequestForPriceMatchUsingPOST
@@ -2535,41 +2570,6 @@ angular.module('otrBackendService', [])
                 queryParameters = mergeQueryParams(parameters, queryParameters);
 
                 this.request('PUT', domain + path, parameters, body, headers, queryParameters, form, deferred);
-
-                return deferred.promise;
-            };
-            /**
-             * getLawfirmTransfers
-             * @method
-             * @name OtrService#getLawfirmTransfersUsingGET
-             * @param {object} parameters - method options and parameters
-             * @param {string} parameters.caseId - caseId
-             */
-            OtrService.prototype.getLawfirmTransfersUsingGET = function(parameters) {
-                if (parameters === undefined) {
-                    parameters = {};
-                }
-                var deferred = $q.defer();
-                var domain = this.domain,
-                    path = '/api/v1/cases/{caseId}/transfers';
-                var body = {},
-                    queryParameters = {},
-                    headers = {},
-                    form = {};
-
-                headers['Accept'] = ['*/*'];
-                headers['Content-Type'] = ['application/json'];
-
-                path = path.replace('{caseId}', parameters['caseId']);
-
-                if (parameters['caseId'] === undefined) {
-                    deferred.reject(new Error('Missing required  parameter: caseId'));
-                    return deferred.promise;
-                }
-
-                queryParameters = mergeQueryParams(parameters, queryParameters);
-
-                this.request('GET', domain + path, parameters, body, headers, queryParameters, form, deferred);
 
                 return deferred.promise;
             };
@@ -6724,7 +6724,7 @@ angular.module('otrBackendService', [])
              * @method
              * @name OtrService#getLawfirmTransactionsUsingGET
              * @param {object} parameters - method options and parameters
-             * @param {string} parameters.lawfirmId - lawfirmId
+             * @param {integer} parameters.lawfirmId - lawfirmId
              */
             OtrService.prototype.getLawfirmTransactionsUsingGET = function(parameters) {
                 if (parameters === undefined) {
@@ -8620,7 +8620,7 @@ angular.module('otrBackendService', [])
              * @method
              * @name OtrService#reverseTransferUsingPOST
              * @param {object} parameters - method options and parameters
-             * @param {string} parameters.lawfirmTransferId - lawfirmTransferId
+             * @param {string} parameters.lawfirmPayoutId - lawfirmPayoutId
              * @param {} parameters.request - request
              */
             OtrService.prototype.reverseTransferUsingPOST = function(parameters) {
@@ -8629,7 +8629,7 @@ angular.module('otrBackendService', [])
                 }
                 var deferred = $q.defer();
                 var domain = this.domain,
-                    path = '/api/v1/transfer/{lawfirmTransferId}/reverse';
+                    path = '/api/v1/transfer/{lawfirmPayoutId}/reverse';
                 var body = {},
                     queryParameters = {},
                     headers = {},
@@ -8638,10 +8638,10 @@ angular.module('otrBackendService', [])
                 headers['Accept'] = ['*/*'];
                 headers['Content-Type'] = ['application/json'];
 
-                path = path.replace('{lawfirmTransferId}', parameters['lawfirmTransferId']);
+                path = path.replace('{lawfirmPayoutId}', parameters['lawfirmPayoutId']);
 
-                if (parameters['lawfirmTransferId'] === undefined) {
-                    deferred.reject(new Error('Missing required  parameter: lawfirmTransferId'));
+                if (parameters['lawfirmPayoutId'] === undefined) {
+                    deferred.reject(new Error('Missing required  parameter: lawfirmPayoutId'));
                     return deferred.promise;
                 }
 
