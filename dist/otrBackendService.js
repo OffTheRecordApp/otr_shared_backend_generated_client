@@ -5472,6 +5472,76 @@ angular.module('otrBackendService', [])
                 return deferred.promise;
             };
             /**
+             * deleteLawfirmFeeRecord
+             * @method
+             * @name OtrService#deleteLawfirmFeeRecordUsingDELETE
+             * @param {object} parameters - method options and parameters
+             * @param {string} parameters.lawfirmFeeId - lawfirmFeeId
+             */
+            OtrService.prototype.deleteLawfirmFeeRecordUsingDELETE = function(parameters) {
+                if (parameters === undefined) {
+                    parameters = {};
+                }
+                var deferred = $q.defer();
+                var domain = this.domain,
+                    path = '/api/v1/lawfirms/fees/{lawfirmFeeId}';
+                var body = {},
+                    queryParameters = {},
+                    headers = {},
+                    form = {};
+
+                headers['Accept'] = ['*/*'];
+                headers['Content-Type'] = ['application/json'];
+
+                path = path.replace('{lawfirmFeeId}', parameters['lawfirmFeeId']);
+
+                if (parameters['lawfirmFeeId'] === undefined) {
+                    deferred.reject(new Error('Missing required  parameter: lawfirmFeeId'));
+                    return deferred.promise;
+                }
+
+                queryParameters = mergeQueryParams(parameters, queryParameters);
+
+                this.request('DELETE', domain + path, parameters, body, headers, queryParameters, form, deferred);
+
+                return deferred.promise;
+            };
+            /**
+             * deleteLawfirmPayoutRecord
+             * @method
+             * @name OtrService#deleteLawfirmPayoutRecordUsingDELETE
+             * @param {object} parameters - method options and parameters
+             * @param {string} parameters.lawfirmPayoutId - lawfirmPayoutId
+             */
+            OtrService.prototype.deleteLawfirmPayoutRecordUsingDELETE = function(parameters) {
+                if (parameters === undefined) {
+                    parameters = {};
+                }
+                var deferred = $q.defer();
+                var domain = this.domain,
+                    path = '/api/v1/lawfirms/payouts/{lawfirmPayoutId}';
+                var body = {},
+                    queryParameters = {},
+                    headers = {},
+                    form = {};
+
+                headers['Accept'] = ['*/*'];
+                headers['Content-Type'] = ['application/json'];
+
+                path = path.replace('{lawfirmPayoutId}', parameters['lawfirmPayoutId']);
+
+                if (parameters['lawfirmPayoutId'] === undefined) {
+                    deferred.reject(new Error('Missing required  parameter: lawfirmPayoutId'));
+                    return deferred.promise;
+                }
+
+                queryParameters = mergeQueryParams(parameters, queryParameters);
+
+                this.request('DELETE', domain + path, parameters, body, headers, queryParameters, form, deferred);
+
+                return deferred.promise;
+            };
+            /**
              * getLawfirmStatuses
              * @method
              * @name OtrService#getLawfirmStatusesUsingGET
