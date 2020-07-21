@@ -7411,6 +7411,51 @@ angular.module('otrBackendService', [])
                 return deferred.promise;
             };
             /**
+             * updatePaymentOwner
+             * @method
+             * @name OtrService#updatePaymentOwnerUsingPUT
+             * @param {object} parameters - method options and parameters
+             * @param {string} parameters.casePaymentId - casePaymentId
+             * @param {string} parameters.owner - recipient
+             */
+            OtrService.prototype.updatePaymentOwnerUsingPUT = function(parameters) {
+                if (parameters === undefined) {
+                    parameters = {};
+                }
+                var deferred = $q.defer();
+                var domain = this.domain,
+                    path = '/api/v1/payments/{casePaymentId}/owner';
+                var body = {},
+                    queryParameters = {},
+                    headers = {},
+                    form = {};
+
+                headers['Accept'] = ['*/*'];
+                headers['Content-Type'] = ['application/json'];
+
+                path = path.replace('{casePaymentId}', parameters['casePaymentId']);
+
+                if (parameters['casePaymentId'] === undefined) {
+                    deferred.reject(new Error('Missing required  parameter: casePaymentId'));
+                    return deferred.promise;
+                }
+
+                if (parameters['owner'] !== undefined) {
+                    queryParameters['owner'] = parameters['owner'];
+                }
+
+                if (parameters['owner'] === undefined) {
+                    deferred.reject(new Error('Missing required  parameter: owner'));
+                    return deferred.promise;
+                }
+
+                queryParameters = mergeQueryParams(parameters, queryParameters);
+
+                this.request('PUT', domain + path, parameters, body, headers, queryParameters, form, deferred);
+
+                return deferred.promise;
+            };
+            /**
              * dismissPhoneLead
              * @method
              * @name OtrService#dismissPhoneLeadUsingPOST
@@ -9992,7 +10037,9 @@ angular.module('otrBackendService', [])
              * @name OtrService#backfillLawfirmTransactionRecordsUsingPOST
              * @param {object} parameters - method options and parameters
              * @param {string} parameters.caseId - caseId
+             * @param {integer} parameters.lawfirmId - lawfirmId
              * @param {boolean} parameters.deleteExistingRecords - deleteExistingRecords
+             * @param {integer} parameters.maxCases - maxCases
              */
             OtrService.prototype.backfillLawfirmTransactionRecordsUsingPOST = function(parameters) {
                 if (parameters === undefined) {
@@ -10013,9 +10060,8 @@ angular.module('otrBackendService', [])
                     queryParameters['caseId'] = parameters['caseId'];
                 }
 
-                if (parameters['caseId'] === undefined) {
-                    deferred.reject(new Error('Missing required  parameter: caseId'));
-                    return deferred.promise;
+                if (parameters['lawfirmId'] !== undefined) {
+                    queryParameters['lawfirmId'] = parameters['lawfirmId'];
                 }
 
                 if (parameters['deleteExistingRecords'] !== undefined) {
@@ -10025,6 +10071,10 @@ angular.module('otrBackendService', [])
                 if (parameters['deleteExistingRecords'] === undefined) {
                     deferred.reject(new Error('Missing required  parameter: deleteExistingRecords'));
                     return deferred.promise;
+                }
+
+                if (parameters['maxCases'] !== undefined) {
+                    queryParameters['maxCases'] = parameters['maxCases'];
                 }
 
                 queryParameters = mergeQueryParams(parameters, queryParameters);
@@ -10104,6 +10154,7 @@ angular.module('otrBackendService', [])
              * @param {object} parameters - method options and parameters
              * @param {boolean} parameters.syncStatus - syncStatus
              * @param {boolean} parameters.missingChargesStatus - missingChargesStatus
+             * @param {boolean} parameters.lawfirmTransactionsStatus - lawfirmTransactionsStatus
              */
             OtrService.prototype.setStatusUsingPOST = function(parameters) {
                 if (parameters === undefined) {
@@ -10124,18 +10175,12 @@ angular.module('otrBackendService', [])
                     queryParameters['syncStatus'] = parameters['syncStatus'];
                 }
 
-                if (parameters['syncStatus'] === undefined) {
-                    deferred.reject(new Error('Missing required  parameter: syncStatus'));
-                    return deferred.promise;
-                }
-
                 if (parameters['missingChargesStatus'] !== undefined) {
                     queryParameters['missingChargesStatus'] = parameters['missingChargesStatus'];
                 }
 
-                if (parameters['missingChargesStatus'] === undefined) {
-                    deferred.reject(new Error('Missing required  parameter: missingChargesStatus'));
-                    return deferred.promise;
+                if (parameters['lawfirmTransactionsStatus'] !== undefined) {
+                    queryParameters['lawfirmTransactionsStatus'] = parameters['lawfirmTransactionsStatus'];
                 }
 
                 queryParameters = mergeQueryParams(parameters, queryParameters);
