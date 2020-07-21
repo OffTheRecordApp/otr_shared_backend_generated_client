@@ -7411,14 +7411,14 @@ angular.module('otrBackendService', [])
                 return deferred.promise;
             };
             /**
-             * updatePaymentOwner
+             * updatePaymentRecipient
              * @method
-             * @name OtrService#updatePaymentOwnerUsingPUT
+             * @name OtrService#updatePaymentRecipientUsingPUT
              * @param {object} parameters - method options and parameters
              * @param {string} parameters.casePaymentId - casePaymentId
-             * @param {string} parameters.owner - recipient
+             * @param {string} parameters.recipient - recipient
              */
-            OtrService.prototype.updatePaymentOwnerUsingPUT = function(parameters) {
+            OtrService.prototype.updatePaymentRecipientUsingPUT = function(parameters) {
                 if (parameters === undefined) {
                     parameters = {};
                 }
@@ -7440,12 +7440,12 @@ angular.module('otrBackendService', [])
                     return deferred.promise;
                 }
 
-                if (parameters['owner'] !== undefined) {
-                    queryParameters['owner'] = parameters['owner'];
+                if (parameters['recipient'] !== undefined) {
+                    queryParameters['recipient'] = parameters['recipient'];
                 }
 
-                if (parameters['owner'] === undefined) {
-                    deferred.reject(new Error('Missing required  parameter: owner'));
+                if (parameters['recipient'] === undefined) {
+                    deferred.reject(new Error('Missing required  parameter: recipient'));
                     return deferred.promise;
                 }
 
