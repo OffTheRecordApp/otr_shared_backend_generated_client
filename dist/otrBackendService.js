@@ -657,51 +657,6 @@ angular.module('otrBackendService', [])
                 return deferred.promise;
             };
             /**
-             * refundCharge
-             * @method
-             * @name OtrService#refundChargeUsingPOST
-             * @param {object} parameters - method options and parameters
-             * @param {string} parameters.caseId - caseId
-             * @param {} parameters.request - request
-             */
-            OtrService.prototype.refundChargeUsingPOST = function(parameters) {
-                if (parameters === undefined) {
-                    parameters = {};
-                }
-                var deferred = $q.defer();
-                var domain = this.domain,
-                    path = '/api/v1/cases/{caseId}/charges/refund';
-                var body = {},
-                    queryParameters = {},
-                    headers = {},
-                    form = {};
-
-                headers['Accept'] = ['*/*'];
-                headers['Content-Type'] = ['application/json'];
-
-                path = path.replace('{caseId}', parameters['caseId']);
-
-                if (parameters['caseId'] === undefined) {
-                    deferred.reject(new Error('Missing required  parameter: caseId'));
-                    return deferred.promise;
-                }
-
-                if (parameters['request'] !== undefined) {
-                    body = parameters['request'];
-                }
-
-                if (parameters['request'] === undefined) {
-                    deferred.reject(new Error('Missing required  parameter: request'));
-                    return deferred.promise;
-                }
-
-                queryParameters = mergeQueryParams(parameters, queryParameters);
-
-                this.request('POST', domain + path, parameters, body, headers, queryParameters, form, deferred);
-
-                return deferred.promise;
-            };
-            /**
              * getStripeCharge
              * @method
              * @name OtrService#getStripeChargeUsingGET
@@ -1382,6 +1337,41 @@ angular.module('otrBackendService', [])
                 var deferred = $q.defer();
                 var domain = this.domain,
                     path = '/api/v1/cases/{caseId}/lawfirm-fees';
+                var body = {},
+                    queryParameters = {},
+                    headers = {},
+                    form = {};
+
+                headers['Accept'] = ['*/*'];
+                headers['Content-Type'] = ['application/json'];
+
+                path = path.replace('{caseId}', parameters['caseId']);
+
+                if (parameters['caseId'] === undefined) {
+                    deferred.reject(new Error('Missing required  parameter: caseId'));
+                    return deferred.promise;
+                }
+
+                queryParameters = mergeQueryParams(parameters, queryParameters);
+
+                this.request('GET', domain + path, parameters, body, headers, queryParameters, form, deferred);
+
+                return deferred.promise;
+            };
+            /**
+             * getLawfirmTransactionsForCase
+             * @method
+             * @name OtrService#getLawfirmTransactionsForCaseUsingGET
+             * @param {object} parameters - method options and parameters
+             * @param {string} parameters.caseId - caseId
+             */
+            OtrService.prototype.getLawfirmTransactionsForCaseUsingGET = function(parameters) {
+                if (parameters === undefined) {
+                    parameters = {};
+                }
+                var deferred = $q.defer();
+                var domain = this.domain,
+                    path = '/api/v1/cases/{caseId}/lawfirm-transactions';
                 var body = {},
                     queryParameters = {},
                     headers = {},
@@ -3325,6 +3315,43 @@ angular.module('otrBackendService', [])
                 queryParameters = mergeQueryParams(parameters, queryParameters);
 
                 this.request('GET', domain + path, parameters, body, headers, queryParameters, form, deferred);
+
+                return deferred.promise;
+            };
+            /**
+             * appleConnect
+             * @method
+             * @name OtrService#appleConnectUsingPOST
+             * @param {object} parameters - method options and parameters
+             * @param {} parameters.request - request
+             */
+            OtrService.prototype.appleConnectUsingPOST = function(parameters) {
+                if (parameters === undefined) {
+                    parameters = {};
+                }
+                var deferred = $q.defer();
+                var domain = this.domain,
+                    path = '/api/v1/connect/apple';
+                var body = {},
+                    queryParameters = {},
+                    headers = {},
+                    form = {};
+
+                headers['Accept'] = ['*/*'];
+                headers['Content-Type'] = ['application/json'];
+
+                if (parameters['request'] !== undefined) {
+                    body = parameters['request'];
+                }
+
+                if (parameters['request'] === undefined) {
+                    deferred.reject(new Error('Missing required  parameter: request'));
+                    return deferred.promise;
+                }
+
+                queryParameters = mergeQueryParams(parameters, queryParameters);
+
+                this.request('POST', domain + path, parameters, body, headers, queryParameters, form, deferred);
 
                 return deferred.promise;
             };
@@ -6768,41 +6795,6 @@ angular.module('otrBackendService', [])
                 var deferred = $q.defer();
                 var domain = this.domain,
                     path = '/api/v1/lawfirms/{lawfirmId}/supported-states';
-                var body = {},
-                    queryParameters = {},
-                    headers = {},
-                    form = {};
-
-                headers['Accept'] = ['*/*'];
-                headers['Content-Type'] = ['application/json'];
-
-                path = path.replace('{lawfirmId}', parameters['lawfirmId']);
-
-                if (parameters['lawfirmId'] === undefined) {
-                    deferred.reject(new Error('Missing required  parameter: lawfirmId'));
-                    return deferred.promise;
-                }
-
-                queryParameters = mergeQueryParams(parameters, queryParameters);
-
-                this.request('GET', domain + path, parameters, body, headers, queryParameters, form, deferred);
-
-                return deferred.promise;
-            };
-            /**
-             * getLawfirmTransactions
-             * @method
-             * @name OtrService#getLawfirmTransactionsUsingGET
-             * @param {object} parameters - method options and parameters
-             * @param {integer} parameters.lawfirmId - lawfirmId
-             */
-            OtrService.prototype.getLawfirmTransactionsUsingGET = function(parameters) {
-                if (parameters === undefined) {
-                    parameters = {};
-                }
-                var deferred = $q.defer();
-                var domain = this.domain,
-                    path = '/api/v1/lawfirms/{lawfirmId}/transactions';
                 var body = {},
                     queryParameters = {},
                     headers = {},
