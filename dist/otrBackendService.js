@@ -7193,6 +7193,33 @@ angular.module('otrBackendService', [])
                 return deferred.promise;
             };
             /**
+             * getLineItemTypes
+             * @method
+             * @name OtrService#getLineItemTypesUsingGET
+             * @param {object} parameters - method options and parameters
+             */
+            OtrService.prototype.getLineItemTypesUsingGET = function(parameters) {
+                if (parameters === undefined) {
+                    parameters = {};
+                }
+                var deferred = $q.defer();
+                var domain = this.domain,
+                    path = '/api/v1/lineitems';
+                var body = {},
+                    queryParameters = {},
+                    headers = {},
+                    form = {};
+
+                headers['Accept'] = ['application/json'];
+                headers['Content-Type'] = ['application/json'];
+
+                queryParameters = mergeQueryParams(parameters, queryParameters);
+
+                this.request('GET', domain + path, parameters, body, headers, queryParameters, form, deferred);
+
+                return deferred.promise;
+            };
+            /**
              * createNote
              * @method
              * @name OtrService#createNoteUsingPOST
