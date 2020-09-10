@@ -1962,13 +1962,16 @@ angular.module('otrBackendService', [])
                 return deferred.promise;
             };
             /**
-             * getAvailablePaymentPlans
+             * getPaymentPlanOptions
              * @method
-             * @name OtrService#getAvailablePaymentPlansUsingGET
+             * @name OtrService#getPaymentPlanOptionsUsingGET
              * @param {object} parameters - method options and parameters
              * @param {string} parameters.caseId - caseId
+             * @param {integer} parameters.lawfirmId - lawfirmId
+             * @param {integer} parameters.userId - userId
+             * @param {integer} parameters.feeInCents - feeInCents
              */
-            OtrService.prototype.getAvailablePaymentPlansUsingGET = function(parameters) {
+            OtrService.prototype.getPaymentPlanOptionsUsingGET = function(parameters) {
                 if (parameters === undefined) {
                     parameters = {};
                 }
@@ -1987,6 +1990,28 @@ angular.module('otrBackendService', [])
 
                 if (parameters['caseId'] === undefined) {
                     deferred.reject(new Error('Missing required  parameter: caseId'));
+                    return deferred.promise;
+                }
+
+                if (parameters['lawfirmId'] !== undefined) {
+                    queryParameters['lawfirmId'] = parameters['lawfirmId'];
+                }
+
+                if (parameters['lawfirmId'] === undefined) {
+                    deferred.reject(new Error('Missing required  parameter: lawfirmId'));
+                    return deferred.promise;
+                }
+
+                if (parameters['userId'] !== undefined) {
+                    queryParameters['userId'] = parameters['userId'];
+                }
+
+                if (parameters['feeInCents'] !== undefined) {
+                    queryParameters['feeInCents'] = parameters['feeInCents'];
+                }
+
+                if (parameters['feeInCents'] === undefined) {
+                    deferred.reject(new Error('Missing required  parameter: feeInCents'));
                     return deferred.promise;
                 }
 
