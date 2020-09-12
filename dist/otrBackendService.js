@@ -8567,13 +8567,13 @@ angular.module('otrBackendService', [])
                 return deferred.promise;
             };
             /**
-             * getScheduledTasks
+             * deleteScheduledTask
              * @method
-             * @name OtrService#getScheduledTasksUsingDELETE
+             * @name OtrService#deleteScheduledTaskUsingDELETE
              * @param {object} parameters - method options and parameters
              * @param {integer} parameters.taskId - taskId
              */
-            OtrService.prototype.getScheduledTasksUsingDELETE = function(parameters) {
+            OtrService.prototype.deleteScheduledTaskUsingDELETE = function(parameters) {
                 if (parameters === undefined) {
                     parameters = {};
                 }
