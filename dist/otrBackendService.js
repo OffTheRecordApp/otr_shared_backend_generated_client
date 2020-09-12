@@ -8567,6 +8567,41 @@ angular.module('otrBackendService', [])
                 return deferred.promise;
             };
             /**
+             * getScheduledTasks
+             * @method
+             * @name OtrService#getScheduledTasksUsingDELETE
+             * @param {object} parameters - method options and parameters
+             * @param {integer} parameters.taskId - taskId
+             */
+            OtrService.prototype.getScheduledTasksUsingDELETE = function(parameters) {
+                if (parameters === undefined) {
+                    parameters = {};
+                }
+                var deferred = $q.defer();
+                var domain = this.domain,
+                    path = '/api/v1/scheduled-tasks/{taskId}';
+                var body = {},
+                    queryParameters = {},
+                    headers = {},
+                    form = {};
+
+                headers['Accept'] = ['*/*'];
+                headers['Content-Type'] = ['application/json'];
+
+                path = path.replace('{taskId}', parameters['taskId']);
+
+                if (parameters['taskId'] === undefined) {
+                    deferred.reject(new Error('Missing required  parameter: taskId'));
+                    return deferred.promise;
+                }
+
+                queryParameters = mergeQueryParams(parameters, queryParameters);
+
+                this.request('DELETE', domain + path, parameters, body, headers, queryParameters, form, deferred);
+
+                return deferred.promise;
+            };
+            /**
              * rescheduleTask
              * @method
              * @name OtrService#rescheduleTaskUsingPUT
@@ -10425,10 +10460,7 @@ angular.module('otrBackendService', [])
              * @method
              * @name OtrService#backfillLawfirmTransactionRecordsUsingPOST
              * @param {object} parameters - method options and parameters
-             * @param {string} parameters.caseId - caseId
-             * @param {integer} parameters.lawfirmId - lawfirmId
-             * @param {boolean} parameters.deleteExistingRecords - deleteExistingRecords
-             * @param {integer} parameters.maxCases - maxCases
+             * @param {} parameters.request - request
              */
             OtrService.prototype.backfillLawfirmTransactionRecordsUsingPOST = function(parameters) {
                 if (parameters === undefined) {
@@ -10445,25 +10477,13 @@ angular.module('otrBackendService', [])
                 headers['Accept'] = ['*/*'];
                 headers['Content-Type'] = ['application/json'];
 
-                if (parameters['caseId'] !== undefined) {
-                    queryParameters['caseId'] = parameters['caseId'];
+                if (parameters['request'] !== undefined) {
+                    body = parameters['request'];
                 }
 
-                if (parameters['lawfirmId'] !== undefined) {
-                    queryParameters['lawfirmId'] = parameters['lawfirmId'];
-                }
-
-                if (parameters['deleteExistingRecords'] !== undefined) {
-                    queryParameters['deleteExistingRecords'] = parameters['deleteExistingRecords'];
-                }
-
-                if (parameters['deleteExistingRecords'] === undefined) {
-                    deferred.reject(new Error('Missing required  parameter: deleteExistingRecords'));
+                if (parameters['request'] === undefined) {
+                    deferred.reject(new Error('Missing required  parameter: request'));
                     return deferred.promise;
-                }
-
-                if (parameters['maxCases'] !== undefined) {
-                    queryParameters['maxCases'] = parameters['maxCases'];
                 }
 
                 queryParameters = mergeQueryParams(parameters, queryParameters);
