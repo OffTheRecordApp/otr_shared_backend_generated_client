@@ -5446,10 +5446,48 @@ angular.module('otrBackendService', [])
                 return deferred.promise;
             };
             /**
+             * handleDripWebhook
+             * @method
+             * @name OtrService#handleDripWebhookUsingPOST
+             * @param {object} parameters - method options and parameters
+             * @param {} parameters.request - request
+             */
+            OtrService.prototype.handleDripWebhookUsingPOST = function(parameters) {
+                if (parameters === undefined) {
+                    parameters = {};
+                }
+                var deferred = $q.defer();
+                var domain = this.domain,
+                    path = '/api/v1/drip/webhooks';
+                var body = {},
+                    queryParameters = {},
+                    headers = {},
+                    form = {};
+
+                headers['Accept'] = ['*/*'];
+                headers['Content-Type'] = ['application/json'];
+
+                if (parameters['request'] !== undefined) {
+                    body = parameters['request'];
+                }
+
+                if (parameters['request'] === undefined) {
+                    deferred.reject(new Error('Missing required  parameter: request'));
+                    return deferred.promise;
+                }
+
+                queryParameters = mergeQueryParams(parameters, queryParameters);
+
+                this.request('POST', domain + path, parameters, body, headers, queryParameters, form, deferred);
+
+                return deferred.promise;
+            };
+            /**
              * postFeedback
              * @method
              * @name OtrService#postFeedbackUsingPOST
              * @param {object} parameters - method options and parameters
+             * @param {boolean} parameters.isReview - isReview
              * @param {} parameters.request - request
              */
             OtrService.prototype.postFeedbackUsingPOST = function(parameters) {
@@ -5466,6 +5504,10 @@ angular.module('otrBackendService', [])
 
                 headers['Accept'] = ['*/*'];
                 headers['Content-Type'] = ['application/json'];
+
+                if (parameters['isReview'] !== undefined) {
+                    queryParameters['isReview'] = parameters['isReview'];
+                }
 
                 if (parameters['request'] !== undefined) {
                     body = parameters['request'];
@@ -10640,6 +10682,7 @@ angular.module('otrBackendService', [])
              * @method
              * @name OtrService#getTrafficViolationTypesUsingGET
              * @param {object} parameters - method options and parameters
+             * @param {boolean} parameters.includePenalties - isPenaltiesEnabled
              * @param {string} parameters.state - stateAbbreviation
              * @param {string} parameters.audience - audience
              * @param {string} parameters.flavor - flavor
@@ -10658,6 +10701,10 @@ angular.module('otrBackendService', [])
 
                 headers['Accept'] = ['*/*'];
                 headers['Content-Type'] = ['application/json'];
+
+                if (parameters['includePenalties'] !== undefined) {
+                    queryParameters['includePenalties'] = parameters['includePenalties'];
+                }
 
                 if (parameters['state'] !== undefined) {
                     queryParameters['state'] = parameters['state'];
@@ -10938,43 +10985,6 @@ angular.module('otrBackendService', [])
                 var deferred = $q.defer();
                 var domain = this.domain,
                     path = '/api/v1/webhooks/drip/bounce-or-complaint';
-                var body = {},
-                    queryParameters = {},
-                    headers = {},
-                    form = {};
-
-                headers['Accept'] = ['*/*'];
-                headers['Content-Type'] = ['application/json'];
-
-                if (parameters['request'] !== undefined) {
-                    body = parameters['request'];
-                }
-
-                if (parameters['request'] === undefined) {
-                    deferred.reject(new Error('Missing required  parameter: request'));
-                    return deferred.promise;
-                }
-
-                queryParameters = mergeQueryParams(parameters, queryParameters);
-
-                this.request('POST', domain + path, parameters, body, headers, queryParameters, form, deferred);
-
-                return deferred.promise;
-            };
-            /**
-             * handleReceivedEmail
-             * @method
-             * @name OtrService#handleReceivedEmailUsingPOST
-             * @param {object} parameters - method options and parameters
-             * @param {} parameters.request - request
-             */
-            OtrService.prototype.handleReceivedEmailUsingPOST = function(parameters) {
-                if (parameters === undefined) {
-                    parameters = {};
-                }
-                var deferred = $q.defer();
-                var domain = this.domain,
-                    path = '/api/v1/webhooks/drip/received-email';
                 var body = {},
                     queryParameters = {},
                     headers = {},
