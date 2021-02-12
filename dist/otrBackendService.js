@@ -300,6 +300,53 @@ angular.module('otrBackendService', [])
                 return deferred.promise;
             };
             /**
+             * listActivityFeed
+             * @method
+             * @name OtrService#listActivityFeedUsingGET
+             * @param {object} parameters - method options and parameters
+             * @param {integer} parameters.limit - limit
+             * @param {string} parameters.previousPageToken - previousPageToken
+             * @param {string} parameters.nextPageToken - nextPageToken
+             */
+            OtrService.prototype.listActivityFeedUsingGET = function(parameters) {
+                if (parameters === undefined) {
+                    parameters = {};
+                }
+                var deferred = $q.defer();
+                var domain = this.domain,
+                    path = '/api/v1/activity-feed';
+                var body = {},
+                    queryParameters = {},
+                    headers = {},
+                    form = {};
+
+                headers['Accept'] = ['*/*'];
+                headers['Content-Type'] = ['application/json'];
+
+                if (parameters['limit'] !== undefined) {
+                    queryParameters['limit'] = parameters['limit'];
+                }
+
+                if (parameters['limit'] === undefined) {
+                    deferred.reject(new Error('Missing required  parameter: limit'));
+                    return deferred.promise;
+                }
+
+                if (parameters['previousPageToken'] !== undefined) {
+                    queryParameters['previousPageToken'] = parameters['previousPageToken'];
+                }
+
+                if (parameters['nextPageToken'] !== undefined) {
+                    queryParameters['nextPageToken'] = parameters['nextPageToken'];
+                }
+
+                queryParameters = mergeQueryParams(parameters, queryParameters);
+
+                this.request('GET', domain + path, parameters, body, headers, queryParameters, form, deferred);
+
+                return deferred.promise;
+            };
+            /**
              * updateBranchLinksForAllUsers
              * @method
              * @name OtrService#updateBranchLinksForAllUsersUsingPOST
@@ -6215,6 +6262,7 @@ angular.module('otrBackendService', [])
              * @name OtrService#getAccountFeesUsingGET
              * @param {object} parameters - method options and parameters
              * @param {string} parameters.lawfirmId - lawfirmId
+             * @param {boolean} parameters.enabledFeesOnly - enabledFeesOnly
              */
             OtrService.prototype.getAccountFeesUsingGET = function(parameters) {
                 if (parameters === undefined) {
@@ -6236,6 +6284,10 @@ angular.module('otrBackendService', [])
                 if (parameters['lawfirmId'] === undefined) {
                     deferred.reject(new Error('Missing required  parameter: lawfirmId'));
                     return deferred.promise;
+                }
+
+                if (parameters['enabledFeesOnly'] !== undefined) {
+                    queryParameters['enabledFeesOnly'] = parameters['enabledFeesOnly'];
                 }
 
                 queryParameters = mergeQueryParams(parameters, queryParameters);
@@ -6296,6 +6348,51 @@ angular.module('otrBackendService', [])
                 queryParameters = mergeQueryParams(parameters, queryParameters);
 
                 this.request('POST', domain + path, parameters, body, headers, queryParameters, form, deferred);
+
+                return deferred.promise;
+            };
+            /**
+             * removeAccountFees
+             * @method
+             * @name OtrService#removeAccountFeesUsingDELETE
+             * @param {object} parameters - method options and parameters
+             * @param {string} parameters.lawfirmId - lawfirmId
+             * @param {string} parameters.classification - classification
+             * @param {integer} parameters.violationId - violationId
+             */
+            OtrService.prototype.removeAccountFeesUsingDELETE = function(parameters) {
+                if (parameters === undefined) {
+                    parameters = {};
+                }
+                var deferred = $q.defer();
+                var domain = this.domain,
+                    path = '/api/v1/lawfirms/{lawfirmId}/account-fees';
+                var body = {},
+                    queryParameters = {},
+                    headers = {},
+                    form = {};
+
+                headers['Accept'] = ['*/*'];
+                headers['Content-Type'] = ['application/json'];
+
+                path = path.replace('{lawfirmId}', parameters['lawfirmId']);
+
+                if (parameters['lawfirmId'] === undefined) {
+                    deferred.reject(new Error('Missing required  parameter: lawfirmId'));
+                    return deferred.promise;
+                }
+
+                if (parameters['classification'] !== undefined) {
+                    queryParameters['classification'] = parameters['classification'];
+                }
+
+                if (parameters['violationId'] !== undefined) {
+                    queryParameters['violationId'] = parameters['violationId'];
+                }
+
+                queryParameters = mergeQueryParams(parameters, queryParameters);
+
+                this.request('DELETE', domain + path, parameters, body, headers, queryParameters, form, deferred);
 
                 return deferred.promise;
             };
@@ -6437,7 +6534,7 @@ angular.module('otrBackendService', [])
              * @method
              * @name OtrService#getLawfirmCasesUsingGET
              * @param {object} parameters - method options and parameters
-             * @param {integer} parameters.lawfirmId - lawfirmId
+             * @param {string} parameters.lawfirmId - lawfirmId
              */
             OtrService.prototype.getLawfirmCasesUsingGET = function(parameters) {
                 if (parameters === undefined) {
@@ -8536,9 +8633,10 @@ angular.module('otrBackendService', [])
              * @method
              * @name OtrService#listCustomerReviewsUsingGET
              * @param {object} parameters - method options and parameters
-             * @param {integer} parameters.page - page
-             * @param {integer} parameters.size - size
+             * @param {integer} parameters.limit - limit
              * @param {boolean} parameters.includeAnonymous - includeAnonymous
+             * @param {string} parameters.previousPageToken - previousPageToken
+             * @param {string} parameters.nextPageToken - nextPageToken
              * @param {boolean} parameters.isFeatured - isFeatured
              */
             OtrService.prototype.listCustomerReviewsUsingGET = function(parameters) {
@@ -8556,16 +8654,20 @@ angular.module('otrBackendService', [])
                 headers['Accept'] = ['*/*'];
                 headers['Content-Type'] = ['application/json'];
 
-                if (parameters['page'] !== undefined) {
-                    queryParameters['page'] = parameters['page'];
-                }
-
-                if (parameters['size'] !== undefined) {
-                    queryParameters['size'] = parameters['size'];
+                if (parameters['limit'] !== undefined) {
+                    queryParameters['limit'] = parameters['limit'];
                 }
 
                 if (parameters['includeAnonymous'] !== undefined) {
                     queryParameters['includeAnonymous'] = parameters['includeAnonymous'];
+                }
+
+                if (parameters['previousPageToken'] !== undefined) {
+                    queryParameters['previousPageToken'] = parameters['previousPageToken'];
+                }
+
+                if (parameters['nextPageToken'] !== undefined) {
+                    queryParameters['nextPageToken'] = parameters['nextPageToken'];
                 }
 
                 if (parameters['isFeatured'] !== undefined) {
