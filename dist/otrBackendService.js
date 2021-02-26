@@ -7130,6 +7130,7 @@ angular.module('otrBackendService', [])
              * @name OtrService#deleteLawfirmConnectedAccountUsingDELETE
              * @param {object} parameters - method options and parameters
              * @param {integer} parameters.lawfirmId - lawfirmId
+             * @param {string} parameters.stripeAccountId - stripeAccountId
              */
             OtrService.prototype.deleteLawfirmConnectedAccountUsingDELETE = function(parameters) {
                 if (parameters === undefined) {
@@ -7137,7 +7138,7 @@ angular.module('otrBackendService', [])
                 }
                 var deferred = $q.defer();
                 var domain = this.domain,
-                    path = '/api/v1/lawfirms/{lawfirmId}/stripe/account';
+                    path = '/api/v1/lawfirms/{lawfirmId}/stripe/account/{stripeAccountId}';
                 var body = {},
                     queryParameters = {},
                     headers = {},
@@ -7150,6 +7151,13 @@ angular.module('otrBackendService', [])
 
                 if (parameters['lawfirmId'] === undefined) {
                     deferred.reject(new Error('Missing required  parameter: lawfirmId'));
+                    return deferred.promise;
+                }
+
+                path = path.replace('{stripeAccountId}', parameters['stripeAccountId']);
+
+                if (parameters['stripeAccountId'] === undefined) {
+                    deferred.reject(new Error('Missing required  parameter: stripeAccountId'));
                     return deferred.promise;
                 }
 
