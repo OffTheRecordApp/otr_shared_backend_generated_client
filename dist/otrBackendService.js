@@ -7865,6 +7865,33 @@ angular.module('otrBackendService', [])
                 return deferred.promise;
             };
             /**
+             * sendOneTimePassword
+             * @method
+             * @name OtrService#sendOneTimePasswordUsingPOST
+             * @param {object} parameters - method options and parameters
+             */
+            OtrService.prototype.sendOneTimePasswordUsingPOST = function(parameters) {
+                if (parameters === undefined) {
+                    parameters = {};
+                }
+                var deferred = $q.defer();
+                var domain = this.domain,
+                    path = '/api/v1/one_time_password';
+                var body = {},
+                    queryParameters = {},
+                    headers = {},
+                    form = {};
+
+                headers['Accept'] = ['*/*'];
+                headers['Content-Type'] = ['application/json'];
+
+                queryParameters = mergeQueryParams(parameters, queryParameters);
+
+                this.request('POST', domain + path, parameters, body, headers, queryParameters, form, deferred);
+
+                return deferred.promise;
+            };
+            /**
              * getPaymentModelTypes
              * @method
              * @name OtrService#getPaymentModelTypesUsingGET
@@ -8380,6 +8407,7 @@ angular.module('otrBackendService', [])
              * @method
              * @name OtrService#getUserReferralSourceTypesUsingGET
              * @param {object} parameters - method options and parameters
+             * @param {string} parameters.flavor - flavor
              */
             OtrService.prototype.getUserReferralSourceTypesUsingGET = function(parameters) {
                 if (parameters === undefined) {
@@ -8395,6 +8423,10 @@ angular.module('otrBackendService', [])
 
                 headers['Accept'] = ['application/json'];
                 headers['Content-Type'] = ['application/json'];
+
+                if (parameters['flavor'] !== undefined) {
+                    queryParameters['flavor'] = parameters['flavor'];
+                }
 
                 queryParameters = mergeQueryParams(parameters, queryParameters);
 
@@ -8803,20 +8835,21 @@ angular.module('otrBackendService', [])
                 return deferred.promise;
             };
             /**
-             * likeComment
+             * markCommentWithVote
              * @method
-             * @name OtrService#likeCommentUsingPUT
+             * @name OtrService#markCommentWithVoteUsingPUT
              * @param {object} parameters - method options and parameters
              * @param {integer} parameters.reviewId - reviewId
              * @param {integer} parameters.commentId - commentId
+             * @param {boolean} parameters.like - like
              */
-            OtrService.prototype.likeCommentUsingPUT = function(parameters) {
+            OtrService.prototype.markCommentWithVoteUsingPUT = function(parameters) {
                 if (parameters === undefined) {
                     parameters = {};
                 }
                 var deferred = $q.defer();
                 var domain = this.domain,
-                    path = '/api/v1/reviews/{reviewId}/comments/{commentId}/like';
+                    path = '/api/v1/reviews/{reviewId}/comments/{commentId}/vote';
                 var body = {},
                     queryParameters = {},
                     headers = {},
@@ -8839,6 +8872,10 @@ angular.module('otrBackendService', [])
                     return deferred.promise;
                 }
 
+                if (parameters['like'] !== undefined) {
+                    queryParameters['like'] = parameters['like'];
+                }
+
                 queryParameters = mergeQueryParams(parameters, queryParameters);
 
                 this.request('PUT', domain + path, parameters, body, headers, queryParameters, form, deferred);
@@ -8846,20 +8883,20 @@ angular.module('otrBackendService', [])
                 return deferred.promise;
             };
             /**
-             * markReviewAsHelpful
+             * markReviewWithVote
              * @method
-             * @name OtrService#markReviewAsHelpfulUsingPUT
+             * @name OtrService#markReviewWithVoteUsingPUT
              * @param {object} parameters - method options and parameters
              * @param {integer} parameters.reviewId - reviewId
              * @param {boolean} parameters.helpful - isHelpful
              */
-            OtrService.prototype.markReviewAsHelpfulUsingPUT = function(parameters) {
+            OtrService.prototype.markReviewWithVoteUsingPUT = function(parameters) {
                 if (parameters === undefined) {
                     parameters = {};
                 }
                 var deferred = $q.defer();
                 var domain = this.domain,
-                    path = '/api/v1/reviews/{reviewId}/help';
+                    path = '/api/v1/reviews/{reviewId}/vote';
                 var body = {},
                     queryParameters = {},
                     headers = {},
@@ -8877,11 +8914,6 @@ angular.module('otrBackendService', [])
 
                 if (parameters['helpful'] !== undefined) {
                     queryParameters['helpful'] = parameters['helpful'];
-                }
-
-                if (parameters['helpful'] === undefined) {
-                    deferred.reject(new Error('Missing required  parameter: helpful'));
-                    return deferred.promise;
                 }
 
                 queryParameters = mergeQueryParams(parameters, queryParameters);
