@@ -4623,6 +4623,7 @@ angular.module('otrBackendService', [])
              * @param {string} parameters.countryCode - countryCode
              * @param {string} parameters.regionCode - regionCode
              * @param {integer} parameters.countyId - countyId
+             * @param {integer} parameters.trailingDays - trailingDays
              */
             OtrService.prototype.findCourtsWithNoCoverageUsingGET = function(parameters) {
                 if (parameters === undefined) {
@@ -4649,6 +4650,10 @@ angular.module('otrBackendService', [])
 
                 if (parameters['countyId'] !== undefined) {
                     queryParameters['countyId'] = parameters['countyId'];
+                }
+
+                if (parameters['trailingDays'] !== undefined) {
+                    queryParameters['trailingDays'] = parameters['trailingDays'];
                 }
 
                 queryParameters = mergeQueryParams(parameters, queryParameters);
