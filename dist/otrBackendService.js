@@ -11297,6 +11297,33 @@ angular.module('otrBackendService', [])
                 return deferred.promise;
             };
             /**
+             * clearCache
+             * @method
+             * @name OtrService#clearCacheUsingPOST
+             * @param {object} parameters - method options and parameters
+             */
+            OtrService.prototype.clearCacheUsingPOST = function(parameters) {
+                if (parameters === undefined) {
+                    parameters = {};
+                }
+                var deferred = $q.defer();
+                var domain = this.domain,
+                    path = '/api/v1/vanity-links/clear-cache';
+                var body = {},
+                    queryParameters = {},
+                    headers = {},
+                    form = {};
+
+                headers['Accept'] = ['*/*'];
+                headers['Content-Type'] = ['application/json'];
+
+                queryParameters = mergeQueryParams(parameters, queryParameters);
+
+                this.request('POST', domain + path, parameters, body, headers, queryParameters, form, deferred);
+
+                return deferred.promise;
+            };
+            /**
              * getTrafficViolationTypes
              * @method
              * @name OtrService#getTrafficViolationTypesUsingGET
@@ -12070,6 +12097,56 @@ angular.module('otrBackendService', [])
                 if (parameters['userId'] === undefined) {
                     deferred.reject(new Error('Missing required  parameter: userId'));
                     return deferred.promise;
+                }
+
+                queryParameters = mergeQueryParams(parameters, queryParameters);
+
+                this.request('GET', domain + path, parameters, body, headers, queryParameters, form, deferred);
+
+                return deferred.promise;
+            };
+            /**
+             * listDashboardCases
+             * @method
+             * @name OtrService#listDashboardCasesUsingGET
+             * @param {object} parameters - method options and parameters
+             * @param {integer} parameters.userId - userId
+             * @param {integer} parameters.limit - limit
+             * @param {string} parameters.previousPageToken - previousPageToken
+             * @param {array} parameters.statusCategories - statusCategories
+             */
+            OtrService.prototype.listDashboardCasesUsingGET = function(parameters) {
+                if (parameters === undefined) {
+                    parameters = {};
+                }
+                var deferred = $q.defer();
+                var domain = this.domain,
+                    path = '/api/v3/users/{userId}/cases';
+                var body = {},
+                    queryParameters = {},
+                    headers = {},
+                    form = {};
+
+                headers['Accept'] = ['*/*'];
+                headers['Content-Type'] = ['application/json'];
+
+                path = path.replace('{userId}', parameters['userId']);
+
+                if (parameters['userId'] === undefined) {
+                    deferred.reject(new Error('Missing required  parameter: userId'));
+                    return deferred.promise;
+                }
+
+                if (parameters['limit'] !== undefined) {
+                    queryParameters['limit'] = parameters['limit'];
+                }
+
+                if (parameters['previousPageToken'] !== undefined) {
+                    queryParameters['previousPageToken'] = parameters['previousPageToken'];
+                }
+
+                if (parameters['statusCategories'] !== undefined) {
+                    queryParameters['statusCategories'] = parameters['statusCategories'];
                 }
 
                 queryParameters = mergeQueryParams(parameters, queryParameters);
