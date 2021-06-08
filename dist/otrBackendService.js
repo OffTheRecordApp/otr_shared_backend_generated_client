@@ -5908,6 +5908,43 @@ angular.module('otrBackendService', [])
                 return deferred.promise;
             };
             /**
+             * getLawfirmByUrl
+             * @method
+             * @name OtrService#getLawfirmByUrlUsingGET
+             * @param {object} parameters - method options and parameters
+             * @param {string} parameters.seoUrl - encodedSeoUrl
+             */
+            OtrService.prototype.getLawfirmByUrlUsingGET = function(parameters) {
+                if (parameters === undefined) {
+                    parameters = {};
+                }
+                var deferred = $q.defer();
+                var domain = this.domain,
+                    path = '/api/v1/lawfirms/url';
+                var body = {},
+                    queryParameters = {},
+                    headers = {},
+                    form = {};
+
+                headers['Accept'] = ['*/*'];
+                headers['Content-Type'] = ['application/json'];
+
+                if (parameters['seoUrl'] !== undefined) {
+                    queryParameters['seoUrl'] = parameters['seoUrl'];
+                }
+
+                if (parameters['seoUrl'] === undefined) {
+                    deferred.reject(new Error('Missing required  parameter: seoUrl'));
+                    return deferred.promise;
+                }
+
+                queryParameters = mergeQueryParams(parameters, queryParameters);
+
+                this.request('GET', domain + path, parameters, body, headers, queryParameters, form, deferred);
+
+                return deferred.promise;
+            };
+            /**
              * getLawfirm
              * @method
              * @name OtrService#getLawfirmUsingGET
@@ -7387,14 +7424,14 @@ angular.module('otrBackendService', [])
                 return deferred.promise;
             };
             /**
-             * deleteSurcharges
+             * removeSurcharges
              * @method
-             * @name OtrService#deleteSurchargesUsingDELETE
+             * @name OtrService#removeSurchargesUsingDELETE
              * @param {object} parameters - method options and parameters
              * @param {string} parameters.lawfirmId - lawfirmId
              * @param {} parameters.request - request
              */
-            OtrService.prototype.deleteSurchargesUsingDELETE = function(parameters) {
+            OtrService.prototype.removeSurchargesUsingDELETE = function(parameters) {
                 if (parameters === undefined) {
                     parameters = {};
                 }
@@ -8308,6 +8345,112 @@ angular.module('otrBackendService', [])
                     deferred.reject(new Error('Missing required  parameter: request'));
                     return deferred.promise;
                 }
+
+                queryParameters = mergeQueryParams(parameters, queryParameters);
+
+                this.request('POST', domain + path, parameters, body, headers, queryParameters, form, deferred);
+
+                return deferred.promise;
+            };
+            /**
+             * getRedirectUrl
+             * @method
+             * @name OtrService#getRedirectUrlUsingGET
+             * @param {object} parameters - method options and parameters
+             * @param {string} parameters.landingPageUrl - landingPageUrl
+             * @param {string} parameters.lawfirmId - lawfirmId
+             * @param {string} parameters.pageType - pageType
+             */
+            OtrService.prototype.getRedirectUrlUsingGET = function(parameters) {
+                if (parameters === undefined) {
+                    parameters = {};
+                }
+                var deferred = $q.defer();
+                var domain = this.domain,
+                    path = '/api/v1/redirects';
+                var body = {},
+                    queryParameters = {},
+                    headers = {},
+                    form = {};
+
+                headers['Accept'] = ['*/*'];
+                headers['Content-Type'] = ['application/json'];
+
+                if (parameters['landingPageUrl'] !== undefined) {
+                    queryParameters['landingPageUrl'] = parameters['landingPageUrl'];
+                }
+
+                if (parameters['lawfirmId'] !== undefined) {
+                    queryParameters['lawfirmId'] = parameters['lawfirmId'];
+                }
+
+                if (parameters['pageType'] !== undefined) {
+                    queryParameters['pageType'] = parameters['pageType'];
+                }
+
+                queryParameters = mergeQueryParams(parameters, queryParameters);
+
+                this.request('GET', domain + path, parameters, body, headers, queryParameters, form, deferred);
+
+                return deferred.promise;
+            };
+            /**
+             * addRedirectUrl
+             * @method
+             * @name OtrService#addRedirectUrlUsingPOST
+             * @param {object} parameters - method options and parameters
+             * @param {} parameters.request - request
+             */
+            OtrService.prototype.addRedirectUrlUsingPOST = function(parameters) {
+                if (parameters === undefined) {
+                    parameters = {};
+                }
+                var deferred = $q.defer();
+                var domain = this.domain,
+                    path = '/api/v1/redirects';
+                var body = {},
+                    queryParameters = {},
+                    headers = {},
+                    form = {};
+
+                headers['Accept'] = ['*/*'];
+                headers['Content-Type'] = ['application/json'];
+
+                if (parameters['request'] !== undefined) {
+                    body = parameters['request'];
+                }
+
+                if (parameters['request'] === undefined) {
+                    deferred.reject(new Error('Missing required  parameter: request'));
+                    return deferred.promise;
+                }
+
+                queryParameters = mergeQueryParams(parameters, queryParameters);
+
+                this.request('POST', domain + path, parameters, body, headers, queryParameters, form, deferred);
+
+                return deferred.promise;
+            };
+            /**
+             * clearCache
+             * @method
+             * @name OtrService#clearCacheUsingPOST
+             * @param {object} parameters - method options and parameters
+             */
+            OtrService.prototype.clearCacheUsingPOST = function(parameters) {
+                if (parameters === undefined) {
+                    parameters = {};
+                }
+                var deferred = $q.defer();
+                var domain = this.domain,
+                    path = '/api/v1/redirects/clear-cache';
+                var body = {},
+                    queryParameters = {},
+                    headers = {},
+                    form = {};
+
+                headers['Accept'] = ['*/*'];
+                headers['Content-Type'] = ['application/json'];
 
                 queryParameters = mergeQueryParams(parameters, queryParameters);
 
@@ -11214,112 +11357,6 @@ angular.module('otrBackendService', [])
                 queryParameters = mergeQueryParams(parameters, queryParameters);
 
                 this.request('GET', domain + path, parameters, body, headers, queryParameters, form, deferred);
-
-                return deferred.promise;
-            };
-            /**
-             * getRedirectUrl
-             * @method
-             * @name OtrService#getRedirectUrlUsingGET
-             * @param {object} parameters - method options and parameters
-             * @param {string} parameters.landingPageUrl - landingPageUrl
-             * @param {string} parameters.lawfirmId - lawfirmId
-             * @param {string} parameters.pageType - pageType
-             */
-            OtrService.prototype.getRedirectUrlUsingGET = function(parameters) {
-                if (parameters === undefined) {
-                    parameters = {};
-                }
-                var deferred = $q.defer();
-                var domain = this.domain,
-                    path = '/api/v1/vanity-links';
-                var body = {},
-                    queryParameters = {},
-                    headers = {},
-                    form = {};
-
-                headers['Accept'] = ['*/*'];
-                headers['Content-Type'] = ['application/json'];
-
-                if (parameters['landingPageUrl'] !== undefined) {
-                    queryParameters['landingPageUrl'] = parameters['landingPageUrl'];
-                }
-
-                if (parameters['lawfirmId'] !== undefined) {
-                    queryParameters['lawfirmId'] = parameters['lawfirmId'];
-                }
-
-                if (parameters['pageType'] !== undefined) {
-                    queryParameters['pageType'] = parameters['pageType'];
-                }
-
-                queryParameters = mergeQueryParams(parameters, queryParameters);
-
-                this.request('GET', domain + path, parameters, body, headers, queryParameters, form, deferred);
-
-                return deferred.promise;
-            };
-            /**
-             * addRedirectUrl
-             * @method
-             * @name OtrService#addRedirectUrlUsingPOST
-             * @param {object} parameters - method options and parameters
-             * @param {} parameters.request - request
-             */
-            OtrService.prototype.addRedirectUrlUsingPOST = function(parameters) {
-                if (parameters === undefined) {
-                    parameters = {};
-                }
-                var deferred = $q.defer();
-                var domain = this.domain,
-                    path = '/api/v1/vanity-links';
-                var body = {},
-                    queryParameters = {},
-                    headers = {},
-                    form = {};
-
-                headers['Accept'] = ['*/*'];
-                headers['Content-Type'] = ['application/json'];
-
-                if (parameters['request'] !== undefined) {
-                    body = parameters['request'];
-                }
-
-                if (parameters['request'] === undefined) {
-                    deferred.reject(new Error('Missing required  parameter: request'));
-                    return deferred.promise;
-                }
-
-                queryParameters = mergeQueryParams(parameters, queryParameters);
-
-                this.request('POST', domain + path, parameters, body, headers, queryParameters, form, deferred);
-
-                return deferred.promise;
-            };
-            /**
-             * clearCache
-             * @method
-             * @name OtrService#clearCacheUsingPOST
-             * @param {object} parameters - method options and parameters
-             */
-            OtrService.prototype.clearCacheUsingPOST = function(parameters) {
-                if (parameters === undefined) {
-                    parameters = {};
-                }
-                var deferred = $q.defer();
-                var domain = this.domain,
-                    path = '/api/v1/vanity-links/clear-cache';
-                var body = {},
-                    queryParameters = {},
-                    headers = {},
-                    form = {};
-
-                headers['Accept'] = ['*/*'];
-                headers['Content-Type'] = ['application/json'];
-
-                queryParameters = mergeQueryParams(parameters, queryParameters);
-
-                this.request('POST', domain + path, parameters, body, headers, queryParameters, form, deferred);
 
                 return deferred.promise;
             };
