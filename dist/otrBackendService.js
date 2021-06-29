@@ -13144,6 +13144,61 @@ angular.module('otrBackendService', [])
                 return deferred.promise;
             };
             /**
+             * mergeUser
+             * @method
+             * @name OtrService#mergeUserUsingPOST
+             * @param {object} parameters - method options and parameters
+             * @param {string} parameters.xFeature - which feature is the client using
+             * @param {string} parameters.xResourceId - a generic resource identifier
+             * @param {string} parameters.primaryUserId - primaryUserId
+             * @param {} parameters.request - request
+             */
+            OtrService.prototype.mergeUserUsingPOST = function(parameters) {
+                if (parameters === undefined) {
+                    parameters = {};
+                }
+                var deferred = $q.defer();
+                var domain = this.domain,
+                    path = '/api/v1/users/{primaryUserId}/merge';
+                var body = {},
+                    queryParameters = {},
+                    headers = {},
+                    form = {};
+
+                headers['Accept'] = ['*/*'];
+                headers['Content-Type'] = ['application/json'];
+
+                if (parameters['xFeature'] !== undefined) {
+                    headers['X-Feature'] = parameters['xFeature'];
+                }
+
+                if (parameters['xResourceId'] !== undefined) {
+                    headers['X-Resource-Id'] = parameters['xResourceId'];
+                }
+
+                path = path.replace('{primaryUserId}', parameters['primaryUserId']);
+
+                if (parameters['primaryUserId'] === undefined) {
+                    deferred.reject(new Error('Missing required  parameter: primaryUserId'));
+                    return deferred.promise;
+                }
+
+                if (parameters['request'] !== undefined) {
+                    body = parameters['request'];
+                }
+
+                if (parameters['request'] === undefined) {
+                    deferred.reject(new Error('Missing required  parameter: request'));
+                    return deferred.promise;
+                }
+
+                queryParameters = mergeQueryParams(parameters, queryParameters);
+
+                this.request('POST', domain + path, parameters, body, headers, queryParameters, form, deferred);
+
+                return deferred.promise;
+            };
+            /**
              * getUserDetails
              * @method
              * @name OtrService#getUserDetailsUsingGET
