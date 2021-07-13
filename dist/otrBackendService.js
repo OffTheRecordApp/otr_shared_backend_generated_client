@@ -1566,7 +1566,7 @@ angular.module('otrBackendService', [])
              * @param {string} parameters.xFeature - which feature is the client using
              * @param {string} parameters.xResourceId - a generic resource identifier
              * @param {string} parameters.caseId - caseId
-             * @param {string} parameters.messageId - messageId
+             * @param {integer} parameters.messageId - messageId
              */
             OtrService.prototype.getMessageUsingGET = function(parameters) {
                 if (parameters === undefined) {
@@ -1619,7 +1619,7 @@ angular.module('otrBackendService', [])
              * @param {string} parameters.xFeature - which feature is the client using
              * @param {string} parameters.xResourceId - a generic resource identifier
              * @param {string} parameters.caseId - caseId
-             * @param {string} parameters.messageId - messageId
+             * @param {integer} parameters.messageId - messageId
              * @param {boolean} parameters.isDeleted - isDeleted
              */
             OtrService.prototype.markMessageAsDeletedUsingPUT = function(parameters) {
@@ -1675,22 +1675,23 @@ angular.module('otrBackendService', [])
                 return deferred.promise;
             };
             /**
-             * deleteMessage
+             * editMessage
              * @method
-             * @name OtrService#deleteMessageUsingDELETE
+             * @name OtrService#editMessageUsingPUT
              * @param {object} parameters - method options and parameters
              * @param {string} parameters.xFeature - which feature is the client using
              * @param {string} parameters.xResourceId - a generic resource identifier
              * @param {string} parameters.caseId - caseId
-             * @param {string} parameters.messageId - messageId
+             * @param {integer} parameters.messageId - messageId
+             * @param {} parameters.request - request
              */
-            OtrService.prototype.deleteMessageUsingDELETE = function(parameters) {
+            OtrService.prototype.editMessageUsingPUT = function(parameters) {
                 if (parameters === undefined) {
                     parameters = {};
                 }
                 var deferred = $q.defer();
                 var domain = this.domain,
-                    path = '/api/v1/cases/{caseId}/conversation/{messageId}';
+                    path = '/api/v1/cases/{caseId}/conversation/{messageId}/edit';
                 var body = {},
                     queryParameters = {},
                     headers = {},
@@ -1721,9 +1722,18 @@ angular.module('otrBackendService', [])
                     return deferred.promise;
                 }
 
+                if (parameters['request'] !== undefined) {
+                    body = parameters['request'];
+                }
+
+                if (parameters['request'] === undefined) {
+                    deferred.reject(new Error('Missing required  parameter: request'));
+                    return deferred.promise;
+                }
+
                 queryParameters = mergeQueryParams(parameters, queryParameters);
 
-                this.request('DELETE', domain + path, parameters, body, headers, queryParameters, form, deferred);
+                this.request('PUT', domain + path, parameters, body, headers, queryParameters, form, deferred);
 
                 return deferred.promise;
             };
@@ -10273,6 +10283,61 @@ angular.module('otrBackendService', [])
                 return deferred.promise;
             };
             /**
+             * updateCasePayment
+             * @method
+             * @name OtrService#updateCasePaymentUsingPUT
+             * @param {object} parameters - method options and parameters
+             * @param {string} parameters.xFeature - which feature is the client using
+             * @param {string} parameters.xResourceId - a generic resource identifier
+             * @param {string} parameters.casePaymentId - casePaymentId
+             * @param {} parameters.request - request
+             */
+            OtrService.prototype.updateCasePaymentUsingPUT = function(parameters) {
+                if (parameters === undefined) {
+                    parameters = {};
+                }
+                var deferred = $q.defer();
+                var domain = this.domain,
+                    path = '/api/v1/payments/{casePaymentId}';
+                var body = {},
+                    queryParameters = {},
+                    headers = {},
+                    form = {};
+
+                headers['Accept'] = ['*/*'];
+                headers['Content-Type'] = ['application/json'];
+
+                if (parameters['xFeature'] !== undefined) {
+                    headers['X-Feature'] = parameters['xFeature'];
+                }
+
+                if (parameters['xResourceId'] !== undefined) {
+                    headers['X-Resource-Id'] = parameters['xResourceId'];
+                }
+
+                path = path.replace('{casePaymentId}', parameters['casePaymentId']);
+
+                if (parameters['casePaymentId'] === undefined) {
+                    deferred.reject(new Error('Missing required  parameter: casePaymentId'));
+                    return deferred.promise;
+                }
+
+                if (parameters['request'] !== undefined) {
+                    body = parameters['request'];
+                }
+
+                if (parameters['request'] === undefined) {
+                    deferred.reject(new Error('Missing required  parameter: request'));
+                    return deferred.promise;
+                }
+
+                queryParameters = mergeQueryParams(parameters, queryParameters);
+
+                this.request('PUT', domain + path, parameters, body, headers, queryParameters, form, deferred);
+
+                return deferred.promise;
+            };
+            /**
              * updatePaymentRecipient
              * @method
              * @name OtrService#updatePaymentRecipientUsingPUT
@@ -14479,7 +14544,7 @@ angular.module('otrBackendService', [])
              * @param {object} parameters - method options and parameters
              * @param {string} parameters.xFeature - which feature is the client using
              * @param {string} parameters.xResourceId - a generic resource identifier
-             * @param {string} parameters.violationId - violationId
+             * @param {integer} parameters.violationId - violationId
              * @param {} parameters.request - request
              */
             OtrService.prototype.updateViolationUsingPUT = function(parameters) {
