@@ -14501,6 +14501,48 @@ angular.module('otrBackendService', [])
                 return deferred.promise;
             };
             /**
+             * listViolationClassifications
+             * @method
+             * @name OtrService#listViolationClassificationsUsingGET
+             * @param {object} parameters - method options and parameters
+             * @param {string} parameters.xFeature - which feature is the client using
+             * @param {string} parameters.xResourceId - a generic resource identifier
+             * @param {string} parameters.regionCode - regionCode
+             */
+            OtrService.prototype.listViolationClassificationsUsingGET = function(parameters) {
+                if (parameters === undefined) {
+                    parameters = {};
+                }
+                var deferred = $q.defer();
+                var domain = this.domain,
+                    path = '/api/v1/violations/classifications';
+                var body = {},
+                    queryParameters = {},
+                    headers = {},
+                    form = {};
+
+                headers['Accept'] = ['*/*'];
+                headers['Content-Type'] = ['application/json'];
+
+                if (parameters['xFeature'] !== undefined) {
+                    headers['X-Feature'] = parameters['xFeature'];
+                }
+
+                if (parameters['xResourceId'] !== undefined) {
+                    headers['X-Resource-Id'] = parameters['xResourceId'];
+                }
+
+                if (parameters['regionCode'] !== undefined) {
+                    queryParameters['regionCode'] = parameters['regionCode'];
+                }
+
+                queryParameters = mergeQueryParams(parameters, queryParameters);
+
+                this.request('GET', domain + path, parameters, body, headers, queryParameters, form, deferred);
+
+                return deferred.promise;
+            };
+            /**
              * getPenaltyTypes
              * @method
              * @name OtrService#getPenaltyTypesUsingGET
