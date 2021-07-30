@@ -7956,6 +7956,116 @@ angular.module('otrBackendService', [])
                 return deferred.promise;
             };
             /**
+             * enableViolationsForLawfirm
+             * @method
+             * @name OtrService#enableViolationsForLawfirmUsingPOST
+             * @param {object} parameters - method options and parameters
+             * @param {string} parameters.xFeature - which feature is the client using
+             * @param {string} parameters.xResourceId - a generic resource identifier
+             * @param {string} parameters.lawfirmId - lawfirmIdParam
+             * @param {} parameters.request - request
+             */
+            OtrService.prototype.enableViolationsForLawfirmUsingPOST = function(parameters) {
+                if (parameters === undefined) {
+                    parameters = {};
+                }
+                var deferred = $q.defer();
+                var domain = this.domain,
+                    path = '/api/v1/lawfirms/{lawfirmId}/account-fees/enable-violations';
+                var body = {},
+                    queryParameters = {},
+                    headers = {},
+                    form = {};
+
+                headers['Accept'] = ['*/*'];
+                headers['Content-Type'] = ['application/json'];
+
+                if (parameters['xFeature'] !== undefined) {
+                    headers['X-Feature'] = parameters['xFeature'];
+                }
+
+                if (parameters['xResourceId'] !== undefined) {
+                    headers['X-Resource-Id'] = parameters['xResourceId'];
+                }
+
+                path = path.replace('{lawfirmId}', parameters['lawfirmId']);
+
+                if (parameters['lawfirmId'] === undefined) {
+                    deferred.reject(new Error('Missing required  parameter: lawfirmId'));
+                    return deferred.promise;
+                }
+
+                if (parameters['request'] !== undefined) {
+                    body = parameters['request'];
+                }
+
+                if (parameters['request'] === undefined) {
+                    deferred.reject(new Error('Missing required  parameter: request'));
+                    return deferred.promise;
+                }
+
+                queryParameters = mergeQueryParams(parameters, queryParameters);
+
+                this.request('POST', domain + path, parameters, body, headers, queryParameters, form, deferred);
+
+                return deferred.promise;
+            };
+            /**
+             * resetFeesForLawfirm
+             * @method
+             * @name OtrService#resetFeesForLawfirmUsingPOST
+             * @param {object} parameters - method options and parameters
+             * @param {string} parameters.xFeature - which feature is the client using
+             * @param {string} parameters.xResourceId - a generic resource identifier
+             * @param {string} parameters.lawfirmId - lawfirmIdParam
+             * @param {} parameters.request - request
+             */
+            OtrService.prototype.resetFeesForLawfirmUsingPOST = function(parameters) {
+                if (parameters === undefined) {
+                    parameters = {};
+                }
+                var deferred = $q.defer();
+                var domain = this.domain,
+                    path = '/api/v1/lawfirms/{lawfirmId}/account-fees/reset';
+                var body = {},
+                    queryParameters = {},
+                    headers = {},
+                    form = {};
+
+                headers['Accept'] = ['*/*'];
+                headers['Content-Type'] = ['application/json'];
+
+                if (parameters['xFeature'] !== undefined) {
+                    headers['X-Feature'] = parameters['xFeature'];
+                }
+
+                if (parameters['xResourceId'] !== undefined) {
+                    headers['X-Resource-Id'] = parameters['xResourceId'];
+                }
+
+                path = path.replace('{lawfirmId}', parameters['lawfirmId']);
+
+                if (parameters['lawfirmId'] === undefined) {
+                    deferred.reject(new Error('Missing required  parameter: lawfirmId'));
+                    return deferred.promise;
+                }
+
+                if (parameters['request'] !== undefined) {
+                    body = parameters['request'];
+                }
+
+                if (parameters['request'] === undefined) {
+                    deferred.reject(new Error('Missing required  parameter: request'));
+                    return deferred.promise;
+                }
+
+                queryParameters = mergeQueryParams(parameters, queryParameters);
+
+                this.request('POST', domain + path, parameters, body, headers, queryParameters, form, deferred);
+
+                return deferred.promise;
+            };
+            /**
              * getLawfirmAddresses
              * @method
              * @name OtrService#getLawfirmAddressesUsingGET
@@ -12563,53 +12673,6 @@ angular.module('otrBackendService', [])
                 queryParameters = mergeQueryParams(parameters, queryParameters);
 
                 this.request('GET', domain + path, parameters, body, headers, queryParameters, form, deferred);
-
-                return deferred.promise;
-            };
-            /**
-             * updateUserDetails
-             * @method
-             * @name OtrService#updateUserDetailsUsingPUT
-             * @param {object} parameters - method options and parameters
-             * @param {string} parameters.xFeature - which feature is the client using
-             * @param {string} parameters.xResourceId - a generic resource identifier
-             * @param {} parameters.request - request
-             */
-            OtrService.prototype.updateUserDetailsUsingPUT = function(parameters) {
-                if (parameters === undefined) {
-                    parameters = {};
-                }
-                var deferred = $q.defer();
-                var domain = this.domain,
-                    path = '/api/v1/user';
-                var body = {},
-                    queryParameters = {},
-                    headers = {},
-                    form = {};
-
-                headers['Accept'] = ['*/*'];
-                headers['Content-Type'] = ['application/json'];
-
-                if (parameters['xFeature'] !== undefined) {
-                    headers['X-Feature'] = parameters['xFeature'];
-                }
-
-                if (parameters['xResourceId'] !== undefined) {
-                    headers['X-Resource-Id'] = parameters['xResourceId'];
-                }
-
-                if (parameters['request'] !== undefined) {
-                    body = parameters['request'];
-                }
-
-                if (parameters['request'] === undefined) {
-                    deferred.reject(new Error('Missing required  parameter: request'));
-                    return deferred.promise;
-                }
-
-                queryParameters = mergeQueryParams(parameters, queryParameters);
-
-                this.request('PUT', domain + path, parameters, body, headers, queryParameters, form, deferred);
 
                 return deferred.promise;
             };
