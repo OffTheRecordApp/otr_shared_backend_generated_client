@@ -10503,6 +10503,53 @@ angular.module('otrBackendService', [])
                 return deferred.promise;
             };
             /**
+             * signRecordingUrl
+             * @method
+             * @name OtrService#signRecordingUrlUsingPOST
+             * @param {object} parameters - method options and parameters
+             * @param {string} parameters.xFeature - which feature is the client using
+             * @param {string} parameters.xResourceId - a generic resource identifier
+             * @param {} parameters.request - request
+             */
+            OtrService.prototype.signRecordingUrlUsingPOST = function(parameters) {
+                if (parameters === undefined) {
+                    parameters = {};
+                }
+                var deferred = $q.defer();
+                var domain = this.domain,
+                    path = '/api/v1/phone-calls/sign';
+                var body = {},
+                    queryParameters = {},
+                    headers = {},
+                    form = {};
+
+                headers['Accept'] = ['*/*'];
+                headers['Content-Type'] = ['application/json'];
+
+                if (parameters['xFeature'] !== undefined) {
+                    headers['X-Feature'] = parameters['xFeature'];
+                }
+
+                if (parameters['xResourceId'] !== undefined) {
+                    headers['X-Resource-Id'] = parameters['xResourceId'];
+                }
+
+                if (parameters['request'] !== undefined) {
+                    body = parameters['request'];
+                }
+
+                if (parameters['request'] === undefined) {
+                    deferred.reject(new Error('Missing required  parameter: request'));
+                    return deferred.promise;
+                }
+
+                queryParameters = mergeQueryParams(parameters, queryParameters);
+
+                this.request('POST', domain + path, parameters, body, headers, queryParameters, form, deferred);
+
+                return deferred.promise;
+            };
+            /**
              * dismissPhoneLead
              * @method
              * @name OtrService#dismissPhoneLeadUsingPOST
@@ -13788,15 +13835,15 @@ angular.module('otrBackendService', [])
                 return deferred.promise;
             };
             /**
-             * getContactTimeline
+             * listContactTimeline
              * @method
-             * @name OtrService#getContactTimelineUsingGET
+             * @name OtrService#listContactTimelineUsingGET
              * @param {object} parameters - method options and parameters
              * @param {string} parameters.xFeature - which feature is the client using
              * @param {string} parameters.xResourceId - a generic resource identifier
              * @param {integer} parameters.userId - userId
              */
-            OtrService.prototype.getContactTimelineUsingGET = function(parameters) {
+            OtrService.prototype.listContactTimelineUsingGET = function(parameters) {
                 if (parameters === undefined) {
                     parameters = {};
                 }
