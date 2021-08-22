@@ -12129,6 +12129,100 @@ angular.module('otrBackendService', [])
                 return deferred.promise;
             };
             /**
+             * createStripeConnectAccount
+             * @method
+             * @name OtrService#createStripeConnectAccountUsingPOST
+             * @param {object} parameters - method options and parameters
+             * @param {string} parameters.xFeature - which feature is the client using
+             * @param {string} parameters.xResourceId - a generic resource identifier
+             * @param {} parameters.request - request
+             */
+            OtrService.prototype.createStripeConnectAccountUsingPOST = function(parameters) {
+                if (parameters === undefined) {
+                    parameters = {};
+                }
+                var deferred = $q.defer();
+                var domain = this.domain,
+                    path = '/api/v1/stripe/account';
+                var body = {},
+                    queryParameters = {},
+                    headers = {},
+                    form = {};
+
+                headers['Accept'] = ['*/*'];
+                headers['Content-Type'] = ['application/json'];
+
+                if (parameters['xFeature'] !== undefined) {
+                    headers['X-Feature'] = parameters['xFeature'];
+                }
+
+                if (parameters['xResourceId'] !== undefined) {
+                    headers['X-Resource-Id'] = parameters['xResourceId'];
+                }
+
+                if (parameters['request'] !== undefined) {
+                    body = parameters['request'];
+                }
+
+                if (parameters['request'] === undefined) {
+                    deferred.reject(new Error('Missing required  parameter: request'));
+                    return deferred.promise;
+                }
+
+                queryParameters = mergeQueryParams(parameters, queryParameters);
+
+                this.request('POST', domain + path, parameters, body, headers, queryParameters, form, deferred);
+
+                return deferred.promise;
+            };
+            /**
+             * createConnectAccountLink
+             * @method
+             * @name OtrService#createConnectAccountLinkUsingPOST
+             * @param {object} parameters - method options and parameters
+             * @param {string} parameters.xFeature - which feature is the client using
+             * @param {string} parameters.xResourceId - a generic resource identifier
+             * @param {} parameters.request - request
+             */
+            OtrService.prototype.createConnectAccountLinkUsingPOST = function(parameters) {
+                if (parameters === undefined) {
+                    parameters = {};
+                }
+                var deferred = $q.defer();
+                var domain = this.domain,
+                    path = '/api/v1/stripe/account/link';
+                var body = {},
+                    queryParameters = {},
+                    headers = {},
+                    form = {};
+
+                headers['Accept'] = ['*/*'];
+                headers['Content-Type'] = ['application/json'];
+
+                if (parameters['xFeature'] !== undefined) {
+                    headers['X-Feature'] = parameters['xFeature'];
+                }
+
+                if (parameters['xResourceId'] !== undefined) {
+                    headers['X-Resource-Id'] = parameters['xResourceId'];
+                }
+
+                if (parameters['request'] !== undefined) {
+                    body = parameters['request'];
+                }
+
+                if (parameters['request'] === undefined) {
+                    deferred.reject(new Error('Missing required  parameter: request'));
+                    return deferred.promise;
+                }
+
+                queryParameters = mergeQueryParams(parameters, queryParameters);
+
+                this.request('POST', domain + path, parameters, body, headers, queryParameters, form, deferred);
+
+                return deferred.promise;
+            };
+            /**
              * connectStripeAccount
              * @method
              * @name OtrService#connectStripeAccountUsingPOST
