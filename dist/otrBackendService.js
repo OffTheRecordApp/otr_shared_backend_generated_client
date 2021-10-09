@@ -113,12 +113,10 @@ angular.module('otrBackendService', [])
             /**
              * unmappedRequest
              * @method
-             * @name OtrService#unmappedRequestUsingGET
+             * @name OtrService#unmappedRequestUsingGET_1
              * @param {object} parameters - method options and parameters
-             * @param {string} parameters.xFeature - which feature is the client using
-             * @param {string} parameters.xResourceId - a generic resource identifier
              */
-            OtrService.prototype.unmappedRequestUsingGET = function(parameters) {
+            OtrService.prototype.unmappedRequestUsingGET_1 = function(parameters) {
                 if (parameters === undefined) {
                     parameters = {};
                 }
@@ -131,15 +129,6 @@ angular.module('otrBackendService', [])
                     form = {};
 
                 headers['Accept'] = ['*/*'];
-                headers['Content-Type'] = ['application/json'];
-
-                if (parameters['xFeature'] !== undefined) {
-                    headers['X-Feature'] = parameters['xFeature'];
-                }
-
-                if (parameters['xResourceId'] !== undefined) {
-                    headers['X-Resource-Id'] = parameters['xResourceId'];
-                }
 
                 queryParameters = mergeQueryParams(parameters, queryParameters);
 
@@ -150,12 +139,10 @@ angular.module('otrBackendService', [])
             /**
              * unmappedRequest
              * @method
-             * @name OtrService#unmappedRequestUsingHEAD
+             * @name OtrService#unmappedRequestUsingHEAD_1
              * @param {object} parameters - method options and parameters
-             * @param {string} parameters.xFeature - which feature is the client using
-             * @param {string} parameters.xResourceId - a generic resource identifier
              */
-            OtrService.prototype.unmappedRequestUsingHEAD = function(parameters) {
+            OtrService.prototype.unmappedRequestUsingHEAD_1 = function(parameters) {
                 if (parameters === undefined) {
                     parameters = {};
                 }
@@ -169,14 +156,6 @@ angular.module('otrBackendService', [])
 
                 headers['Accept'] = ['*/*'];
                 headers['Content-Type'] = ['application/json'];
-
-                if (parameters['xFeature'] !== undefined) {
-                    headers['X-Feature'] = parameters['xFeature'];
-                }
-
-                if (parameters['xResourceId'] !== undefined) {
-                    headers['X-Resource-Id'] = parameters['xResourceId'];
-                }
 
                 queryParameters = mergeQueryParams(parameters, queryParameters);
 
@@ -187,12 +166,10 @@ angular.module('otrBackendService', [])
             /**
              * unmappedRequest
              * @method
-             * @name OtrService#unmappedRequestUsingPOST
+             * @name OtrService#unmappedRequestUsingPOST_1
              * @param {object} parameters - method options and parameters
-             * @param {string} parameters.xFeature - which feature is the client using
-             * @param {string} parameters.xResourceId - a generic resource identifier
              */
-            OtrService.prototype.unmappedRequestUsingPOST = function(parameters) {
+            OtrService.prototype.unmappedRequestUsingPOST_1 = function(parameters) {
                 if (parameters === undefined) {
                     parameters = {};
                 }
@@ -206,14 +183,6 @@ angular.module('otrBackendService', [])
 
                 headers['Accept'] = ['*/*'];
                 headers['Content-Type'] = ['application/json'];
-
-                if (parameters['xFeature'] !== undefined) {
-                    headers['X-Feature'] = parameters['xFeature'];
-                }
-
-                if (parameters['xResourceId'] !== undefined) {
-                    headers['X-Resource-Id'] = parameters['xResourceId'];
-                }
 
                 queryParameters = mergeQueryParams(parameters, queryParameters);
 
@@ -224,12 +193,10 @@ angular.module('otrBackendService', [])
             /**
              * unmappedRequest
              * @method
-             * @name OtrService#unmappedRequestUsingPUT
+             * @name OtrService#unmappedRequestUsingPUT_1
              * @param {object} parameters - method options and parameters
-             * @param {string} parameters.xFeature - which feature is the client using
-             * @param {string} parameters.xResourceId - a generic resource identifier
              */
-            OtrService.prototype.unmappedRequestUsingPUT = function(parameters) {
+            OtrService.prototype.unmappedRequestUsingPUT_1 = function(parameters) {
                 if (parameters === undefined) {
                     parameters = {};
                 }
@@ -243,14 +210,6 @@ angular.module('otrBackendService', [])
 
                 headers['Accept'] = ['*/*'];
                 headers['Content-Type'] = ['application/json'];
-
-                if (parameters['xFeature'] !== undefined) {
-                    headers['X-Feature'] = parameters['xFeature'];
-                }
-
-                if (parameters['xResourceId'] !== undefined) {
-                    headers['X-Resource-Id'] = parameters['xResourceId'];
-                }
 
                 queryParameters = mergeQueryParams(parameters, queryParameters);
 
@@ -261,12 +220,10 @@ angular.module('otrBackendService', [])
             /**
              * unmappedRequest
              * @method
-             * @name OtrService#unmappedRequestUsingDELETE
+             * @name OtrService#unmappedRequestUsingDELETE_1
              * @param {object} parameters - method options and parameters
-             * @param {string} parameters.xFeature - which feature is the client using
-             * @param {string} parameters.xResourceId - a generic resource identifier
              */
-            OtrService.prototype.unmappedRequestUsingDELETE = function(parameters) {
+            OtrService.prototype.unmappedRequestUsingDELETE_1 = function(parameters) {
                 if (parameters === undefined) {
                     parameters = {};
                 }
@@ -279,15 +236,6 @@ angular.module('otrBackendService', [])
                     form = {};
 
                 headers['Accept'] = ['*/*'];
-                headers['Content-Type'] = ['application/json'];
-
-                if (parameters['xFeature'] !== undefined) {
-                    headers['X-Feature'] = parameters['xFeature'];
-                }
-
-                if (parameters['xResourceId'] !== undefined) {
-                    headers['X-Resource-Id'] = parameters['xResourceId'];
-                }
 
                 queryParameters = mergeQueryParams(parameters, queryParameters);
 
@@ -298,12 +246,10 @@ angular.module('otrBackendService', [])
             /**
              * unmappedRequest
              * @method
-             * @name OtrService#unmappedRequestUsingOPTIONS
+             * @name OtrService#unmappedRequestUsingOPTIONS_1
              * @param {object} parameters - method options and parameters
-             * @param {string} parameters.xFeature - which feature is the client using
-             * @param {string} parameters.xResourceId - a generic resource identifier
              */
-            OtrService.prototype.unmappedRequestUsingOPTIONS = function(parameters) {
+            OtrService.prototype.unmappedRequestUsingOPTIONS_1 = function(parameters) {
                 if (parameters === undefined) {
                     parameters = {};
                 }
@@ -317,14 +263,6 @@ angular.module('otrBackendService', [])
 
                 headers['Accept'] = ['*/*'];
                 headers['Content-Type'] = ['application/json'];
-
-                if (parameters['xFeature'] !== undefined) {
-                    headers['X-Feature'] = parameters['xFeature'];
-                }
-
-                if (parameters['xResourceId'] !== undefined) {
-                    headers['X-Resource-Id'] = parameters['xResourceId'];
-                }
 
                 queryParameters = mergeQueryParams(parameters, queryParameters);
 
@@ -335,12 +273,10 @@ angular.module('otrBackendService', [])
             /**
              * unmappedRequest
              * @method
-             * @name OtrService#unmappedRequestUsingPATCH
+             * @name OtrService#unmappedRequestUsingPATCH_1
              * @param {object} parameters - method options and parameters
-             * @param {string} parameters.xFeature - which feature is the client using
-             * @param {string} parameters.xResourceId - a generic resource identifier
              */
-            OtrService.prototype.unmappedRequestUsingPATCH = function(parameters) {
+            OtrService.prototype.unmappedRequestUsingPATCH_1 = function(parameters) {
                 if (parameters === undefined) {
                     parameters = {};
                 }
@@ -354,14 +290,6 @@ angular.module('otrBackendService', [])
 
                 headers['Accept'] = ['*/*'];
                 headers['Content-Type'] = ['application/json'];
-
-                if (parameters['xFeature'] !== undefined) {
-                    headers['X-Feature'] = parameters['xFeature'];
-                }
-
-                if (parameters['xResourceId'] !== undefined) {
-                    headers['X-Resource-Id'] = parameters['xResourceId'];
-                }
 
                 queryParameters = mergeQueryParams(parameters, queryParameters);
 
@@ -374,11 +302,9 @@ angular.module('otrBackendService', [])
              * @method
              * @name OtrService#listActivityFeedUsingGET
              * @param {object} parameters - method options and parameters
-             * @param {string} parameters.xFeature - which feature is the client using
-             * @param {string} parameters.xResourceId - a generic resource identifier
              * @param {integer} parameters.limit - limit
-             * @param {string} parameters.previousPageToken - previousPageToken
              * @param {string} parameters.nextPageToken - nextPageToken
+             * @param {string} parameters.previousPageToken - previousPageToken
              */
             OtrService.prototype.listActivityFeedUsingGET = function(parameters) {
                 if (parameters === undefined) {
@@ -393,15 +319,6 @@ angular.module('otrBackendService', [])
                     form = {};
 
                 headers['Accept'] = ['*/*'];
-                headers['Content-Type'] = ['application/json'];
-
-                if (parameters['xFeature'] !== undefined) {
-                    headers['X-Feature'] = parameters['xFeature'];
-                }
-
-                if (parameters['xResourceId'] !== undefined) {
-                    headers['X-Resource-Id'] = parameters['xResourceId'];
-                }
 
                 if (parameters['limit'] !== undefined) {
                     queryParameters['limit'] = parameters['limit'];
@@ -412,12 +329,12 @@ angular.module('otrBackendService', [])
                     return deferred.promise;
                 }
 
-                if (parameters['previousPageToken'] !== undefined) {
-                    queryParameters['previousPageToken'] = parameters['previousPageToken'];
-                }
-
                 if (parameters['nextPageToken'] !== undefined) {
                     queryParameters['nextPageToken'] = parameters['nextPageToken'];
+                }
+
+                if (parameters['previousPageToken'] !== undefined) {
+                    queryParameters['previousPageToken'] = parameters['previousPageToken'];
                 }
 
                 queryParameters = mergeQueryParams(parameters, queryParameters);
@@ -431,8 +348,6 @@ angular.module('otrBackendService', [])
              * @method
              * @name OtrService#updateBranchLinksForAllUsersUsingPOST
              * @param {object} parameters - method options and parameters
-             * @param {string} parameters.xFeature - which feature is the client using
-             * @param {string} parameters.xResourceId - a generic resource identifier
              */
             OtrService.prototype.updateBranchLinksForAllUsersUsingPOST = function(parameters) {
                 if (parameters === undefined) {
@@ -449,14 +364,6 @@ angular.module('otrBackendService', [])
                 headers['Accept'] = ['*/*'];
                 headers['Content-Type'] = ['application/json'];
 
-                if (parameters['xFeature'] !== undefined) {
-                    headers['X-Feature'] = parameters['xFeature'];
-                }
-
-                if (parameters['xResourceId'] !== undefined) {
-                    headers['X-Resource-Id'] = parameters['xResourceId'];
-                }
-
                 queryParameters = mergeQueryParams(parameters, queryParameters);
 
                 this.request('POST', domain + path, parameters, body, headers, queryParameters, form, deferred);
@@ -468,9 +375,7 @@ angular.module('otrBackendService', [])
              * @method
              * @name OtrService#markAlertAsReadUsingDELETE
              * @param {object} parameters - method options and parameters
-             * @param {string} parameters.xFeature - which feature is the client using
-             * @param {string} parameters.xResourceId - a generic resource identifier
-             * @param {string} parameters.alertId - userId
+             * @param {string} parameters.alertId - alertId
              */
             OtrService.prototype.markAlertAsReadUsingDELETE = function(parameters) {
                 if (parameters === undefined) {
@@ -485,15 +390,6 @@ angular.module('otrBackendService', [])
                     form = {};
 
                 headers['Accept'] = ['*/*'];
-                headers['Content-Type'] = ['application/json'];
-
-                if (parameters['xFeature'] !== undefined) {
-                    headers['X-Feature'] = parameters['xFeature'];
-                }
-
-                if (parameters['xResourceId'] !== undefined) {
-                    headers['X-Resource-Id'] = parameters['xResourceId'];
-                }
 
                 path = path.replace('{alertId}', parameters['alertId']);
 
@@ -513,8 +409,6 @@ angular.module('otrBackendService', [])
              * @method
              * @name OtrService#getAlertsUsingGET
              * @param {object} parameters - method options and parameters
-             * @param {string} parameters.xFeature - which feature is the client using
-             * @param {string} parameters.xResourceId - a generic resource identifier
              * @param {string} parameters.userId - userId
              */
             OtrService.prototype.getAlertsUsingGET = function(parameters) {
@@ -530,15 +424,6 @@ angular.module('otrBackendService', [])
                     form = {};
 
                 headers['Accept'] = ['*/*'];
-                headers['Content-Type'] = ['application/json'];
-
-                if (parameters['xFeature'] !== undefined) {
-                    headers['X-Feature'] = parameters['xFeature'];
-                }
-
-                if (parameters['xResourceId'] !== undefined) {
-                    headers['X-Resource-Id'] = parameters['xResourceId'];
-                }
 
                 path = path.replace('{userId}', parameters['userId']);
 
@@ -558,8 +443,6 @@ angular.module('otrBackendService', [])
              * @method
              * @name OtrService#addAppEventUsingPOST
              * @param {object} parameters - method options and parameters
-             * @param {string} parameters.xFeature - which feature is the client using
-             * @param {string} parameters.xResourceId - a generic resource identifier
              * @param {} parameters.request - request
              */
             OtrService.prototype.addAppEventUsingPOST = function(parameters) {
@@ -576,14 +459,6 @@ angular.module('otrBackendService', [])
 
                 headers['Accept'] = ['*/*'];
                 headers['Content-Type'] = ['application/json'];
-
-                if (parameters['xFeature'] !== undefined) {
-                    headers['X-Feature'] = parameters['xFeature'];
-                }
-
-                if (parameters['xResourceId'] !== undefined) {
-                    headers['X-Resource-Id'] = parameters['xResourceId'];
-                }
 
                 if (parameters['request'] !== undefined) {
                     body = parameters['request'];
@@ -605,8 +480,6 @@ angular.module('otrBackendService', [])
              * @method
              * @name OtrService#refundApplicationFeeUsingPOST
              * @param {object} parameters - method options and parameters
-             * @param {string} parameters.xFeature - which feature is the client using
-             * @param {string} parameters.xResourceId - a generic resource identifier
              * @param {string} parameters.lawfirmFeeId - lawfirmFeeId
              * @param {} parameters.request - request
              */
@@ -624,14 +497,6 @@ angular.module('otrBackendService', [])
 
                 headers['Accept'] = ['*/*'];
                 headers['Content-Type'] = ['application/json'];
-
-                if (parameters['xFeature'] !== undefined) {
-                    headers['X-Feature'] = parameters['xFeature'];
-                }
-
-                if (parameters['xResourceId'] !== undefined) {
-                    headers['X-Resource-Id'] = parameters['xResourceId'];
-                }
 
                 path = path.replace('{lawfirmFeeId}', parameters['lawfirmFeeId']);
 
@@ -660,8 +525,6 @@ angular.module('otrBackendService', [])
              * @method
              * @name OtrService#getUserInfoUsingGET
              * @param {object} parameters - method options and parameters
-             * @param {string} parameters.xFeature - which feature is the client using
-             * @param {string} parameters.xResourceId - a generic resource identifier
              */
             OtrService.prototype.getUserInfoUsingGET = function(parameters) {
                 if (parameters === undefined) {
@@ -676,15 +539,6 @@ angular.module('otrBackendService', [])
                     form = {};
 
                 headers['Accept'] = ['*/*'];
-                headers['Content-Type'] = ['application/json'];
-
-                if (parameters['xFeature'] !== undefined) {
-                    headers['X-Feature'] = parameters['xFeature'];
-                }
-
-                if (parameters['xResourceId'] !== undefined) {
-                    headers['X-Resource-Id'] = parameters['xResourceId'];
-                }
 
                 queryParameters = mergeQueryParams(parameters, queryParameters);
 
@@ -697,8 +551,6 @@ angular.module('otrBackendService', [])
              * @method
              * @name OtrService#handleBounceComplaintEmailsUsingPOST
              * @param {object} parameters - method options and parameters
-             * @param {string} parameters.xFeature - which feature is the client using
-             * @param {string} parameters.xResourceId - a generic resource identifier
              * @param {} parameters.request - request
              */
             OtrService.prototype.handleBounceComplaintEmailsUsingPOST = function(parameters) {
@@ -715,14 +567,6 @@ angular.module('otrBackendService', [])
 
                 headers['Accept'] = ['*/*'];
                 headers['Content-Type'] = ['application/json,text/plain'];
-
-                if (parameters['xFeature'] !== undefined) {
-                    headers['X-Feature'] = parameters['xFeature'];
-                }
-
-                if (parameters['xResourceId'] !== undefined) {
-                    headers['X-Resource-Id'] = parameters['xResourceId'];
-                }
 
                 if (parameters['request'] !== undefined) {
                     body = parameters['request'];
@@ -744,8 +588,6 @@ angular.module('otrBackendService', [])
              * @method
              * @name OtrService#createBranchLinkUsingPOST
              * @param {object} parameters - method options and parameters
-             * @param {string} parameters.xFeature - which feature is the client using
-             * @param {string} parameters.xResourceId - a generic resource identifier
              * @param {} parameters.request - request
              */
             OtrService.prototype.createBranchLinkUsingPOST = function(parameters) {
@@ -762,14 +604,6 @@ angular.module('otrBackendService', [])
 
                 headers['Accept'] = ['*/*'];
                 headers['Content-Type'] = ['application/json'];
-
-                if (parameters['xFeature'] !== undefined) {
-                    headers['X-Feature'] = parameters['xFeature'];
-                }
-
-                if (parameters['xResourceId'] !== undefined) {
-                    headers['X-Resource-Id'] = parameters['xResourceId'];
-                }
 
                 if (parameters['request'] !== undefined) {
                     body = parameters['request'];
@@ -791,8 +625,6 @@ angular.module('otrBackendService', [])
              * @method
              * @name OtrService#getCaseResolutionStatusesUsingGET
              * @param {object} parameters - method options and parameters
-             * @param {string} parameters.xFeature - which feature is the client using
-             * @param {string} parameters.xResourceId - a generic resource identifier
              * @param {string} parameters.stateCode - stateCode
              */
             OtrService.prototype.getCaseResolutionStatusesUsingGET = function(parameters) {
@@ -808,15 +640,6 @@ angular.module('otrBackendService', [])
                     form = {};
 
                 headers['Accept'] = ['*/*'];
-                headers['Content-Type'] = ['application/json'];
-
-                if (parameters['xFeature'] !== undefined) {
-                    headers['X-Feature'] = parameters['xFeature'];
-                }
-
-                if (parameters['xResourceId'] !== undefined) {
-                    headers['X-Resource-Id'] = parameters['xResourceId'];
-                }
 
                 if (parameters['stateCode'] !== undefined) {
                     queryParameters['stateCode'] = parameters['stateCode'];
@@ -833,8 +656,6 @@ angular.module('otrBackendService', [])
              * @method
              * @name OtrService#getAllActionsUsingGET
              * @param {object} parameters - method options and parameters
-             * @param {string} parameters.xFeature - which feature is the client using
-             * @param {string} parameters.xResourceId - a generic resource identifier
              */
             OtrService.prototype.getAllActionsUsingGET = function(parameters) {
                 if (parameters === undefined) {
@@ -849,15 +670,6 @@ angular.module('otrBackendService', [])
                     form = {};
 
                 headers['Accept'] = ['*/*'];
-                headers['Content-Type'] = ['application/json'];
-
-                if (parameters['xFeature'] !== undefined) {
-                    headers['X-Feature'] = parameters['xFeature'];
-                }
-
-                if (parameters['xResourceId'] !== undefined) {
-                    headers['X-Resource-Id'] = parameters['xResourceId'];
-                }
 
                 queryParameters = mergeQueryParams(parameters, queryParameters);
 
@@ -870,8 +682,6 @@ angular.module('otrBackendService', [])
              * @method
              * @name OtrService#getCaseStatusesUsingGET
              * @param {object} parameters - method options and parameters
-             * @param {string} parameters.xFeature - which feature is the client using
-             * @param {string} parameters.xResourceId - a generic resource identifier
              * @param {array} parameters.categories - categories
              */
             OtrService.prototype.getCaseStatusesUsingGET = function(parameters) {
@@ -887,15 +697,6 @@ angular.module('otrBackendService', [])
                     form = {};
 
                 headers['Accept'] = ['*/*'];
-                headers['Content-Type'] = ['application/json'];
-
-                if (parameters['xFeature'] !== undefined) {
-                    headers['X-Feature'] = parameters['xFeature'];
-                }
-
-                if (parameters['xResourceId'] !== undefined) {
-                    headers['X-Resource-Id'] = parameters['xResourceId'];
-                }
 
                 if (parameters['categories'] !== undefined) {
                     queryParameters['categories'] = parameters['categories'];
@@ -912,8 +713,6 @@ angular.module('otrBackendService', [])
              * @method
              * @name OtrService#getCaseUsingGET
              * @param {object} parameters - method options and parameters
-             * @param {string} parameters.xFeature - which feature is the client using
-             * @param {string} parameters.xResourceId - a generic resource identifier
              * @param {string} parameters.caseId - caseId
              */
             OtrService.prototype.getCaseUsingGET = function(parameters) {
@@ -929,15 +728,6 @@ angular.module('otrBackendService', [])
                     form = {};
 
                 headers['Accept'] = ['*/*'];
-                headers['Content-Type'] = ['application/json'];
-
-                if (parameters['xFeature'] !== undefined) {
-                    headers['X-Feature'] = parameters['xFeature'];
-                }
-
-                if (parameters['xResourceId'] !== undefined) {
-                    headers['X-Resource-Id'] = parameters['xResourceId'];
-                }
 
                 path = path.replace('{caseId}', parameters['caseId']);
 
@@ -957,10 +747,8 @@ angular.module('otrBackendService', [])
              * @method
              * @name OtrService#updateCaseUsingPUT
              * @param {object} parameters - method options and parameters
-             * @param {string} parameters.xFeature - which feature is the client using
-             * @param {string} parameters.xResourceId - a generic resource identifier
-             * @param {string} parameters.caseId - caseId
              * @param {} parameters.caseFromRequest - caseFromRequest
+             * @param {string} parameters.caseId - caseId
              */
             OtrService.prototype.updateCaseUsingPUT = function(parameters) {
                 if (parameters === undefined) {
@@ -977,27 +765,19 @@ angular.module('otrBackendService', [])
                 headers['Accept'] = ['*/*'];
                 headers['Content-Type'] = ['application/json'];
 
-                if (parameters['xFeature'] !== undefined) {
-                    headers['X-Feature'] = parameters['xFeature'];
-                }
-
-                if (parameters['xResourceId'] !== undefined) {
-                    headers['X-Resource-Id'] = parameters['xResourceId'];
-                }
-
-                path = path.replace('{caseId}', parameters['caseId']);
-
-                if (parameters['caseId'] === undefined) {
-                    deferred.reject(new Error('Missing required  parameter: caseId'));
-                    return deferred.promise;
-                }
-
                 if (parameters['caseFromRequest'] !== undefined) {
                     body = parameters['caseFromRequest'];
                 }
 
                 if (parameters['caseFromRequest'] === undefined) {
                     deferred.reject(new Error('Missing required  parameter: caseFromRequest'));
+                    return deferred.promise;
+                }
+
+                path = path.replace('{caseId}', parameters['caseId']);
+
+                if (parameters['caseId'] === undefined) {
+                    deferred.reject(new Error('Missing required  parameter: caseId'));
                     return deferred.promise;
                 }
 
@@ -1012,8 +792,6 @@ angular.module('otrBackendService', [])
              * @method
              * @name OtrService#getCaseActionsUsingGET
              * @param {object} parameters - method options and parameters
-             * @param {string} parameters.xFeature - which feature is the client using
-             * @param {string} parameters.xResourceId - a generic resource identifier
              * @param {string} parameters.caseId - caseId
              */
             OtrService.prototype.getCaseActionsUsingGET = function(parameters) {
@@ -1029,15 +807,6 @@ angular.module('otrBackendService', [])
                     form = {};
 
                 headers['Accept'] = ['*/*'];
-                headers['Content-Type'] = ['application/json'];
-
-                if (parameters['xFeature'] !== undefined) {
-                    headers['X-Feature'] = parameters['xFeature'];
-                }
-
-                if (parameters['xResourceId'] !== undefined) {
-                    headers['X-Resource-Id'] = parameters['xResourceId'];
-                }
 
                 path = path.replace('{caseId}', parameters['caseId']);
 
@@ -1057,8 +826,6 @@ angular.module('otrBackendService', [])
              * @method
              * @name OtrService#getActionTimelineUsingGET
              * @param {object} parameters - method options and parameters
-             * @param {string} parameters.xFeature - which feature is the client using
-             * @param {string} parameters.xResourceId - a generic resource identifier
              * @param {string} parameters.caseId - caseId
              */
             OtrService.prototype.getActionTimelineUsingGET = function(parameters) {
@@ -1074,15 +841,6 @@ angular.module('otrBackendService', [])
                     form = {};
 
                 headers['Accept'] = ['application/json'];
-                headers['Content-Type'] = ['application/json'];
-
-                if (parameters['xFeature'] !== undefined) {
-                    headers['X-Feature'] = parameters['xFeature'];
-                }
-
-                if (parameters['xResourceId'] !== undefined) {
-                    headers['X-Resource-Id'] = parameters['xResourceId'];
-                }
 
                 path = path.replace('{caseId}', parameters['caseId']);
 
@@ -1102,8 +860,6 @@ angular.module('otrBackendService', [])
              * @method
              * @name OtrService#getAppearanceAttorneysForCaseUsingGET
              * @param {object} parameters - method options and parameters
-             * @param {string} parameters.xFeature - which feature is the client using
-             * @param {string} parameters.xResourceId - a generic resource identifier
              * @param {string} parameters.caseId - caseId
              */
             OtrService.prototype.getAppearanceAttorneysForCaseUsingGET = function(parameters) {
@@ -1119,15 +875,6 @@ angular.module('otrBackendService', [])
                     form = {};
 
                 headers['Accept'] = ['*/*'];
-                headers['Content-Type'] = ['application/json'];
-
-                if (parameters['xFeature'] !== undefined) {
-                    headers['X-Feature'] = parameters['xFeature'];
-                }
-
-                if (parameters['xResourceId'] !== undefined) {
-                    headers['X-Resource-Id'] = parameters['xResourceId'];
-                }
 
                 path = path.replace('{caseId}', parameters['caseId']);
 
@@ -1147,8 +894,6 @@ angular.module('otrBackendService', [])
              * @method
              * @name OtrService#listCostItemsForAttorneyUsingGET
              * @param {object} parameters - method options and parameters
-             * @param {string} parameters.xFeature - which feature is the client using
-             * @param {string} parameters.xResourceId - a generic resource identifier
              * @param {string} parameters.caseId - caseId
              */
             OtrService.prototype.listCostItemsForAttorneyUsingGET = function(parameters) {
@@ -1164,15 +909,6 @@ angular.module('otrBackendService', [])
                     form = {};
 
                 headers['Accept'] = ['*/*'];
-                headers['Content-Type'] = ['application/json'];
-
-                if (parameters['xFeature'] !== undefined) {
-                    headers['X-Feature'] = parameters['xFeature'];
-                }
-
-                if (parameters['xResourceId'] !== undefined) {
-                    headers['X-Resource-Id'] = parameters['xResourceId'];
-                }
 
                 path = path.replace('{caseId}', parameters['caseId']);
 
@@ -1192,8 +928,6 @@ angular.module('otrBackendService', [])
              * @method
              * @name OtrService#getStripeChargeUsingGET
              * @param {object} parameters - method options and parameters
-             * @param {string} parameters.xFeature - which feature is the client using
-             * @param {string} parameters.xResourceId - a generic resource identifier
              * @param {string} parameters.stripeChargeId - stripeChargeId
              */
             OtrService.prototype.getStripeChargeUsingGET = function(parameters) {
@@ -1209,15 +943,6 @@ angular.module('otrBackendService', [])
                     form = {};
 
                 headers['Accept'] = ['*/*'];
-                headers['Content-Type'] = ['application/json'];
-
-                if (parameters['xFeature'] !== undefined) {
-                    headers['X-Feature'] = parameters['xFeature'];
-                }
-
-                if (parameters['xResourceId'] !== undefined) {
-                    headers['X-Resource-Id'] = parameters['xResourceId'];
-                }
 
                 path = path.replace('{stripeChargeId}', parameters['stripeChargeId']);
 
@@ -1237,11 +962,9 @@ angular.module('otrBackendService', [])
              * @method
              * @name OtrService#refundChargeUsingPOST
              * @param {object} parameters - method options and parameters
-             * @param {string} parameters.xFeature - which feature is the client using
-             * @param {string} parameters.xResourceId - a generic resource identifier
              * @param {string} parameters.caseId - caseId
-             * @param {string} parameters.stripeChargeId - stripeChargeId
              * @param {} parameters.request - request
+             * @param {string} parameters.stripeChargeId - stripeChargeId
              */
             OtrService.prototype.refundChargeUsingPOST = function(parameters) {
                 if (parameters === undefined) {
@@ -1258,25 +981,10 @@ angular.module('otrBackendService', [])
                 headers['Accept'] = ['*/*'];
                 headers['Content-Type'] = ['application/json'];
 
-                if (parameters['xFeature'] !== undefined) {
-                    headers['X-Feature'] = parameters['xFeature'];
-                }
-
-                if (parameters['xResourceId'] !== undefined) {
-                    headers['X-Resource-Id'] = parameters['xResourceId'];
-                }
-
                 path = path.replace('{caseId}', parameters['caseId']);
 
                 if (parameters['caseId'] === undefined) {
                     deferred.reject(new Error('Missing required  parameter: caseId'));
-                    return deferred.promise;
-                }
-
-                path = path.replace('{stripeChargeId}', parameters['stripeChargeId']);
-
-                if (parameters['stripeChargeId'] === undefined) {
-                    deferred.reject(new Error('Missing required  parameter: stripeChargeId'));
                     return deferred.promise;
                 }
 
@@ -1286,6 +994,13 @@ angular.module('otrBackendService', [])
 
                 if (parameters['request'] === undefined) {
                     deferred.reject(new Error('Missing required  parameter: request'));
+                    return deferred.promise;
+                }
+
+                path = path.replace('{stripeChargeId}', parameters['stripeChargeId']);
+
+                if (parameters['stripeChargeId'] === undefined) {
+                    deferred.reject(new Error('Missing required  parameter: stripeChargeId'));
                     return deferred.promise;
                 }
 
@@ -1300,8 +1015,6 @@ angular.module('otrBackendService', [])
              * @method
              * @name OtrService#addViolationsToCitationUsingPOST
              * @param {object} parameters - method options and parameters
-             * @param {string} parameters.xFeature - which feature is the client using
-             * @param {string} parameters.xResourceId - a generic resource identifier
              * @param {string} parameters.caseId - caseId
              * @param {} parameters.request - request
              */
@@ -1319,14 +1032,6 @@ angular.module('otrBackendService', [])
 
                 headers['Accept'] = ['*/*'];
                 headers['Content-Type'] = ['application/json'];
-
-                if (parameters['xFeature'] !== undefined) {
-                    headers['X-Feature'] = parameters['xFeature'];
-                }
-
-                if (parameters['xResourceId'] !== undefined) {
-                    headers['X-Resource-Id'] = parameters['xResourceId'];
-                }
 
                 path = path.replace('{caseId}', parameters['caseId']);
 
@@ -1355,10 +1060,8 @@ angular.module('otrBackendService', [])
              * @method
              * @name OtrService#removeViolationsFromCitationUsingDELETE
              * @param {object} parameters - method options and parameters
-             * @param {string} parameters.xFeature - which feature is the client using
-             * @param {string} parameters.xResourceId - a generic resource identifier
              * @param {string} parameters.caseId - caseId
-             * @param {array} parameters.violationTypes - violationTypes
+             * @param {string} parameters.violationTypes - violationTypes
              */
             OtrService.prototype.removeViolationsFromCitationUsingDELETE = function(parameters) {
                 if (parameters === undefined) {
@@ -1373,15 +1076,6 @@ angular.module('otrBackendService', [])
                     form = {};
 
                 headers['Accept'] = ['*/*'];
-                headers['Content-Type'] = ['application/json'];
-
-                if (parameters['xFeature'] !== undefined) {
-                    headers['X-Feature'] = parameters['xFeature'];
-                }
-
-                if (parameters['xResourceId'] !== undefined) {
-                    headers['X-Resource-Id'] = parameters['xResourceId'];
-                }
 
                 path = path.replace('{caseId}', parameters['caseId']);
 
@@ -1408,8 +1102,6 @@ angular.module('otrBackendService', [])
              * @method
              * @name OtrService#getCaseClientUsingGET
              * @param {object} parameters - method options and parameters
-             * @param {string} parameters.xFeature - which feature is the client using
-             * @param {string} parameters.xResourceId - a generic resource identifier
              * @param {string} parameters.caseId - caseId
              */
             OtrService.prototype.getCaseClientUsingGET = function(parameters) {
@@ -1425,15 +1117,6 @@ angular.module('otrBackendService', [])
                     form = {};
 
                 headers['Accept'] = ['*/*'];
-                headers['Content-Type'] = ['application/json'];
-
-                if (parameters['xFeature'] !== undefined) {
-                    headers['X-Feature'] = parameters['xFeature'];
-                }
-
-                if (parameters['xResourceId'] !== undefined) {
-                    headers['X-Resource-Id'] = parameters['xResourceId'];
-                }
 
                 path = path.replace('{caseId}', parameters['caseId']);
 
@@ -1453,11 +1136,9 @@ angular.module('otrBackendService', [])
              * @method
              * @name OtrService#getConversationUsingGET
              * @param {object} parameters - method options and parameters
-             * @param {string} parameters.xFeature - which feature is the client using
-             * @param {string} parameters.xResourceId - a generic resource identifier
              * @param {string} parameters.caseId - caseId
-             * @param {integer} parameters.page - page
              * @param {integer} parameters.length - length
+             * @param {integer} parameters.page - page
              */
             OtrService.prototype.getConversationUsingGET = function(parameters) {
                 if (parameters === undefined) {
@@ -1472,15 +1153,6 @@ angular.module('otrBackendService', [])
                     form = {};
 
                 headers['Accept'] = ['*/*'];
-                headers['Content-Type'] = ['application/json'];
-
-                if (parameters['xFeature'] !== undefined) {
-                    headers['X-Feature'] = parameters['xFeature'];
-                }
-
-                if (parameters['xResourceId'] !== undefined) {
-                    headers['X-Resource-Id'] = parameters['xResourceId'];
-                }
 
                 path = path.replace('{caseId}', parameters['caseId']);
 
@@ -1489,12 +1161,15 @@ angular.module('otrBackendService', [])
                     return deferred.promise;
                 }
 
-                if (parameters['page'] !== undefined) {
-                    queryParameters['page'] = parameters['page'];
-                }
+                /** set default value **/
+                queryParameters['length'] = 9999;
 
                 if (parameters['length'] !== undefined) {
                     queryParameters['length'] = parameters['length'];
+                }
+
+                if (parameters['page'] !== undefined) {
+                    queryParameters['page'] = parameters['page'];
                 }
 
                 queryParameters = mergeQueryParams(parameters, queryParameters);
@@ -1508,8 +1183,6 @@ angular.module('otrBackendService', [])
              * @method
              * @name OtrService#addMessageToConversationUsingPOST
              * @param {object} parameters - method options and parameters
-             * @param {string} parameters.xFeature - which feature is the client using
-             * @param {string} parameters.xResourceId - a generic resource identifier
              * @param {string} parameters.caseId - caseId
              * @param {} parameters.request - request
              */
@@ -1527,14 +1200,6 @@ angular.module('otrBackendService', [])
 
                 headers['Accept'] = ['*/*'];
                 headers['Content-Type'] = ['application/json'];
-
-                if (parameters['xFeature'] !== undefined) {
-                    headers['X-Feature'] = parameters['xFeature'];
-                }
-
-                if (parameters['xResourceId'] !== undefined) {
-                    headers['X-Resource-Id'] = parameters['xResourceId'];
-                }
 
                 path = path.replace('{caseId}', parameters['caseId']);
 
@@ -1563,8 +1228,6 @@ angular.module('otrBackendService', [])
              * @method
              * @name OtrService#getMessageUsingGET
              * @param {object} parameters - method options and parameters
-             * @param {string} parameters.xFeature - which feature is the client using
-             * @param {string} parameters.xResourceId - a generic resource identifier
              * @param {string} parameters.caseId - caseId
              * @param {integer} parameters.messageId - messageId
              */
@@ -1581,15 +1244,6 @@ angular.module('otrBackendService', [])
                     form = {};
 
                 headers['Accept'] = ['*/*'];
-                headers['Content-Type'] = ['application/json'];
-
-                if (parameters['xFeature'] !== undefined) {
-                    headers['X-Feature'] = parameters['xFeature'];
-                }
-
-                if (parameters['xResourceId'] !== undefined) {
-                    headers['X-Resource-Id'] = parameters['xResourceId'];
-                }
 
                 path = path.replace('{caseId}', parameters['caseId']);
 
@@ -1616,11 +1270,9 @@ angular.module('otrBackendService', [])
              * @method
              * @name OtrService#markMessageAsDeletedUsingPUT
              * @param {object} parameters - method options and parameters
-             * @param {string} parameters.xFeature - which feature is the client using
-             * @param {string} parameters.xResourceId - a generic resource identifier
              * @param {string} parameters.caseId - caseId
-             * @param {integer} parameters.messageId - messageId
              * @param {boolean} parameters.isDeleted - isDeleted
+             * @param {integer} parameters.messageId - messageId
              */
             OtrService.prototype.markMessageAsDeletedUsingPUT = function(parameters) {
                 if (parameters === undefined) {
@@ -1637,25 +1289,10 @@ angular.module('otrBackendService', [])
                 headers['Accept'] = ['*/*'];
                 headers['Content-Type'] = ['application/json'];
 
-                if (parameters['xFeature'] !== undefined) {
-                    headers['X-Feature'] = parameters['xFeature'];
-                }
-
-                if (parameters['xResourceId'] !== undefined) {
-                    headers['X-Resource-Id'] = parameters['xResourceId'];
-                }
-
                 path = path.replace('{caseId}', parameters['caseId']);
 
                 if (parameters['caseId'] === undefined) {
                     deferred.reject(new Error('Missing required  parameter: caseId'));
-                    return deferred.promise;
-                }
-
-                path = path.replace('{messageId}', parameters['messageId']);
-
-                if (parameters['messageId'] === undefined) {
-                    deferred.reject(new Error('Missing required  parameter: messageId'));
                     return deferred.promise;
                 }
 
@@ -1665,6 +1302,13 @@ angular.module('otrBackendService', [])
 
                 if (parameters['isDeleted'] === undefined) {
                     deferred.reject(new Error('Missing required  parameter: isDeleted'));
+                    return deferred.promise;
+                }
+
+                path = path.replace('{messageId}', parameters['messageId']);
+
+                if (parameters['messageId'] === undefined) {
+                    deferred.reject(new Error('Missing required  parameter: messageId'));
                     return deferred.promise;
                 }
 
@@ -1679,8 +1323,6 @@ angular.module('otrBackendService', [])
              * @method
              * @name OtrService#editMessageUsingPUT
              * @param {object} parameters - method options and parameters
-             * @param {string} parameters.xFeature - which feature is the client using
-             * @param {string} parameters.xResourceId - a generic resource identifier
              * @param {string} parameters.caseId - caseId
              * @param {integer} parameters.messageId - messageId
              * @param {} parameters.request - request
@@ -1699,14 +1341,6 @@ angular.module('otrBackendService', [])
 
                 headers['Accept'] = ['*/*'];
                 headers['Content-Type'] = ['application/json'];
-
-                if (parameters['xFeature'] !== undefined) {
-                    headers['X-Feature'] = parameters['xFeature'];
-                }
-
-                if (parameters['xResourceId'] !== undefined) {
-                    headers['X-Resource-Id'] = parameters['xResourceId'];
-                }
 
                 path = path.replace('{caseId}', parameters['caseId']);
 
@@ -1742,8 +1376,6 @@ angular.module('otrBackendService', [])
              * @method
              * @name OtrService#setCourtDateForCaseUsingPOST
              * @param {object} parameters - method options and parameters
-             * @param {string} parameters.xFeature - which feature is the client using
-             * @param {string} parameters.xResourceId - a generic resource identifier
              * @param {string} parameters.caseId - caseId
              * @param {} parameters.request - request
              */
@@ -1761,14 +1393,6 @@ angular.module('otrBackendService', [])
 
                 headers['Accept'] = ['*/*'];
                 headers['Content-Type'] = ['application/json'];
-
-                if (parameters['xFeature'] !== undefined) {
-                    headers['X-Feature'] = parameters['xFeature'];
-                }
-
-                if (parameters['xResourceId'] !== undefined) {
-                    headers['X-Resource-Id'] = parameters['xResourceId'];
-                }
 
                 path = path.replace('{caseId}', parameters['caseId']);
 
@@ -1797,8 +1421,6 @@ angular.module('otrBackendService', [])
              * @method
              * @name OtrService#listCostItemsForCustomerUsingGET
              * @param {object} parameters - method options and parameters
-             * @param {string} parameters.xFeature - which feature is the client using
-             * @param {string} parameters.xResourceId - a generic resource identifier
              * @param {string} parameters.caseId - caseId
              */
             OtrService.prototype.listCostItemsForCustomerUsingGET = function(parameters) {
@@ -1814,15 +1436,6 @@ angular.module('otrBackendService', [])
                     form = {};
 
                 headers['Accept'] = ['*/*'];
-                headers['Content-Type'] = ['application/json'];
-
-                if (parameters['xFeature'] !== undefined) {
-                    headers['X-Feature'] = parameters['xFeature'];
-                }
-
-                if (parameters['xResourceId'] !== undefined) {
-                    headers['X-Resource-Id'] = parameters['xResourceId'];
-                }
 
                 path = path.replace('{caseId}', parameters['caseId']);
 
@@ -1842,8 +1455,6 @@ angular.module('otrBackendService', [])
              * @method
              * @name OtrService#updateDeclineTicketsUsingPUT
              * @param {object} parameters - method options and parameters
-             * @param {string} parameters.xFeature - which feature is the client using
-             * @param {string} parameters.xResourceId - a generic resource identifier
              * @param {string} parameters.caseId - caseId
              * @param {} parameters.request - request
              */
@@ -1861,14 +1472,6 @@ angular.module('otrBackendService', [])
 
                 headers['Accept'] = ['*/*'];
                 headers['Content-Type'] = ['application/json'];
-
-                if (parameters['xFeature'] !== undefined) {
-                    headers['X-Feature'] = parameters['xFeature'];
-                }
-
-                if (parameters['xResourceId'] !== undefined) {
-                    headers['X-Resource-Id'] = parameters['xResourceId'];
-                }
 
                 path = path.replace('{caseId}', parameters['caseId']);
 
@@ -1897,8 +1500,6 @@ angular.module('otrBackendService', [])
              * @method
              * @name OtrService#findChargeDisputesByCaseIdUsingGET
              * @param {object} parameters - method options and parameters
-             * @param {string} parameters.xFeature - which feature is the client using
-             * @param {string} parameters.xResourceId - a generic resource identifier
              * @param {string} parameters.caseId - caseId
              */
             OtrService.prototype.findChargeDisputesByCaseIdUsingGET = function(parameters) {
@@ -1914,15 +1515,6 @@ angular.module('otrBackendService', [])
                     form = {};
 
                 headers['Accept'] = ['*/*'];
-                headers['Content-Type'] = ['application/json'];
-
-                if (parameters['xFeature'] !== undefined) {
-                    headers['X-Feature'] = parameters['xFeature'];
-                }
-
-                if (parameters['xResourceId'] !== undefined) {
-                    headers['X-Resource-Id'] = parameters['xResourceId'];
-                }
 
                 path = path.replace('{caseId}', parameters['caseId']);
 
@@ -1942,8 +1534,6 @@ angular.module('otrBackendService', [])
              * @method
              * @name OtrService#getLawfirmCaseDocumentsUsingGET
              * @param {object} parameters - method options and parameters
-             * @param {string} parameters.xFeature - which feature is the client using
-             * @param {string} parameters.xResourceId - a generic resource identifier
              * @param {string} parameters.caseId - caseId
              */
             OtrService.prototype.getLawfirmCaseDocumentsUsingGET = function(parameters) {
@@ -1959,15 +1549,6 @@ angular.module('otrBackendService', [])
                     form = {};
 
                 headers['Accept'] = ['*/*'];
-                headers['Content-Type'] = ['application/json'];
-
-                if (parameters['xFeature'] !== undefined) {
-                    headers['X-Feature'] = parameters['xFeature'];
-                }
-
-                if (parameters['xResourceId'] !== undefined) {
-                    headers['X-Resource-Id'] = parameters['xResourceId'];
-                }
 
                 path = path.replace('{caseId}', parameters['caseId']);
 
@@ -1987,8 +1568,6 @@ angular.module('otrBackendService', [])
              * @method
              * @name OtrService#initiateCaseUsingPOST
              * @param {object} parameters - method options and parameters
-             * @param {string} parameters.xFeature - which feature is the client using
-             * @param {string} parameters.xResourceId - a generic resource identifier
              * @param {string} parameters.caseId - caseId
              * @param {} parameters.request - request
              */
@@ -2006,14 +1585,6 @@ angular.module('otrBackendService', [])
 
                 headers['Accept'] = ['*/*'];
                 headers['Content-Type'] = ['application/json'];
-
-                if (parameters['xFeature'] !== undefined) {
-                    headers['X-Feature'] = parameters['xFeature'];
-                }
-
-                if (parameters['xResourceId'] !== undefined) {
-                    headers['X-Resource-Id'] = parameters['xResourceId'];
-                }
 
                 path = path.replace('{caseId}', parameters['caseId']);
 
@@ -2037,8 +1608,6 @@ angular.module('otrBackendService', [])
              * @method
              * @name OtrService#initiateCaseAndChargeCustomerUsingPOST
              * @param {object} parameters - method options and parameters
-             * @param {string} parameters.xFeature - which feature is the client using
-             * @param {string} parameters.xResourceId - a generic resource identifier
              * @param {string} parameters.caseId - caseId
              * @param {} parameters.request - request
              */
@@ -2056,14 +1625,6 @@ angular.module('otrBackendService', [])
 
                 headers['Accept'] = ['*/*'];
                 headers['Content-Type'] = ['application/json'];
-
-                if (parameters['xFeature'] !== undefined) {
-                    headers['X-Feature'] = parameters['xFeature'];
-                }
-
-                if (parameters['xResourceId'] !== undefined) {
-                    headers['X-Resource-Id'] = parameters['xResourceId'];
-                }
 
                 path = path.replace('{caseId}', parameters['caseId']);
 
@@ -2092,8 +1653,6 @@ angular.module('otrBackendService', [])
              * @method
              * @name OtrService#getLawfirmFeesUsingGET
              * @param {object} parameters - method options and parameters
-             * @param {string} parameters.xFeature - which feature is the client using
-             * @param {string} parameters.xResourceId - a generic resource identifier
              * @param {string} parameters.caseId - caseId
              */
             OtrService.prototype.getLawfirmFeesUsingGET = function(parameters) {
@@ -2109,15 +1668,6 @@ angular.module('otrBackendService', [])
                     form = {};
 
                 headers['Accept'] = ['*/*'];
-                headers['Content-Type'] = ['application/json'];
-
-                if (parameters['xFeature'] !== undefined) {
-                    headers['X-Feature'] = parameters['xFeature'];
-                }
-
-                if (parameters['xResourceId'] !== undefined) {
-                    headers['X-Resource-Id'] = parameters['xResourceId'];
-                }
 
                 path = path.replace('{caseId}', parameters['caseId']);
 
@@ -2137,8 +1687,6 @@ angular.module('otrBackendService', [])
              * @method
              * @name OtrService#getLawfirmTransactionsForCaseUsingGET
              * @param {object} parameters - method options and parameters
-             * @param {string} parameters.xFeature - which feature is the client using
-             * @param {string} parameters.xResourceId - a generic resource identifier
              * @param {string} parameters.caseId - caseId
              */
             OtrService.prototype.getLawfirmTransactionsForCaseUsingGET = function(parameters) {
@@ -2154,15 +1702,6 @@ angular.module('otrBackendService', [])
                     form = {};
 
                 headers['Accept'] = ['*/*'];
-                headers['Content-Type'] = ['application/json'];
-
-                if (parameters['xFeature'] !== undefined) {
-                    headers['X-Feature'] = parameters['xFeature'];
-                }
-
-                if (parameters['xResourceId'] !== undefined) {
-                    headers['X-Resource-Id'] = parameters['xResourceId'];
-                }
 
                 path = path.replace('{caseId}', parameters['caseId']);
 
@@ -2182,8 +1721,6 @@ angular.module('otrBackendService', [])
              * @method
              * @name OtrService#getLineItemsUsingGET
              * @param {object} parameters - method options and parameters
-             * @param {string} parameters.xFeature - which feature is the client using
-             * @param {string} parameters.xResourceId - a generic resource identifier
              * @param {string} parameters.caseId - caseId
              */
             OtrService.prototype.getLineItemsUsingGET = function(parameters) {
@@ -2199,15 +1736,6 @@ angular.module('otrBackendService', [])
                     form = {};
 
                 headers['Accept'] = ['application/json'];
-                headers['Content-Type'] = ['application/json'];
-
-                if (parameters['xFeature'] !== undefined) {
-                    headers['X-Feature'] = parameters['xFeature'];
-                }
-
-                if (parameters['xResourceId'] !== undefined) {
-                    headers['X-Resource-Id'] = parameters['xResourceId'];
-                }
 
                 path = path.replace('{caseId}', parameters['caseId']);
 
@@ -2227,8 +1755,6 @@ angular.module('otrBackendService', [])
              * @method
              * @name OtrService#insertCaseLineItemUsingPOST
              * @param {object} parameters - method options and parameters
-             * @param {string} parameters.xFeature - which feature is the client using
-             * @param {string} parameters.xResourceId - a generic resource identifier
              * @param {string} parameters.caseId - caseId
              * @param {} parameters.request - request
              */
@@ -2246,14 +1772,6 @@ angular.module('otrBackendService', [])
 
                 headers['Accept'] = ['application/json'];
                 headers['Content-Type'] = ['application/json'];
-
-                if (parameters['xFeature'] !== undefined) {
-                    headers['X-Feature'] = parameters['xFeature'];
-                }
-
-                if (parameters['xResourceId'] !== undefined) {
-                    headers['X-Resource-Id'] = parameters['xResourceId'];
-                }
 
                 path = path.replace('{caseId}', parameters['caseId']);
 
@@ -2282,8 +1800,6 @@ angular.module('otrBackendService', [])
              * @method
              * @name OtrService#updateCaseLineItemUsingPUT
              * @param {object} parameters - method options and parameters
-             * @param {string} parameters.xFeature - which feature is the client using
-             * @param {string} parameters.xResourceId - a generic resource identifier
              * @param {string} parameters.caseId - caseId
              * @param {string} parameters.lineItemId - lineItemId
              * @param {} parameters.request - request
@@ -2302,14 +1818,6 @@ angular.module('otrBackendService', [])
 
                 headers['Accept'] = ['application/json'];
                 headers['Content-Type'] = ['application/json'];
-
-                if (parameters['xFeature'] !== undefined) {
-                    headers['X-Feature'] = parameters['xFeature'];
-                }
-
-                if (parameters['xResourceId'] !== undefined) {
-                    headers['X-Resource-Id'] = parameters['xResourceId'];
-                }
 
                 path = path.replace('{caseId}', parameters['caseId']);
 
@@ -2345,8 +1853,6 @@ angular.module('otrBackendService', [])
              * @method
              * @name OtrService#deleteCaseLineItemUsingDELETE
              * @param {object} parameters - method options and parameters
-             * @param {string} parameters.xFeature - which feature is the client using
-             * @param {string} parameters.xResourceId - a generic resource identifier
              * @param {string} parameters.caseId - caseId
              * @param {string} parameters.lineItemId - lineItemId
              */
@@ -2363,15 +1869,6 @@ angular.module('otrBackendService', [])
                     form = {};
 
                 headers['Accept'] = ['application/json'];
-                headers['Content-Type'] = ['application/json'];
-
-                if (parameters['xFeature'] !== undefined) {
-                    headers['X-Feature'] = parameters['xFeature'];
-                }
-
-                if (parameters['xResourceId'] !== undefined) {
-                    headers['X-Resource-Id'] = parameters['xResourceId'];
-                }
 
                 path = path.replace('{caseId}', parameters['caseId']);
 
@@ -2398,8 +1895,6 @@ angular.module('otrBackendService', [])
              * @method
              * @name OtrService#getCaseNotesUsingGET
              * @param {object} parameters - method options and parameters
-             * @param {string} parameters.xFeature - which feature is the client using
-             * @param {string} parameters.xResourceId - a generic resource identifier
              * @param {string} parameters.caseId - caseId
              */
             OtrService.prototype.getCaseNotesUsingGET = function(parameters) {
@@ -2415,15 +1910,6 @@ angular.module('otrBackendService', [])
                     form = {};
 
                 headers['Accept'] = ['*/*'];
-                headers['Content-Type'] = ['application/json'];
-
-                if (parameters['xFeature'] !== undefined) {
-                    headers['X-Feature'] = parameters['xFeature'];
-                }
-
-                if (parameters['xResourceId'] !== undefined) {
-                    headers['X-Resource-Id'] = parameters['xResourceId'];
-                }
 
                 path = path.replace('{caseId}', parameters['caseId']);
 
@@ -2443,8 +1929,6 @@ angular.module('otrBackendService', [])
              * @method
              * @name OtrService#saveCaseNotesUsingPOST
              * @param {object} parameters - method options and parameters
-             * @param {string} parameters.xFeature - which feature is the client using
-             * @param {string} parameters.xResourceId - a generic resource identifier
              * @param {string} parameters.caseId - caseId
              * @param {} parameters.request - request
              */
@@ -2462,14 +1946,6 @@ angular.module('otrBackendService', [])
 
                 headers['Accept'] = ['*/*'];
                 headers['Content-Type'] = ['application/json'];
-
-                if (parameters['xFeature'] !== undefined) {
-                    headers['X-Feature'] = parameters['xFeature'];
-                }
-
-                if (parameters['xResourceId'] !== undefined) {
-                    headers['X-Resource-Id'] = parameters['xResourceId'];
-                }
 
                 path = path.replace('{caseId}', parameters['caseId']);
 
@@ -2498,8 +1974,6 @@ angular.module('otrBackendService', [])
              * @method
              * @name OtrService#assignOwnerUsingPOST
              * @param {object} parameters - method options and parameters
-             * @param {string} parameters.xFeature - which feature is the client using
-             * @param {string} parameters.xResourceId - a generic resource identifier
              * @param {string} parameters.caseId - caseId
              */
             OtrService.prototype.assignOwnerUsingPOST = function(parameters) {
@@ -2516,14 +1990,6 @@ angular.module('otrBackendService', [])
 
                 headers['Accept'] = ['*/*'];
                 headers['Content-Type'] = ['application/json'];
-
-                if (parameters['xFeature'] !== undefined) {
-                    headers['X-Feature'] = parameters['xFeature'];
-                }
-
-                if (parameters['xResourceId'] !== undefined) {
-                    headers['X-Resource-Id'] = parameters['xResourceId'];
-                }
 
                 path = path.replace('{caseId}', parameters['caseId']);
 
@@ -2543,8 +2009,6 @@ angular.module('otrBackendService', [])
              * @method
              * @name OtrService#assignCaseToUserUsingPOST
              * @param {object} parameters - method options and parameters
-             * @param {string} parameters.xFeature - which feature is the client using
-             * @param {string} parameters.xResourceId - a generic resource identifier
              * @param {string} parameters.caseId - caseId
              * @param {integer} parameters.userId - userId
              */
@@ -2562,14 +2026,6 @@ angular.module('otrBackendService', [])
 
                 headers['Accept'] = ['*/*'];
                 headers['Content-Type'] = ['application/json'];
-
-                if (parameters['xFeature'] !== undefined) {
-                    headers['X-Feature'] = parameters['xFeature'];
-                }
-
-                if (parameters['xResourceId'] !== undefined) {
-                    headers['X-Resource-Id'] = parameters['xResourceId'];
-                }
 
                 path = path.replace('{caseId}', parameters['caseId']);
 
@@ -2596,12 +2052,10 @@ angular.module('otrBackendService', [])
              * @method
              * @name OtrService#getPaymentPlanOptionsUsingGET
              * @param {object} parameters - method options and parameters
-             * @param {string} parameters.xFeature - which feature is the client using
-             * @param {string} parameters.xResourceId - a generic resource identifier
              * @param {string} parameters.caseId - caseId
+             * @param {integer} parameters.feeInCents - feeInCents
              * @param {integer} parameters.lawfirmId - lawfirmId
              * @param {integer} parameters.userId - userId
-             * @param {integer} parameters.feeInCents - feeInCents
              */
             OtrService.prototype.getPaymentPlanOptionsUsingGET = function(parameters) {
                 if (parameters === undefined) {
@@ -2616,20 +2070,20 @@ angular.module('otrBackendService', [])
                     form = {};
 
                 headers['Accept'] = ['*/*'];
-                headers['Content-Type'] = ['application/json'];
-
-                if (parameters['xFeature'] !== undefined) {
-                    headers['X-Feature'] = parameters['xFeature'];
-                }
-
-                if (parameters['xResourceId'] !== undefined) {
-                    headers['X-Resource-Id'] = parameters['xResourceId'];
-                }
 
                 path = path.replace('{caseId}', parameters['caseId']);
 
                 if (parameters['caseId'] === undefined) {
                     deferred.reject(new Error('Missing required  parameter: caseId'));
+                    return deferred.promise;
+                }
+
+                if (parameters['feeInCents'] !== undefined) {
+                    queryParameters['feeInCents'] = parameters['feeInCents'];
+                }
+
+                if (parameters['feeInCents'] === undefined) {
+                    deferred.reject(new Error('Missing required  parameter: feeInCents'));
                     return deferred.promise;
                 }
 
@@ -2646,15 +2100,6 @@ angular.module('otrBackendService', [])
                     queryParameters['userId'] = parameters['userId'];
                 }
 
-                if (parameters['feeInCents'] !== undefined) {
-                    queryParameters['feeInCents'] = parameters['feeInCents'];
-                }
-
-                if (parameters['feeInCents'] === undefined) {
-                    deferred.reject(new Error('Missing required  parameter: feeInCents'));
-                    return deferred.promise;
-                }
-
                 queryParameters = mergeQueryParams(parameters, queryParameters);
 
                 this.request('GET', domain + path, parameters, body, headers, queryParameters, form, deferred);
@@ -2666,8 +2111,6 @@ angular.module('otrBackendService', [])
              * @method
              * @name OtrService#generateCasePaymentPlanUsingGET
              * @param {object} parameters - method options and parameters
-             * @param {string} parameters.xFeature - which feature is the client using
-             * @param {string} parameters.xResourceId - a generic resource identifier
              * @param {string} parameters.caseId - caseId
              * @param {string} parameters.paymentPlanTypeId - paymentPlanTypeId
              */
@@ -2684,15 +2127,6 @@ angular.module('otrBackendService', [])
                     form = {};
 
                 headers['Accept'] = ['*/*'];
-                headers['Content-Type'] = ['application/json'];
-
-                if (parameters['xFeature'] !== undefined) {
-                    headers['X-Feature'] = parameters['xFeature'];
-                }
-
-                if (parameters['xResourceId'] !== undefined) {
-                    headers['X-Resource-Id'] = parameters['xResourceId'];
-                }
 
                 path = path.replace('{caseId}', parameters['caseId']);
 
@@ -2719,8 +2153,6 @@ angular.module('otrBackendService', [])
              * @method
              * @name OtrService#getCasePaymentsUsingGET
              * @param {object} parameters - method options and parameters
-             * @param {string} parameters.xFeature - which feature is the client using
-             * @param {string} parameters.xResourceId - a generic resource identifier
              * @param {string} parameters.caseId - caseId
              */
             OtrService.prototype.getCasePaymentsUsingGET = function(parameters) {
@@ -2736,15 +2168,6 @@ angular.module('otrBackendService', [])
                     form = {};
 
                 headers['Accept'] = ['*/*'];
-                headers['Content-Type'] = ['application/json'];
-
-                if (parameters['xFeature'] !== undefined) {
-                    headers['X-Feature'] = parameters['xFeature'];
-                }
-
-                if (parameters['xResourceId'] !== undefined) {
-                    headers['X-Resource-Id'] = parameters['xResourceId'];
-                }
 
                 path = path.replace('{caseId}', parameters['caseId']);
 
@@ -2764,8 +2187,6 @@ angular.module('otrBackendService', [])
              * @method
              * @name OtrService#scheduleNewPaymentUsingPOST
              * @param {object} parameters - method options and parameters
-             * @param {string} parameters.xFeature - which feature is the client using
-             * @param {string} parameters.xResourceId - a generic resource identifier
              * @param {string} parameters.caseId - caseId
              * @param {} parameters.request - request
              */
@@ -2783,14 +2204,6 @@ angular.module('otrBackendService', [])
 
                 headers['Accept'] = ['*/*'];
                 headers['Content-Type'] = ['application/json'];
-
-                if (parameters['xFeature'] !== undefined) {
-                    headers['X-Feature'] = parameters['xFeature'];
-                }
-
-                if (parameters['xResourceId'] !== undefined) {
-                    headers['X-Resource-Id'] = parameters['xResourceId'];
-                }
 
                 path = path.replace('{caseId}', parameters['caseId']);
 
@@ -2819,8 +2232,6 @@ angular.module('otrBackendService', [])
              * @method
              * @name OtrService#deleteCasePaymentUsingDELETE
              * @param {object} parameters - method options and parameters
-             * @param {string} parameters.xFeature - which feature is the client using
-             * @param {string} parameters.xResourceId - a generic resource identifier
              * @param {string} parameters.caseId - caseId
              * @param {string} parameters.casePaymentId - casePaymentId
              */
@@ -2837,15 +2248,6 @@ angular.module('otrBackendService', [])
                     form = {};
 
                 headers['Accept'] = ['*/*'];
-                headers['Content-Type'] = ['application/json'];
-
-                if (parameters['xFeature'] !== undefined) {
-                    headers['X-Feature'] = parameters['xFeature'];
-                }
-
-                if (parameters['xResourceId'] !== undefined) {
-                    headers['X-Resource-Id'] = parameters['xResourceId'];
-                }
 
                 path = path.replace('{caseId}', parameters['caseId']);
 
@@ -2872,8 +2274,6 @@ angular.module('otrBackendService', [])
              * @method
              * @name OtrService#authorizeChargeForCasePaymentUsingPOST
              * @param {object} parameters - method options and parameters
-             * @param {string} parameters.xFeature - which feature is the client using
-             * @param {string} parameters.xResourceId - a generic resource identifier
              * @param {string} parameters.caseId - caseId
              * @param {string} parameters.casePaymentId - casePaymentId
              * @param {} parameters.request - request
@@ -2892,14 +2292,6 @@ angular.module('otrBackendService', [])
 
                 headers['Accept'] = ['*/*'];
                 headers['Content-Type'] = ['application/json'];
-
-                if (parameters['xFeature'] !== undefined) {
-                    headers['X-Feature'] = parameters['xFeature'];
-                }
-
-                if (parameters['xResourceId'] !== undefined) {
-                    headers['X-Resource-Id'] = parameters['xResourceId'];
-                }
 
                 path = path.replace('{caseId}', parameters['caseId']);
 
@@ -2930,8 +2322,6 @@ angular.module('otrBackendService', [])
              * @method
              * @name OtrService#captureChargeFromCasePaymentUsingPOST
              * @param {object} parameters - method options and parameters
-             * @param {string} parameters.xFeature - which feature is the client using
-             * @param {string} parameters.xResourceId - a generic resource identifier
              * @param {string} parameters.caseId - caseId
              * @param {string} parameters.casePaymentId - casePaymentId
              * @param {} parameters.request - request
@@ -2950,14 +2340,6 @@ angular.module('otrBackendService', [])
 
                 headers['Accept'] = ['*/*'];
                 headers['Content-Type'] = ['application/json'];
-
-                if (parameters['xFeature'] !== undefined) {
-                    headers['X-Feature'] = parameters['xFeature'];
-                }
-
-                if (parameters['xResourceId'] !== undefined) {
-                    headers['X-Resource-Id'] = parameters['xResourceId'];
-                }
 
                 path = path.replace('{caseId}', parameters['caseId']);
 
@@ -2988,8 +2370,6 @@ angular.module('otrBackendService', [])
              * @method
              * @name OtrService#updatePaymentDueDateUsingPOST
              * @param {object} parameters - method options and parameters
-             * @param {string} parameters.xFeature - which feature is the client using
-             * @param {string} parameters.xResourceId - a generic resource identifier
              * @param {string} parameters.caseId - caseId
              * @param {string} parameters.casePaymentId - casePaymentId
              * @param {} parameters.request - request
@@ -3008,14 +2388,6 @@ angular.module('otrBackendService', [])
 
                 headers['Accept'] = ['*/*'];
                 headers['Content-Type'] = ['application/json'];
-
-                if (parameters['xFeature'] !== undefined) {
-                    headers['X-Feature'] = parameters['xFeature'];
-                }
-
-                if (parameters['xResourceId'] !== undefined) {
-                    headers['X-Resource-Id'] = parameters['xResourceId'];
-                }
 
                 path = path.replace('{caseId}', parameters['caseId']);
 
@@ -3051,8 +2423,6 @@ angular.module('otrBackendService', [])
              * @method
              * @name OtrService#releasePaymentUsingPOST
              * @param {object} parameters - method options and parameters
-             * @param {string} parameters.xFeature - which feature is the client using
-             * @param {string} parameters.xResourceId - a generic resource identifier
              * @param {string} parameters.caseId - caseId
              * @param {string} parameters.casePaymentId - casePaymentId
              */
@@ -3070,14 +2440,6 @@ angular.module('otrBackendService', [])
 
                 headers['Accept'] = ['*/*'];
                 headers['Content-Type'] = ['application/json'];
-
-                if (parameters['xFeature'] !== undefined) {
-                    headers['X-Feature'] = parameters['xFeature'];
-                }
-
-                if (parameters['xResourceId'] !== undefined) {
-                    headers['X-Resource-Id'] = parameters['xResourceId'];
-                }
 
                 path = path.replace('{caseId}', parameters['caseId']);
 
@@ -3104,8 +2466,6 @@ angular.module('otrBackendService', [])
              * @method
              * @name OtrService#getLawfirmPayoutsUsingGET
              * @param {object} parameters - method options and parameters
-             * @param {string} parameters.xFeature - which feature is the client using
-             * @param {string} parameters.xResourceId - a generic resource identifier
              * @param {string} parameters.caseId - caseId
              */
             OtrService.prototype.getLawfirmPayoutsUsingGET = function(parameters) {
@@ -3121,15 +2481,6 @@ angular.module('otrBackendService', [])
                     form = {};
 
                 headers['Accept'] = ['*/*'];
-                headers['Content-Type'] = ['application/json'];
-
-                if (parameters['xFeature'] !== undefined) {
-                    headers['X-Feature'] = parameters['xFeature'];
-                }
-
-                if (parameters['xResourceId'] !== undefined) {
-                    headers['X-Resource-Id'] = parameters['xResourceId'];
-                }
 
                 path = path.replace('{caseId}', parameters['caseId']);
 
@@ -3149,8 +2500,6 @@ angular.module('otrBackendService', [])
              * @method
              * @name OtrService#submitRequestForPriceMatchUsingPOST
              * @param {object} parameters - method options and parameters
-             * @param {string} parameters.xFeature - which feature is the client using
-             * @param {string} parameters.xResourceId - a generic resource identifier
              * @param {string} parameters.caseId - caseId
              * @param {} parameters.priceMatchRequest - priceMatchRequest
              */
@@ -3168,14 +2517,6 @@ angular.module('otrBackendService', [])
 
                 headers['Accept'] = ['*/*'];
                 headers['Content-Type'] = ['application/json'];
-
-                if (parameters['xFeature'] !== undefined) {
-                    headers['X-Feature'] = parameters['xFeature'];
-                }
-
-                if (parameters['xResourceId'] !== undefined) {
-                    headers['X-Resource-Id'] = parameters['xResourceId'];
-                }
 
                 path = path.replace('{caseId}', parameters['caseId']);
 
@@ -3204,8 +2545,6 @@ angular.module('otrBackendService', [])
              * @method
              * @name OtrService#applyReferralCodeUsingPOST
              * @param {object} parameters - method options and parameters
-             * @param {string} parameters.xFeature - which feature is the client using
-             * @param {string} parameters.xResourceId - a generic resource identifier
              * @param {string} parameters.caseId - caseId
              * @param {string} parameters.codeId - codeId
              */
@@ -3223,14 +2562,6 @@ angular.module('otrBackendService', [])
 
                 headers['Accept'] = ['*/*'];
                 headers['Content-Type'] = ['application/json'];
-
-                if (parameters['xFeature'] !== undefined) {
-                    headers['X-Feature'] = parameters['xFeature'];
-                }
-
-                if (parameters['xResourceId'] !== undefined) {
-                    headers['X-Resource-Id'] = parameters['xResourceId'];
-                }
 
                 path = path.replace('{caseId}', parameters['caseId']);
 
@@ -3257,8 +2588,6 @@ angular.module('otrBackendService', [])
              * @method
              * @name OtrService#updateRefundEligibilityForCaseUsingPUT
              * @param {object} parameters - method options and parameters
-             * @param {string} parameters.xFeature - which feature is the client using
-             * @param {string} parameters.xResourceId - a generic resource identifier
              * @param {string} parameters.caseId - caseId
              * @param {} parameters.request - request
              */
@@ -3276,14 +2605,6 @@ angular.module('otrBackendService', [])
 
                 headers['Accept'] = ['*/*'];
                 headers['Content-Type'] = ['application/json'];
-
-                if (parameters['xFeature'] !== undefined) {
-                    headers['X-Feature'] = parameters['xFeature'];
-                }
-
-                if (parameters['xResourceId'] !== undefined) {
-                    headers['X-Resource-Id'] = parameters['xResourceId'];
-                }
 
                 path = path.replace('{caseId}', parameters['caseId']);
 
@@ -3312,8 +2633,6 @@ angular.module('otrBackendService', [])
              * @method
              * @name OtrService#isRefundEligibleUsingGET
              * @param {object} parameters - method options and parameters
-             * @param {string} parameters.xFeature - which feature is the client using
-             * @param {string} parameters.xResourceId - a generic resource identifier
              * @param {string} parameters.caseId - caseId
              */
             OtrService.prototype.isRefundEligibleUsingGET = function(parameters) {
@@ -3329,15 +2648,6 @@ angular.module('otrBackendService', [])
                     form = {};
 
                 headers['Accept'] = ['*/*'];
-                headers['Content-Type'] = ['application/json'];
-
-                if (parameters['xFeature'] !== undefined) {
-                    headers['X-Feature'] = parameters['xFeature'];
-                }
-
-                if (parameters['xResourceId'] !== undefined) {
-                    headers['X-Resource-Id'] = parameters['xResourceId'];
-                }
 
                 path = path.replace('{caseId}', parameters['caseId']);
 
@@ -3357,8 +2667,6 @@ angular.module('otrBackendService', [])
              * @method
              * @name OtrService#reopenCaseUsingPUT
              * @param {object} parameters - method options and parameters
-             * @param {string} parameters.xFeature - which feature is the client using
-             * @param {string} parameters.xResourceId - a generic resource identifier
              * @param {string} parameters.caseId - caseId
              */
             OtrService.prototype.reopenCaseUsingPUT = function(parameters) {
@@ -3375,14 +2683,6 @@ angular.module('otrBackendService', [])
 
                 headers['Accept'] = ['*/*'];
                 headers['Content-Type'] = ['application/json'];
-
-                if (parameters['xFeature'] !== undefined) {
-                    headers['X-Feature'] = parameters['xFeature'];
-                }
-
-                if (parameters['xResourceId'] !== undefined) {
-                    headers['X-Resource-Id'] = parameters['xResourceId'];
-                }
 
                 path = path.replace('{caseId}', parameters['caseId']);
 
@@ -3402,8 +2702,6 @@ angular.module('otrBackendService', [])
              * @method
              * @name OtrService#requestLawyerUsingPOST
              * @param {object} parameters - method options and parameters
-             * @param {string} parameters.xFeature - which feature is the client using
-             * @param {string} parameters.xResourceId - a generic resource identifier
              * @param {string} parameters.caseId - caseId
              * @param {} parameters.lawyerRequest - lawyerRequest
              */
@@ -3421,14 +2719,6 @@ angular.module('otrBackendService', [])
 
                 headers['Accept'] = ['*/*'];
                 headers['Content-Type'] = ['application/json'];
-
-                if (parameters['xFeature'] !== undefined) {
-                    headers['X-Feature'] = parameters['xFeature'];
-                }
-
-                if (parameters['xResourceId'] !== undefined) {
-                    headers['X-Resource-Id'] = parameters['xResourceId'];
-                }
 
                 path = path.replace('{caseId}', parameters['caseId']);
 
@@ -3457,8 +2747,6 @@ angular.module('otrBackendService', [])
              * @method
              * @name OtrService#markCaseAsResolvedUsingPOST
              * @param {object} parameters - method options and parameters
-             * @param {string} parameters.xFeature - which feature is the client using
-             * @param {string} parameters.xResourceId - a generic resource identifier
              * @param {string} parameters.caseId - caseId
              * @param {} parameters.request - request
              */
@@ -3476,14 +2764,6 @@ angular.module('otrBackendService', [])
 
                 headers['Accept'] = ['*/*'];
                 headers['Content-Type'] = ['application/json'];
-
-                if (parameters['xFeature'] !== undefined) {
-                    headers['X-Feature'] = parameters['xFeature'];
-                }
-
-                if (parameters['xResourceId'] !== undefined) {
-                    headers['X-Resource-Id'] = parameters['xResourceId'];
-                }
 
                 path = path.replace('{caseId}', parameters['caseId']);
 
@@ -3512,8 +2792,6 @@ angular.module('otrBackendService', [])
              * @method
              * @name OtrService#getLawfirmPayoutReversalsUsingGET
              * @param {object} parameters - method options and parameters
-             * @param {string} parameters.xFeature - which feature is the client using
-             * @param {string} parameters.xResourceId - a generic resource identifier
              * @param {string} parameters.caseId - caseId
              */
             OtrService.prototype.getLawfirmPayoutReversalsUsingGET = function(parameters) {
@@ -3529,15 +2807,6 @@ angular.module('otrBackendService', [])
                     form = {};
 
                 headers['Accept'] = ['*/*'];
-                headers['Content-Type'] = ['application/json'];
-
-                if (parameters['xFeature'] !== undefined) {
-                    headers['X-Feature'] = parameters['xFeature'];
-                }
-
-                if (parameters['xResourceId'] !== undefined) {
-                    headers['X-Resource-Id'] = parameters['xResourceId'];
-                }
 
                 path = path.replace('{caseId}', parameters['caseId']);
 
@@ -3557,8 +2826,6 @@ angular.module('otrBackendService', [])
              * @method
              * @name OtrService#getStripeChargesUsingGET
              * @param {object} parameters - method options and parameters
-             * @param {string} parameters.xFeature - which feature is the client using
-             * @param {string} parameters.xResourceId - a generic resource identifier
              * @param {string} parameters.caseId - caseId
              */
             OtrService.prototype.getStripeChargesUsingGET = function(parameters) {
@@ -3574,15 +2841,6 @@ angular.module('otrBackendService', [])
                     form = {};
 
                 headers['Accept'] = ['*/*'];
-                headers['Content-Type'] = ['application/json'];
-
-                if (parameters['xFeature'] !== undefined) {
-                    headers['X-Feature'] = parameters['xFeature'];
-                }
-
-                if (parameters['xResourceId'] !== undefined) {
-                    headers['X-Resource-Id'] = parameters['xResourceId'];
-                }
 
                 path = path.replace('{caseId}', parameters['caseId']);
 
@@ -3602,8 +2860,6 @@ angular.module('otrBackendService', [])
              * @method
              * @name OtrService#getSupportTicketsForCaseUsingGET
              * @param {object} parameters - method options and parameters
-             * @param {string} parameters.xFeature - which feature is the client using
-             * @param {string} parameters.xResourceId - a generic resource identifier
              * @param {string} parameters.caseId - caseId
              */
             OtrService.prototype.getSupportTicketsForCaseUsingGET = function(parameters) {
@@ -3619,15 +2875,6 @@ angular.module('otrBackendService', [])
                     form = {};
 
                 headers['Accept'] = ['*/*'];
-                headers['Content-Type'] = ['application/json'];
-
-                if (parameters['xFeature'] !== undefined) {
-                    headers['X-Feature'] = parameters['xFeature'];
-                }
-
-                if (parameters['xResourceId'] !== undefined) {
-                    headers['X-Resource-Id'] = parameters['xResourceId'];
-                }
 
                 path = path.replace('{caseId}', parameters['caseId']);
 
@@ -3647,8 +2894,6 @@ angular.module('otrBackendService', [])
              * @method
              * @name OtrService#getTransferHistoryUsingGET
              * @param {object} parameters - method options and parameters
-             * @param {string} parameters.xFeature - which feature is the client using
-             * @param {string} parameters.xResourceId - a generic resource identifier
              * @param {string} parameters.caseId - caseId
              */
             OtrService.prototype.getTransferHistoryUsingGET = function(parameters) {
@@ -3664,15 +2909,6 @@ angular.module('otrBackendService', [])
                     form = {};
 
                 headers['Accept'] = ['*/*'];
-                headers['Content-Type'] = ['application/json'];
-
-                if (parameters['xFeature'] !== undefined) {
-                    headers['X-Feature'] = parameters['xFeature'];
-                }
-
-                if (parameters['xResourceId'] !== undefined) {
-                    headers['X-Resource-Id'] = parameters['xResourceId'];
-                }
 
                 path = path.replace('{caseId}', parameters['caseId']);
 
@@ -3692,8 +2928,6 @@ angular.module('otrBackendService', [])
              * @method
              * @name OtrService#transferCaseUsingPUT
              * @param {object} parameters - method options and parameters
-             * @param {string} parameters.xFeature - which feature is the client using
-             * @param {string} parameters.xResourceId - a generic resource identifier
              * @param {string} parameters.caseId - caseId
              * @param {} parameters.request - request
              */
@@ -3711,14 +2945,6 @@ angular.module('otrBackendService', [])
 
                 headers['Accept'] = ['*/*'];
                 headers['Content-Type'] = ['application/json'];
-
-                if (parameters['xFeature'] !== undefined) {
-                    headers['X-Feature'] = parameters['xFeature'];
-                }
-
-                if (parameters['xResourceId'] !== undefined) {
-                    headers['X-Resource-Id'] = parameters['xResourceId'];
-                }
 
                 path = path.replace('{caseId}', parameters['caseId']);
 
@@ -3747,9 +2973,7 @@ angular.module('otrBackendService', [])
              * @method
              * @name OtrService#getSSLPublicCertFileUsingGET
              * @param {object} parameters - method options and parameters
-             * @param {string} parameters.xFeature - which feature is the client using
-             * @param {string} parameters.xResourceId - a generic resource identifier
-             * @param {string} parameters.encoding - certEncoding
+             * @param {string} parameters.encoding - encoding
              */
             OtrService.prototype.getSSLPublicCertFileUsingGET = function(parameters) {
                 if (parameters === undefined) {
@@ -3764,15 +2988,6 @@ angular.module('otrBackendService', [])
                     form = {};
 
                 headers['Accept'] = ['*/*'];
-                headers['Content-Type'] = ['application/json'];
-
-                if (parameters['xFeature'] !== undefined) {
-                    headers['X-Feature'] = parameters['xFeature'];
-                }
-
-                if (parameters['xResourceId'] !== undefined) {
-                    headers['X-Resource-Id'] = parameters['xResourceId'];
-                }
 
                 if (parameters['encoding'] !== undefined) {
                     queryParameters['encoding'] = parameters['encoding'];
@@ -3794,8 +3009,6 @@ angular.module('otrBackendService', [])
              * @method
              * @name OtrService#createNewCitationUsingPOST
              * @param {object} parameters - method options and parameters
-             * @param {string} parameters.xFeature - which feature is the client using
-             * @param {string} parameters.xResourceId - a generic resource identifier
              * @param {} parameters.request - request
              */
             OtrService.prototype.createNewCitationUsingPOST = function(parameters) {
@@ -3812,14 +3025,6 @@ angular.module('otrBackendService', [])
 
                 headers['Accept'] = ['*/*'];
                 headers['Content-Type'] = ['application/json'];
-
-                if (parameters['xFeature'] !== undefined) {
-                    headers['X-Feature'] = parameters['xFeature'];
-                }
-
-                if (parameters['xResourceId'] !== undefined) {
-                    headers['X-Resource-Id'] = parameters['xResourceId'];
-                }
 
                 if (parameters['request'] !== undefined) {
                     body = parameters['request'];
@@ -3841,8 +3046,6 @@ angular.module('otrBackendService', [])
              * @method
              * @name OtrService#getListOfCitationsWithMissingCourtUsingGET
              * @param {object} parameters - method options and parameters
-             * @param {string} parameters.xFeature - which feature is the client using
-             * @param {string} parameters.xResourceId - a generic resource identifier
              */
             OtrService.prototype.getListOfCitationsWithMissingCourtUsingGET = function(parameters) {
                 if (parameters === undefined) {
@@ -3857,15 +3060,6 @@ angular.module('otrBackendService', [])
                     form = {};
 
                 headers['Accept'] = ['*/*'];
-                headers['Content-Type'] = ['application/json'];
-
-                if (parameters['xFeature'] !== undefined) {
-                    headers['X-Feature'] = parameters['xFeature'];
-                }
-
-                if (parameters['xResourceId'] !== undefined) {
-                    headers['X-Resource-Id'] = parameters['xResourceId'];
-                }
 
                 queryParameters = mergeQueryParams(parameters, queryParameters);
 
@@ -3878,8 +3072,6 @@ angular.module('otrBackendService', [])
              * @method
              * @name OtrService#dismissCitationsFromContactListUsingPOST
              * @param {object} parameters - method options and parameters
-             * @param {string} parameters.xFeature - which feature is the client using
-             * @param {string} parameters.xResourceId - a generic resource identifier
              * @param {} parameters.request - request
              */
             OtrService.prototype.dismissCitationsFromContactListUsingPOST = function(parameters) {
@@ -3896,14 +3088,6 @@ angular.module('otrBackendService', [])
 
                 headers['Accept'] = ['*/*'];
                 headers['Content-Type'] = ['application/json'];
-
-                if (parameters['xFeature'] !== undefined) {
-                    headers['X-Feature'] = parameters['xFeature'];
-                }
-
-                if (parameters['xResourceId'] !== undefined) {
-                    headers['X-Resource-Id'] = parameters['xResourceId'];
-                }
 
                 if (parameters['request'] !== undefined) {
                     body = parameters['request'];
@@ -3925,8 +3109,6 @@ angular.module('otrBackendService', [])
              * @method
              * @name OtrService#getCitationUsingGET
              * @param {object} parameters - method options and parameters
-             * @param {string} parameters.xFeature - which feature is the client using
-             * @param {string} parameters.xResourceId - a generic resource identifier
              * @param {string} parameters.citationIdString - citationIdString
              */
             OtrService.prototype.getCitationUsingGET = function(parameters) {
@@ -3942,15 +3124,6 @@ angular.module('otrBackendService', [])
                     form = {};
 
                 headers['Accept'] = ['*/*'];
-                headers['Content-Type'] = ['application/json'];
-
-                if (parameters['xFeature'] !== undefined) {
-                    headers['X-Feature'] = parameters['xFeature'];
-                }
-
-                if (parameters['xResourceId'] !== undefined) {
-                    headers['X-Resource-Id'] = parameters['xResourceId'];
-                }
 
                 path = path.replace('{citationIdString}', parameters['citationIdString']);
 
@@ -3970,8 +3143,6 @@ angular.module('otrBackendService', [])
              * @method
              * @name OtrService#updateCitationUsingPUT
              * @param {object} parameters - method options and parameters
-             * @param {string} parameters.xFeature - which feature is the client using
-             * @param {string} parameters.xResourceId - a generic resource identifier
              * @param {string} parameters.citationIdString - citationIdString
              * @param {} parameters.updateCitationRequest - updateCitationRequest
              */
@@ -3989,14 +3160,6 @@ angular.module('otrBackendService', [])
 
                 headers['Accept'] = ['*/*'];
                 headers['Content-Type'] = ['application/json'];
-
-                if (parameters['xFeature'] !== undefined) {
-                    headers['X-Feature'] = parameters['xFeature'];
-                }
-
-                if (parameters['xResourceId'] !== undefined) {
-                    headers['X-Resource-Id'] = parameters['xResourceId'];
-                }
 
                 path = path.replace('{citationIdString}', parameters['citationIdString']);
 
@@ -4025,8 +3188,6 @@ angular.module('otrBackendService', [])
              * @method
              * @name OtrService#deleteCitationUsingDELETE
              * @param {object} parameters - method options and parameters
-             * @param {string} parameters.xFeature - which feature is the client using
-             * @param {string} parameters.xResourceId - a generic resource identifier
              * @param {string} parameters.citationIdString - citationIdString
              */
             OtrService.prototype.deleteCitationUsingDELETE = function(parameters) {
@@ -4042,15 +3203,6 @@ angular.module('otrBackendService', [])
                     form = {};
 
                 headers['Accept'] = ['*/*'];
-                headers['Content-Type'] = ['application/json'];
-
-                if (parameters['xFeature'] !== undefined) {
-                    headers['X-Feature'] = parameters['xFeature'];
-                }
-
-                if (parameters['xResourceId'] !== undefined) {
-                    headers['X-Resource-Id'] = parameters['xResourceId'];
-                }
 
                 path = path.replace('{citationIdString}', parameters['citationIdString']);
 
@@ -4070,8 +3222,6 @@ angular.module('otrBackendService', [])
              * @method
              * @name OtrService#matchCaseUsingPOST
              * @param {object} parameters - method options and parameters
-             * @param {string} parameters.xFeature - which feature is the client using
-             * @param {string} parameters.xResourceId - a generic resource identifier
              * @param {string} parameters.citationIdString - citationIdString
              * @param {} parameters.request - request
              */
@@ -4089,14 +3239,6 @@ angular.module('otrBackendService', [])
 
                 headers['Accept'] = ['*/*'];
                 headers['Content-Type'] = ['application/json'];
-
-                if (parameters['xFeature'] !== undefined) {
-                    headers['X-Feature'] = parameters['xFeature'];
-                }
-
-                if (parameters['xResourceId'] !== undefined) {
-                    headers['X-Resource-Id'] = parameters['xResourceId'];
-                }
 
                 path = path.replace('{citationIdString}', parameters['citationIdString']);
 
@@ -4120,8 +3262,6 @@ angular.module('otrBackendService', [])
              * @method
              * @name OtrService#setCitationContactListFlagUsingPOST
              * @param {object} parameters - method options and parameters
-             * @param {string} parameters.xFeature - which feature is the client using
-             * @param {string} parameters.xResourceId - a generic resource identifier
              * @param {string} parameters.citationIdString - citationIdString
              * @param {boolean} parameters.isDismissed - isDismissed
              */
@@ -4139,14 +3279,6 @@ angular.module('otrBackendService', [])
 
                 headers['Accept'] = ['*/*'];
                 headers['Content-Type'] = ['application/json'];
-
-                if (parameters['xFeature'] !== undefined) {
-                    headers['X-Feature'] = parameters['xFeature'];
-                }
-
-                if (parameters['xResourceId'] !== undefined) {
-                    headers['X-Resource-Id'] = parameters['xResourceId'];
-                }
 
                 path = path.replace('{citationIdString}', parameters['citationIdString']);
 
@@ -4175,8 +3307,6 @@ angular.module('otrBackendService', [])
              * @method
              * @name OtrService#updateCitationAddressUsingPOST
              * @param {object} parameters - method options and parameters
-             * @param {string} parameters.xFeature - which feature is the client using
-             * @param {string} parameters.xResourceId - a generic resource identifier
              * @param {string} parameters.citationId - citationId
              * @param {} parameters.request - request
              */
@@ -4194,14 +3324,6 @@ angular.module('otrBackendService', [])
 
                 headers['Accept'] = ['*/*'];
                 headers['Content-Type'] = ['application/json'];
-
-                if (parameters['xFeature'] !== undefined) {
-                    headers['X-Feature'] = parameters['xFeature'];
-                }
-
-                if (parameters['xResourceId'] !== undefined) {
-                    headers['X-Resource-Id'] = parameters['xResourceId'];
-                }
 
                 path = path.replace('{citationId}', parameters['citationId']);
 
@@ -4230,8 +3352,6 @@ angular.module('otrBackendService', [])
              * @method
              * @name OtrService#getCaseFromCitationUsingGET
              * @param {object} parameters - method options and parameters
-             * @param {string} parameters.xFeature - which feature is the client using
-             * @param {string} parameters.xResourceId - a generic resource identifier
              * @param {string} parameters.citationId - citationId
              */
             OtrService.prototype.getCaseFromCitationUsingGET = function(parameters) {
@@ -4247,15 +3367,6 @@ angular.module('otrBackendService', [])
                     form = {};
 
                 headers['Accept'] = ['*/*'];
-                headers['Content-Type'] = ['application/json'];
-
-                if (parameters['xFeature'] !== undefined) {
-                    headers['X-Feature'] = parameters['xFeature'];
-                }
-
-                if (parameters['xResourceId'] !== undefined) {
-                    headers['X-Resource-Id'] = parameters['xResourceId'];
-                }
 
                 path = path.replace('{citationId}', parameters['citationId']);
 
@@ -4275,8 +3386,6 @@ angular.module('otrBackendService', [])
              * @method
              * @name OtrService#postMissingCourtForCitationUsingPOST
              * @param {object} parameters - method options and parameters
-             * @param {string} parameters.xFeature - which feature is the client using
-             * @param {string} parameters.xResourceId - a generic resource identifier
              * @param {string} parameters.citationId - citationId
              * @param {string} parameters.state - state
              */
@@ -4294,14 +3403,6 @@ angular.module('otrBackendService', [])
 
                 headers['Accept'] = ['*/*'];
                 headers['Content-Type'] = ['application/json'];
-
-                if (parameters['xFeature'] !== undefined) {
-                    headers['X-Feature'] = parameters['xFeature'];
-                }
-
-                if (parameters['xResourceId'] !== undefined) {
-                    headers['X-Resource-Id'] = parameters['xResourceId'];
-                }
 
                 path = path.replace('{citationId}', parameters['citationId']);
 
@@ -4330,8 +3431,6 @@ angular.module('otrBackendService', [])
              * @method
              * @name OtrService#deleteMissingCourtRecordUsingDELETE
              * @param {object} parameters - method options and parameters
-             * @param {string} parameters.xFeature - which feature is the client using
-             * @param {string} parameters.xResourceId - a generic resource identifier
              * @param {integer} parameters.citationId - citationId
              */
             OtrService.prototype.deleteMissingCourtRecordUsingDELETE = function(parameters) {
@@ -4347,15 +3446,6 @@ angular.module('otrBackendService', [])
                     form = {};
 
                 headers['Accept'] = ['*/*'];
-                headers['Content-Type'] = ['application/json'];
-
-                if (parameters['xFeature'] !== undefined) {
-                    headers['X-Feature'] = parameters['xFeature'];
-                }
-
-                if (parameters['xResourceId'] !== undefined) {
-                    headers['X-Resource-Id'] = parameters['xResourceId'];
-                }
 
                 path = path.replace('{citationId}', parameters['citationId']);
 
@@ -4375,8 +3465,6 @@ angular.module('otrBackendService', [])
              * @method
              * @name OtrService#assignCitationOwnerUsingPOST
              * @param {object} parameters - method options and parameters
-             * @param {string} parameters.xFeature - which feature is the client using
-             * @param {string} parameters.xResourceId - a generic resource identifier
              * @param {integer} parameters.citationId - citationId
              */
             OtrService.prototype.assignCitationOwnerUsingPOST = function(parameters) {
@@ -4393,14 +3481,6 @@ angular.module('otrBackendService', [])
 
                 headers['Accept'] = ['*/*'];
                 headers['Content-Type'] = ['application/json'];
-
-                if (parameters['xFeature'] !== undefined) {
-                    headers['X-Feature'] = parameters['xFeature'];
-                }
-
-                if (parameters['xResourceId'] !== undefined) {
-                    headers['X-Resource-Id'] = parameters['xResourceId'];
-                }
 
                 path = path.replace('{citationId}', parameters['citationId']);
 
@@ -4420,8 +3500,6 @@ angular.module('otrBackendService', [])
              * @method
              * @name OtrService#updateCitationPictureUsingPUT
              * @param {object} parameters - method options and parameters
-             * @param {string} parameters.xFeature - which feature is the client using
-             * @param {string} parameters.xResourceId - a generic resource identifier
              * @param {string} parameters.citationId - citationId
              * @param {} parameters.request - request
              */
@@ -4439,14 +3517,6 @@ angular.module('otrBackendService', [])
 
                 headers['Accept'] = ['*/*'];
                 headers['Content-Type'] = ['application/json'];
-
-                if (parameters['xFeature'] !== undefined) {
-                    headers['X-Feature'] = parameters['xFeature'];
-                }
-
-                if (parameters['xResourceId'] !== undefined) {
-                    headers['X-Resource-Id'] = parameters['xResourceId'];
-                }
 
                 path = path.replace('{citationId}', parameters['citationId']);
 
@@ -4475,8 +3545,6 @@ angular.module('otrBackendService', [])
              * @method
              * @name OtrService#createReferralSourceForCitationUsingPOST
              * @param {object} parameters - method options and parameters
-             * @param {string} parameters.xFeature - which feature is the client using
-             * @param {string} parameters.xResourceId - a generic resource identifier
              * @param {string} parameters.citationId - citationId
              * @param {} parameters.request - request
              */
@@ -4494,14 +3562,6 @@ angular.module('otrBackendService', [])
 
                 headers['Accept'] = ['*/*'];
                 headers['Content-Type'] = ['application/json'];
-
-                if (parameters['xFeature'] !== undefined) {
-                    headers['X-Feature'] = parameters['xFeature'];
-                }
-
-                if (parameters['xResourceId'] !== undefined) {
-                    headers['X-Resource-Id'] = parameters['xResourceId'];
-                }
 
                 path = path.replace('{citationId}', parameters['citationId']);
 
@@ -4526,12 +3586,45 @@ angular.module('otrBackendService', [])
                 return deferred.promise;
             };
             /**
+             * testTransaction
+             * @method
+             * @name OtrService#testTransactionUsingPUT
+             * @param {object} parameters - method options and parameters
+             * @param {string} parameters.citationId - citationId
+             */
+            OtrService.prototype.testTransactionUsingPUT = function(parameters) {
+                if (parameters === undefined) {
+                    parameters = {};
+                }
+                var deferred = $q.defer();
+                var domain = this.domain,
+                    path = '/api/v1/citations/{citationId}/test-trans';
+                var body = {},
+                    queryParameters = {},
+                    headers = {},
+                    form = {};
+
+                headers['Accept'] = ['*/*'];
+                headers['Content-Type'] = ['application/json'];
+
+                path = path.replace('{citationId}', parameters['citationId']);
+
+                if (parameters['citationId'] === undefined) {
+                    deferred.reject(new Error('Missing required  parameter: citationId'));
+                    return deferred.promise;
+                }
+
+                queryParameters = mergeQueryParams(parameters, queryParameters);
+
+                this.request('PUT', domain + path, parameters, body, headers, queryParameters, form, deferred);
+
+                return deferred.promise;
+            };
+            /**
              * getTicketReviewInfo
              * @method
              * @name OtrService#getTicketReviewInfoUsingGET
              * @param {object} parameters - method options and parameters
-             * @param {string} parameters.xFeature - which feature is the client using
-             * @param {string} parameters.xResourceId - a generic resource identifier
              * @param {string} parameters.citationId - citationId
              */
             OtrService.prototype.getTicketReviewInfoUsingGET = function(parameters) {
@@ -4547,15 +3640,6 @@ angular.module('otrBackendService', [])
                     form = {};
 
                 headers['Accept'] = ['*/*'];
-                headers['Content-Type'] = ['application/json'];
-
-                if (parameters['xFeature'] !== undefined) {
-                    headers['X-Feature'] = parameters['xFeature'];
-                }
-
-                if (parameters['xResourceId'] !== undefined) {
-                    headers['X-Resource-Id'] = parameters['xResourceId'];
-                }
 
                 path = path.replace('{citationId}', parameters['citationId']);
 
@@ -4575,8 +3659,6 @@ angular.module('otrBackendService', [])
              * @method
              * @name OtrService#getAnonymousTicketUploadsUsingGET
              * @param {object} parameters - method options and parameters
-             * @param {string} parameters.xFeature - which feature is the client using
-             * @param {string} parameters.xResourceId - a generic resource identifier
              * @param {string} parameters.emailAddress - emailAddress
              */
             OtrService.prototype.getAnonymousTicketUploadsUsingGET = function(parameters) {
@@ -4592,15 +3674,6 @@ angular.module('otrBackendService', [])
                     form = {};
 
                 headers['Accept'] = ['*/*'];
-                headers['Content-Type'] = ['application/json'];
-
-                if (parameters['xFeature'] !== undefined) {
-                    headers['X-Feature'] = parameters['xFeature'];
-                }
-
-                if (parameters['xResourceId'] !== undefined) {
-                    headers['X-Resource-Id'] = parameters['xResourceId'];
-                }
 
                 path = path.replace('{emailAddress}', parameters['emailAddress']);
 
@@ -4620,8 +3693,6 @@ angular.module('otrBackendService', [])
              * @method
              * @name OtrService#addSampleCaseUsingPUT
              * @param {object} parameters - method options and parameters
-             * @param {string} parameters.xFeature - which feature is the client using
-             * @param {string} parameters.xResourceId - a generic resource identifier
              * @param {string} parameters.lawfirmId - lawfirmId
              */
             OtrService.prototype.addSampleCaseUsingPUT = function(parameters) {
@@ -4638,14 +3709,6 @@ angular.module('otrBackendService', [])
 
                 headers['Accept'] = ['*/*'];
                 headers['Content-Type'] = ['application/json'];
-
-                if (parameters['xFeature'] !== undefined) {
-                    headers['X-Feature'] = parameters['xFeature'];
-                }
-
-                if (parameters['xResourceId'] !== undefined) {
-                    headers['X-Resource-Id'] = parameters['xResourceId'];
-                }
 
                 path = path.replace('{lawfirmId}', parameters['lawfirmId']);
 
@@ -4665,8 +3728,6 @@ angular.module('otrBackendService', [])
              * @method
              * @name OtrService#getAppConfigurationUsingGET
              * @param {object} parameters - method options and parameters
-             * @param {string} parameters.xFeature - which feature is the client using
-             * @param {string} parameters.xResourceId - a generic resource identifier
              */
             OtrService.prototype.getAppConfigurationUsingGET = function(parameters) {
                 if (parameters === undefined) {
@@ -4681,15 +3742,6 @@ angular.module('otrBackendService', [])
                     form = {};
 
                 headers['Accept'] = ['*/*'];
-                headers['Content-Type'] = ['application/json'];
-
-                if (parameters['xFeature'] !== undefined) {
-                    headers['X-Feature'] = parameters['xFeature'];
-                }
-
-                if (parameters['xResourceId'] !== undefined) {
-                    headers['X-Resource-Id'] = parameters['xResourceId'];
-                }
 
                 queryParameters = mergeQueryParams(parameters, queryParameters);
 
@@ -4702,8 +3754,6 @@ angular.module('otrBackendService', [])
              * @method
              * @name OtrService#appleConnectUsingPOST
              * @param {object} parameters - method options and parameters
-             * @param {string} parameters.xFeature - which feature is the client using
-             * @param {string} parameters.xResourceId - a generic resource identifier
              * @param {} parameters.request - request
              */
             OtrService.prototype.appleConnectUsingPOST = function(parameters) {
@@ -4720,14 +3770,6 @@ angular.module('otrBackendService', [])
 
                 headers['Accept'] = ['*/*'];
                 headers['Content-Type'] = ['application/json'];
-
-                if (parameters['xFeature'] !== undefined) {
-                    headers['X-Feature'] = parameters['xFeature'];
-                }
-
-                if (parameters['xResourceId'] !== undefined) {
-                    headers['X-Resource-Id'] = parameters['xResourceId'];
-                }
 
                 if (parameters['request'] !== undefined) {
                     body = parameters['request'];
@@ -4749,8 +3791,6 @@ angular.module('otrBackendService', [])
              * @method
              * @name OtrService#facebookConnectUsingPOST
              * @param {object} parameters - method options and parameters
-             * @param {string} parameters.xFeature - which feature is the client using
-             * @param {string} parameters.xResourceId - a generic resource identifier
              * @param {string} parameters.providerId - providerId
              * @param {} parameters.request - request
              */
@@ -4768,14 +3808,6 @@ angular.module('otrBackendService', [])
 
                 headers['Accept'] = ['*/*'];
                 headers['Content-Type'] = ['application/json'];
-
-                if (parameters['xFeature'] !== undefined) {
-                    headers['X-Feature'] = parameters['xFeature'];
-                }
-
-                if (parameters['xResourceId'] !== undefined) {
-                    headers['X-Resource-Id'] = parameters['xResourceId'];
-                }
 
                 path = path.replace('{providerId}', parameters['providerId']);
 
@@ -4804,8 +3836,6 @@ angular.module('otrBackendService', [])
              * @method
              * @name OtrService#getCasesWithCoverageObtainedUsingPOST
              * @param {object} parameters - method options and parameters
-             * @param {string} parameters.xFeature - which feature is the client using
-             * @param {string} parameters.xResourceId - a generic resource identifier
              * @param {} parameters.request - request
              */
             OtrService.prototype.getCasesWithCoverageObtainedUsingPOST = function(parameters) {
@@ -4822,14 +3852,6 @@ angular.module('otrBackendService', [])
 
                 headers['Accept'] = ['application/json'];
                 headers['Content-Type'] = ['application/json'];
-
-                if (parameters['xFeature'] !== undefined) {
-                    headers['X-Feature'] = parameters['xFeature'];
-                }
-
-                if (parameters['xResourceId'] !== undefined) {
-                    headers['X-Resource-Id'] = parameters['xResourceId'];
-                }
 
                 if (parameters['request'] !== undefined) {
                     body = parameters['request'];
@@ -4851,8 +3873,6 @@ angular.module('otrBackendService', [])
              * @method
              * @name OtrService#getInvalidCasesWithStripeChargeUsingPOST
              * @param {object} parameters - method options and parameters
-             * @param {string} parameters.xFeature - which feature is the client using
-             * @param {string} parameters.xResourceId - a generic resource identifier
              * @param {} parameters.request - request
              */
             OtrService.prototype.getInvalidCasesWithStripeChargeUsingPOST = function(parameters) {
@@ -4869,14 +3889,6 @@ angular.module('otrBackendService', [])
 
                 headers['Accept'] = ['application/json'];
                 headers['Content-Type'] = ['application/json'];
-
-                if (parameters['xFeature'] !== undefined) {
-                    headers['X-Feature'] = parameters['xFeature'];
-                }
-
-                if (parameters['xResourceId'] !== undefined) {
-                    headers['X-Resource-Id'] = parameters['xResourceId'];
-                }
 
                 if (parameters['request'] !== undefined) {
                     body = parameters['request'];
@@ -4898,8 +3910,6 @@ angular.module('otrBackendService', [])
              * @method
              * @name OtrService#getLostCasesWithTransferNotReversedUsingPOST
              * @param {object} parameters - method options and parameters
-             * @param {string} parameters.xFeature - which feature is the client using
-             * @param {string} parameters.xResourceId - a generic resource identifier
              * @param {} parameters.request - request
              */
             OtrService.prototype.getLostCasesWithTransferNotReversedUsingPOST = function(parameters) {
@@ -4916,14 +3926,6 @@ angular.module('otrBackendService', [])
 
                 headers['Accept'] = ['application/json'];
                 headers['Content-Type'] = ['application/json'];
-
-                if (parameters['xFeature'] !== undefined) {
-                    headers['X-Feature'] = parameters['xFeature'];
-                }
-
-                if (parameters['xResourceId'] !== undefined) {
-                    headers['X-Resource-Id'] = parameters['xResourceId'];
-                }
 
                 if (parameters['request'] !== undefined) {
                     body = parameters['request'];
@@ -4945,8 +3947,6 @@ angular.module('otrBackendService', [])
              * @method
              * @name OtrService#listCasesByStatusUsingPOST
              * @param {object} parameters - method options and parameters
-             * @param {string} parameters.xFeature - which feature is the client using
-             * @param {string} parameters.xResourceId - a generic resource identifier
              * @param {} parameters.graphRequest - graphRequest
              */
             OtrService.prototype.listCasesByStatusUsingPOST = function(parameters) {
@@ -4963,14 +3963,6 @@ angular.module('otrBackendService', [])
 
                 headers['Accept'] = ['application/json'];
                 headers['Content-Type'] = ['application/json'];
-
-                if (parameters['xFeature'] !== undefined) {
-                    headers['X-Feature'] = parameters['xFeature'];
-                }
-
-                if (parameters['xResourceId'] !== undefined) {
-                    headers['X-Resource-Id'] = parameters['xResourceId'];
-                }
 
                 if (parameters['graphRequest'] !== undefined) {
                     body = parameters['graphRequest'];
@@ -4992,8 +3984,6 @@ angular.module('otrBackendService', [])
              * @method
              * @name OtrService#getPendingAndRefusedCasesUsingPOST
              * @param {object} parameters - method options and parameters
-             * @param {string} parameters.xFeature - which feature is the client using
-             * @param {string} parameters.xResourceId - a generic resource identifier
              * @param {} parameters.request - request
              */
             OtrService.prototype.getPendingAndRefusedCasesUsingPOST = function(parameters) {
@@ -5010,14 +4000,6 @@ angular.module('otrBackendService', [])
 
                 headers['Accept'] = ['application/json'];
                 headers['Content-Type'] = ['application/json'];
-
-                if (parameters['xFeature'] !== undefined) {
-                    headers['X-Feature'] = parameters['xFeature'];
-                }
-
-                if (parameters['xResourceId'] !== undefined) {
-                    headers['X-Resource-Id'] = parameters['xResourceId'];
-                }
 
                 if (parameters['request'] !== undefined) {
                     body = parameters['request'];
@@ -5039,8 +4021,6 @@ angular.module('otrBackendService', [])
              * @method
              * @name OtrService#getCasesWithOverduePaymentsUsingPOST
              * @param {object} parameters - method options and parameters
-             * @param {string} parameters.xFeature - which feature is the client using
-             * @param {string} parameters.xResourceId - a generic resource identifier
              * @param {} parameters.request - request
              */
             OtrService.prototype.getCasesWithOverduePaymentsUsingPOST = function(parameters) {
@@ -5057,14 +4037,6 @@ angular.module('otrBackendService', [])
 
                 headers['Accept'] = ['application/json'];
                 headers['Content-Type'] = ['application/json'];
-
-                if (parameters['xFeature'] !== undefined) {
-                    headers['X-Feature'] = parameters['xFeature'];
-                }
-
-                if (parameters['xResourceId'] !== undefined) {
-                    headers['X-Resource-Id'] = parameters['xResourceId'];
-                }
 
                 if (parameters['request'] !== undefined) {
                     body = parameters['request'];
@@ -5086,8 +4058,6 @@ angular.module('otrBackendService', [])
              * @method
              * @name OtrService#getCitationPhoneLeadsUsingPOST
              * @param {object} parameters - method options and parameters
-             * @param {string} parameters.xFeature - which feature is the client using
-             * @param {string} parameters.xResourceId - a generic resource identifier
              * @param {} parameters.request - request
              */
             OtrService.prototype.getCitationPhoneLeadsUsingPOST = function(parameters) {
@@ -5104,14 +4074,6 @@ angular.module('otrBackendService', [])
 
                 headers['Accept'] = ['application/json'];
                 headers['Content-Type'] = ['application/json'];
-
-                if (parameters['xFeature'] !== undefined) {
-                    headers['X-Feature'] = parameters['xFeature'];
-                }
-
-                if (parameters['xResourceId'] !== undefined) {
-                    headers['X-Resource-Id'] = parameters['xResourceId'];
-                }
 
                 if (parameters['request'] !== undefined) {
                     body = parameters['request'];
@@ -5133,8 +4095,6 @@ angular.module('otrBackendService', [])
              * @method
              * @name OtrService#getCitationsWithMissingFieldsUsingPOST
              * @param {object} parameters - method options and parameters
-             * @param {string} parameters.xFeature - which feature is the client using
-             * @param {string} parameters.xResourceId - a generic resource identifier
              * @param {} parameters.request - request
              */
             OtrService.prototype.getCitationsWithMissingFieldsUsingPOST = function(parameters) {
@@ -5151,14 +4111,6 @@ angular.module('otrBackendService', [])
 
                 headers['Accept'] = ['application/json'];
                 headers['Content-Type'] = ['application/json'];
-
-                if (parameters['xFeature'] !== undefined) {
-                    headers['X-Feature'] = parameters['xFeature'];
-                }
-
-                if (parameters['xResourceId'] !== undefined) {
-                    headers['X-Resource-Id'] = parameters['xResourceId'];
-                }
 
                 if (parameters['request'] !== undefined) {
                     body = parameters['request'];
@@ -5180,8 +4132,6 @@ angular.module('otrBackendService', [])
              * @method
              * @name OtrService#listCustomersUsingPOST
              * @param {object} parameters - method options and parameters
-             * @param {string} parameters.xFeature - which feature is the client using
-             * @param {string} parameters.xResourceId - a generic resource identifier
              * @param {} parameters.graphRequest - graphRequest
              */
             OtrService.prototype.listCustomersUsingPOST = function(parameters) {
@@ -5198,14 +4148,6 @@ angular.module('otrBackendService', [])
 
                 headers['Accept'] = ['application/json'];
                 headers['Content-Type'] = ['application/json'];
-
-                if (parameters['xFeature'] !== undefined) {
-                    headers['X-Feature'] = parameters['xFeature'];
-                }
-
-                if (parameters['xResourceId'] !== undefined) {
-                    headers['X-Resource-Id'] = parameters['xResourceId'];
-                }
 
                 if (parameters['graphRequest'] !== undefined) {
                     body = parameters['graphRequest'];
@@ -5227,8 +4169,6 @@ angular.module('otrBackendService', [])
              * @method
              * @name OtrService#findDisputesUsingPOST
              * @param {object} parameters - method options and parameters
-             * @param {string} parameters.xFeature - which feature is the client using
-             * @param {string} parameters.xResourceId - a generic resource identifier
              * @param {} parameters.request - request
              */
             OtrService.prototype.findDisputesUsingPOST = function(parameters) {
@@ -5245,14 +4185,6 @@ angular.module('otrBackendService', [])
 
                 headers['Accept'] = ['application/json'];
                 headers['Content-Type'] = ['application/json'];
-
-                if (parameters['xFeature'] !== undefined) {
-                    headers['X-Feature'] = parameters['xFeature'];
-                }
-
-                if (parameters['xResourceId'] !== undefined) {
-                    headers['X-Resource-Id'] = parameters['xResourceId'];
-                }
 
                 if (parameters['request'] !== undefined) {
                     body = parameters['request'];
@@ -5274,8 +4206,6 @@ angular.module('otrBackendService', [])
              * @method
              * @name OtrService#listDropoffsUsingPOST
              * @param {object} parameters - method options and parameters
-             * @param {string} parameters.xFeature - which feature is the client using
-             * @param {string} parameters.xResourceId - a generic resource identifier
              * @param {} parameters.graphRequest - graphRequest
              */
             OtrService.prototype.listDropoffsUsingPOST = function(parameters) {
@@ -5292,14 +4222,6 @@ angular.module('otrBackendService', [])
 
                 headers['Accept'] = ['application/json'];
                 headers['Content-Type'] = ['application/json'];
-
-                if (parameters['xFeature'] !== undefined) {
-                    headers['X-Feature'] = parameters['xFeature'];
-                }
-
-                if (parameters['xResourceId'] !== undefined) {
-                    headers['X-Resource-Id'] = parameters['xResourceId'];
-                }
 
                 if (parameters['graphRequest'] !== undefined) {
                     body = parameters['graphRequest'];
@@ -5321,8 +4243,6 @@ angular.module('otrBackendService', [])
              * @method
              * @name OtrService#listExpensesUsingPOST
              * @param {object} parameters - method options and parameters
-             * @param {string} parameters.xFeature - which feature is the client using
-             * @param {string} parameters.xResourceId - a generic resource identifier
              * @param {} parameters.graphRequest - graphRequest
              */
             OtrService.prototype.listExpensesUsingPOST = function(parameters) {
@@ -5339,14 +4259,6 @@ angular.module('otrBackendService', [])
 
                 headers['Accept'] = ['application/json'];
                 headers['Content-Type'] = ['application/json'];
-
-                if (parameters['xFeature'] !== undefined) {
-                    headers['X-Feature'] = parameters['xFeature'];
-                }
-
-                if (parameters['xResourceId'] !== undefined) {
-                    headers['X-Resource-Id'] = parameters['xResourceId'];
-                }
 
                 if (parameters['graphRequest'] !== undefined) {
                     body = parameters['graphRequest'];
@@ -5368,8 +4280,6 @@ angular.module('otrBackendService', [])
              * @method
              * @name OtrService#listLawfirmLeadsUsingPOST
              * @param {object} parameters - method options and parameters
-             * @param {string} parameters.xFeature - which feature is the client using
-             * @param {string} parameters.xResourceId - a generic resource identifier
              * @param {} parameters.request - request
              */
             OtrService.prototype.listLawfirmLeadsUsingPOST = function(parameters) {
@@ -5386,14 +4296,6 @@ angular.module('otrBackendService', [])
 
                 headers['Accept'] = ['application/json'];
                 headers['Content-Type'] = ['application/json'];
-
-                if (parameters['xFeature'] !== undefined) {
-                    headers['X-Feature'] = parameters['xFeature'];
-                }
-
-                if (parameters['xResourceId'] !== undefined) {
-                    headers['X-Resource-Id'] = parameters['xResourceId'];
-                }
 
                 if (parameters['request'] !== undefined) {
                     body = parameters['request'];
@@ -5415,8 +4317,6 @@ angular.module('otrBackendService', [])
              * @method
              * @name OtrService#listLawyerLeadsUsingPOST
              * @param {object} parameters - method options and parameters
-             * @param {string} parameters.xFeature - which feature is the client using
-             * @param {string} parameters.xResourceId - a generic resource identifier
              * @param {} parameters.graphRequest - graphRequest
              */
             OtrService.prototype.listLawyerLeadsUsingPOST = function(parameters) {
@@ -5433,14 +4333,6 @@ angular.module('otrBackendService', [])
 
                 headers['Accept'] = ['application/json'];
                 headers['Content-Type'] = ['application/json'];
-
-                if (parameters['xFeature'] !== undefined) {
-                    headers['X-Feature'] = parameters['xFeature'];
-                }
-
-                if (parameters['xResourceId'] !== undefined) {
-                    headers['X-Resource-Id'] = parameters['xResourceId'];
-                }
 
                 if (parameters['graphRequest'] !== undefined) {
                     body = parameters['graphRequest'];
@@ -5462,8 +4354,6 @@ angular.module('otrBackendService', [])
              * @method
              * @name OtrService#listPotentialCustomersUsingPOST
              * @param {object} parameters - method options and parameters
-             * @param {string} parameters.xFeature - which feature is the client using
-             * @param {string} parameters.xResourceId - a generic resource identifier
              * @param {} parameters.request - request
              */
             OtrService.prototype.listPotentialCustomersUsingPOST = function(parameters) {
@@ -5480,14 +4370,6 @@ angular.module('otrBackendService', [])
 
                 headers['Accept'] = ['application/json'];
                 headers['Content-Type'] = ['application/json'];
-
-                if (parameters['xFeature'] !== undefined) {
-                    headers['X-Feature'] = parameters['xFeature'];
-                }
-
-                if (parameters['xResourceId'] !== undefined) {
-                    headers['X-Resource-Id'] = parameters['xResourceId'];
-                }
 
                 if (parameters['request'] !== undefined) {
                     body = parameters['request'];
@@ -5509,8 +4391,6 @@ angular.module('otrBackendService', [])
              * @method
              * @name OtrService#getPendingTicketReviewsUsingPOST
              * @param {object} parameters - method options and parameters
-             * @param {string} parameters.xFeature - which feature is the client using
-             * @param {string} parameters.xResourceId - a generic resource identifier
              * @param {} parameters.request - request
              */
             OtrService.prototype.getPendingTicketReviewsUsingPOST = function(parameters) {
@@ -5527,14 +4407,6 @@ angular.module('otrBackendService', [])
 
                 headers['Accept'] = ['application/json'];
                 headers['Content-Type'] = ['application/json'];
-
-                if (parameters['xFeature'] !== undefined) {
-                    headers['X-Feature'] = parameters['xFeature'];
-                }
-
-                if (parameters['xResourceId'] !== undefined) {
-                    headers['X-Resource-Id'] = parameters['xResourceId'];
-                }
 
                 if (parameters['request'] !== undefined) {
                     body = parameters['request'];
@@ -5556,8 +4428,6 @@ angular.module('otrBackendService', [])
              * @method
              * @name OtrService#getRegisteredUsersUsingPOST
              * @param {object} parameters - method options and parameters
-             * @param {string} parameters.xFeature - which feature is the client using
-             * @param {string} parameters.xResourceId - a generic resource identifier
              * @param {} parameters.graphRequest - graphRequest
              */
             OtrService.prototype.getRegisteredUsersUsingPOST = function(parameters) {
@@ -5574,14 +4444,6 @@ angular.module('otrBackendService', [])
 
                 headers['Accept'] = ['application/json'];
                 headers['Content-Type'] = ['application/json'];
-
-                if (parameters['xFeature'] !== undefined) {
-                    headers['X-Feature'] = parameters['xFeature'];
-                }
-
-                if (parameters['xResourceId'] !== undefined) {
-                    headers['X-Resource-Id'] = parameters['xResourceId'];
-                }
 
                 if (parameters['graphRequest'] !== undefined) {
                     body = parameters['graphRequest'];
@@ -5603,8 +4465,6 @@ angular.module('otrBackendService', [])
              * @method
              * @name OtrService#getCountiesUsingGET
              * @param {object} parameters - method options and parameters
-             * @param {string} parameters.xFeature - which feature is the client using
-             * @param {string} parameters.xResourceId - a generic resource identifier
              * @param {string} parameters.state - state
              */
             OtrService.prototype.getCountiesUsingGET = function(parameters) {
@@ -5620,15 +4480,6 @@ angular.module('otrBackendService', [])
                     form = {};
 
                 headers['Accept'] = ['*/*'];
-                headers['Content-Type'] = ['application/json'];
-
-                if (parameters['xFeature'] !== undefined) {
-                    headers['X-Feature'] = parameters['xFeature'];
-                }
-
-                if (parameters['xResourceId'] !== undefined) {
-                    headers['X-Resource-Id'] = parameters['xResourceId'];
-                }
 
                 if (parameters['state'] !== undefined) {
                     queryParameters['state'] = parameters['state'];
@@ -5650,8 +4501,6 @@ angular.module('otrBackendService', [])
              * @method
              * @name OtrService#getCountryListUsingGET
              * @param {object} parameters - method options and parameters
-             * @param {string} parameters.xFeature - which feature is the client using
-             * @param {string} parameters.xResourceId - a generic resource identifier
              */
             OtrService.prototype.getCountryListUsingGET = function(parameters) {
                 if (parameters === undefined) {
@@ -5666,15 +4515,6 @@ angular.module('otrBackendService', [])
                     form = {};
 
                 headers['Accept'] = ['*/*'];
-                headers['Content-Type'] = ['application/json'];
-
-                if (parameters['xFeature'] !== undefined) {
-                    headers['X-Feature'] = parameters['xFeature'];
-                }
-
-                if (parameters['xResourceId'] !== undefined) {
-                    headers['X-Resource-Id'] = parameters['xResourceId'];
-                }
 
                 queryParameters = mergeQueryParams(parameters, queryParameters);
 
@@ -5687,8 +4527,6 @@ angular.module('otrBackendService', [])
              * @method
              * @name OtrService#getCountryRegionsUsingGET
              * @param {object} parameters - method options and parameters
-             * @param {string} parameters.xFeature - which feature is the client using
-             * @param {string} parameters.xResourceId - a generic resource identifier
              * @param {string} parameters.countryCode - countryCode
              */
             OtrService.prototype.getCountryRegionsUsingGET = function(parameters) {
@@ -5704,15 +4542,6 @@ angular.module('otrBackendService', [])
                     form = {};
 
                 headers['Accept'] = ['*/*'];
-                headers['Content-Type'] = ['application/json'];
-
-                if (parameters['xFeature'] !== undefined) {
-                    headers['X-Feature'] = parameters['xFeature'];
-                }
-
-                if (parameters['xResourceId'] !== undefined) {
-                    headers['X-Resource-Id'] = parameters['xResourceId'];
-                }
 
                 path = path.replace('{countryCode}', parameters['countryCode']);
 
@@ -5732,8 +4561,6 @@ angular.module('otrBackendService', [])
              * @method
              * @name OtrService#addCourtUsingPOST
              * @param {object} parameters - method options and parameters
-             * @param {string} parameters.xFeature - which feature is the client using
-             * @param {string} parameters.xResourceId - a generic resource identifier
              * @param {} parameters.request - request
              */
             OtrService.prototype.addCourtUsingPOST = function(parameters) {
@@ -5750,14 +4577,6 @@ angular.module('otrBackendService', [])
 
                 headers['Accept'] = ['*/*'];
                 headers['Content-Type'] = ['application/json'];
-
-                if (parameters['xFeature'] !== undefined) {
-                    headers['X-Feature'] = parameters['xFeature'];
-                }
-
-                if (parameters['xResourceId'] !== undefined) {
-                    headers['X-Resource-Id'] = parameters['xResourceId'];
-                }
 
                 if (parameters['request'] !== undefined) {
                     body = parameters['request'];
@@ -5779,11 +4598,9 @@ angular.module('otrBackendService', [])
              * @method
              * @name OtrService#findCourtsWithNoCoverageUsingGET
              * @param {object} parameters - method options and parameters
-             * @param {string} parameters.xFeature - which feature is the client using
-             * @param {string} parameters.xResourceId - a generic resource identifier
              * @param {string} parameters.countryCode - countryCode
-             * @param {string} parameters.regionCode - regionCode
              * @param {integer} parameters.countyId - countyId
+             * @param {string} parameters.regionCode - regionCode
              * @param {integer} parameters.trailingDays - trailingDays
              */
             OtrService.prototype.findCourtsWithNoCoverageUsingGET = function(parameters) {
@@ -5799,27 +4616,24 @@ angular.module('otrBackendService', [])
                     form = {};
 
                 headers['Accept'] = ['*/*'];
-                headers['Content-Type'] = ['application/json'];
 
-                if (parameters['xFeature'] !== undefined) {
-                    headers['X-Feature'] = parameters['xFeature'];
-                }
-
-                if (parameters['xResourceId'] !== undefined) {
-                    headers['X-Resource-Id'] = parameters['xResourceId'];
-                }
+                /** set default value **/
+                queryParameters['countryCode'] = US;
 
                 if (parameters['countryCode'] !== undefined) {
                     queryParameters['countryCode'] = parameters['countryCode'];
+                }
+
+                if (parameters['countyId'] !== undefined) {
+                    queryParameters['countyId'] = parameters['countyId'];
                 }
 
                 if (parameters['regionCode'] !== undefined) {
                     queryParameters['regionCode'] = parameters['regionCode'];
                 }
 
-                if (parameters['countyId'] !== undefined) {
-                    queryParameters['countyId'] = parameters['countyId'];
-                }
+                /** set default value **/
+                queryParameters['trailingDays'] = 120;
 
                 if (parameters['trailingDays'] !== undefined) {
                     queryParameters['trailingDays'] = parameters['trailingDays'];
@@ -5836,17 +4650,15 @@ angular.module('otrBackendService', [])
              * @method
              * @name OtrService#searchCourtsUsingGET
              * @param {object} parameters - method options and parameters
-             * @param {string} parameters.xFeature - which feature is the client using
-             * @param {string} parameters.xResourceId - a generic resource identifier
-             * @param {string} parameters.q - q
-             * @param {string} parameters.state - state
-             * @param {string} parameters.regionCode - regionCode
-             * @param {string} parameters.countryCode - countryCode
-             * @param {string} parameters.city - city
-             * @param {string} parameters.county - county
-             * @param {integer} parameters.offset - offset
-             * @param {integer} parameters.length - length
              * @param {integer} parameters.citationId - citationId
+             * @param {string} parameters.city - city
+             * @param {string} parameters.countryCode - countryCode
+             * @param {string} parameters.county - county
+             * @param {integer} parameters.length - length
+             * @param {integer} parameters.offset - offset
+             * @param {string} parameters.q - q
+             * @param {string} parameters.regionCode - regionCode
+             * @param {string} parameters.state - state
              */
             OtrService.prototype.searchCourtsUsingGET = function(parameters) {
                 if (parameters === undefined) {
@@ -5861,50 +4673,44 @@ angular.module('otrBackendService', [])
                     form = {};
 
                 headers['Accept'] = ['*/*'];
-                headers['Content-Type'] = ['application/json'];
 
-                if (parameters['xFeature'] !== undefined) {
-                    headers['X-Feature'] = parameters['xFeature'];
-                }
-
-                if (parameters['xResourceId'] !== undefined) {
-                    headers['X-Resource-Id'] = parameters['xResourceId'];
-                }
-
-                if (parameters['q'] !== undefined) {
-                    queryParameters['q'] = parameters['q'];
-                }
-
-                if (parameters['state'] !== undefined) {
-                    queryParameters['state'] = parameters['state'];
-                }
-
-                if (parameters['regionCode'] !== undefined) {
-                    queryParameters['regionCode'] = parameters['regionCode'];
-                }
-
-                if (parameters['countryCode'] !== undefined) {
-                    queryParameters['countryCode'] = parameters['countryCode'];
+                if (parameters['citationId'] !== undefined) {
+                    queryParameters['citationId'] = parameters['citationId'];
                 }
 
                 if (parameters['city'] !== undefined) {
                     queryParameters['city'] = parameters['city'];
                 }
 
+                if (parameters['countryCode'] !== undefined) {
+                    queryParameters['countryCode'] = parameters['countryCode'];
+                }
+
                 if (parameters['county'] !== undefined) {
                     queryParameters['county'] = parameters['county'];
+                }
+
+                /** set default value **/
+                queryParameters['length'] = 9999;
+
+                if (parameters['length'] !== undefined) {
+                    queryParameters['length'] = parameters['length'];
                 }
 
                 if (parameters['offset'] !== undefined) {
                     queryParameters['offset'] = parameters['offset'];
                 }
 
-                if (parameters['length'] !== undefined) {
-                    queryParameters['length'] = parameters['length'];
+                if (parameters['q'] !== undefined) {
+                    queryParameters['q'] = parameters['q'];
                 }
 
-                if (parameters['citationId'] !== undefined) {
-                    queryParameters['citationId'] = parameters['citationId'];
+                if (parameters['regionCode'] !== undefined) {
+                    queryParameters['regionCode'] = parameters['regionCode'];
+                }
+
+                if (parameters['state'] !== undefined) {
+                    queryParameters['state'] = parameters['state'];
                 }
 
                 queryParameters = mergeQueryParams(parameters, queryParameters);
@@ -5918,8 +4724,6 @@ angular.module('otrBackendService', [])
              * @method
              * @name OtrService#getCourtUsingGET
              * @param {object} parameters - method options and parameters
-             * @param {string} parameters.xFeature - which feature is the client using
-             * @param {string} parameters.xResourceId - a generic resource identifier
              * @param {integer} parameters.courtId - courtId
              */
             OtrService.prototype.getCourtUsingGET = function(parameters) {
@@ -5935,15 +4739,6 @@ angular.module('otrBackendService', [])
                     form = {};
 
                 headers['Accept'] = ['*/*'];
-                headers['Content-Type'] = ['application/json'];
-
-                if (parameters['xFeature'] !== undefined) {
-                    headers['X-Feature'] = parameters['xFeature'];
-                }
-
-                if (parameters['xResourceId'] !== undefined) {
-                    headers['X-Resource-Id'] = parameters['xResourceId'];
-                }
 
                 path = path.replace('{courtId}', parameters['courtId']);
 
@@ -5963,8 +4758,6 @@ angular.module('otrBackendService', [])
              * @method
              * @name OtrService#updateCourtUsingPUT
              * @param {object} parameters - method options and parameters
-             * @param {string} parameters.xFeature - which feature is the client using
-             * @param {string} parameters.xResourceId - a generic resource identifier
              * @param {integer} parameters.courtId - courtId
              * @param {} parameters.request - request
              */
@@ -5982,14 +4775,6 @@ angular.module('otrBackendService', [])
 
                 headers['Accept'] = ['*/*'];
                 headers['Content-Type'] = ['application/json'];
-
-                if (parameters['xFeature'] !== undefined) {
-                    headers['X-Feature'] = parameters['xFeature'];
-                }
-
-                if (parameters['xResourceId'] !== undefined) {
-                    headers['X-Resource-Id'] = parameters['xResourceId'];
-                }
 
                 path = path.replace('{courtId}', parameters['courtId']);
 
@@ -6018,10 +4803,8 @@ angular.module('otrBackendService', [])
              * @method
              * @name OtrService#updateCourtAddressUsingPUT
              * @param {object} parameters - method options and parameters
-             * @param {string} parameters.xFeature - which feature is the client using
-             * @param {string} parameters.xResourceId - a generic resource identifier
-             * @param {integer} parameters.courtId - courtId
              * @param {integer} parameters.addressId - addressId
+             * @param {integer} parameters.courtId - courtId
              * @param {} parameters.request - request
              */
             OtrService.prototype.updateCourtAddressUsingPUT = function(parameters) {
@@ -6039,25 +4822,17 @@ angular.module('otrBackendService', [])
                 headers['Accept'] = ['*/*'];
                 headers['Content-Type'] = ['application/json'];
 
-                if (parameters['xFeature'] !== undefined) {
-                    headers['X-Feature'] = parameters['xFeature'];
-                }
+                path = path.replace('{addressId}', parameters['addressId']);
 
-                if (parameters['xResourceId'] !== undefined) {
-                    headers['X-Resource-Id'] = parameters['xResourceId'];
+                if (parameters['addressId'] === undefined) {
+                    deferred.reject(new Error('Missing required  parameter: addressId'));
+                    return deferred.promise;
                 }
 
                 path = path.replace('{courtId}', parameters['courtId']);
 
                 if (parameters['courtId'] === undefined) {
                     deferred.reject(new Error('Missing required  parameter: courtId'));
-                    return deferred.promise;
-                }
-
-                path = path.replace('{addressId}', parameters['addressId']);
-
-                if (parameters['addressId'] === undefined) {
-                    deferred.reject(new Error('Missing required  parameter: addressId'));
                     return deferred.promise;
                 }
 
@@ -6081,8 +4856,6 @@ angular.module('otrBackendService', [])
              * @method
              * @name OtrService#getAwsCredentialsUsingPOST
              * @param {object} parameters - method options and parameters
-             * @param {string} parameters.xFeature - which feature is the client using
-             * @param {string} parameters.xResourceId - a generic resource identifier
              * @param {} parameters.request - request
              */
             OtrService.prototype.getAwsCredentialsUsingPOST = function(parameters) {
@@ -6099,14 +4872,6 @@ angular.module('otrBackendService', [])
 
                 headers['Accept'] = ['*/*'];
                 headers['Content-Type'] = ['application/json'];
-
-                if (parameters['xFeature'] !== undefined) {
-                    headers['X-Feature'] = parameters['xFeature'];
-                }
-
-                if (parameters['xResourceId'] !== undefined) {
-                    headers['X-Resource-Id'] = parameters['xResourceId'];
-                }
 
                 if (parameters['request'] !== undefined) {
                     body = parameters['request'];
@@ -6128,8 +4893,6 @@ angular.module('otrBackendService', [])
              * @method
              * @name OtrService#getOutgoingContactsUsingGET
              * @param {object} parameters - method options and parameters
-             * @param {string} parameters.xFeature - which feature is the client using
-             * @param {string} parameters.xResourceId - a generic resource identifier
              * @param {string} parameters.recipientEmailAddress - recipientEmailAddress
              */
             OtrService.prototype.getOutgoingContactsUsingGET = function(parameters) {
@@ -6145,15 +4908,6 @@ angular.module('otrBackendService', [])
                     form = {};
 
                 headers['Accept'] = ['application/json'];
-                headers['Content-Type'] = ['application/json'];
-
-                if (parameters['xFeature'] !== undefined) {
-                    headers['X-Feature'] = parameters['xFeature'];
-                }
-
-                if (parameters['xResourceId'] !== undefined) {
-                    headers['X-Resource-Id'] = parameters['xResourceId'];
-                }
 
                 if (parameters['recipientEmailAddress'] !== undefined) {
                     queryParameters['recipientEmailAddress'] = parameters['recipientEmailAddress'];
@@ -6175,8 +4929,6 @@ angular.module('otrBackendService', [])
              * @method
              * @name OtrService#generateTemplateUsingPOST
              * @param {object} parameters - method options and parameters
-             * @param {string} parameters.xFeature - which feature is the client using
-             * @param {string} parameters.xResourceId - a generic resource identifier
              * @param {} parameters.request - request
              */
             OtrService.prototype.generateTemplateUsingPOST = function(parameters) {
@@ -6193,14 +4945,6 @@ angular.module('otrBackendService', [])
 
                 headers['Accept'] = ['application/json'];
                 headers['Content-Type'] = ['application/json'];
-
-                if (parameters['xFeature'] !== undefined) {
-                    headers['X-Feature'] = parameters['xFeature'];
-                }
-
-                if (parameters['xResourceId'] !== undefined) {
-                    headers['X-Resource-Id'] = parameters['xResourceId'];
-                }
 
                 if (parameters['request'] !== undefined) {
                     body = parameters['request'];
@@ -6222,8 +4966,6 @@ angular.module('otrBackendService', [])
              * @method
              * @name OtrService#getTemplatesUsingGET
              * @param {object} parameters - method options and parameters
-             * @param {string} parameters.xFeature - which feature is the client using
-             * @param {string} parameters.xResourceId - a generic resource identifier
              * @param {array} parameters.category - category
              */
             OtrService.prototype.getTemplatesUsingGET = function(parameters) {
@@ -6239,15 +4981,6 @@ angular.module('otrBackendService', [])
                     form = {};
 
                 headers['Accept'] = ['application/json'];
-                headers['Content-Type'] = ['application/json'];
-
-                if (parameters['xFeature'] !== undefined) {
-                    headers['X-Feature'] = parameters['xFeature'];
-                }
-
-                if (parameters['xResourceId'] !== undefined) {
-                    headers['X-Resource-Id'] = parameters['xResourceId'];
-                }
 
                 if (parameters['category'] !== undefined) {
                     queryParameters['category'] = parameters['category'];
@@ -6264,10 +4997,8 @@ angular.module('otrBackendService', [])
              * @method
              * @name OtrService#replyToTicketUsingPOST
              * @param {object} parameters - method options and parameters
-             * @param {string} parameters.xFeature - which feature is the client using
-             * @param {string} parameters.xResourceId - a generic resource identifier
-             * @param {integer} parameters.ticketId - ticketId
              * @param {} parameters.request - request
+             * @param {integer} parameters.ticketId - ticketId
              */
             OtrService.prototype.replyToTicketUsingPOST = function(parameters) {
                 if (parameters === undefined) {
@@ -6284,27 +5015,19 @@ angular.module('otrBackendService', [])
                 headers['Accept'] = ['application/json'];
                 headers['Content-Type'] = ['application/json'];
 
-                if (parameters['xFeature'] !== undefined) {
-                    headers['X-Feature'] = parameters['xFeature'];
-                }
-
-                if (parameters['xResourceId'] !== undefined) {
-                    headers['X-Resource-Id'] = parameters['xResourceId'];
-                }
-
-                path = path.replace('{ticketId}', parameters['ticketId']);
-
-                if (parameters['ticketId'] === undefined) {
-                    deferred.reject(new Error('Missing required  parameter: ticketId'));
-                    return deferred.promise;
-                }
-
                 if (parameters['request'] !== undefined) {
                     body = parameters['request'];
                 }
 
                 if (parameters['request'] === undefined) {
                     deferred.reject(new Error('Missing required  parameter: request'));
+                    return deferred.promise;
+                }
+
+                path = path.replace('{ticketId}', parameters['ticketId']);
+
+                if (parameters['ticketId'] === undefined) {
+                    deferred.reject(new Error('Missing required  parameter: ticketId'));
                     return deferred.promise;
                 }
 
@@ -6319,8 +5042,6 @@ angular.module('otrBackendService', [])
              * @method
              * @name OtrService#sendConsolidatedEmailToUserUsingPOST
              * @param {object} parameters - method options and parameters
-             * @param {string} parameters.xFeature - which feature is the client using
-             * @param {string} parameters.xResourceId - a generic resource identifier
              * @param {} parameters.request - request
              */
             OtrService.prototype.sendConsolidatedEmailToUserUsingPOST = function(parameters) {
@@ -6337,14 +5058,6 @@ angular.module('otrBackendService', [])
 
                 headers['Accept'] = ['application/json'];
                 headers['Content-Type'] = ['application/json'];
-
-                if (parameters['xFeature'] !== undefined) {
-                    headers['X-Feature'] = parameters['xFeature'];
-                }
-
-                if (parameters['xResourceId'] !== undefined) {
-                    headers['X-Resource-Id'] = parameters['xResourceId'];
-                }
 
                 if (parameters['request'] !== undefined) {
                     body = parameters['request'];
@@ -6366,8 +5079,6 @@ angular.module('otrBackendService', [])
              * @method
              * @name OtrService#sendEmailToUserUsingPOST
              * @param {object} parameters - method options and parameters
-             * @param {string} parameters.xFeature - which feature is the client using
-             * @param {string} parameters.xResourceId - a generic resource identifier
              * @param {} parameters.request - request
              */
             OtrService.prototype.sendEmailToUserUsingPOST = function(parameters) {
@@ -6384,14 +5095,6 @@ angular.module('otrBackendService', [])
 
                 headers['Accept'] = ['application/json'];
                 headers['Content-Type'] = ['application/json'];
-
-                if (parameters['xFeature'] !== undefined) {
-                    headers['X-Feature'] = parameters['xFeature'];
-                }
-
-                if (parameters['xResourceId'] !== undefined) {
-                    headers['X-Resource-Id'] = parameters['xResourceId'];
-                }
 
                 if (parameters['request'] !== undefined) {
                     body = parameters['request'];
@@ -6413,8 +5116,6 @@ angular.module('otrBackendService', [])
              * @method
              * @name OtrService#sendEmailToUsersUsingPOST
              * @param {object} parameters - method options and parameters
-             * @param {string} parameters.xFeature - which feature is the client using
-             * @param {string} parameters.xResourceId - a generic resource identifier
              * @param {} parameters.request - request
              */
             OtrService.prototype.sendEmailToUsersUsingPOST = function(parameters) {
@@ -6431,14 +5132,6 @@ angular.module('otrBackendService', [])
 
                 headers['Accept'] = ['application/json'];
                 headers['Content-Type'] = ['application/json'];
-
-                if (parameters['xFeature'] !== undefined) {
-                    headers['X-Feature'] = parameters['xFeature'];
-                }
-
-                if (parameters['xResourceId'] !== undefined) {
-                    headers['X-Resource-Id'] = parameters['xResourceId'];
-                }
 
                 if (parameters['request'] !== undefined) {
                     body = parameters['request'];
@@ -6460,8 +5153,6 @@ angular.module('otrBackendService', [])
              * @method
              * @name OtrService#postCustomerLeadUsingPOST
              * @param {object} parameters - method options and parameters
-             * @param {string} parameters.xFeature - which feature is the client using
-             * @param {string} parameters.xResourceId - a generic resource identifier
              * @param {} parameters.request - request
              */
             OtrService.prototype.postCustomerLeadUsingPOST = function(parameters) {
@@ -6478,14 +5169,6 @@ angular.module('otrBackendService', [])
 
                 headers['Accept'] = ['*/*'];
                 headers['Content-Type'] = ['application/json'];
-
-                if (parameters['xFeature'] !== undefined) {
-                    headers['X-Feature'] = parameters['xFeature'];
-                }
-
-                if (parameters['xResourceId'] !== undefined) {
-                    headers['X-Resource-Id'] = parameters['xResourceId'];
-                }
 
                 if (parameters['request'] !== undefined) {
                     body = parameters['request'];
@@ -6507,8 +5190,6 @@ angular.module('otrBackendService', [])
              * @method
              * @name OtrService#sendDirectMailUsingPOST
              * @param {object} parameters - method options and parameters
-             * @param {string} parameters.xFeature - which feature is the client using
-             * @param {string} parameters.xResourceId - a generic resource identifier
              * @param {} parameters.request - request
              */
             OtrService.prototype.sendDirectMailUsingPOST = function(parameters) {
@@ -6525,14 +5206,6 @@ angular.module('otrBackendService', [])
 
                 headers['Accept'] = ['*/*'];
                 headers['Content-Type'] = ['application/json'];
-
-                if (parameters['xFeature'] !== undefined) {
-                    headers['X-Feature'] = parameters['xFeature'];
-                }
-
-                if (parameters['xResourceId'] !== undefined) {
-                    headers['X-Resource-Id'] = parameters['xResourceId'];
-                }
 
                 if (parameters['request'] !== undefined) {
                     body = parameters['request'];
@@ -6554,8 +5227,6 @@ angular.module('otrBackendService', [])
              * @method
              * @name OtrService#getSentMailUsingPOST
              * @param {object} parameters - method options and parameters
-             * @param {string} parameters.xFeature - which feature is the client using
-             * @param {string} parameters.xResourceId - a generic resource identifier
              * @param {} parameters.request - request
              */
             OtrService.prototype.getSentMailUsingPOST = function(parameters) {
@@ -6572,14 +5243,6 @@ angular.module('otrBackendService', [])
 
                 headers['Accept'] = ['*/*'];
                 headers['Content-Type'] = ['application/json'];
-
-                if (parameters['xFeature'] !== undefined) {
-                    headers['X-Feature'] = parameters['xFeature'];
-                }
-
-                if (parameters['xResourceId'] !== undefined) {
-                    headers['X-Resource-Id'] = parameters['xResourceId'];
-                }
 
                 if (parameters['request'] !== undefined) {
                     body = parameters['request'];
@@ -6601,8 +5264,6 @@ angular.module('otrBackendService', [])
              * @method
              * @name OtrService#handleLobEventUsingPOST
              * @param {object} parameters - method options and parameters
-             * @param {string} parameters.xFeature - which feature is the client using
-             * @param {string} parameters.xResourceId - a generic resource identifier
              * @param {} parameters.request - request
              */
             OtrService.prototype.handleLobEventUsingPOST = function(parameters) {
@@ -6619,14 +5280,6 @@ angular.module('otrBackendService', [])
 
                 headers['Accept'] = ['*/*'];
                 headers['Content-Type'] = ['application/json'];
-
-                if (parameters['xFeature'] !== undefined) {
-                    headers['X-Feature'] = parameters['xFeature'];
-                }
-
-                if (parameters['xResourceId'] !== undefined) {
-                    headers['X-Resource-Id'] = parameters['xResourceId'];
-                }
 
                 if (parameters['request'] !== undefined) {
                     body = parameters['request'];
@@ -6648,8 +5301,6 @@ angular.module('otrBackendService', [])
              * @method
              * @name OtrService#getDirectMailTemplatesUsingGET
              * @param {object} parameters - method options and parameters
-             * @param {string} parameters.xFeature - which feature is the client using
-             * @param {string} parameters.xResourceId - a generic resource identifier
              */
             OtrService.prototype.getDirectMailTemplatesUsingGET = function(parameters) {
                 if (parameters === undefined) {
@@ -6664,15 +5315,6 @@ angular.module('otrBackendService', [])
                     form = {};
 
                 headers['Accept'] = ['*/*'];
-                headers['Content-Type'] = ['application/json'];
-
-                if (parameters['xFeature'] !== undefined) {
-                    headers['X-Feature'] = parameters['xFeature'];
-                }
-
-                if (parameters['xResourceId'] !== undefined) {
-                    headers['X-Resource-Id'] = parameters['xResourceId'];
-                }
 
                 queryParameters = mergeQueryParams(parameters, queryParameters);
 
@@ -6685,8 +5327,6 @@ angular.module('otrBackendService', [])
              * @method
              * @name OtrService#addDirectMailTemplateUsingPOST
              * @param {object} parameters - method options and parameters
-             * @param {string} parameters.xFeature - which feature is the client using
-             * @param {string} parameters.xResourceId - a generic resource identifier
              * @param {} parameters.request - request
              */
             OtrService.prototype.addDirectMailTemplateUsingPOST = function(parameters) {
@@ -6703,14 +5343,6 @@ angular.module('otrBackendService', [])
 
                 headers['Accept'] = ['*/*'];
                 headers['Content-Type'] = ['application/json'];
-
-                if (parameters['xFeature'] !== undefined) {
-                    headers['X-Feature'] = parameters['xFeature'];
-                }
-
-                if (parameters['xResourceId'] !== undefined) {
-                    headers['X-Resource-Id'] = parameters['xResourceId'];
-                }
 
                 if (parameters['request'] !== undefined) {
                     body = parameters['request'];
@@ -6732,8 +5364,6 @@ angular.module('otrBackendService', [])
              * @method
              * @name OtrService#validateDirectMailRequestForSendUsingPOST
              * @param {object} parameters - method options and parameters
-             * @param {string} parameters.xFeature - which feature is the client using
-             * @param {string} parameters.xResourceId - a generic resource identifier
              * @param {} parameters.request - request
              */
             OtrService.prototype.validateDirectMailRequestForSendUsingPOST = function(parameters) {
@@ -6750,14 +5380,6 @@ angular.module('otrBackendService', [])
 
                 headers['Accept'] = ['*/*'];
                 headers['Content-Type'] = ['application/json'];
-
-                if (parameters['xFeature'] !== undefined) {
-                    headers['X-Feature'] = parameters['xFeature'];
-                }
-
-                if (parameters['xResourceId'] !== undefined) {
-                    headers['X-Resource-Id'] = parameters['xResourceId'];
-                }
 
                 if (parameters['request'] !== undefined) {
                     body = parameters['request'];
@@ -6779,10 +5401,8 @@ angular.module('otrBackendService', [])
              * @method
              * @name OtrService#markDocumentWithDecisionUsingPOST
              * @param {object} parameters - method options and parameters
-             * @param {string} parameters.xFeature - which feature is the client using
-             * @param {string} parameters.xResourceId - a generic resource identifier
-             * @param {string} parameters.docId - docId
              * @param {} parameters.decisionRequest - decisionRequest
+             * @param {string} parameters.docId - docId
              */
             OtrService.prototype.markDocumentWithDecisionUsingPOST = function(parameters) {
                 if (parameters === undefined) {
@@ -6799,27 +5419,19 @@ angular.module('otrBackendService', [])
                 headers['Accept'] = ['*/*'];
                 headers['Content-Type'] = ['application/json'];
 
-                if (parameters['xFeature'] !== undefined) {
-                    headers['X-Feature'] = parameters['xFeature'];
-                }
-
-                if (parameters['xResourceId'] !== undefined) {
-                    headers['X-Resource-Id'] = parameters['xResourceId'];
-                }
-
-                path = path.replace('{docId}', parameters['docId']);
-
-                if (parameters['docId'] === undefined) {
-                    deferred.reject(new Error('Missing required  parameter: docId'));
-                    return deferred.promise;
-                }
-
                 if (parameters['decisionRequest'] !== undefined) {
                     body = parameters['decisionRequest'];
                 }
 
                 if (parameters['decisionRequest'] === undefined) {
                     deferred.reject(new Error('Missing required  parameter: decisionRequest'));
+                    return deferred.promise;
+                }
+
+                path = path.replace('{docId}', parameters['docId']);
+
+                if (parameters['docId'] === undefined) {
+                    deferred.reject(new Error('Missing required  parameter: docId'));
                     return deferred.promise;
                 }
 
@@ -6834,8 +5446,6 @@ angular.module('otrBackendService', [])
              * @method
              * @name OtrService#removeFromDripUsingDELETE
              * @param {object} parameters - method options and parameters
-             * @param {string} parameters.xFeature - which feature is the client using
-             * @param {string} parameters.xResourceId - a generic resource identifier
              * @param {} parameters.request - request
              */
             OtrService.prototype.removeFromDripUsingDELETE = function(parameters) {
@@ -6851,15 +5461,6 @@ angular.module('otrBackendService', [])
                     form = {};
 
                 headers['Accept'] = ['application/json'];
-                headers['Content-Type'] = ['application/json'];
-
-                if (parameters['xFeature'] !== undefined) {
-                    headers['X-Feature'] = parameters['xFeature'];
-                }
-
-                if (parameters['xResourceId'] !== undefined) {
-                    headers['X-Resource-Id'] = parameters['xResourceId'];
-                }
 
                 if (parameters['request'] !== undefined) {
                     body = parameters['request'];
@@ -6881,8 +5482,6 @@ angular.module('otrBackendService', [])
              * @method
              * @name OtrService#handleDripWebhookUsingPOST
              * @param {object} parameters - method options and parameters
-             * @param {string} parameters.xFeature - which feature is the client using
-             * @param {string} parameters.xResourceId - a generic resource identifier
              * @param {} parameters.request - request
              */
             OtrService.prototype.handleDripWebhookUsingPOST = function(parameters) {
@@ -6899,14 +5498,6 @@ angular.module('otrBackendService', [])
 
                 headers['Accept'] = ['*/*'];
                 headers['Content-Type'] = ['application/json'];
-
-                if (parameters['xFeature'] !== undefined) {
-                    headers['X-Feature'] = parameters['xFeature'];
-                }
-
-                if (parameters['xResourceId'] !== undefined) {
-                    headers['X-Resource-Id'] = parameters['xResourceId'];
-                }
 
                 if (parameters['request'] !== undefined) {
                     body = parameters['request'];
@@ -6928,8 +5519,6 @@ angular.module('otrBackendService', [])
              * @method
              * @name OtrService#postFeedbackUsingPOST
              * @param {object} parameters - method options and parameters
-             * @param {string} parameters.xFeature - which feature is the client using
-             * @param {string} parameters.xResourceId - a generic resource identifier
              * @param {boolean} parameters.isReview - isReview
              * @param {} parameters.request - request
              */
@@ -6947,14 +5536,6 @@ angular.module('otrBackendService', [])
 
                 headers['Accept'] = ['*/*'];
                 headers['Content-Type'] = ['application/json'];
-
-                if (parameters['xFeature'] !== undefined) {
-                    headers['X-Feature'] = parameters['xFeature'];
-                }
-
-                if (parameters['xResourceId'] !== undefined) {
-                    headers['X-Resource-Id'] = parameters['xResourceId'];
-                }
 
                 if (parameters['isReview'] !== undefined) {
                     queryParameters['isReview'] = parameters['isReview'];
@@ -6980,10 +5561,8 @@ angular.module('otrBackendService', [])
              * @method
              * @name OtrService#updateFreshdeskTicketUsingPUT
              * @param {object} parameters - method options and parameters
-             * @param {string} parameters.xFeature - which feature is the client using
-             * @param {string} parameters.xResourceId - a generic resource identifier
-             * @param {integer} parameters.ticketId - ticketId
              * @param {} parameters.request - request
+             * @param {integer} parameters.ticketId - ticketId
              */
             OtrService.prototype.updateFreshdeskTicketUsingPUT = function(parameters) {
                 if (parameters === undefined) {
@@ -7000,27 +5579,19 @@ angular.module('otrBackendService', [])
                 headers['Accept'] = ['application/json'];
                 headers['Content-Type'] = ['application/json'];
 
-                if (parameters['xFeature'] !== undefined) {
-                    headers['X-Feature'] = parameters['xFeature'];
-                }
-
-                if (parameters['xResourceId'] !== undefined) {
-                    headers['X-Resource-Id'] = parameters['xResourceId'];
-                }
-
-                path = path.replace('{ticketId}', parameters['ticketId']);
-
-                if (parameters['ticketId'] === undefined) {
-                    deferred.reject(new Error('Missing required  parameter: ticketId'));
-                    return deferred.promise;
-                }
-
                 if (parameters['request'] !== undefined) {
                     body = parameters['request'];
                 }
 
                 if (parameters['request'] === undefined) {
                     deferred.reject(new Error('Missing required  parameter: request'));
+                    return deferred.promise;
+                }
+
+                path = path.replace('{ticketId}', parameters['ticketId']);
+
+                if (parameters['ticketId'] === undefined) {
+                    deferred.reject(new Error('Missing required  parameter: ticketId'));
                     return deferred.promise;
                 }
 
@@ -7035,10 +5606,8 @@ angular.module('otrBackendService', [])
              * @method
              * @name OtrService#ticketStatusChangeHookUsingPUT
              * @param {object} parameters - method options and parameters
-             * @param {string} parameters.xFeature - which feature is the client using
-             * @param {string} parameters.xResourceId - a generic resource identifier
-             * @param {string} parameters.ticketId - ticketId
              * @param {} parameters.request - request
+             * @param {string} parameters.ticketId - ticketId
              */
             OtrService.prototype.ticketStatusChangeHookUsingPUT = function(parameters) {
                 if (parameters === undefined) {
@@ -7055,27 +5624,19 @@ angular.module('otrBackendService', [])
                 headers['Accept'] = ['application/json'];
                 headers['Content-Type'] = ['application/json'];
 
-                if (parameters['xFeature'] !== undefined) {
-                    headers['X-Feature'] = parameters['xFeature'];
-                }
-
-                if (parameters['xResourceId'] !== undefined) {
-                    headers['X-Resource-Id'] = parameters['xResourceId'];
-                }
-
-                path = path.replace('{ticketId}', parameters['ticketId']);
-
-                if (parameters['ticketId'] === undefined) {
-                    deferred.reject(new Error('Missing required  parameter: ticketId'));
-                    return deferred.promise;
-                }
-
                 if (parameters['request'] !== undefined) {
                     body = parameters['request'];
                 }
 
                 if (parameters['request'] === undefined) {
                     deferred.reject(new Error('Missing required  parameter: request'));
+                    return deferred.promise;
+                }
+
+                path = path.replace('{ticketId}', parameters['ticketId']);
+
+                if (parameters['ticketId'] === undefined) {
+                    deferred.reject(new Error('Missing required  parameter: ticketId'));
                     return deferred.promise;
                 }
 
@@ -7086,12 +5647,55 @@ angular.module('otrBackendService', [])
                 return deferred.promise;
             };
             /**
+             * mergeTicket
+             * @method
+             * @name OtrService#mergeTicketUsingPOST
+             * @param {object} parameters - method options and parameters
+             * @param {} parameters.request - request
+             * @param {integer} parameters.ticketId - ticketId
+             */
+            OtrService.prototype.mergeTicketUsingPOST = function(parameters) {
+                if (parameters === undefined) {
+                    parameters = {};
+                }
+                var deferred = $q.defer();
+                var domain = this.domain,
+                    path = '/api/v1/freshdesk/webhook/ticket/{ticketId}/merge';
+                var body = {},
+                    queryParameters = {},
+                    headers = {},
+                    form = {};
+
+                headers['Accept'] = ['application/json'];
+                headers['Content-Type'] = ['application/json'];
+
+                if (parameters['request'] !== undefined) {
+                    body = parameters['request'];
+                }
+
+                if (parameters['request'] === undefined) {
+                    deferred.reject(new Error('Missing required  parameter: request'));
+                    return deferred.promise;
+                }
+
+                path = path.replace('{ticketId}', parameters['ticketId']);
+
+                if (parameters['ticketId'] === undefined) {
+                    deferred.reject(new Error('Missing required  parameter: ticketId'));
+                    return deferred.promise;
+                }
+
+                queryParameters = mergeQueryParams(parameters, queryParameters);
+
+                this.request('POST', domain + path, parameters, body, headers, queryParameters, form, deferred);
+
+                return deferred.promise;
+            };
+            /**
              * calculateTicketSavings
              * @method
              * @name OtrService#calculateTicketSavingsUsingPOST
              * @param {object} parameters - method options and parameters
-             * @param {string} parameters.xFeature - which feature is the client using
-             * @param {string} parameters.xResourceId - a generic resource identifier
              * @param {} parameters.request - request
              */
             OtrService.prototype.calculateTicketSavingsUsingPOST = function(parameters) {
@@ -7108,14 +5712,6 @@ angular.module('otrBackendService', [])
 
                 headers['Accept'] = ['application/json'];
                 headers['Content-Type'] = ['application/json'];
-
-                if (parameters['xFeature'] !== undefined) {
-                    headers['X-Feature'] = parameters['xFeature'];
-                }
-
-                if (parameters['xResourceId'] !== undefined) {
-                    headers['X-Resource-Id'] = parameters['xResourceId'];
-                }
 
                 if (parameters['request'] !== undefined) {
                     body = parameters['request'];
@@ -7137,8 +5733,6 @@ angular.module('otrBackendService', [])
              * @method
              * @name OtrService#setLawfirmCaseDecisionUsingPOST
              * @param {object} parameters - method options and parameters
-             * @param {string} parameters.xFeature - which feature is the client using
-             * @param {string} parameters.xResourceId - a generic resource identifier
              * @param {string} parameters.caseId - caseId
              * @param {} parameters.request - request
              */
@@ -7156,14 +5750,6 @@ angular.module('otrBackendService', [])
 
                 headers['Accept'] = ['*/*'];
                 headers['Content-Type'] = ['application/json'];
-
-                if (parameters['xFeature'] !== undefined) {
-                    headers['X-Feature'] = parameters['xFeature'];
-                }
-
-                if (parameters['xResourceId'] !== undefined) {
-                    headers['X-Resource-Id'] = parameters['xResourceId'];
-                }
 
                 path = path.replace('{caseId}', parameters['caseId']);
 
@@ -7192,15 +5778,13 @@ angular.module('otrBackendService', [])
              * @method
              * @name OtrService#getLawfirmsUsingGET
              * @param {object} parameters - method options and parameters
-             * @param {string} parameters.xFeature - which feature is the client using
-             * @param {string} parameters.xResourceId - a generic resource identifier
+             * @param {boolean} parameters.acceptsAccidentTickets - acceptsAccidentTickets
+             * @param {boolean} parameters.acceptsPastDueTickets - acceptsPastDueTickets
+             * @param {boolean} parameters.includeTestLawfirms - includeTestLawfirms
+             * @param {boolean} parameters.includeVacationMode - includeVacationMode
              * @param {string} parameters.q - q
              * @param {array} parameters.states - states
              * @param {array} parameters.statuses - statuses
-             * @param {boolean} parameters.includeTestLawfirms - includeTestLawfirms
-             * @param {boolean} parameters.includeVacationMode - includeVacationMode
-             * @param {boolean} parameters.acceptsAccidentTickets - acceptsAccidentTickets
-             * @param {boolean} parameters.acceptsPastDueTickets - acceptsPastDueTickets
              */
             OtrService.prototype.getLawfirmsUsingGET = function(parameters) {
                 if (parameters === undefined) {
@@ -7215,14 +5799,21 @@ angular.module('otrBackendService', [])
                     form = {};
 
                 headers['Accept'] = ['*/*'];
-                headers['Content-Type'] = ['application/json'];
 
-                if (parameters['xFeature'] !== undefined) {
-                    headers['X-Feature'] = parameters['xFeature'];
+                if (parameters['acceptsAccidentTickets'] !== undefined) {
+                    queryParameters['acceptsAccidentTickets'] = parameters['acceptsAccidentTickets'];
                 }
 
-                if (parameters['xResourceId'] !== undefined) {
-                    headers['X-Resource-Id'] = parameters['xResourceId'];
+                if (parameters['acceptsPastDueTickets'] !== undefined) {
+                    queryParameters['acceptsPastDueTickets'] = parameters['acceptsPastDueTickets'];
+                }
+
+                if (parameters['includeTestLawfirms'] !== undefined) {
+                    queryParameters['includeTestLawfirms'] = parameters['includeTestLawfirms'];
+                }
+
+                if (parameters['includeVacationMode'] !== undefined) {
+                    queryParameters['includeVacationMode'] = parameters['includeVacationMode'];
                 }
 
                 if (parameters['q'] !== undefined) {
@@ -7237,22 +5828,6 @@ angular.module('otrBackendService', [])
                     queryParameters['statuses'] = parameters['statuses'];
                 }
 
-                if (parameters['includeTestLawfirms'] !== undefined) {
-                    queryParameters['includeTestLawfirms'] = parameters['includeTestLawfirms'];
-                }
-
-                if (parameters['includeVacationMode'] !== undefined) {
-                    queryParameters['includeVacationMode'] = parameters['includeVacationMode'];
-                }
-
-                if (parameters['acceptsAccidentTickets'] !== undefined) {
-                    queryParameters['acceptsAccidentTickets'] = parameters['acceptsAccidentTickets'];
-                }
-
-                if (parameters['acceptsPastDueTickets'] !== undefined) {
-                    queryParameters['acceptsPastDueTickets'] = parameters['acceptsPastDueTickets'];
-                }
-
                 queryParameters = mergeQueryParams(parameters, queryParameters);
 
                 this.request('GET', domain + path, parameters, body, headers, queryParameters, form, deferred);
@@ -7264,8 +5839,6 @@ angular.module('otrBackendService', [])
              * @method
              * @name OtrService#createLawfirmUsingPOST
              * @param {object} parameters - method options and parameters
-             * @param {string} parameters.xFeature - which feature is the client using
-             * @param {string} parameters.xResourceId - a generic resource identifier
              * @param {} parameters.request - request
              */
             OtrService.prototype.createLawfirmUsingPOST = function(parameters) {
@@ -7282,14 +5855,6 @@ angular.module('otrBackendService', [])
 
                 headers['Accept'] = ['*/*'];
                 headers['Content-Type'] = ['application/json'];
-
-                if (parameters['xFeature'] !== undefined) {
-                    headers['X-Feature'] = parameters['xFeature'];
-                }
-
-                if (parameters['xResourceId'] !== undefined) {
-                    headers['X-Resource-Id'] = parameters['xResourceId'];
-                }
 
                 if (parameters['request'] !== undefined) {
                     body = parameters['request'];
@@ -7311,8 +5876,6 @@ angular.module('otrBackendService', [])
              * @method
              * @name OtrService#deleteLawfirmFeeRecordUsingDELETE
              * @param {object} parameters - method options and parameters
-             * @param {string} parameters.xFeature - which feature is the client using
-             * @param {string} parameters.xResourceId - a generic resource identifier
              * @param {string} parameters.lawfirmFeeId - lawfirmFeeId
              */
             OtrService.prototype.deleteLawfirmFeeRecordUsingDELETE = function(parameters) {
@@ -7328,15 +5891,6 @@ angular.module('otrBackendService', [])
                     form = {};
 
                 headers['Accept'] = ['*/*'];
-                headers['Content-Type'] = ['application/json'];
-
-                if (parameters['xFeature'] !== undefined) {
-                    headers['X-Feature'] = parameters['xFeature'];
-                }
-
-                if (parameters['xResourceId'] !== undefined) {
-                    headers['X-Resource-Id'] = parameters['xResourceId'];
-                }
 
                 path = path.replace('{lawfirmFeeId}', parameters['lawfirmFeeId']);
 
@@ -7356,8 +5910,6 @@ angular.module('otrBackendService', [])
              * @method
              * @name OtrService#deleteLawfirmPayoutRecordUsingDELETE
              * @param {object} parameters - method options and parameters
-             * @param {string} parameters.xFeature - which feature is the client using
-             * @param {string} parameters.xResourceId - a generic resource identifier
              * @param {string} parameters.lawfirmPayoutId - lawfirmPayoutId
              */
             OtrService.prototype.deleteLawfirmPayoutRecordUsingDELETE = function(parameters) {
@@ -7373,15 +5925,6 @@ angular.module('otrBackendService', [])
                     form = {};
 
                 headers['Accept'] = ['*/*'];
-                headers['Content-Type'] = ['application/json'];
-
-                if (parameters['xFeature'] !== undefined) {
-                    headers['X-Feature'] = parameters['xFeature'];
-                }
-
-                if (parameters['xResourceId'] !== undefined) {
-                    headers['X-Resource-Id'] = parameters['xResourceId'];
-                }
 
                 path = path.replace('{lawfirmPayoutId}', parameters['lawfirmPayoutId']);
 
@@ -7401,8 +5944,6 @@ angular.module('otrBackendService', [])
              * @method
              * @name OtrService#getLawfirmStatusesUsingGET
              * @param {object} parameters - method options and parameters
-             * @param {string} parameters.xFeature - which feature is the client using
-             * @param {string} parameters.xResourceId - a generic resource identifier
              */
             OtrService.prototype.getLawfirmStatusesUsingGET = function(parameters) {
                 if (parameters === undefined) {
@@ -7417,15 +5958,6 @@ angular.module('otrBackendService', [])
                     form = {};
 
                 headers['Accept'] = ['*/*'];
-                headers['Content-Type'] = ['application/json'];
-
-                if (parameters['xFeature'] !== undefined) {
-                    headers['X-Feature'] = parameters['xFeature'];
-                }
-
-                if (parameters['xResourceId'] !== undefined) {
-                    headers['X-Resource-Id'] = parameters['xResourceId'];
-                }
 
                 queryParameters = mergeQueryParams(parameters, queryParameters);
 
@@ -7438,9 +5970,7 @@ angular.module('otrBackendService', [])
              * @method
              * @name OtrService#getLawfirmByUrlUsingGET
              * @param {object} parameters - method options and parameters
-             * @param {string} parameters.xFeature - which feature is the client using
-             * @param {string} parameters.xResourceId - a generic resource identifier
-             * @param {string} parameters.seoUrl - encodedSeoUrl
+             * @param {string} parameters.seoUrl - seoUrl
              */
             OtrService.prototype.getLawfirmByUrlUsingGET = function(parameters) {
                 if (parameters === undefined) {
@@ -7455,15 +5985,6 @@ angular.module('otrBackendService', [])
                     form = {};
 
                 headers['Accept'] = ['*/*'];
-                headers['Content-Type'] = ['application/json'];
-
-                if (parameters['xFeature'] !== undefined) {
-                    headers['X-Feature'] = parameters['xFeature'];
-                }
-
-                if (parameters['xResourceId'] !== undefined) {
-                    headers['X-Resource-Id'] = parameters['xResourceId'];
-                }
 
                 if (parameters['seoUrl'] !== undefined) {
                     queryParameters['seoUrl'] = parameters['seoUrl'];
@@ -7485,10 +6006,8 @@ angular.module('otrBackendService', [])
              * @method
              * @name OtrService#getLawfirmUsingGET
              * @param {object} parameters - method options and parameters
-             * @param {string} parameters.xFeature - which feature is the client using
-             * @param {string} parameters.xResourceId - a generic resource identifier
-             * @param {string} parameters.lawfirmIdString - lawfirmIdString
              * @param {boolean} parameters.isDetailsRequired - isDetailsRequired
+             * @param {string} parameters.lawfirmIdString - lawfirmIdString
              */
             OtrService.prototype.getLawfirmUsingGET = function(parameters) {
                 if (parameters === undefined) {
@@ -7503,14 +6022,9 @@ angular.module('otrBackendService', [])
                     form = {};
 
                 headers['Accept'] = ['*/*'];
-                headers['Content-Type'] = ['application/json'];
 
-                if (parameters['xFeature'] !== undefined) {
-                    headers['X-Feature'] = parameters['xFeature'];
-                }
-
-                if (parameters['xResourceId'] !== undefined) {
-                    headers['X-Resource-Id'] = parameters['xResourceId'];
+                if (parameters['isDetailsRequired'] !== undefined) {
+                    queryParameters['isDetailsRequired'] = parameters['isDetailsRequired'];
                 }
 
                 path = path.replace('{lawfirmIdString}', parameters['lawfirmIdString']);
@@ -7518,10 +6032,6 @@ angular.module('otrBackendService', [])
                 if (parameters['lawfirmIdString'] === undefined) {
                     deferred.reject(new Error('Missing required  parameter: lawfirmIdString'));
                     return deferred.promise;
-                }
-
-                if (parameters['isDetailsRequired'] !== undefined) {
-                    queryParameters['isDetailsRequired'] = parameters['isDetailsRequired'];
                 }
 
                 queryParameters = mergeQueryParams(parameters, queryParameters);
@@ -7535,8 +6045,6 @@ angular.module('otrBackendService', [])
              * @method
              * @name OtrService#updateLawfirmUsingPUT
              * @param {object} parameters - method options and parameters
-             * @param {string} parameters.xFeature - which feature is the client using
-             * @param {string} parameters.xResourceId - a generic resource identifier
              * @param {string} parameters.lawfirmIdString - lawfirmIdString
              * @param {} parameters.request - request
              */
@@ -7554,14 +6062,6 @@ angular.module('otrBackendService', [])
 
                 headers['Accept'] = ['*/*'];
                 headers['Content-Type'] = ['application/json'];
-
-                if (parameters['xFeature'] !== undefined) {
-                    headers['X-Feature'] = parameters['xFeature'];
-                }
-
-                if (parameters['xResourceId'] !== undefined) {
-                    headers['X-Resource-Id'] = parameters['xResourceId'];
-                }
 
                 path = path.replace('{lawfirmIdString}', parameters['lawfirmIdString']);
 
@@ -7590,8 +6090,6 @@ angular.module('otrBackendService', [])
              * @method
              * @name OtrService#addCourtToCoverageUsingPOST
              * @param {object} parameters - method options and parameters
-             * @param {string} parameters.xFeature - which feature is the client using
-             * @param {string} parameters.xResourceId - a generic resource identifier
              * @param {string} parameters.lawfirmIdString - lawfirmIdString
              * @param {} parameters.request - request
              */
@@ -7609,14 +6107,6 @@ angular.module('otrBackendService', [])
 
                 headers['Accept'] = ['*/*'];
                 headers['Content-Type'] = ['application/json'];
-
-                if (parameters['xFeature'] !== undefined) {
-                    headers['X-Feature'] = parameters['xFeature'];
-                }
-
-                if (parameters['xResourceId'] !== undefined) {
-                    headers['X-Resource-Id'] = parameters['xResourceId'];
-                }
 
                 path = path.replace('{lawfirmIdString}', parameters['lawfirmIdString']);
 
@@ -7645,8 +6135,6 @@ angular.module('otrBackendService', [])
              * @method
              * @name OtrService#getLawfirmCoverageUsingGET
              * @param {object} parameters - method options and parameters
-             * @param {string} parameters.xFeature - which feature is the client using
-             * @param {string} parameters.xResourceId - a generic resource identifier
              * @param {string} parameters.lawfirmIdString - lawfirmIdString
              */
             OtrService.prototype.getLawfirmCoverageUsingGET = function(parameters) {
@@ -7662,15 +6150,6 @@ angular.module('otrBackendService', [])
                     form = {};
 
                 headers['Accept'] = ['*/*'];
-                headers['Content-Type'] = ['application/json'];
-
-                if (parameters['xFeature'] !== undefined) {
-                    headers['X-Feature'] = parameters['xFeature'];
-                }
-
-                if (parameters['xResourceId'] !== undefined) {
-                    headers['X-Resource-Id'] = parameters['xResourceId'];
-                }
 
                 path = path.replace('{lawfirmIdString}', parameters['lawfirmIdString']);
 
@@ -7690,8 +6169,6 @@ angular.module('otrBackendService', [])
              * @method
              * @name OtrService#getLawfirmLawyersUsingGET
              * @param {object} parameters - method options and parameters
-             * @param {string} parameters.xFeature - which feature is the client using
-             * @param {string} parameters.xResourceId - a generic resource identifier
              * @param {string} parameters.lawfirmIdString - lawfirmIdString
              */
             OtrService.prototype.getLawfirmLawyersUsingGET = function(parameters) {
@@ -7707,15 +6184,6 @@ angular.module('otrBackendService', [])
                     form = {};
 
                 headers['Accept'] = ['*/*'];
-                headers['Content-Type'] = ['application/json'];
-
-                if (parameters['xFeature'] !== undefined) {
-                    headers['X-Feature'] = parameters['xFeature'];
-                }
-
-                if (parameters['xResourceId'] !== undefined) {
-                    headers['X-Resource-Id'] = parameters['xResourceId'];
-                }
 
                 path = path.replace('{lawfirmIdString}', parameters['lawfirmIdString']);
 
@@ -7735,8 +6203,6 @@ angular.module('otrBackendService', [])
              * @method
              * @name OtrService#updateLawfirmSettingsUsingPOST
              * @param {object} parameters - method options and parameters
-             * @param {string} parameters.xFeature - which feature is the client using
-             * @param {string} parameters.xResourceId - a generic resource identifier
              * @param {string} parameters.lawfirmIdString - lawfirmIdString
              * @param {} parameters.request - request
              */
@@ -7754,14 +6220,6 @@ angular.module('otrBackendService', [])
 
                 headers['Accept'] = ['*/*'];
                 headers['Content-Type'] = ['application/json'];
-
-                if (parameters['xFeature'] !== undefined) {
-                    headers['X-Feature'] = parameters['xFeature'];
-                }
-
-                if (parameters['xResourceId'] !== undefined) {
-                    headers['X-Resource-Id'] = parameters['xResourceId'];
-                }
 
                 path = path.replace('{lawfirmIdString}', parameters['lawfirmIdString']);
 
@@ -7790,10 +6248,8 @@ angular.module('otrBackendService', [])
              * @method
              * @name OtrService#getAccountFeesUsingGET
              * @param {object} parameters - method options and parameters
-             * @param {string} parameters.xFeature - which feature is the client using
-             * @param {string} parameters.xResourceId - a generic resource identifier
-             * @param {string} parameters.lawfirmId - lawfirmId
              * @param {boolean} parameters.enabledFeesOnly - enabledFeesOnly
+             * @param {string} parameters.lawfirmId - lawfirmId
              */
             OtrService.prototype.getAccountFeesUsingGET = function(parameters) {
                 if (parameters === undefined) {
@@ -7808,14 +6264,9 @@ angular.module('otrBackendService', [])
                     form = {};
 
                 headers['Accept'] = ['*/*'];
-                headers['Content-Type'] = ['application/json'];
 
-                if (parameters['xFeature'] !== undefined) {
-                    headers['X-Feature'] = parameters['xFeature'];
-                }
-
-                if (parameters['xResourceId'] !== undefined) {
-                    headers['X-Resource-Id'] = parameters['xResourceId'];
+                if (parameters['enabledFeesOnly'] !== undefined) {
+                    queryParameters['enabledFeesOnly'] = parameters['enabledFeesOnly'];
                 }
 
                 path = path.replace('{lawfirmId}', parameters['lawfirmId']);
@@ -7823,10 +6274,6 @@ angular.module('otrBackendService', [])
                 if (parameters['lawfirmId'] === undefined) {
                     deferred.reject(new Error('Missing required  parameter: lawfirmId'));
                     return deferred.promise;
-                }
-
-                if (parameters['enabledFeesOnly'] !== undefined) {
-                    queryParameters['enabledFeesOnly'] = parameters['enabledFeesOnly'];
                 }
 
                 queryParameters = mergeQueryParams(parameters, queryParameters);
@@ -7840,10 +6287,8 @@ angular.module('otrBackendService', [])
              * @method
              * @name OtrService#saveAccountFeesUsingPOST
              * @param {object} parameters - method options and parameters
-             * @param {string} parameters.xFeature - which feature is the client using
-             * @param {string} parameters.xResourceId - a generic resource identifier
-             * @param {string} parameters.lawfirmId - lawfirmId
              * @param {boolean} parameters.isSyncEnabled - isSyncEnabled
+             * @param {string} parameters.lawfirmId - lawfirmId
              * @param {} parameters.request - request
              */
             OtrService.prototype.saveAccountFeesUsingPOST = function(parameters) {
@@ -7861,27 +6306,19 @@ angular.module('otrBackendService', [])
                 headers['Accept'] = ['*/*'];
                 headers['Content-Type'] = ['application/json'];
 
-                if (parameters['xFeature'] !== undefined) {
-                    headers['X-Feature'] = parameters['xFeature'];
-                }
-
-                if (parameters['xResourceId'] !== undefined) {
-                    headers['X-Resource-Id'] = parameters['xResourceId'];
-                }
-
-                path = path.replace('{lawfirmId}', parameters['lawfirmId']);
-
-                if (parameters['lawfirmId'] === undefined) {
-                    deferred.reject(new Error('Missing required  parameter: lawfirmId'));
-                    return deferred.promise;
-                }
-
                 if (parameters['isSyncEnabled'] !== undefined) {
                     queryParameters['isSyncEnabled'] = parameters['isSyncEnabled'];
                 }
 
                 if (parameters['isSyncEnabled'] === undefined) {
                     deferred.reject(new Error('Missing required  parameter: isSyncEnabled'));
+                    return deferred.promise;
+                }
+
+                path = path.replace('{lawfirmId}', parameters['lawfirmId']);
+
+                if (parameters['lawfirmId'] === undefined) {
+                    deferred.reject(new Error('Missing required  parameter: lawfirmId'));
                     return deferred.promise;
                 }
 
@@ -7905,10 +6342,9 @@ angular.module('otrBackendService', [])
              * @method
              * @name OtrService#removeAccountFeesUsingDELETE
              * @param {object} parameters - method options and parameters
-             * @param {string} parameters.xFeature - which feature is the client using
-             * @param {string} parameters.xResourceId - a generic resource identifier
-             * @param {string} parameters.lawfirmId - lawfirmId
              * @param {string} parameters.classification - classification
+             * @param {boolean} parameters.isPermitted - isPermitted
+             * @param {string} parameters.lawfirmId - lawfirmId
              * @param {integer} parameters.violationId - violationId
              */
             OtrService.prototype.removeAccountFeesUsingDELETE = function(parameters) {
@@ -7924,14 +6360,13 @@ angular.module('otrBackendService', [])
                     form = {};
 
                 headers['Accept'] = ['*/*'];
-                headers['Content-Type'] = ['application/json'];
 
-                if (parameters['xFeature'] !== undefined) {
-                    headers['X-Feature'] = parameters['xFeature'];
+                if (parameters['classification'] !== undefined) {
+                    queryParameters['classification'] = parameters['classification'];
                 }
 
-                if (parameters['xResourceId'] !== undefined) {
-                    headers['X-Resource-Id'] = parameters['xResourceId'];
+                if (parameters['isPermitted'] !== undefined) {
+                    queryParameters['isPermitted'] = parameters['isPermitted'];
                 }
 
                 path = path.replace('{lawfirmId}', parameters['lawfirmId']);
@@ -7939,10 +6374,6 @@ angular.module('otrBackendService', [])
                 if (parameters['lawfirmId'] === undefined) {
                     deferred.reject(new Error('Missing required  parameter: lawfirmId'));
                     return deferred.promise;
-                }
-
-                if (parameters['classification'] !== undefined) {
-                    queryParameters['classification'] = parameters['classification'];
                 }
 
                 if (parameters['violationId'] !== undefined) {
@@ -7960,9 +6391,7 @@ angular.module('otrBackendService', [])
              * @method
              * @name OtrService#enableViolationsForLawfirmUsingPOST
              * @param {object} parameters - method options and parameters
-             * @param {string} parameters.xFeature - which feature is the client using
-             * @param {string} parameters.xResourceId - a generic resource identifier
-             * @param {string} parameters.lawfirmId - lawfirmIdParam
+             * @param {string} parameters.lawfirmId - lawfirmId
              * @param {} parameters.request - request
              */
             OtrService.prototype.enableViolationsForLawfirmUsingPOST = function(parameters) {
@@ -7979,14 +6408,6 @@ angular.module('otrBackendService', [])
 
                 headers['Accept'] = ['*/*'];
                 headers['Content-Type'] = ['application/json'];
-
-                if (parameters['xFeature'] !== undefined) {
-                    headers['X-Feature'] = parameters['xFeature'];
-                }
-
-                if (parameters['xResourceId'] !== undefined) {
-                    headers['X-Resource-Id'] = parameters['xResourceId'];
-                }
 
                 path = path.replace('{lawfirmId}', parameters['lawfirmId']);
 
@@ -8015,9 +6436,7 @@ angular.module('otrBackendService', [])
              * @method
              * @name OtrService#resetFeesForLawfirmUsingPOST
              * @param {object} parameters - method options and parameters
-             * @param {string} parameters.xFeature - which feature is the client using
-             * @param {string} parameters.xResourceId - a generic resource identifier
-             * @param {string} parameters.lawfirmId - lawfirmIdParam
+             * @param {string} parameters.lawfirmId - lawfirmId
              * @param {} parameters.request - request
              */
             OtrService.prototype.resetFeesForLawfirmUsingPOST = function(parameters) {
@@ -8034,14 +6453,6 @@ angular.module('otrBackendService', [])
 
                 headers['Accept'] = ['*/*'];
                 headers['Content-Type'] = ['application/json'];
-
-                if (parameters['xFeature'] !== undefined) {
-                    headers['X-Feature'] = parameters['xFeature'];
-                }
-
-                if (parameters['xResourceId'] !== undefined) {
-                    headers['X-Resource-Id'] = parameters['xResourceId'];
-                }
 
                 path = path.replace('{lawfirmId}', parameters['lawfirmId']);
 
@@ -8070,8 +6481,6 @@ angular.module('otrBackendService', [])
              * @method
              * @name OtrService#getLawfirmAddressesUsingGET
              * @param {object} parameters - method options and parameters
-             * @param {string} parameters.xFeature - which feature is the client using
-             * @param {string} parameters.xResourceId - a generic resource identifier
              * @param {integer} parameters.lawfirmId - lawfirmId
              */
             OtrService.prototype.getLawfirmAddressesUsingGET = function(parameters) {
@@ -8087,15 +6496,6 @@ angular.module('otrBackendService', [])
                     form = {};
 
                 headers['Accept'] = ['*/*'];
-                headers['Content-Type'] = ['application/json'];
-
-                if (parameters['xFeature'] !== undefined) {
-                    headers['X-Feature'] = parameters['xFeature'];
-                }
-
-                if (parameters['xResourceId'] !== undefined) {
-                    headers['X-Resource-Id'] = parameters['xResourceId'];
-                }
 
                 path = path.replace('{lawfirmId}', parameters['lawfirmId']);
 
@@ -8115,8 +6515,6 @@ angular.module('otrBackendService', [])
              * @method
              * @name OtrService#addLawfirmAddressUsingPOST
              * @param {object} parameters - method options and parameters
-             * @param {string} parameters.xFeature - which feature is the client using
-             * @param {string} parameters.xResourceId - a generic resource identifier
              * @param {integer} parameters.lawfirmId - lawfirmId
              * @param {} parameters.request - request
              */
@@ -8134,14 +6532,6 @@ angular.module('otrBackendService', [])
 
                 headers['Accept'] = ['*/*'];
                 headers['Content-Type'] = ['application/json'];
-
-                if (parameters['xFeature'] !== undefined) {
-                    headers['X-Feature'] = parameters['xFeature'];
-                }
-
-                if (parameters['xResourceId'] !== undefined) {
-                    headers['X-Resource-Id'] = parameters['xResourceId'];
-                }
 
                 path = path.replace('{lawfirmId}', parameters['lawfirmId']);
 
@@ -8170,10 +6560,8 @@ angular.module('otrBackendService', [])
              * @method
              * @name OtrService#updateLawfirmAddressUsingPUT
              * @param {object} parameters - method options and parameters
-             * @param {string} parameters.xFeature - which feature is the client using
-             * @param {string} parameters.xResourceId - a generic resource identifier
-             * @param {integer} parameters.lawfirmId - lawfirmId
              * @param {integer} parameters.addressId - addressId
+             * @param {integer} parameters.lawfirmId - lawfirmId
              * @param {} parameters.request - request
              */
             OtrService.prototype.updateLawfirmAddressUsingPUT = function(parameters) {
@@ -8191,25 +6579,17 @@ angular.module('otrBackendService', [])
                 headers['Accept'] = ['*/*'];
                 headers['Content-Type'] = ['application/json'];
 
-                if (parameters['xFeature'] !== undefined) {
-                    headers['X-Feature'] = parameters['xFeature'];
-                }
+                path = path.replace('{addressId}', parameters['addressId']);
 
-                if (parameters['xResourceId'] !== undefined) {
-                    headers['X-Resource-Id'] = parameters['xResourceId'];
+                if (parameters['addressId'] === undefined) {
+                    deferred.reject(new Error('Missing required  parameter: addressId'));
+                    return deferred.promise;
                 }
 
                 path = path.replace('{lawfirmId}', parameters['lawfirmId']);
 
                 if (parameters['lawfirmId'] === undefined) {
                     deferred.reject(new Error('Missing required  parameter: lawfirmId'));
-                    return deferred.promise;
-                }
-
-                path = path.replace('{addressId}', parameters['addressId']);
-
-                if (parameters['addressId'] === undefined) {
-                    deferred.reject(new Error('Missing required  parameter: addressId'));
                     return deferred.promise;
                 }
 
@@ -8233,8 +6613,6 @@ angular.module('otrBackendService', [])
              * @method
              * @name OtrService#getLawfirmCasesUsingGET
              * @param {object} parameters - method options and parameters
-             * @param {string} parameters.xFeature - which feature is the client using
-             * @param {string} parameters.xResourceId - a generic resource identifier
              * @param {string} parameters.lawfirmId - lawfirmId
              */
             OtrService.prototype.getLawfirmCasesUsingGET = function(parameters) {
@@ -8250,15 +6628,6 @@ angular.module('otrBackendService', [])
                     form = {};
 
                 headers['Accept'] = ['*/*'];
-                headers['Content-Type'] = ['application/json'];
-
-                if (parameters['xFeature'] !== undefined) {
-                    headers['X-Feature'] = parameters['xFeature'];
-                }
-
-                if (parameters['xResourceId'] !== undefined) {
-                    headers['X-Resource-Id'] = parameters['xResourceId'];
-                }
 
                 path = path.replace('{lawfirmId}', parameters['lawfirmId']);
 
@@ -8278,8 +6647,6 @@ angular.module('otrBackendService', [])
              * @method
              * @name OtrService#getLawfirmCaseStatsUsingGET
              * @param {object} parameters - method options and parameters
-             * @param {string} parameters.xFeature - which feature is the client using
-             * @param {string} parameters.xResourceId - a generic resource identifier
              * @param {integer} parameters.lawfirmId - lawfirmId
              */
             OtrService.prototype.getLawfirmCaseStatsUsingGET = function(parameters) {
@@ -8295,15 +6662,6 @@ angular.module('otrBackendService', [])
                     form = {};
 
                 headers['Accept'] = ['*/*'];
-                headers['Content-Type'] = ['application/json'];
-
-                if (parameters['xFeature'] !== undefined) {
-                    headers['X-Feature'] = parameters['xFeature'];
-                }
-
-                if (parameters['xResourceId'] !== undefined) {
-                    headers['X-Resource-Id'] = parameters['xResourceId'];
-                }
 
                 path = path.replace('{lawfirmId}', parameters['lawfirmId']);
 
@@ -8323,10 +6681,8 @@ angular.module('otrBackendService', [])
              * @method
              * @name OtrService#removeCourtsUsingDELETE
              * @param {object} parameters - method options and parameters
-             * @param {string} parameters.xFeature - which feature is the client using
-             * @param {string} parameters.xResourceId - a generic resource identifier
-             * @param {string} parameters.lawfirmId - lawfirmId
              * @param {array} parameters.courtsToRemove - courtsToRemove
+             * @param {string} parameters.lawfirmId - lawfirmId
              */
             OtrService.prototype.removeCourtsUsingDELETE = function(parameters) {
                 if (parameters === undefined) {
@@ -8341,22 +6697,6 @@ angular.module('otrBackendService', [])
                     form = {};
 
                 headers['Accept'] = ['*/*'];
-                headers['Content-Type'] = ['application/json'];
-
-                if (parameters['xFeature'] !== undefined) {
-                    headers['X-Feature'] = parameters['xFeature'];
-                }
-
-                if (parameters['xResourceId'] !== undefined) {
-                    headers['X-Resource-Id'] = parameters['xResourceId'];
-                }
-
-                path = path.replace('{lawfirmId}', parameters['lawfirmId']);
-
-                if (parameters['lawfirmId'] === undefined) {
-                    deferred.reject(new Error('Missing required  parameter: lawfirmId'));
-                    return deferred.promise;
-                }
 
                 if (parameters['courtsToRemove'] !== undefined) {
                     queryParameters['courtsToRemove'] = parameters['courtsToRemove'];
@@ -8364,6 +6704,13 @@ angular.module('otrBackendService', [])
 
                 if (parameters['courtsToRemove'] === undefined) {
                     deferred.reject(new Error('Missing required  parameter: courtsToRemove'));
+                    return deferred.promise;
+                }
+
+                path = path.replace('{lawfirmId}', parameters['lawfirmId']);
+
+                if (parameters['lawfirmId'] === undefined) {
+                    deferred.reject(new Error('Missing required  parameter: lawfirmId'));
                     return deferred.promise;
                 }
 
@@ -8378,8 +6725,6 @@ angular.module('otrBackendService', [])
              * @method
              * @name OtrService#deleteLawfirmCoverPhotoUsingDELETE
              * @param {object} parameters - method options and parameters
-             * @param {string} parameters.xFeature - which feature is the client using
-             * @param {string} parameters.xResourceId - a generic resource identifier
              * @param {string} parameters.lawfirmId - lawfirmId
              */
             OtrService.prototype.deleteLawfirmCoverPhotoUsingDELETE = function(parameters) {
@@ -8395,15 +6740,6 @@ angular.module('otrBackendService', [])
                     form = {};
 
                 headers['Accept'] = ['*/*'];
-                headers['Content-Type'] = ['application/json'];
-
-                if (parameters['xFeature'] !== undefined) {
-                    headers['X-Feature'] = parameters['xFeature'];
-                }
-
-                if (parameters['xResourceId'] !== undefined) {
-                    headers['X-Resource-Id'] = parameters['xResourceId'];
-                }
 
                 path = path.replace('{lawfirmId}', parameters['lawfirmId']);
 
@@ -8423,10 +6759,8 @@ angular.module('otrBackendService', [])
              * @method
              * @name OtrService#getDocumentUsingGET
              * @param {object} parameters - method options and parameters
-             * @param {string} parameters.xFeature - which feature is the client using
-             * @param {string} parameters.xResourceId - a generic resource identifier
+             * @param {string} parameters.docType - doc_type
              * @param {string} parameters.lawfirmId - lawfirmId
-             * @param {string} parameters.docType - docType
              */
             OtrService.prototype.getDocumentUsingGET = function(parameters) {
                 if (parameters === undefined) {
@@ -8441,22 +6775,6 @@ angular.module('otrBackendService', [])
                     form = {};
 
                 headers['Accept'] = ['*/*'];
-                headers['Content-Type'] = ['application/json'];
-
-                if (parameters['xFeature'] !== undefined) {
-                    headers['X-Feature'] = parameters['xFeature'];
-                }
-
-                if (parameters['xResourceId'] !== undefined) {
-                    headers['X-Resource-Id'] = parameters['xResourceId'];
-                }
-
-                path = path.replace('{lawfirmId}', parameters['lawfirmId']);
-
-                if (parameters['lawfirmId'] === undefined) {
-                    deferred.reject(new Error('Missing required  parameter: lawfirmId'));
-                    return deferred.promise;
-                }
 
                 if (parameters['docType'] !== undefined) {
                     queryParameters['doc_type'] = parameters['docType'];
@@ -8464,6 +6782,13 @@ angular.module('otrBackendService', [])
 
                 if (parameters['docType'] === undefined) {
                     deferred.reject(new Error('Missing required  parameter: docType'));
+                    return deferred.promise;
+                }
+
+                path = path.replace('{lawfirmId}', parameters['lawfirmId']);
+
+                if (parameters['lawfirmId'] === undefined) {
+                    deferred.reject(new Error('Missing required  parameter: lawfirmId'));
                     return deferred.promise;
                 }
 
@@ -8478,10 +6803,8 @@ angular.module('otrBackendService', [])
              * @method
              * @name OtrService#generateDocUsingPOST
              * @param {object} parameters - method options and parameters
-             * @param {string} parameters.xFeature - which feature is the client using
-             * @param {string} parameters.xResourceId - a generic resource identifier
+             * @param {string} parameters.docType - doc_type
              * @param {string} parameters.lawfirmId - lawfirmId
-             * @param {string} parameters.docType - docType
              * @param {} parameters.request - request
              */
             OtrService.prototype.generateDocUsingPOST = function(parameters) {
@@ -8499,27 +6822,19 @@ angular.module('otrBackendService', [])
                 headers['Accept'] = ['*/*'];
                 headers['Content-Type'] = ['application/json'];
 
-                if (parameters['xFeature'] !== undefined) {
-                    headers['X-Feature'] = parameters['xFeature'];
-                }
-
-                if (parameters['xResourceId'] !== undefined) {
-                    headers['X-Resource-Id'] = parameters['xResourceId'];
-                }
-
-                path = path.replace('{lawfirmId}', parameters['lawfirmId']);
-
-                if (parameters['lawfirmId'] === undefined) {
-                    deferred.reject(new Error('Missing required  parameter: lawfirmId'));
-                    return deferred.promise;
-                }
-
                 if (parameters['docType'] !== undefined) {
                     queryParameters['doc_type'] = parameters['docType'];
                 }
 
                 if (parameters['docType'] === undefined) {
                     deferred.reject(new Error('Missing required  parameter: docType'));
+                    return deferred.promise;
+                }
+
+                path = path.replace('{lawfirmId}', parameters['lawfirmId']);
+
+                if (parameters['lawfirmId'] === undefined) {
+                    deferred.reject(new Error('Missing required  parameter: lawfirmId'));
                     return deferred.promise;
                 }
 
@@ -8538,8 +6853,6 @@ angular.module('otrBackendService', [])
              * @method
              * @name OtrService#uploadCopyUsingPUT
              * @param {object} parameters - method options and parameters
-             * @param {string} parameters.xFeature - which feature is the client using
-             * @param {string} parameters.xResourceId - a generic resource identifier
              * @param {string} parameters.lawfirmId - lawfirmId
              * @param {} parameters.request - request
              */
@@ -8557,14 +6870,6 @@ angular.module('otrBackendService', [])
 
                 headers['Accept'] = ['*/*'];
                 headers['Content-Type'] = ['application/json'];
-
-                if (parameters['xFeature'] !== undefined) {
-                    headers['X-Feature'] = parameters['xFeature'];
-                }
-
-                if (parameters['xResourceId'] !== undefined) {
-                    headers['X-Resource-Id'] = parameters['xResourceId'];
-                }
 
                 path = path.replace('{lawfirmId}', parameters['lawfirmId']);
 
@@ -8593,10 +6898,8 @@ angular.module('otrBackendService', [])
              * @method
              * @name OtrService#previewDocUsingPOST
              * @param {object} parameters - method options and parameters
-             * @param {string} parameters.xFeature - which feature is the client using
-             * @param {string} parameters.xResourceId - a generic resource identifier
+             * @param {string} parameters.docType - doc_type
              * @param {string} parameters.lawfirmId - lawfirmId
-             * @param {string} parameters.docType - docType
              * @param {} parameters.request - request
              */
             OtrService.prototype.previewDocUsingPOST = function(parameters) {
@@ -8614,27 +6917,19 @@ angular.module('otrBackendService', [])
                 headers['Accept'] = ['*/*'];
                 headers['Content-Type'] = ['application/json'];
 
-                if (parameters['xFeature'] !== undefined) {
-                    headers['X-Feature'] = parameters['xFeature'];
-                }
-
-                if (parameters['xResourceId'] !== undefined) {
-                    headers['X-Resource-Id'] = parameters['xResourceId'];
-                }
-
-                path = path.replace('{lawfirmId}', parameters['lawfirmId']);
-
-                if (parameters['lawfirmId'] === undefined) {
-                    deferred.reject(new Error('Missing required  parameter: lawfirmId'));
-                    return deferred.promise;
-                }
-
                 if (parameters['docType'] !== undefined) {
                     queryParameters['doc_type'] = parameters['docType'];
                 }
 
                 if (parameters['docType'] === undefined) {
                     deferred.reject(new Error('Missing required  parameter: docType'));
+                    return deferred.promise;
+                }
+
+                path = path.replace('{lawfirmId}', parameters['lawfirmId']);
+
+                if (parameters['lawfirmId'] === undefined) {
+                    deferred.reject(new Error('Missing required  parameter: lawfirmId'));
                     return deferred.promise;
                 }
 
@@ -8658,11 +6953,9 @@ angular.module('otrBackendService', [])
              * @method
              * @name OtrService#getLawfirmInboxMessagesUsingGET
              * @param {object} parameters - method options and parameters
-             * @param {string} parameters.xFeature - which feature is the client using
-             * @param {string} parameters.xResourceId - a generic resource identifier
              * @param {integer} parameters.lawfirmId - lawfirmId
-             * @param {integer} parameters.page - page
              * @param {integer} parameters.length - length
+             * @param {integer} parameters.page - page
              */
             OtrService.prototype.getLawfirmInboxMessagesUsingGET = function(parameters) {
                 if (parameters === undefined) {
@@ -8677,15 +6970,6 @@ angular.module('otrBackendService', [])
                     form = {};
 
                 headers['Accept'] = ['*/*'];
-                headers['Content-Type'] = ['application/json'];
-
-                if (parameters['xFeature'] !== undefined) {
-                    headers['X-Feature'] = parameters['xFeature'];
-                }
-
-                if (parameters['xResourceId'] !== undefined) {
-                    headers['X-Resource-Id'] = parameters['xResourceId'];
-                }
 
                 path = path.replace('{lawfirmId}', parameters['lawfirmId']);
 
@@ -8694,12 +6978,15 @@ angular.module('otrBackendService', [])
                     return deferred.promise;
                 }
 
-                if (parameters['page'] !== undefined) {
-                    queryParameters['page'] = parameters['page'];
-                }
+                /** set default value **/
+                queryParameters['length'] = 100;
 
                 if (parameters['length'] !== undefined) {
                     queryParameters['length'] = parameters['length'];
+                }
+
+                if (parameters['page'] !== undefined) {
+                    queryParameters['page'] = parameters['page'];
                 }
 
                 queryParameters = mergeQueryParams(parameters, queryParameters);
@@ -8713,8 +7000,6 @@ angular.module('otrBackendService', [])
              * @method
              * @name OtrService#getOtrLawfirmNotesUsingGET
              * @param {object} parameters - method options and parameters
-             * @param {string} parameters.xFeature - which feature is the client using
-             * @param {string} parameters.xResourceId - a generic resource identifier
              * @param {string} parameters.lawfirmId - lawfirmId
              */
             OtrService.prototype.getOtrLawfirmNotesUsingGET = function(parameters) {
@@ -8730,15 +7015,6 @@ angular.module('otrBackendService', [])
                     form = {};
 
                 headers['Accept'] = ['*/*'];
-                headers['Content-Type'] = ['application/json'];
-
-                if (parameters['xFeature'] !== undefined) {
-                    headers['X-Feature'] = parameters['xFeature'];
-                }
-
-                if (parameters['xResourceId'] !== undefined) {
-                    headers['X-Resource-Id'] = parameters['xResourceId'];
-                }
 
                 path = path.replace('{lawfirmId}', parameters['lawfirmId']);
 
@@ -8758,8 +7034,6 @@ angular.module('otrBackendService', [])
              * @method
              * @name OtrService#updatePaymentModelUsingPUT
              * @param {object} parameters - method options and parameters
-             * @param {string} parameters.xFeature - which feature is the client using
-             * @param {string} parameters.xResourceId - a generic resource identifier
              * @param {integer} parameters.lawfirmId - lawfirmId
              * @param {} parameters.request - request
              */
@@ -8777,14 +7051,6 @@ angular.module('otrBackendService', [])
 
                 headers['Accept'] = ['*/*'];
                 headers['Content-Type'] = ['application/json'];
-
-                if (parameters['xFeature'] !== undefined) {
-                    headers['X-Feature'] = parameters['xFeature'];
-                }
-
-                if (parameters['xResourceId'] !== undefined) {
-                    headers['X-Resource-Id'] = parameters['xResourceId'];
-                }
 
                 path = path.replace('{lawfirmId}', parameters['lawfirmId']);
 
@@ -8813,8 +7079,6 @@ angular.module('otrBackendService', [])
              * @method
              * @name OtrService#getLawfirmPaymentMethodsUsingGET
              * @param {object} parameters - method options and parameters
-             * @param {string} parameters.xFeature - which feature is the client using
-             * @param {string} parameters.xResourceId - a generic resource identifier
              * @param {integer} parameters.lawfirmId - lawfirmId
              */
             OtrService.prototype.getLawfirmPaymentMethodsUsingGET = function(parameters) {
@@ -8830,15 +7094,6 @@ angular.module('otrBackendService', [])
                     form = {};
 
                 headers['Accept'] = ['*/*'];
-                headers['Content-Type'] = ['application/json'];
-
-                if (parameters['xFeature'] !== undefined) {
-                    headers['X-Feature'] = parameters['xFeature'];
-                }
-
-                if (parameters['xResourceId'] !== undefined) {
-                    headers['X-Resource-Id'] = parameters['xResourceId'];
-                }
 
                 path = path.replace('{lawfirmId}', parameters['lawfirmId']);
 
@@ -8858,8 +7113,6 @@ angular.module('otrBackendService', [])
              * @method
              * @name OtrService#sendPayoutToLawfirmUsingPOST
              * @param {object} parameters - method options and parameters
-             * @param {string} parameters.xFeature - which feature is the client using
-             * @param {string} parameters.xResourceId - a generic resource identifier
              * @param {integer} parameters.lawfirmId - lawfirmId
              * @param {} parameters.request - request
              */
@@ -8877,14 +7130,6 @@ angular.module('otrBackendService', [])
 
                 headers['Accept'] = ['*/*'];
                 headers['Content-Type'] = ['application/json'];
-
-                if (parameters['xFeature'] !== undefined) {
-                    headers['X-Feature'] = parameters['xFeature'];
-                }
-
-                if (parameters['xResourceId'] !== undefined) {
-                    headers['X-Resource-Id'] = parameters['xResourceId'];
-                }
 
                 path = path.replace('{lawfirmId}', parameters['lawfirmId']);
 
@@ -8913,8 +7158,6 @@ angular.module('otrBackendService', [])
              * @method
              * @name OtrService#updateLawfirmWithPictureUsingPUT
              * @param {object} parameters - method options and parameters
-             * @param {string} parameters.xFeature - which feature is the client using
-             * @param {string} parameters.xResourceId - a generic resource identifier
              * @param {string} parameters.lawfirmId - lawfirmId
              * @param {} parameters.lawfirmPictureRequest - lawfirmPictureRequest
              */
@@ -8932,14 +7175,6 @@ angular.module('otrBackendService', [])
 
                 headers['Accept'] = ['*/*'];
                 headers['Content-Type'] = ['application/json'];
-
-                if (parameters['xFeature'] !== undefined) {
-                    headers['X-Feature'] = parameters['xFeature'];
-                }
-
-                if (parameters['xResourceId'] !== undefined) {
-                    headers['X-Resource-Id'] = parameters['xResourceId'];
-                }
 
                 path = path.replace('{lawfirmId}', parameters['lawfirmId']);
 
@@ -8968,8 +7203,6 @@ angular.module('otrBackendService', [])
              * @method
              * @name OtrService#getLawfirmSettingsUsingGET
              * @param {object} parameters - method options and parameters
-             * @param {string} parameters.xFeature - which feature is the client using
-             * @param {string} parameters.xResourceId - a generic resource identifier
              * @param {integer} parameters.lawfirmId - lawfirmId
              */
             OtrService.prototype.getLawfirmSettingsUsingGET = function(parameters) {
@@ -8985,15 +7218,6 @@ angular.module('otrBackendService', [])
                     form = {};
 
                 headers['Accept'] = ['*/*'];
-                headers['Content-Type'] = ['application/json'];
-
-                if (parameters['xFeature'] !== undefined) {
-                    headers['X-Feature'] = parameters['xFeature'];
-                }
-
-                if (parameters['xResourceId'] !== undefined) {
-                    headers['X-Resource-Id'] = parameters['xResourceId'];
-                }
 
                 path = path.replace('{lawfirmId}', parameters['lawfirmId']);
 
@@ -9013,8 +7237,6 @@ angular.module('otrBackendService', [])
              * @method
              * @name OtrService#getStripeConnectedAccountsUsingGET
              * @param {object} parameters - method options and parameters
-             * @param {string} parameters.xFeature - which feature is the client using
-             * @param {string} parameters.xResourceId - a generic resource identifier
              * @param {integer} parameters.lawfirmId - lawfirmId
              */
             OtrService.prototype.getStripeConnectedAccountsUsingGET = function(parameters) {
@@ -9030,15 +7252,6 @@ angular.module('otrBackendService', [])
                     form = {};
 
                 headers['Accept'] = ['*/*'];
-                headers['Content-Type'] = ['application/json'];
-
-                if (parameters['xFeature'] !== undefined) {
-                    headers['X-Feature'] = parameters['xFeature'];
-                }
-
-                if (parameters['xResourceId'] !== undefined) {
-                    headers['X-Resource-Id'] = parameters['xResourceId'];
-                }
 
                 path = path.replace('{lawfirmId}', parameters['lawfirmId']);
 
@@ -9058,8 +7271,6 @@ angular.module('otrBackendService', [])
              * @method
              * @name OtrService#deleteLawfirmConnectedAccountUsingDELETE
              * @param {object} parameters - method options and parameters
-             * @param {string} parameters.xFeature - which feature is the client using
-             * @param {string} parameters.xResourceId - a generic resource identifier
              * @param {integer} parameters.lawfirmId - lawfirmId
              * @param {string} parameters.stripeAccountId - stripeAccountId
              */
@@ -9076,15 +7287,6 @@ angular.module('otrBackendService', [])
                     form = {};
 
                 headers['Accept'] = ['*/*'];
-                headers['Content-Type'] = ['application/json'];
-
-                if (parameters['xFeature'] !== undefined) {
-                    headers['X-Feature'] = parameters['xFeature'];
-                }
-
-                if (parameters['xResourceId'] !== undefined) {
-                    headers['X-Resource-Id'] = parameters['xResourceId'];
-                }
 
                 path = path.replace('{lawfirmId}', parameters['lawfirmId']);
 
@@ -9111,8 +7313,6 @@ angular.module('otrBackendService', [])
              * @method
              * @name OtrService#addACHToLawfirmStripeAccountUsingPOST
              * @param {object} parameters - method options and parameters
-             * @param {string} parameters.xFeature - which feature is the client using
-             * @param {string} parameters.xResourceId - a generic resource identifier
              * @param {string} parameters.lawfirmId - lawfirmId
              * @param {} parameters.request - request
              */
@@ -9130,14 +7330,6 @@ angular.module('otrBackendService', [])
 
                 headers['Accept'] = ['*/*'];
                 headers['Content-Type'] = ['application/json'];
-
-                if (parameters['xFeature'] !== undefined) {
-                    headers['X-Feature'] = parameters['xFeature'];
-                }
-
-                if (parameters['xResourceId'] !== undefined) {
-                    headers['X-Resource-Id'] = parameters['xResourceId'];
-                }
 
                 path = path.replace('{lawfirmId}', parameters['lawfirmId']);
 
@@ -9166,10 +7358,8 @@ angular.module('otrBackendService', [])
              * @method
              * @name OtrService#deleteBankAccountFromLawfirmStripeAccountUsingDELETE
              * @param {object} parameters - method options and parameters
-             * @param {string} parameters.xFeature - which feature is the client using
-             * @param {string} parameters.xResourceId - a generic resource identifier
-             * @param {integer} parameters.lawfirmId - lawfirmId
              * @param {string} parameters.bankAccountId - bankAccountId
+             * @param {integer} parameters.lawfirmId - lawfirmId
              */
             OtrService.prototype.deleteBankAccountFromLawfirmStripeAccountUsingDELETE = function(parameters) {
                 if (parameters === undefined) {
@@ -9184,27 +7374,18 @@ angular.module('otrBackendService', [])
                     form = {};
 
                 headers['Accept'] = ['*/*'];
-                headers['Content-Type'] = ['application/json'];
 
-                if (parameters['xFeature'] !== undefined) {
-                    headers['X-Feature'] = parameters['xFeature'];
-                }
+                path = path.replace('{bankAccountId}', parameters['bankAccountId']);
 
-                if (parameters['xResourceId'] !== undefined) {
-                    headers['X-Resource-Id'] = parameters['xResourceId'];
+                if (parameters['bankAccountId'] === undefined) {
+                    deferred.reject(new Error('Missing required  parameter: bankAccountId'));
+                    return deferred.promise;
                 }
 
                 path = path.replace('{lawfirmId}', parameters['lawfirmId']);
 
                 if (parameters['lawfirmId'] === undefined) {
                     deferred.reject(new Error('Missing required  parameter: lawfirmId'));
-                    return deferred.promise;
-                }
-
-                path = path.replace('{bankAccountId}', parameters['bankAccountId']);
-
-                if (parameters['bankAccountId'] === undefined) {
-                    deferred.reject(new Error('Missing required  parameter: bankAccountId'));
                     return deferred.promise;
                 }
 
@@ -9219,8 +7400,6 @@ angular.module('otrBackendService', [])
              * @method
              * @name OtrService#setDefaultPaymentMethodForLawfirmUsingPUT
              * @param {object} parameters - method options and parameters
-             * @param {string} parameters.xFeature - which feature is the client using
-             * @param {string} parameters.xResourceId - a generic resource identifier
              * @param {integer} parameters.lawfirmId - lawfirmId
              * @param {string} parameters.stripePaymentSourceId - stripePaymentSourceId
              */
@@ -9238,14 +7417,6 @@ angular.module('otrBackendService', [])
 
                 headers['Accept'] = ['*/*'];
                 headers['Content-Type'] = ['application/json'];
-
-                if (parameters['xFeature'] !== undefined) {
-                    headers['X-Feature'] = parameters['xFeature'];
-                }
-
-                if (parameters['xResourceId'] !== undefined) {
-                    headers['X-Resource-Id'] = parameters['xResourceId'];
-                }
 
                 path = path.replace('{lawfirmId}', parameters['lawfirmId']);
 
@@ -9274,8 +7445,6 @@ angular.module('otrBackendService', [])
              * @method
              * @name OtrService#getSupportedStatesForLawfirmUsingGET
              * @param {object} parameters - method options and parameters
-             * @param {string} parameters.xFeature - which feature is the client using
-             * @param {string} parameters.xResourceId - a generic resource identifier
              * @param {integer} parameters.lawfirmId - lawfirmId
              */
             OtrService.prototype.getSupportedStatesForLawfirmUsingGET = function(parameters) {
@@ -9291,15 +7460,6 @@ angular.module('otrBackendService', [])
                     form = {};
 
                 headers['Accept'] = ['*/*'];
-                headers['Content-Type'] = ['application/json'];
-
-                if (parameters['xFeature'] !== undefined) {
-                    headers['X-Feature'] = parameters['xFeature'];
-                }
-
-                if (parameters['xResourceId'] !== undefined) {
-                    headers['X-Resource-Id'] = parameters['xResourceId'];
-                }
 
                 path = path.replace('{lawfirmId}', parameters['lawfirmId']);
 
@@ -9319,10 +7479,8 @@ angular.module('otrBackendService', [])
              * @method
              * @name OtrService#listLawfirmSurchargesUsingGET
              * @param {object} parameters - method options and parameters
-             * @param {string} parameters.xFeature - which feature is the client using
-             * @param {string} parameters.xResourceId - a generic resource identifier
-             * @param {string} parameters.lawfirmId - lawfirmId
              * @param {string} parameters.featureType - featureType
+             * @param {string} parameters.lawfirmId - lawfirmId
              */
             OtrService.prototype.listLawfirmSurchargesUsingGET = function(parameters) {
                 if (parameters === undefined) {
@@ -9337,14 +7495,9 @@ angular.module('otrBackendService', [])
                     form = {};
 
                 headers['Accept'] = ['*/*'];
-                headers['Content-Type'] = ['application/json'];
 
-                if (parameters['xFeature'] !== undefined) {
-                    headers['X-Feature'] = parameters['xFeature'];
-                }
-
-                if (parameters['xResourceId'] !== undefined) {
-                    headers['X-Resource-Id'] = parameters['xResourceId'];
+                if (parameters['featureType'] !== undefined) {
+                    queryParameters['featureType'] = parameters['featureType'];
                 }
 
                 path = path.replace('{lawfirmId}', parameters['lawfirmId']);
@@ -9352,10 +7505,6 @@ angular.module('otrBackendService', [])
                 if (parameters['lawfirmId'] === undefined) {
                     deferred.reject(new Error('Missing required  parameter: lawfirmId'));
                     return deferred.promise;
-                }
-
-                if (parameters['featureType'] !== undefined) {
-                    queryParameters['featureType'] = parameters['featureType'];
                 }
 
                 queryParameters = mergeQueryParams(parameters, queryParameters);
@@ -9369,8 +7518,6 @@ angular.module('otrBackendService', [])
              * @method
              * @name OtrService#saveLawfirmSurchargesUsingPOST
              * @param {object} parameters - method options and parameters
-             * @param {string} parameters.xFeature - which feature is the client using
-             * @param {string} parameters.xResourceId - a generic resource identifier
              * @param {string} parameters.lawfirmId - lawfirmId
              * @param {} parameters.request - request
              */
@@ -9388,14 +7535,6 @@ angular.module('otrBackendService', [])
 
                 headers['Accept'] = ['*/*'];
                 headers['Content-Type'] = ['application/json'];
-
-                if (parameters['xFeature'] !== undefined) {
-                    headers['X-Feature'] = parameters['xFeature'];
-                }
-
-                if (parameters['xResourceId'] !== undefined) {
-                    headers['X-Resource-Id'] = parameters['xResourceId'];
-                }
 
                 path = path.replace('{lawfirmId}', parameters['lawfirmId']);
 
@@ -9424,8 +7563,6 @@ angular.module('otrBackendService', [])
              * @method
              * @name OtrService#removeSurchargesUsingDELETE
              * @param {object} parameters - method options and parameters
-             * @param {string} parameters.xFeature - which feature is the client using
-             * @param {string} parameters.xResourceId - a generic resource identifier
              * @param {string} parameters.lawfirmId - lawfirmId
              * @param {} parameters.request - request
              */
@@ -9442,15 +7579,6 @@ angular.module('otrBackendService', [])
                     form = {};
 
                 headers['Accept'] = ['*/*'];
-                headers['Content-Type'] = ['application/json'];
-
-                if (parameters['xFeature'] !== undefined) {
-                    headers['X-Feature'] = parameters['xFeature'];
-                }
-
-                if (parameters['xResourceId'] !== undefined) {
-                    headers['X-Resource-Id'] = parameters['xResourceId'];
-                }
 
                 path = path.replace('{lawfirmId}', parameters['lawfirmId']);
 
@@ -9479,8 +7607,6 @@ angular.module('otrBackendService', [])
              * @method
              * @name OtrService#setVacationModeUsingPOST
              * @param {object} parameters - method options and parameters
-             * @param {string} parameters.xFeature - which feature is the client using
-             * @param {string} parameters.xResourceId - a generic resource identifier
              * @param {integer} parameters.lawfirmId - lawfirmId
              * @param {} parameters.request - request
              */
@@ -9498,14 +7624,6 @@ angular.module('otrBackendService', [])
 
                 headers['Accept'] = ['*/*'];
                 headers['Content-Type'] = ['application/json'];
-
-                if (parameters['xFeature'] !== undefined) {
-                    headers['X-Feature'] = parameters['xFeature'];
-                }
-
-                if (parameters['xResourceId'] !== undefined) {
-                    headers['X-Resource-Id'] = parameters['xResourceId'];
-                }
 
                 path = path.replace('{lawfirmId}', parameters['lawfirmId']);
 
@@ -9534,8 +7652,6 @@ angular.module('otrBackendService', [])
              * @method
              * @name OtrService#upsertLawyerUsingPOST
              * @param {object} parameters - method options and parameters
-             * @param {string} parameters.xFeature - which feature is the client using
-             * @param {string} parameters.xResourceId - a generic resource identifier
              * @param {} parameters.request - request
              */
             OtrService.prototype.upsertLawyerUsingPOST = function(parameters) {
@@ -9552,14 +7668,6 @@ angular.module('otrBackendService', [])
 
                 headers['Accept'] = ['*/*'];
                 headers['Content-Type'] = ['application/json'];
-
-                if (parameters['xFeature'] !== undefined) {
-                    headers['X-Feature'] = parameters['xFeature'];
-                }
-
-                if (parameters['xResourceId'] !== undefined) {
-                    headers['X-Resource-Id'] = parameters['xResourceId'];
-                }
 
                 if (parameters['request'] !== undefined) {
                     body = parameters['request'];
@@ -9581,8 +7689,6 @@ angular.module('otrBackendService', [])
              * @method
              * @name OtrService#saveLawyerLeadUsingPOST
              * @param {object} parameters - method options and parameters
-             * @param {string} parameters.xFeature - which feature is the client using
-             * @param {string} parameters.xResourceId - a generic resource identifier
              * @param {} parameters.request - request
              */
             OtrService.prototype.saveLawyerLeadUsingPOST = function(parameters) {
@@ -9599,14 +7705,6 @@ angular.module('otrBackendService', [])
 
                 headers['Accept'] = ['*/*'];
                 headers['Content-Type'] = ['application/json'];
-
-                if (parameters['xFeature'] !== undefined) {
-                    headers['X-Feature'] = parameters['xFeature'];
-                }
-
-                if (parameters['xResourceId'] !== undefined) {
-                    headers['X-Resource-Id'] = parameters['xResourceId'];
-                }
 
                 if (parameters['request'] !== undefined) {
                     body = parameters['request'];
@@ -9628,8 +7726,6 @@ angular.module('otrBackendService', [])
              * @method
              * @name OtrService#getLawyerEmailGuessesUsingGET
              * @param {object} parameters - method options and parameters
-             * @param {string} parameters.xFeature - which feature is the client using
-             * @param {string} parameters.xResourceId - a generic resource identifier
              * @param {integer} parameters.lawyerId - lawyerId
              */
             OtrService.prototype.getLawyerEmailGuessesUsingGET = function(parameters) {
@@ -9645,15 +7741,6 @@ angular.module('otrBackendService', [])
                     form = {};
 
                 headers['Accept'] = ['*/*'];
-                headers['Content-Type'] = ['application/json'];
-
-                if (parameters['xFeature'] !== undefined) {
-                    headers['X-Feature'] = parameters['xFeature'];
-                }
-
-                if (parameters['xResourceId'] !== undefined) {
-                    headers['X-Resource-Id'] = parameters['xResourceId'];
-                }
 
                 path = path.replace('{lawyerId}', parameters['lawyerId']);
 
@@ -9673,10 +7760,8 @@ angular.module('otrBackendService', [])
              * @method
              * @name OtrService#saveLawyerLicensesUsingPOST
              * @param {object} parameters - method options and parameters
-             * @param {string} parameters.xFeature - which feature is the client using
-             * @param {string} parameters.xResourceId - a generic resource identifier
-             * @param {string} parameters.userId - userId
              * @param {} parameters.request - request
+             * @param {string} parameters.userId - userId
              */
             OtrService.prototype.saveLawyerLicensesUsingPOST = function(parameters) {
                 if (parameters === undefined) {
@@ -9693,27 +7778,19 @@ angular.module('otrBackendService', [])
                 headers['Accept'] = ['*/*'];
                 headers['Content-Type'] = ['application/json'];
 
-                if (parameters['xFeature'] !== undefined) {
-                    headers['X-Feature'] = parameters['xFeature'];
-                }
-
-                if (parameters['xResourceId'] !== undefined) {
-                    headers['X-Resource-Id'] = parameters['xResourceId'];
-                }
-
-                path = path.replace('{userId}', parameters['userId']);
-
-                if (parameters['userId'] === undefined) {
-                    deferred.reject(new Error('Missing required  parameter: userId'));
-                    return deferred.promise;
-                }
-
                 if (parameters['request'] !== undefined) {
                     body = parameters['request'];
                 }
 
                 if (parameters['request'] === undefined) {
                     deferred.reject(new Error('Missing required  parameter: request'));
+                    return deferred.promise;
+                }
+
+                path = path.replace('{userId}', parameters['userId']);
+
+                if (parameters['userId'] === undefined) {
+                    deferred.reject(new Error('Missing required  parameter: userId'));
                     return deferred.promise;
                 }
 
@@ -9728,10 +7805,8 @@ angular.module('otrBackendService', [])
              * @method
              * @name OtrService#deleteLawyerLicensesUsingDELETE
              * @param {object} parameters - method options and parameters
-             * @param {string} parameters.xFeature - which feature is the client using
-             * @param {string} parameters.xResourceId - a generic resource identifier
-             * @param {string} parameters.userId - userId
              * @param {} parameters.request - request
+             * @param {string} parameters.userId - userId
              */
             OtrService.prototype.deleteLawyerLicensesUsingDELETE = function(parameters) {
                 if (parameters === undefined) {
@@ -9746,22 +7821,6 @@ angular.module('otrBackendService', [])
                     form = {};
 
                 headers['Accept'] = ['*/*'];
-                headers['Content-Type'] = ['application/json'];
-
-                if (parameters['xFeature'] !== undefined) {
-                    headers['X-Feature'] = parameters['xFeature'];
-                }
-
-                if (parameters['xResourceId'] !== undefined) {
-                    headers['X-Resource-Id'] = parameters['xResourceId'];
-                }
-
-                path = path.replace('{userId}', parameters['userId']);
-
-                if (parameters['userId'] === undefined) {
-                    deferred.reject(new Error('Missing required  parameter: userId'));
-                    return deferred.promise;
-                }
 
                 if (parameters['request'] !== undefined) {
                     body = parameters['request'];
@@ -9769,6 +7828,13 @@ angular.module('otrBackendService', [])
 
                 if (parameters['request'] === undefined) {
                     deferred.reject(new Error('Missing required  parameter: request'));
+                    return deferred.promise;
+                }
+
+                path = path.replace('{userId}', parameters['userId']);
+
+                if (parameters['userId'] === undefined) {
+                    deferred.reject(new Error('Missing required  parameter: userId'));
                     return deferred.promise;
                 }
 
@@ -9783,8 +7849,6 @@ angular.module('otrBackendService', [])
              * @method
              * @name OtrService#getLineItemTypesUsingGET
              * @param {object} parameters - method options and parameters
-             * @param {string} parameters.xFeature - which feature is the client using
-             * @param {string} parameters.xResourceId - a generic resource identifier
              */
             OtrService.prototype.getLineItemTypesUsingGET = function(parameters) {
                 if (parameters === undefined) {
@@ -9799,15 +7863,6 @@ angular.module('otrBackendService', [])
                     form = {};
 
                 headers['Accept'] = ['application/json'];
-                headers['Content-Type'] = ['application/json'];
-
-                if (parameters['xFeature'] !== undefined) {
-                    headers['X-Feature'] = parameters['xFeature'];
-                }
-
-                if (parameters['xResourceId'] !== undefined) {
-                    headers['X-Resource-Id'] = parameters['xResourceId'];
-                }
 
                 queryParameters = mergeQueryParams(parameters, queryParameters);
 
@@ -9820,8 +7875,6 @@ angular.module('otrBackendService', [])
              * @method
              * @name OtrService#createNoteUsingPOST
              * @param {object} parameters - method options and parameters
-             * @param {string} parameters.xFeature - which feature is the client using
-             * @param {string} parameters.xResourceId - a generic resource identifier
              * @param {} parameters.request - request
              */
             OtrService.prototype.createNoteUsingPOST = function(parameters) {
@@ -9838,14 +7891,6 @@ angular.module('otrBackendService', [])
 
                 headers['Accept'] = ['application/json'];
                 headers['Content-Type'] = ['application/json'];
-
-                if (parameters['xFeature'] !== undefined) {
-                    headers['X-Feature'] = parameters['xFeature'];
-                }
-
-                if (parameters['xResourceId'] !== undefined) {
-                    headers['X-Resource-Id'] = parameters['xResourceId'];
-                }
 
                 if (parameters['request'] !== undefined) {
                     body = parameters['request'];
@@ -9867,8 +7912,6 @@ angular.module('otrBackendService', [])
              * @method
              * @name OtrService#updateNoteUsingPUT
              * @param {object} parameters - method options and parameters
-             * @param {string} parameters.xFeature - which feature is the client using
-             * @param {string} parameters.xResourceId - a generic resource identifier
              * @param {integer} parameters.noteId - noteId
              * @param {} parameters.request - request
              */
@@ -9886,14 +7929,6 @@ angular.module('otrBackendService', [])
 
                 headers['Accept'] = ['application/json'];
                 headers['Content-Type'] = ['application/json'];
-
-                if (parameters['xFeature'] !== undefined) {
-                    headers['X-Feature'] = parameters['xFeature'];
-                }
-
-                if (parameters['xResourceId'] !== undefined) {
-                    headers['X-Resource-Id'] = parameters['xResourceId'];
-                }
 
                 path = path.replace('{noteId}', parameters['noteId']);
 
@@ -9922,8 +7957,6 @@ angular.module('otrBackendService', [])
              * @method
              * @name OtrService#deleteNoteUsingDELETE
              * @param {object} parameters - method options and parameters
-             * @param {string} parameters.xFeature - which feature is the client using
-             * @param {string} parameters.xResourceId - a generic resource identifier
              * @param {integer} parameters.noteId - noteId
              */
             OtrService.prototype.deleteNoteUsingDELETE = function(parameters) {
@@ -9939,15 +7972,6 @@ angular.module('otrBackendService', [])
                     form = {};
 
                 headers['Accept'] = ['application/json'];
-                headers['Content-Type'] = ['application/json'];
-
-                if (parameters['xFeature'] !== undefined) {
-                    headers['X-Feature'] = parameters['xFeature'];
-                }
-
-                if (parameters['xResourceId'] !== undefined) {
-                    headers['X-Resource-Id'] = parameters['xResourceId'];
-                }
 
                 path = path.replace('{noteId}', parameters['noteId']);
 
@@ -9967,8 +7991,6 @@ angular.module('otrBackendService', [])
              * @method
              * @name OtrService#notifyClientActionRequirementUsingPOST
              * @param {object} parameters - method options and parameters
-             * @param {string} parameters.xFeature - which feature is the client using
-             * @param {string} parameters.xResourceId - a generic resource identifier
              * @param {} parameters.request - request
              */
             OtrService.prototype.notifyClientActionRequirementUsingPOST = function(parameters) {
@@ -9985,14 +8007,6 @@ angular.module('otrBackendService', [])
 
                 headers['Accept'] = ['*/*'];
                 headers['Content-Type'] = ['application/json'];
-
-                if (parameters['xFeature'] !== undefined) {
-                    headers['X-Feature'] = parameters['xFeature'];
-                }
-
-                if (parameters['xResourceId'] !== undefined) {
-                    headers['X-Resource-Id'] = parameters['xResourceId'];
-                }
 
                 if (parameters['request'] !== undefined) {
                     body = parameters['request'];
@@ -10014,8 +8028,6 @@ angular.module('otrBackendService', [])
              * @method
              * @name OtrService#pushCaseMessageUsingPOST
              * @param {object} parameters - method options and parameters
-             * @param {string} parameters.xFeature - which feature is the client using
-             * @param {string} parameters.xResourceId - a generic resource identifier
              * @param {string} parameters.caseId - caseId
              * @param {} parameters.pushRequest - pushRequest
              */
@@ -10033,14 +8045,6 @@ angular.module('otrBackendService', [])
 
                 headers['Accept'] = ['*/*'];
                 headers['Content-Type'] = ['application/json'];
-
-                if (parameters['xFeature'] !== undefined) {
-                    headers['X-Feature'] = parameters['xFeature'];
-                }
-
-                if (parameters['xResourceId'] !== undefined) {
-                    headers['X-Resource-Id'] = parameters['xResourceId'];
-                }
 
                 path = path.replace('{caseId}', parameters['caseId']);
 
@@ -10069,8 +8073,6 @@ angular.module('otrBackendService', [])
              * @method
              * @name OtrService#registerUsingPOST
              * @param {object} parameters - method options and parameters
-             * @param {string} parameters.xFeature - which feature is the client using
-             * @param {string} parameters.xResourceId - a generic resource identifier
              * @param {} parameters.request - request
              */
             OtrService.prototype.registerUsingPOST = function(parameters) {
@@ -10087,14 +8089,6 @@ angular.module('otrBackendService', [])
 
                 headers['Accept'] = ['*/*'];
                 headers['Content-Type'] = ['application/json'];
-
-                if (parameters['xFeature'] !== undefined) {
-                    headers['X-Feature'] = parameters['xFeature'];
-                }
-
-                if (parameters['xResourceId'] !== undefined) {
-                    headers['X-Resource-Id'] = parameters['xResourceId'];
-                }
 
                 if (parameters['request'] !== undefined) {
                     body = parameters['request'];
@@ -10116,8 +8110,6 @@ angular.module('otrBackendService', [])
              * @method
              * @name OtrService#getUnreadCountsUsingGET
              * @param {object} parameters - method options and parameters
-             * @param {string} parameters.xFeature - which feature is the client using
-             * @param {string} parameters.xResourceId - a generic resource identifier
              * @param {boolean} parameters.includeMessage - includeMessage
              */
             OtrService.prototype.getUnreadCountsUsingGET = function(parameters) {
@@ -10133,15 +8125,6 @@ angular.module('otrBackendService', [])
                     form = {};
 
                 headers['Accept'] = ['*/*'];
-                headers['Content-Type'] = ['application/json'];
-
-                if (parameters['xFeature'] !== undefined) {
-                    headers['X-Feature'] = parameters['xFeature'];
-                }
-
-                if (parameters['xResourceId'] !== undefined) {
-                    headers['X-Resource-Id'] = parameters['xResourceId'];
-                }
 
                 if (parameters['includeMessage'] !== undefined) {
                     queryParameters['includeMessage'] = parameters['includeMessage'];
@@ -10158,8 +8141,6 @@ angular.module('otrBackendService', [])
              * @method
              * @name OtrService#markReadUsingDELETE
              * @param {object} parameters - method options and parameters
-             * @param {string} parameters.xFeature - which feature is the client using
-             * @param {string} parameters.xResourceId - a generic resource identifier
              * @param {string} parameters.caseId - caseId
              * @param {} parameters.request - request
              */
@@ -10176,15 +8157,6 @@ angular.module('otrBackendService', [])
                     form = {};
 
                 headers['Accept'] = ['*/*'];
-                headers['Content-Type'] = ['application/json'];
-
-                if (parameters['xFeature'] !== undefined) {
-                    headers['X-Feature'] = parameters['xFeature'];
-                }
-
-                if (parameters['xResourceId'] !== undefined) {
-                    headers['X-Resource-Id'] = parameters['xResourceId'];
-                }
 
                 path = path.replace('{caseId}', parameters['caseId']);
 
@@ -10213,8 +8185,6 @@ angular.module('otrBackendService', [])
              * @method
              * @name OtrService#markAllReadForUserUsingDELETE
              * @param {object} parameters - method options and parameters
-             * @param {string} parameters.xFeature - which feature is the client using
-             * @param {string} parameters.xResourceId - a generic resource identifier
              * @param {string} parameters.userId - userId
              */
             OtrService.prototype.markAllReadForUserUsingDELETE = function(parameters) {
@@ -10230,15 +8200,6 @@ angular.module('otrBackendService', [])
                     form = {};
 
                 headers['Accept'] = ['*/*'];
-                headers['Content-Type'] = ['application/json'];
-
-                if (parameters['xFeature'] !== undefined) {
-                    headers['X-Feature'] = parameters['xFeature'];
-                }
-
-                if (parameters['xResourceId'] !== undefined) {
-                    headers['X-Resource-Id'] = parameters['xResourceId'];
-                }
 
                 path = path.replace('{userId}', parameters['userId']);
 
@@ -10258,10 +8219,8 @@ angular.module('otrBackendService', [])
              * @method
              * @name OtrService#pushNotificationToUserUsingPOST
              * @param {object} parameters - method options and parameters
-             * @param {string} parameters.xFeature - which feature is the client using
-             * @param {string} parameters.xResourceId - a generic resource identifier
-             * @param {string} parameters.recipientId - recipientId
              * @param {} parameters.pushRequest - pushRequest
+             * @param {string} parameters.recipientId - recipientId
              */
             OtrService.prototype.pushNotificationToUserUsingPOST = function(parameters) {
                 if (parameters === undefined) {
@@ -10278,27 +8237,19 @@ angular.module('otrBackendService', [])
                 headers['Accept'] = ['*/*'];
                 headers['Content-Type'] = ['application/json'];
 
-                if (parameters['xFeature'] !== undefined) {
-                    headers['X-Feature'] = parameters['xFeature'];
-                }
-
-                if (parameters['xResourceId'] !== undefined) {
-                    headers['X-Resource-Id'] = parameters['xResourceId'];
-                }
-
-                path = path.replace('{recipientId}', parameters['recipientId']);
-
-                if (parameters['recipientId'] === undefined) {
-                    deferred.reject(new Error('Missing required  parameter: recipientId'));
-                    return deferred.promise;
-                }
-
                 if (parameters['pushRequest'] !== undefined) {
                     body = parameters['pushRequest'];
                 }
 
                 if (parameters['pushRequest'] === undefined) {
                     deferred.reject(new Error('Missing required  parameter: pushRequest'));
+                    return deferred.promise;
+                }
+
+                path = path.replace('{recipientId}', parameters['recipientId']);
+
+                if (parameters['recipientId'] === undefined) {
+                    deferred.reject(new Error('Missing required  parameter: recipientId'));
                     return deferred.promise;
                 }
 
@@ -10313,8 +8264,6 @@ angular.module('otrBackendService', [])
              * @method
              * @name OtrService#sendOneTimePasswordUsingPOST
              * @param {object} parameters - method options and parameters
-             * @param {string} parameters.xFeature - which feature is the client using
-             * @param {string} parameters.xResourceId - a generic resource identifier
              */
             OtrService.prototype.sendOneTimePasswordUsingPOST = function(parameters) {
                 if (parameters === undefined) {
@@ -10331,14 +8280,6 @@ angular.module('otrBackendService', [])
                 headers['Accept'] = ['*/*'];
                 headers['Content-Type'] = ['application/json'];
 
-                if (parameters['xFeature'] !== undefined) {
-                    headers['X-Feature'] = parameters['xFeature'];
-                }
-
-                if (parameters['xResourceId'] !== undefined) {
-                    headers['X-Resource-Id'] = parameters['xResourceId'];
-                }
-
                 queryParameters = mergeQueryParams(parameters, queryParameters);
 
                 this.request('POST', domain + path, parameters, body, headers, queryParameters, form, deferred);
@@ -10350,8 +8291,6 @@ angular.module('otrBackendService', [])
              * @method
              * @name OtrService#getPaymentModelTypesUsingGET
              * @param {object} parameters - method options and parameters
-             * @param {string} parameters.xFeature - which feature is the client using
-             * @param {string} parameters.xResourceId - a generic resource identifier
              */
             OtrService.prototype.getPaymentModelTypesUsingGET = function(parameters) {
                 if (parameters === undefined) {
@@ -10366,15 +8305,6 @@ angular.module('otrBackendService', [])
                     form = {};
 
                 headers['Accept'] = ['*/*'];
-                headers['Content-Type'] = ['application/json'];
-
-                if (parameters['xFeature'] !== undefined) {
-                    headers['X-Feature'] = parameters['xFeature'];
-                }
-
-                if (parameters['xResourceId'] !== undefined) {
-                    headers['X-Resource-Id'] = parameters['xResourceId'];
-                }
 
                 queryParameters = mergeQueryParams(parameters, queryParameters);
 
@@ -10387,8 +8317,6 @@ angular.module('otrBackendService', [])
              * @method
              * @name OtrService#getAvailablePaymentPlansUsingPOST
              * @param {object} parameters - method options and parameters
-             * @param {string} parameters.xFeature - which feature is the client using
-             * @param {string} parameters.xResourceId - a generic resource identifier
              * @param {integer} parameters.lawfirmId - lawfirmId
              * @param {string} parameters.legalFeeInCents - legalFeeInCents
              * @param {string} parameters.state - state
@@ -10407,14 +8335,6 @@ angular.module('otrBackendService', [])
 
                 headers['Accept'] = ['*/*'];
                 headers['Content-Type'] = ['application/json'];
-
-                if (parameters['xFeature'] !== undefined) {
-                    headers['X-Feature'] = parameters['xFeature'];
-                }
-
-                if (parameters['xResourceId'] !== undefined) {
-                    headers['X-Resource-Id'] = parameters['xResourceId'];
-                }
 
                 path = path.replace('{lawfirmId}', parameters['lawfirmId']);
 
@@ -10452,8 +8372,6 @@ angular.module('otrBackendService', [])
              * @method
              * @name OtrService#updateCasePaymentUsingPUT
              * @param {object} parameters - method options and parameters
-             * @param {string} parameters.xFeature - which feature is the client using
-             * @param {string} parameters.xResourceId - a generic resource identifier
              * @param {string} parameters.casePaymentId - casePaymentId
              * @param {} parameters.request - request
              */
@@ -10471,14 +8389,6 @@ angular.module('otrBackendService', [])
 
                 headers['Accept'] = ['*/*'];
                 headers['Content-Type'] = ['application/json'];
-
-                if (parameters['xFeature'] !== undefined) {
-                    headers['X-Feature'] = parameters['xFeature'];
-                }
-
-                if (parameters['xResourceId'] !== undefined) {
-                    headers['X-Resource-Id'] = parameters['xResourceId'];
-                }
 
                 path = path.replace('{casePaymentId}', parameters['casePaymentId']);
 
@@ -10507,8 +8417,6 @@ angular.module('otrBackendService', [])
              * @method
              * @name OtrService#updatePaymentRecipientUsingPUT
              * @param {object} parameters - method options and parameters
-             * @param {string} parameters.xFeature - which feature is the client using
-             * @param {string} parameters.xResourceId - a generic resource identifier
              * @param {string} parameters.casePaymentId - casePaymentId
              * @param {string} parameters.recipient - recipient
              */
@@ -10526,14 +8434,6 @@ angular.module('otrBackendService', [])
 
                 headers['Accept'] = ['*/*'];
                 headers['Content-Type'] = ['application/json'];
-
-                if (parameters['xFeature'] !== undefined) {
-                    headers['X-Feature'] = parameters['xFeature'];
-                }
-
-                if (parameters['xResourceId'] !== undefined) {
-                    headers['X-Resource-Id'] = parameters['xResourceId'];
-                }
 
                 path = path.replace('{casePaymentId}', parameters['casePaymentId']);
 
@@ -10562,8 +8462,6 @@ angular.module('otrBackendService', [])
              * @method
              * @name OtrService#signRecordingUrlUsingPOST
              * @param {object} parameters - method options and parameters
-             * @param {string} parameters.xFeature - which feature is the client using
-             * @param {string} parameters.xResourceId - a generic resource identifier
              * @param {} parameters.request - request
              */
             OtrService.prototype.signRecordingUrlUsingPOST = function(parameters) {
@@ -10580,14 +8478,6 @@ angular.module('otrBackendService', [])
 
                 headers['Accept'] = ['*/*'];
                 headers['Content-Type'] = ['application/json'];
-
-                if (parameters['xFeature'] !== undefined) {
-                    headers['X-Feature'] = parameters['xFeature'];
-                }
-
-                if (parameters['xResourceId'] !== undefined) {
-                    headers['X-Resource-Id'] = parameters['xResourceId'];
-                }
 
                 if (parameters['request'] !== undefined) {
                     body = parameters['request'];
@@ -10609,8 +8499,6 @@ angular.module('otrBackendService', [])
              * @method
              * @name OtrService#dismissPhoneLeadUsingPOST
              * @param {object} parameters - method options and parameters
-             * @param {string} parameters.xFeature - which feature is the client using
-             * @param {string} parameters.xResourceId - a generic resource identifier
              * @param {} parameters.request - request
              */
             OtrService.prototype.dismissPhoneLeadUsingPOST = function(parameters) {
@@ -10627,14 +8515,6 @@ angular.module('otrBackendService', [])
 
                 headers['Accept'] = ['application/json'];
                 headers['Content-Type'] = ['application/json'];
-
-                if (parameters['xFeature'] !== undefined) {
-                    headers['X-Feature'] = parameters['xFeature'];
-                }
-
-                if (parameters['xResourceId'] !== undefined) {
-                    headers['X-Resource-Id'] = parameters['xResourceId'];
-                }
 
                 if (parameters['request'] !== undefined) {
                     body = parameters['request'];
@@ -10656,8 +8536,6 @@ angular.module('otrBackendService', [])
              * @method
              * @name OtrService#addNoteToPhoneLeadUsingPOST
              * @param {object} parameters - method options and parameters
-             * @param {string} parameters.xFeature - which feature is the client using
-             * @param {string} parameters.xResourceId - a generic resource identifier
              * @param {} parameters.request - request
              */
             OtrService.prototype.addNoteToPhoneLeadUsingPOST = function(parameters) {
@@ -10674,14 +8552,6 @@ angular.module('otrBackendService', [])
 
                 headers['Accept'] = ['application/json'];
                 headers['Content-Type'] = ['application/json'];
-
-                if (parameters['xFeature'] !== undefined) {
-                    headers['X-Feature'] = parameters['xFeature'];
-                }
-
-                if (parameters['xResourceId'] !== undefined) {
-                    headers['X-Resource-Id'] = parameters['xResourceId'];
-                }
 
                 if (parameters['request'] !== undefined) {
                     body = parameters['request'];
@@ -10703,8 +8573,6 @@ angular.module('otrBackendService', [])
              * @method
              * @name OtrService#getActiveRatesByAreaUsingPOST
              * @param {object} parameters - method options and parameters
-             * @param {string} parameters.xFeature - which feature is the client using
-             * @param {string} parameters.xResourceId - a generic resource identifier
              * @param {} parameters.request - request
              */
             OtrService.prototype.getActiveRatesByAreaUsingPOST = function(parameters) {
@@ -10721,14 +8589,6 @@ angular.module('otrBackendService', [])
 
                 headers['Accept'] = ['*/*'];
                 headers['Content-Type'] = ['application/json'];
-
-                if (parameters['xFeature'] !== undefined) {
-                    headers['X-Feature'] = parameters['xFeature'];
-                }
-
-                if (parameters['xResourceId'] !== undefined) {
-                    headers['X-Resource-Id'] = parameters['xResourceId'];
-                }
 
                 if (parameters['request'] !== undefined) {
                     body = parameters['request'];
@@ -10750,8 +8610,6 @@ angular.module('otrBackendService', [])
              * @method
              * @name OtrService#getRedirectUrlUsingGET
              * @param {object} parameters - method options and parameters
-             * @param {string} parameters.xFeature - which feature is the client using
-             * @param {string} parameters.xResourceId - a generic resource identifier
              * @param {string} parameters.landingPageUrl - landingPageUrl
              * @param {string} parameters.lawfirmId - lawfirmId
              * @param {string} parameters.pageType - pageType
@@ -10769,15 +8627,6 @@ angular.module('otrBackendService', [])
                     form = {};
 
                 headers['Accept'] = ['*/*'];
-                headers['Content-Type'] = ['application/json'];
-
-                if (parameters['xFeature'] !== undefined) {
-                    headers['X-Feature'] = parameters['xFeature'];
-                }
-
-                if (parameters['xResourceId'] !== undefined) {
-                    headers['X-Resource-Id'] = parameters['xResourceId'];
-                }
 
                 if (parameters['landingPageUrl'] !== undefined) {
                     queryParameters['landingPageUrl'] = parameters['landingPageUrl'];
@@ -10802,8 +8651,6 @@ angular.module('otrBackendService', [])
              * @method
              * @name OtrService#addRedirectUrlUsingPOST
              * @param {object} parameters - method options and parameters
-             * @param {string} parameters.xFeature - which feature is the client using
-             * @param {string} parameters.xResourceId - a generic resource identifier
              * @param {} parameters.request - request
              */
             OtrService.prototype.addRedirectUrlUsingPOST = function(parameters) {
@@ -10820,14 +8667,6 @@ angular.module('otrBackendService', [])
 
                 headers['Accept'] = ['*/*'];
                 headers['Content-Type'] = ['application/json'];
-
-                if (parameters['xFeature'] !== undefined) {
-                    headers['X-Feature'] = parameters['xFeature'];
-                }
-
-                if (parameters['xResourceId'] !== undefined) {
-                    headers['X-Resource-Id'] = parameters['xResourceId'];
-                }
 
                 if (parameters['request'] !== undefined) {
                     body = parameters['request'];
@@ -10849,8 +8688,6 @@ angular.module('otrBackendService', [])
              * @method
              * @name OtrService#clearCacheUsingPOST
              * @param {object} parameters - method options and parameters
-             * @param {string} parameters.xFeature - which feature is the client using
-             * @param {string} parameters.xResourceId - a generic resource identifier
              */
             OtrService.prototype.clearCacheUsingPOST = function(parameters) {
                 if (parameters === undefined) {
@@ -10867,14 +8704,6 @@ angular.module('otrBackendService', [])
                 headers['Accept'] = ['*/*'];
                 headers['Content-Type'] = ['application/json'];
 
-                if (parameters['xFeature'] !== undefined) {
-                    headers['X-Feature'] = parameters['xFeature'];
-                }
-
-                if (parameters['xResourceId'] !== undefined) {
-                    headers['X-Resource-Id'] = parameters['xResourceId'];
-                }
-
                 queryParameters = mergeQueryParams(parameters, queryParameters);
 
                 this.request('POST', domain + path, parameters, body, headers, queryParameters, form, deferred);
@@ -10886,8 +8715,6 @@ angular.module('otrBackendService', [])
              * @method
              * @name OtrService#getReferralHistoryUsingGET
              * @param {object} parameters - method options and parameters
-             * @param {string} parameters.xFeature - which feature is the client using
-             * @param {string} parameters.xResourceId - a generic resource identifier
              */
             OtrService.prototype.getReferralHistoryUsingGET = function(parameters) {
                 if (parameters === undefined) {
@@ -10902,15 +8729,6 @@ angular.module('otrBackendService', [])
                     form = {};
 
                 headers['Accept'] = ['application/json'];
-                headers['Content-Type'] = ['application/json'];
-
-                if (parameters['xFeature'] !== undefined) {
-                    headers['X-Feature'] = parameters['xFeature'];
-                }
-
-                if (parameters['xResourceId'] !== undefined) {
-                    headers['X-Resource-Id'] = parameters['xResourceId'];
-                }
 
                 queryParameters = mergeQueryParams(parameters, queryParameters);
 
@@ -10923,8 +8741,6 @@ angular.module('otrBackendService', [])
              * @method
              * @name OtrService#getReferralCodesUsingGET
              * @param {object} parameters - method options and parameters
-             * @param {string} parameters.xFeature - which feature is the client using
-             * @param {string} parameters.xResourceId - a generic resource identifier
              * @param {boolean} parameters.isActive - isActive
              */
             OtrService.prototype.getReferralCodesUsingGET = function(parameters) {
@@ -10940,15 +8756,9 @@ angular.module('otrBackendService', [])
                     form = {};
 
                 headers['Accept'] = ['application/json'];
-                headers['Content-Type'] = ['application/json'];
 
-                if (parameters['xFeature'] !== undefined) {
-                    headers['X-Feature'] = parameters['xFeature'];
-                }
-
-                if (parameters['xResourceId'] !== undefined) {
-                    headers['X-Resource-Id'] = parameters['xResourceId'];
-                }
+                /** set default value **/
+                queryParameters['isActive'] = true;
 
                 if (parameters['isActive'] !== undefined) {
                     queryParameters['isActive'] = parameters['isActive'];
@@ -10965,8 +8775,6 @@ angular.module('otrBackendService', [])
              * @method
              * @name OtrService#generateReferralCodeUsingPOST
              * @param {object} parameters - method options and parameters
-             * @param {string} parameters.xFeature - which feature is the client using
-             * @param {string} parameters.xResourceId - a generic resource identifier
              * @param {} parameters.request - request
              */
             OtrService.prototype.generateReferralCodeUsingPOST = function(parameters) {
@@ -10983,14 +8791,6 @@ angular.module('otrBackendService', [])
 
                 headers['Accept'] = ['application/json'];
                 headers['Content-Type'] = ['application/json'];
-
-                if (parameters['xFeature'] !== undefined) {
-                    headers['X-Feature'] = parameters['xFeature'];
-                }
-
-                if (parameters['xResourceId'] !== undefined) {
-                    headers['X-Resource-Id'] = parameters['xResourceId'];
-                }
 
                 if (parameters['request'] !== undefined) {
                     body = parameters['request'];
@@ -11012,8 +8812,6 @@ angular.module('otrBackendService', [])
              * @method
              * @name OtrService#getReferralCodeUsingGET
              * @param {object} parameters - method options and parameters
-             * @param {string} parameters.xFeature - which feature is the client using
-             * @param {string} parameters.xResourceId - a generic resource identifier
              * @param {string} parameters.codeId - codeId
              */
             OtrService.prototype.getReferralCodeUsingGET = function(parameters) {
@@ -11029,15 +8827,6 @@ angular.module('otrBackendService', [])
                     form = {};
 
                 headers['Accept'] = ['application/json'];
-                headers['Content-Type'] = ['application/json'];
-
-                if (parameters['xFeature'] !== undefined) {
-                    headers['X-Feature'] = parameters['xFeature'];
-                }
-
-                if (parameters['xResourceId'] !== undefined) {
-                    headers['X-Resource-Id'] = parameters['xResourceId'];
-                }
 
                 path = path.replace('{codeId}', parameters['codeId']);
 
@@ -11057,8 +8846,6 @@ angular.module('otrBackendService', [])
              * @method
              * @name OtrService#markCodeAsInactiveUsingDELETE
              * @param {object} parameters - method options and parameters
-             * @param {string} parameters.xFeature - which feature is the client using
-             * @param {string} parameters.xResourceId - a generic resource identifier
              * @param {string} parameters.codeId - codeId
              */
             OtrService.prototype.markCodeAsInactiveUsingDELETE = function(parameters) {
@@ -11074,15 +8861,6 @@ angular.module('otrBackendService', [])
                     form = {};
 
                 headers['Accept'] = ['application/json'];
-                headers['Content-Type'] = ['application/json'];
-
-                if (parameters['xFeature'] !== undefined) {
-                    headers['X-Feature'] = parameters['xFeature'];
-                }
-
-                if (parameters['xResourceId'] !== undefined) {
-                    headers['X-Resource-Id'] = parameters['xResourceId'];
-                }
 
                 path = path.replace('{codeId}', parameters['codeId']);
 
@@ -11102,8 +8880,6 @@ angular.module('otrBackendService', [])
              * @method
              * @name OtrService#approveReferralCodeUsingPUT
              * @param {object} parameters - method options and parameters
-             * @param {string} parameters.xFeature - which feature is the client using
-             * @param {string} parameters.xResourceId - a generic resource identifier
              * @param {string} parameters.codeId - codeId
              */
             OtrService.prototype.approveReferralCodeUsingPUT = function(parameters) {
@@ -11120,14 +8896,6 @@ angular.module('otrBackendService', [])
 
                 headers['Accept'] = ['application/json'];
                 headers['Content-Type'] = ['application/json'];
-
-                if (parameters['xFeature'] !== undefined) {
-                    headers['X-Feature'] = parameters['xFeature'];
-                }
-
-                if (parameters['xResourceId'] !== undefined) {
-                    headers['X-Resource-Id'] = parameters['xResourceId'];
-                }
 
                 path = path.replace('{codeId}', parameters['codeId']);
 
@@ -11147,8 +8915,6 @@ angular.module('otrBackendService', [])
              * @method
              * @name OtrService#validateReferralCodeUsingGET
              * @param {object} parameters - method options and parameters
-             * @param {string} parameters.xFeature - which feature is the client using
-             * @param {string} parameters.xResourceId - a generic resource identifier
              * @param {string} parameters.codeId - codeId
              */
             OtrService.prototype.validateReferralCodeUsingGET = function(parameters) {
@@ -11164,15 +8930,6 @@ angular.module('otrBackendService', [])
                     form = {};
 
                 headers['Accept'] = ['application/json'];
-                headers['Content-Type'] = ['application/json'];
-
-                if (parameters['xFeature'] !== undefined) {
-                    headers['X-Feature'] = parameters['xFeature'];
-                }
-
-                if (parameters['xResourceId'] !== undefined) {
-                    headers['X-Resource-Id'] = parameters['xResourceId'];
-                }
 
                 path = path.replace('{codeId}', parameters['codeId']);
 
@@ -11192,8 +8949,6 @@ angular.module('otrBackendService', [])
              * @method
              * @name OtrService#publishReferralContactsUsingPOST
              * @param {object} parameters - method options and parameters
-             * @param {string} parameters.xFeature - which feature is the client using
-             * @param {string} parameters.xResourceId - a generic resource identifier
              * @param {} parameters.request - request
              */
             OtrService.prototype.publishReferralContactsUsingPOST = function(parameters) {
@@ -11210,14 +8965,6 @@ angular.module('otrBackendService', [])
 
                 headers['Accept'] = ['application/json'];
                 headers['Content-Type'] = ['application/json'];
-
-                if (parameters['xFeature'] !== undefined) {
-                    headers['X-Feature'] = parameters['xFeature'];
-                }
-
-                if (parameters['xResourceId'] !== undefined) {
-                    headers['X-Resource-Id'] = parameters['xResourceId'];
-                }
 
                 if (parameters['request'] !== undefined) {
                     body = parameters['request'];
@@ -11239,8 +8986,6 @@ angular.module('otrBackendService', [])
              * @method
              * @name OtrService#getUserReferralSourceTypesUsingGET
              * @param {object} parameters - method options and parameters
-             * @param {string} parameters.xFeature - which feature is the client using
-             * @param {string} parameters.xResourceId - a generic resource identifier
              * @param {string} parameters.flavor - flavor
              */
             OtrService.prototype.getUserReferralSourceTypesUsingGET = function(parameters) {
@@ -11256,15 +9001,6 @@ angular.module('otrBackendService', [])
                     form = {};
 
                 headers['Accept'] = ['application/json'];
-                headers['Content-Type'] = ['application/json'];
-
-                if (parameters['xFeature'] !== undefined) {
-                    headers['X-Feature'] = parameters['xFeature'];
-                }
-
-                if (parameters['xResourceId'] !== undefined) {
-                    headers['X-Resource-Id'] = parameters['xResourceId'];
-                }
 
                 if (parameters['flavor'] !== undefined) {
                     queryParameters['flavor'] = parameters['flavor'];
@@ -11281,8 +9017,6 @@ angular.module('otrBackendService', [])
              * @method
              * @name OtrService#setReferralSourceUsingPOST
              * @param {object} parameters - method options and parameters
-             * @param {string} parameters.xFeature - which feature is the client using
-             * @param {string} parameters.xResourceId - a generic resource identifier
              * @param {} parameters.request - request
              */
             OtrService.prototype.setReferralSourceUsingPOST = function(parameters) {
@@ -11299,14 +9033,6 @@ angular.module('otrBackendService', [])
 
                 headers['Accept'] = ['application/json'];
                 headers['Content-Type'] = ['application/json'];
-
-                if (parameters['xFeature'] !== undefined) {
-                    headers['X-Feature'] = parameters['xFeature'];
-                }
-
-                if (parameters['xResourceId'] !== undefined) {
-                    headers['X-Resource-Id'] = parameters['xResourceId'];
-                }
 
                 if (parameters['request'] !== undefined) {
                     body = parameters['request'];
@@ -11328,8 +9054,6 @@ angular.module('otrBackendService', [])
              * @method
              * @name OtrService#getRefLinksForUserUsingGET
              * @param {object} parameters - method options and parameters
-             * @param {string} parameters.xFeature - which feature is the client using
-             * @param {string} parameters.xResourceId - a generic resource identifier
              * @param {string} parameters.userIdString - userIdString
              */
             OtrService.prototype.getRefLinksForUserUsingGET = function(parameters) {
@@ -11345,15 +9069,6 @@ angular.module('otrBackendService', [])
                     form = {};
 
                 headers['Accept'] = ['*/*'];
-                headers['Content-Type'] = ['application/json'];
-
-                if (parameters['xFeature'] !== undefined) {
-                    headers['X-Feature'] = parameters['xFeature'];
-                }
-
-                if (parameters['xResourceId'] !== undefined) {
-                    headers['X-Resource-Id'] = parameters['xResourceId'];
-                }
 
                 path = path.replace('{userIdString}', parameters['userIdString']);
 
@@ -11373,8 +9088,6 @@ angular.module('otrBackendService', [])
              * @method
              * @name OtrService#getCourtCoverageReportUsingGET
              * @param {object} parameters - method options and parameters
-             * @param {string} parameters.xFeature - which feature is the client using
-             * @param {string} parameters.xResourceId - a generic resource identifier
              * @param {integer} parameters.urWindowInDays - urWindowInDays
              */
             OtrService.prototype.getCourtCoverageReportUsingGET = function(parameters) {
@@ -11390,15 +9103,6 @@ angular.module('otrBackendService', [])
                     form = {};
 
                 headers['Accept'] = ['application/json'];
-                headers['Content-Type'] = ['application/json'];
-
-                if (parameters['xFeature'] !== undefined) {
-                    headers['X-Feature'] = parameters['xFeature'];
-                }
-
-                if (parameters['xResourceId'] !== undefined) {
-                    headers['X-Resource-Id'] = parameters['xResourceId'];
-                }
 
                 if (parameters['urWindowInDays'] !== undefined) {
                     queryParameters['urWindowInDays'] = parameters['urWindowInDays'];
@@ -11415,10 +9119,8 @@ angular.module('otrBackendService', [])
              * @method
              * @name OtrService#getLawfirmCoverageReportUsingGET
              * @param {object} parameters - method options and parameters
-             * @param {string} parameters.xFeature - which feature is the client using
-             * @param {string} parameters.xResourceId - a generic resource identifier
-             * @param {string} parameters.regionCode - regionCode
              * @param {integer} parameters.countyId - countyId
+             * @param {string} parameters.regionCode - regionCode
              */
             OtrService.prototype.getLawfirmCoverageReportUsingGET = function(parameters) {
                 if (parameters === undefined) {
@@ -11433,22 +9135,13 @@ angular.module('otrBackendService', [])
                     form = {};
 
                 headers['Accept'] = ['application/json'];
-                headers['Content-Type'] = ['application/json'];
 
-                if (parameters['xFeature'] !== undefined) {
-                    headers['X-Feature'] = parameters['xFeature'];
-                }
-
-                if (parameters['xResourceId'] !== undefined) {
-                    headers['X-Resource-Id'] = parameters['xResourceId'];
+                if (parameters['countyId'] !== undefined) {
+                    queryParameters['countyId'] = parameters['countyId'];
                 }
 
                 if (parameters['regionCode'] !== undefined) {
                     queryParameters['regionCode'] = parameters['regionCode'];
-                }
-
-                if (parameters['countyId'] !== undefined) {
-                    queryParameters['countyId'] = parameters['countyId'];
                 }
 
                 queryParameters = mergeQueryParams(parameters, queryParameters);
@@ -11462,10 +9155,8 @@ angular.module('otrBackendService', [])
              * @method
              * @name OtrService#getCourtCoverageForStateReportUsingGET
              * @param {object} parameters - method options and parameters
-             * @param {string} parameters.xFeature - which feature is the client using
-             * @param {string} parameters.xResourceId - a generic resource identifier
-             * @param {string} parameters.regionCode - regionCode
              * @param {integer} parameters.countyId - countyId
+             * @param {string} parameters.regionCode - regionCode
              * @param {integer} parameters.urWindowInDays - urWindowInDays
              */
             OtrService.prototype.getCourtCoverageForStateReportUsingGET = function(parameters) {
@@ -11481,14 +9172,9 @@ angular.module('otrBackendService', [])
                     form = {};
 
                 headers['Accept'] = ['application/json'];
-                headers['Content-Type'] = ['application/json'];
 
-                if (parameters['xFeature'] !== undefined) {
-                    headers['X-Feature'] = parameters['xFeature'];
-                }
-
-                if (parameters['xResourceId'] !== undefined) {
-                    headers['X-Resource-Id'] = parameters['xResourceId'];
+                if (parameters['countyId'] !== undefined) {
+                    queryParameters['countyId'] = parameters['countyId'];
                 }
 
                 path = path.replace('{regionCode}', parameters['regionCode']);
@@ -11498,9 +9184,8 @@ angular.module('otrBackendService', [])
                     return deferred.promise;
                 }
 
-                if (parameters['countyId'] !== undefined) {
-                    queryParameters['countyId'] = parameters['countyId'];
-                }
+                /** set default value **/
+                queryParameters['urWindowInDays'] = 120;
 
                 if (parameters['urWindowInDays'] !== undefined) {
                     queryParameters['urWindowInDays'] = parameters['urWindowInDays'];
@@ -11517,10 +9202,8 @@ angular.module('otrBackendService', [])
              * @method
              * @name OtrService#getCourtCoverageForCountyReportUsingGET
              * @param {object} parameters - method options and parameters
-             * @param {string} parameters.xFeature - which feature is the client using
-             * @param {string} parameters.xResourceId - a generic resource identifier
-             * @param {string} parameters.regionCode - regionCode
              * @param {integer} parameters.countyId - countyId
+             * @param {string} parameters.regionCode - regionCode
              * @param {integer} parameters.urWindowInDays - urWindowInDays
              */
             OtrService.prototype.getCourtCoverageForCountyReportUsingGET = function(parameters) {
@@ -11536,14 +9219,12 @@ angular.module('otrBackendService', [])
                     form = {};
 
                 headers['Accept'] = ['application/json'];
-                headers['Content-Type'] = ['application/json'];
 
-                if (parameters['xFeature'] !== undefined) {
-                    headers['X-Feature'] = parameters['xFeature'];
-                }
+                path = path.replace('{countyId}', parameters['countyId']);
 
-                if (parameters['xResourceId'] !== undefined) {
-                    headers['X-Resource-Id'] = parameters['xResourceId'];
+                if (parameters['countyId'] === undefined) {
+                    deferred.reject(new Error('Missing required  parameter: countyId'));
+                    return deferred.promise;
                 }
 
                 path = path.replace('{regionCode}', parameters['regionCode']);
@@ -11553,12 +9234,8 @@ angular.module('otrBackendService', [])
                     return deferred.promise;
                 }
 
-                path = path.replace('{countyId}', parameters['countyId']);
-
-                if (parameters['countyId'] === undefined) {
-                    deferred.reject(new Error('Missing required  parameter: countyId'));
-                    return deferred.promise;
-                }
+                /** set default value **/
+                queryParameters['urWindowInDays'] = 120;
 
                 if (parameters['urWindowInDays'] !== undefined) {
                     queryParameters['urWindowInDays'] = parameters['urWindowInDays'];
@@ -11575,15 +9252,14 @@ angular.module('otrBackendService', [])
              * @method
              * @name OtrService#listCustomerReviewsUsingGET
              * @param {object} parameters - method options and parameters
-             * @param {string} parameters.xFeature - which feature is the client using
-             * @param {string} parameters.xResourceId - a generic resource identifier
-             * @param {integer} parameters.limit - limit
              * @param {boolean} parameters.includeAnonymous - includeAnonymous
-             * @param {integer} parameters.lawfirmId - lawfirmId
-             * @param {string} parameters.previousPageToken - previousPageToken
-             * @param {string} parameters.nextPageToken - nextPageToken
-             * @param {boolean} parameters.isFeatured - isFeatured
              * @param {boolean} parameters.includeRatings - includeRatings
+             * @param {boolean} parameters.isFeatured - isFeatured
+             * @param {integer} parameters.lawfirmId - lawfirmId
+             * @param {integer} parameters.limit - limit
+             * @param {string} parameters.nextPageToken - nextPageToken
+             * @param {string} parameters.previousPageToken - previousPageToken
+             * @param {array} parameters.tags - tags
              */
             OtrService.prototype.listCustomerReviewsUsingGET = function(parameters) {
                 if (parameters === undefined) {
@@ -11598,42 +9274,40 @@ angular.module('otrBackendService', [])
                     form = {};
 
                 headers['Accept'] = ['*/*'];
-                headers['Content-Type'] = ['application/json'];
-
-                if (parameters['xFeature'] !== undefined) {
-                    headers['X-Feature'] = parameters['xFeature'];
-                }
-
-                if (parameters['xResourceId'] !== undefined) {
-                    headers['X-Resource-Id'] = parameters['xResourceId'];
-                }
-
-                if (parameters['limit'] !== undefined) {
-                    queryParameters['limit'] = parameters['limit'];
-                }
 
                 if (parameters['includeAnonymous'] !== undefined) {
                     queryParameters['includeAnonymous'] = parameters['includeAnonymous'];
                 }
 
-                if (parameters['lawfirmId'] !== undefined) {
-                    queryParameters['lawfirmId'] = parameters['lawfirmId'];
-                }
-
-                if (parameters['previousPageToken'] !== undefined) {
-                    queryParameters['previousPageToken'] = parameters['previousPageToken'];
-                }
-
-                if (parameters['nextPageToken'] !== undefined) {
-                    queryParameters['nextPageToken'] = parameters['nextPageToken'];
+                if (parameters['includeRatings'] !== undefined) {
+                    queryParameters['includeRatings'] = parameters['includeRatings'];
                 }
 
                 if (parameters['isFeatured'] !== undefined) {
                     queryParameters['isFeatured'] = parameters['isFeatured'];
                 }
 
-                if (parameters['includeRatings'] !== undefined) {
-                    queryParameters['includeRatings'] = parameters['includeRatings'];
+                if (parameters['lawfirmId'] !== undefined) {
+                    queryParameters['lawfirmId'] = parameters['lawfirmId'];
+                }
+
+                /** set default value **/
+                queryParameters['limit'] = 50;
+
+                if (parameters['limit'] !== undefined) {
+                    queryParameters['limit'] = parameters['limit'];
+                }
+
+                if (parameters['nextPageToken'] !== undefined) {
+                    queryParameters['nextPageToken'] = parameters['nextPageToken'];
+                }
+
+                if (parameters['previousPageToken'] !== undefined) {
+                    queryParameters['previousPageToken'] = parameters['previousPageToken'];
+                }
+
+                if (parameters['tags'] !== undefined) {
+                    queryParameters['tags'] = parameters['tags'];
                 }
 
                 queryParameters = mergeQueryParams(parameters, queryParameters);
@@ -11647,8 +9321,6 @@ angular.module('otrBackendService', [])
              * @method
              * @name OtrService#addCustomerReviewUsingPOST
              * @param {object} parameters - method options and parameters
-             * @param {string} parameters.xFeature - which feature is the client using
-             * @param {string} parameters.xResourceId - a generic resource identifier
              * @param {} parameters.addReviewRequest - addReviewRequest
              */
             OtrService.prototype.addCustomerReviewUsingPOST = function(parameters) {
@@ -11665,14 +9337,6 @@ angular.module('otrBackendService', [])
 
                 headers['Accept'] = ['*/*'];
                 headers['Content-Type'] = ['application/json'];
-
-                if (parameters['xFeature'] !== undefined) {
-                    headers['X-Feature'] = parameters['xFeature'];
-                }
-
-                if (parameters['xResourceId'] !== undefined) {
-                    headers['X-Resource-Id'] = parameters['xResourceId'];
-                }
 
                 if (parameters['addReviewRequest'] !== undefined) {
                     body = parameters['addReviewRequest'];
@@ -11694,8 +9358,6 @@ angular.module('otrBackendService', [])
              * @method
              * @name OtrService#listEligibleStatusesForReviewUsingGET
              * @param {object} parameters - method options and parameters
-             * @param {string} parameters.xFeature - which feature is the client using
-             * @param {string} parameters.xResourceId - a generic resource identifier
              */
             OtrService.prototype.listEligibleStatusesForReviewUsingGET = function(parameters) {
                 if (parameters === undefined) {
@@ -11710,15 +9372,6 @@ angular.module('otrBackendService', [])
                     form = {};
 
                 headers['Accept'] = ['*/*'];
-                headers['Content-Type'] = ['application/json'];
-
-                if (parameters['xFeature'] !== undefined) {
-                    headers['X-Feature'] = parameters['xFeature'];
-                }
-
-                if (parameters['xResourceId'] !== undefined) {
-                    headers['X-Resource-Id'] = parameters['xResourceId'];
-                }
 
                 queryParameters = mergeQueryParams(parameters, queryParameters);
 
@@ -11731,10 +9384,8 @@ angular.module('otrBackendService', [])
              * @method
              * @name OtrService#replyToCustomerReviewUsingPOST
              * @param {object} parameters - method options and parameters
-             * @param {string} parameters.xFeature - which feature is the client using
-             * @param {string} parameters.xResourceId - a generic resource identifier
-             * @param {integer} parameters.reviewId - reviewId
              * @param {} parameters.request - request
+             * @param {integer} parameters.reviewId - reviewId
              */
             OtrService.prototype.replyToCustomerReviewUsingPOST = function(parameters) {
                 if (parameters === undefined) {
@@ -11751,27 +9402,19 @@ angular.module('otrBackendService', [])
                 headers['Accept'] = ['*/*'];
                 headers['Content-Type'] = ['application/json'];
 
-                if (parameters['xFeature'] !== undefined) {
-                    headers['X-Feature'] = parameters['xFeature'];
-                }
-
-                if (parameters['xResourceId'] !== undefined) {
-                    headers['X-Resource-Id'] = parameters['xResourceId'];
-                }
-
-                path = path.replace('{reviewId}', parameters['reviewId']);
-
-                if (parameters['reviewId'] === undefined) {
-                    deferred.reject(new Error('Missing required  parameter: reviewId'));
-                    return deferred.promise;
-                }
-
                 if (parameters['request'] !== undefined) {
                     body = parameters['request'];
                 }
 
                 if (parameters['request'] === undefined) {
                     deferred.reject(new Error('Missing required  parameter: request'));
+                    return deferred.promise;
+                }
+
+                path = path.replace('{reviewId}', parameters['reviewId']);
+
+                if (parameters['reviewId'] === undefined) {
+                    deferred.reject(new Error('Missing required  parameter: reviewId'));
                     return deferred.promise;
                 }
 
@@ -11786,11 +9429,9 @@ angular.module('otrBackendService', [])
              * @method
              * @name OtrService#markCommentWithVoteUsingPUT
              * @param {object} parameters - method options and parameters
-             * @param {string} parameters.xFeature - which feature is the client using
-             * @param {string} parameters.xResourceId - a generic resource identifier
-             * @param {integer} parameters.reviewId - reviewId
              * @param {integer} parameters.commentId - commentId
              * @param {boolean} parameters.like - like
+             * @param {integer} parameters.reviewId - reviewId
              */
             OtrService.prototype.markCommentWithVoteUsingPUT = function(parameters) {
                 if (parameters === undefined) {
@@ -11807,21 +9448,6 @@ angular.module('otrBackendService', [])
                 headers['Accept'] = ['*/*'];
                 headers['Content-Type'] = ['application/json'];
 
-                if (parameters['xFeature'] !== undefined) {
-                    headers['X-Feature'] = parameters['xFeature'];
-                }
-
-                if (parameters['xResourceId'] !== undefined) {
-                    headers['X-Resource-Id'] = parameters['xResourceId'];
-                }
-
-                path = path.replace('{reviewId}', parameters['reviewId']);
-
-                if (parameters['reviewId'] === undefined) {
-                    deferred.reject(new Error('Missing required  parameter: reviewId'));
-                    return deferred.promise;
-                }
-
                 path = path.replace('{commentId}', parameters['commentId']);
 
                 if (parameters['commentId'] === undefined) {
@@ -11831,6 +9457,13 @@ angular.module('otrBackendService', [])
 
                 if (parameters['like'] !== undefined) {
                     queryParameters['like'] = parameters['like'];
+                }
+
+                path = path.replace('{reviewId}', parameters['reviewId']);
+
+                if (parameters['reviewId'] === undefined) {
+                    deferred.reject(new Error('Missing required  parameter: reviewId'));
+                    return deferred.promise;
                 }
 
                 queryParameters = mergeQueryParams(parameters, queryParameters);
@@ -11844,10 +9477,8 @@ angular.module('otrBackendService', [])
              * @method
              * @name OtrService#markReviewWithVoteUsingPUT
              * @param {object} parameters - method options and parameters
-             * @param {string} parameters.xFeature - which feature is the client using
-             * @param {string} parameters.xResourceId - a generic resource identifier
+             * @param {boolean} parameters.helpful - helpful
              * @param {integer} parameters.reviewId - reviewId
-             * @param {boolean} parameters.helpful - isHelpful
              */
             OtrService.prototype.markReviewWithVoteUsingPUT = function(parameters) {
                 if (parameters === undefined) {
@@ -11864,12 +9495,8 @@ angular.module('otrBackendService', [])
                 headers['Accept'] = ['*/*'];
                 headers['Content-Type'] = ['application/json'];
 
-                if (parameters['xFeature'] !== undefined) {
-                    headers['X-Feature'] = parameters['xFeature'];
-                }
-
-                if (parameters['xResourceId'] !== undefined) {
-                    headers['X-Resource-Id'] = parameters['xResourceId'];
+                if (parameters['helpful'] !== undefined) {
+                    queryParameters['helpful'] = parameters['helpful'];
                 }
 
                 path = path.replace('{reviewId}', parameters['reviewId']);
@@ -11877,10 +9504,6 @@ angular.module('otrBackendService', [])
                 if (parameters['reviewId'] === undefined) {
                     deferred.reject(new Error('Missing required  parameter: reviewId'));
                     return deferred.promise;
-                }
-
-                if (parameters['helpful'] !== undefined) {
-                    queryParameters['helpful'] = parameters['helpful'];
                 }
 
                 queryParameters = mergeQueryParams(parameters, queryParameters);
@@ -11894,8 +9517,6 @@ angular.module('otrBackendService', [])
              * @method
              * @name OtrService#getScheduledTasksUsingGET
              * @param {object} parameters - method options and parameters
-             * @param {string} parameters.xFeature - which feature is the client using
-             * @param {string} parameters.xResourceId - a generic resource identifier
              * @param {string} parameters.caseId - caseId
              */
             OtrService.prototype.getScheduledTasksUsingGET = function(parameters) {
@@ -11911,15 +9532,6 @@ angular.module('otrBackendService', [])
                     form = {};
 
                 headers['Accept'] = ['*/*'];
-                headers['Content-Type'] = ['application/json'];
-
-                if (parameters['xFeature'] !== undefined) {
-                    headers['X-Feature'] = parameters['xFeature'];
-                }
-
-                if (parameters['xResourceId'] !== undefined) {
-                    headers['X-Resource-Id'] = parameters['xResourceId'];
-                }
 
                 path = path.replace('{caseId}', parameters['caseId']);
 
@@ -11939,8 +9551,6 @@ angular.module('otrBackendService', [])
              * @method
              * @name OtrService#deleteScheduledTaskUsingDELETE
              * @param {object} parameters - method options and parameters
-             * @param {string} parameters.xFeature - which feature is the client using
-             * @param {string} parameters.xResourceId - a generic resource identifier
              * @param {integer} parameters.taskId - taskId
              */
             OtrService.prototype.deleteScheduledTaskUsingDELETE = function(parameters) {
@@ -11956,15 +9566,6 @@ angular.module('otrBackendService', [])
                     form = {};
 
                 headers['Accept'] = ['*/*'];
-                headers['Content-Type'] = ['application/json'];
-
-                if (parameters['xFeature'] !== undefined) {
-                    headers['X-Feature'] = parameters['xFeature'];
-                }
-
-                if (parameters['xResourceId'] !== undefined) {
-                    headers['X-Resource-Id'] = parameters['xResourceId'];
-                }
 
                 path = path.replace('{taskId}', parameters['taskId']);
 
@@ -11984,10 +9585,8 @@ angular.module('otrBackendService', [])
              * @method
              * @name OtrService#rescheduleTaskUsingPUT
              * @param {object} parameters - method options and parameters
-             * @param {string} parameters.xFeature - which feature is the client using
-             * @param {string} parameters.xResourceId - a generic resource identifier
-             * @param {string} parameters.taskId - taskId
              * @param {} parameters.request - request
+             * @param {string} parameters.taskId - taskId
              */
             OtrService.prototype.rescheduleTaskUsingPUT = function(parameters) {
                 if (parameters === undefined) {
@@ -12004,27 +9603,19 @@ angular.module('otrBackendService', [])
                 headers['Accept'] = ['*/*'];
                 headers['Content-Type'] = ['application/json'];
 
-                if (parameters['xFeature'] !== undefined) {
-                    headers['X-Feature'] = parameters['xFeature'];
-                }
-
-                if (parameters['xResourceId'] !== undefined) {
-                    headers['X-Resource-Id'] = parameters['xResourceId'];
-                }
-
-                path = path.replace('{taskId}', parameters['taskId']);
-
-                if (parameters['taskId'] === undefined) {
-                    deferred.reject(new Error('Missing required  parameter: taskId'));
-                    return deferred.promise;
-                }
-
                 if (parameters['request'] !== undefined) {
                     body = parameters['request'];
                 }
 
                 if (parameters['request'] === undefined) {
                     deferred.reject(new Error('Missing required  parameter: request'));
+                    return deferred.promise;
+                }
+
+                path = path.replace('{taskId}', parameters['taskId']);
+
+                if (parameters['taskId'] === undefined) {
+                    deferred.reject(new Error('Missing required  parameter: taskId'));
                     return deferred.promise;
                 }
 
@@ -12039,8 +9630,6 @@ angular.module('otrBackendService', [])
              * @method
              * @name OtrService#handleIncomingEmailsUsingPOST
              * @param {object} parameters - method options and parameters
-             * @param {string} parameters.xFeature - which feature is the client using
-             * @param {string} parameters.xResourceId - a generic resource identifier
              * @param {} parameters.request - request
              */
             OtrService.prototype.handleIncomingEmailsUsingPOST = function(parameters) {
@@ -12057,14 +9646,6 @@ angular.module('otrBackendService', [])
 
                 headers['Accept'] = ['*/*'];
                 headers['Content-Type'] = ['application/json,text/plain'];
-
-                if (parameters['xFeature'] !== undefined) {
-                    headers['X-Feature'] = parameters['xFeature'];
-                }
-
-                if (parameters['xResourceId'] !== undefined) {
-                    headers['X-Resource-Id'] = parameters['xResourceId'];
-                }
 
                 if (parameters['request'] !== undefined) {
                     body = parameters['request'];
@@ -12086,8 +9667,6 @@ angular.module('otrBackendService', [])
              * @method
              * @name OtrService#registerNewUserUsingPOST
              * @param {object} parameters - method options and parameters
-             * @param {string} parameters.xFeature - which feature is the client using
-             * @param {string} parameters.xResourceId - a generic resource identifier
              * @param {} parameters.request - request
              */
             OtrService.prototype.registerNewUserUsingPOST = function(parameters) {
@@ -12104,14 +9683,6 @@ angular.module('otrBackendService', [])
 
                 headers['Accept'] = ['*/*'];
                 headers['Content-Type'] = ['application/json'];
-
-                if (parameters['xFeature'] !== undefined) {
-                    headers['X-Feature'] = parameters['xFeature'];
-                }
-
-                if (parameters['xResourceId'] !== undefined) {
-                    headers['X-Resource-Id'] = parameters['xResourceId'];
-                }
 
                 if (parameters['request'] !== undefined) {
                     body = parameters['request'];
@@ -12133,8 +9704,6 @@ angular.module('otrBackendService', [])
              * @method
              * @name OtrService#createStripeConnectAccountUsingPOST
              * @param {object} parameters - method options and parameters
-             * @param {string} parameters.xFeature - which feature is the client using
-             * @param {string} parameters.xResourceId - a generic resource identifier
              * @param {} parameters.request - request
              */
             OtrService.prototype.createStripeConnectAccountUsingPOST = function(parameters) {
@@ -12151,14 +9720,6 @@ angular.module('otrBackendService', [])
 
                 headers['Accept'] = ['*/*'];
                 headers['Content-Type'] = ['application/json'];
-
-                if (parameters['xFeature'] !== undefined) {
-                    headers['X-Feature'] = parameters['xFeature'];
-                }
-
-                if (parameters['xResourceId'] !== undefined) {
-                    headers['X-Resource-Id'] = parameters['xResourceId'];
-                }
 
                 if (parameters['request'] !== undefined) {
                     body = parameters['request'];
@@ -12180,8 +9741,6 @@ angular.module('otrBackendService', [])
              * @method
              * @name OtrService#createConnectAccountLinkUsingPOST
              * @param {object} parameters - method options and parameters
-             * @param {string} parameters.xFeature - which feature is the client using
-             * @param {string} parameters.xResourceId - a generic resource identifier
              * @param {} parameters.request - request
              */
             OtrService.prototype.createConnectAccountLinkUsingPOST = function(parameters) {
@@ -12198,14 +9757,6 @@ angular.module('otrBackendService', [])
 
                 headers['Accept'] = ['*/*'];
                 headers['Content-Type'] = ['application/json'];
-
-                if (parameters['xFeature'] !== undefined) {
-                    headers['X-Feature'] = parameters['xFeature'];
-                }
-
-                if (parameters['xResourceId'] !== undefined) {
-                    headers['X-Resource-Id'] = parameters['xResourceId'];
-                }
 
                 if (parameters['request'] !== undefined) {
                     body = parameters['request'];
@@ -12227,9 +9778,7 @@ angular.module('otrBackendService', [])
              * @method
              * @name OtrService#connectStripeAccountUsingPOST
              * @param {object} parameters - method options and parameters
-             * @param {string} parameters.xFeature - which feature is the client using
-             * @param {string} parameters.xResourceId - a generic resource identifier
-             * @param {string} parameters.code - authorizationCode
+             * @param {string} parameters.code - code
              */
             OtrService.prototype.connectStripeAccountUsingPOST = function(parameters) {
                 if (parameters === undefined) {
@@ -12245,14 +9794,6 @@ angular.module('otrBackendService', [])
 
                 headers['Accept'] = ['*/*'];
                 headers['Content-Type'] = ['application/json'];
-
-                if (parameters['xFeature'] !== undefined) {
-                    headers['X-Feature'] = parameters['xFeature'];
-                }
-
-                if (parameters['xResourceId'] !== undefined) {
-                    headers['X-Resource-Id'] = parameters['xResourceId'];
-                }
 
                 if (parameters['code'] !== undefined) {
                     queryParameters['code'] = parameters['code'];
@@ -12274,8 +9815,6 @@ angular.module('otrBackendService', [])
              * @method
              * @name OtrService#syncAllDisputesUsingPOST
              * @param {object} parameters - method options and parameters
-             * @param {string} parameters.xFeature - which feature is the client using
-             * @param {string} parameters.xResourceId - a generic resource identifier
              */
             OtrService.prototype.syncAllDisputesUsingPOST = function(parameters) {
                 if (parameters === undefined) {
@@ -12292,14 +9831,6 @@ angular.module('otrBackendService', [])
                 headers['Accept'] = ['*/*'];
                 headers['Content-Type'] = ['application/json'];
 
-                if (parameters['xFeature'] !== undefined) {
-                    headers['X-Feature'] = parameters['xFeature'];
-                }
-
-                if (parameters['xResourceId'] !== undefined) {
-                    headers['X-Resource-Id'] = parameters['xResourceId'];
-                }
-
                 queryParameters = mergeQueryParams(parameters, queryParameters);
 
                 this.request('POST', domain + path, parameters, body, headers, queryParameters, form, deferred);
@@ -12311,8 +9842,6 @@ angular.module('otrBackendService', [])
              * @method
              * @name OtrService#updateDisputeUsingPUT
              * @param {object} parameters - method options and parameters
-             * @param {string} parameters.xFeature - which feature is the client using
-             * @param {string} parameters.xResourceId - a generic resource identifier
              * @param {string} parameters.disputeId - disputeId
              * @param {} parameters.request - request
              */
@@ -12330,14 +9859,6 @@ angular.module('otrBackendService', [])
 
                 headers['Accept'] = ['*/*'];
                 headers['Content-Type'] = ['application/json'];
-
-                if (parameters['xFeature'] !== undefined) {
-                    headers['X-Feature'] = parameters['xFeature'];
-                }
-
-                if (parameters['xResourceId'] !== undefined) {
-                    headers['X-Resource-Id'] = parameters['xResourceId'];
-                }
 
                 path = path.replace('{disputeId}', parameters['disputeId']);
 
@@ -12366,8 +9887,6 @@ angular.module('otrBackendService', [])
              * @method
              * @name OtrService#syncDisputeUsingPOST
              * @param {object} parameters - method options and parameters
-             * @param {string} parameters.xFeature - which feature is the client using
-             * @param {string} parameters.xResourceId - a generic resource identifier
              * @param {string} parameters.disputeId - disputeId
              */
             OtrService.prototype.syncDisputeUsingPOST = function(parameters) {
@@ -12384,14 +9903,6 @@ angular.module('otrBackendService', [])
 
                 headers['Accept'] = ['*/*'];
                 headers['Content-Type'] = ['application/json'];
-
-                if (parameters['xFeature'] !== undefined) {
-                    headers['X-Feature'] = parameters['xFeature'];
-                }
-
-                if (parameters['xResourceId'] !== undefined) {
-                    headers['X-Resource-Id'] = parameters['xResourceId'];
-                }
 
                 path = path.replace('{disputeId}', parameters['disputeId']);
 
@@ -12411,8 +9922,6 @@ angular.module('otrBackendService', [])
              * @method
              * @name OtrService#findMissingChargesUsingPOST
              * @param {object} parameters - method options and parameters
-             * @param {string} parameters.xFeature - which feature is the client using
-             * @param {string} parameters.xResourceId - a generic resource identifier
              * @param {integer} parameters.limit - limit
              */
             OtrService.prototype.findMissingChargesUsingPOST = function(parameters) {
@@ -12429,14 +9938,6 @@ angular.module('otrBackendService', [])
 
                 headers['Accept'] = ['*/*'];
                 headers['Content-Type'] = ['application/json'];
-
-                if (parameters['xFeature'] !== undefined) {
-                    headers['X-Feature'] = parameters['xFeature'];
-                }
-
-                if (parameters['xResourceId'] !== undefined) {
-                    headers['X-Resource-Id'] = parameters['xResourceId'];
-                }
 
                 if (parameters['limit'] !== undefined) {
                     queryParameters['limit'] = parameters['limit'];
@@ -12458,8 +9959,6 @@ angular.module('otrBackendService', [])
              * @method
              * @name OtrService#handleOrphanedStripeChargesUsingPOST
              * @param {object} parameters - method options and parameters
-             * @param {string} parameters.xFeature - which feature is the client using
-             * @param {string} parameters.xResourceId - a generic resource identifier
              * @param {} parameters.request - request
              */
             OtrService.prototype.handleOrphanedStripeChargesUsingPOST = function(parameters) {
@@ -12476,14 +9975,6 @@ angular.module('otrBackendService', [])
 
                 headers['Accept'] = ['*/*'];
                 headers['Content-Type'] = ['application/json'];
-
-                if (parameters['xFeature'] !== undefined) {
-                    headers['X-Feature'] = parameters['xFeature'];
-                }
-
-                if (parameters['xResourceId'] !== undefined) {
-                    headers['X-Resource-Id'] = parameters['xResourceId'];
-                }
 
                 if (parameters['request'] !== undefined) {
                     body = parameters['request'];
@@ -12505,8 +9996,6 @@ angular.module('otrBackendService', [])
              * @method
              * @name OtrService#syncStripeChargesUsingPOST
              * @param {object} parameters - method options and parameters
-             * @param {string} parameters.xFeature - which feature is the client using
-             * @param {string} parameters.xResourceId - a generic resource identifier
              * @param {} parameters.request - request
              */
             OtrService.prototype.syncStripeChargesUsingPOST = function(parameters) {
@@ -12523,14 +10012,6 @@ angular.module('otrBackendService', [])
 
                 headers['Accept'] = ['*/*'];
                 headers['Content-Type'] = ['application/json'];
-
-                if (parameters['xFeature'] !== undefined) {
-                    headers['X-Feature'] = parameters['xFeature'];
-                }
-
-                if (parameters['xResourceId'] !== undefined) {
-                    headers['X-Resource-Id'] = parameters['xResourceId'];
-                }
 
                 if (parameters['request'] !== undefined) {
                     body = parameters['request'];
@@ -12552,8 +10033,6 @@ angular.module('otrBackendService', [])
              * @method
              * @name OtrService#handleStripeWebhookUsingPOST
              * @param {object} parameters - method options and parameters
-             * @param {string} parameters.xFeature - which feature is the client using
-             * @param {string} parameters.xResourceId - a generic resource identifier
              * @param {} parameters.request - request
              */
             OtrService.prototype.handleStripeWebhookUsingPOST = function(parameters) {
@@ -12571,14 +10050,6 @@ angular.module('otrBackendService', [])
                 headers['Accept'] = ['*/*'];
                 headers['Content-Type'] = ['application/json'];
 
-                if (parameters['xFeature'] !== undefined) {
-                    headers['X-Feature'] = parameters['xFeature'];
-                }
-
-                if (parameters['xResourceId'] !== undefined) {
-                    headers['X-Resource-Id'] = parameters['xResourceId'];
-                }
-
                 if (parameters['request'] !== undefined) {
                     body = parameters['request'];
                 }
@@ -12594,8 +10065,6 @@ angular.module('otrBackendService', [])
              * @method
              * @name OtrService#handleStripeWebhookOnDemandUsingPOST
              * @param {object} parameters - method options and parameters
-             * @param {string} parameters.xFeature - which feature is the client using
-             * @param {string} parameters.xResourceId - a generic resource identifier
              * @param {} parameters.request - request
              */
             OtrService.prototype.handleStripeWebhookOnDemandUsingPOST = function(parameters) {
@@ -12613,14 +10082,6 @@ angular.module('otrBackendService', [])
                 headers['Accept'] = ['*/*'];
                 headers['Content-Type'] = ['application/json'];
 
-                if (parameters['xFeature'] !== undefined) {
-                    headers['X-Feature'] = parameters['xFeature'];
-                }
-
-                if (parameters['xResourceId'] !== undefined) {
-                    headers['X-Resource-Id'] = parameters['xResourceId'];
-                }
-
                 if (parameters['request'] !== undefined) {
                     body = parameters['request'];
                 }
@@ -12636,8 +10097,6 @@ angular.module('otrBackendService', [])
              * @method
              * @name OtrService#subscribeUsingPOST
              * @param {object} parameters - method options and parameters
-             * @param {string} parameters.xFeature - which feature is the client using
-             * @param {string} parameters.xResourceId - a generic resource identifier
              * @param {} parameters.request - request
              */
             OtrService.prototype.subscribeUsingPOST = function(parameters) {
@@ -12654,14 +10113,6 @@ angular.module('otrBackendService', [])
 
                 headers['Accept'] = ['*/*'];
                 headers['Content-Type'] = ['application/json'];
-
-                if (parameters['xFeature'] !== undefined) {
-                    headers['X-Feature'] = parameters['xFeature'];
-                }
-
-                if (parameters['xResourceId'] !== undefined) {
-                    headers['X-Resource-Id'] = parameters['xResourceId'];
-                }
 
                 if (parameters['request'] !== undefined) {
                     body = parameters['request'];
@@ -12683,8 +10134,6 @@ angular.module('otrBackendService', [])
              * @method
              * @name OtrService#persistTicketEvaluationUsingPOST
              * @param {object} parameters - method options and parameters
-             * @param {string} parameters.xFeature - which feature is the client using
-             * @param {string} parameters.xResourceId - a generic resource identifier
              * @param {} parameters.request - request
              */
             OtrService.prototype.persistTicketEvaluationUsingPOST = function(parameters) {
@@ -12701,14 +10150,6 @@ angular.module('otrBackendService', [])
 
                 headers['Accept'] = ['*/*'];
                 headers['Content-Type'] = ['application/json'];
-
-                if (parameters['xFeature'] !== undefined) {
-                    headers['X-Feature'] = parameters['xFeature'];
-                }
-
-                if (parameters['xResourceId'] !== undefined) {
-                    headers['X-Resource-Id'] = parameters['xResourceId'];
-                }
 
                 if (parameters['request'] !== undefined) {
                     body = parameters['request'];
@@ -12730,10 +10171,8 @@ angular.module('otrBackendService', [])
              * @method
              * @name OtrService#updateTicketEvaluationRequestUsingPUT
              * @param {object} parameters - method options and parameters
-             * @param {string} parameters.xFeature - which feature is the client using
-             * @param {string} parameters.xResourceId - a generic resource identifier
-             * @param {integer} parameters.ticketEvaluationRequestId - ticketEvaluationRequestId
              * @param {} parameters.request - request
+             * @param {integer} parameters.ticketEvaluationRequestId - ticketEvaluationRequestId
              */
             OtrService.prototype.updateTicketEvaluationRequestUsingPUT = function(parameters) {
                 if (parameters === undefined) {
@@ -12750,27 +10189,19 @@ angular.module('otrBackendService', [])
                 headers['Accept'] = ['*/*'];
                 headers['Content-Type'] = ['application/json'];
 
-                if (parameters['xFeature'] !== undefined) {
-                    headers['X-Feature'] = parameters['xFeature'];
-                }
-
-                if (parameters['xResourceId'] !== undefined) {
-                    headers['X-Resource-Id'] = parameters['xResourceId'];
-                }
-
-                path = path.replace('{ticketEvaluationRequestId}', parameters['ticketEvaluationRequestId']);
-
-                if (parameters['ticketEvaluationRequestId'] === undefined) {
-                    deferred.reject(new Error('Missing required  parameter: ticketEvaluationRequestId'));
-                    return deferred.promise;
-                }
-
                 if (parameters['request'] !== undefined) {
                     body = parameters['request'];
                 }
 
                 if (parameters['request'] === undefined) {
                     deferred.reject(new Error('Missing required  parameter: request'));
+                    return deferred.promise;
+                }
+
+                path = path.replace('{ticketEvaluationRequestId}', parameters['ticketEvaluationRequestId']);
+
+                if (parameters['ticketEvaluationRequestId'] === undefined) {
+                    deferred.reject(new Error('Missing required  parameter: ticketEvaluationRequestId'));
                     return deferred.promise;
                 }
 
@@ -12785,8 +10216,6 @@ angular.module('otrBackendService', [])
              * @method
              * @name OtrService#reverseTransferUsingPOST
              * @param {object} parameters - method options and parameters
-             * @param {string} parameters.xFeature - which feature is the client using
-             * @param {string} parameters.xResourceId - a generic resource identifier
              * @param {string} parameters.lawfirmPayoutId - lawfirmPayoutId
              * @param {} parameters.request - request
              */
@@ -12804,14 +10233,6 @@ angular.module('otrBackendService', [])
 
                 headers['Accept'] = ['*/*'];
                 headers['Content-Type'] = ['application/json'];
-
-                if (parameters['xFeature'] !== undefined) {
-                    headers['X-Feature'] = parameters['xFeature'];
-                }
-
-                if (parameters['xResourceId'] !== undefined) {
-                    headers['X-Resource-Id'] = parameters['xResourceId'];
-                }
 
                 path = path.replace('{lawfirmPayoutId}', parameters['lawfirmPayoutId']);
 
@@ -12840,8 +10261,6 @@ angular.module('otrBackendService', [])
              * @method
              * @name OtrService#getCurrentUserInfoUsingGET
              * @param {object} parameters - method options and parameters
-             * @param {string} parameters.xFeature - which feature is the client using
-             * @param {string} parameters.xResourceId - a generic resource identifier
              */
             OtrService.prototype.getCurrentUserInfoUsingGET = function(parameters) {
                 if (parameters === undefined) {
@@ -12856,15 +10275,6 @@ angular.module('otrBackendService', [])
                     form = {};
 
                 headers['Accept'] = ['*/*'];
-                headers['Content-Type'] = ['application/json'];
-
-                if (parameters['xFeature'] !== undefined) {
-                    headers['X-Feature'] = parameters['xFeature'];
-                }
-
-                if (parameters['xResourceId'] !== undefined) {
-                    headers['X-Resource-Id'] = parameters['xResourceId'];
-                }
 
                 queryParameters = mergeQueryParams(parameters, queryParameters);
 
@@ -12877,8 +10287,6 @@ angular.module('otrBackendService', [])
              * @method
              * @name OtrService#changeUserPasswordUsingPUT
              * @param {object} parameters - method options and parameters
-             * @param {string} parameters.xFeature - which feature is the client using
-             * @param {string} parameters.xResourceId - a generic resource identifier
              * @param {} parameters.request - request
              */
             OtrService.prototype.changeUserPasswordUsingPUT = function(parameters) {
@@ -12895,14 +10303,6 @@ angular.module('otrBackendService', [])
 
                 headers['Accept'] = ['*/*'];
                 headers['Content-Type'] = ['application/json'];
-
-                if (parameters['xFeature'] !== undefined) {
-                    headers['X-Feature'] = parameters['xFeature'];
-                }
-
-                if (parameters['xResourceId'] !== undefined) {
-                    headers['X-Resource-Id'] = parameters['xResourceId'];
-                }
 
                 if (parameters['request'] !== undefined) {
                     body = parameters['request'];
@@ -12924,8 +10324,6 @@ angular.module('otrBackendService', [])
              * @method
              * @name OtrService#resetUserPasswordUsingPOST
              * @param {object} parameters - method options and parameters
-             * @param {string} parameters.xFeature - which feature is the client using
-             * @param {string} parameters.xResourceId - a generic resource identifier
              * @param {} parameters.request - request
              */
             OtrService.prototype.resetUserPasswordUsingPOST = function(parameters) {
@@ -12942,14 +10340,6 @@ angular.module('otrBackendService', [])
 
                 headers['Accept'] = ['*/*'];
                 headers['Content-Type'] = ['application/json'];
-
-                if (parameters['xFeature'] !== undefined) {
-                    headers['X-Feature'] = parameters['xFeature'];
-                }
-
-                if (parameters['xResourceId'] !== undefined) {
-                    headers['X-Resource-Id'] = parameters['xResourceId'];
-                }
 
                 if (parameters['request'] !== undefined) {
                     body = parameters['request'];
@@ -12971,8 +10361,6 @@ angular.module('otrBackendService', [])
              * @method
              * @name OtrService#verifyPwdResetTokenUsingGET
              * @param {object} parameters - method options and parameters
-             * @param {string} parameters.xFeature - which feature is the client using
-             * @param {string} parameters.xResourceId - a generic resource identifier
              * @param {string} parameters.token - token
              */
             OtrService.prototype.verifyPwdResetTokenUsingGET = function(parameters) {
@@ -12988,15 +10376,6 @@ angular.module('otrBackendService', [])
                     form = {};
 
                 headers['Accept'] = ['*/*'];
-                headers['Content-Type'] = ['application/json'];
-
-                if (parameters['xFeature'] !== undefined) {
-                    headers['X-Feature'] = parameters['xFeature'];
-                }
-
-                if (parameters['xResourceId'] !== undefined) {
-                    headers['X-Resource-Id'] = parameters['xResourceId'];
-                }
 
                 if (parameters['token'] !== undefined) {
                     queryParameters['token'] = parameters['token'];
@@ -13018,9 +10397,7 @@ angular.module('otrBackendService', [])
              * @method
              * @name OtrService#sendResetPasswordTokenUsingPOST
              * @param {object} parameters - method options and parameters
-             * @param {string} parameters.xFeature - which feature is the client using
-             * @param {string} parameters.xResourceId - a generic resource identifier
-             * @param {string} parameters.email - userEmail
+             * @param {string} parameters.email - email
              */
             OtrService.prototype.sendResetPasswordTokenUsingPOST = function(parameters) {
                 if (parameters === undefined) {
@@ -13036,14 +10413,6 @@ angular.module('otrBackendService', [])
 
                 headers['Accept'] = ['*/*'];
                 headers['Content-Type'] = ['application/json'];
-
-                if (parameters['xFeature'] !== undefined) {
-                    headers['X-Feature'] = parameters['xFeature'];
-                }
-
-                if (parameters['xResourceId'] !== undefined) {
-                    headers['X-Resource-Id'] = parameters['xResourceId'];
-                }
 
                 if (parameters['email'] !== undefined) {
                     queryParameters['email'] = parameters['email'];
@@ -13065,8 +10434,6 @@ angular.module('otrBackendService', [])
              * @method
              * @name OtrService#isUserLoggedInUsingGET
              * @param {object} parameters - method options and parameters
-             * @param {string} parameters.xFeature - which feature is the client using
-             * @param {string} parameters.xResourceId - a generic resource identifier
              */
             OtrService.prototype.isUserLoggedInUsingGET = function(parameters) {
                 if (parameters === undefined) {
@@ -13081,15 +10448,6 @@ angular.module('otrBackendService', [])
                     form = {};
 
                 headers['Accept'] = ['*/*'];
-                headers['Content-Type'] = ['application/json'];
-
-                if (parameters['xFeature'] !== undefined) {
-                    headers['X-Feature'] = parameters['xFeature'];
-                }
-
-                if (parameters['xResourceId'] !== undefined) {
-                    headers['X-Resource-Id'] = parameters['xResourceId'];
-                }
 
                 queryParameters = mergeQueryParams(parameters, queryParameters);
 
@@ -13102,8 +10460,6 @@ angular.module('otrBackendService', [])
              * @method
              * @name OtrService#getCountOfMatchingUsersUsingPOST
              * @param {object} parameters - method options and parameters
-             * @param {string} parameters.xFeature - which feature is the client using
-             * @param {string} parameters.xResourceId - a generic resource identifier
              * @param {} parameters.request - request
              */
             OtrService.prototype.getCountOfMatchingUsersUsingPOST = function(parameters) {
@@ -13120,14 +10476,6 @@ angular.module('otrBackendService', [])
 
                 headers['Accept'] = ['*/*'];
                 headers['Content-Type'] = ['application/json'];
-
-                if (parameters['xFeature'] !== undefined) {
-                    headers['X-Feature'] = parameters['xFeature'];
-                }
-
-                if (parameters['xResourceId'] !== undefined) {
-                    headers['X-Resource-Id'] = parameters['xResourceId'];
-                }
 
                 if (parameters['request'] !== undefined) {
                     body = parameters['request'];
@@ -13149,8 +10497,6 @@ angular.module('otrBackendService', [])
              * @method
              * @name OtrService#updateUserRolesUsingPOST
              * @param {object} parameters - method options and parameters
-             * @param {string} parameters.xFeature - which feature is the client using
-             * @param {string} parameters.xResourceId - a generic resource identifier
              * @param {} parameters.request - request
              */
             OtrService.prototype.updateUserRolesUsingPOST = function(parameters) {
@@ -13167,14 +10513,6 @@ angular.module('otrBackendService', [])
 
                 headers['Accept'] = ['*/*'];
                 headers['Content-Type'] = ['application/json'];
-
-                if (parameters['xFeature'] !== undefined) {
-                    headers['X-Feature'] = parameters['xFeature'];
-                }
-
-                if (parameters['xResourceId'] !== undefined) {
-                    headers['X-Resource-Id'] = parameters['xResourceId'];
-                }
 
                 if (parameters['request'] !== undefined) {
                     body = parameters['request'];
@@ -13196,8 +10534,6 @@ angular.module('otrBackendService', [])
              * @method
              * @name OtrService#findMatchingUsersUsingPOST
              * @param {object} parameters - method options and parameters
-             * @param {string} parameters.xFeature - which feature is the client using
-             * @param {string} parameters.xResourceId - a generic resource identifier
              * @param {} parameters.request - request
              */
             OtrService.prototype.findMatchingUsersUsingPOST = function(parameters) {
@@ -13214,14 +10550,6 @@ angular.module('otrBackendService', [])
 
                 headers['Accept'] = ['*/*'];
                 headers['Content-Type'] = ['application/json'];
-
-                if (parameters['xFeature'] !== undefined) {
-                    headers['X-Feature'] = parameters['xFeature'];
-                }
-
-                if (parameters['xResourceId'] !== undefined) {
-                    headers['X-Resource-Id'] = parameters['xResourceId'];
-                }
 
                 if (parameters['request'] !== undefined) {
                     body = parameters['request'];
@@ -13243,8 +10571,6 @@ angular.module('otrBackendService', [])
              * @method
              * @name OtrService#addCardToStripeAccountUsingPOST
              * @param {object} parameters - method options and parameters
-             * @param {string} parameters.xFeature - which feature is the client using
-             * @param {string} parameters.xResourceId - a generic resource identifier
              * @param {} parameters.request - request
              */
             OtrService.prototype.addCardToStripeAccountUsingPOST = function(parameters) {
@@ -13261,14 +10587,6 @@ angular.module('otrBackendService', [])
 
                 headers['Accept'] = ['*/*'];
                 headers['Content-Type'] = ['application/json'];
-
-                if (parameters['xFeature'] !== undefined) {
-                    headers['X-Feature'] = parameters['xFeature'];
-                }
-
-                if (parameters['xResourceId'] !== undefined) {
-                    headers['X-Resource-Id'] = parameters['xResourceId'];
-                }
 
                 if (parameters['request'] !== undefined) {
                     body = parameters['request'];
@@ -13290,8 +10608,6 @@ angular.module('otrBackendService', [])
              * @method
              * @name OtrService#getCardUsingGET
              * @param {object} parameters - method options and parameters
-             * @param {string} parameters.xFeature - which feature is the client using
-             * @param {string} parameters.xResourceId - a generic resource identifier
              * @param {string} parameters.cardId - cardId
              */
             OtrService.prototype.getCardUsingGET = function(parameters) {
@@ -13307,15 +10623,6 @@ angular.module('otrBackendService', [])
                     form = {};
 
                 headers['Accept'] = ['*/*'];
-                headers['Content-Type'] = ['application/json'];
-
-                if (parameters['xFeature'] !== undefined) {
-                    headers['X-Feature'] = parameters['xFeature'];
-                }
-
-                if (parameters['xResourceId'] !== undefined) {
-                    headers['X-Resource-Id'] = parameters['xResourceId'];
-                }
 
                 path = path.replace('{cardId}', parameters['cardId']);
 
@@ -13335,8 +10642,6 @@ angular.module('otrBackendService', [])
              * @method
              * @name OtrService#deleteCardUsingDELETE
              * @param {object} parameters - method options and parameters
-             * @param {string} parameters.xFeature - which feature is the client using
-             * @param {string} parameters.xResourceId - a generic resource identifier
              * @param {string} parameters.cardId - cardId
              */
             OtrService.prototype.deleteCardUsingDELETE = function(parameters) {
@@ -13352,15 +10657,6 @@ angular.module('otrBackendService', [])
                     form = {};
 
                 headers['Accept'] = ['*/*'];
-                headers['Content-Type'] = ['application/json'];
-
-                if (parameters['xFeature'] !== undefined) {
-                    headers['X-Feature'] = parameters['xFeature'];
-                }
-
-                if (parameters['xResourceId'] !== undefined) {
-                    headers['X-Resource-Id'] = parameters['xResourceId'];
-                }
 
                 path = path.replace('{cardId}', parameters['cardId']);
 
@@ -13380,9 +10676,7 @@ angular.module('otrBackendService', [])
              * @method
              * @name OtrService#validateUserByEmailUsingGET
              * @param {object} parameters - method options and parameters
-             * @param {string} parameters.xFeature - which feature is the client using
-             * @param {string} parameters.xResourceId - a generic resource identifier
-             * @param {string} parameters.email - emailAddress
+             * @param {string} parameters.email - email
              */
             OtrService.prototype.validateUserByEmailUsingGET = function(parameters) {
                 if (parameters === undefined) {
@@ -13397,15 +10691,6 @@ angular.module('otrBackendService', [])
                     form = {};
 
                 headers['Accept'] = ['*/*'];
-                headers['Content-Type'] = ['application/json'];
-
-                if (parameters['xFeature'] !== undefined) {
-                    headers['X-Feature'] = parameters['xFeature'];
-                }
-
-                if (parameters['xResourceId'] !== undefined) {
-                    headers['X-Resource-Id'] = parameters['xResourceId'];
-                }
 
                 if (parameters['email'] !== undefined) {
                     queryParameters['email'] = parameters['email'];
@@ -13427,8 +10712,6 @@ angular.module('otrBackendService', [])
              * @method
              * @name OtrService#getSupportTicketsForUserUsingGET
              * @param {object} parameters - method options and parameters
-             * @param {string} parameters.xFeature - which feature is the client using
-             * @param {string} parameters.xResourceId - a generic resource identifier
              * @param {string} parameters.email - email
              */
             OtrService.prototype.getSupportTicketsForUserUsingGET = function(parameters) {
@@ -13444,15 +10727,6 @@ angular.module('otrBackendService', [])
                     form = {};
 
                 headers['Accept'] = ['*/*'];
-                headers['Content-Type'] = ['application/json'];
-
-                if (parameters['xFeature'] !== undefined) {
-                    headers['X-Feature'] = parameters['xFeature'];
-                }
-
-                if (parameters['xResourceId'] !== undefined) {
-                    headers['X-Resource-Id'] = parameters['xResourceId'];
-                }
 
                 path = path.replace('{email}', parameters['email']);
 
@@ -13472,8 +10746,6 @@ angular.module('otrBackendService', [])
              * @method
              * @name OtrService#mergeUserUsingPOST
              * @param {object} parameters - method options and parameters
-             * @param {string} parameters.xFeature - which feature is the client using
-             * @param {string} parameters.xResourceId - a generic resource identifier
              * @param {string} parameters.primaryUserId - primaryUserId
              * @param {} parameters.request - request
              */
@@ -13491,14 +10763,6 @@ angular.module('otrBackendService', [])
 
                 headers['Accept'] = ['*/*'];
                 headers['Content-Type'] = ['application/json'];
-
-                if (parameters['xFeature'] !== undefined) {
-                    headers['X-Feature'] = parameters['xFeature'];
-                }
-
-                if (parameters['xResourceId'] !== undefined) {
-                    headers['X-Resource-Id'] = parameters['xResourceId'];
-                }
 
                 path = path.replace('{primaryUserId}', parameters['primaryUserId']);
 
@@ -13527,8 +10791,6 @@ angular.module('otrBackendService', [])
              * @method
              * @name OtrService#getUserDetailsUsingGET
              * @param {object} parameters - method options and parameters
-             * @param {string} parameters.xFeature - which feature is the client using
-             * @param {string} parameters.xResourceId - a generic resource identifier
              * @param {string} parameters.userIdString - userIdString
              */
             OtrService.prototype.getUserDetailsUsingGET = function(parameters) {
@@ -13544,15 +10806,6 @@ angular.module('otrBackendService', [])
                     form = {};
 
                 headers['Accept'] = ['application/json'];
-                headers['Content-Type'] = ['application/json'];
-
-                if (parameters['xFeature'] !== undefined) {
-                    headers['X-Feature'] = parameters['xFeature'];
-                }
-
-                if (parameters['xResourceId'] !== undefined) {
-                    headers['X-Resource-Id'] = parameters['xResourceId'];
-                }
 
                 path = path.replace('{userIdString}', parameters['userIdString']);
 
@@ -13572,8 +10825,6 @@ angular.module('otrBackendService', [])
              * @method
              * @name OtrService#getPaymentMethodsForUserUsingGET
              * @param {object} parameters - method options and parameters
-             * @param {string} parameters.xFeature - which feature is the client using
-             * @param {string} parameters.xResourceId - a generic resource identifier
              * @param {string} parameters.userIdString - userIdString
              */
             OtrService.prototype.getPaymentMethodsForUserUsingGET = function(parameters) {
@@ -13589,15 +10840,6 @@ angular.module('otrBackendService', [])
                     form = {};
 
                 headers['Accept'] = ['*/*'];
-                headers['Content-Type'] = ['application/json'];
-
-                if (parameters['xFeature'] !== undefined) {
-                    headers['X-Feature'] = parameters['xFeature'];
-                }
-
-                if (parameters['xResourceId'] !== undefined) {
-                    headers['X-Resource-Id'] = parameters['xResourceId'];
-                }
 
                 path = path.replace('{userIdString}', parameters['userIdString']);
 
@@ -13617,10 +10859,8 @@ angular.module('otrBackendService', [])
              * @method
              * @name OtrService#updateUserProfileUsingPUT
              * @param {object} parameters - method options and parameters
-             * @param {string} parameters.xFeature - which feature is the client using
-             * @param {string} parameters.xResourceId - a generic resource identifier
-             * @param {integer} parameters.userId - userId
              * @param {} parameters.request - request
+             * @param {integer} parameters.userId - userId
              */
             OtrService.prototype.updateUserProfileUsingPUT = function(parameters) {
                 if (parameters === undefined) {
@@ -13637,27 +10877,19 @@ angular.module('otrBackendService', [])
                 headers['Accept'] = ['*/*'];
                 headers['Content-Type'] = ['application/json'];
 
-                if (parameters['xFeature'] !== undefined) {
-                    headers['X-Feature'] = parameters['xFeature'];
-                }
-
-                if (parameters['xResourceId'] !== undefined) {
-                    headers['X-Resource-Id'] = parameters['xResourceId'];
-                }
-
-                path = path.replace('{userId}', parameters['userId']);
-
-                if (parameters['userId'] === undefined) {
-                    deferred.reject(new Error('Missing required  parameter: userId'));
-                    return deferred.promise;
-                }
-
                 if (parameters['request'] !== undefined) {
                     body = parameters['request'];
                 }
 
                 if (parameters['request'] === undefined) {
                     deferred.reject(new Error('Missing required  parameter: request'));
+                    return deferred.promise;
+                }
+
+                path = path.replace('{userId}', parameters['userId']);
+
+                if (parameters['userId'] === undefined) {
+                    deferred.reject(new Error('Missing required  parameter: userId'));
                     return deferred.promise;
                 }
 
@@ -13672,10 +10904,8 @@ angular.module('otrBackendService', [])
              * @method
              * @name OtrService#addExtraAccountUsingPOST
              * @param {object} parameters - method options and parameters
-             * @param {string} parameters.xFeature - which feature is the client using
-             * @param {string} parameters.xResourceId - a generic resource identifier
-             * @param {string} parameters.userId - userId
              * @param {} parameters.request - request
+             * @param {string} parameters.userId - userId
              */
             OtrService.prototype.addExtraAccountUsingPOST = function(parameters) {
                 if (parameters === undefined) {
@@ -13692,27 +10922,19 @@ angular.module('otrBackendService', [])
                 headers['Accept'] = ['*/*'];
                 headers['Content-Type'] = ['application/json'];
 
-                if (parameters['xFeature'] !== undefined) {
-                    headers['X-Feature'] = parameters['xFeature'];
-                }
-
-                if (parameters['xResourceId'] !== undefined) {
-                    headers['X-Resource-Id'] = parameters['xResourceId'];
-                }
-
-                path = path.replace('{userId}', parameters['userId']);
-
-                if (parameters['userId'] === undefined) {
-                    deferred.reject(new Error('Missing required  parameter: userId'));
-                    return deferred.promise;
-                }
-
                 if (parameters['request'] !== undefined) {
                     body = parameters['request'];
                 }
 
                 if (parameters['request'] === undefined) {
                     deferred.reject(new Error('Missing required  parameter: request'));
+                    return deferred.promise;
+                }
+
+                path = path.replace('{userId}', parameters['userId']);
+
+                if (parameters['userId'] === undefined) {
+                    deferred.reject(new Error('Missing required  parameter: userId'));
                     return deferred.promise;
                 }
 
@@ -13727,10 +10949,8 @@ angular.module('otrBackendService', [])
              * @method
              * @name OtrService#setCardAsPrimaryUsingPUT
              * @param {object} parameters - method options and parameters
-             * @param {string} parameters.xFeature - which feature is the client using
-             * @param {string} parameters.xResourceId - a generic resource identifier
-             * @param {string} parameters.userId - userId
              * @param {string} parameters.cardId - cardId
+             * @param {string} parameters.userId - userId
              */
             OtrService.prototype.setCardAsPrimaryUsingPUT = function(parameters) {
                 if (parameters === undefined) {
@@ -13747,25 +10967,17 @@ angular.module('otrBackendService', [])
                 headers['Accept'] = ['*/*'];
                 headers['Content-Type'] = ['application/json'];
 
-                if (parameters['xFeature'] !== undefined) {
-                    headers['X-Feature'] = parameters['xFeature'];
-                }
+                path = path.replace('{cardId}', parameters['cardId']);
 
-                if (parameters['xResourceId'] !== undefined) {
-                    headers['X-Resource-Id'] = parameters['xResourceId'];
+                if (parameters['cardId'] === undefined) {
+                    deferred.reject(new Error('Missing required  parameter: cardId'));
+                    return deferred.promise;
                 }
 
                 path = path.replace('{userId}', parameters['userId']);
 
                 if (parameters['userId'] === undefined) {
                     deferred.reject(new Error('Missing required  parameter: userId'));
-                    return deferred.promise;
-                }
-
-                path = path.replace('{cardId}', parameters['cardId']);
-
-                if (parameters['cardId'] === undefined) {
-                    deferred.reject(new Error('Missing required  parameter: cardId'));
                     return deferred.promise;
                 }
 
@@ -13780,8 +10992,6 @@ angular.module('otrBackendService', [])
              * @method
              * @name OtrService#getUserAddressesUsingGET
              * @param {object} parameters - method options and parameters
-             * @param {string} parameters.xFeature - which feature is the client using
-             * @param {string} parameters.xResourceId - a generic resource identifier
              * @param {integer} parameters.userId - userId
              */
             OtrService.prototype.getUserAddressesUsingGET = function(parameters) {
@@ -13797,15 +11007,6 @@ angular.module('otrBackendService', [])
                     form = {};
 
                 headers['Accept'] = ['*/*'];
-                headers['Content-Type'] = ['application/json'];
-
-                if (parameters['xFeature'] !== undefined) {
-                    headers['X-Feature'] = parameters['xFeature'];
-                }
-
-                if (parameters['xResourceId'] !== undefined) {
-                    headers['X-Resource-Id'] = parameters['xResourceId'];
-                }
 
                 path = path.replace('{userId}', parameters['userId']);
 
@@ -13825,10 +11026,8 @@ angular.module('otrBackendService', [])
              * @method
              * @name OtrService#addUserAddressUsingPOST
              * @param {object} parameters - method options and parameters
-             * @param {string} parameters.xFeature - which feature is the client using
-             * @param {string} parameters.xResourceId - a generic resource identifier
-             * @param {integer} parameters.userId - userId
              * @param {} parameters.request - request
+             * @param {integer} parameters.userId - userId
              */
             OtrService.prototype.addUserAddressUsingPOST = function(parameters) {
                 if (parameters === undefined) {
@@ -13845,27 +11044,19 @@ angular.module('otrBackendService', [])
                 headers['Accept'] = ['*/*'];
                 headers['Content-Type'] = ['application/json'];
 
-                if (parameters['xFeature'] !== undefined) {
-                    headers['X-Feature'] = parameters['xFeature'];
-                }
-
-                if (parameters['xResourceId'] !== undefined) {
-                    headers['X-Resource-Id'] = parameters['xResourceId'];
-                }
-
-                path = path.replace('{userId}', parameters['userId']);
-
-                if (parameters['userId'] === undefined) {
-                    deferred.reject(new Error('Missing required  parameter: userId'));
-                    return deferred.promise;
-                }
-
                 if (parameters['request'] !== undefined) {
                     body = parameters['request'];
                 }
 
                 if (parameters['request'] === undefined) {
                     deferred.reject(new Error('Missing required  parameter: request'));
+                    return deferred.promise;
+                }
+
+                path = path.replace('{userId}', parameters['userId']);
+
+                if (parameters['userId'] === undefined) {
+                    deferred.reject(new Error('Missing required  parameter: userId'));
                     return deferred.promise;
                 }
 
@@ -13880,11 +11071,9 @@ angular.module('otrBackendService', [])
              * @method
              * @name OtrService#updateUserAddressUsingPUT
              * @param {object} parameters - method options and parameters
-             * @param {string} parameters.xFeature - which feature is the client using
-             * @param {string} parameters.xResourceId - a generic resource identifier
-             * @param {integer} parameters.userId - userId
              * @param {integer} parameters.addressId - addressId
              * @param {} parameters.request - request
+             * @param {integer} parameters.userId - userId
              */
             OtrService.prototype.updateUserAddressUsingPUT = function(parameters) {
                 if (parameters === undefined) {
@@ -13900,21 +11089,6 @@ angular.module('otrBackendService', [])
 
                 headers['Accept'] = ['*/*'];
                 headers['Content-Type'] = ['application/json'];
-
-                if (parameters['xFeature'] !== undefined) {
-                    headers['X-Feature'] = parameters['xFeature'];
-                }
-
-                if (parameters['xResourceId'] !== undefined) {
-                    headers['X-Resource-Id'] = parameters['xResourceId'];
-                }
-
-                path = path.replace('{userId}', parameters['userId']);
-
-                if (parameters['userId'] === undefined) {
-                    deferred.reject(new Error('Missing required  parameter: userId'));
-                    return deferred.promise;
-                }
 
                 path = path.replace('{addressId}', parameters['addressId']);
 
@@ -13932,6 +11106,13 @@ angular.module('otrBackendService', [])
                     return deferred.promise;
                 }
 
+                path = path.replace('{userId}', parameters['userId']);
+
+                if (parameters['userId'] === undefined) {
+                    deferred.reject(new Error('Missing required  parameter: userId'));
+                    return deferred.promise;
+                }
+
                 queryParameters = mergeQueryParams(parameters, queryParameters);
 
                 this.request('PUT', domain + path, parameters, body, headers, queryParameters, form, deferred);
@@ -13943,8 +11124,6 @@ angular.module('otrBackendService', [])
              * @method
              * @name OtrService#getCasesForUserUsingGET
              * @param {object} parameters - method options and parameters
-             * @param {string} parameters.xFeature - which feature is the client using
-             * @param {string} parameters.xResourceId - a generic resource identifier
              * @param {string} parameters.userId - userId
              */
             OtrService.prototype.getCasesForUserUsingGET = function(parameters) {
@@ -13960,15 +11139,6 @@ angular.module('otrBackendService', [])
                     form = {};
 
                 headers['Accept'] = ['*/*'];
-                headers['Content-Type'] = ['application/json'];
-
-                if (parameters['xFeature'] !== undefined) {
-                    headers['X-Feature'] = parameters['xFeature'];
-                }
-
-                if (parameters['xResourceId'] !== undefined) {
-                    headers['X-Resource-Id'] = parameters['xResourceId'];
-                }
 
                 path = path.replace('{userId}', parameters['userId']);
 
@@ -13988,8 +11158,6 @@ angular.module('otrBackendService', [])
              * @method
              * @name OtrService#listContactTimelineUsingGET
              * @param {object} parameters - method options and parameters
-             * @param {string} parameters.xFeature - which feature is the client using
-             * @param {string} parameters.xResourceId - a generic resource identifier
              * @param {integer} parameters.userId - userId
              */
             OtrService.prototype.listContactTimelineUsingGET = function(parameters) {
@@ -14005,15 +11173,6 @@ angular.module('otrBackendService', [])
                     form = {};
 
                 headers['Accept'] = ['application/json'];
-                headers['Content-Type'] = ['application/json'];
-
-                if (parameters['xFeature'] !== undefined) {
-                    headers['X-Feature'] = parameters['xFeature'];
-                }
-
-                if (parameters['xResourceId'] !== undefined) {
-                    headers['X-Resource-Id'] = parameters['xResourceId'];
-                }
 
                 path = path.replace('{userId}', parameters['userId']);
 
@@ -14033,8 +11192,6 @@ angular.module('otrBackendService', [])
              * @method
              * @name OtrService#findChargeDisputesByUserIdUsingGET
              * @param {object} parameters - method options and parameters
-             * @param {string} parameters.xFeature - which feature is the client using
-             * @param {string} parameters.xResourceId - a generic resource identifier
              * @param {string} parameters.userId - userId
              */
             OtrService.prototype.findChargeDisputesByUserIdUsingGET = function(parameters) {
@@ -14050,15 +11207,6 @@ angular.module('otrBackendService', [])
                     form = {};
 
                 headers['Accept'] = ['*/*'];
-                headers['Content-Type'] = ['application/json'];
-
-                if (parameters['xFeature'] !== undefined) {
-                    headers['X-Feature'] = parameters['xFeature'];
-                }
-
-                if (parameters['xResourceId'] !== undefined) {
-                    headers['X-Resource-Id'] = parameters['xResourceId'];
-                }
 
                 path = path.replace('{userId}', parameters['userId']);
 
@@ -14078,8 +11226,6 @@ angular.module('otrBackendService', [])
              * @method
              * @name OtrService#getOverduePaymentsUsingGET
              * @param {object} parameters - method options and parameters
-             * @param {string} parameters.xFeature - which feature is the client using
-             * @param {string} parameters.xResourceId - a generic resource identifier
              * @param {integer} parameters.userId - userId
              */
             OtrService.prototype.getOverduePaymentsUsingGET = function(parameters) {
@@ -14095,15 +11241,6 @@ angular.module('otrBackendService', [])
                     form = {};
 
                 headers['Accept'] = ['*/*'];
-                headers['Content-Type'] = ['application/json'];
-
-                if (parameters['xFeature'] !== undefined) {
-                    headers['X-Feature'] = parameters['xFeature'];
-                }
-
-                if (parameters['xResourceId'] !== undefined) {
-                    headers['X-Resource-Id'] = parameters['xResourceId'];
-                }
 
                 path = path.replace('{userId}', parameters['userId']);
 
@@ -14123,10 +11260,8 @@ angular.module('otrBackendService', [])
              * @method
              * @name OtrService#resetUserPasswordByAdminUsingPUT
              * @param {object} parameters - method options and parameters
-             * @param {string} parameters.xFeature - which feature is the client using
-             * @param {string} parameters.xResourceId - a generic resource identifier
-             * @param {integer} parameters.userId - userId
              * @param {} parameters.request - request
+             * @param {integer} parameters.userId - userId
              */
             OtrService.prototype.resetUserPasswordByAdminUsingPUT = function(parameters) {
                 if (parameters === undefined) {
@@ -14143,27 +11278,19 @@ angular.module('otrBackendService', [])
                 headers['Accept'] = ['*/*'];
                 headers['Content-Type'] = ['application/json'];
 
-                if (parameters['xFeature'] !== undefined) {
-                    headers['X-Feature'] = parameters['xFeature'];
-                }
-
-                if (parameters['xResourceId'] !== undefined) {
-                    headers['X-Resource-Id'] = parameters['xResourceId'];
-                }
-
-                path = path.replace('{userId}', parameters['userId']);
-
-                if (parameters['userId'] === undefined) {
-                    deferred.reject(new Error('Missing required  parameter: userId'));
-                    return deferred.promise;
-                }
-
                 if (parameters['request'] !== undefined) {
                     body = parameters['request'];
                 }
 
                 if (parameters['request'] === undefined) {
                     deferred.reject(new Error('Missing required  parameter: request'));
+                    return deferred.promise;
+                }
+
+                path = path.replace('{userId}', parameters['userId']);
+
+                if (parameters['userId'] === undefined) {
+                    deferred.reject(new Error('Missing required  parameter: userId'));
                     return deferred.promise;
                 }
 
@@ -14178,10 +11305,8 @@ angular.module('otrBackendService', [])
              * @method
              * @name OtrService#addUserPhoneNumberUsingPOST
              * @param {object} parameters - method options and parameters
-             * @param {string} parameters.xFeature - which feature is the client using
-             * @param {string} parameters.xResourceId - a generic resource identifier
-             * @param {integer} parameters.userId - userId
              * @param {} parameters.request - request
+             * @param {integer} parameters.userId - userId
              */
             OtrService.prototype.addUserPhoneNumberUsingPOST = function(parameters) {
                 if (parameters === undefined) {
@@ -14198,27 +11323,19 @@ angular.module('otrBackendService', [])
                 headers['Accept'] = ['*/*'];
                 headers['Content-Type'] = ['application/json'];
 
-                if (parameters['xFeature'] !== undefined) {
-                    headers['X-Feature'] = parameters['xFeature'];
-                }
-
-                if (parameters['xResourceId'] !== undefined) {
-                    headers['X-Resource-Id'] = parameters['xResourceId'];
-                }
-
-                path = path.replace('{userId}', parameters['userId']);
-
-                if (parameters['userId'] === undefined) {
-                    deferred.reject(new Error('Missing required  parameter: userId'));
-                    return deferred.promise;
-                }
-
                 if (parameters['request'] !== undefined) {
                     body = parameters['request'];
                 }
 
                 if (parameters['request'] === undefined) {
                     deferred.reject(new Error('Missing required  parameter: request'));
+                    return deferred.promise;
+                }
+
+                path = path.replace('{userId}', parameters['userId']);
+
+                if (parameters['userId'] === undefined) {
+                    deferred.reject(new Error('Missing required  parameter: userId'));
                     return deferred.promise;
                 }
 
@@ -14233,11 +11350,9 @@ angular.module('otrBackendService', [])
              * @method
              * @name OtrService#updateUserPhoneNumberUsingPUT
              * @param {object} parameters - method options and parameters
-             * @param {string} parameters.xFeature - which feature is the client using
-             * @param {string} parameters.xResourceId - a generic resource identifier
-             * @param {integer} parameters.userId - userId
              * @param {integer} parameters.phoneNumberId - phoneNumberId
              * @param {} parameters.request - request
+             * @param {integer} parameters.userId - userId
              */
             OtrService.prototype.updateUserPhoneNumberUsingPUT = function(parameters) {
                 if (parameters === undefined) {
@@ -14254,21 +11369,6 @@ angular.module('otrBackendService', [])
                 headers['Accept'] = ['*/*'];
                 headers['Content-Type'] = ['application/json'];
 
-                if (parameters['xFeature'] !== undefined) {
-                    headers['X-Feature'] = parameters['xFeature'];
-                }
-
-                if (parameters['xResourceId'] !== undefined) {
-                    headers['X-Resource-Id'] = parameters['xResourceId'];
-                }
-
-                path = path.replace('{userId}', parameters['userId']);
-
-                if (parameters['userId'] === undefined) {
-                    deferred.reject(new Error('Missing required  parameter: userId'));
-                    return deferred.promise;
-                }
-
                 path = path.replace('{phoneNumberId}', parameters['phoneNumberId']);
 
                 if (parameters['phoneNumberId'] === undefined) {
@@ -14285,6 +11385,13 @@ angular.module('otrBackendService', [])
                     return deferred.promise;
                 }
 
+                path = path.replace('{userId}', parameters['userId']);
+
+                if (parameters['userId'] === undefined) {
+                    deferred.reject(new Error('Missing required  parameter: userId'));
+                    return deferred.promise;
+                }
+
                 queryParameters = mergeQueryParams(parameters, queryParameters);
 
                 this.request('PUT', domain + path, parameters, body, headers, queryParameters, form, deferred);
@@ -14296,10 +11403,8 @@ angular.module('otrBackendService', [])
              * @method
              * @name OtrService#deleteUserPhoneNumberUsingDELETE
              * @param {object} parameters - method options and parameters
-             * @param {string} parameters.xFeature - which feature is the client using
-             * @param {string} parameters.xResourceId - a generic resource identifier
-             * @param {integer} parameters.userId - userId
              * @param {integer} parameters.phoneNumberId - phoneNumberId
+             * @param {integer} parameters.userId - userId
              */
             OtrService.prototype.deleteUserPhoneNumberUsingDELETE = function(parameters) {
                 if (parameters === undefined) {
@@ -14314,27 +11419,18 @@ angular.module('otrBackendService', [])
                     form = {};
 
                 headers['Accept'] = ['*/*'];
-                headers['Content-Type'] = ['application/json'];
 
-                if (parameters['xFeature'] !== undefined) {
-                    headers['X-Feature'] = parameters['xFeature'];
-                }
+                path = path.replace('{phoneNumberId}', parameters['phoneNumberId']);
 
-                if (parameters['xResourceId'] !== undefined) {
-                    headers['X-Resource-Id'] = parameters['xResourceId'];
+                if (parameters['phoneNumberId'] === undefined) {
+                    deferred.reject(new Error('Missing required  parameter: phoneNumberId'));
+                    return deferred.promise;
                 }
 
                 path = path.replace('{userId}', parameters['userId']);
 
                 if (parameters['userId'] === undefined) {
                     deferred.reject(new Error('Missing required  parameter: userId'));
-                    return deferred.promise;
-                }
-
-                path = path.replace('{phoneNumberId}', parameters['phoneNumberId']);
-
-                if (parameters['phoneNumberId'] === undefined) {
-                    deferred.reject(new Error('Missing required  parameter: phoneNumberId'));
                     return deferred.promise;
                 }
 
@@ -14349,10 +11445,8 @@ angular.module('otrBackendService', [])
              * @method
              * @name OtrService#updateProfilePictureUsingPUT
              * @param {object} parameters - method options and parameters
-             * @param {string} parameters.xFeature - which feature is the client using
-             * @param {string} parameters.xResourceId - a generic resource identifier
-             * @param {integer} parameters.userId - userId
              * @param {} parameters.request - request
+             * @param {integer} parameters.userId - userId
              */
             OtrService.prototype.updateProfilePictureUsingPUT = function(parameters) {
                 if (parameters === undefined) {
@@ -14369,27 +11463,19 @@ angular.module('otrBackendService', [])
                 headers['Accept'] = ['*/*'];
                 headers['Content-Type'] = ['application/json'];
 
-                if (parameters['xFeature'] !== undefined) {
-                    headers['X-Feature'] = parameters['xFeature'];
-                }
-
-                if (parameters['xResourceId'] !== undefined) {
-                    headers['X-Resource-Id'] = parameters['xResourceId'];
-                }
-
-                path = path.replace('{userId}', parameters['userId']);
-
-                if (parameters['userId'] === undefined) {
-                    deferred.reject(new Error('Missing required  parameter: userId'));
-                    return deferred.promise;
-                }
-
                 if (parameters['request'] !== undefined) {
                     body = parameters['request'];
                 }
 
                 if (parameters['request'] === undefined) {
                     deferred.reject(new Error('Missing required  parameter: request'));
+                    return deferred.promise;
+                }
+
+                path = path.replace('{userId}', parameters['userId']);
+
+                if (parameters['userId'] === undefined) {
+                    deferred.reject(new Error('Missing required  parameter: userId'));
                     return deferred.promise;
                 }
 
@@ -14404,10 +11490,8 @@ angular.module('otrBackendService', [])
              * @method
              * @name OtrService#deleteCardForUserUsingDELETE
              * @param {object} parameters - method options and parameters
-             * @param {string} parameters.xFeature - which feature is the client using
-             * @param {string} parameters.xResourceId - a generic resource identifier
-             * @param {string} parameters.userId - userId
              * @param {string} parameters.cardId - cardId
+             * @param {string} parameters.userId - userId
              */
             OtrService.prototype.deleteCardForUserUsingDELETE = function(parameters) {
                 if (parameters === undefined) {
@@ -14422,27 +11506,18 @@ angular.module('otrBackendService', [])
                     form = {};
 
                 headers['Accept'] = ['*/*'];
-                headers['Content-Type'] = ['application/json'];
 
-                if (parameters['xFeature'] !== undefined) {
-                    headers['X-Feature'] = parameters['xFeature'];
-                }
+                path = path.replace('{cardId}', parameters['cardId']);
 
-                if (parameters['xResourceId'] !== undefined) {
-                    headers['X-Resource-Id'] = parameters['xResourceId'];
+                if (parameters['cardId'] === undefined) {
+                    deferred.reject(new Error('Missing required  parameter: cardId'));
+                    return deferred.promise;
                 }
 
                 path = path.replace('{userId}', parameters['userId']);
 
                 if (parameters['userId'] === undefined) {
                     deferred.reject(new Error('Missing required  parameter: userId'));
-                    return deferred.promise;
-                }
-
-                path = path.replace('{cardId}', parameters['cardId']);
-
-                if (parameters['cardId'] === undefined) {
-                    deferred.reject(new Error('Missing required  parameter: cardId'));
                     return deferred.promise;
                 }
 
@@ -14457,10 +11532,8 @@ angular.module('otrBackendService', [])
              * @method
              * @name OtrService#addACHToUserStripeAccountUsingPOST
              * @param {object} parameters - method options and parameters
-             * @param {string} parameters.xFeature - which feature is the client using
-             * @param {string} parameters.xResourceId - a generic resource identifier
-             * @param {string} parameters.userId - userId
              * @param {} parameters.request - request
+             * @param {string} parameters.userId - userId
              */
             OtrService.prototype.addACHToUserStripeAccountUsingPOST = function(parameters) {
                 if (parameters === undefined) {
@@ -14477,27 +11550,19 @@ angular.module('otrBackendService', [])
                 headers['Accept'] = ['*/*'];
                 headers['Content-Type'] = ['application/json'];
 
-                if (parameters['xFeature'] !== undefined) {
-                    headers['X-Feature'] = parameters['xFeature'];
-                }
-
-                if (parameters['xResourceId'] !== undefined) {
-                    headers['X-Resource-Id'] = parameters['xResourceId'];
-                }
-
-                path = path.replace('{userId}', parameters['userId']);
-
-                if (parameters['userId'] === undefined) {
-                    deferred.reject(new Error('Missing required  parameter: userId'));
-                    return deferred.promise;
-                }
-
                 if (parameters['request'] !== undefined) {
                     body = parameters['request'];
                 }
 
                 if (parameters['request'] === undefined) {
                     deferred.reject(new Error('Missing required  parameter: request'));
+                    return deferred.promise;
+                }
+
+                path = path.replace('{userId}', parameters['userId']);
+
+                if (parameters['userId'] === undefined) {
+                    deferred.reject(new Error('Missing required  parameter: userId'));
                     return deferred.promise;
                 }
 
@@ -14512,8 +11577,6 @@ angular.module('otrBackendService', [])
              * @method
              * @name OtrService#backfillLawfirmTransactionRecordsUsingPOST
              * @param {object} parameters - method options and parameters
-             * @param {string} parameters.xFeature - which feature is the client using
-             * @param {string} parameters.xResourceId - a generic resource identifier
              * @param {} parameters.request - request
              */
             OtrService.prototype.backfillLawfirmTransactionRecordsUsingPOST = function(parameters) {
@@ -14530,14 +11593,6 @@ angular.module('otrBackendService', [])
 
                 headers['Accept'] = ['*/*'];
                 headers['Content-Type'] = ['application/json'];
-
-                if (parameters['xFeature'] !== undefined) {
-                    headers['X-Feature'] = parameters['xFeature'];
-                }
-
-                if (parameters['xResourceId'] !== undefined) {
-                    headers['X-Resource-Id'] = parameters['xResourceId'];
-                }
 
                 if (parameters['request'] !== undefined) {
                     body = parameters['request'];
@@ -14559,8 +11614,6 @@ angular.module('otrBackendService', [])
              * @method
              * @name OtrService#getStatusUsingGET
              * @param {object} parameters - method options and parameters
-             * @param {string} parameters.xFeature - which feature is the client using
-             * @param {string} parameters.xResourceId - a generic resource identifier
              */
             OtrService.prototype.getStatusUsingGET = function(parameters) {
                 if (parameters === undefined) {
@@ -14575,15 +11628,6 @@ angular.module('otrBackendService', [])
                     form = {};
 
                 headers['Accept'] = ['*/*'];
-                headers['Content-Type'] = ['application/json'];
-
-                if (parameters['xFeature'] !== undefined) {
-                    headers['X-Feature'] = parameters['xFeature'];
-                }
-
-                if (parameters['xResourceId'] !== undefined) {
-                    headers['X-Resource-Id'] = parameters['xResourceId'];
-                }
 
                 queryParameters = mergeQueryParams(parameters, queryParameters);
 
@@ -14596,11 +11640,9 @@ angular.module('otrBackendService', [])
              * @method
              * @name OtrService#setStatusUsingPOST
              * @param {object} parameters - method options and parameters
-             * @param {string} parameters.xFeature - which feature is the client using
-             * @param {string} parameters.xResourceId - a generic resource identifier
-             * @param {boolean} parameters.syncStatus - syncStatus
-             * @param {boolean} parameters.missingChargesStatus - missingChargesStatus
              * @param {boolean} parameters.lawfirmTransactionsStatus - lawfirmTransactionsStatus
+             * @param {boolean} parameters.missingChargesStatus - missingChargesStatus
+             * @param {boolean} parameters.syncStatus - syncStatus
              */
             OtrService.prototype.setStatusUsingPOST = function(parameters) {
                 if (parameters === undefined) {
@@ -14617,24 +11659,16 @@ angular.module('otrBackendService', [])
                 headers['Accept'] = ['*/*'];
                 headers['Content-Type'] = ['application/json'];
 
-                if (parameters['xFeature'] !== undefined) {
-                    headers['X-Feature'] = parameters['xFeature'];
-                }
-
-                if (parameters['xResourceId'] !== undefined) {
-                    headers['X-Resource-Id'] = parameters['xResourceId'];
-                }
-
-                if (parameters['syncStatus'] !== undefined) {
-                    queryParameters['syncStatus'] = parameters['syncStatus'];
+                if (parameters['lawfirmTransactionsStatus'] !== undefined) {
+                    queryParameters['lawfirmTransactionsStatus'] = parameters['lawfirmTransactionsStatus'];
                 }
 
                 if (parameters['missingChargesStatus'] !== undefined) {
                     queryParameters['missingChargesStatus'] = parameters['missingChargesStatus'];
                 }
 
-                if (parameters['lawfirmTransactionsStatus'] !== undefined) {
-                    queryParameters['lawfirmTransactionsStatus'] = parameters['lawfirmTransactionsStatus'];
+                if (parameters['syncStatus'] !== undefined) {
+                    queryParameters['syncStatus'] = parameters['syncStatus'];
                 }
 
                 queryParameters = mergeQueryParams(parameters, queryParameters);
@@ -14648,8 +11682,6 @@ angular.module('otrBackendService', [])
              * @method
              * @name OtrService#validateEmailAddressUsingGET
              * @param {object} parameters - method options and parameters
-             * @param {string} parameters.xFeature - which feature is the client using
-             * @param {string} parameters.xResourceId - a generic resource identifier
              * @param {string} parameters.email - email
              */
             OtrService.prototype.validateEmailAddressUsingGET = function(parameters) {
@@ -14665,15 +11697,6 @@ angular.module('otrBackendService', [])
                     form = {};
 
                 headers['Accept'] = ['*/*'];
-                headers['Content-Type'] = ['application/json'];
-
-                if (parameters['xFeature'] !== undefined) {
-                    headers['X-Feature'] = parameters['xFeature'];
-                }
-
-                if (parameters['xResourceId'] !== undefined) {
-                    headers['X-Resource-Id'] = parameters['xResourceId'];
-                }
 
                 if (parameters['email'] !== undefined) {
                     queryParameters['email'] = parameters['email'];
@@ -14695,12 +11718,10 @@ angular.module('otrBackendService', [])
              * @method
              * @name OtrService#getTrafficViolationTypesUsingGET
              * @param {object} parameters - method options and parameters
-             * @param {string} parameters.xFeature - which feature is the client using
-             * @param {string} parameters.xResourceId - a generic resource identifier
-             * @param {boolean} parameters.includePenalties - isPenaltiesEnabled
-             * @param {string} parameters.state - stateAbbreviation
              * @param {string} parameters.audience - audience
              * @param {string} parameters.flavor - flavor
+             * @param {boolean} parameters.includePenalties - includePenalties
+             * @param {string} parameters.state - state
              */
             OtrService.prototype.getTrafficViolationTypesUsingGET = function(parameters) {
                 if (parameters === undefined) {
@@ -14715,14 +11736,13 @@ angular.module('otrBackendService', [])
                     form = {};
 
                 headers['Accept'] = ['*/*'];
-                headers['Content-Type'] = ['application/json'];
 
-                if (parameters['xFeature'] !== undefined) {
-                    headers['X-Feature'] = parameters['xFeature'];
+                if (parameters['audience'] !== undefined) {
+                    queryParameters['audience'] = parameters['audience'];
                 }
 
-                if (parameters['xResourceId'] !== undefined) {
-                    headers['X-Resource-Id'] = parameters['xResourceId'];
+                if (parameters['flavor'] !== undefined) {
+                    queryParameters['flavor'] = parameters['flavor'];
                 }
 
                 if (parameters['includePenalties'] !== undefined) {
@@ -14731,14 +11751,6 @@ angular.module('otrBackendService', [])
 
                 if (parameters['state'] !== undefined) {
                     queryParameters['state'] = parameters['state'];
-                }
-
-                if (parameters['audience'] !== undefined) {
-                    queryParameters['audience'] = parameters['audience'];
-                }
-
-                if (parameters['flavor'] !== undefined) {
-                    queryParameters['flavor'] = parameters['flavor'];
                 }
 
                 queryParameters = mergeQueryParams(parameters, queryParameters);
@@ -14752,8 +11764,6 @@ angular.module('otrBackendService', [])
              * @method
              * @name OtrService#addViolationUsingPOST
              * @param {object} parameters - method options and parameters
-             * @param {string} parameters.xFeature - which feature is the client using
-             * @param {string} parameters.xResourceId - a generic resource identifier
              * @param {boolean} parameters.isLive - isLive
              * @param {} parameters.request - request
              */
@@ -14771,14 +11781,6 @@ angular.module('otrBackendService', [])
 
                 headers['Accept'] = ['*/*'];
                 headers['Content-Type'] = ['application/json'];
-
-                if (parameters['xFeature'] !== undefined) {
-                    headers['X-Feature'] = parameters['xFeature'];
-                }
-
-                if (parameters['xResourceId'] !== undefined) {
-                    headers['X-Resource-Id'] = parameters['xResourceId'];
-                }
 
                 if (parameters['isLive'] !== undefined) {
                     queryParameters['isLive'] = parameters['isLive'];
@@ -14809,8 +11811,6 @@ angular.module('otrBackendService', [])
              * @method
              * @name OtrService#listViolationClassificationsUsingGET
              * @param {object} parameters - method options and parameters
-             * @param {string} parameters.xFeature - which feature is the client using
-             * @param {string} parameters.xResourceId - a generic resource identifier
              * @param {string} parameters.regionCode - regionCode
              */
             OtrService.prototype.listViolationClassificationsUsingGET = function(parameters) {
@@ -14826,15 +11826,6 @@ angular.module('otrBackendService', [])
                     form = {};
 
                 headers['Accept'] = ['*/*'];
-                headers['Content-Type'] = ['application/json'];
-
-                if (parameters['xFeature'] !== undefined) {
-                    headers['X-Feature'] = parameters['xFeature'];
-                }
-
-                if (parameters['xResourceId'] !== undefined) {
-                    headers['X-Resource-Id'] = parameters['xResourceId'];
-                }
 
                 if (parameters['regionCode'] !== undefined) {
                     queryParameters['regionCode'] = parameters['regionCode'];
@@ -14851,8 +11842,6 @@ angular.module('otrBackendService', [])
              * @method
              * @name OtrService#getPenaltyTypesUsingGET
              * @param {object} parameters - method options and parameters
-             * @param {string} parameters.xFeature - which feature is the client using
-             * @param {string} parameters.xResourceId - a generic resource identifier
              */
             OtrService.prototype.getPenaltyTypesUsingGET = function(parameters) {
                 if (parameters === undefined) {
@@ -14867,15 +11856,6 @@ angular.module('otrBackendService', [])
                     form = {};
 
                 headers['Accept'] = ['*/*'];
-                headers['Content-Type'] = ['application/json'];
-
-                if (parameters['xFeature'] !== undefined) {
-                    headers['X-Feature'] = parameters['xFeature'];
-                }
-
-                if (parameters['xResourceId'] !== undefined) {
-                    headers['X-Resource-Id'] = parameters['xResourceId'];
-                }
 
                 queryParameters = mergeQueryParams(parameters, queryParameters);
 
@@ -14888,10 +11868,8 @@ angular.module('otrBackendService', [])
              * @method
              * @name OtrService#updateViolationUsingPUT
              * @param {object} parameters - method options and parameters
-             * @param {string} parameters.xFeature - which feature is the client using
-             * @param {string} parameters.xResourceId - a generic resource identifier
-             * @param {integer} parameters.violationId - violationId
              * @param {} parameters.request - request
+             * @param {integer} parameters.violationId - violationId
              */
             OtrService.prototype.updateViolationUsingPUT = function(parameters) {
                 if (parameters === undefined) {
@@ -14908,27 +11886,19 @@ angular.module('otrBackendService', [])
                 headers['Accept'] = ['*/*'];
                 headers['Content-Type'] = ['application/json'];
 
-                if (parameters['xFeature'] !== undefined) {
-                    headers['X-Feature'] = parameters['xFeature'];
-                }
-
-                if (parameters['xResourceId'] !== undefined) {
-                    headers['X-Resource-Id'] = parameters['xResourceId'];
-                }
-
-                path = path.replace('{violationId}', parameters['violationId']);
-
-                if (parameters['violationId'] === undefined) {
-                    deferred.reject(new Error('Missing required  parameter: violationId'));
-                    return deferred.promise;
-                }
-
                 if (parameters['request'] !== undefined) {
                     body = parameters['request'];
                 }
 
                 if (parameters['request'] === undefined) {
                     deferred.reject(new Error('Missing required  parameter: request'));
+                    return deferred.promise;
+                }
+
+                path = path.replace('{violationId}', parameters['violationId']);
+
+                if (parameters['violationId'] === undefined) {
+                    deferred.reject(new Error('Missing required  parameter: violationId'));
                     return deferred.promise;
                 }
 
@@ -14943,10 +11913,8 @@ angular.module('otrBackendService', [])
              * @method
              * @name OtrService#getPenaltiesByViolationUsingGET
              * @param {object} parameters - method options and parameters
-             * @param {string} parameters.xFeature - which feature is the client using
-             * @param {string} parameters.xResourceId - a generic resource identifier
-             * @param {string} parameters.violationId - violationId
              * @param {string} parameters.flavor - flavor
+             * @param {string} parameters.violationId - violationId
              */
             OtrService.prototype.getPenaltiesByViolationUsingGET = function(parameters) {
                 if (parameters === undefined) {
@@ -14961,14 +11929,12 @@ angular.module('otrBackendService', [])
                     form = {};
 
                 headers['Accept'] = ['*/*'];
-                headers['Content-Type'] = ['application/json'];
 
-                if (parameters['xFeature'] !== undefined) {
-                    headers['X-Feature'] = parameters['xFeature'];
-                }
+                /** set default value **/
+                queryParameters['flavor'] = ALL;
 
-                if (parameters['xResourceId'] !== undefined) {
-                    headers['X-Resource-Id'] = parameters['xResourceId'];
+                if (parameters['flavor'] !== undefined) {
+                    queryParameters['flavor'] = parameters['flavor'];
                 }
 
                 path = path.replace('{violationId}', parameters['violationId']);
@@ -14976,10 +11942,6 @@ angular.module('otrBackendService', [])
                 if (parameters['violationId'] === undefined) {
                     deferred.reject(new Error('Missing required  parameter: violationId'));
                     return deferred.promise;
-                }
-
-                if (parameters['flavor'] !== undefined) {
-                    queryParameters['flavor'] = parameters['flavor'];
                 }
 
                 queryParameters = mergeQueryParams(parameters, queryParameters);
@@ -14993,10 +11955,8 @@ angular.module('otrBackendService', [])
              * @method
              * @name OtrService#upsertPenaltyUsingPOST
              * @param {object} parameters - method options and parameters
-             * @param {string} parameters.xFeature - which feature is the client using
-             * @param {string} parameters.xResourceId - a generic resource identifier
-             * @param {string} parameters.violationId - violationId
              * @param {} parameters.penaltyToAdd - penaltyToAdd
+             * @param {string} parameters.violationId - violationId
              */
             OtrService.prototype.upsertPenaltyUsingPOST = function(parameters) {
                 if (parameters === undefined) {
@@ -15013,27 +11973,19 @@ angular.module('otrBackendService', [])
                 headers['Accept'] = ['*/*'];
                 headers['Content-Type'] = ['application/json'];
 
-                if (parameters['xFeature'] !== undefined) {
-                    headers['X-Feature'] = parameters['xFeature'];
-                }
-
-                if (parameters['xResourceId'] !== undefined) {
-                    headers['X-Resource-Id'] = parameters['xResourceId'];
-                }
-
-                path = path.replace('{violationId}', parameters['violationId']);
-
-                if (parameters['violationId'] === undefined) {
-                    deferred.reject(new Error('Missing required  parameter: violationId'));
-                    return deferred.promise;
-                }
-
                 if (parameters['penaltyToAdd'] !== undefined) {
                     body = parameters['penaltyToAdd'];
                 }
 
                 if (parameters['penaltyToAdd'] === undefined) {
                     deferred.reject(new Error('Missing required  parameter: penaltyToAdd'));
+                    return deferred.promise;
+                }
+
+                path = path.replace('{violationId}', parameters['violationId']);
+
+                if (parameters['violationId'] === undefined) {
+                    deferred.reject(new Error('Missing required  parameter: violationId'));
                     return deferred.promise;
                 }
 
@@ -15048,10 +12000,8 @@ angular.module('otrBackendService', [])
              * @method
              * @name OtrService#removePenaltyUsingDELETE
              * @param {object} parameters - method options and parameters
-             * @param {string} parameters.xFeature - which feature is the client using
-             * @param {string} parameters.xResourceId - a generic resource identifier
-             * @param {string} parameters.violationId - violationId
              * @param {string} parameters.penaltyTypeId - penaltyTypeId
+             * @param {string} parameters.violationId - violationId
              */
             OtrService.prototype.removePenaltyUsingDELETE = function(parameters) {
                 if (parameters === undefined) {
@@ -15066,27 +12016,18 @@ angular.module('otrBackendService', [])
                     form = {};
 
                 headers['Accept'] = ['*/*'];
-                headers['Content-Type'] = ['application/json'];
 
-                if (parameters['xFeature'] !== undefined) {
-                    headers['X-Feature'] = parameters['xFeature'];
-                }
+                path = path.replace('{penaltyTypeId}', parameters['penaltyTypeId']);
 
-                if (parameters['xResourceId'] !== undefined) {
-                    headers['X-Resource-Id'] = parameters['xResourceId'];
+                if (parameters['penaltyTypeId'] === undefined) {
+                    deferred.reject(new Error('Missing required  parameter: penaltyTypeId'));
+                    return deferred.promise;
                 }
 
                 path = path.replace('{violationId}', parameters['violationId']);
 
                 if (parameters['violationId'] === undefined) {
                     deferred.reject(new Error('Missing required  parameter: violationId'));
-                    return deferred.promise;
-                }
-
-                path = path.replace('{penaltyTypeId}', parameters['penaltyTypeId']);
-
-                if (parameters['penaltyTypeId'] === undefined) {
-                    deferred.reject(new Error('Missing required  parameter: penaltyTypeId'));
                     return deferred.promise;
                 }
 
@@ -15101,8 +12042,6 @@ angular.module('otrBackendService', [])
              * @method
              * @name OtrService#handleBounceOrComplaintEventUsingPOST
              * @param {object} parameters - method options and parameters
-             * @param {string} parameters.xFeature - which feature is the client using
-             * @param {string} parameters.xResourceId - a generic resource identifier
              * @param {} parameters.request - request
              */
             OtrService.prototype.handleBounceOrComplaintEventUsingPOST = function(parameters) {
@@ -15119,14 +12058,6 @@ angular.module('otrBackendService', [])
 
                 headers['Accept'] = ['*/*'];
                 headers['Content-Type'] = ['application/json'];
-
-                if (parameters['xFeature'] !== undefined) {
-                    headers['X-Feature'] = parameters['xFeature'];
-                }
-
-                if (parameters['xResourceId'] !== undefined) {
-                    headers['X-Resource-Id'] = parameters['xResourceId'];
-                }
 
                 if (parameters['request'] !== undefined) {
                     body = parameters['request'];
@@ -15148,8 +12079,6 @@ angular.module('otrBackendService', [])
              * @method
              * @name OtrService#handleEventUsingPOST
              * @param {object} parameters - method options and parameters
-             * @param {string} parameters.xFeature - which feature is the client using
-             * @param {string} parameters.xResourceId - a generic resource identifier
              * @param {} parameters.event - event
              */
             OtrService.prototype.handleEventUsingPOST = function(parameters) {
@@ -15166,14 +12095,6 @@ angular.module('otrBackendService', [])
 
                 headers['Accept'] = ['*/*'];
                 headers['Content-Type'] = ['application/json'];
-
-                if (parameters['xFeature'] !== undefined) {
-                    headers['X-Feature'] = parameters['xFeature'];
-                }
-
-                if (parameters['xResourceId'] !== undefined) {
-                    headers['X-Resource-Id'] = parameters['xResourceId'];
-                }
 
                 if (parameters['event'] !== undefined) {
                     body = parameters['event'];
@@ -15195,8 +12116,6 @@ angular.module('otrBackendService', [])
              * @method
              * @name OtrService#cancelCaseUsingDELETE
              * @param {object} parameters - method options and parameters
-             * @param {string} parameters.xFeature - which feature is the client using
-             * @param {string} parameters.xResourceId - a generic resource identifier
              * @param {} parameters.request - request
              */
             OtrService.prototype.cancelCaseUsingDELETE = function(parameters) {
@@ -15212,15 +12131,6 @@ angular.module('otrBackendService', [])
                     form = {};
 
                 headers['Accept'] = ['*/*'];
-                headers['Content-Type'] = ['application/json'];
-
-                if (parameters['xFeature'] !== undefined) {
-                    headers['X-Feature'] = parameters['xFeature'];
-                }
-
-                if (parameters['xResourceId'] !== undefined) {
-                    headers['X-Resource-Id'] = parameters['xResourceId'];
-                }
 
                 if (parameters['request'] !== undefined) {
                     body = parameters['request'];
@@ -15242,8 +12152,6 @@ angular.module('otrBackendService', [])
              * @method
              * @name OtrService#addActionToCaseV2UsingPOST
              * @param {object} parameters - method options and parameters
-             * @param {string} parameters.xFeature - which feature is the client using
-             * @param {string} parameters.xResourceId - a generic resource identifier
              * @param {string} parameters.caseId - caseId
              * @param {} parameters.request - request
              */
@@ -15261,14 +12169,6 @@ angular.module('otrBackendService', [])
 
                 headers['Accept'] = ['*/*'];
                 headers['Content-Type'] = ['application/json'];
-
-                if (parameters['xFeature'] !== undefined) {
-                    headers['X-Feature'] = parameters['xFeature'];
-                }
-
-                if (parameters['xResourceId'] !== undefined) {
-                    headers['X-Resource-Id'] = parameters['xResourceId'];
-                }
 
                 path = path.replace('{caseId}', parameters['caseId']);
 
@@ -15297,17 +12197,15 @@ angular.module('otrBackendService', [])
              * @method
              * @name OtrService#findCourtsUsingGET
              * @param {object} parameters - method options and parameters
-             * @param {string} parameters.xFeature - which feature is the client using
-             * @param {string} parameters.xResourceId - a generic resource identifier
-             * @param {string} parameters.q - q
-             * @param {string} parameters.state - state
-             * @param {string} parameters.regionCode - regionCode
-             * @param {string} parameters.countryCode - countryCode
-             * @param {string} parameters.city - city
-             * @param {string} parameters.county - county
-             * @param {integer} parameters.offset - offset
-             * @param {integer} parameters.length - length
              * @param {integer} parameters.citationId - citationId
+             * @param {string} parameters.city - city
+             * @param {string} parameters.countryCode - countryCode
+             * @param {string} parameters.county - county
+             * @param {integer} parameters.length - length
+             * @param {integer} parameters.offset - offset
+             * @param {string} parameters.q - q
+             * @param {string} parameters.regionCode - regionCode
+             * @param {string} parameters.state - state
              */
             OtrService.prototype.findCourtsUsingGET = function(parameters) {
                 if (parameters === undefined) {
@@ -15322,50 +12220,44 @@ angular.module('otrBackendService', [])
                     form = {};
 
                 headers['Accept'] = ['*/*'];
-                headers['Content-Type'] = ['application/json'];
 
-                if (parameters['xFeature'] !== undefined) {
-                    headers['X-Feature'] = parameters['xFeature'];
-                }
-
-                if (parameters['xResourceId'] !== undefined) {
-                    headers['X-Resource-Id'] = parameters['xResourceId'];
-                }
-
-                if (parameters['q'] !== undefined) {
-                    queryParameters['q'] = parameters['q'];
-                }
-
-                if (parameters['state'] !== undefined) {
-                    queryParameters['state'] = parameters['state'];
-                }
-
-                if (parameters['regionCode'] !== undefined) {
-                    queryParameters['regionCode'] = parameters['regionCode'];
-                }
-
-                if (parameters['countryCode'] !== undefined) {
-                    queryParameters['countryCode'] = parameters['countryCode'];
+                if (parameters['citationId'] !== undefined) {
+                    queryParameters['citationId'] = parameters['citationId'];
                 }
 
                 if (parameters['city'] !== undefined) {
                     queryParameters['city'] = parameters['city'];
                 }
 
+                if (parameters['countryCode'] !== undefined) {
+                    queryParameters['countryCode'] = parameters['countryCode'];
+                }
+
                 if (parameters['county'] !== undefined) {
                     queryParameters['county'] = parameters['county'];
+                }
+
+                /** set default value **/
+                queryParameters['length'] = 9999;
+
+                if (parameters['length'] !== undefined) {
+                    queryParameters['length'] = parameters['length'];
                 }
 
                 if (parameters['offset'] !== undefined) {
                     queryParameters['offset'] = parameters['offset'];
                 }
 
-                if (parameters['length'] !== undefined) {
-                    queryParameters['length'] = parameters['length'];
+                if (parameters['q'] !== undefined) {
+                    queryParameters['q'] = parameters['q'];
                 }
 
-                if (parameters['citationId'] !== undefined) {
-                    queryParameters['citationId'] = parameters['citationId'];
+                if (parameters['regionCode'] !== undefined) {
+                    queryParameters['regionCode'] = parameters['regionCode'];
+                }
+
+                if (parameters['state'] !== undefined) {
+                    queryParameters['state'] = parameters['state'];
                 }
 
                 queryParameters = mergeQueryParams(parameters, queryParameters);
@@ -15379,12 +12271,10 @@ angular.module('otrBackendService', [])
              * @method
              * @name OtrService#getLawfirmCasesByPageUsingPOST
              * @param {object} parameters - method options and parameters
-             * @param {string} parameters.xFeature - which feature is the client using
-             * @param {string} parameters.xResourceId - a generic resource identifier
              * @param {string} parameters.lawfirmIdString - lawfirmIdString
-             * @param {} parameters.request - request
-             * @param {integer} parameters.page - page
              * @param {integer} parameters.length - length
+             * @param {integer} parameters.page - page
+             * @param {} parameters.request - request
              */
             OtrService.prototype.getLawfirmCasesByPageUsingPOST = function(parameters) {
                 if (parameters === undefined) {
@@ -15401,19 +12291,22 @@ angular.module('otrBackendService', [])
                 headers['Accept'] = ['*/*'];
                 headers['Content-Type'] = ['application/json'];
 
-                if (parameters['xFeature'] !== undefined) {
-                    headers['X-Feature'] = parameters['xFeature'];
-                }
-
-                if (parameters['xResourceId'] !== undefined) {
-                    headers['X-Resource-Id'] = parameters['xResourceId'];
-                }
-
                 path = path.replace('{lawfirmIdString}', parameters['lawfirmIdString']);
 
                 if (parameters['lawfirmIdString'] === undefined) {
                     deferred.reject(new Error('Missing required  parameter: lawfirmIdString'));
                     return deferred.promise;
+                }
+
+                /** set default value **/
+                queryParameters['length'] = 10;
+
+                if (parameters['length'] !== undefined) {
+                    queryParameters['length'] = parameters['length'];
+                }
+
+                if (parameters['page'] !== undefined) {
+                    queryParameters['page'] = parameters['page'];
                 }
 
                 if (parameters['request'] !== undefined) {
@@ -15423,14 +12316,6 @@ angular.module('otrBackendService', [])
                 if (parameters['request'] === undefined) {
                     deferred.reject(new Error('Missing required  parameter: request'));
                     return deferred.promise;
-                }
-
-                if (parameters['page'] !== undefined) {
-                    queryParameters['page'] = parameters['page'];
-                }
-
-                if (parameters['length'] !== undefined) {
-                    queryParameters['length'] = parameters['length'];
                 }
 
                 queryParameters = mergeQueryParams(parameters, queryParameters);
@@ -15444,10 +12329,8 @@ angular.module('otrBackendService', [])
              * @method
              * @name OtrService#removeCoverageUsingDELETE
              * @param {object} parameters - method options and parameters
-             * @param {string} parameters.xFeature - which feature is the client using
-             * @param {string} parameters.xResourceId - a generic resource identifier
-             * @param {string} parameters.lawfirmId - lawfirmId
              * @param {} parameters.courtsToRemove - courtsToRemove
+             * @param {string} parameters.lawfirmId - lawfirmId
              */
             OtrService.prototype.removeCoverageUsingDELETE = function(parameters) {
                 if (parameters === undefined) {
@@ -15462,22 +12345,6 @@ angular.module('otrBackendService', [])
                     form = {};
 
                 headers['Accept'] = ['*/*'];
-                headers['Content-Type'] = ['application/json'];
-
-                if (parameters['xFeature'] !== undefined) {
-                    headers['X-Feature'] = parameters['xFeature'];
-                }
-
-                if (parameters['xResourceId'] !== undefined) {
-                    headers['X-Resource-Id'] = parameters['xResourceId'];
-                }
-
-                path = path.replace('{lawfirmId}', parameters['lawfirmId']);
-
-                if (parameters['lawfirmId'] === undefined) {
-                    deferred.reject(new Error('Missing required  parameter: lawfirmId'));
-                    return deferred.promise;
-                }
 
                 if (parameters['courtsToRemove'] !== undefined) {
                     body = parameters['courtsToRemove'];
@@ -15485,6 +12352,13 @@ angular.module('otrBackendService', [])
 
                 if (parameters['courtsToRemove'] === undefined) {
                     deferred.reject(new Error('Missing required  parameter: courtsToRemove'));
+                    return deferred.promise;
+                }
+
+                path = path.replace('{lawfirmId}', parameters['lawfirmId']);
+
+                if (parameters['lawfirmId'] === undefined) {
+                    deferred.reject(new Error('Missing required  parameter: lawfirmId'));
                     return deferred.promise;
                 }
 
@@ -15499,8 +12373,6 @@ angular.module('otrBackendService', [])
              * @method
              * @name OtrService#getLawfirmFeeCoverageUsingGET
              * @param {object} parameters - method options and parameters
-             * @param {string} parameters.xFeature - which feature is the client using
-             * @param {string} parameters.xResourceId - a generic resource identifier
              * @param {string} parameters.lawfirmId - lawfirmId
              */
             OtrService.prototype.getLawfirmFeeCoverageUsingGET = function(parameters) {
@@ -15516,15 +12388,6 @@ angular.module('otrBackendService', [])
                     form = {};
 
                 headers['Accept'] = ['*/*'];
-                headers['Content-Type'] = ['application/json'];
-
-                if (parameters['xFeature'] !== undefined) {
-                    headers['X-Feature'] = parameters['xFeature'];
-                }
-
-                if (parameters['xResourceId'] !== undefined) {
-                    headers['X-Resource-Id'] = parameters['xResourceId'];
-                }
 
                 path = path.replace('{lawfirmId}', parameters['lawfirmId']);
 
@@ -15544,11 +12407,9 @@ angular.module('otrBackendService', [])
              * @method
              * @name OtrService#getLawfirmFinancialTransactionsUsingGET
              * @param {object} parameters - method options and parameters
-             * @param {string} parameters.xFeature - which feature is the client using
-             * @param {string} parameters.xResourceId - a generic resource identifier
              * @param {integer} parameters.lawfirmId - lawfirmId
-             * @param {integer} parameters.page - page
              * @param {integer} parameters.length - length
+             * @param {integer} parameters.page - page
              */
             OtrService.prototype.getLawfirmFinancialTransactionsUsingGET = function(parameters) {
                 if (parameters === undefined) {
@@ -15563,15 +12424,6 @@ angular.module('otrBackendService', [])
                     form = {};
 
                 headers['Accept'] = ['*/*'];
-                headers['Content-Type'] = ['application/json'];
-
-                if (parameters['xFeature'] !== undefined) {
-                    headers['X-Feature'] = parameters['xFeature'];
-                }
-
-                if (parameters['xResourceId'] !== undefined) {
-                    headers['X-Resource-Id'] = parameters['xResourceId'];
-                }
 
                 path = path.replace('{lawfirmId}', parameters['lawfirmId']);
 
@@ -15580,12 +12432,18 @@ angular.module('otrBackendService', [])
                     return deferred.promise;
                 }
 
-                if (parameters['page'] !== undefined) {
-                    queryParameters['page'] = parameters['page'];
-                }
+                /** set default value **/
+                queryParameters['length'] = 100;
 
                 if (parameters['length'] !== undefined) {
                     queryParameters['length'] = parameters['length'];
+                }
+
+                /** set default value **/
+                queryParameters['page'] = 1;
+
+                if (parameters['page'] !== undefined) {
+                    queryParameters['page'] = parameters['page'];
                 }
 
                 queryParameters = mergeQueryParams(parameters, queryParameters);
@@ -15599,8 +12457,6 @@ angular.module('otrBackendService', [])
              * @method
              * @name OtrService#markPageTypesAsReadUsingDELETE
              * @param {object} parameters - method options and parameters
-             * @param {string} parameters.xFeature - which feature is the client using
-             * @param {string} parameters.xResourceId - a generic resource identifier
              * @param {string} parameters.caseId - caseId
              * @param {} parameters.request - request
              */
@@ -15617,15 +12473,6 @@ angular.module('otrBackendService', [])
                     form = {};
 
                 headers['Accept'] = ['*/*'];
-                headers['Content-Type'] = ['application/json'];
-
-                if (parameters['xFeature'] !== undefined) {
-                    headers['X-Feature'] = parameters['xFeature'];
-                }
-
-                if (parameters['xResourceId'] !== undefined) {
-                    headers['X-Resource-Id'] = parameters['xResourceId'];
-                }
 
                 path = path.replace('{caseId}', parameters['caseId']);
 
@@ -15654,8 +12501,6 @@ angular.module('otrBackendService', [])
              * @method
              * @name OtrService#getUserCasesUsingGET
              * @param {object} parameters - method options and parameters
-             * @param {string} parameters.xFeature - which feature is the client using
-             * @param {string} parameters.xResourceId - a generic resource identifier
              * @param {integer} parameters.userId - userId
              */
             OtrService.prototype.getUserCasesUsingGET = function(parameters) {
@@ -15671,15 +12516,6 @@ angular.module('otrBackendService', [])
                     form = {};
 
                 headers['Accept'] = ['*/*'];
-                headers['Content-Type'] = ['application/json'];
-
-                if (parameters['xFeature'] !== undefined) {
-                    headers['X-Feature'] = parameters['xFeature'];
-                }
-
-                if (parameters['xResourceId'] !== undefined) {
-                    headers['X-Resource-Id'] = parameters['xResourceId'];
-                }
 
                 path = path.replace('{userId}', parameters['userId']);
 
@@ -15699,12 +12535,10 @@ angular.module('otrBackendService', [])
              * @method
              * @name OtrService#listDashboardCasesUsingGET
              * @param {object} parameters - method options and parameters
-             * @param {string} parameters.xFeature - which feature is the client using
-             * @param {string} parameters.xResourceId - a generic resource identifier
-             * @param {integer} parameters.userId - userId
              * @param {integer} parameters.limit - limit
              * @param {string} parameters.previousPageToken - previousPageToken
              * @param {array} parameters.statusCategories - statusCategories
+             * @param {integer} parameters.userId - userId
              */
             OtrService.prototype.listDashboardCasesUsingGET = function(parameters) {
                 if (parameters === undefined) {
@@ -15719,22 +12553,9 @@ angular.module('otrBackendService', [])
                     form = {};
 
                 headers['Accept'] = ['*/*'];
-                headers['Content-Type'] = ['application/json'];
 
-                if (parameters['xFeature'] !== undefined) {
-                    headers['X-Feature'] = parameters['xFeature'];
-                }
-
-                if (parameters['xResourceId'] !== undefined) {
-                    headers['X-Resource-Id'] = parameters['xResourceId'];
-                }
-
-                path = path.replace('{userId}', parameters['userId']);
-
-                if (parameters['userId'] === undefined) {
-                    deferred.reject(new Error('Missing required  parameter: userId'));
-                    return deferred.promise;
-                }
+                /** set default value **/
+                queryParameters['limit'] = 50;
 
                 if (parameters['limit'] !== undefined) {
                     queryParameters['limit'] = parameters['limit'];
@@ -15748,6 +12569,13 @@ angular.module('otrBackendService', [])
                     queryParameters['statusCategories'] = parameters['statusCategories'];
                 }
 
+                path = path.replace('{userId}', parameters['userId']);
+
+                if (parameters['userId'] === undefined) {
+                    deferred.reject(new Error('Missing required  parameter: userId'));
+                    return deferred.promise;
+                }
+
                 queryParameters = mergeQueryParams(parameters, queryParameters);
 
                 this.request('GET', domain + path, parameters, body, headers, queryParameters, form, deferred);
@@ -15759,8 +12587,6 @@ angular.module('otrBackendService', [])
              * @method
              * @name OtrService#deleteActionFromCaseUsingDELETE
              * @param {object} parameters - method options and parameters
-             * @param {string} parameters.xFeature - which feature is the client using
-             * @param {string} parameters.xResourceId - a generic resource identifier
              * @param {string} parameters.caseActionIdString - caseActionIdString
              * @param {string} parameters.caseId - caseId
              */
@@ -15777,15 +12603,6 @@ angular.module('otrBackendService', [])
                     form = {};
 
                 headers['Accept'] = ['*/*'];
-                headers['Content-Type'] = ['application/json'];
-
-                if (parameters['xFeature'] !== undefined) {
-                    headers['X-Feature'] = parameters['xFeature'];
-                }
-
-                if (parameters['xResourceId'] !== undefined) {
-                    headers['X-Resource-Id'] = parameters['xResourceId'];
-                }
 
                 path = path.replace('{caseActionIdString}', parameters['caseActionIdString']);
 
