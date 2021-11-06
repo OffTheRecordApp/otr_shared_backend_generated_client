@@ -22,6 +22,6 @@
   },
   "dependencies": {
     "swagger-js-react-native-codegen": "0.1.4",
-    "swagger-typescript-codegen": "^1.9.5"
+    "swagger-typescript-codegen": "^1.11.0"
   }
 }
