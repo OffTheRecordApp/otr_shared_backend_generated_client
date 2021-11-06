@@ -1,15 +1,15 @@
 'use strict';
 
-var fs      = require('file-system');
-var gulp    = require('gulp');
-var gutil   = require('gulp-util');
+const fs = require('file-system');
+const gulp    = require('gulp');
+const gutil   = require('gulp-util');
 
-var uglify  = require('gulp-uglify');
-var notify  = require('gulp-notify');
-var rename  = require('gulp-rename');
-var del     = require('del');
+const uglify  = require('gulp-uglify');
+const notify  = require('gulp-notify');
+const rename  = require('gulp-rename');
+const del     = require('del');
 
-var apis = [
+let apis = [
         {
             swagger: 'api/otr-service.json',
             moduleName: 'otrBackendService',
@@ -17,25 +17,25 @@ var apis = [
         }
 ];
 
-gulp.task('clean', function(){
-    del(['dist']).then(function(paths) {
+function clean() {
+    return del(['dist']).then(function(paths) {
         console.log("Deleted files and folders:\n" + paths.join('\n'));
     });
-});
+}
 
-gulp.task('otr-angular', function(done){
+function otrAngular(done) {
     
-    var CodeGen = require('swagger-js-codegen').CodeGen;
-    var dest = 'dist';
-    apis.forEach(function(api){
-        var swagger = JSON.parse(fs.readFileSync(api.swagger, 'utf-8'));
-        var source = CodeGen.getAngularCode({ moduleName: api.moduleName, className: api.className, swagger: swagger });
+    let CodeGen = require('swagger-js-codegen').CodeGen;
+    let dest = 'dist';
+    apis.forEach(function(api) {
+        let swagger = JSON.parse(fs.readFileSync(api.swagger, 'utf-8'));
+        let source = CodeGen.getAngularCode({ moduleName: api.moduleName, className: api.className, swagger: swagger });
         gutil.log('Generated ' + api.moduleName + '.js from ' + api.swagger);
 
-        var generatedApiFile = dest + '/' + api.moduleName + '.js';
+        let generatedApiFile = dest + '/' + api.moduleName + '.js';
         fs.writeFileSync(generatedApiFile, source, 'UTF-8');
 
-        //var otherSources = 'input/**/*.js';
+        //let otherSources = 'input/**/*.js';
 
         gulp.src([generatedApiFile]) //otherSources])
             //.pipe(concat('concat.js'))
@@ -50,7 +50,7 @@ gulp.task('otr-angular', function(done){
 
     });
     done();
-});
+}
 
-
-gulp.task('codegen', ['otr-angular']);
+exports.codegen = gulp.series(otrAngular);
+exports.default = exports.codegen;
