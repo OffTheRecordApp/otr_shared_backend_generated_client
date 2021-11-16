@@ -113,10 +113,10 @@ angular.module('otrBackendService', [])
             /**
              * unmappedRequest
              * @method
-             * @name OtrService#unmappedRequestUsingGET_1
+             * @name OtrService#unmappedRequestUsingGET
              * @param {object} parameters - method options and parameters
              */
-            OtrService.prototype.unmappedRequestUsingGET_1 = function(parameters) {
+            OtrService.prototype.unmappedRequestUsingGET = function(parameters) {
                 if (parameters === undefined) {
                     parameters = {};
                 }
@@ -139,10 +139,10 @@ angular.module('otrBackendService', [])
             /**
              * unmappedRequest
              * @method
-             * @name OtrService#unmappedRequestUsingHEAD_1
+             * @name OtrService#unmappedRequestUsingHEAD
              * @param {object} parameters - method options and parameters
              */
-            OtrService.prototype.unmappedRequestUsingHEAD_1 = function(parameters) {
+            OtrService.prototype.unmappedRequestUsingHEAD = function(parameters) {
                 if (parameters === undefined) {
                     parameters = {};
                 }
@@ -166,10 +166,10 @@ angular.module('otrBackendService', [])
             /**
              * unmappedRequest
              * @method
-             * @name OtrService#unmappedRequestUsingPOST_1
+             * @name OtrService#unmappedRequestUsingPOST
              * @param {object} parameters - method options and parameters
              */
-            OtrService.prototype.unmappedRequestUsingPOST_1 = function(parameters) {
+            OtrService.prototype.unmappedRequestUsingPOST = function(parameters) {
                 if (parameters === undefined) {
                     parameters = {};
                 }
@@ -193,10 +193,10 @@ angular.module('otrBackendService', [])
             /**
              * unmappedRequest
              * @method
-             * @name OtrService#unmappedRequestUsingPUT_1
+             * @name OtrService#unmappedRequestUsingPUT
              * @param {object} parameters - method options and parameters
              */
-            OtrService.prototype.unmappedRequestUsingPUT_1 = function(parameters) {
+            OtrService.prototype.unmappedRequestUsingPUT = function(parameters) {
                 if (parameters === undefined) {
                     parameters = {};
                 }
@@ -220,10 +220,10 @@ angular.module('otrBackendService', [])
             /**
              * unmappedRequest
              * @method
-             * @name OtrService#unmappedRequestUsingDELETE_1
+             * @name OtrService#unmappedRequestUsingDELETE
              * @param {object} parameters - method options and parameters
              */
-            OtrService.prototype.unmappedRequestUsingDELETE_1 = function(parameters) {
+            OtrService.prototype.unmappedRequestUsingDELETE = function(parameters) {
                 if (parameters === undefined) {
                     parameters = {};
                 }
@@ -246,10 +246,10 @@ angular.module('otrBackendService', [])
             /**
              * unmappedRequest
              * @method
-             * @name OtrService#unmappedRequestUsingOPTIONS_1
+             * @name OtrService#unmappedRequestUsingOPTIONS
              * @param {object} parameters - method options and parameters
              */
-            OtrService.prototype.unmappedRequestUsingOPTIONS_1 = function(parameters) {
+            OtrService.prototype.unmappedRequestUsingOPTIONS = function(parameters) {
                 if (parameters === undefined) {
                     parameters = {};
                 }
@@ -273,10 +273,10 @@ angular.module('otrBackendService', [])
             /**
              * unmappedRequest
              * @method
-             * @name OtrService#unmappedRequestUsingPATCH_1
+             * @name OtrService#unmappedRequestUsingPATCH
              * @param {object} parameters - method options and parameters
              */
-            OtrService.prototype.unmappedRequestUsingPATCH_1 = function(parameters) {
+            OtrService.prototype.unmappedRequestUsingPATCH = function(parameters) {
                 if (parameters === undefined) {
                     parameters = {};
                 }
@@ -4571,9 +4571,6 @@ angular.module('otrBackendService', [])
                     form = {};
 
                 headers['Accept'] = ['*/*'];
-
-                /** set default value **/
-                queryParameters['countryCode'] = US;
 
                 if (parameters['countryCode'] !== undefined) {
                     queryParameters['countryCode'] = parameters['countryCode'];
@@ -9864,6 +9861,70 @@ angular.module('otrBackendService', [])
                 return deferred.promise;
             };
             /**
+             * handleStripeWebhookFromLawfirmAccount
+             * @method
+             * @name OtrService#handleStripeWebhookFromLawfirmAccountUsingPOST
+             * @param {object} parameters - method options and parameters
+             * @param {} parameters.request - request
+             */
+            OtrService.prototype.handleStripeWebhookFromLawfirmAccountUsingPOST = function(parameters) {
+                if (parameters === undefined) {
+                    parameters = {};
+                }
+                var deferred = $q.defer();
+                var domain = this.domain,
+                    path = '/api/v1/stripe/acct_15jGPnDVzhogLb0T/webhook';
+                var body = {},
+                    queryParameters = {},
+                    headers = {},
+                    form = {};
+
+                headers['Accept'] = ['*/*'];
+                headers['Content-Type'] = ['application/json'];
+
+                if (parameters['request'] !== undefined) {
+                    body = parameters['request'];
+                }
+
+                queryParameters = mergeQueryParams(parameters, queryParameters);
+
+                this.request('POST', domain + path, parameters, body, headers, queryParameters, form, deferred);
+
+                return deferred.promise;
+            };
+            /**
+             * handleStripeWebhookFromOTRAccount
+             * @method
+             * @name OtrService#handleStripeWebhookFromOTRAccountUsingPOST
+             * @param {object} parameters - method options and parameters
+             * @param {} parameters.request - request
+             */
+            OtrService.prototype.handleStripeWebhookFromOTRAccountUsingPOST = function(parameters) {
+                if (parameters === undefined) {
+                    parameters = {};
+                }
+                var deferred = $q.defer();
+                var domain = this.domain,
+                    path = '/api/v1/stripe/acct_15jGdjA1uVHZiLuV/webhook';
+                var body = {},
+                    queryParameters = {},
+                    headers = {},
+                    form = {};
+
+                headers['Accept'] = ['*/*'];
+                headers['Content-Type'] = ['application/json'];
+
+                if (parameters['request'] !== undefined) {
+                    body = parameters['request'];
+                }
+
+                queryParameters = mergeQueryParams(parameters, queryParameters);
+
+                this.request('POST', domain + path, parameters, body, headers, queryParameters, form, deferred);
+
+                return deferred.promise;
+            };
+            /**
              * connectStripeAccount
              * @method
              * @name OtrService#connectStripeAccountUsingPOST
@@ -10110,38 +10171,6 @@ angular.module('otrBackendService', [])
                 if (parameters['request'] === undefined) {
                     deferred.reject(new Error('Missing required  parameter: request'));
                     return deferred.promise;
-                }
-
-                queryParameters = mergeQueryParams(parameters, queryParameters);
-
-                this.request('POST', domain + path, parameters, body, headers, queryParameters, form, deferred);
-
-                return deferred.promise;
-            };
-            /**
-             * handleStripeWebhook
-             * @method
-             * @name OtrService#handleStripeWebhookUsingPOST
-             * @param {object} parameters - method options and parameters
-             * @param {} parameters.request - request
-             */
-            OtrService.prototype.handleStripeWebhookUsingPOST = function(parameters) {
-                if (parameters === undefined) {
-                    parameters = {};
-                }
-                var deferred = $q.defer();
-                var domain = this.domain,
-                    path = '/api/v1/stripe/webhook';
-                var body = {},
-                    queryParameters = {},
-                    headers = {},
-                    form = {};
-
-                headers['Accept'] = ['*/*'];
-                headers['Content-Type'] = ['application/json'];
-
-                if (parameters['request'] !== undefined) {
-                    body = parameters['request'];
                 }
 
                 queryParameters = mergeQueryParams(parameters, queryParameters);
@@ -11918,6 +11947,40 @@ angular.module('otrBackendService', [])
                 queryParameters = mergeQueryParams(parameters, queryParameters);
 
                 this.request('PUT', domain + path, parameters, body, headers, queryParameters, form, deferred);
+
+                return deferred.promise;
+            };
+            /**
+             * deleteViolation
+             * @method
+             * @name OtrService#deleteViolationUsingDELETE
+             * @param {object} parameters - method options and parameters
+             * @param {integer} parameters.violationId - violationId
+             */
+            OtrService.prototype.deleteViolationUsingDELETE = function(parameters) {
+                if (parameters === undefined) {
+                    parameters = {};
+                }
+                var deferred = $q.defer();
+                var domain = this.domain,
+                    path = '/api/v1/violations/{violationId}';
+                var body = {},
+                    queryParameters = {},
+                    headers = {},
+                    form = {};
+
+                headers['Accept'] = ['*/*'];
+
+                path = path.replace('{violationId}', parameters['violationId']);
+
+                if (parameters['violationId'] === undefined) {
+                    deferred.reject(new Error('Missing required  parameter: violationId'));
+                    return deferred.promise;
+                }
+
+                queryParameters = mergeQueryParams(parameters, queryParameters);
+
+                this.request('DELETE', domain + path, parameters, body, headers, queryParameters, form, deferred);
 
                 return deferred.promise;
             };
