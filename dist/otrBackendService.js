@@ -10372,6 +10372,43 @@ angular.module('otrBackendService', [])
                 return deferred.promise;
             };
             /**
+             * syncStripePayments
+             * @method
+             * @name OtrService#syncStripePaymentsUsingPOST
+             * @param {object} parameters - method options and parameters
+             * @param {} parameters.request - request
+             */
+            OtrService.prototype.syncStripePaymentsUsingPOST = function(parameters) {
+                if (parameters === undefined) {
+                    parameters = {};
+                }
+                var deferred = $q.defer();
+                var domain = this.domain,
+                    path = '/api/v1/stripe/payments/sync';
+                var body = {},
+                    queryParameters = {},
+                    headers = {},
+                    form = {};
+
+                headers['Accept'] = ['*/*'];
+                headers['Content-Type'] = ['application/json'];
+
+                if (parameters['request'] !== undefined) {
+                    body = parameters['request'];
+                }
+
+                if (parameters['request'] === undefined) {
+                    deferred.reject(new Error('Missing required  parameter: request'));
+                    return deferred.promise;
+                }
+
+                queryParameters = mergeQueryParams(parameters, queryParameters);
+
+                this.request('POST', domain + path, parameters, body, headers, queryParameters, form, deferred);
+
+                return deferred.promise;
+            };
+            /**
              * syncStripeCharges
              * @method
              * @name OtrService#syncStripeChargesUsingPOST
@@ -10385,6 +10422,43 @@ angular.module('otrBackendService', [])
                 var deferred = $q.defer();
                 var domain = this.domain,
                     path = '/api/v1/stripe/sync-stripe-charges';
+                var body = {},
+                    queryParameters = {},
+                    headers = {},
+                    form = {};
+
+                headers['Accept'] = ['*/*'];
+                headers['Content-Type'] = ['application/json'];
+
+                if (parameters['request'] !== undefined) {
+                    body = parameters['request'];
+                }
+
+                if (parameters['request'] === undefined) {
+                    deferred.reject(new Error('Missing required  parameter: request'));
+                    return deferred.promise;
+                }
+
+                queryParameters = mergeQueryParams(parameters, queryParameters);
+
+                this.request('POST', domain + path, parameters, body, headers, queryParameters, form, deferred);
+
+                return deferred.promise;
+            };
+            /**
+             * syncStripeTransfers
+             * @method
+             * @name OtrService#syncStripeTransfersUsingPOST
+             * @param {object} parameters - method options and parameters
+             * @param {} parameters.request - request
+             */
+            OtrService.prototype.syncStripeTransfersUsingPOST = function(parameters) {
+                if (parameters === undefined) {
+                    parameters = {};
+                }
+                var deferred = $q.defer();
+                var domain = this.domain,
+                    path = '/api/v1/stripe/transfers/sync';
                 var body = {},
                     queryParameters = {},
                     headers = {},
@@ -10838,6 +10912,43 @@ angular.module('otrBackendService', [])
                 return deferred.promise;
             };
             /**
+             * sendAccountVerificationCode
+             * @method
+             * @name OtrService#sendAccountVerificationCodeUsingPOST
+             * @param {object} parameters - method options and parameters
+             * @param {string} parameters.email - email
+             */
+            OtrService.prototype.sendAccountVerificationCodeUsingPOST = function(parameters) {
+                if (parameters === undefined) {
+                    parameters = {};
+                }
+                var deferred = $q.defer();
+                var domain = this.domain,
+                    path = '/api/v1/users/send-verification-code';
+                var body = {},
+                    queryParameters = {},
+                    headers = {},
+                    form = {};
+
+                headers['Accept'] = ['*/*'];
+                headers['Content-Type'] = ['application/json'];
+
+                if (parameters['email'] !== undefined) {
+                    queryParameters['email'] = parameters['email'];
+                }
+
+                if (parameters['email'] === undefined) {
+                    deferred.reject(new Error('Missing required  parameter: email'));
+                    return deferred.promise;
+                }
+
+                queryParameters = mergeQueryParams(parameters, queryParameters);
+
+                this.request('POST', domain + path, parameters, body, headers, queryParameters, form, deferred);
+
+                return deferred.promise;
+            };
+            /**
              * addCardToStripeAccount
              * @method
              * @name OtrService#addCardToStripeAccountUsingPOST
@@ -10962,6 +11073,52 @@ angular.module('otrBackendService', [])
                     form = {};
 
                 headers['Accept'] = ['*/*'];
+
+                if (parameters['email'] !== undefined) {
+                    queryParameters['email'] = parameters['email'];
+                }
+
+                if (parameters['email'] === undefined) {
+                    deferred.reject(new Error('Missing required  parameter: email'));
+                    return deferred.promise;
+                }
+
+                queryParameters = mergeQueryParams(parameters, queryParameters);
+
+                this.request('GET', domain + path, parameters, body, headers, queryParameters, form, deferred);
+
+                return deferred.promise;
+            };
+            /**
+             * verifyUserAccount
+             * @method
+             * @name OtrService#verifyUserAccountUsingGET
+             * @param {object} parameters - method options and parameters
+             * @param {string} parameters.code - code
+             * @param {string} parameters.email - email
+             */
+            OtrService.prototype.verifyUserAccountUsingGET = function(parameters) {
+                if (parameters === undefined) {
+                    parameters = {};
+                }
+                var deferred = $q.defer();
+                var domain = this.domain,
+                    path = '/api/v1/users/verify-account';
+                var body = {},
+                    queryParameters = {},
+                    headers = {},
+                    form = {};
+
+                headers['Accept'] = ['*/*'];
+
+                if (parameters['code'] !== undefined) {
+                    queryParameters['code'] = parameters['code'];
+                }
+
+                if (parameters['code'] === undefined) {
+                    deferred.reject(new Error('Missing required  parameter: code'));
+                    return deferred.promise;
+                }
 
                 if (parameters['email'] !== undefined) {
                     queryParameters['email'] = parameters['email'];
@@ -11914,6 +12071,7 @@ angular.module('otrBackendService', [])
              * @param {boolean} parameters.lawfirmTransactionsStatus - lawfirmTransactionsStatus
              * @param {boolean} parameters.missingChargesStatus - missingChargesStatus
              * @param {boolean} parameters.syncStatus - syncStatus
+             * @param {boolean} parameters.syncStripeConnectedAccountsStatus - syncStripeConnectedAccountsStatus
              */
             OtrService.prototype.setStatusUsingPOST = function(parameters) {
                 if (parameters === undefined) {
@@ -11940,6 +12098,10 @@ angular.module('otrBackendService', [])
 
                 if (parameters['syncStatus'] !== undefined) {
                     queryParameters['syncStatus'] = parameters['syncStatus'];
+                }
+
+                if (parameters['syncStripeConnectedAccountsStatus'] !== undefined) {
+                    queryParameters['syncStripeConnectedAccountsStatus'] = parameters['syncStripeConnectedAccountsStatus'];
                 }
 
                 queryParameters = mergeQueryParams(parameters, queryParameters);
