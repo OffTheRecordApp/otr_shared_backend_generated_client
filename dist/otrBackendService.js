@@ -10879,7 +10879,7 @@ angular.module('otrBackendService', [])
              * @method
              * @name OtrService#sendAccountVerificationCodeUsingPOST
              * @param {object} parameters - method options and parameters
-             * @param {string} parameters.email - email
+             * @param {string} parameters.userId - userId
              */
             OtrService.prototype.sendAccountVerificationCodeUsingPOST = function(parameters) {
                 if (parameters === undefined) {
@@ -10896,12 +10896,12 @@ angular.module('otrBackendService', [])
                 headers['Accept'] = ['*/*'];
                 headers['Content-Type'] = ['application/json'];
 
-                if (parameters['email'] !== undefined) {
-                    queryParameters['email'] = parameters['email'];
+                if (parameters['userId'] !== undefined) {
+                    queryParameters['userId'] = parameters['userId'];
                 }
 
-                if (parameters['email'] === undefined) {
-                    deferred.reject(new Error('Missing required  parameter: email'));
+                if (parameters['userId'] === undefined) {
+                    deferred.reject(new Error('Missing required  parameter: userId'));
                     return deferred.promise;
                 }
 
