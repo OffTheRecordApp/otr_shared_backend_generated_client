@@ -1,11 +1,16 @@
 {
-  "name": "otr-js-service-shared",
-  "version": "1.0.6",
+  "name": "@otr-app/shared-backend-generated-client",
+  "version": "1.0.0",
+  "main": "dist/otrBackendService.min.js",
+  "files": [
+    "/dist"
+  ],
   "description": "Generate client-side and service-side code using swagger CLI",
   "homepage": "https://offtherecord.com",
   "author": "Off the Record, Inc.",
   "scripts": {
-    "otr-client-typescript": "openapi-generator generate -i api/otr-service.json -g typescript-angularjs -o dist/otr-ts-client"
+    "generate-devo": "curl https://otr-backend-service-us-devo.offtherecord.com/v2/api-docs -o api/otr-service.json",
+    "prepublishOnly": "gulp codegen"
   },
   "devDependencies": {
     "@openapitools/openapi-generator-cli": "^1.0.13-4.3.1",
