@@ -11578,6 +11578,91 @@ angular.module('otrBackendService', [])
                 return deferred.promise;
             };
             /**
+             * removeAdditionalUserHandle
+             * @method
+             * @name OtrService#removeAdditionalUserHandleUsingDELETE
+             * @param {object} parameters - method options and parameters
+             * @param {string} parameters.userHandle - userHandle
+             * @param {integer} parameters.userId - userId
+             */
+            OtrService.prototype.removeAdditionalUserHandleUsingDELETE = function(parameters) {
+                if (parameters === undefined) {
+                    parameters = {};
+                }
+                var deferred = $q.defer();
+                var domain = this.domain,
+                    path = '/api/v1/users/{userId}/accounts/{userHandle}';
+                var body = {},
+                    queryParameters = {},
+                    headers = {},
+                    form = {};
+
+                headers['Accept'] = ['*/*'];
+
+                path = path.replace('{userHandle}', parameters['userHandle']);
+
+                if (parameters['userHandle'] === undefined) {
+                    deferred.reject(new Error('Missing required  parameter: userHandle'));
+                    return deferred.promise;
+                }
+
+                path = path.replace('{userId}', parameters['userId']);
+
+                if (parameters['userId'] === undefined) {
+                    deferred.reject(new Error('Missing required  parameter: userId'));
+                    return deferred.promise;
+                }
+
+                queryParameters = mergeQueryParams(parameters, queryParameters);
+
+                this.request('DELETE', domain + path, parameters, body, headers, queryParameters, form, deferred);
+
+                return deferred.promise;
+            };
+            /**
+             * setPrimaryUserHandle
+             * @method
+             * @name OtrService#setPrimaryUserHandleUsingPUT
+             * @param {object} parameters - method options and parameters
+             * @param {string} parameters.userHandle - userHandle
+             * @param {integer} parameters.userId - userId
+             */
+            OtrService.prototype.setPrimaryUserHandleUsingPUT = function(parameters) {
+                if (parameters === undefined) {
+                    parameters = {};
+                }
+                var deferred = $q.defer();
+                var domain = this.domain,
+                    path = '/api/v1/users/{userId}/accounts/{userHandle}/set-primary-user-handle';
+                var body = {},
+                    queryParameters = {},
+                    headers = {},
+                    form = {};
+
+                headers['Accept'] = ['*/*'];
+                headers['Content-Type'] = ['application/json'];
+
+                path = path.replace('{userHandle}', parameters['userHandle']);
+
+                if (parameters['userHandle'] === undefined) {
+                    deferred.reject(new Error('Missing required  parameter: userHandle'));
+                    return deferred.promise;
+                }
+
+                path = path.replace('{userId}', parameters['userId']);
+
+                if (parameters['userId'] === undefined) {
+                    deferred.reject(new Error('Missing required  parameter: userId'));
+                    return deferred.promise;
+                }
+
+                queryParameters = mergeQueryParams(parameters, queryParameters);
+
+                this.request('PUT', domain + path, parameters, body, headers, queryParameters, form, deferred);
+
+                return deferred.promise;
+            };
+            /**
              * getUserAddresses
              * @method
              * @name OtrService#getUserAddressesUsingGET
