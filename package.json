@@ -9,7 +9,8 @@
   "homepage": "https://offtherecord.com",
   "author": "Off the Record, Inc.",
   "scripts": {
-    "generate-devo": "curl https://otr-backend-service-us-devo.offtherecord.com/v2/api-docs -o api/otr-service.json",
+    "generate:devo": "curl https://otr-backend-service-us-devo.offtherecord.com/v2/api-docs -o api/otr-service.json && gulp codegen",
+    "generate:local": "curl http://localhost:8080/v2/api-docs -o api/otr-service.json && gulp codegen",
     "prepublishOnly": "gulp codegen"
   },
   "devDependencies": {
