@@ -1,4 +1,4 @@
-# Module
+# Import
 In your app.js, inject the otrBackendService module
 
 ```js
@@ -30,31 +30,32 @@ var otrService = new OtrService({domain: ENV.apiEndpoint})
 - E.g. getCaseUsingGET, confirmBookingUsingPOST, and etc...
 
 ```js
-otrService.getCaseUsingGET({caseId: caseId})
-    .then(
-        function(responseSuccess) {
-        
-        },
-        
-        function(errorResponse) {
-        
-        }
-    );
+let responseSuccess = await otrService.getCaseUsingGET({caseId: caseId});
 ```
 
 ## Error Handling
 
 - Sample Code
 
-```js
-otrService.getCaseUsingGET({caseId: caseId})
-    .then(
-        function(response) {
-        
-        },
-        function(error) {
-            var uiErrorMsg = error.body.error.uiErrorMsg;
-            ...
-        }
-    );
+```typescript
+try {
+    await otrService.getCaseUsingGET({caseId: caseId})
+} catch(error) {
+    const uiErrorMsg = error.body.error.uiErrorMsg;
+}
 ```
+
+## How to upgrade the generated AngularJS client
+1. 
+   Generate the JSON models and endpoints from devo
+   ``` npm run generate:devo```
+   1. OR generate the JSON models and endpoints from local server
+   ``` npm run generate:local```
+2. Optional: Sanity check the differences in otrBackendService.js
+3. Commit the changes and push to github
+4. Update the version number in package.json
+5. Execute ```npm publish```
+   1. Make sure you are authenticated with npm under the @otr-app organization
+      1. ```npm login --scope=@otr-app```
+      2. Run step 5 again
+6. Done.
