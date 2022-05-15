@@ -502,6 +502,190 @@ angular.module('otrBackendService', [])
                 return deferred.promise;
             };
             /**
+             * listBillingProducts
+             * @method
+             * @name OtrService#listBillingProductsUsingGET
+             * @param {object} parameters - method options and parameters
+             * @param {boolean} parameters.active - active
+             * @param {string} parameters.audience - audience
+             * @param {integer} parameters.limit - limit
+             */
+            OtrService.prototype.listBillingProductsUsingGET = function(parameters) {
+                if (parameters === undefined) {
+                    parameters = {};
+                }
+                var deferred = $q.defer();
+                var domain = this.domain,
+                    path = '/api/v1/billing/products';
+                var body = {},
+                    queryParameters = {},
+                    headers = {},
+                    form = {};
+
+                headers['Accept'] = ['*/*'];
+
+                /** set default value **/
+                queryParameters['active'] = true;
+
+                if (parameters['active'] !== undefined) {
+                    queryParameters['active'] = parameters['active'];
+                }
+
+                if (parameters['audience'] !== undefined) {
+                    queryParameters['audience'] = parameters['audience'];
+                }
+
+                /** set default value **/
+                queryParameters['limit'] = 10;
+
+                if (parameters['limit'] !== undefined) {
+                    queryParameters['limit'] = parameters['limit'];
+                }
+
+                queryParameters = mergeQueryParams(parameters, queryParameters);
+
+                this.request('GET', domain + path, parameters, body, headers, queryParameters, form, deferred);
+
+                return deferred.promise;
+            };
+            /**
+             * listBillingSubscriptions
+             * @method
+             * @name OtrService#listBillingSubscriptionsUsingGET
+             * @param {object} parameters - method options and parameters
+             * @param {boolean} parameters.includeInactive - includeInactive
+             * @param {integer} parameters.userId - userId
+             */
+            OtrService.prototype.listBillingSubscriptionsUsingGET = function(parameters) {
+                if (parameters === undefined) {
+                    parameters = {};
+                }
+                var deferred = $q.defer();
+                var domain = this.domain,
+                    path = '/api/v1/billing/{userId}/subscriptions';
+                var body = {},
+                    queryParameters = {},
+                    headers = {},
+                    form = {};
+
+                headers['Accept'] = ['*/*'];
+
+                /** set default value **/
+                queryParameters['includeInactive'] = true;
+
+                if (parameters['includeInactive'] !== undefined) {
+                    queryParameters['includeInactive'] = parameters['includeInactive'];
+                }
+
+                path = path.replace('{userId}', parameters['userId']);
+
+                if (parameters['userId'] === undefined) {
+                    deferred.reject(new Error('Missing required  parameter: userId'));
+                    return deferred.promise;
+                }
+
+                queryParameters = mergeQueryParams(parameters, queryParameters);
+
+                this.request('GET', domain + path, parameters, body, headers, queryParameters, form, deferred);
+
+                return deferred.promise;
+            };
+            /**
+             * createBillingSubscription
+             * @method
+             * @name OtrService#createBillingSubscriptionUsingPOST
+             * @param {object} parameters - method options and parameters
+             * @param {} parameters.request - request
+             * @param {integer} parameters.userId - userId
+             */
+            OtrService.prototype.createBillingSubscriptionUsingPOST = function(parameters) {
+                if (parameters === undefined) {
+                    parameters = {};
+                }
+                var deferred = $q.defer();
+                var domain = this.domain,
+                    path = '/api/v1/billing/{userId}/subscriptions';
+                var body = {},
+                    queryParameters = {},
+                    headers = {},
+                    form = {};
+
+                headers['Accept'] = ['*/*'];
+                headers['Content-Type'] = ['application/json'];
+
+                if (parameters['request'] !== undefined) {
+                    body = parameters['request'];
+                }
+
+                if (parameters['request'] === undefined) {
+                    deferred.reject(new Error('Missing required  parameter: request'));
+                    return deferred.promise;
+                }
+
+                path = path.replace('{userId}', parameters['userId']);
+
+                if (parameters['userId'] === undefined) {
+                    deferred.reject(new Error('Missing required  parameter: userId'));
+                    return deferred.promise;
+                }
+
+                queryParameters = mergeQueryParams(parameters, queryParameters);
+
+                this.request('POST', domain + path, parameters, body, headers, queryParameters, form, deferred);
+
+                return deferred.promise;
+            };
+            /**
+             * cancelBillingSubscription
+             * @method
+             * @name OtrService#cancelBillingSubscriptionUsingDELETE
+             * @param {object} parameters - method options and parameters
+             * @param {string} parameters.id - id
+             * @param {boolean} parameters.isProrated - isProrated
+             * @param {string} parameters.userId - userId
+             */
+            OtrService.prototype.cancelBillingSubscriptionUsingDELETE = function(parameters) {
+                if (parameters === undefined) {
+                    parameters = {};
+                }
+                var deferred = $q.defer();
+                var domain = this.domain,
+                    path = '/api/v1/billing/{userId}/subscriptions/{id}';
+                var body = {},
+                    queryParameters = {},
+                    headers = {},
+                    form = {};
+
+                headers['Accept'] = ['*/*'];
+
+                path = path.replace('{id}', parameters['id']);
+
+                if (parameters['id'] === undefined) {
+                    deferred.reject(new Error('Missing required  parameter: id'));
+                    return deferred.promise;
+                }
+
+                /** set default value **/
+                queryParameters['isProrated'] = true;
+
+                if (parameters['isProrated'] !== undefined) {
+                    queryParameters['isProrated'] = parameters['isProrated'];
+                }
+
+                path = path.replace('{userId}', parameters['userId']);
+
+                if (parameters['userId'] === undefined) {
+                    deferred.reject(new Error('Missing required  parameter: userId'));
+                    return deferred.promise;
+                }
+
+                queryParameters = mergeQueryParams(parameters, queryParameters);
+
+                this.request('DELETE', domain + path, parameters, body, headers, queryParameters, form, deferred);
+
+                return deferred.promise;
+            };
+            /**
              * handleBounceComplaintEmails
              * @method
              * @name OtrService#handleBounceComplaintEmailsUsingPOST
@@ -8427,6 +8611,50 @@ angular.module('otrBackendService', [])
                 return deferred.promise;
             };
             /**
+             * getLocation
+             * @method
+             * @name OtrService#getLocationUsingGET
+             * @param {object} parameters - method options and parameters
+             * @param {string} parameters.countryCode - countryCode
+             * @param {string} parameters.zipCode - zipCode
+             */
+            OtrService.prototype.getLocationUsingGET = function(parameters) {
+                if (parameters === undefined) {
+                    parameters = {};
+                }
+                var deferred = $q.defer();
+                var domain = this.domain,
+                    path = '/api/v1/locations';
+                var body = {},
+                    queryParameters = {},
+                    headers = {},
+                    form = {};
+
+                headers['Accept'] = ['*/*'];
+
+                /** set default value **/
+                queryParameters['countryCode'] = USA;
+
+                if (parameters['countryCode'] !== undefined) {
+                    queryParameters['countryCode'] = parameters['countryCode'];
+                }
+
+                if (parameters['zipCode'] !== undefined) {
+                    queryParameters['zipCode'] = parameters['zipCode'];
+                }
+
+                if (parameters['zipCode'] === undefined) {
+                    deferred.reject(new Error('Missing required  parameter: zipCode'));
+                    return deferred.promise;
+                }
+
+                queryParameters = mergeQueryParams(parameters, queryParameters);
+
+                this.request('GET', domain + path, parameters, body, headers, queryParameters, form, deferred);
+
+                return deferred.promise;
+            };
+            /**
              * createNote
              * @method
              * @name OtrService#createNoteUsingPOST
@@ -9986,6 +10214,59 @@ angular.module('otrBackendService', [])
                 return deferred.promise;
             };
             /**
+             * updateCommentForCustomerReview
+             * @method
+             * @name OtrService#updateCommentForCustomerReviewUsingPOST
+             * @param {object} parameters - method options and parameters
+             * @param {integer} parameters.commentId - commentId
+             * @param {} parameters.request - request
+             * @param {integer} parameters.reviewId - reviewId
+             */
+            OtrService.prototype.updateCommentForCustomerReviewUsingPOST = function(parameters) {
+                if (parameters === undefined) {
+                    parameters = {};
+                }
+                var deferred = $q.defer();
+                var domain = this.domain,
+                    path = '/api/v1/reviews/{reviewId}/comments/{commentId}';
+                var body = {},
+                    queryParameters = {},
+                    headers = {},
+                    form = {};
+
+                headers['Accept'] = ['*/*'];
+                headers['Content-Type'] = ['application/json'];
+
+                path = path.replace('{commentId}', parameters['commentId']);
+
+                if (parameters['commentId'] === undefined) {
+                    deferred.reject(new Error('Missing required  parameter: commentId'));
+                    return deferred.promise;
+                }
+
+                if (parameters['request'] !== undefined) {
+                    body = parameters['request'];
+                }
+
+                if (parameters['request'] === undefined) {
+                    deferred.reject(new Error('Missing required  parameter: request'));
+                    return deferred.promise;
+                }
+
+                path = path.replace('{reviewId}', parameters['reviewId']);
+
+                if (parameters['reviewId'] === undefined) {
+                    deferred.reject(new Error('Missing required  parameter: reviewId'));
+                    return deferred.promise;
+                }
+
+                queryParameters = mergeQueryParams(parameters, queryParameters);
+
+                this.request('POST', domain + path, parameters, body, headers, queryParameters, form, deferred);
+
+                return deferred.promise;
+            };
+            /**
              * markCommentWithVote
              * @method
              * @name OtrService#markCommentWithVoteUsingPUT
@@ -10015,6 +10296,9 @@ angular.module('otrBackendService', [])
                     deferred.reject(new Error('Missing required  parameter: commentId'));
                     return deferred.promise;
                 }
+
+                /** set default value **/
+                queryParameters['like'] = true;
 
                 if (parameters['like'] !== undefined) {
                     queryParameters['like'] = parameters['like'];
@@ -10055,6 +10339,9 @@ angular.module('otrBackendService', [])
 
                 headers['Accept'] = ['*/*'];
                 headers['Content-Type'] = ['application/json'];
+
+                /** set default value **/
+                queryParameters['helpful'] = true;
 
                 if (parameters['helpful'] !== undefined) {
                     queryParameters['helpful'] = parameters['helpful'];
