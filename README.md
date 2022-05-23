@@ -46,16 +46,16 @@ try {
 ```
 
 ## How to upgrade the generated AngularJS client
-1. 
+1. Make sure you are authenticated with npm under the @otr-app organization
+   1. ```npm login --scope=@otr-app```
+2. 
    Generate the JSON models and endpoints from devo
    ``` npm run generate:devo```
    1. OR generate the JSON models and endpoints from local server
    ``` npm run generate:local```
-2. Optional: Sanity check the differences in otrBackendService.js
-3. Commit the changes and push to github
-4. Update the version number in package.json
-5. Execute ```npm publish```
-   1. Make sure you are authenticated with npm under the @otr-app organization
-      1. ```npm login --scope=@otr-app```
-      2. Run step 5 again
-6. Done.
+3. Optional: Sanity check the differences in otrBackendService.js
+   1. ```git diff HEAD dist/otrBackendService.js```
+4. Commit the changes and push to github
+5. Update the version number in package.json
+6. Execute ```npm publish```
+7. Done.
