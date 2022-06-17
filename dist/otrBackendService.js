@@ -760,6 +760,37 @@ angular.module('otrBackendService', [])
                 return deferred.promise;
             };
             /**
+             * getCaseStatuses
+             * @method
+             * @name OtrService#getCaseStatusesUsingGET
+             * @param {object} parameters - method options and parameters
+             * @param {array} parameters.categories - categories
+             */
+            OtrService.prototype.getCaseStatusesUsingGET = function(parameters) {
+                if (parameters === undefined) {
+                    parameters = {};
+                }
+                var deferred = $q.defer();
+                var domain = this.domain,
+                    path = '/api/v1/case-statuses';
+                var body = {},
+                    queryParameters = {},
+                    headers = {},
+                    form = {};
+
+                headers['Accept'] = ['*/*'];
+
+                if (parameters['categories'] !== undefined) {
+                    queryParameters['categories'] = parameters['categories'];
+                }
+
+                queryParameters = mergeQueryParams(parameters, queryParameters);
+
+                this.request('GET', domain + path, parameters, body, headers, queryParameters, form, deferred);
+
+                return deferred.promise;
+            };
+            /**
              * getCaseResolutionStatuses
              * @method
              * @name OtrService#getCaseResolutionStatusesUsingGET
@@ -887,37 +918,6 @@ angular.module('otrBackendService', [])
                 queryParameters = mergeQueryParams(parameters, queryParameters);
 
                 this.request('POST', domain + path, parameters, body, headers, queryParameters, form, deferred);
-
-                return deferred.promise;
-            };
-            /**
-             * getCaseStatuses
-             * @method
-             * @name OtrService#getCaseStatusesUsingGET
-             * @param {object} parameters - method options and parameters
-             * @param {array} parameters.categories - categories
-             */
-            OtrService.prototype.getCaseStatusesUsingGET = function(parameters) {
-                if (parameters === undefined) {
-                    parameters = {};
-                }
-                var deferred = $q.defer();
-                var domain = this.domain,
-                    path = '/api/v1/cases/statuses';
-                var body = {},
-                    queryParameters = {},
-                    headers = {},
-                    form = {};
-
-                headers['Accept'] = ['*/*'];
-
-                if (parameters['categories'] !== undefined) {
-                    queryParameters['categories'] = parameters['categories'];
-                }
-
-                queryParameters = mergeQueryParams(parameters, queryParameters);
-
-                this.request('GET', domain + path, parameters, body, headers, queryParameters, form, deferred);
 
                 return deferred.promise;
             };
