@@ -686,6 +686,56 @@ angular.module('otrBackendService', [])
                 return deferred.promise;
             };
             /**
+             * listSubscriptionInvoices
+             * @method
+             * @name OtrService#listSubscriptionInvoicesUsingGET
+             * @param {object} parameters - method options and parameters
+             * @param {string} parameters.id - id
+             * @param {integer} parameters.limit - limit
+             * @param {integer} parameters.userId - userId
+             */
+            OtrService.prototype.listSubscriptionInvoicesUsingGET = function(parameters) {
+                if (parameters === undefined) {
+                    parameters = {};
+                }
+                var deferred = $q.defer();
+                var domain = this.domain,
+                    path = '/api/v1/billing/{userId}/subscriptions/{id}/invoices';
+                var body = {},
+                    queryParameters = {},
+                    headers = {},
+                    form = {};
+
+                headers['Accept'] = ['*/*'];
+
+                path = path.replace('{id}', parameters['id']);
+
+                if (parameters['id'] === undefined) {
+                    deferred.reject(new Error('Missing required  parameter: id'));
+                    return deferred.promise;
+                }
+
+                /** set default value **/
+                queryParameters['limit'] = 100;
+
+                if (parameters['limit'] !== undefined) {
+                    queryParameters['limit'] = parameters['limit'];
+                }
+
+                path = path.replace('{userId}', parameters['userId']);
+
+                if (parameters['userId'] === undefined) {
+                    deferred.reject(new Error('Missing required  parameter: userId'));
+                    return deferred.promise;
+                }
+
+                queryParameters = mergeQueryParams(parameters, queryParameters);
+
+                this.request('GET', domain + path, parameters, body, headers, queryParameters, form, deferred);
+
+                return deferred.promise;
+            };
+            /**
              * handleBounceComplaintEmails
              * @method
              * @name OtrService#handleBounceComplaintEmailsUsingPOST
