@@ -1,6 +1,6 @@
 {
   "name": "@otr-app/shared-backend-generated-client",
-  "version": "1.1.6",
+  "version": "2.0.0",
   "main": "dist/otrBackendService.min.js",
   "files": [
     "/dist"
@@ -9,12 +9,14 @@
   "homepage": "https://offtherecord.com",
   "author": "Off the Record, Inc.",
   "scripts": {
-    "generate:devo": "curl https://otr-backend-service-us-devo.offtherecord.com/v2/api-docs -o api/otr-service.json && gulp codegen",
+    "download:devo": "curl https://otr-backend-service-us-devo.offtherecord.com/v2/api-docs -o api/otr-service.json",
+    "generate:devo-axios": "openapi-generator-cli generate -i api/otr-service.json -o dist/typescript-axios -g typescript-axios",
+    "generate:devo-angularjs": "openapi-generator-cli generate -i api/otr-service.json -o dist/typescript-angularjs -g typescript-angularjs",
+    "generate:devo": "npm run download:devo && gulp codegen",
     "generate:local": "curl http://localhost:8080/v2/api-docs -o api/otr-service.json && gulp codegen",
-    "prepublishOnly": "gulp codegen"
+    "preinstall": "npm i @openapitools/openapi-generator-cli -g && openapi-generator-cli version-manager set 4.3.1"
   },
   "devDependencies": {
-    "@openapitools/openapi-generator-cli": "^1.0.13-4.3.1",
     "del": "2.2.0",
     "file-system": "2.2.1",
     "gulp": "4.0.2",
@@ -29,5 +31,8 @@
   "dependencies": {
     "swagger-js-react-native-codegen": "0.1.4",
     "swagger-typescript-codegen": "^1.11.0"
+  },
+  "peerDependencies": {
+    "axios": "^0.27.2"
   }
 }
