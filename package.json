@@ -1,6 +1,6 @@
 {
   "name": "@otr-app/shared-backend-generated-client",
-  "version": "2.0.0",
+  "version": "2.0.0-alpha",
   "main": "dist/otrBackendService.min.js",
   "files": [
     "/dist"
@@ -18,6 +18,7 @@
   },
   "devDependencies": {
     "@types/node": "^18.0.3",
+    "@types/angular": "~1.8.4",
     "del": "2.2.0",
     "file-system": "2.2.1",
     "gulp": "4.0.2",
