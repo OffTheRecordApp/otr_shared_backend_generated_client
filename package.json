@@ -1,10 +1,11 @@
 {
   "name": "@otr-app/shared-backend-generated-client",
-  "version": "2.0.2",
+  "version": "2.0.3",
   "main": "dist/otrBackendService.min.js",
   "files": [
     "/dist"
   ],
+  "types": "dist/index.d.ts",
   "description": "Generate client-side and service-side code using swagger CLI",
   "homepage": "https://offtherecord.com",
   "author": "Off the Record, Inc.",
