@@ -1,6 +1,6 @@
 {
   "name": "@otr-app/shared-backend-generated-client",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "main": "dist/otrBackendService.min.js",
   "files": [
     "/dist"
@@ -10,8 +10,8 @@
   "author": "Off the Record, Inc.",
   "scripts": {
     "download:devo": "curl https://otr-backend-service-us-devo.offtherecord.com/v2/api-docs -o api/otr-service.json",
-    "generate:devo-axios": "openapi-generator-cli generate -i api/otr-service.json -o dist/typescript-axios -g typescript-axios",
-    "generate:devo-angularjs": "openapi-generator-cli generate -i api/otr-service.json -o dist/typescript-angularjs -g typescript-angularjs",
+    "clean-source": "find dist/typescript -type f | grep -v  '\\(\\.d\\.ts\\|\\.js\\)' | xargs rm\n",
+    "generate:devo-ts": "openapi-generator-cli generate -i api/otr-service.json -o dist/typescript -g typescript-angularjs && tsc && npm run clean-source",
     "generate:devo": "npm run download:devo && gulp codegen",
     "generate:local": "curl http://localhost:8080/v2/api-docs -o api/otr-service.json && gulp codegen",
     "preinstall": "npm i @openapitools/openapi-generator-cli -g && openapi-generator-cli version-manager set 4.3.1"

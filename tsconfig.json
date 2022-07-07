@@ -4,7 +4,7 @@
     "target": "es5",
     "declaration": true
   },
-  "include": ["dist/typescript-angularjs", "dist/typescript-axios"],
+  "include": ["dist/typescript"],
   "exclude": [
     "node_modules"
   ]
