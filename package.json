@@ -5,6 +5,9 @@
   "files": [
     "/dist"
   ],
+  "repository": {
+    "url": "https://github.com/alexg313/otr_shared_backend_generated_client"
+  },
   "types": "dist/index.d.ts",
   "description": "Generate client-side and service-side code using swagger CLI",
   "homepage": "https://offtherecord.com",
