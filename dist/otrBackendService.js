@@ -1103,7 +1103,7 @@ angular.module('otrBackendService', [])
                     headers = {},
                     form = {};
 
-                headers['Accept'] = ['application/json'];
+                headers['Accept'] = ['*/*'];
 
                 path = path.replace('{caseId}', parameters['caseId']);
 
@@ -1191,6 +1191,7 @@ angular.module('otrBackendService', [])
              * @method
              * @name OtrService#getStripeChargeUsingGET
              * @param {object} parameters - method options and parameters
+             * @param {string} parameters.caseId - caseId
              * @param {string} parameters.stripeChargeId - stripeChargeId
              */
             OtrService.prototype.getStripeChargeUsingGET = function(parameters) {
@@ -1206,6 +1207,13 @@ angular.module('otrBackendService', [])
                     form = {};
 
                 headers['Accept'] = ['*/*'];
+
+                path = path.replace('{caseId}', parameters['caseId']);
+
+                if (parameters['caseId'] === undefined) {
+                    deferred.reject(new Error('Missing required  parameter: caseId'));
+                    return deferred.promise;
+                }
 
                 path = path.replace('{stripeChargeId}', parameters['stripeChargeId']);
 
@@ -6096,6 +6104,176 @@ angular.module('otrBackendService', [])
                 return deferred.promise;
             };
             /**
+             * acceptHouseholdInvite
+             * @method
+             * @name OtrService#acceptHouseholdInviteUsingPUT
+             * @param {object} parameters - method options and parameters
+             * @param {string} parameters.email - email
+             * @param {string} parameters.token - token
+             */
+            OtrService.prototype.acceptHouseholdInviteUsingPUT = function(parameters) {
+                if (parameters === undefined) {
+                    parameters = {};
+                }
+                var deferred = $q.defer();
+                var domain = this.domain,
+                    path = '/api/v1/household-mates/accept-invite';
+                var body = {},
+                    queryParameters = {},
+                    headers = {},
+                    form = {};
+
+                headers['Accept'] = ['*/*'];
+                headers['Content-Type'] = ['application/json'];
+
+                if (parameters['email'] !== undefined) {
+                    queryParameters['email'] = parameters['email'];
+                }
+
+                if (parameters['email'] === undefined) {
+                    deferred.reject(new Error('Missing required  parameter: email'));
+                    return deferred.promise;
+                }
+
+                if (parameters['token'] !== undefined) {
+                    queryParameters['token'] = parameters['token'];
+                }
+
+                if (parameters['token'] === undefined) {
+                    deferred.reject(new Error('Missing required  parameter: token'));
+                    return deferred.promise;
+                }
+
+                queryParameters = mergeQueryParams(parameters, queryParameters);
+
+                this.request('PUT', domain + path, parameters, body, headers, queryParameters, form, deferred);
+
+                return deferred.promise;
+            };
+            /**
+             * getHouseholdMates
+             * @method
+             * @name OtrService#getHouseholdMatesUsingGET
+             * @param {object} parameters - method options and parameters
+             * @param {string} parameters.userId - userId
+             */
+            OtrService.prototype.getHouseholdMatesUsingGET = function(parameters) {
+                if (parameters === undefined) {
+                    parameters = {};
+                }
+                var deferred = $q.defer();
+                var domain = this.domain,
+                    path = '/api/v1/household-mates/{userId}';
+                var body = {},
+                    queryParameters = {},
+                    headers = {},
+                    form = {};
+
+                headers['Accept'] = ['*/*'];
+
+                path = path.replace('{userId}', parameters['userId']);
+
+                if (parameters['userId'] === undefined) {
+                    deferred.reject(new Error('Missing required  parameter: userId'));
+                    return deferred.promise;
+                }
+
+                queryParameters = mergeQueryParams(parameters, queryParameters);
+
+                this.request('GET', domain + path, parameters, body, headers, queryParameters, form, deferred);
+
+                return deferred.promise;
+            };
+            /**
+             * inviteHouseholdMate
+             * @method
+             * @name OtrService#inviteHouseholdMateUsingPOST
+             * @param {object} parameters - method options and parameters
+             * @param {} parameters.request - request
+             * @param {integer} parameters.userId - userId
+             */
+            OtrService.prototype.inviteHouseholdMateUsingPOST = function(parameters) {
+                if (parameters === undefined) {
+                    parameters = {};
+                }
+                var deferred = $q.defer();
+                var domain = this.domain,
+                    path = '/api/v1/household-mates/{userId}/invite';
+                var body = {},
+                    queryParameters = {},
+                    headers = {},
+                    form = {};
+
+                headers['Accept'] = ['*/*'];
+                headers['Content-Type'] = ['application/json'];
+
+                if (parameters['request'] !== undefined) {
+                    body = parameters['request'];
+                }
+
+                if (parameters['request'] === undefined) {
+                    deferred.reject(new Error('Missing required  parameter: request'));
+                    return deferred.promise;
+                }
+
+                path = path.replace('{userId}', parameters['userId']);
+
+                if (parameters['userId'] === undefined) {
+                    deferred.reject(new Error('Missing required  parameter: userId'));
+                    return deferred.promise;
+                }
+
+                queryParameters = mergeQueryParams(parameters, queryParameters);
+
+                this.request('POST', domain + path, parameters, body, headers, queryParameters, form, deferred);
+
+                return deferred.promise;
+            };
+            /**
+             * cancelHouseholdMateInvite
+             * @method
+             * @name OtrService#cancelHouseholdMateInviteUsingDELETE
+             * @param {object} parameters - method options and parameters
+             * @param {string} parameters.inviteeEmail - inviteeEmail
+             * @param {integer} parameters.userId - userId
+             */
+            OtrService.prototype.cancelHouseholdMateInviteUsingDELETE = function(parameters) {
+                if (parameters === undefined) {
+                    parameters = {};
+                }
+                var deferred = $q.defer();
+                var domain = this.domain,
+                    path = '/api/v1/household-mates/{userId}/invite';
+                var body = {},
+                    queryParameters = {},
+                    headers = {},
+                    form = {};
+
+                headers['Accept'] = ['*/*'];
+
+                if (parameters['inviteeEmail'] !== undefined) {
+                    queryParameters['inviteeEmail'] = parameters['inviteeEmail'];
+                }
+
+                if (parameters['inviteeEmail'] === undefined) {
+                    deferred.reject(new Error('Missing required  parameter: inviteeEmail'));
+                    return deferred.promise;
+                }
+
+                path = path.replace('{userId}', parameters['userId']);
+
+                if (parameters['userId'] === undefined) {
+                    deferred.reject(new Error('Missing required  parameter: userId'));
+                    return deferred.promise;
+                }
+
+                queryParameters = mergeQueryParams(parameters, queryParameters);
+
+                this.request('DELETE', domain + path, parameters, body, headers, queryParameters, form, deferred);
+
+                return deferred.promise;
+            };
+            /**
              * calculateTicketSavings
              * @method
              * @name OtrService#calculateTicketSavingsUsingPOST
@@ -10418,9 +10596,6 @@ angular.module('otrBackendService', [])
                     return deferred.promise;
                 }
 
-                /** set default value **/
-                queryParameters['like'] = true;
-
                 if (parameters['like'] !== undefined) {
                     queryParameters['like'] = parameters['like'];
                 }
@@ -10460,9 +10635,6 @@ angular.module('otrBackendService', [])
 
                 headers['Accept'] = ['*/*'];
                 headers['Content-Type'] = ['application/json'];
-
-                /** set default value **/
-                queryParameters['helpful'] = true;
 
                 if (parameters['helpful'] !== undefined) {
                     queryParameters['helpful'] = parameters['helpful'];
@@ -13877,20 +14049,21 @@ angular.module('otrBackendService', [])
                 return deferred.promise;
             };
             /**
-             * deleteActionFromCase
+             * markActionAsDeleted
              * @method
-             * @name OtrService#deleteActionFromCaseUsingDELETE
+             * @name OtrService#markActionAsDeletedUsingDELETE
              * @param {object} parameters - method options and parameters
-             * @param {string} parameters.caseActionIdString - caseActionIdString
+             * @param {string} parameters.caseActionId - caseActionId
              * @param {string} parameters.caseId - caseId
+             * @param {boolean} parameters.isDeleted - isDeleted
              */
-            OtrService.prototype.deleteActionFromCaseUsingDELETE = function(parameters) {
+            OtrService.prototype.markActionAsDeletedUsingDELETE = function(parameters) {
                 if (parameters === undefined) {
                     parameters = {};
                 }
                 var deferred = $q.defer();
                 var domain = this.domain,
-                    path = '/api/{caseId}/actions/{caseActionIdString}';
+                    path = '/api/{caseId}/actions/{caseActionId}';
                 var body = {},
                     queryParameters = {},
                     headers = {},
@@ -13898,10 +14071,10 @@ angular.module('otrBackendService', [])
 
                 headers['Accept'] = ['*/*'];
 
-                path = path.replace('{caseActionIdString}', parameters['caseActionIdString']);
+                path = path.replace('{caseActionId}', parameters['caseActionId']);
 
-                if (parameters['caseActionIdString'] === undefined) {
-                    deferred.reject(new Error('Missing required  parameter: caseActionIdString'));
+                if (parameters['caseActionId'] === undefined) {
+                    deferred.reject(new Error('Missing required  parameter: caseActionId'));
                     return deferred.promise;
                 }
 
@@ -13910,6 +14083,13 @@ angular.module('otrBackendService', [])
                 if (parameters['caseId'] === undefined) {
                     deferred.reject(new Error('Missing required  parameter: caseId'));
                     return deferred.promise;
+                }
+
+                /** set default value **/
+                queryParameters['isDeleted'] = true;
+
+                if (parameters['isDeleted'] !== undefined) {
+                    queryParameters['isDeleted'] = parameters['isDeleted'];
                 }
 
                 queryParameters = mergeQueryParams(parameters, queryParameters);
