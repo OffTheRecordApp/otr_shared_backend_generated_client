@@ -1119,6 +1119,56 @@ angular.module('otrBackendService', [])
                 return deferred.promise;
             };
             /**
+             * markActionAsDeleted
+             * @method
+             * @name OtrService#markActionAsDeletedUsingDELETE
+             * @param {object} parameters - method options and parameters
+             * @param {string} parameters.caseActionId - caseActionId
+             * @param {string} parameters.caseId - caseId
+             * @param {boolean} parameters.isDeleted - isDeleted
+             */
+            OtrService.prototype.markActionAsDeletedUsingDELETE = function(parameters) {
+                if (parameters === undefined) {
+                    parameters = {};
+                }
+                var deferred = $q.defer();
+                var domain = this.domain,
+                    path = '/api/v1/cases/{caseId}/actions/{caseActionId}';
+                var body = {},
+                    queryParameters = {},
+                    headers = {},
+                    form = {};
+
+                headers['Accept'] = ['*/*'];
+
+                path = path.replace('{caseActionId}', parameters['caseActionId']);
+
+                if (parameters['caseActionId'] === undefined) {
+                    deferred.reject(new Error('Missing required  parameter: caseActionId'));
+                    return deferred.promise;
+                }
+
+                path = path.replace('{caseId}', parameters['caseId']);
+
+                if (parameters['caseId'] === undefined) {
+                    deferred.reject(new Error('Missing required  parameter: caseId'));
+                    return deferred.promise;
+                }
+
+                /** set default value **/
+                queryParameters['isDeleted'] = true;
+
+                if (parameters['isDeleted'] !== undefined) {
+                    queryParameters['isDeleted'] = parameters['isDeleted'];
+                }
+
+                queryParameters = mergeQueryParams(parameters, queryParameters);
+
+                this.request('DELETE', domain + path, parameters, body, headers, queryParameters, form, deferred);
+
+                return deferred.promise;
+            };
+            /**
              * getAppearanceAttorneysForCase
              * @method
              * @name OtrService#getAppearanceAttorneysForCaseUsingGET
@@ -14045,56 +14095,6 @@ angular.module('otrBackendService', [])
                 queryParameters = mergeQueryParams(parameters, queryParameters);
 
                 this.request('GET', domain + path, parameters, body, headers, queryParameters, form, deferred);
-
-                return deferred.promise;
-            };
-            /**
-             * markActionAsDeleted
-             * @method
-             * @name OtrService#markActionAsDeletedUsingDELETE
-             * @param {object} parameters - method options and parameters
-             * @param {string} parameters.caseActionId - caseActionId
-             * @param {string} parameters.caseId - caseId
-             * @param {boolean} parameters.isDeleted - isDeleted
-             */
-            OtrService.prototype.markActionAsDeletedUsingDELETE = function(parameters) {
-                if (parameters === undefined) {
-                    parameters = {};
-                }
-                var deferred = $q.defer();
-                var domain = this.domain,
-                    path = '/api/{caseId}/actions/{caseActionId}';
-                var body = {},
-                    queryParameters = {},
-                    headers = {},
-                    form = {};
-
-                headers['Accept'] = ['*/*'];
-
-                path = path.replace('{caseActionId}', parameters['caseActionId']);
-
-                if (parameters['caseActionId'] === undefined) {
-                    deferred.reject(new Error('Missing required  parameter: caseActionId'));
-                    return deferred.promise;
-                }
-
-                path = path.replace('{caseId}', parameters['caseId']);
-
-                if (parameters['caseId'] === undefined) {
-                    deferred.reject(new Error('Missing required  parameter: caseId'));
-                    return deferred.promise;
-                }
-
-                /** set default value **/
-                queryParameters['isDeleted'] = true;
-
-                if (parameters['isDeleted'] !== undefined) {
-                    queryParameters['isDeleted'] = parameters['isDeleted'];
-                }
-
-                queryParameters = mergeQueryParams(parameters, queryParameters);
-
-                this.request('DELETE', domain + path, parameters, body, headers, queryParameters, form, deferred);
 
                 return deferred.promise;
             };
