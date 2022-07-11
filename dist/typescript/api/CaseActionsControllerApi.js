@@ -56,37 +56,6 @@ var CaseActionsControllerApi = /** @class */ (function () {
     };
     /**
      *
-     * @summary deleteActionFromCase
-     * @param caseActionIdString caseActionIdString
-     * @param caseId caseId
-     */
-    CaseActionsControllerApi.prototype.deleteActionFromCaseUsingDELETE = function (caseActionIdString, caseId, extraHttpRequestParams) {
-        var localVarPath = this.basePath + '/api/{caseId}/actions/{caseActionIdString}'
-            .replace('{' + 'caseActionIdString' + '}', encodeURIComponent(String(caseActionIdString)))
-            .replace('{' + 'caseId' + '}', encodeURIComponent(String(caseId)));
-        var queryParameters = {};
-        var headerParams = Object.assign({}, this.defaultHeaders);
-        // verify required parameter 'caseActionIdString' is not null or undefined
-        if (caseActionIdString === null || caseActionIdString === undefined) {
-            throw new Error('Required parameter caseActionIdString was null or undefined when calling deleteActionFromCaseUsingDELETE.');
-        }
-        // verify required parameter 'caseId' is not null or undefined
-        if (caseId === null || caseId === undefined) {
-            throw new Error('Required parameter caseId was null or undefined when calling deleteActionFromCaseUsingDELETE.');
-        }
-        var httpRequestParams = {
-            method: 'DELETE',
-            url: localVarPath,
-            params: queryParameters,
-            headers: headerParams
-        };
-        if (extraHttpRequestParams) {
-            httpRequestParams = Object.assign(httpRequestParams, extraHttpRequestParams);
-        }
-        return this.$http(httpRequestParams);
-    };
-    /**
-     *
      * @summary getActionTimeline
      * @param caseId caseId
      */
@@ -133,8 +102,9 @@ var CaseActionsControllerApi = /** @class */ (function () {
      *
      * @summary getCaseActions
      * @param caseId caseId
+     * @param showDeleted showDeleted
      */
-    CaseActionsControllerApi.prototype.getCaseActionsUsingGET = function (caseId, extraHttpRequestParams) {
+    CaseActionsControllerApi.prototype.getCaseActionsUsingGET = function (caseId, showDeleted, extraHttpRequestParams) {
         var localVarPath = this.basePath + '/api/v1/cases/{caseId}/actions'
             .replace('{' + 'caseId' + '}', encodeURIComponent(String(caseId)));
         var queryParameters = {};
@@ -143,8 +113,46 @@ var CaseActionsControllerApi = /** @class */ (function () {
         if (caseId === null || caseId === undefined) {
             throw new Error('Required parameter caseId was null or undefined when calling getCaseActionsUsingGET.');
         }
+        if (showDeleted !== undefined) {
+            queryParameters['showDeleted'] = showDeleted;
+        }
         var httpRequestParams = {
             method: 'GET',
+            url: localVarPath,
+            params: queryParameters,
+            headers: headerParams
+        };
+        if (extraHttpRequestParams) {
+            httpRequestParams = Object.assign(httpRequestParams, extraHttpRequestParams);
+        }
+        return this.$http(httpRequestParams);
+    };
+    /**
+     *
+     * @summary markActionAsDeleted
+     * @param caseActionId caseActionId
+     * @param caseId caseId
+     * @param isDeleted isDeleted
+     */
+    CaseActionsControllerApi.prototype.markActionAsDeletedUsingDELETE = function (caseActionId, caseId, isDeleted, extraHttpRequestParams) {
+        var localVarPath = this.basePath + '/api/v1/cases/{caseId}/actions/{caseActionId}'
+            .replace('{' + 'caseActionId' + '}', encodeURIComponent(String(caseActionId)))
+            .replace('{' + 'caseId' + '}', encodeURIComponent(String(caseId)));
+        var queryParameters = {};
+        var headerParams = Object.assign({}, this.defaultHeaders);
+        // verify required parameter 'caseActionId' is not null or undefined
+        if (caseActionId === null || caseActionId === undefined) {
+            throw new Error('Required parameter caseActionId was null or undefined when calling markActionAsDeletedUsingDELETE.');
+        }
+        // verify required parameter 'caseId' is not null or undefined
+        if (caseId === null || caseId === undefined) {
+            throw new Error('Required parameter caseId was null or undefined when calling markActionAsDeletedUsingDELETE.');
+        }
+        if (isDeleted !== undefined) {
+            queryParameters['isDeleted'] = isDeleted;
+        }
+        var httpRequestParams = {
+            method: 'DELETE',
             url: localVarPath,
             params: queryParameters,
             headers: headerParams

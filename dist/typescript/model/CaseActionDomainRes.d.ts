@@ -18,6 +18,7 @@ export interface CaseActionDomainRes {
     "authorId"?: number;
     "authorName"?: string;
     "caseActionId"?: number;
+    "isDeleted"?: boolean;
 }
 export declare namespace CaseActionDomainRes {
     enum ActionTypeEnum {

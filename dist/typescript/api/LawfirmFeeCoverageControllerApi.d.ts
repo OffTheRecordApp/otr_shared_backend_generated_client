@@ -66,7 +66,7 @@ export declare class LawfirmFeeCoverageControllerApi {
      * @param courtsToRemove courtsToRemove
      * @param lawfirmId lawfirmId
      */
-    removeCourtsUsingDELETE(courtsToRemove: Array<number>, lawfirmId: string, extraHttpRequestParams?: any): ng.IHttpPromise<{}>;
+    removeCourtsUsingDELETE(courtsToRemove: number, lawfirmId: string, extraHttpRequestParams?: any): ng.IHttpPromise<{}>;
     /**
      *
      * @summary removeCoverage

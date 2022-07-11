@@ -29,5 +29,5 @@ export declare class CaseStatusControllerApi {
      * @summary getCaseStatuses
      * @param categories categories
      */
-    getCaseStatusesUsingGET(categories?: Array<'ACTIVE' | 'CANCELLED' | 'RESOLVED' | 'UNCONFIRMED'>, extraHttpRequestParams?: any): ng.IHttpPromise<Array<models.CaseStatusDetailsResponse>>;
+    getCaseStatusesUsingGET(categories?: 'ACTIVE' | 'CANCELLED' | 'RESOLVED' | 'UNCONFIRMED', extraHttpRequestParams?: any): ng.IHttpPromise<Array<models.CaseStatusDetailsResponse>>;
 }

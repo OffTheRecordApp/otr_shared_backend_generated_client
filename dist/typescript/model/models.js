@@ -370,6 +370,7 @@ __exportStar(require("./LobEventRequest"), exports);
 __exportStar(require("./LobMailingAddress"), exports);
 __exportStar(require("./LocalTime"), exports);
 __exportStar(require("./LostCaseWithTransferNotReversed"), exports);
+__exportStar(require("./MarkActionAsDeletedResponse"), exports);
 __exportStar(require("./MarkCaseAsResolvedRequest"), exports);
 __exportStar(require("./MarkCaseAsResolvedResponse"), exports);
 __exportStar(require("./MatchCaseResponse"), exports);

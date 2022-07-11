@@ -39,5 +39,5 @@ export declare class ListCasesControllerApi {
      * @param sortBy sortBy
      * @param statusCategories statusCategories
      */
-    listDashboardCasesUsingGET(userId: number, limit?: number, previousPageToken?: string, sortBy?: 'BOOKING_CONFIRMED_DATE' | 'CITATION_ISSUE_DATE', statusCategories?: Array<'ACTIVE' | 'CANCELLED' | 'RESOLVED' | 'UNCONFIRMED'>, extraHttpRequestParams?: any): ng.IHttpPromise<models.ListDashboardCasesResponse>;
+    listDashboardCasesUsingGET(userId: number, limit?: number, previousPageToken?: string, sortBy?: 'BOOKING_CONFIRMED_DATE' | 'CITATION_ISSUE_DATE', statusCategories?: 'ACTIVE' | 'CANCELLED' | 'RESOLVED' | 'UNCONFIRMED', extraHttpRequestParams?: any): ng.IHttpPromise<models.ListDashboardCasesResponse>;
 }

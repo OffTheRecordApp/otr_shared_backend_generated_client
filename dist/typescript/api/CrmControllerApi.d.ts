@@ -35,7 +35,7 @@ export declare class CrmControllerApi {
      * @summary getTemplates
      * @param category category
      */
-    getTemplatesUsingGET(category?: Array<string>, extraHttpRequestParams?: any): ng.IHttpPromise<Array<string>>;
+    getTemplatesUsingGET(category?: string, extraHttpRequestParams?: any): ng.IHttpPromise<Array<string>>;
     /**
      *
      * @summary replyToTicket

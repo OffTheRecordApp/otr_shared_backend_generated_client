@@ -78,7 +78,7 @@ export declare class CitationControllerApi {
      * @param regionCodes regionCodes
      * @param trailingDays trailingDays
      */
-    getNoViolationCitationsUsingGET(regionCodes?: Array<string>, trailingDays?: number, extraHttpRequestParams?: any): ng.IHttpPromise<models.GetNoViolationCitationsResponse>;
+    getNoViolationCitationsUsingGET(regionCodes?: string, trailingDays?: number, extraHttpRequestParams?: any): ng.IHttpPromise<models.GetNoViolationCitationsResponse>;
     /**
      *
      * @summary postMissingCourtForCitation

@@ -27,13 +27,6 @@ export declare class CaseActionsControllerApi {
     addActionToCaseV2UsingPOST(caseId: string, request: models.AddActionToCaseRequest, extraHttpRequestParams?: any): ng.IHttpPromise<models.AddActionToCaseResponse>;
     /**
      *
-     * @summary deleteActionFromCase
-     * @param caseActionIdString caseActionIdString
-     * @param caseId caseId
-     */
-    deleteActionFromCaseUsingDELETE(caseActionIdString: string, caseId: string, extraHttpRequestParams?: any): ng.IHttpPromise<object>;
-    /**
-     *
      * @summary getActionTimeline
      * @param caseId caseId
      */
@@ -47,6 +40,15 @@ export declare class CaseActionsControllerApi {
      *
      * @summary getCaseActions
      * @param caseId caseId
+     * @param showDeleted showDeleted
      */
-    getCaseActionsUsingGET(caseId: string, extraHttpRequestParams?: any): ng.IHttpPromise<models.GetCaseActionResponse>;
+    getCaseActionsUsingGET(caseId: string, showDeleted?: boolean, extraHttpRequestParams?: any): ng.IHttpPromise<models.GetCaseActionResponse>;
+    /**
+     *
+     * @summary markActionAsDeleted
+     * @param caseActionId caseActionId
+     * @param caseId caseId
+     * @param isDeleted isDeleted
+     */
+    markActionAsDeletedUsingDELETE(caseActionId: string, caseId: string, isDeleted?: boolean, extraHttpRequestParams?: any): ng.IHttpPromise<models.MarkActionAsDeletedResponse>;
 }
