@@ -9,7 +9,6 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-import * as models from './models';
-export interface MarkActionAsDeletedResponse {
-    "caseAction"?: models.CaseActionDomainRes;
+export interface UpdateCaseActionRequest {
+    "note"?: string;
 }

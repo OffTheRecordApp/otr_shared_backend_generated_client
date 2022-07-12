@@ -14,7 +14,7 @@
   "author": "Off the Record, Inc.",
   "scripts": {
     "download:devo": "curl https://otr-backend-service-us-devo.offtherecord.com/v2/api-docs -o api/otr-service.json",
-    "clean-source": "find dist/typescript -type f | grep -v  '\\(\\.d\\.ts\\|\\.js\\)' | xargs rm\n",
+    "clean-source": "find dist/typescript -type f | grep -v  \"\\.d\\.ts\\|\\.js\" | xargs rm",
     "generate:devo-ts": "npm run download:devo && openapi-generator-cli generate -i api/otr-service.json -o dist/typescript -g typescript-angularjs && tsc && npm run clean-source",
     "generate:devo": "npm run download:devo && gulp codegen",
     "generate:local": "curl http://localhost:8080/v2/api-docs -o api/otr-service.json && gulp codegen",

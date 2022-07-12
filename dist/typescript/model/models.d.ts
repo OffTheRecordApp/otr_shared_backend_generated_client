@@ -506,6 +506,8 @@ export * from './TrafficViolationTypeDomain';
 export * from './TransferCaseRequest';
 export * from './USStateDomain';
 export * from './UpdateAddress';
+export * from './UpdateCaseActionRequest';
+export * from './UpdateCaseActionResponse';
 export * from './UpdateCaseDeclineTicketsRequest';
 export * from './UpdateCasePaymentRequest';
 export * from './UpdateCitationAddressRequest';

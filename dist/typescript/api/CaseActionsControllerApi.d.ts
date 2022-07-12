@@ -50,5 +50,13 @@ export declare class CaseActionsControllerApi {
      * @param caseId caseId
      * @param isDeleted isDeleted
      */
-    markActionAsDeletedUsingDELETE(caseActionId: string, caseId: string, isDeleted?: boolean, extraHttpRequestParams?: any): ng.IHttpPromise<models.MarkActionAsDeletedResponse>;
+    markActionAsDeletedUsingDELETE(caseActionId: number, caseId: string, isDeleted: boolean, extraHttpRequestParams?: any): ng.IHttpPromise<models.MarkActionAsDeletedResponse>;
+    /**
+     *
+     * @summary updateCaseAction
+     * @param caseActionId caseActionId
+     * @param caseId caseId
+     * @param request request
+     */
+    updateCaseActionUsingPUT(caseActionId: number, caseId: string, request: models.UpdateCaseActionRequest, extraHttpRequestParams?: any): ng.IHttpPromise<models.UpdateCaseActionResponse>;
 }

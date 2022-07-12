@@ -10,6 +10,6 @@
  * Do not edit the class manually.
  */
 import * as models from './models';
-export interface MarkActionAsDeletedResponse {
+export interface UpdateCaseActionResponse {
     "caseAction"?: models.CaseActionDomainRes;
 }

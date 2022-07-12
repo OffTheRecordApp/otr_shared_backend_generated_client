@@ -518,6 +518,8 @@ __exportStar(require("./TrafficViolationTypeDomain"), exports);
 __exportStar(require("./TransferCaseRequest"), exports);
 __exportStar(require("./USStateDomain"), exports);
 __exportStar(require("./UpdateAddress"), exports);
+__exportStar(require("./UpdateCaseActionRequest"), exports);
+__exportStar(require("./UpdateCaseActionResponse"), exports);
 __exportStar(require("./UpdateCaseDeclineTicketsRequest"), exports);
 __exportStar(require("./UpdateCasePaymentRequest"), exports);
 __exportStar(require("./UpdateCitationAddressRequest"), exports);
