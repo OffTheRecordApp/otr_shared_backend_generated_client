@@ -11,5 +11,5 @@
  */
 import * as models from './models';
 export interface MarkActionAsDeletedResponse {
-    "caseAction"?: models.CaseActionDomainRes;
+    "caseAction"?: models.CaseActionDomain;
 }

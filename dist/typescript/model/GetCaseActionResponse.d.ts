@@ -11,5 +11,5 @@
  */
 import * as models from './models';
 export interface GetCaseActionResponse {
-    "actions"?: Array<models.CaseActionDomainRes>;
+    "actions"?: Array<models.CaseActionDomain>;
 }

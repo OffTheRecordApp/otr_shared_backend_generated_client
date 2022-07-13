@@ -9,7 +9,6 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-import * as models from './models';
 export interface CaseMessageDomain {
     "authorFirstname"?: string;
     "authorLastname"?: string;
@@ -19,7 +18,7 @@ export interface CaseMessageDomain {
     "mediaUrl"?: string;
     "messageBody"?: string;
     "messageId"?: number;
-    "messageSentDateUtc"?: models.Timestamp;
+    "messageSentDateUtc"?: string;
 }
 export declare namespace CaseMessageDomain {
     enum AuthorRoleTypeEnum {

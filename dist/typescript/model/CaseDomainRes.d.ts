@@ -11,7 +11,7 @@
  */
 import * as models from './models';
 export interface CaseDomainRes {
-    "actions"?: Array<models.CaseActionDomainRes>;
+    "actions"?: Array<models.CaseActionDomain>;
     "adjustedFineAmount"?: number;
     "adjustedPointCount"?: number;
     "bookingConfirmedDate"?: models.TimestampRes;

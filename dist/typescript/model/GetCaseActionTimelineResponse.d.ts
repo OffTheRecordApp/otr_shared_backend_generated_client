@@ -11,6 +11,6 @@
  */
 import * as models from './models';
 export interface GetCaseActionTimelineResponse {
-    "actionsNotTaken"?: Array<models.CaseActionDomainRes>;
-    "actionsTaken"?: Array<models.CaseActionDomainRes>;
+    "actionsNotTaken"?: Array<models.CaseActionDomain>;
+    "actionsTaken"?: Array<models.CaseActionDomain>;
 }

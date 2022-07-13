@@ -11,7 +11,7 @@
  */
 import * as models from './models';
 export interface CaseActionDomain {
-    "actionDate"?: models.Timestamp;
+    "actionDate"?: string;
     "actionNote"?: string;
     "actionType"?: CaseActionDomain.ActionTypeEnum;
     "author"?: models.AuthorModel;

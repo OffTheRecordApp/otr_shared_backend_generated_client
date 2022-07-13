@@ -11,7 +11,7 @@
  */
 import * as models from './models';
 export interface CaseDomainReq {
-    "actions"?: Array<models.CaseActionDomainReq>;
+    "actions"?: Array<models.CaseActionDomain>;
     "adjustedFineAmount"?: number;
     "adjustedPointCount"?: number;
     "bookingConfirmedDate"?: models.TimestampReq;

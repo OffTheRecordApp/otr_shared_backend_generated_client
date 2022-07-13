@@ -61,8 +61,6 @@ export * from './CancelationDetailsReq';
 export * from './CancelationDetailsRes';
 export * from './CaptureChargeFromCasePaymentRequest';
 export * from './CaseActionDomain';
-export * from './CaseActionDomainReq';
-export * from './CaseActionDomainRes';
 export * from './CaseAlert';
 export * from './CaseBookingsStats';
 export * from './CaseChargeResponsePojo';
