@@ -1,6 +1,6 @@
 {
   "name": "@otr-app/shared-backend-generated-client",
-  "version": "2.0.8",
+  "version": "2.0.9",
   "main": "dist/otrBackendService.min.js",
   "files": [
     "/dist"
@@ -18,7 +18,7 @@
     "generate:devo-ts": "npm run download:devo && openapi-generator-cli generate -i api/otr-service.json -o dist/typescript -g typescript-angularjs && tsc && npm run clean-source",
     "generate:devo": "npm run download:devo && gulp codegen",
     "generate:local": "curl http://localhost:8080/v2/api-docs -o api/otr-service.json && gulp codegen",
-    "preinstall": "npm i @openapitools/openapi-generator-cli -g && openapi-generator-cli version-manager set 4.3.1"
+    "bootstrap": "npm i @openapitools/openapi-generator-cli -g && openapi-generator-cli version-manager set 4.3.1"
   },
   "devDependencies": {
     "@types/node": "^18.0.3",
