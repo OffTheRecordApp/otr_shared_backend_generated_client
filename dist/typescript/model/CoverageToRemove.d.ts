@@ -10,6 +10,64 @@
  * Do not edit the class manually.
  */
 export interface CoverageToRemove {
+    "classification"?: CoverageToRemove.ClassificationEnum;
     "courtId"?: number;
     "violationId"?: number;
+}
+export declare namespace CoverageToRemove {
+    enum ClassificationEnum {
+        CLASS1FELONY,
+        CLASS1MISDEMEANOR,
+        CLASS2FELONY,
+        CLASS2MISDEMEANOR,
+        CLASS3FELONY,
+        CLASS3MISDEMEANOR,
+        CLASS4FELONY,
+        CLASS4MISDEMEANOR,
+        CLASS5FELONY,
+        CLASS6FELONY,
+        CLASSA1MISDEMEANOR,
+        CLASSAFELONY,
+        CLASSAINFRACTION,
+        CLASSAMISDEMEANOR,
+        CLASSAVIOLATION,
+        CLASSBFELONY,
+        CLASSBINFRACTION,
+        CLASSBMISDEMEANOR,
+        CLASSBVIOLATION,
+        CLASSCFELONY,
+        CLASSCMISDEMEANOR,
+        CLASSCVIOLATION,
+        CLASSDFELONY,
+        CLASSDMISDEMEANOR,
+        CLASSDVIOLATION,
+        CLASSEFELONY,
+        CLASSFFELONY,
+        CLASSHFELONY,
+        DISORDERLYPERSONSOFFENSE,
+        FELONY,
+        FELONY1STDEGREE,
+        FELONY2NDDEGREE,
+        FELONY3RDDEGREE,
+        FELONY4THDEGREE,
+        FELONY5THDEGREE,
+        GROSSMISDEMEANOR,
+        HIGHANDAGGRAVATEDMISDEMEANOR,
+        INFRACTION,
+        MINORMISDEMEANOR,
+        MISDEMEANOR,
+        MISDEMEANOR1STDEGREE,
+        MISDEMEANOR2NDDEGREE,
+        MISDEMEANOR3RDDEGREE,
+        MISDEMEANOR4THDEGREE,
+        MISDEMEANORWITHREFUND,
+        NONMOVING,
+        NONREPORTABLE,
+        PETTYMISDEMEANOR,
+        QUASICRIMINAL,
+        SUMMARYOFFENSE,
+        SUMMARYOFFENSENOREFUND,
+        WOBBLERTOFELONY,
+        WOBBLERTOMISDEMEANOR
+    }
 }

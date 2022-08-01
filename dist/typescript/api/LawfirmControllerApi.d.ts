@@ -162,9 +162,9 @@ export declare class LawfirmControllerApi {
      *
      * @summary updateLawfirmWithPicture
      * @param lawfirmId lawfirmId
-     * @param lawfirmPictureRequest lawfirmPictureRequest
+     * @param request request
      */
-    updateLawfirmWithPictureUsingPUT(lawfirmId: string, lawfirmPictureRequest: models.LawfirmPictureRequest, extraHttpRequestParams?: any): ng.IHttpPromise<object>;
+    updateLawfirmWithPictureUsingPUT(lawfirmId: string, request: models.LawfirmPictureRequest, extraHttpRequestParams?: any): ng.IHttpPromise<object>;
     /**
      *
      * @summary updatePaymentModel

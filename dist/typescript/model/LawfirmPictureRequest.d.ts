@@ -10,6 +10,7 @@
  * Do not edit the class manually.
  */
 export interface LawfirmPictureRequest {
+    "contentType"?: string;
     "coverPhotoBase64ImageData"?: string;
     "profileBase64ImageData"?: string;
 }

@@ -618,9 +618,9 @@ var LawfirmControllerApi = /** @class */ (function () {
      *
      * @summary updateLawfirmWithPicture
      * @param lawfirmId lawfirmId
-     * @param lawfirmPictureRequest lawfirmPictureRequest
+     * @param request request
      */
-    LawfirmControllerApi.prototype.updateLawfirmWithPictureUsingPUT = function (lawfirmId, lawfirmPictureRequest, extraHttpRequestParams) {
+    LawfirmControllerApi.prototype.updateLawfirmWithPictureUsingPUT = function (lawfirmId, request, extraHttpRequestParams) {
         var localVarPath = this.basePath + '/api/v1/lawfirms/{lawfirmId}/picture'
             .replace('{' + 'lawfirmId' + '}', encodeURIComponent(String(lawfirmId)));
         var queryParameters = {};
@@ -629,14 +629,14 @@ var LawfirmControllerApi = /** @class */ (function () {
         if (lawfirmId === null || lawfirmId === undefined) {
             throw new Error('Required parameter lawfirmId was null or undefined when calling updateLawfirmWithPictureUsingPUT.');
         }
-        // verify required parameter 'lawfirmPictureRequest' is not null or undefined
-        if (lawfirmPictureRequest === null || lawfirmPictureRequest === undefined) {
-            throw new Error('Required parameter lawfirmPictureRequest was null or undefined when calling updateLawfirmWithPictureUsingPUT.');
+        // verify required parameter 'request' is not null or undefined
+        if (request === null || request === undefined) {
+            throw new Error('Required parameter request was null or undefined when calling updateLawfirmWithPictureUsingPUT.');
         }
         var httpRequestParams = {
             method: 'PUT',
             url: localVarPath,
-            data: lawfirmPictureRequest,
+            data: request,
             params: queryParameters,
             headers: headerParams
         };

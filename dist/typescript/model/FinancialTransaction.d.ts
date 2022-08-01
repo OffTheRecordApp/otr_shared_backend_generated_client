@@ -14,6 +14,7 @@ export interface FinancialTransaction {
     "amount"?: number;
     "caseId"?: string;
     "isOverdue"?: boolean;
+    "lawfirmReferenceId"?: string;
     "otrAmount"?: number;
     "runAtDateUtc"?: models.TimestampRes;
     "stripeAmount"?: number;
