@@ -113,10 +113,10 @@ angular.module('otrBackendService', [])
             /**
              * unmappedRequest
              * @method
-             * @name OtrService#unmappedRequestUsingGET_1
+             * @name OtrService#unmappedRequestUsingGET
              * @param {object} parameters - method options and parameters
              */
-            OtrService.prototype.unmappedRequestUsingGET_1 = function(parameters) {
+            OtrService.prototype.unmappedRequestUsingGET = function(parameters) {
                 if (parameters === undefined) {
                     parameters = {};
                 }
@@ -139,10 +139,10 @@ angular.module('otrBackendService', [])
             /**
              * unmappedRequest
              * @method
-             * @name OtrService#unmappedRequestUsingHEAD_1
+             * @name OtrService#unmappedRequestUsingHEAD
              * @param {object} parameters - method options and parameters
              */
-            OtrService.prototype.unmappedRequestUsingHEAD_1 = function(parameters) {
+            OtrService.prototype.unmappedRequestUsingHEAD = function(parameters) {
                 if (parameters === undefined) {
                     parameters = {};
                 }
@@ -166,10 +166,10 @@ angular.module('otrBackendService', [])
             /**
              * unmappedRequest
              * @method
-             * @name OtrService#unmappedRequestUsingPOST_1
+             * @name OtrService#unmappedRequestUsingPOST
              * @param {object} parameters - method options and parameters
              */
-            OtrService.prototype.unmappedRequestUsingPOST_1 = function(parameters) {
+            OtrService.prototype.unmappedRequestUsingPOST = function(parameters) {
                 if (parameters === undefined) {
                     parameters = {};
                 }
@@ -193,10 +193,10 @@ angular.module('otrBackendService', [])
             /**
              * unmappedRequest
              * @method
-             * @name OtrService#unmappedRequestUsingPUT_1
+             * @name OtrService#unmappedRequestUsingPUT
              * @param {object} parameters - method options and parameters
              */
-            OtrService.prototype.unmappedRequestUsingPUT_1 = function(parameters) {
+            OtrService.prototype.unmappedRequestUsingPUT = function(parameters) {
                 if (parameters === undefined) {
                     parameters = {};
                 }
@@ -220,10 +220,10 @@ angular.module('otrBackendService', [])
             /**
              * unmappedRequest
              * @method
-             * @name OtrService#unmappedRequestUsingDELETE_1
+             * @name OtrService#unmappedRequestUsingDELETE
              * @param {object} parameters - method options and parameters
              */
-            OtrService.prototype.unmappedRequestUsingDELETE_1 = function(parameters) {
+            OtrService.prototype.unmappedRequestUsingDELETE = function(parameters) {
                 if (parameters === undefined) {
                     parameters = {};
                 }
@@ -246,10 +246,10 @@ angular.module('otrBackendService', [])
             /**
              * unmappedRequest
              * @method
-             * @name OtrService#unmappedRequestUsingOPTIONS_1
+             * @name OtrService#unmappedRequestUsingOPTIONS
              * @param {object} parameters - method options and parameters
              */
-            OtrService.prototype.unmappedRequestUsingOPTIONS_1 = function(parameters) {
+            OtrService.prototype.unmappedRequestUsingOPTIONS = function(parameters) {
                 if (parameters === undefined) {
                     parameters = {};
                 }
@@ -273,10 +273,10 @@ angular.module('otrBackendService', [])
             /**
              * unmappedRequest
              * @method
-             * @name OtrService#unmappedRequestUsingPATCH_1
+             * @name OtrService#unmappedRequestUsingPATCH
              * @param {object} parameters - method options and parameters
              */
-            OtrService.prototype.unmappedRequestUsingPATCH_1 = function(parameters) {
+            OtrService.prototype.unmappedRequestUsingPATCH = function(parameters) {
                 if (parameters === undefined) {
                     parameters = {};
                 }
@@ -814,7 +814,7 @@ angular.module('otrBackendService', [])
              * @method
              * @name OtrService#getCaseStatusesUsingGET
              * @param {object} parameters - method options and parameters
-             * @param {array} parameters.categories - categories
+             * @param {string} parameters.categories - categories
              */
             OtrService.prototype.getCaseStatusesUsingGET = function(parameters) {
                 if (parameters === undefined) {
@@ -1056,6 +1056,7 @@ angular.module('otrBackendService', [])
              * @name OtrService#getCaseActionsUsingGET
              * @param {object} parameters - method options and parameters
              * @param {string} parameters.caseId - caseId
+             * @param {boolean} parameters.showDeleted - showDeleted
              */
             OtrService.prototype.getCaseActionsUsingGET = function(parameters) {
                 if (parameters === undefined) {
@@ -1076,6 +1077,10 @@ angular.module('otrBackendService', [])
                 if (parameters['caseId'] === undefined) {
                     deferred.reject(new Error('Missing required  parameter: caseId'));
                     return deferred.promise;
+                }
+
+                if (parameters['showDeleted'] !== undefined) {
+                    queryParameters['showDeleted'] = parameters['showDeleted'];
                 }
 
                 queryParameters = mergeQueryParams(parameters, queryParameters);
@@ -1119,11 +1124,64 @@ angular.module('otrBackendService', [])
                 return deferred.promise;
             };
             /**
+             * updateCaseAction
+             * @method
+             * @name OtrService#updateCaseActionUsingPUT
+             * @param {object} parameters - method options and parameters
+             * @param {integer} parameters.caseActionId - caseActionId
+             * @param {string} parameters.caseId - caseId
+             * @param {} parameters.request - request
+             */
+            OtrService.prototype.updateCaseActionUsingPUT = function(parameters) {
+                if (parameters === undefined) {
+                    parameters = {};
+                }
+                var deferred = $q.defer();
+                var domain = this.domain,
+                    path = '/api/v1/cases/{caseId}/actions/{caseActionId}';
+                var body = {},
+                    queryParameters = {},
+                    headers = {},
+                    form = {};
+
+                headers['Accept'] = ['*/*'];
+                headers['Content-Type'] = ['application/json'];
+
+                path = path.replace('{caseActionId}', parameters['caseActionId']);
+
+                if (parameters['caseActionId'] === undefined) {
+                    deferred.reject(new Error('Missing required  parameter: caseActionId'));
+                    return deferred.promise;
+                }
+
+                path = path.replace('{caseId}', parameters['caseId']);
+
+                if (parameters['caseId'] === undefined) {
+                    deferred.reject(new Error('Missing required  parameter: caseId'));
+                    return deferred.promise;
+                }
+
+                if (parameters['request'] !== undefined) {
+                    body = parameters['request'];
+                }
+
+                if (parameters['request'] === undefined) {
+                    deferred.reject(new Error('Missing required  parameter: request'));
+                    return deferred.promise;
+                }
+
+                queryParameters = mergeQueryParams(parameters, queryParameters);
+
+                this.request('PUT', domain + path, parameters, body, headers, queryParameters, form, deferred);
+
+                return deferred.promise;
+            };
+            /**
              * markActionAsDeleted
              * @method
              * @name OtrService#markActionAsDeletedUsingDELETE
              * @param {object} parameters - method options and parameters
-             * @param {string} parameters.caseActionId - caseActionId
+             * @param {integer} parameters.caseActionId - caseActionId
              * @param {string} parameters.caseId - caseId
              * @param {boolean} parameters.isDeleted - isDeleted
              */
@@ -1155,11 +1213,13 @@ angular.module('otrBackendService', [])
                     return deferred.promise;
                 }
 
-                /** set default value **/
-                queryParameters['isDeleted'] = true;
-
                 if (parameters['isDeleted'] !== undefined) {
                     queryParameters['isDeleted'] = parameters['isDeleted'];
+                }
+
+                if (parameters['isDeleted'] === undefined) {
+                    deferred.reject(new Error('Missing required  parameter: isDeleted'));
+                    return deferred.promise;
                 }
 
                 queryParameters = mergeQueryParams(parameters, queryParameters);
@@ -3377,7 +3437,7 @@ angular.module('otrBackendService', [])
              * @method
              * @name OtrService#getNoViolationCitationsUsingGET
              * @param {object} parameters - method options and parameters
-             * @param {array} parameters.regionCodes - regionCodes
+             * @param {string} parameters.regionCodes - regionCodes
              * @param {integer} parameters.trailingDays - trailingDays
              */
             OtrService.prototype.getNoViolationCitationsUsingGET = function(parameters) {
@@ -5346,7 +5406,7 @@ angular.module('otrBackendService', [])
              * @method
              * @name OtrService#getTemplatesUsingGET
              * @param {object} parameters - method options and parameters
-             * @param {array} parameters.category - category
+             * @param {string} parameters.category - category
              */
             OtrService.prototype.getTemplatesUsingGET = function(parameters) {
                 if (parameters === undefined) {
@@ -6709,8 +6769,8 @@ angular.module('otrBackendService', [])
              * @param {boolean} parameters.includeTestLawfirms - includeTestLawfirms
              * @param {boolean} parameters.includeVacationMode - includeVacationMode
              * @param {string} parameters.q - q
-             * @param {array} parameters.states - states
-             * @param {array} parameters.statuses - statuses
+             * @param {string} parameters.states - states
+             * @param {string} parameters.statuses - statuses
              */
             OtrService.prototype.getLawfirmsUsingGET = function(parameters) {
                 if (parameters === undefined) {
@@ -7521,8 +7581,8 @@ angular.module('otrBackendService', [])
              * @method
              * @name OtrService#listLawfirmAuditEventsByCursorUsingGET
              * @param {object} parameters - method options and parameters
-             * @param {array} parameters.excludeTypes - excludeTypes
-             * @param {array} parameters.includeTypes - includeTypes
+             * @param {string} parameters.excludeTypes - excludeTypes
+             * @param {string} parameters.includeTypes - includeTypes
              * @param {integer} parameters.lawfirmId - lawfirmId
              * @param {integer} parameters.limit - limit
              * @param {string} parameters.nextPageToken - nextPageToken
@@ -7646,7 +7706,7 @@ angular.module('otrBackendService', [])
              * @method
              * @name OtrService#removeCourtsUsingDELETE
              * @param {object} parameters - method options and parameters
-             * @param {array} parameters.courtsToRemove - courtsToRemove
+             * @param {integer} parameters.courtsToRemove - courtsToRemove
              * @param {string} parameters.lawfirmId - lawfirmId
              */
             OtrService.prototype.removeCourtsUsingDELETE = function(parameters) {
@@ -7997,6 +8057,7 @@ angular.module('otrBackendService', [])
              * @method
              * @name OtrService#getLawfirmInboxMessagesUsingGET
              * @param {object} parameters - method options and parameters
+             * @param {string} parameters.caseId - caseId
              * @param {integer} parameters.lawfirmId - lawfirmId
              * @param {integer} parameters.length - length
              * @param {integer} parameters.page - page
@@ -8014,6 +8075,10 @@ angular.module('otrBackendService', [])
                     form = {};
 
                 headers['Accept'] = ['*/*'];
+
+                if (parameters['caseId'] !== undefined) {
+                    queryParameters['caseId'] = parameters['caseId'];
+                }
 
                 path = path.replace('{lawfirmId}', parameters['lawfirmId']);
 
@@ -8203,7 +8268,7 @@ angular.module('otrBackendService', [])
              * @name OtrService#updateLawfirmWithPictureUsingPUT
              * @param {object} parameters - method options and parameters
              * @param {string} parameters.lawfirmId - lawfirmId
-             * @param {} parameters.lawfirmPictureRequest - lawfirmPictureRequest
+             * @param {} parameters.request - request
              */
             OtrService.prototype.updateLawfirmWithPictureUsingPUT = function(parameters) {
                 if (parameters === undefined) {
@@ -8227,12 +8292,12 @@ angular.module('otrBackendService', [])
                     return deferred.promise;
                 }
 
-                if (parameters['lawfirmPictureRequest'] !== undefined) {
-                    body = parameters['lawfirmPictureRequest'];
+                if (parameters['request'] !== undefined) {
+                    body = parameters['request'];
                 }
 
-                if (parameters['lawfirmPictureRequest'] === undefined) {
-                    deferred.reject(new Error('Missing required  parameter: lawfirmPictureRequest'));
+                if (parameters['request'] === undefined) {
+                    deferred.reject(new Error('Missing required  parameter: request'));
                     return deferred.promise;
                 }
 
@@ -10393,7 +10458,7 @@ angular.module('otrBackendService', [])
              * @param {string} parameters.nextPageToken - nextPageToken
              * @param {string} parameters.previousPageToken - previousPageToken
              * @param {string} parameters.state - state
-             * @param {array} parameters.tags - tags
+             * @param {string} parameters.tags - tags
              */
             OtrService.prototype.listCustomerReviewsUsingGET = function(parameters) {
                 if (parameters === undefined) {
@@ -14049,7 +14114,7 @@ angular.module('otrBackendService', [])
              * @param {integer} parameters.limit - limit
              * @param {string} parameters.previousPageToken - previousPageToken
              * @param {string} parameters.sortBy - sortBy
-             * @param {array} parameters.statusCategories - statusCategories
+             * @param {string} parameters.statusCategories - statusCategories
              * @param {integer} parameters.userId - userId
              */
             OtrService.prototype.listDashboardCasesUsingGET = function(parameters) {

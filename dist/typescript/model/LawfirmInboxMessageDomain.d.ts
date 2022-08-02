@@ -11,6 +11,8 @@
  */
 import * as models from './models';
 export interface LawfirmInboxMessageDomain {
+    "authorFirstName"?: string;
+    "authorLastName"?: string;
     "caseId"?: string;
     "caseStatus"?: LawfirmInboxMessageDomain.CaseStatusEnum;
     "caseStatusCategory"?: LawfirmInboxMessageDomain.CaseStatusCategoryEnum;
@@ -18,7 +20,10 @@ export interface LawfirmInboxMessageDomain {
     "citationIssueDateUtc"?: models.TimestampRes;
     "clientFirstName"?: string;
     "clientLastName"?: string;
+    "courtDateUtc"?: string;
     "courtName"?: string;
+    "customerFirstName"?: string;
+    "customerLastName"?: string;
     "lawfirmCaseDecisionStatus"?: LawfirmInboxMessageDomain.LawfirmCaseDecisionStatusEnum;
     "messageBody"?: string;
     "messageSentDateUtc"?: models.TimestampRes;
