@@ -27,7 +27,7 @@ var CatchAllControllerApi = /** @class */ (function () {
      *
      * @summary unmappedRequest
      */
-    CatchAllControllerApi.prototype.unmappedRequestUsingDELETE = function (extraHttpRequestParams) {
+    CatchAllControllerApi.prototype.unmappedRequestUsingDELETE1 = function (extraHttpRequestParams) {
         var localVarPath = this.basePath + '/api/**';
         var queryParameters = {};
         var headerParams = Object.assign({}, this.defaultHeaders);
@@ -46,7 +46,7 @@ var CatchAllControllerApi = /** @class */ (function () {
      *
      * @summary unmappedRequest
      */
-    CatchAllControllerApi.prototype.unmappedRequestUsingGET = function (extraHttpRequestParams) {
+    CatchAllControllerApi.prototype.unmappedRequestUsingGET1 = function (extraHttpRequestParams) {
         var localVarPath = this.basePath + '/api/**';
         var queryParameters = {};
         var headerParams = Object.assign({}, this.defaultHeaders);
@@ -65,7 +65,7 @@ var CatchAllControllerApi = /** @class */ (function () {
      *
      * @summary unmappedRequest
      */
-    CatchAllControllerApi.prototype.unmappedRequestUsingHEAD = function (extraHttpRequestParams) {
+    CatchAllControllerApi.prototype.unmappedRequestUsingHEAD1 = function (extraHttpRequestParams) {
         var localVarPath = this.basePath + '/api/**';
         var queryParameters = {};
         var headerParams = Object.assign({}, this.defaultHeaders);
@@ -84,7 +84,7 @@ var CatchAllControllerApi = /** @class */ (function () {
      *
      * @summary unmappedRequest
      */
-    CatchAllControllerApi.prototype.unmappedRequestUsingOPTIONS = function (extraHttpRequestParams) {
+    CatchAllControllerApi.prototype.unmappedRequestUsingOPTIONS1 = function (extraHttpRequestParams) {
         var localVarPath = this.basePath + '/api/**';
         var queryParameters = {};
         var headerParams = Object.assign({}, this.defaultHeaders);
@@ -103,7 +103,7 @@ var CatchAllControllerApi = /** @class */ (function () {
      *
      * @summary unmappedRequest
      */
-    CatchAllControllerApi.prototype.unmappedRequestUsingPATCH = function (extraHttpRequestParams) {
+    CatchAllControllerApi.prototype.unmappedRequestUsingPATCH1 = function (extraHttpRequestParams) {
         var localVarPath = this.basePath + '/api/**';
         var queryParameters = {};
         var headerParams = Object.assign({}, this.defaultHeaders);
@@ -122,7 +122,7 @@ var CatchAllControllerApi = /** @class */ (function () {
      *
      * @summary unmappedRequest
      */
-    CatchAllControllerApi.prototype.unmappedRequestUsingPOST = function (extraHttpRequestParams) {
+    CatchAllControllerApi.prototype.unmappedRequestUsingPOST1 = function (extraHttpRequestParams) {
         var localVarPath = this.basePath + '/api/**';
         var queryParameters = {};
         var headerParams = Object.assign({}, this.defaultHeaders);
@@ -141,7 +141,7 @@ var CatchAllControllerApi = /** @class */ (function () {
      *
      * @summary unmappedRequest
      */
-    CatchAllControllerApi.prototype.unmappedRequestUsingPUT = function (extraHttpRequestParams) {
+    CatchAllControllerApi.prototype.unmappedRequestUsingPUT1 = function (extraHttpRequestParams) {
         var localVarPath = this.basePath + '/api/**';
         var queryParameters = {};
         var headerParams = Object.assign({}, this.defaultHeaders);

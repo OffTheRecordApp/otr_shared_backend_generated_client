@@ -46,6 +46,14 @@ export declare class LawfirmControllerApi {
     deleteLawfirmCoverPhotoUsingDELETE(lawfirmId: string, extraHttpRequestParams?: any): ng.IHttpPromise<object>;
     /**
      *
+     * @summary getInboxMessages
+     * @param lawfirmId lawfirmId
+     * @param length length
+     * @param page page
+     */
+    getInboxMessagesUsingGET(lawfirmId: number, length?: number, page?: number, extraHttpRequestParams?: any): ng.IHttpPromise<models.GetLawfirmInboxMessagesResponse>;
+    /**
+     *
      * @summary getLawfirmAddresses
      * @param lawfirmId lawfirmId
      */
@@ -66,11 +74,10 @@ export declare class LawfirmControllerApi {
      *
      * @summary getLawfirmInboxMessages
      * @param lawfirmId lawfirmId
-     * @param caseId caseId
      * @param length length
      * @param page page
      */
-    getLawfirmInboxMessagesUsingGET(lawfirmId: number, caseId?: string, length?: number, page?: number, extraHttpRequestParams?: any): ng.IHttpPromise<models.GetLawfirmInboxMessagesResponse>;
+    getLawfirmInboxMessagesUsingGET(lawfirmId: number, length?: number, page?: number, extraHttpRequestParams?: any): ng.IHttpPromise<models.GetLawfirmInboxMessagesResponse>;
     /**
      *
      * @summary getLawfirmJobTitles
