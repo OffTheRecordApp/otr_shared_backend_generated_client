@@ -21,35 +21,35 @@ export declare class CatchAllControllerApi {
      *
      * @summary unmappedRequest
      */
-    unmappedRequestUsingDELETE1(extraHttpRequestParams?: any): ng.IHttpPromise<object>;
+    unmappedRequestUsingDELETE(extraHttpRequestParams?: any): ng.IHttpPromise<object>;
     /**
      *
      * @summary unmappedRequest
      */
-    unmappedRequestUsingGET1(extraHttpRequestParams?: any): ng.IHttpPromise<object>;
+    unmappedRequestUsingGET(extraHttpRequestParams?: any): ng.IHttpPromise<object>;
     /**
      *
      * @summary unmappedRequest
      */
-    unmappedRequestUsingHEAD1(extraHttpRequestParams?: any): ng.IHttpPromise<object>;
+    unmappedRequestUsingHEAD(extraHttpRequestParams?: any): ng.IHttpPromise<object>;
     /**
      *
      * @summary unmappedRequest
      */
-    unmappedRequestUsingOPTIONS1(extraHttpRequestParams?: any): ng.IHttpPromise<object>;
+    unmappedRequestUsingOPTIONS(extraHttpRequestParams?: any): ng.IHttpPromise<object>;
     /**
      *
      * @summary unmappedRequest
      */
-    unmappedRequestUsingPATCH1(extraHttpRequestParams?: any): ng.IHttpPromise<object>;
+    unmappedRequestUsingPATCH(extraHttpRequestParams?: any): ng.IHttpPromise<object>;
     /**
      *
      * @summary unmappedRequest
      */
-    unmappedRequestUsingPOST1(extraHttpRequestParams?: any): ng.IHttpPromise<object>;
+    unmappedRequestUsingPOST(extraHttpRequestParams?: any): ng.IHttpPromise<object>;
     /**
      *
      * @summary unmappedRequest
      */
-    unmappedRequestUsingPUT1(extraHttpRequestParams?: any): ng.IHttpPromise<object>;
+    unmappedRequestUsingPUT(extraHttpRequestParams?: any): ng.IHttpPromise<object>;
 }
