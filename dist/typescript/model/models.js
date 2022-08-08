@@ -101,6 +101,7 @@ __exportStar(require("./CitationDomain"), exports);
 __exportStar(require("./CitationDomainReq"), exports);
 __exportStar(require("./CitationDomainRes"), exports);
 __exportStar(require("./CitationInputRequest"), exports);
+__exportStar(require("./CitationViolationModel"), exports);
 __exportStar(require("./CitationWithMissingCourt"), exports);
 __exportStar(require("./CitationWithMissingFields"), exports);
 __exportStar(require("./ClientActionRequiredRequest"), exports);

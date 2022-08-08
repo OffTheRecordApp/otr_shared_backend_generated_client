@@ -19,6 +19,7 @@ export interface CitationWithMissingFields {
     "state"?: CitationWithMissingFields.StateEnum;
     "ticketImageUrl"?: string;
     "userId"?: number;
+    "violations"?: Array<models.CitationViolationModel>;
 }
 export declare namespace CitationWithMissingFields {
     enum StateEnum {

@@ -89,6 +89,7 @@ export * from './CitationDomain';
 export * from './CitationDomainReq';
 export * from './CitationDomainRes';
 export * from './CitationInputRequest';
+export * from './CitationViolationModel';
 export * from './CitationWithMissingCourt';
 export * from './CitationWithMissingFields';
 export * from './ClientActionRequiredRequest';
