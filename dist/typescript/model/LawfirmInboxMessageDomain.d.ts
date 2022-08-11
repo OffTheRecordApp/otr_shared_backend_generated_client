@@ -14,6 +14,7 @@ export interface LawfirmInboxMessageDomain {
     "attachment"?: boolean;
     "authorFirstName"?: string;
     "authorLastName"?: string;
+    "authorRoleType"?: LawfirmInboxMessageDomain.AuthorRoleTypeEnum;
     "bookingConfirmedDateUtc"?: string;
     "caseId"?: string;
     "caseStatus"?: LawfirmInboxMessageDomain.CaseStatusEnum;
@@ -32,6 +33,13 @@ export interface LawfirmInboxMessageDomain {
     "profilePictureUrl"?: string;
 }
 export declare namespace LawfirmInboxMessageDomain {
+    enum AuthorRoleTypeEnum {
+        ADMIN,
+        DEFENDANT,
+        LAWYER,
+        PARTNER,
+        UNKNOWN
+    }
     enum CaseStatusEnum {
         AMENDEDDOWNWITHINCLASS,
         AMENDEDFULLFINE,

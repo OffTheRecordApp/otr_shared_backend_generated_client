@@ -14,6 +14,14 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.LawfirmInboxMessageDomain = void 0;
 var LawfirmInboxMessageDomain;
 (function (LawfirmInboxMessageDomain) {
+    var AuthorRoleTypeEnum;
+    (function (AuthorRoleTypeEnum) {
+        AuthorRoleTypeEnum[AuthorRoleTypeEnum["ADMIN"] = 'ADMIN'] = "ADMIN";
+        AuthorRoleTypeEnum[AuthorRoleTypeEnum["DEFENDANT"] = 'DEFENDANT'] = "DEFENDANT";
+        AuthorRoleTypeEnum[AuthorRoleTypeEnum["LAWYER"] = 'LAWYER'] = "LAWYER";
+        AuthorRoleTypeEnum[AuthorRoleTypeEnum["PARTNER"] = 'PARTNER'] = "PARTNER";
+        AuthorRoleTypeEnum[AuthorRoleTypeEnum["UNKNOWN"] = 'UNKNOWN'] = "UNKNOWN";
+    })(AuthorRoleTypeEnum = LawfirmInboxMessageDomain.AuthorRoleTypeEnum || (LawfirmInboxMessageDomain.AuthorRoleTypeEnum = {}));
     var CaseStatusEnum;
     (function (CaseStatusEnum) {
         CaseStatusEnum[CaseStatusEnum["AMENDEDDOWNWITHINCLASS"] = 'AMENDED_DOWN_WITHIN_CLASS'] = "AMENDEDDOWNWITHINCLASS";
