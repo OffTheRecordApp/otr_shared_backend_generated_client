@@ -7126,6 +7126,7 @@ angular.module('otrBackendService', [])
              * @param {string} parameters.classification - classification
              * @param {boolean} parameters.isPermitted - isPermitted
              * @param {string} parameters.lawfirmId - lawfirmId
+             * @param {string} parameters.regionCode - regionCode
              * @param {integer} parameters.violationId - violationId
              */
             OtrService.prototype.removeAccountFeesUsingDELETE = function(parameters) {
@@ -7155,6 +7156,10 @@ angular.module('otrBackendService', [])
                 if (parameters['lawfirmId'] === undefined) {
                     deferred.reject(new Error('Missing required  parameter: lawfirmId'));
                     return deferred.promise;
+                }
+
+                if (parameters['regionCode'] !== undefined) {
+                    queryParameters['regionCode'] = parameters['regionCode'];
                 }
 
                 if (parameters['violationId'] !== undefined) {

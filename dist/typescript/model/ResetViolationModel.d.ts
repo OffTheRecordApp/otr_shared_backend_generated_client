@@ -10,6 +10,7 @@
  * Do not edit the class manually.
  */
 export interface ResetViolationModel {
+    "regionCode"?: string;
     "violationClass"?: ResetViolationModel.ViolationClassEnum;
     "violationId"?: number;
 }

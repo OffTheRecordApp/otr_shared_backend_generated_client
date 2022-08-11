@@ -12,6 +12,7 @@
 export interface CoverageToRemove {
     "classification"?: CoverageToRemove.ClassificationEnum;
     "courtId"?: number;
+    "regionCode"?: string;
     "violationId"?: number;
 }
 export declare namespace CoverageToRemove {

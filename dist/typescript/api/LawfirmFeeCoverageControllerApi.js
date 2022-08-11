@@ -170,9 +170,10 @@ var LawfirmFeeCoverageControllerApi = /** @class */ (function () {
      * @param lawfirmId lawfirmId
      * @param classification classification
      * @param isPermitted isPermitted
+     * @param regionCode regionCode
      * @param violationId violationId
      */
-    LawfirmFeeCoverageControllerApi.prototype.removeAccountFeesUsingDELETE = function (lawfirmId, classification, isPermitted, violationId, extraHttpRequestParams) {
+    LawfirmFeeCoverageControllerApi.prototype.removeAccountFeesUsingDELETE = function (lawfirmId, classification, isPermitted, regionCode, violationId, extraHttpRequestParams) {
         var localVarPath = this.basePath + '/api/v1/lawfirms/{lawfirmId}/account-fees'
             .replace('{' + 'lawfirmId' + '}', encodeURIComponent(String(lawfirmId)));
         var queryParameters = {};
@@ -186,6 +187,9 @@ var LawfirmFeeCoverageControllerApi = /** @class */ (function () {
         }
         if (isPermitted !== undefined) {
             queryParameters['isPermitted'] = isPermitted;
+        }
+        if (regionCode !== undefined) {
+            queryParameters['regionCode'] = regionCode;
         }
         if (violationId !== undefined) {
             queryParameters['violationId'] = violationId;
