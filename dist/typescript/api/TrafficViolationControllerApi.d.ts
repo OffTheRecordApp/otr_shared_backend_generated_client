@@ -50,7 +50,7 @@ export declare class TrafficViolationControllerApi {
      * @summary listViolationClassifications
      * @param regionCode regionCode
      */
-    listViolationClassificationsUsingGET(regionCode?: string, extraHttpRequestParams?: any): ng.IHttpPromise<models.ListViolationClassificationResponse>;
+    listViolationClassificationsUsingGET(regionCode: string, extraHttpRequestParams?: any): ng.IHttpPromise<models.ListViolationClassificationResponse>;
     /**
      *
      * @summary updateViolation
