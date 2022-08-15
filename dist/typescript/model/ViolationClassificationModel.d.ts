@@ -13,6 +13,7 @@ export interface ViolationClassificationModel {
     "classification"?: ViolationClassificationModel.ClassificationEnum;
     "criminal"?: boolean;
     "pureCriminal"?: boolean;
+    "regionCode"?: string;
 }
 export declare namespace ViolationClassificationModel {
     enum ClassificationEnum {
