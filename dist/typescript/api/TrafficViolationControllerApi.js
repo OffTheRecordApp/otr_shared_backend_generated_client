@@ -144,10 +144,6 @@ var TrafficViolationControllerApi = /** @class */ (function () {
         var localVarPath = this.basePath + '/api/v1/violations/classifications';
         var queryParameters = {};
         var headerParams = Object.assign({}, this.defaultHeaders);
-        // verify required parameter 'regionCode' is not null or undefined
-        if (regionCode === null || regionCode === undefined) {
-            throw new Error('Required parameter regionCode was null or undefined when calling listViolationClassificationsUsingGET.');
-        }
         if (regionCode !== undefined) {
             queryParameters['regionCode'] = regionCode;
         }

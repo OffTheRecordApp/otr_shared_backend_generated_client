@@ -13174,11 +13174,6 @@ angular.module('otrBackendService', [])
                     queryParameters['regionCode'] = parameters['regionCode'];
                 }
 
-                if (parameters['regionCode'] === undefined) {
-                    deferred.reject(new Error('Missing required  parameter: regionCode'));
-                    return deferred.promise;
-                }
-
                 queryParameters = mergeQueryParams(parameters, queryParameters);
 
                 this.request('GET', domain + path, parameters, body, headers, queryParameters, form, deferred);
