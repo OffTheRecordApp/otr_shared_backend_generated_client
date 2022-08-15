@@ -12,8 +12,6 @@
 import * as models from './models';
 export interface GetCitationsWithMissingFieldsResponse {
     "citations"?: Array<models.CitationWithMissingFields>;
-    "citationsWithMissingClientName"?: Array<models.CitationWithMissingFields>;
-    "citationsWithMissingCourt"?: Array<models.CitationWithMissingFields>;
     "missingClientNameCount"?: number;
     "missingCourtCount"?: number;
 }
