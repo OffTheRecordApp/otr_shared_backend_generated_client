@@ -23,10 +23,12 @@ export interface UserDomainRes {
     "hasLeftReview"?: boolean;
     "isEmailConfirmed"?: boolean;
     "isEnabled"?: boolean;
+    "isLawfirmAccessGranted"?: boolean;
     "isPaymentPlansAllowed"?: boolean;
     "isTestUser"?: boolean;
     "isUnsubscribed"?: boolean;
     "lastname"?: string;
+    "lawfirmId"?: number;
     "lawyerJobTitle"?: UserDomainRes.LawyerJobTitleEnum;
     "loginProvider"?: UserDomainRes.LoginProviderEnum;
     "numBookingCancelations"?: number;

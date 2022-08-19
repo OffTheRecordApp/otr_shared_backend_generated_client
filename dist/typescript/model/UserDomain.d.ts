@@ -23,10 +23,12 @@ export interface UserDomain {
     "hasLeftReview"?: boolean;
     "isEmailConfirmed"?: boolean;
     "isEnabled"?: boolean;
+    "isLawfirmAccessGranted"?: boolean;
     "isPaymentPlansAllowed"?: boolean;
     "isTestUser"?: boolean;
     "isUnsubscribed"?: boolean;
     "lastname"?: string;
+    "lawfirmId"?: number;
     "lawyerJobTitle"?: UserDomain.LawyerJobTitleEnum;
     "loginProvider"?: UserDomain.LoginProviderEnum;
     "numBookingCancelations"?: number;
