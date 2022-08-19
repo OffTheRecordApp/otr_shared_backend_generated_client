@@ -28,6 +28,7 @@ export interface LawfirmInboxMessageDomain {
     "customerFirstName"?: string;
     "customerLastName"?: string;
     "lawfirmCaseDecisionStatus"?: LawfirmInboxMessageDomain.LawfirmCaseDecisionStatusEnum;
+    "lawfirmReceiptDateUtc"?: string;
     "messageBody"?: string;
     "messageSentDateUtc"?: string;
     "profilePictureUrl"?: string;
