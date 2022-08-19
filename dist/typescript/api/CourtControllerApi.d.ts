@@ -52,7 +52,7 @@ export declare class CourtControllerApi {
      * @summary getCourt
      * @param courtId courtId
      */
-    getCourtUsingGET(courtId: number, extraHttpRequestParams?: any): ng.IHttpPromise<models.GetCourtResponse>;
+    getCourtUsingGET(courtId: string, extraHttpRequestParams?: any): ng.IHttpPromise<models.GetCourtResponse>;
     /**
      *
      * @summary searchCourts

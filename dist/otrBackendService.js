@@ -4977,7 +4977,7 @@ angular.module('otrBackendService', [])
              * @method
              * @name OtrService#getCourtUsingGET
              * @param {object} parameters - method options and parameters
-             * @param {integer} parameters.courtId - courtId
+             * @param {string} parameters.courtId - courtId
              */
             OtrService.prototype.getCourtUsingGET = function(parameters) {
                 if (parameters === undefined) {
