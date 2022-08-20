@@ -19,6 +19,7 @@ export interface StripeConnectedAccountDomain {
     "creationDateUtc"?: models.TimestampRes;
     "detailsSubmitted"?: boolean;
     "email"?: string;
+    "id"?: number;
     "isDeprecated"?: boolean;
     "payoutsEnabled"?: boolean;
     "stripePlatformAccountId"?: string;
