@@ -14,6 +14,7 @@ export interface UpdateAddress {
     "addressLine2"?: string;
     "city"?: string;
     "countryCode"?: string;
+    "phoneNumber"?: string;
     "postalCode"?: string;
     "regionCode"?: string;
 }
