@@ -15,6 +15,7 @@ export interface LawfirmInboxMessageDomain {
     "authorFirstName"?: string;
     "authorLastName"?: string;
     "authorRoleType"?: LawfirmInboxMessageDomain.AuthorRoleTypeEnum;
+    "authorUserId"?: number;
     "bookingConfirmedDateUtc"?: string;
     "caseId"?: string;
     "caseStatus"?: LawfirmInboxMessageDomain.CaseStatusEnum;

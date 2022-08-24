@@ -14,6 +14,7 @@ export interface CaseMessageDomain {
     "authorLastname"?: string;
     "authorProfilePicUrl"?: string;
     "authorRoleType"?: CaseMessageDomain.AuthorRoleTypeEnum;
+    "authorUserId"?: number;
     "isDeleted"?: boolean;
     "mediaType"?: CaseMessageDomain.MediaTypeEnum;
     "mediaUrl"?: string;
