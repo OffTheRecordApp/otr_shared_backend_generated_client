@@ -72,14 +72,6 @@ export declare class LawfirmControllerApi {
     getLawfirmCaseStatsUsingGET(lawfirmId: number, extraHttpRequestParams?: any): ng.IHttpPromise<models.GetLawfirmCaseStatsResponse>;
     /**
      *
-     * @summary getLawfirmInboxMessages
-     * @param lawfirmId lawfirmId
-     * @param length length
-     * @param page page
-     */
-    getLawfirmInboxMessagesUsingGET(lawfirmId: number, length?: number, page?: number, extraHttpRequestParams?: any): ng.IHttpPromise<models.GetLawfirmInboxMessagesResponse>;
-    /**
-     *
      * @summary getLawfirmJobTitles
      */
     getLawfirmJobTitlesUsingGET(extraHttpRequestParams?: any): ng.IHttpPromise<models.GetLawfirmJobTitleResponse>;

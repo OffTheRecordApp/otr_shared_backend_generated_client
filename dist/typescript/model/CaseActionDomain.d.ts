@@ -18,6 +18,8 @@ export interface CaseActionDomain {
     "authorId"?: number;
     "authorName"?: string;
     "caseActionId"?: number;
+    "courtDateActionNote"?: string;
+    "courtDateActionTitle"?: string;
     "isDeleted"?: boolean;
 }
 export declare namespace CaseActionDomain {

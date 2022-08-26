@@ -247,39 +247,6 @@ var LawfirmControllerApi = /** @class */ (function () {
     };
     /**
      *
-     * @summary getLawfirmInboxMessages
-     * @param lawfirmId lawfirmId
-     * @param length length
-     * @param page page
-     */
-    LawfirmControllerApi.prototype.getLawfirmInboxMessagesUsingGET = function (lawfirmId, length, page, extraHttpRequestParams) {
-        var localVarPath = this.basePath + '/api/v1/lawfirms/{lawfirmId}/messages'
-            .replace('{' + 'lawfirmId' + '}', encodeURIComponent(String(lawfirmId)));
-        var queryParameters = {};
-        var headerParams = Object.assign({}, this.defaultHeaders);
-        // verify required parameter 'lawfirmId' is not null or undefined
-        if (lawfirmId === null || lawfirmId === undefined) {
-            throw new Error('Required parameter lawfirmId was null or undefined when calling getLawfirmInboxMessagesUsingGET.');
-        }
-        if (length !== undefined) {
-            queryParameters['length'] = length;
-        }
-        if (page !== undefined) {
-            queryParameters['page'] = page;
-        }
-        var httpRequestParams = {
-            method: 'GET',
-            url: localVarPath,
-            params: queryParameters,
-            headers: headerParams
-        };
-        if (extraHttpRequestParams) {
-            httpRequestParams = Object.assign(httpRequestParams, extraHttpRequestParams);
-        }
-        return this.$http(httpRequestParams);
-    };
-    /**
-     *
      * @summary getLawfirmJobTitles
      */
     LawfirmControllerApi.prototype.getLawfirmJobTitlesUsingGET = function (extraHttpRequestParams) {
