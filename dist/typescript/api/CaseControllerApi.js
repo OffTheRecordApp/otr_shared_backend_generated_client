@@ -332,6 +332,31 @@ var CaseControllerApi = /** @class */ (function () {
     };
     /**
      *
+     * @summary setArchiveOnCases
+     * @param request request
+     */
+    CaseControllerApi.prototype.setArchiveOnCasesUsingPUT = function (request, extraHttpRequestParams) {
+        var localVarPath = this.basePath + '/api/v1/cases/archive';
+        var queryParameters = {};
+        var headerParams = Object.assign({}, this.defaultHeaders);
+        // verify required parameter 'request' is not null or undefined
+        if (request === null || request === undefined) {
+            throw new Error('Required parameter request was null or undefined when calling setArchiveOnCasesUsingPUT.');
+        }
+        var httpRequestParams = {
+            method: 'PUT',
+            url: localVarPath,
+            data: request,
+            params: queryParameters,
+            headers: headerParams
+        };
+        if (extraHttpRequestParams) {
+            httpRequestParams = Object.assign(httpRequestParams, extraHttpRequestParams);
+        }
+        return this.$http(httpRequestParams);
+    };
+    /**
+     *
      * @summary setCourtDateForCase
      * @param caseId caseId
      * @param request request

@@ -56,4 +56,16 @@ export declare class ConversationControllerApi {
      * @param messageId messageId
      */
     markMessageAsDeletedUsingPUT(caseId: string, isDeleted: boolean, messageId: number, extraHttpRequestParams?: any): ng.IHttpPromise<object>;
+    /**
+     *
+     * @summary setFlagOnMessages
+     * @param request request
+     */
+    setFlagOnMessagesUsingPUT(request: models.SetFlagOnMessagesRequest, extraHttpRequestParams?: any): ng.IHttpPromise<{}>;
+    /**
+     *
+     * @summary setStarOnMessages
+     * @param request request
+     */
+    setStarOnMessagesUsingPUT(request: models.SetStarOnMessagesRequest, extraHttpRequestParams?: any): ng.IHttpPromise<{}>;
 }

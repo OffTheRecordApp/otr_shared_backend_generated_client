@@ -92,6 +92,12 @@ export declare class CaseControllerApi {
     reopenCaseUsingPUT(caseId: string, extraHttpRequestParams?: any): ng.IHttpPromise<{}>;
     /**
      *
+     * @summary setArchiveOnCases
+     * @param request request
+     */
+    setArchiveOnCasesUsingPUT(request: models.SetArchiveOnCasesRequest, extraHttpRequestParams?: any): ng.IHttpPromise<{}>;
+    /**
+     *
      * @summary setCourtDateForCase
      * @param caseId caseId
      * @param request request

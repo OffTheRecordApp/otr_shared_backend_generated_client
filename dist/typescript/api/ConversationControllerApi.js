@@ -194,6 +194,56 @@ var ConversationControllerApi = /** @class */ (function () {
         }
         return this.$http(httpRequestParams);
     };
+    /**
+     *
+     * @summary setFlagOnMessages
+     * @param request request
+     */
+    ConversationControllerApi.prototype.setFlagOnMessagesUsingPUT = function (request, extraHttpRequestParams) {
+        var localVarPath = this.basePath + '/api/v1/cases/conversation/flag';
+        var queryParameters = {};
+        var headerParams = Object.assign({}, this.defaultHeaders);
+        // verify required parameter 'request' is not null or undefined
+        if (request === null || request === undefined) {
+            throw new Error('Required parameter request was null or undefined when calling setFlagOnMessagesUsingPUT.');
+        }
+        var httpRequestParams = {
+            method: 'PUT',
+            url: localVarPath,
+            data: request,
+            params: queryParameters,
+            headers: headerParams
+        };
+        if (extraHttpRequestParams) {
+            httpRequestParams = Object.assign(httpRequestParams, extraHttpRequestParams);
+        }
+        return this.$http(httpRequestParams);
+    };
+    /**
+     *
+     * @summary setStarOnMessages
+     * @param request request
+     */
+    ConversationControllerApi.prototype.setStarOnMessagesUsingPUT = function (request, extraHttpRequestParams) {
+        var localVarPath = this.basePath + '/api/v1/cases/conversation/star';
+        var queryParameters = {};
+        var headerParams = Object.assign({}, this.defaultHeaders);
+        // verify required parameter 'request' is not null or undefined
+        if (request === null || request === undefined) {
+            throw new Error('Required parameter request was null or undefined when calling setStarOnMessagesUsingPUT.');
+        }
+        var httpRequestParams = {
+            method: 'PUT',
+            url: localVarPath,
+            data: request,
+            params: queryParameters,
+            headers: headerParams
+        };
+        if (extraHttpRequestParams) {
+            httpRequestParams = Object.assign(httpRequestParams, extraHttpRequestParams);
+        }
+        return this.$http(httpRequestParams);
+    };
     ConversationControllerApi.$inject = ['$http', '$httpParamSerializer', 'basePath'];
     return ConversationControllerApi;
 }());
