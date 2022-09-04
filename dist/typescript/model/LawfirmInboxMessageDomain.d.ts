@@ -16,14 +16,12 @@ export interface LawfirmInboxMessageDomain {
     "authorLastName"?: string;
     "authorRoleType"?: LawfirmInboxMessageDomain.AuthorRoleTypeEnum;
     "authorUserId"?: number;
-    "bookingConfirmedDateUtc"?: string;
+    "caseArchived"?: boolean;
     "caseId"?: string;
     "caseStatus"?: LawfirmInboxMessageDomain.CaseStatusEnum;
     "caseStatusCategory"?: LawfirmInboxMessageDomain.CaseStatusCategoryEnum;
     "citationIssueDate"?: models.PureDate;
     "citationIssueDateUtc"?: string;
-    "clientFirstName"?: string;
-    "clientLastName"?: string;
     "courtDateUtc"?: string;
     "courtName"?: string;
     "customerFirstName"?: string;
@@ -31,7 +29,10 @@ export interface LawfirmInboxMessageDomain {
     "lawfirmCaseDecisionStatus"?: LawfirmInboxMessageDomain.LawfirmCaseDecisionStatusEnum;
     "lawfirmReceiptDateUtc"?: string;
     "messageBody"?: string;
+    "messageFlagged"?: boolean;
+    "messageId"?: number;
     "messageSentDateUtc"?: string;
+    "messageStarred"?: boolean;
     "profilePictureUrl"?: string;
 }
 export declare namespace LawfirmInboxMessageDomain {
