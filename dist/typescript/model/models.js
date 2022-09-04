@@ -373,6 +373,8 @@ __exportStar(require("./LostCaseWithTransferNotReversed"), exports);
 __exportStar(require("./MarkActionAsDeletedResponse"), exports);
 __exportStar(require("./MarkCaseAsResolvedRequest"), exports);
 __exportStar(require("./MarkCaseAsResolvedResponse"), exports);
+__exportStar(require("./MarkNotificationAsUnreadModel"), exports);
+__exportStar(require("./MarkNotificationAsUnreadRequest"), exports);
 __exportStar(require("./MatchCaseResponse"), exports);
 __exportStar(require("./MatchCitationResponse"), exports);
 __exportStar(require("./MatchInnerCaseResponse"), exports);
