@@ -1,3 +1,4 @@
+"use strict";
 /**
  * OffTheRecord Rest Service API - Devo
  * A service to handle your traffic tickets
@@ -9,6 +10,4 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-export interface CursorModel {
-    "nextPageToken"?: string;
-}
+Object.defineProperty(exports, "__esModule", { value: true });

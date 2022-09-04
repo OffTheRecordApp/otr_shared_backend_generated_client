@@ -9,6 +9,9 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-export interface CursorModel {
-    "nextPageToken"?: string;
+import * as models from './models';
+export interface ListUserAuditEventsByCursorResponse {
+    "cursorModel"?: models.CursorModel;
+    "events"?: Array<models.UserAuditEventModel>;
+    "totalRecords"?: number;
 }

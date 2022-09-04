@@ -9,18 +9,18 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-export interface LawfirmAuditEventModel {
-    "authorName"?: string;
-    "clientType"?: LawfirmAuditEventModel.ClientTypeEnum;
-    "event"?: LawfirmAuditEventModel.EventEnum;
+export interface UserAuditEventModel {
+    "clientType"?: UserAuditEventModel.ClientTypeEnum;
     "eventDate"?: string;
     "eventId"?: number;
-    "lawfirmEventId"?: number;
+    "eventType"?: UserAuditEventModel.EventTypeEnum;
     "newValue"?: string;
     "oldValue"?: string;
-    "userId"?: number;
+    "requesterName"?: string;
+    "requesterUserId"?: number;
+    "userEventId"?: number;
 }
-export declare namespace LawfirmAuditEventModel {
+export declare namespace UserAuditEventModel {
     enum ClientTypeEnum {
         ANDROID,
         DESKTOPWEBAPP,
@@ -42,7 +42,7 @@ export declare namespace LawfirmAuditEventModel {
         OTRWIDGET,
         UNKNOWN
     }
-    enum EventEnum {
+    enum EventTypeEnum {
         CASEBOOKING,
         CASEMATCH,
         CITATIONUPLOAD,

@@ -12498,6 +12498,63 @@ angular.module('otrBackendService', [])
                 return deferred.promise;
             };
             /**
+             * listUserAuditEventsByCursor
+             * @method
+             * @name OtrService#listUserAuditEventsByCursorUsingGET
+             * @param {object} parameters - method options and parameters
+             * @param {string} parameters.excludeTypes - excludeTypes
+             * @param {string} parameters.includeTypes - includeTypes
+             * @param {integer} parameters.limit - limit
+             * @param {string} parameters.nextPageToken - nextPageToken
+             * @param {integer} parameters.userId - userId
+             */
+            OtrService.prototype.listUserAuditEventsByCursorUsingGET = function(parameters) {
+                if (parameters === undefined) {
+                    parameters = {};
+                }
+                var deferred = $q.defer();
+                var domain = this.domain,
+                    path = '/api/v1/users/{userId}/audit-events';
+                var body = {},
+                    queryParameters = {},
+                    headers = {},
+                    form = {};
+
+                headers['Accept'] = ['*/*'];
+
+                if (parameters['excludeTypes'] !== undefined) {
+                    queryParameters['excludeTypes'] = parameters['excludeTypes'];
+                }
+
+                if (parameters['includeTypes'] !== undefined) {
+                    queryParameters['includeTypes'] = parameters['includeTypes'];
+                }
+
+                /** set default value **/
+                queryParameters['limit'] = 25;
+
+                if (parameters['limit'] !== undefined) {
+                    queryParameters['limit'] = parameters['limit'];
+                }
+
+                if (parameters['nextPageToken'] !== undefined) {
+                    queryParameters['nextPageToken'] = parameters['nextPageToken'];
+                }
+
+                path = path.replace('{userId}', parameters['userId']);
+
+                if (parameters['userId'] === undefined) {
+                    deferred.reject(new Error('Missing required  parameter: userId'));
+                    return deferred.promise;
+                }
+
+                queryParameters = mergeQueryParams(parameters, queryParameters);
+
+                this.request('GET', domain + path, parameters, body, headers, queryParameters, form, deferred);
+
+                return deferred.promise;
+            };
+            /**
              * getCasesForUser
              * @method
              * @name OtrService#getCasesForUserUsingGET

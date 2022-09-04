@@ -11,9 +11,9 @@
  * Do not edit the class manually.
  */
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.LawfirmAuditEventModel = void 0;
-var LawfirmAuditEventModel;
-(function (LawfirmAuditEventModel) {
+exports.UserAuditEventModel = void 0;
+var UserAuditEventModel;
+(function (UserAuditEventModel) {
     var ClientTypeEnum;
     (function (ClientTypeEnum) {
         ClientTypeEnum[ClientTypeEnum["ANDROID"] = 'ANDROID'] = "ANDROID";
@@ -35,19 +35,19 @@ var LawfirmAuditEventModel;
         ClientTypeEnum[ClientTypeEnum["OTRWEBSITELOCALHOST"] = 'OTR_WEBSITE_LOCALHOST'] = "OTRWEBSITELOCALHOST";
         ClientTypeEnum[ClientTypeEnum["OTRWIDGET"] = 'OTR_WIDGET'] = "OTRWIDGET";
         ClientTypeEnum[ClientTypeEnum["UNKNOWN"] = 'UNKNOWN'] = "UNKNOWN";
-    })(ClientTypeEnum = LawfirmAuditEventModel.ClientTypeEnum || (LawfirmAuditEventModel.ClientTypeEnum = {}));
-    var EventEnum;
-    (function (EventEnum) {
-        EventEnum[EventEnum["CASEBOOKING"] = 'CASE_BOOKING'] = "CASEBOOKING";
-        EventEnum[EventEnum["CASEMATCH"] = 'CASE_MATCH'] = "CASEMATCH";
-        EventEnum[EventEnum["CITATIONUPLOAD"] = 'CITATION_UPLOAD'] = "CITATIONUPLOAD";
-        EventEnum[EventEnum["LAWFIRMACCOUNTPRIORITY"] = 'LAWFIRM_ACCOUNT_PRIORITY'] = "LAWFIRMACCOUNTPRIORITY";
-        EventEnum[EventEnum["LAWFIRMACCOUNTSTATUS"] = 'LAWFIRM_ACCOUNT_STATUS'] = "LAWFIRMACCOUNTSTATUS";
-        EventEnum[EventEnum["LAWFIRMDAILYCAPACITY"] = 'LAWFIRM_DAILY_CAPACITY'] = "LAWFIRMDAILYCAPACITY";
-        EventEnum[EventEnum["LAWFIRMTOTALCAPACITY"] = 'LAWFIRM_TOTAL_CAPACITY'] = "LAWFIRMTOTALCAPACITY";
-        EventEnum[EventEnum["SAVEVACATIONMODEENDDATE"] = 'SAVE_VACATION_MODE_END_DATE'] = "SAVEVACATIONMODEENDDATE";
-        EventEnum[EventEnum["SAVEVACATIONMODEREASON"] = 'SAVE_VACATION_MODE_REASON'] = "SAVEVACATIONMODEREASON";
-        EventEnum[EventEnum["USERLOGINEVENT"] = 'USER_LOGIN_EVENT'] = "USERLOGINEVENT";
-        EventEnum[EventEnum["VACATIONMODETOGGLE"] = 'VACATION_MODE_TOGGLE'] = "VACATIONMODETOGGLE";
-    })(EventEnum = LawfirmAuditEventModel.EventEnum || (LawfirmAuditEventModel.EventEnum = {}));
-})(LawfirmAuditEventModel = exports.LawfirmAuditEventModel || (exports.LawfirmAuditEventModel = {}));
+    })(ClientTypeEnum = UserAuditEventModel.ClientTypeEnum || (UserAuditEventModel.ClientTypeEnum = {}));
+    var EventTypeEnum;
+    (function (EventTypeEnum) {
+        EventTypeEnum[EventTypeEnum["CASEBOOKING"] = 'CASE_BOOKING'] = "CASEBOOKING";
+        EventTypeEnum[EventTypeEnum["CASEMATCH"] = 'CASE_MATCH'] = "CASEMATCH";
+        EventTypeEnum[EventTypeEnum["CITATIONUPLOAD"] = 'CITATION_UPLOAD'] = "CITATIONUPLOAD";
+        EventTypeEnum[EventTypeEnum["LAWFIRMACCOUNTPRIORITY"] = 'LAWFIRM_ACCOUNT_PRIORITY'] = "LAWFIRMACCOUNTPRIORITY";
+        EventTypeEnum[EventTypeEnum["LAWFIRMACCOUNTSTATUS"] = 'LAWFIRM_ACCOUNT_STATUS'] = "LAWFIRMACCOUNTSTATUS";
+        EventTypeEnum[EventTypeEnum["LAWFIRMDAILYCAPACITY"] = 'LAWFIRM_DAILY_CAPACITY'] = "LAWFIRMDAILYCAPACITY";
+        EventTypeEnum[EventTypeEnum["LAWFIRMTOTALCAPACITY"] = 'LAWFIRM_TOTAL_CAPACITY'] = "LAWFIRMTOTALCAPACITY";
+        EventTypeEnum[EventTypeEnum["SAVEVACATIONMODEENDDATE"] = 'SAVE_VACATION_MODE_END_DATE'] = "SAVEVACATIONMODEENDDATE";
+        EventTypeEnum[EventTypeEnum["SAVEVACATIONMODEREASON"] = 'SAVE_VACATION_MODE_REASON'] = "SAVEVACATIONMODEREASON";
+        EventTypeEnum[EventTypeEnum["USERLOGINEVENT"] = 'USER_LOGIN_EVENT'] = "USERLOGINEVENT";
+        EventTypeEnum[EventTypeEnum["VACATIONMODETOGGLE"] = 'VACATION_MODE_TOGGLE'] = "VACATIONMODETOGGLE";
+    })(EventTypeEnum = UserAuditEventModel.EventTypeEnum || (UserAuditEventModel.EventTypeEnum = {}));
+})(UserAuditEventModel = exports.UserAuditEventModel || (exports.UserAuditEventModel = {}));
