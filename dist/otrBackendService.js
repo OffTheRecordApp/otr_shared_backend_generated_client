@@ -7952,6 +7952,7 @@ angular.module('otrBackendService', [])
              * @method
              * @name OtrService#getInboxMessagesUsingGET
              * @param {object} parameters - method options and parameters
+             * @param {string} parameters.filter - filter
              * @param {integer} parameters.lawfirmId - lawfirmId
              * @param {integer} parameters.length - length
              * @param {integer} parameters.page - page
@@ -7969,6 +7970,10 @@ angular.module('otrBackendService', [])
                     form = {};
 
                 headers['Accept'] = ['*/*'];
+
+                if (parameters['filter'] !== undefined) {
+                    queryParameters['filter'] = parameters['filter'];
+                }
 
                 path = path.replace('{lawfirmId}', parameters['lawfirmId']);
 
