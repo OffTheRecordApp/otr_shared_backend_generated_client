@@ -9,7 +9,6 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-export interface CursorModel {
+export interface ListUserAuditEventsCursorModel {
     "nextPageToken"?: string;
-    "previousPageToken"?: string;
 }

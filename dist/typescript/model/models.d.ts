@@ -352,6 +352,7 @@ export * from './ListReferralsResponse';
 export * from './ListReviewsResponse';
 export * from './ListSubscriptionInvoicesResponse';
 export * from './ListUserAuditEventsByCursorResponse';
+export * from './ListUserAuditEventsCursorModel';
 export * from './ListViolationClassificationResponse';
 export * from './LobEvent';
 export * from './LobEventRequest';

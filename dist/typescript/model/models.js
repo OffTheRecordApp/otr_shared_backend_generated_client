@@ -364,6 +364,7 @@ __exportStar(require("./ListReferralsResponse"), exports);
 __exportStar(require("./ListReviewsResponse"), exports);
 __exportStar(require("./ListSubscriptionInvoicesResponse"), exports);
 __exportStar(require("./ListUserAuditEventsByCursorResponse"), exports);
+__exportStar(require("./ListUserAuditEventsCursorModel"), exports);
 __exportStar(require("./ListViolationClassificationResponse"), exports);
 __exportStar(require("./LobEvent"), exports);
 __exportStar(require("./LobEventRequest"), exports);

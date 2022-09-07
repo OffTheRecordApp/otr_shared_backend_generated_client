@@ -11,7 +11,7 @@
  */
 import * as models from './models';
 export interface ListUserAuditEventsByCursorResponse {
-    "cursorModel"?: models.CursorModel;
+    "cursorModel"?: models.ListUserAuditEventsCursorModel;
     "events"?: Array<models.UserAuditEventModel>;
     "totalRecords"?: number;
 }
