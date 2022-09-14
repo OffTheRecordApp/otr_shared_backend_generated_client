@@ -29,5 +29,5 @@ export declare class SnsListenerControllerApi {
      * @summary handleIncomingEmails
      * @param request request
      */
-    handleIncomingEmailsUsingPOST(request: models.SNSNotificationRequest, extraHttpRequestParams?: any): ng.IHttpPromise<{}>;
+    handleIncomingEmailsUsingPOST(request: models.IncomingEmailRequest, extraHttpRequestParams?: any): ng.IHttpPromise<{}>;
 }
