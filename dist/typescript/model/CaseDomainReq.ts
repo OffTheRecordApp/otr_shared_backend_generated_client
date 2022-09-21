@@ -32,6 +32,7 @@ export interface CaseDomainReq {
     "hasLeftLawyerReview"?: boolean;
     "isPointSystemState"?: boolean;
     "lawfirmCaseDecision"?: models.LawfirmCaseDomainReq;
+    "letterOfEngagement"?: models.LetterOfEngagement;
     "referralCode"?: string;
     "refundEligibility"?: CaseDomainReq.RefundEligibilityEnum;
     "resolutionSummary"?: string;

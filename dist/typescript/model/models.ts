@@ -335,6 +335,7 @@ export * from './LawfirmVacationRequest';
 export * from './LawfirmsRatesResponse';
 export * from './LawyerLicenseModel';
 export * from './LawyerModel';
+export * from './LetterOfEngagement';
 export * from './LineItem';
 export * from './LineItemModel';
 export * from './LineItemRequest';

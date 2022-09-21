@@ -347,6 +347,7 @@ __exportStar(require("./LawfirmVacationRequest"), exports);
 __exportStar(require("./LawfirmsRatesResponse"), exports);
 __exportStar(require("./LawyerLicenseModel"), exports);
 __exportStar(require("./LawyerModel"), exports);
+__exportStar(require("./LetterOfEngagement"), exports);
 __exportStar(require("./LineItem"), exports);
 __exportStar(require("./LineItemModel"), exports);
 __exportStar(require("./LineItemRequest"), exports);
