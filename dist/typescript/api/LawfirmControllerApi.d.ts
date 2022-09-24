@@ -51,8 +51,9 @@ export declare class LawfirmControllerApi {
      * @param filter filter
      * @param length length
      * @param page page
+     * @param query query
      */
-    getInboxMessagesUsingGET(lawfirmId: number, filter?: 'ARCHIVE' | 'DEFAULT' | 'FLAG_ONLY' | 'STAR_ONLY', length?: number, page?: number, extraHttpRequestParams?: any): ng.IHttpPromise<models.GetLawfirmInboxMessagesResponse>;
+    getInboxMessagesUsingGET(lawfirmId: number, filter?: 'ARCHIVE' | 'DEFAULT' | 'FLAG_ONLY' | 'STAR_ONLY', length?: number, page?: number, query?: string, extraHttpRequestParams?: any): ng.IHttpPromise<models.GetLawfirmInboxMessagesResponse>;
     /**
      *
      * @summary getLawfirmAddresses

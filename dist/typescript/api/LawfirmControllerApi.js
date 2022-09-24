@@ -142,8 +142,9 @@ var LawfirmControllerApi = /** @class */ (function () {
      * @param filter filter
      * @param length length
      * @param page page
+     * @param query query
      */
-    LawfirmControllerApi.prototype.getInboxMessagesUsingGET = function (lawfirmId, filter, length, page, extraHttpRequestParams) {
+    LawfirmControllerApi.prototype.getInboxMessagesUsingGET = function (lawfirmId, filter, length, page, query, extraHttpRequestParams) {
         var localVarPath = this.basePath + '/api/v1/lawfirms/{lawfirmId}/inbox-messages'
             .replace('{' + 'lawfirmId' + '}', encodeURIComponent(String(lawfirmId)));
         var queryParameters = {};
@@ -160,6 +161,9 @@ var LawfirmControllerApi = /** @class */ (function () {
         }
         if (page !== undefined) {
             queryParameters['page'] = page;
+        }
+        if (query !== undefined) {
+            queryParameters['query'] = query;
         }
         var httpRequestParams = {
             method: 'GET',

@@ -7956,6 +7956,7 @@ angular.module('otrBackendService', [])
              * @param {integer} parameters.lawfirmId - lawfirmId
              * @param {integer} parameters.length - length
              * @param {integer} parameters.page - page
+             * @param {string} parameters.query - query
              */
             OtrService.prototype.getInboxMessagesUsingGET = function(parameters) {
                 if (parameters === undefined) {
@@ -7991,6 +7992,10 @@ angular.module('otrBackendService', [])
 
                 if (parameters['page'] !== undefined) {
                     queryParameters['page'] = parameters['page'];
+                }
+
+                if (parameters['query'] !== undefined) {
+                    queryParameters['query'] = parameters['query'];
                 }
 
                 queryParameters = mergeQueryParams(parameters, queryParameters);
