@@ -41,11 +41,13 @@ export declare namespace CallContact {
         OUTGOING
     }
     enum CallStatusEnum {
+        ABANDONED,
         BLOCKED,
         BUSY,
         COMPLETED,
         CONNECTING,
         CONNECTIONFAILED,
+        DEFAULT,
         DISCONNECTED,
         ENQUEUED,
         INPROGRESS,
@@ -53,7 +55,6 @@ export declare namespace CallContact {
         ONHOLD,
         RECENTLYCOMPLETED,
         RESTRICTED,
-        UNKNOWN,
         VOICEMAIL,
         VOICEMAILRECORDINGINPROGRESS
     }

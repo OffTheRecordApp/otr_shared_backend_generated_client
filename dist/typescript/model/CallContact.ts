@@ -45,11 +45,13 @@ export namespace CallContact {
         OUTGOING = <any> 'OUTGOING'
     }
     export enum CallStatusEnum {
+        ABANDONED = <any> 'ABANDONED',
         BLOCKED = <any> 'BLOCKED',
         BUSY = <any> 'BUSY',
         COMPLETED = <any> 'COMPLETED',
         CONNECTING = <any> 'CONNECTING',
         CONNECTIONFAILED = <any> 'CONNECTION_FAILED',
+        DEFAULT = <any> 'DEFAULT',
         DISCONNECTED = <any> 'DISCONNECTED',
         ENQUEUED = <any> 'ENQUEUED',
         INPROGRESS = <any> 'IN_PROGRESS',
@@ -57,7 +59,6 @@ export namespace CallContact {
         ONHOLD = <any> 'ON_HOLD',
         RECENTLYCOMPLETED = <any> 'RECENTLY_COMPLETED',
         RESTRICTED = <any> 'RESTRICTED',
-        UNKNOWN = <any> 'UNKNOWN',
         VOICEMAIL = <any> 'VOICEMAIL',
         VOICEMAILRECORDINGINPROGRESS = <any> 'VOICEMAIL_RECORDING_IN_PROGRESS'
     }
