@@ -86,7 +86,6 @@ export declare namespace CaseDomainReq {
     }
     enum RefundEligibilityEnum {
         FULLREFUND,
-        NOREFUND,
-        PARTIALREFUND
+        NOREFUND
     }
 }

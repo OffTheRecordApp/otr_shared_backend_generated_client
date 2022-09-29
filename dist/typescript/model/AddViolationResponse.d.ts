@@ -11,6 +11,7 @@
  */
 export interface AddViolationResponse {
     "otrViolationId"?: number;
+    "refundEligibilityType"?: AddViolationResponse.RefundEligibilityTypeEnum;
     "stateAbbreviation"?: string;
     "userFriendlyName"?: string;
     "userFriendlyShortForm"?: string;
@@ -19,6 +20,10 @@ export interface AddViolationResponse {
     "violationDescription"?: string;
 }
 export declare namespace AddViolationResponse {
+    enum RefundEligibilityTypeEnum {
+        FULLREFUND,
+        NOREFUND
+    }
     enum ViolationClassificationEnum {
         CLASS1FELONY,
         CLASS1MISDEMEANOR,

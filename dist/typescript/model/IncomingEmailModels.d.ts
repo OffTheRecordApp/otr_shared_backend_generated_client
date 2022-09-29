@@ -9,13 +9,9 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-export interface IsRefundEligibleResponse {
-    "refundEligibilityType"?: IsRefundEligibleResponse.RefundEligibilityTypeEnum;
-    "uiReasonMsg"?: string;
-}
-export declare namespace IsRefundEligibleResponse {
-    enum RefundEligibilityTypeEnum {
-        FULLREFUND,
-        NOREFUND
-    }
+import * as models from './models';
+export interface IncomingEmailModels {
+    "content"?: string;
+    "mail"?: models.IncomingEmail;
+    "notificationType"?: string;
 }

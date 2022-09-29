@@ -28,7 +28,6 @@ export declare namespace MatchInnerCaseResponse {
     }
     enum RefundEligibilityEnum {
         FULLREFUND,
-        NOREFUND,
-        PARTIALREFUND
+        NOREFUND
     }
 }

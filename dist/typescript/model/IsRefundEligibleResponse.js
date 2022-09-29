@@ -18,6 +18,5 @@ var IsRefundEligibleResponse;
     (function (RefundEligibilityTypeEnum) {
         RefundEligibilityTypeEnum[RefundEligibilityTypeEnum["FULLREFUND"] = 'FULL_REFUND'] = "FULLREFUND";
         RefundEligibilityTypeEnum[RefundEligibilityTypeEnum["NOREFUND"] = 'NO_REFUND'] = "NOREFUND";
-        RefundEligibilityTypeEnum[RefundEligibilityTypeEnum["PARTIALREFUND"] = 'PARTIAL_REFUND'] = "PARTIALREFUND";
     })(RefundEligibilityTypeEnum = IsRefundEligibleResponse.RefundEligibilityTypeEnum || (IsRefundEligibleResponse.RefundEligibilityTypeEnum = {}));
 })(IsRefundEligibleResponse = exports.IsRefundEligibleResponse || (exports.IsRefundEligibleResponse = {}));

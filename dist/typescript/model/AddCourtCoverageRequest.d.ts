@@ -78,7 +78,6 @@ export declare namespace AddCourtCoverageRequest {
     }
     enum RefundEligibilityEnum {
         FULLREFUND,
-        NOREFUND,
-        PARTIALREFUND
+        NOREFUND
     }
 }

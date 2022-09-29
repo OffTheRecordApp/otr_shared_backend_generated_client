@@ -84,7 +84,6 @@ export declare namespace GetLawfirmFeeModel {
     }
     enum RefundEligibilityEnum {
         FULLREFUND,
-        NOREFUND,
-        PARTIALREFUND
+        NOREFUND
     }
 }

@@ -14,6 +14,11 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.AddViolationResponse = void 0;
 var AddViolationResponse;
 (function (AddViolationResponse) {
+    var RefundEligibilityTypeEnum;
+    (function (RefundEligibilityTypeEnum) {
+        RefundEligibilityTypeEnum[RefundEligibilityTypeEnum["FULLREFUND"] = 'FULL_REFUND'] = "FULLREFUND";
+        RefundEligibilityTypeEnum[RefundEligibilityTypeEnum["NOREFUND"] = 'NO_REFUND'] = "NOREFUND";
+    })(RefundEligibilityTypeEnum = AddViolationResponse.RefundEligibilityTypeEnum || (AddViolationResponse.RefundEligibilityTypeEnum = {}));
     var ViolationClassificationEnum;
     (function (ViolationClassificationEnum) {
         ViolationClassificationEnum[ViolationClassificationEnum["CLASS1FELONY"] = 'CLASS_1_FELONY'] = "CLASS1FELONY";
