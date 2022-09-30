@@ -16,7 +16,7 @@
     "download:devo": "curl https://otr-backend-service-us-devo.offtherecord.com/v2/api-docs -o api/otr-service.json",
     "compile": "tsc",
     "clean-source": "find dist/typescript -type f | grep -v  \"\\.d\\.ts\\|\\.js\" | xargs rm",
-    "ts-client": "gulp codegen && openapi-generator-cli generate -i api/otr-service.json -o dist/typescript -g typescript-angularjs",
+    "ts-client": "rm -r dist/typescript && gulp codegen && openapi-generator-cli generate -i api/otr-service.json -o dist/typescript -g typescript-angularjs",
     "generate:devo": "npm run download:devo && npm run ts-client && npm run compile && npm run clean-source",
     "generate:local": "curl http://localhost:8080/v2/api-docs -o api/otr-service.json && npm run ts-client && npm run compile && npm run clean-source",
     "bootstrap": "npm i @openapitools/openapi-generator-cli -g && openapi-generator-cli version-manager set 4.3.1"
