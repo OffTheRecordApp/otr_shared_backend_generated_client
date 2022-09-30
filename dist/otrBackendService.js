@@ -184,13 +184,13 @@ angular.module('otrBackendService', [])
                 return deferred.promise;
             };
             /**
-             * postAgentBooking
+             * saveAgentBooking
              * @method
-             * @name OtrService#postAgentBookingUsingPOST
+             * @name OtrService#saveAgentBookingUsingPOST
              * @param {object} parameters - method options and parameters
              * @param {} parameters.request - request
              */
-            OtrService.prototype.postAgentBookingUsingPOST = function(parameters) {
+            OtrService.prototype.saveAgentBookingUsingPOST = function(parameters) {
                 if (parameters === undefined) {
                     parameters = {};
                 }
@@ -5546,6 +5546,37 @@ angular.module('otrBackendService', [])
                 queryParameters = mergeQueryParams(parameters, queryParameters);
 
                 this.request('POST', domain + path, parameters, body, headers, queryParameters, form, deferred);
+
+                return deferred.promise;
+            };
+            /**
+             * getCustomerServiceAgents
+             * @method
+             * @name OtrService#getCustomerServiceAgentsUsingGET
+             * @param {object} parameters - method options and parameters
+             * @param {boolean} parameters.isActive - isActive
+             */
+            OtrService.prototype.getCustomerServiceAgentsUsingGET = function(parameters) {
+                if (parameters === undefined) {
+                    parameters = {};
+                }
+                var deferred = $q.defer();
+                var domain = this.domain,
+                    path = '/api/v1/cs-agent';
+                var body = {},
+                    queryParameters = {},
+                    headers = {},
+                    form = {};
+
+                headers['Accept'] = ['*/*'];
+
+                if (parameters['isActive'] !== undefined) {
+                    queryParameters['isActive'] = parameters['isActive'];
+                }
+
+                queryParameters = mergeQueryParams(parameters, queryParameters);
+
+                this.request('GET', domain + path, parameters, body, headers, queryParameters, form, deferred);
 
                 return deferred.promise;
             };
