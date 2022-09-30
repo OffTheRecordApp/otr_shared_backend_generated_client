@@ -11,7 +11,7 @@
  */
 /// <reference types="angular" />
 import * as models from '../model/models';
-export declare class AgentBookingsControllerApi {
+export declare class CustomerServiceAgentBookingsControllerApi {
     protected $http: ng.IHttpService;
     protected $httpParamSerializer?: (d: any) => any;
     protected basePath: string;
@@ -20,8 +20,8 @@ export declare class AgentBookingsControllerApi {
     constructor($http: ng.IHttpService, $httpParamSerializer?: (d: any) => any, basePath?: string);
     /**
      *
-     * @summary postAgentBooking
+     * @summary saveAgentBooking
      * @param request request
      */
-    postAgentBookingUsingPOST(request: models.PostAgentBookingRequest, extraHttpRequestParams?: any): ng.IHttpPromise<models.PostAgentBookingResponse>;
+    saveAgentBookingUsingPOST(request: models.SaveAgentBookingRequest, extraHttpRequestParams?: any): ng.IHttpPromise<models.SaveAgentBookingResponse>;
 }

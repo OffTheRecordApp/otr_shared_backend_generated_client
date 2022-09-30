@@ -1,3 +1,4 @@
+"use strict";
 /**
  * OffTheRecord Rest Service API - Devo
  * A service to handle your traffic tickets
@@ -9,10 +10,4 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-export interface PostAgentBookingRequest {
-    "bookingReference"?: string;
-    "caseId"?: string;
-    "channel"?: string;
-    "direction"?: string;
-    "userId"?: number;
-}
+Object.defineProperty(exports, "__esModule", { value: true });

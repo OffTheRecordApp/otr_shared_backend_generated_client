@@ -1,3 +1,4 @@
+"use strict";
 /**
  * OffTheRecord Rest Service API - Devo
  * A service to handle your traffic tickets
@@ -9,9 +10,4 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-import * as models from './models';
-export interface IncomingEmailMessage {
-    "content"?: string;
-    "mail"?: models.IncomingEmail;
-    "notificationType"?: string;
-}
+Object.defineProperty(exports, "__esModule", { value: true });

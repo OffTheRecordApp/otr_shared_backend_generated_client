@@ -9,7 +9,8 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-import * as models from './models';
-export interface PostAgentBookingResponse {
-    "booking"?: models.AgentBookingDomain;
+export interface User {
+    "firstName"?: string;
+    "lastName"?: string;
+    "userId"?: number;
 }

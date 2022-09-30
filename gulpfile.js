@@ -44,9 +44,7 @@ function otrAngular(done) {
 
             .pipe(uglify())
             .pipe(rename(api.moduleName + '.min.js'))
-            .pipe(gulp.dest(dest))
-
-            .pipe(notify("File has been successfully uglified!"));
+            .pipe(gulp.dest(dest));
 
     });
     done();

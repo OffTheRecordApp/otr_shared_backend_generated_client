@@ -11,10 +11,10 @@
  * Do not edit the class manually.
  */
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.AgentBookingsControllerApi = void 0;
+exports.CustomerServiceAgentBookingsControllerApi = void 0;
 /* tslint:disable:no-unused-variable member-ordering */
-var AgentBookingsControllerApi = /** @class */ (function () {
-    function AgentBookingsControllerApi($http, $httpParamSerializer, basePath) {
+var CustomerServiceAgentBookingsControllerApi = /** @class */ (function () {
+    function CustomerServiceAgentBookingsControllerApi($http, $httpParamSerializer, basePath) {
         this.$http = $http;
         this.$httpParamSerializer = $httpParamSerializer;
         this.basePath = 'http://otr-backend-service-us-devo.offtherecord.com';
@@ -25,16 +25,16 @@ var AgentBookingsControllerApi = /** @class */ (function () {
     }
     /**
      *
-     * @summary postAgentBooking
+     * @summary saveAgentBooking
      * @param request request
      */
-    AgentBookingsControllerApi.prototype.postAgentBookingUsingPOST = function (request, extraHttpRequestParams) {
+    CustomerServiceAgentBookingsControllerApi.prototype.saveAgentBookingUsingPOST = function (request, extraHttpRequestParams) {
         var localVarPath = this.basePath + '/api/v1/agent-bookings';
         var queryParameters = {};
         var headerParams = Object.assign({}, this.defaultHeaders);
         // verify required parameter 'request' is not null or undefined
         if (request === null || request === undefined) {
-            throw new Error('Required parameter request was null or undefined when calling postAgentBookingUsingPOST.');
+            throw new Error('Required parameter request was null or undefined when calling saveAgentBookingUsingPOST.');
         }
         var httpRequestParams = {
             method: 'POST',
@@ -48,7 +48,7 @@ var AgentBookingsControllerApi = /** @class */ (function () {
         }
         return this.$http(httpRequestParams);
     };
-    AgentBookingsControllerApi.$inject = ['$http', '$httpParamSerializer', 'basePath'];
-    return AgentBookingsControllerApi;
+    CustomerServiceAgentBookingsControllerApi.$inject = ['$http', '$httpParamSerializer', 'basePath'];
+    return CustomerServiceAgentBookingsControllerApi;
 }());
-exports.AgentBookingsControllerApi = AgentBookingsControllerApi;
+exports.CustomerServiceAgentBookingsControllerApi = CustomerServiceAgentBookingsControllerApi;
