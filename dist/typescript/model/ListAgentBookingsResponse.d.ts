@@ -10,12 +10,8 @@
  * Do not edit the class manually.
  */
 import * as models from './models';
-export interface CustomerServiceAgentBookingDomain {
-    "agentBookingId"?: number;
-    "bookingReference"?: string;
-    "channel"?: string;
-    "direction"?: string;
-    "requesterId"?: number;
-    "theCase"?: models.Case;
-    "user"?: models.User;
+export interface ListAgentBookingsResponse {
+    "agentBookings"?: Array<models.CustomerServiceAgentBookingDomain>;
+    "agentStats"?: Array<models.AgentBookingStats>;
+    "bookingsSummary"?: models.AgentBookingsSummary;
 }

@@ -9,13 +9,11 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-import * as models from './models';
-export interface CustomerServiceAgentBookingDomain {
-    "agentBookingId"?: number;
-    "bookingReference"?: string;
-    "channel"?: string;
-    "direction"?: string;
-    "requesterId"?: number;
-    "theCase"?: models.Case;
-    "user"?: models.User;
+export interface AgentBookingStats {
+    "bookingsCount"?: number;
+    "firstName"?: string;
+    "lastName"?: string;
+    "otrRevenueTotal"?: number;
+    "transactionsTotal"?: number;
+    "userId"?: number;
 }

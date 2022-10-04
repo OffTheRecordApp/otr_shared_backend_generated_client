@@ -20,6 +20,21 @@ export declare class CustomerServiceAgentBookingsControllerApi {
     constructor($http: ng.IHttpService, $httpParamSerializer?: (d: any) => any, basePath?: string);
     /**
      *
+     * @summary listAgentBookings
+     * @param agentUserId agentUserId
+     * @param channel channel
+     * @param direction direction
+     * @param endDate endDate
+     * @param length length
+     * @param offset offset
+     * @param sortBy sortBy
+     * @param sortOrder sortOrder
+     * @param startDate startDate
+     * @param timeZoneId timeZoneId
+     */
+    listAgentBookingsUsingGET(agentUserId?: number, channel?: string, direction?: string, endDate?: string, length?: number, offset?: number, sortBy?: string, sortOrder?: string, startDate?: string, timeZoneId?: string, extraHttpRequestParams?: any): ng.IHttpPromise<models.ListAgentBookingsResponse>;
+    /**
+     *
      * @summary saveAgentBooking
      * @param request request
      */

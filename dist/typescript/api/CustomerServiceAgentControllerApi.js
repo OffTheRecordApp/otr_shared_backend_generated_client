@@ -29,7 +29,7 @@ var CustomerServiceAgentControllerApi = /** @class */ (function () {
      * @param isActive isActive
      */
     CustomerServiceAgentControllerApi.prototype.getCustomerServiceAgentsUsingGET = function (isActive, extraHttpRequestParams) {
-        var localVarPath = this.basePath + '/api/v1/cs-agent';
+        var localVarPath = this.basePath + '/api/v1/cs-agents';
         var queryParameters = {};
         var headerParams = Object.assign({}, this.defaultHeaders);
         if (isActive !== undefined) {

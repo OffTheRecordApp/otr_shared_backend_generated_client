@@ -184,43 +184,6 @@ angular.module('otrBackendService', [])
                 return deferred.promise;
             };
             /**
-             * saveAgentBooking
-             * @method
-             * @name OtrService#saveAgentBookingUsingPOST
-             * @param {object} parameters - method options and parameters
-             * @param {} parameters.request - request
-             */
-            OtrService.prototype.saveAgentBookingUsingPOST = function(parameters) {
-                if (parameters === undefined) {
-                    parameters = {};
-                }
-                var deferred = $q.defer();
-                var domain = this.domain,
-                    path = '/api/v1/agent-bookings';
-                var body = {},
-                    queryParameters = {},
-                    headers = {},
-                    form = {};
-
-                headers['Accept'] = ['*/*'];
-                headers['Content-Type'] = ['application/json'];
-
-                if (parameters['request'] !== undefined) {
-                    body = parameters['request'];
-                }
-
-                if (parameters['request'] === undefined) {
-                    deferred.reject(new Error('Missing required  parameter: request'));
-                    return deferred.promise;
-                }
-
-                queryParameters = mergeQueryParams(parameters, queryParameters);
-
-                this.request('POST', domain + path, parameters, body, headers, queryParameters, form, deferred);
-
-                return deferred.promise;
-            };
-            /**
              * markAlertAsRead
              * @method
              * @name OtrService#markAlertAsReadUsingDELETE
@@ -5550,6 +5513,122 @@ angular.module('otrBackendService', [])
                 return deferred.promise;
             };
             /**
+             * listAgentBookings
+             * @method
+             * @name OtrService#listAgentBookingsUsingGET
+             * @param {object} parameters - method options and parameters
+             * @param {integer} parameters.agentUserId - agentUserId
+             * @param {string} parameters.channel - channel
+             * @param {string} parameters.direction - direction
+             * @param {string} parameters.endDate - endDate
+             * @param {integer} parameters.length - length
+             * @param {integer} parameters.offset - offset
+             * @param {string} parameters.sortBy - sortBy
+             * @param {string} parameters.sortOrder - sortOrder
+             * @param {string} parameters.startDate - startDate
+             * @param {string} parameters.timeZoneId - timeZoneId
+             */
+            OtrService.prototype.listAgentBookingsUsingGET = function(parameters) {
+                if (parameters === undefined) {
+                    parameters = {};
+                }
+                var deferred = $q.defer();
+                var domain = this.domain,
+                    path = '/api/v1/cs-agent-bookings';
+                var body = {},
+                    queryParameters = {},
+                    headers = {},
+                    form = {};
+
+                headers['Accept'] = ['*/*'];
+
+                if (parameters['agentUserId'] !== undefined) {
+                    queryParameters['agentUserId'] = parameters['agentUserId'];
+                }
+
+                if (parameters['channel'] !== undefined) {
+                    queryParameters['channel'] = parameters['channel'];
+                }
+
+                if (parameters['direction'] !== undefined) {
+                    queryParameters['direction'] = parameters['direction'];
+                }
+
+                if (parameters['endDate'] !== undefined) {
+                    queryParameters['endDate'] = parameters['endDate'];
+                }
+
+                /** set default value **/
+                queryParameters['length'] = 50;
+
+                if (parameters['length'] !== undefined) {
+                    queryParameters['length'] = parameters['length'];
+                }
+
+                if (parameters['offset'] !== undefined) {
+                    queryParameters['offset'] = parameters['offset'];
+                }
+
+                if (parameters['sortBy'] !== undefined) {
+                    queryParameters['sortBy'] = parameters['sortBy'];
+                }
+
+                if (parameters['sortOrder'] !== undefined) {
+                    queryParameters['sortOrder'] = parameters['sortOrder'];
+                }
+
+                if (parameters['startDate'] !== undefined) {
+                    queryParameters['startDate'] = parameters['startDate'];
+                }
+
+                if (parameters['timeZoneId'] !== undefined) {
+                    queryParameters['timeZoneId'] = parameters['timeZoneId'];
+                }
+
+                queryParameters = mergeQueryParams(parameters, queryParameters);
+
+                this.request('GET', domain + path, parameters, body, headers, queryParameters, form, deferred);
+
+                return deferred.promise;
+            };
+            /**
+             * saveAgentBooking
+             * @method
+             * @name OtrService#saveAgentBookingUsingPOST
+             * @param {object} parameters - method options and parameters
+             * @param {} parameters.request - request
+             */
+            OtrService.prototype.saveAgentBookingUsingPOST = function(parameters) {
+                if (parameters === undefined) {
+                    parameters = {};
+                }
+                var deferred = $q.defer();
+                var domain = this.domain,
+                    path = '/api/v1/cs-agent-bookings';
+                var body = {},
+                    queryParameters = {},
+                    headers = {},
+                    form = {};
+
+                headers['Accept'] = ['*/*'];
+                headers['Content-Type'] = ['application/json'];
+
+                if (parameters['request'] !== undefined) {
+                    body = parameters['request'];
+                }
+
+                if (parameters['request'] === undefined) {
+                    deferred.reject(new Error('Missing required  parameter: request'));
+                    return deferred.promise;
+                }
+
+                queryParameters = mergeQueryParams(parameters, queryParameters);
+
+                this.request('POST', domain + path, parameters, body, headers, queryParameters, form, deferred);
+
+                return deferred.promise;
+            };
+            /**
              * getCustomerServiceAgents
              * @method
              * @name OtrService#getCustomerServiceAgentsUsingGET
@@ -5562,7 +5641,7 @@ angular.module('otrBackendService', [])
                 }
                 var deferred = $q.defer();
                 var domain = this.domain,
-                    path = '/api/v1/cs-agent';
+                    path = '/api/v1/cs-agents';
                 var body = {},
                     queryParameters = {},
                     headers = {},

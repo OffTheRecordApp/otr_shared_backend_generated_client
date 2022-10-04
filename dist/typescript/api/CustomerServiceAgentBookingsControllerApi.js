@@ -25,11 +25,70 @@ var CustomerServiceAgentBookingsControllerApi = /** @class */ (function () {
     }
     /**
      *
+     * @summary listAgentBookings
+     * @param agentUserId agentUserId
+     * @param channel channel
+     * @param direction direction
+     * @param endDate endDate
+     * @param length length
+     * @param offset offset
+     * @param sortBy sortBy
+     * @param sortOrder sortOrder
+     * @param startDate startDate
+     * @param timeZoneId timeZoneId
+     */
+    CustomerServiceAgentBookingsControllerApi.prototype.listAgentBookingsUsingGET = function (agentUserId, channel, direction, endDate, length, offset, sortBy, sortOrder, startDate, timeZoneId, extraHttpRequestParams) {
+        var localVarPath = this.basePath + '/api/v1/cs-agent-bookings';
+        var queryParameters = {};
+        var headerParams = Object.assign({}, this.defaultHeaders);
+        if (agentUserId !== undefined) {
+            queryParameters['agentUserId'] = agentUserId;
+        }
+        if (channel !== undefined) {
+            queryParameters['channel'] = channel;
+        }
+        if (direction !== undefined) {
+            queryParameters['direction'] = direction;
+        }
+        if (endDate !== undefined) {
+            queryParameters['endDate'] = endDate;
+        }
+        if (length !== undefined) {
+            queryParameters['length'] = length;
+        }
+        if (offset !== undefined) {
+            queryParameters['offset'] = offset;
+        }
+        if (sortBy !== undefined) {
+            queryParameters['sortBy'] = sortBy;
+        }
+        if (sortOrder !== undefined) {
+            queryParameters['sortOrder'] = sortOrder;
+        }
+        if (startDate !== undefined) {
+            queryParameters['startDate'] = startDate;
+        }
+        if (timeZoneId !== undefined) {
+            queryParameters['timeZoneId'] = timeZoneId;
+        }
+        var httpRequestParams = {
+            method: 'GET',
+            url: localVarPath,
+            params: queryParameters,
+            headers: headerParams
+        };
+        if (extraHttpRequestParams) {
+            httpRequestParams = Object.assign(httpRequestParams, extraHttpRequestParams);
+        }
+        return this.$http(httpRequestParams);
+    };
+    /**
+     *
      * @summary saveAgentBooking
      * @param request request
      */
     CustomerServiceAgentBookingsControllerApi.prototype.saveAgentBookingUsingPOST = function (request, extraHttpRequestParams) {
-        var localVarPath = this.basePath + '/api/v1/agent-bookings';
+        var localVarPath = this.basePath + '/api/v1/cs-agent-bookings';
         var queryParameters = {};
         var headerParams = Object.assign({}, this.defaultHeaders);
         // verify required parameter 'request' is not null or undefined
