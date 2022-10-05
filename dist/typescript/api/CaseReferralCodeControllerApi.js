@@ -54,6 +54,37 @@ var CaseReferralCodeControllerApi = /** @class */ (function () {
         }
         return this.$http(httpRequestParams);
     };
+    /**
+     *
+     * @summary removeReferralCodeFromCase
+     * @param caseId caseId
+     * @param codeId codeId
+     */
+    CaseReferralCodeControllerApi.prototype.removeReferralCodeFromCaseUsingDELETE = function (caseId, codeId, extraHttpRequestParams) {
+        var localVarPath = this.basePath + '/api/v1/cases/{caseId}/referralcode/{codeId}'
+            .replace('{' + 'caseId' + '}', encodeURIComponent(String(caseId)))
+            .replace('{' + 'codeId' + '}', encodeURIComponent(String(codeId)));
+        var queryParameters = {};
+        var headerParams = Object.assign({}, this.defaultHeaders);
+        // verify required parameter 'caseId' is not null or undefined
+        if (caseId === null || caseId === undefined) {
+            throw new Error('Required parameter caseId was null or undefined when calling removeReferralCodeFromCaseUsingDELETE.');
+        }
+        // verify required parameter 'codeId' is not null or undefined
+        if (codeId === null || codeId === undefined) {
+            throw new Error('Required parameter codeId was null or undefined when calling removeReferralCodeFromCaseUsingDELETE.');
+        }
+        var httpRequestParams = {
+            method: 'DELETE',
+            url: localVarPath,
+            params: queryParameters,
+            headers: headerParams
+        };
+        if (extraHttpRequestParams) {
+            httpRequestParams = Object.assign(httpRequestParams, extraHttpRequestParams);
+        }
+        return this.$http(httpRequestParams);
+    };
     CaseReferralCodeControllerApi.$inject = ['$http', '$httpParamSerializer', 'basePath'];
     return CaseReferralCodeControllerApi;
 }());
