@@ -31,6 +31,7 @@ export interface CaseDomainRes {
     "isPointSystemState"?: boolean;
     "lawfirmCaseDecision"?: models.LawfirmCaseDomainRes;
     "letterOfEngagement"?: models.LetterOfEngagement;
+    "paymentPlanTypeModel"?: models.PaymentPlanTypeModelRes;
     "referralCode"?: string;
     "refundEligibility"?: CaseDomainRes.RefundEligibilityEnum;
     "resolutionSummary"?: string;
