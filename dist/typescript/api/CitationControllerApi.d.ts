@@ -39,6 +39,12 @@ export declare class CitationControllerApi {
     createReferralSourceForCitationUsingPOST(citationId: string, request: models.CreateReferralSourceForCitation, extraHttpRequestParams?: any): ng.IHttpPromise<{}>;
     /**
      *
+     * @summary deleteCitationCourt
+     * @param citationId citationId
+     */
+    deleteCitationCourtUsingDELETE(citationId: number, extraHttpRequestParams?: any): ng.IHttpPromise<{}>;
+    /**
+     *
      * @summary deleteCitation
      * @param citationIdString citationIdString
      */
