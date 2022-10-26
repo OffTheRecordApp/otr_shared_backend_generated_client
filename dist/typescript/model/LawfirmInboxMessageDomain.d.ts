@@ -26,13 +26,13 @@ export interface LawfirmInboxMessageDomain {
     "courtName"?: string;
     "customerFirstName"?: string;
     "customerLastName"?: string;
+    "hasFlagMessage"?: boolean;
+    "hasStarMessage"?: boolean;
     "lawfirmCaseDecisionStatus"?: LawfirmInboxMessageDomain.LawfirmCaseDecisionStatusEnum;
     "lawfirmReceiptDateUtc"?: string;
     "messageBody"?: string;
-    "messageFlagged"?: boolean;
     "messageId"?: number;
     "messageSentDateUtc"?: string;
-    "messageStarred"?: boolean;
     "profilePictureUrl"?: string;
 }
 export declare namespace LawfirmInboxMessageDomain {
