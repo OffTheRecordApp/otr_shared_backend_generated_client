@@ -32,11 +32,11 @@ export declare class PushNotificationControllerApi {
     markAllReadForUserUsingDELETE(userId: string, extraHttpRequestParams?: any): ng.IHttpPromise<{}>;
     /**
      *
-     * @summary markNotificationAsUnread
+     * @summary markCaseNotificationsAsUnread
+     * @param caseId caseId
      * @param userId userId
-     * @param request request
      */
-    markNotificationAsUnreadUsingPUT(userId: number, request: models.MarkNotificationAsUnreadRequest, extraHttpRequestParams?: any): ng.IHttpPromise<{}>;
+    markCaseNotificationsAsUnreadUsingPUT(caseId: string, userId: number, extraHttpRequestParams?: any): ng.IHttpPromise<{}>;
     /**
      *
      * @summary markPageTypesAsRead

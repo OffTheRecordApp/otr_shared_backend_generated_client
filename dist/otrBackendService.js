@@ -9501,51 +9501,6 @@ angular.module('otrBackendService', [])
                 return deferred.promise;
             };
             /**
-             * markNotificationAsUnread
-             * @method
-             * @name OtrService#markNotificationAsUnreadUsingPUT
-             * @param {object} parameters - method options and parameters
-             * @param {} parameters.request - request
-             * @param {integer} parameters.userId - userId
-             */
-            OtrService.prototype.markNotificationAsUnreadUsingPUT = function(parameters) {
-                if (parameters === undefined) {
-                    parameters = {};
-                }
-                var deferred = $q.defer();
-                var domain = this.domain,
-                    path = '/api/v1/notifications/unread/{userId}/message';
-                var body = {},
-                    queryParameters = {},
-                    headers = {},
-                    form = {};
-
-                headers['Accept'] = ['*/*'];
-                headers['Content-Type'] = ['application/json'];
-
-                if (parameters['request'] !== undefined) {
-                    body = parameters['request'];
-                }
-
-                if (parameters['request'] === undefined) {
-                    deferred.reject(new Error('Missing required  parameter: request'));
-                    return deferred.promise;
-                }
-
-                path = path.replace('{userId}', parameters['userId']);
-
-                if (parameters['userId'] === undefined) {
-                    deferred.reject(new Error('Missing required  parameter: userId'));
-                    return deferred.promise;
-                }
-
-                queryParameters = mergeQueryParams(parameters, queryParameters);
-
-                this.request('PUT', domain + path, parameters, body, headers, queryParameters, form, deferred);
-
-                return deferred.promise;
-            };
-            /**
              * markAllReadForUser
              * @method
              * @name OtrService#markAllReadForUserUsingDELETE
@@ -9621,6 +9576,49 @@ angular.module('otrBackendService', [])
                 queryParameters = mergeQueryParams(parameters, queryParameters);
 
                 this.request('POST', domain + path, parameters, body, headers, queryParameters, form, deferred);
+
+                return deferred.promise;
+            };
+            /**
+             * markCaseNotificationsAsUnread
+             * @method
+             * @name OtrService#markCaseNotificationsAsUnreadUsingPUT
+             * @param {object} parameters - method options and parameters
+             * @param {string} parameters.caseId - caseId
+             * @param {integer} parameters.userId - userId
+             */
+            OtrService.prototype.markCaseNotificationsAsUnreadUsingPUT = function(parameters) {
+                if (parameters === undefined) {
+                    parameters = {};
+                }
+                var deferred = $q.defer();
+                var domain = this.domain,
+                    path = '/api/v1/notifications/{userId}/unread/{caseId}/message';
+                var body = {},
+                    queryParameters = {},
+                    headers = {},
+                    form = {};
+
+                headers['Accept'] = ['*/*'];
+                headers['Content-Type'] = ['application/json'];
+
+                path = path.replace('{caseId}', parameters['caseId']);
+
+                if (parameters['caseId'] === undefined) {
+                    deferred.reject(new Error('Missing required  parameter: caseId'));
+                    return deferred.promise;
+                }
+
+                path = path.replace('{userId}', parameters['userId']);
+
+                if (parameters['userId'] === undefined) {
+                    deferred.reject(new Error('Missing required  parameter: userId'));
+                    return deferred.promise;
+                }
+
+                queryParameters = mergeQueryParams(parameters, queryParameters);
+
+                this.request('PUT', domain + path, parameters, body, headers, queryParameters, form, deferred);
 
                 return deferred.promise;
             };

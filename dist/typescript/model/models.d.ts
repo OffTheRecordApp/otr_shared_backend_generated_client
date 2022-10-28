@@ -375,8 +375,6 @@ export * from './LostCaseWithTransferNotReversed';
 export * from './MarkActionAsDeletedResponse';
 export * from './MarkCaseAsResolvedRequest';
 export * from './MarkCaseAsResolvedResponse';
-export * from './MarkNotificationAsUnreadModel';
-export * from './MarkNotificationAsUnreadRequest';
 export * from './MatchCaseResponse';
 export * from './MatchCitationResponse';
 export * from './MatchInnerCaseResponse';
