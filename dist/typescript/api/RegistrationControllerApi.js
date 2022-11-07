@@ -48,25 +48,6 @@ var RegistrationControllerApi = /** @class */ (function () {
         }
         return this.$http(httpRequestParams);
     };
-    /**
-     *
-     * @summary updateBranchLinksForAllUsers
-     */
-    RegistrationControllerApi.prototype.updateBranchLinksForAllUsersUsingPOST = function (extraHttpRequestParams) {
-        var localVarPath = this.basePath + '/api/v1/admin/tools/updateBranchLinksForAllUsers';
-        var queryParameters = {};
-        var headerParams = Object.assign({}, this.defaultHeaders);
-        var httpRequestParams = {
-            method: 'POST',
-            url: localVarPath,
-            params: queryParameters,
-            headers: headerParams
-        };
-        if (extraHttpRequestParams) {
-            httpRequestParams = Object.assign(httpRequestParams, extraHttpRequestParams);
-        }
-        return this.$http(httpRequestParams);
-    };
     RegistrationControllerApi.$inject = ['$http', '$httpParamSerializer', 'basePath'];
     return RegistrationControllerApi;
 }());

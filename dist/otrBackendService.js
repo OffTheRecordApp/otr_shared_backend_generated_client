@@ -157,33 +157,6 @@ angular.module('otrBackendService', [])
                 return deferred.promise;
             };
             /**
-             * updateBranchLinksForAllUsers
-             * @method
-             * @name OtrService#updateBranchLinksForAllUsersUsingPOST
-             * @param {object} parameters - method options and parameters
-             */
-            OtrService.prototype.updateBranchLinksForAllUsersUsingPOST = function(parameters) {
-                if (parameters === undefined) {
-                    parameters = {};
-                }
-                var deferred = $q.defer();
-                var domain = this.domain,
-                    path = '/api/v1/admin/tools/updateBranchLinksForAllUsers';
-                var body = {},
-                    queryParameters = {},
-                    headers = {},
-                    form = {};
-
-                headers['Accept'] = ['*/*'];
-                headers['Content-Type'] = ['application/json'];
-
-                queryParameters = mergeQueryParams(parameters, queryParameters);
-
-                this.request('POST', domain + path, parameters, body, headers, queryParameters, form, deferred);
-
-                return deferred.promise;
-            };
-            /**
              * markAlertAsRead
              * @method
              * @name OtrService#markAlertAsReadUsingDELETE
