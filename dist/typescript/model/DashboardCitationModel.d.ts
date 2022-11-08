@@ -17,6 +17,7 @@ export interface DashboardCitationModel {
     "creationDateUtc"?: string;
     "dismissedFromContactList"?: boolean;
     "isDeleted"?: boolean;
+    "lastUpdatedDateUtc"?: string;
     "regionCode"?: string;
     "ticketImageUrl"?: string;
     "violationCount"?: number;

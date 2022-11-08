@@ -19,6 +19,7 @@ export interface DashboardCaseModel {
     "lawfirmName"?: string;
     "lawfirmProfilePictureUrl"?: string;
     "legalFeeInCents"?: number;
+    "messageBody"?: string;
     "status"?: models.DashboardStatusModel;
     "userId"?: number;
 }
