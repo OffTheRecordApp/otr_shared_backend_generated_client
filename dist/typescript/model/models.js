@@ -76,6 +76,7 @@ __exportStar(require("./CancelationDetailsRes"), exports);
 __exportStar(require("./CaptureChargeFromCasePaymentRequest"), exports);
 __exportStar(require("./Case"), exports);
 __exportStar(require("./CaseActionDomain"), exports);
+__exportStar(require("./CaseActionRequestModel"), exports);
 __exportStar(require("./CaseAlert"), exports);
 __exportStar(require("./CaseBookingsStats"), exports);
 __exportStar(require("./CaseChargeResponsePojo"), exports);
