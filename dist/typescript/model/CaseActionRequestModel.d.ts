@@ -25,6 +25,7 @@ export declare namespace CaseActionRequestModel {
         NOTICEOFAPPEARANCEFILED,
         OTHER,
         REVIEWEDBYLAWFIRM,
+        SOCIALMEDIAASK,
         TICKETMAILEDTOCOURT
     }
 }

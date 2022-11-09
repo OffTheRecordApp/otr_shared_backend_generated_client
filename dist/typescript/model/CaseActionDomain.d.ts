@@ -33,6 +33,7 @@ export declare namespace CaseActionDomain {
         NOTICEOFAPPEARANCEFILED,
         OTHER,
         REVIEWEDBYLAWFIRM,
+        SOCIALMEDIAASK,
         TICKETMAILEDTOCOURT
     }
 }

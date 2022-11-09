@@ -23,6 +23,7 @@ export declare namespace GetCaseActionTypesResponse {
         NOTICEOFAPPEARANCEFILED,
         OTHER,
         REVIEWEDBYLAWFIRM,
+        SOCIALMEDIAASK,
         TICKETMAILEDTOCOURT
     }
 }

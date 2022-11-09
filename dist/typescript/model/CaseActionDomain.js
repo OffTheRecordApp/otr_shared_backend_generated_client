@@ -25,6 +25,7 @@ var CaseActionDomain;
         ActionTypeEnum[ActionTypeEnum["NOTICEOFAPPEARANCEFILED"] = 'NOTICE_OF_APPEARANCE_FILED'] = "NOTICEOFAPPEARANCEFILED";
         ActionTypeEnum[ActionTypeEnum["OTHER"] = 'OTHER'] = "OTHER";
         ActionTypeEnum[ActionTypeEnum["REVIEWEDBYLAWFIRM"] = 'REVIEWED_BY_LAWFIRM'] = "REVIEWEDBYLAWFIRM";
+        ActionTypeEnum[ActionTypeEnum["SOCIALMEDIAASK"] = 'SOCIAL_MEDIA_ASK'] = "SOCIALMEDIAASK";
         ActionTypeEnum[ActionTypeEnum["TICKETMAILEDTOCOURT"] = 'TICKET_MAILED_TO_COURT'] = "TICKETMAILEDTOCOURT";
     })(ActionTypeEnum = CaseActionDomain.ActionTypeEnum || (CaseActionDomain.ActionTypeEnum = {}));
 })(CaseActionDomain = exports.CaseActionDomain || (exports.CaseActionDomain = {}));
