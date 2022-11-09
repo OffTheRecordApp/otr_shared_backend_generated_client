@@ -318,6 +318,7 @@ __exportStar(require("./GetUserRegistrationsRequest"), exports);
 __exportStar(require("./GetUserRegistrationsResponse"), exports);
 __exportStar(require("./GetUserResponse"), exports);
 __exportStar(require("./GetUserStripeAccountResponse"), exports);
+__exportStar(require("./GoogleLoginRequest"), exports);
 __exportStar(require("./GraphRequest"), exports);
 __exportStar(require("./HandleOrphanedStripeChargeRequest"), exports);
 __exportStar(require("./HandleOrphanedStripeChargeResponse"), exports);

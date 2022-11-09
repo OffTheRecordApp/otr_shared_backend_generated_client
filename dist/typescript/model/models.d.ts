@@ -306,6 +306,7 @@ export * from './GetUserRegistrationsRequest';
 export * from './GetUserRegistrationsResponse';
 export * from './GetUserResponse';
 export * from './GetUserStripeAccountResponse';
+export * from './GoogleLoginRequest';
 export * from './GraphRequest';
 export * from './HandleOrphanedStripeChargeRequest';
 export * from './HandleOrphanedStripeChargeResponse';

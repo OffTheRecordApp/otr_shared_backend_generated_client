@@ -31,4 +31,10 @@ export declare class SocialLoginControllerApi {
      * @param request request
      */
     facebookConnectUsingPOST(providerId: string, request: models.SocialLoginRequest, extraHttpRequestParams?: any): ng.IHttpPromise<models.SocialLoginResponse>;
+    /**
+     *
+     * @summary googleConnect
+     * @param request request
+     */
+    googleConnectUsingPOST(request: models.GoogleLoginRequest, extraHttpRequestParams?: any): ng.IHttpPromise<models.SocialLoginResponse>;
 }
