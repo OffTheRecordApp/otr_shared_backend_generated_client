@@ -150,6 +150,7 @@ __exportStar(require("./CustomerReview"), exports);
 __exportStar(require("./CustomerServiceAgentBookingDomain"), exports);
 __exportStar(require("./CustomerServiceAgentDomain"), exports);
 __exportStar(require("./DashboardAddressModel"), exports);
+__exportStar(require("./DashboardAuthorModel"), exports);
 __exportStar(require("./DashboardCaseModel"), exports);
 __exportStar(require("./DashboardCitationModel"), exports);
 __exportStar(require("./DashboardCourtModel"), exports);

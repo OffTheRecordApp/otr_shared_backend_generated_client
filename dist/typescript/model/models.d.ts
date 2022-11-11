@@ -138,6 +138,7 @@ export * from './CustomerReview';
 export * from './CustomerServiceAgentBookingDomain';
 export * from './CustomerServiceAgentDomain';
 export * from './DashboardAddressModel';
+export * from './DashboardAuthorModel';
 export * from './DashboardCaseModel';
 export * from './DashboardCitationModel';
 export * from './DashboardCourtModel';

@@ -11,6 +11,7 @@
  */
 import * as models from './models';
 export interface DashboardCaseModel {
+    "authorModel"?: models.DashboardAuthorModel;
     "bookingConfirmedDate"?: string;
     "caseId"?: string;
     "citation"?: models.DashboardCitationModel;
