@@ -335,6 +335,45 @@ angular.module('otrBackendService', [])
                 return deferred.promise;
             };
             /**
+             * listBillingSubscribers
+             * @method
+             * @name OtrService#listBillingSubscribersUsingGET
+             * @param {object} parameters - method options and parameters
+             * @param {integer} parameters.length - length
+             * @param {integer} parameters.page - page
+             */
+            OtrService.prototype.listBillingSubscribersUsingGET = function(parameters) {
+                if (parameters === undefined) {
+                    parameters = {};
+                }
+                var deferred = $q.defer();
+                var domain = this.domain,
+                    path = '/api/v1/billing/subscribers';
+                var body = {},
+                    queryParameters = {},
+                    headers = {},
+                    form = {};
+
+                headers['Accept'] = ['application/json'];
+
+                /** set default value **/
+                queryParameters['length'] = 50;
+
+                if (parameters['length'] !== undefined) {
+                    queryParameters['length'] = parameters['length'];
+                }
+
+                if (parameters['page'] !== undefined) {
+                    queryParameters['page'] = parameters['page'];
+                }
+
+                queryParameters = mergeQueryParams(parameters, queryParameters);
+
+                this.request('GET', domain + path, parameters, body, headers, queryParameters, form, deferred);
+
+                return deferred.promise;
+            };
+            /**
              * listBillingSubscriptions
              * @method
              * @name OtrService#listBillingSubscriptionsUsingGET

@@ -92,6 +92,13 @@ export declare class ConsoleListControllerApi {
     getPendingTicketReviewsUsingPOST(request: models.GetPendingTicketReviewsRequest, extraHttpRequestParams?: any): ng.IHttpPromise<models.GetPendingTicketReviewsResponse>;
     /**
      *
+     * @summary listBillingSubscribers
+     * @param length length
+     * @param page page
+     */
+    listBillingSubscribersUsingGET(length?: number, page?: number, extraHttpRequestParams?: any): ng.IHttpPromise<models.ListBillingSubscribersResponse>;
+    /**
+     *
      * @summary listLawfirmLeads
      * @param request request
      */

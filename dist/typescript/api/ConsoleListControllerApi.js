@@ -325,6 +325,33 @@ var ConsoleListControllerApi = /** @class */ (function () {
     };
     /**
      *
+     * @summary listBillingSubscribers
+     * @param length length
+     * @param page page
+     */
+    ConsoleListControllerApi.prototype.listBillingSubscribersUsingGET = function (length, page, extraHttpRequestParams) {
+        var localVarPath = this.basePath + '/api/v1/billing/subscribers';
+        var queryParameters = {};
+        var headerParams = Object.assign({}, this.defaultHeaders);
+        if (length !== undefined) {
+            queryParameters['length'] = length;
+        }
+        if (page !== undefined) {
+            queryParameters['page'] = page;
+        }
+        var httpRequestParams = {
+            method: 'GET',
+            url: localVarPath,
+            params: queryParameters,
+            headers: headerParams
+        };
+        if (extraHttpRequestParams) {
+            httpRequestParams = Object.assign(httpRequestParams, extraHttpRequestParams);
+        }
+        return this.$http(httpRequestParams);
+    };
+    /**
+     *
      * @summary listLawfirmLeads
      * @param request request
      */
