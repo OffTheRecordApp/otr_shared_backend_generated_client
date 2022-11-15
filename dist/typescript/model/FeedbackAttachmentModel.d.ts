@@ -9,11 +9,7 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-import * as models from './models';
-export interface FeedbackDomain {
-    "appVersion"?: string;
-    "attachments"?: Array<models.FeedbackAttachmentModel>;
-    "body"?: string;
-    "device"?: string;
-    "subject"?: string;
+export interface FeedbackAttachmentModel {
+    "base64data"?: string;
+    "contentType"?: string;
 }

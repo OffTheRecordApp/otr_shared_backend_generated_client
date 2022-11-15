@@ -1,3 +1,4 @@
+"use strict";
 /**
  * OffTheRecord Rest Service API - Devo
  * A service to handle your traffic tickets
@@ -9,11 +10,4 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-import * as models from './models';
-export interface FeedbackDomain {
-    "appVersion"?: string;
-    "attachments"?: Array<models.FeedbackAttachmentModel>;
-    "body"?: string;
-    "device"?: string;
-    "subject"?: string;
-}
+Object.defineProperty(exports, "__esModule", { value: true });

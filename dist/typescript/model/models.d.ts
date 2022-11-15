@@ -170,6 +170,7 @@ export * from './EnableViolationsForLawfirmRequest';
 export * from './EnableViolationsForLawfirmResponse';
 export * from './EstimateInsuranceSavingsRequest';
 export * from './EstimateInsuranceSavingsResponse';
+export * from './FeedbackAttachmentModel';
 export * from './FeedbackDomain';
 export * from './FinancialTransaction';
 export * from './FindChargeDisputesResponse';

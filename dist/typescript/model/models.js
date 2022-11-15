@@ -182,6 +182,7 @@ __exportStar(require("./EnableViolationsForLawfirmRequest"), exports);
 __exportStar(require("./EnableViolationsForLawfirmResponse"), exports);
 __exportStar(require("./EstimateInsuranceSavingsRequest"), exports);
 __exportStar(require("./EstimateInsuranceSavingsResponse"), exports);
+__exportStar(require("./FeedbackAttachmentModel"), exports);
 __exportStar(require("./FeedbackDomain"), exports);
 __exportStar(require("./FinancialTransaction"), exports);
 __exportStar(require("./FindChargeDisputesResponse"), exports);
