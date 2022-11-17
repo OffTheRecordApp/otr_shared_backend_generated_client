@@ -369,6 +369,7 @@ __exportStar(require("./LineItemRequest"), exports);
 __exportStar(require("./ListAgentBookingsResponse"), exports);
 __exportStar(require("./ListBillingProductsResponse"), exports);
 __exportStar(require("./ListBillingSubscribersResponse"), exports);
+__exportStar(require("./ListBillingSubscriptionModel"), exports);
 __exportStar(require("./ListBillingSubscriptionsResponse"), exports);
 __exportStar(require("./ListContactTimelineResponse"), exports);
 __exportStar(require("./ListCostItemsForCustomerResponse"), exports);

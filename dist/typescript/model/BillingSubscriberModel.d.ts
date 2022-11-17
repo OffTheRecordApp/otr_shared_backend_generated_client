@@ -14,7 +14,7 @@ export interface BillingSubscriberModel {
     "emailAddress"?: string;
     "firstName"?: string;
     "lastName"?: string;
-    "subscriptions"?: Array<models.BillingSubscriptionModel>;
+    "subscriptions"?: Array<models.ListBillingSubscriptionModel>;
     "totalUsage"?: number;
     "userId"?: number;
 }
