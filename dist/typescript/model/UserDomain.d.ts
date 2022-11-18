@@ -38,6 +38,7 @@ export interface UserDomain {
     "phoneNumbers"?: Array<models.PhoneNumberDomain>;
     "privacyMode"?: UserDomain.PrivacyModeEnum;
     "profilePicture"?: string;
+    "referralCount"?: number;
     "roles"?: Array<models.UserRoleDomain>;
     "signUpCode"?: string;
     "signUpCodeUseCount"?: number;
