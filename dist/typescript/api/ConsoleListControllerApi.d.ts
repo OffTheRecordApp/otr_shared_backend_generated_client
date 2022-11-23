@@ -95,8 +95,9 @@ export declare class ConsoleListControllerApi {
      * @summary listBillingSubscribers
      * @param length length
      * @param page page
+     * @param start start
      */
-    listBillingSubscribersUsingGET(length?: number, page?: number, extraHttpRequestParams?: any): ng.IHttpPromise<models.ListBillingSubscribersResponse>;
+    listBillingSubscribersUsingGET(length?: number, page?: number, start?: string, extraHttpRequestParams?: any): ng.IHttpPromise<models.ListBillingSubscribersResponse>;
     /**
      *
      * @summary listLawfirmLeads
