@@ -342,6 +342,7 @@ angular.module('otrBackendService', [])
              * @param {integer} parameters.length - length
              * @param {integer} parameters.page - page
              * @param {string} parameters.start - start
+             * @param {string} parameters.statuses - statuses
              */
             OtrService.prototype.listBillingSubscribersUsingGET = function(parameters) {
                 if (parameters === undefined) {
@@ -370,6 +371,10 @@ angular.module('otrBackendService', [])
 
                 if (parameters['start'] !== undefined) {
                     queryParameters['start'] = parameters['start'];
+                }
+
+                if (parameters['statuses'] !== undefined) {
+                    queryParameters['statuses'] = parameters['statuses'];
                 }
 
                 queryParameters = mergeQueryParams(parameters, queryParameters);

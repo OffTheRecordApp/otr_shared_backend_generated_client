@@ -329,8 +329,9 @@ var ConsoleListControllerApi = /** @class */ (function () {
      * @param length length
      * @param page page
      * @param start start
+     * @param statuses statuses
      */
-    ConsoleListControllerApi.prototype.listBillingSubscribersUsingGET = function (length, page, start, extraHttpRequestParams) {
+    ConsoleListControllerApi.prototype.listBillingSubscribersUsingGET = function (length, page, start, statuses, extraHttpRequestParams) {
         var localVarPath = this.basePath + '/api/v1/billing/subscribers';
         var queryParameters = {};
         var headerParams = Object.assign({}, this.defaultHeaders);
@@ -342,6 +343,9 @@ var ConsoleListControllerApi = /** @class */ (function () {
         }
         if (start !== undefined) {
             queryParameters['start'] = start;
+        }
+        if (statuses !== undefined) {
+            queryParameters['statuses'] = statuses;
         }
         var httpRequestParams = {
             method: 'GET',
