@@ -27,8 +27,9 @@ var CitationControllerApi = /** @class */ (function () {
      *
      * @summary assignCitationOwner
      * @param citationId citationId
+     * @param request request
      */
-    CitationControllerApi.prototype.assignCitationOwnerUsingPOST = function (citationId, extraHttpRequestParams) {
+    CitationControllerApi.prototype.assignCitationOwnerUsingPOST = function (citationId, request, extraHttpRequestParams) {
         var localVarPath = this.basePath + '/api/v1/citations/{citationId}/owner'
             .replace('{' + 'citationId' + '}', encodeURIComponent(String(citationId)));
         var queryParameters = {};
@@ -40,6 +41,7 @@ var CitationControllerApi = /** @class */ (function () {
         var httpRequestParams = {
             method: 'POST',
             url: localVarPath,
+            data: request,
             params: queryParameters,
             headers: headerParams
         };

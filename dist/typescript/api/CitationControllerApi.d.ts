@@ -22,8 +22,9 @@ export declare class CitationControllerApi {
      *
      * @summary assignCitationOwner
      * @param citationId citationId
+     * @param request request
      */
-    assignCitationOwnerUsingPOST(citationId: number, extraHttpRequestParams?: any): ng.IHttpPromise<object>;
+    assignCitationOwnerUsingPOST(citationId: number, request?: models.AssignCitationOwnerRequest, extraHttpRequestParams?: any): ng.IHttpPromise<object>;
     /**
      *
      * @summary createNewCitation

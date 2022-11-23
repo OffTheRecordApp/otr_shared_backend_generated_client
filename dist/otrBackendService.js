@@ -3845,6 +3845,7 @@ angular.module('otrBackendService', [])
              * @name OtrService#assignCitationOwnerUsingPOST
              * @param {object} parameters - method options and parameters
              * @param {integer} parameters.citationId - citationId
+             * @param {} parameters.request - request
              */
             OtrService.prototype.assignCitationOwnerUsingPOST = function(parameters) {
                 if (parameters === undefined) {
@@ -3866,6 +3867,10 @@ angular.module('otrBackendService', [])
                 if (parameters['citationId'] === undefined) {
                     deferred.reject(new Error('Missing required  parameter: citationId'));
                     return deferred.promise;
+                }
+
+                if (parameters['request'] !== undefined) {
+                    body = parameters['request'];
                 }
 
                 queryParameters = mergeQueryParams(parameters, queryParameters);

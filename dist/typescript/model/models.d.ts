@@ -36,6 +36,7 @@ export * from './AlertNotificationResponse';
 export * from './AppEventCreateRequest';
 export * from './AppearanceAttorneyDomain';
 export * from './AppleLoginRequest';
+export * from './AssignCitationOwnerRequest';
 export * from './AuthorModel';
 export * from './AuthorizeChargeForCasePaymentRequest';
 export * from './AuthorizeChargeForCasePaymentResponse';

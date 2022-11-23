@@ -48,6 +48,7 @@ __exportStar(require("./AlertNotificationResponse"), exports);
 __exportStar(require("./AppEventCreateRequest"), exports);
 __exportStar(require("./AppearanceAttorneyDomain"), exports);
 __exportStar(require("./AppleLoginRequest"), exports);
+__exportStar(require("./AssignCitationOwnerRequest"), exports);
 __exportStar(require("./AuthorModel"), exports);
 __exportStar(require("./AuthorizeChargeForCasePaymentRequest"), exports);
 __exportStar(require("./AuthorizeChargeForCasePaymentResponse"), exports);
