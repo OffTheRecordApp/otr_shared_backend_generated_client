@@ -12,4 +12,5 @@
 import * as models from './models';
 export interface ListBillingSubscribersResponse {
     "subscribers"?: Array<models.BillingSubscriberModel>;
+    "totalRecords"?: number;
 }
