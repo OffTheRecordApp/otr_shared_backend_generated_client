@@ -16,6 +16,7 @@ export interface LawfirmSettingsDomainRes {
     "acceptsPaymentPlans"?: boolean;
     "allowReviewReplies"?: boolean;
     "defaultTrafficTicketFee"?: number;
+    "isDirectoryOn"?: boolean;
     "isVacationMode"?: boolean;
     "latestCaseAssignmentDateUtc"?: models.TimestampRes;
     "maxCaseCapacity"?: number;
