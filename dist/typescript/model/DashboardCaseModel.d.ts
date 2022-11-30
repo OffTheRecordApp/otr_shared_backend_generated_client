@@ -19,6 +19,7 @@ export interface DashboardCaseModel {
     "hasLeftLawyerReview"?: boolean;
     "lawfirmName"?: string;
     "lawfirmProfilePictureUrl"?: string;
+    "lawyerRating"?: number;
     "legalFeeInCents"?: number;
     "messageBody"?: string;
     "status"?: models.DashboardStatusModel;
