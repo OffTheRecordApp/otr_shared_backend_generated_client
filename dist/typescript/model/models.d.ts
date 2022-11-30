@@ -48,6 +48,7 @@ export * from './BackfillLawfirmTransactionRecordsResponse';
 export * from './BillingInvoiceModel';
 export * from './BillingPriceModel';
 export * from './BillingProductModel';
+export * from './BillingSubscriberAggregateModel';
 export * from './BillingSubscriberModel';
 export * from './BillingSubscriptionItemModel';
 export * from './BillingSubscriptionModel';

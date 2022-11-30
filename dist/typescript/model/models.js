@@ -60,6 +60,7 @@ __exportStar(require("./BackfillLawfirmTransactionRecordsResponse"), exports);
 __exportStar(require("./BillingInvoiceModel"), exports);
 __exportStar(require("./BillingPriceModel"), exports);
 __exportStar(require("./BillingProductModel"), exports);
+__exportStar(require("./BillingSubscriberAggregateModel"), exports);
 __exportStar(require("./BillingSubscriberModel"), exports);
 __exportStar(require("./BillingSubscriptionItemModel"), exports);
 __exportStar(require("./BillingSubscriptionModel"), exports);

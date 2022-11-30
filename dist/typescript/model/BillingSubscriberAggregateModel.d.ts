@@ -9,8 +9,8 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-import * as models from './models';
-export interface ListBillingSubscribersResponse {
-    "aggregates"?: models.BillingSubscriberAggregateModel;
-    "subscribers"?: Array<models.BillingSubscriberModel>;
+export interface BillingSubscriberAggregateModel {
+    "totalSubscribers"?: number;
+    "totalUniqueActiveSubscriptions"?: number;
+    "totalUniqueCancelledSubscriptions"?: number;
 }
