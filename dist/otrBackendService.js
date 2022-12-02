@@ -337,14 +337,15 @@ angular.module('otrBackendService', [])
             /**
              * listBillingSubscribers
              * @method
-             * @name OtrService#listBillingSubscribersUsingGET
+             * @name OtrService#listBillingSubscribersUsingPOST
              * @param {object} parameters - method options and parameters
              * @param {integer} parameters.length - length
              * @param {integer} parameters.page - page
+             * @param {} parameters.request - request
              * @param {string} parameters.start - start
              * @param {string} parameters.statuses - statuses
              */
-            OtrService.prototype.listBillingSubscribersUsingGET = function(parameters) {
+            OtrService.prototype.listBillingSubscribersUsingPOST = function(parameters) {
                 if (parameters === undefined) {
                     parameters = {};
                 }
@@ -357,6 +358,7 @@ angular.module('otrBackendService', [])
                     form = {};
 
                 headers['Accept'] = ['application/json'];
+                headers['Content-Type'] = ['application/json'];
 
                 /** set default value **/
                 queryParameters['length'] = 50;
@@ -369,6 +371,10 @@ angular.module('otrBackendService', [])
                     queryParameters['page'] = parameters['page'];
                 }
 
+                if (parameters['request'] !== undefined) {
+                    body = parameters['request'];
+                }
+
                 if (parameters['start'] !== undefined) {
                     queryParameters['start'] = parameters['start'];
                 }
@@ -379,7 +385,7 @@ angular.module('otrBackendService', [])
 
                 queryParameters = mergeQueryParams(parameters, queryParameters);
 
-                this.request('GET', domain + path, parameters, body, headers, queryParameters, form, deferred);
+                this.request('POST', domain + path, parameters, body, headers, queryParameters, form, deferred);
 
                 return deferred.promise;
             };

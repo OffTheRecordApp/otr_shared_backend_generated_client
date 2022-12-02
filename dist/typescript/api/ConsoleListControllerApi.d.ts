@@ -97,8 +97,9 @@ export declare class ConsoleListControllerApi {
      * @param page page
      * @param start start
      * @param statuses statuses
+     * @param request request
      */
-    listBillingSubscribersUsingGET(length?: number, page?: number, start?: string, statuses?: 'ACTIVE' | 'CANCELED' | 'INCOMPLETE' | 'INCOMPLETE_EXPIRED' | 'IN_TRIAL_PERIOD' | 'PAST_DUE' | 'UNKNOWN' | 'UNPAID', extraHttpRequestParams?: any): ng.IHttpPromise<models.ListBillingSubscribersResponse>;
+    listBillingSubscribersUsingPOST(length?: number, page?: number, start?: string, statuses?: 'ACTIVE' | 'CANCELED' | 'INCOMPLETE' | 'INCOMPLETE_EXPIRED' | 'IN_TRIAL_PERIOD' | 'PAST_DUE' | 'UNKNOWN' | 'UNPAID', request?: models.ListBillingSubscribersRequest, extraHttpRequestParams?: any): ng.IHttpPromise<models.ListBillingSubscribersResponse>;
     /**
      *
      * @summary listLawfirmLeads
