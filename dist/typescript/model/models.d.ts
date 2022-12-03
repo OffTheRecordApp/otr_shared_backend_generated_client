@@ -486,6 +486,7 @@ export * from './SetStarOnMessagesRequest';
 export * from './SignRecordingUrlRequest';
 export * from './SignRecordingUrlResponse';
 export * from './SimpleCredentialsResponse';
+export * from './SingleSignOnResponse';
 export * from './SocialLoginRequest';
 export * from './SocialLoginResponse';
 export * from './SocialLoginUser';

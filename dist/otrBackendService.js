@@ -262,6 +262,73 @@ angular.module('otrBackendService', [])
                 return deferred.promise;
             };
             /**
+             * loginWithSSO
+             * @method
+             * @name OtrService#loginWithSSOUsingPOST
+             * @param {object} parameters - method options and parameters
+             * @param {string} parameters.brandId - brandId
+             * @param {string} parameters.email - email
+             * @param {boolean} parameters.isAdmin - isAdmin
+             * @param {string} parameters.password - password
+             */
+            OtrService.prototype.loginWithSSOUsingPOST = function(parameters) {
+                if (parameters === undefined) {
+                    parameters = {};
+                }
+                var deferred = $q.defer();
+                var domain = this.domain,
+                    path = '/api/v1/authentication/sso/login';
+                var body = {},
+                    queryParameters = {},
+                    headers = {},
+                    form = {};
+
+                headers['Accept'] = ['*/*'];
+                headers['Content-Type'] = ['application/json'];
+
+                if (parameters['brandId'] !== undefined) {
+                    queryParameters['brandId'] = parameters['brandId'];
+                }
+
+                if (parameters['brandId'] === undefined) {
+                    deferred.reject(new Error('Missing required  parameter: brandId'));
+                    return deferred.promise;
+                }
+
+                if (parameters['email'] !== undefined) {
+                    queryParameters['email'] = parameters['email'];
+                }
+
+                if (parameters['email'] === undefined) {
+                    deferred.reject(new Error('Missing required  parameter: email'));
+                    return deferred.promise;
+                }
+
+                if (parameters['isAdmin'] !== undefined) {
+                    queryParameters['isAdmin'] = parameters['isAdmin'];
+                }
+
+                if (parameters['isAdmin'] === undefined) {
+                    deferred.reject(new Error('Missing required  parameter: isAdmin'));
+                    return deferred.promise;
+                }
+
+                if (parameters['password'] !== undefined) {
+                    queryParameters['password'] = parameters['password'];
+                }
+
+                if (parameters['password'] === undefined) {
+                    deferred.reject(new Error('Missing required  parameter: password'));
+                    return deferred.promise;
+                }
+
+                queryParameters = mergeQueryParams(parameters, queryParameters);
+
+                this.request('POST', domain + path, parameters, body, headers, queryParameters, form, deferred);
+
+                return deferred.promise;
+            };
+            /**
              * getUserInfo
              * @method
              * @name OtrService#getUserInfoUsingGET

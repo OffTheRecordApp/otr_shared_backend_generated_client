@@ -498,6 +498,7 @@ __exportStar(require("./SetStarOnMessagesRequest"), exports);
 __exportStar(require("./SignRecordingUrlRequest"), exports);
 __exportStar(require("./SignRecordingUrlResponse"), exports);
 __exportStar(require("./SimpleCredentialsResponse"), exports);
+__exportStar(require("./SingleSignOnResponse"), exports);
 __exportStar(require("./SocialLoginRequest"), exports);
 __exportStar(require("./SocialLoginResponse"), exports);
 __exportStar(require("./SocialLoginUser"), exports);
