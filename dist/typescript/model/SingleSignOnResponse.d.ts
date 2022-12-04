@@ -10,5 +10,8 @@
  * Do not edit the class manually.
  */
 export interface SingleSignOnResponse {
+    "emailAddress"?: string;
     "jwt"?: string;
+    "redirectUrl"?: string;
+    "userId"?: number;
 }
