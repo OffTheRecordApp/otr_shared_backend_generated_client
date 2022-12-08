@@ -16,6 +16,8 @@ var GetCaseActionTypesResponse;
 (function (GetCaseActionTypesResponse) {
     var CaseActionTypesEnum;
     (function (CaseActionTypesEnum) {
+        CaseActionTypesEnum[CaseActionTypesEnum["CASEACCEPT"] = 'CASE_ACCEPT'] = "CASEACCEPT";
+        CaseActionTypesEnum[CaseActionTypesEnum["CASEDECLINE"] = 'CASE_DECLINE'] = "CASEDECLINE";
         CaseActionTypesEnum[CaseActionTypesEnum["CITATIONDATAEXTRACTED"] = 'CITATION_DATA_EXTRACTED'] = "CITATIONDATAEXTRACTED";
         CaseActionTypesEnum[CaseActionTypesEnum["COURTDATEREMOVED"] = 'COURT_DATE_REMOVED'] = "COURTDATEREMOVED";
         CaseActionTypesEnum[CaseActionTypesEnum["COURTDATESCHEDULED"] = 'COURT_DATE_SCHEDULED'] = "COURTDATESCHEDULED";

@@ -16,6 +16,8 @@ var CaseActionDomain;
 (function (CaseActionDomain) {
     var ActionTypeEnum;
     (function (ActionTypeEnum) {
+        ActionTypeEnum[ActionTypeEnum["CASEACCEPT"] = 'CASE_ACCEPT'] = "CASEACCEPT";
+        ActionTypeEnum[ActionTypeEnum["CASEDECLINE"] = 'CASE_DECLINE'] = "CASEDECLINE";
         ActionTypeEnum[ActionTypeEnum["CITATIONDATAEXTRACTED"] = 'CITATION_DATA_EXTRACTED'] = "CITATIONDATAEXTRACTED";
         ActionTypeEnum[ActionTypeEnum["COURTDATEREMOVED"] = 'COURT_DATE_REMOVED'] = "COURTDATEREMOVED";
         ActionTypeEnum[ActionTypeEnum["COURTDATESCHEDULED"] = 'COURT_DATE_SCHEDULED'] = "COURTDATESCHEDULED";

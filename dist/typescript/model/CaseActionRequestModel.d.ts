@@ -16,6 +16,8 @@ export interface CaseActionRequestModel {
 }
 export declare namespace CaseActionRequestModel {
     enum ActionTypeEnum {
+        CASEACCEPT,
+        CASEDECLINE,
         CITATIONDATAEXTRACTED,
         COURTDATEREMOVED,
         COURTDATESCHEDULED,

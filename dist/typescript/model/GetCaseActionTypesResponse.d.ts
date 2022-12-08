@@ -14,6 +14,8 @@ export interface GetCaseActionTypesResponse {
 }
 export declare namespace GetCaseActionTypesResponse {
     enum CaseActionTypesEnum {
+        CASEACCEPT,
+        CASEDECLINE,
         CITATIONDATAEXTRACTED,
         COURTDATEREMOVED,
         COURTDATESCHEDULED,
