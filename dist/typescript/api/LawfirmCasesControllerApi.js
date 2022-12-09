@@ -28,10 +28,11 @@ var LawfirmCasesControllerApi = /** @class */ (function () {
      * @summary getLawfirmCasesByPage
      * @param lawfirmIdString lawfirmIdString
      * @param request request
+     * @param hasPaymentPlan hasPaymentPlan
      * @param length length
      * @param page page
      */
-    LawfirmCasesControllerApi.prototype.getLawfirmCasesByPageUsingPOST = function (lawfirmIdString, request, length, page, extraHttpRequestParams) {
+    LawfirmCasesControllerApi.prototype.getLawfirmCasesByPageUsingPOST = function (lawfirmIdString, request, hasPaymentPlan, length, page, extraHttpRequestParams) {
         var localVarPath = this.basePath + '/api/v2/lawfirm/{lawfirmIdString}/cases'
             .replace('{' + 'lawfirmIdString' + '}', encodeURIComponent(String(lawfirmIdString)));
         var queryParameters = {};
@@ -43,6 +44,9 @@ var LawfirmCasesControllerApi = /** @class */ (function () {
         // verify required parameter 'request' is not null or undefined
         if (request === null || request === undefined) {
             throw new Error('Required parameter request was null or undefined when calling getLawfirmCasesByPageUsingPOST.');
+        }
+        if (hasPaymentPlan !== undefined) {
+            queryParameters['hasPaymentPlan'] = hasPaymentPlan;
         }
         if (length !== undefined) {
             queryParameters['length'] = length;

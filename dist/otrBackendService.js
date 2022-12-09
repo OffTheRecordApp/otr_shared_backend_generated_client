@@ -14215,6 +14215,7 @@ angular.module('otrBackendService', [])
              * @method
              * @name OtrService#getLawfirmCasesByPageUsingPOST
              * @param {object} parameters - method options and parameters
+             * @param {boolean} parameters.hasPaymentPlan - hasPaymentPlan
              * @param {string} parameters.lawfirmIdString - lawfirmIdString
              * @param {integer} parameters.length - length
              * @param {integer} parameters.page - page
@@ -14234,6 +14235,10 @@ angular.module('otrBackendService', [])
 
                 headers['Accept'] = ['*/*'];
                 headers['Content-Type'] = ['application/json'];
+
+                if (parameters['hasPaymentPlan'] !== undefined) {
+                    queryParameters['hasPaymentPlan'] = parameters['hasPaymentPlan'];
+                }
 
                 path = path.replace('{lawfirmIdString}', parameters['lawfirmIdString']);
 
