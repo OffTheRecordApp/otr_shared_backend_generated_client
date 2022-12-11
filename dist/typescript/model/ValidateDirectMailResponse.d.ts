@@ -99,6 +99,7 @@ export declare namespace ValidateDirectMailResponse {
         INVALIDCASEID,
         INVALIDCASEPAYMENTID,
         INVALIDCITATIONID,
+        INVALIDCODE,
         INVALIDCOURTID,
         INVALIDDATE,
         INVALIDDISPUTEID,

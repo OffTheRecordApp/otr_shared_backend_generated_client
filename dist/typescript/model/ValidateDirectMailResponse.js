@@ -101,6 +101,7 @@ var ValidateDirectMailResponse;
         OtrErrorEnum[OtrErrorEnum["INVALIDCASEID"] = 'INVALID_CASE_ID'] = "INVALIDCASEID";
         OtrErrorEnum[OtrErrorEnum["INVALIDCASEPAYMENTID"] = 'INVALID_CASE_PAYMENT_ID'] = "INVALIDCASEPAYMENTID";
         OtrErrorEnum[OtrErrorEnum["INVALIDCITATIONID"] = 'INVALID_CITATION_ID'] = "INVALIDCITATIONID";
+        OtrErrorEnum[OtrErrorEnum["INVALIDCODE"] = 'INVALID_CODE'] = "INVALIDCODE";
         OtrErrorEnum[OtrErrorEnum["INVALIDCOURTID"] = 'INVALID_COURT_ID'] = "INVALIDCOURTID";
         OtrErrorEnum[OtrErrorEnum["INVALIDDATE"] = 'INVALID_DATE'] = "INVALIDDATE";
         OtrErrorEnum[OtrErrorEnum["INVALIDDISPUTEID"] = 'INVALID_DISPUTE_ID'] = "INVALIDDISPUTEID";
