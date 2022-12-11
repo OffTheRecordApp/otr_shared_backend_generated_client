@@ -12,8 +12,10 @@
 import * as models from './models';
 export interface GetLawfirmSummaryCasesResponse {
     "activeCasesCount"?: number;
+    "bookedCasesCount"?: number;
     "cases"?: Array<models.CaseSummaryDomain>;
     "numMatchingCases"?: number;
     "paymentPlanCasesCount"?: number;
     "pendingCasesCount"?: number;
+    "percentCasesWithPaymentPlan"?: number;
 }
