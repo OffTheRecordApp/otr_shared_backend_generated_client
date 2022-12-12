@@ -34,6 +34,7 @@ export declare namespace CaseActionDomain {
         FAILEDPAYMENTATTEMPT,
         NOTICEOFAPPEARANCEFILED,
         OTHER,
+        OVERDUEBALANCEPAID,
         REVIEWEDBYLAWFIRM,
         SOCIALMEDIAASK,
         TICKETMAILEDTOCOURT

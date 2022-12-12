@@ -26,6 +26,7 @@ var GetCaseActionTypesResponse;
         CaseActionTypesEnum[CaseActionTypesEnum["FAILEDPAYMENTATTEMPT"] = 'FAILED_PAYMENT_ATTEMPT'] = "FAILEDPAYMENTATTEMPT";
         CaseActionTypesEnum[CaseActionTypesEnum["NOTICEOFAPPEARANCEFILED"] = 'NOTICE_OF_APPEARANCE_FILED'] = "NOTICEOFAPPEARANCEFILED";
         CaseActionTypesEnum[CaseActionTypesEnum["OTHER"] = 'OTHER'] = "OTHER";
+        CaseActionTypesEnum[CaseActionTypesEnum["OVERDUEBALANCEPAID"] = 'OVERDUE_BALANCE_PAID'] = "OVERDUEBALANCEPAID";
         CaseActionTypesEnum[CaseActionTypesEnum["REVIEWEDBYLAWFIRM"] = 'REVIEWED_BY_LAWFIRM'] = "REVIEWEDBYLAWFIRM";
         CaseActionTypesEnum[CaseActionTypesEnum["SOCIALMEDIAASK"] = 'SOCIAL_MEDIA_ASK'] = "SOCIALMEDIAASK";
         CaseActionTypesEnum[CaseActionTypesEnum["TICKETMAILEDTOCOURT"] = 'TICKET_MAILED_TO_COURT'] = "TICKETMAILEDTOCOURT";

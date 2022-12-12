@@ -26,6 +26,7 @@ export declare namespace CaseActionRequestModel {
         FAILEDPAYMENTATTEMPT,
         NOTICEOFAPPEARANCEFILED,
         OTHER,
+        OVERDUEBALANCEPAID,
         REVIEWEDBYLAWFIRM,
         SOCIALMEDIAASK,
         TICKETMAILEDTOCOURT
