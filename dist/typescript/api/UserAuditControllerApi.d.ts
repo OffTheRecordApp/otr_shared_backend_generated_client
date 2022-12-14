@@ -20,6 +20,13 @@ export declare class UserAuditControllerApi {
     constructor($http: ng.IHttpService, $httpParamSerializer?: (d: any) => any, basePath?: string);
     /**
      *
+     * @summary getLastLogin
+     * @param userId userId
+     * @param clients clients
+     */
+    getLastLoginUsingGET(userId: number, clients?: 'ANDROID' | 'DESKTOP_WEBAPP' | 'DMV_GO' | 'DMV_ORG' | 'FRESH_DESK' | 'IOS' | 'MOBILE_WEBAPP' | 'OTR_ADMIN_CONSOLE' | 'OTR_ADMIN_CONSOLE_DEVO' | 'OTR_ADMIN_CONSOLE_LOCALHOST' | 'OTR_EXPLORER' | 'OTR_LAWFIRM_PORTAL' | 'OTR_LAWFIRM_PORTAL_DEVO' | 'OTR_LAWFIRM_PORTAL_LOCALHOST' | 'OTR_WEBSITE' | 'OTR_WEBSITE_DEVO' | 'OTR_WEBSITE_LOCALHOST' | 'OTR_WIDGET' | 'UNKNOWN', extraHttpRequestParams?: any): ng.IHttpPromise<models.GetLastLoginResponse>;
+    /**
+     *
      * @summary listUserAuditEventsByCursor
      * @param userId userId
      * @param excludeTypes excludeTypes
