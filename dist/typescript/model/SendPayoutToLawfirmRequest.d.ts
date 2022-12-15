@@ -34,6 +34,7 @@ export declare namespace SendPayoutToLawfirmRequest {
         STRIPETRANSFER,
         UNKNOWN,
         VENMO,
+        WIRETRANSFER,
         ZELLE
     }
 }

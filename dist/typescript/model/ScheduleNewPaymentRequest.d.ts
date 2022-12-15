@@ -34,6 +34,7 @@ export declare namespace ScheduleNewPaymentRequest {
         STRIPETRANSFER,
         UNKNOWN,
         VENMO,
+        WIRETRANSFER,
         ZELLE
     }
 }

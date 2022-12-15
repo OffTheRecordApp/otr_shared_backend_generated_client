@@ -33,6 +33,7 @@ export declare namespace UpdateLawfirmFeeRequest {
         STRIPETRANSFER,
         UNKNOWN,
         VENMO,
+        WIRETRANSFER,
         ZELLE
     }
 }

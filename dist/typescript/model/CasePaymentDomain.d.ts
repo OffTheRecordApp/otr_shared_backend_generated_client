@@ -54,6 +54,7 @@ export declare namespace CasePaymentDomain {
         STRIPETRANSFER,
         UNKNOWN,
         VENMO,
+        WIRETRANSFER,
         ZELLE
     }
 }

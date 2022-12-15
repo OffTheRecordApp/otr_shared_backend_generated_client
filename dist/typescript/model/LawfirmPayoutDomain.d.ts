@@ -39,6 +39,7 @@ export declare namespace LawfirmPayoutDomain {
         STRIPETRANSFER,
         UNKNOWN,
         VENMO,
+        WIRETRANSFER,
         ZELLE
     }
 }

@@ -34,6 +34,7 @@ export declare namespace ChargeFeeToLawfirmRequest {
         STRIPETRANSFER,
         UNKNOWN,
         VENMO,
+        WIRETRANSFER,
         ZELLE
     }
 }
