@@ -9367,6 +9367,55 @@ angular.module('otrBackendService', [])
                 return deferred.promise;
             };
             /**
+             * listMessagesByEntity
+             * @method
+             * @name OtrService#listMessagesByEntityUsingGET
+             * @param {object} parameters - method options and parameters
+             * @param {integer} parameters.lawfirmId - lawfirmId
+             * @param {integer} parameters.length - length
+             * @param {integer} parameters.page - page
+             * @param {integer} parameters.userIds - userIds
+             */
+            OtrService.prototype.listMessagesByEntityUsingGET = function(parameters) {
+                if (parameters === undefined) {
+                    parameters = {};
+                }
+                var deferred = $q.defer();
+                var domain = this.domain,
+                    path = '/api/v1/messages';
+                var body = {},
+                    queryParameters = {},
+                    headers = {},
+                    form = {};
+
+                headers['Accept'] = ['*/*'];
+
+                if (parameters['lawfirmId'] !== undefined) {
+                    queryParameters['lawfirmId'] = parameters['lawfirmId'];
+                }
+
+                /** set default value **/
+                queryParameters['length'] = 100;
+
+                if (parameters['length'] !== undefined) {
+                    queryParameters['length'] = parameters['length'];
+                }
+
+                if (parameters['page'] !== undefined) {
+                    queryParameters['page'] = parameters['page'];
+                }
+
+                if (parameters['userIds'] !== undefined) {
+                    queryParameters['userIds'] = parameters['userIds'];
+                }
+
+                queryParameters = mergeQueryParams(parameters, queryParameters);
+
+                this.request('GET', domain + path, parameters, body, headers, queryParameters, form, deferred);
+
+                return deferred.promise;
+            };
+            /**
              * createNote
              * @method
              * @name OtrService#createNoteUsingPOST

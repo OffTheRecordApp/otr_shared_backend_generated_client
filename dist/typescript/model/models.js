@@ -291,6 +291,8 @@ __exportStar(require("./GetListOfCitationsWithMissingCourtResponse"), exports);
 __exportStar(require("./GetLocationResponse"), exports);
 __exportStar(require("./GetLostCasesWithTransferNotReversedRequest"), exports);
 __exportStar(require("./GetLostCasesWithTransferNotReversedResponse"), exports);
+__exportStar(require("./GetMessagesByEntityModel"), exports);
+__exportStar(require("./GetMessagesByEntityResponse"), exports);
 __exportStar(require("./GetNoViolationCitationsResponse"), exports);
 __exportStar(require("./GetOutgoingContactsResponse"), exports);
 __exportStar(require("./GetOverduePaymentsResponse"), exports);

@@ -279,6 +279,8 @@ export * from './GetListOfCitationsWithMissingCourtResponse';
 export * from './GetLocationResponse';
 export * from './GetLostCasesWithTransferNotReversedRequest';
 export * from './GetLostCasesWithTransferNotReversedResponse';
+export * from './GetMessagesByEntityModel';
+export * from './GetMessagesByEntityResponse';
 export * from './GetNoViolationCitationsResponse';
 export * from './GetOutgoingContactsResponse';
 export * from './GetOverduePaymentsResponse';
