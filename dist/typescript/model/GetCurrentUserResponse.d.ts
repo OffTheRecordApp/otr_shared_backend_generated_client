@@ -14,5 +14,6 @@ export interface GetCurrentUserResponse {
     "isUserAuthenticated"?: boolean;
     "isUserLoggedIn"?: boolean;
     "isUserRememberMeAuthenticated"?: boolean;
+    "jwt"?: string;
     "user"?: models.UserDomain;
 }

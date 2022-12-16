@@ -51,11 +51,19 @@ var UserControllerApi = /** @class */ (function () {
     /**
      *
      * @summary getCurrentUserInfo
+     * @param isAdmin isAdmin
+     * @param serviceProviderId serviceProviderId
      */
-    UserControllerApi.prototype.getCurrentUserInfoUsingGET = function (extraHttpRequestParams) {
+    UserControllerApi.prototype.getCurrentUserInfoUsingGET = function (isAdmin, serviceProviderId, extraHttpRequestParams) {
         var localVarPath = this.basePath + '/api/v1/user';
         var queryParameters = {};
         var headerParams = Object.assign({}, this.defaultHeaders);
+        if (isAdmin !== undefined) {
+            queryParameters['isAdmin'] = isAdmin;
+        }
+        if (serviceProviderId !== undefined) {
+            queryParameters['serviceProviderId'] = serviceProviderId;
+        }
         var httpRequestParams = {
             method: 'GET',
             url: localVarPath,

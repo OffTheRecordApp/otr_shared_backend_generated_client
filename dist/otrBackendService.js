@@ -11981,6 +11981,8 @@ angular.module('otrBackendService', [])
              * @method
              * @name OtrService#getCurrentUserInfoUsingGET
              * @param {object} parameters - method options and parameters
+             * @param {boolean} parameters.isAdmin - isAdmin
+             * @param {string} parameters.serviceProviderId - serviceProviderId
              */
             OtrService.prototype.getCurrentUserInfoUsingGET = function(parameters) {
                 if (parameters === undefined) {
@@ -11995,6 +11997,14 @@ angular.module('otrBackendService', [])
                     form = {};
 
                 headers['Accept'] = ['*/*'];
+
+                if (parameters['isAdmin'] !== undefined) {
+                    queryParameters['isAdmin'] = parameters['isAdmin'];
+                }
+
+                if (parameters['serviceProviderId'] !== undefined) {
+                    queryParameters['serviceProviderId'] = parameters['serviceProviderId'];
+                }
 
                 queryParameters = mergeQueryParams(parameters, queryParameters);
 
