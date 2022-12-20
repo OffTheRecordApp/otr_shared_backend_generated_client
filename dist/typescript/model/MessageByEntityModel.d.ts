@@ -9,14 +9,14 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-export interface GetMessagesByEntityModel {
+export interface MessageByEntityModel {
     "authorFirstName"?: string;
     "authorLastName"?: string;
     "authorUserId"?: number;
     "caseDocId"?: string;
     "caseId"?: string;
-    "caseStatus"?: GetMessagesByEntityModel.CaseStatusEnum;
-    "caseStatusCategory"?: GetMessagesByEntityModel.CaseStatusCategoryEnum;
+    "caseStatus"?: MessageByEntityModel.CaseStatusEnum;
+    "caseStatusCategory"?: MessageByEntityModel.CaseStatusCategoryEnum;
     "customerFirstName"?: string;
     "customerLastName"?: string;
     "docType"?: string;
@@ -27,7 +27,7 @@ export interface GetMessagesByEntityModel {
     "messageSentDateUtc"?: string;
     "profilePictureUrl"?: string;
 }
-export declare namespace GetMessagesByEntityModel {
+export declare namespace MessageByEntityModel {
     enum CaseStatusEnum {
         AMENDEDDOWNWITHINCLASS,
         AMENDEDFULLFINE,

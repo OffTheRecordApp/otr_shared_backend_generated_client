@@ -11,6 +11,8 @@
  */
 import * as models from './models';
 export interface GetMessagesByEntityResponse {
-    "messages"?: Array<models.GetMessagesByEntityModel>;
+    "actions"?: Array<models.ActionByEntityModel>;
+    "messages"?: Array<models.MessageByEntityModel>;
+    "numActions"?: number;
     "numMessages"?: number;
 }

@@ -11,9 +11,9 @@
  * Do not edit the class manually.
  */
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.GetMessagesByEntityModel = void 0;
-var GetMessagesByEntityModel;
-(function (GetMessagesByEntityModel) {
+exports.MessageByEntityModel = void 0;
+var MessageByEntityModel;
+(function (MessageByEntityModel) {
     var CaseStatusEnum;
     (function (CaseStatusEnum) {
         CaseStatusEnum[CaseStatusEnum["AMENDEDDOWNWITHINCLASS"] = 'AMENDED_DOWN_WITHIN_CLASS'] = "AMENDEDDOWNWITHINCLASS";
@@ -53,12 +53,12 @@ var GetMessagesByEntityModel;
         CaseStatusEnum[CaseStatusEnum["STALE"] = 'STALE'] = "STALE";
         CaseStatusEnum[CaseStatusEnum["TRAFFICSCHOOL"] = 'TRAFFIC_SCHOOL'] = "TRAFFICSCHOOL";
         CaseStatusEnum[CaseStatusEnum["UNCONFIRMED"] = 'UNCONFIRMED'] = "UNCONFIRMED";
-    })(CaseStatusEnum = GetMessagesByEntityModel.CaseStatusEnum || (GetMessagesByEntityModel.CaseStatusEnum = {}));
+    })(CaseStatusEnum = MessageByEntityModel.CaseStatusEnum || (MessageByEntityModel.CaseStatusEnum = {}));
     var CaseStatusCategoryEnum;
     (function (CaseStatusCategoryEnum) {
         CaseStatusCategoryEnum[CaseStatusCategoryEnum["ACTIVE"] = 'ACTIVE'] = "ACTIVE";
         CaseStatusCategoryEnum[CaseStatusCategoryEnum["CANCELLED"] = 'CANCELLED'] = "CANCELLED";
         CaseStatusCategoryEnum[CaseStatusCategoryEnum["RESOLVED"] = 'RESOLVED'] = "RESOLVED";
         CaseStatusCategoryEnum[CaseStatusCategoryEnum["UNCONFIRMED"] = 'UNCONFIRMED'] = "UNCONFIRMED";
-    })(CaseStatusCategoryEnum = GetMessagesByEntityModel.CaseStatusCategoryEnum || (GetMessagesByEntityModel.CaseStatusCategoryEnum = {}));
-})(GetMessagesByEntityModel = exports.GetMessagesByEntityModel || (exports.GetMessagesByEntityModel = {}));
+    })(CaseStatusCategoryEnum = MessageByEntityModel.CaseStatusCategoryEnum || (MessageByEntityModel.CaseStatusCategoryEnum = {}));
+})(MessageByEntityModel = exports.MessageByEntityModel || (exports.MessageByEntityModel = {}));
