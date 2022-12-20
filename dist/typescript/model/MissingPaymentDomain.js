@@ -54,4 +54,11 @@ var MissingPaymentDomain;
         CaseStatusEnum[CaseStatusEnum["TRAFFICSCHOOL"] = 'TRAFFIC_SCHOOL'] = "TRAFFICSCHOOL";
         CaseStatusEnum[CaseStatusEnum["UNCONFIRMED"] = 'UNCONFIRMED'] = "UNCONFIRMED";
     })(CaseStatusEnum = MissingPaymentDomain.CaseStatusEnum || (MissingPaymentDomain.CaseStatusEnum = {}));
+    var StatusCategoryEnum;
+    (function (StatusCategoryEnum) {
+        StatusCategoryEnum[StatusCategoryEnum["ACTIVE"] = 'ACTIVE'] = "ACTIVE";
+        StatusCategoryEnum[StatusCategoryEnum["CANCELLED"] = 'CANCELLED'] = "CANCELLED";
+        StatusCategoryEnum[StatusCategoryEnum["RESOLVED"] = 'RESOLVED'] = "RESOLVED";
+        StatusCategoryEnum[StatusCategoryEnum["UNCONFIRMED"] = 'UNCONFIRMED'] = "UNCONFIRMED";
+    })(StatusCategoryEnum = MissingPaymentDomain.StatusCategoryEnum || (MissingPaymentDomain.StatusCategoryEnum = {}));
 })(MissingPaymentDomain = exports.MissingPaymentDomain || (exports.MissingPaymentDomain = {}));
