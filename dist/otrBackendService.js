@@ -7972,40 +7972,6 @@ angular.module('otrBackendService', [])
                 return deferred.promise;
             };
             /**
-             * getLawfirmCases
-             * @method
-             * @name OtrService#getLawfirmCasesUsingGET
-             * @param {object} parameters - method options and parameters
-             * @param {string} parameters.lawfirmId - lawfirmId
-             */
-            OtrService.prototype.getLawfirmCasesUsingGET = function(parameters) {
-                if (parameters === undefined) {
-                    parameters = {};
-                }
-                var deferred = $q.defer();
-                var domain = this.domain,
-                    path = '/api/v1/lawfirms/{lawfirmId}/cases';
-                var body = {},
-                    queryParameters = {},
-                    headers = {},
-                    form = {};
-
-                headers['Accept'] = ['*/*'];
-
-                path = path.replace('{lawfirmId}', parameters['lawfirmId']);
-
-                if (parameters['lawfirmId'] === undefined) {
-                    deferred.reject(new Error('Missing required  parameter: lawfirmId'));
-                    return deferred.promise;
-                }
-
-                queryParameters = mergeQueryParams(parameters, queryParameters);
-
-                this.request('GET', domain + path, parameters, body, headers, queryParameters, form, deferred);
-
-                return deferred.promise;
-            };
-            /**
              * getLawfirmCaseStats
              * @method
              * @name OtrService#getLawfirmCaseStatsUsingGET
@@ -14313,11 +14279,13 @@ angular.module('otrBackendService', [])
              * @method
              * @name OtrService#getLawfirmCasesByPageUsingPOST
              * @param {object} parameters - method options and parameters
+             * @param {string} parameters.end - end
              * @param {boolean} parameters.hasPaymentPlan - hasPaymentPlan
              * @param {string} parameters.lawfirmIdString - lawfirmIdString
              * @param {integer} parameters.length - length
              * @param {integer} parameters.page - page
              * @param {} parameters.request - request
+             * @param {string} parameters.start - start
              */
             OtrService.prototype.getLawfirmCasesByPageUsingPOST = function(parameters) {
                 if (parameters === undefined) {
@@ -14333,6 +14301,10 @@ angular.module('otrBackendService', [])
 
                 headers['Accept'] = ['*/*'];
                 headers['Content-Type'] = ['application/json'];
+
+                if (parameters['end'] !== undefined) {
+                    queryParameters['end'] = parameters['end'];
+                }
 
                 if (parameters['hasPaymentPlan'] !== undefined) {
                     queryParameters['hasPaymentPlan'] = parameters['hasPaymentPlan'];
@@ -14363,6 +14335,10 @@ angular.module('otrBackendService', [])
                 if (parameters['request'] === undefined) {
                     deferred.reject(new Error('Missing required  parameter: request'));
                     return deferred.promise;
+                }
+
+                if (parameters['start'] !== undefined) {
+                    queryParameters['start'] = parameters['start'];
                 }
 
                 queryParameters = mergeQueryParams(parameters, queryParameters);

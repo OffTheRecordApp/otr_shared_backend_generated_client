@@ -250,7 +250,6 @@ export * from './GetInvalidCasesWithStripeChargeResponse';
 export * from './GetLastLoginResponse';
 export * from './GetLawfirmAddressesResponse';
 export * from './GetLawfirmCaseStatsResponse';
-export * from './GetLawfirmCasesResponse';
 export * from './GetLawfirmCoverageReportResponse';
 export * from './GetLawfirmCoverageResponse';
 export * from './GetLawfirmFeeCoverageModel';

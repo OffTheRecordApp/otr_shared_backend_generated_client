@@ -28,11 +28,13 @@ var LawfirmCasesControllerApi = /** @class */ (function () {
      * @summary getLawfirmCasesByPage
      * @param lawfirmIdString lawfirmIdString
      * @param request request
+     * @param end end
      * @param hasPaymentPlan hasPaymentPlan
      * @param length length
      * @param page page
+     * @param start start
      */
-    LawfirmCasesControllerApi.prototype.getLawfirmCasesByPageUsingPOST = function (lawfirmIdString, request, hasPaymentPlan, length, page, extraHttpRequestParams) {
+    LawfirmCasesControllerApi.prototype.getLawfirmCasesByPageUsingPOST = function (lawfirmIdString, request, end, hasPaymentPlan, length, page, start, extraHttpRequestParams) {
         var localVarPath = this.basePath + '/api/v2/lawfirm/{lawfirmIdString}/cases'
             .replace('{' + 'lawfirmIdString' + '}', encodeURIComponent(String(lawfirmIdString)));
         var queryParameters = {};
@@ -45,6 +47,9 @@ var LawfirmCasesControllerApi = /** @class */ (function () {
         if (request === null || request === undefined) {
             throw new Error('Required parameter request was null or undefined when calling getLawfirmCasesByPageUsingPOST.');
         }
+        if (end !== undefined) {
+            queryParameters['end'] = end;
+        }
         if (hasPaymentPlan !== undefined) {
             queryParameters['hasPaymentPlan'] = hasPaymentPlan;
         }
@@ -54,35 +59,13 @@ var LawfirmCasesControllerApi = /** @class */ (function () {
         if (page !== undefined) {
             queryParameters['page'] = page;
         }
+        if (start !== undefined) {
+            queryParameters['start'] = start;
+        }
         var httpRequestParams = {
             method: 'POST',
             url: localVarPath,
             data: request,
-            params: queryParameters,
-            headers: headerParams
-        };
-        if (extraHttpRequestParams) {
-            httpRequestParams = Object.assign(httpRequestParams, extraHttpRequestParams);
-        }
-        return this.$http(httpRequestParams);
-    };
-    /**
-     *
-     * @summary getLawfirmCases
-     * @param lawfirmId lawfirmId
-     */
-    LawfirmCasesControllerApi.prototype.getLawfirmCasesUsingGET = function (lawfirmId, extraHttpRequestParams) {
-        var localVarPath = this.basePath + '/api/v1/lawfirms/{lawfirmId}/cases'
-            .replace('{' + 'lawfirmId' + '}', encodeURIComponent(String(lawfirmId)));
-        var queryParameters = {};
-        var headerParams = Object.assign({}, this.defaultHeaders);
-        // verify required parameter 'lawfirmId' is not null or undefined
-        if (lawfirmId === null || lawfirmId === undefined) {
-            throw new Error('Required parameter lawfirmId was null or undefined when calling getLawfirmCasesUsingGET.');
-        }
-        var httpRequestParams = {
-            method: 'GET',
-            url: localVarPath,
             params: queryParameters,
             headers: headerParams
         };

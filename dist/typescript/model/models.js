@@ -262,7 +262,6 @@ __exportStar(require("./GetInvalidCasesWithStripeChargeResponse"), exports);
 __exportStar(require("./GetLastLoginResponse"), exports);
 __exportStar(require("./GetLawfirmAddressesResponse"), exports);
 __exportStar(require("./GetLawfirmCaseStatsResponse"), exports);
-__exportStar(require("./GetLawfirmCasesResponse"), exports);
 __exportStar(require("./GetLawfirmCoverageReportResponse"), exports);
 __exportStar(require("./GetLawfirmCoverageResponse"), exports);
 __exportStar(require("./GetLawfirmFeeCoverageModel"), exports);
