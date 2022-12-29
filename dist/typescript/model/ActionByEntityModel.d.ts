@@ -13,6 +13,7 @@ export interface ActionByEntityModel {
     "actionDateUtc"?: string;
     "actionId"?: number;
     "actionNote"?: string;
+    "actionType"?: ActionByEntityModel.ActionTypeEnum;
     "authorFirstName"?: string;
     "authorLastName"?: string;
     "authorUserId"?: number;
@@ -25,6 +26,22 @@ export interface ActionByEntityModel {
     "profilePictureUrl"?: string;
 }
 export declare namespace ActionByEntityModel {
+    enum ActionTypeEnum {
+        CASEACCEPT,
+        CASEDECLINE,
+        CITATIONDATAEXTRACTED,
+        COURTDATEREMOVED,
+        COURTDATESCHEDULED,
+        DISCOVERYRECEIVED,
+        DISCOVERYREQUESTED,
+        FAILEDPAYMENTATTEMPT,
+        NOTICEOFAPPEARANCEFILED,
+        OTHER,
+        OVERDUEBALANCEPAID,
+        REVIEWEDBYLAWFIRM,
+        SOCIALMEDIAASK,
+        TICKETMAILEDTOCOURT
+    }
     enum CaseStatusEnum {
         AMENDEDDOWNWITHINCLASS,
         AMENDEDFULLFINE,
