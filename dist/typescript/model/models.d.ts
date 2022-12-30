@@ -218,6 +218,7 @@ export * from './GetCaseResponse';
 export * from './GetCasesWithCoverageObtainedResponse';
 export * from './GetCasesWithMissingLawfirmPayoutsResponse';
 export * from './GetCasesWithOverduePaymentsResponse';
+export * from './GetCasesWithUncapturedChargesRequest';
 export * from './GetCitationPhoneLeadsRequest';
 export * from './GetCitationPhoneLeadsResponse';
 export * from './GetCitationResponse';

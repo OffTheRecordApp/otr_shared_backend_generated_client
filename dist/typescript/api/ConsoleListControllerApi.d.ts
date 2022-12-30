@@ -41,7 +41,7 @@ export declare class ConsoleListControllerApi {
      * @summary getCasesWithOverduePayments
      * @param request request
      */
-    getCasesWithOverduePaymentsUsingPOST(request: object, extraHttpRequestParams?: any): ng.IHttpPromise<models.GetCasesWithOverduePaymentsResponse>;
+    getCasesWithOverduePaymentsUsingPOST(request: models.GetCasesWithUncapturedChargesRequest, extraHttpRequestParams?: any): ng.IHttpPromise<models.GetCasesWithOverduePaymentsResponse>;
     /**
      *
      * @summary getCitationPhoneLeads
