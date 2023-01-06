@@ -14594,6 +14594,7 @@ angular.module('otrBackendService', [])
              * @method
              * @name OtrService#listDashboardCasesUsingGET
              * @param {object} parameters - method options and parameters
+             * @param {string} parameters.caseStatuses - caseStatuses
              * @param {integer} parameters.limit - limit
              * @param {string} parameters.previousPageToken - previousPageToken
              * @param {string} parameters.sortBy - sortBy
@@ -14613,6 +14614,10 @@ angular.module('otrBackendService', [])
                     form = {};
 
                 headers['Accept'] = ['*/*'];
+
+                if (parameters['caseStatuses'] !== undefined) {
+                    queryParameters['caseStatuses'] = parameters['caseStatuses'];
+                }
 
                 /** set default value **/
                 queryParameters['limit'] = 50;

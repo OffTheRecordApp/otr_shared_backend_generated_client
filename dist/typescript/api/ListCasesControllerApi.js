@@ -77,12 +77,13 @@ var ListCasesControllerApi = /** @class */ (function () {
      *
      * @summary listDashboardCases
      * @param userId userId
+     * @param caseStatuses caseStatuses
      * @param limit limit
      * @param previousPageToken previousPageToken
      * @param sortBy sortBy
      * @param statusCategories statusCategories
      */
-    ListCasesControllerApi.prototype.listDashboardCasesUsingGET = function (userId, limit, previousPageToken, sortBy, statusCategories, extraHttpRequestParams) {
+    ListCasesControllerApi.prototype.listDashboardCasesUsingGET = function (userId, caseStatuses, limit, previousPageToken, sortBy, statusCategories, extraHttpRequestParams) {
         var localVarPath = this.basePath + '/api/v3/users/{userId}/cases'
             .replace('{' + 'userId' + '}', encodeURIComponent(String(userId)));
         var queryParameters = {};
@@ -90,6 +91,9 @@ var ListCasesControllerApi = /** @class */ (function () {
         // verify required parameter 'userId' is not null or undefined
         if (userId === null || userId === undefined) {
             throw new Error('Required parameter userId was null or undefined when calling listDashboardCasesUsingGET.');
+        }
+        if (caseStatuses !== undefined) {
+            queryParameters['caseStatuses'] = caseStatuses;
         }
         if (limit !== undefined) {
             queryParameters['limit'] = limit;
