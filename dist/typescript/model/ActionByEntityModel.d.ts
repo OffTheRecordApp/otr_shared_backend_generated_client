@@ -34,6 +34,7 @@ export declare namespace ActionByEntityModel {
         COURTDATESCHEDULED,
         DISCOVERYRECEIVED,
         DISCOVERYREQUESTED,
+        DISPUTEFILED,
         FAILEDPAYMENTATTEMPT,
         NOTICEOFAPPEARANCEFILED,
         OTHER,

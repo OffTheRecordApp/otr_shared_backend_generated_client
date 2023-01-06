@@ -23,6 +23,7 @@ export declare namespace CaseActionRequestModel {
         COURTDATESCHEDULED,
         DISCOVERYRECEIVED,
         DISCOVERYREQUESTED,
+        DISPUTEFILED,
         FAILEDPAYMENTATTEMPT,
         NOTICEOFAPPEARANCEFILED,
         OTHER,
