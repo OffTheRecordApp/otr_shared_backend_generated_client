@@ -15,5 +15,12 @@ export interface FeedbackDomain {
     "attachments"?: Array<models.FeedbackAttachmentModel>;
     "body"?: string;
     "device"?: string;
+    "feedbackType"?: FeedbackDomain.FeedbackTypeEnum;
     "subject"?: string;
+}
+export declare namespace FeedbackDomain {
+    enum FeedbackTypeEnum {
+        GENERIC,
+        NOTREADYTOBOOK
+    }
 }
