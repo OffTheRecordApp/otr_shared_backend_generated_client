@@ -8327,11 +8327,13 @@ angular.module('otrBackendService', [])
              * @method
              * @name OtrService#getInboxMessagesUsingGET
              * @param {object} parameters - method options and parameters
+             * @param {string} parameters.caseStatuses - caseStatuses
              * @param {string} parameters.filter - filter
              * @param {integer} parameters.lawfirmId - lawfirmId
              * @param {integer} parameters.length - length
              * @param {integer} parameters.page - page
              * @param {string} parameters.query - query
+             * @param {string} parameters.statusCategories - statusCategories
              */
             OtrService.prototype.getInboxMessagesUsingGET = function(parameters) {
                 if (parameters === undefined) {
@@ -8346,6 +8348,10 @@ angular.module('otrBackendService', [])
                     form = {};
 
                 headers['Accept'] = ['*/*'];
+
+                if (parameters['caseStatuses'] !== undefined) {
+                    queryParameters['caseStatuses'] = parameters['caseStatuses'];
+                }
 
                 if (parameters['filter'] !== undefined) {
                     queryParameters['filter'] = parameters['filter'];
@@ -8371,6 +8377,10 @@ angular.module('otrBackendService', [])
 
                 if (parameters['query'] !== undefined) {
                     queryParameters['query'] = parameters['query'];
+                }
+
+                if (parameters['statusCategories'] !== undefined) {
+                    queryParameters['statusCategories'] = parameters['statusCategories'];
                 }
 
                 queryParameters = mergeQueryParams(parameters, queryParameters);
