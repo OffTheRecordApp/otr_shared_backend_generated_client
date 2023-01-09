@@ -14,6 +14,7 @@ export interface FeedbackDomain {
     "appVersion"?: string;
     "attachments"?: Array<models.FeedbackAttachmentModel>;
     "body"?: string;
+    "citationId"?: number;
     "device"?: string;
     "feedbackType"?: FeedbackDomain.FeedbackTypeEnum;
     "subject"?: string;
