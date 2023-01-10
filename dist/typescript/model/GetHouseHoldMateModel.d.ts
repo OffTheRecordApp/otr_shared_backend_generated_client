@@ -11,6 +11,7 @@
  */
 export interface GetHouseHoldMateModel {
     "email"?: string;
+    "expiryDateUtc"?: string;
     "fullName"?: string;
     "inviteStatus"?: GetHouseHoldMateModel.InviteStatusEnum;
     "profilePictureUrl"?: string;
