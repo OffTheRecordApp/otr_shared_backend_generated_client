@@ -11,13 +11,3 @@
  * Do not edit the class manually.
  */
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.GeoRatesRequest = void 0;
-var GeoRatesRequest;
-(function (GeoRatesRequest) {
-    var CdlStatusEnum;
-    (function (CdlStatusEnum) {
-        CdlStatusEnum[CdlStatusEnum["CDLINCOMMERCIALVEHICLE"] = 'CDL_IN_COMMERCIAL_VEHICLE'] = "CDLINCOMMERCIALVEHICLE";
-        CdlStatusEnum[CdlStatusEnum["CDLINPERSONALVEHICLE"] = 'CDL_IN_PERSONAL_VEHICLE'] = "CDLINPERSONALVEHICLE";
-        CdlStatusEnum[CdlStatusEnum["NOCDL"] = 'NO_CDL'] = "NOCDL";
-    })(CdlStatusEnum = GeoRatesRequest.CdlStatusEnum || (GeoRatesRequest.CdlStatusEnum = {}));
-})(GeoRatesRequest = exports.GeoRatesRequest || (exports.GeoRatesRequest = {}));
