@@ -10,6 +10,7 @@
  * Do not edit the class manually.
  */
 export interface GetHouseHoldMateModel {
+    "deleted"?: boolean;
     "email"?: string;
     "expiryDateUtc"?: string;
     "fullName"?: string;
