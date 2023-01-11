@@ -18,6 +18,7 @@ export interface LawfirmSettingsDomainRes {
     "defaultTrafficTicketFee"?: number;
     "isDirectoryOn"?: boolean;
     "isStoreFrontOn"?: boolean;
+    "isStorefrontWidgetOn"?: boolean;
     "isVacationMode"?: boolean;
     "latestCaseAssignmentDateUtc"?: models.TimestampRes;
     "maxCaseCapacity"?: number;
