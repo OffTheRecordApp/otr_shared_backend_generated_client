@@ -8373,6 +8373,7 @@ angular.module('otrBackendService', [])
              * @param {object} parameters - method options and parameters
              * @param {string} parameters.caseStatuses - caseStatuses
              * @param {string} parameters.filter - filter
+             * @param {boolean} parameters.isCourtDateInPast - isCourtDateInPast
              * @param {integer} parameters.lawfirmId - lawfirmId
              * @param {integer} parameters.length - length
              * @param {integer} parameters.page - page
@@ -8399,6 +8400,10 @@ angular.module('otrBackendService', [])
 
                 if (parameters['filter'] !== undefined) {
                     queryParameters['filter'] = parameters['filter'];
+                }
+
+                if (parameters['isCourtDateInPast'] !== undefined) {
+                    queryParameters['isCourtDateInPast'] = parameters['isCourtDateInPast'];
                 }
 
                 path = path.replace('{lawfirmId}', parameters['lawfirmId']);
