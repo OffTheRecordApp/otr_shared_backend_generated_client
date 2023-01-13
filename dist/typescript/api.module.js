@@ -92,5 +92,6 @@ var apiModule = angular.module('api', [])
     .service('UserSearchControllerApi', api.UserSearchControllerApi)
     .service('UtilityControllerApi', api.UtilityControllerApi)
     .service('ValidationControllerApi', api.ValidationControllerApi)
+    .service('VerificationControllerApi', api.VerificationControllerApi)
     .service('ViolationPenaltyControllerApi', api.ViolationPenaltyControllerApi);
 exports.default = apiModule;

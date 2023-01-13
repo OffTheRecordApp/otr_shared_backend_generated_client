@@ -248,6 +248,7 @@ export * from './GetEmailTemplateResponse';
 export * from './GetHouseHoldMateModel';
 export * from './GetHouseholdMatesResponse';
 export * from './GetInvalidCasesWithStripeChargeResponse';
+export * from './GetInviteByTokenResponse';
 export * from './GetLastLoginResponse';
 export * from './GetLawfirmAddressesResponse';
 export * from './GetLawfirmCaseStatsResponse';

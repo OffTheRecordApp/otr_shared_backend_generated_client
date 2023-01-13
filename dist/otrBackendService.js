@@ -13724,6 +13724,42 @@ angular.module('otrBackendService', [])
                 return deferred.promise;
             };
             /**
+             * getInviteByToken
+             * @method
+             * @name OtrService#getInviteByTokenUsingGET
+             * @param {object} parameters - method options and parameters
+             * @param {string} parameters.token - token
+             */
+            OtrService.prototype.getInviteByTokenUsingGET = function(parameters) {
+                if (parameters === undefined) {
+                    parameters = {};
+                }
+                var deferred = $q.defer();
+                var domain = this.domain,
+                    path = '/api/v1/verification-tokens';
+                var body = {},
+                    queryParameters = {},
+                    headers = {},
+                    form = {};
+
+                headers['Accept'] = ['*/*'];
+
+                if (parameters['token'] !== undefined) {
+                    queryParameters['token'] = parameters['token'];
+                }
+
+                if (parameters['token'] === undefined) {
+                    deferred.reject(new Error('Missing required  parameter: token'));
+                    return deferred.promise;
+                }
+
+                queryParameters = mergeQueryParams(parameters, queryParameters);
+
+                this.request('GET', domain + path, parameters, body, headers, queryParameters, form, deferred);
+
+                return deferred.promise;
+            };
+            /**
              * getTrafficViolationTypes
              * @method
              * @name OtrService#getTrafficViolationTypesUsingGET

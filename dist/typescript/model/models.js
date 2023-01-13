@@ -260,6 +260,7 @@ __exportStar(require("./GetEmailTemplateResponse"), exports);
 __exportStar(require("./GetHouseHoldMateModel"), exports);
 __exportStar(require("./GetHouseholdMatesResponse"), exports);
 __exportStar(require("./GetInvalidCasesWithStripeChargeResponse"), exports);
+__exportStar(require("./GetInviteByTokenResponse"), exports);
 __exportStar(require("./GetLastLoginResponse"), exports);
 __exportStar(require("./GetLawfirmAddressesResponse"), exports);
 __exportStar(require("./GetLawfirmCaseStatsResponse"), exports);
