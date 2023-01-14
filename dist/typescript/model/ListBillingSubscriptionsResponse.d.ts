@@ -12,4 +12,5 @@
 import * as models from './models';
 export interface ListBillingSubscriptionsResponse {
     "subscriptions"?: Array<models.BillingSubscriptionModel>;
+    "subscriptionsAsBeneficiary"?: Array<models.BillingSubscriptionModel>;
 }
