@@ -30,11 +30,12 @@ var LawfirmCasesControllerApi = /** @class */ (function () {
      * @param request request
      * @param end end
      * @param hasPaymentPlan hasPaymentPlan
+     * @param isCourtDateInPast isCourtDateInPast
      * @param length length
      * @param page page
      * @param start start
      */
-    LawfirmCasesControllerApi.prototype.getLawfirmCasesByPageUsingPOST = function (lawfirmIdString, request, end, hasPaymentPlan, length, page, start, extraHttpRequestParams) {
+    LawfirmCasesControllerApi.prototype.getLawfirmCasesByPageUsingPOST = function (lawfirmIdString, request, end, hasPaymentPlan, isCourtDateInPast, length, page, start, extraHttpRequestParams) {
         var localVarPath = this.basePath + '/api/v2/lawfirm/{lawfirmIdString}/cases'
             .replace('{' + 'lawfirmIdString' + '}', encodeURIComponent(String(lawfirmIdString)));
         var queryParameters = {};
@@ -52,6 +53,9 @@ var LawfirmCasesControllerApi = /** @class */ (function () {
         }
         if (hasPaymentPlan !== undefined) {
             queryParameters['hasPaymentPlan'] = hasPaymentPlan;
+        }
+        if (isCourtDateInPast !== undefined) {
+            queryParameters['isCourtDateInPast'] = isCourtDateInPast;
         }
         if (length !== undefined) {
             queryParameters['length'] = length;
