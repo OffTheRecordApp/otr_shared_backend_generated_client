@@ -26,7 +26,7 @@ export declare namespace GetHouseHoldMateModel {
         VERIFIED
     }
     enum RelationshipTypeEnum {
-        SELF,
+        OWNER,
         SIBLING,
         SPOUSE,
         TEENAGER,
