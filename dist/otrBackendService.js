@@ -6370,6 +6370,72 @@ angular.module('otrBackendService', [])
                 return deferred.promise;
             };
             /**
+             * getExternalTickets
+             * @method
+             * @name OtrService#getExternalTicketsUsingGET
+             * @param {object} parameters - method options and parameters
+             * @param {integer} parameters.countyId - countyId
+             * @param {string} parameters.dateOfBirth - dateOfBirth
+             * @param {string} parameters.driversLicenseId - driversLicenseId
+             * @param {string} parameters.regionCode - regionCode
+             */
+            OtrService.prototype.getExternalTicketsUsingGET = function(parameters) {
+                if (parameters === undefined) {
+                    parameters = {};
+                }
+                var deferred = $q.defer();
+                var domain = this.domain,
+                    path = '/api/v1/external-tickets';
+                var body = {},
+                    queryParameters = {},
+                    headers = {},
+                    form = {};
+
+                headers['Accept'] = ['*/*'];
+
+                if (parameters['countyId'] !== undefined) {
+                    queryParameters['countyId'] = parameters['countyId'];
+                }
+
+                if (parameters['countyId'] === undefined) {
+                    deferred.reject(new Error('Missing required  parameter: countyId'));
+                    return deferred.promise;
+                }
+
+                if (parameters['dateOfBirth'] !== undefined) {
+                    queryParameters['dateOfBirth'] = parameters['dateOfBirth'];
+                }
+
+                if (parameters['dateOfBirth'] === undefined) {
+                    deferred.reject(new Error('Missing required  parameter: dateOfBirth'));
+                    return deferred.promise;
+                }
+
+                if (parameters['driversLicenseId'] !== undefined) {
+                    queryParameters['driversLicenseId'] = parameters['driversLicenseId'];
+                }
+
+                if (parameters['driversLicenseId'] === undefined) {
+                    deferred.reject(new Error('Missing required  parameter: driversLicenseId'));
+                    return deferred.promise;
+                }
+
+                if (parameters['regionCode'] !== undefined) {
+                    queryParameters['regionCode'] = parameters['regionCode'];
+                }
+
+                if (parameters['regionCode'] === undefined) {
+                    deferred.reject(new Error('Missing required  parameter: regionCode'));
+                    return deferred.promise;
+                }
+
+                queryParameters = mergeQueryParams(parameters, queryParameters);
+
+                this.request('GET', domain + path, parameters, body, headers, queryParameters, form, deferred);
+
+                return deferred.promise;
+            };
+            /**
              * postFeedback
              * @method
              * @name OtrService#postFeedbackUsingPOST
