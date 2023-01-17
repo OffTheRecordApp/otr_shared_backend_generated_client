@@ -15,6 +15,7 @@ export interface GetLawfirmSummaryCasesResponse {
     "bookedCasesCount"?: number;
     "cases"?: Array<models.CaseSummaryDomain>;
     "numMatchingCases"?: number;
+    "pastDueCasesCount"?: number;
     "paymentPlanCasesCount"?: number;
     "pendingCasesCount"?: number;
     "percentCasesWithPaymentPlan"?: number;
