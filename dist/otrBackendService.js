@@ -8438,8 +8438,8 @@ angular.module('otrBackendService', [])
              * @name OtrService#getInboxMessagesUsingGET
              * @param {object} parameters - method options and parameters
              * @param {string} parameters.caseStatuses - caseStatuses
+             * @param {string} parameters.courtDateFilter - courtDateFilter
              * @param {string} parameters.filter - filter
-             * @param {boolean} parameters.isCourtDateInPast - isCourtDateInPast
              * @param {integer} parameters.lawfirmId - lawfirmId
              * @param {integer} parameters.length - length
              * @param {integer} parameters.page - page
@@ -8464,12 +8464,12 @@ angular.module('otrBackendService', [])
                     queryParameters['caseStatuses'] = parameters['caseStatuses'];
                 }
 
-                if (parameters['filter'] !== undefined) {
-                    queryParameters['filter'] = parameters['filter'];
+                if (parameters['courtDateFilter'] !== undefined) {
+                    queryParameters['courtDateFilter'] = parameters['courtDateFilter'];
                 }
 
-                if (parameters['isCourtDateInPast'] !== undefined) {
-                    queryParameters['isCourtDateInPast'] = parameters['isCourtDateInPast'];
+                if (parameters['filter'] !== undefined) {
+                    queryParameters['filter'] = parameters['filter'];
                 }
 
                 path = path.replace('{lawfirmId}', parameters['lawfirmId']);
@@ -14477,9 +14477,9 @@ angular.module('otrBackendService', [])
              * @method
              * @name OtrService#getLawfirmCasesByPageUsingPOST
              * @param {object} parameters - method options and parameters
+             * @param {string} parameters.courtDateFilter - courtDateFilter
              * @param {string} parameters.end - end
              * @param {boolean} parameters.hasPaymentPlan - hasPaymentPlan
-             * @param {boolean} parameters.isCourtDateInPast - isCourtDateInPast
              * @param {string} parameters.lawfirmIdString - lawfirmIdString
              * @param {integer} parameters.length - length
              * @param {integer} parameters.page - page
@@ -14501,16 +14501,16 @@ angular.module('otrBackendService', [])
                 headers['Accept'] = ['*/*'];
                 headers['Content-Type'] = ['application/json'];
 
+                if (parameters['courtDateFilter'] !== undefined) {
+                    queryParameters['courtDateFilter'] = parameters['courtDateFilter'];
+                }
+
                 if (parameters['end'] !== undefined) {
                     queryParameters['end'] = parameters['end'];
                 }
 
                 if (parameters['hasPaymentPlan'] !== undefined) {
                     queryParameters['hasPaymentPlan'] = parameters['hasPaymentPlan'];
-                }
-
-                if (parameters['isCourtDateInPast'] !== undefined) {
-                    queryParameters['isCourtDateInPast'] = parameters['isCourtDateInPast'];
                 }
 
                 path = path.replace('{lawfirmIdString}', parameters['lawfirmIdString']);

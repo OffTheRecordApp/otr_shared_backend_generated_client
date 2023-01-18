@@ -140,14 +140,14 @@ var LawfirmControllerApi = /** @class */ (function () {
      * @summary getInboxMessages
      * @param lawfirmId lawfirmId
      * @param caseStatuses caseStatuses
+     * @param courtDateFilter courtDateFilter
      * @param filter filter
-     * @param isCourtDateInPast isCourtDateInPast
      * @param length length
      * @param page page
      * @param query query
      * @param statusCategories statusCategories
      */
-    LawfirmControllerApi.prototype.getInboxMessagesUsingGET = function (lawfirmId, caseStatuses, filter, isCourtDateInPast, length, page, query, statusCategories, extraHttpRequestParams) {
+    LawfirmControllerApi.prototype.getInboxMessagesUsingGET = function (lawfirmId, caseStatuses, courtDateFilter, filter, length, page, query, statusCategories, extraHttpRequestParams) {
         var localVarPath = this.basePath + '/api/v1/lawfirms/{lawfirmId}/inbox-messages'
             .replace('{' + 'lawfirmId' + '}', encodeURIComponent(String(lawfirmId)));
         var queryParameters = {};
@@ -159,11 +159,11 @@ var LawfirmControllerApi = /** @class */ (function () {
         if (caseStatuses !== undefined) {
             queryParameters['caseStatuses'] = caseStatuses;
         }
+        if (courtDateFilter !== undefined) {
+            queryParameters['courtDateFilter'] = courtDateFilter;
+        }
         if (filter !== undefined) {
             queryParameters['filter'] = filter;
-        }
-        if (isCourtDateInPast !== undefined) {
-            queryParameters['isCourtDateInPast'] = isCourtDateInPast;
         }
         if (length !== undefined) {
             queryParameters['length'] = length;

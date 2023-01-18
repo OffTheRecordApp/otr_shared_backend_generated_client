@@ -28,14 +28,14 @@ var LawfirmCasesControllerApi = /** @class */ (function () {
      * @summary getLawfirmCasesByPage
      * @param lawfirmIdString lawfirmIdString
      * @param request request
+     * @param courtDateFilter courtDateFilter
      * @param end end
      * @param hasPaymentPlan hasPaymentPlan
-     * @param isCourtDateInPast isCourtDateInPast
      * @param length length
      * @param page page
      * @param start start
      */
-    LawfirmCasesControllerApi.prototype.getLawfirmCasesByPageUsingPOST = function (lawfirmIdString, request, end, hasPaymentPlan, isCourtDateInPast, length, page, start, extraHttpRequestParams) {
+    LawfirmCasesControllerApi.prototype.getLawfirmCasesByPageUsingPOST = function (lawfirmIdString, request, courtDateFilter, end, hasPaymentPlan, length, page, start, extraHttpRequestParams) {
         var localVarPath = this.basePath + '/api/v2/lawfirm/{lawfirmIdString}/cases'
             .replace('{' + 'lawfirmIdString' + '}', encodeURIComponent(String(lawfirmIdString)));
         var queryParameters = {};
@@ -48,14 +48,14 @@ var LawfirmCasesControllerApi = /** @class */ (function () {
         if (request === null || request === undefined) {
             throw new Error('Required parameter request was null or undefined when calling getLawfirmCasesByPageUsingPOST.');
         }
+        if (courtDateFilter !== undefined) {
+            queryParameters['courtDateFilter'] = courtDateFilter;
+        }
         if (end !== undefined) {
             queryParameters['end'] = end;
         }
         if (hasPaymentPlan !== undefined) {
             queryParameters['hasPaymentPlan'] = hasPaymentPlan;
-        }
-        if (isCourtDateInPast !== undefined) {
-            queryParameters['isCourtDateInPast'] = isCourtDateInPast;
         }
         if (length !== undefined) {
             queryParameters['length'] = length;
