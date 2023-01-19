@@ -81,6 +81,31 @@ var LawyerControllerApi = /** @class */ (function () {
     };
     /**
      *
+     * @summary getLawyer
+     * @param userId userId
+     */
+    LawyerControllerApi.prototype.getLawyerUsingGET = function (userId, extraHttpRequestParams) {
+        var localVarPath = this.basePath + '/api/v1/lawyers/{userId}'
+            .replace('{' + 'userId' + '}', encodeURIComponent(String(userId)));
+        var queryParameters = {};
+        var headerParams = Object.assign({}, this.defaultHeaders);
+        // verify required parameter 'userId' is not null or undefined
+        if (userId === null || userId === undefined) {
+            throw new Error('Required parameter userId was null or undefined when calling getLawyerUsingGET.');
+        }
+        var httpRequestParams = {
+            method: 'GET',
+            url: localVarPath,
+            params: queryParameters,
+            headers: headerParams
+        };
+        if (extraHttpRequestParams) {
+            httpRequestParams = Object.assign(httpRequestParams, extraHttpRequestParams);
+        }
+        return this.$http(httpRequestParams);
+    };
+    /**
+     *
      * @summary saveLawyerLead
      * @param request request
      */

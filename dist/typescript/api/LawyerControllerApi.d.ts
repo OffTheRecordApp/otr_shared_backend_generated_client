@@ -33,6 +33,12 @@ export declare class LawyerControllerApi {
     getLawyerEmailGuessesUsingGET(lawyerId: number, extraHttpRequestParams?: any): ng.IHttpPromise<object>;
     /**
      *
+     * @summary getLawyer
+     * @param userId userId
+     */
+    getLawyerUsingGET(userId: number, extraHttpRequestParams?: any): ng.IHttpPromise<models.GetLawyerResponse>;
+    /**
+     *
      * @summary saveLawyerLead
      * @param request request
      */

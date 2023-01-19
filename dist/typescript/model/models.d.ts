@@ -281,6 +281,7 @@ export * from './GetLawfirmSummaryCasesResponse';
 export * from './GetLawfirmSupportedStatesResponse';
 export * from './GetLawfirmTransactionsForCaseResponse';
 export * from './GetLawfirmsResponse';
+export * from './GetLawyerResponse';
 export * from './GetLineItemTypesResponse';
 export * from './GetLineItemsResponse';
 export * from './GetListOfCitationsWithMissingCourtResponse';

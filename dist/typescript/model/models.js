@@ -293,6 +293,7 @@ __exportStar(require("./GetLawfirmSummaryCasesResponse"), exports);
 __exportStar(require("./GetLawfirmSupportedStatesResponse"), exports);
 __exportStar(require("./GetLawfirmTransactionsForCaseResponse"), exports);
 __exportStar(require("./GetLawfirmsResponse"), exports);
+__exportStar(require("./GetLawyerResponse"), exports);
 __exportStar(require("./GetLineItemTypesResponse"), exports);
 __exportStar(require("./GetLineItemsResponse"), exports);
 __exportStar(require("./GetListOfCitationsWithMissingCourtResponse"), exports);

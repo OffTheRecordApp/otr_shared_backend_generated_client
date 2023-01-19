@@ -9299,6 +9299,40 @@ angular.module('otrBackendService', [])
                 return deferred.promise;
             };
             /**
+             * getLawyer
+             * @method
+             * @name OtrService#getLawyerUsingGET
+             * @param {object} parameters - method options and parameters
+             * @param {integer} parameters.userId - userId
+             */
+            OtrService.prototype.getLawyerUsingGET = function(parameters) {
+                if (parameters === undefined) {
+                    parameters = {};
+                }
+                var deferred = $q.defer();
+                var domain = this.domain,
+                    path = '/api/v1/lawyers/{userId}';
+                var body = {},
+                    queryParameters = {},
+                    headers = {},
+                    form = {};
+
+                headers['Accept'] = ['*/*'];
+
+                path = path.replace('{userId}', parameters['userId']);
+
+                if (parameters['userId'] === undefined) {
+                    deferred.reject(new Error('Missing required  parameter: userId'));
+                    return deferred.promise;
+                }
+
+                queryParameters = mergeQueryParams(parameters, queryParameters);
+
+                this.request('GET', domain + path, parameters, body, headers, queryParameters, form, deferred);
+
+                return deferred.promise;
+            };
+            /**
              * saveLawyerLicenses
              * @method
              * @name OtrService#saveLawyerLicensesUsingPOST
