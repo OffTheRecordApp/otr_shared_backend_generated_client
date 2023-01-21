@@ -52,7 +52,9 @@ export declare namespace LawfirmAuditEventModel {
         LAWFIRMTOTALCAPACITY,
         SAVEVACATIONMODEENDDATE,
         SAVEVACATIONMODEREASON,
+        UNKNOWN,
         USERLOGINEVENT,
-        VACATIONMODETOGGLE
+        VACATIONMODETOGGLE,
+        VACATIONMODEUPDATE
     }
 }
