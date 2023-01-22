@@ -43,8 +43,11 @@ export declare namespace LawfirmAuditEventModel {
         UNKNOWN
     }
     enum EventEnum {
+        CASEACCEPT,
         CASEBOOKING,
+        CASEDECLINE,
         CASEMATCH,
+        CASERESOLVE,
         CITATIONUPLOAD,
         LAWFIRMACCOUNTPRIORITY,
         LAWFIRMACCOUNTSTATUS,

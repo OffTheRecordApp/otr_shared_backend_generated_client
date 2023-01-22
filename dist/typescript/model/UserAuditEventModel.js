@@ -38,8 +38,11 @@ var UserAuditEventModel;
     })(ClientTypeEnum = UserAuditEventModel.ClientTypeEnum || (UserAuditEventModel.ClientTypeEnum = {}));
     var EventTypeEnum;
     (function (EventTypeEnum) {
+        EventTypeEnum[EventTypeEnum["CASEACCEPT"] = 'CASE_ACCEPT'] = "CASEACCEPT";
         EventTypeEnum[EventTypeEnum["CASEBOOKING"] = 'CASE_BOOKING'] = "CASEBOOKING";
+        EventTypeEnum[EventTypeEnum["CASEDECLINE"] = 'CASE_DECLINE'] = "CASEDECLINE";
         EventTypeEnum[EventTypeEnum["CASEMATCH"] = 'CASE_MATCH'] = "CASEMATCH";
+        EventTypeEnum[EventTypeEnum["CASERESOLVE"] = 'CASE_RESOLVE'] = "CASERESOLVE";
         EventTypeEnum[EventTypeEnum["CITATIONUPLOAD"] = 'CITATION_UPLOAD'] = "CITATIONUPLOAD";
         EventTypeEnum[EventTypeEnum["LAWFIRMACCOUNTPRIORITY"] = 'LAWFIRM_ACCOUNT_PRIORITY'] = "LAWFIRMACCOUNTPRIORITY";
         EventTypeEnum[EventTypeEnum["LAWFIRMACCOUNTSTATUS"] = 'LAWFIRM_ACCOUNT_STATUS'] = "LAWFIRMACCOUNTSTATUS";
