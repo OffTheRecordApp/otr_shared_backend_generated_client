@@ -30,6 +30,7 @@ export declare namespace LineItemModel {
         DISPUTEFEE,
         FINEPAYMENT,
         FTAFEE,
+        INITIALSUBSCRIPTIONFEE,
         LATEFEE,
         MBGREFUND,
         MVSFEE,

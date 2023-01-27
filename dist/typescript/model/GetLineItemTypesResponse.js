@@ -24,6 +24,7 @@ var GetLineItemTypesResponse;
         LineItemTypesEnum[LineItemTypesEnum["DISPUTEFEE"] = 'DISPUTE_FEE'] = "DISPUTEFEE";
         LineItemTypesEnum[LineItemTypesEnum["FINEPAYMENT"] = 'FINE_PAYMENT'] = "FINEPAYMENT";
         LineItemTypesEnum[LineItemTypesEnum["FTAFEE"] = 'FTA_FEE'] = "FTAFEE";
+        LineItemTypesEnum[LineItemTypesEnum["INITIALSUBSCRIPTIONFEE"] = 'INITIAL_SUBSCRIPTION_FEE'] = "INITIALSUBSCRIPTIONFEE";
         LineItemTypesEnum[LineItemTypesEnum["LATEFEE"] = 'LATE_FEE'] = "LATEFEE";
         LineItemTypesEnum[LineItemTypesEnum["MBGREFUND"] = 'MBG_REFUND'] = "MBGREFUND";
         LineItemTypesEnum[LineItemTypesEnum["MVSFEE"] = 'MVS_FEE'] = "MVSFEE";
