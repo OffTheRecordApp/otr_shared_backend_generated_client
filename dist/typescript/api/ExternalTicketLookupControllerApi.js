@@ -27,25 +27,19 @@ var ExternalTicketLookupControllerApi = /** @class */ (function () {
      *
      * @summary getExternalTickets
      * @param countyId countyId
+     * @param regionCode regionCode
      * @param dateOfBirth dateOfBirth
      * @param driversLicenseId driversLicenseId
-     * @param regionCode regionCode
+     * @param lastName lastName
+     * @param organizationName organizationName
      */
-    ExternalTicketLookupControllerApi.prototype.getExternalTicketsUsingGET = function (countyId, dateOfBirth, driversLicenseId, regionCode, extraHttpRequestParams) {
+    ExternalTicketLookupControllerApi.prototype.getExternalTicketsUsingGET = function (countyId, regionCode, dateOfBirth, driversLicenseId, lastName, organizationName, extraHttpRequestParams) {
         var localVarPath = this.basePath + '/api/v1/external-tickets';
         var queryParameters = {};
         var headerParams = Object.assign({}, this.defaultHeaders);
         // verify required parameter 'countyId' is not null or undefined
         if (countyId === null || countyId === undefined) {
             throw new Error('Required parameter countyId was null or undefined when calling getExternalTicketsUsingGET.');
-        }
-        // verify required parameter 'dateOfBirth' is not null or undefined
-        if (dateOfBirth === null || dateOfBirth === undefined) {
-            throw new Error('Required parameter dateOfBirth was null or undefined when calling getExternalTicketsUsingGET.');
-        }
-        // verify required parameter 'driversLicenseId' is not null or undefined
-        if (driversLicenseId === null || driversLicenseId === undefined) {
-            throw new Error('Required parameter driversLicenseId was null or undefined when calling getExternalTicketsUsingGET.');
         }
         // verify required parameter 'regionCode' is not null or undefined
         if (regionCode === null || regionCode === undefined) {
@@ -59,6 +53,12 @@ var ExternalTicketLookupControllerApi = /** @class */ (function () {
         }
         if (driversLicenseId !== undefined) {
             queryParameters['driversLicenseId'] = driversLicenseId;
+        }
+        if (lastName !== undefined) {
+            queryParameters['lastName'] = lastName;
+        }
+        if (organizationName !== undefined) {
+            queryParameters['organizationName'] = organizationName;
         }
         if (regionCode !== undefined) {
             queryParameters['regionCode'] = regionCode;

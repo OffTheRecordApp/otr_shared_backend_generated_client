@@ -6397,6 +6397,8 @@ angular.module('otrBackendService', [])
              * @param {integer} parameters.countyId - countyId
              * @param {string} parameters.dateOfBirth - dateOfBirth
              * @param {string} parameters.driversLicenseId - driversLicenseId
+             * @param {string} parameters.lastName - lastName
+             * @param {string} parameters.organizationName - organizationName
              * @param {string} parameters.regionCode - regionCode
              */
             OtrService.prototype.getExternalTicketsUsingGET = function(parameters) {
@@ -6426,18 +6428,16 @@ angular.module('otrBackendService', [])
                     queryParameters['dateOfBirth'] = parameters['dateOfBirth'];
                 }
 
-                if (parameters['dateOfBirth'] === undefined) {
-                    deferred.reject(new Error('Missing required  parameter: dateOfBirth'));
-                    return deferred.promise;
-                }
-
                 if (parameters['driversLicenseId'] !== undefined) {
                     queryParameters['driversLicenseId'] = parameters['driversLicenseId'];
                 }
 
-                if (parameters['driversLicenseId'] === undefined) {
-                    deferred.reject(new Error('Missing required  parameter: driversLicenseId'));
-                    return deferred.promise;
+                if (parameters['lastName'] !== undefined) {
+                    queryParameters['lastName'] = parameters['lastName'];
+                }
+
+                if (parameters['organizationName'] !== undefined) {
+                    queryParameters['organizationName'] = parameters['organizationName'];
                 }
 
                 if (parameters['regionCode'] !== undefined) {

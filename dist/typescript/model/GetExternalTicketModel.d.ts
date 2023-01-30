@@ -13,10 +13,14 @@ import * as models from './models';
 export interface GetExternalTicketModel {
     "court"?: models.ExternalTicketCourt;
     "disposition"?: Array<string>;
+    "docketNumber"?: string;
     "dueDate"?: string;
     "lawEnforcementAgency"?: string;
     "name"?: string;
+    "primaryViolationDescription"?: string;
     "status"?: string;
     "ticketId"?: string;
+    "totalFineAmount"?: string;
     "violationDate"?: string;
+    "violationIds"?: Array<string>;
 }
