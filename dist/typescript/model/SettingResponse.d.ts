@@ -12,5 +12,14 @@
 export interface SettingResponse {
     "id"?: number;
     "name"?: string;
+    "type"?: SettingResponse.TypeEnum;
     "value"?: string;
+}
+export declare namespace SettingResponse {
+    enum TypeEnum {
+        Boolean,
+        Integer,
+        List,
+        String
+    }
 }
