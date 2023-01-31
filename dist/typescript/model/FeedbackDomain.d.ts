@@ -17,6 +17,7 @@ export interface FeedbackDomain {
     "citationId"?: number;
     "device"?: string;
     "feedbackType"?: FeedbackDomain.FeedbackTypeEnum;
+    "phoneNumber"?: string;
     "subject"?: string;
 }
 export declare namespace FeedbackDomain {
