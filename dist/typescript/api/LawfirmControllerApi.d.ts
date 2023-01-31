@@ -51,12 +51,13 @@ export declare class LawfirmControllerApi {
      * @param caseStatuses caseStatuses
      * @param courtDateFilter courtDateFilter
      * @param filter filter
+     * @param latestMessageBy latestMessageBy
      * @param length length
      * @param page page
      * @param query query
      * @param statusCategories statusCategories
      */
-    getInboxMessagesUsingGET(lawfirmId: number, caseStatuses?: 'AMENDED_DOWN_WITHIN_CLASS' | 'AMENDED_FULL_FINE' | 'AMENDED_INCREASED_FINE' | 'AMENDED_NO_FINE' | 'AMENDED_REDUCED_FINE' | 'AMENDED_TO_INFRACTION' | 'AMENDED_TO_NMV' | 'CANCELLED_ATTORNEY_AT_FAULT' | 'CANCELLED_BY_LAWFIRM' | 'CANCELLED_BY_USER' | 'CANCELLED_DUPLICATE' | 'CANCELLED_NMV' | 'CANCELLED_NON_PAYMENT' | 'CANCELLED_NO_LAWFIRM' | 'CANCELLED_OVERDUE' | 'CANCELLED_TOO_SHORT_NOTICE' | 'CASE_IN_PROGRESS' | 'CLIENT_CONFIRMED' | 'CLIENT_CONFIRMED_UNPAID' | 'CLIENT_FIRED_LAWFIRM' | 'CLIENT_FORCED_LOSS' | 'CLIENT_PAID_FINE' | 'CLIENT_UNRESPONSIVE' | 'DEFERRED' | 'DISMISSED' | 'DIVERSION' | 'FEES_DISPUTED' | 'FINE_REDUCTION_ONLY' | 'LAWFIRM_WITHDRAWN' | 'LOST' | 'NO_LAWFIRM_AVAILABLE' | 'POINT_REDUCTION' | 'REFUSED_BY_LAWFIRM' | 'RESOLVED_NON_PAYMENT' | 'STALE' | 'TRAFFIC_SCHOOL' | 'UNCONFIRMED', courtDateFilter?: 'NO_COURT_DATE' | 'PAST_DUE' | 'PAST_DUE_AND_NO_COURT_DATE' | 'UPCOMING', filter?: 'ARCHIVE' | 'DEFAULT' | 'FLAG_ONLY' | 'STAR_ONLY', length?: number, page?: number, query?: string, statusCategories?: 'ACTIVE' | 'CANCELLED' | 'RESOLVED' | 'UNCONFIRMED', extraHttpRequestParams?: any): ng.IHttpPromise<models.GetLawfirmInboxMessagesResponse>;
+    getInboxMessagesUsingGET(lawfirmId: number, caseStatuses?: 'AMENDED_DOWN_WITHIN_CLASS' | 'AMENDED_FULL_FINE' | 'AMENDED_INCREASED_FINE' | 'AMENDED_NO_FINE' | 'AMENDED_REDUCED_FINE' | 'AMENDED_TO_INFRACTION' | 'AMENDED_TO_NMV' | 'CANCELLED_ATTORNEY_AT_FAULT' | 'CANCELLED_BY_LAWFIRM' | 'CANCELLED_BY_USER' | 'CANCELLED_DUPLICATE' | 'CANCELLED_NMV' | 'CANCELLED_NON_PAYMENT' | 'CANCELLED_NO_LAWFIRM' | 'CANCELLED_OVERDUE' | 'CANCELLED_TOO_SHORT_NOTICE' | 'CASE_IN_PROGRESS' | 'CLIENT_CONFIRMED' | 'CLIENT_CONFIRMED_UNPAID' | 'CLIENT_FIRED_LAWFIRM' | 'CLIENT_FORCED_LOSS' | 'CLIENT_PAID_FINE' | 'CLIENT_UNRESPONSIVE' | 'DEFERRED' | 'DISMISSED' | 'DIVERSION' | 'FEES_DISPUTED' | 'FINE_REDUCTION_ONLY' | 'LAWFIRM_WITHDRAWN' | 'LOST' | 'NO_LAWFIRM_AVAILABLE' | 'POINT_REDUCTION' | 'REFUSED_BY_LAWFIRM' | 'RESOLVED_NON_PAYMENT' | 'STALE' | 'TRAFFIC_SCHOOL' | 'UNCONFIRMED', courtDateFilter?: 'NO_COURT_DATE' | 'PAST_DUE' | 'PAST_DUE_AND_NO_COURT_DATE' | 'UPCOMING', filter?: 'ARCHIVE' | 'DEFAULT' | 'FLAG_ONLY' | 'STAR_ONLY', latestMessageBy?: 'ADMIN' | 'CLIENT' | 'LAWYER', length?: number, page?: number, query?: string, statusCategories?: 'ACTIVE' | 'CANCELLED' | 'RESOLVED' | 'UNCONFIRMED', extraHttpRequestParams?: any): ng.IHttpPromise<models.GetLawfirmInboxMessagesResponse>;
     /**
      *
      * @summary getLawfirmAddresses

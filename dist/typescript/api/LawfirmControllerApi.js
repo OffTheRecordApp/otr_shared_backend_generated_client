@@ -142,12 +142,13 @@ var LawfirmControllerApi = /** @class */ (function () {
      * @param caseStatuses caseStatuses
      * @param courtDateFilter courtDateFilter
      * @param filter filter
+     * @param latestMessageBy latestMessageBy
      * @param length length
      * @param page page
      * @param query query
      * @param statusCategories statusCategories
      */
-    LawfirmControllerApi.prototype.getInboxMessagesUsingGET = function (lawfirmId, caseStatuses, courtDateFilter, filter, length, page, query, statusCategories, extraHttpRequestParams) {
+    LawfirmControllerApi.prototype.getInboxMessagesUsingGET = function (lawfirmId, caseStatuses, courtDateFilter, filter, latestMessageBy, length, page, query, statusCategories, extraHttpRequestParams) {
         var localVarPath = this.basePath + '/api/v1/lawfirms/{lawfirmId}/inbox-messages'
             .replace('{' + 'lawfirmId' + '}', encodeURIComponent(String(lawfirmId)));
         var queryParameters = {};
@@ -164,6 +165,9 @@ var LawfirmControllerApi = /** @class */ (function () {
         }
         if (filter !== undefined) {
             queryParameters['filter'] = filter;
+        }
+        if (latestMessageBy !== undefined) {
+            queryParameters['latestMessageBy'] = latestMessageBy;
         }
         if (length !== undefined) {
             queryParameters['length'] = length;
