@@ -45,6 +45,12 @@ export declare class CrmControllerApi {
     replyToTicketUsingPOST(ticketId: number, request: models.ReplyToTicketRequest, extraHttpRequestParams?: any): ng.IHttpPromise<object>;
     /**
      *
+     * @summary sendBookingReceipt
+     * @param request request
+     */
+    sendBookingReceiptUsingPOST(request: models.SendBookingReceiptRequest, extraHttpRequestParams?: any): ng.IHttpPromise<{}>;
+    /**
+     *
      * @summary sendConsolidatedEmailToUser
      * @param request request
      */

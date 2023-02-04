@@ -481,6 +481,7 @@ export * from './SaveLawyerRequest';
 export * from './ScheduleNewPaymentRequest';
 export * from './ScheduledTaskGetResponse';
 export * from './ScheduledTaskResponse';
+export * from './SendBookingReceiptRequest';
 export * from './SendConsolidatedEmailToUser';
 export * from './SendDirectCheckResponse';
 export * from './SendDirectMailResponse';

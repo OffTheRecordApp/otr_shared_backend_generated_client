@@ -493,6 +493,7 @@ __exportStar(require("./SaveLawyerRequest"), exports);
 __exportStar(require("./ScheduleNewPaymentRequest"), exports);
 __exportStar(require("./ScheduledTaskGetResponse"), exports);
 __exportStar(require("./ScheduledTaskResponse"), exports);
+__exportStar(require("./SendBookingReceiptRequest"), exports);
 __exportStar(require("./SendConsolidatedEmailToUser"), exports);
 __exportStar(require("./SendDirectCheckResponse"), exports);
 __exportStar(require("./SendDirectMailResponse"), exports);
