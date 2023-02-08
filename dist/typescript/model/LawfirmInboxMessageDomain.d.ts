@@ -40,6 +40,7 @@ export declare namespace LawfirmInboxMessageDomain {
     enum AuthorRoleTypeEnum {
         ADMIN,
         DEFENDANT,
+        LAWFIRMADMIN,
         LAWYER,
         PARTNER,
         UNKNOWN

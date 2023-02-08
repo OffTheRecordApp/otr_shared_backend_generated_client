@@ -40,6 +40,7 @@ var RegisterNewUserRequest;
     (function (RoleTypeEnum) {
         RoleTypeEnum[RoleTypeEnum["ADMIN"] = 'ADMIN'] = "ADMIN";
         RoleTypeEnum[RoleTypeEnum["DEFENDANT"] = 'DEFENDANT'] = "DEFENDANT";
+        RoleTypeEnum[RoleTypeEnum["LAWFIRMADMIN"] = 'LAWFIRM_ADMIN'] = "LAWFIRMADMIN";
         RoleTypeEnum[RoleTypeEnum["LAWYER"] = 'LAWYER'] = "LAWYER";
         RoleTypeEnum[RoleTypeEnum["PARTNER"] = 'PARTNER'] = "PARTNER";
         RoleTypeEnum[RoleTypeEnum["UNKNOWN"] = 'UNKNOWN'] = "UNKNOWN";

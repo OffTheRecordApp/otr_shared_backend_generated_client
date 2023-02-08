@@ -26,6 +26,7 @@ export declare namespace CaseMessageDomain {
     enum AuthorRoleTypeEnum {
         ADMIN,
         DEFENDANT,
+        LAWFIRMADMIN,
         LAWYER,
         PARTNER,
         UNKNOWN
