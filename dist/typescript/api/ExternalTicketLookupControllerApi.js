@@ -32,8 +32,10 @@ var ExternalTicketLookupControllerApi = /** @class */ (function () {
      * @param driversLicenseId driversLicenseId
      * @param lastName lastName
      * @param organizationName organizationName
+     * @param searchType searchType
+     * @param searchValue searchValue
      */
-    ExternalTicketLookupControllerApi.prototype.getExternalTicketsUsingGET = function (countyId, regionCode, dateOfBirth, driversLicenseId, lastName, organizationName, extraHttpRequestParams) {
+    ExternalTicketLookupControllerApi.prototype.getExternalTicketsUsingGET = function (countyId, regionCode, dateOfBirth, driversLicenseId, lastName, organizationName, searchType, searchValue, extraHttpRequestParams) {
         var localVarPath = this.basePath + '/api/v1/external-tickets';
         var queryParameters = {};
         var headerParams = Object.assign({}, this.defaultHeaders);
@@ -62,6 +64,12 @@ var ExternalTicketLookupControllerApi = /** @class */ (function () {
         }
         if (regionCode !== undefined) {
             queryParameters['regionCode'] = regionCode;
+        }
+        if (searchType !== undefined) {
+            queryParameters['searchType'] = searchType;
+        }
+        if (searchValue !== undefined) {
+            queryParameters['searchValue'] = searchValue;
         }
         var httpRequestParams = {
             method: 'GET',

@@ -6437,6 +6437,8 @@ angular.module('otrBackendService', [])
              * @param {string} parameters.lastName - lastName
              * @param {string} parameters.organizationName - organizationName
              * @param {string} parameters.regionCode - regionCode
+             * @param {string} parameters.searchType - searchType
+             * @param {string} parameters.searchValue - searchValue
              */
             OtrService.prototype.getExternalTicketsUsingGET = function(parameters) {
                 if (parameters === undefined) {
@@ -6484,6 +6486,14 @@ angular.module('otrBackendService', [])
                 if (parameters['regionCode'] === undefined) {
                     deferred.reject(new Error('Missing required  parameter: regionCode'));
                     return deferred.promise;
+                }
+
+                if (parameters['searchType'] !== undefined) {
+                    queryParameters['searchType'] = parameters['searchType'];
+                }
+
+                if (parameters['searchValue'] !== undefined) {
+                    queryParameters['searchValue'] = parameters['searchValue'];
                 }
 
                 queryParameters = mergeQueryParams(parameters, queryParameters);
