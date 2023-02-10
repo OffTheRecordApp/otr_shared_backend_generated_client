@@ -2,10 +2,9 @@
   "compilerOptions": {
     "module": "commonjs",
     "target": "es5",
-    "declaration": true
+    "declaration": true,
+    "experimentalDecorators": true
   },
   "include": ["dist/typescript"],
-  "exclude": [
-    "node_modules"
-  ]
+  "exclude": ["node_modules"]
 }

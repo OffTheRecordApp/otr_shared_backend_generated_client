@@ -3892,7 +3892,45 @@ angular.module('otrBackendService', [])
                 return deferred.promise;
             };
             /**
+<<<<<<< HEAD
              * getCaseFromCitation
+=======
+             * deleteCitationCourt
+             * @method
+             * @name OtrService#deleteCitationCourtUsingDELETE
+             * @param {object} parameters - method options and parameters
+             * @param {integer} parameters.citationId - citationId
+             */
+            OtrService.prototype.deleteCitationCourtUsingDELETE = function(parameters) {
+                if (parameters === undefined) {
+                    parameters = {};
+                }
+                var deferred = $q.defer();
+                var domain = this.domain,
+                    path = '/api/v1/citations/{citationId}/court';
+                var body = {},
+                    queryParameters = {},
+                    headers = {},
+                    form = {};
+
+                headers['Accept'] = ['*/*'];
+
+                path = path.replace('{citationId}', parameters['citationId']);
+
+                if (parameters['citationId'] === undefined) {
+                    deferred.reject(new Error('Missing required  parameter: citationId'));
+                    return deferred.promise;
+                }
+
+                queryParameters = mergeQueryParams(parameters, queryParameters);
+
+                this.request('DELETE', domain + path, parameters, body, headers, queryParameters, form, deferred);
+
+                return deferred.promise;
+            };
+            /**
+             * postMissingCourtForCitation
+>>>>>>> 3677008 (generate angular client)
              * @method
              * @name OtrService#getCaseFromCitationUsingGET
              * @param {object} parameters - method options and parameters
@@ -3964,8 +4002,13 @@ angular.module('otrBackendService', [])
              * @method
              * @name OtrService#postMissingCourtForCitationUsingPOST
              * @param {object} parameters - method options and parameters
+<<<<<<< HEAD
              * @param {string} parameters.citationId - citationId
              * @param {string} parameters.state - state
+=======
+             * @param {integer} parameters.citationId - citationId
+             * @param {} parameters.request - request
+>>>>>>> 3677008 (generate angular client)
              */
             OtrService.prototype.postMissingCourtForCitationUsingPOST = function(parameters) {
                 if (parameters === undefined) {
@@ -4379,6 +4422,46 @@ angular.module('otrBackendService', [])
             };
             /**
              * googleConnect
+<<<<<<< HEAD
+             * @method
+             * @name OtrService#googleConnectUsingPOST
+             * @param {object} parameters - method options and parameters
+             * @param {} parameters.request - request
+             */
+            OtrService.prototype.googleConnectUsingPOST = function(parameters) {
+                if (parameters === undefined) {
+                    parameters = {};
+                }
+                var deferred = $q.defer();
+                var domain = this.domain,
+                    path = '/api/v1/connect/google';
+                var body = {},
+                    queryParameters = {},
+                    headers = {},
+                    form = {};
+
+                headers['Accept'] = ['*/*'];
+                headers['Content-Type'] = ['application/json'];
+
+                if (parameters['request'] !== undefined) {
+                    body = parameters['request'];
+                }
+
+                if (parameters['request'] === undefined) {
+                    deferred.reject(new Error('Missing required  parameter: request'));
+                    return deferred.promise;
+                }
+
+                queryParameters = mergeQueryParams(parameters, queryParameters);
+
+                this.request('POST', domain + path, parameters, body, headers, queryParameters, form, deferred);
+
+                return deferred.promise;
+            };
+            /**
+             * facebookConnect
+=======
+>>>>>>> 3677008 (generate angular client)
              * @method
              * @name OtrService#googleConnectUsingPOST
              * @param {object} parameters - method options and parameters
@@ -5923,6 +6006,166 @@ angular.module('otrBackendService', [])
             };
             /**
              * listAgentBookings
+<<<<<<< HEAD
+=======
+             * @method
+             * @name OtrService#listAgentBookingsUsingGET
+             * @param {object} parameters - method options and parameters
+             * @param {integer} parameters.agentUserId - agentUserId
+             * @param {string} parameters.caseStatus - caseStatus
+             * @param {string} parameters.channel - channel
+             * @param {string} parameters.direction - direction
+             * @param {string} parameters.endDate - endDate
+             * @param {integer} parameters.length - length
+             * @param {integer} parameters.offset - offset
+             * @param {string} parameters.sortBy - sortBy
+             * @param {string} parameters.sortOrder - sortOrder
+             * @param {string} parameters.startDate - startDate
+             * @param {string} parameters.state - state
+             * @param {string} parameters.timeZoneId - timeZoneId
+             */
+            OtrService.prototype.listAgentBookingsUsingGET = function(parameters) {
+                if (parameters === undefined) {
+                    parameters = {};
+                }
+                var deferred = $q.defer();
+                var domain = this.domain,
+                    path = '/api/v1/cs-agent-bookings';
+                var body = {},
+                    queryParameters = {},
+                    headers = {},
+                    form = {};
+
+                headers['Accept'] = ['*/*'];
+
+                if (parameters['agentUserId'] !== undefined) {
+                    queryParameters['agentUserId'] = parameters['agentUserId'];
+                }
+
+                if (parameters['caseStatus'] !== undefined) {
+                    queryParameters['caseStatus'] = parameters['caseStatus'];
+                }
+
+                if (parameters['channel'] !== undefined) {
+                    queryParameters['channel'] = parameters['channel'];
+                }
+
+                if (parameters['direction'] !== undefined) {
+                    queryParameters['direction'] = parameters['direction'];
+                }
+
+                if (parameters['endDate'] !== undefined) {
+                    queryParameters['endDate'] = parameters['endDate'];
+                }
+
+                /** set default value **/
+                queryParameters['length'] = 50;
+
+                if (parameters['length'] !== undefined) {
+                    queryParameters['length'] = parameters['length'];
+                }
+
+                if (parameters['offset'] !== undefined) {
+                    queryParameters['offset'] = parameters['offset'];
+                }
+
+                if (parameters['sortBy'] !== undefined) {
+                    queryParameters['sortBy'] = parameters['sortBy'];
+                }
+
+                if (parameters['sortOrder'] !== undefined) {
+                    queryParameters['sortOrder'] = parameters['sortOrder'];
+                }
+
+                if (parameters['startDate'] !== undefined) {
+                    queryParameters['startDate'] = parameters['startDate'];
+                }
+
+                if (parameters['state'] !== undefined) {
+                    queryParameters['state'] = parameters['state'];
+                }
+
+                if (parameters['timeZoneId'] !== undefined) {
+                    queryParameters['timeZoneId'] = parameters['timeZoneId'];
+                }
+
+                queryParameters = mergeQueryParams(parameters, queryParameters);
+
+                this.request('GET', domain + path, parameters, body, headers, queryParameters, form, deferred);
+
+                return deferred.promise;
+            };
+            /**
+             * saveAgentBooking
+             * @method
+             * @name OtrService#saveAgentBookingUsingPOST
+             * @param {object} parameters - method options and parameters
+             * @param {} parameters.request - request
+             */
+            OtrService.prototype.saveAgentBookingUsingPOST = function(parameters) {
+                if (parameters === undefined) {
+                    parameters = {};
+                }
+                var deferred = $q.defer();
+                var domain = this.domain,
+                    path = '/api/v1/cs-agent-bookings';
+                var body = {},
+                    queryParameters = {},
+                    headers = {},
+                    form = {};
+
+                headers['Accept'] = ['*/*'];
+                headers['Content-Type'] = ['application/json'];
+
+                if (parameters['request'] !== undefined) {
+                    body = parameters['request'];
+                }
+
+                if (parameters['request'] === undefined) {
+                    deferred.reject(new Error('Missing required  parameter: request'));
+                    return deferred.promise;
+                }
+
+                queryParameters = mergeQueryParams(parameters, queryParameters);
+
+                this.request('POST', domain + path, parameters, body, headers, queryParameters, form, deferred);
+
+                return deferred.promise;
+            };
+            /**
+             * getCustomerServiceAgents
+             * @method
+             * @name OtrService#getCustomerServiceAgentsUsingGET
+             * @param {object} parameters - method options and parameters
+             * @param {boolean} parameters.isActive - isActive
+             */
+            OtrService.prototype.getCustomerServiceAgentsUsingGET = function(parameters) {
+                if (parameters === undefined) {
+                    parameters = {};
+                }
+                var deferred = $q.defer();
+                var domain = this.domain,
+                    path = '/api/v1/cs-agents';
+                var body = {},
+                    queryParameters = {},
+                    headers = {},
+                    form = {};
+
+                headers['Accept'] = ['*/*'];
+
+                if (parameters['isActive'] !== undefined) {
+                    queryParameters['isActive'] = parameters['isActive'];
+                }
+
+                queryParameters = mergeQueryParams(parameters, queryParameters);
+
+                this.request('GET', domain + path, parameters, body, headers, queryParameters, form, deferred);
+
+                return deferred.promise;
+            };
+            /**
+             * postCustomerLead
+>>>>>>> 3677008 (generate angular client)
              * @method
              * @name OtrService#listAgentBookingsUsingGET
              * @param {object} parameters - method options and parameters
@@ -6531,8 +6774,11 @@ angular.module('otrBackendService', [])
              * @method
              * @name OtrService#getExternalTicketsUsingGET
              * @param {object} parameters - method options and parameters
+<<<<<<< HEAD
              * @param {integer} parameters.attempts - attempts
              * @param {string} parameters.citationId - citationId
+=======
+>>>>>>> 3677008 (generate angular client)
              * @param {integer} parameters.countyId - countyId
              * @param {string} parameters.dateOfBirth - dateOfBirth
              * @param {string} parameters.driversLicenseId - driversLicenseId
@@ -6556,6 +6802,7 @@ angular.module('otrBackendService', [])
 
                 headers['Accept'] = ['*/*'];
 
+<<<<<<< HEAD
                 /** set default value **/
                 queryParameters['attempts'] = 1;
 
@@ -6567,6 +6814,8 @@ angular.module('otrBackendService', [])
                     queryParameters['citationId'] = parameters['citationId'];
                 }
 
+=======
+>>>>>>> 3677008 (generate angular client)
                 if (parameters['countyId'] !== undefined) {
                     queryParameters['countyId'] = parameters['countyId'];
                 }
@@ -6616,6 +6865,7 @@ angular.module('otrBackendService', [])
                 return deferred.promise;
             };
             /**
+<<<<<<< HEAD
              * getInputParameters
              * @method
              * @name OtrService#getInputParametersUsingGET
@@ -6652,6 +6902,8 @@ angular.module('otrBackendService', [])
                 return deferred.promise;
             };
             /**
+=======
+>>>>>>> 3677008 (generate angular client)
              * postFeedback
              * @method
              * @name OtrService#postFeedbackUsingPOST
@@ -7331,6 +7583,98 @@ angular.module('otrBackendService', [])
             };
             /**
              * getLawfirmSetting
+<<<<<<< HEAD
+=======
+             * @method
+             * @name OtrService#getLawfirmSettingUsingGET
+             * @param {object} parameters - method options and parameters
+             * @param {integer} parameters.lawfirmId - lawfirmId
+             * @param {string} parameters.name - name
+             */
+            OtrService.prototype.getLawfirmSettingUsingGET = function(parameters) {
+                if (parameters === undefined) {
+                    parameters = {};
+                }
+                var deferred = $q.defer();
+                var domain = this.domain,
+                    path = '/api/v1/lawfirm-settings/{lawfirmId}/setting';
+                var body = {},
+                    queryParameters = {},
+                    headers = {},
+                    form = {};
+
+                headers['Accept'] = ['*/*'];
+
+                path = path.replace('{lawfirmId}', parameters['lawfirmId']);
+
+                if (parameters['lawfirmId'] === undefined) {
+                    deferred.reject(new Error('Missing required  parameter: lawfirmId'));
+                    return deferred.promise;
+                }
+
+                if (parameters['name'] !== undefined) {
+                    queryParameters['name'] = parameters['name'];
+                }
+
+                if (parameters['name'] === undefined) {
+                    deferred.reject(new Error('Missing required  parameter: name'));
+                    return deferred.promise;
+                }
+
+                queryParameters = mergeQueryParams(parameters, queryParameters);
+
+                this.request('GET', domain + path, parameters, body, headers, queryParameters, form, deferred);
+
+                return deferred.promise;
+            };
+            /**
+             * updateLawfirmSetting
+             * @method
+             * @name OtrService#updateLawfirmSettingUsingPOST
+             * @param {object} parameters - method options and parameters
+             * @param {integer} parameters.lawfirmId - lawfirmId
+             * @param {} parameters.request - request
+             */
+            OtrService.prototype.updateLawfirmSettingUsingPOST = function(parameters) {
+                if (parameters === undefined) {
+                    parameters = {};
+                }
+                var deferred = $q.defer();
+                var domain = this.domain,
+                    path = '/api/v1/lawfirm-settings/{lawfirmId}/setting';
+                var body = {},
+                    queryParameters = {},
+                    headers = {},
+                    form = {};
+
+                headers['Accept'] = ['*/*'];
+                headers['Content-Type'] = ['application/json'];
+
+                path = path.replace('{lawfirmId}', parameters['lawfirmId']);
+
+                if (parameters['lawfirmId'] === undefined) {
+                    deferred.reject(new Error('Missing required  parameter: lawfirmId'));
+                    return deferred.promise;
+                }
+
+                if (parameters['request'] !== undefined) {
+                    body = parameters['request'];
+                }
+
+                if (parameters['request'] === undefined) {
+                    deferred.reject(new Error('Missing required  parameter: request'));
+                    return deferred.promise;
+                }
+
+                queryParameters = mergeQueryParams(parameters, queryParameters);
+
+                this.request('POST', domain + path, parameters, body, headers, queryParameters, form, deferred);
+
+                return deferred.promise;
+            };
+            /**
+             * listLawfirmStorefronts
+>>>>>>> 3677008 (generate angular client)
              * @method
              * @name OtrService#getLawfirmSettingUsingGET
              * @param {object} parameters - method options and parameters
@@ -9754,7 +10098,11 @@ angular.module('otrBackendService', [])
              * @name OtrService#deleteLawyerUsingDELETE
              * @param {object} parameters - method options and parameters
              * @param {boolean} parameters.removeAdminOnly - removeAdminOnly
+<<<<<<< HEAD
              * @param {integer} parameters.userId - userId
+=======
+             * @param {string} parameters.userId - userId
+>>>>>>> 3677008 (generate angular client)
              */
             OtrService.prototype.deleteLawyerUsingDELETE = function(parameters) {
                 if (parameters === undefined) {
@@ -9788,6 +10136,7 @@ angular.module('otrBackendService', [])
                 return deferred.promise;
             };
             /**
+<<<<<<< HEAD
              * cancelLawyerInvite
              * @method
              * @name OtrService#cancelLawyerInviteUsingDELETE
@@ -9832,6 +10181,8 @@ angular.module('otrBackendService', [])
                 return deferred.promise;
             };
             /**
+=======
+>>>>>>> 3677008 (generate angular client)
              * saveLawyerLicenses
              * @method
              * @name OtrService#saveLawyerLicensesUsingPOST
@@ -10055,6 +10406,92 @@ angular.module('otrBackendService', [])
                 if (parameters['includeAdminActions'] !== undefined) {
                     queryParameters['includeAdminActions '] = parameters['includeAdminActions'];
                 }
+
+                if (parameters['lawfirmId'] !== undefined) {
+                    queryParameters['lawfirmId'] = parameters['lawfirmId'];
+                }
+
+                /** set default value **/
+                queryParameters['length'] = 100;
+
+                if (parameters['length'] !== undefined) {
+                    queryParameters['length'] = parameters['length'];
+                }
+
+                if (parameters['page'] !== undefined) {
+                    queryParameters['page'] = parameters['page'];
+                }
+
+                if (parameters['userIds'] !== undefined) {
+                    queryParameters['userIds'] = parameters['userIds'];
+                }
+
+                queryParameters = mergeQueryParams(parameters, queryParameters);
+
+                this.request('GET', domain + path, parameters, body, headers, queryParameters, form, deferred);
+
+                return deferred.promise;
+            };
+            /**
+             * convertPdfToImage
+             * @method
+             * @name OtrService#convertPdfToImageUsingPOST
+             * @param {object} parameters - method options and parameters
+             * @param {} parameters.request - request
+             */
+            OtrService.prototype.convertPdfToImageUsingPOST = function(parameters) {
+                if (parameters === undefined) {
+                    parameters = {};
+                }
+                var deferred = $q.defer();
+                var domain = this.domain,
+                    path = '/api/v1/media/convert-pdf-to-image';
+                var body = {},
+                    queryParameters = {},
+                    headers = {},
+                    form = {};
+
+                headers['Accept'] = ['*/*'];
+                headers['Content-Type'] = ['application/json'];
+
+                if (parameters['request'] !== undefined) {
+                    body = parameters['request'];
+                }
+
+                if (parameters['request'] === undefined) {
+                    deferred.reject(new Error('Missing required  parameter: request'));
+                    return deferred.promise;
+                }
+
+                queryParameters = mergeQueryParams(parameters, queryParameters);
+
+                this.request('POST', domain + path, parameters, body, headers, queryParameters, form, deferred);
+
+                return deferred.promise;
+            };
+            /**
+             * listMessagesByEntity
+             * @method
+             * @name OtrService#listMessagesByEntityUsingGET
+             * @param {object} parameters - method options and parameters
+             * @param {integer} parameters.lawfirmId - lawfirmId
+             * @param {integer} parameters.length - length
+             * @param {integer} parameters.page - page
+             * @param {integer} parameters.userIds - userIds
+             */
+            OtrService.prototype.listMessagesByEntityUsingGET = function(parameters) {
+                if (parameters === undefined) {
+                    parameters = {};
+                }
+                var deferred = $q.defer();
+                var domain = this.domain,
+                    path = '/api/v1/messages';
+                var body = {},
+                    queryParameters = {},
+                    headers = {},
+                    form = {};
+
+                headers['Accept'] = ['*/*'];
 
                 if (parameters['lawfirmId'] !== undefined) {
                     queryParameters['lawfirmId'] = parameters['lawfirmId'];
@@ -12849,6 +13286,14 @@ angular.module('otrBackendService', [])
                 if (parameters['userId'] === undefined) {
                     deferred.reject(new Error('Missing required  parameter: userId'));
                     return deferred.promise;
+                }
+
+                if (parameters['isAdmin'] !== undefined) {
+                    queryParameters['isAdmin'] = parameters['isAdmin'];
+                }
+
+                if (parameters['serviceProviderId'] !== undefined) {
+                    queryParameters['serviceProviderId'] = parameters['serviceProviderId'];
                 }
 
                 queryParameters = mergeQueryParams(parameters, queryParameters);
