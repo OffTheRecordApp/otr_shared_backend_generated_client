@@ -74,4 +74,9 @@ var UpdateViolationRequest;
         ClassificationEnum[ClassificationEnum["WOBBLERTOFELONY"] = 'WOBBLER_TO_FELONY'] = "WOBBLERTOFELONY";
         ClassificationEnum[ClassificationEnum["WOBBLERTOMISDEMEANOR"] = 'WOBBLER_TO_MISDEMEANOR'] = "WOBBLERTOMISDEMEANOR";
     })(ClassificationEnum = UpdateViolationRequest.ClassificationEnum || (UpdateViolationRequest.ClassificationEnum = {}));
+    var RefundEligibilityTypeEnum;
+    (function (RefundEligibilityTypeEnum) {
+        RefundEligibilityTypeEnum[RefundEligibilityTypeEnum["FULLREFUND"] = 'FULL_REFUND'] = "FULLREFUND";
+        RefundEligibilityTypeEnum[RefundEligibilityTypeEnum["NOREFUND"] = 'NO_REFUND'] = "NOREFUND";
+    })(RefundEligibilityTypeEnum = UpdateViolationRequest.RefundEligibilityTypeEnum || (UpdateViolationRequest.RefundEligibilityTypeEnum = {}));
 })(UpdateViolationRequest = exports.UpdateViolationRequest || (exports.UpdateViolationRequest = {}));

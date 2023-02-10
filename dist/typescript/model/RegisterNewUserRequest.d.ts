@@ -49,6 +49,7 @@ export declare namespace RegisterNewUserRequest {
     enum RoleTypeEnum {
         ADMIN,
         DEFENDANT,
+        LAWFIRMADMIN,
         LAWYER,
         PARTNER,
         UNKNOWN

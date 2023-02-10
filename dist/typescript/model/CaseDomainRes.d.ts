@@ -30,7 +30,9 @@ export interface CaseDomainRes {
     "hasLeftLawyerReview"?: boolean;
     "isPointSystemState"?: boolean;
     "lawfirmCaseDecision"?: models.LawfirmCaseDomainRes;
+    "lawfirmCodeApplied"?: boolean;
     "letterOfEngagement"?: models.LetterOfEngagement;
+    "paymentPlanTypeModel"?: models.PaymentPlanTypeModelRes;
     "referralCode"?: string;
     "refundEligibility"?: CaseDomainRes.RefundEligibilityEnum;
     "resolutionSummary"?: string;
@@ -86,7 +88,6 @@ export declare namespace CaseDomainRes {
     }
     enum RefundEligibilityEnum {
         FULLREFUND,
-        NOREFUND,
-        PARTIALREFUND
+        NOREFUND
     }
 }

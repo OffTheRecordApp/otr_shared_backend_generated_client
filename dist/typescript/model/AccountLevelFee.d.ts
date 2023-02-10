@@ -84,7 +84,6 @@ export declare namespace AccountLevelFee {
     }
     enum RefundEligibilityEnum {
         FULLREFUND,
-        NOREFUND,
-        PARTIALREFUND
+        NOREFUND
     }
 }

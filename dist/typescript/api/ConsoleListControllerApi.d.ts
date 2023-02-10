@@ -41,7 +41,7 @@ export declare class ConsoleListControllerApi {
      * @summary getCasesWithOverduePayments
      * @param request request
      */
-    getCasesWithOverduePaymentsUsingPOST(request: object, extraHttpRequestParams?: any): ng.IHttpPromise<models.GetCasesWithOverduePaymentsResponse>;
+    getCasesWithOverduePaymentsUsingPOST(request: models.GetCasesWithUncapturedChargesRequest, extraHttpRequestParams?: any): ng.IHttpPromise<models.GetCasesWithOverduePaymentsResponse>;
     /**
      *
      * @summary getCitationPhoneLeads
@@ -90,6 +90,16 @@ export declare class ConsoleListControllerApi {
      * @param request request
      */
     getPendingTicketReviewsUsingPOST(request: models.GetPendingTicketReviewsRequest, extraHttpRequestParams?: any): ng.IHttpPromise<models.GetPendingTicketReviewsResponse>;
+    /**
+     *
+     * @summary listBillingSubscribers
+     * @param length length
+     * @param page page
+     * @param start start
+     * @param statuses statuses
+     * @param request request
+     */
+    listBillingSubscribersUsingPOST(length?: number, page?: number, start?: string, statuses?: 'ACTIVE' | 'CANCELED' | 'INCOMPLETE' | 'INCOMPLETE_EXPIRED' | 'IN_TRIAL_PERIOD' | 'PAST_DUE' | 'UNKNOWN' | 'UNPAID', request?: models.ListBillingSubscribersRequest, extraHttpRequestParams?: any): ng.IHttpPromise<models.ListBillingSubscribersResponse>;
     /**
      *
      * @summary listLawfirmLeads

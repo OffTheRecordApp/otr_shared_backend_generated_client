@@ -63,6 +63,7 @@ export declare namespace SendEmailToUserRequest {
         GOOGLEPLAYSTORE,
         HIGHYA,
         IOSAPPSTORE,
-        REVIEWSIO
+        REVIEWSIO,
+        TRUSTPILOT
     }
 }

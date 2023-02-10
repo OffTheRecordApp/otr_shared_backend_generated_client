@@ -18,6 +18,7 @@ export interface CasePaymentDomain {
     "creationDateUTC"?: models.Timestamp;
     "dueDate"?: string;
     "isLocked"?: boolean;
+    "isPaymentActive"?: boolean;
     "lastAttemptDate"?: string;
     "lastUpdatedDateUTC"?: models.Timestamp;
     "lawfirmAssumedCost"?: number;
@@ -54,6 +55,7 @@ export declare namespace CasePaymentDomain {
         STRIPETRANSFER,
         UNKNOWN,
         VENMO,
+        WIRETRANSFER,
         ZELLE
     }
 }

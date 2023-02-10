@@ -19,6 +19,7 @@ export declare namespace MessageInputModel {
     enum AuthorEnum {
         ADMIN,
         DEFENDANT,
+        LAWFIRMADMIN,
         LAWYER,
         PARTNER,
         UNKNOWN

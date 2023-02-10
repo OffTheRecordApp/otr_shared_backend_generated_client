@@ -46,6 +46,7 @@ export declare namespace CaseLineItemDomainReq {
         DISPUTEFEE,
         FINEPAYMENT,
         FTAFEE,
+        INITIALSUBSCRIPTIONFEE,
         LATEFEE,
         MBGREFUND,
         MVSFEE,

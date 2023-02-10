@@ -27,8 +27,10 @@ export declare class UserControllerApi {
     /**
      *
      * @summary getCurrentUserInfo
+     * @param isAdmin isAdmin
+     * @param serviceProviderId serviceProviderId
      */
-    getCurrentUserInfoUsingGET(extraHttpRequestParams?: any): ng.IHttpPromise<models.GetCurrentUserResponse>;
+    getCurrentUserInfoUsingGET(isAdmin?: boolean, serviceProviderId?: string, extraHttpRequestParams?: any): ng.IHttpPromise<models.GetCurrentUserResponse>;
     /**
      *
      * @summary getOverduePayments

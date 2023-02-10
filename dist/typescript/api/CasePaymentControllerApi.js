@@ -125,8 +125,10 @@ var CasePaymentControllerApi = /** @class */ (function () {
      * @summary generateCasePaymentPlan
      * @param caseId caseId
      * @param paymentPlanTypeId paymentPlanTypeId
+     * @param period period
+     * @param productId productId
      */
-    CasePaymentControllerApi.prototype.generateCasePaymentPlanUsingGET = function (caseId, paymentPlanTypeId, extraHttpRequestParams) {
+    CasePaymentControllerApi.prototype.generateCasePaymentPlanUsingGET = function (caseId, paymentPlanTypeId, period, productId, extraHttpRequestParams) {
         var localVarPath = this.basePath + '/api/v1/cases/{caseId}/payment-plans/{paymentPlanTypeId}'
             .replace('{' + 'caseId' + '}', encodeURIComponent(String(caseId)))
             .replace('{' + 'paymentPlanTypeId' + '}', encodeURIComponent(String(paymentPlanTypeId)));
@@ -139,6 +141,12 @@ var CasePaymentControllerApi = /** @class */ (function () {
         // verify required parameter 'paymentPlanTypeId' is not null or undefined
         if (paymentPlanTypeId === null || paymentPlanTypeId === undefined) {
             throw new Error('Required parameter paymentPlanTypeId was null or undefined when calling generateCasePaymentPlanUsingGET.');
+        }
+        if (period !== undefined) {
+            queryParameters['period'] = period;
+        }
+        if (productId !== undefined) {
+            queryParameters['productId'] = productId;
         }
         var httpRequestParams = {
             method: 'GET',
@@ -347,8 +355,10 @@ var CasePaymentControllerApi = /** @class */ (function () {
      *
      * @summary listCostItemsForCustomer
      * @param caseId caseId
+     * @param period period
+     * @param productId productId
      */
-    CasePaymentControllerApi.prototype.listCostItemsForCustomerUsingGET = function (caseId, extraHttpRequestParams) {
+    CasePaymentControllerApi.prototype.listCostItemsForCustomerUsingGET = function (caseId, period, productId, extraHttpRequestParams) {
         var localVarPath = this.basePath + '/api/v1/cases/{caseId}/customer/cost'
             .replace('{' + 'caseId' + '}', encodeURIComponent(String(caseId)));
         var queryParameters = {};
@@ -356,6 +366,12 @@ var CasePaymentControllerApi = /** @class */ (function () {
         // verify required parameter 'caseId' is not null or undefined
         if (caseId === null || caseId === undefined) {
             throw new Error('Required parameter caseId was null or undefined when calling listCostItemsForCustomerUsingGET.');
+        }
+        if (period !== undefined) {
+            queryParameters['period'] = period;
+        }
+        if (productId !== undefined) {
+            queryParameters['productId'] = productId;
         }
         var httpRequestParams = {
             method: 'GET',

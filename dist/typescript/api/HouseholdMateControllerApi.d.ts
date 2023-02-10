@@ -45,4 +45,11 @@ export declare class HouseholdMateControllerApi {
      * @param request request
      */
     inviteHouseholdMateUsingPOST(userId: number, request: models.InviteHouseholdMateRequest, extraHttpRequestParams?: any): ng.IHttpPromise<{}>;
+    /**
+     *
+     * @summary removeHouseholdMate
+     * @param mateUserId mateUserId
+     * @param userId userId
+     */
+    removeHouseholdMateUsingDELETE(mateUserId: number, userId: number, extraHttpRequestParams?: any): ng.IHttpPromise<{}>;
 }

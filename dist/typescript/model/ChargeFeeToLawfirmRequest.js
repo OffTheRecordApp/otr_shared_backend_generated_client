@@ -26,6 +26,7 @@ var ChargeFeeToLawfirmRequest;
         TransactionMethodEnum[TransactionMethodEnum["STRIPETRANSFER"] = 'STRIPE_TRANSFER'] = "STRIPETRANSFER";
         TransactionMethodEnum[TransactionMethodEnum["UNKNOWN"] = 'UNKNOWN'] = "UNKNOWN";
         TransactionMethodEnum[TransactionMethodEnum["VENMO"] = 'VENMO'] = "VENMO";
+        TransactionMethodEnum[TransactionMethodEnum["WIRETRANSFER"] = 'WIRE_TRANSFER'] = "WIRETRANSFER";
         TransactionMethodEnum[TransactionMethodEnum["ZELLE"] = 'ZELLE'] = "ZELLE";
     })(TransactionMethodEnum = ChargeFeeToLawfirmRequest.TransactionMethodEnum || (ChargeFeeToLawfirmRequest.TransactionMethodEnum = {}));
 })(ChargeFeeToLawfirmRequest = exports.ChargeFeeToLawfirmRequest || (exports.ChargeFeeToLawfirmRequest = {}));

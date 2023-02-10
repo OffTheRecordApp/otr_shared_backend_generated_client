@@ -16,6 +16,7 @@ export interface GetTrafficViolationModel {
     "enabledForCustomers"?: boolean;
     "enabledForLawfirms"?: boolean;
     "penalties"?: Array<models.PenaltyModel>;
+    "refundEligibilityType"?: GetTrafficViolationModel.RefundEligibilityTypeEnum;
     "trafficViolationDesc"?: string;
     "trafficViolationTypeId"?: number;
     "userFriendlyName"?: string;
@@ -25,6 +26,10 @@ export interface GetTrafficViolationModel {
     "wobblerToCriminal"?: boolean;
 }
 export declare namespace GetTrafficViolationModel {
+    enum RefundEligibilityTypeEnum {
+        FULLREFUND,
+        NOREFUND
+    }
     enum ViolationClassificationEnum {
         CLASS1FELONY,
         CLASS1MISDEMEANOR,

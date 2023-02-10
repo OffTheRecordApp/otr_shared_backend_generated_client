@@ -43,6 +43,7 @@ export declare namespace LawfirmFeeDomain {
         STRIPETRANSFER,
         UNKNOWN,
         VENMO,
+        WIRETRANSFER,
         ZELLE
     }
 }

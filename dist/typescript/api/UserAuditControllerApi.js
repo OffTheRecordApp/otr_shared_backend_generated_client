@@ -25,6 +25,35 @@ var UserAuditControllerApi = /** @class */ (function () {
     }
     /**
      *
+     * @summary getLastLogin
+     * @param userId userId
+     * @param clients clients
+     */
+    UserAuditControllerApi.prototype.getLastLoginUsingGET = function (userId, clients, extraHttpRequestParams) {
+        var localVarPath = this.basePath + '/api/v1/api/v1/users/{userId}/last-login'
+            .replace('{' + 'userId' + '}', encodeURIComponent(String(userId)));
+        var queryParameters = {};
+        var headerParams = Object.assign({}, this.defaultHeaders);
+        // verify required parameter 'userId' is not null or undefined
+        if (userId === null || userId === undefined) {
+            throw new Error('Required parameter userId was null or undefined when calling getLastLoginUsingGET.');
+        }
+        if (clients !== undefined) {
+            queryParameters['clients'] = clients;
+        }
+        var httpRequestParams = {
+            method: 'GET',
+            url: localVarPath,
+            params: queryParameters,
+            headers: headerParams
+        };
+        if (extraHttpRequestParams) {
+            httpRequestParams = Object.assign(httpRequestParams, extraHttpRequestParams);
+        }
+        return this.$http(httpRequestParams);
+    };
+    /**
+     *
      * @summary listUserAuditEventsByCursor
      * @param userId userId
      * @param excludeTypes excludeTypes

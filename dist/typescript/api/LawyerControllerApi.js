@@ -56,6 +56,35 @@ var LawyerControllerApi = /** @class */ (function () {
     };
     /**
      *
+     * @summary deleteLawyer
+     * @param userId userId
+     * @param removeAdminOnly removeAdminOnly
+     */
+    LawyerControllerApi.prototype.deleteLawyerUsingDELETE = function (userId, removeAdminOnly, extraHttpRequestParams) {
+        var localVarPath = this.basePath + '/api/v1/lawyers/{userId}'
+            .replace('{' + 'userId' + '}', encodeURIComponent(String(userId)));
+        var queryParameters = {};
+        var headerParams = Object.assign({}, this.defaultHeaders);
+        // verify required parameter 'userId' is not null or undefined
+        if (userId === null || userId === undefined) {
+            throw new Error('Required parameter userId was null or undefined when calling deleteLawyerUsingDELETE.');
+        }
+        if (removeAdminOnly !== undefined) {
+            queryParameters['removeAdminOnly'] = removeAdminOnly;
+        }
+        var httpRequestParams = {
+            method: 'DELETE',
+            url: localVarPath,
+            params: queryParameters,
+            headers: headerParams
+        };
+        if (extraHttpRequestParams) {
+            httpRequestParams = Object.assign(httpRequestParams, extraHttpRequestParams);
+        }
+        return this.$http(httpRequestParams);
+    };
+    /**
+     *
      * @summary getLawyerEmailGuesses
      * @param lawyerId lawyerId
      */
@@ -67,6 +96,31 @@ var LawyerControllerApi = /** @class */ (function () {
         // verify required parameter 'lawyerId' is not null or undefined
         if (lawyerId === null || lawyerId === undefined) {
             throw new Error('Required parameter lawyerId was null or undefined when calling getLawyerEmailGuessesUsingGET.');
+        }
+        var httpRequestParams = {
+            method: 'GET',
+            url: localVarPath,
+            params: queryParameters,
+            headers: headerParams
+        };
+        if (extraHttpRequestParams) {
+            httpRequestParams = Object.assign(httpRequestParams, extraHttpRequestParams);
+        }
+        return this.$http(httpRequestParams);
+    };
+    /**
+     *
+     * @summary getLawyer
+     * @param userId userId
+     */
+    LawyerControllerApi.prototype.getLawyerUsingGET = function (userId, extraHttpRequestParams) {
+        var localVarPath = this.basePath + '/api/v1/lawyers/{userId}'
+            .replace('{' + 'userId' + '}', encodeURIComponent(String(userId)));
+        var queryParameters = {};
+        var headerParams = Object.assign({}, this.defaultHeaders);
+        // verify required parameter 'userId' is not null or undefined
+        if (userId === null || userId === undefined) {
+            throw new Error('Required parameter userId was null or undefined when calling getLawyerUsingGET.');
         }
         var httpRequestParams = {
             method: 'GET',

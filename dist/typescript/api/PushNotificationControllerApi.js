@@ -73,27 +73,27 @@ var PushNotificationControllerApi = /** @class */ (function () {
     };
     /**
      *
-     * @summary markNotificationAsUnread
+     * @summary markCaseNotificationsAsUnread
+     * @param caseId caseId
      * @param userId userId
-     * @param request request
      */
-    PushNotificationControllerApi.prototype.markNotificationAsUnreadUsingPUT = function (userId, request, extraHttpRequestParams) {
-        var localVarPath = this.basePath + '/api/v1/notifications/unread/{userId}/message'
+    PushNotificationControllerApi.prototype.markCaseNotificationsAsUnreadUsingPUT = function (caseId, userId, extraHttpRequestParams) {
+        var localVarPath = this.basePath + '/api/v1/notifications/{userId}/unread/{caseId}/message'
+            .replace('{' + 'caseId' + '}', encodeURIComponent(String(caseId)))
             .replace('{' + 'userId' + '}', encodeURIComponent(String(userId)));
         var queryParameters = {};
         var headerParams = Object.assign({}, this.defaultHeaders);
+        // verify required parameter 'caseId' is not null or undefined
+        if (caseId === null || caseId === undefined) {
+            throw new Error('Required parameter caseId was null or undefined when calling markCaseNotificationsAsUnreadUsingPUT.');
+        }
         // verify required parameter 'userId' is not null or undefined
         if (userId === null || userId === undefined) {
-            throw new Error('Required parameter userId was null or undefined when calling markNotificationAsUnreadUsingPUT.');
-        }
-        // verify required parameter 'request' is not null or undefined
-        if (request === null || request === undefined) {
-            throw new Error('Required parameter request was null or undefined when calling markNotificationAsUnreadUsingPUT.');
+            throw new Error('Required parameter userId was null or undefined when calling markCaseNotificationsAsUnreadUsingPUT.');
         }
         var httpRequestParams = {
             method: 'PUT',
             url: localVarPath,
-            data: request,
             params: queryParameters,
             headers: headerParams
         };

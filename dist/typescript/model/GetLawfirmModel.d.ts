@@ -18,7 +18,10 @@ export interface GetLawfirmModel {
     "createdBy"?: number;
     "establishedDateUtc"?: string;
     "establishedYear"?: number;
+    "isLawfirmDisabled"?: boolean;
+    "isLawfirmNotWithCompany"?: boolean;
     "isTestLawfirm"?: boolean;
+    "languagesServed"?: Array<string>;
     "lawfirmId"?: number;
     "lawfirmName"?: string;
     "lawfirmPaymentModel"?: GetLawfirmModel.LawfirmPaymentModelEnum;

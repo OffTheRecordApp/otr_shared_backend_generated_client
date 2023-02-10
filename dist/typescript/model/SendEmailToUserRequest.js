@@ -61,5 +61,6 @@ var SendEmailToUserRequest;
         ReviewPlatformEnum[ReviewPlatformEnum["HIGHYA"] = 'HIGHYA'] = "HIGHYA";
         ReviewPlatformEnum[ReviewPlatformEnum["IOSAPPSTORE"] = 'IOS_APP_STORE'] = "IOSAPPSTORE";
         ReviewPlatformEnum[ReviewPlatformEnum["REVIEWSIO"] = 'REVIEWS_IO'] = "REVIEWSIO";
+        ReviewPlatformEnum[ReviewPlatformEnum["TRUSTPILOT"] = 'TRUST_PILOT'] = "TRUSTPILOT";
     })(ReviewPlatformEnum = SendEmailToUserRequest.ReviewPlatformEnum || (SendEmailToUserRequest.ReviewPlatformEnum = {}));
 })(SendEmailToUserRequest = exports.SendEmailToUserRequest || (exports.SendEmailToUserRequest = {}));

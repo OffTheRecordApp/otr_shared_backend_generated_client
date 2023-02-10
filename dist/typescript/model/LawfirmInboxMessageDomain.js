@@ -18,6 +18,7 @@ var LawfirmInboxMessageDomain;
     (function (AuthorRoleTypeEnum) {
         AuthorRoleTypeEnum[AuthorRoleTypeEnum["ADMIN"] = 'ADMIN'] = "ADMIN";
         AuthorRoleTypeEnum[AuthorRoleTypeEnum["DEFENDANT"] = 'DEFENDANT'] = "DEFENDANT";
+        AuthorRoleTypeEnum[AuthorRoleTypeEnum["LAWFIRMADMIN"] = 'LAWFIRM_ADMIN'] = "LAWFIRMADMIN";
         AuthorRoleTypeEnum[AuthorRoleTypeEnum["LAWYER"] = 'LAWYER'] = "LAWYER";
         AuthorRoleTypeEnum[AuthorRoleTypeEnum["PARTNER"] = 'PARTNER'] = "PARTNER";
         AuthorRoleTypeEnum[AuthorRoleTypeEnum["UNKNOWN"] = 'UNKNOWN'] = "UNKNOWN";

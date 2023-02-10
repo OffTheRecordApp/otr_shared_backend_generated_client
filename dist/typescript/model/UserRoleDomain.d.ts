@@ -16,6 +16,7 @@ export declare namespace UserRoleDomain {
     enum RoleTypeEnum {
         ADMIN,
         DEFENDANT,
+        LAWFIRMADMIN,
         LAWYER,
         PARTNER,
         UNKNOWN

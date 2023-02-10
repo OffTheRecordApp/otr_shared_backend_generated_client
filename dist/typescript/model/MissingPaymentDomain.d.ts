@@ -24,6 +24,7 @@ export interface MissingPaymentDomain {
     "mostRecentChargeError"?: string;
     "mostRecentDueDateUtc"?: string;
     "overdue"?: number;
+    "statusCategory"?: MissingPaymentDomain.StatusCategoryEnum;
     "totalPaid"?: number;
     "userId"?: number;
     "userName"?: string;
@@ -66,6 +67,12 @@ export declare namespace MissingPaymentDomain {
         RESOLVEDNONPAYMENT,
         STALE,
         TRAFFICSCHOOL,
+        UNCONFIRMED
+    }
+    enum StatusCategoryEnum {
+        ACTIVE,
+        CANCELLED,
+        RESOLVED,
         UNCONFIRMED
     }
 }

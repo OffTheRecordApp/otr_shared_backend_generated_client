@@ -23,6 +23,5 @@ var MatchInnerCaseResponse;
     (function (RefundEligibilityEnum) {
         RefundEligibilityEnum[RefundEligibilityEnum["FULLREFUND"] = 'FULL_REFUND'] = "FULLREFUND";
         RefundEligibilityEnum[RefundEligibilityEnum["NOREFUND"] = 'NO_REFUND'] = "NOREFUND";
-        RefundEligibilityEnum[RefundEligibilityEnum["PARTIALREFUND"] = 'PARTIAL_REFUND'] = "PARTIALREFUND";
     })(RefundEligibilityEnum = MatchInnerCaseResponse.RefundEligibilityEnum || (MatchInnerCaseResponse.RefundEligibilityEnum = {}));
 })(MatchInnerCaseResponse = exports.MatchInnerCaseResponse || (exports.MatchInnerCaseResponse = {}));

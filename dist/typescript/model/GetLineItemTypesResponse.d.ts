@@ -22,6 +22,7 @@ export declare namespace GetLineItemTypesResponse {
         DISPUTEFEE,
         FINEPAYMENT,
         FTAFEE,
+        INITIALSUBSCRIPTIONFEE,
         LATEFEE,
         MBGREFUND,
         MVSFEE,

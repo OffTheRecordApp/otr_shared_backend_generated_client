@@ -18,6 +18,7 @@ var MessageInputModel;
     (function (AuthorEnum) {
         AuthorEnum[AuthorEnum["ADMIN"] = 'ADMIN'] = "ADMIN";
         AuthorEnum[AuthorEnum["DEFENDANT"] = 'DEFENDANT'] = "DEFENDANT";
+        AuthorEnum[AuthorEnum["LAWFIRMADMIN"] = 'LAWFIRM_ADMIN'] = "LAWFIRMADMIN";
         AuthorEnum[AuthorEnum["LAWYER"] = 'LAWYER'] = "LAWYER";
         AuthorEnum[AuthorEnum["PARTNER"] = 'PARTNER'] = "PARTNER";
         AuthorEnum[AuthorEnum["UNKNOWN"] = 'UNKNOWN'] = "UNKNOWN";

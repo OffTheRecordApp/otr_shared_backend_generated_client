@@ -9,9 +9,11 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
+import * as models from './models';
 export interface IncomingEmailRequest {
     "Message"?: string;
     "SubscribeURL"?: string;
     "Type"?: string;
     "UnsubscribeURL"?: string;
+    "models"?: models.IncomingEmailModels;
 }

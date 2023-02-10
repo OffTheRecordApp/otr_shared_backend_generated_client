@@ -33,6 +33,7 @@ export declare namespace LineItemRequest {
         DISPUTEFEE,
         FINEPAYMENT,
         FTAFEE,
+        INITIALSUBSCRIPTIONFEE,
         LATEFEE,
         MBGREFUND,
         MVSFEE,

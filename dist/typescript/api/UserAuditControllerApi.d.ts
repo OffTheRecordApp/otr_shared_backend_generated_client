@@ -20,6 +20,13 @@ export declare class UserAuditControllerApi {
     constructor($http: ng.IHttpService, $httpParamSerializer?: (d: any) => any, basePath?: string);
     /**
      *
+     * @summary getLastLogin
+     * @param userId userId
+     * @param clients clients
+     */
+    getLastLoginUsingGET(userId: number, clients?: 'ANDROID' | 'DESKTOP_WEBAPP' | 'DMV_GO' | 'DMV_ORG' | 'FRESH_DESK' | 'IOS' | 'MOBILE_WEBAPP' | 'OTR_ADMIN_CONSOLE' | 'OTR_ADMIN_CONSOLE_DEVO' | 'OTR_ADMIN_CONSOLE_LOCALHOST' | 'OTR_EXPLORER' | 'OTR_LAWFIRM_PORTAL' | 'OTR_LAWFIRM_PORTAL_DEVO' | 'OTR_LAWFIRM_PORTAL_LOCALHOST' | 'OTR_WEBSITE' | 'OTR_WEBSITE_DEVO' | 'OTR_WEBSITE_LOCALHOST' | 'OTR_WIDGET' | 'UNKNOWN', extraHttpRequestParams?: any): ng.IHttpPromise<models.GetLastLoginResponse>;
+    /**
+     *
      * @summary listUserAuditEventsByCursor
      * @param userId userId
      * @param excludeTypes excludeTypes
@@ -27,5 +34,5 @@ export declare class UserAuditControllerApi {
      * @param limit limit
      * @param nextPageToken nextPageToken
      */
-    listUserAuditEventsByCursorUsingGET(userId: number, excludeTypes?: 'CASE_BOOKING' | 'CASE_MATCH' | 'CITATION_UPLOAD' | 'LAWFIRM_ACCOUNT_PRIORITY' | 'LAWFIRM_ACCOUNT_STATUS' | 'LAWFIRM_DAILY_CAPACITY' | 'LAWFIRM_TOTAL_CAPACITY' | 'SAVE_VACATION_MODE_END_DATE' | 'SAVE_VACATION_MODE_REASON' | 'USER_LOGIN_EVENT' | 'VACATION_MODE_TOGGLE', includeTypes?: 'CASE_BOOKING' | 'CASE_MATCH' | 'CITATION_UPLOAD' | 'LAWFIRM_ACCOUNT_PRIORITY' | 'LAWFIRM_ACCOUNT_STATUS' | 'LAWFIRM_DAILY_CAPACITY' | 'LAWFIRM_TOTAL_CAPACITY' | 'SAVE_VACATION_MODE_END_DATE' | 'SAVE_VACATION_MODE_REASON' | 'USER_LOGIN_EVENT' | 'VACATION_MODE_TOGGLE', limit?: number, nextPageToken?: string, extraHttpRequestParams?: any): ng.IHttpPromise<models.ListUserAuditEventsByCursorResponse>;
+    listUserAuditEventsByCursorUsingGET(userId: number, excludeTypes?: 'CASE_ACCEPT' | 'CASE_BOOKING' | 'CASE_DECLINE' | 'CASE_MATCH' | 'CASE_RESOLVE' | 'CITATION_UPLOAD' | 'LAWFIRM_ACCOUNT_PRIORITY' | 'LAWFIRM_ACCOUNT_STATUS' | 'LAWFIRM_DAILY_CAPACITY' | 'LAWFIRM_TOTAL_CAPACITY' | 'PASSWORD_CHANGE' | 'PASSWORD_RESET_REQUESTED' | 'PAYMENT_METHOD_ADD' | 'PAYMENT_METHOD_DELETE' | 'SAVE_VACATION_MODE_END_DATE' | 'SAVE_VACATION_MODE_REASON' | 'UNKNOWN' | 'USER_LOGIN_EVENT' | 'VACATION_MODE_TOGGLE' | 'VACATION_MODE_UPDATE' | 'VERIFY_EMAIL', includeTypes?: 'CASE_ACCEPT' | 'CASE_BOOKING' | 'CASE_DECLINE' | 'CASE_MATCH' | 'CASE_RESOLVE' | 'CITATION_UPLOAD' | 'LAWFIRM_ACCOUNT_PRIORITY' | 'LAWFIRM_ACCOUNT_STATUS' | 'LAWFIRM_DAILY_CAPACITY' | 'LAWFIRM_TOTAL_CAPACITY' | 'PASSWORD_CHANGE' | 'PASSWORD_RESET_REQUESTED' | 'PAYMENT_METHOD_ADD' | 'PAYMENT_METHOD_DELETE' | 'SAVE_VACATION_MODE_END_DATE' | 'SAVE_VACATION_MODE_REASON' | 'UNKNOWN' | 'USER_LOGIN_EVENT' | 'VACATION_MODE_TOGGLE' | 'VACATION_MODE_UPDATE' | 'VERIFY_EMAIL', limit?: number, nextPageToken?: string, extraHttpRequestParams?: any): ng.IHttpPromise<models.ListUserAuditEventsByCursorResponse>;
 }

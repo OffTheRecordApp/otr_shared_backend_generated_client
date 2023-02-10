@@ -34,6 +34,7 @@ export declare namespace UpdateCasePaymentRequest {
         STRIPETRANSFER,
         UNKNOWN,
         VENMO,
+        WIRETRANSFER,
         ZELLE
     }
 }

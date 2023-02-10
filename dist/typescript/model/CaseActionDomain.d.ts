@@ -24,15 +24,20 @@ export interface CaseActionDomain {
 }
 export declare namespace CaseActionDomain {
     enum ActionTypeEnum {
+        CASEACCEPT,
+        CASEDECLINE,
         CITATIONDATAEXTRACTED,
         COURTDATEREMOVED,
         COURTDATESCHEDULED,
         DISCOVERYRECEIVED,
         DISCOVERYREQUESTED,
+        DISPUTEFILED,
         FAILEDPAYMENTATTEMPT,
         NOTICEOFAPPEARANCEFILED,
         OTHER,
+        OVERDUEBALANCEPAID,
         REVIEWEDBYLAWFIRM,
+        SOCIALMEDIAASK,
         TICKETMAILEDTOCOURT
     }
 }

@@ -16,7 +16,6 @@ export interface IsRefundEligibleResponse {
 export declare namespace IsRefundEligibleResponse {
     enum RefundEligibilityTypeEnum {
         FULLREFUND,
-        NOREFUND,
-        PARTIALREFUND
+        NOREFUND
     }
 }

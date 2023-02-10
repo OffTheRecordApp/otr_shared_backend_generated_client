@@ -16,6 +16,7 @@ export interface CreateCitationRequest {
     "firstName"?: string;
     "imageContentType"?: string;
     "rawImageData"?: string;
+    "userId"?: number;
 }
 export declare namespace CreateCitationRequest {
     enum CitationStateEnum {

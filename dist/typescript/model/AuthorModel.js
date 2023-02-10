@@ -18,6 +18,7 @@ var AuthorModel;
     (function (UserRoleEnum) {
         UserRoleEnum[UserRoleEnum["ADMIN"] = 'ADMIN'] = "ADMIN";
         UserRoleEnum[UserRoleEnum["DEFENDANT"] = 'DEFENDANT'] = "DEFENDANT";
+        UserRoleEnum[UserRoleEnum["LAWFIRMADMIN"] = 'LAWFIRM_ADMIN'] = "LAWFIRMADMIN";
         UserRoleEnum[UserRoleEnum["LAWYER"] = 'LAWYER'] = "LAWYER";
         UserRoleEnum[UserRoleEnum["PARTNER"] = 'PARTNER'] = "PARTNER";
         UserRoleEnum[UserRoleEnum["UNKNOWN"] = 'UNKNOWN'] = "UNKNOWN";

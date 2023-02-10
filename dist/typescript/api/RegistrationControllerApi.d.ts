@@ -24,9 +24,4 @@ export declare class RegistrationControllerApi {
      * @param request request
      */
     registerNewUserUsingPOST(request: models.RegisterNewUserRequest, extraHttpRequestParams?: any): ng.IHttpPromise<models.RegisterNewUserResponse>;
-    /**
-     *
-     * @summary updateBranchLinksForAllUsers
-     */
-    updateBranchLinksForAllUsersUsingPOST(extraHttpRequestParams?: any): ng.IHttpPromise<object>;
 }

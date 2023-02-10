@@ -18,6 +18,7 @@ var UpdateUserRolesRequest;
     (function (RolesEnum) {
         RolesEnum[RolesEnum["ADMIN"] = 'ADMIN'] = "ADMIN";
         RolesEnum[RolesEnum["DEFENDANT"] = 'DEFENDANT'] = "DEFENDANT";
+        RolesEnum[RolesEnum["LAWFIRMADMIN"] = 'LAWFIRM_ADMIN'] = "LAWFIRMADMIN";
         RolesEnum[RolesEnum["LAWYER"] = 'LAWYER'] = "LAWYER";
         RolesEnum[RolesEnum["PARTNER"] = 'PARTNER'] = "PARTNER";
         RolesEnum[RolesEnum["UNKNOWN"] = 'UNKNOWN'] = "UNKNOWN";

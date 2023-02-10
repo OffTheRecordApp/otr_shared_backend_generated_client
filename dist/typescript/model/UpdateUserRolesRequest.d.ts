@@ -17,6 +17,7 @@ export declare namespace UpdateUserRolesRequest {
     enum RolesEnum {
         ADMIN,
         DEFENDANT,
+        LAWFIRMADMIN,
         LAWYER,
         PARTNER,
         UNKNOWN

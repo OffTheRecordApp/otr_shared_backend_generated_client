@@ -46,6 +46,7 @@ export declare namespace FinancialTransaction {
         STRIPETRANSFER,
         UNKNOWN,
         VENMO,
+        WIRETRANSFER,
         ZELLE
     }
     enum TransactionTypeEnum {

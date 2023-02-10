@@ -10,7 +10,9 @@
  * Do not edit the class manually.
  */
 export interface GetHouseHoldMateModel {
+    "deleted"?: boolean;
     "email"?: string;
+    "expiryDateUtc"?: string;
     "fullName"?: string;
     "inviteStatus"?: GetHouseHoldMateModel.InviteStatusEnum;
     "profilePictureUrl"?: string;
@@ -24,7 +26,7 @@ export declare namespace GetHouseHoldMateModel {
         VERIFIED
     }
     enum RelationshipTypeEnum {
-        SELF,
+        OWNER,
         SIBLING,
         SPOUSE,
         TEENAGER,

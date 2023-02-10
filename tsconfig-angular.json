@@ -1,0 +1,10 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "target": "es5",
+    "declaration": true,
+    "experimentalDecorators": true
+  },
+  "include": ["dist/angular"],
+  "exclude": ["node_modules"]
+}

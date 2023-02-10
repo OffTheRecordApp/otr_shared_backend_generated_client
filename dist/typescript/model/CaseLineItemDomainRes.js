@@ -29,6 +29,7 @@ var CaseLineItemDomainRes;
         LineItemTypeEnum[LineItemTypeEnum["DISPUTEFEE"] = 'DISPUTE_FEE'] = "DISPUTEFEE";
         LineItemTypeEnum[LineItemTypeEnum["FINEPAYMENT"] = 'FINE_PAYMENT'] = "FINEPAYMENT";
         LineItemTypeEnum[LineItemTypeEnum["FTAFEE"] = 'FTA_FEE'] = "FTAFEE";
+        LineItemTypeEnum[LineItemTypeEnum["INITIALSUBSCRIPTIONFEE"] = 'INITIAL_SUBSCRIPTION_FEE'] = "INITIALSUBSCRIPTIONFEE";
         LineItemTypeEnum[LineItemTypeEnum["LATEFEE"] = 'LATE_FEE'] = "LATEFEE";
         LineItemTypeEnum[LineItemTypeEnum["MBGREFUND"] = 'MBG_REFUND'] = "MBGREFUND";
         LineItemTypeEnum[LineItemTypeEnum["MVSFEE"] = 'MVS_FEE'] = "MVSFEE";

@@ -16,7 +16,7 @@ export interface InviteHouseholdMateRequest {
 }
 export declare namespace InviteHouseholdMateRequest {
     enum RelationshipTypeEnum {
-        SELF,
+        OWNER,
         SIBLING,
         SPOUSE,
         TEENAGER,

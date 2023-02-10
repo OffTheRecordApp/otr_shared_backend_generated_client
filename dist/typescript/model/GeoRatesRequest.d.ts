@@ -11,16 +11,9 @@
  */
 import * as models from './models';
 export interface GeoRatesRequest {
-    "cdlStatus"?: GeoRatesRequest.CdlStatusEnum;
     "courtDate"?: string;
     "courtId"?: string;
+    "isCDL"?: boolean;
     "violationCount"?: number;
     "violations"?: Array<models.ViolationInputRequest>;
-}
-export declare namespace GeoRatesRequest {
-    enum CdlStatusEnum {
-        CDLINCOMMERCIALVEHICLE,
-        CDLINPERSONALVEHICLE,
-        NOCDL
-    }
 }

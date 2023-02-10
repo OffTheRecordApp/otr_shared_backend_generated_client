@@ -16,7 +16,7 @@ var InviteHouseholdMateRequest;
 (function (InviteHouseholdMateRequest) {
     var RelationshipTypeEnum;
     (function (RelationshipTypeEnum) {
-        RelationshipTypeEnum[RelationshipTypeEnum["SELF"] = 'SELF'] = "SELF";
+        RelationshipTypeEnum[RelationshipTypeEnum["OWNER"] = 'OWNER'] = "OWNER";
         RelationshipTypeEnum[RelationshipTypeEnum["SIBLING"] = 'SIBLING'] = "SIBLING";
         RelationshipTypeEnum[RelationshipTypeEnum["SPOUSE"] = 'SPOUSE'] = "SPOUSE";
         RelationshipTypeEnum[RelationshipTypeEnum["TEENAGER"] = 'TEENAGER'] = "TEENAGER";

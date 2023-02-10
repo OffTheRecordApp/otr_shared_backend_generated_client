@@ -27,10 +27,23 @@ export declare class LawyerControllerApi {
     deleteLawyerLicensesUsingDELETE(userId: string, request: models.DeleteLawyerLicenseRequest, extraHttpRequestParams?: any): ng.IHttpPromise<object>;
     /**
      *
+     * @summary deleteLawyer
+     * @param userId userId
+     * @param removeAdminOnly removeAdminOnly
+     */
+    deleteLawyerUsingDELETE(userId: string, removeAdminOnly?: boolean, extraHttpRequestParams?: any): ng.IHttpPromise<{}>;
+    /**
+     *
      * @summary getLawyerEmailGuesses
      * @param lawyerId lawyerId
      */
     getLawyerEmailGuessesUsingGET(lawyerId: number, extraHttpRequestParams?: any): ng.IHttpPromise<object>;
+    /**
+     *
+     * @summary getLawyer
+     * @param userId userId
+     */
+    getLawyerUsingGET(userId: number, extraHttpRequestParams?: any): ng.IHttpPromise<models.GetLawyerResponse>;
     /**
      *
      * @summary saveLawyerLead

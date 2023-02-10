@@ -78,6 +78,5 @@ var AddCourtCoverageRequest;
     (function (RefundEligibilityEnum) {
         RefundEligibilityEnum[RefundEligibilityEnum["FULLREFUND"] = 'FULL_REFUND'] = "FULLREFUND";
         RefundEligibilityEnum[RefundEligibilityEnum["NOREFUND"] = 'NO_REFUND'] = "NOREFUND";
-        RefundEligibilityEnum[RefundEligibilityEnum["PARTIALREFUND"] = 'PARTIAL_REFUND'] = "PARTIALREFUND";
     })(RefundEligibilityEnum = AddCourtCoverageRequest.RefundEligibilityEnum || (AddCourtCoverageRequest.RefundEligibilityEnum = {}));
 })(AddCourtCoverageRequest = exports.AddCourtCoverageRequest || (exports.AddCourtCoverageRequest = {}));

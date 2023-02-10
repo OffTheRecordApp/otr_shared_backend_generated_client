@@ -46,8 +46,10 @@ export declare class CasePaymentControllerApi {
      * @summary generateCasePaymentPlan
      * @param caseId caseId
      * @param paymentPlanTypeId paymentPlanTypeId
+     * @param period period
+     * @param productId productId
      */
-    generateCasePaymentPlanUsingGET(caseId: string, paymentPlanTypeId: string, extraHttpRequestParams?: any): ng.IHttpPromise<models.ListCostItemsForCustomerResponse>;
+    generateCasePaymentPlanUsingGET(caseId: string, paymentPlanTypeId: string, period?: 'DAILY' | 'MONTHLY' | 'QUARTERLY' | 'WEEKLY' | 'YEARLY', productId?: string, extraHttpRequestParams?: any): ng.IHttpPromise<models.ListCostItemsForCustomerResponse>;
     /**
      *
      * @summary getAvailablePaymentPlans
@@ -94,8 +96,10 @@ export declare class CasePaymentControllerApi {
      *
      * @summary listCostItemsForCustomer
      * @param caseId caseId
+     * @param period period
+     * @param productId productId
      */
-    listCostItemsForCustomerUsingGET(caseId: string, extraHttpRequestParams?: any): ng.IHttpPromise<models.ListCostItemsForCustomerResponse>;
+    listCostItemsForCustomerUsingGET(caseId: string, period?: 'DAILY' | 'MONTHLY' | 'QUARTERLY' | 'WEEKLY' | 'YEARLY', productId?: string, extraHttpRequestParams?: any): ng.IHttpPromise<models.ListCostItemsForCustomerResponse>;
     /**
      *
      * @summary scheduleNewPayment

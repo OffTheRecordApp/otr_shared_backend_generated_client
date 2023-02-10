@@ -147,6 +147,39 @@ var HouseholdMateControllerApi = /** @class */ (function () {
         }
         return this.$http(httpRequestParams);
     };
+    /**
+     *
+     * @summary removeHouseholdMate
+     * @param mateUserId mateUserId
+     * @param userId userId
+     */
+    HouseholdMateControllerApi.prototype.removeHouseholdMateUsingDELETE = function (mateUserId, userId, extraHttpRequestParams) {
+        var localVarPath = this.basePath + '/api/v1/household-mates/{userId}'
+            .replace('{' + 'userId' + '}', encodeURIComponent(String(userId)));
+        var queryParameters = {};
+        var headerParams = Object.assign({}, this.defaultHeaders);
+        // verify required parameter 'mateUserId' is not null or undefined
+        if (mateUserId === null || mateUserId === undefined) {
+            throw new Error('Required parameter mateUserId was null or undefined when calling removeHouseholdMateUsingDELETE.');
+        }
+        // verify required parameter 'userId' is not null or undefined
+        if (userId === null || userId === undefined) {
+            throw new Error('Required parameter userId was null or undefined when calling removeHouseholdMateUsingDELETE.');
+        }
+        if (mateUserId !== undefined) {
+            queryParameters['mateUserId'] = mateUserId;
+        }
+        var httpRequestParams = {
+            method: 'DELETE',
+            url: localVarPath,
+            params: queryParameters,
+            headers: headerParams
+        };
+        if (extraHttpRequestParams) {
+            httpRequestParams = Object.assign(httpRequestParams, extraHttpRequestParams);
+        }
+        return this.$http(httpRequestParams);
+    };
     HouseholdMateControllerApi.$inject = ['$http', '$httpParamSerializer', 'basePath'];
     return HouseholdMateControllerApi;
 }());

@@ -9,9 +9,20 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
+import * as models from './models';
 export interface FeedbackDomain {
     "appVersion"?: string;
+    "attachments"?: Array<models.FeedbackAttachmentModel>;
     "body"?: string;
+    "citationId"?: number;
     "device"?: string;
+    "feedbackType"?: FeedbackDomain.FeedbackTypeEnum;
+    "phoneNumber"?: string;
     "subject"?: string;
+}
+export declare namespace FeedbackDomain {
+    enum FeedbackTypeEnum {
+        GENERIC,
+        NOTREADYTOBOOK
+    }
 }

@@ -13,6 +13,7 @@ export interface UpdateViolationRequest {
     "classification"?: UpdateViolationRequest.ClassificationEnum;
     "isEnabledForCustomers"?: boolean;
     "isEnabledForLawfirms"?: boolean;
+    "refundEligibilityType"?: UpdateViolationRequest.RefundEligibilityTypeEnum;
     "userFriendlyName"?: string;
     "userFriendlyShortForm"?: string;
     "violationCode"?: string;
@@ -77,5 +78,9 @@ export declare namespace UpdateViolationRequest {
         SUMMARYOFFENSENOREFUND,
         WOBBLERTOFELONY,
         WOBBLERTOMISDEMEANOR
+    }
+    enum RefundEligibilityTypeEnum {
+        FULLREFUND,
+        NOREFUND
     }
 }

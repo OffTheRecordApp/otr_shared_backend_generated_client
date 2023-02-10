@@ -11,7 +11,7 @@
  */
 import * as models from './models';
 export interface LawyerModel {
-    "creationDateUtc"?: models.TimestampRes;
+    "creationDateUtc"?: models.Timestamp;
     "emailAddress"?: string;
     "firstname"?: string;
     "isEmailConfirmed"?: boolean;

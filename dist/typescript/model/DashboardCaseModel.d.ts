@@ -11,6 +11,7 @@
  */
 import * as models from './models';
 export interface DashboardCaseModel {
+    "authorModel"?: models.DashboardAuthorModel;
     "bookingConfirmedDate"?: string;
     "caseId"?: string;
     "citation"?: models.DashboardCitationModel;
@@ -18,7 +19,9 @@ export interface DashboardCaseModel {
     "hasLeftLawyerReview"?: boolean;
     "lawfirmName"?: string;
     "lawfirmProfilePictureUrl"?: string;
+    "lawyerRating"?: number;
     "legalFeeInCents"?: number;
+    "messageBody"?: string;
     "status"?: models.DashboardStatusModel;
     "userId"?: number;
 }

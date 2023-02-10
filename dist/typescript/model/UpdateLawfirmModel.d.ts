@@ -17,6 +17,7 @@ export interface UpdateLawfirmModel {
     "establishedDateUtc"?: string;
     "establishedYear"?: number;
     "isTestLawfirm"?: boolean;
+    "languagesServed"?: Array<string>;
     "lawfirmId"?: number;
     "lawfirmName"?: string;
     "lawfirmPaymentModel"?: UpdateLawfirmModel.LawfirmPaymentModelEnum;

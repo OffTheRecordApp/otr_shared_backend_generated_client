@@ -11,5 +11,5 @@
  */
 import * as models from './models';
 export interface AddActionToCaseRequest {
-    "caseAction"?: models.CaseActionDomain;
+    "caseAction"?: models.CaseActionRequestModel;
 }

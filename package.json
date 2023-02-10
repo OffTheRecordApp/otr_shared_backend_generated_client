@@ -14,14 +14,18 @@
   "author": "Off the Record, Inc.",
   "scripts": {
     "download:devo": "curl https://otr-backend-service-us-devo.offtherecord.com/v2/api-docs -o api/otr-service.json",
-    "clean-source": "find dist/typescript -type f | grep -v  \"\\.d\\.ts\\|\\.js\" | xargs rm",
-    "generate:devo": "npm run download:devo && gulp codegen && openapi-generator-cli generate -i api/otr-service.json -o dist/typescript -g typescript-angularjs && tsc && npm run clean-source",
-    "generate:local": "curl http://localhost:8080/v2/api-docs -o api/otr-service.json && gulp codegen && openapi-generator-cli generate -i api/otr-service.json -o dist/typescript -g typescript-angularjs && tsc && npm run clean-source",
-    "bootstrap": "npm i @openapitools/openapi-generator-cli -g && openapi-generator-cli version-manager set 4.3.1"
+    "clean-source": "find dist/**/* -type f | grep -v  \"\\.d\\.ts\\|\\.js\" | xargs rm",
+    "generate:devo": "npm run generate:devo-angular && npm run generate:devo-angularjs",
+    "generate:devo-angular": "npm run download:devo && gulp codegen &&  openapi-generator-cli version-manager set 6.3.0 && openapi-generator-cli generate -i api/otr-service.json -o dist/angular -g typescript-angular && tsc --project tsconfig-angular.json && npm run clean-source",
+    "generate:devo-angularjs": "npm run download:devo && gulp codegen &&  openapi-generator-cli version-manager set 4.3.1 && openapi-generator-cli generate -i api/otr-service.json -o dist/typescript -g typescript-angularjs && tsc --project tsconfig.json && npm run clean-source",
+    "generate:local": "curl http://localhost:8080/v2/api-docs -o api/otr-service.json && gulp codegen && openapi-generator-cli generate -i api/otr-service.json -o dist/typescript -g typescript-angular && tsc && npm run clean-source",
+    "bootstrap": "npm i @openapitools/openapi-generator-cli -g && openapi-generator-cli version-manager set 6.3.0"
   },
   "devDependencies": {
-    "@types/node": "^18.0.3",
+    "@angular/common": "^15.0.0",
+    "@angular/core": "^15.0.0",
     "@types/angular": "~1.8.4",
+    "@types/node": "^18.11.18",
     "del": "2.2.0",
     "file-system": "2.2.1",
     "gulp": "4.0.2",
@@ -34,6 +38,8 @@
     "swagger-js-codegen": "1.12.0"
   },
   "dependencies": {
+    "angular": "^1.8.3",
+    "jquery": "^3.6.3",
     "swagger-js-react-native-codegen": "0.1.4",
     "swagger-typescript-codegen": "^1.11.0"
   },

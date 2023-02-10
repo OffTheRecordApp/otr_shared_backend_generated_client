@@ -11,3 +11,12 @@
  * Do not edit the class manually.
  */
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.FeedbackDomain = void 0;
+var FeedbackDomain;
+(function (FeedbackDomain) {
+    var FeedbackTypeEnum;
+    (function (FeedbackTypeEnum) {
+        FeedbackTypeEnum[FeedbackTypeEnum["GENERIC"] = 'GENERIC'] = "GENERIC";
+        FeedbackTypeEnum[FeedbackTypeEnum["NOTREADYTOBOOK"] = 'NOT_READY_TO_BOOK'] = "NOTREADYTOBOOK";
+    })(FeedbackTypeEnum = FeedbackDomain.FeedbackTypeEnum || (FeedbackDomain.FeedbackTypeEnum = {}));
+})(FeedbackDomain = exports.FeedbackDomain || (exports.FeedbackDomain = {}));

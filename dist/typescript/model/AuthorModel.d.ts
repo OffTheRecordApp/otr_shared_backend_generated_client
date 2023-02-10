@@ -20,6 +20,7 @@ export declare namespace AuthorModel {
     enum UserRoleEnum {
         ADMIN,
         DEFENDANT,
+        LAWFIRMADMIN,
         LAWYER,
         PARTNER,
         UNKNOWN

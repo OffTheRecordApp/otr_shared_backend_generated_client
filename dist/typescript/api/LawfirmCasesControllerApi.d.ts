@@ -23,14 +23,12 @@ export declare class LawfirmCasesControllerApi {
      * @summary getLawfirmCasesByPage
      * @param lawfirmIdString lawfirmIdString
      * @param request request
+     * @param courtDateFilter courtDateFilter
+     * @param end end
+     * @param hasPaymentPlan hasPaymentPlan
      * @param length length
      * @param page page
+     * @param start start
      */
-    getLawfirmCasesByPageUsingPOST(lawfirmIdString: string, request: models.GetLawfirmSummaryCaseRequest, length?: number, page?: number, extraHttpRequestParams?: any): ng.IHttpPromise<models.GetLawfirmSummaryCasesResponse>;
-    /**
-     *
-     * @summary getLawfirmCases
-     * @param lawfirmId lawfirmId
-     */
-    getLawfirmCasesUsingGET(lawfirmId: string, extraHttpRequestParams?: any): ng.IHttpPromise<models.GetLawfirmCasesResponse>;
+    getLawfirmCasesByPageUsingPOST(lawfirmIdString: string, request: models.GetLawfirmSummaryCaseRequest, courtDateFilter?: 'NO_COURT_DATE' | 'PAST_DUE' | 'PAST_DUE_AND_NO_COURT_DATE' | 'UPCOMING', end?: string, hasPaymentPlan?: boolean, length?: number, page?: number, start?: string, extraHttpRequestParams?: any): ng.IHttpPromise<models.GetLawfirmSummaryCasesResponse>;
 }

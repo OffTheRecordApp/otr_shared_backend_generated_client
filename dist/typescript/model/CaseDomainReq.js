@@ -65,6 +65,5 @@ var CaseDomainReq;
     (function (RefundEligibilityEnum) {
         RefundEligibilityEnum[RefundEligibilityEnum["FULLREFUND"] = 'FULL_REFUND'] = "FULLREFUND";
         RefundEligibilityEnum[RefundEligibilityEnum["NOREFUND"] = 'NO_REFUND'] = "NOREFUND";
-        RefundEligibilityEnum[RefundEligibilityEnum["PARTIALREFUND"] = 'PARTIAL_REFUND'] = "PARTIALREFUND";
     })(RefundEligibilityEnum = CaseDomainReq.RefundEligibilityEnum || (CaseDomainReq.RefundEligibilityEnum = {}));
 })(CaseDomainReq = exports.CaseDomainReq || (exports.CaseDomainReq = {}));

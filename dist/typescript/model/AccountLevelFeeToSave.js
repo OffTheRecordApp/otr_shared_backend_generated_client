@@ -78,6 +78,5 @@ var AccountLevelFeeToSave;
     (function (RefundEligibilityEnum) {
         RefundEligibilityEnum[RefundEligibilityEnum["FULLREFUND"] = 'FULL_REFUND'] = "FULLREFUND";
         RefundEligibilityEnum[RefundEligibilityEnum["NOREFUND"] = 'NO_REFUND'] = "NOREFUND";
-        RefundEligibilityEnum[RefundEligibilityEnum["PARTIALREFUND"] = 'PARTIAL_REFUND'] = "PARTIALREFUND";
     })(RefundEligibilityEnum = AccountLevelFeeToSave.RefundEligibilityEnum || (AccountLevelFeeToSave.RefundEligibilityEnum = {}));
 })(AccountLevelFeeToSave = exports.AccountLevelFeeToSave || (exports.AccountLevelFeeToSave = {}));

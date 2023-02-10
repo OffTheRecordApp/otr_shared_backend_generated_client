@@ -27,8 +27,9 @@ var CitationControllerApi = /** @class */ (function () {
      *
      * @summary assignCitationOwner
      * @param citationId citationId
+     * @param request request
      */
-    CitationControllerApi.prototype.assignCitationOwnerUsingPOST = function (citationId, extraHttpRequestParams) {
+    CitationControllerApi.prototype.assignCitationOwnerUsingPOST = function (citationId, request, extraHttpRequestParams) {
         var localVarPath = this.basePath + '/api/v1/citations/{citationId}/owner'
             .replace('{' + 'citationId' + '}', encodeURIComponent(String(citationId)));
         var queryParameters = {};
@@ -40,6 +41,7 @@ var CitationControllerApi = /** @class */ (function () {
         var httpRequestParams = {
             method: 'POST',
             url: localVarPath,
+            data: request,
             params: queryParameters,
             headers: headerParams
         };
@@ -96,6 +98,31 @@ var CitationControllerApi = /** @class */ (function () {
             method: 'POST',
             url: localVarPath,
             data: request,
+            params: queryParameters,
+            headers: headerParams
+        };
+        if (extraHttpRequestParams) {
+            httpRequestParams = Object.assign(httpRequestParams, extraHttpRequestParams);
+        }
+        return this.$http(httpRequestParams);
+    };
+    /**
+     *
+     * @summary deleteCitationCourt
+     * @param citationId citationId
+     */
+    CitationControllerApi.prototype.deleteCitationCourtUsingDELETE = function (citationId, extraHttpRequestParams) {
+        var localVarPath = this.basePath + '/api/v1/citations/{citationId}/court'
+            .replace('{' + 'citationId' + '}', encodeURIComponent(String(citationId)));
+        var queryParameters = {};
+        var headerParams = Object.assign({}, this.defaultHeaders);
+        // verify required parameter 'citationId' is not null or undefined
+        if (citationId === null || citationId === undefined) {
+            throw new Error('Required parameter citationId was null or undefined when calling deleteCitationCourtUsingDELETE.');
+        }
+        var httpRequestParams = {
+            method: 'DELETE',
+            url: localVarPath,
             params: queryParameters,
             headers: headerParams
         };
