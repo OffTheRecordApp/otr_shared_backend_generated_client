@@ -20,6 +20,7 @@ export interface FindMatchingUser {
     "isTestUser"?: boolean;
     "lastname"?: string;
     "loginProvider"?: FindMatchingUser.LoginProviderEnum;
+    "profilePictureUrl"?: string;
     "roles"?: Array<models.UserRoleDomain>;
     "unsubscribed"?: boolean;
     "userId"?: number;
