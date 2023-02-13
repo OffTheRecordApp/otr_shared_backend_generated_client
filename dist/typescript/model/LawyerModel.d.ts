@@ -26,6 +26,7 @@ export interface LawyerModel {
     "otherJobTitle"?: string;
     "phoneNumbers"?: Array<models.PhoneNumberDomain>;
     "profilePicture"?: string;
+    "roleTypes"?: Array<LawyerModel.RoleTypesEnum>;
     "userId"?: number;
 }
 export declare namespace LawyerModel {
@@ -43,5 +44,13 @@ export declare namespace LawyerModel {
         LEGALSECRETARY,
         OTHER,
         PARALEGAL
+    }
+    enum RoleTypesEnum {
+        ADMIN,
+        DEFENDANT,
+        LAWFIRMADMIN,
+        LAWYER,
+        PARTNER,
+        UNKNOWN
     }
 }

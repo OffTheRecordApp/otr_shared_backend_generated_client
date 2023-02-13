@@ -30,4 +30,13 @@ var LawyerModel;
         JobTitleEnum[JobTitleEnum["OTHER"] = 'OTHER'] = "OTHER";
         JobTitleEnum[JobTitleEnum["PARALEGAL"] = 'PARALEGAL'] = "PARALEGAL";
     })(JobTitleEnum = LawyerModel.JobTitleEnum || (LawyerModel.JobTitleEnum = {}));
+    var RoleTypesEnum;
+    (function (RoleTypesEnum) {
+        RoleTypesEnum[RoleTypesEnum["ADMIN"] = 'ADMIN'] = "ADMIN";
+        RoleTypesEnum[RoleTypesEnum["DEFENDANT"] = 'DEFENDANT'] = "DEFENDANT";
+        RoleTypesEnum[RoleTypesEnum["LAWFIRMADMIN"] = 'LAWFIRM_ADMIN'] = "LAWFIRMADMIN";
+        RoleTypesEnum[RoleTypesEnum["LAWYER"] = 'LAWYER'] = "LAWYER";
+        RoleTypesEnum[RoleTypesEnum["PARTNER"] = 'PARTNER'] = "PARTNER";
+        RoleTypesEnum[RoleTypesEnum["UNKNOWN"] = 'UNKNOWN'] = "UNKNOWN";
+    })(RoleTypesEnum = LawyerModel.RoleTypesEnum || (LawyerModel.RoleTypesEnum = {}));
 })(LawyerModel = exports.LawyerModel || (exports.LawyerModel = {}));
