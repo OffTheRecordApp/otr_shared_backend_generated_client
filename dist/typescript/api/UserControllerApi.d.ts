@@ -62,6 +62,12 @@ export declare class UserControllerApi {
     isUserLoggedInUsingGET(extraHttpRequestParams?: any): ng.IHttpPromise<models.IsUserLoggedInResponse>;
     /**
      *
+     * @summary logoutUser
+     * @param userId userId
+     */
+    logoutUserUsingDELETE(userId: number, extraHttpRequestParams?: any): ng.IHttpPromise<{}>;
+    /**
+     *
      * @summary updateUserProfile
      * @param userId userId
      * @param request request
