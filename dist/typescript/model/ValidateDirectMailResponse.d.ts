@@ -270,6 +270,7 @@ export declare namespace ValidateDirectMailResponse {
         USERDOESNOTMATCHCITATION,
         USERISNOTTHEOWNER,
         USERNOTFOUND,
+        USERNOTFOUNDINLAWFIRM,
         VERIFICATIONLINKNOTVALID
     }
 }

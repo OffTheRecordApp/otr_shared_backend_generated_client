@@ -272,6 +272,7 @@ var ValidateDirectMailResponse;
         OtrErrorEnum[OtrErrorEnum["USERDOESNOTMATCHCITATION"] = 'USER_DOES_NOT_MATCH_CITATION'] = "USERDOESNOTMATCHCITATION";
         OtrErrorEnum[OtrErrorEnum["USERISNOTTHEOWNER"] = 'USER_IS_NOT_THE_OWNER'] = "USERISNOTTHEOWNER";
         OtrErrorEnum[OtrErrorEnum["USERNOTFOUND"] = 'USER_NOT_FOUND'] = "USERNOTFOUND";
+        OtrErrorEnum[OtrErrorEnum["USERNOTFOUNDINLAWFIRM"] = 'USER_NOT_FOUND_IN_LAWFIRM'] = "USERNOTFOUNDINLAWFIRM";
         OtrErrorEnum[OtrErrorEnum["VERIFICATIONLINKNOTVALID"] = 'VERIFICATION_LINK_NOT_VALID'] = "VERIFICATIONLINKNOTVALID";
     })(OtrErrorEnum = ValidateDirectMailResponse.OtrErrorEnum || (ValidateDirectMailResponse.OtrErrorEnum = {}));
 })(ValidateDirectMailResponse = exports.ValidateDirectMailResponse || (exports.ValidateDirectMailResponse = {}));

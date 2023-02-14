@@ -578,6 +578,7 @@ export * from './UpdateLawfirmPayoutRequest';
 export * from './UpdateLawfirmPayoutResponse';
 export * from './UpdateLawfirmRequest';
 export * from './UpdateLawfirmSettingsRequest';
+export * from './UpdateLawyerRoleRequest';
 export * from './UpdateNoteInput';
 export * from './UpdateNoteRequest';
 export * from './UpdateNoteResponse';

@@ -590,6 +590,7 @@ __exportStar(require("./UpdateLawfirmPayoutRequest"), exports);
 __exportStar(require("./UpdateLawfirmPayoutResponse"), exports);
 __exportStar(require("./UpdateLawfirmRequest"), exports);
 __exportStar(require("./UpdateLawfirmSettingsRequest"), exports);
+__exportStar(require("./UpdateLawyerRoleRequest"), exports);
 __exportStar(require("./UpdateNoteInput"), exports);
 __exportStar(require("./UpdateNoteRequest"), exports);
 __exportStar(require("./UpdateNoteResponse"), exports);
