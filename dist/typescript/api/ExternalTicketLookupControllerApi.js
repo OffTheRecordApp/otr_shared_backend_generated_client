@@ -28,6 +28,8 @@ var ExternalTicketLookupControllerApi = /** @class */ (function () {
      * @summary getExternalTickets
      * @param countyId countyId
      * @param regionCode regionCode
+     * @param attempts attempts
+     * @param citationId citationId
      * @param dateOfBirth dateOfBirth
      * @param driversLicenseId driversLicenseId
      * @param lastName lastName
@@ -35,7 +37,7 @@ var ExternalTicketLookupControllerApi = /** @class */ (function () {
      * @param searchType searchType
      * @param searchValue searchValue
      */
-    ExternalTicketLookupControllerApi.prototype.getExternalTicketsUsingGET = function (countyId, regionCode, dateOfBirth, driversLicenseId, lastName, organizationName, searchType, searchValue, extraHttpRequestParams) {
+    ExternalTicketLookupControllerApi.prototype.getExternalTicketsUsingGET = function (countyId, regionCode, attempts, citationId, dateOfBirth, driversLicenseId, lastName, organizationName, searchType, searchValue, extraHttpRequestParams) {
         var localVarPath = this.basePath + '/api/v1/external-tickets';
         var queryParameters = {};
         var headerParams = Object.assign({}, this.defaultHeaders);
@@ -46,6 +48,12 @@ var ExternalTicketLookupControllerApi = /** @class */ (function () {
         // verify required parameter 'regionCode' is not null or undefined
         if (regionCode === null || regionCode === undefined) {
             throw new Error('Required parameter regionCode was null or undefined when calling getExternalTicketsUsingGET.');
+        }
+        if (attempts !== undefined) {
+            queryParameters['attempts'] = attempts;
+        }
+        if (citationId !== undefined) {
+            queryParameters['citationId'] = citationId;
         }
         if (countyId !== undefined) {
             queryParameters['countyId'] = countyId;

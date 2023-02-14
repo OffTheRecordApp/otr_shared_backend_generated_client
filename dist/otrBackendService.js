@@ -6431,6 +6431,8 @@ angular.module('otrBackendService', [])
              * @method
              * @name OtrService#getExternalTicketsUsingGET
              * @param {object} parameters - method options and parameters
+             * @param {integer} parameters.attempts - attempts
+             * @param {string} parameters.citationId - citationId
              * @param {integer} parameters.countyId - countyId
              * @param {string} parameters.dateOfBirth - dateOfBirth
              * @param {string} parameters.driversLicenseId - driversLicenseId
@@ -6453,6 +6455,17 @@ angular.module('otrBackendService', [])
                     form = {};
 
                 headers['Accept'] = ['*/*'];
+
+                /** set default value **/
+                queryParameters['attempts'] = 1;
+
+                if (parameters['attempts'] !== undefined) {
+                    queryParameters['attempts'] = parameters['attempts'];
+                }
+
+                if (parameters['citationId'] !== undefined) {
+                    queryParameters['citationId'] = parameters['citationId'];
+                }
 
                 if (parameters['countyId'] !== undefined) {
                     queryParameters['countyId'] = parameters['countyId'];
