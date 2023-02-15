@@ -14818,7 +14818,9 @@ angular.module('otrBackendService', [])
                     return deferred.promise;
                 }
 
-                path = path.replace('{isDeleteRequest}', parameters['isDeleteRequest']);
+                if (parameters['isDeleteRequest'] !== undefined) {
+                    queryParameters['isDeleteRequest'] = parameters['isDeleteRequest'];
+                }
 
                 if (parameters['isDeleteRequest'] === undefined) {
                     deferred.reject(new Error('Missing required  parameter: isDeleteRequest'));

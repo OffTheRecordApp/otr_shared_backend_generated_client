@@ -376,8 +376,7 @@ var CitationControllerApi = /** @class */ (function () {
      */
     CitationControllerApi.prototype.toggleDeleteCitationUsingDELETE = function (citationId, isDeleteRequest, extraHttpRequestParams) {
         var localVarPath = this.basePath + '/api/v2/citations/{citationId}'
-            .replace('{' + 'citationId' + '}', encodeURIComponent(String(citationId)))
-            .replace('{' + 'isDeleteRequest' + '}', encodeURIComponent(String(isDeleteRequest)));
+            .replace('{' + 'citationId' + '}', encodeURIComponent(String(citationId)));
         var queryParameters = {};
         var headerParams = Object.assign({}, this.defaultHeaders);
         // verify required parameter 'citationId' is not null or undefined
@@ -387,6 +386,9 @@ var CitationControllerApi = /** @class */ (function () {
         // verify required parameter 'isDeleteRequest' is not null or undefined
         if (isDeleteRequest === null || isDeleteRequest === undefined) {
             throw new Error('Required parameter isDeleteRequest was null or undefined when calling toggleDeleteCitationUsingDELETE.');
+        }
+        if (isDeleteRequest !== undefined) {
+            queryParameters['isDeleteRequest'] = isDeleteRequest;
         }
         var httpRequestParams = {
             method: 'DELETE',
