@@ -3671,13 +3671,14 @@ angular.module('otrBackendService', [])
                 return deferred.promise;
             };
             /**
-             * deleteCitation
+             * toggleDeleteCitation
              * @method
-             * @name OtrService#deleteCitationUsingDELETE
+             * @name OtrService#toggleDeleteCitationUsingDELETE
              * @param {object} parameters - method options and parameters
-             * @param {string} parameters.citationIdString - citationIdString
+             * @param {integer} parameters.citationId - citationId
+             * @param {boolean} parameters.isDeleteRequest - isDeleteRequest
              */
-            OtrService.prototype.deleteCitationUsingDELETE = function(parameters) {
+            OtrService.prototype.toggleDeleteCitationUsingDELETE = function(parameters) {
                 if (parameters === undefined) {
                     parameters = {};
                 }
@@ -3691,10 +3692,17 @@ angular.module('otrBackendService', [])
 
                 headers['Accept'] = ['*/*'];
 
-                path = path.replace('{citationIdString}', parameters['citationIdString']);
+                path = path.replace('{citationId}', parameters['citationId']);
 
-                if (parameters['citationIdString'] === undefined) {
-                    deferred.reject(new Error('Missing required  parameter: citationIdString'));
+                if (parameters['citationId'] === undefined) {
+                    deferred.reject(new Error('Missing required  parameter: citationId'));
+                    return deferred.promise;
+                }
+
+                path = path.replace('{isDeleteRequest}', parameters['isDeleteRequest']);
+
+                if (parameters['isDeleteRequest'] === undefined) {
+                    deferred.reject(new Error('Missing required  parameter: isDeleteRequest'));
                     return deferred.promise;
                 }
 
