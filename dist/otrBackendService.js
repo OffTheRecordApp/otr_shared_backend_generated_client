@@ -3671,14 +3671,13 @@ angular.module('otrBackendService', [])
                 return deferred.promise;
             };
             /**
-             * toggleDeleteCitation
+             * deleteCitation
              * @method
-             * @name OtrService#toggleDeleteCitationUsingDELETE
+             * @name OtrService#deleteCitationUsingDELETE
              * @param {object} parameters - method options and parameters
-             * @param {integer} parameters.citationId - citationId
-             * @param {boolean} parameters.isDeleteRequest - isDeleteRequest
+             * @param {string} parameters.citationIdString - citationIdString
              */
-            OtrService.prototype.toggleDeleteCitationUsingDELETE = function(parameters) {
+            OtrService.prototype.deleteCitationUsingDELETE = function(parameters) {
                 if (parameters === undefined) {
                     parameters = {};
                 }
@@ -3692,17 +3691,10 @@ angular.module('otrBackendService', [])
 
                 headers['Accept'] = ['*/*'];
 
-                path = path.replace('{citationId}', parameters['citationId']);
+                path = path.replace('{citationIdString}', parameters['citationIdString']);
 
-                if (parameters['citationId'] === undefined) {
-                    deferred.reject(new Error('Missing required  parameter: citationId'));
-                    return deferred.promise;
-                }
-
-                path = path.replace('{isDeleteRequest}', parameters['isDeleteRequest']);
-
-                if (parameters['isDeleteRequest'] === undefined) {
-                    deferred.reject(new Error('Missing required  parameter: isDeleteRequest'));
+                if (parameters['citationIdString'] === undefined) {
+                    deferred.reject(new Error('Missing required  parameter: citationIdString'));
                     return deferred.promise;
                 }
 
@@ -3839,6 +3831,63 @@ angular.module('otrBackendService', [])
                 queryParameters = mergeQueryParams(parameters, queryParameters);
 
                 this.request('POST', domain + path, parameters, body, headers, queryParameters, form, deferred);
+
+                return deferred.promise;
+            };
+            /**
+             * listCitationAuditEvents
+             * @method
+             * @name OtrService#listCitationAuditEventsUsingGET
+             * @param {object} parameters - method options and parameters
+             * @param {integer} parameters.citationId - citationId
+             * @param {string} parameters.excludeTypes - excludeTypes
+             * @param {string} parameters.includeTypes - includeTypes
+             * @param {integer} parameters.limit - limit
+             * @param {string} parameters.nextPageToken - nextPageToken
+             */
+            OtrService.prototype.listCitationAuditEventsUsingGET = function(parameters) {
+                if (parameters === undefined) {
+                    parameters = {};
+                }
+                var deferred = $q.defer();
+                var domain = this.domain,
+                    path = '/api/v1/citations/{citationId}/audit-events';
+                var body = {},
+                    queryParameters = {},
+                    headers = {},
+                    form = {};
+
+                headers['Accept'] = ['*/*'];
+
+                path = path.replace('{citationId}', parameters['citationId']);
+
+                if (parameters['citationId'] === undefined) {
+                    deferred.reject(new Error('Missing required  parameter: citationId'));
+                    return deferred.promise;
+                }
+
+                if (parameters['excludeTypes'] !== undefined) {
+                    queryParameters['excludeTypes'] = parameters['excludeTypes'];
+                }
+
+                if (parameters['includeTypes'] !== undefined) {
+                    queryParameters['includeTypes'] = parameters['includeTypes'];
+                }
+
+                /** set default value **/
+                queryParameters['limit'] = 25;
+
+                if (parameters['limit'] !== undefined) {
+                    queryParameters['limit'] = parameters['limit'];
+                }
+
+                if (parameters['nextPageToken'] !== undefined) {
+                    queryParameters['nextPageToken'] = parameters['nextPageToken'];
+                }
+
+                queryParameters = mergeQueryParams(parameters, queryParameters);
+
+                this.request('GET', domain + path, parameters, body, headers, queryParameters, form, deferred);
 
                 return deferred.promise;
             };
@@ -9573,7 +9622,7 @@ angular.module('otrBackendService', [])
              * @name OtrService#deleteLawyerUsingDELETE
              * @param {object} parameters - method options and parameters
              * @param {boolean} parameters.removeAdminOnly - removeAdminOnly
-             * @param {string} parameters.userId - userId
+             * @param {integer} parameters.userId - userId
              */
             OtrService.prototype.deleteLawyerUsingDELETE = function(parameters) {
                 if (parameters === undefined) {
@@ -14737,6 +14786,48 @@ angular.module('otrBackendService', [])
                 queryParameters = mergeQueryParams(parameters, queryParameters);
 
                 this.request('POST', domain + path, parameters, body, headers, queryParameters, form, deferred);
+
+                return deferred.promise;
+            };
+            /**
+             * toggleDeleteCitation
+             * @method
+             * @name OtrService#toggleDeleteCitationUsingDELETE
+             * @param {object} parameters - method options and parameters
+             * @param {integer} parameters.citationId - citationId
+             * @param {boolean} parameters.isDeleteRequest - isDeleteRequest
+             */
+            OtrService.prototype.toggleDeleteCitationUsingDELETE = function(parameters) {
+                if (parameters === undefined) {
+                    parameters = {};
+                }
+                var deferred = $q.defer();
+                var domain = this.domain,
+                    path = '/api/v2/citations/{citationId}';
+                var body = {},
+                    queryParameters = {},
+                    headers = {},
+                    form = {};
+
+                headers['Accept'] = ['*/*'];
+
+                path = path.replace('{citationId}', parameters['citationId']);
+
+                if (parameters['citationId'] === undefined) {
+                    deferred.reject(new Error('Missing required  parameter: citationId'));
+                    return deferred.promise;
+                }
+
+                path = path.replace('{isDeleteRequest}', parameters['isDeleteRequest']);
+
+                if (parameters['isDeleteRequest'] === undefined) {
+                    deferred.reject(new Error('Missing required  parameter: isDeleteRequest'));
+                    return deferred.promise;
+                }
+
+                queryParameters = mergeQueryParams(parameters, queryParameters);
+
+                this.request('DELETE', domain + path, parameters, body, headers, queryParameters, form, deferred);
 
                 return deferred.promise;
             };
