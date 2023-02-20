@@ -322,6 +322,8 @@ export * from './GetUserReferralSourceTypesResponse';
 export * from './GetUserRegistrationsRequest';
 export * from './GetUserRegistrationsResponse';
 export * from './GetUserResponse';
+export * from './GetUserSettingsRequest';
+export * from './GetUserSettingsResponse';
 export * from './GetUserStripeAccountResponse';
 export * from './GoogleLoginRequest';
 export * from './GraphRequest';

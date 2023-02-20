@@ -334,6 +334,8 @@ __exportStar(require("./GetUserReferralSourceTypesResponse"), exports);
 __exportStar(require("./GetUserRegistrationsRequest"), exports);
 __exportStar(require("./GetUserRegistrationsResponse"), exports);
 __exportStar(require("./GetUserResponse"), exports);
+__exportStar(require("./GetUserSettingsRequest"), exports);
+__exportStar(require("./GetUserSettingsResponse"), exports);
 __exportStar(require("./GetUserStripeAccountResponse"), exports);
 __exportStar(require("./GoogleLoginRequest"), exports);
 __exportStar(require("./GraphRequest"), exports);

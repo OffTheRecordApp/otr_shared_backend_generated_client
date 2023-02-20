@@ -12498,6 +12498,95 @@ angular.module('otrBackendService', [])
                 return deferred.promise;
             };
             /**
+             * getUserSetting
+             * @method
+             * @name OtrService#getUserSettingUsingGET
+             * @param {object} parameters - method options and parameters
+             * @param {string} parameters.name - name
+             * @param {integer} parameters.userId - userId
+             */
+            OtrService.prototype.getUserSettingUsingGET = function(parameters) {
+                if (parameters === undefined) {
+                    parameters = {};
+                }
+                var deferred = $q.defer();
+                var domain = this.domain,
+                    path = '/api/v1/user-settings/{userId}';
+                var body = {},
+                    queryParameters = {},
+                    headers = {},
+                    form = {};
+
+                headers['Accept'] = ['*/*'];
+
+                if (parameters['name'] !== undefined) {
+                    queryParameters['name'] = parameters['name'];
+                }
+
+                if (parameters['name'] === undefined) {
+                    deferred.reject(new Error('Missing required  parameter: name'));
+                    return deferred.promise;
+                }
+
+                path = path.replace('{userId}', parameters['userId']);
+
+                if (parameters['userId'] === undefined) {
+                    deferred.reject(new Error('Missing required  parameter: userId'));
+                    return deferred.promise;
+                }
+
+                queryParameters = mergeQueryParams(parameters, queryParameters);
+
+                this.request('GET', domain + path, parameters, body, headers, queryParameters, form, deferred);
+
+                return deferred.promise;
+            };
+            /**
+             * getUserSettings
+             * @method
+             * @name OtrService#getUserSettingsUsingPOST
+             * @param {object} parameters - method options and parameters
+             * @param {} parameters.request - request
+             * @param {integer} parameters.userId - userId
+             */
+            OtrService.prototype.getUserSettingsUsingPOST = function(parameters) {
+                if (parameters === undefined) {
+                    parameters = {};
+                }
+                var deferred = $q.defer();
+                var domain = this.domain,
+                    path = '/api/v1/user-settings/{userId}/get-settings';
+                var body = {},
+                    queryParameters = {},
+                    headers = {},
+                    form = {};
+
+                headers['Accept'] = ['*/*'];
+                headers['Content-Type'] = ['application/json'];
+
+                if (parameters['request'] !== undefined) {
+                    body = parameters['request'];
+                }
+
+                if (parameters['request'] === undefined) {
+                    deferred.reject(new Error('Missing required  parameter: request'));
+                    return deferred.promise;
+                }
+
+                path = path.replace('{userId}', parameters['userId']);
+
+                if (parameters['userId'] === undefined) {
+                    deferred.reject(new Error('Missing required  parameter: userId'));
+                    return deferred.promise;
+                }
+
+                queryParameters = mergeQueryParams(parameters, queryParameters);
+
+                this.request('POST', domain + path, parameters, body, headers, queryParameters, form, deferred);
+
+                return deferred.promise;
+            };
+            /**
              * changeUserPassword
              * @method
              * @name OtrService#changeUserPasswordUsingPUT

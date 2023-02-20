@@ -9,7 +9,6 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-export interface SettingRequest {
-    "name": string;
-    "value": string;
+export interface GetUserSettingsRequest {
+    "settingsList": Array<string>;
 }

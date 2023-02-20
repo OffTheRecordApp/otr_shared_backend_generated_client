@@ -9,7 +9,8 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-export interface SettingRequest {
-    "name": string;
-    "value": string;
+import * as models from './models';
+export interface GetUserSettingsResponse {
+    "userId"?: number;
+    "userSettings"?: Array<models.SettingResponse>;
 }
