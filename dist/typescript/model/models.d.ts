@@ -596,6 +596,8 @@ export * from './UpdateUserModel';
 export * from './UpdateUserPhoneNumberRequest';
 export * from './UpdateUserProfileRequest';
 export * from './UpdateUserRolesRequest';
+export * from './UpdateUserSettingsRequest';
+export * from './UpdateUserSettingsResponse';
 export * from './UpdateViolationRequest';
 export * from './UpsertAddressRequest';
 export * from './User';

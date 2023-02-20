@@ -608,6 +608,8 @@ __exportStar(require("./UpdateUserModel"), exports);
 __exportStar(require("./UpdateUserPhoneNumberRequest"), exports);
 __exportStar(require("./UpdateUserProfileRequest"), exports);
 __exportStar(require("./UpdateUserRolesRequest"), exports);
+__exportStar(require("./UpdateUserSettingsRequest"), exports);
+__exportStar(require("./UpdateUserSettingsResponse"), exports);
 __exportStar(require("./UpdateViolationRequest"), exports);
 __exportStar(require("./UpsertAddressRequest"), exports);
 __exportStar(require("./User"), exports);

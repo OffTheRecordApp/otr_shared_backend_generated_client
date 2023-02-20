@@ -32,4 +32,18 @@ export declare class UserSettingsControllerApi {
      * @param request request
      */
     getUserSettingsUsingPOST(userId: number, request: models.GetUserSettingsRequest, extraHttpRequestParams?: any): ng.IHttpPromise<models.GetUserSettingsResponse>;
+    /**
+     *
+     * @summary updateUserSetting
+     * @param userId userId
+     * @param request request
+     */
+    updateUserSettingUsingPOST(userId: number, request: models.SettingRequest, extraHttpRequestParams?: any): ng.IHttpPromise<models.SettingResponse>;
+    /**
+     *
+     * @summary updateUserSettings
+     * @param userId userId
+     * @param request request
+     */
+    updateUserSettingsUsingPOST(userId: number, request: models.UpdateUserSettingsRequest, extraHttpRequestParams?: any): ng.IHttpPromise<models.UpdateUserSettingsResponse>;
 }
