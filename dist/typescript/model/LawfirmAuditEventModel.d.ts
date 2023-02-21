@@ -49,6 +49,7 @@ export declare namespace LawfirmAuditEventModel {
         CASEMATCH,
         CASERESOLVE,
         CITATIONUPLOAD,
+        EXTERNALTICKETREQUEST,
         LAWFIRMACCOUNTPRIORITY,
         LAWFIRMACCOUNTSTATUS,
         LAWFIRMDAILYCAPACITY,

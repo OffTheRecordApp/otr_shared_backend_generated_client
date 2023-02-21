@@ -49,6 +49,7 @@ export declare namespace UserAuditEventModel {
         CASEMATCH,
         CASERESOLVE,
         CITATIONUPLOAD,
+        EXTERNALTICKETREQUEST,
         LAWFIRMACCOUNTPRIORITY,
         LAWFIRMACCOUNTSTATUS,
         LAWFIRMDAILYCAPACITY,
