@@ -46,6 +46,14 @@ export declare class LawyerControllerApi {
     getLawyerUsingGET(userId: number, extraHttpRequestParams?: any): ng.IHttpPromise<models.GetLawyerResponse>;
     /**
      *
+     * @summary inviteLawyerToLawfirm
+     * @param lawfirmId lawfirmId
+     * @param userId userId
+     * @param request request
+     */
+    inviteLawyerToLawfirmUsingPOST(lawfirmId: number, userId: number, request: models.InviteLawyerToLawfirmRequest, extraHttpRequestParams?: any): ng.IHttpPromise<{}>;
+    /**
+     *
      * @summary saveLawyerLead
      * @param request request
      */

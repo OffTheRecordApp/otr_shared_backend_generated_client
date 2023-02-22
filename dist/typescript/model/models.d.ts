@@ -338,6 +338,7 @@ export * from './InitiateCaseAndChargeCustomerResponse';
 export * from './InsertCaseLineItemResponse';
 export * from './InsertInvoiceLineItemRequest';
 export * from './InviteHouseholdMateRequest';
+export * from './InviteLawyerToLawfirmRequest';
 export * from './IsRefundEligibleResponse';
 export * from './IsUserLoggedInResponse';
 export * from './LastLoginDateModel';

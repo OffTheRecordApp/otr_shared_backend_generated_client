@@ -350,6 +350,7 @@ __exportStar(require("./InitiateCaseAndChargeCustomerResponse"), exports);
 __exportStar(require("./InsertCaseLineItemResponse"), exports);
 __exportStar(require("./InsertInvoiceLineItemRequest"), exports);
 __exportStar(require("./InviteHouseholdMateRequest"), exports);
+__exportStar(require("./InviteLawyerToLawfirmRequest"), exports);
 __exportStar(require("./IsRefundEligibleResponse"), exports);
 __exportStar(require("./IsUserLoggedInResponse"), exports);
 __exportStar(require("./LastLoginDateModel"), exports);
