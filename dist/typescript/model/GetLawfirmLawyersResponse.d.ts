@@ -11,5 +11,6 @@
  */
 import * as models from './models';
 export interface GetLawfirmLawyersResponse {
+    "invites"?: Array<models.LawyerInviteModel>;
     "lawyers"?: Array<models.LawyerModel>;
 }
