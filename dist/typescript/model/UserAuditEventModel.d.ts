@@ -45,9 +45,11 @@ export declare namespace UserAuditEventModel {
     enum EventTypeEnum {
         CASEACCEPT,
         CASEBOOKING,
+        CASECANCEL,
         CASEDECLINE,
         CASEMATCH,
         CASERESOLVE,
+        CASESTATUS,
         CITATIONUPLOAD,
         EXTERNALTICKETREQUEST,
         LAWFIRMACCOUNTPRIORITY,

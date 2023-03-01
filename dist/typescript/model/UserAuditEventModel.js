@@ -40,9 +40,11 @@ var UserAuditEventModel;
     (function (EventTypeEnum) {
         EventTypeEnum[EventTypeEnum["CASEACCEPT"] = 'CASE_ACCEPT'] = "CASEACCEPT";
         EventTypeEnum[EventTypeEnum["CASEBOOKING"] = 'CASE_BOOKING'] = "CASEBOOKING";
+        EventTypeEnum[EventTypeEnum["CASECANCEL"] = 'CASE_CANCEL'] = "CASECANCEL";
         EventTypeEnum[EventTypeEnum["CASEDECLINE"] = 'CASE_DECLINE'] = "CASEDECLINE";
         EventTypeEnum[EventTypeEnum["CASEMATCH"] = 'CASE_MATCH'] = "CASEMATCH";
         EventTypeEnum[EventTypeEnum["CASERESOLVE"] = 'CASE_RESOLVE'] = "CASERESOLVE";
+        EventTypeEnum[EventTypeEnum["CASESTATUS"] = 'CASE_STATUS'] = "CASESTATUS";
         EventTypeEnum[EventTypeEnum["CITATIONUPLOAD"] = 'CITATION_UPLOAD'] = "CITATIONUPLOAD";
         EventTypeEnum[EventTypeEnum["EXTERNALTICKETREQUEST"] = 'EXTERNAL_TICKET_REQUEST'] = "EXTERNALTICKETREQUEST";
         EventTypeEnum[EventTypeEnum["LAWFIRMACCOUNTPRIORITY"] = 'LAWFIRM_ACCOUNT_PRIORITY'] = "LAWFIRMACCOUNTPRIORITY";

@@ -40,9 +40,11 @@ var LawfirmAuditEventModel;
     (function (EventEnum) {
         EventEnum[EventEnum["CASEACCEPT"] = 'CASE_ACCEPT'] = "CASEACCEPT";
         EventEnum[EventEnum["CASEBOOKING"] = 'CASE_BOOKING'] = "CASEBOOKING";
+        EventEnum[EventEnum["CASECANCEL"] = 'CASE_CANCEL'] = "CASECANCEL";
         EventEnum[EventEnum["CASEDECLINE"] = 'CASE_DECLINE'] = "CASEDECLINE";
         EventEnum[EventEnum["CASEMATCH"] = 'CASE_MATCH'] = "CASEMATCH";
         EventEnum[EventEnum["CASERESOLVE"] = 'CASE_RESOLVE'] = "CASERESOLVE";
+        EventEnum[EventEnum["CASESTATUS"] = 'CASE_STATUS'] = "CASESTATUS";
         EventEnum[EventEnum["CITATIONUPLOAD"] = 'CITATION_UPLOAD'] = "CITATIONUPLOAD";
         EventEnum[EventEnum["EXTERNALTICKETREQUEST"] = 'EXTERNAL_TICKET_REQUEST'] = "EXTERNALTICKETREQUEST";
         EventEnum[EventEnum["LAWFIRMACCOUNTPRIORITY"] = 'LAWFIRM_ACCOUNT_PRIORITY'] = "LAWFIRMACCOUNTPRIORITY";
