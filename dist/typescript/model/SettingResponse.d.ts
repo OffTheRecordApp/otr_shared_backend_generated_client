@@ -10,8 +10,8 @@
  * Do not edit the class manually.
  */
 export interface SettingResponse {
-    "id"?: number;
-    "name"?: string;
+    "settingId"?: number;
+    "settingName"?: string;
     "type"?: SettingResponse.TypeEnum;
     "value"?: string;
 }

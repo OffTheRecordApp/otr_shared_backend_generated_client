@@ -10,6 +10,6 @@
  * Do not edit the class manually.
  */
 export interface SettingRequest {
-    "name": string;
-    "value": string;
+    "name"?: string;
+    "value"?: string;
 }
