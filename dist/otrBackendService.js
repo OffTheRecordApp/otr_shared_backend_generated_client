@@ -6573,6 +6573,43 @@ angular.module('otrBackendService', [])
                 return deferred.promise;
             };
             /**
+             * getInputParameters
+             * @method
+             * @name OtrService#getInputParametersUsingPOST
+             * @param {object} parameters - method options and parameters
+             * @param {string} parameters.regionCode - regionCode
+             */
+            OtrService.prototype.getInputParametersUsingPOST = function(parameters) {
+                if (parameters === undefined) {
+                    parameters = {};
+                }
+                var deferred = $q.defer();
+                var domain = this.domain,
+                    path = '/api/v1/external-tickets/getInputParameters';
+                var body = {},
+                    queryParameters = {},
+                    headers = {},
+                    form = {};
+
+                headers['Accept'] = ['*/*'];
+                headers['Content-Type'] = ['application/json'];
+
+                if (parameters['regionCode'] !== undefined) {
+                    queryParameters['regionCode'] = parameters['regionCode'];
+                }
+
+                if (parameters['regionCode'] === undefined) {
+                    deferred.reject(new Error('Missing required  parameter: regionCode'));
+                    return deferred.promise;
+                }
+
+                queryParameters = mergeQueryParams(parameters, queryParameters);
+
+                this.request('POST', domain + path, parameters, body, headers, queryParameters, form, deferred);
+
+                return deferred.promise;
+            };
+            /**
              * postFeedback
              * @method
              * @name OtrService#postFeedbackUsingPOST

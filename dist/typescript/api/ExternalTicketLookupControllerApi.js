@@ -90,6 +90,33 @@ var ExternalTicketLookupControllerApi = /** @class */ (function () {
         }
         return this.$http(httpRequestParams);
     };
+    /**
+     *
+     * @summary getInputParameters
+     * @param regionCode regionCode
+     */
+    ExternalTicketLookupControllerApi.prototype.getInputParametersUsingPOST = function (regionCode, extraHttpRequestParams) {
+        var localVarPath = this.basePath + '/api/v1/external-tickets/getInputParameters';
+        var queryParameters = {};
+        var headerParams = Object.assign({}, this.defaultHeaders);
+        // verify required parameter 'regionCode' is not null or undefined
+        if (regionCode === null || regionCode === undefined) {
+            throw new Error('Required parameter regionCode was null or undefined when calling getInputParametersUsingPOST.');
+        }
+        if (regionCode !== undefined) {
+            queryParameters['regionCode'] = regionCode;
+        }
+        var httpRequestParams = {
+            method: 'POST',
+            url: localVarPath,
+            params: queryParameters,
+            headers: headerParams
+        };
+        if (extraHttpRequestParams) {
+            httpRequestParams = Object.assign(httpRequestParams, extraHttpRequestParams);
+        }
+        return this.$http(httpRequestParams);
+    };
     ExternalTicketLookupControllerApi.$inject = ['$http', '$httpParamSerializer', 'basePath'];
     return ExternalTicketLookupControllerApi;
 }());
