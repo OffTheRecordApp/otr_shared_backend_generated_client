@@ -6575,24 +6575,23 @@ angular.module('otrBackendService', [])
             /**
              * getInputParameters
              * @method
-             * @name OtrService#getInputParametersUsingPOST
+             * @name OtrService#getInputParametersUsingGET
              * @param {object} parameters - method options and parameters
              * @param {string} parameters.regionCode - regionCode
              */
-            OtrService.prototype.getInputParametersUsingPOST = function(parameters) {
+            OtrService.prototype.getInputParametersUsingGET = function(parameters) {
                 if (parameters === undefined) {
                     parameters = {};
                 }
                 var deferred = $q.defer();
                 var domain = this.domain,
-                    path = '/api/v1/external-tickets/getInputParameters';
+                    path = '/api/v1/external-tickets/input-parameters';
                 var body = {},
                     queryParameters = {},
                     headers = {},
                     form = {};
 
                 headers['Accept'] = ['*/*'];
-                headers['Content-Type'] = ['application/json'];
 
                 if (parameters['regionCode'] !== undefined) {
                     queryParameters['regionCode'] = parameters['regionCode'];
@@ -6605,7 +6604,7 @@ angular.module('otrBackendService', [])
 
                 queryParameters = mergeQueryParams(parameters, queryParameters);
 
-                this.request('POST', domain + path, parameters, body, headers, queryParameters, form, deferred);
+                this.request('GET', domain + path, parameters, body, headers, queryParameters, form, deferred);
 
                 return deferred.promise;
             };
