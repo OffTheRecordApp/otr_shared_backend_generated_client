@@ -15386,7 +15386,9 @@ angular.module('otrBackendService', [])
              * @method
              * @name OtrService#searchNotesUsingGET
              * @param {object} parameters - method options and parameters
+             * @param {string} parameters.noteType - noteType
              * @param {string} parameters.query - query
+             * @param {string} parameters.referenceId - referenceId
              */
             OtrService.prototype.searchNotesUsingGET = function(parameters) {
                 if (parameters === undefined) {
@@ -15394,7 +15396,7 @@ angular.module('otrBackendService', [])
                 }
                 var deferred = $q.defer();
                 var domain = this.domain,
-                    path = '/api/v2/notes/{noteType}/search/{referenceId}';
+                    path = '/api/v2/notes/search';
                 var body = {},
                     queryParameters = {},
                     headers = {},
@@ -15402,12 +15404,30 @@ angular.module('otrBackendService', [])
 
                 headers['Accept'] = ['application/json'];
 
+                if (parameters['noteType'] !== undefined) {
+                    queryParameters['noteType'] = parameters['noteType'];
+                }
+
+                if (parameters['noteType'] === undefined) {
+                    deferred.reject(new Error('Missing required  parameter: noteType'));
+                    return deferred.promise;
+                }
+
                 if (parameters['query'] !== undefined) {
                     queryParameters['query'] = parameters['query'];
                 }
 
                 if (parameters['query'] === undefined) {
                     deferred.reject(new Error('Missing required  parameter: query'));
+                    return deferred.promise;
+                }
+
+                if (parameters['referenceId'] !== undefined) {
+                    queryParameters['referenceId'] = parameters['referenceId'];
+                }
+
+                if (parameters['referenceId'] === undefined) {
+                    deferred.reject(new Error('Missing required  parameter: referenceId'));
                     return deferred.promise;
                 }
 
