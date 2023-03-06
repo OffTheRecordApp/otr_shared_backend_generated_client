@@ -15382,6 +15382,107 @@ angular.module('otrBackendService', [])
                 return deferred.promise;
             };
             /**
+             * searchNotes
+             * @method
+             * @name OtrService#searchNotesUsingGET
+             * @param {object} parameters - method options and parameters
+             * @param {string} parameters.query - query
+             */
+            OtrService.prototype.searchNotesUsingGET = function(parameters) {
+                if (parameters === undefined) {
+                    parameters = {};
+                }
+                var deferred = $q.defer();
+                var domain = this.domain,
+                    path = '/api/v2/notes/{noteType}/search/{referenceId}';
+                var body = {},
+                    queryParameters = {},
+                    headers = {},
+                    form = {};
+
+                headers['Accept'] = ['application/json'];
+
+                if (parameters['query'] !== undefined) {
+                    queryParameters['query'] = parameters['query'];
+                }
+
+                if (parameters['query'] === undefined) {
+                    deferred.reject(new Error('Missing required  parameter: query'));
+                    return deferred.promise;
+                }
+
+                queryParameters = mergeQueryParams(parameters, queryParameters);
+
+                this.request('GET', domain + path, parameters, body, headers, queryParameters, form, deferred);
+
+                return deferred.promise;
+            };
+            /**
+             * listNotes
+             * @method
+             * @name OtrService#listNotesUsingGET
+             * @param {object} parameters - method options and parameters
+             * @param {integer} parameters.initialNoteId - initialNoteId
+             * @param {integer} parameters.limit - limit
+             * @param {string} parameters.nextPageToken - nextPageToken
+             * @param {string} parameters.noteType - noteType
+             * @param {string} parameters.previousPageToken - previousPageToken
+             * @param {string} parameters.referenceId - referenceId
+             */
+            OtrService.prototype.listNotesUsingGET = function(parameters) {
+                if (parameters === undefined) {
+                    parameters = {};
+                }
+                var deferred = $q.defer();
+                var domain = this.domain,
+                    path = '/api/v2/notes/{noteType}/{referenceId}';
+                var body = {},
+                    queryParameters = {},
+                    headers = {},
+                    form = {};
+
+                headers['Accept'] = ['application/json'];
+
+                if (parameters['initialNoteId'] !== undefined) {
+                    queryParameters['initialNoteId'] = parameters['initialNoteId'];
+                }
+
+                /** set default value **/
+                queryParameters['limit'] = 20;
+
+                if (parameters['limit'] !== undefined) {
+                    queryParameters['limit'] = parameters['limit'];
+                }
+
+                if (parameters['nextPageToken'] !== undefined) {
+                    queryParameters['nextPageToken'] = parameters['nextPageToken'];
+                }
+
+                path = path.replace('{noteType}', parameters['noteType']);
+
+                if (parameters['noteType'] === undefined) {
+                    deferred.reject(new Error('Missing required  parameter: noteType'));
+                    return deferred.promise;
+                }
+
+                if (parameters['previousPageToken'] !== undefined) {
+                    queryParameters['previousPageToken'] = parameters['previousPageToken'];
+                }
+
+                path = path.replace('{referenceId}', parameters['referenceId']);
+
+                if (parameters['referenceId'] === undefined) {
+                    deferred.reject(new Error('Missing required  parameter: referenceId'));
+                    return deferred.promise;
+                }
+
+                queryParameters = mergeQueryParams(parameters, queryParameters);
+
+                this.request('GET', domain + path, parameters, body, headers, queryParameters, form, deferred);
+
+                return deferred.promise;
+            };
+            /**
              * markPageTypesAsRead
              * @method
              * @name OtrService#markPageTypesAsReadUsingDELETE
