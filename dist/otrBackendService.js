@@ -4039,6 +4039,49 @@ angular.module('otrBackendService', [])
                 return deferred.promise;
             };
             /**
+             * setLockForCitation
+             * @method
+             * @name OtrService#setLockForCitationUsingPUT
+             * @param {object} parameters - method options and parameters
+             * @param {integer} parameters.citationId - citationId
+             * @param {boolean} parameters.isLocked - isLocked
+             */
+            OtrService.prototype.setLockForCitationUsingPUT = function(parameters) {
+                if (parameters === undefined) {
+                    parameters = {};
+                }
+                var deferred = $q.defer();
+                var domain = this.domain,
+                    path = '/api/v1/citations/{citationId}/lock-citation/{isLocked}';
+                var body = {},
+                    queryParameters = {},
+                    headers = {},
+                    form = {};
+
+                headers['Accept'] = ['*/*'];
+                headers['Content-Type'] = ['application/json'];
+
+                path = path.replace('{citationId}', parameters['citationId']);
+
+                if (parameters['citationId'] === undefined) {
+                    deferred.reject(new Error('Missing required  parameter: citationId'));
+                    return deferred.promise;
+                }
+
+                path = path.replace('{isLocked}', parameters['isLocked']);
+
+                if (parameters['isLocked'] === undefined) {
+                    deferred.reject(new Error('Missing required  parameter: isLocked'));
+                    return deferred.promise;
+                }
+
+                queryParameters = mergeQueryParams(parameters, queryParameters);
+
+                this.request('PUT', domain + path, parameters, body, headers, queryParameters, form, deferred);
+
+                return deferred.promise;
+            };
+            /**
              * assignCitationOwner
              * @method
              * @name OtrService#assignCitationOwnerUsingPOST

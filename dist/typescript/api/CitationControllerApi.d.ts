@@ -102,6 +102,13 @@ export declare class CitationControllerApi {
     setCitationContactListFlagUsingPOST(citationIdString: string, isDismissed: boolean, extraHttpRequestParams?: any): ng.IHttpPromise<object>;
     /**
      *
+     * @summary setLockForCitation
+     * @param citationId citationId
+     * @param isLocked isLocked
+     */
+    setLockForCitationUsingPUT(citationId: number, isLocked: boolean, extraHttpRequestParams?: any): ng.IHttpPromise<{}>;
+    /**
+     *
      * @summary toggleDeleteCitation
      * @param citationId citationId
      * @param isDeleteRequest isDeleteRequest
