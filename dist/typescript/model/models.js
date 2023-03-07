@@ -381,6 +381,7 @@ __exportStar(require("./LawfirmSettingsDomainRes"), exports);
 __exportStar(require("./LawfirmStorefrontModel"), exports);
 __exportStar(require("./LawfirmVacationRequest"), exports);
 __exportStar(require("./LawfirmsRatesResponse"), exports);
+__exportStar(require("./LawyerInviteByTokenModel"), exports);
 __exportStar(require("./LawyerInviteModel"), exports);
 __exportStar(require("./LawyerLicenseModel"), exports);
 __exportStar(require("./LawyerModel"), exports);

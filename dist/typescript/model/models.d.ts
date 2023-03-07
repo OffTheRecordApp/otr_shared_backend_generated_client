@@ -369,6 +369,7 @@ export * from './LawfirmSettingsDomainRes';
 export * from './LawfirmStorefrontModel';
 export * from './LawfirmVacationRequest';
 export * from './LawfirmsRatesResponse';
+export * from './LawyerInviteByTokenModel';
 export * from './LawyerInviteModel';
 export * from './LawyerLicenseModel';
 export * from './LawyerModel';
