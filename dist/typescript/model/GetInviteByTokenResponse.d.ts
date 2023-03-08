@@ -17,6 +17,7 @@ export interface GetInviteByTokenResponse {
     "inviteeFirstName"?: string;
     "inviteeLastName"?: string;
     "inviteeRoleType"?: GetInviteByTokenResponse.InviteeRoleTypeEnum;
+    "inviteeUserId"?: number;
     "lawyerInvite"?: models.LawyerInviteByTokenModel;
     "profilePictureUrl"?: string;
     "userId"?: number;
