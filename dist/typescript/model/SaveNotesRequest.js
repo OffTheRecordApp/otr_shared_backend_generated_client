@@ -11,14 +11,14 @@
  * Do not edit the class manually.
  */
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.NoteDomain = void 0;
-var NoteDomain;
-(function (NoteDomain) {
+exports.SaveNotesRequest = void 0;
+var SaveNotesRequest;
+(function (SaveNotesRequest) {
     var NoteTypeEnum;
     (function (NoteTypeEnum) {
         NoteTypeEnum[NoteTypeEnum["CASE"] = 'CASE'] = "CASE";
         NoteTypeEnum[NoteTypeEnum["LAWFIRM"] = 'LAWFIRM'] = "LAWFIRM";
         NoteTypeEnum[NoteTypeEnum["PHONELEAD"] = 'PHONE_LEAD'] = "PHONELEAD";
         NoteTypeEnum[NoteTypeEnum["USER"] = 'USER'] = "USER";
-    })(NoteTypeEnum = NoteDomain.NoteTypeEnum || (NoteDomain.NoteTypeEnum = {}));
-})(NoteDomain = exports.NoteDomain || (exports.NoteDomain = {}));
+    })(NoteTypeEnum = SaveNotesRequest.NoteTypeEnum || (SaveNotesRequest.NoteTypeEnum = {}));
+})(SaveNotesRequest = exports.SaveNotesRequest || (exports.SaveNotesRequest = {}));

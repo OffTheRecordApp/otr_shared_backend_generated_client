@@ -11,5 +11,5 @@
  */
 import * as models from './models';
 export interface CreateNoteResponse {
-    "note"?: models.NoteDomain;
+    "note"?: models.NoteModel;
 }

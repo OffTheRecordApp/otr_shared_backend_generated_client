@@ -10,16 +10,16 @@
  * Do not edit the class manually.
  */
 import * as models from './models';
-export interface NoteDomain {
+export interface NoteEntity {
     "author"?: models.NoteAuthor;
-    "deletedDateUtc"?: models.Timestamp;
+    "deletedDateUtc"?: models.TimestampRes;
     "note"?: string;
     "noteId"?: number;
-    "noteType"?: NoteDomain.NoteTypeEnum;
-    "postedDateUtc"?: models.Timestamp;
+    "noteType"?: NoteEntity.NoteTypeEnum;
+    "postedDateUtc"?: models.TimestampRes;
     "referenceId"?: string;
 }
-export declare namespace NoteDomain {
+export declare namespace NoteEntity {
     enum NoteTypeEnum {
         CASE,
         LAWFIRM,

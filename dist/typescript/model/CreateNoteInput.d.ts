@@ -11,7 +11,7 @@
  */
 export interface CreateNoteInput {
     "note"?: string;
-    "noteType"?: CreateNoteInput.NoteTypeEnum;
+    "noteType": CreateNoteInput.NoteTypeEnum;
     "referenceId"?: string;
 }
 export declare namespace CreateNoteInput {

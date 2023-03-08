@@ -43,6 +43,13 @@ export declare class NotesControllerApi {
     listNotesUsingGET(noteType: 'CASE' | 'LAWFIRM' | 'PHONE_LEAD' | 'USER', referenceId: string, initialNoteId?: number, limit?: number, nextPageToken?: string, previousPageToken?: string, extraHttpRequestParams?: any): ng.IHttpPromise<models.ListNotesResponse>;
     /**
      *
+     * @summary saveNotes
+     * @param userId userId
+     * @param request request
+     */
+    saveNotesUsingPOST(userId: number, request: models.SaveNotesRequest, extraHttpRequestParams?: any): ng.IHttpPromise<object>;
+    /**
+     *
      * @summary searchNotes
      * @param noteType noteType
      * @param query query

@@ -9,7 +9,17 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-import * as models from './models';
-export interface UpdateNoteResponse {
-    "note"?: models.NoteModel;
+export interface SaveNotesRequest {
+    "noteId"?: number;
+    "noteType": SaveNotesRequest.NoteTypeEnum;
+    "notes": string;
+    "referenceId": number;
+}
+export declare namespace SaveNotesRequest {
+    enum NoteTypeEnum {
+        CASE,
+        LAWFIRM,
+        PHONELEAD,
+        USER
+    }
 }

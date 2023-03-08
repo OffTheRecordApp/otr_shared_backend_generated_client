@@ -16,7 +16,7 @@ export interface TicketLeadDomain {
     "citationId"?: number;
     "classification"?: TicketLeadDomain.ClassificationEnum;
     "courtName"?: string;
-    "notes"?: Array<models.NoteDomain>;
+    "notes"?: Array<models.NoteEntity>;
     "region"?: models.CountryRegion;
     "ticketImageUrl"?: string;
 }

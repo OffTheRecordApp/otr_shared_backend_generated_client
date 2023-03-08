@@ -10,5 +10,5 @@
  * Do not edit the class manually.
  */
 export interface UpdateNoteInput {
-    "note"?: string;
+    "note": string;
 }
