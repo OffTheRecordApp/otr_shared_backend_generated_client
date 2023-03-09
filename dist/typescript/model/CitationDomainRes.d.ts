@@ -16,6 +16,7 @@ export interface CitationDomainRes {
     "citationId"?: number;
     "citationIssueDate"?: models.PureDate;
     "citationIssueDateUTC"?: models.TimestampRes;
+    "citationLockedForClient"?: boolean;
     "clientEmailAddress"?: string;
     "clientFirstName"?: string;
     "clientType"?: CitationDomainRes.ClientTypeEnum;
