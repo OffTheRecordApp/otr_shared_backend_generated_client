@@ -20,6 +20,13 @@ export declare class LawyerControllerApi {
     constructor($http: ng.IHttpService, $httpParamSerializer?: (d: any) => any, basePath?: string);
     /**
      *
+     * @summary cancelLawyerInvite
+     * @param inviteeEmail inviteeEmail
+     * @param userId userId
+     */
+    cancelLawyerInviteUsingDELETE(inviteeEmail: string, userId: number, extraHttpRequestParams?: any): ng.IHttpPromise<{}>;
+    /**
+     *
      * @summary deleteLawyerLicenses
      * @param userId userId
      * @param request request

@@ -25,6 +25,39 @@ var LawyerControllerApi = /** @class */ (function () {
     }
     /**
      *
+     * @summary cancelLawyerInvite
+     * @param inviteeEmail inviteeEmail
+     * @param userId userId
+     */
+    LawyerControllerApi.prototype.cancelLawyerInviteUsingDELETE = function (inviteeEmail, userId, extraHttpRequestParams) {
+        var localVarPath = this.basePath + '/api/v1/lawyers/{userId}/invite'
+            .replace('{' + 'userId' + '}', encodeURIComponent(String(userId)));
+        var queryParameters = {};
+        var headerParams = Object.assign({}, this.defaultHeaders);
+        // verify required parameter 'inviteeEmail' is not null or undefined
+        if (inviteeEmail === null || inviteeEmail === undefined) {
+            throw new Error('Required parameter inviteeEmail was null or undefined when calling cancelLawyerInviteUsingDELETE.');
+        }
+        // verify required parameter 'userId' is not null or undefined
+        if (userId === null || userId === undefined) {
+            throw new Error('Required parameter userId was null or undefined when calling cancelLawyerInviteUsingDELETE.');
+        }
+        if (inviteeEmail !== undefined) {
+            queryParameters['inviteeEmail'] = inviteeEmail;
+        }
+        var httpRequestParams = {
+            method: 'DELETE',
+            url: localVarPath,
+            params: queryParameters,
+            headers: headerParams
+        };
+        if (extraHttpRequestParams) {
+            httpRequestParams = Object.assign(httpRequestParams, extraHttpRequestParams);
+        }
+        return this.$http(httpRequestParams);
+    };
+    /**
+     *
      * @summary deleteLawyerLicenses
      * @param userId userId
      * @param request request

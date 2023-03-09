@@ -16,6 +16,7 @@ export interface SaveLawyerRequest {
     "licensedDate"?: string;
     "otherJobTitle"?: string;
     "userId"?: number;
+    "verificationToken"?: string;
 }
 export declare namespace SaveLawyerRequest {
     enum JobTitleEnum {

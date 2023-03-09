@@ -12,4 +12,5 @@
 export interface LawyerInviteByTokenModel {
     "lawfirmId"?: number;
     "lawfirmName"?: string;
+    "lawfirmPictureUrl"?: string;
 }
