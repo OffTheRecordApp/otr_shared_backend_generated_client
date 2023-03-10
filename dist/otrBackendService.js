@@ -15529,6 +15529,8 @@ angular.module('otrBackendService', [])
              * @method
              * @name OtrService#listNotesUsingGET
              * @param {object} parameters - method options and parameters
+             * @param {integer} parameters.authorUserId - authorUserId
+             * @param {boolean} parameters.includeDeleted - includeDeleted
              * @param {integer} parameters.initialNoteId - initialNoteId
              * @param {integer} parameters.limit - limit
              * @param {string} parameters.nextPageToken - nextPageToken
@@ -15549,6 +15551,14 @@ angular.module('otrBackendService', [])
                     form = {};
 
                 headers['Accept'] = ['application/json'];
+
+                if (parameters['authorUserId'] !== undefined) {
+                    queryParameters['authorUserId'] = parameters['authorUserId'];
+                }
+
+                if (parameters['includeDeleted'] !== undefined) {
+                    queryParameters['includeDeleted'] = parameters['includeDeleted'];
+                }
 
                 if (parameters['initialNoteId'] !== undefined) {
                     queryParameters['initialNoteId'] = parameters['initialNoteId'];

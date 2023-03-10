@@ -23,7 +23,7 @@ export interface CustomerReview {
     "ratingModel"?: models.ReviewRatingModel;
     "recommendationType"?: string;
     "resolutionName"?: string;
-    "reviewDateUtc"?: string;
+    "reviewDateUtc"?: models.Timestamp;
     "source"?: CustomerReview.SourceEnum;
     "starRating"?: string;
     "stateAbbreviation"?: string;

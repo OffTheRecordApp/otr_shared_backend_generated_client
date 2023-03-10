@@ -78,12 +78,14 @@ var NotesControllerApi = /** @class */ (function () {
      * @summary listNotes
      * @param noteType noteType
      * @param referenceId referenceId
+     * @param authorUserId authorUserId
+     * @param includeDeleted includeDeleted
      * @param initialNoteId initialNoteId
      * @param limit limit
      * @param nextPageToken nextPageToken
      * @param previousPageToken previousPageToken
      */
-    NotesControllerApi.prototype.listNotesUsingGET = function (noteType, referenceId, initialNoteId, limit, nextPageToken, previousPageToken, extraHttpRequestParams) {
+    NotesControllerApi.prototype.listNotesUsingGET = function (noteType, referenceId, authorUserId, includeDeleted, initialNoteId, limit, nextPageToken, previousPageToken, extraHttpRequestParams) {
         var localVarPath = this.basePath + '/api/v2/notes/{noteType}/{referenceId}'
             .replace('{' + 'noteType' + '}', encodeURIComponent(String(noteType)))
             .replace('{' + 'referenceId' + '}', encodeURIComponent(String(referenceId)));
@@ -96,6 +98,12 @@ var NotesControllerApi = /** @class */ (function () {
         // verify required parameter 'referenceId' is not null or undefined
         if (referenceId === null || referenceId === undefined) {
             throw new Error('Required parameter referenceId was null or undefined when calling listNotesUsingGET.');
+        }
+        if (authorUserId !== undefined) {
+            queryParameters['authorUserId'] = authorUserId;
+        }
+        if (includeDeleted !== undefined) {
+            queryParameters['includeDeleted'] = includeDeleted;
         }
         if (initialNoteId !== undefined) {
             queryParameters['initialNoteId'] = initialNoteId;

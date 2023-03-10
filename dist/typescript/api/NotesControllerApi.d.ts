@@ -35,12 +35,14 @@ export declare class NotesControllerApi {
      * @summary listNotes
      * @param noteType noteType
      * @param referenceId referenceId
+     * @param authorUserId authorUserId
+     * @param includeDeleted includeDeleted
      * @param initialNoteId initialNoteId
      * @param limit limit
      * @param nextPageToken nextPageToken
      * @param previousPageToken previousPageToken
      */
-    listNotesUsingGET(noteType: 'CASE' | 'LAWFIRM' | 'PHONE_LEAD' | 'USER', referenceId: string, initialNoteId?: number, limit?: number, nextPageToken?: string, previousPageToken?: string, extraHttpRequestParams?: any): ng.IHttpPromise<models.ListNotesResponse>;
+    listNotesUsingGET(noteType: 'CASE' | 'LAWFIRM' | 'PHONE_LEAD' | 'USER', referenceId: string, authorUserId?: number, includeDeleted?: boolean, initialNoteId?: number, limit?: number, nextPageToken?: string, previousPageToken?: string, extraHttpRequestParams?: any): ng.IHttpPromise<models.ListNotesResponse>;
     /**
      *
      * @summary saveNotes

@@ -13,6 +13,7 @@ import * as models from './models';
 export interface NoteModel {
     "author"?: models.NoteAuthor;
     "deletedDateUtc"?: models.Timestamp;
+    "isDeleted"?: boolean;
     "note"?: string;
     "noteId"?: number;
     "noteType"?: NoteModel.NoteTypeEnum;
