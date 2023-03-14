@@ -10,10 +10,10 @@
  * Do not edit the class manually.
  */
 export interface SaveNotesRequest {
+    "note": string;
     "noteId"?: number;
     "noteType": SaveNotesRequest.NoteTypeEnum;
-    "notes": string;
-    "referenceId": number;
+    "referenceId": string;
 }
 export declare namespace SaveNotesRequest {
     enum NoteTypeEnum {
