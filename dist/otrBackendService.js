@@ -10032,6 +10032,7 @@ angular.module('otrBackendService', [])
              * @method
              * @name OtrService#listMessagesByEntityUsingGET
              * @param {object} parameters - method options and parameters
+             * @param {boolean} parameters.includeAdminActions - includeAdminActions 
              * @param {integer} parameters.lawfirmId - lawfirmId
              * @param {integer} parameters.length - length
              * @param {integer} parameters.page - page
@@ -10050,6 +10051,10 @@ angular.module('otrBackendService', [])
                     form = {};
 
                 headers['Accept'] = ['*/*'];
+
+                if (parameters['includeAdminActions'] !== undefined) {
+                    queryParameters['includeAdminActions '] = parameters['includeAdminActions'];
+                }
 
                 if (parameters['lawfirmId'] !== undefined) {
                     queryParameters['lawfirmId'] = parameters['lawfirmId'];
