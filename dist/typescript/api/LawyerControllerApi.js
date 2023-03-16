@@ -25,6 +25,39 @@ var LawyerControllerApi = /** @class */ (function () {
     }
     /**
      *
+     * @summary cancelLawyerInvite
+     * @param inviteeEmail inviteeEmail
+     * @param userId userId
+     */
+    LawyerControllerApi.prototype.cancelLawyerInviteUsingDELETE = function (inviteeEmail, userId, extraHttpRequestParams) {
+        var localVarPath = this.basePath + '/api/v1/lawyers/{userId}/invite'
+            .replace('{' + 'userId' + '}', encodeURIComponent(String(userId)));
+        var queryParameters = {};
+        var headerParams = Object.assign({}, this.defaultHeaders);
+        // verify required parameter 'inviteeEmail' is not null or undefined
+        if (inviteeEmail === null || inviteeEmail === undefined) {
+            throw new Error('Required parameter inviteeEmail was null or undefined when calling cancelLawyerInviteUsingDELETE.');
+        }
+        // verify required parameter 'userId' is not null or undefined
+        if (userId === null || userId === undefined) {
+            throw new Error('Required parameter userId was null or undefined when calling cancelLawyerInviteUsingDELETE.');
+        }
+        if (inviteeEmail !== undefined) {
+            queryParameters['inviteeEmail'] = inviteeEmail;
+        }
+        var httpRequestParams = {
+            method: 'DELETE',
+            url: localVarPath,
+            params: queryParameters,
+            headers: headerParams
+        };
+        if (extraHttpRequestParams) {
+            httpRequestParams = Object.assign(httpRequestParams, extraHttpRequestParams);
+        }
+        return this.$http(httpRequestParams);
+    };
+    /**
+     *
      * @summary deleteLawyerLicenses
      * @param userId userId
      * @param request request
@@ -125,6 +158,43 @@ var LawyerControllerApi = /** @class */ (function () {
         var httpRequestParams = {
             method: 'GET',
             url: localVarPath,
+            params: queryParameters,
+            headers: headerParams
+        };
+        if (extraHttpRequestParams) {
+            httpRequestParams = Object.assign(httpRequestParams, extraHttpRequestParams);
+        }
+        return this.$http(httpRequestParams);
+    };
+    /**
+     *
+     * @summary inviteLawyerToLawfirm
+     * @param lawfirmId lawfirmId
+     * @param userId userId
+     * @param request request
+     */
+    LawyerControllerApi.prototype.inviteLawyerToLawfirmUsingPOST = function (lawfirmId, userId, request, extraHttpRequestParams) {
+        var localVarPath = this.basePath + '/api/v1/lawfirms/{lawfirmId}/lawyers/{userId}/invite'
+            .replace('{' + 'lawfirmId' + '}', encodeURIComponent(String(lawfirmId)))
+            .replace('{' + 'userId' + '}', encodeURIComponent(String(userId)));
+        var queryParameters = {};
+        var headerParams = Object.assign({}, this.defaultHeaders);
+        // verify required parameter 'lawfirmId' is not null or undefined
+        if (lawfirmId === null || lawfirmId === undefined) {
+            throw new Error('Required parameter lawfirmId was null or undefined when calling inviteLawyerToLawfirmUsingPOST.');
+        }
+        // verify required parameter 'userId' is not null or undefined
+        if (userId === null || userId === undefined) {
+            throw new Error('Required parameter userId was null or undefined when calling inviteLawyerToLawfirmUsingPOST.');
+        }
+        // verify required parameter 'request' is not null or undefined
+        if (request === null || request === undefined) {
+            throw new Error('Required parameter request was null or undefined when calling inviteLawyerToLawfirmUsingPOST.');
+        }
+        var httpRequestParams = {
+            method: 'POST',
+            url: localVarPath,
+            data: request,
             params: queryParameters,
             headers: headerParams
         };

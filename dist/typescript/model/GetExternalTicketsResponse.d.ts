@@ -11,5 +11,14 @@
  */
 import * as models from './models';
 export interface GetExternalTicketsResponse {
+    "requestState"?: GetExternalTicketsResponse.RequestStateEnum;
+    "retryAfterInSeconds"?: number;
     "tickets"?: Array<models.GetExternalTicketModel>;
+}
+export declare namespace GetExternalTicketsResponse {
+    enum RequestStateEnum {
+        DONE,
+        ERROR,
+        PENDING
+    }
 }

@@ -20,6 +20,13 @@ export declare class LawyerControllerApi {
     constructor($http: ng.IHttpService, $httpParamSerializer?: (d: any) => any, basePath?: string);
     /**
      *
+     * @summary cancelLawyerInvite
+     * @param inviteeEmail inviteeEmail
+     * @param userId userId
+     */
+    cancelLawyerInviteUsingDELETE(inviteeEmail: string, userId: number, extraHttpRequestParams?: any): ng.IHttpPromise<{}>;
+    /**
+     *
      * @summary deleteLawyerLicenses
      * @param userId userId
      * @param request request
@@ -31,7 +38,7 @@ export declare class LawyerControllerApi {
      * @param userId userId
      * @param removeAdminOnly removeAdminOnly
      */
-    deleteLawyerUsingDELETE(userId: string, removeAdminOnly?: boolean, extraHttpRequestParams?: any): ng.IHttpPromise<{}>;
+    deleteLawyerUsingDELETE(userId: number, removeAdminOnly?: boolean, extraHttpRequestParams?: any): ng.IHttpPromise<{}>;
     /**
      *
      * @summary getLawyerEmailGuesses
@@ -44,6 +51,14 @@ export declare class LawyerControllerApi {
      * @param userId userId
      */
     getLawyerUsingGET(userId: number, extraHttpRequestParams?: any): ng.IHttpPromise<models.GetLawyerResponse>;
+    /**
+     *
+     * @summary inviteLawyerToLawfirm
+     * @param lawfirmId lawfirmId
+     * @param userId userId
+     * @param request request
+     */
+    inviteLawyerToLawfirmUsingPOST(lawfirmId: number, userId: number, request: models.InviteLawyerToLawfirmRequest, extraHttpRequestParams?: any): ng.IHttpPromise<{}>;
     /**
      *
      * @summary saveLawyerLead

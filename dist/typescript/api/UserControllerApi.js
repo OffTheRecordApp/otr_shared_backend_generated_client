@@ -196,6 +196,31 @@ var UserControllerApi = /** @class */ (function () {
     };
     /**
      *
+     * @summary logoutUser
+     * @param userId userId
+     */
+    UserControllerApi.prototype.logoutUserUsingDELETE = function (userId, extraHttpRequestParams) {
+        var localVarPath = this.basePath + '/api/v1/users/{userId}/logout'
+            .replace('{' + 'userId' + '}', encodeURIComponent(String(userId)));
+        var queryParameters = {};
+        var headerParams = Object.assign({}, this.defaultHeaders);
+        // verify required parameter 'userId' is not null or undefined
+        if (userId === null || userId === undefined) {
+            throw new Error('Required parameter userId was null or undefined when calling logoutUserUsingDELETE.');
+        }
+        var httpRequestParams = {
+            method: 'DELETE',
+            url: localVarPath,
+            params: queryParameters,
+            headers: headerParams
+        };
+        if (extraHttpRequestParams) {
+            httpRequestParams = Object.assign(httpRequestParams, extraHttpRequestParams);
+        }
+        return this.$http(httpRequestParams);
+    };
+    /**
+     *
      * @summary updateUserProfile
      * @param userId userId
      * @param request request

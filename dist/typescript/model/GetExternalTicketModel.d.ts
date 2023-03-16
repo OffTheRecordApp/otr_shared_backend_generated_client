@@ -11,6 +11,7 @@
  */
 import * as models from './models';
 export interface GetExternalTicketModel {
+    "additionalAttributes"?: object;
     "court"?: models.ExternalTicketCourt;
     "disposition"?: Array<string>;
     "docketNumber"?: string;

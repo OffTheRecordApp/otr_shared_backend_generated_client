@@ -370,6 +370,70 @@ var CitationControllerApi = /** @class */ (function () {
     };
     /**
      *
+     * @summary setLockForCitation
+     * @param citationId citationId
+     * @param isLocked isLocked
+     */
+    CitationControllerApi.prototype.setLockForCitationUsingPUT = function (citationId, isLocked, extraHttpRequestParams) {
+        var localVarPath = this.basePath + '/api/v1/citations/{citationId}/lock-citation/{isLocked}'
+            .replace('{' + 'citationId' + '}', encodeURIComponent(String(citationId)))
+            .replace('{' + 'isLocked' + '}', encodeURIComponent(String(isLocked)));
+        var queryParameters = {};
+        var headerParams = Object.assign({}, this.defaultHeaders);
+        // verify required parameter 'citationId' is not null or undefined
+        if (citationId === null || citationId === undefined) {
+            throw new Error('Required parameter citationId was null or undefined when calling setLockForCitationUsingPUT.');
+        }
+        // verify required parameter 'isLocked' is not null or undefined
+        if (isLocked === null || isLocked === undefined) {
+            throw new Error('Required parameter isLocked was null or undefined when calling setLockForCitationUsingPUT.');
+        }
+        var httpRequestParams = {
+            method: 'PUT',
+            url: localVarPath,
+            params: queryParameters,
+            headers: headerParams
+        };
+        if (extraHttpRequestParams) {
+            httpRequestParams = Object.assign(httpRequestParams, extraHttpRequestParams);
+        }
+        return this.$http(httpRequestParams);
+    };
+    /**
+     *
+     * @summary toggleDeleteCitation
+     * @param citationId citationId
+     * @param isDeleteRequest isDeleteRequest
+     */
+    CitationControllerApi.prototype.toggleDeleteCitationUsingDELETE = function (citationId, isDeleteRequest, extraHttpRequestParams) {
+        var localVarPath = this.basePath + '/api/v2/citations/{citationId}'
+            .replace('{' + 'citationId' + '}', encodeURIComponent(String(citationId)));
+        var queryParameters = {};
+        var headerParams = Object.assign({}, this.defaultHeaders);
+        // verify required parameter 'citationId' is not null or undefined
+        if (citationId === null || citationId === undefined) {
+            throw new Error('Required parameter citationId was null or undefined when calling toggleDeleteCitationUsingDELETE.');
+        }
+        // verify required parameter 'isDeleteRequest' is not null or undefined
+        if (isDeleteRequest === null || isDeleteRequest === undefined) {
+            throw new Error('Required parameter isDeleteRequest was null or undefined when calling toggleDeleteCitationUsingDELETE.');
+        }
+        if (isDeleteRequest !== undefined) {
+            queryParameters['isDeleteRequest'] = isDeleteRequest;
+        }
+        var httpRequestParams = {
+            method: 'DELETE',
+            url: localVarPath,
+            params: queryParameters,
+            headers: headerParams
+        };
+        if (extraHttpRequestParams) {
+            httpRequestParams = Object.assign(httpRequestParams, extraHttpRequestParams);
+        }
+        return this.$http(httpRequestParams);
+    };
+    /**
+     *
      * @summary updateCitationAddress
      * @param citationId citationId
      * @param request request

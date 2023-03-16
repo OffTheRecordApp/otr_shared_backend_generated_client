@@ -14,6 +14,15 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.GetInviteByTokenResponse = void 0;
 var GetInviteByTokenResponse;
 (function (GetInviteByTokenResponse) {
+    var InviteeRoleTypeEnum;
+    (function (InviteeRoleTypeEnum) {
+        InviteeRoleTypeEnum[InviteeRoleTypeEnum["ADMIN"] = 'ADMIN'] = "ADMIN";
+        InviteeRoleTypeEnum[InviteeRoleTypeEnum["DEFENDANT"] = 'DEFENDANT'] = "DEFENDANT";
+        InviteeRoleTypeEnum[InviteeRoleTypeEnum["LAWFIRMADMIN"] = 'LAWFIRM_ADMIN'] = "LAWFIRMADMIN";
+        InviteeRoleTypeEnum[InviteeRoleTypeEnum["LAWYER"] = 'LAWYER'] = "LAWYER";
+        InviteeRoleTypeEnum[InviteeRoleTypeEnum["PARTNER"] = 'PARTNER'] = "PARTNER";
+        InviteeRoleTypeEnum[InviteeRoleTypeEnum["UNKNOWN"] = 'UNKNOWN'] = "UNKNOWN";
+    })(InviteeRoleTypeEnum = GetInviteByTokenResponse.InviteeRoleTypeEnum || (GetInviteByTokenResponse.InviteeRoleTypeEnum = {}));
     var VerificationStatusEnum;
     (function (VerificationStatusEnum) {
         VerificationStatusEnum[VerificationStatusEnum["CANCELLED"] = 'CANCELLED'] = "CANCELLED";

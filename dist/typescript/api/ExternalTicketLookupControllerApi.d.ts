@@ -23,6 +23,8 @@ export declare class ExternalTicketLookupControllerApi {
      * @summary getExternalTickets
      * @param countyId countyId
      * @param regionCode regionCode
+     * @param attempts attempts
+     * @param citationId citationId
      * @param dateOfBirth dateOfBirth
      * @param driversLicenseId driversLicenseId
      * @param lastName lastName
@@ -30,5 +32,11 @@ export declare class ExternalTicketLookupControllerApi {
      * @param searchType searchType
      * @param searchValue searchValue
      */
-    getExternalTicketsUsingGET(countyId: number, regionCode: string, dateOfBirth?: string, driversLicenseId?: string, lastName?: string, organizationName?: string, searchType?: string, searchValue?: string, extraHttpRequestParams?: any): ng.IHttpPromise<models.GetExternalTicketsResponse>;
+    getExternalTicketsUsingGET(countyId: number, regionCode: string, attempts?: number, citationId?: string, dateOfBirth?: string, driversLicenseId?: string, lastName?: string, organizationName?: string, searchType?: string, searchValue?: string, extraHttpRequestParams?: any): ng.IHttpPromise<models.GetExternalTicketsResponse>;
+    /**
+     *
+     * @summary getInputParameters
+     * @param regionCode regionCode
+     */
+    getInputParametersUsingGET(regionCode: string, extraHttpRequestParams?: any): ng.IHttpPromise<models.GetExternalTicketInputParamsResponse>;
 }
