@@ -125,6 +125,37 @@ var DashboardControllerApi = /** @class */ (function () {
     };
     /**
      *
+     * @summary listCitations
+     * @param length length
+     * @param page page
+     * @param trailingDays trailingDays
+     */
+    DashboardControllerApi.prototype.listCitationsUsingPOST = function (length, page, trailingDays, extraHttpRequestParams) {
+        var localVarPath = this.basePath + '/api/v1/console/citations';
+        var queryParameters = {};
+        var headerParams = Object.assign({}, this.defaultHeaders);
+        if (length !== undefined) {
+            queryParameters['length'] = length;
+        }
+        if (page !== undefined) {
+            queryParameters['page'] = page;
+        }
+        if (trailingDays !== undefined) {
+            queryParameters['trailingDays'] = trailingDays;
+        }
+        var httpRequestParams = {
+            method: 'POST',
+            url: localVarPath,
+            params: queryParameters,
+            headers: headerParams
+        };
+        if (extraHttpRequestParams) {
+            httpRequestParams = Object.assign(httpRequestParams, extraHttpRequestParams);
+        }
+        return this.$http(httpRequestParams);
+    };
+    /**
+     *
      * @summary listCustomers
      * @param graphRequest graphRequest
      */
