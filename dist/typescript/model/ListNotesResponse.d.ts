@@ -11,7 +11,6 @@
  */
 import * as models from './models';
 export interface ListNotesResponse {
-    "authors"?: Array<models.NoteAuthor>;
     "cursorModel"?: models.Cursor;
     "notes"?: Array<models.NoteModel>;
 }

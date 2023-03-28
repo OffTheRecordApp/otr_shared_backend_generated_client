@@ -13,5 +13,4 @@ export interface CaseCreationRequest {
     "courtDate"?: string;
     "forcePredeterminedLawfirmId"?: boolean;
     "predeterminedLawfirmId"?: number;
-    "setQuoteExpirationOn"?: boolean;
 }

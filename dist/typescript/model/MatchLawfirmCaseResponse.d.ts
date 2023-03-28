@@ -12,7 +12,6 @@
 export interface MatchLawfirmCaseResponse {
     "lawfirmId"?: number;
     "lawfirmName"?: string;
-    "matchExpirationDateUtc"?: string;
     "obfuscatedPictureUrl"?: string;
     "profilePictureUrl"?: string;
 }

@@ -28,7 +28,6 @@ export interface LawyerModel {
     "profilePicture"?: string;
     "roleTypes"?: Array<LawyerModel.RoleTypesEnum>;
     "userId"?: number;
-    "visibleOnStorefront"?: boolean;
 }
 export declare namespace LawyerModel {
     enum JobTitleEnum {

@@ -21,11 +21,10 @@ export declare class MessagesControllerApi {
     /**
      *
      * @summary listMessagesByEntity
-     * @param includeAdminActions includeAdminActions
      * @param lawfirmId lawfirmId
      * @param length length
      * @param page page
      * @param userIds userIds
      */
-    listMessagesByEntityUsingGET(includeAdminActions?: boolean, lawfirmId?: number, length?: number, page?: number, userIds?: number, extraHttpRequestParams?: any): ng.IHttpPromise<models.GetMessagesByEntityResponse>;
+    listMessagesByEntityUsingGET(lawfirmId?: number, length?: number, page?: number, userIds?: number, extraHttpRequestParams?: any): ng.IHttpPromise<models.GetMessagesByEntityResponse>;
 }

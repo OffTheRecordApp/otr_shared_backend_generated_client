@@ -21,7 +21,6 @@ export interface LawfirmCaseDomainRes {
     "lawfirmName"?: string;
     "lawfirmPrimaryEmail"?: string;
     "lawfirmReceiptDateUtc"?: models.TimestampRes;
-    "matchExpirationDateUtc"?: string;
     "obfuscatedPictureUrl"?: string;
     "profilePictureUrl"?: string;
     "refundOwner"?: LawfirmCaseDomainRes.RefundOwnerEnum;
