@@ -24,8 +24,8 @@ var CaseReferralCodeControllerApi = /** @class */ (function () {
         }
     }
     /**
-     *
-     * @summary Apply referral code to a case to adjust the estimated cost and/or to assign the rightful lawfirm. This operation is idempotent
+     * Apply referral code to a case to adjust the estimated cost and/or to assign the rightful lawfirm. This operation is idempotent
+     * @summary applyReferralCode
      * @param caseId caseId
      * @param codeId codeId
      */

@@ -26,15 +26,19 @@ var MessagesControllerApi = /** @class */ (function () {
     /**
      *
      * @summary listMessagesByEntity
+     * @param includeAdminActions includeAdminActions
      * @param lawfirmId lawfirmId
      * @param length length
      * @param page page
      * @param userIds userIds
      */
-    MessagesControllerApi.prototype.listMessagesByEntityUsingGET = function (lawfirmId, length, page, userIds, extraHttpRequestParams) {
+    MessagesControllerApi.prototype.listMessagesByEntityUsingGET = function (includeAdminActions, lawfirmId, length, page, userIds, extraHttpRequestParams) {
         var localVarPath = this.basePath + '/api/v1/messages';
         var queryParameters = {};
         var headerParams = Object.assign({}, this.defaultHeaders);
+        if (includeAdminActions !== undefined) {
+            queryParameters['includeAdminActions '] = includeAdminActions;
+        }
         if (lawfirmId !== undefined) {
             queryParameters['lawfirmId'] = lawfirmId;
         }

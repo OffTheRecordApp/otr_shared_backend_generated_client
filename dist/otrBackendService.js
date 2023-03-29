@@ -4793,6 +4793,54 @@ angular.module('otrBackendService', [])
                 return deferred.promise;
             };
             /**
+             * listCitations
+             * @method
+             * @name OtrService#listCitationsUsingPOST
+             * @param {object} parameters - method options and parameters
+             * @param {integer} parameters.length - length
+             * @param {integer} parameters.page - page
+             * @param {integer} parameters.trailingDays - trailingDays
+             */
+            OtrService.prototype.listCitationsUsingPOST = function(parameters) {
+                if (parameters === undefined) {
+                    parameters = {};
+                }
+                var deferred = $q.defer();
+                var domain = this.domain,
+                    path = '/api/v1/console/citations';
+                var body = {},
+                    queryParameters = {},
+                    headers = {},
+                    form = {};
+
+                headers['Accept'] = ['application/json'];
+                headers['Content-Type'] = ['application/json'];
+
+                /** set default value **/
+                queryParameters['length'] = 10;
+
+                if (parameters['length'] !== undefined) {
+                    queryParameters['length'] = parameters['length'];
+                }
+
+                if (parameters['page'] !== undefined) {
+                    queryParameters['page'] = parameters['page'];
+                }
+
+                /** set default value **/
+                queryParameters['trailingDays'] = 30;
+
+                if (parameters['trailingDays'] !== undefined) {
+                    queryParameters['trailingDays'] = parameters['trailingDays'];
+                }
+
+                queryParameters = mergeQueryParams(parameters, queryParameters);
+
+                this.request('POST', domain + path, parameters, body, headers, queryParameters, form, deferred);
+
+                return deferred.promise;
+            };
+            /**
              * getCitationsWithMissingFields
              * @method
              * @name OtrService#getCitationsWithMissingFieldsUsingPOST
@@ -10032,6 +10080,7 @@ angular.module('otrBackendService', [])
              * @method
              * @name OtrService#listMessagesByEntityUsingGET
              * @param {object} parameters - method options and parameters
+             * @param {boolean} parameters.includeAdminActions - includeAdminActions 
              * @param {integer} parameters.lawfirmId - lawfirmId
              * @param {integer} parameters.length - length
              * @param {integer} parameters.page - page
@@ -10050,6 +10099,10 @@ angular.module('otrBackendService', [])
                     form = {};
 
                 headers['Accept'] = ['*/*'];
+
+                if (parameters['includeAdminActions'] !== undefined) {
+                    queryParameters['includeAdminActions '] = parameters['includeAdminActions'];
+                }
 
                 if (parameters['lawfirmId'] !== undefined) {
                     queryParameters['lawfirmId'] = parameters['lawfirmId'];
