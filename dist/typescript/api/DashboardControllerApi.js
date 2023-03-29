@@ -126,25 +126,41 @@ var DashboardControllerApi = /** @class */ (function () {
     /**
      *
      * @summary listCitations
+     * @param endDate endDate
+     * @param startDate startDate
      * @param length length
      * @param page page
-     * @param trailingDays trailingDays
+     * @param timeZoneId timeZoneId
      */
-    DashboardControllerApi.prototype.listCitationsUsingPOST = function (length, page, trailingDays, extraHttpRequestParams) {
+    DashboardControllerApi.prototype.listCitationsUsingGET = function (endDate, startDate, length, page, timeZoneId, extraHttpRequestParams) {
         var localVarPath = this.basePath + '/api/v1/console/citations';
         var queryParameters = {};
         var headerParams = Object.assign({}, this.defaultHeaders);
+        // verify required parameter 'endDate' is not null or undefined
+        if (endDate === null || endDate === undefined) {
+            throw new Error('Required parameter endDate was null or undefined when calling listCitationsUsingGET.');
+        }
+        // verify required parameter 'startDate' is not null or undefined
+        if (startDate === null || startDate === undefined) {
+            throw new Error('Required parameter startDate was null or undefined when calling listCitationsUsingGET.');
+        }
+        if (endDate !== undefined) {
+            queryParameters['endDate'] = endDate;
+        }
         if (length !== undefined) {
             queryParameters['length'] = length;
         }
         if (page !== undefined) {
             queryParameters['page'] = page;
         }
-        if (trailingDays !== undefined) {
-            queryParameters['trailingDays'] = trailingDays;
+        if (startDate !== undefined) {
+            queryParameters['startDate'] = startDate;
+        }
+        if (timeZoneId !== undefined) {
+            queryParameters['timeZoneId'] = timeZoneId;
         }
         var httpRequestParams = {
-            method: 'POST',
+            method: 'GET',
             url: localVarPath,
             params: queryParameters,
             headers: headerParams

@@ -4795,13 +4795,15 @@ angular.module('otrBackendService', [])
             /**
              * listCitations
              * @method
-             * @name OtrService#listCitationsUsingPOST
+             * @name OtrService#listCitationsUsingGET
              * @param {object} parameters - method options and parameters
+             * @param {string} parameters.endDate - endDate
              * @param {integer} parameters.length - length
              * @param {integer} parameters.page - page
-             * @param {integer} parameters.trailingDays - trailingDays
+             * @param {string} parameters.startDate - startDate
+             * @param {string} parameters.timeZoneId - timeZoneId
              */
-            OtrService.prototype.listCitationsUsingPOST = function(parameters) {
+            OtrService.prototype.listCitationsUsingGET = function(parameters) {
                 if (parameters === undefined) {
                     parameters = {};
                 }
@@ -4814,7 +4816,15 @@ angular.module('otrBackendService', [])
                     form = {};
 
                 headers['Accept'] = ['application/json'];
-                headers['Content-Type'] = ['application/json'];
+
+                if (parameters['endDate'] !== undefined) {
+                    queryParameters['endDate'] = parameters['endDate'];
+                }
+
+                if (parameters['endDate'] === undefined) {
+                    deferred.reject(new Error('Missing required  parameter: endDate'));
+                    return deferred.promise;
+                }
 
                 /** set default value **/
                 queryParameters['length'] = 10;
@@ -4823,20 +4833,29 @@ angular.module('otrBackendService', [])
                     queryParameters['length'] = parameters['length'];
                 }
 
+                /** set default value **/
+                queryParameters['page'] = 1;
+
                 if (parameters['page'] !== undefined) {
                     queryParameters['page'] = parameters['page'];
                 }
 
-                /** set default value **/
-                queryParameters['trailingDays'] = 30;
+                if (parameters['startDate'] !== undefined) {
+                    queryParameters['startDate'] = parameters['startDate'];
+                }
 
-                if (parameters['trailingDays'] !== undefined) {
-                    queryParameters['trailingDays'] = parameters['trailingDays'];
+                if (parameters['startDate'] === undefined) {
+                    deferred.reject(new Error('Missing required  parameter: startDate'));
+                    return deferred.promise;
+                }
+
+                if (parameters['timeZoneId'] !== undefined) {
+                    queryParameters['timeZoneId'] = parameters['timeZoneId'];
                 }
 
                 queryParameters = mergeQueryParams(parameters, queryParameters);
 
-                this.request('POST', domain + path, parameters, body, headers, queryParameters, form, deferred);
+                this.request('GET', domain + path, parameters, body, headers, queryParameters, form, deferred);
 
                 return deferred.promise;
             };

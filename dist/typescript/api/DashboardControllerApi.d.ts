@@ -45,11 +45,13 @@ export declare class DashboardControllerApi {
     /**
      *
      * @summary listCitations
+     * @param endDate endDate
+     * @param startDate startDate
      * @param length length
      * @param page page
-     * @param trailingDays trailingDays
+     * @param timeZoneId timeZoneId
      */
-    listCitationsUsingPOST(length?: number, page?: number, trailingDays?: number, extraHttpRequestParams?: any): ng.IHttpPromise<models.ListCitationsResponse>;
+    listCitationsUsingGET(endDate: string, startDate: string, length?: number, page?: number, timeZoneId?: string, extraHttpRequestParams?: any): ng.IHttpPromise<models.ListCitationsResponse>;
     /**
      *
      * @summary listCustomers
