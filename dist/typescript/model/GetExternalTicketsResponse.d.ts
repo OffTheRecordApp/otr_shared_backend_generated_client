@@ -17,8 +17,8 @@ export interface GetExternalTicketsResponse {
 }
 export declare namespace GetExternalTicketsResponse {
     enum RequestStateEnum {
-        DONE,
         ERROR,
-        PENDING
+        PENDING,
+        SUCCESS
     }
 }

@@ -16,8 +16,8 @@ var GetExternalTicketsResponse;
 (function (GetExternalTicketsResponse) {
     var RequestStateEnum;
     (function (RequestStateEnum) {
-        RequestStateEnum[RequestStateEnum["DONE"] = 'DONE'] = "DONE";
         RequestStateEnum[RequestStateEnum["ERROR"] = 'ERROR'] = "ERROR";
         RequestStateEnum[RequestStateEnum["PENDING"] = 'PENDING'] = "PENDING";
+        RequestStateEnum[RequestStateEnum["SUCCESS"] = 'SUCCESS'] = "SUCCESS";
     })(RequestStateEnum = GetExternalTicketsResponse.RequestStateEnum || (GetExternalTicketsResponse.RequestStateEnum = {}));
 })(GetExternalTicketsResponse = exports.GetExternalTicketsResponse || (exports.GetExternalTicketsResponse = {}));
