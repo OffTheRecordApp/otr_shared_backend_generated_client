@@ -128,11 +128,13 @@ var DashboardControllerApi = /** @class */ (function () {
      * @summary listCitations
      * @param endDate endDate
      * @param startDate startDate
+     * @param experimentName experimentName
+     * @param groupName groupName
      * @param length length
      * @param page page
      * @param timeZoneId timeZoneId
      */
-    DashboardControllerApi.prototype.listCitationsUsingGET = function (endDate, startDate, length, page, timeZoneId, extraHttpRequestParams) {
+    DashboardControllerApi.prototype.listCitationsUsingGET = function (endDate, startDate, experimentName, groupName, length, page, timeZoneId, extraHttpRequestParams) {
         var localVarPath = this.basePath + '/api/v1/console/citations';
         var queryParameters = {};
         var headerParams = Object.assign({}, this.defaultHeaders);
@@ -146,6 +148,12 @@ var DashboardControllerApi = /** @class */ (function () {
         }
         if (endDate !== undefined) {
             queryParameters['endDate'] = endDate;
+        }
+        if (experimentName !== undefined) {
+            queryParameters['experimentName'] = experimentName;
+        }
+        if (groupName !== undefined) {
+            queryParameters['groupName'] = groupName;
         }
         if (length !== undefined) {
             queryParameters['length'] = length;

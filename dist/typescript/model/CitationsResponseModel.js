@@ -120,6 +120,10 @@ var CitationsResponseModel;
         ClassificationsEnum[ClassificationsEnum["WOBBLERTOFELONY"] = 'WOBBLER_TO_FELONY'] = "WOBBLERTOFELONY";
         ClassificationsEnum[ClassificationsEnum["WOBBLERTOMISDEMEANOR"] = 'WOBBLER_TO_MISDEMEANOR'] = "WOBBLERTOMISDEMEANOR";
     })(ClassificationsEnum = CitationsResponseModel.ClassificationsEnum || (CitationsResponseModel.ClassificationsEnum = {}));
+    var ExperimentNameEnum;
+    (function (ExperimentNameEnum) {
+        ExperimentNameEnum[ExperimentNameEnum["PRINCETONPROJECT1"] = 'PRINCETON_PROJECT_1'] = "PRINCETONPROJECT1";
+    })(ExperimentNameEnum = CitationsResponseModel.ExperimentNameEnum || (CitationsResponseModel.ExperimentNameEnum = {}));
     var TicketLocationStateEnum;
     (function (TicketLocationStateEnum) {
         TicketLocationStateEnum[TicketLocationStateEnum["AK"] = 'AK'] = "AK";

@@ -20,6 +20,8 @@ export interface CitationsResponseModel {
     "countyName"?: string;
     "courtName"?: string;
     "creationDateUtc"?: models.Timestamp;
+    "experimentName"?: CitationsResponseModel.ExperimentNameEnum;
+    "groupName"?: string;
     "hasPhoto"?: boolean;
     "involvesAccident"?: boolean;
     "lawfirmName"?: string;
@@ -131,6 +133,9 @@ export declare namespace CitationsResponseModel {
         SUMMARYOFFENSENOREFUND,
         WOBBLERTOFELONY,
         WOBBLERTOMISDEMEANOR
+    }
+    enum ExperimentNameEnum {
+        PRINCETONPROJECT1
     }
     enum TicketLocationStateEnum {
         AK,

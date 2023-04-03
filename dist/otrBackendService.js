@@ -4797,11 +4797,13 @@ angular.module('otrBackendService', [])
              * @method
              * @name OtrService#listCitationsUsingGET
              * @param {object} parameters - method options and parameters
-             * @param {string} parameters.endDate - endDate
-             * @param {integer} parameters.length - length
-             * @param {integer} parameters.page - page
-             * @param {string} parameters.startDate - startDate
-             * @param {string} parameters.timeZoneId - timeZoneId
+                 * @param {string} parameters.endDate - endDate
+                
+                 * @param {string} parameters.groupName - groupName
+                 * @param {integer} parameters.length - length
+                 * @param {integer} parameters.page - page
+                 * @param {string} parameters.startDate - startDate
+                 * @param {string} parameters.timeZoneId - timeZoneId
              */
             OtrService.prototype.listCitationsUsingGET = function(parameters) {
                 if (parameters === undefined) {
@@ -4824,6 +4826,12 @@ angular.module('otrBackendService', [])
                 if (parameters['endDate'] === undefined) {
                     deferred.reject(new Error('Missing required  parameter: endDate'));
                     return deferred.promise;
+                }
+
+                queryParameters['experimentName'] = 'PRINCETON_PROJECT_1';
+
+                if (parameters['groupName'] !== undefined) {
+                    queryParameters['groupName'] = parameters['groupName'];
                 }
 
                 /** set default value **/
