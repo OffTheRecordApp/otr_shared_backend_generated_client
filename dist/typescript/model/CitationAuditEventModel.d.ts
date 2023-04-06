@@ -16,6 +16,8 @@ export interface CitationAuditEventModel {
     "event"?: CitationAuditEventModel.EventEnum;
     "eventDate"?: string;
     "eventId"?: number;
+    "newValue"?: string;
+    "oldValue"?: string;
     "userId"?: number;
 }
 export declare namespace CitationAuditEventModel {
