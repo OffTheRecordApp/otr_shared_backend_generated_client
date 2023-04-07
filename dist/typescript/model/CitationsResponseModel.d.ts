@@ -27,6 +27,9 @@ export interface CitationsResponseModel {
     "lawfirmName"?: string;
     "ticketImageUrl"?: string;
     "ticketLocationState"?: CitationsResponseModel.TicketLocationStateEnum;
+    "totalClientCostInCents"?: number;
+    "totalLawfirmDiscountInCents"?: number;
+    "totalOtrDiscountInCents"?: number;
     "userFirstName"?: string;
     "userLastName"?: string;
 }
