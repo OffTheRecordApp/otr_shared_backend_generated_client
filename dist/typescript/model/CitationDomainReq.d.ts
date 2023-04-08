@@ -24,6 +24,7 @@ export interface CitationDomainReq {
     "creationDateUTC"?: models.TimestampReq;
     "documentUrlToConvert"?: string;
     "fineAmount"?: number;
+    "hubspotContactId"?: string;
     "involvesAccident"?: boolean;
     "isDeleted"?: boolean;
     "isDismissedFromContactList"?: boolean;

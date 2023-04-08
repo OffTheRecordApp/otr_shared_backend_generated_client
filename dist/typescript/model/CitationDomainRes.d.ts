@@ -24,6 +24,7 @@ export interface CitationDomainRes {
     "creationDateUTC"?: models.TimestampRes;
     "documentUrlToConvert"?: string;
     "fineAmount"?: number;
+    "hubspotContactId"?: string;
     "involvesAccident"?: boolean;
     "isDeleted"?: boolean;
     "isDismissedFromContactList"?: boolean;
