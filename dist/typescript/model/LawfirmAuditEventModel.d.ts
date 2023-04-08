@@ -51,6 +51,7 @@ export declare namespace LawfirmAuditEventModel {
         CASERESOLVE,
         CASESTATUS,
         CASETRANSFER,
+        CASEUNSERVICEABLEREQUEST,
         CITATIONUPLOAD,
         EXTERNALTICKETREQUEST,
         LAWFIRMACCOUNTPRIORITY,

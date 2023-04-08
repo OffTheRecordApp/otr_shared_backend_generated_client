@@ -4841,9 +4841,6 @@ angular.module('otrBackendService', [])
                     queryParameters['length'] = parameters['length'];
                 }
 
-                /** set default value **/
-                queryParameters['page'] = 1;
-
                 if (parameters['page'] !== undefined) {
                     queryParameters['page'] = parameters['page'];
                 }
