@@ -22,5 +22,6 @@ var NewUser;
         LoginProviderEnum[LoginProviderEnum["GOOGLE"] = 'GOOGLE'] = "GOOGLE";
         LoginProviderEnum[LoginProviderEnum["PHONE"] = 'PHONE'] = "PHONE";
         LoginProviderEnum[LoginProviderEnum["TWITTER"] = 'TWITTER'] = "TWITTER";
+        LoginProviderEnum[LoginProviderEnum["UNKNOWN"] = 'UNKNOWN'] = "UNKNOWN";
     })(LoginProviderEnum = NewUser.LoginProviderEnum || (NewUser.LoginProviderEnum = {}));
 })(NewUser = exports.NewUser || (exports.NewUser = {}));

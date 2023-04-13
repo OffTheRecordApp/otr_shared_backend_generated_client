@@ -68,7 +68,8 @@ export declare namespace UserDomainRes {
         FACEBOOK,
         GOOGLE,
         PHONE,
-        TWITTER
+        TWITTER,
+        UNKNOWN
     }
     enum PrivacyModeEnum {
         FRIENDS,

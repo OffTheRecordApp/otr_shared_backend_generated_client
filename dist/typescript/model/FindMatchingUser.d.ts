@@ -32,6 +32,7 @@ export declare namespace FindMatchingUser {
         FACEBOOK,
         GOOGLE,
         PHONE,
-        TWITTER
+        TWITTER,
+        UNKNOWN
     }
 }

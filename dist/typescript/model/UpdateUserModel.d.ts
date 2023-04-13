@@ -36,7 +36,8 @@ export declare namespace UpdateUserModel {
         FACEBOOK,
         GOOGLE,
         PHONE,
-        TWITTER
+        TWITTER,
+        UNKNOWN
     }
     enum PrivacyModeEnum {
         FRIENDS,

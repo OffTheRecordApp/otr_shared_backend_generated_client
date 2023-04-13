@@ -38,6 +38,7 @@ var UserDomainReq;
         LoginProviderEnum[LoginProviderEnum["GOOGLE"] = 'GOOGLE'] = "GOOGLE";
         LoginProviderEnum[LoginProviderEnum["PHONE"] = 'PHONE'] = "PHONE";
         LoginProviderEnum[LoginProviderEnum["TWITTER"] = 'TWITTER'] = "TWITTER";
+        LoginProviderEnum[LoginProviderEnum["UNKNOWN"] = 'UNKNOWN'] = "UNKNOWN";
     })(LoginProviderEnum = UserDomainReq.LoginProviderEnum || (UserDomainReq.LoginProviderEnum = {}));
     var PrivacyModeEnum;
     (function (PrivacyModeEnum) {

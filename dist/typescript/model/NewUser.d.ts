@@ -26,6 +26,7 @@ export declare namespace NewUser {
         FACEBOOK,
         GOOGLE,
         PHONE,
-        TWITTER
+        TWITTER,
+        UNKNOWN
     }
 }

@@ -24,6 +24,7 @@ export declare namespace UserAccountModel {
         FACEBOOK,
         GOOGLE,
         PHONE,
-        TWITTER
+        TWITTER,
+        UNKNOWN
     }
 }

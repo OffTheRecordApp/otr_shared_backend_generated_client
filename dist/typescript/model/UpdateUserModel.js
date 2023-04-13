@@ -22,6 +22,7 @@ var UpdateUserModel;
         LoginProviderEnum[LoginProviderEnum["GOOGLE"] = 'GOOGLE'] = "GOOGLE";
         LoginProviderEnum[LoginProviderEnum["PHONE"] = 'PHONE'] = "PHONE";
         LoginProviderEnum[LoginProviderEnum["TWITTER"] = 'TWITTER'] = "TWITTER";
+        LoginProviderEnum[LoginProviderEnum["UNKNOWN"] = 'UNKNOWN'] = "UNKNOWN";
     })(LoginProviderEnum = UpdateUserModel.LoginProviderEnum || (UpdateUserModel.LoginProviderEnum = {}));
     var PrivacyModeEnum;
     (function (PrivacyModeEnum) {
