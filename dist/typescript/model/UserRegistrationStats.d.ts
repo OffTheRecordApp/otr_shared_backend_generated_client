@@ -14,10 +14,12 @@ export interface UserRegistrationStats {
     "clientTypes"?: {
         [key: string]: number;
     };
+    "conversionRate"?: number;
     "endDate"?: string;
     "loginProviders"?: {
         [key: string]: number;
     };
+    "newCustomerCount"?: number;
     "numRegistrations"?: number;
     "startDate"?: string;
     "zoneId"?: models.ZoneId;
