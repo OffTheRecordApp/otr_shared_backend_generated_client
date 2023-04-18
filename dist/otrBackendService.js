@@ -4803,6 +4803,7 @@ angular.module('otrBackendService', [])
                  * @param {integer} parameters.length - length
                  * @param {integer} parameters.page - page
                  * @param {string} parameters.startDate - startDate
+                 * @param {string} parameters.stateFilter - stateFilter
                  * @param {string} parameters.timeZoneId - timeZoneId
              */
             OtrService.prototype.listCitationsUsingGET = function(parameters) {
@@ -4852,6 +4853,10 @@ angular.module('otrBackendService', [])
                 if (parameters['startDate'] === undefined) {
                     deferred.reject(new Error('Missing required  parameter: startDate'));
                     return deferred.promise;
+                }
+
+                if (parameters['stateFilter'] !== undefined) {
+                    queryParameters['stateFilter'] = parameters['stateFilter'];
                 }
 
                 if (parameters['timeZoneId'] !== undefined) {
