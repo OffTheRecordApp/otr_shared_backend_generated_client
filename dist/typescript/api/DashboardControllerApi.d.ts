@@ -47,14 +47,17 @@ export declare class DashboardControllerApi {
      * @summary listCitations
      * @param endDate endDate
      * @param startDate startDate
+     * @param caseStatusFilter caseStatusFilter
+     * @param countyFilter countyFilter
      * @param experimentName experimentName
      * @param groupName groupName
      * @param length length
      * @param page page
      * @param stateFilter stateFilter
+     * @param statusCategoryFilter statusCategoryFilter
      * @param timeZoneId timeZoneId
      */
-    listCitationsUsingGET(endDate: string, startDate: string, experimentName?: 'PRINCETON_PROJECT_1', groupName?: string, length?: number, page?: number, stateFilter?: string, timeZoneId?: string, extraHttpRequestParams?: any): ng.IHttpPromise<models.ListCitationsResponse>;
+    listCitationsUsingGET(endDate: string, startDate: string, caseStatusFilter?: string, countyFilter?: string, experimentName?: 'PRINCETON_PROJECT_1', groupName?: string, length?: number, page?: number, stateFilter?: string, statusCategoryFilter?: string, timeZoneId?: string, extraHttpRequestParams?: any): ng.IHttpPromise<models.ListCitationsResponse>;
     /**
      *
      * @summary listCustomers

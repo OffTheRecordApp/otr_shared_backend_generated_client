@@ -12,5 +12,6 @@
 import * as models from './models';
 export interface ListCitationsResponse {
     "citations"?: Array<models.CitationsResponseModel>;
+    "matchingRecords"?: number;
     "totalRecords"?: number;
 }

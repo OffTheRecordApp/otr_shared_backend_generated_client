@@ -4797,6 +4797,8 @@ angular.module('otrBackendService', [])
              * @method
              * @name OtrService#listCitationsUsingGET
              * @param {object} parameters - method options and parameters
+                 * @param {string} parameters.caseStatusFilter - caseStatusFilter
+                 * @param {string} parameters.countyFilter - countyFilter
                  * @param {string} parameters.endDate - endDate
                 
                  * @param {string} parameters.groupName - groupName
@@ -4804,6 +4806,7 @@ angular.module('otrBackendService', [])
                  * @param {integer} parameters.page - page
                  * @param {string} parameters.startDate - startDate
                  * @param {string} parameters.stateFilter - stateFilter
+                 * @param {string} parameters.statusCategoryFilter - statusCategoryFilter
                  * @param {string} parameters.timeZoneId - timeZoneId
              */
             OtrService.prototype.listCitationsUsingGET = function(parameters) {
@@ -4819,6 +4822,14 @@ angular.module('otrBackendService', [])
                     form = {};
 
                 headers['Accept'] = ['application/json'];
+
+                if (parameters['caseStatusFilter'] !== undefined) {
+                    queryParameters['caseStatusFilter'] = parameters['caseStatusFilter'];
+                }
+
+                if (parameters['countyFilter'] !== undefined) {
+                    queryParameters['countyFilter'] = parameters['countyFilter'];
+                }
 
                 if (parameters['endDate'] !== undefined) {
                     queryParameters['endDate'] = parameters['endDate'];
@@ -4857,6 +4868,10 @@ angular.module('otrBackendService', [])
 
                 if (parameters['stateFilter'] !== undefined) {
                     queryParameters['stateFilter'] = parameters['stateFilter'];
+                }
+
+                if (parameters['statusCategoryFilter'] !== undefined) {
+                    queryParameters['statusCategoryFilter'] = parameters['statusCategoryFilter'];
                 }
 
                 if (parameters['timeZoneId'] !== undefined) {

@@ -128,14 +128,17 @@ var DashboardControllerApi = /** @class */ (function () {
      * @summary listCitations
      * @param endDate endDate
      * @param startDate startDate
+     * @param caseStatusFilter caseStatusFilter
+     * @param countyFilter countyFilter
      * @param experimentName experimentName
      * @param groupName groupName
      * @param length length
      * @param page page
      * @param stateFilter stateFilter
+     * @param statusCategoryFilter statusCategoryFilter
      * @param timeZoneId timeZoneId
      */
-    DashboardControllerApi.prototype.listCitationsUsingGET = function (endDate, startDate, experimentName, groupName, length, page, stateFilter, timeZoneId, extraHttpRequestParams) {
+    DashboardControllerApi.prototype.listCitationsUsingGET = function (endDate, startDate, caseStatusFilter, countyFilter, experimentName, groupName, length, page, stateFilter, statusCategoryFilter, timeZoneId, extraHttpRequestParams) {
         var localVarPath = this.basePath + '/api/v1/console/citations';
         var queryParameters = {};
         var headerParams = Object.assign({}, this.defaultHeaders);
@@ -146,6 +149,12 @@ var DashboardControllerApi = /** @class */ (function () {
         // verify required parameter 'startDate' is not null or undefined
         if (startDate === null || startDate === undefined) {
             throw new Error('Required parameter startDate was null or undefined when calling listCitationsUsingGET.');
+        }
+        if (caseStatusFilter !== undefined) {
+            queryParameters['caseStatusFilter'] = caseStatusFilter;
+        }
+        if (countyFilter !== undefined) {
+            queryParameters['countyFilter'] = countyFilter;
         }
         if (endDate !== undefined) {
             queryParameters['endDate'] = endDate;
@@ -167,6 +176,9 @@ var DashboardControllerApi = /** @class */ (function () {
         }
         if (stateFilter !== undefined) {
             queryParameters['stateFilter'] = stateFilter;
+        }
+        if (statusCategoryFilter !== undefined) {
+            queryParameters['statusCategoryFilter'] = statusCategoryFilter;
         }
         if (timeZoneId !== undefined) {
             queryParameters['timeZoneId'] = timeZoneId;
