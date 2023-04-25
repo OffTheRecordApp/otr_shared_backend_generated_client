@@ -11,5 +11,7 @@
  */
 import * as models from './models';
 export interface ConvertPdfToImageResponse {
+    "errorMessage"?: string;
+    "isSuccess"?: boolean;
     "mediaItems"?: Array<models.MediaItemModel>;
 }
