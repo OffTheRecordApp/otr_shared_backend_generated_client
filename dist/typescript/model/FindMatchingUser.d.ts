@@ -15,6 +15,7 @@ export interface FindMatchingUser {
     "creationDateUtc"?: models.Timestamp;
     "emailAddress"?: string;
     "firstname"?: string;
+    "ghostAccountCreationDateUtc"?: string;
     "isEmailConfirmed"?: boolean;
     "isEnabled"?: boolean;
     "isTestUser"?: boolean;
@@ -24,6 +25,7 @@ export interface FindMatchingUser {
     "roles"?: Array<models.UserRoleDomain>;
     "unsubscribed"?: boolean;
     "userId"?: number;
+    "userRegistrationDateUtc"?: string;
 }
 export declare namespace FindMatchingUser {
     enum LoginProviderEnum {

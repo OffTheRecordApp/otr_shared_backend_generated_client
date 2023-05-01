@@ -15,6 +15,7 @@ export interface RegisterNewUserRequest {
     "fingerPrintId"?: string;
     "httpReferrer"?: string;
     "isAutoLogin"?: boolean;
+    "isGhostAccount"?: boolean;
     "otherNote"?: string;
     "referralCode"?: string;
     "referralSourceData"?: {

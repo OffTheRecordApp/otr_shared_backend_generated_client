@@ -19,6 +19,7 @@ export interface UserDomainReq {
     "emailAddress"?: string;
     "firstname"?: string;
     "gender"?: string;
+    "ghostAccountCreationDateUtc"?: string;
     "hasLeftReview"?: boolean;
     "isEmailConfirmed"?: boolean;
     "isEnabled"?: boolean;
@@ -44,6 +45,7 @@ export interface UserDomainReq {
     "subscriptionPlans"?: Array<models.UserSubscriptionPlanModelReq>;
     "userAlias"?: string;
     "userId"?: number;
+    "userRegistrationDateUtc"?: string;
 }
 export declare namespace UserDomainReq {
     enum LawyerJobTitleEnum {

@@ -20,6 +20,12 @@ export declare class RegistrationControllerApi {
     constructor($http: ng.IHttpService, $httpParamSerializer?: (d: any) => any, basePath?: string);
     /**
      *
+     * @summary registerGhostUser
+     * @param request request
+     */
+    registerGhostUserUsingPOST(request: models.RegisterGhostUserRequest, extraHttpRequestParams?: any): ng.IHttpPromise<models.RegisterGhostUserResponse>;
+    /**
+     *
      * @summary registerNewUser
      * @param request request
      */
