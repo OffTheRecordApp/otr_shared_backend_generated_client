@@ -399,6 +399,7 @@ __exportStar(require("./ListBillingSubscribersResponse"), exports);
 __exportStar(require("./ListBillingSubscriptionModel"), exports);
 __exportStar(require("./ListBillingSubscriptionsResponse"), exports);
 __exportStar(require("./ListCitationAuditEventsResponse"), exports);
+__exportStar(require("./ListCitationsRequest"), exports);
 __exportStar(require("./ListCitationsResponse"), exports);
 __exportStar(require("./ListContactTimelineResponse"), exports);
 __exportStar(require("./ListCostItemsForCustomerResponse"), exports);

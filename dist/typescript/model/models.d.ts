@@ -387,6 +387,7 @@ export * from './ListBillingSubscribersResponse';
 export * from './ListBillingSubscriptionModel';
 export * from './ListBillingSubscriptionsResponse';
 export * from './ListCitationAuditEventsResponse';
+export * from './ListCitationsRequest';
 export * from './ListCitationsResponse';
 export * from './ListContactTimelineResponse';
 export * from './ListCostItemsForCustomerResponse';

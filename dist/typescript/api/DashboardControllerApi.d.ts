@@ -44,6 +44,12 @@ export declare class DashboardControllerApi {
     listCasesByStatusUsingPOST(graphRequest: models.GraphRequest, extraHttpRequestParams?: any): ng.IHttpPromise<models.SqlResponse>;
     /**
      *
+     * @summary listCitations2
+     * @param request request
+     */
+    listCitations2UsingPOST(request: models.ListCitationsRequest, extraHttpRequestParams?: any): ng.IHttpPromise<models.ListCitationsResponse>;
+    /**
+     *
      * @summary listCitations
      * @param endDate endDate
      * @param startDate startDate
