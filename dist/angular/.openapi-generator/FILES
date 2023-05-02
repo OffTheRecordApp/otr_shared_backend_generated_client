@@ -22,6 +22,7 @@ api/caseRefundController.service.ts
 api/caseStatusController.service.ts
 api/caseTransferController.service.ts
 api/certificateController.service.ts
+api/citationAuditController.service.ts
 api/citationController.service.ts
 api/configurationController.service.ts
 api/consoleListController.service.ts
@@ -92,6 +93,7 @@ api/userController.service.ts
 api/userPasswordController.service.ts
 api/userProfileController.service.ts
 api/userSearchController.service.ts
+api/userSettingsController.service.ts
 api/utilityController.service.ts
 api/validationController.service.ts
 api/verificationController.service.ts
@@ -195,6 +197,7 @@ model/caseWithCoverageObtained.ts
 model/changeUserPasswordRequest.ts
 model/chargeFeeToLawfirmRequest.ts
 model/chargeFeeToLawfirmResponse.ts
+model/citationAuditEventModel.ts
 model/citationDomain.ts
 model/citationDomainReq.ts
 model/citationDomainRes.ts
@@ -202,6 +205,7 @@ model/citationInputRequest.ts
 model/citationViolationModel.ts
 model/citationWithMissingCourt.ts
 model/citationWithMissingFields.ts
+model/citationsResponseModel.ts
 model/clientActionRequiredRequest.ts
 model/clientConfirmedUnpaidCase.ts
 model/clientLeadDomain.ts
@@ -240,6 +244,7 @@ model/createReferralCodeResponse.ts
 model/createReferralSourceForCitation.ts
 model/createStripeConnectAccountRequest.ts
 model/createStripeConnectAccountResponse.ts
+model/cursor.ts
 model/cursorModel.ts
 model/customerLead.ts
 model/customerOverduePayment.ts
@@ -351,6 +356,7 @@ model/getDeclinedCasesRequest.ts
 model/getDeclinedCasesResponse.ts
 model/getDocumentsRequest.ts
 model/getEmailTemplateResponse.ts
+model/getExternalTicketInputParamsResponse.ts
 model/getExternalTicketModel.ts
 model/getExternalTicketsResponse.ts
 model/getHouseHoldMateModel.ts
@@ -423,7 +429,11 @@ model/getUserReferralSourceTypesResponse.ts
 model/getUserRegistrationsRequest.ts
 model/getUserRegistrationsResponse.ts
 model/getUserResponse.ts
+model/getUserSettingsRequest.ts
+model/getUserSettingsResponse.ts
 model/getUserStripeAccountResponse.ts
+model/ghostUser.ts
+model/ghostUserResponse.ts
 model/googleLoginRequest.ts
 model/graphRequest.ts
 model/handleOrphanedStripeChargeRequest.ts
@@ -437,6 +447,7 @@ model/initiateCaseAndChargeCustomerResponse.ts
 model/insertCaseLineItemResponse.ts
 model/insertInvoiceLineItemRequest.ts
 model/inviteHouseholdMateRequest.ts
+model/inviteLawyerToLawfirmRequest.ts
 model/isRefundEligibleResponse.ts
 model/isUserLoggedInResponse.ts
 model/lastLoginDateModel.ts
@@ -465,6 +476,8 @@ model/lawfirmSettingsDomainRes.ts
 model/lawfirmStorefrontModel.ts
 model/lawfirmVacationRequest.ts
 model/lawfirmsRatesResponse.ts
+model/lawyerInviteByTokenModel.ts
+model/lawyerInviteModel.ts
 model/lawyerLicenseModel.ts
 model/lawyerModel.ts
 model/letterOfEngagement.ts
@@ -477,6 +490,9 @@ model/listBillingSubscribersRequest.ts
 model/listBillingSubscribersResponse.ts
 model/listBillingSubscriptionModel.ts
 model/listBillingSubscriptionsResponse.ts
+model/listCitationAuditEventsResponse.ts
+model/listCitationsRequest.ts
+model/listCitationsResponse.ts
 model/listContactTimelineResponse.ts
 model/listCostItemsForCustomerResponse.ts
 model/listDashboardCasesResponse.ts
@@ -486,6 +502,7 @@ model/listLawfirmStorefrontsResponse.ts
 model/listLawfirmSurchargeModel.ts
 model/listLawfirmSurchargeTypeModel.ts
 model/listLawfirmSurchargesResponse.ts
+model/listNotesResponse.ts
 model/listReferralsResponse.ts
 model/listReviewsResponse.ts
 model/listSubscriptionInvoicesResponse.ts
@@ -496,6 +513,7 @@ model/lobEvent.ts
 model/lobEventRequest.ts
 model/lobMailingAddress.ts
 model/localTime.ts
+model/lookupParamValue.ts
 model/lostCaseWithTransferNotReversed.ts
 model/markActionAsDeletedResponse.ts
 model/markCaseAsResolvedRequest.ts
@@ -521,7 +539,8 @@ model/newUserResponse.ts
 model/noLawyerAvailableRequest.ts
 model/noViolationCitation.ts
 model/noteAuthor.ts
-model/noteDomain.ts
+model/noteEntity.ts
+model/noteModel.ts
 model/notificationEvent.ts
 model/notificationEvents.ts
 model/outgoingContactDomain.ts
@@ -553,6 +572,8 @@ model/referralResponse.ts
 model/referralResponseByUser.ts
 model/refundCasePaymentRequest.ts
 model/refundLawfirmFeeRequest.ts
+model/registerGhostUserRequest.ts
+model/registerGhostUserResponse.ts
 model/registerNewUserRequest.ts
 model/registerNewUserResponse.ts
 model/removeCoverageRequest.ts
@@ -581,9 +602,11 @@ model/saveLawyerLeadRequest.ts
 model/saveLawyerLicenseModel.ts
 model/saveLawyerLicensesRequest.ts
 model/saveLawyerRequest.ts
+model/saveNotesRequest.ts
 model/scheduleNewPaymentRequest.ts
 model/scheduledTaskGetResponse.ts
 model/scheduledTaskResponse.ts
+model/searchNotesResponse.ts
 model/sendBookingReceiptRequest.ts
 model/sendConsolidatedEmailToUser.ts
 model/sendDirectCheckResponse.ts
@@ -681,6 +704,7 @@ model/updateLawfirmPayoutRequest.ts
 model/updateLawfirmPayoutResponse.ts
 model/updateLawfirmRequest.ts
 model/updateLawfirmSettingsRequest.ts
+model/updateLawyerRoleRequest.ts
 model/updateNoteInput.ts
 model/updateNoteRequest.ts
 model/updateNoteResponse.ts
@@ -694,6 +718,8 @@ model/updateUserModel.ts
 model/updateUserPhoneNumberRequest.ts
 model/updateUserProfileRequest.ts
 model/updateUserRolesRequest.ts
+model/updateUserSettingsRequest.ts
+model/updateUserSettingsResponse.ts
 model/updateViolationRequest.ts
 model/upsertAddressRequest.ts
 model/user.ts
