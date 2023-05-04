@@ -54,6 +54,7 @@ export declare namespace CitationAuditEventModel {
         CASEUNSERVICEABLEREQUEST,
         CITATIONUPLOAD,
         EXTERNALTICKETREQUEST,
+        GHOSTACCOUNTCREATED,
         LAWFIRMACCOUNTPRIORITY,
         LAWFIRMACCOUNTSTATUS,
         LAWFIRMDAILYCAPACITY,
@@ -72,6 +73,7 @@ export declare namespace CitationAuditEventModel {
         SAVEVACATIONMODEREASON,
         UNKNOWN,
         USERLOGINEVENT,
+        USERREGISTRATION,
         VACATIONMODETOGGLE,
         VACATIONMODEUPDATE,
         VERIFYEMAIL

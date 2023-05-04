@@ -54,6 +54,7 @@ export declare namespace LawfirmAuditEventModel {
         CASEUNSERVICEABLEREQUEST,
         CITATIONUPLOAD,
         EXTERNALTICKETREQUEST,
+        GHOSTACCOUNTCREATED,
         LAWFIRMACCOUNTPRIORITY,
         LAWFIRMACCOUNTSTATUS,
         LAWFIRMDAILYCAPACITY,
@@ -72,6 +73,7 @@ export declare namespace LawfirmAuditEventModel {
         SAVEVACATIONMODEREASON,
         UNKNOWN,
         USERLOGINEVENT,
+        USERREGISTRATION,
         VACATIONMODETOGGLE,
         VACATIONMODEUPDATE,
         VERIFYEMAIL
