@@ -38,6 +38,7 @@ export declare namespace LawfirmRatesResponse {
         COURTVIOLATIONFEE
     }
     enum IneligibleMatchReasonsEnum {
+        CDLMISMATCH,
         DAILYCAPACITYBREACHED,
         ONVACATION,
         OUTOFCAPACITY,

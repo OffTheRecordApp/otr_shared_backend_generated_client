@@ -23,6 +23,7 @@ var LawfirmRatesResponse;
     })(FeeLevelEnum = LawfirmRatesResponse.FeeLevelEnum || (LawfirmRatesResponse.FeeLevelEnum = {}));
     var IneligibleMatchReasonsEnum;
     (function (IneligibleMatchReasonsEnum) {
+        IneligibleMatchReasonsEnum[IneligibleMatchReasonsEnum["CDLMISMATCH"] = 'CDL_MISMATCH'] = "CDLMISMATCH";
         IneligibleMatchReasonsEnum[IneligibleMatchReasonsEnum["DAILYCAPACITYBREACHED"] = 'DAILY_CAPACITY_BREACHED'] = "DAILYCAPACITYBREACHED";
         IneligibleMatchReasonsEnum[IneligibleMatchReasonsEnum["ONVACATION"] = 'ON_VACATION'] = "ONVACATION";
         IneligibleMatchReasonsEnum[IneligibleMatchReasonsEnum["OUTOFCAPACITY"] = 'OUT_OF_CAPACITY'] = "OUTOFCAPACITY";
