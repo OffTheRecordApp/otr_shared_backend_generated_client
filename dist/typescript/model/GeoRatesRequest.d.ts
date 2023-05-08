@@ -11,9 +11,9 @@
  */
 import * as models from './models';
 export interface GeoRatesRequest {
+    "cdl"?: boolean;
     "courtDate"?: string;
     "courtId"?: string;
-    "isCDL"?: boolean;
     "violationCount"?: number;
     "violations"?: Array<models.ViolationInputRequest>;
 }
