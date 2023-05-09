@@ -40,8 +40,9 @@ export namespace LawfirmRatesResponse {
         CourtFee: 'COURT_FEE' as FeeLevelEnum,
         CourtViolationFee: 'COURT_VIOLATION_FEE' as FeeLevelEnum
     };
-    export type IneligibleMatchReasonsEnum = 'DAILY_CAPACITY_BREACHED' | 'ON_VACATION' | 'OUT_OF_CAPACITY' | 'OUT_PRICED' | 'OUT_RANKED';
+    export type IneligibleMatchReasonsEnum = 'CDL_MISMATCH' | 'DAILY_CAPACITY_BREACHED' | 'ON_VACATION' | 'OUT_OF_CAPACITY' | 'OUT_PRICED' | 'OUT_RANKED';
     export const IneligibleMatchReasonsEnum = {
+        CdlMismatch: 'CDL_MISMATCH' as IneligibleMatchReasonsEnum,
         DailyCapacityBreached: 'DAILY_CAPACITY_BREACHED' as IneligibleMatchReasonsEnum,
         OnVacation: 'ON_VACATION' as IneligibleMatchReasonsEnum,
         OutOfCapacity: 'OUT_OF_CAPACITY' as IneligibleMatchReasonsEnum,

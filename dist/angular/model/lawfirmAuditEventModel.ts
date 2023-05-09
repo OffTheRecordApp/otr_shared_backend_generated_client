@@ -45,7 +45,7 @@ export namespace LawfirmAuditEventModel {
         OtrWidget: 'OTR_WIDGET' as ClientTypeEnum,
         Unknown: 'UNKNOWN' as ClientTypeEnum
     };
-    export type EventEnum = 'CASE_ACCEPT' | 'CASE_BOOKING' | 'CASE_CANCEL' | 'CASE_DECLINE' | 'CASE_MATCH' | 'CASE_RESOLVE' | 'CASE_STATUS' | 'CASE_TRANSFER' | 'CASE_UNSERVICEABLE_REQUEST' | 'CITATION_UPLOAD' | 'EXTERNAL_TICKET_REQUEST' | 'LAWFIRM_ACCOUNT_PRIORITY' | 'LAWFIRM_ACCOUNT_STATUS' | 'LAWFIRM_DAILY_CAPACITY' | 'LAWFIRM_TOTAL_CAPACITY' | 'LINE_ITEM_ADDED' | 'LINE_ITEM_DELETED' | 'PASSWORD_CHANGE' | 'PASSWORD_RESET_REQUESTED' | 'PAYMENT_AUTHORIZED' | 'PAYMENT_CAPTURED' | 'PAYMENT_METHOD_ADD' | 'PAYMENT_METHOD_DELETE' | 'PAYMENT_REFUNDED' | 'PAYMENT_SCHEDULED' | 'SAVE_VACATION_MODE_END_DATE' | 'SAVE_VACATION_MODE_REASON' | 'UNKNOWN' | 'USER_LOGIN_EVENT' | 'VACATION_MODE_TOGGLE' | 'VACATION_MODE_UPDATE' | 'VERIFY_EMAIL';
+    export type EventEnum = 'CASE_ACCEPT' | 'CASE_BOOKING' | 'CASE_CANCEL' | 'CASE_DECLINE' | 'CASE_MATCH' | 'CASE_RESOLVE' | 'CASE_STATUS' | 'CASE_TRANSFER' | 'CASE_UNSERVICEABLE_REQUEST' | 'CITATION_UPLOAD' | 'EXTERNAL_TICKET_REQUEST' | 'GHOST_ACCOUNT_CREATED' | 'LAWFIRM_ACCOUNT_PRIORITY' | 'LAWFIRM_ACCOUNT_STATUS' | 'LAWFIRM_DAILY_CAPACITY' | 'LAWFIRM_TOTAL_CAPACITY' | 'LINE_ITEM_ADDED' | 'LINE_ITEM_DELETED' | 'PASSWORD_CHANGE' | 'PASSWORD_RESET_REQUESTED' | 'PAYMENT_AUTHORIZED' | 'PAYMENT_CAPTURED' | 'PAYMENT_METHOD_ADD' | 'PAYMENT_METHOD_DELETE' | 'PAYMENT_REFUNDED' | 'PAYMENT_SCHEDULED' | 'REFERRAL_CODE_APPLIED' | 'REFERRAL_CODE_ATTEMPT_FAILED' | 'REFERRAL_CODE_REMOVED' | 'SAVE_VACATION_MODE_END_DATE' | 'SAVE_VACATION_MODE_REASON' | 'UNKNOWN' | 'USER_LOGIN_EVENT' | 'USER_REGISTRATION' | 'VACATION_MODE_TOGGLE' | 'VACATION_MODE_UPDATE' | 'VERIFY_EMAIL';
     export const EventEnum = {
         CaseAccept: 'CASE_ACCEPT' as EventEnum,
         CaseBooking: 'CASE_BOOKING' as EventEnum,
@@ -58,6 +58,7 @@ export namespace LawfirmAuditEventModel {
         CaseUnserviceableRequest: 'CASE_UNSERVICEABLE_REQUEST' as EventEnum,
         CitationUpload: 'CITATION_UPLOAD' as EventEnum,
         ExternalTicketRequest: 'EXTERNAL_TICKET_REQUEST' as EventEnum,
+        GhostAccountCreated: 'GHOST_ACCOUNT_CREATED' as EventEnum,
         LawfirmAccountPriority: 'LAWFIRM_ACCOUNT_PRIORITY' as EventEnum,
         LawfirmAccountStatus: 'LAWFIRM_ACCOUNT_STATUS' as EventEnum,
         LawfirmDailyCapacity: 'LAWFIRM_DAILY_CAPACITY' as EventEnum,
@@ -72,10 +73,14 @@ export namespace LawfirmAuditEventModel {
         PaymentMethodDelete: 'PAYMENT_METHOD_DELETE' as EventEnum,
         PaymentRefunded: 'PAYMENT_REFUNDED' as EventEnum,
         PaymentScheduled: 'PAYMENT_SCHEDULED' as EventEnum,
+        ReferralCodeApplied: 'REFERRAL_CODE_APPLIED' as EventEnum,
+        ReferralCodeAttemptFailed: 'REFERRAL_CODE_ATTEMPT_FAILED' as EventEnum,
+        ReferralCodeRemoved: 'REFERRAL_CODE_REMOVED' as EventEnum,
         SaveVacationModeEndDate: 'SAVE_VACATION_MODE_END_DATE' as EventEnum,
         SaveVacationModeReason: 'SAVE_VACATION_MODE_REASON' as EventEnum,
         Unknown: 'UNKNOWN' as EventEnum,
         UserLoginEvent: 'USER_LOGIN_EVENT' as EventEnum,
+        UserRegistration: 'USER_REGISTRATION' as EventEnum,
         VacationModeToggle: 'VACATION_MODE_TOGGLE' as EventEnum,
         VacationModeUpdate: 'VACATION_MODE_UPDATE' as EventEnum,
         VerifyEmail: 'VERIFY_EMAIL' as EventEnum
