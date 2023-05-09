@@ -13,9 +13,9 @@ import { ViolationInputRequest } from './violationInputRequest';
 
 
 export interface GeoRatesRequest { 
-    cdl?: boolean;
     courtDate?: string;
     courtId?: string;
+    isCDL?: boolean;
     violationCount?: number;
     violations?: Array<ViolationInputRequest>;
 }
