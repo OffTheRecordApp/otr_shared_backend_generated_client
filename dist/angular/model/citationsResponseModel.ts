@@ -18,15 +18,14 @@ export interface CitationsResponseModel {
     cdlStatus?: CitationsResponseModel.CdlStatusEnum;
     citationId?: number;
     citationIssueDate?: string;
-    classifications?: Array<CitationsResponseModel.ClassificationsEnum>;
     countyName?: string;
     courtName?: string;
     creationDateUtc?: Timestamp;
-    experimentName?: CitationsResponseModel.ExperimentNameEnum;
-    groupName?: string;
     hasPhoto?: boolean;
     involvesAccident?: boolean;
     lawfirmName?: string;
+    maxViolationClassification?: CitationsResponseModel.MaxViolationClassificationEnum;
+    numViolations?: number;
     ticketImageUrl?: string;
     ticketLocationState?: CitationsResponseModel.TicketLocationStateEnum;
     totalClientCostInCents?: number;
@@ -82,69 +81,65 @@ export namespace CitationsResponseModel {
         CdlInPersonalVehicle: 'CDL_IN_PERSONAL_VEHICLE' as CdlStatusEnum,
         NoCdl: 'NO_CDL' as CdlStatusEnum
     };
-    export type ClassificationsEnum = 'CLASS_1_FELONY' | 'CLASS_1_MISDEMEANOR' | 'CLASS_2_FELONY' | 'CLASS_2_MISDEMEANOR' | 'CLASS_3_FELONY' | 'CLASS_3_MISDEMEANOR' | 'CLASS_4_FELONY' | 'CLASS_4_MISDEMEANOR' | 'CLASS_5_FELONY' | 'CLASS_6_FELONY' | 'CLASS_A1_MISDEMEANOR' | 'CLASS_A_FELONY' | 'CLASS_A_INFRACTION' | 'CLASS_A_MISDEMEANOR' | 'CLASS_A_VIOLATION' | 'CLASS_B_FELONY' | 'CLASS_B_INFRACTION' | 'CLASS_B_MISDEMEANOR' | 'CLASS_B_VIOLATION' | 'CLASS_C_FELONY' | 'CLASS_C_INFRACTION' | 'CLASS_C_MISDEMEANOR' | 'CLASS_C_VIOLATION' | 'CLASS_D_FELONY' | 'CLASS_D_MISDEMEANOR' | 'CLASS_D_VIOLATION' | 'CLASS_E_FELONY' | 'CLASS_F_FELONY' | 'CLASS_H_FELONY' | 'DISORDERLY_PERSONS_OFFENSE' | 'FELONY' | 'FELONY_1ST_DEGREE' | 'FELONY_2ND_DEGREE' | 'FELONY_3RD_DEGREE' | 'FELONY_4TH_DEGREE' | 'FELONY_5TH_DEGREE' | 'GROSS_MISDEMEANOR' | 'HIGH_AND_AGGRAVATED_MISDEMEANOR' | 'INFRACTION' | 'LEVEL_4_FELONY' | 'LEVEL_5_FELONY' | 'LEVEL_6_FELONY' | 'MINOR_MISDEMEANOR' | 'MISDEMEANOR' | 'MISDEMEANOR_1ST_DEGREE' | 'MISDEMEANOR_2ND_DEGREE' | 'MISDEMEANOR_3RD_DEGREE' | 'MISDEMEANOR_4TH_DEGREE' | 'MISDEMEANOR_WITH_REFUND' | 'NON_MOVING' | 'NON_REPORTABLE' | 'PETTY_MISDEMEANOR' | 'QUASI_CRIMINAL' | 'SUMMARY_OFFENSE' | 'SUMMARY_OFFENSE_NO_REFUND' | 'WOBBLER_TO_FELONY' | 'WOBBLER_TO_MISDEMEANOR';
-    export const ClassificationsEnum = {
-        Class1Felony: 'CLASS_1_FELONY' as ClassificationsEnum,
-        Class1Misdemeanor: 'CLASS_1_MISDEMEANOR' as ClassificationsEnum,
-        Class2Felony: 'CLASS_2_FELONY' as ClassificationsEnum,
-        Class2Misdemeanor: 'CLASS_2_MISDEMEANOR' as ClassificationsEnum,
-        Class3Felony: 'CLASS_3_FELONY' as ClassificationsEnum,
-        Class3Misdemeanor: 'CLASS_3_MISDEMEANOR' as ClassificationsEnum,
-        Class4Felony: 'CLASS_4_FELONY' as ClassificationsEnum,
-        Class4Misdemeanor: 'CLASS_4_MISDEMEANOR' as ClassificationsEnum,
-        Class5Felony: 'CLASS_5_FELONY' as ClassificationsEnum,
-        Class6Felony: 'CLASS_6_FELONY' as ClassificationsEnum,
-        ClassA1Misdemeanor: 'CLASS_A1_MISDEMEANOR' as ClassificationsEnum,
-        ClassAFelony: 'CLASS_A_FELONY' as ClassificationsEnum,
-        ClassAInfraction: 'CLASS_A_INFRACTION' as ClassificationsEnum,
-        ClassAMisdemeanor: 'CLASS_A_MISDEMEANOR' as ClassificationsEnum,
-        ClassAViolation: 'CLASS_A_VIOLATION' as ClassificationsEnum,
-        ClassBFelony: 'CLASS_B_FELONY' as ClassificationsEnum,
-        ClassBInfraction: 'CLASS_B_INFRACTION' as ClassificationsEnum,
-        ClassBMisdemeanor: 'CLASS_B_MISDEMEANOR' as ClassificationsEnum,
-        ClassBViolation: 'CLASS_B_VIOLATION' as ClassificationsEnum,
-        ClassCFelony: 'CLASS_C_FELONY' as ClassificationsEnum,
-        ClassCInfraction: 'CLASS_C_INFRACTION' as ClassificationsEnum,
-        ClassCMisdemeanor: 'CLASS_C_MISDEMEANOR' as ClassificationsEnum,
-        ClassCViolation: 'CLASS_C_VIOLATION' as ClassificationsEnum,
-        ClassDFelony: 'CLASS_D_FELONY' as ClassificationsEnum,
-        ClassDMisdemeanor: 'CLASS_D_MISDEMEANOR' as ClassificationsEnum,
-        ClassDViolation: 'CLASS_D_VIOLATION' as ClassificationsEnum,
-        ClassEFelony: 'CLASS_E_FELONY' as ClassificationsEnum,
-        ClassFFelony: 'CLASS_F_FELONY' as ClassificationsEnum,
-        ClassHFelony: 'CLASS_H_FELONY' as ClassificationsEnum,
-        DisorderlyPersonsOffense: 'DISORDERLY_PERSONS_OFFENSE' as ClassificationsEnum,
-        Felony: 'FELONY' as ClassificationsEnum,
-        Felony1StDegree: 'FELONY_1ST_DEGREE' as ClassificationsEnum,
-        Felony2NdDegree: 'FELONY_2ND_DEGREE' as ClassificationsEnum,
-        Felony3RdDegree: 'FELONY_3RD_DEGREE' as ClassificationsEnum,
-        Felony4ThDegree: 'FELONY_4TH_DEGREE' as ClassificationsEnum,
-        Felony5ThDegree: 'FELONY_5TH_DEGREE' as ClassificationsEnum,
-        GrossMisdemeanor: 'GROSS_MISDEMEANOR' as ClassificationsEnum,
-        HighAndAggravatedMisdemeanor: 'HIGH_AND_AGGRAVATED_MISDEMEANOR' as ClassificationsEnum,
-        Infraction: 'INFRACTION' as ClassificationsEnum,
-        Level4Felony: 'LEVEL_4_FELONY' as ClassificationsEnum,
-        Level5Felony: 'LEVEL_5_FELONY' as ClassificationsEnum,
-        Level6Felony: 'LEVEL_6_FELONY' as ClassificationsEnum,
-        MinorMisdemeanor: 'MINOR_MISDEMEANOR' as ClassificationsEnum,
-        Misdemeanor: 'MISDEMEANOR' as ClassificationsEnum,
-        Misdemeanor1StDegree: 'MISDEMEANOR_1ST_DEGREE' as ClassificationsEnum,
-        Misdemeanor2NdDegree: 'MISDEMEANOR_2ND_DEGREE' as ClassificationsEnum,
-        Misdemeanor3RdDegree: 'MISDEMEANOR_3RD_DEGREE' as ClassificationsEnum,
-        Misdemeanor4ThDegree: 'MISDEMEANOR_4TH_DEGREE' as ClassificationsEnum,
-        MisdemeanorWithRefund: 'MISDEMEANOR_WITH_REFUND' as ClassificationsEnum,
-        NonMoving: 'NON_MOVING' as ClassificationsEnum,
-        NonReportable: 'NON_REPORTABLE' as ClassificationsEnum,
-        PettyMisdemeanor: 'PETTY_MISDEMEANOR' as ClassificationsEnum,
-        QuasiCriminal: 'QUASI_CRIMINAL' as ClassificationsEnum,
-        SummaryOffense: 'SUMMARY_OFFENSE' as ClassificationsEnum,
-        SummaryOffenseNoRefund: 'SUMMARY_OFFENSE_NO_REFUND' as ClassificationsEnum,
-        WobblerToFelony: 'WOBBLER_TO_FELONY' as ClassificationsEnum,
-        WobblerToMisdemeanor: 'WOBBLER_TO_MISDEMEANOR' as ClassificationsEnum
-    };
-    export type ExperimentNameEnum = 'PRINCETON_PROJECT_1';
-    export const ExperimentNameEnum = {
-        PrincetonProject1: 'PRINCETON_PROJECT_1' as ExperimentNameEnum
+    export type MaxViolationClassificationEnum = 'CLASS_1_FELONY' | 'CLASS_1_MISDEMEANOR' | 'CLASS_2_FELONY' | 'CLASS_2_MISDEMEANOR' | 'CLASS_3_FELONY' | 'CLASS_3_MISDEMEANOR' | 'CLASS_4_FELONY' | 'CLASS_4_MISDEMEANOR' | 'CLASS_5_FELONY' | 'CLASS_6_FELONY' | 'CLASS_A1_MISDEMEANOR' | 'CLASS_A_FELONY' | 'CLASS_A_INFRACTION' | 'CLASS_A_MISDEMEANOR' | 'CLASS_A_VIOLATION' | 'CLASS_B_FELONY' | 'CLASS_B_INFRACTION' | 'CLASS_B_MISDEMEANOR' | 'CLASS_B_VIOLATION' | 'CLASS_C_FELONY' | 'CLASS_C_INFRACTION' | 'CLASS_C_MISDEMEANOR' | 'CLASS_C_VIOLATION' | 'CLASS_D_FELONY' | 'CLASS_D_MISDEMEANOR' | 'CLASS_D_VIOLATION' | 'CLASS_E_FELONY' | 'CLASS_F_FELONY' | 'CLASS_H_FELONY' | 'DISORDERLY_PERSONS_OFFENSE' | 'FELONY' | 'FELONY_1ST_DEGREE' | 'FELONY_2ND_DEGREE' | 'FELONY_3RD_DEGREE' | 'FELONY_4TH_DEGREE' | 'FELONY_5TH_DEGREE' | 'GROSS_MISDEMEANOR' | 'HIGH_AND_AGGRAVATED_MISDEMEANOR' | 'INFRACTION' | 'LEVEL_4_FELONY' | 'LEVEL_5_FELONY' | 'LEVEL_6_FELONY' | 'MINOR_MISDEMEANOR' | 'MISDEMEANOR' | 'MISDEMEANOR_1ST_DEGREE' | 'MISDEMEANOR_2ND_DEGREE' | 'MISDEMEANOR_3RD_DEGREE' | 'MISDEMEANOR_4TH_DEGREE' | 'MISDEMEANOR_WITH_REFUND' | 'NON_MOVING' | 'NON_REPORTABLE' | 'PETTY_MISDEMEANOR' | 'QUASI_CRIMINAL' | 'SUMMARY_OFFENSE' | 'SUMMARY_OFFENSE_NO_REFUND' | 'WOBBLER_TO_FELONY' | 'WOBBLER_TO_MISDEMEANOR';
+    export const MaxViolationClassificationEnum = {
+        Class1Felony: 'CLASS_1_FELONY' as MaxViolationClassificationEnum,
+        Class1Misdemeanor: 'CLASS_1_MISDEMEANOR' as MaxViolationClassificationEnum,
+        Class2Felony: 'CLASS_2_FELONY' as MaxViolationClassificationEnum,
+        Class2Misdemeanor: 'CLASS_2_MISDEMEANOR' as MaxViolationClassificationEnum,
+        Class3Felony: 'CLASS_3_FELONY' as MaxViolationClassificationEnum,
+        Class3Misdemeanor: 'CLASS_3_MISDEMEANOR' as MaxViolationClassificationEnum,
+        Class4Felony: 'CLASS_4_FELONY' as MaxViolationClassificationEnum,
+        Class4Misdemeanor: 'CLASS_4_MISDEMEANOR' as MaxViolationClassificationEnum,
+        Class5Felony: 'CLASS_5_FELONY' as MaxViolationClassificationEnum,
+        Class6Felony: 'CLASS_6_FELONY' as MaxViolationClassificationEnum,
+        ClassA1Misdemeanor: 'CLASS_A1_MISDEMEANOR' as MaxViolationClassificationEnum,
+        ClassAFelony: 'CLASS_A_FELONY' as MaxViolationClassificationEnum,
+        ClassAInfraction: 'CLASS_A_INFRACTION' as MaxViolationClassificationEnum,
+        ClassAMisdemeanor: 'CLASS_A_MISDEMEANOR' as MaxViolationClassificationEnum,
+        ClassAViolation: 'CLASS_A_VIOLATION' as MaxViolationClassificationEnum,
+        ClassBFelony: 'CLASS_B_FELONY' as MaxViolationClassificationEnum,
+        ClassBInfraction: 'CLASS_B_INFRACTION' as MaxViolationClassificationEnum,
+        ClassBMisdemeanor: 'CLASS_B_MISDEMEANOR' as MaxViolationClassificationEnum,
+        ClassBViolation: 'CLASS_B_VIOLATION' as MaxViolationClassificationEnum,
+        ClassCFelony: 'CLASS_C_FELONY' as MaxViolationClassificationEnum,
+        ClassCInfraction: 'CLASS_C_INFRACTION' as MaxViolationClassificationEnum,
+        ClassCMisdemeanor: 'CLASS_C_MISDEMEANOR' as MaxViolationClassificationEnum,
+        ClassCViolation: 'CLASS_C_VIOLATION' as MaxViolationClassificationEnum,
+        ClassDFelony: 'CLASS_D_FELONY' as MaxViolationClassificationEnum,
+        ClassDMisdemeanor: 'CLASS_D_MISDEMEANOR' as MaxViolationClassificationEnum,
+        ClassDViolation: 'CLASS_D_VIOLATION' as MaxViolationClassificationEnum,
+        ClassEFelony: 'CLASS_E_FELONY' as MaxViolationClassificationEnum,
+        ClassFFelony: 'CLASS_F_FELONY' as MaxViolationClassificationEnum,
+        ClassHFelony: 'CLASS_H_FELONY' as MaxViolationClassificationEnum,
+        DisorderlyPersonsOffense: 'DISORDERLY_PERSONS_OFFENSE' as MaxViolationClassificationEnum,
+        Felony: 'FELONY' as MaxViolationClassificationEnum,
+        Felony1StDegree: 'FELONY_1ST_DEGREE' as MaxViolationClassificationEnum,
+        Felony2NdDegree: 'FELONY_2ND_DEGREE' as MaxViolationClassificationEnum,
+        Felony3RdDegree: 'FELONY_3RD_DEGREE' as MaxViolationClassificationEnum,
+        Felony4ThDegree: 'FELONY_4TH_DEGREE' as MaxViolationClassificationEnum,
+        Felony5ThDegree: 'FELONY_5TH_DEGREE' as MaxViolationClassificationEnum,
+        GrossMisdemeanor: 'GROSS_MISDEMEANOR' as MaxViolationClassificationEnum,
+        HighAndAggravatedMisdemeanor: 'HIGH_AND_AGGRAVATED_MISDEMEANOR' as MaxViolationClassificationEnum,
+        Infraction: 'INFRACTION' as MaxViolationClassificationEnum,
+        Level4Felony: 'LEVEL_4_FELONY' as MaxViolationClassificationEnum,
+        Level5Felony: 'LEVEL_5_FELONY' as MaxViolationClassificationEnum,
+        Level6Felony: 'LEVEL_6_FELONY' as MaxViolationClassificationEnum,
+        MinorMisdemeanor: 'MINOR_MISDEMEANOR' as MaxViolationClassificationEnum,
+        Misdemeanor: 'MISDEMEANOR' as MaxViolationClassificationEnum,
+        Misdemeanor1StDegree: 'MISDEMEANOR_1ST_DEGREE' as MaxViolationClassificationEnum,
+        Misdemeanor2NdDegree: 'MISDEMEANOR_2ND_DEGREE' as MaxViolationClassificationEnum,
+        Misdemeanor3RdDegree: 'MISDEMEANOR_3RD_DEGREE' as MaxViolationClassificationEnum,
+        Misdemeanor4ThDegree: 'MISDEMEANOR_4TH_DEGREE' as MaxViolationClassificationEnum,
+        MisdemeanorWithRefund: 'MISDEMEANOR_WITH_REFUND' as MaxViolationClassificationEnum,
+        NonMoving: 'NON_MOVING' as MaxViolationClassificationEnum,
+        NonReportable: 'NON_REPORTABLE' as MaxViolationClassificationEnum,
+        PettyMisdemeanor: 'PETTY_MISDEMEANOR' as MaxViolationClassificationEnum,
+        QuasiCriminal: 'QUASI_CRIMINAL' as MaxViolationClassificationEnum,
+        SummaryOffense: 'SUMMARY_OFFENSE' as MaxViolationClassificationEnum,
+        SummaryOffenseNoRefund: 'SUMMARY_OFFENSE_NO_REFUND' as MaxViolationClassificationEnum,
+        WobblerToFelony: 'WOBBLER_TO_FELONY' as MaxViolationClassificationEnum,
+        WobblerToMisdemeanor: 'WOBBLER_TO_MISDEMEANOR' as MaxViolationClassificationEnum
     };
     export type TicketLocationStateEnum = 'AK' | 'AL' | 'AR' | 'AZ' | 'CA' | 'CO' | 'CT' | 'DC' | 'DE' | 'FL' | 'GA' | 'HI' | 'IA' | 'ID' | 'IL' | 'IN' | 'KS' | 'KY' | 'LA' | 'MA' | 'MD' | 'ME' | 'MI' | 'MN' | 'MO' | 'MS' | 'MT' | 'NC' | 'ND' | 'NE' | 'NH' | 'NJ' | 'NM' | 'NV' | 'NY' | 'OH' | 'OK' | 'OR' | 'PA' | 'RI' | 'SC' | 'SD' | 'TN' | 'TX' | 'UT' | 'VA' | 'VT' | 'WA' | 'WI' | 'WV' | 'WY';
     export const TicketLocationStateEnum = {

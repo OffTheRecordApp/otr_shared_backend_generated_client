@@ -16,15 +16,14 @@ export interface CitationsResponseModel {
     "cdlStatus"?: CitationsResponseModel.CdlStatusEnum;
     "citationId"?: number;
     "citationIssueDate"?: string;
-    "classifications"?: Array<CitationsResponseModel.ClassificationsEnum>;
     "countyName"?: string;
     "courtName"?: string;
     "creationDateUtc"?: models.Timestamp;
-    "experimentName"?: CitationsResponseModel.ExperimentNameEnum;
-    "groupName"?: string;
     "hasPhoto"?: boolean;
     "involvesAccident"?: boolean;
     "lawfirmName"?: string;
+    "maxViolationClassification"?: CitationsResponseModel.MaxViolationClassificationEnum;
+    "numViolations"?: number;
     "ticketImageUrl"?: string;
     "ticketLocationState"?: CitationsResponseModel.TicketLocationStateEnum;
     "totalClientCostInCents"?: number;
@@ -78,7 +77,7 @@ export declare namespace CitationsResponseModel {
         CDLINPERSONALVEHICLE,
         NOCDL
     }
-    enum ClassificationsEnum {
+    enum MaxViolationClassificationEnum {
         CLASS1FELONY,
         CLASS1MISDEMEANOR,
         CLASS2FELONY,
@@ -136,9 +135,6 @@ export declare namespace CitationsResponseModel {
         SUMMARYOFFENSENOREFUND,
         WOBBLERTOFELONY,
         WOBBLERTOMISDEMEANOR
-    }
-    enum ExperimentNameEnum {
-        PRINCETONPROJECT1
     }
     enum TicketLocationStateEnum {
         AK,
