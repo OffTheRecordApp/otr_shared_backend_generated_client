@@ -12,7 +12,6 @@
 import * as models from './models';
 export interface RegisterGhostUserRequest {
     "ghostUser"?: models.GhostUser;
-    "isGhostAccount"?: boolean;
     "roleType"?: RegisterGhostUserRequest.RoleTypeEnum;
 }
 export declare namespace RegisterGhostUserRequest {

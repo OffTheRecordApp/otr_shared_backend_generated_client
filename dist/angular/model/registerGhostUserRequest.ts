@@ -14,7 +14,6 @@ import { GhostUser } from './ghostUser';
 
 export interface RegisterGhostUserRequest { 
     ghostUser?: GhostUser;
-    isGhostAccount?: boolean;
     roleType?: RegisterGhostUserRequest.RoleTypeEnum;
 }
 export namespace RegisterGhostUserRequest {
