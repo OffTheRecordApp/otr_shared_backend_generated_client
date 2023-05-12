@@ -23,6 +23,7 @@ export interface CitationsResponseModel {
     creationDateUtc?: Timestamp;
     hasPhoto?: boolean;
     involvesAccident?: boolean;
+    lawfirmId?: string;
     lawfirmName?: string;
     maxViolationClassification?: CitationsResponseModel.MaxViolationClassificationEnum;
     numViolations?: number;
@@ -32,6 +33,7 @@ export interface CitationsResponseModel {
     totalLawfirmDiscountInCents?: number;
     totalOtrDiscountInCents?: number;
     userFirstName?: string;
+    userId?: string;
     userLastName?: string;
 }
 export namespace CitationsResponseModel {
