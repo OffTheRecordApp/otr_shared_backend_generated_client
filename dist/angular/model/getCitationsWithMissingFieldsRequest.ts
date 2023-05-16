@@ -12,10 +12,12 @@
 
 
 export interface GetCitationsWithMissingFieldsRequest { 
+    endDate?: string;
     maxRecords?: number;
     selectedStates?: Array<GetCitationsWithMissingFieldsRequest.SelectedStatesEnum>;
     showMissingCourtRecords?: boolean;
     showMissingNameRecords?: boolean;
+    startDate?: string;
     trailingDays?: number;
 }
 export namespace GetCitationsWithMissingFieldsRequest {
