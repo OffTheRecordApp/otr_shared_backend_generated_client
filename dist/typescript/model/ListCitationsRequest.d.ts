@@ -12,8 +12,12 @@
 export interface ListCitationsRequest {
     "caseStatusCategoryFilter"?: ListCitationsRequest.CaseStatusCategoryFilterEnum;
     "caseStatusFilterList"?: Array<ListCitationsRequest.CaseStatusFilterListEnum>;
+    "cdlStatus"?: string;
     "countyFilter"?: string;
     "endDate"?: string;
+    "hasAccident"?: boolean;
+    "hasCase"?: boolean;
+    "hasPhoto"?: boolean;
     "length"?: number;
     "page"?: number;
     "sortMap"?: {

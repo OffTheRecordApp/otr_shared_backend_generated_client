@@ -125,92 +125,21 @@ var DashboardControllerApi = /** @class */ (function () {
     };
     /**
      *
-     * @summary listCitations2
+     * @summary listCitations
      * @param request request
      */
-    DashboardControllerApi.prototype.listCitations2UsingPOST = function (request, extraHttpRequestParams) {
-        var localVarPath = this.basePath + '/api/v1/console/citations2';
+    DashboardControllerApi.prototype.listCitationsUsingPOST = function (request, extraHttpRequestParams) {
+        var localVarPath = this.basePath + '/api/v1/console/citations';
         var queryParameters = {};
         var headerParams = Object.assign({}, this.defaultHeaders);
         // verify required parameter 'request' is not null or undefined
         if (request === null || request === undefined) {
-            throw new Error('Required parameter request was null or undefined when calling listCitations2UsingPOST.');
+            throw new Error('Required parameter request was null or undefined when calling listCitationsUsingPOST.');
         }
         var httpRequestParams = {
             method: 'POST',
             url: localVarPath,
             data: request,
-            params: queryParameters,
-            headers: headerParams
-        };
-        if (extraHttpRequestParams) {
-            httpRequestParams = Object.assign(httpRequestParams, extraHttpRequestParams);
-        }
-        return this.$http(httpRequestParams);
-    };
-    /**
-     *
-     * @summary listCitations
-     * @param endDate endDate
-     * @param startDate startDate
-     * @param caseStatusFilter caseStatusFilter
-     * @param countyFilter countyFilter
-     * @param experimentName experimentName
-     * @param groupName groupName
-     * @param length length
-     * @param page page
-     * @param stateFilter stateFilter
-     * @param statusCategoryFilter statusCategoryFilter
-     * @param timeZoneId timeZoneId
-     */
-    DashboardControllerApi.prototype.listCitationsUsingGET = function (endDate, startDate, caseStatusFilter, countyFilter, experimentName, groupName, length, page, stateFilter, statusCategoryFilter, timeZoneId, extraHttpRequestParams) {
-        var localVarPath = this.basePath + '/api/v1/console/citations';
-        var queryParameters = {};
-        var headerParams = Object.assign({}, this.defaultHeaders);
-        // verify required parameter 'endDate' is not null or undefined
-        if (endDate === null || endDate === undefined) {
-            throw new Error('Required parameter endDate was null or undefined when calling listCitationsUsingGET.');
-        }
-        // verify required parameter 'startDate' is not null or undefined
-        if (startDate === null || startDate === undefined) {
-            throw new Error('Required parameter startDate was null or undefined when calling listCitationsUsingGET.');
-        }
-        if (caseStatusFilter !== undefined) {
-            queryParameters['caseStatusFilter'] = caseStatusFilter;
-        }
-        if (countyFilter !== undefined) {
-            queryParameters['countyFilter'] = countyFilter;
-        }
-        if (endDate !== undefined) {
-            queryParameters['endDate'] = endDate;
-        }
-        if (experimentName !== undefined) {
-            queryParameters['experimentName'] = experimentName;
-        }
-        if (groupName !== undefined) {
-            queryParameters['groupName'] = groupName;
-        }
-        if (length !== undefined) {
-            queryParameters['length'] = length;
-        }
-        if (page !== undefined) {
-            queryParameters['page'] = page;
-        }
-        if (startDate !== undefined) {
-            queryParameters['startDate'] = startDate;
-        }
-        if (stateFilter !== undefined) {
-            queryParameters['stateFilter'] = stateFilter;
-        }
-        if (statusCategoryFilter !== undefined) {
-            queryParameters['statusCategoryFilter'] = statusCategoryFilter;
-        }
-        if (timeZoneId !== undefined) {
-            queryParameters['timeZoneId'] = timeZoneId;
-        }
-        var httpRequestParams = {
-            method: 'GET',
-            url: localVarPath,
             params: queryParameters,
             headers: headerParams
         };

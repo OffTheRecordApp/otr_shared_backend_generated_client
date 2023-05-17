@@ -378,17 +378,17 @@ export class DashboardControllerService {
     }
 
     /**
-     * listCitations2
+     * listCitations
      * @param request request
      * @param observe set whether or not to return the data Observable as the body, response or events. defaults to returning the body.
      * @param reportProgress flag to report request and response progress.
      */
-    public listCitations2UsingPOST(request: ListCitationsRequest, observe?: 'body', reportProgress?: boolean, options?: {httpHeaderAccept?: 'application/json', context?: HttpContext}): Observable<ListCitationsResponse>;
-    public listCitations2UsingPOST(request: ListCitationsRequest, observe?: 'response', reportProgress?: boolean, options?: {httpHeaderAccept?: 'application/json', context?: HttpContext}): Observable<HttpResponse<ListCitationsResponse>>;
-    public listCitations2UsingPOST(request: ListCitationsRequest, observe?: 'events', reportProgress?: boolean, options?: {httpHeaderAccept?: 'application/json', context?: HttpContext}): Observable<HttpEvent<ListCitationsResponse>>;
-    public listCitations2UsingPOST(request: ListCitationsRequest, observe: any = 'body', reportProgress: boolean = false, options?: {httpHeaderAccept?: 'application/json', context?: HttpContext}): Observable<any> {
+    public listCitationsUsingPOST(request: ListCitationsRequest, observe?: 'body', reportProgress?: boolean, options?: {httpHeaderAccept?: 'application/json', context?: HttpContext}): Observable<ListCitationsResponse>;
+    public listCitationsUsingPOST(request: ListCitationsRequest, observe?: 'response', reportProgress?: boolean, options?: {httpHeaderAccept?: 'application/json', context?: HttpContext}): Observable<HttpResponse<ListCitationsResponse>>;
+    public listCitationsUsingPOST(request: ListCitationsRequest, observe?: 'events', reportProgress?: boolean, options?: {httpHeaderAccept?: 'application/json', context?: HttpContext}): Observable<HttpEvent<ListCitationsResponse>>;
+    public listCitationsUsingPOST(request: ListCitationsRequest, observe: any = 'body', reportProgress: boolean = false, options?: {httpHeaderAccept?: 'application/json', context?: HttpContext}): Observable<any> {
         if (request === null || request === undefined) {
-            throw new Error('Required parameter request was null or undefined when calling listCitations2UsingPOST.');
+            throw new Error('Required parameter request was null or undefined when calling listCitationsUsingPOST.');
         }
 
         let localVarHeaders = this.defaultHeaders;
@@ -431,129 +431,11 @@ export class DashboardControllerService {
             }
         }
 
-        let localVarPath = `/api/v1/console/citations2`;
+        let localVarPath = `/api/v1/console/citations`;
         return this.httpClient.request<ListCitationsResponse>('post', `${this.configuration.basePath}${localVarPath}`,
             {
                 context: localVarHttpContext,
                 body: request,
-                responseType: <any>responseType_,
-                withCredentials: this.configuration.withCredentials,
-                headers: localVarHeaders,
-                observe: observe,
-                reportProgress: reportProgress
-            }
-        );
-    }
-
-    /**
-     * listCitations
-     * @param endDate endDate
-     * @param startDate startDate
-     * @param caseStatusFilter caseStatusFilter
-     * @param countyFilter countyFilter
-     * @param experimentName experimentName
-     * @param groupName groupName
-     * @param length length
-     * @param page page
-     * @param stateFilter stateFilter
-     * @param statusCategoryFilter statusCategoryFilter
-     * @param timeZoneId timeZoneId
-     * @param observe set whether or not to return the data Observable as the body, response or events. defaults to returning the body.
-     * @param reportProgress flag to report request and response progress.
-     */
-    public listCitationsUsingGET(endDate: string, startDate: string, caseStatusFilter?: string, countyFilter?: string, experimentName?: 'PRINCETON_PROJECT_1', groupName?: string, length?: number, page?: number, stateFilter?: string, statusCategoryFilter?: string, timeZoneId?: string, observe?: 'body', reportProgress?: boolean, options?: {httpHeaderAccept?: 'application/json', context?: HttpContext}): Observable<ListCitationsResponse>;
-    public listCitationsUsingGET(endDate: string, startDate: string, caseStatusFilter?: string, countyFilter?: string, experimentName?: 'PRINCETON_PROJECT_1', groupName?: string, length?: number, page?: number, stateFilter?: string, statusCategoryFilter?: string, timeZoneId?: string, observe?: 'response', reportProgress?: boolean, options?: {httpHeaderAccept?: 'application/json', context?: HttpContext}): Observable<HttpResponse<ListCitationsResponse>>;
-    public listCitationsUsingGET(endDate: string, startDate: string, caseStatusFilter?: string, countyFilter?: string, experimentName?: 'PRINCETON_PROJECT_1', groupName?: string, length?: number, page?: number, stateFilter?: string, statusCategoryFilter?: string, timeZoneId?: string, observe?: 'events', reportProgress?: boolean, options?: {httpHeaderAccept?: 'application/json', context?: HttpContext}): Observable<HttpEvent<ListCitationsResponse>>;
-    public listCitationsUsingGET(endDate: string, startDate: string, caseStatusFilter?: string, countyFilter?: string, experimentName?: 'PRINCETON_PROJECT_1', groupName?: string, length?: number, page?: number, stateFilter?: string, statusCategoryFilter?: string, timeZoneId?: string, observe: any = 'body', reportProgress: boolean = false, options?: {httpHeaderAccept?: 'application/json', context?: HttpContext}): Observable<any> {
-        if (endDate === null || endDate === undefined) {
-            throw new Error('Required parameter endDate was null or undefined when calling listCitationsUsingGET.');
-        }
-        if (startDate === null || startDate === undefined) {
-            throw new Error('Required parameter startDate was null or undefined when calling listCitationsUsingGET.');
-        }
-
-        let localVarQueryParameters = new HttpParams({encoder: this.encoder});
-        if (caseStatusFilter !== undefined && caseStatusFilter !== null) {
-          localVarQueryParameters = this.addToHttpParams(localVarQueryParameters,
-            <any>caseStatusFilter, 'caseStatusFilter');
-        }
-        if (countyFilter !== undefined && countyFilter !== null) {
-          localVarQueryParameters = this.addToHttpParams(localVarQueryParameters,
-            <any>countyFilter, 'countyFilter');
-        }
-        if (endDate !== undefined && endDate !== null) {
-          localVarQueryParameters = this.addToHttpParams(localVarQueryParameters,
-            <any>endDate, 'endDate');
-        }
-        if (experimentName !== undefined && experimentName !== null) {
-          localVarQueryParameters = this.addToHttpParams(localVarQueryParameters,
-            <any>experimentName, 'experimentName');
-        }
-        if (groupName !== undefined && groupName !== null) {
-          localVarQueryParameters = this.addToHttpParams(localVarQueryParameters,
-            <any>groupName, 'groupName');
-        }
-        if (length !== undefined && length !== null) {
-          localVarQueryParameters = this.addToHttpParams(localVarQueryParameters,
-            <any>length, 'length');
-        }
-        if (page !== undefined && page !== null) {
-          localVarQueryParameters = this.addToHttpParams(localVarQueryParameters,
-            <any>page, 'page');
-        }
-        if (startDate !== undefined && startDate !== null) {
-          localVarQueryParameters = this.addToHttpParams(localVarQueryParameters,
-            <any>startDate, 'startDate');
-        }
-        if (stateFilter !== undefined && stateFilter !== null) {
-          localVarQueryParameters = this.addToHttpParams(localVarQueryParameters,
-            <any>stateFilter, 'stateFilter');
-        }
-        if (statusCategoryFilter !== undefined && statusCategoryFilter !== null) {
-          localVarQueryParameters = this.addToHttpParams(localVarQueryParameters,
-            <any>statusCategoryFilter, 'statusCategoryFilter');
-        }
-        if (timeZoneId !== undefined && timeZoneId !== null) {
-          localVarQueryParameters = this.addToHttpParams(localVarQueryParameters,
-            <any>timeZoneId, 'timeZoneId');
-        }
-
-        let localVarHeaders = this.defaultHeaders;
-
-        let localVarHttpHeaderAcceptSelected: string | undefined = options && options.httpHeaderAccept;
-        if (localVarHttpHeaderAcceptSelected === undefined) {
-            // to determine the Accept header
-            const httpHeaderAccepts: string[] = [
-                'application/json'
-            ];
-            localVarHttpHeaderAcceptSelected = this.configuration.selectHeaderAccept(httpHeaderAccepts);
-        }
-        if (localVarHttpHeaderAcceptSelected !== undefined) {
-            localVarHeaders = localVarHeaders.set('Accept', localVarHttpHeaderAcceptSelected);
-        }
-
-        let localVarHttpContext: HttpContext | undefined = options && options.context;
-        if (localVarHttpContext === undefined) {
-            localVarHttpContext = new HttpContext();
-        }
-
-
-        let responseType_: 'text' | 'json' | 'blob' = 'json';
-        if (localVarHttpHeaderAcceptSelected) {
-            if (localVarHttpHeaderAcceptSelected.startsWith('text')) {
-                responseType_ = 'text';
-            } else if (this.configuration.isJsonMime(localVarHttpHeaderAcceptSelected)) {
-                responseType_ = 'json';
-            } else {
-                responseType_ = 'blob';
-            }
-        }
-
-        let localVarPath = `/api/v1/console/citations`;
-        return this.httpClient.request<ListCitationsResponse>('get', `${this.configuration.basePath}${localVarPath}`,
-            {
-                context: localVarHttpContext,
-                params: localVarQueryParameters,
                 responseType: <any>responseType_,
                 withCredentials: this.configuration.withCredentials,
                 headers: localVarHeaders,
