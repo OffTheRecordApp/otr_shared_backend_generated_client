@@ -19,6 +19,8 @@ export interface CitationsResponseModel {
     "countyName"?: string;
     "courtName"?: string;
     "creationDateUtc"?: models.Timestamp;
+    "experimentName"?: CitationsResponseModel.ExperimentNameEnum;
+    "groupName"?: string;
     "hasPhoto"?: boolean;
     "involvesAccident"?: boolean;
     "lawfirmId"?: string;
@@ -78,6 +80,9 @@ export declare namespace CitationsResponseModel {
         CDLINCOMMERCIALVEHICLE,
         CDLINPERSONALVEHICLE,
         NOCDL
+    }
+    enum ExperimentNameEnum {
+        PRINCETONPROJECT1
     }
     enum MaxViolationClassificationEnum {
         CLASS1FELONY,

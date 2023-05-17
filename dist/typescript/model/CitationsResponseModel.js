@@ -60,6 +60,10 @@ var CitationsResponseModel;
         CdlStatusEnum[CdlStatusEnum["CDLINPERSONALVEHICLE"] = 'CDL_IN_PERSONAL_VEHICLE'] = "CDLINPERSONALVEHICLE";
         CdlStatusEnum[CdlStatusEnum["NOCDL"] = 'NO_CDL'] = "NOCDL";
     })(CdlStatusEnum = CitationsResponseModel.CdlStatusEnum || (CitationsResponseModel.CdlStatusEnum = {}));
+    var ExperimentNameEnum;
+    (function (ExperimentNameEnum) {
+        ExperimentNameEnum[ExperimentNameEnum["PRINCETONPROJECT1"] = 'PRINCETON_PROJECT_1'] = "PRINCETONPROJECT1";
+    })(ExperimentNameEnum = CitationsResponseModel.ExperimentNameEnum || (CitationsResponseModel.ExperimentNameEnum = {}));
     var MaxViolationClassificationEnum;
     (function (MaxViolationClassificationEnum) {
         MaxViolationClassificationEnum[MaxViolationClassificationEnum["CLASS1FELONY"] = 'CLASS_1_FELONY'] = "CLASS1FELONY";
