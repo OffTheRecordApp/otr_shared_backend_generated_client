@@ -15,6 +15,8 @@ export interface ListCitationsRequest {
     "cdlStatus"?: string;
     "countyFilter"?: string;
     "endDate"?: string;
+    "experimentGroup"?: ListCitationsRequest.ExperimentGroupEnum;
+    "experimentName"?: string;
     "hasAccident"?: boolean;
     "hasCase"?: boolean;
     "hasPhoto"?: boolean;
@@ -72,6 +74,11 @@ export declare namespace ListCitationsRequest {
         STALE,
         TRAFFICSCHOOL,
         UNCONFIRMED
+    }
+    enum ExperimentGroupEnum {
+        CONTROL,
+        VARIATION1,
+        VARIATION2
     }
     enum StateFilterListEnum {
         AK,

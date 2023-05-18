@@ -61,6 +61,12 @@ var ListCitationsRequest;
         CaseStatusFilterListEnum[CaseStatusFilterListEnum["TRAFFICSCHOOL"] = 'TRAFFIC_SCHOOL'] = "TRAFFICSCHOOL";
         CaseStatusFilterListEnum[CaseStatusFilterListEnum["UNCONFIRMED"] = 'UNCONFIRMED'] = "UNCONFIRMED";
     })(CaseStatusFilterListEnum = ListCitationsRequest.CaseStatusFilterListEnum || (ListCitationsRequest.CaseStatusFilterListEnum = {}));
+    var ExperimentGroupEnum;
+    (function (ExperimentGroupEnum) {
+        ExperimentGroupEnum[ExperimentGroupEnum["CONTROL"] = 'CONTROL'] = "CONTROL";
+        ExperimentGroupEnum[ExperimentGroupEnum["VARIATION1"] = 'VARIATION_1'] = "VARIATION1";
+        ExperimentGroupEnum[ExperimentGroupEnum["VARIATION2"] = 'VARIATION_2'] = "VARIATION2";
+    })(ExperimentGroupEnum = ListCitationsRequest.ExperimentGroupEnum || (ListCitationsRequest.ExperimentGroupEnum = {}));
     var StateFilterListEnum;
     (function (StateFilterListEnum) {
         StateFilterListEnum[StateFilterListEnum["AK"] = 'AK'] = "AK";

@@ -17,6 +17,8 @@ export interface ListCitationsRequest {
     cdlStatus?: string;
     countyFilter?: string;
     endDate?: string;
+    experimentGroup?: ListCitationsRequest.ExperimentGroupEnum;
+    experimentName?: string;
     hasAccident?: boolean;
     hasCase?: boolean;
     hasPhoto?: boolean;
@@ -74,6 +76,12 @@ export namespace ListCitationsRequest {
         Stale: 'STALE' as CaseStatusFilterListEnum,
         TrafficSchool: 'TRAFFIC_SCHOOL' as CaseStatusFilterListEnum,
         Unconfirmed: 'UNCONFIRMED' as CaseStatusFilterListEnum
+    };
+    export type ExperimentGroupEnum = 'CONTROL' | 'VARIATION_1' | 'VARIATION_2';
+    export const ExperimentGroupEnum = {
+        Control: 'CONTROL' as ExperimentGroupEnum,
+        Variation1: 'VARIATION_1' as ExperimentGroupEnum,
+        Variation2: 'VARIATION_2' as ExperimentGroupEnum
     };
     export type StateFilterListEnum = 'AK' | 'AL' | 'AR' | 'AZ' | 'CA' | 'CO' | 'CT' | 'DC' | 'DE' | 'FL' | 'GA' | 'HI' | 'IA' | 'ID' | 'IL' | 'IN' | 'KS' | 'KY' | 'LA' | 'MA' | 'MD' | 'ME' | 'MI' | 'MN' | 'MO' | 'MS' | 'MT' | 'NC' | 'ND' | 'NE' | 'NH' | 'NJ' | 'NM' | 'NV' | 'NY' | 'OH' | 'OK' | 'OR' | 'PA' | 'RI' | 'SC' | 'SD' | 'TN' | 'TX' | 'UT' | 'VA' | 'VT' | 'WA' | 'WI' | 'WV' | 'WY';
     export const StateFilterListEnum = {
