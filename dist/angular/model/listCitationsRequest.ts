@@ -13,8 +13,8 @@
 
 export interface ListCitationsRequest { 
     caseStatusCategoryFilter?: ListCitationsRequest.CaseStatusCategoryFilterEnum;
-    caseStatusFilterList?: Array<ListCitationsRequest.CaseStatusFilterListEnum>;
-    cdlStatus?: string;
+    caseStatusFilterList?: Array<string>;
+    cdlStatus?: Array<ListCitationsRequest.CdlStatusEnum>;
     countyFilter?: string;
     endDate?: string;
     experimentGroup?: ListCitationsRequest.ExperimentGroupEnum;
@@ -37,45 +37,11 @@ export namespace ListCitationsRequest {
         Resolved: 'RESOLVED' as CaseStatusCategoryFilterEnum,
         Unconfirmed: 'UNCONFIRMED' as CaseStatusCategoryFilterEnum
     };
-    export type CaseStatusFilterListEnum = 'AMENDED_DOWN_WITHIN_CLASS' | 'AMENDED_FULL_FINE' | 'AMENDED_INCREASED_FINE' | 'AMENDED_NO_FINE' | 'AMENDED_REDUCED_FINE' | 'AMENDED_TO_INFRACTION' | 'AMENDED_TO_NMV' | 'CANCELLED_ATTORNEY_AT_FAULT' | 'CANCELLED_BY_LAWFIRM' | 'CANCELLED_BY_USER' | 'CANCELLED_DUPLICATE' | 'CANCELLED_NMV' | 'CANCELLED_NON_PAYMENT' | 'CANCELLED_NO_LAWFIRM' | 'CANCELLED_OVERDUE' | 'CANCELLED_TOO_SHORT_NOTICE' | 'CASE_IN_PROGRESS' | 'CLIENT_CONFIRMED' | 'CLIENT_CONFIRMED_UNPAID' | 'CLIENT_FIRED_LAWFIRM' | 'CLIENT_FORCED_LOSS' | 'CLIENT_PAID_FINE' | 'CLIENT_UNRESPONSIVE' | 'DEFERRED' | 'DISMISSED' | 'DIVERSION' | 'FEES_DISPUTED' | 'FINE_REDUCTION_ONLY' | 'LAWFIRM_WITHDRAWN' | 'LOST' | 'NO_LAWFIRM_AVAILABLE' | 'POINT_REDUCTION' | 'REFUSED_BY_LAWFIRM' | 'RESOLVED_NON_PAYMENT' | 'STALE' | 'TRAFFIC_SCHOOL' | 'UNCONFIRMED';
-    export const CaseStatusFilterListEnum = {
-        AmendedDownWithinClass: 'AMENDED_DOWN_WITHIN_CLASS' as CaseStatusFilterListEnum,
-        AmendedFullFine: 'AMENDED_FULL_FINE' as CaseStatusFilterListEnum,
-        AmendedIncreasedFine: 'AMENDED_INCREASED_FINE' as CaseStatusFilterListEnum,
-        AmendedNoFine: 'AMENDED_NO_FINE' as CaseStatusFilterListEnum,
-        AmendedReducedFine: 'AMENDED_REDUCED_FINE' as CaseStatusFilterListEnum,
-        AmendedToInfraction: 'AMENDED_TO_INFRACTION' as CaseStatusFilterListEnum,
-        AmendedToNmv: 'AMENDED_TO_NMV' as CaseStatusFilterListEnum,
-        CancelledAttorneyAtFault: 'CANCELLED_ATTORNEY_AT_FAULT' as CaseStatusFilterListEnum,
-        CancelledByLawfirm: 'CANCELLED_BY_LAWFIRM' as CaseStatusFilterListEnum,
-        CancelledByUser: 'CANCELLED_BY_USER' as CaseStatusFilterListEnum,
-        CancelledDuplicate: 'CANCELLED_DUPLICATE' as CaseStatusFilterListEnum,
-        CancelledNmv: 'CANCELLED_NMV' as CaseStatusFilterListEnum,
-        CancelledNonPayment: 'CANCELLED_NON_PAYMENT' as CaseStatusFilterListEnum,
-        CancelledNoLawfirm: 'CANCELLED_NO_LAWFIRM' as CaseStatusFilterListEnum,
-        CancelledOverdue: 'CANCELLED_OVERDUE' as CaseStatusFilterListEnum,
-        CancelledTooShortNotice: 'CANCELLED_TOO_SHORT_NOTICE' as CaseStatusFilterListEnum,
-        CaseInProgress: 'CASE_IN_PROGRESS' as CaseStatusFilterListEnum,
-        ClientConfirmed: 'CLIENT_CONFIRMED' as CaseStatusFilterListEnum,
-        ClientConfirmedUnpaid: 'CLIENT_CONFIRMED_UNPAID' as CaseStatusFilterListEnum,
-        ClientFiredLawfirm: 'CLIENT_FIRED_LAWFIRM' as CaseStatusFilterListEnum,
-        ClientForcedLoss: 'CLIENT_FORCED_LOSS' as CaseStatusFilterListEnum,
-        ClientPaidFine: 'CLIENT_PAID_FINE' as CaseStatusFilterListEnum,
-        ClientUnresponsive: 'CLIENT_UNRESPONSIVE' as CaseStatusFilterListEnum,
-        Deferred: 'DEFERRED' as CaseStatusFilterListEnum,
-        Dismissed: 'DISMISSED' as CaseStatusFilterListEnum,
-        Diversion: 'DIVERSION' as CaseStatusFilterListEnum,
-        FeesDisputed: 'FEES_DISPUTED' as CaseStatusFilterListEnum,
-        FineReductionOnly: 'FINE_REDUCTION_ONLY' as CaseStatusFilterListEnum,
-        LawfirmWithdrawn: 'LAWFIRM_WITHDRAWN' as CaseStatusFilterListEnum,
-        Lost: 'LOST' as CaseStatusFilterListEnum,
-        NoLawfirmAvailable: 'NO_LAWFIRM_AVAILABLE' as CaseStatusFilterListEnum,
-        PointReduction: 'POINT_REDUCTION' as CaseStatusFilterListEnum,
-        RefusedByLawfirm: 'REFUSED_BY_LAWFIRM' as CaseStatusFilterListEnum,
-        ResolvedNonPayment: 'RESOLVED_NON_PAYMENT' as CaseStatusFilterListEnum,
-        Stale: 'STALE' as CaseStatusFilterListEnum,
-        TrafficSchool: 'TRAFFIC_SCHOOL' as CaseStatusFilterListEnum,
-        Unconfirmed: 'UNCONFIRMED' as CaseStatusFilterListEnum
+    export type CdlStatusEnum = 'CDL_IN_COMMERCIAL_VEHICLE' | 'CDL_IN_PERSONAL_VEHICLE' | 'NO_CDL';
+    export const CdlStatusEnum = {
+        CdlInCommercialVehicle: 'CDL_IN_COMMERCIAL_VEHICLE' as CdlStatusEnum,
+        CdlInPersonalVehicle: 'CDL_IN_PERSONAL_VEHICLE' as CdlStatusEnum,
+        NoCdl: 'NO_CDL' as CdlStatusEnum
     };
     export type ExperimentGroupEnum = 'CONTROL' | 'VARIATION_1' | 'VARIATION_2';
     export const ExperimentGroupEnum = {

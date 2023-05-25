@@ -11,8 +11,8 @@
  */
 export interface ListCitationsRequest {
     "caseStatusCategoryFilter"?: ListCitationsRequest.CaseStatusCategoryFilterEnum;
-    "caseStatusFilterList"?: Array<ListCitationsRequest.CaseStatusFilterListEnum>;
-    "cdlStatus"?: string;
+    "caseStatusFilterList"?: Array<string>;
+    "cdlStatus"?: Array<ListCitationsRequest.CdlStatusEnum>;
     "countyFilter"?: string;
     "endDate"?: string;
     "experimentGroup"?: ListCitationsRequest.ExperimentGroupEnum;
@@ -36,44 +36,10 @@ export declare namespace ListCitationsRequest {
         RESOLVED,
         UNCONFIRMED
     }
-    enum CaseStatusFilterListEnum {
-        AMENDEDDOWNWITHINCLASS,
-        AMENDEDFULLFINE,
-        AMENDEDINCREASEDFINE,
-        AMENDEDNOFINE,
-        AMENDEDREDUCEDFINE,
-        AMENDEDTOINFRACTION,
-        AMENDEDTONMV,
-        CANCELLEDATTORNEYATFAULT,
-        CANCELLEDBYLAWFIRM,
-        CANCELLEDBYUSER,
-        CANCELLEDDUPLICATE,
-        CANCELLEDNMV,
-        CANCELLEDNONPAYMENT,
-        CANCELLEDNOLAWFIRM,
-        CANCELLEDOVERDUE,
-        CANCELLEDTOOSHORTNOTICE,
-        CASEINPROGRESS,
-        CLIENTCONFIRMED,
-        CLIENTCONFIRMEDUNPAID,
-        CLIENTFIREDLAWFIRM,
-        CLIENTFORCEDLOSS,
-        CLIENTPAIDFINE,
-        CLIENTUNRESPONSIVE,
-        DEFERRED,
-        DISMISSED,
-        DIVERSION,
-        FEESDISPUTED,
-        FINEREDUCTIONONLY,
-        LAWFIRMWITHDRAWN,
-        LOST,
-        NOLAWFIRMAVAILABLE,
-        POINTREDUCTION,
-        REFUSEDBYLAWFIRM,
-        RESOLVEDNONPAYMENT,
-        STALE,
-        TRAFFICSCHOOL,
-        UNCONFIRMED
+    enum CdlStatusEnum {
+        CDLINCOMMERCIALVEHICLE,
+        CDLINPERSONALVEHICLE,
+        NOCDL
     }
     enum ExperimentGroupEnum {
         CONTROL,
