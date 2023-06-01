@@ -18,6 +18,7 @@ export interface NewUser {
     "loginProvider"?: NewUser.LoginProviderEnum;
     "password"?: string;
     "phoneNumbers"?: Array<models.PhoneNumberDomain>;
+    "shouldOptInForSmsNotifications"?: boolean;
 }
 export declare namespace NewUser {
     enum LoginProviderEnum {

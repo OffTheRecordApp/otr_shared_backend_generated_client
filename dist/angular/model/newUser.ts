@@ -20,6 +20,7 @@ export interface NewUser {
     loginProvider?: NewUser.LoginProviderEnum;
     password?: string;
     phoneNumbers?: Set<PhoneNumberDomain>;
+    shouldOptInForSmsNotifications?: boolean;
 }
 export namespace NewUser {
     export type LoginProviderEnum = 'APPLE' | 'EMAIL' | 'FACEBOOK' | 'GOOGLE' | 'PHONE' | 'TWITTER' | 'UNKNOWN';
