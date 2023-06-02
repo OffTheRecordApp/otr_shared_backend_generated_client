@@ -11,3 +11,12 @@
  * Do not edit the class manually.
  */
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetLawfirmFeeCoverageModel = void 0;
+var GetLawfirmFeeCoverageModel;
+(function (GetLawfirmFeeCoverageModel) {
+    var LegalServiceTypeEnum;
+    (function (LegalServiceTypeEnum) {
+        LegalServiceTypeEnum[LegalServiceTypeEnum["DEFER"] = 'DEFER'] = "DEFER";
+        LegalServiceTypeEnum[LegalServiceTypeEnum["FIGHT"] = 'FIGHT'] = "FIGHT";
+    })(LegalServiceTypeEnum = GetLawfirmFeeCoverageModel.LegalServiceTypeEnum || (GetLawfirmFeeCoverageModel.LegalServiceTypeEnum = {}));
+})(GetLawfirmFeeCoverageModel = exports.GetLawfirmFeeCoverageModel || (exports.GetLawfirmFeeCoverageModel = {}));

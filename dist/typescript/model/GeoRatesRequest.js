@@ -11,3 +11,12 @@
  * Do not edit the class manually.
  */
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.GeoRatesRequest = void 0;
+var GeoRatesRequest;
+(function (GeoRatesRequest) {
+    var LegalServiceTypeEnum;
+    (function (LegalServiceTypeEnum) {
+        LegalServiceTypeEnum[LegalServiceTypeEnum["DEFER"] = 'DEFER'] = "DEFER";
+        LegalServiceTypeEnum[LegalServiceTypeEnum["FIGHT"] = 'FIGHT'] = "FIGHT";
+    })(LegalServiceTypeEnum = GeoRatesRequest.LegalServiceTypeEnum || (GeoRatesRequest.LegalServiceTypeEnum = {}));
+})(GeoRatesRequest = exports.GeoRatesRequest || (exports.GeoRatesRequest = {}));

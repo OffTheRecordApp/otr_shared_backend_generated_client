@@ -381,15 +381,22 @@ export class LawfirmFeeCoverageControllerService {
     /**
      * getLawfirmFeeCoverage
      * @param lawfirmId lawfirmId
+     * @param legalServiceType legalServiceType
      * @param observe set whether or not to return the data Observable as the body, response or events. defaults to returning the body.
      * @param reportProgress flag to report request and response progress.
      */
-    public getLawfirmFeeCoverageUsingGET(lawfirmId: string, observe?: 'body', reportProgress?: boolean, options?: {httpHeaderAccept?: '*/*', context?: HttpContext}): Observable<GetLawfirmFeeCoverageResponse>;
-    public getLawfirmFeeCoverageUsingGET(lawfirmId: string, observe?: 'response', reportProgress?: boolean, options?: {httpHeaderAccept?: '*/*', context?: HttpContext}): Observable<HttpResponse<GetLawfirmFeeCoverageResponse>>;
-    public getLawfirmFeeCoverageUsingGET(lawfirmId: string, observe?: 'events', reportProgress?: boolean, options?: {httpHeaderAccept?: '*/*', context?: HttpContext}): Observable<HttpEvent<GetLawfirmFeeCoverageResponse>>;
-    public getLawfirmFeeCoverageUsingGET(lawfirmId: string, observe: any = 'body', reportProgress: boolean = false, options?: {httpHeaderAccept?: '*/*', context?: HttpContext}): Observable<any> {
+    public getLawfirmFeeCoverageUsingGET(lawfirmId: string, legalServiceType?: 'DEFER' | 'FIGHT', observe?: 'body', reportProgress?: boolean, options?: {httpHeaderAccept?: '*/*', context?: HttpContext}): Observable<GetLawfirmFeeCoverageResponse>;
+    public getLawfirmFeeCoverageUsingGET(lawfirmId: string, legalServiceType?: 'DEFER' | 'FIGHT', observe?: 'response', reportProgress?: boolean, options?: {httpHeaderAccept?: '*/*', context?: HttpContext}): Observable<HttpResponse<GetLawfirmFeeCoverageResponse>>;
+    public getLawfirmFeeCoverageUsingGET(lawfirmId: string, legalServiceType?: 'DEFER' | 'FIGHT', observe?: 'events', reportProgress?: boolean, options?: {httpHeaderAccept?: '*/*', context?: HttpContext}): Observable<HttpEvent<GetLawfirmFeeCoverageResponse>>;
+    public getLawfirmFeeCoverageUsingGET(lawfirmId: string, legalServiceType?: 'DEFER' | 'FIGHT', observe: any = 'body', reportProgress: boolean = false, options?: {httpHeaderAccept?: '*/*', context?: HttpContext}): Observable<any> {
         if (lawfirmId === null || lawfirmId === undefined) {
             throw new Error('Required parameter lawfirmId was null or undefined when calling getLawfirmFeeCoverageUsingGET.');
+        }
+
+        let localVarQueryParameters = new HttpParams({encoder: this.encoder});
+        if (legalServiceType !== undefined && legalServiceType !== null) {
+          localVarQueryParameters = this.addToHttpParams(localVarQueryParameters,
+            <any>legalServiceType, 'legalServiceType');
         }
 
         let localVarHeaders = this.defaultHeaders;
@@ -427,6 +434,7 @@ export class LawfirmFeeCoverageControllerService {
         return this.httpClient.request<GetLawfirmFeeCoverageResponse>('get', `${this.configuration.basePath}${localVarPath}`,
             {
                 context: localVarHttpContext,
+                params: localVarQueryParameters,
                 responseType: <any>responseType_,
                 withCredentials: this.configuration.withCredentials,
                 headers: localVarHeaders,

@@ -12,6 +12,13 @@
 export interface CaseCreationRequest {
     "courtDate"?: string;
     "forcePredeterminedLawfirmId"?: boolean;
+    "legalServiceType"?: CaseCreationRequest.LegalServiceTypeEnum;
     "predeterminedLawfirmId"?: number;
     "setQuoteExpirationOn"?: boolean;
+}
+export declare namespace CaseCreationRequest {
+    enum LegalServiceTypeEnum {
+        DEFER,
+        FIGHT
+    }
 }

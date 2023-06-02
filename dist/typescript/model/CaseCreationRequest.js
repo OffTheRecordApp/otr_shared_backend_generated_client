@@ -11,3 +11,12 @@
  * Do not edit the class manually.
  */
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.CaseCreationRequest = void 0;
+var CaseCreationRequest;
+(function (CaseCreationRequest) {
+    var LegalServiceTypeEnum;
+    (function (LegalServiceTypeEnum) {
+        LegalServiceTypeEnum[LegalServiceTypeEnum["DEFER"] = 'DEFER'] = "DEFER";
+        LegalServiceTypeEnum[LegalServiceTypeEnum["FIGHT"] = 'FIGHT'] = "FIGHT";
+    })(LegalServiceTypeEnum = CaseCreationRequest.LegalServiceTypeEnum || (CaseCreationRequest.LegalServiceTypeEnum = {}));
+})(CaseCreationRequest = exports.CaseCreationRequest || (exports.CaseCreationRequest = {}));

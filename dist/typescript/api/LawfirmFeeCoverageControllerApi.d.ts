@@ -49,8 +49,9 @@ export declare class LawfirmFeeCoverageControllerApi {
      *
      * @summary getLawfirmFeeCoverage
      * @param lawfirmId lawfirmId
+     * @param legalServiceType legalServiceType
      */
-    getLawfirmFeeCoverageUsingGET(lawfirmId: string, extraHttpRequestParams?: any): ng.IHttpPromise<models.GetLawfirmFeeCoverageResponse>;
+    getLawfirmFeeCoverageUsingGET(lawfirmId: string, legalServiceType?: 'DEFER' | 'FIGHT', extraHttpRequestParams?: any): ng.IHttpPromise<models.GetLawfirmFeeCoverageResponse>;
     /**
      *
      * @summary removeAccountFees

@@ -143,8 +143,9 @@ var LawfirmFeeCoverageControllerApi = /** @class */ (function () {
      *
      * @summary getLawfirmFeeCoverage
      * @param lawfirmId lawfirmId
+     * @param legalServiceType legalServiceType
      */
-    LawfirmFeeCoverageControllerApi.prototype.getLawfirmFeeCoverageUsingGET = function (lawfirmId, extraHttpRequestParams) {
+    LawfirmFeeCoverageControllerApi.prototype.getLawfirmFeeCoverageUsingGET = function (lawfirmId, legalServiceType, extraHttpRequestParams) {
         var localVarPath = this.basePath + '/api/v2/lawfirms/{lawfirmId}/coverage'
             .replace('{' + 'lawfirmId' + '}', encodeURIComponent(String(lawfirmId)));
         var queryParameters = {};
@@ -152,6 +153,9 @@ var LawfirmFeeCoverageControllerApi = /** @class */ (function () {
         // verify required parameter 'lawfirmId' is not null or undefined
         if (lawfirmId === null || lawfirmId === undefined) {
             throw new Error('Required parameter lawfirmId was null or undefined when calling getLawfirmFeeCoverageUsingGET.');
+        }
+        if (legalServiceType !== undefined) {
+            queryParameters['legalServiceType'] = legalServiceType;
         }
         var httpRequestParams = {
             method: 'GET',

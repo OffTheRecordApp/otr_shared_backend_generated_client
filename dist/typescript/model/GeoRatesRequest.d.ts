@@ -14,6 +14,13 @@ export interface GeoRatesRequest {
     "courtDate"?: string;
     "courtId"?: string;
     "isCDL"?: boolean;
+    "legalServiceType"?: GeoRatesRequest.LegalServiceTypeEnum;
     "violationCount"?: number;
     "violations"?: Array<models.ViolationInputRequest>;
+}
+export declare namespace GeoRatesRequest {
+    enum LegalServiceTypeEnum {
+        DEFER,
+        FIGHT
+    }
 }

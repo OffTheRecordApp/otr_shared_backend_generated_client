@@ -16,7 +16,16 @@ export interface GeoRatesRequest {
     courtDate?: string;
     courtId?: string;
     isCDL?: boolean;
+    legalServiceType?: GeoRatesRequest.LegalServiceTypeEnum;
     violationCount?: number;
     violations?: Array<ViolationInputRequest>;
 }
+export namespace GeoRatesRequest {
+    export type LegalServiceTypeEnum = 'DEFER' | 'FIGHT';
+    export const LegalServiceTypeEnum = {
+        Defer: 'DEFER' as LegalServiceTypeEnum,
+        Fight: 'FIGHT' as LegalServiceTypeEnum
+    };
+}
+
 

@@ -15469,6 +15469,7 @@ angular.module('otrBackendService', [])
              * @name OtrService#getLawfirmFeeCoverageUsingGET
              * @param {object} parameters - method options and parameters
              * @param {string} parameters.lawfirmId - lawfirmId
+             * @param {string} parameters.legalServiceType - legalServiceType
              */
             OtrService.prototype.getLawfirmFeeCoverageUsingGET = function(parameters) {
                 if (parameters === undefined) {
@@ -15489,6 +15490,13 @@ angular.module('otrBackendService', [])
                 if (parameters['lawfirmId'] === undefined) {
                     deferred.reject(new Error('Missing required  parameter: lawfirmId'));
                     return deferred.promise;
+                }
+
+                /** set default value **/
+                queryParameters['legalServiceType'] = FIGHT;
+
+                if (parameters['legalServiceType'] !== undefined) {
+                    queryParameters['legalServiceType'] = parameters['legalServiceType'];
                 }
 
                 queryParameters = mergeQueryParams(parameters, queryParameters);

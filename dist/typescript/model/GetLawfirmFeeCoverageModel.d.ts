@@ -17,5 +17,13 @@ export interface GetLawfirmFeeCoverageModel {
     "courtName"?: string;
     "fees"?: Array<models.GetLawfirmFeeModel>;
     "isDeleted"?: boolean;
+    "legalServiceId"?: number;
+    "legalServiceType"?: GetLawfirmFeeCoverageModel.LegalServiceTypeEnum;
     "regionCode"?: string;
+}
+export declare namespace GetLawfirmFeeCoverageModel {
+    enum LegalServiceTypeEnum {
+        DEFER,
+        FIGHT
+    }
 }
