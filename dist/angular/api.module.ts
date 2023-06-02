@@ -59,6 +59,7 @@ import { LawfirmStorefrontControllerService } from './api/lawfirmStorefrontContr
 import { LawfirmSurchargeControllerService } from './api/lawfirmSurchargeController.service';
 import { LawfirmTransactionsControllerService } from './api/lawfirmTransactionsController.service';
 import { LawyerControllerService } from './api/lawyerController.service';
+import { LegalServicesControllerService } from './api/legalServicesController.service';
 import { LineItemControllerService } from './api/lineItemController.service';
 import { ListCasesControllerService } from './api/listCasesController.service';
 import { MediaCreationControllerService } from './api/mediaCreationController.service';

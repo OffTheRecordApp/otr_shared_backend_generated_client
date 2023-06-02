@@ -59,6 +59,7 @@ api/lawfirmStorefrontController.service.ts
 api/lawfirmSurchargeController.service.ts
 api/lawfirmTransactionsController.service.ts
 api/lawyerController.service.ts
+api/legalServicesController.service.ts
 api/lineItemController.service.ts
 api/listCasesController.service.ts
 api/mediaCreationController.service.ts
