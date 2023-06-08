@@ -15,6 +15,7 @@ export interface UserDomainRes {
     "address"?: models.AddressDomainRes;
     "creationDateUtc"?: models.TimestampRes;
     "dob"?: string;
+    "driverLicenseNumber"?: string;
     "eligibleForAppReview"?: boolean;
     "emailAddress"?: string;
     "firstname"?: string;
@@ -39,6 +40,7 @@ export interface UserDomainRes {
     "phoneNumbers"?: Array<models.PhoneNumberDomainRes>;
     "privacyMode"?: UserDomainRes.PrivacyModeEnum;
     "profilePicture"?: string;
+    "race"?: UserDomainRes.RaceEnum;
     "referralCount"?: number;
     "roles"?: Array<models.UserRoleDomain>;
     "signUpCode"?: string;
@@ -78,5 +80,15 @@ export declare namespace UserDomainRes {
         PRIVATE,
         PUBLIC,
         SEMIPUBLIC
+    }
+    enum RaceEnum {
+        ASIAN,
+        BLACK,
+        HISPANIC,
+        MIDDLEEASTERN,
+        NATIVE,
+        PACIFICISLANDER,
+        UNKNOWN,
+        WHITE
     }
 }

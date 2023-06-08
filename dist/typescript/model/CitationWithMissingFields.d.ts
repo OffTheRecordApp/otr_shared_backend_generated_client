@@ -11,17 +11,37 @@
  */
 import * as models from './models';
 export interface CitationWithMissingFields {
+    "birthDate"?: string;
     "citationCreationDateUtc"?: models.TimestampRes;
     "citationId"?: number;
     "clientEmailAddress"?: string;
     "clientFirstName"?: string;
     "courtId"?: number;
+    "gender"?: CitationWithMissingFields.GenderEnum;
+    "lastName"?: string;
+    "licenseNumber"?: string;
+    "race"?: CitationWithMissingFields.RaceEnum;
     "state"?: CitationWithMissingFields.StateEnum;
     "ticketImageUrl"?: string;
     "userId"?: number;
     "violations"?: Array<models.CitationViolationModel>;
 }
 export declare namespace CitationWithMissingFields {
+    enum GenderEnum {
+        FEMALE,
+        MALE,
+        NOTLISTED
+    }
+    enum RaceEnum {
+        ASIAN,
+        BLACK,
+        HISPANIC,
+        MIDDLEEASTERN,
+        NATIVE,
+        PACIFICISLANDER,
+        UNKNOWN,
+        WHITE
+    }
     enum StateEnum {
         AK,
         AL,

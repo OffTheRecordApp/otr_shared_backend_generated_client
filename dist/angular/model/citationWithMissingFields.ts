@@ -14,17 +14,39 @@ import { TimestampRes } from './timestampRes';
 
 
 export interface CitationWithMissingFields { 
+    birthDate?: string;
     citationCreationDateUtc?: TimestampRes;
     citationId?: number;
     clientEmailAddress?: string;
     clientFirstName?: string;
     courtId?: number;
+    gender?: CitationWithMissingFields.GenderEnum;
+    lastName?: string;
+    licenseNumber?: string;
+    race?: CitationWithMissingFields.RaceEnum;
     state?: CitationWithMissingFields.StateEnum;
     ticketImageUrl?: string;
     userId?: number;
     violations?: Array<CitationViolationModel>;
 }
 export namespace CitationWithMissingFields {
+    export type GenderEnum = 'FEMALE' | 'MALE' | 'NOT_LISTED';
+    export const GenderEnum = {
+        Female: 'FEMALE' as GenderEnum,
+        Male: 'MALE' as GenderEnum,
+        NotListed: 'NOT_LISTED' as GenderEnum
+    };
+    export type RaceEnum = 'ASIAN' | 'BLACK' | 'HISPANIC' | 'MIDDLE_EASTERN' | 'NATIVE' | 'PACIFIC_ISLANDER' | 'UNKNOWN' | 'WHITE';
+    export const RaceEnum = {
+        Asian: 'ASIAN' as RaceEnum,
+        Black: 'BLACK' as RaceEnum,
+        Hispanic: 'HISPANIC' as RaceEnum,
+        MiddleEastern: 'MIDDLE_EASTERN' as RaceEnum,
+        Native: 'NATIVE' as RaceEnum,
+        PacificIslander: 'PACIFIC_ISLANDER' as RaceEnum,
+        Unknown: 'UNKNOWN' as RaceEnum,
+        White: 'WHITE' as RaceEnum
+    };
     export type StateEnum = 'AK' | 'AL' | 'AR' | 'AZ' | 'CA' | 'CO' | 'CT' | 'DC' | 'DE' | 'FL' | 'GA' | 'HI' | 'IA' | 'ID' | 'IL' | 'IN' | 'KS' | 'KY' | 'LA' | 'MA' | 'MD' | 'ME' | 'MI' | 'MN' | 'MO' | 'MS' | 'MT' | 'NC' | 'ND' | 'NE' | 'NH' | 'NJ' | 'NM' | 'NV' | 'NY' | 'OH' | 'OK' | 'OR' | 'PA' | 'RI' | 'SC' | 'SD' | 'TN' | 'TX' | 'UT' | 'VA' | 'VT' | 'WA' | 'WI' | 'WV' | 'WY';
     export const StateEnum = {
         Ak: 'AK' as StateEnum,

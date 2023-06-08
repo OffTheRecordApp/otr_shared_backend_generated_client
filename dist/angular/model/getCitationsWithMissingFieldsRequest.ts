@@ -16,6 +16,8 @@ export interface GetCitationsWithMissingFieldsRequest {
     maxRecords?: number;
     selectedStates?: Array<GetCitationsWithMissingFieldsRequest.SelectedStatesEnum>;
     showMissingCourtRecords?: boolean;
+    showMissingDOBRecords?: boolean;
+    showMissingGenderRecords?: boolean;
     showMissingNameRecords?: boolean;
     startDate?: string;
     trailingDays?: number;

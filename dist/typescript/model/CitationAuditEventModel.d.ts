@@ -80,6 +80,7 @@ export declare namespace CitationAuditEventModel {
         USERREGISTRATION,
         VACATIONMODETOGGLE,
         VACATIONMODEUPDATE,
-        VERIFYEMAIL
+        VERIFYEMAIL,
+        VERIFYPHONE
     }
 }

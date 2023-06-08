@@ -76,5 +76,6 @@ var CitationAuditEventModel;
         EventEnum[EventEnum["VACATIONMODETOGGLE"] = 'VACATION_MODE_TOGGLE'] = "VACATIONMODETOGGLE";
         EventEnum[EventEnum["VACATIONMODEUPDATE"] = 'VACATION_MODE_UPDATE'] = "VACATIONMODEUPDATE";
         EventEnum[EventEnum["VERIFYEMAIL"] = 'VERIFY_EMAIL'] = "VERIFYEMAIL";
+        EventEnum[EventEnum["VERIFYPHONE"] = 'VERIFY_PHONE'] = "VERIFYPHONE";
     })(EventEnum = CitationAuditEventModel.EventEnum || (CitationAuditEventModel.EventEnum = {}));
 })(CitationAuditEventModel = exports.CitationAuditEventModel || (exports.CitationAuditEventModel = {}));

@@ -80,6 +80,7 @@ export declare namespace UserAuditEventModel {
         USERREGISTRATION,
         VACATIONMODETOGGLE,
         VACATIONMODEUPDATE,
-        VERIFYEMAIL
+        VERIFYEMAIL,
+        VERIFYPHONE
     }
 }

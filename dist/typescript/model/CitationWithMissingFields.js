@@ -14,6 +14,23 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.CitationWithMissingFields = void 0;
 var CitationWithMissingFields;
 (function (CitationWithMissingFields) {
+    var GenderEnum;
+    (function (GenderEnum) {
+        GenderEnum[GenderEnum["FEMALE"] = 'FEMALE'] = "FEMALE";
+        GenderEnum[GenderEnum["MALE"] = 'MALE'] = "MALE";
+        GenderEnum[GenderEnum["NOTLISTED"] = 'NOT_LISTED'] = "NOTLISTED";
+    })(GenderEnum = CitationWithMissingFields.GenderEnum || (CitationWithMissingFields.GenderEnum = {}));
+    var RaceEnum;
+    (function (RaceEnum) {
+        RaceEnum[RaceEnum["ASIAN"] = 'ASIAN'] = "ASIAN";
+        RaceEnum[RaceEnum["BLACK"] = 'BLACK'] = "BLACK";
+        RaceEnum[RaceEnum["HISPANIC"] = 'HISPANIC'] = "HISPANIC";
+        RaceEnum[RaceEnum["MIDDLEEASTERN"] = 'MIDDLE_EASTERN'] = "MIDDLEEASTERN";
+        RaceEnum[RaceEnum["NATIVE"] = 'NATIVE'] = "NATIVE";
+        RaceEnum[RaceEnum["PACIFICISLANDER"] = 'PACIFIC_ISLANDER'] = "PACIFICISLANDER";
+        RaceEnum[RaceEnum["UNKNOWN"] = 'UNKNOWN'] = "UNKNOWN";
+        RaceEnum[RaceEnum["WHITE"] = 'WHITE'] = "WHITE";
+    })(RaceEnum = CitationWithMissingFields.RaceEnum || (CitationWithMissingFields.RaceEnum = {}));
     var StateEnum;
     (function (StateEnum) {
         StateEnum[StateEnum["AK"] = 'AK'] = "AK";

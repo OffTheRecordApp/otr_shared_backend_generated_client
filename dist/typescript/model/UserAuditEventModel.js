@@ -76,5 +76,6 @@ var UserAuditEventModel;
         EventTypeEnum[EventTypeEnum["VACATIONMODETOGGLE"] = 'VACATION_MODE_TOGGLE'] = "VACATIONMODETOGGLE";
         EventTypeEnum[EventTypeEnum["VACATIONMODEUPDATE"] = 'VACATION_MODE_UPDATE'] = "VACATIONMODEUPDATE";
         EventTypeEnum[EventTypeEnum["VERIFYEMAIL"] = 'VERIFY_EMAIL'] = "VERIFYEMAIL";
+        EventTypeEnum[EventTypeEnum["VERIFYPHONE"] = 'VERIFY_PHONE'] = "VERIFYPHONE";
     })(EventTypeEnum = UserAuditEventModel.EventTypeEnum || (UserAuditEventModel.EventTypeEnum = {}));
 })(UserAuditEventModel = exports.UserAuditEventModel || (exports.UserAuditEventModel = {}));

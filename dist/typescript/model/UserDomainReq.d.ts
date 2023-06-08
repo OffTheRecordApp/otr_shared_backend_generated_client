@@ -15,6 +15,7 @@ export interface UserDomainReq {
     "address"?: models.AddressDomainReq;
     "creationDateUtc"?: models.TimestampReq;
     "dob"?: string;
+    "driverLicenseNumber"?: string;
     "eligibleForAppReview"?: boolean;
     "emailAddress"?: string;
     "firstname"?: string;
@@ -38,6 +39,7 @@ export interface UserDomainReq {
     "phoneNumbers"?: Array<models.PhoneNumberDomainReq>;
     "privacyMode"?: UserDomainReq.PrivacyModeEnum;
     "profilePicture"?: string;
+    "race"?: UserDomainReq.RaceEnum;
     "referralCount"?: number;
     "roles"?: Array<models.UserRoleDomain>;
     "signUpCode"?: string;
@@ -77,5 +79,15 @@ export declare namespace UserDomainReq {
         PRIVATE,
         PUBLIC,
         SEMIPUBLIC
+    }
+    enum RaceEnum {
+        ASIAN,
+        BLACK,
+        HISPANIC,
+        MIDDLEEASTERN,
+        NATIVE,
+        PACIFICISLANDER,
+        UNKNOWN,
+        WHITE
     }
 }

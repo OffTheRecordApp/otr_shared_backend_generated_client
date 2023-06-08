@@ -76,5 +76,6 @@ var LawfirmAuditEventModel;
         EventEnum[EventEnum["VACATIONMODETOGGLE"] = 'VACATION_MODE_TOGGLE'] = "VACATIONMODETOGGLE";
         EventEnum[EventEnum["VACATIONMODEUPDATE"] = 'VACATION_MODE_UPDATE'] = "VACATIONMODEUPDATE";
         EventEnum[EventEnum["VERIFYEMAIL"] = 'VERIFY_EMAIL'] = "VERIFYEMAIL";
+        EventEnum[EventEnum["VERIFYPHONE"] = 'VERIFY_PHONE'] = "VERIFYPHONE";
     })(EventEnum = LawfirmAuditEventModel.EventEnum || (LawfirmAuditEventModel.EventEnum = {}));
 })(LawfirmAuditEventModel = exports.LawfirmAuditEventModel || (exports.LawfirmAuditEventModel = {}));

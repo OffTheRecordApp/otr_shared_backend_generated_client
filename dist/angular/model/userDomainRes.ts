@@ -22,6 +22,7 @@ export interface UserDomainRes {
     address?: AddressDomainRes;
     creationDateUtc?: TimestampRes;
     dob?: string;
+    driverLicenseNumber?: string;
     eligibleForAppReview?: boolean;
     emailAddress?: string;
     firstname?: string;
@@ -46,6 +47,7 @@ export interface UserDomainRes {
     phoneNumbers?: Set<PhoneNumberDomainRes>;
     privacyMode?: UserDomainRes.PrivacyModeEnum;
     profilePicture?: string;
+    race?: UserDomainRes.RaceEnum;
     referralCount?: number;
     roles?: Set<UserRoleDomain>;
     signUpCode?: string;
@@ -88,6 +90,17 @@ export namespace UserDomainRes {
         Private: 'PRIVATE' as PrivacyModeEnum,
         Public: 'PUBLIC' as PrivacyModeEnum,
         SemiPublic: 'SEMI_PUBLIC' as PrivacyModeEnum
+    };
+    export type RaceEnum = 'ASIAN' | 'BLACK' | 'HISPANIC' | 'MIDDLE_EASTERN' | 'NATIVE' | 'PACIFIC_ISLANDER' | 'UNKNOWN' | 'WHITE';
+    export const RaceEnum = {
+        Asian: 'ASIAN' as RaceEnum,
+        Black: 'BLACK' as RaceEnum,
+        Hispanic: 'HISPANIC' as RaceEnum,
+        MiddleEastern: 'MIDDLE_EASTERN' as RaceEnum,
+        Native: 'NATIVE' as RaceEnum,
+        PacificIslander: 'PACIFIC_ISLANDER' as RaceEnum,
+        Unknown: 'UNKNOWN' as RaceEnum,
+        White: 'WHITE' as RaceEnum
     };
 }
 

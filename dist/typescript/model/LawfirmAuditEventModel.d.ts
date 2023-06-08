@@ -80,6 +80,7 @@ export declare namespace LawfirmAuditEventModel {
         USERREGISTRATION,
         VACATIONMODETOGGLE,
         VACATIONMODEUPDATE,
-        VERIFYEMAIL
+        VERIFYEMAIL,
+        VERIFYPHONE
     }
 }

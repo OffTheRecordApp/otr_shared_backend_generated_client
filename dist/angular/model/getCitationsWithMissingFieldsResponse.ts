@@ -16,5 +16,7 @@ export interface GetCitationsWithMissingFieldsResponse {
     citations?: Array<CitationWithMissingFields>;
     missingClientNameCount?: number;
     missingCourtCount?: number;
+    missingDOBCount?: number;
+    missingGenderCount?: number;
 }
 
