@@ -14,5 +14,6 @@
 export interface VerifyUserAccountResponse { 
     emailAlreadyConfirmed?: boolean;
     emailConfirmed?: boolean;
+    mobilePhoneConfirmed?: boolean;
 }
 

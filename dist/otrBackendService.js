@@ -13442,6 +13442,8 @@ angular.module('otrBackendService', [])
              * @name OtrService#verifyUserAccountUsingPUT
              * @param {object} parameters - method options and parameters
              * @param {string} parameters.code - code
+             * @param {string} parameters.fieldType - fieldType
+             * @param {string} parameters.fieldValue - fieldValue
              * @param {string} parameters.userId - userId
              */
             OtrService.prototype.verifyUserAccountUsingPUT = function(parameters) {
@@ -13465,6 +13467,22 @@ angular.module('otrBackendService', [])
 
                 if (parameters['code'] === undefined) {
                     deferred.reject(new Error('Missing required  parameter: code'));
+                    return deferred.promise;
+                }
+
+                /** set default value **/
+                queryParameters['fieldType'] = email;
+
+                if (parameters['fieldType'] !== undefined) {
+                    queryParameters['fieldType'] = parameters['fieldType'];
+                }
+
+                if (parameters['fieldValue'] !== undefined) {
+                    queryParameters['fieldValue'] = parameters['fieldValue'];
+                }
+
+                if (parameters['fieldValue'] === undefined) {
+                    deferred.reject(new Error('Missing required  parameter: fieldValue'));
                     return deferred.promise;
                 }
 

@@ -21,6 +21,7 @@ export interface RegisterNewUserRequest {
         [key: string]: object;
     };
     "roleType"?: RegisterNewUserRequest.RoleTypeEnum;
+    "shouldVerifyPhoneNumber"?: boolean;
     "user"?: models.NewUser;
     "userReferralSourceTypeId"?: number;
 }

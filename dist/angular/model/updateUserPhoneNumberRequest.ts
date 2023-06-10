@@ -14,5 +14,6 @@ import { UpdatePhoneNumber } from './updatePhoneNumber';
 
 export interface UpdateUserPhoneNumberRequest { 
     phoneNumber?: UpdatePhoneNumber;
+    shouldVerifyNumber?: boolean;
 }
 

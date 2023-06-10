@@ -21,6 +21,7 @@ export interface RegisterNewUserRequest {
     referralCode?: string;
     referralSourceData?: { [key: string]: object; };
     roleType?: RegisterNewUserRequest.RoleTypeEnum;
+    shouldVerifyPhoneNumber?: boolean;
     user?: NewUser;
     userReferralSourceTypeId?: number;
 }

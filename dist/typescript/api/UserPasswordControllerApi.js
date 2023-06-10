@@ -189,9 +189,11 @@ var UserPasswordControllerApi = /** @class */ (function () {
      *
      * @summary verifyUserAccount
      * @param code code
+     * @param fieldValue fieldValue
      * @param userId userId
+     * @param fieldType fieldType
      */
-    UserPasswordControllerApi.prototype.verifyUserAccountUsingPUT = function (code, userId, extraHttpRequestParams) {
+    UserPasswordControllerApi.prototype.verifyUserAccountUsingPUT = function (code, fieldValue, userId, fieldType, extraHttpRequestParams) {
         var localVarPath = this.basePath + '/api/v1/users/verify-account';
         var queryParameters = {};
         var headerParams = Object.assign({}, this.defaultHeaders);
@@ -199,12 +201,22 @@ var UserPasswordControllerApi = /** @class */ (function () {
         if (code === null || code === undefined) {
             throw new Error('Required parameter code was null or undefined when calling verifyUserAccountUsingPUT.');
         }
+        // verify required parameter 'fieldValue' is not null or undefined
+        if (fieldValue === null || fieldValue === undefined) {
+            throw new Error('Required parameter fieldValue was null or undefined when calling verifyUserAccountUsingPUT.');
+        }
         // verify required parameter 'userId' is not null or undefined
         if (userId === null || userId === undefined) {
             throw new Error('Required parameter userId was null or undefined when calling verifyUserAccountUsingPUT.');
         }
         if (code !== undefined) {
             queryParameters['code'] = code;
+        }
+        if (fieldType !== undefined) {
+            queryParameters['fieldType'] = fieldType;
+        }
+        if (fieldValue !== undefined) {
+            queryParameters['fieldValue'] = fieldValue;
         }
         if (userId !== undefined) {
             queryParameters['userId'] = userId;
