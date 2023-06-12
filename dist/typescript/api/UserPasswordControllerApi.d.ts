@@ -59,9 +59,9 @@ export declare class UserPasswordControllerApi {
      *
      * @summary verifyUserAccount
      * @param code code
-     * @param fieldValue fieldValue
      * @param userId userId
      * @param fieldName fieldName
+     * @param fieldValue fieldValue
      */
-    verifyUserAccountUsingPUT(code: string, fieldValue: string, userId: string, fieldName?: string, extraHttpRequestParams?: any): ng.IHttpPromise<models.VerifyUserAccountResponse>;
+    verifyUserAccountUsingPUT(code: string, userId: string, fieldName?: string, fieldValue?: string, extraHttpRequestParams?: any): ng.IHttpPromise<models.VerifyUserAccountResponse>;
 }

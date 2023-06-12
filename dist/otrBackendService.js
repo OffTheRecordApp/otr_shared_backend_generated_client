@@ -13481,11 +13481,6 @@ angular.module('otrBackendService', [])
                     queryParameters['fieldValue'] = parameters['fieldValue'];
                 }
 
-                if (parameters['fieldValue'] === undefined) {
-                    deferred.reject(new Error('Missing required  parameter: fieldValue'));
-                    return deferred.promise;
-                }
-
                 if (parameters['userId'] !== undefined) {
                     queryParameters['userId'] = parameters['userId'];
                 }

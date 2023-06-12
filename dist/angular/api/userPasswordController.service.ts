@@ -501,21 +501,18 @@ export class UserPasswordControllerService {
     /**
      * verifyUserAccount
      * @param code code
-     * @param fieldValue fieldValue
      * @param userId userId
      * @param fieldName fieldName
+     * @param fieldValue fieldValue
      * @param observe set whether or not to return the data Observable as the body, response or events. defaults to returning the body.
      * @param reportProgress flag to report request and response progress.
      */
-    public verifyUserAccountUsingPUT(code: string, fieldValue: string, userId: string, fieldName?: string, observe?: 'body', reportProgress?: boolean, options?: {httpHeaderAccept?: '*/*', context?: HttpContext}): Observable<VerifyUserAccountResponse>;
-    public verifyUserAccountUsingPUT(code: string, fieldValue: string, userId: string, fieldName?: string, observe?: 'response', reportProgress?: boolean, options?: {httpHeaderAccept?: '*/*', context?: HttpContext}): Observable<HttpResponse<VerifyUserAccountResponse>>;
-    public verifyUserAccountUsingPUT(code: string, fieldValue: string, userId: string, fieldName?: string, observe?: 'events', reportProgress?: boolean, options?: {httpHeaderAccept?: '*/*', context?: HttpContext}): Observable<HttpEvent<VerifyUserAccountResponse>>;
-    public verifyUserAccountUsingPUT(code: string, fieldValue: string, userId: string, fieldName?: string, observe: any = 'body', reportProgress: boolean = false, options?: {httpHeaderAccept?: '*/*', context?: HttpContext}): Observable<any> {
+    public verifyUserAccountUsingPUT(code: string, userId: string, fieldName?: string, fieldValue?: string, observe?: 'body', reportProgress?: boolean, options?: {httpHeaderAccept?: '*/*', context?: HttpContext}): Observable<VerifyUserAccountResponse>;
+    public verifyUserAccountUsingPUT(code: string, userId: string, fieldName?: string, fieldValue?: string, observe?: 'response', reportProgress?: boolean, options?: {httpHeaderAccept?: '*/*', context?: HttpContext}): Observable<HttpResponse<VerifyUserAccountResponse>>;
+    public verifyUserAccountUsingPUT(code: string, userId: string, fieldName?: string, fieldValue?: string, observe?: 'events', reportProgress?: boolean, options?: {httpHeaderAccept?: '*/*', context?: HttpContext}): Observable<HttpEvent<VerifyUserAccountResponse>>;
+    public verifyUserAccountUsingPUT(code: string, userId: string, fieldName?: string, fieldValue?: string, observe: any = 'body', reportProgress: boolean = false, options?: {httpHeaderAccept?: '*/*', context?: HttpContext}): Observable<any> {
         if (code === null || code === undefined) {
             throw new Error('Required parameter code was null or undefined when calling verifyUserAccountUsingPUT.');
-        }
-        if (fieldValue === null || fieldValue === undefined) {
-            throw new Error('Required parameter fieldValue was null or undefined when calling verifyUserAccountUsingPUT.');
         }
         if (userId === null || userId === undefined) {
             throw new Error('Required parameter userId was null or undefined when calling verifyUserAccountUsingPUT.');

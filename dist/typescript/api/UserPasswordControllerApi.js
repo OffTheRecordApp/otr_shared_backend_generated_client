@@ -189,21 +189,17 @@ var UserPasswordControllerApi = /** @class */ (function () {
      *
      * @summary verifyUserAccount
      * @param code code
-     * @param fieldValue fieldValue
      * @param userId userId
      * @param fieldName fieldName
+     * @param fieldValue fieldValue
      */
-    UserPasswordControllerApi.prototype.verifyUserAccountUsingPUT = function (code, fieldValue, userId, fieldName, extraHttpRequestParams) {
+    UserPasswordControllerApi.prototype.verifyUserAccountUsingPUT = function (code, userId, fieldName, fieldValue, extraHttpRequestParams) {
         var localVarPath = this.basePath + '/api/v1/users/verify-account';
         var queryParameters = {};
         var headerParams = Object.assign({}, this.defaultHeaders);
         // verify required parameter 'code' is not null or undefined
         if (code === null || code === undefined) {
             throw new Error('Required parameter code was null or undefined when calling verifyUserAccountUsingPUT.');
-        }
-        // verify required parameter 'fieldValue' is not null or undefined
-        if (fieldValue === null || fieldValue === undefined) {
-            throw new Error('Required parameter fieldValue was null or undefined when calling verifyUserAccountUsingPUT.');
         }
         // verify required parameter 'userId' is not null or undefined
         if (userId === null || userId === undefined) {
