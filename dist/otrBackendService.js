@@ -13442,7 +13442,7 @@ angular.module('otrBackendService', [])
              * @name OtrService#verifyUserAccountUsingPUT
              * @param {object} parameters - method options and parameters
              * @param {string} parameters.code - code
-             * @param {string} parameters.fieldType - fieldType
+             * @param {string} parameters.fieldName - fieldName
              * @param {string} parameters.fieldValue - fieldValue
              * @param {string} parameters.userId - userId
              */
@@ -13471,10 +13471,10 @@ angular.module('otrBackendService', [])
                 }
 
                 /** set default value **/
-                queryParameters['fieldType'] = email;
+                queryParameters['fieldName'] = email;
 
-                if (parameters['fieldType'] !== undefined) {
-                    queryParameters['fieldType'] = parameters['fieldType'];
+                if (parameters['fieldName'] !== undefined) {
+                    queryParameters['fieldName'] = parameters['fieldName'];
                 }
 
                 if (parameters['fieldValue'] !== undefined) {

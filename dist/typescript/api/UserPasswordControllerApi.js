@@ -191,9 +191,9 @@ var UserPasswordControllerApi = /** @class */ (function () {
      * @param code code
      * @param fieldValue fieldValue
      * @param userId userId
-     * @param fieldType fieldType
+     * @param fieldName fieldName
      */
-    UserPasswordControllerApi.prototype.verifyUserAccountUsingPUT = function (code, fieldValue, userId, fieldType, extraHttpRequestParams) {
+    UserPasswordControllerApi.prototype.verifyUserAccountUsingPUT = function (code, fieldValue, userId, fieldName, extraHttpRequestParams) {
         var localVarPath = this.basePath + '/api/v1/users/verify-account';
         var queryParameters = {};
         var headerParams = Object.assign({}, this.defaultHeaders);
@@ -212,8 +212,8 @@ var UserPasswordControllerApi = /** @class */ (function () {
         if (code !== undefined) {
             queryParameters['code'] = code;
         }
-        if (fieldType !== undefined) {
-            queryParameters['fieldType'] = fieldType;
+        if (fieldName !== undefined) {
+            queryParameters['fieldName'] = fieldName;
         }
         if (fieldValue !== undefined) {
             queryParameters['fieldValue'] = fieldValue;
