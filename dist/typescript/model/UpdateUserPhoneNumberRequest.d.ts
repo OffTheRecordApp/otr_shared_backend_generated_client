@@ -12,5 +12,5 @@
 import * as models from './models';
 export interface UpdateUserPhoneNumberRequest {
     "phoneNumber"?: models.UpdatePhoneNumber;
-    "shouldVerifyNumber"?: boolean;
+    "shouldVerifyPhoneNumber"?: boolean;
 }
