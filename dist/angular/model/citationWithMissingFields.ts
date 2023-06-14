@@ -36,7 +36,7 @@ export namespace CitationWithMissingFields {
         Male: 'MALE' as GenderEnum,
         NotListed: 'NOT_LISTED' as GenderEnum
     };
-    export type RaceEnum = 'ASIAN' | 'BLACK' | 'HISPANIC' | 'MIDDLE_EASTERN' | 'NATIVE' | 'PACIFIC_ISLANDER' | 'UNKNOWN' | 'WHITE';
+    export type RaceEnum = 'ASIAN' | 'BLACK' | 'HISPANIC' | 'MIDDLE_EASTERN' | 'NATIVE' | 'PACIFIC_ISLANDER' | 'TWO_OR_MORE' | 'UNKNOWN' | 'WHITE';
     export const RaceEnum = {
         Asian: 'ASIAN' as RaceEnum,
         Black: 'BLACK' as RaceEnum,
@@ -44,6 +44,7 @@ export namespace CitationWithMissingFields {
         MiddleEastern: 'MIDDLE_EASTERN' as RaceEnum,
         Native: 'NATIVE' as RaceEnum,
         PacificIslander: 'PACIFIC_ISLANDER' as RaceEnum,
+        TwoOrMore: 'TWO_OR_MORE' as RaceEnum,
         Unknown: 'UNKNOWN' as RaceEnum,
         White: 'WHITE' as RaceEnum
     };

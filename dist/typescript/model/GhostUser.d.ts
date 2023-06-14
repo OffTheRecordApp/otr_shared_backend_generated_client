@@ -11,9 +11,31 @@
  */
 import * as models from './models';
 export interface GhostUser {
+    "dob"?: string;
+    "driverLicenseNumber"?: string;
     "emailAddress"?: string;
     "firstname"?: string;
+    "gender"?: GhostUser.GenderEnum;
     "lastname"?: string;
     "password"?: string;
     "phoneNumbers"?: Array<models.PhoneNumberDomain>;
+    "race"?: GhostUser.RaceEnum;
+}
+export declare namespace GhostUser {
+    enum GenderEnum {
+        FEMALE,
+        MALE,
+        NOTLISTED
+    }
+    enum RaceEnum {
+        ASIAN,
+        BLACK,
+        HISPANIC,
+        MIDDLEEASTERN,
+        NATIVE,
+        PACIFICISLANDER,
+        TWOORMORE,
+        UNKNOWN,
+        WHITE
+    }
 }

@@ -31,4 +31,16 @@ var UpdateUserModel;
         PrivacyModeEnum[PrivacyModeEnum["PUBLIC"] = 'PUBLIC'] = "PUBLIC";
         PrivacyModeEnum[PrivacyModeEnum["SEMIPUBLIC"] = 'SEMI_PUBLIC'] = "SEMIPUBLIC";
     })(PrivacyModeEnum = UpdateUserModel.PrivacyModeEnum || (UpdateUserModel.PrivacyModeEnum = {}));
+    var RaceEnum;
+    (function (RaceEnum) {
+        RaceEnum[RaceEnum["ASIAN"] = 'ASIAN'] = "ASIAN";
+        RaceEnum[RaceEnum["BLACK"] = 'BLACK'] = "BLACK";
+        RaceEnum[RaceEnum["HISPANIC"] = 'HISPANIC'] = "HISPANIC";
+        RaceEnum[RaceEnum["MIDDLEEASTERN"] = 'MIDDLE_EASTERN'] = "MIDDLEEASTERN";
+        RaceEnum[RaceEnum["NATIVE"] = 'NATIVE'] = "NATIVE";
+        RaceEnum[RaceEnum["PACIFICISLANDER"] = 'PACIFIC_ISLANDER'] = "PACIFICISLANDER";
+        RaceEnum[RaceEnum["TWOORMORE"] = 'TWO_OR_MORE'] = "TWOORMORE";
+        RaceEnum[RaceEnum["UNKNOWN"] = 'UNKNOWN'] = "UNKNOWN";
+        RaceEnum[RaceEnum["WHITE"] = 'WHITE'] = "WHITE";
+    })(RaceEnum = UpdateUserModel.RaceEnum || (UpdateUserModel.RaceEnum = {}));
 })(UpdateUserModel = exports.UpdateUserModel || (exports.UpdateUserModel = {}));

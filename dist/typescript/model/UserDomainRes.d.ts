@@ -88,6 +88,7 @@ export declare namespace UserDomainRes {
         MIDDLEEASTERN,
         NATIVE,
         PACIFICISLANDER,
+        TWOORMORE,
         UNKNOWN,
         WHITE
     }

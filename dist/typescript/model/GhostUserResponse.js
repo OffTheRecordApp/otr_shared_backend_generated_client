@@ -11,3 +11,25 @@
  * Do not edit the class manually.
  */
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.GhostUserResponse = void 0;
+var GhostUserResponse;
+(function (GhostUserResponse) {
+    var GenderEnum;
+    (function (GenderEnum) {
+        GenderEnum[GenderEnum["FEMALE"] = 'FEMALE'] = "FEMALE";
+        GenderEnum[GenderEnum["MALE"] = 'MALE'] = "MALE";
+        GenderEnum[GenderEnum["NOTLISTED"] = 'NOT_LISTED'] = "NOTLISTED";
+    })(GenderEnum = GhostUserResponse.GenderEnum || (GhostUserResponse.GenderEnum = {}));
+    var RaceEnum;
+    (function (RaceEnum) {
+        RaceEnum[RaceEnum["ASIAN"] = 'ASIAN'] = "ASIAN";
+        RaceEnum[RaceEnum["BLACK"] = 'BLACK'] = "BLACK";
+        RaceEnum[RaceEnum["HISPANIC"] = 'HISPANIC'] = "HISPANIC";
+        RaceEnum[RaceEnum["MIDDLEEASTERN"] = 'MIDDLE_EASTERN'] = "MIDDLEEASTERN";
+        RaceEnum[RaceEnum["NATIVE"] = 'NATIVE'] = "NATIVE";
+        RaceEnum[RaceEnum["PACIFICISLANDER"] = 'PACIFIC_ISLANDER'] = "PACIFICISLANDER";
+        RaceEnum[RaceEnum["TWOORMORE"] = 'TWO_OR_MORE'] = "TWOORMORE";
+        RaceEnum[RaceEnum["UNKNOWN"] = 'UNKNOWN'] = "UNKNOWN";
+        RaceEnum[RaceEnum["WHITE"] = 'WHITE'] = "WHITE";
+    })(RaceEnum = GhostUserResponse.RaceEnum || (GhostUserResponse.RaceEnum = {}));
+})(GhostUserResponse = exports.GhostUserResponse || (exports.GhostUserResponse = {}));

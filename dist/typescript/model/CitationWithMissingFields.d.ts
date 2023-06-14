@@ -39,6 +39,7 @@ export declare namespace CitationWithMissingFields {
         MIDDLEEASTERN,
         NATIVE,
         PACIFICISLANDER,
+        TWOORMORE,
         UNKNOWN,
         WHITE
     }

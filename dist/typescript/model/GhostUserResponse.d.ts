@@ -10,8 +10,30 @@
  * Do not edit the class manually.
  */
 export interface GhostUserResponse {
+    "dob"?: string;
+    "driverLicenseNumber"?: string;
     "emailAddress"?: string;
     "firstname"?: string;
+    "gender"?: GhostUserResponse.GenderEnum;
     "lastname"?: string;
+    "race"?: GhostUserResponse.RaceEnum;
     "userId"?: number;
+}
+export declare namespace GhostUserResponse {
+    enum GenderEnum {
+        FEMALE,
+        MALE,
+        NOTLISTED
+    }
+    enum RaceEnum {
+        ASIAN,
+        BLACK,
+        HISPANIC,
+        MIDDLEEASTERN,
+        NATIVE,
+        PACIFICISLANDER,
+        TWOORMORE,
+        UNKNOWN,
+        WHITE
+    }
 }

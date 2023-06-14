@@ -12,9 +12,34 @@
 
 
 export interface GhostUserResponse { 
+    dob?: string;
+    driverLicenseNumber?: string;
     emailAddress?: string;
     firstname?: string;
+    gender?: GhostUserResponse.GenderEnum;
     lastname?: string;
+    race?: GhostUserResponse.RaceEnum;
     userId?: number;
 }
+export namespace GhostUserResponse {
+    export type GenderEnum = 'FEMALE' | 'MALE' | 'NOT_LISTED';
+    export const GenderEnum = {
+        Female: 'FEMALE' as GenderEnum,
+        Male: 'MALE' as GenderEnum,
+        NotListed: 'NOT_LISTED' as GenderEnum
+    };
+    export type RaceEnum = 'ASIAN' | 'BLACK' | 'HISPANIC' | 'MIDDLE_EASTERN' | 'NATIVE' | 'PACIFIC_ISLANDER' | 'TWO_OR_MORE' | 'UNKNOWN' | 'WHITE';
+    export const RaceEnum = {
+        Asian: 'ASIAN' as RaceEnum,
+        Black: 'BLACK' as RaceEnum,
+        Hispanic: 'HISPANIC' as RaceEnum,
+        MiddleEastern: 'MIDDLE_EASTERN' as RaceEnum,
+        Native: 'NATIVE' as RaceEnum,
+        PacificIslander: 'PACIFIC_ISLANDER' as RaceEnum,
+        TwoOrMore: 'TWO_OR_MORE' as RaceEnum,
+        Unknown: 'UNKNOWN' as RaceEnum,
+        White: 'WHITE' as RaceEnum
+    };
+}
+
 

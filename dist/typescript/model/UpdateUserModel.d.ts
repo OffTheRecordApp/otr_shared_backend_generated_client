@@ -11,6 +11,7 @@
  */
 export interface UpdateUserModel {
     "dob"?: string;
+    "driverLicenseNumber"?: string;
     "emailAddress"?: string;
     "firstname"?: string;
     "gender"?: string;
@@ -25,6 +26,7 @@ export interface UpdateUserModel {
     "loginProvider"?: UpdateUserModel.LoginProviderEnum;
     "privacyMode"?: UpdateUserModel.PrivacyModeEnum;
     "profilePicture"?: string;
+    "race"?: UpdateUserModel.RaceEnum;
     "signUpCode"?: string;
     "signUpCodeUseCount"?: number;
     "userAlias"?: string;
@@ -44,5 +46,16 @@ export declare namespace UpdateUserModel {
         PRIVATE,
         PUBLIC,
         SEMIPUBLIC
+    }
+    enum RaceEnum {
+        ASIAN,
+        BLACK,
+        HISPANIC,
+        MIDDLEEASTERN,
+        NATIVE,
+        PACIFICISLANDER,
+        TWOORMORE,
+        UNKNOWN,
+        WHITE
     }
 }
