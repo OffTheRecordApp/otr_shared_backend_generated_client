@@ -65,6 +65,7 @@ import { ListCasesControllerService } from './api/listCasesController.service';
 import { MediaCreationControllerService } from './api/mediaCreationController.service';
 import { MessagesControllerService } from './api/messagesController.service';
 import { NotesControllerService } from './api/notesController.service';
+import { OcrPredictionControllerService } from './api/ocrPredictionController.service';
 import { OnDemandRequestControllerService } from './api/onDemandRequestController.service';
 import { OneTimePasswordControllerService } from './api/oneTimePasswordController.service';
 import { PhoneLeadsControllerService } from './api/phoneLeadsController.service';

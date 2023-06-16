@@ -65,6 +65,7 @@ api/listCasesController.service.ts
 api/mediaCreationController.service.ts
 api/messagesController.service.ts
 api/notesController.service.ts
+api/ocrPredictionController.service.ts
 api/onDemandRequestController.service.ts
 api/oneTimePasswordController.service.ts
 api/phoneLeadsController.service.ts
@@ -544,6 +545,7 @@ model/noteEntity.ts
 model/noteModel.ts
 model/notificationEvent.ts
 model/notificationEvents.ts
+model/oCRPredictionCaseResponse.ts
 model/outgoingContactDomain.ts
 model/paymentPlanTypeModel.ts
 model/paymentPlanTypeModelReq.ts
@@ -558,6 +560,7 @@ model/phoneNumberDomainRes.ts
 model/postCourtCoverageRequest.ts
 model/postFeedbackRequest.ts
 model/potentialCustomerDomain.ts
+model/predictCitationTextRequest.ts
 model/previewDocumentRequest.ts
 model/priceMatchRequest.ts
 model/priceMatchResponse.ts
@@ -746,6 +749,7 @@ model/verifyMailingAddressRequest.ts
 model/verifyMailingAddressResponse.ts
 model/verifyPasswordResetTokenResponse.ts
 model/verifyUserAccountResponse.ts
+model/violation.ts
 model/violationClassificationModel.ts
 model/violationInput.ts
 model/violationInputRequest.ts
