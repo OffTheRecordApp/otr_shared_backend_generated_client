@@ -10598,6 +10598,7 @@ angular.module('otrBackendService', [])
              * @method
              * @name OtrService#sendOneTimePasswordUsingPOST
              * @param {object} parameters - method options and parameters
+             * @param {} parameters.request - request
              */
             OtrService.prototype.sendOneTimePasswordUsingPOST = function(parameters) {
                 if (parameters === undefined) {
@@ -10613,6 +10614,15 @@ angular.module('otrBackendService', [])
 
                 headers['Accept'] = ['*/*'];
                 headers['Content-Type'] = ['application/json'];
+
+                if (parameters['request'] !== undefined) {
+                    body = parameters['request'];
+                }
+
+                if (parameters['request'] === undefined) {
+                    deferred.reject(new Error('Missing required  parameter: request'));
+                    return deferred.promise;
+                }
 
                 queryParameters = mergeQueryParams(parameters, queryParameters);
 

@@ -618,6 +618,7 @@ model/sendDirectMailResponse.ts
 model/sendDirectReferralCheckRequest.ts
 model/sendEmailToUserRequest.ts
 model/sendEmailToUsersRequest.ts
+model/sendOneTimePasswordRequest.ts
 model/sendPayoutToLawfirmRequest.ts
 model/sendPayoutToLawfirmResponse.ts
 model/setArchiveCaseModel.ts

@@ -523,6 +523,7 @@ __exportStar(require("./SendDirectMailResponse"), exports);
 __exportStar(require("./SendDirectReferralCheckRequest"), exports);
 __exportStar(require("./SendEmailToUserRequest"), exports);
 __exportStar(require("./SendEmailToUsersRequest"), exports);
+__exportStar(require("./SendOneTimePasswordRequest"), exports);
 __exportStar(require("./SendPayoutToLawfirmRequest"), exports);
 __exportStar(require("./SendPayoutToLawfirmResponse"), exports);
 __exportStar(require("./SetArchiveCaseModel"), exports);

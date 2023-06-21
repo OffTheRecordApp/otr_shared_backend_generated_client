@@ -10,6 +10,7 @@
  * Do not edit the class manually.
  */
 /// <reference types="angular" />
+import * as models from '../model/models';
 export declare class OneTimePasswordControllerApi {
     protected $http: ng.IHttpService;
     protected $httpParamSerializer?: (d: any) => any;
@@ -20,6 +21,7 @@ export declare class OneTimePasswordControllerApi {
     /**
      *
      * @summary sendOneTimePassword
+     * @param request request
      */
-    sendOneTimePasswordUsingPOST(extraHttpRequestParams?: any): ng.IHttpPromise<{}>;
+    sendOneTimePasswordUsingPOST(request: models.SendOneTimePasswordRequest, extraHttpRequestParams?: any): ng.IHttpPromise<{}>;
 }

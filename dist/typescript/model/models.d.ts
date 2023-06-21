@@ -511,6 +511,7 @@ export * from './SendDirectMailResponse';
 export * from './SendDirectReferralCheckRequest';
 export * from './SendEmailToUserRequest';
 export * from './SendEmailToUsersRequest';
+export * from './SendOneTimePasswordRequest';
 export * from './SendPayoutToLawfirmRequest';
 export * from './SendPayoutToLawfirmResponse';
 export * from './SetArchiveCaseModel';
