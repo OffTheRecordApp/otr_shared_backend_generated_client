@@ -32,10 +32,6 @@ var OneTimePasswordControllerApi = /** @class */ (function () {
         var localVarPath = this.basePath + '/api/v1/one_time_password';
         var queryParameters = {};
         var headerParams = Object.assign({}, this.defaultHeaders);
-        // verify required parameter 'request' is not null or undefined
-        if (request === null || request === undefined) {
-            throw new Error('Required parameter request was null or undefined when calling sendOneTimePasswordUsingPOST.');
-        }
         var httpRequestParams = {
             method: 'POST',
             url: localVarPath,

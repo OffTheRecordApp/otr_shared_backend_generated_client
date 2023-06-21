@@ -23,5 +23,5 @@ export declare class OneTimePasswordControllerApi {
      * @summary sendOneTimePassword
      * @param request request
      */
-    sendOneTimePasswordUsingPOST(request: models.SendOneTimePasswordRequest, extraHttpRequestParams?: any): ng.IHttpPromise<{}>;
+    sendOneTimePasswordUsingPOST(request?: models.SendOneTimePasswordRequest, extraHttpRequestParams?: any): ng.IHttpPromise<{}>;
 }
