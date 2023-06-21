@@ -10,6 +10,7 @@
  * Do not edit the class manually.
  */
 import { CitationViolationModel } from './citationViolationModel';
+import { PureDate } from './pureDate';
 import { TimestampRes } from './timestampRes';
 
 
@@ -17,6 +18,7 @@ export interface CitationWithMissingFields {
     birthDate?: string;
     citationCreationDateUtc?: TimestampRes;
     citationId?: number;
+    citationIssueDate?: PureDate;
     clientEmailAddress?: string;
     clientFirstName?: string;
     courtId?: number;

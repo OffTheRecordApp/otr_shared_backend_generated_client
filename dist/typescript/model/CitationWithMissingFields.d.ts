@@ -14,6 +14,7 @@ export interface CitationWithMissingFields {
     "birthDate"?: string;
     "citationCreationDateUtc"?: models.TimestampRes;
     "citationId"?: number;
+    "citationIssueDate"?: models.PureDate;
     "clientEmailAddress"?: string;
     "clientFirstName"?: string;
     "courtId"?: number;
