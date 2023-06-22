@@ -30,6 +30,7 @@ export interface CitationDomain {
     creationDateUTC?: Timestamp;
     documentUrlToConvert?: string;
     fineAmount?: number;
+    hasCase?: boolean;
     hubspotContactId?: string;
     involvesAccident?: boolean;
     isDeleted?: boolean;
