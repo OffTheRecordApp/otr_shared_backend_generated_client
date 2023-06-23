@@ -18,6 +18,7 @@ export interface UserAuditEventModel {
     "oldValue"?: string;
     "requesterName"?: string;
     "requesterUserId"?: number;
+    "subject"?: string;
     "userEventId"?: number;
 }
 export declare namespace UserAuditEventModel {

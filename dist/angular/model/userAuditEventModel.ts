@@ -20,6 +20,7 @@ export interface UserAuditEventModel {
     oldValue?: string;
     requesterName?: string;
     requesterUserId?: number;
+    subject?: string;
     userEventId?: number;
 }
 export namespace UserAuditEventModel {

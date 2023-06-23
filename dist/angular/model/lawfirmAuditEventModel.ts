@@ -20,6 +20,7 @@ export interface LawfirmAuditEventModel {
     lawfirmEventId?: number;
     newValue?: string;
     oldValue?: string;
+    subject?: string;
     userId?: number;
 }
 export namespace LawfirmAuditEventModel {

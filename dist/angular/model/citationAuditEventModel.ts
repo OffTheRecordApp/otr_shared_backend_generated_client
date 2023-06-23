@@ -20,6 +20,7 @@ export interface CitationAuditEventModel {
     eventId?: number;
     newValue?: string;
     oldValue?: string;
+    subject?: string;
     userId?: number;
 }
 export namespace CitationAuditEventModel {
