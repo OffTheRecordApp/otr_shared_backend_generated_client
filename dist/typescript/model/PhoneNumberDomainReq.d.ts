@@ -19,6 +19,7 @@ export interface PhoneNumberDomainReq {
     "phoneNumberId"?: number;
     "referenceId"?: number;
     "type"?: PhoneNumberDomainReq.TypeEnum;
+    "verificationDateUtc"?: string;
 }
 export declare namespace PhoneNumberDomainReq {
     enum EntityTypeEnum {

@@ -21,6 +21,7 @@ export interface PhoneNumberDomainReq {
     phoneNumberId?: number;
     referenceId?: number;
     type?: PhoneNumberDomainReq.TypeEnum;
+    verificationDateUtc?: string;
 }
 export namespace PhoneNumberDomainReq {
     export type EntityTypeEnum = 'CASE' | 'CASE_PAYMENT' | 'CITATION' | 'COURT' | 'LAWFIRM' | 'LAWFIRM_CASE' | 'LAWYER' | 'LINE_ITEM' | 'STRIPE_CHARGE' | 'USER';
