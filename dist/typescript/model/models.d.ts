@@ -106,6 +106,7 @@ export * from './ClientActionRequiredRequest';
 export * from './ClientConfirmedUnpaidCase';
 export * from './ClientLeadDomain';
 export * from './CommonHeader';
+export * from './ConfidenceField';
 export * from './ContactTimelineResponse';
 export * from './ConvertPdfToImageModel';
 export * from './ConvertPdfToImageRequest';

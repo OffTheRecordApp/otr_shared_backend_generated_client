@@ -11,6 +11,9 @@
  */
 export interface Violation {
     "code"?: string;
+    "codeConfidence"?: number;
     "description"?: string;
+    "descriptionConfidence"?: number;
     "penalty"?: string;
+    "penaltyConfidence"?: number;
 }

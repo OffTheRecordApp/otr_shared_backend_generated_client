@@ -118,6 +118,7 @@ __exportStar(require("./ClientActionRequiredRequest"), exports);
 __exportStar(require("./ClientConfirmedUnpaidCase"), exports);
 __exportStar(require("./ClientLeadDomain"), exports);
 __exportStar(require("./CommonHeader"), exports);
+__exportStar(require("./ConfidenceField"), exports);
 __exportStar(require("./ContactTimelineResponse"), exports);
 __exportStar(require("./ConvertPdfToImageModel"), exports);
 __exportStar(require("./ConvertPdfToImageRequest"), exports);
