@@ -19,6 +19,7 @@ import { CaseNotesControllerService } from './api/caseNotesController.service';
 import { CasePaymentControllerService } from './api/casePaymentController.service';
 import { CaseReferralCodeControllerService } from './api/caseReferralCodeController.service';
 import { CaseRefundControllerService } from './api/caseRefundController.service';
+import { CaseResolutionControllerService } from './api/caseResolutionController.service';
 import { CaseStatusControllerService } from './api/caseStatusController.service';
 import { CaseTransferControllerService } from './api/caseTransferController.service';
 import { CertificateControllerService } from './api/certificateController.service';

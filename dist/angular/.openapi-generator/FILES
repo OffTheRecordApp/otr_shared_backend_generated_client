@@ -19,6 +19,7 @@ api/caseNotesController.service.ts
 api/casePaymentController.service.ts
 api/caseReferralCodeController.service.ts
 api/caseRefundController.service.ts
+api/caseResolutionController.service.ts
 api/caseStatusController.service.ts
 api/caseTransferController.service.ts
 api/certificateController.service.ts
