@@ -213,6 +213,7 @@ export declare namespace ValidateDirectMailResponse {
         NOCHARGESONCASE,
         NOINSURANCE,
         NOLAWFIRMAVAILABLE,
+        NOLEGALSERVICESINREGION,
         NOSTRIPEACCOUNT,
         OWNERCASEMESSAGEMISMATCH,
         PAYMENTPLANSDENIED,
