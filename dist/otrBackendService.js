@@ -4431,7 +4431,44 @@ angular.module('otrBackendService', [])
                 }
                 var deferred = $q.defer();
                 var domain = this.domain,
-                    path = '/api/v1/connect/apple';
+                    path = '/api/v1/connect/Apple';
+                var body = {},
+                    queryParameters = {},
+                    headers = {},
+                    form = {};
+
+                headers['Accept'] = ['*/*'];
+                headers['Content-Type'] = ['application/json'];
+
+                if (parameters['request'] !== undefined) {
+                    body = parameters['request'];
+                }
+
+                if (parameters['request'] === undefined) {
+                    deferred.reject(new Error('Missing required  parameter: request'));
+                    return deferred.promise;
+                }
+
+                queryParameters = mergeQueryParams(parameters, queryParameters);
+
+                this.request('POST', domain + path, parameters, body, headers, queryParameters, form, deferred);
+
+                return deferred.promise;
+            };
+            /**
+             * facebookConnect
+             * @method
+             * @name OtrService#facebookConnectUsingPOST
+             * @param {object} parameters - method options and parameters
+             * @param {} parameters.request - request
+             */
+            OtrService.prototype.facebookConnectUsingPOST = function(parameters) {
+                if (parameters === undefined) {
+                    parameters = {};
+                }
+                var deferred = $q.defer();
+                var domain = this.domain,
+                    path = '/api/v1/connect/Facebook';
                 var body = {},
                     queryParameters = {},
                     headers = {},
@@ -4468,7 +4505,44 @@ angular.module('otrBackendService', [])
                 }
                 var deferred = $q.defer();
                 var domain = this.domain,
-                    path = '/api/v1/connect/google';
+                    path = '/api/v1/connect/Google';
+                var body = {},
+                    queryParameters = {},
+                    headers = {},
+                    form = {};
+
+                headers['Accept'] = ['*/*'];
+                headers['Content-Type'] = ['application/json'];
+
+                if (parameters['request'] !== undefined) {
+                    body = parameters['request'];
+                }
+
+                if (parameters['request'] === undefined) {
+                    deferred.reject(new Error('Missing required  parameter: request'));
+                    return deferred.promise;
+                }
+
+                queryParameters = mergeQueryParams(parameters, queryParameters);
+
+                this.request('POST', domain + path, parameters, body, headers, queryParameters, form, deferred);
+
+                return deferred.promise;
+            };
+            /**
+             * appleConnect
+             * @method
+             * @name OtrService#appleConnectUsingPOST_1
+             * @param {object} parameters - method options and parameters
+             * @param {} parameters.request - request
+             */
+            OtrService.prototype.appleConnectUsingPOST_1 = function(parameters) {
+                if (parameters === undefined) {
+                    parameters = {};
+                }
+                var deferred = $q.defer();
+                var domain = this.domain,
+                    path = '/api/v1/connect/apple';
                 var body = {},
                     queryParameters = {},
                     headers = {},
@@ -4495,18 +4569,17 @@ angular.module('otrBackendService', [])
             /**
              * facebookConnect
              * @method
-             * @name OtrService#facebookConnectUsingPOST
+             * @name OtrService#facebookConnectUsingPOST_1
              * @param {object} parameters - method options and parameters
-             * @param {string} parameters.providerId - providerId
              * @param {} parameters.request - request
              */
-            OtrService.prototype.facebookConnectUsingPOST = function(parameters) {
+            OtrService.prototype.facebookConnectUsingPOST_1 = function(parameters) {
                 if (parameters === undefined) {
                     parameters = {};
                 }
                 var deferred = $q.defer();
                 var domain = this.domain,
-                    path = '/api/v1/connect/{providerId}';
+                    path = '/api/v1/connect/facebook';
                 var body = {},
                     queryParameters = {},
                     headers = {},
@@ -4515,12 +4588,42 @@ angular.module('otrBackendService', [])
                 headers['Accept'] = ['*/*'];
                 headers['Content-Type'] = ['application/json'];
 
-                path = path.replace('{providerId}', parameters['providerId']);
+                if (parameters['request'] !== undefined) {
+                    body = parameters['request'];
+                }
 
-                if (parameters['providerId'] === undefined) {
-                    deferred.reject(new Error('Missing required  parameter: providerId'));
+                if (parameters['request'] === undefined) {
+                    deferred.reject(new Error('Missing required  parameter: request'));
                     return deferred.promise;
                 }
+
+                queryParameters = mergeQueryParams(parameters, queryParameters);
+
+                this.request('POST', domain + path, parameters, body, headers, queryParameters, form, deferred);
+
+                return deferred.promise;
+            };
+            /**
+             * googleConnect
+             * @method
+             * @name OtrService#googleConnectUsingPOST_1
+             * @param {object} parameters - method options and parameters
+             * @param {} parameters.request - request
+             */
+            OtrService.prototype.googleConnectUsingPOST_1 = function(parameters) {
+                if (parameters === undefined) {
+                    parameters = {};
+                }
+                var deferred = $q.defer();
+                var domain = this.domain,
+                    path = '/api/v1/connect/google';
+                var body = {},
+                    queryParameters = {},
+                    headers = {},
+                    form = {};
+
+                headers['Accept'] = ['*/*'];
+                headers['Content-Type'] = ['application/json'];
 
                 if (parameters['request'] !== undefined) {
                     body = parameters['request'];

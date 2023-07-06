@@ -26,15 +26,32 @@ export declare class SocialLoginControllerApi {
     appleConnectUsingPOST(request: models.AppleLoginRequest, extraHttpRequestParams?: any): ng.IHttpPromise<models.SocialLoginResponse>;
     /**
      *
-     * @summary facebookConnect
-     * @param providerId providerId
+     * @summary appleConnect
      * @param request request
      */
-    facebookConnectUsingPOST(providerId: string, request: models.SocialLoginRequest, extraHttpRequestParams?: any): ng.IHttpPromise<models.SocialLoginResponse>;
+    appleConnectUsingPOST1(request: models.AppleLoginRequest, extraHttpRequestParams?: any): ng.IHttpPromise<models.SocialLoginResponse>;
+    /**
+     *
+     * @summary facebookConnect
+     * @param request request
+     */
+    facebookConnectUsingPOST(request: models.SocialLoginRequest, extraHttpRequestParams?: any): ng.IHttpPromise<models.SocialLoginResponse>;
+    /**
+     *
+     * @summary facebookConnect
+     * @param request request
+     */
+    facebookConnectUsingPOST1(request: models.SocialLoginRequest, extraHttpRequestParams?: any): ng.IHttpPromise<models.SocialLoginResponse>;
     /**
      *
      * @summary googleConnect
      * @param request request
      */
     googleConnectUsingPOST(request: models.GoogleLoginRequest, extraHttpRequestParams?: any): ng.IHttpPromise<models.SocialLoginResponse>;
+    /**
+     *
+     * @summary googleConnect
+     * @param request request
+     */
+    googleConnectUsingPOST1(request: models.GoogleLoginRequest, extraHttpRequestParams?: any): ng.IHttpPromise<models.SocialLoginResponse>;
 }

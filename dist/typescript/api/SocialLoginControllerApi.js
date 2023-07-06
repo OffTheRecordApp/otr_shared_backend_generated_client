@@ -29,7 +29,7 @@ var SocialLoginControllerApi = /** @class */ (function () {
      * @param request request
      */
     SocialLoginControllerApi.prototype.appleConnectUsingPOST = function (request, extraHttpRequestParams) {
-        var localVarPath = this.basePath + '/api/v1/connect/apple';
+        var localVarPath = this.basePath + '/api/v1/connect/Apple';
         var queryParameters = {};
         var headerParams = Object.assign({}, this.defaultHeaders);
         // verify required parameter 'request' is not null or undefined
@@ -50,22 +50,66 @@ var SocialLoginControllerApi = /** @class */ (function () {
     };
     /**
      *
-     * @summary facebookConnect
-     * @param providerId providerId
+     * @summary appleConnect
      * @param request request
      */
-    SocialLoginControllerApi.prototype.facebookConnectUsingPOST = function (providerId, request, extraHttpRequestParams) {
-        var localVarPath = this.basePath + '/api/v1/connect/{providerId}'
-            .replace('{' + 'providerId' + '}', encodeURIComponent(String(providerId)));
+    SocialLoginControllerApi.prototype.appleConnectUsingPOST1 = function (request, extraHttpRequestParams) {
+        var localVarPath = this.basePath + '/api/v1/connect/apple';
         var queryParameters = {};
         var headerParams = Object.assign({}, this.defaultHeaders);
-        // verify required parameter 'providerId' is not null or undefined
-        if (providerId === null || providerId === undefined) {
-            throw new Error('Required parameter providerId was null or undefined when calling facebookConnectUsingPOST.');
+        // verify required parameter 'request' is not null or undefined
+        if (request === null || request === undefined) {
+            throw new Error('Required parameter request was null or undefined when calling appleConnectUsingPOST1.');
         }
+        var httpRequestParams = {
+            method: 'POST',
+            url: localVarPath,
+            data: request,
+            params: queryParameters,
+            headers: headerParams
+        };
+        if (extraHttpRequestParams) {
+            httpRequestParams = Object.assign(httpRequestParams, extraHttpRequestParams);
+        }
+        return this.$http(httpRequestParams);
+    };
+    /**
+     *
+     * @summary facebookConnect
+     * @param request request
+     */
+    SocialLoginControllerApi.prototype.facebookConnectUsingPOST = function (request, extraHttpRequestParams) {
+        var localVarPath = this.basePath + '/api/v1/connect/Facebook';
+        var queryParameters = {};
+        var headerParams = Object.assign({}, this.defaultHeaders);
         // verify required parameter 'request' is not null or undefined
         if (request === null || request === undefined) {
             throw new Error('Required parameter request was null or undefined when calling facebookConnectUsingPOST.');
+        }
+        var httpRequestParams = {
+            method: 'POST',
+            url: localVarPath,
+            data: request,
+            params: queryParameters,
+            headers: headerParams
+        };
+        if (extraHttpRequestParams) {
+            httpRequestParams = Object.assign(httpRequestParams, extraHttpRequestParams);
+        }
+        return this.$http(httpRequestParams);
+    };
+    /**
+     *
+     * @summary facebookConnect
+     * @param request request
+     */
+    SocialLoginControllerApi.prototype.facebookConnectUsingPOST1 = function (request, extraHttpRequestParams) {
+        var localVarPath = this.basePath + '/api/v1/connect/facebook';
+        var queryParameters = {};
+        var headerParams = Object.assign({}, this.defaultHeaders);
+        // verify required parameter 'request' is not null or undefined
+        if (request === null || request === undefined) {
+            throw new Error('Required parameter request was null or undefined when calling facebookConnectUsingPOST1.');
         }
         var httpRequestParams = {
             method: 'POST',
@@ -85,12 +129,37 @@ var SocialLoginControllerApi = /** @class */ (function () {
      * @param request request
      */
     SocialLoginControllerApi.prototype.googleConnectUsingPOST = function (request, extraHttpRequestParams) {
-        var localVarPath = this.basePath + '/api/v1/connect/google';
+        var localVarPath = this.basePath + '/api/v1/connect/Google';
         var queryParameters = {};
         var headerParams = Object.assign({}, this.defaultHeaders);
         // verify required parameter 'request' is not null or undefined
         if (request === null || request === undefined) {
             throw new Error('Required parameter request was null or undefined when calling googleConnectUsingPOST.');
+        }
+        var httpRequestParams = {
+            method: 'POST',
+            url: localVarPath,
+            data: request,
+            params: queryParameters,
+            headers: headerParams
+        };
+        if (extraHttpRequestParams) {
+            httpRequestParams = Object.assign(httpRequestParams, extraHttpRequestParams);
+        }
+        return this.$http(httpRequestParams);
+    };
+    /**
+     *
+     * @summary googleConnect
+     * @param request request
+     */
+    SocialLoginControllerApi.prototype.googleConnectUsingPOST1 = function (request, extraHttpRequestParams) {
+        var localVarPath = this.basePath + '/api/v1/connect/google';
+        var queryParameters = {};
+        var headerParams = Object.assign({}, this.defaultHeaders);
+        // verify required parameter 'request' is not null or undefined
+        if (request === null || request === undefined) {
+            throw new Error('Required parameter request was null or undefined when calling googleConnectUsingPOST1.');
         }
         var httpRequestParams = {
             method: 'POST',
