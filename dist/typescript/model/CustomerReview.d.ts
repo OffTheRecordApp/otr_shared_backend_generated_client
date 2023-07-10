@@ -19,6 +19,7 @@ export interface CustomerReview {
     "id"?: number;
     "loggedInUserVote"?: CustomerReview.LoggedInUserVoteEnum;
     "nameSetting"?: CustomerReview.NameSettingEnum;
+    "profilePictureSignedUrl"?: string;
     "profilePictureUrl"?: string;
     "ratingModel"?: models.ReviewRatingModel;
     "recommendationType"?: string;
