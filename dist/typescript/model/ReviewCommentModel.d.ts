@@ -14,5 +14,6 @@ export interface ReviewCommentModel {
     "commentDateUtc"?: string;
     "copy"?: string;
     "id"?: number;
+    "profilePictureSignedUrl"?: string;
     "profilePictureUrl"?: string;
 }
