@@ -1,4 +1,3 @@
-"use strict";
 /**
  * OffTheRecord Rest Service API - Devo
  * A service to handle your traffic tickets
@@ -10,4 +9,8 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-Object.defineProperty(exports, "__esModule", { value: true });
+import * as models from './models';
+export interface MatchLegalServicesResponse {
+    "projectedInsuranceCostInCents"?: number;
+    "theCase"?: models.MatchInnerCaseModel;
+}

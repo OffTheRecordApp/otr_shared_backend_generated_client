@@ -10,6 +10,7 @@
  * Do not edit the class manually.
  */
 /// <reference types="angular" />
+import * as models from '../model/models';
 export declare class LegalServicesControllerApi {
     protected $http: ng.IHttpService;
     protected $httpParamSerializer?: (d: any) => any;
@@ -19,9 +20,16 @@ export declare class LegalServicesControllerApi {
     constructor($http: ng.IHttpService, $httpParamSerializer?: (d: any) => any, basePath?: string);
     /**
      *
+     * @summary createLegalServices
+     * @param citationId citationId
+     * @param request request
+     */
+    createLegalServicesUsingPOST(citationId: number, request: models.MatchLegalServicesRequest, extraHttpRequestParams?: any): ng.IHttpPromise<models.MatchLegalServicesResponse>;
+    /**
+     *
      * @summary selectLegalService
      * @param citationId citationId
-     * @param serviceId serviceId
+     * @param lawfirmCaseId lawfirmCaseId
      */
-    selectLegalServiceUsingPUT(citationId: number, serviceId: number, extraHttpRequestParams?: any): ng.IHttpPromise<object>;
+    selectLegalServiceUsingPUT(citationId: number, lawfirmCaseId: number, extraHttpRequestParams?: any): ng.IHttpPromise<object>;
 }

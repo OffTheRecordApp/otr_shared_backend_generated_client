@@ -523,9 +523,16 @@ model/markActionAsDeletedResponse.ts
 model/markCaseAsResolvedRequest.ts
 model/markCaseAsResolvedResponse.ts
 model/matchCaseResponse.ts
+model/matchCaseViolationPenaltyModel.ts
+model/matchCitationModel.ts
 model/matchCitationResponse.ts
+model/matchInnerCaseModel.ts
 model/matchInnerCaseResponse.ts
 model/matchLawfirmCaseResponse.ts
+model/matchLegalServiceModel.ts
+model/matchLegalServicesRequest.ts
+model/matchLegalServicesResponse.ts
+model/matchingFieldValue.ts
 model/mediaItemModel.ts
 model/mergeStatusReport.ts
 model/mergeTableChange.ts
@@ -756,6 +763,7 @@ model/violation.ts
 model/violationClassificationModel.ts
 model/violationInput.ts
 model/violationInputRequest.ts
+model/violationModel.ts
 model/violationPenaltyResponse.ts
 model/violationResponse.ts
 model/zoneId.ts

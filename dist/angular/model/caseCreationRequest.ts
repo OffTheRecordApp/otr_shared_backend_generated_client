@@ -14,16 +14,8 @@
 export interface CaseCreationRequest { 
     courtDate?: string;
     forcePredeterminedLawfirmId?: boolean;
-    legalServiceType?: CaseCreationRequest.LegalServiceTypeEnum;
+    legalServiceId?: number;
     predeterminedLawfirmId?: number;
     setQuoteExpirationOn?: boolean;
 }
-export namespace CaseCreationRequest {
-    export type LegalServiceTypeEnum = 'DEFER' | 'FIGHT';
-    export const LegalServiceTypeEnum = {
-        Defer: 'DEFER' as LegalServiceTypeEnum,
-        Fight: 'FIGHT' as LegalServiceTypeEnum
-    };
-}
-
 

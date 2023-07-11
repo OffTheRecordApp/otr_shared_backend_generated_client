@@ -18,6 +18,10 @@ import { HttpClient, HttpHeaders, HttpParams,
 import { CustomHttpParameterCodec }                          from '../encoder';
 import { Observable }                                        from 'rxjs';
 
+// @ts-ignore
+import { MatchLegalServicesRequest } from '../model/matchLegalServicesRequest';
+// @ts-ignore
+import { MatchLegalServicesResponse } from '../model/matchLegalServicesResponse';
 
 // @ts-ignore
 import { BASE_PATH, COLLECTION_FORMATS }                     from '../variables';
@@ -90,21 +94,93 @@ export class LegalServicesControllerService {
     }
 
     /**
-     * selectLegalService
+     * createLegalServices
      * @param citationId citationId
-     * @param serviceId serviceId
+     * @param request request
      * @param observe set whether or not to return the data Observable as the body, response or events. defaults to returning the body.
      * @param reportProgress flag to report request and response progress.
      */
-    public selectLegalServiceUsingPUT(citationId: number, serviceId: number, observe?: 'body', reportProgress?: boolean, options?: {httpHeaderAccept?: '*/*', context?: HttpContext}): Observable<object>;
-    public selectLegalServiceUsingPUT(citationId: number, serviceId: number, observe?: 'response', reportProgress?: boolean, options?: {httpHeaderAccept?: '*/*', context?: HttpContext}): Observable<HttpResponse<object>>;
-    public selectLegalServiceUsingPUT(citationId: number, serviceId: number, observe?: 'events', reportProgress?: boolean, options?: {httpHeaderAccept?: '*/*', context?: HttpContext}): Observable<HttpEvent<object>>;
-    public selectLegalServiceUsingPUT(citationId: number, serviceId: number, observe: any = 'body', reportProgress: boolean = false, options?: {httpHeaderAccept?: '*/*', context?: HttpContext}): Observable<any> {
+    public createLegalServicesUsingPOST(citationId: number, request: MatchLegalServicesRequest, observe?: 'body', reportProgress?: boolean, options?: {httpHeaderAccept?: '*/*', context?: HttpContext}): Observable<MatchLegalServicesResponse>;
+    public createLegalServicesUsingPOST(citationId: number, request: MatchLegalServicesRequest, observe?: 'response', reportProgress?: boolean, options?: {httpHeaderAccept?: '*/*', context?: HttpContext}): Observable<HttpResponse<MatchLegalServicesResponse>>;
+    public createLegalServicesUsingPOST(citationId: number, request: MatchLegalServicesRequest, observe?: 'events', reportProgress?: boolean, options?: {httpHeaderAccept?: '*/*', context?: HttpContext}): Observable<HttpEvent<MatchLegalServicesResponse>>;
+    public createLegalServicesUsingPOST(citationId: number, request: MatchLegalServicesRequest, observe: any = 'body', reportProgress: boolean = false, options?: {httpHeaderAccept?: '*/*', context?: HttpContext}): Observable<any> {
+        if (citationId === null || citationId === undefined) {
+            throw new Error('Required parameter citationId was null or undefined when calling createLegalServicesUsingPOST.');
+        }
+        if (request === null || request === undefined) {
+            throw new Error('Required parameter request was null or undefined when calling createLegalServicesUsingPOST.');
+        }
+
+        let localVarHeaders = this.defaultHeaders;
+
+        let localVarHttpHeaderAcceptSelected: string | undefined = options && options.httpHeaderAccept;
+        if (localVarHttpHeaderAcceptSelected === undefined) {
+            // to determine the Accept header
+            const httpHeaderAccepts: string[] = [
+                '*/*'
+            ];
+            localVarHttpHeaderAcceptSelected = this.configuration.selectHeaderAccept(httpHeaderAccepts);
+        }
+        if (localVarHttpHeaderAcceptSelected !== undefined) {
+            localVarHeaders = localVarHeaders.set('Accept', localVarHttpHeaderAcceptSelected);
+        }
+
+        let localVarHttpContext: HttpContext | undefined = options && options.context;
+        if (localVarHttpContext === undefined) {
+            localVarHttpContext = new HttpContext();
+        }
+
+
+        // to determine the Content-Type header
+        const consumes: string[] = [
+            'application/json'
+        ];
+        const httpContentTypeSelected: string | undefined = this.configuration.selectHeaderContentType(consumes);
+        if (httpContentTypeSelected !== undefined) {
+            localVarHeaders = localVarHeaders.set('Content-Type', httpContentTypeSelected);
+        }
+
+        let responseType_: 'text' | 'json' | 'blob' = 'json';
+        if (localVarHttpHeaderAcceptSelected) {
+            if (localVarHttpHeaderAcceptSelected.startsWith('text')) {
+                responseType_ = 'text';
+            } else if (this.configuration.isJsonMime(localVarHttpHeaderAcceptSelected)) {
+                responseType_ = 'json';
+            } else {
+                responseType_ = 'blob';
+            }
+        }
+
+        let localVarPath = `/api/v1/citations/${this.configuration.encodeParam({name: "citationId", value: citationId, in: "path", style: "simple", explode: false, dataType: "number", dataFormat: "int64"})}/legal-services`;
+        return this.httpClient.request<MatchLegalServicesResponse>('post', `${this.configuration.basePath}${localVarPath}`,
+            {
+                context: localVarHttpContext,
+                body: request,
+                responseType: <any>responseType_,
+                withCredentials: this.configuration.withCredentials,
+                headers: localVarHeaders,
+                observe: observe,
+                reportProgress: reportProgress
+            }
+        );
+    }
+
+    /**
+     * selectLegalService
+     * @param citationId citationId
+     * @param lawfirmCaseId lawfirmCaseId
+     * @param observe set whether or not to return the data Observable as the body, response or events. defaults to returning the body.
+     * @param reportProgress flag to report request and response progress.
+     */
+    public selectLegalServiceUsingPUT(citationId: number, lawfirmCaseId: number, observe?: 'body', reportProgress?: boolean, options?: {httpHeaderAccept?: '*/*', context?: HttpContext}): Observable<object>;
+    public selectLegalServiceUsingPUT(citationId: number, lawfirmCaseId: number, observe?: 'response', reportProgress?: boolean, options?: {httpHeaderAccept?: '*/*', context?: HttpContext}): Observable<HttpResponse<object>>;
+    public selectLegalServiceUsingPUT(citationId: number, lawfirmCaseId: number, observe?: 'events', reportProgress?: boolean, options?: {httpHeaderAccept?: '*/*', context?: HttpContext}): Observable<HttpEvent<object>>;
+    public selectLegalServiceUsingPUT(citationId: number, lawfirmCaseId: number, observe: any = 'body', reportProgress: boolean = false, options?: {httpHeaderAccept?: '*/*', context?: HttpContext}): Observable<any> {
         if (citationId === null || citationId === undefined) {
             throw new Error('Required parameter citationId was null or undefined when calling selectLegalServiceUsingPUT.');
         }
-        if (serviceId === null || serviceId === undefined) {
-            throw new Error('Required parameter serviceId was null or undefined when calling selectLegalServiceUsingPUT.');
+        if (lawfirmCaseId === null || lawfirmCaseId === undefined) {
+            throw new Error('Required parameter lawfirmCaseId was null or undefined when calling selectLegalServiceUsingPUT.');
         }
 
         let localVarHeaders = this.defaultHeaders;
@@ -138,7 +214,7 @@ export class LegalServicesControllerService {
             }
         }
 
-        let localVarPath = `/api/v1/citations/${this.configuration.encodeParam({name: "citationId", value: citationId, in: "path", style: "simple", explode: false, dataType: "number", dataFormat: "int64"})}/legal-services/${this.configuration.encodeParam({name: "serviceId", value: serviceId, in: "path", style: "simple", explode: false, dataType: "number", dataFormat: "int64"})}`;
+        let localVarPath = `/api/v1/citations/${this.configuration.encodeParam({name: "citationId", value: citationId, in: "path", style: "simple", explode: false, dataType: "number", dataFormat: "int64"})}/select-legal-service/${this.configuration.encodeParam({name: "lawfirmCaseId", value: lawfirmCaseId, in: "path", style: "simple", explode: false, dataType: "number", dataFormat: "int64"})}`;
         return this.httpClient.request<object>('put', `${this.configuration.basePath}${localVarPath}`,
             {
                 context: localVarHttpContext,
