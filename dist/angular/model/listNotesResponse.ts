@@ -18,5 +18,6 @@ export interface ListNotesResponse {
     authors?: Array<NoteAuthor>;
     cursorModel?: Cursor;
     notes?: Array<NoteModel>;
+    totalRecords?: number;
 }
 

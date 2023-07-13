@@ -14,4 +14,5 @@ export interface ListNotesResponse {
     "authors"?: Array<models.NoteAuthor>;
     "cursorModel"?: models.Cursor;
     "notes"?: Array<models.NoteModel>;
+    "totalRecords"?: number;
 }
