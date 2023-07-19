@@ -15424,6 +15424,42 @@ angular.module('otrBackendService', [])
                 return deferred.promise;
             };
             /**
+             * getWorkflowState
+             * @method
+             * @name OtrService#getWorkflowStateUsingGET
+             * @param {object} parameters - method options and parameters
+             * @param {string} parameters.caseId - caseId
+             * @param {integer} parameters.citationId - citationId
+             */
+            OtrService.prototype.getWorkflowStateUsingGET = function(parameters) {
+                if (parameters === undefined) {
+                    parameters = {};
+                }
+                var deferred = $q.defer();
+                var domain = this.domain,
+                    path = '/api/v1/workflow-state';
+                var body = {},
+                    queryParameters = {},
+                    headers = {},
+                    form = {};
+
+                headers['Accept'] = ['*/*'];
+
+                if (parameters['caseId'] !== undefined) {
+                    queryParameters['caseId'] = parameters['caseId'];
+                }
+
+                if (parameters['citationId'] !== undefined) {
+                    queryParameters['citationId'] = parameters['citationId'];
+                }
+
+                queryParameters = mergeQueryParams(parameters, queryParameters);
+
+                this.request('GET', domain + path, parameters, body, headers, queryParameters, form, deferred);
+
+                return deferred.promise;
+            };
+            /**
              * cancelCase
              * @method
              * @name OtrService#cancelCaseUsingDELETE

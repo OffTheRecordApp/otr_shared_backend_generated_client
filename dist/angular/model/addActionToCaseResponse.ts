@@ -9,10 +9,10 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-import { CaseDomain } from './caseDomain';
+import { CaseModel } from './caseModel';
 
 
 export interface AddActionToCaseResponse { 
-    theCase?: CaseDomain;
+    theCase?: CaseModel;
 }
 

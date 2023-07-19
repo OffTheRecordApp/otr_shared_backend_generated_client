@@ -88,7 +88,6 @@ import { StripeControllerService } from './api/stripeController.service';
 import { StripeSyncControllerService } from './api/stripeSyncController.service';
 import { StripeWebhookControllerService } from './api/stripeWebhookController.service';
 import { TicketReviewControllerService } from './api/ticketReviewController.service';
-import { TrafficViolationControllerService } from './api/trafficViolationController.service';
 import { UrlRedirectControllerService } from './api/urlRedirectController.service';
 import { UserAccountControllerService } from './api/userAccountController.service';
 import { UserAuditControllerService } from './api/userAuditController.service';
@@ -100,7 +99,9 @@ import { UserSettingsControllerService } from './api/userSettingsController.serv
 import { UtilityControllerService } from './api/utilityController.service';
 import { ValidationControllerService } from './api/validationController.service';
 import { VerificationControllerService } from './api/verificationController.service';
+import { ViolationControllerService } from './api/violationController.service';
 import { ViolationPenaltyControllerService } from './api/violationPenaltyController.service';
+import { WorkflowStateControllerService } from './api/workflowStateController.service';
 
 @NgModule({
   imports:      [],

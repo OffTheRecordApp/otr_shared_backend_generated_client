@@ -13,7 +13,7 @@ import * as models from './models';
 export interface MatchInnerCaseModel {
     "caseId"?: string;
     "citation"?: models.MatchCitationModel;
-    "lawfirmCodeApplied"?: boolean;
+    "isLawfirmCodeApplied"?: boolean;
     "legalServices"?: Array<models.MatchLegalServiceModel>;
     "maxPenalties"?: Array<models.MatchCaseViolationPenaltyModel>;
     "referralCodeOwner"?: MatchInnerCaseModel.ReferralCodeOwnerEnum;

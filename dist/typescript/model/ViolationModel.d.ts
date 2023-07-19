@@ -11,13 +11,17 @@
  */
 import * as models from './models';
 export interface ViolationModel {
-    "criminal"?: boolean;
-    "penalties"?: Array<models.MatchCaseViolationPenaltyModel>;
-    "trafficViolationDesc"?: string;
-    "trafficViolationTypeId"?: number;
+    "insuranceIncreasePercent"?: number;
+    "isCriminal"?: boolean;
+    "isMovingViolation"?: boolean;
+    "isWobblerToCriminal"?: boolean;
+    "penalties"?: Array<models.ViolationPenaltyModel>;
+    "userFriendlyName"?: string;
+    "userFriendlyShortForm"?: string;
     "violationClassification"?: ViolationModel.ViolationClassificationEnum;
     "violationCode"?: string;
-    "wobblerToCriminal"?: boolean;
+    "violationDesc"?: string;
+    "violationTypeId"?: number;
 }
 export declare namespace ViolationModel {
     enum ViolationClassificationEnum {

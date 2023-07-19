@@ -11,8 +11,8 @@
  */
 import * as models from './models';
 export interface GetUserCasesResponse {
-    "cases"?: Array<models.CaseDomain>;
-    "citations"?: Array<models.CitationDomain>;
+    "cases"?: Array<models.CaseModel>;
+    "citations"?: Array<models.CitationModel>;
     "numBookings"?: number;
     "numCitationUploads"?: number;
 }

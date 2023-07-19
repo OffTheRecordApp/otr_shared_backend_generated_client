@@ -11,5 +11,5 @@
  */
 import * as models from './models';
 export interface GetDeclinedCasesResponse {
-    "declinedCases"?: Array<models.CaseDomain>;
+    "declinedCases"?: Array<models.CaseModel>;
 }

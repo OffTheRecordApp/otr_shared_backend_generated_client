@@ -9,12 +9,12 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-import { CaseDomain } from './caseDomain';
+import { CaseModel } from './caseModel';
 
 
 export interface GetCaseFromCitationResponse { 
     chanceOfSuccess?: number;
     projectedInsuranceCostInCents?: number;
-    theCase?: CaseDomain;
+    theCase?: CaseModel;
 }
 

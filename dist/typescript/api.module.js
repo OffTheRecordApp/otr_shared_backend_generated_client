@@ -89,7 +89,6 @@ var apiModule = angular.module('api', [])
     .service('StripeSyncControllerApi', api.StripeSyncControllerApi)
     .service('StripeWebhookControllerApi', api.StripeWebhookControllerApi)
     .service('TicketReviewControllerApi', api.TicketReviewControllerApi)
-    .service('TrafficViolationControllerApi', api.TrafficViolationControllerApi)
     .service('UrlRedirectControllerApi', api.UrlRedirectControllerApi)
     .service('UserAccountControllerApi', api.UserAccountControllerApi)
     .service('UserAuditControllerApi', api.UserAuditControllerApi)
@@ -101,5 +100,7 @@ var apiModule = angular.module('api', [])
     .service('UtilityControllerApi', api.UtilityControllerApi)
     .service('ValidationControllerApi', api.ValidationControllerApi)
     .service('VerificationControllerApi', api.VerificationControllerApi)
-    .service('ViolationPenaltyControllerApi', api.ViolationPenaltyControllerApi);
+    .service('ViolationControllerApi', api.ViolationControllerApi)
+    .service('ViolationPenaltyControllerApi', api.ViolationPenaltyControllerApi)
+    .service('WorkflowStateControllerApi', api.WorkflowStateControllerApi);
 exports.default = apiModule;

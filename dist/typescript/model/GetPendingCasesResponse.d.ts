@@ -11,5 +11,5 @@
  */
 import * as models from './models';
 export interface GetPendingCasesResponse {
-    "pendingCases"?: Array<models.CaseDomain>;
+    "pendingCases"?: Array<models.CaseModel>;
 }

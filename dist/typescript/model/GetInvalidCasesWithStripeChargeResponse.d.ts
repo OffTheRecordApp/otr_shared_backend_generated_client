@@ -11,5 +11,5 @@
  */
 import * as models from './models';
 export interface GetInvalidCasesWithStripeChargeResponse {
-    "cases"?: Array<models.CaseDomain>;
+    "cases"?: Array<models.CaseModel>;
 }
