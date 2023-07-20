@@ -12,6 +12,8 @@
 
 
 export interface GetCitationsWithMissingFieldsRequest { 
+    caseStatusCategory?: GetCitationsWithMissingFieldsRequest.CaseStatusCategoryEnum;
+    caseStatuses?: Array<GetCitationsWithMissingFieldsRequest.CaseStatusesEnum>;
     endDate?: string;
     maxRecords?: number;
     selectedStates?: Array<GetCitationsWithMissingFieldsRequest.SelectedStatesEnum>;
@@ -23,6 +25,53 @@ export interface GetCitationsWithMissingFieldsRequest {
     trailingDays?: number;
 }
 export namespace GetCitationsWithMissingFieldsRequest {
+    export type CaseStatusCategoryEnum = 'ACTIVE' | 'CANCELLED' | 'RESOLVED' | 'UNCONFIRMED';
+    export const CaseStatusCategoryEnum = {
+        Active: 'ACTIVE' as CaseStatusCategoryEnum,
+        Cancelled: 'CANCELLED' as CaseStatusCategoryEnum,
+        Resolved: 'RESOLVED' as CaseStatusCategoryEnum,
+        Unconfirmed: 'UNCONFIRMED' as CaseStatusCategoryEnum
+    };
+    export type CaseStatusesEnum = 'AMENDED_DOWN_WITHIN_CLASS' | 'AMENDED_FULL_FINE' | 'AMENDED_INCREASED_FINE' | 'AMENDED_NO_FINE' | 'AMENDED_REDUCED_FINE' | 'AMENDED_TO_INFRACTION' | 'AMENDED_TO_NMV' | 'CANCELLED_ATTORNEY_AT_FAULT' | 'CANCELLED_BY_LAWFIRM' | 'CANCELLED_BY_USER' | 'CANCELLED_DUPLICATE' | 'CANCELLED_NMV' | 'CANCELLED_NON_PAYMENT' | 'CANCELLED_NO_LAWFIRM' | 'CANCELLED_OVERDUE' | 'CANCELLED_TOO_SHORT_NOTICE' | 'CASE_IN_PROGRESS' | 'CLIENT_CONFIRMED' | 'CLIENT_CONFIRMED_UNPAID' | 'CLIENT_FIRED_LAWFIRM' | 'CLIENT_FORCED_LOSS' | 'CLIENT_PAID_FINE' | 'CLIENT_UNRESPONSIVE' | 'DEFERRED' | 'DISMISSED' | 'DIVERSION' | 'FEES_DISPUTED' | 'FINE_REDUCTION_ONLY' | 'LAWFIRM_WITHDRAWN' | 'LOST' | 'NO_LAWFIRM_AVAILABLE' | 'POINT_REDUCTION' | 'REFUSED_BY_LAWFIRM' | 'RESOLVED_NON_PAYMENT' | 'STALE' | 'TRAFFIC_SCHOOL' | 'UNCONFIRMED';
+    export const CaseStatusesEnum = {
+        AmendedDownWithinClass: 'AMENDED_DOWN_WITHIN_CLASS' as CaseStatusesEnum,
+        AmendedFullFine: 'AMENDED_FULL_FINE' as CaseStatusesEnum,
+        AmendedIncreasedFine: 'AMENDED_INCREASED_FINE' as CaseStatusesEnum,
+        AmendedNoFine: 'AMENDED_NO_FINE' as CaseStatusesEnum,
+        AmendedReducedFine: 'AMENDED_REDUCED_FINE' as CaseStatusesEnum,
+        AmendedToInfraction: 'AMENDED_TO_INFRACTION' as CaseStatusesEnum,
+        AmendedToNmv: 'AMENDED_TO_NMV' as CaseStatusesEnum,
+        CancelledAttorneyAtFault: 'CANCELLED_ATTORNEY_AT_FAULT' as CaseStatusesEnum,
+        CancelledByLawfirm: 'CANCELLED_BY_LAWFIRM' as CaseStatusesEnum,
+        CancelledByUser: 'CANCELLED_BY_USER' as CaseStatusesEnum,
+        CancelledDuplicate: 'CANCELLED_DUPLICATE' as CaseStatusesEnum,
+        CancelledNmv: 'CANCELLED_NMV' as CaseStatusesEnum,
+        CancelledNonPayment: 'CANCELLED_NON_PAYMENT' as CaseStatusesEnum,
+        CancelledNoLawfirm: 'CANCELLED_NO_LAWFIRM' as CaseStatusesEnum,
+        CancelledOverdue: 'CANCELLED_OVERDUE' as CaseStatusesEnum,
+        CancelledTooShortNotice: 'CANCELLED_TOO_SHORT_NOTICE' as CaseStatusesEnum,
+        CaseInProgress: 'CASE_IN_PROGRESS' as CaseStatusesEnum,
+        ClientConfirmed: 'CLIENT_CONFIRMED' as CaseStatusesEnum,
+        ClientConfirmedUnpaid: 'CLIENT_CONFIRMED_UNPAID' as CaseStatusesEnum,
+        ClientFiredLawfirm: 'CLIENT_FIRED_LAWFIRM' as CaseStatusesEnum,
+        ClientForcedLoss: 'CLIENT_FORCED_LOSS' as CaseStatusesEnum,
+        ClientPaidFine: 'CLIENT_PAID_FINE' as CaseStatusesEnum,
+        ClientUnresponsive: 'CLIENT_UNRESPONSIVE' as CaseStatusesEnum,
+        Deferred: 'DEFERRED' as CaseStatusesEnum,
+        Dismissed: 'DISMISSED' as CaseStatusesEnum,
+        Diversion: 'DIVERSION' as CaseStatusesEnum,
+        FeesDisputed: 'FEES_DISPUTED' as CaseStatusesEnum,
+        FineReductionOnly: 'FINE_REDUCTION_ONLY' as CaseStatusesEnum,
+        LawfirmWithdrawn: 'LAWFIRM_WITHDRAWN' as CaseStatusesEnum,
+        Lost: 'LOST' as CaseStatusesEnum,
+        NoLawfirmAvailable: 'NO_LAWFIRM_AVAILABLE' as CaseStatusesEnum,
+        PointReduction: 'POINT_REDUCTION' as CaseStatusesEnum,
+        RefusedByLawfirm: 'REFUSED_BY_LAWFIRM' as CaseStatusesEnum,
+        ResolvedNonPayment: 'RESOLVED_NON_PAYMENT' as CaseStatusesEnum,
+        Stale: 'STALE' as CaseStatusesEnum,
+        TrafficSchool: 'TRAFFIC_SCHOOL' as CaseStatusesEnum,
+        Unconfirmed: 'UNCONFIRMED' as CaseStatusesEnum
+    };
     export type SelectedStatesEnum = 'AK' | 'AL' | 'AR' | 'AZ' | 'CA' | 'CO' | 'CT' | 'DC' | 'DE' | 'FL' | 'GA' | 'HI' | 'IA' | 'ID' | 'IL' | 'IN' | 'KS' | 'KY' | 'LA' | 'MA' | 'MD' | 'ME' | 'MI' | 'MN' | 'MO' | 'MS' | 'MT' | 'NC' | 'ND' | 'NE' | 'NH' | 'NJ' | 'NM' | 'NV' | 'NY' | 'OH' | 'OK' | 'OR' | 'PA' | 'RI' | 'SC' | 'SD' | 'TN' | 'TX' | 'UT' | 'VA' | 'VT' | 'WA' | 'WI' | 'WV' | 'WY';
     export const SelectedStatesEnum = {
         Ak: 'AK' as SelectedStatesEnum,

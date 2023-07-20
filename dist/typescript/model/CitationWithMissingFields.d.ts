@@ -12,6 +12,8 @@
 import * as models from './models';
 export interface CitationWithMissingFields {
     "birthDate"?: string;
+    "caseStatus"?: CitationWithMissingFields.CaseStatusEnum;
+    "caseStatusCategory"?: CitationWithMissingFields.CaseStatusCategoryEnum;
     "citationCreationDateUtc"?: models.TimestampRes;
     "citationId"?: number;
     "citationIssueDate"?: models.PureDate;
@@ -28,6 +30,51 @@ export interface CitationWithMissingFields {
     "violations"?: Array<models.CitationViolationModel>;
 }
 export declare namespace CitationWithMissingFields {
+    enum CaseStatusEnum {
+        AMENDEDDOWNWITHINCLASS,
+        AMENDEDFULLFINE,
+        AMENDEDINCREASEDFINE,
+        AMENDEDNOFINE,
+        AMENDEDREDUCEDFINE,
+        AMENDEDTOINFRACTION,
+        AMENDEDTONMV,
+        CANCELLEDATTORNEYATFAULT,
+        CANCELLEDBYLAWFIRM,
+        CANCELLEDBYUSER,
+        CANCELLEDDUPLICATE,
+        CANCELLEDNMV,
+        CANCELLEDNONPAYMENT,
+        CANCELLEDNOLAWFIRM,
+        CANCELLEDOVERDUE,
+        CANCELLEDTOOSHORTNOTICE,
+        CASEINPROGRESS,
+        CLIENTCONFIRMED,
+        CLIENTCONFIRMEDUNPAID,
+        CLIENTFIREDLAWFIRM,
+        CLIENTFORCEDLOSS,
+        CLIENTPAIDFINE,
+        CLIENTUNRESPONSIVE,
+        DEFERRED,
+        DISMISSED,
+        DIVERSION,
+        FEESDISPUTED,
+        FINEREDUCTIONONLY,
+        LAWFIRMWITHDRAWN,
+        LOST,
+        NOLAWFIRMAVAILABLE,
+        POINTREDUCTION,
+        REFUSEDBYLAWFIRM,
+        RESOLVEDNONPAYMENT,
+        STALE,
+        TRAFFICSCHOOL,
+        UNCONFIRMED
+    }
+    enum CaseStatusCategoryEnum {
+        ACTIVE,
+        CANCELLED,
+        RESOLVED,
+        UNCONFIRMED
+    }
     enum GenderEnum {
         FEMALE,
         MALE,

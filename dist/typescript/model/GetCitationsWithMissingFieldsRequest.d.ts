@@ -10,6 +10,8 @@
  * Do not edit the class manually.
  */
 export interface GetCitationsWithMissingFieldsRequest {
+    "caseStatusCategory"?: GetCitationsWithMissingFieldsRequest.CaseStatusCategoryEnum;
+    "caseStatuses"?: Array<GetCitationsWithMissingFieldsRequest.CaseStatusesEnum>;
     "endDate"?: string;
     "maxRecords"?: number;
     "selectedStates"?: Array<GetCitationsWithMissingFieldsRequest.SelectedStatesEnum>;
@@ -21,6 +23,51 @@ export interface GetCitationsWithMissingFieldsRequest {
     "trailingDays"?: number;
 }
 export declare namespace GetCitationsWithMissingFieldsRequest {
+    enum CaseStatusCategoryEnum {
+        ACTIVE,
+        CANCELLED,
+        RESOLVED,
+        UNCONFIRMED
+    }
+    enum CaseStatusesEnum {
+        AMENDEDDOWNWITHINCLASS,
+        AMENDEDFULLFINE,
+        AMENDEDINCREASEDFINE,
+        AMENDEDNOFINE,
+        AMENDEDREDUCEDFINE,
+        AMENDEDTOINFRACTION,
+        AMENDEDTONMV,
+        CANCELLEDATTORNEYATFAULT,
+        CANCELLEDBYLAWFIRM,
+        CANCELLEDBYUSER,
+        CANCELLEDDUPLICATE,
+        CANCELLEDNMV,
+        CANCELLEDNONPAYMENT,
+        CANCELLEDNOLAWFIRM,
+        CANCELLEDOVERDUE,
+        CANCELLEDTOOSHORTNOTICE,
+        CASEINPROGRESS,
+        CLIENTCONFIRMED,
+        CLIENTCONFIRMEDUNPAID,
+        CLIENTFIREDLAWFIRM,
+        CLIENTFORCEDLOSS,
+        CLIENTPAIDFINE,
+        CLIENTUNRESPONSIVE,
+        DEFERRED,
+        DISMISSED,
+        DIVERSION,
+        FEESDISPUTED,
+        FINEREDUCTIONONLY,
+        LAWFIRMWITHDRAWN,
+        LOST,
+        NOLAWFIRMAVAILABLE,
+        POINTREDUCTION,
+        REFUSEDBYLAWFIRM,
+        RESOLVEDNONPAYMENT,
+        STALE,
+        TRAFFICSCHOOL,
+        UNCONFIRMED
+    }
     enum SelectedStatesEnum {
         AK,
         AL,
