@@ -11,5 +11,5 @@
  */
 import * as models from './models';
 export interface GetCitationResponse {
-    "citation"?: models.CitationModel;
+    "citation"?: models.CitationDomain;
 }

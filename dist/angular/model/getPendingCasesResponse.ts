@@ -9,10 +9,10 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-import { CaseModel } from './caseModel';
+import { CaseDomain } from './caseDomain';
 
 
 export interface GetPendingCasesResponse { 
-    pendingCases?: Array<CaseModel>;
+    pendingCases?: Array<CaseDomain>;
 }
 

@@ -13,8 +13,8 @@
 import * as models from './models';
 
 export interface GetUserCasesResponse {
-    "cases"?: Array<models.CaseModel>;
-    "citations"?: Array<models.CitationModel>;
+    "cases"?: Array<models.CaseDomain>;
+    "citations"?: Array<models.CitationDomain>;
     "numBookings"?: number;
     "numCitationUploads"?: number;
 }

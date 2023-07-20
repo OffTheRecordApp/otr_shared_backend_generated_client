@@ -9,10 +9,10 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-import { CaseModel } from './caseModel';
+import { CaseDomain } from './caseDomain';
 
 
 export interface GetInvalidCasesWithStripeChargeResponse { 
-    cases?: Array<CaseModel>;
+    cases?: Array<CaseDomain>;
 }
 

@@ -13,6 +13,6 @@
 import * as models from './models';
 
 export interface DeleteCitationResponse {
-    "citation"?: models.CitationModel;
+    "citation"?: models.CitationDomain;
 }
 

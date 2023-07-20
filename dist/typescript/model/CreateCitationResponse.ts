@@ -13,6 +13,6 @@
 import * as models from './models';
 
 export interface CreateCitationResponse {
-    "citation"?: models.CitationModel;
+    "citation"?: models.CitationDomain;
 }
 

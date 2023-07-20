@@ -21,7 +21,7 @@ import { Observable }                                        from 'rxjs';
 // @ts-ignore
 import { AddViolationsToCitationRequest } from '../model/addViolationsToCitationRequest';
 // @ts-ignore
-import { CaseModelReq } from '../model/caseModelReq';
+import { CaseDomainReq } from '../model/caseDomainReq';
 // @ts-ignore
 import { FindChargeDisputesResponse } from '../model/findChargeDisputesResponse';
 // @ts-ignore
@@ -1034,10 +1034,10 @@ export class CaseControllerService {
      * @param observe set whether or not to return the data Observable as the body, response or events. defaults to returning the body.
      * @param reportProgress flag to report request and response progress.
      */
-    public updateCaseUsingPUT(caseId: string, caseFromRequest: CaseModelReq, observe?: 'body', reportProgress?: boolean, options?: {httpHeaderAccept?: '*/*', context?: HttpContext}): Observable<GetCaseResponse>;
-    public updateCaseUsingPUT(caseId: string, caseFromRequest: CaseModelReq, observe?: 'response', reportProgress?: boolean, options?: {httpHeaderAccept?: '*/*', context?: HttpContext}): Observable<HttpResponse<GetCaseResponse>>;
-    public updateCaseUsingPUT(caseId: string, caseFromRequest: CaseModelReq, observe?: 'events', reportProgress?: boolean, options?: {httpHeaderAccept?: '*/*', context?: HttpContext}): Observable<HttpEvent<GetCaseResponse>>;
-    public updateCaseUsingPUT(caseId: string, caseFromRequest: CaseModelReq, observe: any = 'body', reportProgress: boolean = false, options?: {httpHeaderAccept?: '*/*', context?: HttpContext}): Observable<any> {
+    public updateCaseUsingPUT(caseId: string, caseFromRequest: CaseDomainReq, observe?: 'body', reportProgress?: boolean, options?: {httpHeaderAccept?: '*/*', context?: HttpContext}): Observable<GetCaseResponse>;
+    public updateCaseUsingPUT(caseId: string, caseFromRequest: CaseDomainReq, observe?: 'response', reportProgress?: boolean, options?: {httpHeaderAccept?: '*/*', context?: HttpContext}): Observable<HttpResponse<GetCaseResponse>>;
+    public updateCaseUsingPUT(caseId: string, caseFromRequest: CaseDomainReq, observe?: 'events', reportProgress?: boolean, options?: {httpHeaderAccept?: '*/*', context?: HttpContext}): Observable<HttpEvent<GetCaseResponse>>;
+    public updateCaseUsingPUT(caseId: string, caseFromRequest: CaseDomainReq, observe: any = 'body', reportProgress: boolean = false, options?: {httpHeaderAccept?: '*/*', context?: HttpContext}): Observable<any> {
         if (caseId === null || caseId === undefined) {
             throw new Error('Required parameter caseId was null or undefined when calling updateCaseUsingPUT.');
         }

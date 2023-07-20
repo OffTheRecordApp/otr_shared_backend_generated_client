@@ -15,6 +15,6 @@ import * as models from './models';
 export interface GetCaseResponse {
     "chanceOfSuccess"?: number;
     "projectedInsuranceCostInCents"?: number;
-    "theCase"?: models.CaseModel;
+    "theCase"?: models.CaseDomain;
 }
 

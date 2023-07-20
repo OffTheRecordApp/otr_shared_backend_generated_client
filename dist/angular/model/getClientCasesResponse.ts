@@ -9,13 +9,13 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-import { CitationModel } from './citationModel';
-import { CaseModel } from './caseModel';
+import { CitationDomain } from './citationDomain';
+import { CaseDomain } from './caseDomain';
 
 
 export interface GetClientCasesResponse { 
-    cases?: Array<CaseModel>;
-    citations?: Array<CitationModel>;
+    cases?: Array<CaseDomain>;
+    citations?: Array<CitationDomain>;
     numBookings?: number;
     numCases?: number;
     numCitationUploads?: number;

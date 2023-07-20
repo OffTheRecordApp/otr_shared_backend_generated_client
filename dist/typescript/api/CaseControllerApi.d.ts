@@ -116,7 +116,7 @@ export declare class CaseControllerApi {
      * @param caseId caseId
      * @param caseFromRequest caseFromRequest
      */
-    updateCaseUsingPUT(caseId: string, caseFromRequest: models.CaseModelReq, extraHttpRequestParams?: any): ng.IHttpPromise<models.GetCaseResponse>;
+    updateCaseUsingPUT(caseId: string, caseFromRequest: models.CaseDomainReq, extraHttpRequestParams?: any): ng.IHttpPromise<models.GetCaseResponse>;
     /**
      *
      * @summary updateDeclineTickets

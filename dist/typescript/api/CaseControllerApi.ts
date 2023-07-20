@@ -489,7 +489,7 @@ export class CaseControllerApi {
      * @param caseId caseId
      * @param caseFromRequest caseFromRequest
      */
-    public updateCaseUsingPUT (caseId: string, caseFromRequest: models.CaseModelReq, extraHttpRequestParams?: any ) : ng.IHttpPromise<models.GetCaseResponse> {
+    public updateCaseUsingPUT (caseId: string, caseFromRequest: models.CaseDomainReq, extraHttpRequestParams?: any ) : ng.IHttpPromise<models.GetCaseResponse> {
         const localVarPath = this.basePath + '/api/v1/cases/{caseId}'
             .replace('{' + 'caseId' + '}', encodeURIComponent(String(caseId)));
 
