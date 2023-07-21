@@ -50,31 +50,6 @@ var DashboardControllerApi = /** @class */ (function () {
     };
     /**
      *
-     * @summary getRegisteredUsers
-     * @param graphRequest graphRequest
-     */
-    DashboardControllerApi.prototype.getRegisteredUsersUsingPOST = function (graphRequest, extraHttpRequestParams) {
-        var localVarPath = this.basePath + '/api/v1/console/users';
-        var queryParameters = {};
-        var headerParams = Object.assign({}, this.defaultHeaders);
-        // verify required parameter 'graphRequest' is not null or undefined
-        if (graphRequest === null || graphRequest === undefined) {
-            throw new Error('Required parameter graphRequest was null or undefined when calling getRegisteredUsersUsingPOST.');
-        }
-        var httpRequestParams = {
-            method: 'POST',
-            url: localVarPath,
-            data: graphRequest,
-            params: queryParameters,
-            headers: headerParams
-        };
-        if (extraHttpRequestParams) {
-            httpRequestParams = Object.assign(httpRequestParams, extraHttpRequestParams);
-        }
-        return this.$http(httpRequestParams);
-    };
-    /**
-     *
      * @summary getUserRegistrations
      * @param request request
      */
@@ -90,31 +65,6 @@ var DashboardControllerApi = /** @class */ (function () {
             method: 'POST',
             url: localVarPath,
             data: request,
-            params: queryParameters,
-            headers: headerParams
-        };
-        if (extraHttpRequestParams) {
-            httpRequestParams = Object.assign(httpRequestParams, extraHttpRequestParams);
-        }
-        return this.$http(httpRequestParams);
-    };
-    /**
-     *
-     * @summary listCasesByStatus
-     * @param graphRequest graphRequest
-     */
-    DashboardControllerApi.prototype.listCasesByStatusUsingPOST = function (graphRequest, extraHttpRequestParams) {
-        var localVarPath = this.basePath + '/api/v1/console/cases/status';
-        var queryParameters = {};
-        var headerParams = Object.assign({}, this.defaultHeaders);
-        // verify required parameter 'graphRequest' is not null or undefined
-        if (graphRequest === null || graphRequest === undefined) {
-            throw new Error('Required parameter graphRequest was null or undefined when calling listCasesByStatusUsingPOST.');
-        }
-        var httpRequestParams = {
-            method: 'POST',
-            url: localVarPath,
-            data: graphRequest,
             params: queryParameters,
             headers: headerParams
         };

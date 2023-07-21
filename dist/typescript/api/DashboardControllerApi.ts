@@ -57,35 +57,6 @@ export class DashboardControllerApi {
     }
     /**
      * 
-     * @summary getRegisteredUsers
-     * @param graphRequest graphRequest
-     */
-    public getRegisteredUsersUsingPOST (graphRequest: models.GraphRequest, extraHttpRequestParams?: any ) : ng.IHttpPromise<models.SqlResponse> {
-        const localVarPath = this.basePath + '/api/v1/console/users';
-
-        let queryParameters: any = {};
-        let headerParams: any = (<any>Object).assign({}, this.defaultHeaders);
-        // verify required parameter 'graphRequest' is not null or undefined
-        if (graphRequest === null || graphRequest === undefined) {
-            throw new Error('Required parameter graphRequest was null or undefined when calling getRegisteredUsersUsingPOST.');
-        }
-
-        let httpRequestParams: ng.IRequestConfig = {
-            method: 'POST',
-            url: localVarPath,
-            data: graphRequest,
-            params: queryParameters,
-            headers: headerParams
-        };
-
-        if (extraHttpRequestParams) {
-            httpRequestParams = (<any>Object).assign(httpRequestParams, extraHttpRequestParams);
-        }
-
-        return this.$http(httpRequestParams);
-    }
-    /**
-     * 
      * @summary getUserRegistrations
      * @param request request
      */
@@ -103,35 +74,6 @@ export class DashboardControllerApi {
             method: 'POST',
             url: localVarPath,
             data: request,
-            params: queryParameters,
-            headers: headerParams
-        };
-
-        if (extraHttpRequestParams) {
-            httpRequestParams = (<any>Object).assign(httpRequestParams, extraHttpRequestParams);
-        }
-
-        return this.$http(httpRequestParams);
-    }
-    /**
-     * 
-     * @summary listCasesByStatus
-     * @param graphRequest graphRequest
-     */
-    public listCasesByStatusUsingPOST (graphRequest: models.GraphRequest, extraHttpRequestParams?: any ) : ng.IHttpPromise<models.SqlResponse> {
-        const localVarPath = this.basePath + '/api/v1/console/cases/status';
-
-        let queryParameters: any = {};
-        let headerParams: any = (<any>Object).assign({}, this.defaultHeaders);
-        // verify required parameter 'graphRequest' is not null or undefined
-        if (graphRequest === null || graphRequest === undefined) {
-            throw new Error('Required parameter graphRequest was null or undefined when calling listCasesByStatusUsingPOST.');
-        }
-
-        let httpRequestParams: ng.IRequestConfig = {
-            method: 'POST',
-            url: localVarPath,
-            data: graphRequest,
             params: queryParameters,
             headers: headerParams
         };

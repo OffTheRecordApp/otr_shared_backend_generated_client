@@ -4908,43 +4908,6 @@ angular.module('otrBackendService', [])
                 return deferred.promise;
             };
             /**
-             * listCasesByStatus
-             * @method
-             * @name OtrService#listCasesByStatusUsingPOST
-             * @param {object} parameters - method options and parameters
-             * @param {} parameters.graphRequest - graphRequest
-             */
-            OtrService.prototype.listCasesByStatusUsingPOST = function(parameters) {
-                if (parameters === undefined) {
-                    parameters = {};
-                }
-                var deferred = $q.defer();
-                var domain = this.domain,
-                    path = '/api/v1/console/cases/status';
-                var body = {},
-                    queryParameters = {},
-                    headers = {},
-                    form = {};
-
-                headers['Accept'] = ['application/json'];
-                headers['Content-Type'] = ['application/json'];
-
-                if (parameters['graphRequest'] !== undefined) {
-                    body = parameters['graphRequest'];
-                }
-
-                if (parameters['graphRequest'] === undefined) {
-                    deferred.reject(new Error('Missing required  parameter: graphRequest'));
-                    return deferred.promise;
-                }
-
-                queryParameters = mergeQueryParams(parameters, queryParameters);
-
-                this.request('POST', domain + path, parameters, body, headers, queryParameters, form, deferred);
-
-                return deferred.promise;
-            };
-            /**
              * getCasesWithOverduePayments
              * @method
              * @name OtrService#getCasesWithOverduePaymentsUsingPOST
@@ -5416,43 +5379,6 @@ angular.module('otrBackendService', [])
 
                 if (parameters['request'] === undefined) {
                     deferred.reject(new Error('Missing required  parameter: request'));
-                    return deferred.promise;
-                }
-
-                queryParameters = mergeQueryParams(parameters, queryParameters);
-
-                this.request('POST', domain + path, parameters, body, headers, queryParameters, form, deferred);
-
-                return deferred.promise;
-            };
-            /**
-             * getRegisteredUsers
-             * @method
-             * @name OtrService#getRegisteredUsersUsingPOST
-             * @param {object} parameters - method options and parameters
-             * @param {} parameters.graphRequest - graphRequest
-             */
-            OtrService.prototype.getRegisteredUsersUsingPOST = function(parameters) {
-                if (parameters === undefined) {
-                    parameters = {};
-                }
-                var deferred = $q.defer();
-                var domain = this.domain,
-                    path = '/api/v1/console/users';
-                var body = {},
-                    queryParameters = {},
-                    headers = {},
-                    form = {};
-
-                headers['Accept'] = ['application/json'];
-                headers['Content-Type'] = ['application/json'];
-
-                if (parameters['graphRequest'] !== undefined) {
-                    body = parameters['graphRequest'];
-                }
-
-                if (parameters['graphRequest'] === undefined) {
-                    deferred.reject(new Error('Missing required  parameter: graphRequest'));
                     return deferred.promise;
                 }
 

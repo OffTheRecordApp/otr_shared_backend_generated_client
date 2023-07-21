@@ -26,22 +26,10 @@ export declare class DashboardControllerApi {
     getBookingsUsingPOST(request: models.GetBookingsRequest, extraHttpRequestParams?: any): ng.IHttpPromise<models.GetBookingsResponse>;
     /**
      *
-     * @summary getRegisteredUsers
-     * @param graphRequest graphRequest
-     */
-    getRegisteredUsersUsingPOST(graphRequest: models.GraphRequest, extraHttpRequestParams?: any): ng.IHttpPromise<models.SqlResponse>;
-    /**
-     *
      * @summary getUserRegistrations
      * @param request request
      */
     getUserRegistrationsUsingPOST(request: models.GetUserRegistrationsRequest, extraHttpRequestParams?: any): ng.IHttpPromise<models.GetUserRegistrationsResponse>;
-    /**
-     *
-     * @summary listCasesByStatus
-     * @param graphRequest graphRequest
-     */
-    listCasesByStatusUsingPOST(graphRequest: models.GraphRequest, extraHttpRequestParams?: any): ng.IHttpPromise<models.SqlResponse>;
     /**
      *
      * @summary listCitations
