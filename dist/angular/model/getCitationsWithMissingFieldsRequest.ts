@@ -12,7 +12,6 @@
 
 
 export interface GetCitationsWithMissingFieldsRequest { 
-    caseStatusCategory?: GetCitationsWithMissingFieldsRequest.CaseStatusCategoryEnum;
     caseStatuses?: Array<GetCitationsWithMissingFieldsRequest.CaseStatusesEnum>;
     endDate?: string;
     maxRecords?: number;
@@ -22,16 +21,10 @@ export interface GetCitationsWithMissingFieldsRequest {
     showMissingGenderRecords?: boolean;
     showMissingNameRecords?: boolean;
     startDate?: string;
+    statusCategories?: Array<GetCitationsWithMissingFieldsRequest.StatusCategoriesEnum>;
     trailingDays?: number;
 }
 export namespace GetCitationsWithMissingFieldsRequest {
-    export type CaseStatusCategoryEnum = 'ACTIVE' | 'CANCELLED' | 'RESOLVED' | 'UNCONFIRMED';
-    export const CaseStatusCategoryEnum = {
-        Active: 'ACTIVE' as CaseStatusCategoryEnum,
-        Cancelled: 'CANCELLED' as CaseStatusCategoryEnum,
-        Resolved: 'RESOLVED' as CaseStatusCategoryEnum,
-        Unconfirmed: 'UNCONFIRMED' as CaseStatusCategoryEnum
-    };
     export type CaseStatusesEnum = 'AMENDED_DOWN_WITHIN_CLASS' | 'AMENDED_FULL_FINE' | 'AMENDED_INCREASED_FINE' | 'AMENDED_NO_FINE' | 'AMENDED_REDUCED_FINE' | 'AMENDED_TO_INFRACTION' | 'AMENDED_TO_NMV' | 'CANCELLED_ATTORNEY_AT_FAULT' | 'CANCELLED_BY_LAWFIRM' | 'CANCELLED_BY_USER' | 'CANCELLED_DUPLICATE' | 'CANCELLED_NMV' | 'CANCELLED_NON_PAYMENT' | 'CANCELLED_NO_LAWFIRM' | 'CANCELLED_OVERDUE' | 'CANCELLED_TOO_SHORT_NOTICE' | 'CASE_IN_PROGRESS' | 'CLIENT_CONFIRMED' | 'CLIENT_CONFIRMED_UNPAID' | 'CLIENT_FIRED_LAWFIRM' | 'CLIENT_FORCED_LOSS' | 'CLIENT_PAID_FINE' | 'CLIENT_UNRESPONSIVE' | 'DEFERRED' | 'DISMISSED' | 'DIVERSION' | 'FEES_DISPUTED' | 'FINE_REDUCTION_ONLY' | 'LAWFIRM_WITHDRAWN' | 'LOST' | 'NO_LAWFIRM_AVAILABLE' | 'POINT_REDUCTION' | 'REFUSED_BY_LAWFIRM' | 'RESOLVED_NON_PAYMENT' | 'STALE' | 'TRAFFIC_SCHOOL' | 'UNCONFIRMED';
     export const CaseStatusesEnum = {
         AmendedDownWithinClass: 'AMENDED_DOWN_WITHIN_CLASS' as CaseStatusesEnum,
@@ -125,6 +118,13 @@ export namespace GetCitationsWithMissingFieldsRequest {
         Wi: 'WI' as SelectedStatesEnum,
         Wv: 'WV' as SelectedStatesEnum,
         Wy: 'WY' as SelectedStatesEnum
+    };
+    export type StatusCategoriesEnum = 'ACTIVE' | 'CANCELLED' | 'RESOLVED' | 'UNCONFIRMED';
+    export const StatusCategoriesEnum = {
+        Active: 'ACTIVE' as StatusCategoriesEnum,
+        Cancelled: 'CANCELLED' as StatusCategoriesEnum,
+        Resolved: 'RESOLVED' as StatusCategoriesEnum,
+        Unconfirmed: 'UNCONFIRMED' as StatusCategoriesEnum
     };
 }
 

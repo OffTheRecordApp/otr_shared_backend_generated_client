@@ -13,7 +13,6 @@
 import * as models from './models';
 
 export interface GetCitationsWithMissingFieldsRequest {
-    "caseStatusCategory"?: GetCitationsWithMissingFieldsRequest.CaseStatusCategoryEnum;
     "caseStatuses"?: Array<GetCitationsWithMissingFieldsRequest.CaseStatusesEnum>;
     "endDate"?: string;
     "maxRecords"?: number;
@@ -23,16 +22,11 @@ export interface GetCitationsWithMissingFieldsRequest {
     "showMissingGenderRecords"?: boolean;
     "showMissingNameRecords"?: boolean;
     "startDate"?: string;
+    "statusCategories"?: Array<GetCitationsWithMissingFieldsRequest.StatusCategoriesEnum>;
     "trailingDays"?: number;
 }
 
 export namespace GetCitationsWithMissingFieldsRequest {
-    export enum CaseStatusCategoryEnum {
-        ACTIVE = <any> 'ACTIVE',
-        CANCELLED = <any> 'CANCELLED',
-        RESOLVED = <any> 'RESOLVED',
-        UNCONFIRMED = <any> 'UNCONFIRMED'
-    }
     export enum CaseStatusesEnum {
         AMENDEDDOWNWITHINCLASS = <any> 'AMENDED_DOWN_WITHIN_CLASS',
         AMENDEDFULLFINE = <any> 'AMENDED_FULL_FINE',
@@ -124,5 +118,11 @@ export namespace GetCitationsWithMissingFieldsRequest {
         WI = <any> 'WI',
         WV = <any> 'WV',
         WY = <any> 'WY'
+    }
+    export enum StatusCategoriesEnum {
+        ACTIVE = <any> 'ACTIVE',
+        CANCELLED = <any> 'CANCELLED',
+        RESOLVED = <any> 'RESOLVED',
+        UNCONFIRMED = <any> 'UNCONFIRMED'
     }
 }

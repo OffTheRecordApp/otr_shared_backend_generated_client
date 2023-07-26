@@ -14,13 +14,6 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.GetCitationsWithMissingFieldsRequest = void 0;
 var GetCitationsWithMissingFieldsRequest;
 (function (GetCitationsWithMissingFieldsRequest) {
-    var CaseStatusCategoryEnum;
-    (function (CaseStatusCategoryEnum) {
-        CaseStatusCategoryEnum[CaseStatusCategoryEnum["ACTIVE"] = 'ACTIVE'] = "ACTIVE";
-        CaseStatusCategoryEnum[CaseStatusCategoryEnum["CANCELLED"] = 'CANCELLED'] = "CANCELLED";
-        CaseStatusCategoryEnum[CaseStatusCategoryEnum["RESOLVED"] = 'RESOLVED'] = "RESOLVED";
-        CaseStatusCategoryEnum[CaseStatusCategoryEnum["UNCONFIRMED"] = 'UNCONFIRMED'] = "UNCONFIRMED";
-    })(CaseStatusCategoryEnum = GetCitationsWithMissingFieldsRequest.CaseStatusCategoryEnum || (GetCitationsWithMissingFieldsRequest.CaseStatusCategoryEnum = {}));
     var CaseStatusesEnum;
     (function (CaseStatusesEnum) {
         CaseStatusesEnum[CaseStatusesEnum["AMENDEDDOWNWITHINCLASS"] = 'AMENDED_DOWN_WITHIN_CLASS'] = "AMENDEDDOWNWITHINCLASS";
@@ -115,4 +108,11 @@ var GetCitationsWithMissingFieldsRequest;
         SelectedStatesEnum[SelectedStatesEnum["WV"] = 'WV'] = "WV";
         SelectedStatesEnum[SelectedStatesEnum["WY"] = 'WY'] = "WY";
     })(SelectedStatesEnum = GetCitationsWithMissingFieldsRequest.SelectedStatesEnum || (GetCitationsWithMissingFieldsRequest.SelectedStatesEnum = {}));
+    var StatusCategoriesEnum;
+    (function (StatusCategoriesEnum) {
+        StatusCategoriesEnum[StatusCategoriesEnum["ACTIVE"] = 'ACTIVE'] = "ACTIVE";
+        StatusCategoriesEnum[StatusCategoriesEnum["CANCELLED"] = 'CANCELLED'] = "CANCELLED";
+        StatusCategoriesEnum[StatusCategoriesEnum["RESOLVED"] = 'RESOLVED'] = "RESOLVED";
+        StatusCategoriesEnum[StatusCategoriesEnum["UNCONFIRMED"] = 'UNCONFIRMED'] = "UNCONFIRMED";
+    })(StatusCategoriesEnum = GetCitationsWithMissingFieldsRequest.StatusCategoriesEnum || (GetCitationsWithMissingFieldsRequest.StatusCategoriesEnum = {}));
 })(GetCitationsWithMissingFieldsRequest = exports.GetCitationsWithMissingFieldsRequest || (exports.GetCitationsWithMissingFieldsRequest = {}));

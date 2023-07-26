@@ -10,7 +10,6 @@
  * Do not edit the class manually.
  */
 export interface GetCitationsWithMissingFieldsRequest {
-    "caseStatusCategory"?: GetCitationsWithMissingFieldsRequest.CaseStatusCategoryEnum;
     "caseStatuses"?: Array<GetCitationsWithMissingFieldsRequest.CaseStatusesEnum>;
     "endDate"?: string;
     "maxRecords"?: number;
@@ -20,15 +19,10 @@ export interface GetCitationsWithMissingFieldsRequest {
     "showMissingGenderRecords"?: boolean;
     "showMissingNameRecords"?: boolean;
     "startDate"?: string;
+    "statusCategories"?: Array<GetCitationsWithMissingFieldsRequest.StatusCategoriesEnum>;
     "trailingDays"?: number;
 }
 export declare namespace GetCitationsWithMissingFieldsRequest {
-    enum CaseStatusCategoryEnum {
-        ACTIVE,
-        CANCELLED,
-        RESOLVED,
-        UNCONFIRMED
-    }
     enum CaseStatusesEnum {
         AMENDEDDOWNWITHINCLASS,
         AMENDEDFULLFINE,
@@ -120,5 +114,11 @@ export declare namespace GetCitationsWithMissingFieldsRequest {
         WI,
         WV,
         WY
+    }
+    enum StatusCategoriesEnum {
+        ACTIVE,
+        CANCELLED,
+        RESOLVED,
+        UNCONFIRMED
     }
 }
