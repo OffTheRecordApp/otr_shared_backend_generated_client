@@ -9,10 +9,10 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-import { CitationDomain } from './citationDomain';
+import { CitationModel } from './citationModel';
 
 
 export interface DeleteCitationResponse { 
-    citation?: CitationDomain;
+    citation?: CitationModel;
 }
 

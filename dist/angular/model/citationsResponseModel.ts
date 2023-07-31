@@ -25,6 +25,7 @@ export interface CitationsResponseModel {
     groupName?: string;
     hasPhoto?: boolean;
     involvesAccident?: boolean;
+    isMatchInternal?: boolean;
     lawfirmId?: string;
     lawfirmName?: string;
     maxViolationClassification?: CitationsResponseModel.MaxViolationClassificationEnum;

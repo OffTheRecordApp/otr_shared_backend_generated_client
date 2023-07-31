@@ -25,6 +25,7 @@ export interface MatchCitationModel {
     fineAmount?: number;
     involvesAccident?: boolean;
     isDeleted?: boolean;
+    signedTicketImageUrl?: string;
     ticketImageUrl?: string;
     ticketNumber?: string;
     violations?: Array<ViolationModel>;

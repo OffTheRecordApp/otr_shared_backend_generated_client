@@ -19,7 +19,7 @@ import { CustomHttpParameterCodec }                          from '../encoder';
 import { Observable }                                        from 'rxjs';
 
 // @ts-ignore
-import { WorkflowStateResponse } from '../model/workflowStateResponse';
+import { GetWorkflowStateResponse } from '../model/getWorkflowStateResponse';
 
 // @ts-ignore
 import { BASE_PATH, COLLECTION_FORMATS }                     from '../variables';
@@ -98,9 +98,9 @@ export class WorkflowStateControllerService {
      * @param observe set whether or not to return the data Observable as the body, response or events. defaults to returning the body.
      * @param reportProgress flag to report request and response progress.
      */
-    public getWorkflowStateUsingGET(caseId?: string, citationId?: number, observe?: 'body', reportProgress?: boolean, options?: {httpHeaderAccept?: '*/*', context?: HttpContext}): Observable<WorkflowStateResponse>;
-    public getWorkflowStateUsingGET(caseId?: string, citationId?: number, observe?: 'response', reportProgress?: boolean, options?: {httpHeaderAccept?: '*/*', context?: HttpContext}): Observable<HttpResponse<WorkflowStateResponse>>;
-    public getWorkflowStateUsingGET(caseId?: string, citationId?: number, observe?: 'events', reportProgress?: boolean, options?: {httpHeaderAccept?: '*/*', context?: HttpContext}): Observable<HttpEvent<WorkflowStateResponse>>;
+    public getWorkflowStateUsingGET(caseId?: string, citationId?: number, observe?: 'body', reportProgress?: boolean, options?: {httpHeaderAccept?: '*/*', context?: HttpContext}): Observable<GetWorkflowStateResponse>;
+    public getWorkflowStateUsingGET(caseId?: string, citationId?: number, observe?: 'response', reportProgress?: boolean, options?: {httpHeaderAccept?: '*/*', context?: HttpContext}): Observable<HttpResponse<GetWorkflowStateResponse>>;
+    public getWorkflowStateUsingGET(caseId?: string, citationId?: number, observe?: 'events', reportProgress?: boolean, options?: {httpHeaderAccept?: '*/*', context?: HttpContext}): Observable<HttpEvent<GetWorkflowStateResponse>>;
     public getWorkflowStateUsingGET(caseId?: string, citationId?: number, observe: any = 'body', reportProgress: boolean = false, options?: {httpHeaderAccept?: '*/*', context?: HttpContext}): Observable<any> {
 
         let localVarQueryParameters = new HttpParams({encoder: this.encoder});
@@ -145,7 +145,7 @@ export class WorkflowStateControllerService {
         }
 
         let localVarPath = `/api/v1/workflow-state`;
-        return this.httpClient.request<WorkflowStateResponse>('get', `${this.configuration.basePath}${localVarPath}`,
+        return this.httpClient.request<GetWorkflowStateResponse>('get', `${this.configuration.basePath}${localVarPath}`,
             {
                 context: localVarHttpContext,
                 params: localVarQueryParameters,

@@ -17,7 +17,7 @@ import { MatchCaseViolationPenaltyModel } from './matchCaseViolationPenaltyModel
 export interface MatchInnerCaseModel { 
     caseId?: string;
     citation?: MatchCitationModel;
-    lawfirmCodeApplied?: boolean;
+    isLawfirmCodeApplied?: boolean;
     legalServices?: Array<MatchLegalServiceModel>;
     maxPenalties?: Array<MatchCaseViolationPenaltyModel>;
     referralCodeOwner?: MatchInnerCaseModel.ReferralCodeOwnerEnum;

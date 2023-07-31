@@ -37,6 +37,7 @@ export interface CitationModel {
     isDismissedFromContactList?: boolean;
     isPastDue?: boolean;
     originalPointCount?: number;
+    signedTicketImageUrl?: string;
     state?: CitationModel.StateEnum;
     ticketImageUrl?: string;
     ticketLocationTags?: string;

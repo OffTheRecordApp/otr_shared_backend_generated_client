@@ -14,6 +14,7 @@ export interface GeoRatesRequest {
     "courtDate"?: string;
     "courtId"?: string;
     "isCDL"?: boolean;
+    "isFTA"?: boolean;
     "legalServiceId"?: number;
     "violationCount"?: number;
     "violations"?: Array<models.ViolationInputRequest>;

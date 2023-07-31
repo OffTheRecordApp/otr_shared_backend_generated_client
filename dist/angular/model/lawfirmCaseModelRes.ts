@@ -17,6 +17,7 @@ export interface LawfirmCaseModelRes {
     caseDecisionStatus?: LawfirmCaseModelRes.CaseDecisionStatusEnum;
     clientDeclineTicket?: FreshDeskTicketRes;
     declineReason?: string;
+    isMatchInternal?: boolean;
     lawfirmCaseId?: number;
     lawfirmDecisionDateUtc?: TimestampRes;
     lawfirmDeclineTicket?: FreshDeskTicketRes;

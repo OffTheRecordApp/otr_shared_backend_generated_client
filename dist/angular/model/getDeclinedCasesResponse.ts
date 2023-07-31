@@ -9,10 +9,10 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-import { CaseDomain } from './caseDomain';
+import { CaseModel } from './caseModel';
 
 
 export interface GetDeclinedCasesResponse { 
-    declinedCases?: Array<CaseDomain>;
+    declinedCases?: Array<CaseModel>;
 }
 

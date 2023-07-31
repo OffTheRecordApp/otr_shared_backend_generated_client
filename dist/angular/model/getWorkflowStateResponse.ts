@@ -9,14 +9,11 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
+import { WorkflowCaseModel } from './workflowCaseModel';
 
 
-export interface CaseCreationRequest { 
-    courtDate?: string;
-    forcePredeterminedLawfirmId?: boolean;
-    legalServiceId?: number;
-    matchInternal?: boolean;
-    predeterminedLawfirmId?: number;
-    setQuoteExpirationOn?: boolean;
+export interface GetWorkflowStateResponse { 
+    projectedInsuranceCostInCents?: number;
+    theCase?: WorkflowCaseModel;
 }
 

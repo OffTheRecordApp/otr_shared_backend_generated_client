@@ -15,6 +15,7 @@ import { MatchingFieldValue } from './matchingFieldValue';
 export interface MatchLegalServicesRequest { 
     courtDate?: string;
     forcePredeterminedLawfirmId?: boolean;
+    isMatchInternal?: boolean;
     legalServiceType?: MatchLegalServicesRequest.LegalServiceTypeEnum;
     legalServicesMatchingRules?: Array<MatchingFieldValue>;
     legalServicesResultLimit: number;
