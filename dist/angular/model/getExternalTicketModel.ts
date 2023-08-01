@@ -13,7 +13,7 @@ import { ExternalTicketCourt } from './externalTicketCourt';
 
 
 export interface GetExternalTicketModel { 
-    additionalAttributes?: object;
+    additionalAttributes?: string;
     court?: ExternalTicketCourt;
     disposition?: Array<string>;
     docketNumber?: string;
