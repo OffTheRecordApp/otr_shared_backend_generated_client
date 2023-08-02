@@ -10,7 +10,9 @@
  * Do not edit the class manually.
  */
 export interface UserAuditEventModel {
+    "authorName"?: string;
     "clientType"?: UserAuditEventModel.ClientTypeEnum;
+    "event"?: UserAuditEventModel.EventEnum;
     "eventDate"?: string;
     "eventId"?: number;
     "eventType"?: UserAuditEventModel.EventTypeEnum;
@@ -20,6 +22,7 @@ export interface UserAuditEventModel {
     "requesterUserId"?: number;
     "subject"?: string;
     "userEventId"?: number;
+    "userId"?: number;
 }
 export declare namespace UserAuditEventModel {
     enum ClientTypeEnum {
@@ -42,6 +45,47 @@ export declare namespace UserAuditEventModel {
         OTRWEBSITELOCALHOST,
         OTRWIDGET,
         UNKNOWN
+    }
+    enum EventEnum {
+        CASEACCEPT,
+        CASEBOOKING,
+        CASECANCEL,
+        CASEDECLINE,
+        CASEMATCH,
+        CASERESOLVE,
+        CASESTATUS,
+        CASETRANSFER,
+        CASEUNSERVICEABLEREQUEST,
+        CITATIONUPLOAD,
+        DECIDEEXPERIMENTGROUPCOMMAND,
+        EXTERNALTICKETREQUEST,
+        GHOSTACCOUNTCREATED,
+        LAWFIRMACCOUNTPRIORITY,
+        LAWFIRMACCOUNTSTATUS,
+        LAWFIRMDAILYCAPACITY,
+        LAWFIRMTOTALCAPACITY,
+        LINEITEMADDED,
+        LINEITEMDELETED,
+        PASSWORDCHANGE,
+        PASSWORDRESETREQUESTED,
+        PAYMENTAUTHORIZED,
+        PAYMENTCAPTURED,
+        PAYMENTMETHODADD,
+        PAYMENTMETHODDELETE,
+        PAYMENTREFUNDED,
+        PAYMENTSCHEDULED,
+        REFERRALCODEAPPLIED,
+        REFERRALCODEATTEMPTFAILED,
+        REFERRALCODEREMOVED,
+        SAVEVACATIONMODEENDDATE,
+        SAVEVACATIONMODEREASON,
+        UNKNOWN,
+        USERLOGINEVENT,
+        USERREGISTRATION,
+        VACATIONMODETOGGLE,
+        VACATIONMODEUPDATE,
+        VERIFYEMAIL,
+        VERIFYPHONE
     }
     enum EventTypeEnum {
         CASEACCEPT,
