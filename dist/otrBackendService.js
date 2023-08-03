@@ -15511,6 +15511,43 @@ angular.module('otrBackendService', [])
                 return deferred.promise;
             };
             /**
+             * getCitationsWithMissingFieldsV2
+             * @method
+             * @name OtrService#getCitationsWithMissingFieldsV2UsingPOST
+             * @param {object} parameters - method options and parameters
+             * @param {} parameters.request - request
+             */
+            OtrService.prototype.getCitationsWithMissingFieldsV2UsingPOST = function(parameters) {
+                if (parameters === undefined) {
+                    parameters = {};
+                }
+                var deferred = $q.defer();
+                var domain = this.domain,
+                    path = '/api/v2/console/citations-with-missing-fields';
+                var body = {},
+                    queryParameters = {},
+                    headers = {},
+                    form = {};
+
+                headers['Accept'] = ['application/json'];
+                headers['Content-Type'] = ['application/json'];
+
+                if (parameters['request'] !== undefined) {
+                    body = parameters['request'];
+                }
+
+                if (parameters['request'] === undefined) {
+                    deferred.reject(new Error('Missing required  parameter: request'));
+                    return deferred.promise;
+                }
+
+                queryParameters = mergeQueryParams(parameters, queryParameters);
+
+                this.request('POST', domain + path, parameters, body, headers, queryParameters, form, deferred);
+
+                return deferred.promise;
+            };
+            /**
              * findCourts
              * @method
              * @name OtrService#findCourtsUsingGET

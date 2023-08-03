@@ -175,6 +175,31 @@ var ConsoleListControllerApi = /** @class */ (function () {
     };
     /**
      *
+     * @summary getCitationsWithMissingFieldsV2
+     * @param request request
+     */
+    ConsoleListControllerApi.prototype.getCitationsWithMissingFieldsV2UsingPOST = function (request, extraHttpRequestParams) {
+        var localVarPath = this.basePath + '/api/v2/console/citations-with-missing-fields';
+        var queryParameters = {};
+        var headerParams = Object.assign({}, this.defaultHeaders);
+        // verify required parameter 'request' is not null or undefined
+        if (request === null || request === undefined) {
+            throw new Error('Required parameter request was null or undefined when calling getCitationsWithMissingFieldsV2UsingPOST.');
+        }
+        var httpRequestParams = {
+            method: 'POST',
+            url: localVarPath,
+            data: request,
+            params: queryParameters,
+            headers: headerParams
+        };
+        if (extraHttpRequestParams) {
+            httpRequestParams = Object.assign(httpRequestParams, extraHttpRequestParams);
+        }
+        return this.$http(httpRequestParams);
+    };
+    /**
+     *
      * @summary getClientConfirmedUnpaidCases
      * @param request request
      */

@@ -56,6 +56,12 @@ export declare class ConsoleListControllerApi {
     getCitationsWithMissingFieldsUsingPOST(request: models.GetCitationsWithMissingFieldsRequest, extraHttpRequestParams?: any): ng.IHttpPromise<models.GetCitationsWithMissingFieldsResponse>;
     /**
      *
+     * @summary getCitationsWithMissingFieldsV2
+     * @param request request
+     */
+    getCitationsWithMissingFieldsV2UsingPOST(request: models.GetCitationsWithMissingFieldsRequest, extraHttpRequestParams?: any): ng.IHttpPromise<models.GetCitationsWithMissingFieldsResponse>;
+    /**
+     *
      * @summary getClientConfirmedUnpaidCases
      * @param request request
      */
