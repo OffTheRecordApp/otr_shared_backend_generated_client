@@ -12,15 +12,28 @@
 import * as models from './models';
 export interface MatchCitationModel {
     "address"?: models.AddressDomain;
+    "cdlStatus"?: MatchCitationModel.CdlStatusEnum;
     "citationId"?: number;
     "citationIssueDate"?: models.PureDate;
     "citationIssueDateUtc"?: models.Timestamp;
+    "citationLockedForClient"?: boolean;
+    "clientEmailAddress"?: string;
+    "clientFirstName"?: string;
     "court"?: models.CourtDomain;
+    "documentUrlToConvert"?: string;
     "fineAmount"?: number;
     "involvesAccident"?: boolean;
     "isDeleted"?: boolean;
     "signedTicketImageUrl"?: string;
     "ticketImageUrl"?: string;
     "ticketNumber"?: string;
+    "violationCount"?: number;
     "violations"?: Array<models.ViolationModel>;
+}
+export declare namespace MatchCitationModel {
+    enum CdlStatusEnum {
+        CDLINCOMMERCIALVEHICLE,
+        CDLINPERSONALVEHICLE,
+        NOCDL
+    }
 }

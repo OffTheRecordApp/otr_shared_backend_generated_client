@@ -18,16 +18,31 @@ import { Timestamp } from './timestamp';
 
 export interface MatchCitationModel { 
     address?: AddressDomain;
+    cdlStatus?: MatchCitationModel.CdlStatusEnum;
     citationId?: number;
     citationIssueDate?: PureDate;
     citationIssueDateUtc?: Timestamp;
+    citationLockedForClient?: boolean;
+    clientEmailAddress?: string;
+    clientFirstName?: string;
     court?: CourtDomain;
+    documentUrlToConvert?: string;
     fineAmount?: number;
     involvesAccident?: boolean;
     isDeleted?: boolean;
     signedTicketImageUrl?: string;
     ticketImageUrl?: string;
     ticketNumber?: string;
+    violationCount?: number;
     violations?: Array<ViolationModel>;
 }
+export namespace MatchCitationModel {
+    export type CdlStatusEnum = 'CDL_IN_COMMERCIAL_VEHICLE' | 'CDL_IN_PERSONAL_VEHICLE' | 'NO_CDL';
+    export const CdlStatusEnum = {
+        CdlInCommercialVehicle: 'CDL_IN_COMMERCIAL_VEHICLE' as CdlStatusEnum,
+        CdlInPersonalVehicle: 'CDL_IN_PERSONAL_VEHICLE' as CdlStatusEnum,
+        NoCdl: 'NO_CDL' as CdlStatusEnum
+    };
+}
+
 

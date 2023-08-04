@@ -12,14 +12,64 @@
 import * as models from './models';
 export interface WorkflowCaseModel {
     "caseId"?: string;
+    "caseStatus"?: WorkflowCaseModel.CaseStatusEnum;
+    "caseStatusCategory"?: WorkflowCaseModel.CaseStatusCategoryEnum;
     "citation"?: models.WorkflowCitationModel;
+    "courtAppointmentDate"?: models.Timestamp;
     "isLawfirmCodeApplied"?: boolean;
     "legalServices"?: Array<models.LegalServiceModel>;
     "maxPenalties"?: Array<models.WorkflowViolationPenaltyModel>;
+    "paymentPlanTypeModel"?: models.PaymentPlanTypeModel;
+    "referralCode"?: string;
     "referralCodeOwner"?: WorkflowCaseModel.ReferralCodeOwnerEnum;
     "userId"?: number;
 }
 export declare namespace WorkflowCaseModel {
+    enum CaseStatusEnum {
+        AMENDEDDOWNWITHINCLASS,
+        AMENDEDFULLFINE,
+        AMENDEDINCREASEDFINE,
+        AMENDEDNOFINE,
+        AMENDEDREDUCEDFINE,
+        AMENDEDTOINFRACTION,
+        AMENDEDTONMV,
+        CANCELLEDATTORNEYATFAULT,
+        CANCELLEDBYLAWFIRM,
+        CANCELLEDBYUSER,
+        CANCELLEDDUPLICATE,
+        CANCELLEDNMV,
+        CANCELLEDNONPAYMENT,
+        CANCELLEDNOLAWFIRM,
+        CANCELLEDOVERDUE,
+        CANCELLEDTOOSHORTNOTICE,
+        CASEINPROGRESS,
+        CLIENTCONFIRMED,
+        CLIENTCONFIRMEDUNPAID,
+        CLIENTFIREDLAWFIRM,
+        CLIENTFORCEDLOSS,
+        CLIENTPAIDFINE,
+        CLIENTUNRESPONSIVE,
+        DEFERRED,
+        DISMISSED,
+        DIVERSION,
+        FEESDISPUTED,
+        FINEREDUCTIONONLY,
+        LAWFIRMWITHDRAWN,
+        LOST,
+        NOLAWFIRMAVAILABLE,
+        POINTREDUCTION,
+        REFUSEDBYLAWFIRM,
+        RESOLVEDNONPAYMENT,
+        STALE,
+        TRAFFICSCHOOL,
+        UNCONFIRMED
+    }
+    enum CaseStatusCategoryEnum {
+        ACTIVE,
+        CANCELLED,
+        RESOLVED,
+        UNCONFIRMED
+    }
     enum ReferralCodeOwnerEnum {
         LAWFIRM,
         OTR

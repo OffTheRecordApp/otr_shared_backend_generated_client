@@ -11,3 +11,13 @@
  * Do not edit the class manually.
  */
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.MatchCitationModel = void 0;
+var MatchCitationModel;
+(function (MatchCitationModel) {
+    var CdlStatusEnum;
+    (function (CdlStatusEnum) {
+        CdlStatusEnum[CdlStatusEnum["CDLINCOMMERCIALVEHICLE"] = 'CDL_IN_COMMERCIAL_VEHICLE'] = "CDLINCOMMERCIALVEHICLE";
+        CdlStatusEnum[CdlStatusEnum["CDLINPERSONALVEHICLE"] = 'CDL_IN_PERSONAL_VEHICLE'] = "CDLINPERSONALVEHICLE";
+        CdlStatusEnum[CdlStatusEnum["NOCDL"] = 'NO_CDL'] = "NOCDL";
+    })(CdlStatusEnum = MatchCitationModel.CdlStatusEnum || (MatchCitationModel.CdlStatusEnum = {}));
+})(MatchCitationModel = exports.MatchCitationModel || (exports.MatchCitationModel = {}));

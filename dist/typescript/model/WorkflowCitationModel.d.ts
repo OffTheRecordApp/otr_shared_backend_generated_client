@@ -12,15 +12,28 @@
 import * as models from './models';
 export interface WorkflowCitationModel {
     "address"?: models.AddressDomain;
+    "cdlStatus"?: WorkflowCitationModel.CdlStatusEnum;
     "citationId"?: number;
     "citationIssueDate"?: models.PureDate;
     "citationIssueDateUtc"?: models.Timestamp;
+    "citationLockedForClient"?: boolean;
+    "clientEmailAddress"?: string;
+    "clientFirstName"?: string;
     "court"?: models.CourtDomain;
+    "documentUrlToConvert"?: string;
     "fineAmount"?: number;
     "involvesAccident"?: boolean;
     "isDeleted"?: boolean;
     "signedTicketImageUrl"?: string;
     "ticketImageUrl"?: string;
     "ticketNumber"?: string;
+    "violationCount"?: number;
     "violations"?: Array<models.WorkflowViolationModel>;
+}
+export declare namespace WorkflowCitationModel {
+    enum CdlStatusEnum {
+        CDLINCOMMERCIALVEHICLE,
+        CDLINPERSONALVEHICLE,
+        NOCDL
+    }
 }

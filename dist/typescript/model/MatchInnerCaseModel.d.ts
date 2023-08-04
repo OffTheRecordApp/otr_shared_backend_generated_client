@@ -12,14 +12,64 @@
 import * as models from './models';
 export interface MatchInnerCaseModel {
     "caseId"?: string;
+    "caseStatus"?: MatchInnerCaseModel.CaseStatusEnum;
+    "caseStatusCategory"?: MatchInnerCaseModel.CaseStatusCategoryEnum;
     "citation"?: models.MatchCitationModel;
+    "courtAppointmentDate"?: models.Timestamp;
     "isLawfirmCodeApplied"?: boolean;
     "legalServices"?: Array<models.MatchLegalServiceModel>;
     "maxPenalties"?: Array<models.MatchCaseViolationPenaltyModel>;
+    "paymentPlanTypeModel"?: models.PaymentPlanTypeModel;
+    "referralCode"?: string;
     "referralCodeOwner"?: MatchInnerCaseModel.ReferralCodeOwnerEnum;
     "userId"?: number;
 }
 export declare namespace MatchInnerCaseModel {
+    enum CaseStatusEnum {
+        AMENDEDDOWNWITHINCLASS,
+        AMENDEDFULLFINE,
+        AMENDEDINCREASEDFINE,
+        AMENDEDNOFINE,
+        AMENDEDREDUCEDFINE,
+        AMENDEDTOINFRACTION,
+        AMENDEDTONMV,
+        CANCELLEDATTORNEYATFAULT,
+        CANCELLEDBYLAWFIRM,
+        CANCELLEDBYUSER,
+        CANCELLEDDUPLICATE,
+        CANCELLEDNMV,
+        CANCELLEDNONPAYMENT,
+        CANCELLEDNOLAWFIRM,
+        CANCELLEDOVERDUE,
+        CANCELLEDTOOSHORTNOTICE,
+        CASEINPROGRESS,
+        CLIENTCONFIRMED,
+        CLIENTCONFIRMEDUNPAID,
+        CLIENTFIREDLAWFIRM,
+        CLIENTFORCEDLOSS,
+        CLIENTPAIDFINE,
+        CLIENTUNRESPONSIVE,
+        DEFERRED,
+        DISMISSED,
+        DIVERSION,
+        FEESDISPUTED,
+        FINEREDUCTIONONLY,
+        LAWFIRMWITHDRAWN,
+        LOST,
+        NOLAWFIRMAVAILABLE,
+        POINTREDUCTION,
+        REFUSEDBYLAWFIRM,
+        RESOLVEDNONPAYMENT,
+        STALE,
+        TRAFFICSCHOOL,
+        UNCONFIRMED
+    }
+    enum CaseStatusCategoryEnum {
+        ACTIVE,
+        CANCELLED,
+        RESOLVED,
+        UNCONFIRMED
+    }
     enum ReferralCodeOwnerEnum {
         LAWFIRM,
         OTR
