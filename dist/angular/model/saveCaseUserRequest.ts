@@ -26,14 +26,15 @@ export interface SaveCaseUserRequest {
     userId?: number;
 }
 export namespace SaveCaseUserRequest {
-    export type RelationshipToClientEnum = 'EMPLOYER' | 'FAMILY_MEMBER' | 'FRIEND' | 'LAWYER' | 'OTHER' | 'SELF';
+    export type RelationshipToClientEnum = 'EMPLOYER' | 'FAMILY_MEMBER' | 'FRIEND' | 'LAWYER' | 'OTHER' | 'SELF' | 'UNKNOWN';
     export const RelationshipToClientEnum = {
         Employer: 'EMPLOYER' as RelationshipToClientEnum,
         FamilyMember: 'FAMILY_MEMBER' as RelationshipToClientEnum,
         Friend: 'FRIEND' as RelationshipToClientEnum,
         Lawyer: 'LAWYER' as RelationshipToClientEnum,
         Other: 'OTHER' as RelationshipToClientEnum,
-        Self: 'SELF' as RelationshipToClientEnum
+        Self: 'SELF' as RelationshipToClientEnum,
+        Unknown: 'UNKNOWN' as RelationshipToClientEnum
     };
 }
 

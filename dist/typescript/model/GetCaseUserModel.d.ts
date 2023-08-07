@@ -34,6 +34,7 @@ export declare namespace GetCaseUserModel {
         FRIEND,
         LAWYER,
         OTHER,
-        SELF
+        SELF,
+        UNKNOWN
     }
 }

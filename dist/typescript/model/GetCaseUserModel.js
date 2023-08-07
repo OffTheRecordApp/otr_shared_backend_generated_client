@@ -22,5 +22,6 @@ var GetCaseUserModel;
         RelationshipToClientEnum[RelationshipToClientEnum["LAWYER"] = 'LAWYER'] = "LAWYER";
         RelationshipToClientEnum[RelationshipToClientEnum["OTHER"] = 'OTHER'] = "OTHER";
         RelationshipToClientEnum[RelationshipToClientEnum["SELF"] = 'SELF'] = "SELF";
+        RelationshipToClientEnum[RelationshipToClientEnum["UNKNOWN"] = 'UNKNOWN'] = "UNKNOWN";
     })(RelationshipToClientEnum = GetCaseUserModel.RelationshipToClientEnum || (GetCaseUserModel.RelationshipToClientEnum = {}));
 })(GetCaseUserModel = exports.GetCaseUserModel || (exports.GetCaseUserModel = {}));

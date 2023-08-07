@@ -29,6 +29,7 @@ export declare namespace SaveCaseUserRequest {
         FRIEND,
         LAWYER,
         OTHER,
-        SELF
+        SELF,
+        UNKNOWN
     }
 }
