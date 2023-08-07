@@ -22,6 +22,7 @@ import { CaseRefundControllerService } from './api/caseRefundController.service'
 import { CaseResolutionControllerService } from './api/caseResolutionController.service';
 import { CaseStatusControllerService } from './api/caseStatusController.service';
 import { CaseTransferControllerService } from './api/caseTransferController.service';
+import { CaseUserControllerService } from './api/caseUserController.service';
 import { CertificateControllerService } from './api/certificateController.service';
 import { CitationAuditControllerService } from './api/citationAuditController.service';
 import { CitationControllerService } from './api/citationController.service';

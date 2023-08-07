@@ -1,11 +1,7 @@
 "use strict";
 var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
     if (k2 === undefined) k2 = k;
-    var desc = Object.getOwnPropertyDescriptor(m, k);
-    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
-      desc = { enumerable: true, get: function() { return m[k]; } };
-    }
-    Object.defineProperty(o, k2, desc);
+    Object.defineProperty(o, k2, { enumerable: true, get: function() { return m[k]; } });
 }) : (function(o, m, k, k2) {
     if (k2 === undefined) k2 = k;
     o[k2] = m[k];
@@ -104,6 +100,8 @@ __exportStar(require("./CaseStatusDomain"), exports);
 __exportStar(require("./CaseSummaryDomain"), exports);
 __exportStar(require("./CaseTransferHistory"), exports);
 __exportStar(require("./CaseTransferResponse"), exports);
+__exportStar(require("./CaseUserDefendantAttributesRequest"), exports);
+__exportStar(require("./CaseUserPermissionAttributes"), exports);
 __exportStar(require("./CaseViolationPenalty"), exports);
 __exportStar(require("./CaseWithCoverageObtained"), exports);
 __exportStar(require("./ChangeUserPasswordRequest"), exports);
@@ -239,6 +237,8 @@ __exportStar(require("./GetCaseNotesResponse"), exports);
 __exportStar(require("./GetCasePaymentsResponse"), exports);
 __exportStar(require("./GetCaseResolutionStatusesResponse"), exports);
 __exportStar(require("./GetCaseResponse"), exports);
+__exportStar(require("./GetCaseUserModel"), exports);
+__exportStar(require("./GetCaseUsersResponse"), exports);
 __exportStar(require("./GetCasesWithCoverageObtainedResponse"), exports);
 __exportStar(require("./GetCasesWithMissingLawfirmPayoutsResponse"), exports);
 __exportStar(require("./GetCasesWithOverduePaymentsResponse"), exports);
@@ -519,6 +519,7 @@ __exportStar(require("./SSLCertificateResponse"), exports);
 __exportStar(require("./SaveAgentBookingRequest"), exports);
 __exportStar(require("./SaveAgentBookingResponse"), exports);
 __exportStar(require("./SaveCaseNotesRequest"), exports);
+__exportStar(require("./SaveCaseUserRequest"), exports);
 __exportStar(require("./SaveLawfirmSurchargeModel"), exports);
 __exportStar(require("./SaveLawfirmSurchargesRequest"), exports);
 __exportStar(require("./SaveLawyerLeadRequest"), exports);

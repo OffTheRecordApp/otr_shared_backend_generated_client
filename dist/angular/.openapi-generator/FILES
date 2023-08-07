@@ -22,6 +22,7 @@ api/caseRefundController.service.ts
 api/caseResolutionController.service.ts
 api/caseStatusController.service.ts
 api/caseTransferController.service.ts
+api/caseUserController.service.ts
 api/certificateController.service.ts
 api/citationAuditController.service.ts
 api/citationController.service.ts
@@ -196,6 +197,8 @@ model/caseStatusDomain.ts
 model/caseSummaryDomain.ts
 model/caseTransferHistory.ts
 model/caseTransferResponse.ts
+model/caseUserDefendantAttributesRequest.ts
+model/caseUserPermissionAttributes.ts
 model/caseViolationPenalty.ts
 model/caseWithCoverageObtained.ts
 model/changeUserPasswordRequest.ts
@@ -331,6 +334,8 @@ model/getCaseNotesResponse.ts
 model/getCasePaymentsResponse.ts
 model/getCaseResolutionStatusesResponse.ts
 model/getCaseResponse.ts
+model/getCaseUserModel.ts
+model/getCaseUsersResponse.ts
 model/getCasesWithCoverageObtainedResponse.ts
 model/getCasesWithMissingLawfirmPayoutsResponse.ts
 model/getCasesWithOverduePaymentsResponse.ts
@@ -612,6 +617,7 @@ model/sSLCertificateResponse.ts
 model/saveAgentBookingRequest.ts
 model/saveAgentBookingResponse.ts
 model/saveCaseNotesRequest.ts
+model/saveCaseUserRequest.ts
 model/saveLawfirmSurchargeModel.ts
 model/saveLawfirmSurchargesRequest.ts
 model/saveLawyerLeadRequest.ts
