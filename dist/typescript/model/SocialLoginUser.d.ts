@@ -20,5 +20,6 @@ export interface SocialLoginUser {
     "phoneNumbers"?: Array<models.SocialPhoneNumber>;
     "profilePictureUrl"?: string;
     "roles"?: Array<models.UserRoleDomain>;
+    "userAlias"?: string;
     "userId"?: number;
 }

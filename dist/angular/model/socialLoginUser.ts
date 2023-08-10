@@ -23,6 +23,7 @@ export interface SocialLoginUser {
     phoneNumbers?: Set<SocialPhoneNumber>;
     profilePictureUrl?: string;
     roles?: Set<UserRoleDomain>;
+    userAlias?: string;
     userId?: number;
 }
 
