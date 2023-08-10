@@ -21,6 +21,7 @@ export interface DashboardCaseModel {
     "lawfirmProfilePictureUrl"?: string;
     "lawyerRating"?: number;
     "legalFeeInCents"?: number;
+    "matchExpirationDateUtc"?: string;
     "messageBody"?: string;
     "status"?: models.DashboardStatusModel;
     "userId"?: number;
