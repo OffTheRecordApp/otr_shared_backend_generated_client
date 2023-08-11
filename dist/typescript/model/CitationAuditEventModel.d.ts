@@ -44,6 +44,8 @@ export declare namespace CitationAuditEventModel {
         UNKNOWN
     }
     enum EventEnum {
+        ACCOUNTNOTIFICATIONSTATUSCHANGED,
+        ACCOUNTSTATUSCHANGED,
         CASEACCEPT,
         CASEBOOKING,
         CASECANCEL,
@@ -63,12 +65,14 @@ export declare namespace CitationAuditEventModel {
         LAWFIRMTOTALCAPACITY,
         LINEITEMADDED,
         LINEITEMDELETED,
+        NAMECHANGED,
         PASSWORDCHANGE,
         PASSWORDRESETREQUESTED,
         PAYMENTAUTHORIZED,
         PAYMENTCAPTURED,
         PAYMENTMETHODADD,
         PAYMENTMETHODDELETE,
+        PAYMENTPLANOPTIONCHANGED,
         PAYMENTREFUNDED,
         PAYMENTSCHEDULED,
         REFERRALCODEAPPLIED,
@@ -79,6 +83,7 @@ export declare namespace CitationAuditEventModel {
         UNKNOWN,
         USERLOGINEVENT,
         USERREGISTRATION,
+        USERREGISTRATIONATTRIBUTED,
         VACATIONMODETOGGLE,
         VACATIONMODEUPDATE,
         VERIFYEMAIL,
