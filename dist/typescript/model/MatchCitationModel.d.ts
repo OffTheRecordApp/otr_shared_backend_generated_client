@@ -24,6 +24,7 @@ export interface MatchCitationModel {
     "fineAmount"?: number;
     "involvesAccident"?: boolean;
     "isDeleted"?: boolean;
+    "regionCode"?: string;
     "signedTicketImageUrl"?: string;
     "ticketImageUrl"?: string;
     "ticketNumber"?: string;
