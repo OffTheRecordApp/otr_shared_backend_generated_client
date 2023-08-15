@@ -31,9 +31,9 @@ import { DeleteCitationResponse } from '../model/deleteCitationResponse';
 // @ts-ignore
 import { DismissCitationsFromContactListRequest } from '../model/dismissCitationsFromContactListRequest';
 // @ts-ignore
-import { GetCitationResponse } from '../model/getCitationResponse';
+import { GetAnonymousTicketUploads } from '../model/getAnonymousTicketUploads';
 // @ts-ignore
-import { GetCitationsResponse } from '../model/getCitationsResponse';
+import { GetCitationResponse } from '../model/getCitationResponse';
 // @ts-ignore
 import { GetListOfCitationsWithMissingCourtResponse } from '../model/getListOfCitationsWithMissingCourtResponse';
 // @ts-ignore
@@ -570,9 +570,9 @@ export class CitationControllerService {
      * @param observe set whether or not to return the data Observable as the body, response or events. defaults to returning the body.
      * @param reportProgress flag to report request and response progress.
      */
-    public getAnonymousTicketUploadsUsingGET(emailAddress: string, observe?: 'body', reportProgress?: boolean, options?: {httpHeaderAccept?: '*/*', context?: HttpContext}): Observable<GetCitationsResponse>;
-    public getAnonymousTicketUploadsUsingGET(emailAddress: string, observe?: 'response', reportProgress?: boolean, options?: {httpHeaderAccept?: '*/*', context?: HttpContext}): Observable<HttpResponse<GetCitationsResponse>>;
-    public getAnonymousTicketUploadsUsingGET(emailAddress: string, observe?: 'events', reportProgress?: boolean, options?: {httpHeaderAccept?: '*/*', context?: HttpContext}): Observable<HttpEvent<GetCitationsResponse>>;
+    public getAnonymousTicketUploadsUsingGET(emailAddress: string, observe?: 'body', reportProgress?: boolean, options?: {httpHeaderAccept?: '*/*', context?: HttpContext}): Observable<GetAnonymousTicketUploads>;
+    public getAnonymousTicketUploadsUsingGET(emailAddress: string, observe?: 'response', reportProgress?: boolean, options?: {httpHeaderAccept?: '*/*', context?: HttpContext}): Observable<HttpResponse<GetAnonymousTicketUploads>>;
+    public getAnonymousTicketUploadsUsingGET(emailAddress: string, observe?: 'events', reportProgress?: boolean, options?: {httpHeaderAccept?: '*/*', context?: HttpContext}): Observable<HttpEvent<GetAnonymousTicketUploads>>;
     public getAnonymousTicketUploadsUsingGET(emailAddress: string, observe: any = 'body', reportProgress: boolean = false, options?: {httpHeaderAccept?: '*/*', context?: HttpContext}): Observable<any> {
         if (emailAddress === null || emailAddress === undefined) {
             throw new Error('Required parameter emailAddress was null or undefined when calling getAnonymousTicketUploadsUsingGET.');
@@ -610,7 +610,7 @@ export class CitationControllerService {
         }
 
         let localVarPath = `/api/v1/citations/${this.configuration.encodeParam({name: "emailAddress", value: emailAddress, in: "path", style: "simple", explode: false, dataType: "string", dataFormat: undefined})}/anonymous-tickets`;
-        return this.httpClient.request<GetCitationsResponse>('get', `${this.configuration.basePath}${localVarPath}`,
+        return this.httpClient.request<GetAnonymousTicketUploads>('get', `${this.configuration.basePath}${localVarPath}`,
             {
                 context: localVarHttpContext,
                 responseType: <any>responseType_,

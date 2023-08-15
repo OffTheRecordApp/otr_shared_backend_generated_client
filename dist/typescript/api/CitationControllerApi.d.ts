@@ -67,7 +67,7 @@ export declare class CitationControllerApi {
      * @summary getAnonymousTicketUploads
      * @param emailAddress emailAddress
      */
-    getAnonymousTicketUploadsUsingGET(emailAddress: string, extraHttpRequestParams?: any): ng.IHttpPromise<models.GetCitationsResponse>;
+    getAnonymousTicketUploadsUsingGET(emailAddress: string, extraHttpRequestParams?: any): ng.IHttpPromise<models.GetAnonymousTicketUploads>;
     /**
      *
      * @summary getCitation

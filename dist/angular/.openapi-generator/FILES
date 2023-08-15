@@ -143,6 +143,7 @@ model/aggregateRatingMetrics.ts
 model/aggregateReferralCredit.ts
 model/alert.ts
 model/alertNotificationResponse.ts
+model/anonymousTicketUploadModel.ts
 model/appEventCreateRequest.ts
 model/appearanceAttorneyDomain.ts
 model/appleLoginRequest.ts
@@ -318,6 +319,7 @@ model/genericAdminListRequest.ts
 model/geoRatesRequest.ts
 model/getActivityFeedResponse.ts
 model/getAddressInnerResponse.ts
+model/getAnonymousTicketUploads.ts
 model/getAppConfigResponse.ts
 model/getAppearanceAttorneysResponse.ts
 model/getAvailablePaymentPlansResponse.ts
@@ -343,7 +345,6 @@ model/getCasesWithUncapturedChargesRequest.ts
 model/getCitationPhoneLeadsRequest.ts
 model/getCitationPhoneLeadsResponse.ts
 model/getCitationResponse.ts
-model/getCitationsResponse.ts
 model/getCitationsWithMissingFieldsRequest.ts
 model/getCitationsWithMissingFieldsResponse.ts
 model/getClientCasesResponse.ts
