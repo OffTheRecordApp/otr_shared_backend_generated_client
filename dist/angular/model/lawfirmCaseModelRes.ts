@@ -18,6 +18,7 @@ export interface LawfirmCaseModelRes {
     clientDeclineTicket?: FreshDeskTicketRes;
     declineReason?: string;
     isMatchInternal?: boolean;
+    isSelected?: boolean;
     lawfirmCaseId?: number;
     lawfirmDecisionDateUtc?: TimestampRes;
     lawfirmDeclineTicket?: FreshDeskTicketRes;

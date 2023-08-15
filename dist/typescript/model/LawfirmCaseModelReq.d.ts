@@ -15,6 +15,7 @@ export interface LawfirmCaseModelReq {
     "clientDeclineTicket"?: models.FreshDeskTicketReq;
     "declineReason"?: string;
     "isMatchInternal"?: boolean;
+    "isSelected"?: boolean;
     "lawfirmCaseId"?: number;
     "lawfirmDecisionDateUtc"?: models.TimestampReq;
     "lawfirmDeclineTicket"?: models.FreshDeskTicketReq;
