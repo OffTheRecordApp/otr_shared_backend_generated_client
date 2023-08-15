@@ -14,6 +14,7 @@ export interface DashboardCaseModel {
     "authorModel"?: models.DashboardAuthorModel;
     "bookingConfirmedDate"?: string;
     "caseId"?: string;
+    "caseUserDetails"?: models.CaseUserDetailsModel;
     "citation"?: models.DashboardCitationModel;
     "court"?: models.DashboardCourtModel;
     "hasLeftLawyerReview"?: boolean;

@@ -11,6 +11,7 @@
  */
 import { DashboardStatusModel } from './dashboardStatusModel';
 import { DashboardCourtModel } from './dashboardCourtModel';
+import { CaseUserDetailsModel } from './caseUserDetailsModel';
 import { DashboardCitationModel } from './dashboardCitationModel';
 import { DashboardAuthorModel } from './dashboardAuthorModel';
 
@@ -19,6 +20,7 @@ export interface DashboardCaseModel {
     authorModel?: DashboardAuthorModel;
     bookingConfirmedDate?: string;
     caseId?: string;
+    caseUserDetails?: CaseUserDetailsModel;
     citation?: DashboardCitationModel;
     court?: DashboardCourtModel;
     hasLeftLawyerReview?: boolean;

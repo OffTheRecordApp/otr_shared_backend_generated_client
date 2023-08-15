@@ -198,7 +198,9 @@ model/caseStatusDomain.ts
 model/caseSummaryDomain.ts
 model/caseTransferHistory.ts
 model/caseTransferResponse.ts
+model/caseUserDefendantAttributes.ts
 model/caseUserDefendantAttributesRequest.ts
+model/caseUserDetailsModel.ts
 model/caseUserPermissionAttributes.ts
 model/caseViolationPenalty.ts
 model/caseWithCoverageObtained.ts
