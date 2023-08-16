@@ -12,6 +12,7 @@
 export interface GetCitationsWithMissingFieldsRequest {
     "caseStatuses"?: Array<GetCitationsWithMissingFieldsRequest.CaseStatusesEnum>;
     "endDate"?: string;
+    "ignoreDataBackfill"?: boolean;
     "maxRecords"?: number;
     "selectedStates"?: Array<GetCitationsWithMissingFieldsRequest.SelectedStatesEnum>;
     "showMissingCourtRecords"?: boolean;
