@@ -15,6 +15,7 @@ import { CaseUserPermissionAttributes } from './caseUserPermissionAttributes';
 export interface GetCaseUserModel { 
     additionalNote?: string;
     caseId?: string;
+    creationDateUtc?: string;
     dateOfBirth?: string;
     emailAddress?: string;
     firstName?: string;
@@ -23,6 +24,7 @@ export interface GetCaseUserModel {
     isOwner?: boolean;
     isRemoved?: boolean;
     lastName?: string;
+    lastUpdatedDateUtc?: string;
     licenseNumber?: string;
     licenseState?: string;
     permissionAttributes?: CaseUserPermissionAttributes;
