@@ -102,6 +102,7 @@ api/validationController.service.ts
 api/verificationController.service.ts
 api/violationController.service.ts
 api/violationPenaltyController.service.ts
+api/websocketMessageController.service.ts
 api/workflowStateController.service.ts
 configuration.ts
 encoder.ts
@@ -294,7 +295,7 @@ model/enableViolationsForLawfirmRequest.ts
 model/enableViolationsForLawfirmResponse.ts
 model/estimateInsuranceSavingsRequest.ts
 model/estimateInsuranceSavingsResponse.ts
-model/externalTicketCourt.ts
+model/externalTicketSiteOutput.ts
 model/feedbackAttachmentModel.ts
 model/feedbackDomain.ts
 model/financialTransaction.ts
@@ -370,7 +371,6 @@ model/getDeclinedCasesResponse.ts
 model/getDocumentsRequest.ts
 model/getEmailTemplateResponse.ts
 model/getExternalTicketInputParamsResponse.ts
-model/getExternalTicketModel.ts
 model/getExternalTicketsResponse.ts
 model/getHouseHoldMateModel.ts
 model/getHouseholdMatesResponse.ts

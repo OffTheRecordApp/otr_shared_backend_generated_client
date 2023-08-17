@@ -9,13 +9,13 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-import { GetExternalTicketModel } from './getExternalTicketModel';
+import { ExternalTicketSiteOutput } from './externalTicketSiteOutput';
 
 
 export interface GetExternalTicketsResponse { 
     requestState?: GetExternalTicketsResponse.RequestStateEnum;
     retryAfterInSeconds?: number;
-    tickets?: Array<GetExternalTicketModel>;
+    tickets?: ExternalTicketSiteOutput;
 }
 export namespace GetExternalTicketsResponse {
     export type RequestStateEnum = 'ERROR' | 'PENDING' | 'SUCCESS';

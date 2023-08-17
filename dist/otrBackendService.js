@@ -6814,6 +6814,7 @@ angular.module('otrBackendService', [])
              * @param {string} parameters.regionCode - regionCode
              * @param {string} parameters.searchType - searchType
              * @param {string} parameters.searchValue - searchValue
+             * @param {string} parameters.userId - userId
              */
             OtrService.prototype.getExternalTicketsUsingGET = function(parameters) {
                 if (parameters === undefined) {
@@ -6880,6 +6881,10 @@ angular.module('otrBackendService', [])
 
                 if (parameters['searchValue'] !== undefined) {
                     queryParameters['searchValue'] = parameters['searchValue'];
+                }
+
+                if (parameters['userId'] !== undefined) {
+                    queryParameters['userId'] = parameters['userId'];
                 }
 
                 queryParameters = mergeQueryParams(parameters, queryParameters);
@@ -6957,6 +6962,53 @@ angular.module('otrBackendService', [])
 
                 if (parameters['request'] === undefined) {
                     deferred.reject(new Error('Missing required  parameter: request'));
+                    return deferred.promise;
+                }
+
+                queryParameters = mergeQueryParams(parameters, queryParameters);
+
+                this.request('POST', domain + path, parameters, body, headers, queryParameters, form, deferred);
+
+                return deferred.promise;
+            };
+            /**
+             * forwardMessage
+             * @method
+             * @name OtrService#forwardMessageUsingPOST
+             * @param {object} parameters - method options and parameters
+             * @param {} parameters.message - message
+             * @param {string} parameters.xSessionId - X-Session-Id
+             */
+            OtrService.prototype.forwardMessageUsingPOST = function(parameters) {
+                if (parameters === undefined) {
+                    parameters = {};
+                }
+                var deferred = $q.defer();
+                var domain = this.domain,
+                    path = '/api/v1/forward-message';
+                var body = {},
+                    queryParameters = {},
+                    headers = {},
+                    form = {};
+
+                headers['Accept'] = ['*/*'];
+                headers['Content-Type'] = ['application/json'];
+
+                if (parameters['message'] !== undefined) {
+                    body = parameters['message'];
+                }
+
+                if (parameters['message'] === undefined) {
+                    deferred.reject(new Error('Missing required  parameter: message'));
+                    return deferred.promise;
+                }
+
+                if (parameters['xSessionId'] !== undefined) {
+                    headers['X-Session-Id'] = parameters['xSessionId'];
+                }
+
+                if (parameters['xSessionId'] === undefined) {
+                    deferred.reject(new Error('Missing required  parameter: xSessionId'));
                     return deferred.promise;
                 }
 

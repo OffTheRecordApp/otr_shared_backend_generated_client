@@ -13,7 +13,7 @@ import * as models from './models';
 export interface GetExternalTicketsResponse {
     "requestState"?: GetExternalTicketsResponse.RequestStateEnum;
     "retryAfterInSeconds"?: number;
-    "tickets"?: Array<models.GetExternalTicketModel>;
+    "tickets"?: models.ExternalTicketSiteOutput;
 }
 export declare namespace GetExternalTicketsResponse {
     enum RequestStateEnum {
