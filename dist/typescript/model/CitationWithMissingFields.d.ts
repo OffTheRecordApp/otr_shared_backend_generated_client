@@ -20,6 +20,7 @@ export interface CitationWithMissingFields {
     "clientEmailAddress"?: string;
     "clientFirstName"?: string;
     "courtId"?: number;
+    "dismissedFromContactList"?: boolean;
     "firstName"?: string;
     "gender"?: CitationWithMissingFields.GenderEnum;
     "lastName"?: string;
