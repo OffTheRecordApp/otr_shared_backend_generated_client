@@ -9,6 +9,7 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
+import { MatchCaseLineItemModel } from './matchCaseLineItemModel';
 
 
 export interface MatchLegalServiceModel { 
@@ -21,6 +22,7 @@ export interface MatchLegalServiceModel {
     legalServiceName?: string;
     legalServiceType?: MatchLegalServiceModel.LegalServiceTypeEnum;
     legalVertical?: MatchLegalServiceModel.LegalVerticalEnum;
+    lineItems?: Array<MatchCaseLineItemModel>;
     matchExpirationDateUtc?: string;
     obfuscatedPictureUrl?: string;
     profilePictureUrl?: string;

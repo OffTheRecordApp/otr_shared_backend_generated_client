@@ -9,6 +9,7 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
+import { WorkflowLineItemModel } from './workflowLineItemModel';
 
 
 export interface LegalServiceModel { 
@@ -21,6 +22,7 @@ export interface LegalServiceModel {
     legalServiceName?: string;
     legalServiceType?: LegalServiceModel.LegalServiceTypeEnum;
     legalVertical?: LegalServiceModel.LegalVerticalEnum;
+    lineItems?: Array<WorkflowLineItemModel>;
     matchExpirationDateUtc?: string;
     obfuscatedPictureUrl?: string;
     profilePictureUrl?: string;

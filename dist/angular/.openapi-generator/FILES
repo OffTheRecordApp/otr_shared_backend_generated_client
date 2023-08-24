@@ -533,6 +533,7 @@ model/lostCaseWithTransferNotReversed.ts
 model/markActionAsDeletedResponse.ts
 model/markCaseAsResolvedRequest.ts
 model/markCaseAsResolvedResponse.ts
+model/matchCaseLineItemModel.ts
 model/matchCaseResponse.ts
 model/matchCaseViolationPenaltyModel.ts
 model/matchCitationModel.ts
@@ -780,6 +781,7 @@ model/violationPenaltyResponse.ts
 model/violationResponse.ts
 model/workflowCaseModel.ts
 model/workflowCitationModel.ts
+model/workflowLineItemModel.ts
 model/workflowViolationModel.ts
 model/workflowViolationPenaltyModel.ts
 model/zoneId.ts

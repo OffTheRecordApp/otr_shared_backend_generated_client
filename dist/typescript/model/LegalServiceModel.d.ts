@@ -9,6 +9,7 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
+import * as models from './models';
 export interface LegalServiceModel {
     "chanceOfSuccess"?: number;
     "isSelected"?: boolean;
@@ -19,6 +20,7 @@ export interface LegalServiceModel {
     "legalServiceName"?: string;
     "legalServiceType"?: LegalServiceModel.LegalServiceTypeEnum;
     "legalVertical"?: LegalServiceModel.LegalVerticalEnum;
+    "lineItems"?: Array<models.WorkflowLineItemModel>;
     "matchExpirationDateUtc"?: string;
     "obfuscatedPictureUrl"?: string;
     "profilePictureUrl"?: string;
