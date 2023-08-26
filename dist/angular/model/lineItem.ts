@@ -17,13 +17,14 @@ export interface LineItem {
     lineItem?: LineItem.LineItemEnum;
 }
 export namespace LineItem {
-    export type LineItemEnum = 'ACCIDENT_FEE' | 'BASE_LEGAL_FEE' | 'BOND_FEE' | 'BOOKING_FEE' | 'CDL_FEE' | 'DISPUTE_FEE' | 'FINE_PAYMENT' | 'FTA_FEE' | 'INITIAL_SUBSCRIPTION_FEE' | 'LATE_FEE' | 'MBG_REFUND' | 'MVS_FEE' | 'OTHER' | 'OTR_CREDIT' | 'PAYMENT_PLAN_SERVICE_FEE' | 'WARRANT_FEE';
+    export type LineItemEnum = 'ACCIDENT_FEE' | 'BASE_LEGAL_FEE' | 'BOND_FEE' | 'BOOKING_FEE' | 'CDL_FEE' | 'COURT_FEE' | 'DISPUTE_FEE' | 'FINE_PAYMENT' | 'FTA_FEE' | 'INITIAL_SUBSCRIPTION_FEE' | 'LATE_FEE' | 'MBG_REFUND' | 'MVS_FEE' | 'OTHER' | 'OTR_CREDIT' | 'PAYMENT_PLAN_SERVICE_FEE' | 'WARRANT_FEE';
     export const LineItemEnum = {
         AccidentFee: 'ACCIDENT_FEE' as LineItemEnum,
         BaseLegalFee: 'BASE_LEGAL_FEE' as LineItemEnum,
         BondFee: 'BOND_FEE' as LineItemEnum,
         BookingFee: 'BOOKING_FEE' as LineItemEnum,
         CdlFee: 'CDL_FEE' as LineItemEnum,
+        CourtFee: 'COURT_FEE' as LineItemEnum,
         DisputeFee: 'DISPUTE_FEE' as LineItemEnum,
         FinePayment: 'FINE_PAYMENT' as LineItemEnum,
         FtaFee: 'FTA_FEE' as LineItemEnum,

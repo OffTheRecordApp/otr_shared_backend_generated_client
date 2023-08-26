@@ -20,6 +20,7 @@ export interface ScheduleNewPaymentRequest {
 }
 export declare namespace ScheduleNewPaymentRequest {
     enum RecipientEnum {
+        COURT,
         LAWFIRM,
         OTR
     }

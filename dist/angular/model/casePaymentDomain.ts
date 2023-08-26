@@ -44,8 +44,9 @@ export interface CasePaymentDomain {
     updatedDueDate?: string;
 }
 export namespace CasePaymentDomain {
-    export type RecipientEnum = 'LAWFIRM' | 'OTR';
+    export type RecipientEnum = 'COURT' | 'LAWFIRM' | 'OTR';
     export const RecipientEnum = {
+        Court: 'COURT' as RecipientEnum,
         Lawfirm: 'LAWFIRM' as RecipientEnum,
         Otr: 'OTR' as RecipientEnum
     };

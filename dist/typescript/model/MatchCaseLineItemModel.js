@@ -21,6 +21,7 @@ var MatchCaseLineItemModel;
         LineItemTypeEnum[LineItemTypeEnum["BONDFEE"] = 'BOND_FEE'] = "BONDFEE";
         LineItemTypeEnum[LineItemTypeEnum["BOOKINGFEE"] = 'BOOKING_FEE'] = "BOOKINGFEE";
         LineItemTypeEnum[LineItemTypeEnum["CDLFEE"] = 'CDL_FEE'] = "CDLFEE";
+        LineItemTypeEnum[LineItemTypeEnum["COURTFEE"] = 'COURT_FEE'] = "COURTFEE";
         LineItemTypeEnum[LineItemTypeEnum["DISPUTEFEE"] = 'DISPUTE_FEE'] = "DISPUTEFEE";
         LineItemTypeEnum[LineItemTypeEnum["FINEPAYMENT"] = 'FINE_PAYMENT'] = "FINEPAYMENT";
         LineItemTypeEnum[LineItemTypeEnum["FTAFEE"] = 'FTA_FEE'] = "FTAFEE";
@@ -35,6 +36,7 @@ var MatchCaseLineItemModel;
     })(LineItemTypeEnum = MatchCaseLineItemModel.LineItemTypeEnum || (MatchCaseLineItemModel.LineItemTypeEnum = {}));
     var RecipientEnum;
     (function (RecipientEnum) {
+        RecipientEnum[RecipientEnum["COURT"] = 'COURT'] = "COURT";
         RecipientEnum[RecipientEnum["LAWFIRM"] = 'LAWFIRM'] = "LAWFIRM";
         RecipientEnum[RecipientEnum["OTR"] = 'OTR'] = "OTR";
     })(RecipientEnum = MatchCaseLineItemModel.RecipientEnum || (MatchCaseLineItemModel.RecipientEnum = {}));

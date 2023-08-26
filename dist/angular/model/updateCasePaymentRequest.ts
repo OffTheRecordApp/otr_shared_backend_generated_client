@@ -21,8 +21,9 @@ export interface UpdateCasePaymentRequest {
     transactionMethod?: UpdateCasePaymentRequest.TransactionMethodEnum;
 }
 export namespace UpdateCasePaymentRequest {
-    export type RecipientEnum = 'LAWFIRM' | 'OTR';
+    export type RecipientEnum = 'COURT' | 'LAWFIRM' | 'OTR';
     export const RecipientEnum = {
+        Court: 'COURT' as RecipientEnum,
         Lawfirm: 'LAWFIRM' as RecipientEnum,
         Otr: 'OTR' as RecipientEnum
     };

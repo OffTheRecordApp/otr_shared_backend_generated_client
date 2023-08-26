@@ -79,6 +79,7 @@ export declare namespace StripeDisputeDomain {
         UNCONFIRMED
     }
     enum PaymentRecipientEnum {
+        COURT,
         LAWFIRM,
         OTR
     }

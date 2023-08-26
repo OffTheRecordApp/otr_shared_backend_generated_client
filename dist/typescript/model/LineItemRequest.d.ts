@@ -21,6 +21,7 @@ export interface LineItemRequest {
 }
 export declare namespace LineItemRequest {
     enum LineItemOwnerEnum {
+        COURT,
         LAWFIRM,
         OTR
     }
@@ -30,6 +31,7 @@ export declare namespace LineItemRequest {
         BONDFEE,
         BOOKINGFEE,
         CDLFEE,
+        COURTFEE,
         DISPUTEFEE,
         FINEPAYMENT,
         FTAFEE,

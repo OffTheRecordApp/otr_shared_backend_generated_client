@@ -34,6 +34,7 @@ export interface CaseLineItemDomainReq {
 }
 export declare namespace CaseLineItemDomainReq {
     enum LineItemOwnerEnum {
+        COURT,
         LAWFIRM,
         OTR
     }
@@ -43,6 +44,7 @@ export declare namespace CaseLineItemDomainReq {
         BONDFEE,
         BOOKINGFEE,
         CDLFEE,
+        COURTFEE,
         DISPUTEFEE,
         FINEPAYMENT,
         FTAFEE,

@@ -23,6 +23,7 @@ export declare namespace WorkflowLineItemModel {
         BONDFEE,
         BOOKINGFEE,
         CDLFEE,
+        COURTFEE,
         DISPUTEFEE,
         FINEPAYMENT,
         FTAFEE,
@@ -36,6 +37,7 @@ export declare namespace WorkflowLineItemModel {
         WARRANTFEE
     }
     enum RecipientEnum {
+        COURT,
         LAWFIRM,
         OTR
     }

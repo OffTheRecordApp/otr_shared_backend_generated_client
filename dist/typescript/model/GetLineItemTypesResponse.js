@@ -21,6 +21,7 @@ var GetLineItemTypesResponse;
         LineItemTypesEnum[LineItemTypesEnum["BONDFEE"] = 'BOND_FEE'] = "BONDFEE";
         LineItemTypesEnum[LineItemTypesEnum["BOOKINGFEE"] = 'BOOKING_FEE'] = "BOOKINGFEE";
         LineItemTypesEnum[LineItemTypesEnum["CDLFEE"] = 'CDL_FEE'] = "CDLFEE";
+        LineItemTypesEnum[LineItemTypesEnum["COURTFEE"] = 'COURT_FEE'] = "COURTFEE";
         LineItemTypesEnum[LineItemTypesEnum["DISPUTEFEE"] = 'DISPUTE_FEE'] = "DISPUTEFEE";
         LineItemTypesEnum[LineItemTypesEnum["FINEPAYMENT"] = 'FINE_PAYMENT'] = "FINEPAYMENT";
         LineItemTypesEnum[LineItemTypesEnum["FTAFEE"] = 'FTA_FEE'] = "FTAFEE";

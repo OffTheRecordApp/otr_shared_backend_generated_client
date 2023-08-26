@@ -18,6 +18,7 @@ export interface LineItemModel {
 }
 export declare namespace LineItemModel {
     enum LineItemOwnerEnum {
+        COURT,
         LAWFIRM,
         OTR
     }
@@ -27,6 +28,7 @@ export declare namespace LineItemModel {
         BONDFEE,
         BOOKINGFEE,
         CDLFEE,
+        COURTFEE,
         DISPUTEFEE,
         FINEPAYMENT,
         FTAFEE,

@@ -21,8 +21,9 @@ export interface ScheduleNewPaymentRequest {
     transactionMethod?: ScheduleNewPaymentRequest.TransactionMethodEnum;
 }
 export namespace ScheduleNewPaymentRequest {
-    export type RecipientEnum = 'LAWFIRM' | 'OTR';
+    export type RecipientEnum = 'COURT' | 'LAWFIRM' | 'OTR';
     export const RecipientEnum = {
+        Court: 'COURT' as RecipientEnum,
         Lawfirm: 'LAWFIRM' as RecipientEnum,
         Otr: 'OTR' as RecipientEnum
     };

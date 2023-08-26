@@ -1082,10 +1082,10 @@ export class CasePaymentControllerService {
      * @param observe set whether or not to return the data Observable as the body, response or events. defaults to returning the body.
      * @param reportProgress flag to report request and response progress.
      */
-    public updatePaymentRecipientUsingPUT(casePaymentId: string, recipient: 'LAWFIRM' | 'OTR', observe?: 'body', reportProgress?: boolean, options?: {httpHeaderAccept?: undefined, context?: HttpContext}): Observable<any>;
-    public updatePaymentRecipientUsingPUT(casePaymentId: string, recipient: 'LAWFIRM' | 'OTR', observe?: 'response', reportProgress?: boolean, options?: {httpHeaderAccept?: undefined, context?: HttpContext}): Observable<HttpResponse<any>>;
-    public updatePaymentRecipientUsingPUT(casePaymentId: string, recipient: 'LAWFIRM' | 'OTR', observe?: 'events', reportProgress?: boolean, options?: {httpHeaderAccept?: undefined, context?: HttpContext}): Observable<HttpEvent<any>>;
-    public updatePaymentRecipientUsingPUT(casePaymentId: string, recipient: 'LAWFIRM' | 'OTR', observe: any = 'body', reportProgress: boolean = false, options?: {httpHeaderAccept?: undefined, context?: HttpContext}): Observable<any> {
+    public updatePaymentRecipientUsingPUT(casePaymentId: string, recipient: 'COURT' | 'LAWFIRM' | 'OTR', observe?: 'body', reportProgress?: boolean, options?: {httpHeaderAccept?: undefined, context?: HttpContext}): Observable<any>;
+    public updatePaymentRecipientUsingPUT(casePaymentId: string, recipient: 'COURT' | 'LAWFIRM' | 'OTR', observe?: 'response', reportProgress?: boolean, options?: {httpHeaderAccept?: undefined, context?: HttpContext}): Observable<HttpResponse<any>>;
+    public updatePaymentRecipientUsingPUT(casePaymentId: string, recipient: 'COURT' | 'LAWFIRM' | 'OTR', observe?: 'events', reportProgress?: boolean, options?: {httpHeaderAccept?: undefined, context?: HttpContext}): Observable<HttpEvent<any>>;
+    public updatePaymentRecipientUsingPUT(casePaymentId: string, recipient: 'COURT' | 'LAWFIRM' | 'OTR', observe: any = 'body', reportProgress: boolean = false, options?: {httpHeaderAccept?: undefined, context?: HttpContext}): Observable<any> {
         if (casePaymentId === null || casePaymentId === undefined) {
             throw new Error('Required parameter casePaymentId was null or undefined when calling updatePaymentRecipientUsingPUT.');
         }

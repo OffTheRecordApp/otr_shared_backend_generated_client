@@ -16,6 +16,7 @@ var ScheduleNewPaymentRequest;
 (function (ScheduleNewPaymentRequest) {
     var RecipientEnum;
     (function (RecipientEnum) {
+        RecipientEnum[RecipientEnum["COURT"] = 'COURT'] = "COURT";
         RecipientEnum[RecipientEnum["LAWFIRM"] = 'LAWFIRM'] = "LAWFIRM";
         RecipientEnum[RecipientEnum["OTR"] = 'OTR'] = "OTR";
     })(RecipientEnum = ScheduleNewPaymentRequest.RecipientEnum || (ScheduleNewPaymentRequest.RecipientEnum = {}));

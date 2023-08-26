@@ -41,6 +41,7 @@ export interface CasePaymentDomain {
 }
 export declare namespace CasePaymentDomain {
     enum RecipientEnum {
+        COURT,
         LAWFIRM,
         OTR
     }

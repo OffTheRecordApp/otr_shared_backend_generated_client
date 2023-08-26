@@ -20,6 +20,7 @@ export interface UpdateCasePaymentRequest {
 }
 export declare namespace UpdateCasePaymentRequest {
     enum RecipientEnum {
+        COURT,
         LAWFIRM,
         OTR
     }

@@ -56,6 +56,7 @@ var StripeDisputeDomain;
     })(CaseStatusEnum = StripeDisputeDomain.CaseStatusEnum || (StripeDisputeDomain.CaseStatusEnum = {}));
     var PaymentRecipientEnum;
     (function (PaymentRecipientEnum) {
+        PaymentRecipientEnum[PaymentRecipientEnum["COURT"] = 'COURT'] = "COURT";
         PaymentRecipientEnum[PaymentRecipientEnum["LAWFIRM"] = 'LAWFIRM'] = "LAWFIRM";
         PaymentRecipientEnum[PaymentRecipientEnum["OTR"] = 'OTR'] = "OTR";
     })(PaymentRecipientEnum = StripeDisputeDomain.PaymentRecipientEnum || (StripeDisputeDomain.PaymentRecipientEnum = {}));

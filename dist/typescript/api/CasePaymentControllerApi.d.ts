@@ -127,5 +127,5 @@ export declare class CasePaymentControllerApi {
      * @param casePaymentId casePaymentId
      * @param recipient recipient
      */
-    updatePaymentRecipientUsingPUT(casePaymentId: string, recipient: 'LAWFIRM' | 'OTR', extraHttpRequestParams?: any): ng.IHttpPromise<{}>;
+    updatePaymentRecipientUsingPUT(casePaymentId: string, recipient: 'COURT' | 'LAWFIRM' | 'OTR', extraHttpRequestParams?: any): ng.IHttpPromise<{}>;
 }

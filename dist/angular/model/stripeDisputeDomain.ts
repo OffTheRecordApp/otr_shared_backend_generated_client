@@ -82,8 +82,9 @@ export namespace StripeDisputeDomain {
         TrafficSchool: 'TRAFFIC_SCHOOL' as CaseStatusEnum,
         Unconfirmed: 'UNCONFIRMED' as CaseStatusEnum
     };
-    export type PaymentRecipientEnum = 'LAWFIRM' | 'OTR';
+    export type PaymentRecipientEnum = 'COURT' | 'LAWFIRM' | 'OTR';
     export const PaymentRecipientEnum = {
+        Court: 'COURT' as PaymentRecipientEnum,
         Lawfirm: 'LAWFIRM' as PaymentRecipientEnum,
         Otr: 'OTR' as PaymentRecipientEnum
     };

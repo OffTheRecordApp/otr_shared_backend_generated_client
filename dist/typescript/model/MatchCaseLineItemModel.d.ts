@@ -23,6 +23,7 @@ export declare namespace MatchCaseLineItemModel {
         BONDFEE,
         BOOKINGFEE,
         CDLFEE,
+        COURTFEE,
         DISPUTEFEE,
         FINEPAYMENT,
         FTAFEE,
@@ -36,6 +37,7 @@ export declare namespace MatchCaseLineItemModel {
         WARRANTFEE
     }
     enum RecipientEnum {
+        COURT,
         LAWFIRM,
         OTR
     }
