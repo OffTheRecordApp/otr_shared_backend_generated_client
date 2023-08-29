@@ -16,6 +16,7 @@ export interface GetCitationsWithMissingFieldsRequest {
     "includeCitationsWithoutImage"?: boolean;
     "includeDismissedCitations"?: boolean;
     "maxRecords"?: number;
+    "onlyCitationsWithoutImage"?: boolean;
     "selectedStates"?: Array<GetCitationsWithMissingFieldsRequest.SelectedStatesEnum>;
     "showMissingCourtRecords"?: boolean;
     "showMissingDOBRecords"?: boolean;
