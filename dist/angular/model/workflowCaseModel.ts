@@ -11,6 +11,7 @@
  */
 import { WorkflowViolationPenaltyModel } from './workflowViolationPenaltyModel';
 import { WorkflowCitationModel } from './workflowCitationModel';
+import { LetterOfEngagement } from './letterOfEngagement';
 import { Timestamp } from './timestamp';
 import { LegalServiceModel } from './legalServiceModel';
 import { PaymentPlanTypeModel } from './paymentPlanTypeModel';
@@ -24,6 +25,7 @@ export interface WorkflowCaseModel {
     courtAppointmentDate?: Timestamp;
     isLawfirmCodeApplied?: boolean;
     legalServices?: Array<LegalServiceModel>;
+    letterOfEngagement?: LetterOfEngagement;
     maxPenalties?: Array<WorkflowViolationPenaltyModel>;
     paymentPlanTypeModel?: PaymentPlanTypeModel;
     referralCode?: string;

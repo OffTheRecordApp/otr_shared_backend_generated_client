@@ -18,6 +18,7 @@ export interface WorkflowCaseModel {
     "courtAppointmentDate"?: models.Timestamp;
     "isLawfirmCodeApplied"?: boolean;
     "legalServices"?: Array<models.LegalServiceModel>;
+    "letterOfEngagement"?: models.LetterOfEngagement;
     "maxPenalties"?: Array<models.WorkflowViolationPenaltyModel>;
     "paymentPlanTypeModel"?: models.PaymentPlanTypeModel;
     "referralCode"?: string;
