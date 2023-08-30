@@ -12,6 +12,7 @@
 import * as models from './models';
 export interface CitationWithMissingFields {
     "birthDate"?: string;
+    "caseId"?: string;
     "caseStatus"?: CitationWithMissingFields.CaseStatusEnum;
     "caseStatusCategory"?: CitationWithMissingFields.CaseStatusCategoryEnum;
     "citationCreationDateUtc"?: models.TimestampRes;

@@ -16,6 +16,7 @@ import { TimestampRes } from './timestampRes';
 
 export interface CitationWithMissingFields { 
     birthDate?: string;
+    caseId?: string;
     caseStatus?: CitationWithMissingFields.CaseStatusEnum;
     caseStatusCategory?: CitationWithMissingFields.CaseStatusCategoryEnum;
     citationCreationDateUtc?: TimestampRes;
