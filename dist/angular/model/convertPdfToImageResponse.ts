@@ -13,6 +13,7 @@ import { MediaItemModel } from './mediaItemModel';
 
 
 export interface ConvertPdfToImageResponse { 
+    errorCode?: number;
     errorMessage?: string;
     isSuccess?: boolean;
     mediaItems?: Array<MediaItemModel>;
