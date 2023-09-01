@@ -11,6 +11,7 @@
  */
 export interface AccountLevelFeeToSave {
     "classification"?: AccountLevelFeeToSave.ClassificationEnum;
+    "isNewLegalFee"?: boolean;
     "isPermitted"?: boolean;
     "lawfirmFee"?: number;
     "refundEligibility"?: AccountLevelFeeToSave.RefundEligibilityEnum;
