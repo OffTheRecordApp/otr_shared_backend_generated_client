@@ -13,6 +13,7 @@ export interface SaveLawyerLeadRequest {
     "city"?: string;
     "email"?: string;
     "firstname"?: string;
+    "isSelfProclaimedLawyer"?: boolean;
     "lastname"?: string;
     "leadProvidedSource"?: SaveLawyerLeadRequest.LeadProvidedSourceEnum;
     "phoneNumber"?: string;
