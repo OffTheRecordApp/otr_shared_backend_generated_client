@@ -196,6 +196,7 @@ export * from './findMatchingUser';
 export * from './findMatchingUsersRequest';
 export * from './findMatchingUsersResponse';
 export * from './findsCourtsResponse';
+export * from './forwardMessageRequest';
 export * from './freshDeskConversation';
 export * from './freshDeskRequester';
 export * from './freshDeskTicket';

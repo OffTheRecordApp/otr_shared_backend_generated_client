@@ -208,6 +208,7 @@ __exportStar(require("./FindMatchingUser"), exports);
 __exportStar(require("./FindMatchingUsersRequest"), exports);
 __exportStar(require("./FindMatchingUsersResponse"), exports);
 __exportStar(require("./FindsCourtsResponse"), exports);
+__exportStar(require("./ForwardMessageRequest"), exports);
 __exportStar(require("./FreshDeskConversation"), exports);
 __exportStar(require("./FreshDeskRequester"), exports);
 __exportStar(require("./FreshDeskTicket"), exports);

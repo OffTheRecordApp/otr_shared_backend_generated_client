@@ -27,9 +27,9 @@ var WebsocketMessageControllerApi = /** @class */ (function () {
      *
      * @summary forwardMessage
      * @param xSessionId X-Session-Id
-     * @param message message
+     * @param request request
      */
-    WebsocketMessageControllerApi.prototype.forwardMessageUsingPOST = function (xSessionId, message, extraHttpRequestParams) {
+    WebsocketMessageControllerApi.prototype.forwardMessageUsingPOST = function (xSessionId, request, extraHttpRequestParams) {
         var localVarPath = this.basePath + '/api/v1/forward-message';
         var queryParameters = {};
         var headerParams = Object.assign({}, this.defaultHeaders);
@@ -37,15 +37,15 @@ var WebsocketMessageControllerApi = /** @class */ (function () {
         if (xSessionId === null || xSessionId === undefined) {
             throw new Error('Required parameter xSessionId was null or undefined when calling forwardMessageUsingPOST.');
         }
-        // verify required parameter 'message' is not null or undefined
-        if (message === null || message === undefined) {
-            throw new Error('Required parameter message was null or undefined when calling forwardMessageUsingPOST.');
+        // verify required parameter 'request' is not null or undefined
+        if (request === null || request === undefined) {
+            throw new Error('Required parameter request was null or undefined when calling forwardMessageUsingPOST.');
         }
         headerParams['X-Session-Id'] = xSessionId;
         var httpRequestParams = {
             method: 'POST',
             url: localVarPath,
-            data: message,
+            data: request,
             params: queryParameters,
             headers: headerParams
         };

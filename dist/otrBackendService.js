@@ -6814,6 +6814,7 @@ angular.module('otrBackendService', [])
              * @param {string} parameters.regionCode - regionCode
              * @param {string} parameters.searchType - searchType
              * @param {string} parameters.searchValue - searchValue
+             * @param {string} parameters.sessionId - sessionId
              * @param {string} parameters.userId - userId
              */
             OtrService.prototype.getExternalTicketsUsingGET = function(parameters) {
@@ -6843,11 +6844,6 @@ angular.module('otrBackendService', [])
 
                 if (parameters['countyId'] !== undefined) {
                     queryParameters['countyId'] = parameters['countyId'];
-                }
-
-                if (parameters['countyId'] === undefined) {
-                    deferred.reject(new Error('Missing required  parameter: countyId'));
-                    return deferred.promise;
                 }
 
                 if (parameters['dateOfBirth'] !== undefined) {
@@ -6881,6 +6877,10 @@ angular.module('otrBackendService', [])
 
                 if (parameters['searchValue'] !== undefined) {
                     queryParameters['searchValue'] = parameters['searchValue'];
+                }
+
+                if (parameters['sessionId'] !== undefined) {
+                    queryParameters['sessionId'] = parameters['sessionId'];
                 }
 
                 if (parameters['userId'] !== undefined) {
@@ -6976,7 +6976,7 @@ angular.module('otrBackendService', [])
              * @method
              * @name OtrService#forwardMessageUsingPOST
              * @param {object} parameters - method options and parameters
-             * @param {} parameters.message - message
+             * @param {} parameters.request - request
              * @param {string} parameters.xSessionId - X-Session-Id
              */
             OtrService.prototype.forwardMessageUsingPOST = function(parameters) {
@@ -6994,12 +6994,12 @@ angular.module('otrBackendService', [])
                 headers['Accept'] = ['*/*'];
                 headers['Content-Type'] = ['application/json'];
 
-                if (parameters['message'] !== undefined) {
-                    body = parameters['message'];
+                if (parameters['request'] !== undefined) {
+                    body = parameters['request'];
                 }
 
-                if (parameters['message'] === undefined) {
-                    deferred.reject(new Error('Missing required  parameter: message'));
+                if (parameters['request'] === undefined) {
+                    deferred.reject(new Error('Missing required  parameter: request'));
                     return deferred.promise;
                 }
 

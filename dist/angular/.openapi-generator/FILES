@@ -306,6 +306,7 @@ model/findMatchingUser.ts
 model/findMatchingUsersRequest.ts
 model/findMatchingUsersResponse.ts
 model/findsCourtsResponse.ts
+model/forwardMessageRequest.ts
 model/freshDeskConversation.ts
 model/freshDeskRequester.ts
 model/freshDeskTicket.ts

@@ -10,6 +10,7 @@
  * Do not edit the class manually.
  */
 /// <reference types="angular" />
+import * as models from '../model/models';
 export declare class WebsocketMessageControllerApi {
     protected $http: ng.IHttpService;
     protected $httpParamSerializer?: (d: any) => any;
@@ -21,7 +22,7 @@ export declare class WebsocketMessageControllerApi {
      *
      * @summary forwardMessage
      * @param xSessionId X-Session-Id
-     * @param message message
+     * @param request request
      */
-    forwardMessageUsingPOST(xSessionId: string, message: string, extraHttpRequestParams?: any): ng.IHttpPromise<object>;
+    forwardMessageUsingPOST(xSessionId: string, request: models.ForwardMessageRequest, extraHttpRequestParams?: any): ng.IHttpPromise<object>;
 }

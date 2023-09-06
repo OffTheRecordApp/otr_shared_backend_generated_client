@@ -18,6 +18,8 @@ import { HttpClient, HttpHeaders, HttpParams,
 import { CustomHttpParameterCodec }                          from '../encoder';
 import { Observable }                                        from 'rxjs';
 
+// @ts-ignore
+import { ForwardMessageRequest } from '../model/forwardMessageRequest';
 
 // @ts-ignore
 import { BASE_PATH, COLLECTION_FORMATS }                     from '../variables';
@@ -92,19 +94,19 @@ export class WebsocketMessageControllerService {
     /**
      * forwardMessage
      * @param xSessionId X-Session-Id
-     * @param message message
+     * @param request request
      * @param observe set whether or not to return the data Observable as the body, response or events. defaults to returning the body.
      * @param reportProgress flag to report request and response progress.
      */
-    public forwardMessageUsingPOST(xSessionId: string, message: string, observe?: 'body', reportProgress?: boolean, options?: {httpHeaderAccept?: '*/*', context?: HttpContext}): Observable<object>;
-    public forwardMessageUsingPOST(xSessionId: string, message: string, observe?: 'response', reportProgress?: boolean, options?: {httpHeaderAccept?: '*/*', context?: HttpContext}): Observable<HttpResponse<object>>;
-    public forwardMessageUsingPOST(xSessionId: string, message: string, observe?: 'events', reportProgress?: boolean, options?: {httpHeaderAccept?: '*/*', context?: HttpContext}): Observable<HttpEvent<object>>;
-    public forwardMessageUsingPOST(xSessionId: string, message: string, observe: any = 'body', reportProgress: boolean = false, options?: {httpHeaderAccept?: '*/*', context?: HttpContext}): Observable<any> {
+    public forwardMessageUsingPOST(xSessionId: string, request: ForwardMessageRequest, observe?: 'body', reportProgress?: boolean, options?: {httpHeaderAccept?: '*/*', context?: HttpContext}): Observable<object>;
+    public forwardMessageUsingPOST(xSessionId: string, request: ForwardMessageRequest, observe?: 'response', reportProgress?: boolean, options?: {httpHeaderAccept?: '*/*', context?: HttpContext}): Observable<HttpResponse<object>>;
+    public forwardMessageUsingPOST(xSessionId: string, request: ForwardMessageRequest, observe?: 'events', reportProgress?: boolean, options?: {httpHeaderAccept?: '*/*', context?: HttpContext}): Observable<HttpEvent<object>>;
+    public forwardMessageUsingPOST(xSessionId: string, request: ForwardMessageRequest, observe: any = 'body', reportProgress: boolean = false, options?: {httpHeaderAccept?: '*/*', context?: HttpContext}): Observable<any> {
         if (xSessionId === null || xSessionId === undefined) {
             throw new Error('Required parameter xSessionId was null or undefined when calling forwardMessageUsingPOST.');
         }
-        if (message === null || message === undefined) {
-            throw new Error('Required parameter message was null or undefined when calling forwardMessageUsingPOST.');
+        if (request === null || request === undefined) {
+            throw new Error('Required parameter request was null or undefined when calling forwardMessageUsingPOST.');
         }
 
         let localVarHeaders = this.defaultHeaders;
@@ -154,7 +156,7 @@ export class WebsocketMessageControllerService {
         return this.httpClient.request<object>('post', `${this.configuration.basePath}${localVarPath}`,
             {
                 context: localVarHttpContext,
-                body: message,
+                body: request,
                 responseType: <any>responseType_,
                 withCredentials: this.configuration.withCredentials,
                 headers: localVarHeaders,

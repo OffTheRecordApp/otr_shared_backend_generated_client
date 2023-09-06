@@ -26,26 +26,23 @@ var ExternalTicketLookupControllerApi = /** @class */ (function () {
     /**
      *
      * @summary getExternalTickets
-     * @param countyId countyId
      * @param regionCode regionCode
      * @param attempts attempts
      * @param citationId citationId
+     * @param countyId countyId
      * @param dateOfBirth dateOfBirth
      * @param driversLicenseId driversLicenseId
      * @param lastName lastName
      * @param organizationName organizationName
      * @param searchType searchType
      * @param searchValue searchValue
+     * @param sessionId sessionId
      * @param userId userId
      */
-    ExternalTicketLookupControllerApi.prototype.getExternalTicketsUsingGET = function (countyId, regionCode, attempts, citationId, dateOfBirth, driversLicenseId, lastName, organizationName, searchType, searchValue, userId, extraHttpRequestParams) {
+    ExternalTicketLookupControllerApi.prototype.getExternalTicketsUsingGET = function (regionCode, attempts, citationId, countyId, dateOfBirth, driversLicenseId, lastName, organizationName, searchType, searchValue, sessionId, userId, extraHttpRequestParams) {
         var localVarPath = this.basePath + '/api/v1/external-tickets';
         var queryParameters = {};
         var headerParams = Object.assign({}, this.defaultHeaders);
-        // verify required parameter 'countyId' is not null or undefined
-        if (countyId === null || countyId === undefined) {
-            throw new Error('Required parameter countyId was null or undefined when calling getExternalTicketsUsingGET.');
-        }
         // verify required parameter 'regionCode' is not null or undefined
         if (regionCode === null || regionCode === undefined) {
             throw new Error('Required parameter regionCode was null or undefined when calling getExternalTicketsUsingGET.');
@@ -79,6 +76,9 @@ var ExternalTicketLookupControllerApi = /** @class */ (function () {
         }
         if (searchValue !== undefined) {
             queryParameters['searchValue'] = searchValue;
+        }
+        if (sessionId !== undefined) {
+            queryParameters['sessionId'] = sessionId;
         }
         if (userId !== undefined) {
             queryParameters['userId'] = userId;
