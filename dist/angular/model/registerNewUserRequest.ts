@@ -13,6 +13,7 @@ import { NewUser } from './newUser';
 
 
 export interface RegisterNewUserRequest { 
+    citationId?: number;
     clientType?: RegisterNewUserRequest.ClientTypeEnum;
     fingerPrintId?: string;
     httpReferrer?: string;

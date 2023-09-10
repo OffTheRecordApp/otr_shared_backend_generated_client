@@ -10,5 +10,6 @@
  * Do not edit the class manually.
  */
 export interface GoogleLoginRequest {
+    "citationId"?: number;
     "identityToken"?: string;
 }

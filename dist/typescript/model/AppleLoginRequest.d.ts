@@ -11,6 +11,7 @@
  */
 export interface AppleLoginRequest {
     "authCode"?: string;
+    "citationId"?: number;
     "familyName"?: string;
     "fingerPrintId"?: string;
     "givenName"?: string;

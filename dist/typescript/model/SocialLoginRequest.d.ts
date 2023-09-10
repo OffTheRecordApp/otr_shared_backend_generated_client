@@ -10,6 +10,7 @@
  * Do not edit the class manually.
  */
 export interface SocialLoginRequest {
+    "citationId"?: number;
     "clientType"?: SocialLoginRequest.ClientTypeEnum;
     "fingerPrintId"?: string;
     "httpReferrer"?: string;
