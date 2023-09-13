@@ -180,6 +180,7 @@ export declare namespace ValidateDirectMailResponse {
         MISSINGADJUSTEDFINEAMOUNT,
         MISSINGCASE,
         MISSINGCITATIONID,
+        MISSINGCOURTFEE,
         MISSINGCOURTID,
         MISSINGEMAILADDRESS,
         MISSINGFEEDBACKCONTENT,
