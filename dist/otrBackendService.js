@@ -15412,6 +15412,95 @@ angular.module('otrBackendService', [])
                 return deferred.promise;
             };
             /**
+             * listUserWatchlists
+             * @method
+             * @name OtrService#listUserWatchlistsUsingGET
+             * @param {object} parameters - method options and parameters
+             * @param {boolean} parameters.isArchived - isArchived
+             * @param {integer} parameters.userId - userId
+             * @param {integer} parameters.watchlistId - watchlistId
+             */
+            OtrService.prototype.listUserWatchlistsUsingGET = function(parameters) {
+                if (parameters === undefined) {
+                    parameters = {};
+                }
+                var deferred = $q.defer();
+                var domain = this.domain,
+                    path = '/api/v1/watchlists/{userId}/lists';
+                var body = {},
+                    queryParameters = {},
+                    headers = {},
+                    form = {};
+
+                headers['Accept'] = ['*/*'];
+
+                if (parameters['isArchived'] !== undefined) {
+                    queryParameters['isArchived'] = parameters['isArchived'];
+                }
+
+                path = path.replace('{userId}', parameters['userId']);
+
+                if (parameters['userId'] === undefined) {
+                    deferred.reject(new Error('Missing required  parameter: userId'));
+                    return deferred.promise;
+                }
+
+                if (parameters['watchlistId'] !== undefined) {
+                    queryParameters['watchlistId'] = parameters['watchlistId'];
+                }
+
+                queryParameters = mergeQueryParams(parameters, queryParameters);
+
+                this.request('GET', domain + path, parameters, body, headers, queryParameters, form, deferred);
+
+                return deferred.promise;
+            };
+            /**
+             * saveUserWatchlists
+             * @method
+             * @name OtrService#saveUserWatchlistsUsingPOST
+             * @param {object} parameters - method options and parameters
+             * @param {} parameters.request - request
+             * @param {integer} parameters.userId - userId
+             */
+            OtrService.prototype.saveUserWatchlistsUsingPOST = function(parameters) {
+                if (parameters === undefined) {
+                    parameters = {};
+                }
+                var deferred = $q.defer();
+                var domain = this.domain,
+                    path = '/api/v1/watchlists/{userId}/lists';
+                var body = {},
+                    queryParameters = {},
+                    headers = {},
+                    form = {};
+
+                headers['Accept'] = ['*/*'];
+                headers['Content-Type'] = ['application/json'];
+
+                if (parameters['request'] !== undefined) {
+                    body = parameters['request'];
+                }
+
+                if (parameters['request'] === undefined) {
+                    deferred.reject(new Error('Missing required  parameter: request'));
+                    return deferred.promise;
+                }
+
+                path = path.replace('{userId}', parameters['userId']);
+
+                if (parameters['userId'] === undefined) {
+                    deferred.reject(new Error('Missing required  parameter: userId'));
+                    return deferred.promise;
+                }
+
+                queryParameters = mergeQueryParams(parameters, queryParameters);
+
+                this.request('POST', domain + path, parameters, body, headers, queryParameters, form, deferred);
+
+                return deferred.promise;
+            };
+            /**
              * handleBounceOrComplaintEvent
              * @method
              * @name OtrService#handleBounceOrComplaintEventUsingPOST
