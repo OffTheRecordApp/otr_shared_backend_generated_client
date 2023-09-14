@@ -12,6 +12,7 @@
 export interface AccountLevelFee {
     "classification"?: AccountLevelFee.ClassificationEnum;
     "classificationId"?: number;
+    "isDeprecated"?: boolean;
     "isEnabled"?: boolean;
     "isPermitted"?: boolean;
     "lawfirmFee"?: number;
