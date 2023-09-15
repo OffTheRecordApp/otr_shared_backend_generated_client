@@ -296,7 +296,6 @@ model/enableViolationsForLawfirmRequest.ts
 model/enableViolationsForLawfirmResponse.ts
 model/estimateInsuranceSavingsRequest.ts
 model/estimateInsuranceSavingsResponse.ts
-model/externalTicketSiteOutput.ts
 model/feedbackAttachmentModel.ts
 model/feedbackDomain.ts
 model/financialTransaction.ts
@@ -373,7 +372,6 @@ model/getDeclinedCasesResponse.ts
 model/getDocumentsRequest.ts
 model/getEmailTemplateResponse.ts
 model/getExternalTicketInputParamsResponse.ts
-model/getExternalTicketsResponse.ts
 model/getHouseHoldMateModel.ts
 model/getHouseholdMatesResponse.ts
 model/getInvalidCasesWithStripeChargeResponse.ts

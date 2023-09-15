@@ -20,8 +20,6 @@ import { Observable }                                        from 'rxjs';
 
 // @ts-ignore
 import { GetExternalTicketInputParamsResponse } from '../model/getExternalTicketInputParamsResponse';
-// @ts-ignore
-import { GetExternalTicketsResponse } from '../model/getExternalTicketsResponse';
 
 // @ts-ignore
 import { BASE_PATH, COLLECTION_FORMATS }                     from '../variables';
@@ -110,10 +108,10 @@ export class ExternalTicketLookupControllerService {
      * @param observe set whether or not to return the data Observable as the body, response or events. defaults to returning the body.
      * @param reportProgress flag to report request and response progress.
      */
-    public getExternalTicketsUsingGET(regionCode: string, attempts?: number, citationId?: string, countyId?: number, dateOfBirth?: string, driversLicenseId?: string, lastName?: string, organizationName?: string, searchType?: string, searchValue?: string, sessionId?: string, userId?: string, observe?: 'body', reportProgress?: boolean, options?: {httpHeaderAccept?: '*/*', context?: HttpContext}): Observable<GetExternalTicketsResponse>;
-    public getExternalTicketsUsingGET(regionCode: string, attempts?: number, citationId?: string, countyId?: number, dateOfBirth?: string, driversLicenseId?: string, lastName?: string, organizationName?: string, searchType?: string, searchValue?: string, sessionId?: string, userId?: string, observe?: 'response', reportProgress?: boolean, options?: {httpHeaderAccept?: '*/*', context?: HttpContext}): Observable<HttpResponse<GetExternalTicketsResponse>>;
-    public getExternalTicketsUsingGET(regionCode: string, attempts?: number, citationId?: string, countyId?: number, dateOfBirth?: string, driversLicenseId?: string, lastName?: string, organizationName?: string, searchType?: string, searchValue?: string, sessionId?: string, userId?: string, observe?: 'events', reportProgress?: boolean, options?: {httpHeaderAccept?: '*/*', context?: HttpContext}): Observable<HttpEvent<GetExternalTicketsResponse>>;
-    public getExternalTicketsUsingGET(regionCode: string, attempts?: number, citationId?: string, countyId?: number, dateOfBirth?: string, driversLicenseId?: string, lastName?: string, organizationName?: string, searchType?: string, searchValue?: string, sessionId?: string, userId?: string, observe: any = 'body', reportProgress: boolean = false, options?: {httpHeaderAccept?: '*/*', context?: HttpContext}): Observable<any> {
+    public getExternalTicketsUsingGET(regionCode: string, attempts?: number, citationId?: string, countyId?: number, dateOfBirth?: string, driversLicenseId?: string, lastName?: string, organizationName?: string, searchType?: string, searchValue?: string, sessionId?: string, userId?: string, observe?: 'body', reportProgress?: boolean, options?: {httpHeaderAccept?: undefined, context?: HttpContext}): Observable<any>;
+    public getExternalTicketsUsingGET(regionCode: string, attempts?: number, citationId?: string, countyId?: number, dateOfBirth?: string, driversLicenseId?: string, lastName?: string, organizationName?: string, searchType?: string, searchValue?: string, sessionId?: string, userId?: string, observe?: 'response', reportProgress?: boolean, options?: {httpHeaderAccept?: undefined, context?: HttpContext}): Observable<HttpResponse<any>>;
+    public getExternalTicketsUsingGET(regionCode: string, attempts?: number, citationId?: string, countyId?: number, dateOfBirth?: string, driversLicenseId?: string, lastName?: string, organizationName?: string, searchType?: string, searchValue?: string, sessionId?: string, userId?: string, observe?: 'events', reportProgress?: boolean, options?: {httpHeaderAccept?: undefined, context?: HttpContext}): Observable<HttpEvent<any>>;
+    public getExternalTicketsUsingGET(regionCode: string, attempts?: number, citationId?: string, countyId?: number, dateOfBirth?: string, driversLicenseId?: string, lastName?: string, organizationName?: string, searchType?: string, searchValue?: string, sessionId?: string, userId?: string, observe: any = 'body', reportProgress: boolean = false, options?: {httpHeaderAccept?: undefined, context?: HttpContext}): Observable<any> {
         if (regionCode === null || regionCode === undefined) {
             throw new Error('Required parameter regionCode was null or undefined when calling getExternalTicketsUsingGET.');
         }
@@ -174,7 +172,6 @@ export class ExternalTicketLookupControllerService {
         if (localVarHttpHeaderAcceptSelected === undefined) {
             // to determine the Accept header
             const httpHeaderAccepts: string[] = [
-                '*/*'
             ];
             localVarHttpHeaderAcceptSelected = this.configuration.selectHeaderAccept(httpHeaderAccepts);
         }
@@ -200,7 +197,7 @@ export class ExternalTicketLookupControllerService {
         }
 
         let localVarPath = `/api/v1/external-tickets`;
-        return this.httpClient.request<GetExternalTicketsResponse>('get', `${this.configuration.basePath}${localVarPath}`,
+        return this.httpClient.request<any>('get', `${this.configuration.basePath}${localVarPath}`,
             {
                 context: localVarHttpContext,
                 params: localVarQueryParameters,
