@@ -24,4 +24,10 @@ export declare class OcrPredictionControllerApi {
      * @param request request
      */
     predictCitationTextUsingPOST(request: models.PredictCitationTextRequest, extraHttpRequestParams?: any): ng.IHttpPromise<models.OCRPredictionCaseResponse>;
+    /**
+     *
+     * @summary predictImageClassification
+     * @param request request
+     */
+    predictImageClassificationUsingPOST(request: models.PredictImageClassificationRequest, extraHttpRequestParams?: any): ng.IHttpPromise<models.PredictImageClassificationResponse>;
 }

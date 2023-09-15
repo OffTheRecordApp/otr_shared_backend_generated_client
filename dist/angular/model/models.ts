@@ -473,6 +473,8 @@ export * from './postCourtCoverageRequest';
 export * from './postFeedbackRequest';
 export * from './potentialCustomerDomain';
 export * from './predictCitationTextRequest';
+export * from './predictImageClassificationRequest';
+export * from './predictImageClassificationResponse';
 export * from './previewDocumentRequest';
 export * from './priceMatchRequest';
 export * from './priceMatchResponse';

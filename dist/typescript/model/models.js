@@ -485,6 +485,8 @@ __exportStar(require("./PostCourtCoverageRequest"), exports);
 __exportStar(require("./PostFeedbackRequest"), exports);
 __exportStar(require("./PotentialCustomerDomain"), exports);
 __exportStar(require("./PredictCitationTextRequest"), exports);
+__exportStar(require("./PredictImageClassificationRequest"), exports);
+__exportStar(require("./PredictImageClassificationResponse"), exports);
 __exportStar(require("./PreviewDocumentRequest"), exports);
 __exportStar(require("./PriceMatchRequest"), exports);
 __exportStar(require("./PriceMatchResponse"), exports);

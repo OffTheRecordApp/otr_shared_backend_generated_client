@@ -585,6 +585,8 @@ model/postCourtCoverageRequest.ts
 model/postFeedbackRequest.ts
 model/potentialCustomerDomain.ts
 model/predictCitationTextRequest.ts
+model/predictImageClassificationRequest.ts
+model/predictImageClassificationResponse.ts
 model/previewDocumentRequest.ts
 model/priceMatchRequest.ts
 model/priceMatchResponse.ts
