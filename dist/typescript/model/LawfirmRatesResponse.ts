@@ -37,7 +37,7 @@ export namespace LawfirmRatesResponse {
     export enum FeeLevelEnum {
         ACCOUNTCLASSFEE = <any> 'ACCOUNT_CLASS_FEE',
         ACCOUNTVIOLATIONFEE = <any> 'ACCOUNT_VIOLATION_FEE',
-        COURTFEE = <any> 'COURT_FEE',
+        COURTCLASSFEE = <any> 'COURT_CLASS_FEE',
         COURTVIOLATIONFEE = <any> 'COURT_VIOLATION_FEE'
     }
     export enum IneligibleMatchReasonsEnum {

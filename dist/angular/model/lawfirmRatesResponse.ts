@@ -33,11 +33,11 @@ export interface LawfirmRatesResponse {
     vacationModeOn?: boolean;
 }
 export namespace LawfirmRatesResponse {
-    export type FeeLevelEnum = 'ACCOUNT_CLASS_FEE' | 'ACCOUNT_VIOLATION_FEE' | 'COURT_FEE' | 'COURT_VIOLATION_FEE';
+    export type FeeLevelEnum = 'ACCOUNT_CLASS_FEE' | 'ACCOUNT_VIOLATION_FEE' | 'COURT_CLASS_FEE' | 'COURT_VIOLATION_FEE';
     export const FeeLevelEnum = {
         AccountClassFee: 'ACCOUNT_CLASS_FEE' as FeeLevelEnum,
         AccountViolationFee: 'ACCOUNT_VIOLATION_FEE' as FeeLevelEnum,
-        CourtFee: 'COURT_FEE' as FeeLevelEnum,
+        CourtClassFee: 'COURT_CLASS_FEE' as FeeLevelEnum,
         CourtViolationFee: 'COURT_VIOLATION_FEE' as FeeLevelEnum
     };
     export type IneligibleMatchReasonsEnum = 'CDL_MISMATCH' | 'DAILY_CAPACITY_BREACHED' | 'ON_VACATION' | 'OUT_OF_CAPACITY' | 'OUT_PRICED' | 'OUT_RANKED';

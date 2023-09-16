@@ -14,6 +14,7 @@
 export interface AddCourtCoverageRequest { 
     classification?: AddCourtCoverageRequest.ClassificationEnum;
     courtId?: number;
+    isNewCoverageFee?: boolean;
     lawfirmFee?: number;
     refundEligibility?: AddCourtCoverageRequest.RefundEligibilityEnum;
     violationId?: number;

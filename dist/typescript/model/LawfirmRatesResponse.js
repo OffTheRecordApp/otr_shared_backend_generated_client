@@ -18,7 +18,7 @@ var LawfirmRatesResponse;
     (function (FeeLevelEnum) {
         FeeLevelEnum[FeeLevelEnum["ACCOUNTCLASSFEE"] = 'ACCOUNT_CLASS_FEE'] = "ACCOUNTCLASSFEE";
         FeeLevelEnum[FeeLevelEnum["ACCOUNTVIOLATIONFEE"] = 'ACCOUNT_VIOLATION_FEE'] = "ACCOUNTVIOLATIONFEE";
-        FeeLevelEnum[FeeLevelEnum["COURTFEE"] = 'COURT_FEE'] = "COURTFEE";
+        FeeLevelEnum[FeeLevelEnum["COURTCLASSFEE"] = 'COURT_CLASS_FEE'] = "COURTCLASSFEE";
         FeeLevelEnum[FeeLevelEnum["COURTVIOLATIONFEE"] = 'COURT_VIOLATION_FEE'] = "COURTVIOLATIONFEE";
     })(FeeLevelEnum = LawfirmRatesResponse.FeeLevelEnum || (LawfirmRatesResponse.FeeLevelEnum = {}));
     var IneligibleMatchReasonsEnum;

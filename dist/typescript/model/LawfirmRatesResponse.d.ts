@@ -34,7 +34,7 @@ export declare namespace LawfirmRatesResponse {
     enum FeeLevelEnum {
         ACCOUNTCLASSFEE,
         ACCOUNTVIOLATIONFEE,
-        COURTFEE,
+        COURTCLASSFEE,
         COURTVIOLATIONFEE
     }
     enum IneligibleMatchReasonsEnum {
