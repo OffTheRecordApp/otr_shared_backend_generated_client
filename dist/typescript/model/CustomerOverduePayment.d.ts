@@ -15,6 +15,7 @@ export interface CustomerOverduePayment {
     "casePaymentId"?: string;
     "city"?: string;
     "dueDate"?: string;
+    "hasFinancialAccess"?: boolean;
     "overdueAmount"?: number;
     "regionCode"?: string;
 }
