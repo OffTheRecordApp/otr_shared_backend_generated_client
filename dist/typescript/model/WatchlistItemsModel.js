@@ -14,6 +14,12 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.WatchlistItemsModel = void 0;
 var WatchlistItemsModel;
 (function (WatchlistItemsModel) {
+    var EntityTypeEnum;
+    (function (EntityTypeEnum) {
+        EntityTypeEnum[EntityTypeEnum["CASE"] = 'CASE'] = "CASE";
+        EntityTypeEnum[EntityTypeEnum["LAWFIRM"] = 'LAWFIRM'] = "LAWFIRM";
+        EntityTypeEnum[EntityTypeEnum["USER"] = 'USER'] = "USER";
+    })(EntityTypeEnum = WatchlistItemsModel.EntityTypeEnum || (WatchlistItemsModel.EntityTypeEnum = {}));
     var PriorityEnum;
     (function (PriorityEnum) {
         PriorityEnum[PriorityEnum["HIGH"] = 'HIGH'] = "HIGH";

@@ -9,17 +9,29 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
+import { CaseItem } from './caseItem';
+import { LawfirmItem } from './lawfirmItem';
+import { UserItem } from './userItem';
 
 
 export interface WatchlistItemsModel { 
+    caseItem?: CaseItem;
     entityId?: string;
-    entityType?: string;
+    entityType?: WatchlistItemsModel.EntityTypeEnum;
     isDeleted?: boolean;
+    lawfirmItem?: LawfirmItem;
     note?: string;
     priority?: WatchlistItemsModel.PriorityEnum;
+    userItem?: UserItem;
     watchlistItemId?: number;
 }
 export namespace WatchlistItemsModel {
+    export type EntityTypeEnum = 'CASE' | 'LAWFIRM' | 'USER';
+    export const EntityTypeEnum = {
+        Case: 'CASE' as EntityTypeEnum,
+        Lawfirm: 'LAWFIRM' as EntityTypeEnum,
+        User: 'USER' as EntityTypeEnum
+    };
     export type PriorityEnum = 'HIGH' | 'LOW' | 'MEDIUM';
     export const PriorityEnum = {
         High: 'HIGH' as PriorityEnum,

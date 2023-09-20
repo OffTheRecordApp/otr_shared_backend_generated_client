@@ -102,7 +102,7 @@ api/validationController.service.ts
 api/verificationController.service.ts
 api/violationController.service.ts
 api/violationPenaltyController.service.ts
-api/watchlistController.service.ts
+api/watchlistsController.service.ts
 api/websocketMessageController.service.ts
 api/workflowStateController.service.ts
 configuration.ts
@@ -138,6 +138,7 @@ model/addViolationsToCitationRequest.ts
 model/addressDomain.ts
 model/addressDomainReq.ts
 model/addressDomainRes.ts
+model/addressEntity.ts
 model/agentBookingStats.ts
 model/agentBookingsSummary.ts
 model/aggregateBySource.ts
@@ -185,6 +186,7 @@ model/caseAlert.ts
 model/caseBookingsStats.ts
 model/caseChargeResponsePojo.ts
 model/caseCreationRequest.ts
+model/caseItem.ts
 model/caseLineItemDomainReq.ts
 model/caseLineItemDomainRes.ts
 model/caseLineItemsSummary.ts
@@ -230,12 +232,14 @@ model/convertPdfToImageResponse.ts
 model/countryDomain.ts
 model/countryRegion.ts
 model/countyDomain.ts
+model/countyEntity.ts
 model/courtCoverageCountyRecord.ts
 model/courtCoverageRecord.ts
 model/courtCoverageStateRecord.ts
 model/courtDomain.ts
 model/courtDomainReq.ts
 model/courtDomainRes.ts
+model/courtEntity.ts
 model/courtInputRequest.ts
 model/courtResponseModel.ts
 model/coverageToRemove.ts
@@ -479,6 +483,7 @@ model/lawfirmDocumentTemplate.ts
 model/lawfirmDocumentTemplateResponse.ts
 model/lawfirmFeeDomain.ts
 model/lawfirmInboxMessageDomain.ts
+model/lawfirmItem.ts
 model/lawfirmLeadDomain.ts
 model/lawfirmPayoutDomain.ts
 model/lawfirmPictureRequest.ts
@@ -760,6 +765,7 @@ model/userDetails.ts
 model/userDomain.ts
 model/userDomainReq.ts
 model/userDomainRes.ts
+model/userItem.ts
 model/userRefLinkDomain.ts
 model/userReferralSourceTypeModel.ts
 model/userRegistrationStats.ts
@@ -769,7 +775,6 @@ model/userSubscriptionPlanModelReq.ts
 model/userSubscriptionPlanModelRes.ts
 model/userToContact.ts
 model/userWatchlistsModel.ts
-model/userWatchlistsResponseModel.ts
 model/validateDirectMailRequest.ts
 model/validateDirectMailResponse.ts
 model/validateUserEmailResponse.ts

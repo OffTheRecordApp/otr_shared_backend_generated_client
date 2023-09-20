@@ -11,5 +11,6 @@
  */
 import * as models from './models';
 export interface ListUserWatchlistsResponse {
-    "userWatchlists"?: Array<models.UserWatchlistsResponseModel>;
+    "userId"?: number;
+    "userWatchlists"?: Array<models.UserWatchlistsModel>;
 }

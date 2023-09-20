@@ -102,7 +102,7 @@ const apiModule = angular.module('api', [])
 .service('VerificationControllerApi', api.VerificationControllerApi)
 .service('ViolationControllerApi', api.ViolationControllerApi)
 .service('ViolationPenaltyControllerApi', api.ViolationPenaltyControllerApi)
-.service('WatchlistControllerApi', api.WatchlistControllerApi)
+.service('WatchlistsControllerApi', api.WatchlistsControllerApi)
 .service('WebsocketMessageControllerApi', api.WebsocketMessageControllerApi)
 .service('WorkflowStateControllerApi', api.WorkflowStateControllerApi)
 

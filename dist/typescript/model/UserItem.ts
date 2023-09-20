@@ -12,8 +12,10 @@
 
 import * as models from './models';
 
-export interface ListUserWatchlistsResponse {
-    "userId"?: number;
-    "userWatchlists"?: Array<models.UserWatchlistsModel>;
+export interface UserItem {
+    "firstName"?: string;
+    "isGhost"?: boolean;
+    "lastName"?: string;
+    "profilePictureUrl"?: string;
 }
 

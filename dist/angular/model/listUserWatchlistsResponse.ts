@@ -9,10 +9,11 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-import { UserWatchlistsResponseModel } from './userWatchlistsResponseModel';
+import { UserWatchlistsModel } from './userWatchlistsModel';
 
 
 export interface ListUserWatchlistsResponse { 
-    userWatchlists?: Array<UserWatchlistsResponseModel>;
+    userId?: number;
+    userWatchlists?: Array<UserWatchlistsModel>;
 }
 

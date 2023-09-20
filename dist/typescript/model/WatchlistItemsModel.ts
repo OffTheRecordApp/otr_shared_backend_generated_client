@@ -13,15 +13,23 @@
 import * as models from './models';
 
 export interface WatchlistItemsModel {
+    "caseItem"?: models.CaseItem;
     "entityId"?: string;
-    "entityType"?: string;
+    "entityType"?: WatchlistItemsModel.EntityTypeEnum;
     "isDeleted"?: boolean;
+    "lawfirmItem"?: models.LawfirmItem;
     "note"?: string;
     "priority"?: WatchlistItemsModel.PriorityEnum;
+    "userItem"?: models.UserItem;
     "watchlistItemId"?: number;
 }
 
 export namespace WatchlistItemsModel {
+    export enum EntityTypeEnum {
+        CASE = <any> 'CASE',
+        LAWFIRM = <any> 'LAWFIRM',
+        USER = <any> 'USER'
+    }
     export enum PriorityEnum {
         HIGH = <any> 'HIGH',
         LOW = <any> 'LOW',
