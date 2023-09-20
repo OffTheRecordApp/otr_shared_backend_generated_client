@@ -8,6 +8,7 @@ api/alertNotificationController.service.ts
 api/api.ts
 api/appEventsController.service.ts
 api/auditLawfirmEventsController.service.ts
+api/auditLogController.service.ts
 api/authenticationController.service.ts
 api/awsCredentialsController.service.ts
 api/blogWebhookController.service.ts
@@ -151,6 +152,7 @@ model/appEventCreateRequest.ts
 model/appearanceAttorneyDomain.ts
 model/appleLoginRequest.ts
 model/assignCitationOwnerRequest.ts
+model/auditLog.ts
 model/authorModel.ts
 model/authorizeChargeForCasePaymentRequest.ts
 model/authorizeChargeForCasePaymentResponse.ts
@@ -212,6 +214,7 @@ model/changeUserPasswordRequest.ts
 model/chargeFeeToLawfirmRequest.ts
 model/chargeFeeToLawfirmResponse.ts
 model/citationAuditEventModel.ts
+model/citationAuditLog.ts
 model/citationInputRequest.ts
 model/citationModel.ts
 model/citationModelReq.ts
@@ -350,6 +353,7 @@ model/getCasesWithCoverageObtainedResponse.ts
 model/getCasesWithMissingLawfirmPayoutsResponse.ts
 model/getCasesWithOverduePaymentsResponse.ts
 model/getCasesWithUncapturedChargesRequest.ts
+model/getCitationAuditLogsResponse.ts
 model/getCitationPhoneLeadsRequest.ts
 model/getCitationPhoneLeadsResponse.ts
 model/getCitationResponse.ts

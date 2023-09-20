@@ -8,6 +8,7 @@ import { AddressControllerService } from './api/addressController.service';
 import { AlertNotificationControllerService } from './api/alertNotificationController.service';
 import { AppEventsControllerService } from './api/appEventsController.service';
 import { AuditLawfirmEventsControllerService } from './api/auditLawfirmEventsController.service';
+import { AuditLogControllerService } from './api/auditLogController.service';
 import { AuthenticationControllerService } from './api/authenticationController.service';
 import { AwsCredentialsControllerService } from './api/awsCredentialsController.service';
 import { BlogWebhookControllerService } from './api/blogWebhookController.service';
