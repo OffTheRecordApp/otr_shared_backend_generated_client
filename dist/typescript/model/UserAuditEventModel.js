@@ -38,6 +38,8 @@ var UserAuditEventModel;
     })(ClientTypeEnum = UserAuditEventModel.ClientTypeEnum || (UserAuditEventModel.ClientTypeEnum = {}));
     var EventEnum;
     (function (EventEnum) {
+        EventEnum[EventEnum["ACCOUNTCOVERAGEADDED"] = 'ACCOUNT_COVERAGE_ADDED'] = "ACCOUNTCOVERAGEADDED";
+        EventEnum[EventEnum["ACCOUNTCOVERAGEREMOVED"] = 'ACCOUNT_COVERAGE_REMOVED'] = "ACCOUNTCOVERAGEREMOVED";
         EventEnum[EventEnum["ACCOUNTNOTIFICATIONSTATUSCHANGED"] = 'ACCOUNT_NOTIFICATION_STATUS_CHANGED'] = "ACCOUNTNOTIFICATIONSTATUSCHANGED";
         EventEnum[EventEnum["ACCOUNTSTATUSCHANGED"] = 'ACCOUNT_STATUS_CHANGED'] = "ACCOUNTSTATUSCHANGED";
         EventEnum[EventEnum["CASEACCEPT"] = 'CASE_ACCEPT'] = "CASEACCEPT";
@@ -95,6 +97,8 @@ var UserAuditEventModel;
     })(EventEnum = UserAuditEventModel.EventEnum || (UserAuditEventModel.EventEnum = {}));
     var EventTypeEnum;
     (function (EventTypeEnum) {
+        EventTypeEnum[EventTypeEnum["ACCOUNTCOVERAGEADDED"] = 'ACCOUNT_COVERAGE_ADDED'] = "ACCOUNTCOVERAGEADDED";
+        EventTypeEnum[EventTypeEnum["ACCOUNTCOVERAGEREMOVED"] = 'ACCOUNT_COVERAGE_REMOVED'] = "ACCOUNTCOVERAGEREMOVED";
         EventTypeEnum[EventTypeEnum["ACCOUNTNOTIFICATIONSTATUSCHANGED"] = 'ACCOUNT_NOTIFICATION_STATUS_CHANGED'] = "ACCOUNTNOTIFICATIONSTATUSCHANGED";
         EventTypeEnum[EventTypeEnum["ACCOUNTSTATUSCHANGED"] = 'ACCOUNT_STATUS_CHANGED'] = "ACCOUNTSTATUSCHANGED";
         EventTypeEnum[EventTypeEnum["CASEACCEPT"] = 'CASE_ACCEPT'] = "CASEACCEPT";

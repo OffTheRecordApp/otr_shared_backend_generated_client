@@ -38,6 +38,8 @@ var CitationAuditEventModel;
     })(ClientTypeEnum = CitationAuditEventModel.ClientTypeEnum || (CitationAuditEventModel.ClientTypeEnum = {}));
     var EventEnum;
     (function (EventEnum) {
+        EventEnum[EventEnum["ACCOUNTCOVERAGEADDED"] = 'ACCOUNT_COVERAGE_ADDED'] = "ACCOUNTCOVERAGEADDED";
+        EventEnum[EventEnum["ACCOUNTCOVERAGEREMOVED"] = 'ACCOUNT_COVERAGE_REMOVED'] = "ACCOUNTCOVERAGEREMOVED";
         EventEnum[EventEnum["ACCOUNTNOTIFICATIONSTATUSCHANGED"] = 'ACCOUNT_NOTIFICATION_STATUS_CHANGED'] = "ACCOUNTNOTIFICATIONSTATUSCHANGED";
         EventEnum[EventEnum["ACCOUNTSTATUSCHANGED"] = 'ACCOUNT_STATUS_CHANGED'] = "ACCOUNTSTATUSCHANGED";
         EventEnum[EventEnum["CASEACCEPT"] = 'CASE_ACCEPT'] = "CASEACCEPT";
