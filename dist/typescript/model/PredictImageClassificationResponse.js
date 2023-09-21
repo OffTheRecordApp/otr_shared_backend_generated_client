@@ -11,3 +11,44 @@
  * Do not edit the class manually.
  */
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.PredictImageClassificationResponse = void 0;
+var PredictImageClassificationResponse;
+(function (PredictImageClassificationResponse) {
+    var DocumentTypeEnum;
+    (function (DocumentTypeEnum) {
+        DocumentTypeEnum[DocumentTypeEnum["CAMERATICKET"] = 'CAMERA_TICKET'] = "CAMERATICKET";
+        DocumentTypeEnum[DocumentTypeEnum["CASEDOCKET"] = 'CASE_DOCKET'] = "CASEDOCKET";
+        DocumentTypeEnum[DocumentTypeEnum["CASERESOLUTION"] = 'CASE_RESOLUTION'] = "CASERESOLUTION";
+        DocumentTypeEnum[DocumentTypeEnum["CHANGEOFCOUNCIL"] = 'CHANGE_OF_COUNCIL'] = "CHANGEOFCOUNCIL";
+        DocumentTypeEnum[DocumentTypeEnum["COLLECTIONSNOTICE"] = 'COLLECTIONS_NOTICE'] = "COLLECTIONSNOTICE";
+        DocumentTypeEnum[DocumentTypeEnum["COURTNOTICE"] = 'COURT_NOTICE'] = "COURTNOTICE";
+        DocumentTypeEnum[DocumentTypeEnum["DRIVERLICENSE"] = 'DRIVER_LICENSE'] = "DRIVERLICENSE";
+        DocumentTypeEnum[DocumentTypeEnum["FAILURETOAPPEAR"] = 'FAILURE_TO_APPEAR'] = "FAILURETOAPPEAR";
+        DocumentTypeEnum[DocumentTypeEnum["FAILURETOPAY"] = 'FAILURE_TO_PAY'] = "FAILURETOPAY";
+        DocumentTypeEnum[DocumentTypeEnum["INSURANCECARD"] = 'INSURANCE_CARD'] = "INSURANCECARD";
+        DocumentTypeEnum[DocumentTypeEnum["NOTICEOFAPPEARANCE"] = 'NOTICE_OF_APPEARANCE'] = "NOTICEOFAPPEARANCE";
+        DocumentTypeEnum[DocumentTypeEnum["NOTADOCUMENT"] = 'NOT_A_DOCUMENT'] = "NOTADOCUMENT";
+        DocumentTypeEnum[DocumentTypeEnum["PARKINGTICKET"] = 'PARKING_TICKET'] = "PARKINGTICKET";
+        DocumentTypeEnum[DocumentTypeEnum["POLICEREPORT"] = 'POLICE_REPORT'] = "POLICEREPORT";
+        DocumentTypeEnum[DocumentTypeEnum["REMINDERNOTICE"] = 'REMINDER_NOTICE'] = "REMINDERNOTICE";
+        DocumentTypeEnum[DocumentTypeEnum["REQUESTFORDISCOVERY"] = 'REQUEST_FOR_DISCOVERY'] = "REQUESTFORDISCOVERY";
+        DocumentTypeEnum[DocumentTypeEnum["SCREENSHOTTICKETLIST"] = 'SCREENSHOT_TICKET_LIST'] = "SCREENSHOTTICKETLIST";
+        DocumentTypeEnum[DocumentTypeEnum["SCREENSHOTTRAFFICTICKET"] = 'SCREENSHOT_TRAFFIC_TICKET'] = "SCREENSHOTTRAFFICTICKET";
+        DocumentTypeEnum[DocumentTypeEnum["SUSPENSIONNOTICE"] = 'SUSPENSION_NOTICE'] = "SUSPENSIONNOTICE";
+        DocumentTypeEnum[DocumentTypeEnum["TRAFFICTICKET"] = 'TRAFFIC_TICKET'] = "TRAFFICTICKET";
+        DocumentTypeEnum[DocumentTypeEnum["UNRECOGNIZEDDOCUMENT"] = 'UNRECOGNIZED_DOCUMENT'] = "UNRECOGNIZEDDOCUMENT";
+        DocumentTypeEnum[DocumentTypeEnum["WARNINGNOTICE"] = 'WARNING_NOTICE'] = "WARNINGNOTICE";
+        DocumentTypeEnum[DocumentTypeEnum["WARRANT"] = 'WARRANT'] = "WARRANT";
+    })(DocumentTypeEnum = PredictImageClassificationResponse.DocumentTypeEnum || (PredictImageClassificationResponse.DocumentTypeEnum = {}));
+    var ImageCategoryEnum;
+    (function (ImageCategoryEnum) {
+        ImageCategoryEnum[ImageCategoryEnum["DOCUMENT"] = 'DOCUMENT'] = "DOCUMENT";
+        ImageCategoryEnum[ImageCategoryEnum["GROUPPHOTO"] = 'GROUP_PHOTO'] = "GROUPPHOTO";
+        ImageCategoryEnum[ImageCategoryEnum["KEYBOARD"] = 'KEYBOARD'] = "KEYBOARD";
+        ImageCategoryEnum[ImageCategoryEnum["LANDSCAPE"] = 'LANDSCAPE'] = "LANDSCAPE";
+        ImageCategoryEnum[ImageCategoryEnum["LICENSEPLATE"] = 'LICENSE_PLATE'] = "LICENSEPLATE";
+        ImageCategoryEnum[ImageCategoryEnum["OTHER"] = 'OTHER'] = "OTHER";
+        ImageCategoryEnum[ImageCategoryEnum["PET"] = 'PET'] = "PET";
+        ImageCategoryEnum[ImageCategoryEnum["SELFIE"] = 'SELFIE'] = "SELFIE";
+    })(ImageCategoryEnum = PredictImageClassificationResponse.ImageCategoryEnum || (PredictImageClassificationResponse.ImageCategoryEnum = {}));
+})(PredictImageClassificationResponse = exports.PredictImageClassificationResponse || (exports.PredictImageClassificationResponse = {}));

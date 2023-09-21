@@ -15,11 +15,12 @@ export interface PredictImageClassificationResponse {
     blurLevel?: string;
     blurLevelConfidenceLevel?: number;
     blurry?: boolean;
-    documentType?: string;
+    documentType?: PredictImageClassificationResponse.DocumentTypeEnum;
     documentTypeConfidenceLevel?: number;
     exposure?: string;
     exposureConfidenceLevel?: number;
     federal?: boolean;
+    imageCategory?: PredictImageClassificationResponse.ImageCategoryEnum;
     isBlurryConfidenceLevel?: number;
     isFederalConfidenceLevel?: number;
     isTypedConfidenceLevel?: number;
@@ -28,4 +29,44 @@ export interface PredictImageClassificationResponse {
     regionName?: string;
     typed?: boolean;
 }
+export namespace PredictImageClassificationResponse {
+    export type DocumentTypeEnum = 'CAMERA_TICKET' | 'CASE_DOCKET' | 'CASE_RESOLUTION' | 'CHANGE_OF_COUNCIL' | 'COLLECTIONS_NOTICE' | 'COURT_NOTICE' | 'DRIVER_LICENSE' | 'FAILURE_TO_APPEAR' | 'FAILURE_TO_PAY' | 'INSURANCE_CARD' | 'NOTICE_OF_APPEARANCE' | 'NOT_A_DOCUMENT' | 'PARKING_TICKET' | 'POLICE_REPORT' | 'REMINDER_NOTICE' | 'REQUEST_FOR_DISCOVERY' | 'SCREENSHOT_TICKET_LIST' | 'SCREENSHOT_TRAFFIC_TICKET' | 'SUSPENSION_NOTICE' | 'TRAFFIC_TICKET' | 'UNRECOGNIZED_DOCUMENT' | 'WARNING_NOTICE' | 'WARRANT';
+    export const DocumentTypeEnum = {
+        CameraTicket: 'CAMERA_TICKET' as DocumentTypeEnum,
+        CaseDocket: 'CASE_DOCKET' as DocumentTypeEnum,
+        CaseResolution: 'CASE_RESOLUTION' as DocumentTypeEnum,
+        ChangeOfCouncil: 'CHANGE_OF_COUNCIL' as DocumentTypeEnum,
+        CollectionsNotice: 'COLLECTIONS_NOTICE' as DocumentTypeEnum,
+        CourtNotice: 'COURT_NOTICE' as DocumentTypeEnum,
+        DriverLicense: 'DRIVER_LICENSE' as DocumentTypeEnum,
+        FailureToAppear: 'FAILURE_TO_APPEAR' as DocumentTypeEnum,
+        FailureToPay: 'FAILURE_TO_PAY' as DocumentTypeEnum,
+        InsuranceCard: 'INSURANCE_CARD' as DocumentTypeEnum,
+        NoticeOfAppearance: 'NOTICE_OF_APPEARANCE' as DocumentTypeEnum,
+        NotADocument: 'NOT_A_DOCUMENT' as DocumentTypeEnum,
+        ParkingTicket: 'PARKING_TICKET' as DocumentTypeEnum,
+        PoliceReport: 'POLICE_REPORT' as DocumentTypeEnum,
+        ReminderNotice: 'REMINDER_NOTICE' as DocumentTypeEnum,
+        RequestForDiscovery: 'REQUEST_FOR_DISCOVERY' as DocumentTypeEnum,
+        ScreenshotTicketList: 'SCREENSHOT_TICKET_LIST' as DocumentTypeEnum,
+        ScreenshotTrafficTicket: 'SCREENSHOT_TRAFFIC_TICKET' as DocumentTypeEnum,
+        SuspensionNotice: 'SUSPENSION_NOTICE' as DocumentTypeEnum,
+        TrafficTicket: 'TRAFFIC_TICKET' as DocumentTypeEnum,
+        UnrecognizedDocument: 'UNRECOGNIZED_DOCUMENT' as DocumentTypeEnum,
+        WarningNotice: 'WARNING_NOTICE' as DocumentTypeEnum,
+        Warrant: 'WARRANT' as DocumentTypeEnum
+    };
+    export type ImageCategoryEnum = 'DOCUMENT' | 'GROUP_PHOTO' | 'KEYBOARD' | 'LANDSCAPE' | 'LICENSE_PLATE' | 'OTHER' | 'PET' | 'SELFIE';
+    export const ImageCategoryEnum = {
+        Document: 'DOCUMENT' as ImageCategoryEnum,
+        GroupPhoto: 'GROUP_PHOTO' as ImageCategoryEnum,
+        Keyboard: 'KEYBOARD' as ImageCategoryEnum,
+        Landscape: 'LANDSCAPE' as ImageCategoryEnum,
+        LicensePlate: 'LICENSE_PLATE' as ImageCategoryEnum,
+        Other: 'OTHER' as ImageCategoryEnum,
+        Pet: 'PET' as ImageCategoryEnum,
+        Selfie: 'SELFIE' as ImageCategoryEnum
+    };
+}
+
 

@@ -13,11 +13,12 @@ export interface PredictImageClassificationResponse {
     "blurLevel"?: string;
     "blurLevelConfidenceLevel"?: number;
     "blurry"?: boolean;
-    "documentType"?: string;
+    "documentType"?: PredictImageClassificationResponse.DocumentTypeEnum;
     "documentTypeConfidenceLevel"?: number;
     "exposure"?: string;
     "exposureConfidenceLevel"?: number;
     "federal"?: boolean;
+    "imageCategory"?: PredictImageClassificationResponse.ImageCategoryEnum;
     "isBlurryConfidenceLevel"?: number;
     "isFederalConfidenceLevel"?: number;
     "isTypedConfidenceLevel"?: number;
@@ -25,4 +26,41 @@ export interface PredictImageClassificationResponse {
     "regionConfidenceLevel"?: number;
     "regionName"?: string;
     "typed"?: boolean;
+}
+export declare namespace PredictImageClassificationResponse {
+    enum DocumentTypeEnum {
+        CAMERATICKET,
+        CASEDOCKET,
+        CASERESOLUTION,
+        CHANGEOFCOUNCIL,
+        COLLECTIONSNOTICE,
+        COURTNOTICE,
+        DRIVERLICENSE,
+        FAILURETOAPPEAR,
+        FAILURETOPAY,
+        INSURANCECARD,
+        NOTICEOFAPPEARANCE,
+        NOTADOCUMENT,
+        PARKINGTICKET,
+        POLICEREPORT,
+        REMINDERNOTICE,
+        REQUESTFORDISCOVERY,
+        SCREENSHOTTICKETLIST,
+        SCREENSHOTTRAFFICTICKET,
+        SUSPENSIONNOTICE,
+        TRAFFICTICKET,
+        UNRECOGNIZEDDOCUMENT,
+        WARNINGNOTICE,
+        WARRANT
+    }
+    enum ImageCategoryEnum {
+        DOCUMENT,
+        GROUPPHOTO,
+        KEYBOARD,
+        LANDSCAPE,
+        LICENSEPLATE,
+        OTHER,
+        PET,
+        SELFIE
+    }
 }
