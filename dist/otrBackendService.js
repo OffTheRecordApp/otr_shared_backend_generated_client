@@ -15502,8 +15502,8 @@ angular.module('otrBackendService', [])
              * @method
              * @name OtrService#listUserWatchlistsUsingGET
              * @param {object} parameters - method options and parameters
-             * @param {boolean} parameters.isArchived - isArchived
-             * @param {boolean} parameters.isDeleted - isDeleted
+             * @param {boolean} parameters.includeArchived - includeArchived
+             * @param {boolean} parameters.includeDeleted - includeDeleted
              * @param {integer} parameters.userId - userId
              * @param {integer} parameters.watchlistId - watchlistId
              */
@@ -15521,12 +15521,12 @@ angular.module('otrBackendService', [])
 
                 headers['Accept'] = ['*/*'];
 
-                if (parameters['isArchived'] !== undefined) {
-                    queryParameters['isArchived'] = parameters['isArchived'];
+                if (parameters['includeArchived'] !== undefined) {
+                    queryParameters['includeArchived'] = parameters['includeArchived'];
                 }
 
-                if (parameters['isDeleted'] !== undefined) {
-                    queryParameters['isDeleted'] = parameters['isDeleted'];
+                if (parameters['includeDeleted'] !== undefined) {
+                    queryParameters['includeDeleted'] = parameters['includeDeleted'];
                 }
 
                 path = path.replace('{userId}', parameters['userId']);

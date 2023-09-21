@@ -27,11 +27,11 @@ var WatchlistsControllerApi = /** @class */ (function () {
      *
      * @summary listUserWatchlists
      * @param userId userId
-     * @param isArchived isArchived
-     * @param isDeleted isDeleted
+     * @param includeArchived includeArchived
+     * @param includeDeleted includeDeleted
      * @param watchlistId watchlistId
      */
-    WatchlistsControllerApi.prototype.listUserWatchlistsUsingGET = function (userId, isArchived, isDeleted, watchlistId, extraHttpRequestParams) {
+    WatchlistsControllerApi.prototype.listUserWatchlistsUsingGET = function (userId, includeArchived, includeDeleted, watchlistId, extraHttpRequestParams) {
         var localVarPath = this.basePath + '/api/v1/watchlists/{userId}/lists'
             .replace('{' + 'userId' + '}', encodeURIComponent(String(userId)));
         var queryParameters = {};
@@ -40,11 +40,11 @@ var WatchlistsControllerApi = /** @class */ (function () {
         if (userId === null || userId === undefined) {
             throw new Error('Required parameter userId was null or undefined when calling listUserWatchlistsUsingGET.');
         }
-        if (isArchived !== undefined) {
-            queryParameters['isArchived'] = isArchived;
+        if (includeArchived !== undefined) {
+            queryParameters['includeArchived'] = includeArchived;
         }
-        if (isDeleted !== undefined) {
-            queryParameters['isDeleted'] = isDeleted;
+        if (includeDeleted !== undefined) {
+            queryParameters['includeDeleted'] = includeDeleted;
         }
         if (watchlistId !== undefined) {
             queryParameters['watchlistId'] = watchlistId;

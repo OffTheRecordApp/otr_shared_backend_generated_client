@@ -22,11 +22,11 @@ export declare class WatchlistsControllerApi {
      *
      * @summary listUserWatchlists
      * @param userId userId
-     * @param isArchived isArchived
-     * @param isDeleted isDeleted
+     * @param includeArchived includeArchived
+     * @param includeDeleted includeDeleted
      * @param watchlistId watchlistId
      */
-    listUserWatchlistsUsingGET(userId: number, isArchived?: boolean, isDeleted?: boolean, watchlistId?: number, extraHttpRequestParams?: any): ng.IHttpPromise<models.ListUserWatchlistsResponse>;
+    listUserWatchlistsUsingGET(userId: number, includeArchived?: boolean, includeDeleted?: boolean, watchlistId?: number, extraHttpRequestParams?: any): ng.IHttpPromise<models.ListUserWatchlistsResponse>;
     /**
      *
      * @summary saveUserWatchlists

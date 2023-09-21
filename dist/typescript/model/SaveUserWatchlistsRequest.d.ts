@@ -12,7 +12,6 @@
 import * as models from './models';
 export interface SaveUserWatchlistsRequest {
     "isArchived"?: boolean;
-    "userId"?: number;
     "watchlistId"?: number;
     "watchlistItems"?: models.WatchlistItemsRequest;
     "watchlistName"?: string;

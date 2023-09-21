@@ -96,28 +96,28 @@ export class WatchlistsControllerService {
     /**
      * listUserWatchlists
      * @param userId userId
-     * @param isArchived isArchived
-     * @param isDeleted isDeleted
+     * @param includeArchived includeArchived
+     * @param includeDeleted includeDeleted
      * @param watchlistId watchlistId
      * @param observe set whether or not to return the data Observable as the body, response or events. defaults to returning the body.
      * @param reportProgress flag to report request and response progress.
      */
-    public listUserWatchlistsUsingGET(userId: number, isArchived?: boolean, isDeleted?: boolean, watchlistId?: number, observe?: 'body', reportProgress?: boolean, options?: {httpHeaderAccept?: '*/*', context?: HttpContext}): Observable<ListUserWatchlistsResponse>;
-    public listUserWatchlistsUsingGET(userId: number, isArchived?: boolean, isDeleted?: boolean, watchlistId?: number, observe?: 'response', reportProgress?: boolean, options?: {httpHeaderAccept?: '*/*', context?: HttpContext}): Observable<HttpResponse<ListUserWatchlistsResponse>>;
-    public listUserWatchlistsUsingGET(userId: number, isArchived?: boolean, isDeleted?: boolean, watchlistId?: number, observe?: 'events', reportProgress?: boolean, options?: {httpHeaderAccept?: '*/*', context?: HttpContext}): Observable<HttpEvent<ListUserWatchlistsResponse>>;
-    public listUserWatchlistsUsingGET(userId: number, isArchived?: boolean, isDeleted?: boolean, watchlistId?: number, observe: any = 'body', reportProgress: boolean = false, options?: {httpHeaderAccept?: '*/*', context?: HttpContext}): Observable<any> {
+    public listUserWatchlistsUsingGET(userId: number, includeArchived?: boolean, includeDeleted?: boolean, watchlistId?: number, observe?: 'body', reportProgress?: boolean, options?: {httpHeaderAccept?: '*/*', context?: HttpContext}): Observable<ListUserWatchlistsResponse>;
+    public listUserWatchlistsUsingGET(userId: number, includeArchived?: boolean, includeDeleted?: boolean, watchlistId?: number, observe?: 'response', reportProgress?: boolean, options?: {httpHeaderAccept?: '*/*', context?: HttpContext}): Observable<HttpResponse<ListUserWatchlistsResponse>>;
+    public listUserWatchlistsUsingGET(userId: number, includeArchived?: boolean, includeDeleted?: boolean, watchlistId?: number, observe?: 'events', reportProgress?: boolean, options?: {httpHeaderAccept?: '*/*', context?: HttpContext}): Observable<HttpEvent<ListUserWatchlistsResponse>>;
+    public listUserWatchlistsUsingGET(userId: number, includeArchived?: boolean, includeDeleted?: boolean, watchlistId?: number, observe: any = 'body', reportProgress: boolean = false, options?: {httpHeaderAccept?: '*/*', context?: HttpContext}): Observable<any> {
         if (userId === null || userId === undefined) {
             throw new Error('Required parameter userId was null or undefined when calling listUserWatchlistsUsingGET.');
         }
 
         let localVarQueryParameters = new HttpParams({encoder: this.encoder});
-        if (isArchived !== undefined && isArchived !== null) {
+        if (includeArchived !== undefined && includeArchived !== null) {
           localVarQueryParameters = this.addToHttpParams(localVarQueryParameters,
-            <any>isArchived, 'isArchived');
+            <any>includeArchived, 'includeArchived');
         }
-        if (isDeleted !== undefined && isDeleted !== null) {
+        if (includeDeleted !== undefined && includeDeleted !== null) {
           localVarQueryParameters = this.addToHttpParams(localVarQueryParameters,
-            <any>isDeleted, 'isDeleted');
+            <any>includeDeleted, 'includeDeleted');
         }
         if (watchlistId !== undefined && watchlistId !== null) {
           localVarQueryParameters = this.addToHttpParams(localVarQueryParameters,

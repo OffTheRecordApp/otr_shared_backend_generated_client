@@ -14,7 +14,6 @@ import { WatchlistItemsRequest } from './watchlistItemsRequest';
 
 export interface SaveUserWatchlistsRequest { 
     isArchived?: boolean;
-    userId?: number;
     watchlistId?: number;
     watchlistItems?: WatchlistItemsRequest;
     watchlistName?: string;
