@@ -15592,6 +15592,48 @@ angular.module('otrBackendService', [])
                 return deferred.promise;
             };
             /**
+             * removeItemFromWatchlist
+             * @method
+             * @name OtrService#removeItemFromWatchlistUsingDELETE
+             * @param {object} parameters - method options and parameters
+             * @param {integer} parameters.itemId - itemId
+             * @param {integer} parameters.watchlistId - watchlistId
+             */
+            OtrService.prototype.removeItemFromWatchlistUsingDELETE = function(parameters) {
+                if (parameters === undefined) {
+                    parameters = {};
+                }
+                var deferred = $q.defer();
+                var domain = this.domain,
+                    path = '/api/v1/watchlists/{watchlistId}/items/{itemId}';
+                var body = {},
+                    queryParameters = {},
+                    headers = {},
+                    form = {};
+
+                headers['Accept'] = ['*/*'];
+
+                path = path.replace('{itemId}', parameters['itemId']);
+
+                if (parameters['itemId'] === undefined) {
+                    deferred.reject(new Error('Missing required  parameter: itemId'));
+                    return deferred.promise;
+                }
+
+                path = path.replace('{watchlistId}', parameters['watchlistId']);
+
+                if (parameters['watchlistId'] === undefined) {
+                    deferred.reject(new Error('Missing required  parameter: watchlistId'));
+                    return deferred.promise;
+                }
+
+                queryParameters = mergeQueryParams(parameters, queryParameters);
+
+                this.request('DELETE', domain + path, parameters, body, headers, queryParameters, form, deferred);
+
+                return deferred.promise;
+            };
+            /**
              * handleBounceOrComplaintEvent
              * @method
              * @name OtrService#handleBounceOrComplaintEventUsingPOST

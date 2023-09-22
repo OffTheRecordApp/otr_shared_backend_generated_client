@@ -29,6 +29,13 @@ export declare class WatchlistsControllerApi {
     listUserWatchlistsUsingGET(userId: number, includeArchived?: boolean, includeDeleted?: boolean, watchlistId?: number, extraHttpRequestParams?: any): ng.IHttpPromise<models.ListUserWatchlistsResponse>;
     /**
      *
+     * @summary removeItemFromWatchlist
+     * @param itemId itemId
+     * @param watchlistId watchlistId
+     */
+    removeItemFromWatchlistUsingDELETE(itemId: number, watchlistId: number, extraHttpRequestParams?: any): ng.IHttpPromise<{}>;
+    /**
+     *
      * @summary saveUserWatchlists
      * @param userId userId
      * @param request request

@@ -62,6 +62,37 @@ var WatchlistsControllerApi = /** @class */ (function () {
     };
     /**
      *
+     * @summary removeItemFromWatchlist
+     * @param itemId itemId
+     * @param watchlistId watchlistId
+     */
+    WatchlistsControllerApi.prototype.removeItemFromWatchlistUsingDELETE = function (itemId, watchlistId, extraHttpRequestParams) {
+        var localVarPath = this.basePath + '/api/v1/watchlists/{watchlistId}/items/{itemId}'
+            .replace('{' + 'itemId' + '}', encodeURIComponent(String(itemId)))
+            .replace('{' + 'watchlistId' + '}', encodeURIComponent(String(watchlistId)));
+        var queryParameters = {};
+        var headerParams = Object.assign({}, this.defaultHeaders);
+        // verify required parameter 'itemId' is not null or undefined
+        if (itemId === null || itemId === undefined) {
+            throw new Error('Required parameter itemId was null or undefined when calling removeItemFromWatchlistUsingDELETE.');
+        }
+        // verify required parameter 'watchlistId' is not null or undefined
+        if (watchlistId === null || watchlistId === undefined) {
+            throw new Error('Required parameter watchlistId was null or undefined when calling removeItemFromWatchlistUsingDELETE.');
+        }
+        var httpRequestParams = {
+            method: 'DELETE',
+            url: localVarPath,
+            params: queryParameters,
+            headers: headerParams
+        };
+        if (extraHttpRequestParams) {
+            httpRequestParams = Object.assign(httpRequestParams, extraHttpRequestParams);
+        }
+        return this.$http(httpRequestParams);
+    };
+    /**
+     *
      * @summary saveUserWatchlists
      * @param userId userId
      * @param request request
