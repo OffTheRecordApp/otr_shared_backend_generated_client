@@ -36,6 +36,13 @@ export declare class WatchlistsControllerApi {
     removeItemFromWatchlistUsingDELETE(itemId: number, watchlistId: number, extraHttpRequestParams?: any): ng.IHttpPromise<{}>;
     /**
      *
+     * @summary saveItemToWatchlist
+     * @param watchlistId watchlistId
+     * @param request request
+     */
+    saveItemToWatchlistUsingPOST(watchlistId: number, request: models.SaveItemToWatchlistRequest, extraHttpRequestParams?: any): ng.IHttpPromise<{}>;
+    /**
+     *
      * @summary saveUserWatchlists
      * @param userId userId
      * @param request request

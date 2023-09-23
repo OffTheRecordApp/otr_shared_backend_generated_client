@@ -9,21 +9,13 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-import * as models from './models';
-export interface WatchlistItemsModel {
-    "caseItem"?: models.CaseItem;
+export interface SaveItemToWatchlistRequest {
     "entityId"?: string;
-    "entityType"?: WatchlistItemsModel.EntityTypeEnum;
-    "isDeleted"?: boolean;
-    "itemCreatedDate"?: models.Timestamp;
-    "itemLastUpdatedDate"?: models.Timestamp;
-    "lawfirmItem"?: models.LawfirmItem;
+    "entityType"?: SaveItemToWatchlistRequest.EntityTypeEnum;
     "note"?: string;
-    "priority"?: WatchlistItemsModel.PriorityEnum;
-    "userItem"?: models.UserItem;
-    "watchlistItemId"?: number;
+    "priority"?: SaveItemToWatchlistRequest.PriorityEnum;
 }
-export declare namespace WatchlistItemsModel {
+export declare namespace SaveItemToWatchlistRequest {
     enum EntityTypeEnum {
         CASE,
         LAWFIRM,

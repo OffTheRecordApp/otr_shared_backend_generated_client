@@ -15592,6 +15592,51 @@ angular.module('otrBackendService', [])
                 return deferred.promise;
             };
             /**
+             * saveItemToWatchlist
+             * @method
+             * @name OtrService#saveItemToWatchlistUsingPOST
+             * @param {object} parameters - method options and parameters
+             * @param {} parameters.request - request
+             * @param {integer} parameters.watchlistId - watchlistId
+             */
+            OtrService.prototype.saveItemToWatchlistUsingPOST = function(parameters) {
+                if (parameters === undefined) {
+                    parameters = {};
+                }
+                var deferred = $q.defer();
+                var domain = this.domain,
+                    path = '/api/v1/watchlists/{watchlistId}/items';
+                var body = {},
+                    queryParameters = {},
+                    headers = {},
+                    form = {};
+
+                headers['Accept'] = ['*/*'];
+                headers['Content-Type'] = ['application/json'];
+
+                if (parameters['request'] !== undefined) {
+                    body = parameters['request'];
+                }
+
+                if (parameters['request'] === undefined) {
+                    deferred.reject(new Error('Missing required  parameter: request'));
+                    return deferred.promise;
+                }
+
+                path = path.replace('{watchlistId}', parameters['watchlistId']);
+
+                if (parameters['watchlistId'] === undefined) {
+                    deferred.reject(new Error('Missing required  parameter: watchlistId'));
+                    return deferred.promise;
+                }
+
+                queryParameters = mergeQueryParams(parameters, queryParameters);
+
+                this.request('POST', domain + path, parameters, body, headers, queryParameters, form, deferred);
+
+                return deferred.promise;
+            };
+            /**
              * removeItemFromWatchlist
              * @method
              * @name OtrService#removeItemFromWatchlistUsingDELETE

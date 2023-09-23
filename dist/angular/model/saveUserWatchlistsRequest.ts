@@ -9,13 +9,13 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-import { WatchlistItemsRequest } from './watchlistItemsRequest';
+import { SaveItemToWatchlistRequest } from './saveItemToWatchlistRequest';
 
 
 export interface SaveUserWatchlistsRequest { 
     isArchived?: boolean;
     watchlistId?: number;
-    watchlistItems?: WatchlistItemsRequest;
+    watchlistItems?: SaveItemToWatchlistRequest;
     watchlistName?: string;
 }
 

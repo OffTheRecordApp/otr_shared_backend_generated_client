@@ -634,6 +634,7 @@ model/saveAgentBookingRequest.ts
 model/saveAgentBookingResponse.ts
 model/saveCaseNotesRequest.ts
 model/saveCaseUserRequest.ts
+model/saveItemToWatchlistRequest.ts
 model/saveLawfirmSurchargeModel.ts
 model/saveLawfirmSurchargesRequest.ts
 model/saveLawyerLeadRequest.ts
@@ -795,7 +796,6 @@ model/violationPenaltyModel.ts
 model/violationPenaltyResponse.ts
 model/violationResponse.ts
 model/watchlistItemsModel.ts
-model/watchlistItemsRequest.ts
 model/workflowCaseModel.ts
 model/workflowCitationModel.ts
 model/workflowLineItemModel.ts

@@ -93,6 +93,37 @@ var WatchlistsControllerApi = /** @class */ (function () {
     };
     /**
      *
+     * @summary saveItemToWatchlist
+     * @param watchlistId watchlistId
+     * @param request request
+     */
+    WatchlistsControllerApi.prototype.saveItemToWatchlistUsingPOST = function (watchlistId, request, extraHttpRequestParams) {
+        var localVarPath = this.basePath + '/api/v1/watchlists/{watchlistId}/items'
+            .replace('{' + 'watchlistId' + '}', encodeURIComponent(String(watchlistId)));
+        var queryParameters = {};
+        var headerParams = Object.assign({}, this.defaultHeaders);
+        // verify required parameter 'watchlistId' is not null or undefined
+        if (watchlistId === null || watchlistId === undefined) {
+            throw new Error('Required parameter watchlistId was null or undefined when calling saveItemToWatchlistUsingPOST.');
+        }
+        // verify required parameter 'request' is not null or undefined
+        if (request === null || request === undefined) {
+            throw new Error('Required parameter request was null or undefined when calling saveItemToWatchlistUsingPOST.');
+        }
+        var httpRequestParams = {
+            method: 'POST',
+            url: localVarPath,
+            data: request,
+            params: queryParameters,
+            headers: headerParams
+        };
+        if (extraHttpRequestParams) {
+            httpRequestParams = Object.assign(httpRequestParams, extraHttpRequestParams);
+        }
+        return this.$http(httpRequestParams);
+    };
+    /**
+     *
      * @summary saveUserWatchlists
      * @param userId userId
      * @param request request
