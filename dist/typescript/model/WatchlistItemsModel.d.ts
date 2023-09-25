@@ -21,6 +21,7 @@ export interface WatchlistItemsModel {
     "note"?: string;
     "priority"?: WatchlistItemsModel.PriorityEnum;
     "userItem"?: models.UserItem;
+    "watchlistId"?: number;
     "watchlistItemId"?: number;
 }
 export declare namespace WatchlistItemsModel {
