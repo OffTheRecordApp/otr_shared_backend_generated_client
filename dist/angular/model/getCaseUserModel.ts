@@ -29,6 +29,7 @@ export interface GetCaseUserModel {
     licenseState?: string;
     permissionAttributes?: CaseUserPermissionAttributes;
     relationshipToClient?: GetCaseUserModel.RelationshipToClientEnum;
+    signedProfilePictureUrl?: string;
     userId?: number;
 }
 export namespace GetCaseUserModel {
