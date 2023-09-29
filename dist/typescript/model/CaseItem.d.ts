@@ -13,6 +13,9 @@ import * as models from './models';
 export interface CaseItem {
     "caseId"?: string;
     "caseStatus"?: CaseItem.CaseStatusEnum;
+    "citationState"?: CaseItem.CitationStateEnum;
+    "clientFirstName"?: string;
+    "clientLastName"?: string;
     "court"?: models.CourtEntity;
     "lawfirmName"?: string;
     "profilePictureUrl"?: string;
@@ -56,5 +59,58 @@ export declare namespace CaseItem {
         STALE,
         TRAFFICSCHOOL,
         UNCONFIRMED
+    }
+    enum CitationStateEnum {
+        AK,
+        AL,
+        AR,
+        AZ,
+        CA,
+        CO,
+        CT,
+        DC,
+        DE,
+        FL,
+        GA,
+        HI,
+        IA,
+        ID,
+        IL,
+        IN,
+        KS,
+        KY,
+        LA,
+        MA,
+        MD,
+        ME,
+        MI,
+        MN,
+        MO,
+        MS,
+        MT,
+        NC,
+        ND,
+        NE,
+        NH,
+        NJ,
+        NM,
+        NV,
+        NY,
+        OH,
+        OK,
+        OR,
+        PA,
+        RI,
+        SC,
+        SD,
+        TN,
+        TX,
+        UT,
+        VA,
+        VT,
+        WA,
+        WI,
+        WV,
+        WY
     }
 }

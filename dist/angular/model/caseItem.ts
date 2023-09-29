@@ -15,6 +15,9 @@ import { CourtEntity } from './courtEntity';
 export interface CaseItem { 
     caseId?: string;
     caseStatus?: CaseItem.CaseStatusEnum;
+    citationState?: CaseItem.CitationStateEnum;
+    clientFirstName?: string;
+    clientLastName?: string;
     court?: CourtEntity;
     lawfirmName?: string;
     profilePictureUrl?: string;
@@ -59,6 +62,60 @@ export namespace CaseItem {
         Stale: 'STALE' as CaseStatusEnum,
         TrafficSchool: 'TRAFFIC_SCHOOL' as CaseStatusEnum,
         Unconfirmed: 'UNCONFIRMED' as CaseStatusEnum
+    };
+    export type CitationStateEnum = 'AK' | 'AL' | 'AR' | 'AZ' | 'CA' | 'CO' | 'CT' | 'DC' | 'DE' | 'FL' | 'GA' | 'HI' | 'IA' | 'ID' | 'IL' | 'IN' | 'KS' | 'KY' | 'LA' | 'MA' | 'MD' | 'ME' | 'MI' | 'MN' | 'MO' | 'MS' | 'MT' | 'NC' | 'ND' | 'NE' | 'NH' | 'NJ' | 'NM' | 'NV' | 'NY' | 'OH' | 'OK' | 'OR' | 'PA' | 'RI' | 'SC' | 'SD' | 'TN' | 'TX' | 'UT' | 'VA' | 'VT' | 'WA' | 'WI' | 'WV' | 'WY';
+    export const CitationStateEnum = {
+        Ak: 'AK' as CitationStateEnum,
+        Al: 'AL' as CitationStateEnum,
+        Ar: 'AR' as CitationStateEnum,
+        Az: 'AZ' as CitationStateEnum,
+        Ca: 'CA' as CitationStateEnum,
+        Co: 'CO' as CitationStateEnum,
+        Ct: 'CT' as CitationStateEnum,
+        Dc: 'DC' as CitationStateEnum,
+        De: 'DE' as CitationStateEnum,
+        Fl: 'FL' as CitationStateEnum,
+        Ga: 'GA' as CitationStateEnum,
+        Hi: 'HI' as CitationStateEnum,
+        Ia: 'IA' as CitationStateEnum,
+        Id: 'ID' as CitationStateEnum,
+        Il: 'IL' as CitationStateEnum,
+        In: 'IN' as CitationStateEnum,
+        Ks: 'KS' as CitationStateEnum,
+        Ky: 'KY' as CitationStateEnum,
+        La: 'LA' as CitationStateEnum,
+        Ma: 'MA' as CitationStateEnum,
+        Md: 'MD' as CitationStateEnum,
+        Me: 'ME' as CitationStateEnum,
+        Mi: 'MI' as CitationStateEnum,
+        Mn: 'MN' as CitationStateEnum,
+        Mo: 'MO' as CitationStateEnum,
+        Ms: 'MS' as CitationStateEnum,
+        Mt: 'MT' as CitationStateEnum,
+        Nc: 'NC' as CitationStateEnum,
+        Nd: 'ND' as CitationStateEnum,
+        Ne: 'NE' as CitationStateEnum,
+        Nh: 'NH' as CitationStateEnum,
+        Nj: 'NJ' as CitationStateEnum,
+        Nm: 'NM' as CitationStateEnum,
+        Nv: 'NV' as CitationStateEnum,
+        Ny: 'NY' as CitationStateEnum,
+        Oh: 'OH' as CitationStateEnum,
+        Ok: 'OK' as CitationStateEnum,
+        Or: 'OR' as CitationStateEnum,
+        Pa: 'PA' as CitationStateEnum,
+        Ri: 'RI' as CitationStateEnum,
+        Sc: 'SC' as CitationStateEnum,
+        Sd: 'SD' as CitationStateEnum,
+        Tn: 'TN' as CitationStateEnum,
+        Tx: 'TX' as CitationStateEnum,
+        Ut: 'UT' as CitationStateEnum,
+        Va: 'VA' as CitationStateEnum,
+        Vt: 'VT' as CitationStateEnum,
+        Wa: 'WA' as CitationStateEnum,
+        Wi: 'WI' as CitationStateEnum,
+        Wv: 'WV' as CitationStateEnum,
+        Wy: 'WY' as CitationStateEnum
     };
 }
 
