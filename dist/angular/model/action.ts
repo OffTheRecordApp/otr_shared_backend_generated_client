@@ -9,11 +9,12 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-import { GptFunctionModel } from './gptFunctionModel';
 
 
-export interface ForwardMessageRequest { 
-    countyName?: string;
-    structuredText?: Array<GptFunctionModel>;
+export interface Action { 
+    actionDate?: string;
+    actionText?: string;
+    disposition?: string;
+    hearingType?: string;
 }
 

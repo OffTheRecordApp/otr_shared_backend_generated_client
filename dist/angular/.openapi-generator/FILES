@@ -114,6 +114,7 @@ model/accountLevelFee.ts
 model/accountLevelFeeRequest.ts
 model/accountLevelFeeResponse.ts
 model/accountLevelFeeToSave.ts
+model/action.ts
 model/actionByEntityModel.ts
 model/activityFeedModel.ts
 model/addACHToStripeAccountRequest.ts
@@ -303,6 +304,7 @@ model/enableViolationsForLawfirmRequest.ts
 model/enableViolationsForLawfirmResponse.ts
 model/estimateInsuranceSavingsRequest.ts
 model/estimateInsuranceSavingsResponse.ts
+model/externalTicketCourt.ts
 model/feedbackAttachmentModel.ts
 model/feedbackDomain.ts
 model/financialTransaction.ts
@@ -313,6 +315,7 @@ model/findMatchingUser.ts
 model/findMatchingUsersRequest.ts
 model/findMatchingUsersResponse.ts
 model/findsCourtsResponse.ts
+model/fineInformation.ts
 model/forwardMessageRequest.ts
 model/freshDeskConversation.ts
 model/freshDeskRequester.ts
@@ -457,6 +460,7 @@ model/getWorkflowStateResponse.ts
 model/ghostUser.ts
 model/ghostUserResponse.ts
 model/googleLoginRequest.ts
+model/gptFunctionModel.ts
 model/graphRequest.ts
 model/handleOrphanedStripeChargeRequest.ts
 model/handleOrphanedStripeChargeResponse.ts
@@ -577,6 +581,7 @@ model/noteModel.ts
 model/notificationEvent.ts
 model/notificationEvents.ts
 model/oCRPredictionCaseResponse.ts
+model/otherCase.ts
 model/outgoingContactDomain.ts
 model/paymentPlanTypeModel.ts
 model/paymentPlanTypeModelReq.ts

@@ -9,7 +9,8 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
+import * as models from './models';
 export interface ForwardMessageRequest {
     "countyName"?: string;
-    "htmlText"?: string;
+    "structuredText"?: Array<models.GptFunctionModel>;
 }
