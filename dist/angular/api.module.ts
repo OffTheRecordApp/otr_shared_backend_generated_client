@@ -43,6 +43,7 @@ import { DirectMailControllerService } from './api/directMailController.service'
 import { DripControllerService } from './api/dripController.service';
 import { DripWebhooksControllerService } from './api/dripWebhooksController.service';
 import { EmailSubscriptionControllerService } from './api/emailSubscriptionController.service';
+import { ExternalContentVoteControllerService } from './api/externalContentVoteController.service';
 import { ExternalTicketLookupControllerService } from './api/externalTicketLookupController.service';
 import { FeedbackControllerService } from './api/feedbackController.service';
 import { FreshcallerControllerService } from './api/freshcallerController.service';

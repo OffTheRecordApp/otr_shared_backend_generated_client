@@ -43,6 +43,7 @@ api/directMailController.service.ts
 api/dripController.service.ts
 api/dripWebhooksController.service.ts
 api/emailSubscriptionController.service.ts
+api/externalContentVoteController.service.ts
 api/externalTicketLookupController.service.ts
 api/feedbackController.service.ts
 api/freshcallerController.service.ts
@@ -304,7 +305,9 @@ model/enableViolationsForLawfirmRequest.ts
 model/enableViolationsForLawfirmResponse.ts
 model/estimateInsuranceSavingsRequest.ts
 model/estimateInsuranceSavingsResponse.ts
+model/externalContentVoteModel.ts
 model/externalTicketCourt.ts
+model/externalUserContentVoteModel.ts
 model/feedbackAttachmentModel.ts
 model/feedbackDomain.ts
 model/financialTransaction.ts
@@ -382,6 +385,7 @@ model/getDeclinedCasesRequest.ts
 model/getDeclinedCasesResponse.ts
 model/getDocumentsRequest.ts
 model/getEmailTemplateResponse.ts
+model/getExternalContentUserVotesResponse.ts
 model/getExternalTicketInputParamsResponse.ts
 model/getHouseHoldMateModel.ts
 model/getHouseholdMatesResponse.ts
@@ -639,6 +643,7 @@ model/saveAgentBookingRequest.ts
 model/saveAgentBookingResponse.ts
 model/saveCaseNotesRequest.ts
 model/saveCaseUserRequest.ts
+model/saveExternalContentVoteRequest.ts
 model/saveItemToWatchlistRequest.ts
 model/saveLawfirmSurchargeModel.ts
 model/saveLawfirmSurchargesRequest.ts
