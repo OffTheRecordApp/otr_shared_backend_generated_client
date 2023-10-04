@@ -10,12 +10,7 @@
  * Do not edit the class manually.
  */
 export interface PredictCitationTextRequest {
-    "documentPredictionType"?: PredictCitationTextRequest.DocumentPredictionTypeEnum;
+    "citationId"?: number;
     "imageInBase64"?: string;
-}
-export declare namespace PredictCitationTextRequest {
-    enum DocumentPredictionTypeEnum {
-        PARKINGTICKET,
-        TRAFFICTICKET
-    }
+    "regionCode"?: string;
 }

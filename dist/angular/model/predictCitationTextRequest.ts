@@ -12,15 +12,8 @@
 
 
 export interface PredictCitationTextRequest { 
-    documentPredictionType?: PredictCitationTextRequest.DocumentPredictionTypeEnum;
+    citationId?: number;
     imageInBase64?: string;
+    regionCode?: string;
 }
-export namespace PredictCitationTextRequest {
-    export type DocumentPredictionTypeEnum = 'PARKING_TICKET' | 'TRAFFIC_TICKET';
-    export const DocumentPredictionTypeEnum = {
-        ParkingTicket: 'PARKING_TICKET' as DocumentPredictionTypeEnum,
-        TrafficTicket: 'TRAFFIC_TICKET' as DocumentPredictionTypeEnum
-    };
-}
-
 

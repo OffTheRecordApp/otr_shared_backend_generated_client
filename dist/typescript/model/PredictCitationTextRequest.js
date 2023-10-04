@@ -11,12 +11,3 @@
  * Do not edit the class manually.
  */
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.PredictCitationTextRequest = void 0;
-var PredictCitationTextRequest;
-(function (PredictCitationTextRequest) {
-    var DocumentPredictionTypeEnum;
-    (function (DocumentPredictionTypeEnum) {
-        DocumentPredictionTypeEnum[DocumentPredictionTypeEnum["PARKINGTICKET"] = 'PARKING_TICKET'] = "PARKINGTICKET";
-        DocumentPredictionTypeEnum[DocumentPredictionTypeEnum["TRAFFICTICKET"] = 'TRAFFIC_TICKET'] = "TRAFFICTICKET";
-    })(DocumentPredictionTypeEnum = PredictCitationTextRequest.DocumentPredictionTypeEnum || (PredictCitationTextRequest.DocumentPredictionTypeEnum = {}));
-})(PredictCitationTextRequest = exports.PredictCitationTextRequest || (exports.PredictCitationTextRequest = {}));
