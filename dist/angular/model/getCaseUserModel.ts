@@ -21,6 +21,7 @@ export interface GetCaseUserModel {
     firstName?: string;
     isBookingAgent?: boolean;
     isDefendant?: boolean;
+    isGhostUser?: boolean;
     isOwner?: boolean;
     isRemoved?: boolean;
     lastName?: string;
