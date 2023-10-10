@@ -21,6 +21,7 @@ export * from './addNewCaseMessageRequest';
 export * from './addNoteToPhoneLeadRequest';
 export * from './addPenaltyRequest';
 export * from './addRedirectUrlRequest';
+export * from './addReferralRequest';
 export * from './addReviewRequest';
 export * from './addViolationRequest';
 export * from './addViolationResponse';

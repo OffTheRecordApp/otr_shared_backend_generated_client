@@ -134,6 +134,7 @@ model/addNewCaseMessageRequest.ts
 model/addNoteToPhoneLeadRequest.ts
 model/addPenaltyRequest.ts
 model/addRedirectUrlRequest.ts
+model/addReferralRequest.ts
 model/addReviewRequest.ts
 model/addViolationRequest.ts
 model/addViolationResponse.ts

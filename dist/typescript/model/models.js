@@ -33,6 +33,7 @@ __exportStar(require("./AddNewCaseMessageRequest"), exports);
 __exportStar(require("./AddNoteToPhoneLeadRequest"), exports);
 __exportStar(require("./AddPenaltyRequest"), exports);
 __exportStar(require("./AddRedirectUrlRequest"), exports);
+__exportStar(require("./AddReferralRequest"), exports);
 __exportStar(require("./AddReviewRequest"), exports);
 __exportStar(require("./AddViolationRequest"), exports);
 __exportStar(require("./AddViolationResponse"), exports);

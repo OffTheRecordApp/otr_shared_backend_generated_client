@@ -20,6 +20,12 @@ export declare class ReferralControllerApi {
     constructor($http: ng.IHttpService, $httpParamSerializer?: (d: any) => any, basePath?: string);
     /**
      *
+     * @summary addReferral
+     * @param request request
+     */
+    addReferralUsingPOST(request: models.AddReferralRequest, extraHttpRequestParams?: any): ng.IHttpPromise<{}>;
+    /**
+     *
      * @summary getReferralHistory
      */
     getReferralHistoryUsingGET(extraHttpRequestParams?: any): ng.IHttpPromise<models.GetReferralsHistoryResponse>;
