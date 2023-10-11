@@ -585,7 +585,9 @@ model/noteEntity.ts
 model/noteModel.ts
 model/notificationEvent.ts
 model/notificationEvents.ts
+model/oCRCourtModel.ts
 model/oCRPredictionCaseResponse.ts
+model/oCRViolationModel.ts
 model/otherCase.ts
 model/outgoingContactDomain.ts
 model/paymentPlanTypeModel.ts

@@ -29,6 +29,8 @@ export interface OCRPredictionCaseResponse {
     "driversState"?: models.ConfidenceField;
     "driversStreetAddress"?: models.ConfidenceField;
     "driversZip"?: models.ConfidenceField;
+    "eligibleCourtModels"?: Array<models.OCRCourtModel>;
+    "eligibleViolationModels"?: Array<models.OCRViolationModel>;
     "infractionNumber"?: models.ConfidenceField;
     "infractionType"?: models.ConfidenceField;
     "leaOri"?: models.ConfidenceField;

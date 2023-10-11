@@ -11,6 +11,8 @@
  */
 import { Violation } from './violation';
 import { ConfidenceField } from './confidenceField';
+import { OCRCourtModel } from './oCRCourtModel';
+import { OCRViolationModel } from './oCRViolationModel';
 
 
 export interface OCRPredictionCaseResponse { 
@@ -32,6 +34,8 @@ export interface OCRPredictionCaseResponse {
     driversState?: ConfidenceField;
     driversStreetAddress?: ConfidenceField;
     driversZip?: ConfidenceField;
+    eligibleCourtModels?: Array<OCRCourtModel>;
+    eligibleViolationModels?: Array<OCRViolationModel>;
     infractionNumber?: ConfidenceField;
     infractionType?: ConfidenceField;
     leaOri?: ConfidenceField;
