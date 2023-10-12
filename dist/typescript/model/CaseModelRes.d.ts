@@ -32,6 +32,7 @@ export interface CaseModelRes {
     "lawfirmCaseDecision"?: models.LawfirmCaseModelRes;
     "lawfirmCodeApplied"?: boolean;
     "letterOfEngagement"?: models.LetterOfEngagement;
+    "maxPenalties"?: Array<models.CaseViolationPenalty>;
     "paymentPlanTypeModel"?: models.PaymentPlanTypeModelRes;
     "referralCode"?: string;
     "refundEligibility"?: CaseModelRes.RefundEligibilityEnum;

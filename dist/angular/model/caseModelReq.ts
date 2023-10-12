@@ -12,6 +12,7 @@
 import { LawfirmCaseModelReq } from './lawfirmCaseModelReq';
 import { CaseStatusDomain } from './caseStatusDomain';
 import { CancelationDetailsReq } from './cancelationDetailsReq';
+import { CaseViolationPenalty } from './caseViolationPenalty';
 import { TimestampReq } from './timestampReq';
 import { UserDomainReq } from './userDomainReq';
 import { CaseActionDomain } from './caseActionDomain';
@@ -42,6 +43,7 @@ export interface CaseModelReq {
     lawfirmCaseDecision?: LawfirmCaseModelReq;
     lawfirmCodeApplied?: boolean;
     letterOfEngagement?: LetterOfEngagement;
+    maxPenalties?: Array<CaseViolationPenalty>;
     paymentPlanTypeModel?: PaymentPlanTypeModelReq;
     referralCode?: string;
     refundEligibility?: CaseModelReq.RefundEligibilityEnum;

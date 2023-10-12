@@ -12,6 +12,7 @@
 import { CitationModel } from './citationModel';
 import { LawfirmCaseModel } from './lawfirmCaseModel';
 import { CaseStatusDomain } from './caseStatusDomain';
+import { CaseViolationPenalty } from './caseViolationPenalty';
 import { UserDomain } from './userDomain';
 import { CaseActionDomain } from './caseActionDomain';
 import { LetterOfEngagement } from './letterOfEngagement';
@@ -42,6 +43,7 @@ export interface CaseModel {
     lawfirmCaseDecision?: LawfirmCaseModel;
     lawfirmCodeApplied?: boolean;
     letterOfEngagement?: LetterOfEngagement;
+    maxPenalties?: Array<CaseViolationPenalty>;
     paymentPlanTypeModel?: PaymentPlanTypeModel;
     referralCode?: string;
     refundEligibility?: CaseModel.RefundEligibilityEnum;
