@@ -46,6 +46,7 @@ var ReferralResponse;
     })(ReferralPaymentStatusEnum = ReferralResponse.ReferralPaymentStatusEnum || (ReferralResponse.ReferralPaymentStatusEnum = {}));
     var ReferralSourceTypeEnum;
     (function (ReferralSourceTypeEnum) {
+        ReferralSourceTypeEnum[ReferralSourceTypeEnum["ADMIN"] = 'ADMIN'] = "ADMIN";
         ReferralSourceTypeEnum[ReferralSourceTypeEnum["BILLBOARDS"] = 'BILLBOARDS'] = "BILLBOARDS";
         ReferralSourceTypeEnum[ReferralSourceTypeEnum["CHECKOUTCODE"] = 'CHECKOUT_CODE'] = "CHECKOUTCODE";
         ReferralSourceTypeEnum[ReferralSourceTypeEnum["DMVCOM"] = 'DMV_COM'] = "DMVCOM";

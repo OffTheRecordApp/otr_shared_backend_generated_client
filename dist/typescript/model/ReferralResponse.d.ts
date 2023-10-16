@@ -53,6 +53,7 @@ export declare namespace ReferralResponse {
         PENDINGCASERESOLUTION
     }
     enum ReferralSourceTypeEnum {
+        ADMIN,
         BILLBOARDS,
         CHECKOUTCODE,
         DMVCOM,
