@@ -10,8 +10,8 @@
  * Do not edit the class manually.
  */
 export interface LawfirmVacationRequest {
+    "isVacationModeEnabled"?: boolean;
     "localTimezoneOffsetInHours"?: number;
     "vacationEndDateUtc"?: string;
-    "vacationModeEnabled"?: boolean;
     "vacationReason"?: string;
 }

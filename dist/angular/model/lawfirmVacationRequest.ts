@@ -12,9 +12,9 @@
 
 
 export interface LawfirmVacationRequest { 
+    isVacationModeEnabled?: boolean;
     localTimezoneOffsetInHours?: number;
     vacationEndDateUtc?: string;
-    vacationModeEnabled?: boolean;
     vacationReason?: string;
 }
 
