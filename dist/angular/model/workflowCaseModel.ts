@@ -9,6 +9,7 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
+import { SubscriptionDiscountEligibility } from './subscriptionDiscountEligibility';
 import { WorkflowViolationPenaltyModel } from './workflowViolationPenaltyModel';
 import { WorkflowCitationModel } from './workflowCitationModel';
 import { LetterOfEngagement } from './letterOfEngagement';
@@ -30,6 +31,7 @@ export interface WorkflowCaseModel {
     paymentPlanTypeModel?: PaymentPlanTypeModel;
     referralCode?: string;
     referralCodeOwner?: WorkflowCaseModel.ReferralCodeOwnerEnum;
+    subscriptionDiscountEligibility?: SubscriptionDiscountEligibility;
     userId?: number;
 }
 export namespace WorkflowCaseModel {

@@ -22,6 +22,7 @@ export interface MatchInnerCaseModel {
     "paymentPlanTypeModel"?: models.PaymentPlanTypeModel;
     "referralCode"?: string;
     "referralCodeOwner"?: MatchInnerCaseModel.ReferralCodeOwnerEnum;
+    "subscriptionDiscountEligibility"?: models.SubscriptionDiscountEligibility;
     "userId"?: number;
 }
 export declare namespace MatchInnerCaseModel {

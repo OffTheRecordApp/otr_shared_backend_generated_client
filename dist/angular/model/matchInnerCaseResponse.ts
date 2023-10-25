@@ -10,6 +10,7 @@
  * Do not edit the class manually.
  */
 import { CaseViolationPenalty } from './caseViolationPenalty';
+import { SubscriptionDiscountEligibility } from './subscriptionDiscountEligibility';
 import { MatchCitationResponse } from './matchCitationResponse';
 import { MatchLawfirmCaseResponse } from './matchLawfirmCaseResponse';
 
@@ -22,6 +23,7 @@ export interface MatchInnerCaseResponse {
     maxPenalties?: Array<CaseViolationPenalty>;
     referralCodeOwner?: MatchInnerCaseResponse.ReferralCodeOwnerEnum;
     refundEligibility?: MatchInnerCaseResponse.RefundEligibilityEnum;
+    subscriptionDiscountEligibility?: SubscriptionDiscountEligibility;
     uiReasonMsg?: string;
     userId?: number;
 }

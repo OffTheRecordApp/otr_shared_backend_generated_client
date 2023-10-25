@@ -10,6 +10,7 @@
  * Do not edit the class manually.
  */
 import { LawfirmCaseModelReq } from './lawfirmCaseModelReq';
+import { SubscriptionDiscountEligibilityReq } from './subscriptionDiscountEligibilityReq';
 import { CaseStatusDomain } from './caseStatusDomain';
 import { CancelationDetailsReq } from './cancelationDetailsReq';
 import { CaseViolationPenalty } from './caseViolationPenalty';
@@ -48,6 +49,7 @@ export interface CaseModelReq {
     referralCode?: string;
     refundEligibility?: CaseModelReq.RefundEligibilityEnum;
     resolutionSummary?: string;
+    subscriptionDiscountEligibility?: SubscriptionDiscountEligibilityReq;
     uiRefundMsg?: string;
     user?: UserDomainReq;
     userId?: number;

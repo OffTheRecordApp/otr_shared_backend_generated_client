@@ -37,6 +37,7 @@ export interface CaseModelRes {
     "referralCode"?: string;
     "refundEligibility"?: CaseModelRes.RefundEligibilityEnum;
     "resolutionSummary"?: string;
+    "subscriptionDiscountEligibility"?: models.SubscriptionDiscountEligibilityRes;
     "uiRefundMsg"?: string;
     "user"?: models.UserDomainRes;
     "userId"?: number;

@@ -18,6 +18,7 @@ export interface MatchInnerCaseResponse {
     "maxPenalties"?: Array<models.CaseViolationPenalty>;
     "referralCodeOwner"?: MatchInnerCaseResponse.ReferralCodeOwnerEnum;
     "refundEligibility"?: MatchInnerCaseResponse.RefundEligibilityEnum;
+    "subscriptionDiscountEligibility"?: models.SubscriptionDiscountEligibility;
     "uiReasonMsg"?: string;
     "userId"?: number;
 }

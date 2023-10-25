@@ -13,6 +13,7 @@ import { CitationModel } from './citationModel';
 import { LawfirmCaseModel } from './lawfirmCaseModel';
 import { CaseStatusDomain } from './caseStatusDomain';
 import { CaseViolationPenalty } from './caseViolationPenalty';
+import { SubscriptionDiscountEligibility } from './subscriptionDiscountEligibility';
 import { UserDomain } from './userDomain';
 import { CaseActionDomain } from './caseActionDomain';
 import { LetterOfEngagement } from './letterOfEngagement';
@@ -48,6 +49,7 @@ export interface CaseModel {
     referralCode?: string;
     refundEligibility?: CaseModel.RefundEligibilityEnum;
     resolutionSummary?: string;
+    subscriptionDiscountEligibility?: SubscriptionDiscountEligibility;
     uiRefundMsg?: string;
     user?: UserDomain;
     userId?: number;

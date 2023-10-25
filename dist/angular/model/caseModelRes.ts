@@ -19,6 +19,7 @@ import { TimestampRes } from './timestampRes';
 import { CaseActionDomain } from './caseActionDomain';
 import { LetterOfEngagement } from './letterOfEngagement';
 import { CitationModelRes } from './citationModelRes';
+import { SubscriptionDiscountEligibilityRes } from './subscriptionDiscountEligibilityRes';
 
 
 export interface CaseModelRes { 
@@ -48,6 +49,7 @@ export interface CaseModelRes {
     referralCode?: string;
     refundEligibility?: CaseModelRes.RefundEligibilityEnum;
     resolutionSummary?: string;
+    subscriptionDiscountEligibility?: SubscriptionDiscountEligibilityRes;
     uiRefundMsg?: string;
     user?: UserDomainRes;
     userId?: number;

@@ -716,6 +716,9 @@ model/stripeTransferSyncResults.ts
 model/subscribeRequest.ts
 model/subscriber.ts
 model/subscriberDomain.ts
+model/subscriptionDiscountEligibility.ts
+model/subscriptionDiscountEligibilityReq.ts
+model/subscriptionDiscountEligibilityRes.ts
 model/syncStripeChargesRequest.ts
 model/syncStripeChargesResponse.ts
 model/syncStripeDisputeResponse.ts
