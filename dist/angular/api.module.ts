@@ -50,6 +50,7 @@ import { FreshcallerControllerService } from './api/freshcallerController.servic
 import { FreshdeskTicketControllerService } from './api/freshdeskTicketController.service';
 import { GetCaseControllerService } from './api/getCaseController.service';
 import { HouseholdMateControllerService } from './api/householdMateController.service';
+import { HubspotWebhookControllerService } from './api/hubspotWebhookController.service';
 import { InsuranceCalculatorControllerService } from './api/insuranceCalculatorController.service';
 import { LawfirmCaseDecisionControllerService } from './api/lawfirmCaseDecisionController.service';
 import { LawfirmCasesControllerService } from './api/lawfirmCasesController.service';

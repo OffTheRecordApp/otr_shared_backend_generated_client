@@ -50,6 +50,7 @@ api/freshcallerController.service.ts
 api/freshdeskTicketController.service.ts
 api/getCaseController.service.ts
 api/householdMateController.service.ts
+api/hubspotWebhookController.service.ts
 api/insuranceCalculatorController.service.ts
 api/lawfirmCaseDecisionController.service.ts
 api/lawfirmCasesController.service.ts
