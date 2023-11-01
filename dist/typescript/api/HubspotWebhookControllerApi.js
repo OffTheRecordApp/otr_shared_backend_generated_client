@@ -29,7 +29,7 @@ var HubspotWebhookControllerApi = /** @class */ (function () {
      * @param body body
      */
     HubspotWebhookControllerApi.prototype.onDeliveredEmailFromHubspotUsingPOST = function (body, extraHttpRequestParams) {
-        var localVarPath = this.basePath + '/api/v1/webhooks/hubspot/email-delivered';
+        var localVarPath = this.basePath + '/api/v1/hubspot/webhook/email-delivered';
         var queryParameters = {};
         var headerParams = Object.assign({}, this.defaultHeaders);
         // verify required parameter 'body' is not null or undefined

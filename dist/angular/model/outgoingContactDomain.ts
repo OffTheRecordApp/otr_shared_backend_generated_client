@@ -16,6 +16,7 @@ export interface OutgoingContactDomain {
     caseId?: string;
     citationId?: number;
     contactSentDateUtc?: string;
+    emailSubject?: string;
     emailTemplateId?: number;
     emailTemplateName?: string;
     outgoingContactId?: number;

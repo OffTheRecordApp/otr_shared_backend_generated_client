@@ -7488,6 +7488,43 @@ angular.module('otrBackendService', [])
                 return deferred.promise;
             };
             /**
+             * onDeliveredEmailFromHubspot
+             * @method
+             * @name OtrService#onDeliveredEmailFromHubspotUsingPOST
+             * @param {object} parameters - method options and parameters
+             * @param {} parameters.body - body
+             */
+            OtrService.prototype.onDeliveredEmailFromHubspotUsingPOST = function(parameters) {
+                if (parameters === undefined) {
+                    parameters = {};
+                }
+                var deferred = $q.defer();
+                var domain = this.domain,
+                    path = '/api/v1/hubspot/webhook/email-delivered';
+                var body = {},
+                    queryParameters = {},
+                    headers = {},
+                    form = {};
+
+                headers['Accept'] = ['*/*'];
+                headers['Content-Type'] = ['application/json'];
+
+                if (parameters['body'] !== undefined) {
+                    body = parameters['body'];
+                }
+
+                if (parameters['body'] === undefined) {
+                    deferred.reject(new Error('Missing required  parameter: body'));
+                    return deferred.promise;
+                }
+
+                queryParameters = mergeQueryParams(parameters, queryParameters);
+
+                this.request('POST', domain + path, parameters, body, headers, queryParameters, form, deferred);
+
+                return deferred.promise;
+            };
+            /**
              * calculateTicketSavings
              * @method
              * @name OtrService#calculateTicketSavingsUsingPOST
@@ -15814,43 +15851,6 @@ angular.module('otrBackendService', [])
 
                 if (parameters['request'] === undefined) {
                     deferred.reject(new Error('Missing required  parameter: request'));
-                    return deferred.promise;
-                }
-
-                queryParameters = mergeQueryParams(parameters, queryParameters);
-
-                this.request('POST', domain + path, parameters, body, headers, queryParameters, form, deferred);
-
-                return deferred.promise;
-            };
-            /**
-             * onDeliveredEmailFromHubspot
-             * @method
-             * @name OtrService#onDeliveredEmailFromHubspotUsingPOST
-             * @param {object} parameters - method options and parameters
-             * @param {} parameters.body - body
-             */
-            OtrService.prototype.onDeliveredEmailFromHubspotUsingPOST = function(parameters) {
-                if (parameters === undefined) {
-                    parameters = {};
-                }
-                var deferred = $q.defer();
-                var domain = this.domain,
-                    path = '/api/v1/webhooks/hubspot/email-delivered';
-                var body = {},
-                    queryParameters = {},
-                    headers = {},
-                    form = {};
-
-                headers['Accept'] = ['*/*'];
-                headers['Content-Type'] = ['application/json'];
-
-                if (parameters['body'] !== undefined) {
-                    body = parameters['body'];
-                }
-
-                if (parameters['body'] === undefined) {
-                    deferred.reject(new Error('Missing required  parameter: body'));
                     return deferred.promise;
                 }
 

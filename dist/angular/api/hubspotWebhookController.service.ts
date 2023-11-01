@@ -142,7 +142,7 @@ export class HubspotWebhookControllerService {
             }
         }
 
-        let localVarPath = `/api/v1/webhooks/hubspot/email-delivered`;
+        let localVarPath = `/api/v1/hubspot/webhook/email-delivered`;
         return this.httpClient.request<any>('post', `${this.configuration.basePath}${localVarPath}`,
             {
                 context: localVarHttpContext,
