@@ -15,7 +15,9 @@ export interface SocialLoginRequest {
     citationId?: number;
     clientType?: SocialLoginRequest.ClientTypeEnum;
     fingerPrintId?: string;
+    firstName?: string;
     httpReferrer?: string;
+    lastName?: string;
     otherNote?: string;
     referralCode?: string;
     referralSourceData?: { [key: string]: object; };

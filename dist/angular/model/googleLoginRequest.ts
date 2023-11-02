@@ -13,6 +13,8 @@
 
 export interface GoogleLoginRequest { 
     citationId?: number;
+    firstName?: string;
     identityToken?: string;
+    lastName?: string;
 }
 
