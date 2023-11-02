@@ -3830,6 +3830,7 @@ angular.module('otrBackendService', [])
              * @param {object} parameters - method options and parameters
              * @param {string} parameters.citationIdString - citationIdString
              * @param {} parameters.request - request
+             * @param {} parameters.xFeature - A service to handle your traffic tickets
              */
             OtrService.prototype.matchCaseUsingPOST = function(parameters) {
                 if (parameters === undefined) {
@@ -3855,6 +3856,10 @@ angular.module('otrBackendService', [])
 
                 if (parameters['request'] !== undefined) {
                     body = parameters['request'];
+                }
+
+                if (parameters['xFeature'] !== undefined) {
+                    headers['X-Feature'] = parameters['xFeature'];
                 }
 
                 queryParameters = mergeQueryParams(parameters, queryParameters);
@@ -4213,6 +4218,7 @@ angular.module('otrBackendService', [])
              * @param {object} parameters - method options and parameters
              * @param {integer} parameters.citationId - citationId
              * @param {} parameters.request - request
+             * @param {} parameters.xFeature - A service to handle your traffic tickets
              */
             OtrService.prototype.createLegalServicesUsingPOST = function(parameters) {
                 if (parameters === undefined) {
@@ -4243,6 +4249,10 @@ angular.module('otrBackendService', [])
                 if (parameters['request'] === undefined) {
                     deferred.reject(new Error('Missing required  parameter: request'));
                     return deferred.promise;
+                }
+
+                if (parameters['xFeature'] !== undefined) {
+                    headers['X-Feature'] = parameters['xFeature'];
                 }
 
                 queryParameters = mergeQueryParams(parameters, queryParameters);
