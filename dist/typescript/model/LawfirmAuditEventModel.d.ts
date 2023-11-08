@@ -77,6 +77,7 @@ export declare namespace LawfirmAuditEventModel {
         LINEITEMDELETED,
         MBGELIGIBILITYCHANGED,
         NAMECHANGED,
+        OCRTEXTEXTRACTED,
         PASSWORDCHANGE,
         PASSWORDRESETREQUESTED,
         PAYMENTAUTHORIZED,

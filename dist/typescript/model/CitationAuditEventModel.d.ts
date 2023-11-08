@@ -77,6 +77,7 @@ export declare namespace CitationAuditEventModel {
         LINEITEMDELETED,
         MBGELIGIBILITYCHANGED,
         NAMECHANGED,
+        OCRTEXTEXTRACTED,
         PASSWORDCHANGE,
         PASSWORDRESETREQUESTED,
         PAYMENTAUTHORIZED,
