@@ -27,6 +27,7 @@ export declare namespace CitationAuditEventModel {
         DESKTOPWEBAPP,
         DMVGO,
         DMVORG,
+        EMAIL,
         FRESHDESK,
         IOS,
         MOBILEWEBAPP,

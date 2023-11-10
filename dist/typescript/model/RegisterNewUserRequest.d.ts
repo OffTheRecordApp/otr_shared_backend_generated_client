@@ -32,6 +32,7 @@ export declare namespace RegisterNewUserRequest {
         DESKTOPWEBAPP,
         DMVGO,
         DMVORG,
+        EMAIL,
         FRESHDESK,
         IOS,
         MOBILEWEBAPP,

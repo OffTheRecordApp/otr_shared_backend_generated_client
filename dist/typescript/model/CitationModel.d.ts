@@ -52,6 +52,7 @@ export declare namespace CitationModel {
         DESKTOPWEBAPP,
         DMVGO,
         DMVORG,
+        EMAIL,
         FRESHDESK,
         IOS,
         MOBILEWEBAPP,

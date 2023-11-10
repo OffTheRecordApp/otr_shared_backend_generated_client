@@ -30,6 +30,7 @@ export declare namespace SocialLoginRequest {
         DESKTOPWEBAPP,
         DMVGO,
         DMVORG,
+        EMAIL,
         FRESHDESK,
         IOS,
         MOBILEWEBAPP,

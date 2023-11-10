@@ -19,6 +19,7 @@ export declare namespace LastLoginDateModel {
         DESKTOPWEBAPP,
         DMVGO,
         DMVORG,
+        EMAIL,
         FRESHDESK,
         IOS,
         MOBILEWEBAPP,

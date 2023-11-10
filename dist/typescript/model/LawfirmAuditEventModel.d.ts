@@ -27,6 +27,7 @@ export declare namespace LawfirmAuditEventModel {
         DESKTOPWEBAPP,
         DMVGO,
         DMVORG,
+        EMAIL,
         FRESHDESK,
         IOS,
         MOBILEWEBAPP,

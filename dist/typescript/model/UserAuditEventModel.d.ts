@@ -30,6 +30,7 @@ export declare namespace UserAuditEventModel {
         DESKTOPWEBAPP,
         DMVGO,
         DMVORG,
+        EMAIL,
         FRESHDESK,
         IOS,
         MOBILEWEBAPP,

@@ -23,12 +23,13 @@ export interface SetReferralSourceRequest {
     userReferralSourceTypeId?: number;
 }
 export namespace SetReferralSourceRequest {
-    export type ClientTypeEnum = 'ANDROID' | 'DESKTOP_WEBAPP' | 'DMV_GO' | 'DMV_ORG' | 'FRESH_DESK' | 'IOS' | 'MOBILE_WEBAPP' | 'OTR_ADMIN_CONSOLE' | 'OTR_ADMIN_CONSOLE_DEVO' | 'OTR_ADMIN_CONSOLE_LOCALHOST' | 'OTR_EXPLORER' | 'OTR_LAWFIRM_PORTAL' | 'OTR_LAWFIRM_PORTAL_DEVO' | 'OTR_LAWFIRM_PORTAL_LOCALHOST' | 'OTR_WEBSITE' | 'OTR_WEBSITE_DEVO' | 'OTR_WEBSITE_LOCALHOST' | 'OTR_WIDGET' | 'UNKNOWN';
+    export type ClientTypeEnum = 'ANDROID' | 'DESKTOP_WEBAPP' | 'DMV_GO' | 'DMV_ORG' | 'EMAIL' | 'FRESH_DESK' | 'IOS' | 'MOBILE_WEBAPP' | 'OTR_ADMIN_CONSOLE' | 'OTR_ADMIN_CONSOLE_DEVO' | 'OTR_ADMIN_CONSOLE_LOCALHOST' | 'OTR_EXPLORER' | 'OTR_LAWFIRM_PORTAL' | 'OTR_LAWFIRM_PORTAL_DEVO' | 'OTR_LAWFIRM_PORTAL_LOCALHOST' | 'OTR_WEBSITE' | 'OTR_WEBSITE_DEVO' | 'OTR_WEBSITE_LOCALHOST' | 'OTR_WIDGET' | 'UNKNOWN';
     export const ClientTypeEnum = {
         Android: 'ANDROID' as ClientTypeEnum,
         DesktopWebapp: 'DESKTOP_WEBAPP' as ClientTypeEnum,
         DmvGo: 'DMV_GO' as ClientTypeEnum,
         DmvOrg: 'DMV_ORG' as ClientTypeEnum,
+        Email: 'EMAIL' as ClientTypeEnum,
         FreshDesk: 'FRESH_DESK' as ClientTypeEnum,
         Ios: 'IOS' as ClientTypeEnum,
         MobileWebapp: 'MOBILE_WEBAPP' as ClientTypeEnum,

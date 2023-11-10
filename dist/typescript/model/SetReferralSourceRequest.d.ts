@@ -28,6 +28,7 @@ export declare namespace SetReferralSourceRequest {
         DESKTOPWEBAPP,
         DMVGO,
         DMVORG,
+        EMAIL,
         FRESHDESK,
         IOS,
         MOBILEWEBAPP,

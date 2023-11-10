@@ -77,6 +77,7 @@ export declare namespace CreateCitationRequest {
         DESKTOPWEBAPP,
         DMVGO,
         DMVORG,
+        EMAIL,
         FRESHDESK,
         IOS,
         MOBILEWEBAPP,
