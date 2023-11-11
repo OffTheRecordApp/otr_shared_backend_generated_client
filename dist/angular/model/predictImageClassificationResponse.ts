@@ -12,22 +12,9 @@
 
 
 export interface PredictImageClassificationResponse { 
-    blurLevel?: string;
-    blurLevelConfidenceLevel?: number;
-    blurry?: boolean;
+    document?: boolean;
     documentType?: PredictImageClassificationResponse.DocumentTypeEnum;
-    documentTypeConfidenceLevel?: number;
-    exposure?: string;
-    exposureConfidenceLevel?: number;
-    federal?: boolean;
-    imageCategory?: PredictImageClassificationResponse.ImageCategoryEnum;
-    isBlurryConfidenceLevel?: number;
-    isFederalConfidenceLevel?: number;
-    isTypedConfidenceLevel?: number;
     regionCode?: string;
-    regionConfidenceLevel?: number;
-    regionName?: string;
-    typed?: boolean;
 }
 export namespace PredictImageClassificationResponse {
     export type DocumentTypeEnum = 'CAMERA_TICKET' | 'CASE_DOCKET' | 'CASE_RESOLUTION' | 'CHANGE_OF_COUNCIL' | 'COLLECTIONS_NOTICE' | 'COURT_NOTICE' | 'DRIVER_LICENSE' | 'FAILURE_TO_APPEAR' | 'FAILURE_TO_PAY' | 'INSURANCE_CARD' | 'NOTICE_OF_APPEARANCE' | 'NOT_A_DOCUMENT' | 'PARKING_TICKET' | 'POLICE_REPORT' | 'REMINDER_NOTICE' | 'REQUEST_FOR_DISCOVERY' | 'SCREENSHOT_TICKET_LIST' | 'SCREENSHOT_TRAFFIC_TICKET' | 'SUSPENSION_NOTICE' | 'TRAFFIC_TICKET' | 'UNRECOGNIZED_DOCUMENT' | 'WARNING_NOTICE' | 'WARRANT';
@@ -55,17 +42,6 @@ export namespace PredictImageClassificationResponse {
         UnrecognizedDocument: 'UNRECOGNIZED_DOCUMENT' as DocumentTypeEnum,
         WarningNotice: 'WARNING_NOTICE' as DocumentTypeEnum,
         Warrant: 'WARRANT' as DocumentTypeEnum
-    };
-    export type ImageCategoryEnum = 'DOCUMENT' | 'GROUP_PHOTO' | 'KEYBOARD' | 'LANDSCAPE' | 'LICENSE_PLATE' | 'OTHER' | 'PET' | 'SELFIE';
-    export const ImageCategoryEnum = {
-        Document: 'DOCUMENT' as ImageCategoryEnum,
-        GroupPhoto: 'GROUP_PHOTO' as ImageCategoryEnum,
-        Keyboard: 'KEYBOARD' as ImageCategoryEnum,
-        Landscape: 'LANDSCAPE' as ImageCategoryEnum,
-        LicensePlate: 'LICENSE_PLATE' as ImageCategoryEnum,
-        Other: 'OTHER' as ImageCategoryEnum,
-        Pet: 'PET' as ImageCategoryEnum,
-        Selfie: 'SELFIE' as ImageCategoryEnum
     };
 }
 

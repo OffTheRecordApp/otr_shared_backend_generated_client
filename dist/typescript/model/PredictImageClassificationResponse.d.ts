@@ -10,22 +10,9 @@
  * Do not edit the class manually.
  */
 export interface PredictImageClassificationResponse {
-    "blurLevel"?: string;
-    "blurLevelConfidenceLevel"?: number;
-    "blurry"?: boolean;
+    "document"?: boolean;
     "documentType"?: PredictImageClassificationResponse.DocumentTypeEnum;
-    "documentTypeConfidenceLevel"?: number;
-    "exposure"?: string;
-    "exposureConfidenceLevel"?: number;
-    "federal"?: boolean;
-    "imageCategory"?: PredictImageClassificationResponse.ImageCategoryEnum;
-    "isBlurryConfidenceLevel"?: number;
-    "isFederalConfidenceLevel"?: number;
-    "isTypedConfidenceLevel"?: number;
     "regionCode"?: string;
-    "regionConfidenceLevel"?: number;
-    "regionName"?: string;
-    "typed"?: boolean;
 }
 export declare namespace PredictImageClassificationResponse {
     enum DocumentTypeEnum {
@@ -52,15 +39,5 @@ export declare namespace PredictImageClassificationResponse {
         UNRECOGNIZEDDOCUMENT,
         WARNINGNOTICE,
         WARRANT
-    }
-    enum ImageCategoryEnum {
-        DOCUMENT,
-        GROUPPHOTO,
-        KEYBOARD,
-        LANDSCAPE,
-        LICENSEPLATE,
-        OTHER,
-        PET,
-        SELFIE
     }
 }

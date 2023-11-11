@@ -40,15 +40,4 @@ var PredictImageClassificationResponse;
         DocumentTypeEnum[DocumentTypeEnum["WARNINGNOTICE"] = 'WARNING_NOTICE'] = "WARNINGNOTICE";
         DocumentTypeEnum[DocumentTypeEnum["WARRANT"] = 'WARRANT'] = "WARRANT";
     })(DocumentTypeEnum = PredictImageClassificationResponse.DocumentTypeEnum || (PredictImageClassificationResponse.DocumentTypeEnum = {}));
-    var ImageCategoryEnum;
-    (function (ImageCategoryEnum) {
-        ImageCategoryEnum[ImageCategoryEnum["DOCUMENT"] = 'DOCUMENT'] = "DOCUMENT";
-        ImageCategoryEnum[ImageCategoryEnum["GROUPPHOTO"] = 'GROUP_PHOTO'] = "GROUPPHOTO";
-        ImageCategoryEnum[ImageCategoryEnum["KEYBOARD"] = 'KEYBOARD'] = "KEYBOARD";
-        ImageCategoryEnum[ImageCategoryEnum["LANDSCAPE"] = 'LANDSCAPE'] = "LANDSCAPE";
-        ImageCategoryEnum[ImageCategoryEnum["LICENSEPLATE"] = 'LICENSE_PLATE'] = "LICENSEPLATE";
-        ImageCategoryEnum[ImageCategoryEnum["OTHER"] = 'OTHER'] = "OTHER";
-        ImageCategoryEnum[ImageCategoryEnum["PET"] = 'PET'] = "PET";
-        ImageCategoryEnum[ImageCategoryEnum["SELFIE"] = 'SELFIE'] = "SELFIE";
-    })(ImageCategoryEnum = PredictImageClassificationResponse.ImageCategoryEnum || (PredictImageClassificationResponse.ImageCategoryEnum = {}));
 })(PredictImageClassificationResponse = exports.PredictImageClassificationResponse || (exports.PredictImageClassificationResponse = {}));
