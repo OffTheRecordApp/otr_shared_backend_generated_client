@@ -9,8 +9,11 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
+import * as models from './models';
 export interface SetLawfirmCaseDecisionRequest {
     "caseDecisionStatus"?: SetLawfirmCaseDecisionRequest.CaseDecisionStatusEnum;
+    "declineCategoryType"?: models.DeclineCategory;
+    "declineReasonType"?: models.DeclineReason;
     "reason"?: string;
 }
 export declare namespace SetLawfirmCaseDecisionRequest {

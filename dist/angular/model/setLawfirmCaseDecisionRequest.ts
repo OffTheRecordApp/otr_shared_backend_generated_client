@@ -9,10 +9,14 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
+import { DeclineReason } from './declineReason';
+import { DeclineCategory } from './declineCategory';
 
 
 export interface SetLawfirmCaseDecisionRequest { 
     caseDecisionStatus?: SetLawfirmCaseDecisionRequest.CaseDecisionStatusEnum;
+    declineCategoryType?: DeclineCategory;
+    declineReasonType?: DeclineReason;
     reason?: string;
 }
 export namespace SetLawfirmCaseDecisionRequest {

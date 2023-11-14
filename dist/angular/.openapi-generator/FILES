@@ -16,6 +16,7 @@ api/branchLinkController.service.ts
 api/caseActionsController.service.ts
 api/caseController.service.ts
 api/caseCreationController.service.ts
+api/caseDeclineController.service.ts
 api/caseNotesController.service.ts
 api/casePaymentController.service.ts
 api/caseReferralCodeController.service.ts
@@ -192,6 +193,9 @@ model/caseAlert.ts
 model/caseBookingsStats.ts
 model/caseChargeResponsePojo.ts
 model/caseCreationRequest.ts
+model/caseDeclineCategory.ts
+model/caseDeclineCategoryReasonsModel.ts
+model/caseDeclineReason.ts
 model/caseItem.ts
 model/caseLineItemDomainReq.ts
 model/caseLineItemDomainRes.ts
@@ -281,6 +285,8 @@ model/dashboardCaseModel.ts
 model/dashboardCitationModel.ts
 model/dashboardCourtModel.ts
 model/dashboardStatusModel.ts
+model/declineCategory.ts
+model/declineReason.ts
 model/defaultClassModel.ts
 model/deleteCitationResponse.ts
 model/deleteLawyerLicenseRequest.ts
@@ -348,6 +354,7 @@ model/getCaseActionResponse.ts
 model/getCaseActionTimelineResponse.ts
 model/getCaseActionTypesResponse.ts
 model/getCaseCostsAttorneyResponse.ts
+model/getCaseDeclineReasonTypesResponse.ts
 model/getCaseDocumentResponse.ts
 model/getCaseFromCitationResponse.ts
 model/getCaseMessagesResponse.ts

@@ -16,6 +16,7 @@ import { BranchLinkControllerService } from './api/branchLinkController.service'
 import { CaseActionsControllerService } from './api/caseActionsController.service';
 import { CaseControllerService } from './api/caseController.service';
 import { CaseCreationControllerService } from './api/caseCreationController.service';
+import { CaseDeclineControllerService } from './api/caseDeclineController.service';
 import { CaseNotesControllerService } from './api/caseNotesController.service';
 import { CasePaymentControllerService } from './api/casePaymentController.service';
 import { CaseReferralCodeControllerService } from './api/caseReferralCodeController.service';
