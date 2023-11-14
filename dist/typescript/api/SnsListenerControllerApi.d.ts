@@ -30,4 +30,10 @@ export declare class SnsListenerControllerApi {
      * @param request request
      */
     handleIncomingEmailsUsingPOST(request: models.IncomingEmailRequest, extraHttpRequestParams?: any): ng.IHttpPromise<{}>;
+    /**
+     *
+     * @summary handleIncomingHelloEmails
+     * @param request request
+     */
+    handleIncomingHelloEmailsUsingPOST(request: models.IncomingEmailModels, extraHttpRequestParams?: any): ng.IHttpPromise<{}>;
 }
