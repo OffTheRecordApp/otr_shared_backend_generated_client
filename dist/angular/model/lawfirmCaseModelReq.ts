@@ -20,7 +20,7 @@ export interface LawfirmCaseModelReq {
     isMatchInternal?: boolean;
     isSelected?: boolean;
     lawfirmCaseId?: number;
-    lawfirmDecisionDateUtc?: TimestampReq;
+    lawfirmDecisionDateUtc?: string;
     lawfirmDeclineTicket?: FreshDeskTicketReq;
     lawfirmId?: number;
     lawfirmName?: string;
