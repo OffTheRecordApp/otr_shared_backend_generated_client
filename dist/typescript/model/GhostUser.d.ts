@@ -11,6 +11,7 @@
  */
 import * as models from './models';
 export interface GhostUser {
+    "clientType"?: GhostUser.ClientTypeEnum;
     "dob"?: string;
     "driverLicenseNumber"?: string;
     "emailAddress"?: string;
@@ -22,6 +23,28 @@ export interface GhostUser {
     "race"?: GhostUser.RaceEnum;
 }
 export declare namespace GhostUser {
+    enum ClientTypeEnum {
+        ANDROID,
+        DESKTOPWEBAPP,
+        DMVGO,
+        DMVORG,
+        EMAIL,
+        FRESHDESK,
+        IOS,
+        MOBILEWEBAPP,
+        OTRADMINCONSOLE,
+        OTRADMINCONSOLEDEVO,
+        OTRADMINCONSOLELOCALHOST,
+        OTREXPLORER,
+        OTRLAWFIRMPORTAL,
+        OTRLAWFIRMPORTALDEVO,
+        OTRLAWFIRMPORTALLOCALHOST,
+        OTRWEBSITE,
+        OTRWEBSITEDEVO,
+        OTRWEBSITELOCALHOST,
+        OTRWIDGET,
+        UNKNOWN
+    }
     enum GenderEnum {
         FEMALE,
         MALE,
