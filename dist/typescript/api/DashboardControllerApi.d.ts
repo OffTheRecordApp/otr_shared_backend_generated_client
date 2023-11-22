@@ -60,4 +60,21 @@ export declare class DashboardControllerApi {
      * @param graphRequest graphRequest
      */
     listLawyerLeadsUsingPOST(graphRequest: models.GraphRequest, extraHttpRequestParams?: any): ng.IHttpPromise<models.SqlResponse>;
+    /**
+     *
+     * @summary listPhoneCalls
+     * @param agentId agentId
+     * @param agentName agentName
+     * @param callStatus callStatus
+     * @param endDate endDate
+     * @param length length
+     * @param page page
+     * @param shouldIncludePhoneCalls shouldIncludePhoneCalls
+     * @param sortBy sortBy
+     * @param sortOrder sortOrder
+     * @param startDate startDate
+     * @param teamName teamName
+     * @param timeZoneId timeZoneId
+     */
+    listPhoneCallsUsingGET(agentId?: number, agentName?: string, callStatus?: 'ABANDONED' | 'BLOCKED' | 'BUSY' | 'COMPLETED' | 'CONNECTING' | 'CONNECTION_FAILED' | 'DEFAULT' | 'DISCONNECTED' | 'ENQUEUED' | 'IN_PROGRESS' | 'MISSED_CALL' | 'ON_HOLD' | 'RECENTLY_COMPLETED' | 'RESTRICTED' | 'VOICEMAIL' | 'VOICEMAIL_RECORDING_IN_PROGRESS', endDate?: string, length?: number, page?: number, shouldIncludePhoneCalls?: boolean, sortBy?: string, sortOrder?: string, startDate?: string, teamName?: string, timeZoneId?: string, extraHttpRequestParams?: any): ng.IHttpPromise<models.ListPhoneCallsResponse>;
 }

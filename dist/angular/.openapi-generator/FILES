@@ -544,6 +544,9 @@ model/listLawfirmSurchargeModel.ts
 model/listLawfirmSurchargeTypeModel.ts
 model/listLawfirmSurchargesResponse.ts
 model/listNotesResponse.ts
+model/listPhoneCallsCountModel.ts
+model/listPhoneCallsModel.ts
+model/listPhoneCallsResponse.ts
 model/listReferralsResponse.ts
 model/listReviewsResponse.ts
 model/listSubscriptionInvoicesResponse.ts

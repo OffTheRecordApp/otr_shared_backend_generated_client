@@ -5437,6 +5437,98 @@ angular.module('otrBackendService', [])
                 return deferred.promise;
             };
             /**
+             * listPhoneCalls
+             * @method
+             * @name OtrService#listPhoneCallsUsingGET
+             * @param {object} parameters - method options and parameters
+             * @param {integer} parameters.agentId - agentId
+             * @param {string} parameters.agentName - agentName
+             * @param {string} parameters.callStatus - callStatus
+             * @param {string} parameters.endDate - endDate
+             * @param {integer} parameters.length - length
+             * @param {integer} parameters.page - page
+             * @param {boolean} parameters.shouldIncludePhoneCalls - shouldIncludePhoneCalls
+             * @param {string} parameters.sortBy - sortBy
+             * @param {string} parameters.sortOrder - sortOrder
+             * @param {string} parameters.startDate - startDate
+             * @param {string} parameters.teamName - teamName
+             * @param {string} parameters.timeZoneId - timeZoneId
+             */
+            OtrService.prototype.listPhoneCallsUsingGET = function(parameters) {
+                if (parameters === undefined) {
+                    parameters = {};
+                }
+                var deferred = $q.defer();
+                var domain = this.domain,
+                    path = '/api/v1/console/phone-calls';
+                var body = {},
+                    queryParameters = {},
+                    headers = {},
+                    form = {};
+
+                headers['Accept'] = ['application/json'];
+
+                if (parameters['agentId'] !== undefined) {
+                    queryParameters['agentId'] = parameters['agentId'];
+                }
+
+                if (parameters['agentName'] !== undefined) {
+                    queryParameters['agentName'] = parameters['agentName'];
+                }
+
+                if (parameters['callStatus'] !== undefined) {
+                    queryParameters['callStatus'] = parameters['callStatus'];
+                }
+
+                if (parameters['endDate'] !== undefined) {
+                    queryParameters['endDate'] = parameters['endDate'];
+                }
+
+                /** set default value **/
+                queryParameters['length'] = 50;
+
+                if (parameters['length'] !== undefined) {
+                    queryParameters['length'] = parameters['length'];
+                }
+
+                if (parameters['page'] !== undefined) {
+                    queryParameters['page'] = parameters['page'];
+                }
+
+                /** set default value **/
+                queryParameters['shouldIncludePhoneCalls'] = true;
+
+                if (parameters['shouldIncludePhoneCalls'] !== undefined) {
+                    queryParameters['shouldIncludePhoneCalls'] = parameters['shouldIncludePhoneCalls'];
+                }
+
+                if (parameters['sortBy'] !== undefined) {
+                    queryParameters['sortBy'] = parameters['sortBy'];
+                }
+
+                if (parameters['sortOrder'] !== undefined) {
+                    queryParameters['sortOrder'] = parameters['sortOrder'];
+                }
+
+                if (parameters['startDate'] !== undefined) {
+                    queryParameters['startDate'] = parameters['startDate'];
+                }
+
+                if (parameters['teamName'] !== undefined) {
+                    queryParameters['teamName'] = parameters['teamName'];
+                }
+
+                if (parameters['timeZoneId'] !== undefined) {
+                    queryParameters['timeZoneId'] = parameters['timeZoneId'];
+                }
+
+                queryParameters = mergeQueryParams(parameters, queryParameters);
+
+                this.request('GET', domain + path, parameters, body, headers, queryParameters, form, deferred);
+
+                return deferred.promise;
+            };
+            /**
              * listPotentialCustomers
              * @method
              * @name OtrService#listPotentialCustomersUsingPOST

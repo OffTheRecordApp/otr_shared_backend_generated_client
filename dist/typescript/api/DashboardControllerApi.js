@@ -198,6 +198,73 @@ var DashboardControllerApi = /** @class */ (function () {
         }
         return this.$http(httpRequestParams);
     };
+    /**
+     *
+     * @summary listPhoneCalls
+     * @param agentId agentId
+     * @param agentName agentName
+     * @param callStatus callStatus
+     * @param endDate endDate
+     * @param length length
+     * @param page page
+     * @param shouldIncludePhoneCalls shouldIncludePhoneCalls
+     * @param sortBy sortBy
+     * @param sortOrder sortOrder
+     * @param startDate startDate
+     * @param teamName teamName
+     * @param timeZoneId timeZoneId
+     */
+    DashboardControllerApi.prototype.listPhoneCallsUsingGET = function (agentId, agentName, callStatus, endDate, length, page, shouldIncludePhoneCalls, sortBy, sortOrder, startDate, teamName, timeZoneId, extraHttpRequestParams) {
+        var localVarPath = this.basePath + '/api/v1/console/phone-calls';
+        var queryParameters = {};
+        var headerParams = Object.assign({}, this.defaultHeaders);
+        if (agentId !== undefined) {
+            queryParameters['agentId'] = agentId;
+        }
+        if (agentName !== undefined) {
+            queryParameters['agentName'] = agentName;
+        }
+        if (callStatus !== undefined) {
+            queryParameters['callStatus'] = callStatus;
+        }
+        if (endDate !== undefined) {
+            queryParameters['endDate'] = endDate;
+        }
+        if (length !== undefined) {
+            queryParameters['length'] = length;
+        }
+        if (page !== undefined) {
+            queryParameters['page'] = page;
+        }
+        if (shouldIncludePhoneCalls !== undefined) {
+            queryParameters['shouldIncludePhoneCalls'] = shouldIncludePhoneCalls;
+        }
+        if (sortBy !== undefined) {
+            queryParameters['sortBy'] = sortBy;
+        }
+        if (sortOrder !== undefined) {
+            queryParameters['sortOrder'] = sortOrder;
+        }
+        if (startDate !== undefined) {
+            queryParameters['startDate'] = startDate;
+        }
+        if (teamName !== undefined) {
+            queryParameters['teamName'] = teamName;
+        }
+        if (timeZoneId !== undefined) {
+            queryParameters['timeZoneId'] = timeZoneId;
+        }
+        var httpRequestParams = {
+            method: 'GET',
+            url: localVarPath,
+            params: queryParameters,
+            headers: headerParams
+        };
+        if (extraHttpRequestParams) {
+            httpRequestParams = Object.assign(httpRequestParams, extraHttpRequestParams);
+        }
+        return this.$http(httpRequestParams);
+    };
     DashboardControllerApi.$inject = ['$http', '$httpParamSerializer', 'basePath'];
     return DashboardControllerApi;
 }());
