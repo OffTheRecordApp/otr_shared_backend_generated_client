@@ -706,6 +706,8 @@ __exportStar(require("./UserWatchlistsModel"), exports);
 __exportStar(require("./ValidateDirectMailRequest"), exports);
 __exportStar(require("./ValidateDirectMailResponse"), exports);
 __exportStar(require("./ValidateUserEmailResponse"), exports);
+__exportStar(require("./VerifyCaptchaTokenRequest"), exports);
+__exportStar(require("./VerifyCaptchaTokenResponse"), exports);
 __exportStar(require("./VerifyMailingAddressRequest"), exports);
 __exportStar(require("./VerifyMailingAddressResponse"), exports);
 __exportStar(require("./VerifyPasswordResetTokenResponse"), exports);

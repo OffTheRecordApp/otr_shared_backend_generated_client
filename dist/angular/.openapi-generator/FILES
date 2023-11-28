@@ -13,6 +13,7 @@ api/authenticationController.service.ts
 api/awsCredentialsController.service.ts
 api/blogWebhookController.service.ts
 api/branchLinkController.service.ts
+api/captchaController.service.ts
 api/caseActionsController.service.ts
 api/caseController.service.ts
 api/caseCreationController.service.ts
@@ -810,6 +811,8 @@ model/userWatchlistsModel.ts
 model/validateDirectMailRequest.ts
 model/validateDirectMailResponse.ts
 model/validateUserEmailResponse.ts
+model/verifyCaptchaTokenRequest.ts
+model/verifyCaptchaTokenResponse.ts
 model/verifyMailingAddressRequest.ts
 model/verifyMailingAddressResponse.ts
 model/verifyPasswordResetTokenResponse.ts

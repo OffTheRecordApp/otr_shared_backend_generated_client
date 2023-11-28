@@ -13,6 +13,7 @@ import { AuthenticationControllerService } from './api/authenticationController.
 import { AwsCredentialsControllerService } from './api/awsCredentialsController.service';
 import { BlogWebhookControllerService } from './api/blogWebhookController.service';
 import { BranchLinkControllerService } from './api/branchLinkController.service';
+import { CaptchaControllerService } from './api/captchaController.service';
 import { CaseActionsControllerService } from './api/caseActionsController.service';
 import { CaseControllerService } from './api/caseController.service';
 import { CaseCreationControllerService } from './api/caseCreationController.service';

@@ -694,6 +694,8 @@ export * from './userWatchlistsModel';
 export * from './validateDirectMailRequest';
 export * from './validateDirectMailResponse';
 export * from './validateUserEmailResponse';
+export * from './verifyCaptchaTokenRequest';
+export * from './verifyCaptchaTokenResponse';
 export * from './verifyMailingAddressRequest';
 export * from './verifyMailingAddressResponse';
 export * from './verifyPasswordResetTokenResponse';
