@@ -13,11 +13,11 @@ import { UserDomain } from './userDomain';
 
 
 export interface GetCurrentUserResponse { 
-    isUserAuthenticated?: boolean;
-    isUserLoggedIn?: boolean;
-    isUserRememberMeAuthenticated?: boolean;
     jwt?: string;
     redirectUrl?: string;
     user?: UserDomain;
+    userAuthenticated?: boolean;
+    userLoggedIn?: boolean;
+    userRememberMeAuthenticated?: boolean;
 }
 
