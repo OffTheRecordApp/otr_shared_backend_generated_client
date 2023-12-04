@@ -12,4 +12,11 @@
 export interface VerifyCaptchaTokenRequest {
     "ipAddress"?: string;
     "token": string;
+    "version"?: VerifyCaptchaTokenRequest.VersionEnum;
+}
+export declare namespace VerifyCaptchaTokenRequest {
+    enum VersionEnum {
+        V2GOOGLE,
+        V3GOOGLE
+    }
 }

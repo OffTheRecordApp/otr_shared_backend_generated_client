@@ -14,5 +14,14 @@
 export interface VerifyCaptchaTokenRequest { 
     ipAddress?: string;
     token: string;
+    version?: VerifyCaptchaTokenRequest.VersionEnum;
 }
+export namespace VerifyCaptchaTokenRequest {
+    export type VersionEnum = 'V2_GOOGLE' | 'V3_GOOGLE';
+    export const VersionEnum = {
+        V2Google: 'V2_GOOGLE' as VersionEnum,
+        V3Google: 'V3_GOOGLE' as VersionEnum
+    };
+}
+
 

@@ -11,3 +11,12 @@
  * Do not edit the class manually.
  */
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.VerifyCaptchaTokenRequest = void 0;
+var VerifyCaptchaTokenRequest;
+(function (VerifyCaptchaTokenRequest) {
+    var VersionEnum;
+    (function (VersionEnum) {
+        VersionEnum[VersionEnum["V2GOOGLE"] = 'V2_GOOGLE'] = "V2GOOGLE";
+        VersionEnum[VersionEnum["V3GOOGLE"] = 'V3_GOOGLE'] = "V3GOOGLE";
+    })(VersionEnum = VerifyCaptchaTokenRequest.VersionEnum || (VerifyCaptchaTokenRequest.VersionEnum = {}));
+})(VerifyCaptchaTokenRequest = exports.VerifyCaptchaTokenRequest || (exports.VerifyCaptchaTokenRequest = {}));
