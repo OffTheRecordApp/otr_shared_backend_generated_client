@@ -18,7 +18,7 @@ export interface ListPhoneCallsModel {
     callDurationInSeconds?: number;
     callQueueName?: string;
     callStartDateUtc?: string;
-    callStatus?: number;
+    callStatus?: ListPhoneCallsModel.CallStatusEnum;
     customerName?: string;
     holdDurationInSeconds?: number;
     ivrDurationInSeconds?: number;
@@ -31,6 +31,25 @@ export namespace ListPhoneCallsModel {
     export const CallDirectionEnum = {
         Incoming: 'INCOMING' as CallDirectionEnum,
         Outgoing: 'OUTGOING' as CallDirectionEnum
+    };
+    export type CallStatusEnum = 'ABANDONED' | 'BLOCKED' | 'BUSY' | 'COMPLETED' | 'CONNECTING' | 'CONNECTION_FAILED' | 'DEFAULT' | 'DISCONNECTED' | 'ENQUEUED' | 'IN_PROGRESS' | 'MISSED_CALL' | 'ON_HOLD' | 'RECENTLY_COMPLETED' | 'RESTRICTED' | 'VOICEMAIL' | 'VOICEMAIL_RECORDING_IN_PROGRESS';
+    export const CallStatusEnum = {
+        Abandoned: 'ABANDONED' as CallStatusEnum,
+        Blocked: 'BLOCKED' as CallStatusEnum,
+        Busy: 'BUSY' as CallStatusEnum,
+        Completed: 'COMPLETED' as CallStatusEnum,
+        Connecting: 'CONNECTING' as CallStatusEnum,
+        ConnectionFailed: 'CONNECTION_FAILED' as CallStatusEnum,
+        Default: 'DEFAULT' as CallStatusEnum,
+        Disconnected: 'DISCONNECTED' as CallStatusEnum,
+        Enqueued: 'ENQUEUED' as CallStatusEnum,
+        InProgress: 'IN_PROGRESS' as CallStatusEnum,
+        MissedCall: 'MISSED_CALL' as CallStatusEnum,
+        OnHold: 'ON_HOLD' as CallStatusEnum,
+        RecentlyCompleted: 'RECENTLY_COMPLETED' as CallStatusEnum,
+        Restricted: 'RESTRICTED' as CallStatusEnum,
+        Voicemail: 'VOICEMAIL' as CallStatusEnum,
+        VoicemailRecordingInProgress: 'VOICEMAIL_RECORDING_IN_PROGRESS' as CallStatusEnum
     };
 }
 

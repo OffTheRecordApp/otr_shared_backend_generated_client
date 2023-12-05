@@ -16,7 +16,7 @@ export interface ListPhoneCallsModel {
     "callDurationInSeconds"?: number;
     "callQueueName"?: string;
     "callStartDateUtc"?: string;
-    "callStatus"?: number;
+    "callStatus"?: ListPhoneCallsModel.CallStatusEnum;
     "customerName"?: string;
     "holdDurationInSeconds"?: number;
     "ivrDurationInSeconds"?: number;
@@ -28,5 +28,23 @@ export declare namespace ListPhoneCallsModel {
     enum CallDirectionEnum {
         INCOMING,
         OUTGOING
+    }
+    enum CallStatusEnum {
+        ABANDONED,
+        BLOCKED,
+        BUSY,
+        COMPLETED,
+        CONNECTING,
+        CONNECTIONFAILED,
+        DEFAULT,
+        DISCONNECTED,
+        ENQUEUED,
+        INPROGRESS,
+        MISSEDCALL,
+        ONHOLD,
+        RECENTLYCOMPLETED,
+        RESTRICTED,
+        VOICEMAIL,
+        VOICEMAILRECORDINGINPROGRESS
     }
 }
