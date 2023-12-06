@@ -9,14 +9,10 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-import { CaseCounterOfferModel } from './caseCounterOfferModel';
-import { CaseModel } from './caseModel';
+import { CaseCounterOption } from './caseCounterOption';
 
 
-export interface GetCaseResponse { 
-    caseCounter?: CaseCounterOfferModel;
-    chanceOfSuccess?: number;
-    projectedInsuranceCostInCents?: number;
-    theCase?: CaseModel;
+export interface GetCaseCounterOptionsResponse { 
+    counterOptions?: Array<CaseCounterOption>;
 }
 

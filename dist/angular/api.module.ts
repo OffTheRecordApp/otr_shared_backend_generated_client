@@ -16,6 +16,7 @@ import { BranchLinkControllerService } from './api/branchLinkController.service'
 import { CaptchaControllerService } from './api/captchaController.service';
 import { CaseActionsControllerService } from './api/caseActionsController.service';
 import { CaseControllerService } from './api/caseController.service';
+import { CaseCounterOfferControllerService } from './api/caseCounterOfferController.service';
 import { CaseCreationControllerService } from './api/caseCreationController.service';
 import { CaseDeclineControllerService } from './api/caseDeclineController.service';
 import { CaseNotesControllerService } from './api/caseNotesController.service';

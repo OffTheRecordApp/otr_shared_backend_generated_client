@@ -16,6 +16,7 @@ api/branchLinkController.service.ts
 api/captchaController.service.ts
 api/caseActionsController.service.ts
 api/caseController.service.ts
+api/caseCounterOfferController.service.ts
 api/caseCreationController.service.ts
 api/caseDeclineController.service.ts
 api/caseNotesController.service.ts
@@ -114,6 +115,7 @@ configuration.ts
 encoder.ts
 git_push.sh
 index.ts
+model/acceptCaseCounterRequest.ts
 model/accountLevelFee.ts
 model/accountLevelFeeRequest.ts
 model/accountLevelFeeResponse.ts
@@ -193,6 +195,9 @@ model/caseActionRequestModel.ts
 model/caseAlert.ts
 model/caseBookingsStats.ts
 model/caseChargeResponsePojo.ts
+model/caseCounterOfferModel.ts
+model/caseCounterOption.ts
+model/caseCounterOptionModel.ts
 model/caseCreationRequest.ts
 model/caseDeclineCategory.ts
 model/caseDeclineCategoryReasonsModel.ts
@@ -241,6 +246,7 @@ model/contactTimelineResponse.ts
 model/convertPdfToImageModel.ts
 model/convertPdfToImageRequest.ts
 model/convertPdfToImageResponse.ts
+model/counterOption.ts
 model/countryDomain.ts
 model/countryRegion.ts
 model/countyDomain.ts
@@ -286,6 +292,7 @@ model/dashboardCaseModel.ts
 model/dashboardCitationModel.ts
 model/dashboardCourtModel.ts
 model/dashboardStatusModel.ts
+model/declineCaseCounterRequest.ts
 model/declineCategory.ts
 model/declineReason.ts
 model/defaultClassModel.ts
@@ -355,6 +362,7 @@ model/getCaseActionResponse.ts
 model/getCaseActionTimelineResponse.ts
 model/getCaseActionTypesResponse.ts
 model/getCaseCostsAttorneyResponse.ts
+model/getCaseCounterOptionsResponse.ts
 model/getCaseDeclineReasonTypesResponse.ts
 model/getCaseDocumentResponse.ts
 model/getCaseFromCitationResponse.ts
@@ -380,6 +388,7 @@ model/getClientConfirmedUnpaidCasesResponse.ts
 model/getCompetitionResponseModel.ts
 model/getCountOfMatchingUsersRequest.ts
 model/getCountOfMatchingUsersResponse.ts
+model/getCounterOfferResponse.ts
 model/getCountiesResponse.ts
 model/getCountryListResponse.ts
 model/getCountryRegionsResponse.ts
@@ -484,6 +493,8 @@ model/incomingEmailRequest.ts
 model/incomingHeader.ts
 model/initiateCaseAndChargeCustomerRequest.ts
 model/initiateCaseAndChargeCustomerResponse.ts
+model/initiateCaseCounterRequest.ts
+model/initiateCaseCounterResponse.ts
 model/insertCaseLineItemResponse.ts
 model/insertInvoiceLineItemRequest.ts
 model/inviteHouseholdMateRequest.ts

@@ -28,6 +28,9 @@ export interface ActionByEntityModel {
 export declare namespace ActionByEntityModel {
     enum ActionTypeEnum {
         CASEACCEPT,
+        CASECOUNTERACCEPTED,
+        CASECOUNTERDECLINED,
+        CASECOUNTERINITIATED,
         CASEDECLINE,
         CITATIONDATAEXTRACTED,
         COURTDATEREMOVED,
