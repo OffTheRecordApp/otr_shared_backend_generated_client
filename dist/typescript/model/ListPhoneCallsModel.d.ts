@@ -21,6 +21,7 @@ export interface ListPhoneCallsModel {
     "holdDurationInSeconds"?: number;
     "ivrDurationInSeconds"?: number;
     "ivrName"?: string;
+    "recordingUrl"?: string;
     "talkDurationInSeconds"?: number;
     "teamName"?: string;
 }
