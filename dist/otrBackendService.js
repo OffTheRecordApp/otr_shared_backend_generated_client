@@ -111,6 +111,69 @@ angular.module('otrBackendService', [])
             };
 
             /**
+             * getCoachingCardCategories
+             * @method
+             * @name OtrService#getCoachingCardCategoriesUsingGET
+             * @param {object} parameters - method options and parameters
+             */
+            OtrService.prototype.getCoachingCardCategoriesUsingGET = function(parameters) {
+                if (parameters === undefined) {
+                    parameters = {};
+                }
+                var deferred = $q.defer();
+                var domain = this.domain,
+                    path = '/api/api/v1/coaching-cards/categories';
+                var body = {},
+                    queryParameters = {},
+                    headers = {},
+                    form = {};
+
+                headers['Accept'] = ['*/*'];
+
+                queryParameters = mergeQueryParams(parameters, queryParameters);
+
+                this.request('GET', domain + path, parameters, body, headers, queryParameters, form, deferred);
+
+                return deferred.promise;
+            };
+            /**
+             * acknowledgeCoachingCard
+             * @method
+             * @name OtrService#acknowledgeCoachingCardUsingPUT
+             * @param {object} parameters - method options and parameters
+             * @param {} parameters.request - request
+             */
+            OtrService.prototype.acknowledgeCoachingCardUsingPUT = function(parameters) {
+                if (parameters === undefined) {
+                    parameters = {};
+                }
+                var deferred = $q.defer();
+                var domain = this.domain,
+                    path = '/api/api/v1/coaching-cards/{cardId}/acknowledge/{userId}';
+                var body = {},
+                    queryParameters = {},
+                    headers = {},
+                    form = {};
+
+                headers['Accept'] = ['*/*'];
+                headers['Content-Type'] = ['application/json'];
+
+                if (parameters['request'] !== undefined) {
+                    body = parameters['request'];
+                }
+
+                if (parameters['request'] === undefined) {
+                    deferred.reject(new Error('Missing required  parameter: request'));
+                    return deferred.promise;
+                }
+
+                queryParameters = mergeQueryParams(parameters, queryParameters);
+
+                this.request('PUT', domain + path, parameters, body, headers, queryParameters, form, deferred);
+
+                return deferred.promise;
+            };
+            /**
              * listActivityFeed
              * @method
              * @name OtrService#listActivityFeedUsingGET
@@ -4841,6 +4904,93 @@ angular.module('otrBackendService', [])
                 queryParameters = mergeQueryParams(parameters, queryParameters);
 
                 this.request('PUT', domain + path, parameters, body, headers, queryParameters, form, deferred);
+
+                return deferred.promise;
+            };
+            /**
+             * listUserCoachingCards
+             * @method
+             * @name OtrService#listUserCoachingCardsUsingGET
+             * @param {object} parameters - method options and parameters
+             * @param {boolean} parameters.includeCreated - includeCreated
+             * @param {boolean} parameters.includeReceived - includeReceived
+             * @param {integer} parameters.userId - userId
+             */
+            OtrService.prototype.listUserCoachingCardsUsingGET = function(parameters) {
+                if (parameters === undefined) {
+                    parameters = {};
+                }
+                var deferred = $q.defer();
+                var domain = this.domain,
+                    path = '/api/v1/coaching-cards/{userId}/cards';
+                var body = {},
+                    queryParameters = {},
+                    headers = {},
+                    form = {};
+
+                headers['Accept'] = ['*/*'];
+
+                /** set default value **/
+                queryParameters['includeCreated'] = true;
+
+                if (parameters['includeCreated'] !== undefined) {
+                    queryParameters['includeCreated'] = parameters['includeCreated'];
+                }
+
+                /** set default value **/
+                queryParameters['includeReceived'] = true;
+
+                if (parameters['includeReceived'] !== undefined) {
+                    queryParameters['includeReceived'] = parameters['includeReceived'];
+                }
+
+                path = path.replace('{userId}', parameters['userId']);
+
+                if (parameters['userId'] === undefined) {
+                    deferred.reject(new Error('Missing required  parameter: userId'));
+                    return deferred.promise;
+                }
+
+                queryParameters = mergeQueryParams(parameters, queryParameters);
+
+                this.request('GET', domain + path, parameters, body, headers, queryParameters, form, deferred);
+
+                return deferred.promise;
+            };
+            /**
+             * saveCoachingCard
+             * @method
+             * @name OtrService#saveCoachingCardUsingPOST
+             * @param {object} parameters - method options and parameters
+             * @param {} parameters.request - request
+             */
+            OtrService.prototype.saveCoachingCardUsingPOST = function(parameters) {
+                if (parameters === undefined) {
+                    parameters = {};
+                }
+                var deferred = $q.defer();
+                var domain = this.domain,
+                    path = '/api/v1/coaching-cards/{userId}/cards';
+                var body = {},
+                    queryParameters = {},
+                    headers = {},
+                    form = {};
+
+                headers['Accept'] = ['*/*'];
+                headers['Content-Type'] = ['application/json'];
+
+                if (parameters['request'] !== undefined) {
+                    body = parameters['request'];
+                }
+
+                if (parameters['request'] === undefined) {
+                    deferred.reject(new Error('Missing required  parameter: request'));
+                    return deferred.promise;
+                }
+
+                queryParameters = mergeQueryParams(parameters, queryParameters);
+
+                this.request('POST', domain + path, parameters, body, headers, queryParameters, form, deferred);
 
                 return deferred.promise;
             };
