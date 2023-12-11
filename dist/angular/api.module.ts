@@ -30,6 +30,7 @@ import { CaseUserControllerService } from './api/caseUserController.service';
 import { CertificateControllerService } from './api/certificateController.service';
 import { CitationAuditControllerService } from './api/citationAuditController.service';
 import { CitationControllerService } from './api/citationController.service';
+import { CoachingCardsControllerService } from './api/coachingCardsController.service';
 import { ConfigurationControllerService } from './api/configurationController.service';
 import { ConsoleListControllerService } from './api/consoleListController.service';
 import { ContactTimelineControllerService } from './api/contactTimelineController.service';

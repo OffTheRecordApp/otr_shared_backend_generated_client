@@ -65,8 +65,11 @@ export declare class DashboardControllerApi {
      * @summary listPhoneCalls
      * @param agentId agentId
      * @param agentName agentName
+     * @param callQueueName callQueueName
      * @param callStatus callStatus
+     * @param direction direction
      * @param endDate endDate
+     * @param ivrName ivrName
      * @param length length
      * @param page page
      * @param shouldIncludePhoneCalls shouldIncludePhoneCalls
@@ -76,5 +79,5 @@ export declare class DashboardControllerApi {
      * @param teamName teamName
      * @param timeZoneId timeZoneId
      */
-    listPhoneCallsUsingGET(agentId?: number, agentName?: string, callStatus?: 'ABANDONED' | 'BLOCKED' | 'BUSY' | 'COMPLETED' | 'CONNECTING' | 'CONNECTION_FAILED' | 'DEFAULT' | 'DISCONNECTED' | 'ENQUEUED' | 'IN_PROGRESS' | 'MISSED_CALL' | 'ON_HOLD' | 'RECENTLY_COMPLETED' | 'RESTRICTED' | 'VOICEMAIL' | 'VOICEMAIL_RECORDING_IN_PROGRESS', endDate?: string, length?: number, page?: number, shouldIncludePhoneCalls?: boolean, sortBy?: string, sortOrder?: string, startDate?: string, teamName?: string, timeZoneId?: string, extraHttpRequestParams?: any): ng.IHttpPromise<models.ListPhoneCallsResponse>;
+    listPhoneCallsUsingGET(agentId?: number, agentName?: string, callQueueName?: string, callStatus?: 'ABANDONED' | 'BLOCKED' | 'BUSY' | 'COMPLETED' | 'CONNECTING' | 'CONNECTION_FAILED' | 'DEFAULT' | 'DISCONNECTED' | 'ENQUEUED' | 'IN_PROGRESS' | 'MISSED_CALL' | 'ON_HOLD' | 'RECENTLY_COMPLETED' | 'RESTRICTED' | 'VOICEMAIL' | 'VOICEMAIL_RECORDING_IN_PROGRESS', direction?: 'INCOMING' | 'OUTGOING', endDate?: string, ivrName?: string, length?: number, page?: number, shouldIncludePhoneCalls?: boolean, sortBy?: string, sortOrder?: string, startDate?: string, teamName?: string, timeZoneId?: string, extraHttpRequestParams?: any): ng.IHttpPromise<models.ListPhoneCallsResponse>;
 }

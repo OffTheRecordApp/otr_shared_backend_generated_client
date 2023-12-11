@@ -30,6 +30,7 @@ api/caseUserController.service.ts
 api/certificateController.service.ts
 api/citationAuditController.service.ts
 api/citationController.service.ts
+api/coachingCardsController.service.ts
 api/configurationController.service.ts
 api/consoleListController.service.ts
 api/contactTimelineController.service.ts
@@ -240,6 +241,12 @@ model/citationsResponseModel.ts
 model/clientActionRequiredRequest.ts
 model/clientConfirmedUnpaidCase.ts
 model/clientLeadDomain.ts
+model/coachingCardCategoriesModel.ts
+model/coachingCardEntity.ts
+model/coachingCardSubcategoriesModel.ts
+model/coachingCardUsersModel.ts
+model/coachingCardsModel.ts
+model/coachingLinks.ts
 model/commonHeader.ts
 model/confidenceField.ts
 model/contactTimelineResponse.ts
@@ -385,6 +392,7 @@ model/getCitationsWithMissingFieldsRequest.ts
 model/getCitationsWithMissingFieldsResponse.ts
 model/getClientCasesResponse.ts
 model/getClientConfirmedUnpaidCasesResponse.ts
+model/getCoachingCardCategoriesResponse.ts
 model/getCompetitionResponseModel.ts
 model/getCountOfMatchingUsersRequest.ts
 model/getCountOfMatchingUsersResponse.ts
@@ -564,6 +572,7 @@ model/listReviewsResponse.ts
 model/listSubscriptionInvoicesResponse.ts
 model/listUserAuditEventsByCursorResponse.ts
 model/listUserAuditEventsCursorModel.ts
+model/listUserCoachingCardsResponse.ts
 model/listUserWatchlistsResponse.ts
 model/listViolationClassificationResponse.ts
 model/lobEvent.ts
@@ -669,6 +678,8 @@ model/saveAgentBookingRequest.ts
 model/saveAgentBookingResponse.ts
 model/saveCaseNotesRequest.ts
 model/saveCaseUserRequest.ts
+model/saveCoachingCardRequest.ts
+model/saveCoachingCardUserRequest.ts
 model/saveExternalContentVoteRequest.ts
 model/saveItemToWatchlistRequest.ts
 model/saveLawfirmSurchargeModel.ts
@@ -772,6 +783,7 @@ model/updateCasePaymentRequest.ts
 model/updateCitationAddressRequest.ts
 model/updateCitationPictureRequest.ts
 model/updateCitationRequest.ts
+model/updateCoachingCardRequest.ts
 model/updateCourtRequest.ts
 model/updateDisputeRequest.ts
 model/updateInvoiceLineItemRequest.ts

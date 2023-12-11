@@ -203,8 +203,11 @@ var DashboardControllerApi = /** @class */ (function () {
      * @summary listPhoneCalls
      * @param agentId agentId
      * @param agentName agentName
+     * @param callQueueName callQueueName
      * @param callStatus callStatus
+     * @param direction direction
      * @param endDate endDate
+     * @param ivrName ivrName
      * @param length length
      * @param page page
      * @param shouldIncludePhoneCalls shouldIncludePhoneCalls
@@ -214,7 +217,7 @@ var DashboardControllerApi = /** @class */ (function () {
      * @param teamName teamName
      * @param timeZoneId timeZoneId
      */
-    DashboardControllerApi.prototype.listPhoneCallsUsingGET = function (agentId, agentName, callStatus, endDate, length, page, shouldIncludePhoneCalls, sortBy, sortOrder, startDate, teamName, timeZoneId, extraHttpRequestParams) {
+    DashboardControllerApi.prototype.listPhoneCallsUsingGET = function (agentId, agentName, callQueueName, callStatus, direction, endDate, ivrName, length, page, shouldIncludePhoneCalls, sortBy, sortOrder, startDate, teamName, timeZoneId, extraHttpRequestParams) {
         var localVarPath = this.basePath + '/api/v1/console/phone-calls';
         var queryParameters = {};
         var headerParams = Object.assign({}, this.defaultHeaders);
@@ -224,11 +227,20 @@ var DashboardControllerApi = /** @class */ (function () {
         if (agentName !== undefined) {
             queryParameters['agentName'] = agentName;
         }
+        if (callQueueName !== undefined) {
+            queryParameters['callQueueName'] = callQueueName;
+        }
         if (callStatus !== undefined) {
             queryParameters['callStatus'] = callStatus;
         }
+        if (direction !== undefined) {
+            queryParameters['direction'] = direction;
+        }
         if (endDate !== undefined) {
             queryParameters['endDate'] = endDate;
+        }
+        if (ivrName !== undefined) {
+            queryParameters['ivrName'] = ivrName;
         }
         if (length !== undefined) {
             queryParameters['length'] = length;
