@@ -5841,8 +5841,11 @@ angular.module('otrBackendService', [])
              * @param {object} parameters - method options and parameters
              * @param {integer} parameters.agentId - agentId
              * @param {string} parameters.agentName - agentName
+             * @param {string} parameters.callQueueName - callQueueName
              * @param {string} parameters.callStatus - callStatus
+             * @param {string} parameters.direction - direction
              * @param {string} parameters.endDate - endDate
+             * @param {string} parameters.ivrName - ivrName
              * @param {integer} parameters.length - length
              * @param {integer} parameters.page - page
              * @param {boolean} parameters.shouldIncludePhoneCalls - shouldIncludePhoneCalls
@@ -5874,12 +5877,24 @@ angular.module('otrBackendService', [])
                     queryParameters['agentName'] = parameters['agentName'];
                 }
 
+                if (parameters['callQueueName'] !== undefined) {
+                    queryParameters['callQueueName'] = parameters['callQueueName'];
+                }
+
                 if (parameters['callStatus'] !== undefined) {
                     queryParameters['callStatus'] = parameters['callStatus'];
                 }
 
+                if (parameters['direction'] !== undefined) {
+                    queryParameters['direction'] = parameters['direction'];
+                }
+
                 if (parameters['endDate'] !== undefined) {
                     queryParameters['endDate'] = parameters['endDate'];
+                }
+
+                if (parameters['ivrName'] !== undefined) {
+                    queryParameters['ivrName'] = parameters['ivrName'];
                 }
 
                 /** set default value **/
