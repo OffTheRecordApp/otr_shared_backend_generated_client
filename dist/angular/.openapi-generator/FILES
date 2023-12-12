@@ -46,6 +46,7 @@ api/dashboardController.service.ts
 api/directMailController.service.ts
 api/dripController.service.ts
 api/dripWebhooksController.service.ts
+api/driverLicenseController.service.ts
 api/emailSubscriptionController.service.ts
 api/externalContentVoteController.service.ts
 api/externalTicketLookupController.service.ts
@@ -320,6 +321,7 @@ model/documentDecisionRequest.ts
 model/dripRemoveRequest.ts
 model/dripWebhookData.ts
 model/dripWebhookEvent.ts
+model/driverLicenseModel.ts
 model/duration.ts
 model/editConversationMessageRequest.ts
 model/enableViolationModel.ts
@@ -411,6 +413,7 @@ model/getCustomerServiceAgentsResponse.ts
 model/getDeclinedCasesRequest.ts
 model/getDeclinedCasesResponse.ts
 model/getDocumentsRequest.ts
+model/getDriverLicensesResponse.ts
 model/getEmailTemplateResponse.ts
 model/getExternalContentUserVotesResponse.ts
 model/getExternalTicketInputParamsResponse.ts
@@ -680,6 +683,8 @@ model/saveCaseNotesRequest.ts
 model/saveCaseUserRequest.ts
 model/saveCoachingCardRequest.ts
 model/saveCoachingCardUserRequest.ts
+model/saveDriverLicensePictureRequest.ts
+model/saveDriverLicenseRequest.ts
 model/saveExternalContentVoteRequest.ts
 model/saveItemToWatchlistRequest.ts
 model/saveLawfirmSurchargeModel.ts
@@ -815,6 +820,7 @@ model/updateViolationRequest.ts
 model/upsertAddressRequest.ts
 model/user.ts
 model/userAccountModel.ts
+model/userAssetModel.ts
 model/userAuditEventModel.ts
 model/userBookingsDomain.ts
 model/userDetails.ts
