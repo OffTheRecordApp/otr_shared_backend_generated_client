@@ -31,7 +31,7 @@ export declare class DriverLicenseControllerApi {
      * @param userId userId
      * @param request request
      */
-    saveDriverLicensePictureUsingPOST(userId: string, request: models.SaveDriverLicensePictureRequest, extraHttpRequestParams?: any): ng.IHttpPromise<models.UserAssetModel>;
+    saveDriverLicensePictureUsingPOST(userId: string, request: models.SaveDriverLicensePictureRequest, extraHttpRequestParams?: any): ng.IHttpPromise<models.SaveDriverLicensePictureResponse>;
     /**
      *
      * @summary saveDriverLicense

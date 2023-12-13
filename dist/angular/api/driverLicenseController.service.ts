@@ -25,9 +25,9 @@ import { GetDriverLicensesResponse } from '../model/getDriverLicensesResponse';
 // @ts-ignore
 import { SaveDriverLicensePictureRequest } from '../model/saveDriverLicensePictureRequest';
 // @ts-ignore
-import { SaveDriverLicenseRequest } from '../model/saveDriverLicenseRequest';
+import { SaveDriverLicensePictureResponse } from '../model/saveDriverLicensePictureResponse';
 // @ts-ignore
-import { UserAssetModel } from '../model/userAssetModel';
+import { SaveDriverLicenseRequest } from '../model/saveDriverLicenseRequest';
 
 // @ts-ignore
 import { BASE_PATH, COLLECTION_FORMATS }                     from '../variables';
@@ -172,9 +172,9 @@ export class DriverLicenseControllerService {
      * @param observe set whether or not to return the data Observable as the body, response or events. defaults to returning the body.
      * @param reportProgress flag to report request and response progress.
      */
-    public saveDriverLicensePictureUsingPOST(userId: string, request: SaveDriverLicensePictureRequest, observe?: 'body', reportProgress?: boolean, options?: {httpHeaderAccept?: '*/*', context?: HttpContext}): Observable<UserAssetModel>;
-    public saveDriverLicensePictureUsingPOST(userId: string, request: SaveDriverLicensePictureRequest, observe?: 'response', reportProgress?: boolean, options?: {httpHeaderAccept?: '*/*', context?: HttpContext}): Observable<HttpResponse<UserAssetModel>>;
-    public saveDriverLicensePictureUsingPOST(userId: string, request: SaveDriverLicensePictureRequest, observe?: 'events', reportProgress?: boolean, options?: {httpHeaderAccept?: '*/*', context?: HttpContext}): Observable<HttpEvent<UserAssetModel>>;
+    public saveDriverLicensePictureUsingPOST(userId: string, request: SaveDriverLicensePictureRequest, observe?: 'body', reportProgress?: boolean, options?: {httpHeaderAccept?: '*/*', context?: HttpContext}): Observable<SaveDriverLicensePictureResponse>;
+    public saveDriverLicensePictureUsingPOST(userId: string, request: SaveDriverLicensePictureRequest, observe?: 'response', reportProgress?: boolean, options?: {httpHeaderAccept?: '*/*', context?: HttpContext}): Observable<HttpResponse<SaveDriverLicensePictureResponse>>;
+    public saveDriverLicensePictureUsingPOST(userId: string, request: SaveDriverLicensePictureRequest, observe?: 'events', reportProgress?: boolean, options?: {httpHeaderAccept?: '*/*', context?: HttpContext}): Observable<HttpEvent<SaveDriverLicensePictureResponse>>;
     public saveDriverLicensePictureUsingPOST(userId: string, request: SaveDriverLicensePictureRequest, observe: any = 'body', reportProgress: boolean = false, options?: {httpHeaderAccept?: '*/*', context?: HttpContext}): Observable<any> {
         if (userId === null || userId === undefined) {
             throw new Error('Required parameter userId was null or undefined when calling saveDriverLicensePictureUsingPOST.');
@@ -224,7 +224,7 @@ export class DriverLicenseControllerService {
         }
 
         let localVarPath = `/api/v1/users/${this.configuration.encodeParam({name: "userId", value: userId, in: "path", style: "simple", explode: false, dataType: "string", dataFormat: undefined})}/driver-license/picture`;
-        return this.httpClient.request<UserAssetModel>('post', `${this.configuration.basePath}${localVarPath}`,
+        return this.httpClient.request<SaveDriverLicensePictureResponse>('post', `${this.configuration.basePath}${localVarPath}`,
             {
                 context: localVarHttpContext,
                 body: request,

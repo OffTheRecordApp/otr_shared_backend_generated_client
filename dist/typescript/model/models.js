@@ -576,6 +576,7 @@ __exportStar(require("./SaveCaseUserRequest"), exports);
 __exportStar(require("./SaveCoachingCardRequest"), exports);
 __exportStar(require("./SaveCoachingCardUserRequest"), exports);
 __exportStar(require("./SaveDriverLicensePictureRequest"), exports);
+__exportStar(require("./SaveDriverLicensePictureResponse"), exports);
 __exportStar(require("./SaveDriverLicenseRequest"), exports);
 __exportStar(require("./SaveExternalContentVoteRequest"), exports);
 __exportStar(require("./SaveItemToWatchlistRequest"), exports);

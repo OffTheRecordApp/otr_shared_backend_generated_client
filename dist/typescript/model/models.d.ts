@@ -564,6 +564,7 @@ export * from './SaveCaseUserRequest';
 export * from './SaveCoachingCardRequest';
 export * from './SaveCoachingCardUserRequest';
 export * from './SaveDriverLicensePictureRequest';
+export * from './SaveDriverLicensePictureResponse';
 export * from './SaveDriverLicenseRequest';
 export * from './SaveExternalContentVoteRequest';
 export * from './SaveItemToWatchlistRequest';

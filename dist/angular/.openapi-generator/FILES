@@ -684,6 +684,7 @@ model/saveCaseUserRequest.ts
 model/saveCoachingCardRequest.ts
 model/saveCoachingCardUserRequest.ts
 model/saveDriverLicensePictureRequest.ts
+model/saveDriverLicensePictureResponse.ts
 model/saveDriverLicenseRequest.ts
 model/saveExternalContentVoteRequest.ts
 model/saveItemToWatchlistRequest.ts
