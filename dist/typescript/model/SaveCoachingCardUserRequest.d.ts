@@ -19,6 +19,7 @@ export interface SaveCoachingCardUserRequest {
     "isActionRequired"?: boolean;
     "isRepeatOffense"?: boolean;
     "permissionType"?: SaveCoachingCardUserRequest.PermissionTypeEnum;
+    "recipientNote"?: string;
     "resolutionDateUtc"?: string;
     "userId"?: number;
 }

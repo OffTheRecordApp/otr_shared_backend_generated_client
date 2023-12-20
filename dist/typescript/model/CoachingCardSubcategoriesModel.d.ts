@@ -11,5 +11,6 @@
  */
 export interface CoachingCardSubcategoriesModel {
     "coachingCardSubcategory"?: string;
+    "coachingCardSubcategoryId"?: number;
     "description"?: string;
 }

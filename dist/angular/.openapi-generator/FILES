@@ -243,7 +243,6 @@ model/clientActionRequiredRequest.ts
 model/clientConfirmedUnpaidCase.ts
 model/clientLeadDomain.ts
 model/coachingCardCategoriesModel.ts
-model/coachingCardEntity.ts
 model/coachingCardSubcategoriesModel.ts
 model/coachingCardUsersModel.ts
 model/coachingCardsModel.ts

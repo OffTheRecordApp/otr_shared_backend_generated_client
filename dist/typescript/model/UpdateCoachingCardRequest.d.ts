@@ -13,6 +13,7 @@ export interface UpdateCoachingCardRequest {
     "acknowledgementDateUtc"?: string;
     "coachingCardId"?: number;
     "permissionType"?: UpdateCoachingCardRequest.PermissionTypeEnum;
+    "recipientNote"?: string;
     "resolutionDateUtc"?: string;
     "userId"?: number;
 }

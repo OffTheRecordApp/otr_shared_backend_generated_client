@@ -124,7 +124,6 @@ export * from './clientActionRequiredRequest';
 export * from './clientConfirmedUnpaidCase';
 export * from './clientLeadDomain';
 export * from './coachingCardCategoriesModel';
-export * from './coachingCardEntity';
 export * from './coachingCardSubcategoriesModel';
 export * from './coachingCardUsersModel';
 export * from './coachingCardsModel';

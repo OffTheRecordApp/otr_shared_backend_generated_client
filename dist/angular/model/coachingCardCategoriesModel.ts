@@ -14,6 +14,7 @@ import { CoachingCardSubcategoriesModel } from './coachingCardSubcategoriesModel
 
 export interface CoachingCardCategoriesModel { 
     coachingCardCategory?: string;
+    coachingCardCategoryId?: number;
     description?: string;
     subcategories?: Array<CoachingCardSubcategoriesModel>;
 }

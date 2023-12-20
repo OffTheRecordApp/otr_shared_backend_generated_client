@@ -9,17 +9,16 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-import * as models from './models';
 export interface CoachingCardUsersModel {
     "acknowledgementDateUtc"?: string;
     "assignmentDateUtc"?: string;
-    "coachingCards"?: models.CoachingCardEntity;
     "coachingDateUtc"?: string;
     "coachingMethod"?: string;
     "hasBeenCoached"?: boolean;
     "isActionRequired"?: boolean;
     "isRepeatOffense"?: boolean;
     "permissionType"?: CoachingCardUsersModel.PermissionTypeEnum;
+    "recipientNote"?: string;
     "resolutionDateUtc"?: string;
     "userId"?: number;
 }

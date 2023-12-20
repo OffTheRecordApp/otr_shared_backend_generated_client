@@ -12,6 +12,7 @@
 import * as models from './models';
 export interface CoachingCardCategoriesModel {
     "coachingCardCategory"?: string;
+    "coachingCardCategoryId"?: number;
     "description"?: string;
     "subcategories"?: Array<models.CoachingCardSubcategoriesModel>;
 }

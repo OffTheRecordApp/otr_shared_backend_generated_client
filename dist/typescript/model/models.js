@@ -136,7 +136,6 @@ __exportStar(require("./ClientActionRequiredRequest"), exports);
 __exportStar(require("./ClientConfirmedUnpaidCase"), exports);
 __exportStar(require("./ClientLeadDomain"), exports);
 __exportStar(require("./CoachingCardCategoriesModel"), exports);
-__exportStar(require("./CoachingCardEntity"), exports);
 __exportStar(require("./CoachingCardSubcategoriesModel"), exports);
 __exportStar(require("./CoachingCardUsersModel"), exports);
 __exportStar(require("./CoachingCardsModel"), exports);

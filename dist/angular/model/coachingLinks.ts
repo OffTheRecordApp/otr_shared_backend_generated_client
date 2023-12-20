@@ -12,6 +12,6 @@
 
 
 export interface CoachingLinks { 
-    link?: string;
+    links?: Array<string>;
 }
 

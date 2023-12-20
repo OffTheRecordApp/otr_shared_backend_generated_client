@@ -10,5 +10,5 @@
  * Do not edit the class manually.
  */
 export interface CoachingLinks {
-    "link"?: string;
+    "links"?: Array<string>;
 }
