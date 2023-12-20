@@ -12,5 +12,4 @@
 import * as models from './models';
 export interface GetLawfirmInboxMessagesResponse {
     "messages"?: Array<models.LawfirmInboxMessageDomain>;
-    "numMessages"?: number;
 }

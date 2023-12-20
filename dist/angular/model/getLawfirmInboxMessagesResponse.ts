@@ -14,6 +14,5 @@ import { LawfirmInboxMessageDomain } from './lawfirmInboxMessageDomain';
 
 export interface GetLawfirmInboxMessagesResponse { 
     messages?: Array<LawfirmInboxMessageDomain>;
-    numMessages?: number;
 }
 
