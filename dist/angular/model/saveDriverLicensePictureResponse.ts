@@ -13,6 +13,6 @@ import { DriverLicenseModel } from './driverLicenseModel';
 
 
 export interface SaveDriverLicensePictureResponse { 
-    userAssetModel?: DriverLicenseModel;
+    driverLicenseModel?: DriverLicenseModel;
 }
 

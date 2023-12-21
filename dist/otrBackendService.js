@@ -15243,7 +15243,7 @@ angular.module('otrBackendService', [])
              * @method
              * @name OtrService#getDriverLicensesUsingGET
              * @param {object} parameters - method options and parameters
-             * @param {boolean} parameters.getDeleted - getDeleted
+             * @param {boolean} parameters.includeDeleted - includeDeleted
              * @param {string} parameters.userId - userId
              */
             OtrService.prototype.getDriverLicensesUsingGET = function(parameters) {
@@ -15260,8 +15260,8 @@ angular.module('otrBackendService', [])
 
                 headers['Accept'] = ['*/*'];
 
-                if (parameters['getDeleted'] !== undefined) {
-                    queryParameters['getDeleted'] = parameters['getDeleted'];
+                if (parameters['includeDeleted'] !== undefined) {
+                    queryParameters['includeDeleted'] = parameters['includeDeleted'];
                 }
 
                 path = path.replace('{userId}', parameters['userId']);

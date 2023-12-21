@@ -102,22 +102,22 @@ export class DriverLicenseControllerService {
     /**
      * getDriverLicenses
      * @param userId userId
-     * @param getDeleted getDeleted
+     * @param includeDeleted includeDeleted
      * @param observe set whether or not to return the data Observable as the body, response or events. defaults to returning the body.
      * @param reportProgress flag to report request and response progress.
      */
-    public getDriverLicensesUsingGET(userId: string, getDeleted?: boolean, observe?: 'body', reportProgress?: boolean, options?: {httpHeaderAccept?: '*/*', context?: HttpContext}): Observable<GetDriverLicensesResponse>;
-    public getDriverLicensesUsingGET(userId: string, getDeleted?: boolean, observe?: 'response', reportProgress?: boolean, options?: {httpHeaderAccept?: '*/*', context?: HttpContext}): Observable<HttpResponse<GetDriverLicensesResponse>>;
-    public getDriverLicensesUsingGET(userId: string, getDeleted?: boolean, observe?: 'events', reportProgress?: boolean, options?: {httpHeaderAccept?: '*/*', context?: HttpContext}): Observable<HttpEvent<GetDriverLicensesResponse>>;
-    public getDriverLicensesUsingGET(userId: string, getDeleted?: boolean, observe: any = 'body', reportProgress: boolean = false, options?: {httpHeaderAccept?: '*/*', context?: HttpContext}): Observable<any> {
+    public getDriverLicensesUsingGET(userId: string, includeDeleted?: boolean, observe?: 'body', reportProgress?: boolean, options?: {httpHeaderAccept?: '*/*', context?: HttpContext}): Observable<GetDriverLicensesResponse>;
+    public getDriverLicensesUsingGET(userId: string, includeDeleted?: boolean, observe?: 'response', reportProgress?: boolean, options?: {httpHeaderAccept?: '*/*', context?: HttpContext}): Observable<HttpResponse<GetDriverLicensesResponse>>;
+    public getDriverLicensesUsingGET(userId: string, includeDeleted?: boolean, observe?: 'events', reportProgress?: boolean, options?: {httpHeaderAccept?: '*/*', context?: HttpContext}): Observable<HttpEvent<GetDriverLicensesResponse>>;
+    public getDriverLicensesUsingGET(userId: string, includeDeleted?: boolean, observe: any = 'body', reportProgress: boolean = false, options?: {httpHeaderAccept?: '*/*', context?: HttpContext}): Observable<any> {
         if (userId === null || userId === undefined) {
             throw new Error('Required parameter userId was null or undefined when calling getDriverLicensesUsingGET.');
         }
 
         let localVarQueryParameters = new HttpParams({encoder: this.encoder});
-        if (getDeleted !== undefined && getDeleted !== null) {
+        if (includeDeleted !== undefined && includeDeleted !== null) {
           localVarQueryParameters = this.addToHttpParams(localVarQueryParameters,
-            <any>getDeleted, 'getDeleted');
+            <any>includeDeleted, 'includeDeleted');
         }
 
         let localVarHeaders = this.defaultHeaders;

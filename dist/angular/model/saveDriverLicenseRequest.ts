@@ -13,6 +13,7 @@
 
 export interface SaveDriverLicenseRequest { 
     address?: string;
+    city?: string;
     dob?: string;
     driverLicenseBackUserAssetId?: number;
     driverLicenseFrontUserAssetId?: number;
@@ -26,6 +27,7 @@ export interface SaveDriverLicenseRequest {
     licenseClass?: string;
     licenseClassEndorsements?: string;
     licenseRestrictions?: string;
-    stateName?: string;
+    postalCode?: string;
+    regionCode?: string;
 }
 

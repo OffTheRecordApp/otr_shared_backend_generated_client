@@ -13,6 +13,7 @@
 
 export interface SaveDriverLicensePictureRequest { 
     base64ImageData?: string;
+    driverLicenseId?: string;
     imageContentType?: string;
     isBackOfLicense?: boolean;
 }

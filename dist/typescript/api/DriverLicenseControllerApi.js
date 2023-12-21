@@ -27,9 +27,9 @@ var DriverLicenseControllerApi = /** @class */ (function () {
      *
      * @summary getDriverLicenses
      * @param userId userId
-     * @param getDeleted getDeleted
+     * @param includeDeleted includeDeleted
      */
-    DriverLicenseControllerApi.prototype.getDriverLicensesUsingGET = function (userId, getDeleted, extraHttpRequestParams) {
+    DriverLicenseControllerApi.prototype.getDriverLicensesUsingGET = function (userId, includeDeleted, extraHttpRequestParams) {
         var localVarPath = this.basePath + '/api/v1/users/{userId}/driver-license'
             .replace('{' + 'userId' + '}', encodeURIComponent(String(userId)));
         var queryParameters = {};
@@ -38,8 +38,8 @@ var DriverLicenseControllerApi = /** @class */ (function () {
         if (userId === null || userId === undefined) {
             throw new Error('Required parameter userId was null or undefined when calling getDriverLicensesUsingGET.');
         }
-        if (getDeleted !== undefined) {
-            queryParameters['getDeleted'] = getDeleted;
+        if (includeDeleted !== undefined) {
+            queryParameters['includeDeleted'] = includeDeleted;
         }
         var httpRequestParams = {
             method: 'GET',

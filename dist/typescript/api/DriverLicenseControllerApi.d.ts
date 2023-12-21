@@ -22,9 +22,9 @@ export declare class DriverLicenseControllerApi {
      *
      * @summary getDriverLicenses
      * @param userId userId
-     * @param getDeleted getDeleted
+     * @param includeDeleted includeDeleted
      */
-    getDriverLicensesUsingGET(userId: string, getDeleted?: boolean, extraHttpRequestParams?: any): ng.IHttpPromise<models.GetDriverLicensesResponse>;
+    getDriverLicensesUsingGET(userId: string, includeDeleted?: boolean, extraHttpRequestParams?: any): ng.IHttpPromise<models.GetDriverLicensesResponse>;
     /**
      *
      * @summary saveDriverLicensePicture
