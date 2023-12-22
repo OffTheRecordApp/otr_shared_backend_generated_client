@@ -12,7 +12,8 @@
 
 
 export interface SaveDriverLicenseRequest { 
-    address?: string;
+    addressLine1?: string;
+    addressLine2?: string;
     city?: string;
     dob?: string;
     driverLicenseBackUserAssetId?: number;
