@@ -14,6 +14,7 @@ import { Timestamp } from './timestamp';
 
 
 export interface LawfirmCaseModel { 
+    caseArchivedByLawfirm?: boolean;
     caseDecisionStatus?: LawfirmCaseModel.CaseDecisionStatusEnum;
     clientDeclineTicket?: FreshDeskTicket;
     declineReason?: string;

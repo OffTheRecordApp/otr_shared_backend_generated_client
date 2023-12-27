@@ -14,6 +14,7 @@ import { FreshDeskTicketReq } from './freshDeskTicketReq';
 
 
 export interface LawfirmCaseModelReq { 
+    caseArchivedByLawfirm?: boolean;
     caseDecisionStatus?: LawfirmCaseModelReq.CaseDecisionStatusEnum;
     clientDeclineTicket?: FreshDeskTicketReq;
     declineReason?: string;

@@ -11,6 +11,7 @@
  */
 import * as models from './models';
 export interface LawfirmCaseModelRes {
+    "caseArchivedByLawfirm"?: boolean;
     "caseDecisionStatus"?: LawfirmCaseModelRes.CaseDecisionStatusEnum;
     "clientDeclineTicket"?: models.FreshDeskTicketRes;
     "declineReason"?: string;
