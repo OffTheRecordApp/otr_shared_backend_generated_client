@@ -23,9 +23,8 @@ export declare class CaseCounterOfferControllerApi {
      * @summary acceptCaseCounter
      * @param caseId caseId
      * @param counterId counterId
-     * @param request request
      */
-    acceptCaseCounterUsingPUT(caseId: string, counterId: number, request: models.AcceptCaseCounterRequest, extraHttpRequestParams?: any): ng.IHttpPromise<{}>;
+    acceptCaseCounterUsingPUT(caseId: string, counterId: number, extraHttpRequestParams?: any): ng.IHttpPromise<{}>;
     /**
      *
      * @summary declineCaseCounter

@@ -28,9 +28,8 @@ var CaseCounterOfferControllerApi = /** @class */ (function () {
      * @summary acceptCaseCounter
      * @param caseId caseId
      * @param counterId counterId
-     * @param request request
      */
-    CaseCounterOfferControllerApi.prototype.acceptCaseCounterUsingPUT = function (caseId, counterId, request, extraHttpRequestParams) {
+    CaseCounterOfferControllerApi.prototype.acceptCaseCounterUsingPUT = function (caseId, counterId, extraHttpRequestParams) {
         var localVarPath = this.basePath + '/api/v1/cases/{caseId}/counters/{counterId}/accept'
             .replace('{' + 'caseId' + '}', encodeURIComponent(String(caseId)))
             .replace('{' + 'counterId' + '}', encodeURIComponent(String(counterId)));
@@ -44,14 +43,9 @@ var CaseCounterOfferControllerApi = /** @class */ (function () {
         if (counterId === null || counterId === undefined) {
             throw new Error('Required parameter counterId was null or undefined when calling acceptCaseCounterUsingPUT.');
         }
-        // verify required parameter 'request' is not null or undefined
-        if (request === null || request === undefined) {
-            throw new Error('Required parameter request was null or undefined when calling acceptCaseCounterUsingPUT.');
-        }
         var httpRequestParams = {
             method: 'PUT',
             url: localVarPath,
-            data: request,
             params: queryParameters,
             headers: headerParams
         };

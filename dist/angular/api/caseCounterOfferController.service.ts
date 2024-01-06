@@ -19,8 +19,6 @@ import { CustomHttpParameterCodec }                          from '../encoder';
 import { Observable }                                        from 'rxjs';
 
 // @ts-ignore
-import { AcceptCaseCounterRequest } from '../model/acceptCaseCounterRequest';
-// @ts-ignore
 import { DeclineCaseCounterRequest } from '../model/declineCaseCounterRequest';
 // @ts-ignore
 import { GetCaseCounterOptionsResponse } from '../model/getCaseCounterOptionsResponse';
@@ -105,22 +103,18 @@ export class CaseCounterOfferControllerService {
      * acceptCaseCounter
      * @param caseId caseId
      * @param counterId counterId
-     * @param request request
      * @param observe set whether or not to return the data Observable as the body, response or events. defaults to returning the body.
      * @param reportProgress flag to report request and response progress.
      */
-    public acceptCaseCounterUsingPUT(caseId: string, counterId: number, request: AcceptCaseCounterRequest, observe?: 'body', reportProgress?: boolean, options?: {httpHeaderAccept?: undefined, context?: HttpContext}): Observable<any>;
-    public acceptCaseCounterUsingPUT(caseId: string, counterId: number, request: AcceptCaseCounterRequest, observe?: 'response', reportProgress?: boolean, options?: {httpHeaderAccept?: undefined, context?: HttpContext}): Observable<HttpResponse<any>>;
-    public acceptCaseCounterUsingPUT(caseId: string, counterId: number, request: AcceptCaseCounterRequest, observe?: 'events', reportProgress?: boolean, options?: {httpHeaderAccept?: undefined, context?: HttpContext}): Observable<HttpEvent<any>>;
-    public acceptCaseCounterUsingPUT(caseId: string, counterId: number, request: AcceptCaseCounterRequest, observe: any = 'body', reportProgress: boolean = false, options?: {httpHeaderAccept?: undefined, context?: HttpContext}): Observable<any> {
+    public acceptCaseCounterUsingPUT(caseId: string, counterId: number, observe?: 'body', reportProgress?: boolean, options?: {httpHeaderAccept?: undefined, context?: HttpContext}): Observable<any>;
+    public acceptCaseCounterUsingPUT(caseId: string, counterId: number, observe?: 'response', reportProgress?: boolean, options?: {httpHeaderAccept?: undefined, context?: HttpContext}): Observable<HttpResponse<any>>;
+    public acceptCaseCounterUsingPUT(caseId: string, counterId: number, observe?: 'events', reportProgress?: boolean, options?: {httpHeaderAccept?: undefined, context?: HttpContext}): Observable<HttpEvent<any>>;
+    public acceptCaseCounterUsingPUT(caseId: string, counterId: number, observe: any = 'body', reportProgress: boolean = false, options?: {httpHeaderAccept?: undefined, context?: HttpContext}): Observable<any> {
         if (caseId === null || caseId === undefined) {
             throw new Error('Required parameter caseId was null or undefined when calling acceptCaseCounterUsingPUT.');
         }
         if (counterId === null || counterId === undefined) {
             throw new Error('Required parameter counterId was null or undefined when calling acceptCaseCounterUsingPUT.');
-        }
-        if (request === null || request === undefined) {
-            throw new Error('Required parameter request was null or undefined when calling acceptCaseCounterUsingPUT.');
         }
 
         let localVarHeaders = this.defaultHeaders;
@@ -142,15 +136,6 @@ export class CaseCounterOfferControllerService {
         }
 
 
-        // to determine the Content-Type header
-        const consumes: string[] = [
-            'application/json'
-        ];
-        const httpContentTypeSelected: string | undefined = this.configuration.selectHeaderContentType(consumes);
-        if (httpContentTypeSelected !== undefined) {
-            localVarHeaders = localVarHeaders.set('Content-Type', httpContentTypeSelected);
-        }
-
         let responseType_: 'text' | 'json' | 'blob' = 'json';
         if (localVarHttpHeaderAcceptSelected) {
             if (localVarHttpHeaderAcceptSelected.startsWith('text')) {
@@ -166,7 +151,6 @@ export class CaseCounterOfferControllerService {
         return this.httpClient.request<any>('put', `${this.configuration.basePath}${localVarPath}`,
             {
                 context: localVarHttpContext,
-                body: request,
                 responseType: <any>responseType_,
                 withCredentials: this.configuration.withCredentials,
                 headers: localVarHeaders,
