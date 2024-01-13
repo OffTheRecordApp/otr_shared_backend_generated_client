@@ -16,7 +16,7 @@ var CaseCounterOptionModel;
 (function (CaseCounterOptionModel) {
     var TypeEnum;
     (function (TypeEnum) {
-        TypeEnum[TypeEnum["HIGHERFEE"] = 'HIGHER_FEE'] = "HIGHERFEE";
-        TypeEnum[TypeEnum["WAIVEMBG"] = 'WAIVE_MBG'] = "WAIVEMBG";
+        TypeEnum[TypeEnum["FEE"] = 'CHANGE_FEE'] = "FEE";
+        TypeEnum[TypeEnum["MBG"] = 'CHANGE_MBG'] = "MBG";
     })(TypeEnum = CaseCounterOptionModel.TypeEnum || (CaseCounterOptionModel.TypeEnum = {}));
 })(CaseCounterOptionModel = exports.CaseCounterOptionModel || (exports.CaseCounterOptionModel = {}));

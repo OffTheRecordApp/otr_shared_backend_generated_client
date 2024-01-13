@@ -15,7 +15,7 @@ export interface CaseCounterOptionModel {
 }
 export declare namespace CaseCounterOptionModel {
     enum TypeEnum {
-        HIGHERFEE,
-        WAIVEMBG
+        FEE,
+        MBG
     }
 }

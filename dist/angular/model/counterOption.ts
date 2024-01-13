@@ -16,10 +16,10 @@ export interface CounterOption {
     value?: string;
 }
 export namespace CounterOption {
-    export type CounterOptionTypeEnum = 'HIGHER_FEE' | 'WAIVE_MBG';
+    export type CounterOptionTypeEnum = 'CHANGE_FEE' | 'CHANGE_MBG';
     export const CounterOptionTypeEnum = {
-        HigherFee: 'HIGHER_FEE' as CounterOptionTypeEnum,
-        WaiveMbg: 'WAIVE_MBG' as CounterOptionTypeEnum
+        Fee: 'CHANGE_FEE' as CounterOptionTypeEnum,
+        Mbg: 'CHANGE_MBG' as CounterOptionTypeEnum
     };
 }
 

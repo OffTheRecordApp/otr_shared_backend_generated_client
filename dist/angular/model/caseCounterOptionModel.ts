@@ -16,10 +16,10 @@ export interface CaseCounterOptionModel {
     value?: string;
 }
 export namespace CaseCounterOptionModel {
-    export type TypeEnum = 'HIGHER_FEE' | 'WAIVE_MBG';
+    export type TypeEnum = 'CHANGE_FEE' | 'CHANGE_MBG';
     export const TypeEnum = {
-        HigherFee: 'HIGHER_FEE' as TypeEnum,
-        WaiveMbg: 'WAIVE_MBG' as TypeEnum
+        Fee: 'CHANGE_FEE' as TypeEnum,
+        Mbg: 'CHANGE_MBG' as TypeEnum
     };
 }
 

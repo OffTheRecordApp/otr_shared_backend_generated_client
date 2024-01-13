@@ -16,7 +16,7 @@ var CounterOption;
 (function (CounterOption) {
     var CounterOptionTypeEnum;
     (function (CounterOptionTypeEnum) {
-        CounterOptionTypeEnum[CounterOptionTypeEnum["HIGHERFEE"] = 'HIGHER_FEE'] = "HIGHERFEE";
-        CounterOptionTypeEnum[CounterOptionTypeEnum["WAIVEMBG"] = 'WAIVE_MBG'] = "WAIVEMBG";
+        CounterOptionTypeEnum[CounterOptionTypeEnum["FEE"] = 'CHANGE_FEE'] = "FEE";
+        CounterOptionTypeEnum[CounterOptionTypeEnum["MBG"] = 'CHANGE_MBG'] = "MBG";
     })(CounterOptionTypeEnum = CounterOption.CounterOptionTypeEnum || (CounterOption.CounterOptionTypeEnum = {}));
 })(CounterOption = exports.CounterOption || (exports.CounterOption = {}));

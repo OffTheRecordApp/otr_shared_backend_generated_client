@@ -15,7 +15,7 @@ export interface CounterOption {
 }
 export declare namespace CounterOption {
     enum CounterOptionTypeEnum {
-        HIGHERFEE,
-        WAIVEMBG
+        FEE,
+        MBG
     }
 }
