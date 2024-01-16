@@ -19,6 +19,12 @@ export declare class StripeWebhookControllerApi {
     constructor($http: ng.IHttpService, $httpParamSerializer?: (d: any) => any, basePath?: string);
     /**
      *
+     * @summary handleStripeWebhookForConnectedAccounts
+     * @param request request
+     */
+    handleStripeWebhookForConnectedAccountsUsingPOST(request?: string, extraHttpRequestParams?: any): ng.IHttpPromise<string>;
+    /**
+     *
      * @summary handleStripeWebhookFromLawfirmAccount
      * @param request request
      */

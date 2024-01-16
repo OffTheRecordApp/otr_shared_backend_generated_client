@@ -25,6 +25,27 @@ var StripeWebhookControllerApi = /** @class */ (function () {
     }
     /**
      *
+     * @summary handleStripeWebhookForConnectedAccounts
+     * @param request request
+     */
+    StripeWebhookControllerApi.prototype.handleStripeWebhookForConnectedAccountsUsingPOST = function (request, extraHttpRequestParams) {
+        var localVarPath = this.basePath + '/api/v1/stripe/acct_15jGdjA1uVHZiLuV/webhook/connected-account';
+        var queryParameters = {};
+        var headerParams = Object.assign({}, this.defaultHeaders);
+        var httpRequestParams = {
+            method: 'POST',
+            url: localVarPath,
+            data: request,
+            params: queryParameters,
+            headers: headerParams
+        };
+        if (extraHttpRequestParams) {
+            httpRequestParams = Object.assign(httpRequestParams, extraHttpRequestParams);
+        }
+        return this.$http(httpRequestParams);
+    };
+    /**
+     *
      * @summary handleStripeWebhookFromLawfirmAccount
      * @param request request
      */
