@@ -10,6 +10,7 @@
  * Do not edit the class manually.
  */
 export interface UserSubscriptionPlanModelReq {
+    "expirationDateUtc"?: string;
     "id"?: string;
     "subscriptionStatus"?: UserSubscriptionPlanModelReq.SubscriptionStatusEnum;
 }

@@ -12,7 +12,9 @@
 
 
 export interface UserSubscriptionPlanModel { 
+    expirationDateUtc?: string;
     id?: string;
+    subscriptionCovered?: boolean;
     subscriptionStatus?: UserSubscriptionPlanModel.SubscriptionStatusEnum;
 }
 export namespace UserSubscriptionPlanModel {

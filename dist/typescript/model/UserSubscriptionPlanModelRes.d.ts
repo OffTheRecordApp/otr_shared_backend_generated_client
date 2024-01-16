@@ -10,7 +10,9 @@
  * Do not edit the class manually.
  */
 export interface UserSubscriptionPlanModelRes {
+    "expirationDateUtc"?: string;
     "id"?: string;
+    "subscriptionCovered"?: boolean;
     "subscriptionStatus"?: UserSubscriptionPlanModelRes.SubscriptionStatusEnum;
 }
 export declare namespace UserSubscriptionPlanModelRes {
