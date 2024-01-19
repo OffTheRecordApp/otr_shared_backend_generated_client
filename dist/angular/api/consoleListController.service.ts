@@ -67,8 +67,6 @@ import { GetPotentialCustomersRequest } from '../model/getPotentialCustomersRequ
 // @ts-ignore
 import { GetPotentialCustomersResponse } from '../model/getPotentialCustomersResponse';
 // @ts-ignore
-import { ListBillingSubscribersRequest } from '../model/listBillingSubscribersRequest';
-// @ts-ignore
 import { ListBillingSubscribersResponse } from '../model/listBillingSubscribersResponse';
 
 // @ts-ignore
@@ -1028,20 +1026,39 @@ export class ConsoleListControllerService {
 
     /**
      * listBillingSubscribers
+     * @param billingInterval billingInterval
+     * @param billingSubscriptionStatus billingSubscriptionStatus
+     * @param endDate endDate
      * @param length length
      * @param page page
-     * @param start start
-     * @param statuses statuses
-     * @param request request
+     * @param planName planName
+     * @param shouldIncludeSubscribers shouldIncludeSubscribers
+     * @param sortBy sortBy
+     * @param sortOrder sortOrder
+     * @param startDate startDate
+     * @param subscriberName subscriberName
+     * @param timeZoneId timeZoneId
      * @param observe set whether or not to return the data Observable as the body, response or events. defaults to returning the body.
      * @param reportProgress flag to report request and response progress.
      */
-    public listBillingSubscribersUsingPOST(length?: number, page?: number, start?: string, statuses?: 'ACTIVE' | 'CANCELED' | 'INCOMPLETE' | 'INCOMPLETE_EXPIRED' | 'IN_TRIAL_PERIOD' | 'PAST_DUE' | 'UNKNOWN' | 'UNPAID', request?: ListBillingSubscribersRequest, observe?: 'body', reportProgress?: boolean, options?: {httpHeaderAccept?: 'application/json', context?: HttpContext}): Observable<ListBillingSubscribersResponse>;
-    public listBillingSubscribersUsingPOST(length?: number, page?: number, start?: string, statuses?: 'ACTIVE' | 'CANCELED' | 'INCOMPLETE' | 'INCOMPLETE_EXPIRED' | 'IN_TRIAL_PERIOD' | 'PAST_DUE' | 'UNKNOWN' | 'UNPAID', request?: ListBillingSubscribersRequest, observe?: 'response', reportProgress?: boolean, options?: {httpHeaderAccept?: 'application/json', context?: HttpContext}): Observable<HttpResponse<ListBillingSubscribersResponse>>;
-    public listBillingSubscribersUsingPOST(length?: number, page?: number, start?: string, statuses?: 'ACTIVE' | 'CANCELED' | 'INCOMPLETE' | 'INCOMPLETE_EXPIRED' | 'IN_TRIAL_PERIOD' | 'PAST_DUE' | 'UNKNOWN' | 'UNPAID', request?: ListBillingSubscribersRequest, observe?: 'events', reportProgress?: boolean, options?: {httpHeaderAccept?: 'application/json', context?: HttpContext}): Observable<HttpEvent<ListBillingSubscribersResponse>>;
-    public listBillingSubscribersUsingPOST(length?: number, page?: number, start?: string, statuses?: 'ACTIVE' | 'CANCELED' | 'INCOMPLETE' | 'INCOMPLETE_EXPIRED' | 'IN_TRIAL_PERIOD' | 'PAST_DUE' | 'UNKNOWN' | 'UNPAID', request?: ListBillingSubscribersRequest, observe: any = 'body', reportProgress: boolean = false, options?: {httpHeaderAccept?: 'application/json', context?: HttpContext}): Observable<any> {
+    public listBillingSubscribersUsingGET(billingInterval?: 'DAILY' | 'MONTHLY' | 'QUARTERLY' | 'WEEKLY' | 'YEARLY', billingSubscriptionStatus?: 'ACTIVE' | 'CANCELED' | 'INCOMPLETE' | 'INCOMPLETE_EXPIRED' | 'IN_TRIAL_PERIOD' | 'PAST_DUE' | 'UNKNOWN' | 'UNPAID', endDate?: string, length?: number, page?: number, planName?: string, shouldIncludeSubscribers?: boolean, sortBy?: string, sortOrder?: string, startDate?: string, subscriberName?: string, timeZoneId?: string, observe?: 'body', reportProgress?: boolean, options?: {httpHeaderAccept?: 'application/json', context?: HttpContext}): Observable<ListBillingSubscribersResponse>;
+    public listBillingSubscribersUsingGET(billingInterval?: 'DAILY' | 'MONTHLY' | 'QUARTERLY' | 'WEEKLY' | 'YEARLY', billingSubscriptionStatus?: 'ACTIVE' | 'CANCELED' | 'INCOMPLETE' | 'INCOMPLETE_EXPIRED' | 'IN_TRIAL_PERIOD' | 'PAST_DUE' | 'UNKNOWN' | 'UNPAID', endDate?: string, length?: number, page?: number, planName?: string, shouldIncludeSubscribers?: boolean, sortBy?: string, sortOrder?: string, startDate?: string, subscriberName?: string, timeZoneId?: string, observe?: 'response', reportProgress?: boolean, options?: {httpHeaderAccept?: 'application/json', context?: HttpContext}): Observable<HttpResponse<ListBillingSubscribersResponse>>;
+    public listBillingSubscribersUsingGET(billingInterval?: 'DAILY' | 'MONTHLY' | 'QUARTERLY' | 'WEEKLY' | 'YEARLY', billingSubscriptionStatus?: 'ACTIVE' | 'CANCELED' | 'INCOMPLETE' | 'INCOMPLETE_EXPIRED' | 'IN_TRIAL_PERIOD' | 'PAST_DUE' | 'UNKNOWN' | 'UNPAID', endDate?: string, length?: number, page?: number, planName?: string, shouldIncludeSubscribers?: boolean, sortBy?: string, sortOrder?: string, startDate?: string, subscriberName?: string, timeZoneId?: string, observe?: 'events', reportProgress?: boolean, options?: {httpHeaderAccept?: 'application/json', context?: HttpContext}): Observable<HttpEvent<ListBillingSubscribersResponse>>;
+    public listBillingSubscribersUsingGET(billingInterval?: 'DAILY' | 'MONTHLY' | 'QUARTERLY' | 'WEEKLY' | 'YEARLY', billingSubscriptionStatus?: 'ACTIVE' | 'CANCELED' | 'INCOMPLETE' | 'INCOMPLETE_EXPIRED' | 'IN_TRIAL_PERIOD' | 'PAST_DUE' | 'UNKNOWN' | 'UNPAID', endDate?: string, length?: number, page?: number, planName?: string, shouldIncludeSubscribers?: boolean, sortBy?: string, sortOrder?: string, startDate?: string, subscriberName?: string, timeZoneId?: string, observe: any = 'body', reportProgress: boolean = false, options?: {httpHeaderAccept?: 'application/json', context?: HttpContext}): Observable<any> {
 
         let localVarQueryParameters = new HttpParams({encoder: this.encoder});
+        if (billingInterval !== undefined && billingInterval !== null) {
+          localVarQueryParameters = this.addToHttpParams(localVarQueryParameters,
+            <any>billingInterval, 'billingInterval');
+        }
+        if (billingSubscriptionStatus !== undefined && billingSubscriptionStatus !== null) {
+          localVarQueryParameters = this.addToHttpParams(localVarQueryParameters,
+            <any>billingSubscriptionStatus, 'billingSubscriptionStatus');
+        }
+        if (endDate !== undefined && endDate !== null) {
+          localVarQueryParameters = this.addToHttpParams(localVarQueryParameters,
+            <any>endDate, 'endDate');
+        }
         if (length !== undefined && length !== null) {
           localVarQueryParameters = this.addToHttpParams(localVarQueryParameters,
             <any>length, 'length');
@@ -1050,13 +1067,33 @@ export class ConsoleListControllerService {
           localVarQueryParameters = this.addToHttpParams(localVarQueryParameters,
             <any>page, 'page');
         }
-        if (start !== undefined && start !== null) {
+        if (planName !== undefined && planName !== null) {
           localVarQueryParameters = this.addToHttpParams(localVarQueryParameters,
-            <any>start, 'start');
+            <any>planName, 'planName');
         }
-        if (statuses !== undefined && statuses !== null) {
+        if (shouldIncludeSubscribers !== undefined && shouldIncludeSubscribers !== null) {
           localVarQueryParameters = this.addToHttpParams(localVarQueryParameters,
-            <any>statuses, 'statuses');
+            <any>shouldIncludeSubscribers, 'shouldIncludeSubscribers');
+        }
+        if (sortBy !== undefined && sortBy !== null) {
+          localVarQueryParameters = this.addToHttpParams(localVarQueryParameters,
+            <any>sortBy, 'sortBy');
+        }
+        if (sortOrder !== undefined && sortOrder !== null) {
+          localVarQueryParameters = this.addToHttpParams(localVarQueryParameters,
+            <any>sortOrder, 'sortOrder');
+        }
+        if (startDate !== undefined && startDate !== null) {
+          localVarQueryParameters = this.addToHttpParams(localVarQueryParameters,
+            <any>startDate, 'startDate');
+        }
+        if (subscriberName !== undefined && subscriberName !== null) {
+          localVarQueryParameters = this.addToHttpParams(localVarQueryParameters,
+            <any>subscriberName, 'subscriberName');
+        }
+        if (timeZoneId !== undefined && timeZoneId !== null) {
+          localVarQueryParameters = this.addToHttpParams(localVarQueryParameters,
+            <any>timeZoneId, 'timeZoneId');
         }
 
         let localVarHeaders = this.defaultHeaders;
@@ -1079,15 +1116,6 @@ export class ConsoleListControllerService {
         }
 
 
-        // to determine the Content-Type header
-        const consumes: string[] = [
-            'application/json'
-        ];
-        const httpContentTypeSelected: string | undefined = this.configuration.selectHeaderContentType(consumes);
-        if (httpContentTypeSelected !== undefined) {
-            localVarHeaders = localVarHeaders.set('Content-Type', httpContentTypeSelected);
-        }
-
         let responseType_: 'text' | 'json' | 'blob' = 'json';
         if (localVarHttpHeaderAcceptSelected) {
             if (localVarHttpHeaderAcceptSelected.startsWith('text')) {
@@ -1100,10 +1128,9 @@ export class ConsoleListControllerService {
         }
 
         let localVarPath = `/api/v1/billing/subscribers`;
-        return this.httpClient.request<ListBillingSubscribersResponse>('post', `${this.configuration.basePath}${localVarPath}`,
+        return this.httpClient.request<ListBillingSubscribersResponse>('get', `${this.configuration.basePath}${localVarPath}`,
             {
                 context: localVarHttpContext,
-                body: request,
                 params: localVarQueryParameters,
                 responseType: <any>responseType_,
                 withCredentials: this.configuration.withCredentials,

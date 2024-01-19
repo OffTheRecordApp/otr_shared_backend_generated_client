@@ -506,15 +506,22 @@ angular.module('otrBackendService', [])
             /**
              * listBillingSubscribers
              * @method
-             * @name OtrService#listBillingSubscribersUsingPOST
+             * @name OtrService#listBillingSubscribersUsingGET
              * @param {object} parameters - method options and parameters
+             * @param {string} parameters.billingInterval - billingInterval
+             * @param {string} parameters.billingSubscriptionStatus - billingSubscriptionStatus
+             * @param {string} parameters.endDate - endDate
              * @param {integer} parameters.length - length
              * @param {integer} parameters.page - page
-             * @param {} parameters.request - request
-             * @param {string} parameters.start - start
-             * @param {string} parameters.statuses - statuses
+             * @param {string} parameters.planName - planName
+             * @param {boolean} parameters.shouldIncludeSubscribers - shouldIncludeSubscribers
+             * @param {string} parameters.sortBy - sortBy
+             * @param {string} parameters.sortOrder - sortOrder
+             * @param {string} parameters.startDate - startDate
+             * @param {string} parameters.subscriberName - subscriberName
+             * @param {string} parameters.timeZoneId - timeZoneId
              */
-            OtrService.prototype.listBillingSubscribersUsingPOST = function(parameters) {
+            OtrService.prototype.listBillingSubscribersUsingGET = function(parameters) {
                 if (parameters === undefined) {
                     parameters = {};
                 }
@@ -527,7 +534,18 @@ angular.module('otrBackendService', [])
                     form = {};
 
                 headers['Accept'] = ['application/json'];
-                headers['Content-Type'] = ['application/json'];
+
+                if (parameters['billingInterval'] !== undefined) {
+                    queryParameters['billingInterval'] = parameters['billingInterval'];
+                }
+
+                if (parameters['billingSubscriptionStatus'] !== undefined) {
+                    queryParameters['billingSubscriptionStatus'] = parameters['billingSubscriptionStatus'];
+                }
+
+                if (parameters['endDate'] !== undefined) {
+                    queryParameters['endDate'] = parameters['endDate'];
+                }
 
                 /** set default value **/
                 queryParameters['length'] = 50;
@@ -540,21 +558,40 @@ angular.module('otrBackendService', [])
                     queryParameters['page'] = parameters['page'];
                 }
 
-                if (parameters['request'] !== undefined) {
-                    body = parameters['request'];
+                if (parameters['planName'] !== undefined) {
+                    queryParameters['planName'] = parameters['planName'];
                 }
 
-                if (parameters['start'] !== undefined) {
-                    queryParameters['start'] = parameters['start'];
+                /** set default value **/
+                queryParameters['shouldIncludeSubscribers'] = true;
+
+                if (parameters['shouldIncludeSubscribers'] !== undefined) {
+                    queryParameters['shouldIncludeSubscribers'] = parameters['shouldIncludeSubscribers'];
                 }
 
-                if (parameters['statuses'] !== undefined) {
-                    queryParameters['statuses'] = parameters['statuses'];
+                if (parameters['sortBy'] !== undefined) {
+                    queryParameters['sortBy'] = parameters['sortBy'];
+                }
+
+                if (parameters['sortOrder'] !== undefined) {
+                    queryParameters['sortOrder'] = parameters['sortOrder'];
+                }
+
+                if (parameters['startDate'] !== undefined) {
+                    queryParameters['startDate'] = parameters['startDate'];
+                }
+
+                if (parameters['subscriberName'] !== undefined) {
+                    queryParameters['subscriberName'] = parameters['subscriberName'];
+                }
+
+                if (parameters['timeZoneId'] !== undefined) {
+                    queryParameters['timeZoneId'] = parameters['timeZoneId'];
                 }
 
                 queryParameters = mergeQueryParams(parameters, queryParameters);
 
-                this.request('POST', domain + path, parameters, body, headers, queryParameters, form, deferred);
+                this.request('GET', domain + path, parameters, body, headers, queryParameters, form, deferred);
 
                 return deferred.promise;
             };

@@ -14,7 +14,8 @@ import { BillingSubscriberModel } from './billingSubscriberModel';
 
 
 export interface ListBillingSubscribersResponse { 
-    aggregates?: BillingSubscriberAggregateModel;
+    matchingAggregates?: BillingSubscriberAggregateModel;
     subscribers?: Array<BillingSubscriberModel>;
+    totalAggregates?: BillingSubscriberAggregateModel;
 }
 

@@ -99,13 +99,20 @@ export declare class ConsoleListControllerApi {
     /**
      *
      * @summary listBillingSubscribers
+     * @param billingInterval billingInterval
+     * @param billingSubscriptionStatus billingSubscriptionStatus
+     * @param endDate endDate
      * @param length length
      * @param page page
-     * @param start start
-     * @param statuses statuses
-     * @param request request
+     * @param planName planName
+     * @param shouldIncludeSubscribers shouldIncludeSubscribers
+     * @param sortBy sortBy
+     * @param sortOrder sortOrder
+     * @param startDate startDate
+     * @param subscriberName subscriberName
+     * @param timeZoneId timeZoneId
      */
-    listBillingSubscribersUsingPOST(length?: number, page?: number, start?: string, statuses?: 'ACTIVE' | 'CANCELED' | 'INCOMPLETE' | 'INCOMPLETE_EXPIRED' | 'IN_TRIAL_PERIOD' | 'PAST_DUE' | 'UNKNOWN' | 'UNPAID', request?: models.ListBillingSubscribersRequest, extraHttpRequestParams?: any): ng.IHttpPromise<models.ListBillingSubscribersResponse>;
+    listBillingSubscribersUsingGET(billingInterval?: 'DAILY' | 'MONTHLY' | 'QUARTERLY' | 'WEEKLY' | 'YEARLY', billingSubscriptionStatus?: 'ACTIVE' | 'CANCELED' | 'INCOMPLETE' | 'INCOMPLETE_EXPIRED' | 'IN_TRIAL_PERIOD' | 'PAST_DUE' | 'UNKNOWN' | 'UNPAID', endDate?: string, length?: number, page?: number, planName?: string, shouldIncludeSubscribers?: boolean, sortBy?: string, sortOrder?: string, startDate?: string, subscriberName?: string, timeZoneId?: string, extraHttpRequestParams?: any): ng.IHttpPromise<models.ListBillingSubscribersResponse>;
     /**
      *
      * @summary listLawfirmLeads

@@ -351,32 +351,62 @@ var ConsoleListControllerApi = /** @class */ (function () {
     /**
      *
      * @summary listBillingSubscribers
+     * @param billingInterval billingInterval
+     * @param billingSubscriptionStatus billingSubscriptionStatus
+     * @param endDate endDate
      * @param length length
      * @param page page
-     * @param start start
-     * @param statuses statuses
-     * @param request request
+     * @param planName planName
+     * @param shouldIncludeSubscribers shouldIncludeSubscribers
+     * @param sortBy sortBy
+     * @param sortOrder sortOrder
+     * @param startDate startDate
+     * @param subscriberName subscriberName
+     * @param timeZoneId timeZoneId
      */
-    ConsoleListControllerApi.prototype.listBillingSubscribersUsingPOST = function (length, page, start, statuses, request, extraHttpRequestParams) {
+    ConsoleListControllerApi.prototype.listBillingSubscribersUsingGET = function (billingInterval, billingSubscriptionStatus, endDate, length, page, planName, shouldIncludeSubscribers, sortBy, sortOrder, startDate, subscriberName, timeZoneId, extraHttpRequestParams) {
         var localVarPath = this.basePath + '/api/v1/billing/subscribers';
         var queryParameters = {};
         var headerParams = Object.assign({}, this.defaultHeaders);
+        if (billingInterval !== undefined) {
+            queryParameters['billingInterval'] = billingInterval;
+        }
+        if (billingSubscriptionStatus !== undefined) {
+            queryParameters['billingSubscriptionStatus'] = billingSubscriptionStatus;
+        }
+        if (endDate !== undefined) {
+            queryParameters['endDate'] = endDate;
+        }
         if (length !== undefined) {
             queryParameters['length'] = length;
         }
         if (page !== undefined) {
             queryParameters['page'] = page;
         }
-        if (start !== undefined) {
-            queryParameters['start'] = start;
+        if (planName !== undefined) {
+            queryParameters['planName'] = planName;
         }
-        if (statuses !== undefined) {
-            queryParameters['statuses'] = statuses;
+        if (shouldIncludeSubscribers !== undefined) {
+            queryParameters['shouldIncludeSubscribers'] = shouldIncludeSubscribers;
+        }
+        if (sortBy !== undefined) {
+            queryParameters['sortBy'] = sortBy;
+        }
+        if (sortOrder !== undefined) {
+            queryParameters['sortOrder'] = sortOrder;
+        }
+        if (startDate !== undefined) {
+            queryParameters['startDate'] = startDate;
+        }
+        if (subscriberName !== undefined) {
+            queryParameters['subscriberName'] = subscriberName;
+        }
+        if (timeZoneId !== undefined) {
+            queryParameters['timeZoneId'] = timeZoneId;
         }
         var httpRequestParams = {
-            method: 'POST',
+            method: 'GET',
             url: localVarPath,
-            data: request,
             params: queryParameters,
             headers: headerParams
         };

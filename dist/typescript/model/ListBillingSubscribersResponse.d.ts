@@ -11,6 +11,7 @@
  */
 import * as models from './models';
 export interface ListBillingSubscribersResponse {
-    "aggregates"?: models.BillingSubscriberAggregateModel;
+    "matchingAggregates"?: models.BillingSubscriberAggregateModel;
     "subscribers"?: Array<models.BillingSubscriberModel>;
+    "totalAggregates"?: models.BillingSubscriberAggregateModel;
 }

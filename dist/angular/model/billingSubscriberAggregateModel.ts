@@ -12,7 +12,7 @@
 
 
 export interface BillingSubscriberAggregateModel { 
-    totalSubscribers?: number;
+    totalRecords?: number;
     totalUniqueActiveSubscriptions?: number;
     totalUniqueCancelledSubscriptions?: number;
 }
