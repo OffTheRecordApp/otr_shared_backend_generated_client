@@ -30,5 +30,6 @@ export interface SaveDriverLicenseRequest {
     licenseRestrictions?: string;
     postalCode?: string;
     regionCode?: string;
+    sex?: string;
 }
 
