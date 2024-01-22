@@ -12,6 +12,7 @@
 
 
 export interface CreateBillingSubscriptionRequest { 
+    cardId?: string;
     priceIds?: Array<string>;
     productId?: string;
 }

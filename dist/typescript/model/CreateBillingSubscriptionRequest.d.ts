@@ -10,6 +10,7 @@
  * Do not edit the class manually.
  */
 export interface CreateBillingSubscriptionRequest {
+    "cardId"?: string;
     "priceIds"?: Array<string>;
     "productId"?: string;
 }
