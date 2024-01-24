@@ -55,7 +55,8 @@ try {
    ``` npm run generate:local```
 3. Optional: Sanity check the differences in otrBackendService.js
    1. ```git diff HEAD dist/otrBackendService.js```
-4. Commit the changes and push to github
-5. Update the version number in package.json
-6. Execute ```npm publish```
-7. Done.
+4. Update version number in package.json
+    1. ``npm version patch`` 
+6. Commit the changes and push to github
+7. Execute ```npm publish```
+8. Done.
