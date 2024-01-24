@@ -408,6 +408,7 @@ export class ConsoleListControllerApi {
      * @summary listBillingSubscribers
      * @param billingInterval billingInterval
      * @param billingSubscriptionStatus billingSubscriptionStatus
+     * @param coveredSubscriptionsOnly coveredSubscriptionsOnly
      * @param endDate endDate
      * @param length length
      * @param page page
@@ -419,7 +420,7 @@ export class ConsoleListControllerApi {
      * @param subscriberName subscriberName
      * @param timeZoneId timeZoneId
      */
-    public listBillingSubscribersUsingGET (billingInterval?: 'DAILY' | 'MONTHLY' | 'QUARTERLY' | 'WEEKLY' | 'YEARLY', billingSubscriptionStatus?: 'ACTIVE' | 'CANCELED' | 'INCOMPLETE' | 'INCOMPLETE_EXPIRED' | 'IN_TRIAL_PERIOD' | 'PAST_DUE' | 'UNKNOWN' | 'UNPAID', endDate?: string, length?: number, page?: number, planName?: string, shouldIncludeSubscribers?: boolean, sortBy?: string, sortOrder?: string, startDate?: string, subscriberName?: string, timeZoneId?: string, extraHttpRequestParams?: any ) : ng.IHttpPromise<models.ListBillingSubscribersResponse> {
+    public listBillingSubscribersUsingGET (billingInterval?: 'DAILY' | 'MONTHLY' | 'QUARTERLY' | 'WEEKLY' | 'YEARLY', billingSubscriptionStatus?: 'ACTIVE' | 'CANCELED' | 'INCOMPLETE' | 'INCOMPLETE_EXPIRED' | 'IN_TRIAL_PERIOD' | 'PAST_DUE' | 'UNKNOWN' | 'UNPAID', coveredSubscriptionsOnly?: boolean, endDate?: string, length?: number, page?: number, planName?: string, shouldIncludeSubscribers?: boolean, sortBy?: string, sortOrder?: string, startDate?: string, subscriberName?: string, timeZoneId?: string, extraHttpRequestParams?: any ) : ng.IHttpPromise<models.ListBillingSubscribersResponse> {
         const localVarPath = this.basePath + '/api/v1/billing/subscribers';
 
         let queryParameters: any = {};
@@ -430,6 +431,10 @@ export class ConsoleListControllerApi {
 
         if (billingSubscriptionStatus !== undefined) {
             queryParameters['billingSubscriptionStatus'] = billingSubscriptionStatus;
+        }
+
+        if (coveredSubscriptionsOnly !== undefined) {
+            queryParameters['coveredSubscriptionsOnly'] = coveredSubscriptionsOnly;
         }
 
         if (endDate !== undefined) {

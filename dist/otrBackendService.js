@@ -510,6 +510,7 @@ angular.module('otrBackendService', [])
              * @param {object} parameters - method options and parameters
              * @param {string} parameters.billingInterval - billingInterval
              * @param {string} parameters.billingSubscriptionStatus - billingSubscriptionStatus
+             * @param {boolean} parameters.coveredSubscriptionsOnly - coveredSubscriptionsOnly
              * @param {string} parameters.endDate - endDate
              * @param {integer} parameters.length - length
              * @param {integer} parameters.page - page
@@ -541,6 +542,10 @@ angular.module('otrBackendService', [])
 
                 if (parameters['billingSubscriptionStatus'] !== undefined) {
                     queryParameters['billingSubscriptionStatus'] = parameters['billingSubscriptionStatus'];
+                }
+
+                if (parameters['coveredSubscriptionsOnly'] !== undefined) {
+                    queryParameters['coveredSubscriptionsOnly'] = parameters['coveredSubscriptionsOnly'];
                 }
 
                 if (parameters['endDate'] !== undefined) {

@@ -353,6 +353,7 @@ var ConsoleListControllerApi = /** @class */ (function () {
      * @summary listBillingSubscribers
      * @param billingInterval billingInterval
      * @param billingSubscriptionStatus billingSubscriptionStatus
+     * @param coveredSubscriptionsOnly coveredSubscriptionsOnly
      * @param endDate endDate
      * @param length length
      * @param page page
@@ -364,7 +365,7 @@ var ConsoleListControllerApi = /** @class */ (function () {
      * @param subscriberName subscriberName
      * @param timeZoneId timeZoneId
      */
-    ConsoleListControllerApi.prototype.listBillingSubscribersUsingGET = function (billingInterval, billingSubscriptionStatus, endDate, length, page, planName, shouldIncludeSubscribers, sortBy, sortOrder, startDate, subscriberName, timeZoneId, extraHttpRequestParams) {
+    ConsoleListControllerApi.prototype.listBillingSubscribersUsingGET = function (billingInterval, billingSubscriptionStatus, coveredSubscriptionsOnly, endDate, length, page, planName, shouldIncludeSubscribers, sortBy, sortOrder, startDate, subscriberName, timeZoneId, extraHttpRequestParams) {
         var localVarPath = this.basePath + '/api/v1/billing/subscribers';
         var queryParameters = {};
         var headerParams = Object.assign({}, this.defaultHeaders);
@@ -373,6 +374,9 @@ var ConsoleListControllerApi = /** @class */ (function () {
         }
         if (billingSubscriptionStatus !== undefined) {
             queryParameters['billingSubscriptionStatus'] = billingSubscriptionStatus;
+        }
+        if (coveredSubscriptionsOnly !== undefined) {
+            queryParameters['coveredSubscriptionsOnly'] = coveredSubscriptionsOnly;
         }
         if (endDate !== undefined) {
             queryParameters['endDate'] = endDate;
