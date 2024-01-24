@@ -20,12 +20,6 @@ export declare class ExternalContentVoteControllerApi {
     constructor($http: ng.IHttpService, $httpParamSerializer?: (d: any) => any, basePath?: string);
     /**
      *
-     * @summary getExternalContentUserVotes
-     * @param userId userId
-     */
-    getExternalContentUserVotesUsingGET(userId: string, extraHttpRequestParams?: any): ng.IHttpPromise<models.GetExternalContentUserVotesResponse>;
-    /**
-     *
      * @summary saveExternalContentVote
      * @param request request
      */

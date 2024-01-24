@@ -328,9 +328,8 @@ model/enableViolationsForLawfirmRequest.ts
 model/enableViolationsForLawfirmResponse.ts
 model/estimateInsuranceSavingsRequest.ts
 model/estimateInsuranceSavingsResponse.ts
-model/externalContentVoteModel.ts
+model/externalContentVote.ts
 model/externalTicketCourt.ts
-model/externalUserContentVoteModel.ts
 model/feedbackAttachmentModel.ts
 model/feedbackDomain.ts
 model/financialTransaction.ts
@@ -413,7 +412,6 @@ model/getDeclinedCasesResponse.ts
 model/getDocumentsRequest.ts
 model/getDriverLicensesResponse.ts
 model/getEmailTemplateResponse.ts
-model/getExternalContentUserVotesResponse.ts
 model/getExternalTicketInputParamsResponse.ts
 model/getHouseHoldMateModel.ts
 model/getHouseholdMatesResponse.ts

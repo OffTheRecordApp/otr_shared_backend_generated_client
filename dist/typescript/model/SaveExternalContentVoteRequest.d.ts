@@ -9,18 +9,13 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
+import * as models from './models';
 export interface SaveExternalContentVoteRequest {
-    "documentType"?: string;
-    "externalDocumentId"?: number;
+    "activityDocumentId"?: string;
+    "externalDocumentId"?: string;
+    "externalDocumentType"?: string;
+    "newVote"?: models.ExternalContentVote;
+    "oldVote"?: models.ExternalContentVote;
     "userId"?: number;
-    "voteType"?: SaveExternalContentVoteRequest.VoteTypeEnum;
-    "voteValue"?: number;
-}
-export declare namespace SaveExternalContentVoteRequest {
-    enum VoteTypeEnum {
-        DOWNVOTE,
-        HELPFUL,
-        UNHELPFUL,
-        UPVOTE
-    }
+    "userMessage"?: string;
 }

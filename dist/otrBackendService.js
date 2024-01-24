@@ -7444,40 +7444,6 @@ angular.module('otrBackendService', [])
                 return deferred.promise;
             };
             /**
-             * getExternalContentUserVotes
-             * @method
-             * @name OtrService#getExternalContentUserVotesUsingGET
-             * @param {object} parameters - method options and parameters
-             * @param {string} parameters.userId - userId
-             */
-            OtrService.prototype.getExternalContentUserVotesUsingGET = function(parameters) {
-                if (parameters === undefined) {
-                    parameters = {};
-                }
-                var deferred = $q.defer();
-                var domain = this.domain,
-                    path = '/api/v1/external-content-votes/{userId}';
-                var body = {},
-                    queryParameters = {},
-                    headers = {},
-                    form = {};
-
-                headers['Accept'] = ['*/*'];
-
-                path = path.replace('{userId}', parameters['userId']);
-
-                if (parameters['userId'] === undefined) {
-                    deferred.reject(new Error('Missing required  parameter: userId'));
-                    return deferred.promise;
-                }
-
-                queryParameters = mergeQueryParams(parameters, queryParameters);
-
-                this.request('GET', domain + path, parameters, body, headers, queryParameters, form, deferred);
-
-                return deferred.promise;
-            };
-            /**
              * getExternalTickets
              * @method
              * @name OtrService#getExternalTicketsUsingGET

@@ -9,23 +9,16 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
+import { ExternalContentVote } from './externalContentVote';
 
 
 export interface SaveExternalContentVoteRequest { 
-    documentType?: string;
-    externalDocumentId?: number;
+    activityDocumentId?: string;
+    externalDocumentId?: string;
+    externalDocumentType?: string;
+    newVote?: ExternalContentVote;
+    oldVote?: ExternalContentVote;
     userId?: number;
-    voteType?: SaveExternalContentVoteRequest.VoteTypeEnum;
-    voteValue?: number;
+    userMessage?: string;
 }
-export namespace SaveExternalContentVoteRequest {
-    export type VoteTypeEnum = 'DOWNVOTE' | 'HELPFUL' | 'UNHELPFUL' | 'UPVOTE';
-    export const VoteTypeEnum = {
-        Downvote: 'DOWNVOTE' as VoteTypeEnum,
-        Helpful: 'HELPFUL' as VoteTypeEnum,
-        Unhelpful: 'UNHELPFUL' as VoteTypeEnum,
-        Upvote: 'UPVOTE' as VoteTypeEnum
-    };
-}
-
 

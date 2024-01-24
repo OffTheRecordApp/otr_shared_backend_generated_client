@@ -11,14 +11,3 @@
  * Do not edit the class manually.
  */
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.SaveExternalContentVoteRequest = void 0;
-var SaveExternalContentVoteRequest;
-(function (SaveExternalContentVoteRequest) {
-    var VoteTypeEnum;
-    (function (VoteTypeEnum) {
-        VoteTypeEnum[VoteTypeEnum["DOWNVOTE"] = 'DOWNVOTE'] = "DOWNVOTE";
-        VoteTypeEnum[VoteTypeEnum["HELPFUL"] = 'HELPFUL'] = "HELPFUL";
-        VoteTypeEnum[VoteTypeEnum["UNHELPFUL"] = 'UNHELPFUL'] = "UNHELPFUL";
-        VoteTypeEnum[VoteTypeEnum["UPVOTE"] = 'UPVOTE'] = "UPVOTE";
-    })(VoteTypeEnum = SaveExternalContentVoteRequest.VoteTypeEnum || (SaveExternalContentVoteRequest.VoteTypeEnum = {}));
-})(SaveExternalContentVoteRequest = exports.SaveExternalContentVoteRequest || (exports.SaveExternalContentVoteRequest = {}));
