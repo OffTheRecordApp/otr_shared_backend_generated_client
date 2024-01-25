@@ -13,6 +13,7 @@
 
 export interface ListBillingSubscriptionModel { 
     billingInterval?: ListBillingSubscriptionModel.BillingIntervalEnum;
+    currentPeriodEndDate?: string;
     lastPastDueDateUtc?: string;
     productName?: string;
     startDateUtc?: string;
