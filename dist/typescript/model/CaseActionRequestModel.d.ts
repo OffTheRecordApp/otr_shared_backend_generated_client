@@ -27,6 +27,7 @@ export declare namespace CaseActionRequestModel {
         DISCOVERYRECEIVED,
         DISCOVERYREQUESTED,
         DISPUTEFILED,
+        DRIVERLICENSEREQUESTED,
         FAILEDPAYMENTATTEMPT,
         NOTICEOFAPPEARANCEFILED,
         OTHER,

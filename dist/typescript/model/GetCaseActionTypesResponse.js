@@ -27,6 +27,7 @@ var GetCaseActionTypesResponse;
         CaseActionTypesEnum[CaseActionTypesEnum["DISCOVERYRECEIVED"] = 'DISCOVERY_RECEIVED'] = "DISCOVERYRECEIVED";
         CaseActionTypesEnum[CaseActionTypesEnum["DISCOVERYREQUESTED"] = 'DISCOVERY_REQUESTED'] = "DISCOVERYREQUESTED";
         CaseActionTypesEnum[CaseActionTypesEnum["DISPUTEFILED"] = 'DISPUTE_FILED'] = "DISPUTEFILED";
+        CaseActionTypesEnum[CaseActionTypesEnum["DRIVERLICENSEREQUESTED"] = 'DRIVER_LICENSE_REQUESTED'] = "DRIVERLICENSEREQUESTED";
         CaseActionTypesEnum[CaseActionTypesEnum["FAILEDPAYMENTATTEMPT"] = 'FAILED_PAYMENT_ATTEMPT'] = "FAILEDPAYMENTATTEMPT";
         CaseActionTypesEnum[CaseActionTypesEnum["NOTICEOFAPPEARANCEFILED"] = 'NOTICE_OF_APPEARANCE_FILED'] = "NOTICEOFAPPEARANCEFILED";
         CaseActionTypesEnum[CaseActionTypesEnum["OTHER"] = 'OTHER'] = "OTHER";

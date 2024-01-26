@@ -38,6 +38,7 @@ export declare namespace ActionByEntityModel {
         DISCOVERYRECEIVED,
         DISCOVERYREQUESTED,
         DISPUTEFILED,
+        DRIVERLICENSEREQUESTED,
         FAILEDPAYMENTATTEMPT,
         NOTICEOFAPPEARANCEFILED,
         OTHER,

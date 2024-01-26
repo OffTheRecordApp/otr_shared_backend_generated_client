@@ -25,7 +25,7 @@ export interface CaseActionDomain {
     isDeleted?: boolean;
 }
 export namespace CaseActionDomain {
-    export type ActionTypeEnum = 'CASE_ACCEPT' | 'CASE_COUNTER_ACCEPTED' | 'CASE_COUNTER_DECLINED' | 'CASE_COUNTER_INITIATED' | 'CASE_DECLINE' | 'CITATION_DATA_EXTRACTED' | 'COURT_DATE_REMOVED' | 'COURT_DATE_SCHEDULED' | 'DISCOVERY_RECEIVED' | 'DISCOVERY_REQUESTED' | 'DISPUTE_FILED' | 'FAILED_PAYMENT_ATTEMPT' | 'NOTICE_OF_APPEARANCE_FILED' | 'OTHER' | 'OVERDUE_BALANCE_PAID' | 'REVIEWED_BY_LAWFIRM' | 'SOCIAL_MEDIA_ASK' | 'TICKET_MAILED_TO_COURT';
+    export type ActionTypeEnum = 'CASE_ACCEPT' | 'CASE_COUNTER_ACCEPTED' | 'CASE_COUNTER_DECLINED' | 'CASE_COUNTER_INITIATED' | 'CASE_DECLINE' | 'CITATION_DATA_EXTRACTED' | 'COURT_DATE_REMOVED' | 'COURT_DATE_SCHEDULED' | 'DISCOVERY_RECEIVED' | 'DISCOVERY_REQUESTED' | 'DISPUTE_FILED' | 'DRIVER_LICENSE_REQUESTED' | 'FAILED_PAYMENT_ATTEMPT' | 'NOTICE_OF_APPEARANCE_FILED' | 'OTHER' | 'OVERDUE_BALANCE_PAID' | 'REVIEWED_BY_LAWFIRM' | 'SOCIAL_MEDIA_ASK' | 'TICKET_MAILED_TO_COURT';
     export const ActionTypeEnum = {
         CaseAccept: 'CASE_ACCEPT' as ActionTypeEnum,
         CaseCounterAccepted: 'CASE_COUNTER_ACCEPTED' as ActionTypeEnum,
@@ -38,6 +38,7 @@ export namespace CaseActionDomain {
         DiscoveryReceived: 'DISCOVERY_RECEIVED' as ActionTypeEnum,
         DiscoveryRequested: 'DISCOVERY_REQUESTED' as ActionTypeEnum,
         DisputeFiled: 'DISPUTE_FILED' as ActionTypeEnum,
+        DriverLicenseRequested: 'DRIVER_LICENSE_REQUESTED' as ActionTypeEnum,
         FailedPaymentAttempt: 'FAILED_PAYMENT_ATTEMPT' as ActionTypeEnum,
         NoticeOfAppearanceFiled: 'NOTICE_OF_APPEARANCE_FILED' as ActionTypeEnum,
         Other: 'OTHER' as ActionTypeEnum,

@@ -35,6 +35,7 @@ export declare namespace CaseActionDomain {
         DISCOVERYRECEIVED,
         DISCOVERYREQUESTED,
         DISPUTEFILED,
+        DRIVERLICENSEREQUESTED,
         FAILEDPAYMENTATTEMPT,
         NOTICEOFAPPEARANCEFILED,
         OTHER,

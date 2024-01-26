@@ -25,6 +25,7 @@ export declare namespace GetCaseActionTypesResponse {
         DISCOVERYRECEIVED,
         DISCOVERYREQUESTED,
         DISPUTEFILED,
+        DRIVERLICENSEREQUESTED,
         FAILEDPAYMENTATTEMPT,
         NOTICEOFAPPEARANCEFILED,
         OTHER,
