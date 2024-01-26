@@ -11,7 +11,6 @@
  */
 import * as models from './models';
 export interface SaveExternalContentVoteRequest {
-    "activityDocumentId"?: string;
     "externalDocumentId"?: string;
     "externalDocumentType"?: string;
     "newVote"?: models.ExternalContentVote;

@@ -13,7 +13,6 @@ import { ExternalContentVote } from './externalContentVote';
 
 
 export interface SaveExternalContentVoteRequest { 
-    activityDocumentId?: string;
     externalDocumentId?: string;
     externalDocumentType?: string;
     newVote?: ExternalContentVote;
