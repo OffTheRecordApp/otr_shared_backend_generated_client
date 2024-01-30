@@ -12,6 +12,7 @@
 
 
 export interface User { 
+    agentTeam?: string;
     firstName?: string;
     lastName?: string;
     userId?: number;

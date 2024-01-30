@@ -10,6 +10,7 @@
  * Do not edit the class manually.
  */
 export interface User {
+    "agentTeam"?: string;
     "firstName"?: string;
     "lastName"?: string;
     "userId"?: number;

@@ -6811,6 +6811,7 @@ angular.module('otrBackendService', [])
              * @method
              * @name OtrService#listAgentBookingsUsingGET
              * @param {object} parameters - method options and parameters
+             * @param {string} parameters.agentTeam - agentTeam
              * @param {integer} parameters.agentUserId - agentUserId
              * @param {string} parameters.caseStatus - caseStatus
              * @param {string} parameters.channel - channel
@@ -6837,6 +6838,10 @@ angular.module('otrBackendService', [])
                     form = {};
 
                 headers['Accept'] = ['*/*'];
+
+                if (parameters['agentTeam'] !== undefined) {
+                    queryParameters['agentTeam'] = parameters['agentTeam'];
+                }
 
                 if (parameters['agentUserId'] !== undefined) {
                     queryParameters['agentUserId'] = parameters['agentUserId'];

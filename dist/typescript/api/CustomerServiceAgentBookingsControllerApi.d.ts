@@ -21,6 +21,7 @@ export declare class CustomerServiceAgentBookingsControllerApi {
     /**
      *
      * @summary listAgentBookings
+     * @param agentTeam agentTeam
      * @param agentUserId agentUserId
      * @param caseStatus caseStatus
      * @param channel channel
@@ -34,7 +35,7 @@ export declare class CustomerServiceAgentBookingsControllerApi {
      * @param state state
      * @param timeZoneId timeZoneId
      */
-    listAgentBookingsUsingGET(agentUserId?: number, caseStatus?: string, channel?: string, direction?: string, endDate?: string, length?: number, offset?: number, sortBy?: string, sortOrder?: string, startDate?: string, state?: string, timeZoneId?: string, extraHttpRequestParams?: any): ng.IHttpPromise<models.ListAgentBookingsResponse>;
+    listAgentBookingsUsingGET(agentTeam?: string, agentUserId?: number, caseStatus?: string, channel?: string, direction?: string, endDate?: string, length?: number, offset?: number, sortBy?: string, sortOrder?: string, startDate?: string, state?: string, timeZoneId?: string, extraHttpRequestParams?: any): ng.IHttpPromise<models.ListAgentBookingsResponse>;
     /**
      *
      * @summary saveAgentBooking
