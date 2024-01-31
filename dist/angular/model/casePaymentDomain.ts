@@ -32,6 +32,7 @@ export interface CasePaymentDomain {
     lawfirmName?: string;
     lawfirmReferralCodeAdjustmentInCents?: number;
     mostRecentChargeError?: string;
+    otrCustomerCharges?: number;
     otrEarnings?: number;
     otrMarketingFeeInCents?: number;
     otrReferralCodeAdjustmentInCents?: number;
