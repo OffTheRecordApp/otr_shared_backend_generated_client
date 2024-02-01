@@ -25,6 +25,12 @@ export declare class StripeWebhookControllerApi {
     handleStripeWebhookForConnectedAccountsUsingPOST(request?: string, extraHttpRequestParams?: any): ng.IHttpPromise<string>;
     /**
      *
+     * @summary handleStripeWebhookForSubscriptions
+     * @param request request
+     */
+    handleStripeWebhookForSubscriptionsUsingPOST(request?: string, extraHttpRequestParams?: any): ng.IHttpPromise<string>;
+    /**
+     *
      * @summary handleStripeWebhookFromLawfirmAccount
      * @param request request
      */
