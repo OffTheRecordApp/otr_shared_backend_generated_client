@@ -19,8 +19,17 @@ export interface CoachingCardsModel {
     coachingCardCategoryId?: number;
     coachingCardId?: number;
     coachingCardSubcategoryId?: number;
+    coachingCardType?: CoachingCardsModel.CoachingCardTypeEnum;
     coachingCardUsers?: Set<CoachingCardUsersModel>;
     coachingLinks?: CoachingLinks;
     coachingText?: string;
 }
+export namespace CoachingCardsModel {
+    export type CoachingCardTypeEnum = 'COACHING' | 'KUDOS';
+    export const CoachingCardTypeEnum = {
+        Coaching: 'COACHING' as CoachingCardTypeEnum,
+        Kudos: 'KUDOS' as CoachingCardTypeEnum
+    };
+}
+
 

@@ -16,7 +16,14 @@ export interface CoachingCardsModel {
     "coachingCardCategoryId"?: number;
     "coachingCardId"?: number;
     "coachingCardSubcategoryId"?: number;
+    "coachingCardType"?: CoachingCardsModel.CoachingCardTypeEnum;
     "coachingCardUsers"?: Array<models.CoachingCardUsersModel>;
     "coachingLinks"?: models.CoachingLinks;
     "coachingText"?: string;
+}
+export declare namespace CoachingCardsModel {
+    enum CoachingCardTypeEnum {
+        COACHING,
+        KUDOS
+    }
 }

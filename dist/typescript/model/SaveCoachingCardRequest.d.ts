@@ -13,7 +13,14 @@ import * as models from './models';
 export interface SaveCoachingCardRequest {
     "coachingCardCategoryId"?: number;
     "coachingCardSubcategoryId"?: number;
+    "coachingCardType"?: SaveCoachingCardRequest.CoachingCardTypeEnum;
     "coachingCardUserRequest"?: Array<models.SaveCoachingCardUserRequest>;
     "coachingLinks"?: models.CoachingLinks;
     "coachingText"?: string;
+}
+export declare namespace SaveCoachingCardRequest {
+    enum CoachingCardTypeEnum {
+        COACHING,
+        KUDOS
+    }
 }

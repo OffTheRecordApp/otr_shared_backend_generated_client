@@ -33,10 +33,11 @@ export declare class CoachingCardsControllerApi {
      *
      * @summary listUserCoachingCards
      * @param userId userId
+     * @param coachingCardType coachingCardType
      * @param includeCreated includeCreated
      * @param includeReceived includeReceived
      */
-    listUserCoachingCardsUsingGET(userId: number, includeCreated?: boolean, includeReceived?: boolean, extraHttpRequestParams?: any): ng.IHttpPromise<models.ListUserCoachingCardsResponse>;
+    listUserCoachingCardsUsingGET(userId: number, coachingCardType?: 'COACHING' | 'KUDOS', includeCreated?: boolean, includeReceived?: boolean, extraHttpRequestParams?: any): ng.IHttpPromise<models.ListUserCoachingCardsResponse>;
     /**
      *
      * @summary saveCoachingCard

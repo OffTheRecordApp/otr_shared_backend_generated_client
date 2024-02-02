@@ -71,10 +71,11 @@ var CoachingCardsControllerApi = /** @class */ (function () {
      *
      * @summary listUserCoachingCards
      * @param userId userId
+     * @param coachingCardType coachingCardType
      * @param includeCreated includeCreated
      * @param includeReceived includeReceived
      */
-    CoachingCardsControllerApi.prototype.listUserCoachingCardsUsingGET = function (userId, includeCreated, includeReceived, extraHttpRequestParams) {
+    CoachingCardsControllerApi.prototype.listUserCoachingCardsUsingGET = function (userId, coachingCardType, includeCreated, includeReceived, extraHttpRequestParams) {
         var localVarPath = this.basePath + '/api/v1/coaching-cards/{userId}/cards'
             .replace('{' + 'userId' + '}', encodeURIComponent(String(userId)));
         var queryParameters = {};
@@ -82,6 +83,9 @@ var CoachingCardsControllerApi = /** @class */ (function () {
         // verify required parameter 'userId' is not null or undefined
         if (userId === null || userId === undefined) {
             throw new Error('Required parameter userId was null or undefined when calling listUserCoachingCardsUsingGET.');
+        }
+        if (coachingCardType !== undefined) {
+            queryParameters['coachingCardType'] = coachingCardType;
         }
         if (includeCreated !== undefined) {
             queryParameters['includeCreated'] = includeCreated;

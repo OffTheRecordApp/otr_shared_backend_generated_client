@@ -11,3 +11,12 @@
  * Do not edit the class manually.
  */
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.SaveCoachingCardRequest = void 0;
+var SaveCoachingCardRequest;
+(function (SaveCoachingCardRequest) {
+    var CoachingCardTypeEnum;
+    (function (CoachingCardTypeEnum) {
+        CoachingCardTypeEnum[CoachingCardTypeEnum["COACHING"] = 'COACHING'] = "COACHING";
+        CoachingCardTypeEnum[CoachingCardTypeEnum["KUDOS"] = 'KUDOS'] = "KUDOS";
+    })(CoachingCardTypeEnum = SaveCoachingCardRequest.CoachingCardTypeEnum || (SaveCoachingCardRequest.CoachingCardTypeEnum = {}));
+})(SaveCoachingCardRequest = exports.SaveCoachingCardRequest || (exports.SaveCoachingCardRequest = {}));

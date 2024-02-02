@@ -221,20 +221,25 @@ export class CoachingCardsControllerService {
     /**
      * listUserCoachingCards
      * @param userId userId
+     * @param coachingCardType coachingCardType
      * @param includeCreated includeCreated
      * @param includeReceived includeReceived
      * @param observe set whether or not to return the data Observable as the body, response or events. defaults to returning the body.
      * @param reportProgress flag to report request and response progress.
      */
-    public listUserCoachingCardsUsingGET(userId: number, includeCreated?: boolean, includeReceived?: boolean, observe?: 'body', reportProgress?: boolean, options?: {httpHeaderAccept?: '*/*', context?: HttpContext}): Observable<ListUserCoachingCardsResponse>;
-    public listUserCoachingCardsUsingGET(userId: number, includeCreated?: boolean, includeReceived?: boolean, observe?: 'response', reportProgress?: boolean, options?: {httpHeaderAccept?: '*/*', context?: HttpContext}): Observable<HttpResponse<ListUserCoachingCardsResponse>>;
-    public listUserCoachingCardsUsingGET(userId: number, includeCreated?: boolean, includeReceived?: boolean, observe?: 'events', reportProgress?: boolean, options?: {httpHeaderAccept?: '*/*', context?: HttpContext}): Observable<HttpEvent<ListUserCoachingCardsResponse>>;
-    public listUserCoachingCardsUsingGET(userId: number, includeCreated?: boolean, includeReceived?: boolean, observe: any = 'body', reportProgress: boolean = false, options?: {httpHeaderAccept?: '*/*', context?: HttpContext}): Observable<any> {
+    public listUserCoachingCardsUsingGET(userId: number, coachingCardType?: 'COACHING' | 'KUDOS', includeCreated?: boolean, includeReceived?: boolean, observe?: 'body', reportProgress?: boolean, options?: {httpHeaderAccept?: '*/*', context?: HttpContext}): Observable<ListUserCoachingCardsResponse>;
+    public listUserCoachingCardsUsingGET(userId: number, coachingCardType?: 'COACHING' | 'KUDOS', includeCreated?: boolean, includeReceived?: boolean, observe?: 'response', reportProgress?: boolean, options?: {httpHeaderAccept?: '*/*', context?: HttpContext}): Observable<HttpResponse<ListUserCoachingCardsResponse>>;
+    public listUserCoachingCardsUsingGET(userId: number, coachingCardType?: 'COACHING' | 'KUDOS', includeCreated?: boolean, includeReceived?: boolean, observe?: 'events', reportProgress?: boolean, options?: {httpHeaderAccept?: '*/*', context?: HttpContext}): Observable<HttpEvent<ListUserCoachingCardsResponse>>;
+    public listUserCoachingCardsUsingGET(userId: number, coachingCardType?: 'COACHING' | 'KUDOS', includeCreated?: boolean, includeReceived?: boolean, observe: any = 'body', reportProgress: boolean = false, options?: {httpHeaderAccept?: '*/*', context?: HttpContext}): Observable<any> {
         if (userId === null || userId === undefined) {
             throw new Error('Required parameter userId was null or undefined when calling listUserCoachingCardsUsingGET.');
         }
 
         let localVarQueryParameters = new HttpParams({encoder: this.encoder});
+        if (coachingCardType !== undefined && coachingCardType !== null) {
+          localVarQueryParameters = this.addToHttpParams(localVarQueryParameters,
+            <any>coachingCardType, 'coachingCardType');
+        }
         if (includeCreated !== undefined && includeCreated !== null) {
           localVarQueryParameters = this.addToHttpParams(localVarQueryParameters,
             <any>includeCreated, 'includeCreated');

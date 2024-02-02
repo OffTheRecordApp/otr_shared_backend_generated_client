@@ -11,3 +11,12 @@
  * Do not edit the class manually.
  */
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.CoachingCardsModel = void 0;
+var CoachingCardsModel;
+(function (CoachingCardsModel) {
+    var CoachingCardTypeEnum;
+    (function (CoachingCardTypeEnum) {
+        CoachingCardTypeEnum[CoachingCardTypeEnum["COACHING"] = 'COACHING'] = "COACHING";
+        CoachingCardTypeEnum[CoachingCardTypeEnum["KUDOS"] = 'KUDOS'] = "KUDOS";
+    })(CoachingCardTypeEnum = CoachingCardsModel.CoachingCardTypeEnum || (CoachingCardsModel.CoachingCardTypeEnum = {}));
+})(CoachingCardsModel = exports.CoachingCardsModel || (exports.CoachingCardsModel = {}));

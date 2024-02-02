@@ -4981,6 +4981,7 @@ angular.module('otrBackendService', [])
              * @method
              * @name OtrService#listUserCoachingCardsUsingGET
              * @param {object} parameters - method options and parameters
+             * @param {string} parameters.coachingCardType - coachingCardType
              * @param {boolean} parameters.includeCreated - includeCreated
              * @param {boolean} parameters.includeReceived - includeReceived
              * @param {integer} parameters.userId - userId
@@ -4998,6 +4999,10 @@ angular.module('otrBackendService', [])
                     form = {};
 
                 headers['Accept'] = ['*/*'];
+
+                if (parameters['coachingCardType'] !== undefined) {
+                    queryParameters['coachingCardType'] = parameters['coachingCardType'];
+                }
 
                 /** set default value **/
                 queryParameters['includeCreated'] = true;

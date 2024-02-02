@@ -16,8 +16,17 @@ import { CoachingLinks } from './coachingLinks';
 export interface SaveCoachingCardRequest { 
     coachingCardCategoryId?: number;
     coachingCardSubcategoryId?: number;
+    coachingCardType?: SaveCoachingCardRequest.CoachingCardTypeEnum;
     coachingCardUserRequest?: Array<SaveCoachingCardUserRequest>;
     coachingLinks?: CoachingLinks;
     coachingText?: string;
 }
+export namespace SaveCoachingCardRequest {
+    export type CoachingCardTypeEnum = 'COACHING' | 'KUDOS';
+    export const CoachingCardTypeEnum = {
+        Coaching: 'COACHING' as CoachingCardTypeEnum,
+        Kudos: 'KUDOS' as CoachingCardTypeEnum
+    };
+}
+
 
