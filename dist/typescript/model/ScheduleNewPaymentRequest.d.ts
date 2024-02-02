@@ -13,6 +13,7 @@ export interface ScheduleNewPaymentRequest {
     "baseFeeInCents"?: number;
     "chargeRunAtDate"?: string;
     "lawfirmReferralCodeAdjustment"?: number;
+    "otrCustomerChargeInCents"?: number;
     "otrMarketingFee"?: number;
     "otrReferralCodeAdjustment"?: number;
     "recipient"?: ScheduleNewPaymentRequest.RecipientEnum;
