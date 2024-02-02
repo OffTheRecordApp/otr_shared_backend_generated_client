@@ -23,6 +23,7 @@ export interface CourtEntity {
     courtType?: CourtEntity.CourtTypeEnum;
     lookupCaseInfoLink?: string;
     otrTargetFee?: number;
+    similarityScore?: number;
     website?: string;
 }
 export namespace CourtEntity {

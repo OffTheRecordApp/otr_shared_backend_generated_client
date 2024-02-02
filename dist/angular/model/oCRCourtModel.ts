@@ -18,6 +18,7 @@ export interface OCRCourtModel {
     courtName?: string;
     courtNameAdditional?: string;
     regionCode?: string;
+    similarityScore?: number;
     timeZoneName?: string;
 }
 

@@ -12,6 +12,7 @@
 export interface OCRViolationModel {
     "classDescription"?: string;
     "criminal"?: boolean;
+    "similarityScore"?: number;
     "violationClassification"?: OCRViolationModel.ViolationClassificationEnum;
     "violationDescription"?: string;
     "violationId"?: number;
