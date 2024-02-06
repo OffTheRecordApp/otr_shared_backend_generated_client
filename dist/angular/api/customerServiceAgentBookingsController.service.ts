@@ -109,14 +109,15 @@ export class CustomerServiceAgentBookingsControllerService {
      * @param sortOrder sortOrder
      * @param startDate startDate
      * @param state state
+     * @param statusCategory statusCategory
      * @param timeZoneId timeZoneId
      * @param observe set whether or not to return the data Observable as the body, response or events. defaults to returning the body.
      * @param reportProgress flag to report request and response progress.
      */
-    public listAgentBookingsUsingGET(agentTeam?: string, agentUserId?: number, caseStatus?: string, channel?: string, direction?: string, endDate?: string, length?: number, offset?: number, sortBy?: string, sortOrder?: string, startDate?: string, state?: string, timeZoneId?: string, observe?: 'body', reportProgress?: boolean, options?: {httpHeaderAccept?: '*/*', context?: HttpContext}): Observable<ListAgentBookingsResponse>;
-    public listAgentBookingsUsingGET(agentTeam?: string, agentUserId?: number, caseStatus?: string, channel?: string, direction?: string, endDate?: string, length?: number, offset?: number, sortBy?: string, sortOrder?: string, startDate?: string, state?: string, timeZoneId?: string, observe?: 'response', reportProgress?: boolean, options?: {httpHeaderAccept?: '*/*', context?: HttpContext}): Observable<HttpResponse<ListAgentBookingsResponse>>;
-    public listAgentBookingsUsingGET(agentTeam?: string, agentUserId?: number, caseStatus?: string, channel?: string, direction?: string, endDate?: string, length?: number, offset?: number, sortBy?: string, sortOrder?: string, startDate?: string, state?: string, timeZoneId?: string, observe?: 'events', reportProgress?: boolean, options?: {httpHeaderAccept?: '*/*', context?: HttpContext}): Observable<HttpEvent<ListAgentBookingsResponse>>;
-    public listAgentBookingsUsingGET(agentTeam?: string, agentUserId?: number, caseStatus?: string, channel?: string, direction?: string, endDate?: string, length?: number, offset?: number, sortBy?: string, sortOrder?: string, startDate?: string, state?: string, timeZoneId?: string, observe: any = 'body', reportProgress: boolean = false, options?: {httpHeaderAccept?: '*/*', context?: HttpContext}): Observable<any> {
+    public listAgentBookingsUsingGET(agentTeam?: string, agentUserId?: number, caseStatus?: string, channel?: string, direction?: string, endDate?: string, length?: number, offset?: number, sortBy?: string, sortOrder?: string, startDate?: string, state?: string, statusCategory?: string, timeZoneId?: string, observe?: 'body', reportProgress?: boolean, options?: {httpHeaderAccept?: '*/*', context?: HttpContext}): Observable<ListAgentBookingsResponse>;
+    public listAgentBookingsUsingGET(agentTeam?: string, agentUserId?: number, caseStatus?: string, channel?: string, direction?: string, endDate?: string, length?: number, offset?: number, sortBy?: string, sortOrder?: string, startDate?: string, state?: string, statusCategory?: string, timeZoneId?: string, observe?: 'response', reportProgress?: boolean, options?: {httpHeaderAccept?: '*/*', context?: HttpContext}): Observable<HttpResponse<ListAgentBookingsResponse>>;
+    public listAgentBookingsUsingGET(agentTeam?: string, agentUserId?: number, caseStatus?: string, channel?: string, direction?: string, endDate?: string, length?: number, offset?: number, sortBy?: string, sortOrder?: string, startDate?: string, state?: string, statusCategory?: string, timeZoneId?: string, observe?: 'events', reportProgress?: boolean, options?: {httpHeaderAccept?: '*/*', context?: HttpContext}): Observable<HttpEvent<ListAgentBookingsResponse>>;
+    public listAgentBookingsUsingGET(agentTeam?: string, agentUserId?: number, caseStatus?: string, channel?: string, direction?: string, endDate?: string, length?: number, offset?: number, sortBy?: string, sortOrder?: string, startDate?: string, state?: string, statusCategory?: string, timeZoneId?: string, observe: any = 'body', reportProgress: boolean = false, options?: {httpHeaderAccept?: '*/*', context?: HttpContext}): Observable<any> {
 
         let localVarQueryParameters = new HttpParams({encoder: this.encoder});
         if (agentTeam !== undefined && agentTeam !== null) {
@@ -166,6 +167,10 @@ export class CustomerServiceAgentBookingsControllerService {
         if (state !== undefined && state !== null) {
           localVarQueryParameters = this.addToHttpParams(localVarQueryParameters,
             <any>state, 'state');
+        }
+        if (statusCategory !== undefined && statusCategory !== null) {
+          localVarQueryParameters = this.addToHttpParams(localVarQueryParameters,
+            <any>statusCategory, 'statusCategory');
         }
         if (timeZoneId !== undefined && timeZoneId !== null) {
           localVarQueryParameters = this.addToHttpParams(localVarQueryParameters,

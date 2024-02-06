@@ -38,9 +38,10 @@ var CustomerServiceAgentBookingsControllerApi = /** @class */ (function () {
      * @param sortOrder sortOrder
      * @param startDate startDate
      * @param state state
+     * @param statusCategory statusCategory
      * @param timeZoneId timeZoneId
      */
-    CustomerServiceAgentBookingsControllerApi.prototype.listAgentBookingsUsingGET = function (agentTeam, agentUserId, caseStatus, channel, direction, endDate, length, offset, sortBy, sortOrder, startDate, state, timeZoneId, extraHttpRequestParams) {
+    CustomerServiceAgentBookingsControllerApi.prototype.listAgentBookingsUsingGET = function (agentTeam, agentUserId, caseStatus, channel, direction, endDate, length, offset, sortBy, sortOrder, startDate, state, statusCategory, timeZoneId, extraHttpRequestParams) {
         var localVarPath = this.basePath + '/api/v1/cs-agent-bookings';
         var queryParameters = {};
         var headerParams = Object.assign({}, this.defaultHeaders);
@@ -79,6 +80,9 @@ var CustomerServiceAgentBookingsControllerApi = /** @class */ (function () {
         }
         if (state !== undefined) {
             queryParameters['state'] = state;
+        }
+        if (statusCategory !== undefined) {
+            queryParameters['statusCategory'] = statusCategory;
         }
         if (timeZoneId !== undefined) {
             queryParameters['timeZoneId'] = timeZoneId;

@@ -19,6 +19,7 @@ export interface Case {
     caseSubtotal?: number;
     otrReferralFee?: number;
     state?: Case.StateEnum;
+    statusCategory?: Case.StatusCategoryEnum;
 }
 export namespace Case {
     export type CaseStatusEnum = 'AMENDED_DOWN_WITHIN_CLASS' | 'AMENDED_FULL_FINE' | 'AMENDED_INCREASED_FINE' | 'AMENDED_NO_FINE' | 'AMENDED_REDUCED_FINE' | 'AMENDED_TO_INFRACTION' | 'AMENDED_TO_NMV' | 'CANCELLED_ATTORNEY_AT_FAULT' | 'CANCELLED_BY_LAWFIRM' | 'CANCELLED_BY_USER' | 'CANCELLED_DUPLICATE' | 'CANCELLED_NMV' | 'CANCELLED_NON_PAYMENT' | 'CANCELLED_NO_LAWFIRM' | 'CANCELLED_OVERDUE' | 'CANCELLED_TOO_SHORT_NOTICE' | 'CASE_IN_PROGRESS' | 'CLIENT_CONFIRMED' | 'CLIENT_CONFIRMED_UNPAID' | 'CLIENT_FIRED_LAWFIRM' | 'CLIENT_FORCED_LOSS' | 'CLIENT_PAID_FINE' | 'CLIENT_UNRESPONSIVE' | 'DEFERRED' | 'DISMISSED' | 'DIVERSION' | 'FEES_DISPUTED' | 'FINE_REDUCTION_ONLY' | 'LAWFIRM_WITHDRAWN' | 'LOST' | 'NO_LAWFIRM_AVAILABLE' | 'POINT_REDUCTION' | 'REFUSED_BY_LAWFIRM' | 'RESOLVED_NON_PAYMENT' | 'STALE' | 'TRAFFIC_SCHOOL' | 'UNCONFIRMED';
@@ -114,6 +115,13 @@ export namespace Case {
         Wi: 'WI' as StateEnum,
         Wv: 'WV' as StateEnum,
         Wy: 'WY' as StateEnum
+    };
+    export type StatusCategoryEnum = 'ACTIVE' | 'CANCELLED' | 'RESOLVED' | 'UNCONFIRMED';
+    export const StatusCategoryEnum = {
+        Active: 'ACTIVE' as StatusCategoryEnum,
+        Cancelled: 'CANCELLED' as StatusCategoryEnum,
+        Resolved: 'RESOLVED' as StatusCategoryEnum,
+        Unconfirmed: 'UNCONFIRMED' as StatusCategoryEnum
     };
 }
 

@@ -17,6 +17,7 @@ export interface Case {
     "caseSubtotal"?: number;
     "otrReferralFee"?: number;
     "state"?: Case.StateEnum;
+    "statusCategory"?: Case.StatusCategoryEnum;
 }
 export declare namespace Case {
     enum CaseStatusEnum {
@@ -110,5 +111,11 @@ export declare namespace Case {
         WI,
         WV,
         WY
+    }
+    enum StatusCategoryEnum {
+        ACTIVE,
+        CANCELLED,
+        RESOLVED,
+        UNCONFIRMED
     }
 }

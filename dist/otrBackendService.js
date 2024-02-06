@@ -6828,6 +6828,7 @@ angular.module('otrBackendService', [])
              * @param {string} parameters.sortOrder - sortOrder
              * @param {string} parameters.startDate - startDate
              * @param {string} parameters.state - state
+             * @param {string} parameters.statusCategory - statusCategory
              * @param {string} parameters.timeZoneId - timeZoneId
              */
             OtrService.prototype.listAgentBookingsUsingGET = function(parameters) {
@@ -6893,6 +6894,10 @@ angular.module('otrBackendService', [])
 
                 if (parameters['state'] !== undefined) {
                     queryParameters['state'] = parameters['state'];
+                }
+
+                if (parameters['statusCategory'] !== undefined) {
+                    queryParameters['statusCategory'] = parameters['statusCategory'];
                 }
 
                 if (parameters['timeZoneId'] !== undefined) {
