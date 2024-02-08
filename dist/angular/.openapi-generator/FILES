@@ -48,6 +48,7 @@ api/dripController.service.ts
 api/dripWebhooksController.service.ts
 api/driverLicenseController.service.ts
 api/emailSubscriptionController.service.ts
+api/employeeController.service.ts
 api/externalContentVoteController.service.ts
 api/externalTicketLookupController.service.ts
 api/feedbackController.service.ts
@@ -412,6 +413,7 @@ model/getDeclinedCasesResponse.ts
 model/getDocumentsRequest.ts
 model/getDriverLicensesResponse.ts
 model/getEmailTemplateResponse.ts
+model/getEmployeeModel.ts
 model/getExternalTicketInputParamsResponse.ts
 model/getHouseHoldMateModel.ts
 model/getHouseholdMatesResponse.ts
@@ -556,6 +558,7 @@ model/listContactTimelineResponse.ts
 model/listCostItemsForCustomerResponse.ts
 model/listDashboardCasesResponse.ts
 model/listEligibleStatusResponse.ts
+model/listEmployeesResponse.ts
 model/listLawfirmAuditEventsByCursorResponse.ts
 model/listLawfirmStorefrontsResponse.ts
 model/listLawfirmSurchargeModel.ts

@@ -7427,6 +7427,55 @@ angular.module('otrBackendService', [])
                 return deferred.promise;
             };
             /**
+             * listEmployees
+             * @method
+             * @name OtrService#listEmployeesUsingGET
+             * @param {object} parameters - method options and parameters
+             * @param {boolean} parameters.isActive - isActive
+             * @param {integer} parameters.length - length
+             * @param {integer} parameters.page - page
+             * @param {string} parameters.team - team
+             */
+            OtrService.prototype.listEmployeesUsingGET = function(parameters) {
+                if (parameters === undefined) {
+                    parameters = {};
+                }
+                var deferred = $q.defer();
+                var domain = this.domain,
+                    path = '/api/v1/employees';
+                var body = {},
+                    queryParameters = {},
+                    headers = {},
+                    form = {};
+
+                headers['Accept'] = ['*/*'];
+
+                if (parameters['isActive'] !== undefined) {
+                    queryParameters['isActive'] = parameters['isActive'];
+                }
+
+                /** set default value **/
+                queryParameters['length'] = 10;
+
+                if (parameters['length'] !== undefined) {
+                    queryParameters['length'] = parameters['length'];
+                }
+
+                if (parameters['page'] !== undefined) {
+                    queryParameters['page'] = parameters['page'];
+                }
+
+                if (parameters['team'] !== undefined) {
+                    queryParameters['team'] = parameters['team'];
+                }
+
+                queryParameters = mergeQueryParams(parameters, queryParameters);
+
+                this.request('GET', domain + path, parameters, body, headers, queryParameters, form, deferred);
+
+                return deferred.promise;
+            };
+            /**
              * saveExternalContentVote
              * @method
              * @name OtrService#saveExternalContentVoteUsingPOST
