@@ -33,6 +33,8 @@ import { GetLawfirmPayoutsResponse } from '../model/getLawfirmPayoutsResponse';
 // @ts-ignore
 import { GetLawfirmTransactionsForCaseResponse } from '../model/getLawfirmTransactionsForCaseResponse';
 // @ts-ignore
+import { ListLawfirmBankPayoutsResponse } from '../model/listLawfirmBankPayoutsResponse';
+// @ts-ignore
 import { RefundLawfirmFeeRequest } from '../model/refundLawfirmFeeRequest';
 // @ts-ignore
 import { ReverseLawfirmPayoutRequest } from '../model/reverseLawfirmPayoutRequest';
@@ -713,6 +715,88 @@ export class LawfirmTransactionsControllerService {
         return this.httpClient.request<GetLawfirmTransactionsForCaseResponse>('get', `${this.configuration.basePath}${localVarPath}`,
             {
                 context: localVarHttpContext,
+                responseType: <any>responseType_,
+                withCredentials: this.configuration.withCredentials,
+                headers: localVarHeaders,
+                observe: observe,
+                reportProgress: reportProgress
+            }
+        );
+    }
+
+    /**
+     * listLawfirmBankPayouts
+     * @param includeTransactions includeTransactions 
+     * @param index index
+     * @param lawfirmId lawfirmId
+     * @param size size
+     * @param observe set whether or not to return the data Observable as the body, response or events. defaults to returning the body.
+     * @param reportProgress flag to report request and response progress.
+     */
+    public listLawfirmBankPayoutsUsingGET(includeTransactions: boolean, index: number, lawfirmId: number, size?: number, observe?: 'body', reportProgress?: boolean, options?: {httpHeaderAccept?: '*/*', context?: HttpContext}): Observable<ListLawfirmBankPayoutsResponse>;
+    public listLawfirmBankPayoutsUsingGET(includeTransactions: boolean, index: number, lawfirmId: number, size?: number, observe?: 'response', reportProgress?: boolean, options?: {httpHeaderAccept?: '*/*', context?: HttpContext}): Observable<HttpResponse<ListLawfirmBankPayoutsResponse>>;
+    public listLawfirmBankPayoutsUsingGET(includeTransactions: boolean, index: number, lawfirmId: number, size?: number, observe?: 'events', reportProgress?: boolean, options?: {httpHeaderAccept?: '*/*', context?: HttpContext}): Observable<HttpEvent<ListLawfirmBankPayoutsResponse>>;
+    public listLawfirmBankPayoutsUsingGET(includeTransactions: boolean, index: number, lawfirmId: number, size?: number, observe: any = 'body', reportProgress: boolean = false, options?: {httpHeaderAccept?: '*/*', context?: HttpContext}): Observable<any> {
+        if (includeTransactions === null || includeTransactions === undefined) {
+            throw new Error('Required parameter includeTransactions was null or undefined when calling listLawfirmBankPayoutsUsingGET.');
+        }
+        if (index === null || index === undefined) {
+            throw new Error('Required parameter index was null or undefined when calling listLawfirmBankPayoutsUsingGET.');
+        }
+        if (lawfirmId === null || lawfirmId === undefined) {
+            throw new Error('Required parameter lawfirmId was null or undefined when calling listLawfirmBankPayoutsUsingGET.');
+        }
+
+        let localVarQueryParameters = new HttpParams({encoder: this.encoder});
+        if (includeTransactions !== undefined && includeTransactions !== null) {
+          localVarQueryParameters = this.addToHttpParams(localVarQueryParameters,
+            <any>includeTransactions, 'includeTransactions ');
+        }
+        if (index !== undefined && index !== null) {
+          localVarQueryParameters = this.addToHttpParams(localVarQueryParameters,
+            <any>index, 'index');
+        }
+        if (size !== undefined && size !== null) {
+          localVarQueryParameters = this.addToHttpParams(localVarQueryParameters,
+            <any>size, 'size');
+        }
+
+        let localVarHeaders = this.defaultHeaders;
+
+        let localVarHttpHeaderAcceptSelected: string | undefined = options && options.httpHeaderAccept;
+        if (localVarHttpHeaderAcceptSelected === undefined) {
+            // to determine the Accept header
+            const httpHeaderAccepts: string[] = [
+                '*/*'
+            ];
+            localVarHttpHeaderAcceptSelected = this.configuration.selectHeaderAccept(httpHeaderAccepts);
+        }
+        if (localVarHttpHeaderAcceptSelected !== undefined) {
+            localVarHeaders = localVarHeaders.set('Accept', localVarHttpHeaderAcceptSelected);
+        }
+
+        let localVarHttpContext: HttpContext | undefined = options && options.context;
+        if (localVarHttpContext === undefined) {
+            localVarHttpContext = new HttpContext();
+        }
+
+
+        let responseType_: 'text' | 'json' | 'blob' = 'json';
+        if (localVarHttpHeaderAcceptSelected) {
+            if (localVarHttpHeaderAcceptSelected.startsWith('text')) {
+                responseType_ = 'text';
+            } else if (this.configuration.isJsonMime(localVarHttpHeaderAcceptSelected)) {
+                responseType_ = 'json';
+            } else {
+                responseType_ = 'blob';
+            }
+        }
+
+        let localVarPath = `/api/v1/lawfirms/${this.configuration.encodeParam({name: "lawfirmId", value: lawfirmId, in: "path", style: "simple", explode: false, dataType: "number", dataFormat: "int64"})}/bank-payouts`;
+        return this.httpClient.request<ListLawfirmBankPayoutsResponse>('get', `${this.configuration.basePath}${localVarPath}`,
+            {
+                context: localVarHttpContext,
+                params: localVarQueryParameters,
                 responseType: <any>responseType_,
                 withCredentials: this.configuration.withCredentials,
                 headers: localVarHeaders,

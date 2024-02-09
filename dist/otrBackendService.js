@@ -9462,6 +9462,68 @@ angular.module('otrBackendService', [])
                 return deferred.promise;
             };
             /**
+             * listLawfirmBankPayouts
+             * @method
+             * @name OtrService#listLawfirmBankPayoutsUsingGET
+             * @param {object} parameters - method options and parameters
+             * @param {boolean} parameters.includeTransactions - includeTransactions 
+             * @param {integer} parameters.index - index
+             * @param {integer} parameters.lawfirmId - lawfirmId
+             * @param {integer} parameters.size - size
+             */
+            OtrService.prototype.listLawfirmBankPayoutsUsingGET = function(parameters) {
+                if (parameters === undefined) {
+                    parameters = {};
+                }
+                var deferred = $q.defer();
+                var domain = this.domain,
+                    path = '/api/v1/lawfirms/{lawfirmId}/bank-payouts';
+                var body = {},
+                    queryParameters = {},
+                    headers = {},
+                    form = {};
+
+                headers['Accept'] = ['*/*'];
+
+                if (parameters['includeTransactions'] !== undefined) {
+                    queryParameters['includeTransactions '] = parameters['includeTransactions'];
+                }
+
+                if (parameters['includeTransactions'] === undefined) {
+                    deferred.reject(new Error('Missing required  parameter: includeTransactions'));
+                    return deferred.promise;
+                }
+
+                if (parameters['index'] !== undefined) {
+                    queryParameters['index'] = parameters['index'];
+                }
+
+                if (parameters['index'] === undefined) {
+                    deferred.reject(new Error('Missing required  parameter: index'));
+                    return deferred.promise;
+                }
+
+                path = path.replace('{lawfirmId}', parameters['lawfirmId']);
+
+                if (parameters['lawfirmId'] === undefined) {
+                    deferred.reject(new Error('Missing required  parameter: lawfirmId'));
+                    return deferred.promise;
+                }
+
+                /** set default value **/
+                queryParameters['size'] = 10;
+
+                if (parameters['size'] !== undefined) {
+                    queryParameters['size'] = parameters['size'];
+                }
+
+                queryParameters = mergeQueryParams(parameters, queryParameters);
+
+                this.request('GET', domain + path, parameters, body, headers, queryParameters, form, deferred);
+
+                return deferred.promise;
+            };
+            /**
              * getLawfirmCaseStats
              * @method
              * @name OtrService#getLawfirmCaseStatsUsingGET

@@ -171,6 +171,7 @@ model/availableRegion.ts
 model/awsCredentialsRequest.ts
 model/backfillLawfirmTransactionRecordsRequest.ts
 model/backfillLawfirmTransactionRecordsResponse.ts
+model/balanceTransactionModel.ts
 model/billingInvoiceModel.ts
 model/billingPriceModel.ts
 model/billingProductModel.ts
@@ -512,6 +513,7 @@ model/isRefundEligibleResponse.ts
 model/isUserLoggedInResponse.ts
 model/lastLoginDateModel.ts
 model/lawfirmAuditEventModel.ts
+model/lawfirmBankPayoutModel.ts
 model/lawfirmBookingSummary.ts
 model/lawfirmCaseDocument.ts
 model/lawfirmCaseModel.ts
@@ -560,6 +562,7 @@ model/listDashboardCasesResponse.ts
 model/listEligibleStatusResponse.ts
 model/listEmployeesResponse.ts
 model/listLawfirmAuditEventsByCursorResponse.ts
+model/listLawfirmBankPayoutsResponse.ts
 model/listLawfirmStorefrontsResponse.ts
 model/listLawfirmSurchargeModel.ts
 model/listLawfirmSurchargeTypeModel.ts

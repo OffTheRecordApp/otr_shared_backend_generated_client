@@ -83,6 +83,15 @@ export declare class LawfirmTransactionsControllerApi {
     getLawfirmTransactionsForCaseUsingGET(caseId: string, extraHttpRequestParams?: any): ng.IHttpPromise<models.GetLawfirmTransactionsForCaseResponse>;
     /**
      *
+     * @summary listLawfirmBankPayouts
+     * @param includeTransactions includeTransactions
+     * @param index index
+     * @param lawfirmId lawfirmId
+     * @param size size
+     */
+    listLawfirmBankPayoutsUsingGET(includeTransactions: boolean, index: number, lawfirmId: number, size?: number, extraHttpRequestParams?: any): ng.IHttpPromise<models.ListLawfirmBankPayoutsResponse>;
+    /**
+     *
      * @summary refundLawfirmFee
      * @param lawfirmFeeId lawfirmFeeId
      * @param request request
