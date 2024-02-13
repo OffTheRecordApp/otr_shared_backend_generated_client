@@ -11,6 +11,9 @@
  */
 export interface AgentBookingStats {
     "bookingsCount"?: number;
+    "cancelledBookingCount"?: number;
+    "cancelledBookingRevenueTotal"?: number;
+    "cancelledTransactionsTotal"?: number;
     "firstName"?: string;
     "lastName"?: string;
     "otrRevenueTotal"?: number;

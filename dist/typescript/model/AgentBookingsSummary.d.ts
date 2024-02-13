@@ -10,6 +10,9 @@
  * Do not edit the class manually.
  */
 export interface AgentBookingsSummary {
+    "cancelledBookingsCount"?: number;
+    "cancelledBookingsRevenueTotal"?: number;
+    "cancelledTransactionsTotal"?: number;
     "otrRevenueTotal"?: number;
     "resultCount"?: number;
     "transactionsTotal"?: number;
