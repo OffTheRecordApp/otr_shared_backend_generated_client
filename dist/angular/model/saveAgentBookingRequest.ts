@@ -12,6 +12,7 @@
 
 
 export interface SaveAgentBookingRequest { 
+    agentBookingId?: number;
     bookingReference?: string;
     caseId?: string;
     channel?: string;

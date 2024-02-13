@@ -10,6 +10,7 @@
  * Do not edit the class manually.
  */
 export interface SaveAgentBookingRequest {
+    "agentBookingId"?: number;
     "bookingReference"?: string;
     "caseId"?: string;
     "channel"?: string;

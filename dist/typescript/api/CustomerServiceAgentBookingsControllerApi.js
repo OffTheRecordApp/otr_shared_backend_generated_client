@@ -25,6 +25,31 @@ var CustomerServiceAgentBookingsControllerApi = /** @class */ (function () {
     }
     /**
      *
+     * @summary deleteAgentBooking
+     * @param agentBookingId agentBookingId
+     */
+    CustomerServiceAgentBookingsControllerApi.prototype.deleteAgentBookingUsingDELETE = function (agentBookingId, extraHttpRequestParams) {
+        var localVarPath = this.basePath + '/api/v1/cs-agent-bookings/{agentBookingId}'
+            .replace('{' + 'agentBookingId' + '}', encodeURIComponent(String(agentBookingId)));
+        var queryParameters = {};
+        var headerParams = Object.assign({}, this.defaultHeaders);
+        // verify required parameter 'agentBookingId' is not null or undefined
+        if (agentBookingId === null || agentBookingId === undefined) {
+            throw new Error('Required parameter agentBookingId was null or undefined when calling deleteAgentBookingUsingDELETE.');
+        }
+        var httpRequestParams = {
+            method: 'DELETE',
+            url: localVarPath,
+            params: queryParameters,
+            headers: headerParams
+        };
+        if (extraHttpRequestParams) {
+            httpRequestParams = Object.assign(httpRequestParams, extraHttpRequestParams);
+        }
+        return this.$http(httpRequestParams);
+    };
+    /**
+     *
      * @summary listAgentBookings
      * @param agentTeam agentTeam
      * @param agentUserId agentUserId

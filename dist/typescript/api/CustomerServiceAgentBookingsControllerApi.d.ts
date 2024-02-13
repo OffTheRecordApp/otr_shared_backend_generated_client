@@ -20,6 +20,12 @@ export declare class CustomerServiceAgentBookingsControllerApi {
     constructor($http: ng.IHttpService, $httpParamSerializer?: (d: any) => any, basePath?: string);
     /**
      *
+     * @summary deleteAgentBooking
+     * @param agentBookingId agentBookingId
+     */
+    deleteAgentBookingUsingDELETE(agentBookingId: number, extraHttpRequestParams?: any): ng.IHttpPromise<{}>;
+    /**
+     *
      * @summary listAgentBookings
      * @param agentTeam agentTeam
      * @param agentUserId agentUserId
