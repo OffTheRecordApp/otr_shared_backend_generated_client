@@ -14,5 +14,7 @@ import { LawfirmBankPayoutModel } from './lawfirmBankPayoutModel';
 
 export interface ListLawfirmBankPayoutsResponse { 
     bankPayouts?: Array<LawfirmBankPayoutModel>;
+    totalCount?: number;
+    totalPages?: number;
 }
 

@@ -12,4 +12,6 @@
 import * as models from './models';
 export interface ListLawfirmBankPayoutsResponse {
     "bankPayouts"?: Array<models.LawfirmBankPayoutModel>;
+    "totalCount"?: number;
+    "totalPages"?: number;
 }
