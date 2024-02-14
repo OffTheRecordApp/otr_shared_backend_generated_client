@@ -18,6 +18,7 @@ export interface AgentBookingsSummary {
     "inboundRevenueTotal"?: number;
     "otrRevenueTotal"?: number;
     "outboundRevenueTotal"?: number;
+    "platformBookingsResultCount"?: number;
     "resultCount"?: number;
     "transactionsTotal"?: number;
 }
