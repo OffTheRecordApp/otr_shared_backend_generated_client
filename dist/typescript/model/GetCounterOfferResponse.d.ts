@@ -19,7 +19,9 @@ export interface GetCounterOfferResponse {
     "createdByUserId"?: number;
     "createdByUserRoleId"?: number;
     "lawfirmCaseId"?: number;
+    "legalFeeDifferenceInCents"?: number;
     "noteToClient"?: string;
     "noteToOtr"?: string;
     "refundPercentage"?: number;
+    "totalLegalFeeInCents"?: number;
 }
