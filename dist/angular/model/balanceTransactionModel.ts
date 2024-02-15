@@ -14,6 +14,7 @@
 export interface BalanceTransactionModel { 
     amountInCents?: number;
     availableAtDateUtc?: string;
+    caseId?: string;
     creationDateUtc?: string;
     id?: string;
     stripePayoutId?: string;
