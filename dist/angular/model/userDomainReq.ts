@@ -47,6 +47,7 @@ export interface UserDomainReq {
     privacyMode?: UserDomainReq.PrivacyModeEnum;
     profilePicture?: string;
     race?: UserDomainReq.RaceEnum;
+    referralCode?: string;
     referralCount?: number;
     roles?: Set<UserRoleDomain>;
     signUpCode?: string;
