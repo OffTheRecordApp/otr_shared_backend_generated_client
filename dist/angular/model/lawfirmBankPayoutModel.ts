@@ -32,6 +32,7 @@ export interface LawfirmBankPayoutModel {
     stripePayoutId?: string;
     stripePlatformAccountId?: string;
     type?: LawfirmBankPayoutModel.TypeEnum;
+    withdrawal?: boolean;
 }
 export namespace LawfirmBankPayoutModel {
     export type MethodEnum = 'INSTANT' | 'STANDARD';
