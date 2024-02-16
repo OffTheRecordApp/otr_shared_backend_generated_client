@@ -51,6 +51,7 @@ var LawfirmAuditEventModel;
         EventEnum[EventEnum["CASECOUNTERINITIATED"] = 'CASE_COUNTER_INITIATED'] = "CASECOUNTERINITIATED";
         EventEnum[EventEnum["CASEDECLINE"] = 'CASE_DECLINE'] = "CASEDECLINE";
         EventEnum[EventEnum["CASEMATCH"] = 'CASE_MATCH'] = "CASEMATCH";
+        EventEnum[EventEnum["CASEPAYMENTDELETED"] = 'CASE_PAYMENT_DELETED'] = "CASEPAYMENTDELETED";
         EventEnum[EventEnum["CASERESOLVE"] = 'CASE_RESOLVE'] = "CASERESOLVE";
         EventEnum[EventEnum["CASESTATUS"] = 'CASE_STATUS'] = "CASESTATUS";
         EventEnum[EventEnum["CASETRANSFER"] = 'CASE_TRANSFER'] = "CASETRANSFER";
