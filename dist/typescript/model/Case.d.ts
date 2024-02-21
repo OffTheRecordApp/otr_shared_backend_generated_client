@@ -16,11 +16,14 @@ export interface Case {
     "caseId"?: string;
     "caseStatus"?: Case.CaseStatusEnum;
     "clientTotalCost"?: number;
+    "dob"?: string;
+    "gender"?: Case.GenderEnum;
     "lawfirmId"?: number;
     "lawfirmName"?: string;
     "numPayments"?: number;
     "otrPercent"?: number;
     "otrRevenue"?: number;
+    "race"?: Case.RaceEnum;
     "state"?: Case.StateEnum;
     "userFirstName"?: string;
     "userId"?: number;
@@ -65,6 +68,22 @@ export declare namespace Case {
         STALE,
         TRAFFICSCHOOL,
         UNCONFIRMED
+    }
+    enum GenderEnum {
+        FEMALE,
+        MALE,
+        NOTLISTED
+    }
+    enum RaceEnum {
+        ASIAN,
+        BLACK,
+        HISPANIC,
+        MIDDLEEASTERN,
+        NATIVE,
+        PACIFICISLANDER,
+        TWOORMORE,
+        UNKNOWN,
+        WHITE
     }
     enum StateEnum {
         AK,

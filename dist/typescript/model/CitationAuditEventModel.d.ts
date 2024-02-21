@@ -83,6 +83,7 @@ export declare namespace CitationAuditEventModel {
         LAWFIRMTRANSFERREVERSED,
         LINEITEMADDED,
         LINEITEMDELETED,
+        LINEITEMUPDATED,
         MBGELIGIBILITYCHANGED,
         NAMECHANGED,
         OCRTEXTEXTRACTED,

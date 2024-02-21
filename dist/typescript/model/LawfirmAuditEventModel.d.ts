@@ -83,6 +83,7 @@ export declare namespace LawfirmAuditEventModel {
         LAWFIRMTRANSFERREVERSED,
         LINEITEMADDED,
         LINEITEMDELETED,
+        LINEITEMUPDATED,
         MBGELIGIBILITYCHANGED,
         NAMECHANGED,
         OCRTEXTEXTRACTED,

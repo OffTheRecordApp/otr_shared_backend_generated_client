@@ -18,11 +18,14 @@ export interface Case {
     caseId?: string;
     caseStatus?: Case.CaseStatusEnum;
     clientTotalCost?: number;
+    dob?: string;
+    gender?: Case.GenderEnum;
     lawfirmId?: number;
     lawfirmName?: string;
     numPayments?: number;
     otrPercent?: number;
     otrRevenue?: number;
+    race?: Case.RaceEnum;
     state?: Case.StateEnum;
     userFirstName?: string;
     userId?: number;
@@ -68,6 +71,24 @@ export namespace Case {
         Stale: 'STALE' as CaseStatusEnum,
         TrafficSchool: 'TRAFFIC_SCHOOL' as CaseStatusEnum,
         Unconfirmed: 'UNCONFIRMED' as CaseStatusEnum
+    };
+    export type GenderEnum = 'FEMALE' | 'MALE' | 'NOT_LISTED';
+    export const GenderEnum = {
+        Female: 'FEMALE' as GenderEnum,
+        Male: 'MALE' as GenderEnum,
+        NotListed: 'NOT_LISTED' as GenderEnum
+    };
+    export type RaceEnum = 'ASIAN' | 'BLACK' | 'HISPANIC' | 'MIDDLE_EASTERN' | 'NATIVE' | 'PACIFIC_ISLANDER' | 'TWO_OR_MORE' | 'UNKNOWN' | 'WHITE';
+    export const RaceEnum = {
+        Asian: 'ASIAN' as RaceEnum,
+        Black: 'BLACK' as RaceEnum,
+        Hispanic: 'HISPANIC' as RaceEnum,
+        MiddleEastern: 'MIDDLE_EASTERN' as RaceEnum,
+        Native: 'NATIVE' as RaceEnum,
+        PacificIslander: 'PACIFIC_ISLANDER' as RaceEnum,
+        TwoOrMore: 'TWO_OR_MORE' as RaceEnum,
+        Unknown: 'UNKNOWN' as RaceEnum,
+        White: 'WHITE' as RaceEnum
     };
     export type StateEnum = 'AK' | 'AL' | 'AR' | 'AZ' | 'CA' | 'CO' | 'CT' | 'DC' | 'DE' | 'FL' | 'GA' | 'HI' | 'IA' | 'ID' | 'IL' | 'IN' | 'KS' | 'KY' | 'LA' | 'MA' | 'MD' | 'ME' | 'MI' | 'MN' | 'MO' | 'MS' | 'MT' | 'NC' | 'ND' | 'NE' | 'NH' | 'NJ' | 'NM' | 'NV' | 'NY' | 'OH' | 'OK' | 'OR' | 'PA' | 'RI' | 'SC' | 'SD' | 'TN' | 'TX' | 'UT' | 'VA' | 'VT' | 'WA' | 'WI' | 'WV' | 'WY';
     export const StateEnum = {

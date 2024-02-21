@@ -54,6 +54,24 @@ var Case;
         CaseStatusEnum[CaseStatusEnum["TRAFFICSCHOOL"] = 'TRAFFIC_SCHOOL'] = "TRAFFICSCHOOL";
         CaseStatusEnum[CaseStatusEnum["UNCONFIRMED"] = 'UNCONFIRMED'] = "UNCONFIRMED";
     })(CaseStatusEnum = Case.CaseStatusEnum || (Case.CaseStatusEnum = {}));
+    var GenderEnum;
+    (function (GenderEnum) {
+        GenderEnum[GenderEnum["FEMALE"] = 'FEMALE'] = "FEMALE";
+        GenderEnum[GenderEnum["MALE"] = 'MALE'] = "MALE";
+        GenderEnum[GenderEnum["NOTLISTED"] = 'NOT_LISTED'] = "NOTLISTED";
+    })(GenderEnum = Case.GenderEnum || (Case.GenderEnum = {}));
+    var RaceEnum;
+    (function (RaceEnum) {
+        RaceEnum[RaceEnum["ASIAN"] = 'ASIAN'] = "ASIAN";
+        RaceEnum[RaceEnum["BLACK"] = 'BLACK'] = "BLACK";
+        RaceEnum[RaceEnum["HISPANIC"] = 'HISPANIC'] = "HISPANIC";
+        RaceEnum[RaceEnum["MIDDLEEASTERN"] = 'MIDDLE_EASTERN'] = "MIDDLEEASTERN";
+        RaceEnum[RaceEnum["NATIVE"] = 'NATIVE'] = "NATIVE";
+        RaceEnum[RaceEnum["PACIFICISLANDER"] = 'PACIFIC_ISLANDER'] = "PACIFICISLANDER";
+        RaceEnum[RaceEnum["TWOORMORE"] = 'TWO_OR_MORE'] = "TWOORMORE";
+        RaceEnum[RaceEnum["UNKNOWN"] = 'UNKNOWN'] = "UNKNOWN";
+        RaceEnum[RaceEnum["WHITE"] = 'WHITE'] = "WHITE";
+    })(RaceEnum = Case.RaceEnum || (Case.RaceEnum = {}));
     var StateEnum;
     (function (StateEnum) {
         StateEnum[StateEnum["AK"] = 'AK'] = "AK";
