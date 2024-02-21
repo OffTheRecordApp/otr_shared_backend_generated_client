@@ -9,14 +9,15 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
+import { ZoneId } from './zoneId';
 
 
-export interface GetUserRegistrationsRequest { 
+export interface CancellationAggregates { 
+    caseCancellationCount?: number;
     endDate?: string;
-    includeDataRecords?: boolean;
-    length?: number;
-    page?: number;
+    revenue?: number;
     startDate?: string;
-    timeZoneId?: string;
+    transactionVolume?: number;
+    zoneId?: ZoneId;
 }
 

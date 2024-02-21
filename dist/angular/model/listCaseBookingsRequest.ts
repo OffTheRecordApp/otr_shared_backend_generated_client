@@ -11,11 +11,9 @@
  */
 
 
-export interface GetUserRegistrationsRequest { 
+export interface ListCaseBookingsRequest { 
     endDate?: string;
     includeDataRecords?: boolean;
-    length?: number;
-    page?: number;
     startDate?: string;
     timeZoneId?: string;
 }

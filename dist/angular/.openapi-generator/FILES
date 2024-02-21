@@ -155,6 +155,7 @@ model/agentBookingsSummary.ts
 model/aggregateBySource.ts
 model/aggregateRatingMetrics.ts
 model/aggregateReferralCredit.ts
+model/aggregates.ts
 model/alert.ts
 model/alertNotificationResponse.ts
 model/anonymousTicketUploadModel.ts
@@ -191,6 +192,7 @@ model/cancelCaseRequest.ts
 model/cancelationDetails.ts
 model/cancelationDetailsReq.ts
 model/cancelationDetailsRes.ts
+model/cancellationAggregates.ts
 model/captureChargeFromCasePaymentRequest.ts
 model/case.ts
 model/caseActionDomain.ts
@@ -512,6 +514,7 @@ model/inviteLawyerToLawfirmRequest.ts
 model/isRefundEligibleResponse.ts
 model/isUserLoggedInResponse.ts
 model/lastLoginDateModel.ts
+model/lawfirm.ts
 model/lawfirmAuditEventModel.ts
 model/lawfirmBankPayoutModel.ts
 model/lawfirmBookingSummary.ts
@@ -553,6 +556,10 @@ model/listBillingProductsResponse.ts
 model/listBillingSubscribersResponse.ts
 model/listBillingSubscriptionModel.ts
 model/listBillingSubscriptionsResponse.ts
+model/listCaseBookingsRequest.ts
+model/listCaseBookingsResponse.ts
+model/listCaseCancellationsRequest.ts
+model/listCaseCancellationsResponse.ts
 model/listCitationAuditEventsResponse.ts
 model/listCitationsRequest.ts
 model/listCitationsResponse.ts
@@ -567,6 +574,8 @@ model/listLawfirmStorefrontsResponse.ts
 model/listLawfirmSurchargeModel.ts
 model/listLawfirmSurchargeTypeModel.ts
 model/listLawfirmSurchargesResponse.ts
+model/listLawfirmsEngagedRequest.ts
+model/listLawfirmsEngagedResponse.ts
 model/listNotesResponse.ts
 model/listPhoneCallsCountModel.ts
 model/listPhoneCallsModel.ts

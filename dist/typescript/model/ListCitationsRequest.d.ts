@@ -20,6 +20,7 @@ export interface ListCitationsRequest {
     "hasAccident"?: boolean;
     "hasCase"?: boolean;
     "hasPhoto"?: boolean;
+    "includeDataRecords"?: boolean;
     "length"?: number;
     "page"?: number;
     "sortMap"?: {

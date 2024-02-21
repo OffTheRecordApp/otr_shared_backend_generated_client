@@ -75,6 +75,56 @@ var DashboardControllerApi = /** @class */ (function () {
     };
     /**
      *
+     * @summary listCaseBookings
+     * @param request request
+     */
+    DashboardControllerApi.prototype.listCaseBookingsUsingPOST = function (request, extraHttpRequestParams) {
+        var localVarPath = this.basePath + '/api/v1/console/bookings2';
+        var queryParameters = {};
+        var headerParams = Object.assign({}, this.defaultHeaders);
+        // verify required parameter 'request' is not null or undefined
+        if (request === null || request === undefined) {
+            throw new Error('Required parameter request was null or undefined when calling listCaseBookingsUsingPOST.');
+        }
+        var httpRequestParams = {
+            method: 'POST',
+            url: localVarPath,
+            data: request,
+            params: queryParameters,
+            headers: headerParams
+        };
+        if (extraHttpRequestParams) {
+            httpRequestParams = Object.assign(httpRequestParams, extraHttpRequestParams);
+        }
+        return this.$http(httpRequestParams);
+    };
+    /**
+     *
+     * @summary listCaseCancellations
+     * @param request request
+     */
+    DashboardControllerApi.prototype.listCaseCancellationsUsingPOST = function (request, extraHttpRequestParams) {
+        var localVarPath = this.basePath + '/api/v1/console/cancellations';
+        var queryParameters = {};
+        var headerParams = Object.assign({}, this.defaultHeaders);
+        // verify required parameter 'request' is not null or undefined
+        if (request === null || request === undefined) {
+            throw new Error('Required parameter request was null or undefined when calling listCaseCancellationsUsingPOST.');
+        }
+        var httpRequestParams = {
+            method: 'POST',
+            url: localVarPath,
+            data: request,
+            params: queryParameters,
+            headers: headerParams
+        };
+        if (extraHttpRequestParams) {
+            httpRequestParams = Object.assign(httpRequestParams, extraHttpRequestParams);
+        }
+        return this.$http(httpRequestParams);
+    };
+    /**
+     *
      * @summary listCitations
      * @param request request
      */
@@ -165,6 +215,31 @@ var DashboardControllerApi = /** @class */ (function () {
             method: 'POST',
             url: localVarPath,
             data: graphRequest,
+            params: queryParameters,
+            headers: headerParams
+        };
+        if (extraHttpRequestParams) {
+            httpRequestParams = Object.assign(httpRequestParams, extraHttpRequestParams);
+        }
+        return this.$http(httpRequestParams);
+    };
+    /**
+     *
+     * @summary listLawfirmsEngaged
+     * @param request request
+     */
+    DashboardControllerApi.prototype.listLawfirmsEngagedUsingPOST = function (request, extraHttpRequestParams) {
+        var localVarPath = this.basePath + '/api/v1/console/lawfirm-engagement';
+        var queryParameters = {};
+        var headerParams = Object.assign({}, this.defaultHeaders);
+        // verify required parameter 'request' is not null or undefined
+        if (request === null || request === undefined) {
+            throw new Error('Required parameter request was null or undefined when calling listLawfirmsEngagedUsingPOST.');
+        }
+        var httpRequestParams = {
+            method: 'POST',
+            url: localVarPath,
+            data: request,
             params: queryParameters,
             headers: headerParams
         };

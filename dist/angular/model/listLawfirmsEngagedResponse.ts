@@ -9,14 +9,12 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
+import { Aggregates } from './aggregates';
+import { Lawfirm } from './lawfirm';
 
 
-export interface GetUserRegistrationsRequest { 
-    endDate?: string;
-    includeDataRecords?: boolean;
-    length?: number;
-    page?: number;
-    startDate?: string;
-    timeZoneId?: string;
+export interface ListLawfirmsEngagedResponse { 
+    aggregates?: Aggregates;
+    lawfirms?: Array<Lawfirm>;
 }
 

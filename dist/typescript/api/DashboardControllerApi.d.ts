@@ -32,6 +32,18 @@ export declare class DashboardControllerApi {
     getUserRegistrationsUsingPOST(request: models.GetUserRegistrationsRequest, extraHttpRequestParams?: any): ng.IHttpPromise<models.GetUserRegistrationsResponse>;
     /**
      *
+     * @summary listCaseBookings
+     * @param request request
+     */
+    listCaseBookingsUsingPOST(request: models.ListCaseBookingsRequest, extraHttpRequestParams?: any): ng.IHttpPromise<models.ListCaseBookingsResponse>;
+    /**
+     *
+     * @summary listCaseCancellations
+     * @param request request
+     */
+    listCaseCancellationsUsingPOST(request: models.ListCaseCancellationsRequest, extraHttpRequestParams?: any): ng.IHttpPromise<models.ListCaseCancellationsResponse>;
+    /**
+     *
      * @summary listCitations
      * @param request request
      */
@@ -54,6 +66,12 @@ export declare class DashboardControllerApi {
      * @param graphRequest graphRequest
      */
     listExpensesUsingPOST(graphRequest: models.GraphRequest, extraHttpRequestParams?: any): ng.IHttpPromise<models.SqlResponse>;
+    /**
+     *
+     * @summary listLawfirmsEngaged
+     * @param request request
+     */
+    listLawfirmsEngagedUsingPOST(request: models.ListLawfirmsEngagedRequest, extraHttpRequestParams?: any): ng.IHttpPromise<models.ListLawfirmsEngagedResponse>;
     /**
      *
      * @summary listLawyerLeads

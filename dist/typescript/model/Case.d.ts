@@ -11,13 +11,20 @@
  */
 import * as models from './models';
 export interface Case {
+    "bookingDate"?: string;
     "bookingDateUtc"?: models.Timestamp;
     "caseId"?: string;
     "caseStatus"?: Case.CaseStatusEnum;
-    "caseSubtotal"?: number;
-    "otrReferralFee"?: number;
+    "clientTotalCost"?: number;
+    "lawfirmId"?: number;
+    "lawfirmName"?: string;
+    "numPayments"?: number;
+    "otrPercent"?: number;
+    "otrRevenue"?: number;
     "state"?: Case.StateEnum;
-    "statusCategory"?: Case.StatusCategoryEnum;
+    "userFirstName"?: string;
+    "userId"?: number;
+    "userLastName"?: string;
 }
 export declare namespace Case {
     enum CaseStatusEnum {
@@ -111,11 +118,5 @@ export declare namespace Case {
         WI,
         WV,
         WY
-    }
-    enum StatusCategoryEnum {
-        ACTIVE,
-        CANCELLED,
-        RESOLVED,
-        UNCONFIRMED
     }
 }

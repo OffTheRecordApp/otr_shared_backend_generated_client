@@ -9,14 +9,12 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
+import { CancellationAggregates } from './cancellationAggregates';
+import { Case } from './case';
 
 
-export interface GetUserRegistrationsRequest { 
-    endDate?: string;
-    includeDataRecords?: boolean;
-    length?: number;
-    page?: number;
-    startDate?: string;
-    timeZoneId?: string;
+export interface ListCaseCancellationsResponse { 
+    cancellationAggregates?: CancellationAggregates;
+    cancellations?: Array<Case>;
 }
 

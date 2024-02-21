@@ -5317,6 +5317,80 @@ angular.module('otrBackendService', [])
                 return deferred.promise;
             };
             /**
+             * listCaseBookings
+             * @method
+             * @name OtrService#listCaseBookingsUsingPOST
+             * @param {object} parameters - method options and parameters
+             * @param {} parameters.request - request
+             */
+            OtrService.prototype.listCaseBookingsUsingPOST = function(parameters) {
+                if (parameters === undefined) {
+                    parameters = {};
+                }
+                var deferred = $q.defer();
+                var domain = this.domain,
+                    path = '/api/v1/console/bookings2';
+                var body = {},
+                    queryParameters = {},
+                    headers = {},
+                    form = {};
+
+                headers['Accept'] = ['application/json'];
+                headers['Content-Type'] = ['application/json'];
+
+                if (parameters['request'] !== undefined) {
+                    body = parameters['request'];
+                }
+
+                if (parameters['request'] === undefined) {
+                    deferred.reject(new Error('Missing required  parameter: request'));
+                    return deferred.promise;
+                }
+
+                queryParameters = mergeQueryParams(parameters, queryParameters);
+
+                this.request('POST', domain + path, parameters, body, headers, queryParameters, form, deferred);
+
+                return deferred.promise;
+            };
+            /**
+             * listCaseCancellations
+             * @method
+             * @name OtrService#listCaseCancellationsUsingPOST
+             * @param {object} parameters - method options and parameters
+             * @param {} parameters.request - request
+             */
+            OtrService.prototype.listCaseCancellationsUsingPOST = function(parameters) {
+                if (parameters === undefined) {
+                    parameters = {};
+                }
+                var deferred = $q.defer();
+                var domain = this.domain,
+                    path = '/api/v1/console/cancellations';
+                var body = {},
+                    queryParameters = {},
+                    headers = {},
+                    form = {};
+
+                headers['Accept'] = ['application/json'];
+                headers['Content-Type'] = ['application/json'];
+
+                if (parameters['request'] !== undefined) {
+                    body = parameters['request'];
+                }
+
+                if (parameters['request'] === undefined) {
+                    deferred.reject(new Error('Missing required  parameter: request'));
+                    return deferred.promise;
+                }
+
+                queryParameters = mergeQueryParams(parameters, queryParameters);
+
+                this.request('POST', domain + path, parameters, body, headers, queryParameters, form, deferred);
+
+                return deferred.promise;
+            };
+            /**
              * getCasesWithCoverageObtained
              * @method
              * @name OtrService#getCasesWithCoverageObtainedUsingPOST
@@ -5788,6 +5862,43 @@ angular.module('otrBackendService', [])
 
                 if (parameters['graphRequest'] === undefined) {
                     deferred.reject(new Error('Missing required  parameter: graphRequest'));
+                    return deferred.promise;
+                }
+
+                queryParameters = mergeQueryParams(parameters, queryParameters);
+
+                this.request('POST', domain + path, parameters, body, headers, queryParameters, form, deferred);
+
+                return deferred.promise;
+            };
+            /**
+             * listLawfirmsEngaged
+             * @method
+             * @name OtrService#listLawfirmsEngagedUsingPOST
+             * @param {object} parameters - method options and parameters
+             * @param {} parameters.request - request
+             */
+            OtrService.prototype.listLawfirmsEngagedUsingPOST = function(parameters) {
+                if (parameters === undefined) {
+                    parameters = {};
+                }
+                var deferred = $q.defer();
+                var domain = this.domain,
+                    path = '/api/v1/console/lawfirm-engagement';
+                var body = {},
+                    queryParameters = {},
+                    headers = {},
+                    form = {};
+
+                headers['Accept'] = ['application/json'];
+                headers['Content-Type'] = ['application/json'];
+
+                if (parameters['request'] !== undefined) {
+                    body = parameters['request'];
+                }
+
+                if (parameters['request'] === undefined) {
+                    deferred.reject(new Error('Missing required  parameter: request'));
                     return deferred.promise;
                 }
 
