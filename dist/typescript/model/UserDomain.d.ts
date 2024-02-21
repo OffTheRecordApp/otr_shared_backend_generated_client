@@ -21,6 +21,7 @@ export interface UserDomain {
     "firstname"?: string;
     "fullName"?: string;
     "gender"?: string;
+    "genderType"?: UserDomain.GenderTypeEnum;
     "ghostAccountCreationDateUtc"?: string;
     "hasLeftReview"?: boolean;
     "isEmailConfirmed"?: boolean;
@@ -52,6 +53,11 @@ export interface UserDomain {
     "userRegistrationDateUtc"?: string;
 }
 export declare namespace UserDomain {
+    enum GenderTypeEnum {
+        FEMALE,
+        MALE,
+        NOTLISTED
+    }
     enum LawyerJobTitleEnum {
         ACCOUNTANT,
         ATTORNEY,

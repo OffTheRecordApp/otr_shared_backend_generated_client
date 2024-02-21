@@ -28,6 +28,7 @@ export interface UserDomainRes {
     firstname?: string;
     fullName?: string;
     gender?: string;
+    genderType?: UserDomainRes.GenderTypeEnum;
     ghostAccountCreationDateUtc?: string;
     hasLeftReview?: boolean;
     isEmailConfirmed?: boolean;
@@ -59,6 +60,12 @@ export interface UserDomainRes {
     userRegistrationDateUtc?: string;
 }
 export namespace UserDomainRes {
+    export type GenderTypeEnum = 'FEMALE' | 'MALE' | 'NOT_LISTED';
+    export const GenderTypeEnum = {
+        Female: 'FEMALE' as GenderTypeEnum,
+        Male: 'MALE' as GenderTypeEnum,
+        NotListed: 'NOT_LISTED' as GenderTypeEnum
+    };
     export type LawyerJobTitleEnum = 'ACCOUNTANT' | 'ATTORNEY' | 'ATTORNEY_ASSOCIATE' | 'ATTORNEY_COUNSEL' | 'ATTORNEY_MANAGING_PARTNER' | 'ATTORNEY_PARTNER' | 'ATTORNEY_STAFF' | 'CUSTOMER_SERVICE_REP' | 'LEGAL_ASSISTANT' | 'LEGAL_INTERN' | 'LEGAL_SECRETARY' | 'OTHER' | 'PARALEGAL';
     export const LawyerJobTitleEnum = {
         Accountant: 'ACCOUNTANT' as LawyerJobTitleEnum,

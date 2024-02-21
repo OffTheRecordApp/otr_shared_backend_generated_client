@@ -14,6 +14,12 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.UserDomain = void 0;
 var UserDomain;
 (function (UserDomain) {
+    var GenderTypeEnum;
+    (function (GenderTypeEnum) {
+        GenderTypeEnum[GenderTypeEnum["FEMALE"] = 'FEMALE'] = "FEMALE";
+        GenderTypeEnum[GenderTypeEnum["MALE"] = 'MALE'] = "MALE";
+        GenderTypeEnum[GenderTypeEnum["NOTLISTED"] = 'NOT_LISTED'] = "NOTLISTED";
+    })(GenderTypeEnum = UserDomain.GenderTypeEnum || (UserDomain.GenderTypeEnum = {}));
     var LawyerJobTitleEnum;
     (function (LawyerJobTitleEnum) {
         LawyerJobTitleEnum[LawyerJobTitleEnum["ACCOUNTANT"] = 'ACCOUNTANT'] = "ACCOUNTANT";
