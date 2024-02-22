@@ -11,10 +11,13 @@
  */
 import * as models from './models';
 export interface Aggregates {
-    "caseCount"?: number;
     "endDate"?: string;
-    "revenue"?: number;
+    "matchingRecords"?: number;
+    "matchingRevenue"?: number;
+    "matchingTransactionVolume"?: number;
     "startDate"?: string;
-    "transactionVolume"?: number;
+    "totalRecords"?: number;
+    "totalRevenue"?: number;
+    "totalTransactionVolume"?: number;
     "zoneId"?: models.ZoneId;
 }

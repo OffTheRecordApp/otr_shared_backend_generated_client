@@ -27,6 +27,7 @@ export interface Case {
     otrRevenue?: number;
     race?: Case.RaceEnum;
     state?: Case.StateEnum;
+    statusCategory?: Case.StatusCategoryEnum;
     userFirstName?: string;
     userId?: number;
     userLastName?: string;
@@ -143,6 +144,13 @@ export namespace Case {
         Wi: 'WI' as StateEnum,
         Wv: 'WV' as StateEnum,
         Wy: 'WY' as StateEnum
+    };
+    export type StatusCategoryEnum = 'ACTIVE' | 'CANCELLED' | 'RESOLVED' | 'UNCONFIRMED';
+    export const StatusCategoryEnum = {
+        Active: 'ACTIVE' as StatusCategoryEnum,
+        Cancelled: 'CANCELLED' as StatusCategoryEnum,
+        Resolved: 'RESOLVED' as StatusCategoryEnum,
+        Unconfirmed: 'UNCONFIRMED' as StatusCategoryEnum
     };
 }
 

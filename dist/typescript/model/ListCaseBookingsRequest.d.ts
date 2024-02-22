@@ -10,8 +10,133 @@
  * Do not edit the class manually.
  */
 export interface ListCaseBookingsRequest {
+    "caseStatusFilter"?: Array<ListCaseBookingsRequest.CaseStatusFilterEnum>;
     "endDate"?: string;
+    "genderFilterList"?: Array<ListCaseBookingsRequest.GenderFilterListEnum>;
     "includeDataRecords"?: boolean;
+    "lawfirmStringFilter"?: string;
+    "raceFilterList"?: Array<ListCaseBookingsRequest.RaceFilterListEnum>;
+    "sortMap"?: {
+        [key: string]: string;
+    };
     "startDate"?: string;
+    "stateFilterList"?: Array<ListCaseBookingsRequest.StateFilterListEnum>;
+    "statusCategoryFilter"?: Array<ListCaseBookingsRequest.StatusCategoryFilterEnum>;
     "timeZoneId"?: string;
+}
+export declare namespace ListCaseBookingsRequest {
+    enum CaseStatusFilterEnum {
+        AMENDEDDOWNWITHINCLASS,
+        AMENDEDFULLFINE,
+        AMENDEDINCREASEDFINE,
+        AMENDEDNOFINE,
+        AMENDEDREDUCEDFINE,
+        AMENDEDTOINFRACTION,
+        AMENDEDTONMV,
+        CANCELLEDATTORNEYATFAULT,
+        CANCELLEDBYLAWFIRM,
+        CANCELLEDBYUSER,
+        CANCELLEDDUPLICATE,
+        CANCELLEDNMV,
+        CANCELLEDNONPAYMENT,
+        CANCELLEDNOLAWFIRM,
+        CANCELLEDOVERDUE,
+        CANCELLEDTOOSHORTNOTICE,
+        CASEINPROGRESS,
+        CLIENTCONFIRMED,
+        CLIENTCONFIRMEDUNPAID,
+        CLIENTFIREDLAWFIRM,
+        CLIENTFORCEDLOSS,
+        CLIENTPAIDFINE,
+        CLIENTUNRESPONSIVE,
+        DEFERRED,
+        DISMISSED,
+        DIVERSION,
+        FEESDISPUTED,
+        FINEREDUCTIONONLY,
+        LAWFIRMWITHDRAWN,
+        LOST,
+        NOLAWFIRMAVAILABLE,
+        POINTREDUCTION,
+        REFUSEDBYLAWFIRM,
+        RESOLVEDNONPAYMENT,
+        STALE,
+        TRAFFICSCHOOL,
+        UNCONFIRMED
+    }
+    enum GenderFilterListEnum {
+        FEMALE,
+        MALE,
+        NOTLISTED
+    }
+    enum RaceFilterListEnum {
+        ASIAN,
+        BLACK,
+        HISPANIC,
+        MIDDLEEASTERN,
+        NATIVE,
+        PACIFICISLANDER,
+        TWOORMORE,
+        UNKNOWN,
+        WHITE
+    }
+    enum StateFilterListEnum {
+        AK,
+        AL,
+        AR,
+        AZ,
+        CA,
+        CO,
+        CT,
+        DC,
+        DE,
+        FL,
+        GA,
+        HI,
+        IA,
+        ID,
+        IL,
+        IN,
+        KS,
+        KY,
+        LA,
+        MA,
+        MD,
+        ME,
+        MI,
+        MN,
+        MO,
+        MS,
+        MT,
+        NC,
+        ND,
+        NE,
+        NH,
+        NJ,
+        NM,
+        NV,
+        NY,
+        OH,
+        OK,
+        OR,
+        PA,
+        RI,
+        SC,
+        SD,
+        TN,
+        TX,
+        UT,
+        VA,
+        VT,
+        WA,
+        WI,
+        WV,
+        WY
+    }
+    enum StatusCategoryFilterEnum {
+        ACTIVE,
+        CANCELLED,
+        RESOLVED,
+        UNCONFIRMED
+    }
 }

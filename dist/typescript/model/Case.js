@@ -126,4 +126,11 @@ var Case;
         StateEnum[StateEnum["WV"] = 'WV'] = "WV";
         StateEnum[StateEnum["WY"] = 'WY'] = "WY";
     })(StateEnum = Case.StateEnum || (Case.StateEnum = {}));
+    var StatusCategoryEnum;
+    (function (StatusCategoryEnum) {
+        StatusCategoryEnum[StatusCategoryEnum["ACTIVE"] = 'ACTIVE'] = "ACTIVE";
+        StatusCategoryEnum[StatusCategoryEnum["CANCELLED"] = 'CANCELLED'] = "CANCELLED";
+        StatusCategoryEnum[StatusCategoryEnum["RESOLVED"] = 'RESOLVED'] = "RESOLVED";
+        StatusCategoryEnum[StatusCategoryEnum["UNCONFIRMED"] = 'UNCONFIRMED'] = "UNCONFIRMED";
+    })(StatusCategoryEnum = Case.StatusCategoryEnum || (Case.StatusCategoryEnum = {}));
 })(Case = exports.Case || (exports.Case = {}));

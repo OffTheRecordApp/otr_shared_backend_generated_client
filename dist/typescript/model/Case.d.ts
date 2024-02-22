@@ -25,6 +25,7 @@ export interface Case {
     "otrRevenue"?: number;
     "race"?: Case.RaceEnum;
     "state"?: Case.StateEnum;
+    "statusCategory"?: Case.StatusCategoryEnum;
     "userFirstName"?: string;
     "userId"?: number;
     "userLastName"?: string;
@@ -137,5 +138,11 @@ export declare namespace Case {
         WI,
         WV,
         WY
+    }
+    enum StatusCategoryEnum {
+        ACTIVE,
+        CANCELLED,
+        RESOLVED,
+        UNCONFIRMED
     }
 }

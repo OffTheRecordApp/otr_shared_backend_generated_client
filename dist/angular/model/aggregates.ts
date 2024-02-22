@@ -13,11 +13,14 @@ import { ZoneId } from './zoneId';
 
 
 export interface Aggregates { 
-    caseCount?: number;
     endDate?: string;
-    revenue?: number;
+    matchingRecords?: number;
+    matchingRevenue?: number;
+    matchingTransactionVolume?: number;
     startDate?: string;
-    transactionVolume?: number;
+    totalRecords?: number;
+    totalRevenue?: number;
+    totalTransactionVolume?: number;
     zoneId?: ZoneId;
 }
 
