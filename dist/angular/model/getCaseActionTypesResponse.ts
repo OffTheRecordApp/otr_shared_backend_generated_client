@@ -15,12 +15,13 @@ export interface GetCaseActionTypesResponse {
     caseActionTypes?: Array<GetCaseActionTypesResponse.CaseActionTypesEnum>;
 }
 export namespace GetCaseActionTypesResponse {
-    export type CaseActionTypesEnum = 'CASE_ACCEPT' | 'CASE_COUNTER_ACCEPTED' | 'CASE_COUNTER_DECLINED' | 'CASE_COUNTER_INITIATED' | 'CASE_DECLINE' | 'CITATION_DATA_EXTRACTED' | 'COURT_DATE_REMOVED' | 'COURT_DATE_SCHEDULED' | 'DISCOVERY_RECEIVED' | 'DISCOVERY_REQUESTED' | 'DISPUTE_FILED' | 'DRIVER_LICENSE_REQUESTED' | 'FAILED_PAYMENT_ATTEMPT' | 'NOTICE_OF_APPEARANCE_FILED' | 'OTHER' | 'OVERDUE_BALANCE_PAID' | 'REVIEWED_BY_LAWFIRM' | 'SOCIAL_MEDIA_ASK' | 'TICKET_MAILED_TO_COURT';
+    export type CaseActionTypesEnum = 'CASE_ACCEPT' | 'CASE_COUNTER_ACCEPTED' | 'CASE_COUNTER_DECLINED' | 'CASE_COUNTER_INITIATED' | 'CASE_COUNTER_WITHDRAWN' | 'CASE_DECLINE' | 'CITATION_DATA_EXTRACTED' | 'COURT_DATE_REMOVED' | 'COURT_DATE_SCHEDULED' | 'DISCOVERY_RECEIVED' | 'DISCOVERY_REQUESTED' | 'DISPUTE_FILED' | 'DRIVER_LICENSE_REQUESTED' | 'FAILED_PAYMENT_ATTEMPT' | 'NOTICE_OF_APPEARANCE_FILED' | 'OTHER' | 'OVERDUE_BALANCE_PAID' | 'REVIEWED_BY_LAWFIRM' | 'SOCIAL_MEDIA_ASK' | 'TICKET_MAILED_TO_COURT';
     export const CaseActionTypesEnum = {
         CaseAccept: 'CASE_ACCEPT' as CaseActionTypesEnum,
         CaseCounterAccepted: 'CASE_COUNTER_ACCEPTED' as CaseActionTypesEnum,
         CaseCounterDeclined: 'CASE_COUNTER_DECLINED' as CaseActionTypesEnum,
         CaseCounterInitiated: 'CASE_COUNTER_INITIATED' as CaseActionTypesEnum,
+        CaseCounterWithdrawn: 'CASE_COUNTER_WITHDRAWN' as CaseActionTypesEnum,
         CaseDecline: 'CASE_DECLINE' as CaseActionTypesEnum,
         CitationDataExtracted: 'CITATION_DATA_EXTRACTED' as CaseActionTypesEnum,
         CourtDateRemoved: 'COURT_DATE_REMOVED' as CaseActionTypesEnum,

@@ -18,6 +18,7 @@ export declare namespace GetCaseActionTypesResponse {
         CASECOUNTERACCEPTED,
         CASECOUNTERDECLINED,
         CASECOUNTERINITIATED,
+        CASECOUNTERWITHDRAWN,
         CASEDECLINE,
         CITATIONDATAEXTRACTED,
         COURTDATEREMOVED,

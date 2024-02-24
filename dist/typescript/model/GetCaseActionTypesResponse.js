@@ -20,6 +20,7 @@ var GetCaseActionTypesResponse;
         CaseActionTypesEnum[CaseActionTypesEnum["CASECOUNTERACCEPTED"] = 'CASE_COUNTER_ACCEPTED'] = "CASECOUNTERACCEPTED";
         CaseActionTypesEnum[CaseActionTypesEnum["CASECOUNTERDECLINED"] = 'CASE_COUNTER_DECLINED'] = "CASECOUNTERDECLINED";
         CaseActionTypesEnum[CaseActionTypesEnum["CASECOUNTERINITIATED"] = 'CASE_COUNTER_INITIATED'] = "CASECOUNTERINITIATED";
+        CaseActionTypesEnum[CaseActionTypesEnum["CASECOUNTERWITHDRAWN"] = 'CASE_COUNTER_WITHDRAWN'] = "CASECOUNTERWITHDRAWN";
         CaseActionTypesEnum[CaseActionTypesEnum["CASEDECLINE"] = 'CASE_DECLINE'] = "CASEDECLINE";
         CaseActionTypesEnum[CaseActionTypesEnum["CITATIONDATAEXTRACTED"] = 'CITATION_DATA_EXTRACTED'] = "CITATIONDATAEXTRACTED";
         CaseActionTypesEnum[CaseActionTypesEnum["COURTDATEREMOVED"] = 'COURT_DATE_REMOVED'] = "COURTDATEREMOVED";
