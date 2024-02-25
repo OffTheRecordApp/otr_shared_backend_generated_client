@@ -45,6 +45,7 @@ __exportStar(require("./AddressEntity"), exports);
 __exportStar(require("./AgentBookingStats"), exports);
 __exportStar(require("./AgentBookingsSummary"), exports);
 __exportStar(require("./AggregateBySource"), exports);
+__exportStar(require("./AggregateQueryResults"), exports);
 __exportStar(require("./AggregateRatingMetrics"), exports);
 __exportStar(require("./AggregateReferralCredit"), exports);
 __exportStar(require("./Aggregates"), exports);

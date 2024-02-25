@@ -48,7 +48,9 @@ export declare namespace GhostUser {
     enum GenderEnum {
         FEMALE,
         MALE,
-        NOTLISTED
+        NOTAVAILABLE,
+        NOTLISTED,
+        UNVERIFIED
     }
     enum RaceEnum {
         ASIAN,
@@ -56,9 +58,11 @@ export declare namespace GhostUser {
         HISPANIC,
         MIDDLEEASTERN,
         NATIVE,
+        NOTAVAILABLE,
         PACIFICISLANDER,
         TWOORMORE,
         UNKNOWN,
+        UNVERIFIED,
         WHITE
     }
 }

@@ -18,7 +18,9 @@ var UserDomainRes;
     (function (GenderTypeEnum) {
         GenderTypeEnum[GenderTypeEnum["FEMALE"] = 'FEMALE'] = "FEMALE";
         GenderTypeEnum[GenderTypeEnum["MALE"] = 'MALE'] = "MALE";
+        GenderTypeEnum[GenderTypeEnum["NOTAVAILABLE"] = 'NOT_AVAILABLE'] = "NOTAVAILABLE";
         GenderTypeEnum[GenderTypeEnum["NOTLISTED"] = 'NOT_LISTED'] = "NOTLISTED";
+        GenderTypeEnum[GenderTypeEnum["UNVERIFIED"] = 'UNVERIFIED'] = "UNVERIFIED";
     })(GenderTypeEnum = UserDomainRes.GenderTypeEnum || (UserDomainRes.GenderTypeEnum = {}));
     var LawyerJobTitleEnum;
     (function (LawyerJobTitleEnum) {
@@ -60,9 +62,11 @@ var UserDomainRes;
         RaceEnum[RaceEnum["HISPANIC"] = 'HISPANIC'] = "HISPANIC";
         RaceEnum[RaceEnum["MIDDLEEASTERN"] = 'MIDDLE_EASTERN'] = "MIDDLEEASTERN";
         RaceEnum[RaceEnum["NATIVE"] = 'NATIVE'] = "NATIVE";
+        RaceEnum[RaceEnum["NOTAVAILABLE"] = 'NOT_AVAILABLE'] = "NOTAVAILABLE";
         RaceEnum[RaceEnum["PACIFICISLANDER"] = 'PACIFIC_ISLANDER'] = "PACIFICISLANDER";
         RaceEnum[RaceEnum["TWOORMORE"] = 'TWO_OR_MORE'] = "TWOORMORE";
         RaceEnum[RaceEnum["UNKNOWN"] = 'UNKNOWN'] = "UNKNOWN";
+        RaceEnum[RaceEnum["UNVERIFIED"] = 'UNVERIFIED'] = "UNVERIFIED";
         RaceEnum[RaceEnum["WHITE"] = 'WHITE'] = "WHITE";
     })(RaceEnum = UserDomainRes.RaceEnum || (UserDomainRes.RaceEnum = {}));
 })(UserDomainRes = exports.UserDomainRes || (exports.UserDomainRes = {}));

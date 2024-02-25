@@ -60,11 +60,13 @@ export interface UserDomainRes {
     userRegistrationDateUtc?: string;
 }
 export namespace UserDomainRes {
-    export type GenderTypeEnum = 'FEMALE' | 'MALE' | 'NOT_LISTED';
+    export type GenderTypeEnum = 'FEMALE' | 'MALE' | 'NOT_AVAILABLE' | 'NOT_LISTED' | 'UNVERIFIED';
     export const GenderTypeEnum = {
         Female: 'FEMALE' as GenderTypeEnum,
         Male: 'MALE' as GenderTypeEnum,
-        NotListed: 'NOT_LISTED' as GenderTypeEnum
+        NotAvailable: 'NOT_AVAILABLE' as GenderTypeEnum,
+        NotListed: 'NOT_LISTED' as GenderTypeEnum,
+        Unverified: 'UNVERIFIED' as GenderTypeEnum
     };
     export type LawyerJobTitleEnum = 'ACCOUNTANT' | 'ATTORNEY' | 'ATTORNEY_ASSOCIATE' | 'ATTORNEY_COUNSEL' | 'ATTORNEY_MANAGING_PARTNER' | 'ATTORNEY_PARTNER' | 'ATTORNEY_STAFF' | 'CUSTOMER_SERVICE_REP' | 'LEGAL_ASSISTANT' | 'LEGAL_INTERN' | 'LEGAL_SECRETARY' | 'OTHER' | 'PARALEGAL';
     export const LawyerJobTitleEnum = {
@@ -99,16 +101,18 @@ export namespace UserDomainRes {
         Public: 'PUBLIC' as PrivacyModeEnum,
         SemiPublic: 'SEMI_PUBLIC' as PrivacyModeEnum
     };
-    export type RaceEnum = 'ASIAN' | 'BLACK' | 'HISPANIC' | 'MIDDLE_EASTERN' | 'NATIVE' | 'PACIFIC_ISLANDER' | 'TWO_OR_MORE' | 'UNKNOWN' | 'WHITE';
+    export type RaceEnum = 'ASIAN' | 'BLACK' | 'HISPANIC' | 'MIDDLE_EASTERN' | 'NATIVE' | 'NOT_AVAILABLE' | 'PACIFIC_ISLANDER' | 'TWO_OR_MORE' | 'UNKNOWN' | 'UNVERIFIED' | 'WHITE';
     export const RaceEnum = {
         Asian: 'ASIAN' as RaceEnum,
         Black: 'BLACK' as RaceEnum,
         Hispanic: 'HISPANIC' as RaceEnum,
         MiddleEastern: 'MIDDLE_EASTERN' as RaceEnum,
         Native: 'NATIVE' as RaceEnum,
+        NotAvailable: 'NOT_AVAILABLE' as RaceEnum,
         PacificIslander: 'PACIFIC_ISLANDER' as RaceEnum,
         TwoOrMore: 'TWO_OR_MORE' as RaceEnum,
         Unknown: 'UNKNOWN' as RaceEnum,
+        Unverified: 'UNVERIFIED' as RaceEnum,
         White: 'WHITE' as RaceEnum
     };
 }

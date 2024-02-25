@@ -22,22 +22,26 @@ export interface GhostUserResponse {
     userId?: number;
 }
 export namespace GhostUserResponse {
-    export type GenderEnum = 'FEMALE' | 'MALE' | 'NOT_LISTED';
+    export type GenderEnum = 'FEMALE' | 'MALE' | 'NOT_AVAILABLE' | 'NOT_LISTED' | 'UNVERIFIED';
     export const GenderEnum = {
         Female: 'FEMALE' as GenderEnum,
         Male: 'MALE' as GenderEnum,
-        NotListed: 'NOT_LISTED' as GenderEnum
+        NotAvailable: 'NOT_AVAILABLE' as GenderEnum,
+        NotListed: 'NOT_LISTED' as GenderEnum,
+        Unverified: 'UNVERIFIED' as GenderEnum
     };
-    export type RaceEnum = 'ASIAN' | 'BLACK' | 'HISPANIC' | 'MIDDLE_EASTERN' | 'NATIVE' | 'PACIFIC_ISLANDER' | 'TWO_OR_MORE' | 'UNKNOWN' | 'WHITE';
+    export type RaceEnum = 'ASIAN' | 'BLACK' | 'HISPANIC' | 'MIDDLE_EASTERN' | 'NATIVE' | 'NOT_AVAILABLE' | 'PACIFIC_ISLANDER' | 'TWO_OR_MORE' | 'UNKNOWN' | 'UNVERIFIED' | 'WHITE';
     export const RaceEnum = {
         Asian: 'ASIAN' as RaceEnum,
         Black: 'BLACK' as RaceEnum,
         Hispanic: 'HISPANIC' as RaceEnum,
         MiddleEastern: 'MIDDLE_EASTERN' as RaceEnum,
         Native: 'NATIVE' as RaceEnum,
+        NotAvailable: 'NOT_AVAILABLE' as RaceEnum,
         PacificIslander: 'PACIFIC_ISLANDER' as RaceEnum,
         TwoOrMore: 'TWO_OR_MORE' as RaceEnum,
         Unknown: 'UNKNOWN' as RaceEnum,
+        Unverified: 'UNVERIFIED' as RaceEnum,
         White: 'WHITE' as RaceEnum
     };
 }

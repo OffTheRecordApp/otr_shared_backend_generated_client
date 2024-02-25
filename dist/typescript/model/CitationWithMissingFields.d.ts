@@ -81,7 +81,9 @@ export declare namespace CitationWithMissingFields {
     enum GenderEnum {
         FEMALE,
         MALE,
-        NOTLISTED
+        NOTAVAILABLE,
+        NOTLISTED,
+        UNVERIFIED
     }
     enum RaceEnum {
         ASIAN,
@@ -89,9 +91,11 @@ export declare namespace CitationWithMissingFields {
         HISPANIC,
         MIDDLEEASTERN,
         NATIVE,
+        NOTAVAILABLE,
         PACIFICISLANDER,
         TWOORMORE,
         UNKNOWN,
+        UNVERIFIED,
         WHITE
     }
     enum StateEnum {

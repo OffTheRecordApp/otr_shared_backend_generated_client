@@ -58,7 +58,9 @@ var Case;
     (function (GenderEnum) {
         GenderEnum[GenderEnum["FEMALE"] = 'FEMALE'] = "FEMALE";
         GenderEnum[GenderEnum["MALE"] = 'MALE'] = "MALE";
+        GenderEnum[GenderEnum["NOTAVAILABLE"] = 'NOT_AVAILABLE'] = "NOTAVAILABLE";
         GenderEnum[GenderEnum["NOTLISTED"] = 'NOT_LISTED'] = "NOTLISTED";
+        GenderEnum[GenderEnum["UNVERIFIED"] = 'UNVERIFIED'] = "UNVERIFIED";
     })(GenderEnum = Case.GenderEnum || (Case.GenderEnum = {}));
     var RaceEnum;
     (function (RaceEnum) {
@@ -67,9 +69,11 @@ var Case;
         RaceEnum[RaceEnum["HISPANIC"] = 'HISPANIC'] = "HISPANIC";
         RaceEnum[RaceEnum["MIDDLEEASTERN"] = 'MIDDLE_EASTERN'] = "MIDDLEEASTERN";
         RaceEnum[RaceEnum["NATIVE"] = 'NATIVE'] = "NATIVE";
+        RaceEnum[RaceEnum["NOTAVAILABLE"] = 'NOT_AVAILABLE'] = "NOTAVAILABLE";
         RaceEnum[RaceEnum["PACIFICISLANDER"] = 'PACIFIC_ISLANDER'] = "PACIFICISLANDER";
         RaceEnum[RaceEnum["TWOORMORE"] = 'TWO_OR_MORE'] = "TWOORMORE";
         RaceEnum[RaceEnum["UNKNOWN"] = 'UNKNOWN'] = "UNKNOWN";
+        RaceEnum[RaceEnum["UNVERIFIED"] = 'UNVERIFIED'] = "UNVERIFIED";
         RaceEnum[RaceEnum["WHITE"] = 'WHITE'] = "WHITE";
     })(RaceEnum = Case.RaceEnum || (Case.RaceEnum = {}));
     var StateEnum;

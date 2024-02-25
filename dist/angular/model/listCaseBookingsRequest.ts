@@ -17,6 +17,8 @@ export interface ListCaseBookingsRequest {
     genderFilterList?: Array<ListCaseBookingsRequest.GenderFilterListEnum>;
     includeDataRecords?: boolean;
     lawfirmStringFilter?: string;
+    length?: number;
+    page?: number;
     raceFilterList?: Array<ListCaseBookingsRequest.RaceFilterListEnum>;
     sortMap?: { [key: string]: string; };
     startDate?: string;
@@ -65,22 +67,26 @@ export namespace ListCaseBookingsRequest {
         TrafficSchool: 'TRAFFIC_SCHOOL' as CaseStatusFilterEnum,
         Unconfirmed: 'UNCONFIRMED' as CaseStatusFilterEnum
     };
-    export type GenderFilterListEnum = 'FEMALE' | 'MALE' | 'NOT_LISTED';
+    export type GenderFilterListEnum = 'FEMALE' | 'MALE' | 'NOT_AVAILABLE' | 'NOT_LISTED' | 'UNVERIFIED';
     export const GenderFilterListEnum = {
         Female: 'FEMALE' as GenderFilterListEnum,
         Male: 'MALE' as GenderFilterListEnum,
-        NotListed: 'NOT_LISTED' as GenderFilterListEnum
+        NotAvailable: 'NOT_AVAILABLE' as GenderFilterListEnum,
+        NotListed: 'NOT_LISTED' as GenderFilterListEnum,
+        Unverified: 'UNVERIFIED' as GenderFilterListEnum
     };
-    export type RaceFilterListEnum = 'ASIAN' | 'BLACK' | 'HISPANIC' | 'MIDDLE_EASTERN' | 'NATIVE' | 'PACIFIC_ISLANDER' | 'TWO_OR_MORE' | 'UNKNOWN' | 'WHITE';
+    export type RaceFilterListEnum = 'ASIAN' | 'BLACK' | 'HISPANIC' | 'MIDDLE_EASTERN' | 'NATIVE' | 'NOT_AVAILABLE' | 'PACIFIC_ISLANDER' | 'TWO_OR_MORE' | 'UNKNOWN' | 'UNVERIFIED' | 'WHITE';
     export const RaceFilterListEnum = {
         Asian: 'ASIAN' as RaceFilterListEnum,
         Black: 'BLACK' as RaceFilterListEnum,
         Hispanic: 'HISPANIC' as RaceFilterListEnum,
         MiddleEastern: 'MIDDLE_EASTERN' as RaceFilterListEnum,
         Native: 'NATIVE' as RaceFilterListEnum,
+        NotAvailable: 'NOT_AVAILABLE' as RaceFilterListEnum,
         PacificIslander: 'PACIFIC_ISLANDER' as RaceFilterListEnum,
         TwoOrMore: 'TWO_OR_MORE' as RaceFilterListEnum,
         Unknown: 'UNKNOWN' as RaceFilterListEnum,
+        Unverified: 'UNVERIFIED' as RaceFilterListEnum,
         White: 'WHITE' as RaceFilterListEnum
     };
     export type StateFilterListEnum = 'AK' | 'AL' | 'AR' | 'AZ' | 'CA' | 'CO' | 'CT' | 'DC' | 'DE' | 'FL' | 'GA' | 'HI' | 'IA' | 'ID' | 'IL' | 'IN' | 'KS' | 'KY' | 'LA' | 'MA' | 'MD' | 'ME' | 'MI' | 'MN' | 'MO' | 'MS' | 'MT' | 'NC' | 'ND' | 'NE' | 'NH' | 'NJ' | 'NM' | 'NV' | 'NY' | 'OH' | 'OK' | 'OR' | 'PA' | 'RI' | 'SC' | 'SD' | 'TN' | 'TX' | 'UT' | 'VA' | 'VT' | 'WA' | 'WI' | 'WV' | 'WY';

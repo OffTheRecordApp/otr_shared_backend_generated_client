@@ -10,11 +10,15 @@
  * Do not edit the class manually.
  */
 import { Aggregates } from './aggregates';
+import { AggregateQueryResults } from './aggregateQueryResults';
 import { Case } from './case';
 
 
 export interface ListCaseBookingsResponse { 
     aggregates?: Aggregates;
+    aggregatesByGender?: { [key: string]: AggregateQueryResults; };
+    aggregatesByRace?: { [key: string]: AggregateQueryResults; };
+    aggregatesByState?: { [key: string]: AggregateQueryResults; };
     cases?: Array<Case>;
 }
 

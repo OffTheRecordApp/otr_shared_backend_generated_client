@@ -153,6 +153,7 @@ model/addressEntity.ts
 model/agentBookingStats.ts
 model/agentBookingsSummary.ts
 model/aggregateBySource.ts
+model/aggregateQueryResults.ts
 model/aggregateRatingMetrics.ts
 model/aggregateReferralCredit.ts
 model/aggregates.ts

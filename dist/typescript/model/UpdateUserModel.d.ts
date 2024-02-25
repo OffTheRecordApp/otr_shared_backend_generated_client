@@ -53,9 +53,11 @@ export declare namespace UpdateUserModel {
         HISPANIC,
         MIDDLEEASTERN,
         NATIVE,
+        NOTAVAILABLE,
         PACIFICISLANDER,
         TWOORMORE,
         UNKNOWN,
+        UNVERIFIED,
         WHITE
     }
 }

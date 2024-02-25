@@ -33,6 +33,7 @@ export * from './AddressEntity';
 export * from './AgentBookingStats';
 export * from './AgentBookingsSummary';
 export * from './AggregateBySource';
+export * from './AggregateQueryResults';
 export * from './AggregateRatingMetrics';
 export * from './AggregateReferralCredit';
 export * from './Aggregates';

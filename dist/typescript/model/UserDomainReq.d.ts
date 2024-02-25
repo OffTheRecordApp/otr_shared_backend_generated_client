@@ -55,7 +55,9 @@ export declare namespace UserDomainReq {
     enum GenderTypeEnum {
         FEMALE,
         MALE,
-        NOTLISTED
+        NOTAVAILABLE,
+        NOTLISTED,
+        UNVERIFIED
     }
     enum LawyerJobTitleEnum {
         ACCOUNTANT,
@@ -93,9 +95,11 @@ export declare namespace UserDomainReq {
         HISPANIC,
         MIDDLEEASTERN,
         NATIVE,
+        NOTAVAILABLE,
         PACIFICISLANDER,
         TWOORMORE,
         UNKNOWN,
+        UNVERIFIED,
         WHITE
     }
 }

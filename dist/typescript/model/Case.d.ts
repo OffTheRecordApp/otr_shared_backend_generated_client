@@ -73,7 +73,9 @@ export declare namespace Case {
     enum GenderEnum {
         FEMALE,
         MALE,
-        NOTLISTED
+        NOTAVAILABLE,
+        NOTLISTED,
+        UNVERIFIED
     }
     enum RaceEnum {
         ASIAN,
@@ -81,9 +83,11 @@ export declare namespace Case {
         HISPANIC,
         MIDDLEEASTERN,
         NATIVE,
+        NOTAVAILABLE,
         PACIFICISLANDER,
         TWOORMORE,
         UNKNOWN,
+        UNVERIFIED,
         WHITE
     }
     enum StateEnum {

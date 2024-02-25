@@ -58,7 +58,9 @@ var ListCaseBookingsRequest;
     (function (GenderFilterListEnum) {
         GenderFilterListEnum[GenderFilterListEnum["FEMALE"] = 'FEMALE'] = "FEMALE";
         GenderFilterListEnum[GenderFilterListEnum["MALE"] = 'MALE'] = "MALE";
+        GenderFilterListEnum[GenderFilterListEnum["NOTAVAILABLE"] = 'NOT_AVAILABLE'] = "NOTAVAILABLE";
         GenderFilterListEnum[GenderFilterListEnum["NOTLISTED"] = 'NOT_LISTED'] = "NOTLISTED";
+        GenderFilterListEnum[GenderFilterListEnum["UNVERIFIED"] = 'UNVERIFIED'] = "UNVERIFIED";
     })(GenderFilterListEnum = ListCaseBookingsRequest.GenderFilterListEnum || (ListCaseBookingsRequest.GenderFilterListEnum = {}));
     var RaceFilterListEnum;
     (function (RaceFilterListEnum) {
@@ -67,9 +69,11 @@ var ListCaseBookingsRequest;
         RaceFilterListEnum[RaceFilterListEnum["HISPANIC"] = 'HISPANIC'] = "HISPANIC";
         RaceFilterListEnum[RaceFilterListEnum["MIDDLEEASTERN"] = 'MIDDLE_EASTERN'] = "MIDDLEEASTERN";
         RaceFilterListEnum[RaceFilterListEnum["NATIVE"] = 'NATIVE'] = "NATIVE";
+        RaceFilterListEnum[RaceFilterListEnum["NOTAVAILABLE"] = 'NOT_AVAILABLE'] = "NOTAVAILABLE";
         RaceFilterListEnum[RaceFilterListEnum["PACIFICISLANDER"] = 'PACIFIC_ISLANDER'] = "PACIFICISLANDER";
         RaceFilterListEnum[RaceFilterListEnum["TWOORMORE"] = 'TWO_OR_MORE'] = "TWOORMORE";
         RaceFilterListEnum[RaceFilterListEnum["UNKNOWN"] = 'UNKNOWN'] = "UNKNOWN";
+        RaceFilterListEnum[RaceFilterListEnum["UNVERIFIED"] = 'UNVERIFIED'] = "UNVERIFIED";
         RaceFilterListEnum[RaceFilterListEnum["WHITE"] = 'WHITE'] = "WHITE";
     })(RaceFilterListEnum = ListCaseBookingsRequest.RaceFilterListEnum || (ListCaseBookingsRequest.RaceFilterListEnum = {}));
     var StateFilterListEnum;

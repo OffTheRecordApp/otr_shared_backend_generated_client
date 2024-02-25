@@ -12,5 +12,14 @@
 import * as models from './models';
 export interface ListCaseBookingsResponse {
     "aggregates"?: models.Aggregates;
+    "aggregatesByGender"?: {
+        [key: string]: models.AggregateQueryResults;
+    };
+    "aggregatesByRace"?: {
+        [key: string]: models.AggregateQueryResults;
+    };
+    "aggregatesByState"?: {
+        [key: string]: models.AggregateQueryResults;
+    };
     "cases"?: Array<models.Case>;
 }

@@ -15,6 +15,8 @@ export interface ListCaseBookingsRequest {
     "genderFilterList"?: Array<ListCaseBookingsRequest.GenderFilterListEnum>;
     "includeDataRecords"?: boolean;
     "lawfirmStringFilter"?: string;
+    "length"?: number;
+    "page"?: number;
     "raceFilterList"?: Array<ListCaseBookingsRequest.RaceFilterListEnum>;
     "sortMap"?: {
         [key: string]: string;
@@ -67,7 +69,9 @@ export declare namespace ListCaseBookingsRequest {
     enum GenderFilterListEnum {
         FEMALE,
         MALE,
-        NOTLISTED
+        NOTAVAILABLE,
+        NOTLISTED,
+        UNVERIFIED
     }
     enum RaceFilterListEnum {
         ASIAN,
@@ -75,9 +79,11 @@ export declare namespace ListCaseBookingsRequest {
         HISPANIC,
         MIDDLEEASTERN,
         NATIVE,
+        NOTAVAILABLE,
         PACIFICISLANDER,
         TWOORMORE,
         UNKNOWN,
+        UNVERIFIED,
         WHITE
     }
     enum StateFilterListEnum {
