@@ -327,6 +327,7 @@ model/dripWebhookEvent.ts
 model/driverLicenseModel.ts
 model/duration.ts
 model/editConversationMessageRequest.ts
+model/editCustomerReviewRequest.ts
 model/enableViolationModel.ts
 model/enableViolationResponseModel.ts
 model/enableViolationsForLawfirmRequest.ts
@@ -724,6 +725,7 @@ model/sendPayoutToLawfirmResponse.ts
 model/setArchiveCaseModel.ts
 model/setArchiveOnCasesRequest.ts
 model/setCourtDateForCaseRequest.ts
+model/setCustomerReviewStatusRequest.ts
 model/setFlagOnMessageModel.ts
 model/setFlagOnMessagesRequest.ts
 model/setLawfirmCaseDecisionRequest.ts

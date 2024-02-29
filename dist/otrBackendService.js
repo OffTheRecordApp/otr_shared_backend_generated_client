@@ -12987,6 +12987,7 @@ angular.module('otrBackendService', [])
              * @name OtrService#listCustomerReviewsUsingGET
              * @param {object} parameters - method options and parameters
              * @param {boolean} parameters.includeAnonymous - includeAnonymous
+             * @param {boolean} parameters.includeDeleted - includeDeleted
              * @param {boolean} parameters.includeRatings - includeRatings
              * @param {boolean} parameters.isFeatured - isFeatured
              * @param {integer} parameters.lawfirmId - lawfirmId
@@ -13012,6 +13013,10 @@ angular.module('otrBackendService', [])
 
                 if (parameters['includeAnonymous'] !== undefined) {
                     queryParameters['includeAnonymous'] = parameters['includeAnonymous'];
+                }
+
+                if (parameters['includeDeleted'] !== undefined) {
+                    queryParameters['includeDeleted'] = parameters['includeDeleted'];
                 }
 
                 if (parameters['includeRatings'] !== undefined) {
@@ -13089,6 +13094,95 @@ angular.module('otrBackendService', [])
                 queryParameters = mergeQueryParams(parameters, queryParameters);
 
                 this.request('POST', domain + path, parameters, body, headers, queryParameters, form, deferred);
+
+                return deferred.promise;
+            };
+            /**
+             * editCustomerReview
+             * @method
+             * @name OtrService#editCustomerReviewUsingPUT
+             * @param {object} parameters - method options and parameters
+             * @param {} parameters.editCustomerReviewRequest - editCustomerReviewRequest
+             * @param {integer} parameters.reviewId - reviewId
+             */
+            OtrService.prototype.editCustomerReviewUsingPUT = function(parameters) {
+                if (parameters === undefined) {
+                    parameters = {};
+                }
+                var deferred = $q.defer();
+                var domain = this.domain,
+                    path = '/api/v1/reviews/api/v1/reviews/{reviewId}';
+                var body = {},
+                    queryParameters = {},
+                    headers = {},
+                    form = {};
+
+                headers['Accept'] = ['*/*'];
+                headers['Content-Type'] = ['application/json'];
+
+                if (parameters['editCustomerReviewRequest'] !== undefined) {
+                    body = parameters['editCustomerReviewRequest'];
+                }
+
+                if (parameters['editCustomerReviewRequest'] === undefined) {
+                    deferred.reject(new Error('Missing required  parameter: editCustomerReviewRequest'));
+                    return deferred.promise;
+                }
+
+                path = path.replace('{reviewId}', parameters['reviewId']);
+
+                if (parameters['reviewId'] === undefined) {
+                    deferred.reject(new Error('Missing required  parameter: reviewId'));
+                    return deferred.promise;
+                }
+
+                queryParameters = mergeQueryParams(parameters, queryParameters);
+
+                this.request('PUT', domain + path, parameters, body, headers, queryParameters, form, deferred);
+
+                return deferred.promise;
+            };
+            /**
+             * setCustomerReviewStatus
+             * @method
+             * @name OtrService#setCustomerReviewStatusUsingDELETE
+             * @param {object} parameters - method options and parameters
+             * @param {integer} parameters.reviewId - reviewId
+             * @param {} parameters.setCustomerReviewStatusRequest - setCustomerReviewStatusRequest
+             */
+            OtrService.prototype.setCustomerReviewStatusUsingDELETE = function(parameters) {
+                if (parameters === undefined) {
+                    parameters = {};
+                }
+                var deferred = $q.defer();
+                var domain = this.domain,
+                    path = '/api/v1/reviews/api/v1/reviews/{reviewId}/status';
+                var body = {},
+                    queryParameters = {},
+                    headers = {},
+                    form = {};
+
+                headers['Accept'] = ['*/*'];
+
+                path = path.replace('{reviewId}', parameters['reviewId']);
+
+                if (parameters['reviewId'] === undefined) {
+                    deferred.reject(new Error('Missing required  parameter: reviewId'));
+                    return deferred.promise;
+                }
+
+                if (parameters['setCustomerReviewStatusRequest'] !== undefined) {
+                    body = parameters['setCustomerReviewStatusRequest'];
+                }
+
+                if (parameters['setCustomerReviewStatusRequest'] === undefined) {
+                    deferred.reject(new Error('Missing required  parameter: setCustomerReviewStatusRequest'));
+                    return deferred.promise;
+                }
+
+                queryParameters = mergeQueryParams(parameters, queryParameters);
+
+                this.request('DELETE', domain + path, parameters, body, headers, queryParameters, form, deferred);
 
                 return deferred.promise;
             };

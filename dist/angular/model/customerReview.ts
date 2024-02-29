@@ -22,6 +22,7 @@ export interface CustomerReview {
     displayName?: string;
     featured?: boolean;
     id?: number;
+    live?: boolean;
     loggedInUserVote?: CustomerReview.LoggedInUserVoteEnum;
     nameSetting?: CustomerReview.NameSettingEnum;
     profilePictureSignedUrl?: string;

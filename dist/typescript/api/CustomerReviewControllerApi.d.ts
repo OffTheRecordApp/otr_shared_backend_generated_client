@@ -26,8 +26,16 @@ export declare class CustomerReviewControllerApi {
     addCustomerReviewUsingPOST(addReviewRequest: models.AddReviewRequest, extraHttpRequestParams?: any): ng.IHttpPromise<{}>;
     /**
      *
+     * @summary editCustomerReview
+     * @param reviewId reviewId
+     * @param editCustomerReviewRequest editCustomerReviewRequest
+     */
+    editCustomerReviewUsingPUT(reviewId: number, editCustomerReviewRequest: models.EditCustomerReviewRequest, extraHttpRequestParams?: any): ng.IHttpPromise<{}>;
+    /**
+     *
      * @summary listCustomerReviews
      * @param includeAnonymous includeAnonymous
+     * @param includeDeleted includeDeleted
      * @param includeRatings includeRatings
      * @param isFeatured isFeatured
      * @param lawfirmId lawfirmId
@@ -37,7 +45,7 @@ export declare class CustomerReviewControllerApi {
      * @param state state
      * @param tags tags
      */
-    listCustomerReviewsUsingGET(includeAnonymous?: boolean, includeRatings?: boolean, isFeatured?: boolean, lawfirmId?: number, limit?: number, nextPageToken?: string, previousPageToken?: string, state?: 'AK' | 'AL' | 'AR' | 'AZ' | 'CA' | 'CO' | 'CT' | 'DC' | 'DE' | 'FL' | 'GA' | 'HI' | 'IA' | 'ID' | 'IL' | 'IN' | 'KS' | 'KY' | 'LA' | 'MA' | 'MD' | 'ME' | 'MI' | 'MN' | 'MO' | 'MS' | 'MT' | 'NC' | 'ND' | 'NE' | 'NH' | 'NJ' | 'NM' | 'NV' | 'NY' | 'OH' | 'OK' | 'OR' | 'PA' | 'RI' | 'SC' | 'SD' | 'TN' | 'TX' | 'UT' | 'VA' | 'VT' | 'WA' | 'WI' | 'WV' | 'WY', tags?: string, extraHttpRequestParams?: any): ng.IHttpPromise<models.ListReviewsResponse>;
+    listCustomerReviewsUsingGET(includeAnonymous?: boolean, includeDeleted?: boolean, includeRatings?: boolean, isFeatured?: boolean, lawfirmId?: number, limit?: number, nextPageToken?: string, previousPageToken?: string, state?: 'AK' | 'AL' | 'AR' | 'AZ' | 'CA' | 'CO' | 'CT' | 'DC' | 'DE' | 'FL' | 'GA' | 'HI' | 'IA' | 'ID' | 'IL' | 'IN' | 'KS' | 'KY' | 'LA' | 'MA' | 'MD' | 'ME' | 'MI' | 'MN' | 'MO' | 'MS' | 'MT' | 'NC' | 'ND' | 'NE' | 'NH' | 'NJ' | 'NM' | 'NV' | 'NY' | 'OH' | 'OK' | 'OR' | 'PA' | 'RI' | 'SC' | 'SD' | 'TN' | 'TX' | 'UT' | 'VA' | 'VT' | 'WA' | 'WI' | 'WV' | 'WY', tags?: string, extraHttpRequestParams?: any): ng.IHttpPromise<models.ListReviewsResponse>;
     /**
      *
      * @summary listEligibleStatusesForReview
@@ -65,6 +73,13 @@ export declare class CustomerReviewControllerApi {
      * @param request request
      */
     replyToCustomerReviewUsingPOST(reviewId: number, request: models.ReplyToReviewRequest, extraHttpRequestParams?: any): ng.IHttpPromise<{}>;
+    /**
+     *
+     * @summary setCustomerReviewStatus
+     * @param reviewId reviewId
+     * @param setCustomerReviewStatusRequest setCustomerReviewStatusRequest
+     */
+    setCustomerReviewStatusUsingDELETE(reviewId: number, setCustomerReviewStatusRequest: models.SetCustomerReviewStatusRequest, extraHttpRequestParams?: any): ng.IHttpPromise<{}>;
     /**
      *
      * @summary updateCommentForCustomerReview
