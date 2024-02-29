@@ -13,13 +13,17 @@ export interface AgentBookingStats {
     "bookingsCount"?: number;
     "cancelledBookingCount"?: number;
     "cancelledBookingRevenueTotal"?: number;
+    "cancelledInboundCaseTotal"?: number;
     "cancelledInboundRevenueTotal"?: number;
+    "cancelledOutboundCaseTotal"?: number;
     "cancelledOutboundRevenueTotal"?: number;
     "cancelledTransactionsTotal"?: number;
     "firstName"?: string;
+    "inboundCaseTotal"?: number;
     "inboundRevenueTotal"?: number;
     "lastName"?: string;
     "otrRevenueTotal"?: number;
+    "outboundCaseTotal"?: number;
     "outboundRevenueTotal"?: number;
     "transactionsTotal"?: number;
     "userId"?: number;

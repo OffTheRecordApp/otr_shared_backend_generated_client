@@ -12,11 +12,15 @@
 export interface AgentBookingsSummary {
     "cancelledBookingsCount"?: number;
     "cancelledBookingsRevenueTotal"?: number;
+    "cancelledInboundCaseTotal"?: number;
     "cancelledInboundRevenueTotal"?: number;
+    "cancelledOutboundCaseTotal"?: number;
     "cancelledOutboundRevenueTotal"?: number;
     "cancelledTransactionsTotal"?: number;
+    "inboundCaseTotal"?: number;
     "inboundRevenueTotal"?: number;
     "otrRevenueTotal"?: number;
+    "outboundCaseTotal"?: number;
     "outboundRevenueTotal"?: number;
     "platformBookingsResultCount"?: number;
     "resultCount"?: number;
