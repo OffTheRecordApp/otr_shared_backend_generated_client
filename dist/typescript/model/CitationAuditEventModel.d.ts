@@ -105,6 +105,7 @@ export declare namespace CitationAuditEventModel {
         USERLOGINEVENT,
         USERREGISTRATION,
         USERREGISTRATIONATTRIBUTED,
+        USERSETTINGUPDATED,
         VACATIONMODETOGGLE,
         VACATIONMODEUPDATE,
         VERIFYEMAIL,

@@ -243,6 +243,7 @@ export declare namespace ValidateDirectMailResponse {
         RESETTOKENEXPIRED,
         RESOURCENOTFOUND,
         REVIEWALREADYEXISTS,
+        REVIEWNOTFOUND,
         ROLENOTSUPPORTED,
         S3CLIENTFAILED,
         S3SERVERFAILED,
