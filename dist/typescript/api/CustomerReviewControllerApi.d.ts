@@ -79,7 +79,7 @@ export declare class CustomerReviewControllerApi {
      * @param reviewId reviewId
      * @param setCustomerReviewStatusRequest setCustomerReviewStatusRequest
      */
-    setCustomerReviewStatusUsingDELETE(reviewId: number, setCustomerReviewStatusRequest: models.SetCustomerReviewStatusRequest, extraHttpRequestParams?: any): ng.IHttpPromise<{}>;
+    setCustomerReviewStatusUsingPUT(reviewId: number, setCustomerReviewStatusRequest: models.SetCustomerReviewStatusRequest, extraHttpRequestParams?: any): ng.IHttpPromise<{}>;
     /**
      *
      * @summary updateCommentForCustomerReview

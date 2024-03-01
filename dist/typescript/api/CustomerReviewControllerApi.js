@@ -258,21 +258,21 @@ var CustomerReviewControllerApi = /** @class */ (function () {
      * @param reviewId reviewId
      * @param setCustomerReviewStatusRequest setCustomerReviewStatusRequest
      */
-    CustomerReviewControllerApi.prototype.setCustomerReviewStatusUsingDELETE = function (reviewId, setCustomerReviewStatusRequest, extraHttpRequestParams) {
+    CustomerReviewControllerApi.prototype.setCustomerReviewStatusUsingPUT = function (reviewId, setCustomerReviewStatusRequest, extraHttpRequestParams) {
         var localVarPath = this.basePath + '/api/v1/reviews/api/v1/reviews/{reviewId}/status'
             .replace('{' + 'reviewId' + '}', encodeURIComponent(String(reviewId)));
         var queryParameters = {};
         var headerParams = Object.assign({}, this.defaultHeaders);
         // verify required parameter 'reviewId' is not null or undefined
         if (reviewId === null || reviewId === undefined) {
-            throw new Error('Required parameter reviewId was null or undefined when calling setCustomerReviewStatusUsingDELETE.');
+            throw new Error('Required parameter reviewId was null or undefined when calling setCustomerReviewStatusUsingPUT.');
         }
         // verify required parameter 'setCustomerReviewStatusRequest' is not null or undefined
         if (setCustomerReviewStatusRequest === null || setCustomerReviewStatusRequest === undefined) {
-            throw new Error('Required parameter setCustomerReviewStatusRequest was null or undefined when calling setCustomerReviewStatusUsingDELETE.');
+            throw new Error('Required parameter setCustomerReviewStatusRequest was null or undefined when calling setCustomerReviewStatusUsingPUT.');
         }
         var httpRequestParams = {
-            method: 'DELETE',
+            method: 'PUT',
             url: localVarPath,
             data: setCustomerReviewStatusRequest,
             params: queryParameters,

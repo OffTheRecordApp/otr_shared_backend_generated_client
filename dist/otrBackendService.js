@@ -13145,12 +13145,12 @@ angular.module('otrBackendService', [])
             /**
              * setCustomerReviewStatus
              * @method
-             * @name OtrService#setCustomerReviewStatusUsingDELETE
+             * @name OtrService#setCustomerReviewStatusUsingPUT
              * @param {object} parameters - method options and parameters
              * @param {integer} parameters.reviewId - reviewId
              * @param {} parameters.setCustomerReviewStatusRequest - setCustomerReviewStatusRequest
              */
-            OtrService.prototype.setCustomerReviewStatusUsingDELETE = function(parameters) {
+            OtrService.prototype.setCustomerReviewStatusUsingPUT = function(parameters) {
                 if (parameters === undefined) {
                     parameters = {};
                 }
@@ -13163,6 +13163,7 @@ angular.module('otrBackendService', [])
                     form = {};
 
                 headers['Accept'] = ['*/*'];
+                headers['Content-Type'] = ['application/json'];
 
                 path = path.replace('{reviewId}', parameters['reviewId']);
 
@@ -13182,7 +13183,7 @@ angular.module('otrBackendService', [])
 
                 queryParameters = mergeQueryParams(parameters, queryParameters);
 
-                this.request('DELETE', domain + path, parameters, body, headers, queryParameters, form, deferred);
+                this.request('PUT', domain + path, parameters, body, headers, queryParameters, form, deferred);
 
                 return deferred.promise;
             };

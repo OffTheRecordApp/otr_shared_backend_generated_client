@@ -614,15 +614,15 @@ export class CustomerReviewControllerService {
      * @param observe set whether or not to return the data Observable as the body, response or events. defaults to returning the body.
      * @param reportProgress flag to report request and response progress.
      */
-    public setCustomerReviewStatusUsingDELETE(reviewId: number, setCustomerReviewStatusRequest: SetCustomerReviewStatusRequest, observe?: 'body', reportProgress?: boolean, options?: {httpHeaderAccept?: undefined, context?: HttpContext}): Observable<any>;
-    public setCustomerReviewStatusUsingDELETE(reviewId: number, setCustomerReviewStatusRequest: SetCustomerReviewStatusRequest, observe?: 'response', reportProgress?: boolean, options?: {httpHeaderAccept?: undefined, context?: HttpContext}): Observable<HttpResponse<any>>;
-    public setCustomerReviewStatusUsingDELETE(reviewId: number, setCustomerReviewStatusRequest: SetCustomerReviewStatusRequest, observe?: 'events', reportProgress?: boolean, options?: {httpHeaderAccept?: undefined, context?: HttpContext}): Observable<HttpEvent<any>>;
-    public setCustomerReviewStatusUsingDELETE(reviewId: number, setCustomerReviewStatusRequest: SetCustomerReviewStatusRequest, observe: any = 'body', reportProgress: boolean = false, options?: {httpHeaderAccept?: undefined, context?: HttpContext}): Observable<any> {
+    public setCustomerReviewStatusUsingPUT(reviewId: number, setCustomerReviewStatusRequest: SetCustomerReviewStatusRequest, observe?: 'body', reportProgress?: boolean, options?: {httpHeaderAccept?: undefined, context?: HttpContext}): Observable<any>;
+    public setCustomerReviewStatusUsingPUT(reviewId: number, setCustomerReviewStatusRequest: SetCustomerReviewStatusRequest, observe?: 'response', reportProgress?: boolean, options?: {httpHeaderAccept?: undefined, context?: HttpContext}): Observable<HttpResponse<any>>;
+    public setCustomerReviewStatusUsingPUT(reviewId: number, setCustomerReviewStatusRequest: SetCustomerReviewStatusRequest, observe?: 'events', reportProgress?: boolean, options?: {httpHeaderAccept?: undefined, context?: HttpContext}): Observable<HttpEvent<any>>;
+    public setCustomerReviewStatusUsingPUT(reviewId: number, setCustomerReviewStatusRequest: SetCustomerReviewStatusRequest, observe: any = 'body', reportProgress: boolean = false, options?: {httpHeaderAccept?: undefined, context?: HttpContext}): Observable<any> {
         if (reviewId === null || reviewId === undefined) {
-            throw new Error('Required parameter reviewId was null or undefined when calling setCustomerReviewStatusUsingDELETE.');
+            throw new Error('Required parameter reviewId was null or undefined when calling setCustomerReviewStatusUsingPUT.');
         }
         if (setCustomerReviewStatusRequest === null || setCustomerReviewStatusRequest === undefined) {
-            throw new Error('Required parameter setCustomerReviewStatusRequest was null or undefined when calling setCustomerReviewStatusUsingDELETE.');
+            throw new Error('Required parameter setCustomerReviewStatusRequest was null or undefined when calling setCustomerReviewStatusUsingPUT.');
         }
 
         let localVarHeaders = this.defaultHeaders;
@@ -646,6 +646,7 @@ export class CustomerReviewControllerService {
 
         // to determine the Content-Type header
         const consumes: string[] = [
+            'application/json'
         ];
         const httpContentTypeSelected: string | undefined = this.configuration.selectHeaderContentType(consumes);
         if (httpContentTypeSelected !== undefined) {
@@ -664,7 +665,7 @@ export class CustomerReviewControllerService {
         }
 
         let localVarPath = `/api/v1/reviews/api/v1/reviews/${this.configuration.encodeParam({name: "reviewId", value: reviewId, in: "path", style: "simple", explode: false, dataType: "number", dataFormat: "int64"})}/status`;
-        return this.httpClient.request<any>('delete', `${this.configuration.basePath}${localVarPath}`,
+        return this.httpClient.request<any>('put', `${this.configuration.basePath}${localVarPath}`,
             {
                 context: localVarHttpContext,
                 body: setCustomerReviewStatusRequest,
