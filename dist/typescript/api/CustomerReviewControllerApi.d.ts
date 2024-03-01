@@ -44,8 +44,9 @@ export declare class CustomerReviewControllerApi {
      * @param previousPageToken previousPageToken
      * @param state state
      * @param tags tags
+     * @param version version
      */
-    listCustomerReviewsUsingGET(includeAnonymous?: boolean, includeDeleted?: boolean, includeRatings?: boolean, isFeatured?: boolean, lawfirmId?: number, limit?: number, nextPageToken?: string, previousPageToken?: string, state?: 'AK' | 'AL' | 'AR' | 'AZ' | 'CA' | 'CO' | 'CT' | 'DC' | 'DE' | 'FL' | 'GA' | 'HI' | 'IA' | 'ID' | 'IL' | 'IN' | 'KS' | 'KY' | 'LA' | 'MA' | 'MD' | 'ME' | 'MI' | 'MN' | 'MO' | 'MS' | 'MT' | 'NC' | 'ND' | 'NE' | 'NH' | 'NJ' | 'NM' | 'NV' | 'NY' | 'OH' | 'OK' | 'OR' | 'PA' | 'RI' | 'SC' | 'SD' | 'TN' | 'TX' | 'UT' | 'VA' | 'VT' | 'WA' | 'WI' | 'WV' | 'WY', tags?: string, extraHttpRequestParams?: any): ng.IHttpPromise<models.ListReviewsResponse>;
+    listCustomerReviewsUsingGET(includeAnonymous?: boolean, includeDeleted?: boolean, includeRatings?: boolean, isFeatured?: boolean, lawfirmId?: number, limit?: number, nextPageToken?: string, previousPageToken?: string, state?: 'AK' | 'AL' | 'AR' | 'AZ' | 'CA' | 'CO' | 'CT' | 'DC' | 'DE' | 'FL' | 'GA' | 'HI' | 'IA' | 'ID' | 'IL' | 'IN' | 'KS' | 'KY' | 'LA' | 'MA' | 'MD' | 'ME' | 'MI' | 'MN' | 'MO' | 'MS' | 'MT' | 'NC' | 'ND' | 'NE' | 'NH' | 'NJ' | 'NM' | 'NV' | 'NY' | 'OH' | 'OK' | 'OR' | 'PA' | 'RI' | 'SC' | 'SD' | 'TN' | 'TX' | 'UT' | 'VA' | 'VT' | 'WA' | 'WI' | 'WV' | 'WY', tags?: string, version?: string, extraHttpRequestParams?: any): ng.IHttpPromise<models.ListReviewsResponse>;
     /**
      *
      * @summary listEligibleStatusesForReview

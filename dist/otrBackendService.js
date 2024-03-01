@@ -12996,6 +12996,7 @@ angular.module('otrBackendService', [])
              * @param {string} parameters.previousPageToken - previousPageToken
              * @param {string} parameters.state - state
              * @param {string} parameters.tags - tags
+             * @param {string} parameters.version - version
              */
             OtrService.prototype.listCustomerReviewsUsingGET = function(parameters) {
                 if (parameters === undefined) {
@@ -13052,6 +13053,10 @@ angular.module('otrBackendService', [])
 
                 if (parameters['tags'] !== undefined) {
                     queryParameters['tags'] = parameters['tags'];
+                }
+
+                if (parameters['version'] !== undefined) {
+                    queryParameters['version'] = parameters['version'];
                 }
 
                 queryParameters = mergeQueryParams(parameters, queryParameters);

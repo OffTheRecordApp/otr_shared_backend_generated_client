@@ -92,8 +92,9 @@ var CustomerReviewControllerApi = /** @class */ (function () {
      * @param previousPageToken previousPageToken
      * @param state state
      * @param tags tags
+     * @param version version
      */
-    CustomerReviewControllerApi.prototype.listCustomerReviewsUsingGET = function (includeAnonymous, includeDeleted, includeRatings, isFeatured, lawfirmId, limit, nextPageToken, previousPageToken, state, tags, extraHttpRequestParams) {
+    CustomerReviewControllerApi.prototype.listCustomerReviewsUsingGET = function (includeAnonymous, includeDeleted, includeRatings, isFeatured, lawfirmId, limit, nextPageToken, previousPageToken, state, tags, version, extraHttpRequestParams) {
         var localVarPath = this.basePath + '/api/v1/reviews';
         var queryParameters = {};
         var headerParams = Object.assign({}, this.defaultHeaders);
@@ -126,6 +127,9 @@ var CustomerReviewControllerApi = /** @class */ (function () {
         }
         if (tags !== undefined) {
             queryParameters['tags'] = tags;
+        }
+        if (version !== undefined) {
+            queryParameters['version'] = version;
         }
         var httpRequestParams = {
             method: 'GET',
