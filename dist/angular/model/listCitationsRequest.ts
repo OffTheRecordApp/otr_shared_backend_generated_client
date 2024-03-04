@@ -21,6 +21,7 @@ export interface ListCitationsRequest {
     experimentName?: string;
     hasAccident?: boolean;
     hasCase?: boolean;
+    hasLastBookingDate?: boolean;
     hasPhoto?: boolean;
     includeDataRecords?: boolean;
     length?: number;

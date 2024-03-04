@@ -24,6 +24,7 @@ export interface CitationsResponseModel {
     "hasPhoto"?: boolean;
     "involvesAccident"?: boolean;
     "isMatchInternal"?: boolean;
+    "lastBookingDateUtc"?: string;
     "lawfirmId"?: string;
     "lawfirmName"?: string;
     "maxViolationClassification"?: CitationsResponseModel.MaxViolationClassificationEnum;
