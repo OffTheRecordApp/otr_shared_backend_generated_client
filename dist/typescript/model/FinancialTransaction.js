@@ -25,6 +25,7 @@ var FinancialTransaction;
     })(TaskStatusEnum = FinancialTransaction.TaskStatusEnum || (FinancialTransaction.TaskStatusEnum = {}));
     var TransactionMethodEnum;
     (function (TransactionMethodEnum) {
+        TransactionMethodEnum[TransactionMethodEnum["CASH"] = 'CASH'] = "CASH";
         TransactionMethodEnum[TransactionMethodEnum["CHECK"] = 'CHECK'] = "CHECK";
         TransactionMethodEnum[TransactionMethodEnum["DESTINATIONCHARGETRANSFER"] = 'DESTINATION_CHARGE_TRANSFER'] = "DESTINATIONCHARGETRANSFER";
         TransactionMethodEnum[TransactionMethodEnum["LOBCHECK"] = 'LOB_CHECK'] = "LOBCHECK";

@@ -24,6 +24,7 @@ export interface SendPayoutToLawfirmRequest {
 }
 export declare namespace SendPayoutToLawfirmRequest {
     enum TransactionMethodEnum {
+        CASH,
         CHECK,
         DESTINATIONCHARGETRANSFER,
         LOBCHECK,

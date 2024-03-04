@@ -14,12 +14,14 @@
 export interface ScheduleNewPaymentRequest { 
     baseFeeInCents?: number;
     chargeRunAtDate?: string;
+    description?: string;
     lawfirmReferralCodeAdjustment?: number;
     otrCustomerChargeInCents?: number;
     otrMarketingFee?: number;
     otrReferralCodeAdjustment?: number;
     recipient?: ScheduleNewPaymentRequest.RecipientEnum;
     transactionMethod?: ScheduleNewPaymentRequest.TransactionMethodEnum;
+    transactionReference?: string;
 }
 export namespace ScheduleNewPaymentRequest {
     export type RecipientEnum = 'COURT' | 'LAWFIRM' | 'OTR';
@@ -28,8 +30,9 @@ export namespace ScheduleNewPaymentRequest {
         Lawfirm: 'LAWFIRM' as RecipientEnum,
         Otr: 'OTR' as RecipientEnum
     };
-    export type TransactionMethodEnum = 'CHECK' | 'DESTINATION_CHARGE_TRANSFER' | 'LOB_CHECK' | 'PAYPAL' | 'STRIPE_APPLICATION_FEE' | 'STRIPE_CHARGE' | 'STRIPE_CONNECT_DEBIT' | 'STRIPE_TRANSFER' | 'UNKNOWN' | 'VENMO' | 'WIRE_TRANSFER' | 'ZELLE';
+    export type TransactionMethodEnum = 'CASH' | 'CHECK' | 'DESTINATION_CHARGE_TRANSFER' | 'LOB_CHECK' | 'PAYPAL' | 'STRIPE_APPLICATION_FEE' | 'STRIPE_CHARGE' | 'STRIPE_CONNECT_DEBIT' | 'STRIPE_TRANSFER' | 'UNKNOWN' | 'VENMO' | 'WIRE_TRANSFER' | 'ZELLE';
     export const TransactionMethodEnum = {
+        Cash: 'CASH' as TransactionMethodEnum,
         Check: 'CHECK' as TransactionMethodEnum,
         DestinationChargeTransfer: 'DESTINATION_CHARGE_TRANSFER' as TransactionMethodEnum,
         LobCheck: 'LOB_CHECK' as TransactionMethodEnum,

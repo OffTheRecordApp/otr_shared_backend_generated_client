@@ -29,6 +29,7 @@ export interface LawfirmPayoutDomain {
 }
 export declare namespace LawfirmPayoutDomain {
     enum TransactionMethodEnum {
+        CASH,
         CHECK,
         DESTINATIONCHARGETRANSFER,
         LOBCHECK,

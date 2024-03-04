@@ -12,12 +12,14 @@
 export interface ScheduleNewPaymentRequest {
     "baseFeeInCents"?: number;
     "chargeRunAtDate"?: string;
+    "description"?: string;
     "lawfirmReferralCodeAdjustment"?: number;
     "otrCustomerChargeInCents"?: number;
     "otrMarketingFee"?: number;
     "otrReferralCodeAdjustment"?: number;
     "recipient"?: ScheduleNewPaymentRequest.RecipientEnum;
     "transactionMethod"?: ScheduleNewPaymentRequest.TransactionMethodEnum;
+    "transactionReference"?: string;
 }
 export declare namespace ScheduleNewPaymentRequest {
     enum RecipientEnum {
@@ -26,6 +28,7 @@ export declare namespace ScheduleNewPaymentRequest {
         OTR
     }
     enum TransactionMethodEnum {
+        CASH,
         CHECK,
         DESTINATIONCHARGETRANSFER,
         LOBCHECK,

@@ -25,6 +25,7 @@ export declare namespace UpdateCasePaymentRequest {
         OTR
     }
     enum TransactionMethodEnum {
+        CASH,
         CHECK,
         DESTINATIONCHARGETRANSFER,
         LOBCHECK,

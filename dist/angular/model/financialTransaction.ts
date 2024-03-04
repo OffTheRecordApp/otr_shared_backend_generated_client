@@ -38,8 +38,9 @@ export namespace FinancialTransaction {
         NoOperation: 'NO_OPERATION' as TaskStatusEnum,
         Queued: 'QUEUED' as TaskStatusEnum
     };
-    export type TransactionMethodEnum = 'CHECK' | 'DESTINATION_CHARGE_TRANSFER' | 'LOB_CHECK' | 'PAYPAL' | 'STRIPE_APPLICATION_FEE' | 'STRIPE_CHARGE' | 'STRIPE_CONNECT_DEBIT' | 'STRIPE_TRANSFER' | 'UNKNOWN' | 'VENMO' | 'WIRE_TRANSFER' | 'ZELLE';
+    export type TransactionMethodEnum = 'CASH' | 'CHECK' | 'DESTINATION_CHARGE_TRANSFER' | 'LOB_CHECK' | 'PAYPAL' | 'STRIPE_APPLICATION_FEE' | 'STRIPE_CHARGE' | 'STRIPE_CONNECT_DEBIT' | 'STRIPE_TRANSFER' | 'UNKNOWN' | 'VENMO' | 'WIRE_TRANSFER' | 'ZELLE';
     export const TransactionMethodEnum = {
+        Cash: 'CASH' as TransactionMethodEnum,
         Check: 'CHECK' as TransactionMethodEnum,
         DestinationChargeTransfer: 'DESTINATION_CHARGE_TRANSFER' as TransactionMethodEnum,
         LobCheck: 'LOB_CHECK' as TransactionMethodEnum,

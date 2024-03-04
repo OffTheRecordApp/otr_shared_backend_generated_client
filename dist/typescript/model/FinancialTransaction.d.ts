@@ -36,6 +36,7 @@ export declare namespace FinancialTransaction {
         QUEUED
     }
     enum TransactionMethodEnum {
+        CASH,
         CHECK,
         DESTINATIONCHARGETRANSFER,
         LOBCHECK,

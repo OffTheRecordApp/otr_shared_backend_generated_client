@@ -24,6 +24,7 @@ export interface ChargeFeeToLawfirmRequest {
 }
 export declare namespace ChargeFeeToLawfirmRequest {
     enum TransactionMethodEnum {
+        CASH,
         CHECK,
         DESTINATIONCHARGETRANSFER,
         LOBCHECK,

@@ -47,6 +47,7 @@ export declare namespace CasePaymentDomain {
         OTR
     }
     enum TransactionMethodEnum {
+        CASH,
         CHECK,
         DESTINATIONCHARGETRANSFER,
         LOBCHECK,
