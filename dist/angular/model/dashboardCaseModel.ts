@@ -24,6 +24,7 @@ export interface DashboardCaseModel {
     citation?: DashboardCitationModel;
     court?: DashboardCourtModel;
     hasLeftLawyerReview?: boolean;
+    lawfirmId?: number;
     lawfirmName?: string;
     lawfirmProfilePictureUrl?: string;
     lawyerRating?: number;

@@ -18,6 +18,7 @@ export interface DashboardCaseModel {
     "citation"?: models.DashboardCitationModel;
     "court"?: models.DashboardCourtModel;
     "hasLeftLawyerReview"?: boolean;
+    "lawfirmId"?: number;
     "lawfirmName"?: string;
     "lawfirmProfilePictureUrl"?: string;
     "lawyerRating"?: number;
