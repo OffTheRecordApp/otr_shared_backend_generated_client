@@ -25,27 +25,6 @@ var StripeWebhookControllerApi = /** @class */ (function () {
     }
     /**
      *
-     * @summary handleStripeWebhookForConnectedAccounts
-     * @param request request
-     */
-    StripeWebhookControllerApi.prototype.handleStripeWebhookForConnectedAccountsUsingPOST = function (request, extraHttpRequestParams) {
-        var localVarPath = this.basePath + '/api/v1/stripe/acct_15jGdjA1uVHZiLuV/webhook/connected-account';
-        var queryParameters = {};
-        var headerParams = Object.assign({}, this.defaultHeaders);
-        var httpRequestParams = {
-            method: 'POST',
-            url: localVarPath,
-            data: request,
-            params: queryParameters,
-            headers: headerParams
-        };
-        if (extraHttpRequestParams) {
-            httpRequestParams = Object.assign(httpRequestParams, extraHttpRequestParams);
-        }
-        return this.$http(httpRequestParams);
-    };
-    /**
-     *
      * @summary handleStripeWebhookForSubscriptions
      * @param request request
      */
@@ -88,11 +67,53 @@ var StripeWebhookControllerApi = /** @class */ (function () {
     };
     /**
      *
+     * @summary handleStripeWebhookFromLawfirmConnectedAccounts
+     * @param request request
+     */
+    StripeWebhookControllerApi.prototype.handleStripeWebhookFromLawfirmConnectedAccountsUsingPOST = function (request, extraHttpRequestParams) {
+        var localVarPath = this.basePath + '/api/v1/stripe/acct_15jGPnDVzhogLb0T/webhook/connected-account';
+        var queryParameters = {};
+        var headerParams = Object.assign({}, this.defaultHeaders);
+        var httpRequestParams = {
+            method: 'POST',
+            url: localVarPath,
+            data: request,
+            params: queryParameters,
+            headers: headerParams
+        };
+        if (extraHttpRequestParams) {
+            httpRequestParams = Object.assign(httpRequestParams, extraHttpRequestParams);
+        }
+        return this.$http(httpRequestParams);
+    };
+    /**
+     *
      * @summary handleStripeWebhookFromOTRAccount
      * @param request request
      */
     StripeWebhookControllerApi.prototype.handleStripeWebhookFromOTRAccountUsingPOST = function (request, extraHttpRequestParams) {
         var localVarPath = this.basePath + '/api/v1/stripe/acct_15jGdjA1uVHZiLuV/webhook';
+        var queryParameters = {};
+        var headerParams = Object.assign({}, this.defaultHeaders);
+        var httpRequestParams = {
+            method: 'POST',
+            url: localVarPath,
+            data: request,
+            params: queryParameters,
+            headers: headerParams
+        };
+        if (extraHttpRequestParams) {
+            httpRequestParams = Object.assign(httpRequestParams, extraHttpRequestParams);
+        }
+        return this.$http(httpRequestParams);
+    };
+    /**
+     *
+     * @summary handleStripeWebhookFromOTRConnectedAccounts
+     * @param request request
+     */
+    StripeWebhookControllerApi.prototype.handleStripeWebhookFromOTRConnectedAccountsUsingPOST = function (request, extraHttpRequestParams) {
+        var localVarPath = this.basePath + '/api/v1/stripe/acct_15jGdjA1uVHZiLuV/webhook/connected-account';
         var queryParameters = {};
         var headerParams = Object.assign({}, this.defaultHeaders);
         var httpRequestParams = {

@@ -19,12 +19,6 @@ export declare class StripeWebhookControllerApi {
     constructor($http: ng.IHttpService, $httpParamSerializer?: (d: any) => any, basePath?: string);
     /**
      *
-     * @summary handleStripeWebhookForConnectedAccounts
-     * @param request request
-     */
-    handleStripeWebhookForConnectedAccountsUsingPOST(request?: string, extraHttpRequestParams?: any): ng.IHttpPromise<string>;
-    /**
-     *
      * @summary handleStripeWebhookForSubscriptions
      * @param request request
      */
@@ -37,8 +31,20 @@ export declare class StripeWebhookControllerApi {
     handleStripeWebhookFromLawfirmAccountUsingPOST(request?: string, extraHttpRequestParams?: any): ng.IHttpPromise<string>;
     /**
      *
+     * @summary handleStripeWebhookFromLawfirmConnectedAccounts
+     * @param request request
+     */
+    handleStripeWebhookFromLawfirmConnectedAccountsUsingPOST(request?: string, extraHttpRequestParams?: any): ng.IHttpPromise<string>;
+    /**
+     *
      * @summary handleStripeWebhookFromOTRAccount
      * @param request request
      */
     handleStripeWebhookFromOTRAccountUsingPOST(request?: string, extraHttpRequestParams?: any): ng.IHttpPromise<string>;
+    /**
+     *
+     * @summary handleStripeWebhookFromOTRConnectedAccounts
+     * @param request request
+     */
+    handleStripeWebhookFromOTRConnectedAccountsUsingPOST(request?: string, extraHttpRequestParams?: any): ng.IHttpPromise<string>;
 }
