@@ -75,4 +75,10 @@ export declare class UserProfileControllerApi {
      * @param request request
      */
     updateUserPhoneNumberUsingPUT(phoneNumberId: number, userId: number, request: models.UpdateUserPhoneNumberRequest, extraHttpRequestParams?: any): ng.IHttpPromise<models.UpdateUserDetailsResponse>;
+    /**
+     *
+     * @summary validatePhoneNumber
+     * @param validatePhoneNumberRequest validatePhoneNumberRequest
+     */
+    validatePhoneNumberUsingPOST(validatePhoneNumberRequest: models.ValidatePhoneNumberRequest, extraHttpRequestParams?: any): ng.IHttpPromise<models.ValidatePhoneNumberResponse>;
 }

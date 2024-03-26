@@ -853,6 +853,8 @@ model/userToContact.ts
 model/userWatchlistsModel.ts
 model/validateDirectMailRequest.ts
 model/validateDirectMailResponse.ts
+model/validatePhoneNumberRequest.ts
+model/validatePhoneNumberResponse.ts
 model/validateUserEmailResponse.ts
 model/verifyCaptchaTokenRequest.ts
 model/verifyCaptchaTokenResponse.ts

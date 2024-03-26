@@ -732,6 +732,8 @@ export * from './userToContact';
 export * from './userWatchlistsModel';
 export * from './validateDirectMailRequest';
 export * from './validateDirectMailResponse';
+export * from './validatePhoneNumberRequest';
+export * from './validatePhoneNumberResponse';
 export * from './validateUserEmailResponse';
 export * from './verifyCaptchaTokenRequest';
 export * from './verifyCaptchaTokenResponse';

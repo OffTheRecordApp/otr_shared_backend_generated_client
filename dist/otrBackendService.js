@@ -14988,6 +14988,43 @@ angular.module('otrBackendService', [])
                 return deferred.promise;
             };
             /**
+             * validatePhoneNumber
+             * @method
+             * @name OtrService#validatePhoneNumberUsingPOST
+             * @param {object} parameters - method options and parameters
+             * @param {} parameters.validatePhoneNumberRequest - validatePhoneNumberRequest
+             */
+            OtrService.prototype.validatePhoneNumberUsingPOST = function(parameters) {
+                if (parameters === undefined) {
+                    parameters = {};
+                }
+                var deferred = $q.defer();
+                var domain = this.domain,
+                    path = '/api/v1/users/validate-phone-number';
+                var body = {},
+                    queryParameters = {},
+                    headers = {},
+                    form = {};
+
+                headers['Accept'] = ['*/*'];
+                headers['Content-Type'] = ['application/json'];
+
+                if (parameters['validatePhoneNumberRequest'] !== undefined) {
+                    body = parameters['validatePhoneNumberRequest'];
+                }
+
+                if (parameters['validatePhoneNumberRequest'] === undefined) {
+                    deferred.reject(new Error('Missing required  parameter: validatePhoneNumberRequest'));
+                    return deferred.promise;
+                }
+
+                queryParameters = mergeQueryParams(parameters, queryParameters);
+
+                this.request('POST', domain + path, parameters, body, headers, queryParameters, form, deferred);
+
+                return deferred.promise;
+            };
+            /**
              * verifyUserAccount
              * @method
              * @name OtrService#verifyUserAccountUsingPUT

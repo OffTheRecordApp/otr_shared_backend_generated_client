@@ -744,6 +744,8 @@ __exportStar(require("./UserToContact"), exports);
 __exportStar(require("./UserWatchlistsModel"), exports);
 __exportStar(require("./ValidateDirectMailRequest"), exports);
 __exportStar(require("./ValidateDirectMailResponse"), exports);
+__exportStar(require("./ValidatePhoneNumberRequest"), exports);
+__exportStar(require("./ValidatePhoneNumberResponse"), exports);
 __exportStar(require("./ValidateUserEmailResponse"), exports);
 __exportStar(require("./VerifyCaptchaTokenRequest"), exports);
 __exportStar(require("./VerifyCaptchaTokenResponse"), exports);

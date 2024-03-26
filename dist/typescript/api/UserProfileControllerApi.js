@@ -277,6 +277,31 @@ var UserProfileControllerApi = /** @class */ (function () {
         }
         return this.$http(httpRequestParams);
     };
+    /**
+     *
+     * @summary validatePhoneNumber
+     * @param validatePhoneNumberRequest validatePhoneNumberRequest
+     */
+    UserProfileControllerApi.prototype.validatePhoneNumberUsingPOST = function (validatePhoneNumberRequest, extraHttpRequestParams) {
+        var localVarPath = this.basePath + '/api/v1/users/validate-phone-number';
+        var queryParameters = {};
+        var headerParams = Object.assign({}, this.defaultHeaders);
+        // verify required parameter 'validatePhoneNumberRequest' is not null or undefined
+        if (validatePhoneNumberRequest === null || validatePhoneNumberRequest === undefined) {
+            throw new Error('Required parameter validatePhoneNumberRequest was null or undefined when calling validatePhoneNumberUsingPOST.');
+        }
+        var httpRequestParams = {
+            method: 'POST',
+            url: localVarPath,
+            data: validatePhoneNumberRequest,
+            params: queryParameters,
+            headers: headerParams
+        };
+        if (extraHttpRequestParams) {
+            httpRequestParams = Object.assign(httpRequestParams, extraHttpRequestParams);
+        }
+        return this.$http(httpRequestParams);
+    };
     UserProfileControllerApi.$inject = ['$http', '$httpParamSerializer', 'basePath'];
     return UserProfileControllerApi;
 }());
