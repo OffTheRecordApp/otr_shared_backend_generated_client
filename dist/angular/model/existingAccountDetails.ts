@@ -9,13 +9,14 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-import { ExistingAccountDetails } from './existingAccountDetails';
 
 
-export interface VerifyUserAccountResponse { 
-    emailAlreadyConfirmed?: boolean;
-    emailConfirmed?: boolean;
-    existingAccounts?: Array<ExistingAccountDetails>;
-    mobilePhoneConfirmed?: boolean;
+export interface ExistingAccountDetails { 
+    firstName?: string;
+    ghostAccount?: boolean;
+    lastName?: string;
+    obfuscatedEmailAddress?: string;
+    phoneVerified?: boolean;
+    userId?: number;
 }
 

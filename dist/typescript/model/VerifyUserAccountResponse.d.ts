@@ -9,8 +9,10 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
+import * as models from './models';
 export interface VerifyUserAccountResponse {
     "emailAlreadyConfirmed"?: boolean;
     "emailConfirmed"?: boolean;
+    "existingAccounts"?: Array<models.ExistingAccountDetails>;
     "mobilePhoneConfirmed"?: boolean;
 }

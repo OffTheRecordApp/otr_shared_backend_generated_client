@@ -334,6 +334,7 @@ model/enableViolationsForLawfirmRequest.ts
 model/enableViolationsForLawfirmResponse.ts
 model/estimateInsuranceSavingsRequest.ts
 model/estimateInsuranceSavingsResponse.ts
+model/existingAccountDetails.ts
 model/externalContentVote.ts
 model/externalTicketCourt.ts
 model/feedbackAttachmentModel.ts

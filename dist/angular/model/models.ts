@@ -214,6 +214,7 @@ export * from './enableViolationsForLawfirmRequest';
 export * from './enableViolationsForLawfirmResponse';
 export * from './estimateInsuranceSavingsRequest';
 export * from './estimateInsuranceSavingsResponse';
+export * from './existingAccountDetails';
 export * from './externalContentVote';
 export * from './externalTicketCourt';
 export * from './feedbackAttachmentModel';

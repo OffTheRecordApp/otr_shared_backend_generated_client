@@ -226,6 +226,7 @@ __exportStar(require("./EnableViolationsForLawfirmRequest"), exports);
 __exportStar(require("./EnableViolationsForLawfirmResponse"), exports);
 __exportStar(require("./EstimateInsuranceSavingsRequest"), exports);
 __exportStar(require("./EstimateInsuranceSavingsResponse"), exports);
+__exportStar(require("./ExistingAccountDetails"), exports);
 __exportStar(require("./ExternalContentVote"), exports);
 __exportStar(require("./ExternalTicketCourt"), exports);
 __exportStar(require("./FeedbackAttachmentModel"), exports);
