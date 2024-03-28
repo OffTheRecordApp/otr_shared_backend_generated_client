@@ -11712,8 +11712,7 @@ angular.module('otrBackendService', [])
              * @method
              * @name OtrService#pushNotificationToUserUsingPOST
              * @param {object} parameters - method options and parameters
-             * @param {} parameters.pushRequest - pushRequest
-             * @param {string} parameters.recipientId - recipientId
+             * @param {} parameters.body - body
              */
             OtrService.prototype.pushNotificationToUserUsingPOST = function(parameters) {
                 if (parameters === undefined) {
@@ -11721,7 +11720,7 @@ angular.module('otrBackendService', [])
                 }
                 var deferred = $q.defer();
                 var domain = this.domain,
-                    path = '/api/v1/notifications/users/{recipientId}';
+                    path = '/api/v1/notifications/users';
                 var body = {},
                     queryParameters = {},
                     headers = {},
@@ -11730,19 +11729,12 @@ angular.module('otrBackendService', [])
                 headers['Accept'] = ['*/*'];
                 headers['Content-Type'] = ['application/json'];
 
-                if (parameters['pushRequest'] !== undefined) {
-                    body = parameters['pushRequest'];
+                if (parameters['body'] !== undefined) {
+                    body = parameters['body'];
                 }
 
-                if (parameters['pushRequest'] === undefined) {
-                    deferred.reject(new Error('Missing required  parameter: pushRequest'));
-                    return deferred.promise;
-                }
-
-                path = path.replace('{recipientId}', parameters['recipientId']);
-
-                if (parameters['recipientId'] === undefined) {
-                    deferred.reject(new Error('Missing required  parameter: recipientId'));
+                if (parameters['body'] === undefined) {
+                    deferred.reject(new Error('Missing required  parameter: body'));
                     return deferred.promise;
                 }
 

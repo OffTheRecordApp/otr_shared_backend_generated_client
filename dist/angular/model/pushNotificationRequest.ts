@@ -15,6 +15,7 @@ export interface PushNotificationRequest {
     messageBody?: string;
     pageType?: PushNotificationRequest.PageTypeEnum;
     platformType?: PushNotificationRequest.PlatformTypeEnum;
+    recipientId?: string;
 }
 export namespace PushNotificationRequest {
     export type PageTypeEnum = 'CASE_ACTION' | 'CASE_MESSAGES' | 'CASE_STATUS' | 'COURT_DATE_SCHEDULED' | 'NEW_TICKET' | 'PROFILE';

@@ -61,10 +61,9 @@ export declare class PushNotificationControllerApi {
     /**
      *
      * @summary pushNotificationToUser
-     * @param recipientId recipientId
-     * @param pushRequest pushRequest
+     * @param body body
      */
-    pushNotificationToUserUsingPOST(recipientId: string, pushRequest: models.PushNotificationRequest, extraHttpRequestParams?: any): ng.IHttpPromise<object>;
+    pushNotificationToUserUsingPOST(body: string, extraHttpRequestParams?: any): ng.IHttpPromise<object>;
     /**
      *
      * @summary register

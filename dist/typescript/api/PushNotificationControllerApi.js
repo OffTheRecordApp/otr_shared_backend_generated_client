@@ -198,26 +198,20 @@ var PushNotificationControllerApi = /** @class */ (function () {
     /**
      *
      * @summary pushNotificationToUser
-     * @param recipientId recipientId
-     * @param pushRequest pushRequest
+     * @param body body
      */
-    PushNotificationControllerApi.prototype.pushNotificationToUserUsingPOST = function (recipientId, pushRequest, extraHttpRequestParams) {
-        var localVarPath = this.basePath + '/api/v1/notifications/users/{recipientId}'
-            .replace('{' + 'recipientId' + '}', encodeURIComponent(String(recipientId)));
+    PushNotificationControllerApi.prototype.pushNotificationToUserUsingPOST = function (body, extraHttpRequestParams) {
+        var localVarPath = this.basePath + '/api/v1/notifications/users';
         var queryParameters = {};
         var headerParams = Object.assign({}, this.defaultHeaders);
-        // verify required parameter 'recipientId' is not null or undefined
-        if (recipientId === null || recipientId === undefined) {
-            throw new Error('Required parameter recipientId was null or undefined when calling pushNotificationToUserUsingPOST.');
-        }
-        // verify required parameter 'pushRequest' is not null or undefined
-        if (pushRequest === null || pushRequest === undefined) {
-            throw new Error('Required parameter pushRequest was null or undefined when calling pushNotificationToUserUsingPOST.');
+        // verify required parameter 'body' is not null or undefined
+        if (body === null || body === undefined) {
+            throw new Error('Required parameter body was null or undefined when calling pushNotificationToUserUsingPOST.');
         }
         var httpRequestParams = {
             method: 'POST',
             url: localVarPath,
-            data: pushRequest,
+            data: body,
             params: queryParameters,
             headers: headerParams
         };

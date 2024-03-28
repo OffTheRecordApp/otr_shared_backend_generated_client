@@ -13,6 +13,7 @@ export interface PushNotificationRequest {
     "messageBody"?: string;
     "pageType"?: PushNotificationRequest.PageTypeEnum;
     "platformType"?: PushNotificationRequest.PlatformTypeEnum;
+    "recipientId"?: string;
 }
 export declare namespace PushNotificationRequest {
     enum PageTypeEnum {

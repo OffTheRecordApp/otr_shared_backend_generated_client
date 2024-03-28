@@ -496,20 +496,16 @@ export class PushNotificationControllerService {
 
     /**
      * pushNotificationToUser
-     * @param recipientId recipientId
-     * @param pushRequest pushRequest
+     * @param body body
      * @param observe set whether or not to return the data Observable as the body, response or events. defaults to returning the body.
      * @param reportProgress flag to report request and response progress.
      */
-    public pushNotificationToUserUsingPOST(recipientId: string, pushRequest: PushNotificationRequest, observe?: 'body', reportProgress?: boolean, options?: {httpHeaderAccept?: '*/*', context?: HttpContext}): Observable<object>;
-    public pushNotificationToUserUsingPOST(recipientId: string, pushRequest: PushNotificationRequest, observe?: 'response', reportProgress?: boolean, options?: {httpHeaderAccept?: '*/*', context?: HttpContext}): Observable<HttpResponse<object>>;
-    public pushNotificationToUserUsingPOST(recipientId: string, pushRequest: PushNotificationRequest, observe?: 'events', reportProgress?: boolean, options?: {httpHeaderAccept?: '*/*', context?: HttpContext}): Observable<HttpEvent<object>>;
-    public pushNotificationToUserUsingPOST(recipientId: string, pushRequest: PushNotificationRequest, observe: any = 'body', reportProgress: boolean = false, options?: {httpHeaderAccept?: '*/*', context?: HttpContext}): Observable<any> {
-        if (recipientId === null || recipientId === undefined) {
-            throw new Error('Required parameter recipientId was null or undefined when calling pushNotificationToUserUsingPOST.');
-        }
-        if (pushRequest === null || pushRequest === undefined) {
-            throw new Error('Required parameter pushRequest was null or undefined when calling pushNotificationToUserUsingPOST.');
+    public pushNotificationToUserUsingPOST(body: string, observe?: 'body', reportProgress?: boolean, options?: {httpHeaderAccept?: '*/*', context?: HttpContext}): Observable<object>;
+    public pushNotificationToUserUsingPOST(body: string, observe?: 'response', reportProgress?: boolean, options?: {httpHeaderAccept?: '*/*', context?: HttpContext}): Observable<HttpResponse<object>>;
+    public pushNotificationToUserUsingPOST(body: string, observe?: 'events', reportProgress?: boolean, options?: {httpHeaderAccept?: '*/*', context?: HttpContext}): Observable<HttpEvent<object>>;
+    public pushNotificationToUserUsingPOST(body: string, observe: any = 'body', reportProgress: boolean = false, options?: {httpHeaderAccept?: '*/*', context?: HttpContext}): Observable<any> {
+        if (body === null || body === undefined) {
+            throw new Error('Required parameter body was null or undefined when calling pushNotificationToUserUsingPOST.');
         }
 
         let localVarHeaders = this.defaultHeaders;
@@ -552,11 +548,11 @@ export class PushNotificationControllerService {
             }
         }
 
-        let localVarPath = `/api/v1/notifications/users/${this.configuration.encodeParam({name: "recipientId", value: recipientId, in: "path", style: "simple", explode: false, dataType: "string", dataFormat: undefined})}`;
+        let localVarPath = `/api/v1/notifications/users`;
         return this.httpClient.request<object>('post', `${this.configuration.basePath}${localVarPath}`,
             {
                 context: localVarHttpContext,
-                body: pushRequest,
+                body: body,
                 responseType: <any>responseType_,
                 withCredentials: this.configuration.withCredentials,
                 headers: localVarHeaders,
