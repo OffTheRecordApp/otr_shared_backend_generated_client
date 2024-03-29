@@ -41,8 +41,9 @@ export declare class UserPasswordControllerApi {
      *
      * @summary sendAccountVerificationCode
      * @param userId userId
+     * @param verificationMethod verificationMethod
      */
-    sendAccountVerificationCodeUsingPOST(userId: string, extraHttpRequestParams?: any): ng.IHttpPromise<{}>;
+    sendAccountVerificationCodeUsingPOST(userId: string, verificationMethod?: 'CODE_ONLY' | 'WEB_LINK', extraHttpRequestParams?: any): ng.IHttpPromise<{}>;
     /**
      *
      * @summary sendResetPasswordToken

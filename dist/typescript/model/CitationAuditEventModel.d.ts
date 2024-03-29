@@ -73,6 +73,7 @@ export declare namespace CitationAuditEventModel {
         DEFAULTFEEADDED,
         DEFAULTFEECHANGED,
         DEFAULTFEEREMOVED,
+        EMAILSENT,
         EXTERNALTICKETREQUEST,
         GHOSTACCOUNTCREATED,
         LAWFIRMACCOUNTPRIORITY,

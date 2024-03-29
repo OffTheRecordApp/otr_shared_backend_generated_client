@@ -307,13 +307,14 @@ export class UserPasswordControllerService {
     /**
      * sendAccountVerificationCode
      * @param userId userId
+     * @param verificationMethod verificationMethod
      * @param observe set whether or not to return the data Observable as the body, response or events. defaults to returning the body.
      * @param reportProgress flag to report request and response progress.
      */
-    public sendAccountVerificationCodeUsingPOST(userId: string, observe?: 'body', reportProgress?: boolean, options?: {httpHeaderAccept?: undefined, context?: HttpContext}): Observable<any>;
-    public sendAccountVerificationCodeUsingPOST(userId: string, observe?: 'response', reportProgress?: boolean, options?: {httpHeaderAccept?: undefined, context?: HttpContext}): Observable<HttpResponse<any>>;
-    public sendAccountVerificationCodeUsingPOST(userId: string, observe?: 'events', reportProgress?: boolean, options?: {httpHeaderAccept?: undefined, context?: HttpContext}): Observable<HttpEvent<any>>;
-    public sendAccountVerificationCodeUsingPOST(userId: string, observe: any = 'body', reportProgress: boolean = false, options?: {httpHeaderAccept?: undefined, context?: HttpContext}): Observable<any> {
+    public sendAccountVerificationCodeUsingPOST(userId: string, verificationMethod?: 'CODE_ONLY' | 'WEB_LINK', observe?: 'body', reportProgress?: boolean, options?: {httpHeaderAccept?: undefined, context?: HttpContext}): Observable<any>;
+    public sendAccountVerificationCodeUsingPOST(userId: string, verificationMethod?: 'CODE_ONLY' | 'WEB_LINK', observe?: 'response', reportProgress?: boolean, options?: {httpHeaderAccept?: undefined, context?: HttpContext}): Observable<HttpResponse<any>>;
+    public sendAccountVerificationCodeUsingPOST(userId: string, verificationMethod?: 'CODE_ONLY' | 'WEB_LINK', observe?: 'events', reportProgress?: boolean, options?: {httpHeaderAccept?: undefined, context?: HttpContext}): Observable<HttpEvent<any>>;
+    public sendAccountVerificationCodeUsingPOST(userId: string, verificationMethod?: 'CODE_ONLY' | 'WEB_LINK', observe: any = 'body', reportProgress: boolean = false, options?: {httpHeaderAccept?: undefined, context?: HttpContext}): Observable<any> {
         if (userId === null || userId === undefined) {
             throw new Error('Required parameter userId was null or undefined when calling sendAccountVerificationCodeUsingPOST.');
         }
@@ -322,6 +323,10 @@ export class UserPasswordControllerService {
         if (userId !== undefined && userId !== null) {
           localVarQueryParameters = this.addToHttpParams(localVarQueryParameters,
             <any>userId, 'userId');
+        }
+        if (verificationMethod !== undefined && verificationMethod !== null) {
+          localVarQueryParameters = this.addToHttpParams(localVarQueryParameters,
+            <any>verificationMethod, 'verificationMethod');
         }
 
         let localVarHeaders = this.defaultHeaders;

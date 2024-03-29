@@ -108,8 +108,9 @@ var UserPasswordControllerApi = /** @class */ (function () {
      *
      * @summary sendAccountVerificationCode
      * @param userId userId
+     * @param verificationMethod verificationMethod
      */
-    UserPasswordControllerApi.prototype.sendAccountVerificationCodeUsingPOST = function (userId, extraHttpRequestParams) {
+    UserPasswordControllerApi.prototype.sendAccountVerificationCodeUsingPOST = function (userId, verificationMethod, extraHttpRequestParams) {
         var localVarPath = this.basePath + '/api/v1/users/send-verification-code';
         var queryParameters = {};
         var headerParams = Object.assign({}, this.defaultHeaders);
@@ -119,6 +120,9 @@ var UserPasswordControllerApi = /** @class */ (function () {
         }
         if (userId !== undefined) {
             queryParameters['userId'] = userId;
+        }
+        if (verificationMethod !== undefined) {
+            queryParameters['verificationMethod'] = verificationMethod;
         }
         var httpRequestParams = {
             method: 'POST',
