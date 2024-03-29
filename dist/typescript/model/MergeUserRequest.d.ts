@@ -10,6 +10,7 @@
  * Do not edit the class manually.
  */
 export interface MergeUserRequest {
+    "authCode"?: number;
     "formerUserId"?: string;
     "rollback"?: boolean;
 }
