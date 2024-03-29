@@ -621,6 +621,7 @@ __exportStar(require("./SetCustomerReviewStatusRequest"), exports);
 __exportStar(require("./SetFlagOnMessageModel"), exports);
 __exportStar(require("./SetFlagOnMessagesRequest"), exports);
 __exportStar(require("./SetLawfirmCaseDecisionRequest"), exports);
+__exportStar(require("./SetMarketingEmailOptInRequest"), exports);
 __exportStar(require("./SetReferralSourceRequest"), exports);
 __exportStar(require("./SetStarOnMessageModel"), exports);
 __exportStar(require("./SetStarOnMessagesRequest"), exports);

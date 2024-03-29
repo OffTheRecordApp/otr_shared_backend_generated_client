@@ -730,6 +730,7 @@ model/setCustomerReviewStatusRequest.ts
 model/setFlagOnMessageModel.ts
 model/setFlagOnMessagesRequest.ts
 model/setLawfirmCaseDecisionRequest.ts
+model/setMarketingEmailOptInRequest.ts
 model/setReferralSourceRequest.ts
 model/setStarOnMessageModel.ts
 model/setStarOnMessagesRequest.ts

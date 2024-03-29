@@ -54,6 +54,13 @@ export declare class UserProfileControllerApi {
     mergeUserUsingPOST(primaryUserId: string, request: models.MergeUserRequest, extraHttpRequestParams?: any): ng.IHttpPromise<models.MergeUserResponse>;
     /**
      *
+     * @summary setMarketingEmailOptIn
+     * @param userId userId
+     * @param request request
+     */
+    setMarketingEmailOptInUsingPUT(userId: number, request: models.SetMarketingEmailOptInRequest, extraHttpRequestParams?: any): ng.IHttpPromise<{}>;
+    /**
+     *
      * @summary updateProfilePicture
      * @param userId userId
      * @param request request

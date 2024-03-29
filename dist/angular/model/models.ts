@@ -609,6 +609,7 @@ export * from './setCustomerReviewStatusRequest';
 export * from './setFlagOnMessageModel';
 export * from './setFlagOnMessagesRequest';
 export * from './setLawfirmCaseDecisionRequest';
+export * from './setMarketingEmailOptInRequest';
 export * from './setReferralSourceRequest';
 export * from './setStarOnMessageModel';
 export * from './setStarOnMessagesRequest';
