@@ -20,6 +20,8 @@ import { Observable }                                        from 'rxjs';
 
 // @ts-ignore
 import { GetActivityFeedResponse } from '../model/getActivityFeedResponse';
+// @ts-ignore
+import { ListCaseOutcomesResponse } from '../model/listCaseOutcomesResponse';
 
 // @ts-ignore
 import { BASE_PATH, COLLECTION_FORMATS }                     from '../variables';
@@ -154,6 +156,88 @@ export class ActivityFeedControllerService {
 
         let localVarPath = `/api/v1/activity-feed`;
         return this.httpClient.request<GetActivityFeedResponse>('get', `${this.configuration.basePath}${localVarPath}`,
+            {
+                context: localVarHttpContext,
+                params: localVarQueryParameters,
+                responseType: <any>responseType_,
+                withCredentials: this.configuration.withCredentials,
+                headers: localVarHeaders,
+                observe: observe,
+                reportProgress: reportProgress
+            }
+        );
+    }
+
+    /**
+     * listCaseOutcomes
+     * @param includeCriminal includeCriminal
+     * @param limit limit
+     * @param regionCode regionCode
+     * @param resolutionStatuses resolutionStatuses
+     * @param startDate startDate
+     * @param observe set whether or not to return the data Observable as the body, response or events. defaults to returning the body.
+     * @param reportProgress flag to report request and response progress.
+     */
+    public listCaseOutcomesUsingGET(includeCriminal?: boolean, limit?: number, regionCode?: string, resolutionStatuses?: 'LOST' | 'POINTS_REDUCED' | 'TICKET_DISMISSED', startDate?: string, observe?: 'body', reportProgress?: boolean, options?: {httpHeaderAccept?: '*/*', context?: HttpContext}): Observable<ListCaseOutcomesResponse>;
+    public listCaseOutcomesUsingGET(includeCriminal?: boolean, limit?: number, regionCode?: string, resolutionStatuses?: 'LOST' | 'POINTS_REDUCED' | 'TICKET_DISMISSED', startDate?: string, observe?: 'response', reportProgress?: boolean, options?: {httpHeaderAccept?: '*/*', context?: HttpContext}): Observable<HttpResponse<ListCaseOutcomesResponse>>;
+    public listCaseOutcomesUsingGET(includeCriminal?: boolean, limit?: number, regionCode?: string, resolutionStatuses?: 'LOST' | 'POINTS_REDUCED' | 'TICKET_DISMISSED', startDate?: string, observe?: 'events', reportProgress?: boolean, options?: {httpHeaderAccept?: '*/*', context?: HttpContext}): Observable<HttpEvent<ListCaseOutcomesResponse>>;
+    public listCaseOutcomesUsingGET(includeCriminal?: boolean, limit?: number, regionCode?: string, resolutionStatuses?: 'LOST' | 'POINTS_REDUCED' | 'TICKET_DISMISSED', startDate?: string, observe: any = 'body', reportProgress: boolean = false, options?: {httpHeaderAccept?: '*/*', context?: HttpContext}): Observable<any> {
+
+        let localVarQueryParameters = new HttpParams({encoder: this.encoder});
+        if (includeCriminal !== undefined && includeCriminal !== null) {
+          localVarQueryParameters = this.addToHttpParams(localVarQueryParameters,
+            <any>includeCriminal, 'includeCriminal');
+        }
+        if (limit !== undefined && limit !== null) {
+          localVarQueryParameters = this.addToHttpParams(localVarQueryParameters,
+            <any>limit, 'limit');
+        }
+        if (regionCode !== undefined && regionCode !== null) {
+          localVarQueryParameters = this.addToHttpParams(localVarQueryParameters,
+            <any>regionCode, 'regionCode');
+        }
+        if (resolutionStatuses !== undefined && resolutionStatuses !== null) {
+          localVarQueryParameters = this.addToHttpParams(localVarQueryParameters,
+            <any>resolutionStatuses, 'resolutionStatuses');
+        }
+        if (startDate !== undefined && startDate !== null) {
+          localVarQueryParameters = this.addToHttpParams(localVarQueryParameters,
+            <any>startDate, 'startDate');
+        }
+
+        let localVarHeaders = this.defaultHeaders;
+
+        let localVarHttpHeaderAcceptSelected: string | undefined = options && options.httpHeaderAccept;
+        if (localVarHttpHeaderAcceptSelected === undefined) {
+            // to determine the Accept header
+            const httpHeaderAccepts: string[] = [
+                '*/*'
+            ];
+            localVarHttpHeaderAcceptSelected = this.configuration.selectHeaderAccept(httpHeaderAccepts);
+        }
+        if (localVarHttpHeaderAcceptSelected !== undefined) {
+            localVarHeaders = localVarHeaders.set('Accept', localVarHttpHeaderAcceptSelected);
+        }
+
+        let localVarHttpContext: HttpContext | undefined = options && options.context;
+        if (localVarHttpContext === undefined) {
+            localVarHttpContext = new HttpContext();
+        }
+
+
+        let responseType_: 'text' | 'json' | 'blob' = 'json';
+        if (localVarHttpHeaderAcceptSelected) {
+            if (localVarHttpHeaderAcceptSelected.startsWith('text')) {
+                responseType_ = 'text';
+            } else if (this.configuration.isJsonMime(localVarHttpHeaderAcceptSelected)) {
+                responseType_ = 'json';
+            } else {
+                responseType_ = 'blob';
+            }
+        }
+
+        let localVarPath = `/api/v1/activity-feed/case-outcomes`;
+        return this.httpClient.request<ListCaseOutcomesResponse>('get', `${this.configuration.basePath}${localVarPath}`,
             {
                 context: localVarHttpContext,
                 params: localVarQueryParameters,

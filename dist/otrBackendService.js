@@ -220,6 +220,60 @@ angular.module('otrBackendService', [])
                 return deferred.promise;
             };
             /**
+             * listCaseOutcomes
+             * @method
+             * @name OtrService#listCaseOutcomesUsingGET
+             * @param {object} parameters - method options and parameters
+             * @param {boolean} parameters.includeCriminal - includeCriminal
+             * @param {integer} parameters.limit - limit
+             * @param {string} parameters.regionCode - regionCode
+             * @param {string} parameters.resolutionStatuses - resolutionStatuses
+             * @param {string} parameters.startDate - startDate
+             */
+            OtrService.prototype.listCaseOutcomesUsingGET = function(parameters) {
+                if (parameters === undefined) {
+                    parameters = {};
+                }
+                var deferred = $q.defer();
+                var domain = this.domain,
+                    path = '/api/v1/activity-feed/case-outcomes';
+                var body = {},
+                    queryParameters = {},
+                    headers = {},
+                    form = {};
+
+                headers['Accept'] = ['*/*'];
+
+                if (parameters['includeCriminal'] !== undefined) {
+                    queryParameters['includeCriminal'] = parameters['includeCriminal'];
+                }
+
+                /** set default value **/
+                queryParameters['limit'] = 100;
+
+                if (parameters['limit'] !== undefined) {
+                    queryParameters['limit'] = parameters['limit'];
+                }
+
+                if (parameters['regionCode'] !== undefined) {
+                    queryParameters['regionCode'] = parameters['regionCode'];
+                }
+
+                if (parameters['resolutionStatuses'] !== undefined) {
+                    queryParameters['resolutionStatuses'] = parameters['resolutionStatuses'];
+                }
+
+                if (parameters['startDate'] !== undefined) {
+                    queryParameters['startDate'] = parameters['startDate'];
+                }
+
+                queryParameters = mergeQueryParams(parameters, queryParameters);
+
+                this.request('GET', domain + path, parameters, body, headers, queryParameters, form, deferred);
+
+                return deferred.promise;
+            };
+            /**
              * markAlertAsRead
              * @method
              * @name OtrService#markAlertAsReadUsingDELETE

@@ -26,4 +26,14 @@ export declare class ActivityFeedControllerApi {
      * @param previousPageToken previousPageToken
      */
     listActivityFeedUsingGET(limit: number, nextPageToken?: string, previousPageToken?: string, extraHttpRequestParams?: any): ng.IHttpPromise<models.GetActivityFeedResponse>;
+    /**
+     *
+     * @summary listCaseOutcomes
+     * @param includeCriminal includeCriminal
+     * @param limit limit
+     * @param regionCode regionCode
+     * @param resolutionStatuses resolutionStatuses
+     * @param startDate startDate
+     */
+    listCaseOutcomesUsingGET(includeCriminal?: boolean, limit?: number, regionCode?: string, resolutionStatuses?: 'LOST' | 'POINTS_REDUCED' | 'TICKET_DISMISSED', startDate?: string, extraHttpRequestParams?: any): ng.IHttpPromise<models.ListCaseOutcomesResponse>;
 }

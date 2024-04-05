@@ -455,6 +455,7 @@ __exportStar(require("./ListCaseBookingsRequest"), exports);
 __exportStar(require("./ListCaseBookingsResponse"), exports);
 __exportStar(require("./ListCaseCancellationsRequest"), exports);
 __exportStar(require("./ListCaseCancellationsResponse"), exports);
+__exportStar(require("./ListCaseOutcomesResponse"), exports);
 __exportStar(require("./ListCitationAuditEventsResponse"), exports);
 __exportStar(require("./ListCitationsRequest"), exports);
 __exportStar(require("./ListCitationsResponse"), exports);

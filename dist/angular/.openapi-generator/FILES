@@ -563,6 +563,7 @@ model/listCaseBookingsRequest.ts
 model/listCaseBookingsResponse.ts
 model/listCaseCancellationsRequest.ts
 model/listCaseCancellationsResponse.ts
+model/listCaseOutcomesResponse.ts
 model/listCitationAuditEventsResponse.ts
 model/listCitationsRequest.ts
 model/listCitationsResponse.ts

@@ -58,6 +58,45 @@ var ActivityFeedControllerApi = /** @class */ (function () {
         }
         return this.$http(httpRequestParams);
     };
+    /**
+     *
+     * @summary listCaseOutcomes
+     * @param includeCriminal includeCriminal
+     * @param limit limit
+     * @param regionCode regionCode
+     * @param resolutionStatuses resolutionStatuses
+     * @param startDate startDate
+     */
+    ActivityFeedControllerApi.prototype.listCaseOutcomesUsingGET = function (includeCriminal, limit, regionCode, resolutionStatuses, startDate, extraHttpRequestParams) {
+        var localVarPath = this.basePath + '/api/v1/activity-feed/case-outcomes';
+        var queryParameters = {};
+        var headerParams = Object.assign({}, this.defaultHeaders);
+        if (includeCriminal !== undefined) {
+            queryParameters['includeCriminal'] = includeCriminal;
+        }
+        if (limit !== undefined) {
+            queryParameters['limit'] = limit;
+        }
+        if (regionCode !== undefined) {
+            queryParameters['regionCode'] = regionCode;
+        }
+        if (resolutionStatuses !== undefined) {
+            queryParameters['resolutionStatuses'] = resolutionStatuses;
+        }
+        if (startDate !== undefined) {
+            queryParameters['startDate'] = startDate;
+        }
+        var httpRequestParams = {
+            method: 'GET',
+            url: localVarPath,
+            params: queryParameters,
+            headers: headerParams
+        };
+        if (extraHttpRequestParams) {
+            httpRequestParams = Object.assign(httpRequestParams, extraHttpRequestParams);
+        }
+        return this.$http(httpRequestParams);
+    };
     ActivityFeedControllerApi.$inject = ['$http', '$httpParamSerializer', 'basePath'];
     return ActivityFeedControllerApi;
 }());

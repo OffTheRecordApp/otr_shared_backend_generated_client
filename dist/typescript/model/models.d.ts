@@ -443,6 +443,7 @@ export * from './ListCaseBookingsRequest';
 export * from './ListCaseBookingsResponse';
 export * from './ListCaseCancellationsRequest';
 export * from './ListCaseCancellationsResponse';
+export * from './ListCaseOutcomesResponse';
 export * from './ListCitationAuditEventsResponse';
 export * from './ListCitationsRequest';
 export * from './ListCitationsResponse';
