@@ -217,6 +217,7 @@ model/caseModel.ts
 model/caseModelReq.ts
 model/caseModelRes.ts
 model/caseNotesDomain.ts
+model/caseOutcomeModel.ts
 model/casePaymentDomain.ts
 model/casePaymentModel.ts
 model/caseStatusDetailsResponse.ts

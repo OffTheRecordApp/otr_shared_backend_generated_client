@@ -11,13 +11,3 @@
  * Do not edit the class manually.
  */
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.ListCaseOutcomesResponse = void 0;
-var ListCaseOutcomesResponse;
-(function (ListCaseOutcomesResponse) {
-    var ResolutionStatusEnum;
-    (function (ResolutionStatusEnum) {
-        ResolutionStatusEnum[ResolutionStatusEnum["LOST"] = 'LOST'] = "LOST";
-        ResolutionStatusEnum[ResolutionStatusEnum["POINTSREDUCED"] = 'POINTS_REDUCED'] = "POINTSREDUCED";
-        ResolutionStatusEnum[ResolutionStatusEnum["TICKETDISMISSED"] = 'TICKET_DISMISSED'] = "TICKETDISMISSED";
-    })(ResolutionStatusEnum = ListCaseOutcomesResponse.ResolutionStatusEnum || (ListCaseOutcomesResponse.ResolutionStatusEnum = {}));
-})(ListCaseOutcomesResponse = exports.ListCaseOutcomesResponse || (exports.ListCaseOutcomesResponse = {}));

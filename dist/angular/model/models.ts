@@ -97,6 +97,7 @@ export * from './caseModel';
 export * from './caseModelReq';
 export * from './caseModelRes';
 export * from './caseNotesDomain';
+export * from './caseOutcomeModel';
 export * from './casePaymentDomain';
 export * from './casePaymentModel';
 export * from './caseStatusDetailsResponse';

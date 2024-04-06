@@ -9,27 +9,10 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
+import { CaseOutcomeModel } from './caseOutcomeModel';
 
 
 export interface ListCaseOutcomesResponse { 
-    averageSavingsInCents?: number;
-    city?: string;
-    clientName?: string;
-    courtName?: string;
-    criminal?: boolean;
-    profilePictureUrl?: string;
-    regionCode?: string;
-    resolutionDateUtc?: string;
-    resolutionStatus?: ListCaseOutcomesResponse.ResolutionStatusEnum;
-    shortViolationName?: string;
+    outcomes?: Array<CaseOutcomeModel>;
 }
-export namespace ListCaseOutcomesResponse {
-    export type ResolutionStatusEnum = 'LOST' | 'POINTS_REDUCED' | 'TICKET_DISMISSED';
-    export const ResolutionStatusEnum = {
-        Lost: 'LOST' as ResolutionStatusEnum,
-        PointsReduced: 'POINTS_REDUCED' as ResolutionStatusEnum,
-        TicketDismissed: 'TICKET_DISMISSED' as ResolutionStatusEnum
-    };
-}
-
 

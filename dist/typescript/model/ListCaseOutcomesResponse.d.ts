@@ -9,22 +9,7 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
+import * as models from './models';
 export interface ListCaseOutcomesResponse {
-    "averageSavingsInCents"?: number;
-    "city"?: string;
-    "clientName"?: string;
-    "courtName"?: string;
-    "criminal"?: boolean;
-    "profilePictureUrl"?: string;
-    "regionCode"?: string;
-    "resolutionDateUtc"?: string;
-    "resolutionStatus"?: ListCaseOutcomesResponse.ResolutionStatusEnum;
-    "shortViolationName"?: string;
-}
-export declare namespace ListCaseOutcomesResponse {
-    enum ResolutionStatusEnum {
-        LOST,
-        POINTSREDUCED,
-        TICKETDISMISSED
-    }
+    "outcomes"?: Array<models.CaseOutcomeModel>;
 }
