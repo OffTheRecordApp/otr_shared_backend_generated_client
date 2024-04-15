@@ -104,6 +104,7 @@ export declare namespace CitationAuditEventModel {
         SAVEVACATIONMODEREASON,
         UNKNOWN,
         USERLOGINEVENT,
+        USERMERGE,
         USERREGISTRATION,
         USERREGISTRATIONATTRIBUTED,
         USERSETTINGUPDATED,

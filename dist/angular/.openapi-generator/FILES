@@ -675,6 +675,7 @@ model/registerGhostUserRequest.ts
 model/registerGhostUserResponse.ts
 model/registerNewUserRequest.ts
 model/registerNewUserResponse.ts
+model/registeredUserDomain.ts
 model/removeCoverageRequest.ts
 model/removeLawfirmSurchargeRequest.ts
 model/replyToReviewRequest.ts

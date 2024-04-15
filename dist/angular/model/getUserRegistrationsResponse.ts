@@ -9,12 +9,12 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-import { UserDomain } from './userDomain';
+import { RegisteredUserDomain } from './registeredUserDomain';
 import { UserRegistrationStats } from './userRegistrationStats';
 
 
 export interface GetUserRegistrationsResponse { 
     stats?: UserRegistrationStats;
-    userRegistrations?: Array<UserDomain>;
+    userRegistrations?: Array<RegisteredUserDomain>;
 }
 

@@ -104,6 +104,7 @@ export declare namespace LawfirmAuditEventModel {
         SAVEVACATIONMODEREASON,
         UNKNOWN,
         USERLOGINEVENT,
+        USERMERGE,
         USERREGISTRATION,
         USERREGISTRATIONATTRIBUTED,
         USERSETTINGUPDATED,

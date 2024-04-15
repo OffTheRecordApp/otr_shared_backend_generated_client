@@ -16,6 +16,7 @@ export interface GetUserRegistrationsRequest {
     includeDataRecords?: boolean;
     length?: number;
     page?: number;
+    sortMap?: { [key: string]: string; };
     startDate?: string;
     timeZoneId?: string;
 }

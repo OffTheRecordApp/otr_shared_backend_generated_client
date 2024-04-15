@@ -554,6 +554,7 @@ export * from './registerGhostUserRequest';
 export * from './registerGhostUserResponse';
 export * from './registerNewUserRequest';
 export * from './registerNewUserResponse';
+export * from './registeredUserDomain';
 export * from './removeCoverageRequest';
 export * from './removeLawfirmSurchargeRequest';
 export * from './replyToReviewRequest';

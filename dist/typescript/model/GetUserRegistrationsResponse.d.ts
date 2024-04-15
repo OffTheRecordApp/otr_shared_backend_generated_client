@@ -12,5 +12,5 @@
 import * as models from './models';
 export interface GetUserRegistrationsResponse {
     "stats"?: models.UserRegistrationStats;
-    "userRegistrations"?: Array<models.UserDomain>;
+    "userRegistrations"?: Array<models.RegisteredUserDomain>;
 }

@@ -566,6 +566,7 @@ __exportStar(require("./RegisterGhostUserRequest"), exports);
 __exportStar(require("./RegisterGhostUserResponse"), exports);
 __exportStar(require("./RegisterNewUserRequest"), exports);
 __exportStar(require("./RegisterNewUserResponse"), exports);
+__exportStar(require("./RegisteredUserDomain"), exports);
 __exportStar(require("./RemoveCoverageRequest"), exports);
 __exportStar(require("./RemoveLawfirmSurchargeRequest"), exports);
 __exportStar(require("./ReplyToReviewRequest"), exports);
