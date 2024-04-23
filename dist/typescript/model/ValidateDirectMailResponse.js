@@ -294,6 +294,7 @@ var ValidateDirectMailResponse;
         OtrErrorEnum[OtrErrorEnum["USERISNOTTHEOWNER"] = 'USER_IS_NOT_THE_OWNER'] = "USERISNOTTHEOWNER";
         OtrErrorEnum[OtrErrorEnum["USERNOTFOUND"] = 'USER_NOT_FOUND'] = "USERNOTFOUND";
         OtrErrorEnum[OtrErrorEnum["USERNOTFOUNDINLAWFIRM"] = 'USER_NOT_FOUND_IN_LAWFIRM'] = "USERNOTFOUNDINLAWFIRM";
+        OtrErrorEnum[OtrErrorEnum["VERIFICATIONCODENOTVALID"] = 'VERIFICATION_CODE_NOT_VALID'] = "VERIFICATIONCODENOTVALID";
         OtrErrorEnum[OtrErrorEnum["VERIFICATIONLINKNOTVALID"] = 'VERIFICATION_LINK_NOT_VALID'] = "VERIFICATIONLINKNOTVALID";
     })(OtrErrorEnum = ValidateDirectMailResponse.OtrErrorEnum || (ValidateDirectMailResponse.OtrErrorEnum = {}));
 })(ValidateDirectMailResponse = exports.ValidateDirectMailResponse || (exports.ValidateDirectMailResponse = {}));
