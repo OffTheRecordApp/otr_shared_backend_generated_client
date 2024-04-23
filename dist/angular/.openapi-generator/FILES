@@ -388,6 +388,7 @@ model/getCaseResponse.ts
 model/getCaseUserModel.ts
 model/getCaseUsersResponse.ts
 model/getCasesWithCoverageObtainedResponse.ts
+model/getCasesWithMissingLawfirmPayoutsRequest.ts
 model/getCasesWithMissingLawfirmPayoutsResponse.ts
 model/getCasesWithOverduePaymentsResponse.ts
 model/getCasesWithUncapturedChargesRequest.ts

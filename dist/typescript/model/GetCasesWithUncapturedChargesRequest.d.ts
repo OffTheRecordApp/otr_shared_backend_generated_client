@@ -12,4 +12,5 @@
 export interface GetCasesWithUncapturedChargesRequest {
     "showNegativeBalances"?: boolean;
     "showPositiveBalances"?: boolean;
+    "trailingMonths"?: number;
 }

@@ -268,6 +268,7 @@ export * from './getCaseResponse';
 export * from './getCaseUserModel';
 export * from './getCaseUsersResponse';
 export * from './getCasesWithCoverageObtainedResponse';
+export * from './getCasesWithMissingLawfirmPayoutsRequest';
 export * from './getCasesWithMissingLawfirmPayoutsResponse';
 export * from './getCasesWithOverduePaymentsResponse';
 export * from './getCasesWithUncapturedChargesRequest';

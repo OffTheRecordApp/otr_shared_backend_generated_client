@@ -11,9 +11,7 @@
  */
 
 
-export interface GetCasesWithUncapturedChargesRequest { 
-    showNegativeBalances?: boolean;
-    showPositiveBalances?: boolean;
+export interface GetCasesWithMissingLawfirmPayoutsRequest { 
     trailingMonths?: number;
 }
 

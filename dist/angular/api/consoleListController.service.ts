@@ -27,6 +27,8 @@ import { GenericAdminListRequest } from '../model/genericAdminListRequest';
 // @ts-ignore
 import { GetCasesWithCoverageObtainedResponse } from '../model/getCasesWithCoverageObtainedResponse';
 // @ts-ignore
+import { GetCasesWithMissingLawfirmPayoutsRequest } from '../model/getCasesWithMissingLawfirmPayoutsRequest';
+// @ts-ignore
 import { GetCasesWithMissingLawfirmPayoutsResponse } from '../model/getCasesWithMissingLawfirmPayoutsResponse';
 // @ts-ignore
 import { GetCasesWithOverduePaymentsResponse } from '../model/getCasesWithOverduePaymentsResponse';
@@ -281,10 +283,10 @@ export class ConsoleListControllerService {
      * @param observe set whether or not to return the data Observable as the body, response or events. defaults to returning the body.
      * @param reportProgress flag to report request and response progress.
      */
-    public getCasesWithMissingLawfirmPayoutsUsingPOST(request: object, observe?: 'body', reportProgress?: boolean, options?: {httpHeaderAccept?: 'application/json', context?: HttpContext}): Observable<GetCasesWithMissingLawfirmPayoutsResponse>;
-    public getCasesWithMissingLawfirmPayoutsUsingPOST(request: object, observe?: 'response', reportProgress?: boolean, options?: {httpHeaderAccept?: 'application/json', context?: HttpContext}): Observable<HttpResponse<GetCasesWithMissingLawfirmPayoutsResponse>>;
-    public getCasesWithMissingLawfirmPayoutsUsingPOST(request: object, observe?: 'events', reportProgress?: boolean, options?: {httpHeaderAccept?: 'application/json', context?: HttpContext}): Observable<HttpEvent<GetCasesWithMissingLawfirmPayoutsResponse>>;
-    public getCasesWithMissingLawfirmPayoutsUsingPOST(request: object, observe: any = 'body', reportProgress: boolean = false, options?: {httpHeaderAccept?: 'application/json', context?: HttpContext}): Observable<any> {
+    public getCasesWithMissingLawfirmPayoutsUsingPOST(request: GetCasesWithMissingLawfirmPayoutsRequest, observe?: 'body', reportProgress?: boolean, options?: {httpHeaderAccept?: 'application/json', context?: HttpContext}): Observable<GetCasesWithMissingLawfirmPayoutsResponse>;
+    public getCasesWithMissingLawfirmPayoutsUsingPOST(request: GetCasesWithMissingLawfirmPayoutsRequest, observe?: 'response', reportProgress?: boolean, options?: {httpHeaderAccept?: 'application/json', context?: HttpContext}): Observable<HttpResponse<GetCasesWithMissingLawfirmPayoutsResponse>>;
+    public getCasesWithMissingLawfirmPayoutsUsingPOST(request: GetCasesWithMissingLawfirmPayoutsRequest, observe?: 'events', reportProgress?: boolean, options?: {httpHeaderAccept?: 'application/json', context?: HttpContext}): Observable<HttpEvent<GetCasesWithMissingLawfirmPayoutsResponse>>;
+    public getCasesWithMissingLawfirmPayoutsUsingPOST(request: GetCasesWithMissingLawfirmPayoutsRequest, observe: any = 'body', reportProgress: boolean = false, options?: {httpHeaderAccept?: 'application/json', context?: HttpContext}): Observable<any> {
         if (request === null || request === undefined) {
             throw new Error('Required parameter request was null or undefined when calling getCasesWithMissingLawfirmPayoutsUsingPOST.');
         }

@@ -280,6 +280,7 @@ __exportStar(require("./GetCaseResponse"), exports);
 __exportStar(require("./GetCaseUserModel"), exports);
 __exportStar(require("./GetCaseUsersResponse"), exports);
 __exportStar(require("./GetCasesWithCoverageObtainedResponse"), exports);
+__exportStar(require("./GetCasesWithMissingLawfirmPayoutsRequest"), exports);
 __exportStar(require("./GetCasesWithMissingLawfirmPayoutsResponse"), exports);
 __exportStar(require("./GetCasesWithOverduePaymentsResponse"), exports);
 __exportStar(require("./GetCasesWithUncapturedChargesRequest"), exports);
