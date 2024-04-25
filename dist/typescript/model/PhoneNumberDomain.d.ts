@@ -11,6 +11,7 @@
  */
 import * as models from './models';
 export interface PhoneNumberDomain {
+    "countryCode"?: string;
     "creationDateUtc"?: models.Timestamp;
     "entityType"?: PhoneNumberDomain.EntityTypeEnum;
     "extension"?: string;

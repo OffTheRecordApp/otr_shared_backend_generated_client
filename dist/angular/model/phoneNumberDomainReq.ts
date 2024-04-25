@@ -13,6 +13,7 @@ import { TimestampReq } from './timestampReq';
 
 
 export interface PhoneNumberDomainReq { 
+    countryCode?: string;
     creationDateUtc?: TimestampReq;
     entityType?: PhoneNumberDomainReq.EntityTypeEnum;
     extension?: string;

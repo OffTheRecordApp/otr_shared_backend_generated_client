@@ -13,6 +13,7 @@ import { TimestampRes } from './timestampRes';
 
 
 export interface PhoneNumberDomainRes { 
+    countryCode?: string;
     creationDateUtc?: TimestampRes;
     entityType?: PhoneNumberDomainRes.EntityTypeEnum;
     extension?: string;
