@@ -23,6 +23,7 @@ export interface UserDomainReq {
     "genderType"?: UserDomainReq.GenderTypeEnum;
     "ghostAccountCreationDateUtc"?: string;
     "hasLeftReview"?: boolean;
+    "hubspotContactId"?: string;
     "isEmailConfirmed"?: boolean;
     "isEnabled"?: boolean;
     "isLawfirmAccessGranted"?: boolean;

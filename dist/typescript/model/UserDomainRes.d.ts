@@ -24,6 +24,7 @@ export interface UserDomainRes {
     "genderType"?: UserDomainRes.GenderTypeEnum;
     "ghostAccountCreationDateUtc"?: string;
     "hasLeftReview"?: boolean;
+    "hubspotContactId"?: string;
     "isEmailConfirmed"?: boolean;
     "isEnabled"?: boolean;
     "isLawfirmAccessGranted"?: boolean;
