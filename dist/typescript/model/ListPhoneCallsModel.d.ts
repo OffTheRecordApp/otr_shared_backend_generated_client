@@ -21,9 +21,13 @@ export interface ListPhoneCallsModel {
     "holdDurationInSeconds"?: number;
     "ivrDurationInSeconds"?: number;
     "ivrName"?: string;
+    "phoneNumber"?: string;
     "recordingUrl"?: string;
     "talkDurationInSeconds"?: number;
     "teamName"?: string;
+    "totalCalls"?: number;
+    "totalOtrAccounts"?: number;
+    "userId"?: number;
 }
 export declare namespace ListPhoneCallsModel {
     enum CallDirectionEnum {

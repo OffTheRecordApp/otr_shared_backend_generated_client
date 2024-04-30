@@ -85,17 +85,20 @@ export declare class DashboardControllerApi {
      * @param agentName agentName
      * @param callQueueName callQueueName
      * @param callStatus callStatus
+     * @param customerName customerName
      * @param direction direction
      * @param endDate endDate
      * @param ivrName ivrName
      * @param length length
      * @param page page
+     * @param phoneNumber phoneNumber
      * @param shouldIncludePhoneCalls shouldIncludePhoneCalls
      * @param sortBy sortBy
      * @param sortOrder sortOrder
      * @param startDate startDate
      * @param teamName teamName
      * @param timeZoneId timeZoneId
+     * @param totalOtrAccounts totalOtrAccounts
      */
-    listPhoneCallsUsingGET(agentId?: number, agentName?: string, callQueueName?: string, callStatus?: 'ABANDONED' | 'BLOCKED' | 'BUSY' | 'COMPLETED' | 'CONNECTING' | 'CONNECTION_FAILED' | 'DEFAULT' | 'DISCONNECTED' | 'ENQUEUED' | 'IN_PROGRESS' | 'MISSED_CALL' | 'ON_HOLD' | 'RECENTLY_COMPLETED' | 'RESTRICTED' | 'VOICEMAIL' | 'VOICEMAIL_RECORDING_IN_PROGRESS', direction?: 'INCOMING' | 'OUTGOING', endDate?: string, ivrName?: string, length?: number, page?: number, shouldIncludePhoneCalls?: boolean, sortBy?: string, sortOrder?: string, startDate?: string, teamName?: string, timeZoneId?: string, extraHttpRequestParams?: any): ng.IHttpPromise<models.ListPhoneCallsResponse>;
+    listPhoneCallsUsingGET(agentId?: number, agentName?: string, callQueueName?: string, callStatus?: 'ABANDONED' | 'BLOCKED' | 'BUSY' | 'COMPLETED' | 'CONNECTING' | 'CONNECTION_FAILED' | 'DEFAULT' | 'DISCONNECTED' | 'ENQUEUED' | 'IN_PROGRESS' | 'MISSED_CALL' | 'ON_HOLD' | 'RECENTLY_COMPLETED' | 'RESTRICTED' | 'VOICEMAIL' | 'VOICEMAIL_RECORDING_IN_PROGRESS', customerName?: string, direction?: 'INCOMING' | 'OUTGOING', endDate?: string, ivrName?: string, length?: number, page?: number, phoneNumber?: string, shouldIncludePhoneCalls?: boolean, sortBy?: string, sortOrder?: string, startDate?: string, teamName?: string, timeZoneId?: string, totalOtrAccounts?: number, extraHttpRequestParams?: any): ng.IHttpPromise<models.ListPhoneCallsResponse>;
 }

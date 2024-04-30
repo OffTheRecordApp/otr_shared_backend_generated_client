@@ -280,19 +280,22 @@ var DashboardControllerApi = /** @class */ (function () {
      * @param agentName agentName
      * @param callQueueName callQueueName
      * @param callStatus callStatus
+     * @param customerName customerName
      * @param direction direction
      * @param endDate endDate
      * @param ivrName ivrName
      * @param length length
      * @param page page
+     * @param phoneNumber phoneNumber
      * @param shouldIncludePhoneCalls shouldIncludePhoneCalls
      * @param sortBy sortBy
      * @param sortOrder sortOrder
      * @param startDate startDate
      * @param teamName teamName
      * @param timeZoneId timeZoneId
+     * @param totalOtrAccounts totalOtrAccounts
      */
-    DashboardControllerApi.prototype.listPhoneCallsUsingGET = function (agentId, agentName, callQueueName, callStatus, direction, endDate, ivrName, length, page, shouldIncludePhoneCalls, sortBy, sortOrder, startDate, teamName, timeZoneId, extraHttpRequestParams) {
+    DashboardControllerApi.prototype.listPhoneCallsUsingGET = function (agentId, agentName, callQueueName, callStatus, customerName, direction, endDate, ivrName, length, page, phoneNumber, shouldIncludePhoneCalls, sortBy, sortOrder, startDate, teamName, timeZoneId, totalOtrAccounts, extraHttpRequestParams) {
         var localVarPath = this.basePath + '/api/v1/console/phone-calls';
         var queryParameters = {};
         var headerParams = Object.assign({}, this.defaultHeaders);
@@ -308,6 +311,9 @@ var DashboardControllerApi = /** @class */ (function () {
         if (callStatus !== undefined) {
             queryParameters['callStatus'] = callStatus;
         }
+        if (customerName !== undefined) {
+            queryParameters['customerName'] = customerName;
+        }
         if (direction !== undefined) {
             queryParameters['direction'] = direction;
         }
@@ -322,6 +328,9 @@ var DashboardControllerApi = /** @class */ (function () {
         }
         if (page !== undefined) {
             queryParameters['page'] = page;
+        }
+        if (phoneNumber !== undefined) {
+            queryParameters['phoneNumber'] = phoneNumber;
         }
         if (shouldIncludePhoneCalls !== undefined) {
             queryParameters['shouldIncludePhoneCalls'] = shouldIncludePhoneCalls;
@@ -340,6 +349,9 @@ var DashboardControllerApi = /** @class */ (function () {
         }
         if (timeZoneId !== undefined) {
             queryParameters['timeZoneId'] = timeZoneId;
+        }
+        if (totalOtrAccounts !== undefined) {
+            queryParameters['totalOtrAccounts'] = totalOtrAccounts;
         }
         var httpRequestParams = {
             method: 'GET',

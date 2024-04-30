@@ -6045,17 +6045,20 @@ angular.module('otrBackendService', [])
              * @param {string} parameters.agentName - agentName
              * @param {string} parameters.callQueueName - callQueueName
              * @param {string} parameters.callStatus - callStatus
+             * @param {string} parameters.customerName - customerName
              * @param {string} parameters.direction - direction
              * @param {string} parameters.endDate - endDate
              * @param {string} parameters.ivrName - ivrName
              * @param {integer} parameters.length - length
              * @param {integer} parameters.page - page
+             * @param {string} parameters.phoneNumber - phoneNumber
              * @param {boolean} parameters.shouldIncludePhoneCalls - shouldIncludePhoneCalls
              * @param {string} parameters.sortBy - sortBy
              * @param {string} parameters.sortOrder - sortOrder
              * @param {string} parameters.startDate - startDate
              * @param {string} parameters.teamName - teamName
              * @param {string} parameters.timeZoneId - timeZoneId
+             * @param {integer} parameters.totalOtrAccounts - totalOtrAccounts
              */
             OtrService.prototype.listPhoneCallsUsingGET = function(parameters) {
                 if (parameters === undefined) {
@@ -6087,6 +6090,10 @@ angular.module('otrBackendService', [])
                     queryParameters['callStatus'] = parameters['callStatus'];
                 }
 
+                if (parameters['customerName'] !== undefined) {
+                    queryParameters['customerName'] = parameters['customerName'];
+                }
+
                 if (parameters['direction'] !== undefined) {
                     queryParameters['direction'] = parameters['direction'];
                 }
@@ -6108,6 +6115,10 @@ angular.module('otrBackendService', [])
 
                 if (parameters['page'] !== undefined) {
                     queryParameters['page'] = parameters['page'];
+                }
+
+                if (parameters['phoneNumber'] !== undefined) {
+                    queryParameters['phoneNumber'] = parameters['phoneNumber'];
                 }
 
                 /** set default value **/
@@ -6135,6 +6146,10 @@ angular.module('otrBackendService', [])
 
                 if (parameters['timeZoneId'] !== undefined) {
                     queryParameters['timeZoneId'] = parameters['timeZoneId'];
+                }
+
+                if (parameters['totalOtrAccounts'] !== undefined) {
+                    queryParameters['totalOtrAccounts'] = parameters['totalOtrAccounts'];
                 }
 
                 queryParameters = mergeQueryParams(parameters, queryParameters);

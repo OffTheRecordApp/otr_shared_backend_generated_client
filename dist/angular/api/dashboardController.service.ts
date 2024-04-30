@@ -805,24 +805,27 @@ export class DashboardControllerService {
      * @param agentName agentName
      * @param callQueueName callQueueName
      * @param callStatus callStatus
+     * @param customerName customerName
      * @param direction direction
      * @param endDate endDate
      * @param ivrName ivrName
      * @param length length
      * @param page page
+     * @param phoneNumber phoneNumber
      * @param shouldIncludePhoneCalls shouldIncludePhoneCalls
      * @param sortBy sortBy
      * @param sortOrder sortOrder
      * @param startDate startDate
      * @param teamName teamName
      * @param timeZoneId timeZoneId
+     * @param totalOtrAccounts totalOtrAccounts
      * @param observe set whether or not to return the data Observable as the body, response or events. defaults to returning the body.
      * @param reportProgress flag to report request and response progress.
      */
-    public listPhoneCallsUsingGET(agentId?: number, agentName?: string, callQueueName?: string, callStatus?: 'ABANDONED' | 'BLOCKED' | 'BUSY' | 'COMPLETED' | 'CONNECTING' | 'CONNECTION_FAILED' | 'DEFAULT' | 'DISCONNECTED' | 'ENQUEUED' | 'IN_PROGRESS' | 'MISSED_CALL' | 'ON_HOLD' | 'RECENTLY_COMPLETED' | 'RESTRICTED' | 'VOICEMAIL' | 'VOICEMAIL_RECORDING_IN_PROGRESS', direction?: 'INCOMING' | 'OUTGOING', endDate?: string, ivrName?: string, length?: number, page?: number, shouldIncludePhoneCalls?: boolean, sortBy?: string, sortOrder?: string, startDate?: string, teamName?: string, timeZoneId?: string, observe?: 'body', reportProgress?: boolean, options?: {httpHeaderAccept?: 'application/json', context?: HttpContext}): Observable<ListPhoneCallsResponse>;
-    public listPhoneCallsUsingGET(agentId?: number, agentName?: string, callQueueName?: string, callStatus?: 'ABANDONED' | 'BLOCKED' | 'BUSY' | 'COMPLETED' | 'CONNECTING' | 'CONNECTION_FAILED' | 'DEFAULT' | 'DISCONNECTED' | 'ENQUEUED' | 'IN_PROGRESS' | 'MISSED_CALL' | 'ON_HOLD' | 'RECENTLY_COMPLETED' | 'RESTRICTED' | 'VOICEMAIL' | 'VOICEMAIL_RECORDING_IN_PROGRESS', direction?: 'INCOMING' | 'OUTGOING', endDate?: string, ivrName?: string, length?: number, page?: number, shouldIncludePhoneCalls?: boolean, sortBy?: string, sortOrder?: string, startDate?: string, teamName?: string, timeZoneId?: string, observe?: 'response', reportProgress?: boolean, options?: {httpHeaderAccept?: 'application/json', context?: HttpContext}): Observable<HttpResponse<ListPhoneCallsResponse>>;
-    public listPhoneCallsUsingGET(agentId?: number, agentName?: string, callQueueName?: string, callStatus?: 'ABANDONED' | 'BLOCKED' | 'BUSY' | 'COMPLETED' | 'CONNECTING' | 'CONNECTION_FAILED' | 'DEFAULT' | 'DISCONNECTED' | 'ENQUEUED' | 'IN_PROGRESS' | 'MISSED_CALL' | 'ON_HOLD' | 'RECENTLY_COMPLETED' | 'RESTRICTED' | 'VOICEMAIL' | 'VOICEMAIL_RECORDING_IN_PROGRESS', direction?: 'INCOMING' | 'OUTGOING', endDate?: string, ivrName?: string, length?: number, page?: number, shouldIncludePhoneCalls?: boolean, sortBy?: string, sortOrder?: string, startDate?: string, teamName?: string, timeZoneId?: string, observe?: 'events', reportProgress?: boolean, options?: {httpHeaderAccept?: 'application/json', context?: HttpContext}): Observable<HttpEvent<ListPhoneCallsResponse>>;
-    public listPhoneCallsUsingGET(agentId?: number, agentName?: string, callQueueName?: string, callStatus?: 'ABANDONED' | 'BLOCKED' | 'BUSY' | 'COMPLETED' | 'CONNECTING' | 'CONNECTION_FAILED' | 'DEFAULT' | 'DISCONNECTED' | 'ENQUEUED' | 'IN_PROGRESS' | 'MISSED_CALL' | 'ON_HOLD' | 'RECENTLY_COMPLETED' | 'RESTRICTED' | 'VOICEMAIL' | 'VOICEMAIL_RECORDING_IN_PROGRESS', direction?: 'INCOMING' | 'OUTGOING', endDate?: string, ivrName?: string, length?: number, page?: number, shouldIncludePhoneCalls?: boolean, sortBy?: string, sortOrder?: string, startDate?: string, teamName?: string, timeZoneId?: string, observe: any = 'body', reportProgress: boolean = false, options?: {httpHeaderAccept?: 'application/json', context?: HttpContext}): Observable<any> {
+    public listPhoneCallsUsingGET(agentId?: number, agentName?: string, callQueueName?: string, callStatus?: 'ABANDONED' | 'BLOCKED' | 'BUSY' | 'COMPLETED' | 'CONNECTING' | 'CONNECTION_FAILED' | 'DEFAULT' | 'DISCONNECTED' | 'ENQUEUED' | 'IN_PROGRESS' | 'MISSED_CALL' | 'ON_HOLD' | 'RECENTLY_COMPLETED' | 'RESTRICTED' | 'VOICEMAIL' | 'VOICEMAIL_RECORDING_IN_PROGRESS', customerName?: string, direction?: 'INCOMING' | 'OUTGOING', endDate?: string, ivrName?: string, length?: number, page?: number, phoneNumber?: string, shouldIncludePhoneCalls?: boolean, sortBy?: string, sortOrder?: string, startDate?: string, teamName?: string, timeZoneId?: string, totalOtrAccounts?: number, observe?: 'body', reportProgress?: boolean, options?: {httpHeaderAccept?: 'application/json', context?: HttpContext}): Observable<ListPhoneCallsResponse>;
+    public listPhoneCallsUsingGET(agentId?: number, agentName?: string, callQueueName?: string, callStatus?: 'ABANDONED' | 'BLOCKED' | 'BUSY' | 'COMPLETED' | 'CONNECTING' | 'CONNECTION_FAILED' | 'DEFAULT' | 'DISCONNECTED' | 'ENQUEUED' | 'IN_PROGRESS' | 'MISSED_CALL' | 'ON_HOLD' | 'RECENTLY_COMPLETED' | 'RESTRICTED' | 'VOICEMAIL' | 'VOICEMAIL_RECORDING_IN_PROGRESS', customerName?: string, direction?: 'INCOMING' | 'OUTGOING', endDate?: string, ivrName?: string, length?: number, page?: number, phoneNumber?: string, shouldIncludePhoneCalls?: boolean, sortBy?: string, sortOrder?: string, startDate?: string, teamName?: string, timeZoneId?: string, totalOtrAccounts?: number, observe?: 'response', reportProgress?: boolean, options?: {httpHeaderAccept?: 'application/json', context?: HttpContext}): Observable<HttpResponse<ListPhoneCallsResponse>>;
+    public listPhoneCallsUsingGET(agentId?: number, agentName?: string, callQueueName?: string, callStatus?: 'ABANDONED' | 'BLOCKED' | 'BUSY' | 'COMPLETED' | 'CONNECTING' | 'CONNECTION_FAILED' | 'DEFAULT' | 'DISCONNECTED' | 'ENQUEUED' | 'IN_PROGRESS' | 'MISSED_CALL' | 'ON_HOLD' | 'RECENTLY_COMPLETED' | 'RESTRICTED' | 'VOICEMAIL' | 'VOICEMAIL_RECORDING_IN_PROGRESS', customerName?: string, direction?: 'INCOMING' | 'OUTGOING', endDate?: string, ivrName?: string, length?: number, page?: number, phoneNumber?: string, shouldIncludePhoneCalls?: boolean, sortBy?: string, sortOrder?: string, startDate?: string, teamName?: string, timeZoneId?: string, totalOtrAccounts?: number, observe?: 'events', reportProgress?: boolean, options?: {httpHeaderAccept?: 'application/json', context?: HttpContext}): Observable<HttpEvent<ListPhoneCallsResponse>>;
+    public listPhoneCallsUsingGET(agentId?: number, agentName?: string, callQueueName?: string, callStatus?: 'ABANDONED' | 'BLOCKED' | 'BUSY' | 'COMPLETED' | 'CONNECTING' | 'CONNECTION_FAILED' | 'DEFAULT' | 'DISCONNECTED' | 'ENQUEUED' | 'IN_PROGRESS' | 'MISSED_CALL' | 'ON_HOLD' | 'RECENTLY_COMPLETED' | 'RESTRICTED' | 'VOICEMAIL' | 'VOICEMAIL_RECORDING_IN_PROGRESS', customerName?: string, direction?: 'INCOMING' | 'OUTGOING', endDate?: string, ivrName?: string, length?: number, page?: number, phoneNumber?: string, shouldIncludePhoneCalls?: boolean, sortBy?: string, sortOrder?: string, startDate?: string, teamName?: string, timeZoneId?: string, totalOtrAccounts?: number, observe: any = 'body', reportProgress: boolean = false, options?: {httpHeaderAccept?: 'application/json', context?: HttpContext}): Observable<any> {
 
         let localVarQueryParameters = new HttpParams({encoder: this.encoder});
         if (agentId !== undefined && agentId !== null) {
@@ -840,6 +843,10 @@ export class DashboardControllerService {
         if (callStatus !== undefined && callStatus !== null) {
           localVarQueryParameters = this.addToHttpParams(localVarQueryParameters,
             <any>callStatus, 'callStatus');
+        }
+        if (customerName !== undefined && customerName !== null) {
+          localVarQueryParameters = this.addToHttpParams(localVarQueryParameters,
+            <any>customerName, 'customerName');
         }
         if (direction !== undefined && direction !== null) {
           localVarQueryParameters = this.addToHttpParams(localVarQueryParameters,
@@ -860,6 +867,10 @@ export class DashboardControllerService {
         if (page !== undefined && page !== null) {
           localVarQueryParameters = this.addToHttpParams(localVarQueryParameters,
             <any>page, 'page');
+        }
+        if (phoneNumber !== undefined && phoneNumber !== null) {
+          localVarQueryParameters = this.addToHttpParams(localVarQueryParameters,
+            <any>phoneNumber, 'phoneNumber');
         }
         if (shouldIncludePhoneCalls !== undefined && shouldIncludePhoneCalls !== null) {
           localVarQueryParameters = this.addToHttpParams(localVarQueryParameters,
@@ -884,6 +895,10 @@ export class DashboardControllerService {
         if (timeZoneId !== undefined && timeZoneId !== null) {
           localVarQueryParameters = this.addToHttpParams(localVarQueryParameters,
             <any>timeZoneId, 'timeZoneId');
+        }
+        if (totalOtrAccounts !== undefined && totalOtrAccounts !== null) {
+          localVarQueryParameters = this.addToHttpParams(localVarQueryParameters,
+            <any>totalOtrAccounts, 'totalOtrAccounts');
         }
 
         let localVarHeaders = this.defaultHeaders;
