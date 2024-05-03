@@ -15,4 +15,5 @@ export interface GetLawfirmCaseStatsResponse {
     };
     "numBookedCases"?: number;
     "numResolvedCases"?: number;
+    "successRate"?: number;
 }

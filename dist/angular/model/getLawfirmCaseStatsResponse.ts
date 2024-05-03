@@ -15,5 +15,6 @@ export interface GetLawfirmCaseStatsResponse {
     caseCountByStatusMap?: { [key: string]: number; };
     numBookedCases?: number;
     numResolvedCases?: number;
+    successRate?: number;
 }
 
