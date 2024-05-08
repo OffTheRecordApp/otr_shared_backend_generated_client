@@ -293,9 +293,10 @@ var DashboardControllerApi = /** @class */ (function () {
      * @param startDate startDate
      * @param teamName teamName
      * @param timeZoneId timeZoneId
+     * @param totalCalls totalCalls
      * @param totalOtrAccounts totalOtrAccounts
      */
-    DashboardControllerApi.prototype.listPhoneCallsUsingGET = function (agentId, agentName, callQueueName, callStatus, customerName, direction, endDate, ivrName, length, page, phoneNumber, shouldIncludePhoneCalls, sortBy, sortOrder, startDate, teamName, timeZoneId, totalOtrAccounts, extraHttpRequestParams) {
+    DashboardControllerApi.prototype.listPhoneCallsUsingGET = function (agentId, agentName, callQueueName, callStatus, customerName, direction, endDate, ivrName, length, page, phoneNumber, shouldIncludePhoneCalls, sortBy, sortOrder, startDate, teamName, timeZoneId, totalCalls, totalOtrAccounts, extraHttpRequestParams) {
         var localVarPath = this.basePath + '/api/v1/console/phone-calls';
         var queryParameters = {};
         var headerParams = Object.assign({}, this.defaultHeaders);
@@ -349,6 +350,9 @@ var DashboardControllerApi = /** @class */ (function () {
         }
         if (timeZoneId !== undefined) {
             queryParameters['timeZoneId'] = timeZoneId;
+        }
+        if (totalCalls !== undefined) {
+            queryParameters['totalCalls'] = totalCalls;
         }
         if (totalOtrAccounts !== undefined) {
             queryParameters['totalOtrAccounts'] = totalOtrAccounts;

@@ -6058,6 +6058,7 @@ angular.module('otrBackendService', [])
              * @param {string} parameters.startDate - startDate
              * @param {string} parameters.teamName - teamName
              * @param {string} parameters.timeZoneId - timeZoneId
+             * @param {integer} parameters.totalCalls - totalCalls
              * @param {integer} parameters.totalOtrAccounts - totalOtrAccounts
              */
             OtrService.prototype.listPhoneCallsUsingGET = function(parameters) {
@@ -6146,6 +6147,10 @@ angular.module('otrBackendService', [])
 
                 if (parameters['timeZoneId'] !== undefined) {
                     queryParameters['timeZoneId'] = parameters['timeZoneId'];
+                }
+
+                if (parameters['totalCalls'] !== undefined) {
+                    queryParameters['totalCalls'] = parameters['totalCalls'];
                 }
 
                 if (parameters['totalOtrAccounts'] !== undefined) {
