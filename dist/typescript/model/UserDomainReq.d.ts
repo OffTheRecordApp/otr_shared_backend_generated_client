@@ -44,6 +44,7 @@ export interface UserDomainReq {
     "race"?: UserDomainReq.RaceEnum;
     "referralCode"?: string;
     "referralCount"?: number;
+    "referralLink"?: string;
     "roles"?: Array<models.UserRoleDomain>;
     "signUpCode"?: string;
     "signUpCodeUseCount"?: number;
