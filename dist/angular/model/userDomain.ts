@@ -12,6 +12,7 @@
 import { UserAccountModel } from './userAccountModel';
 import { AddressDomain } from './addressDomain';
 import { PhoneNumberDomain } from './phoneNumberDomain';
+import { UserSocialProfileModel } from './userSocialProfileModel';
 import { UserRoleDomain } from './userRoleDomain';
 import { UserSubscriptionPlanModel } from './userSubscriptionPlanModel';
 import { Timestamp } from './timestamp';
@@ -56,6 +57,7 @@ export interface UserDomain {
     roles?: Set<UserRoleDomain>;
     signUpCode?: string;
     signUpCodeUseCount?: number;
+    socialProfiles?: Array<UserSocialProfileModel>;
     subscriptionPlans?: Array<UserSubscriptionPlanModel>;
     userAlias?: string;
     userId?: number;

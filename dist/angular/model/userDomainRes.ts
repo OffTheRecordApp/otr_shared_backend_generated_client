@@ -9,6 +9,7 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
+import { UserSocialProfileModelRes } from './userSocialProfileModelRes';
 import { UserAccountModel } from './userAccountModel';
 import { UserSubscriptionPlanModelRes } from './userSubscriptionPlanModelRes';
 import { UserRoleDomain } from './userRoleDomain';
@@ -56,6 +57,7 @@ export interface UserDomainRes {
     roles?: Set<UserRoleDomain>;
     signUpCode?: string;
     signUpCodeUseCount?: number;
+    socialProfiles?: Array<UserSocialProfileModelRes>;
     subscriptionPlans?: Array<UserSubscriptionPlanModelRes>;
     userAlias?: string;
     userId?: number;

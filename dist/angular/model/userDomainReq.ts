@@ -15,6 +15,7 @@ import { TimestampReq } from './timestampReq';
 import { UserRoleDomain } from './userRoleDomain';
 import { UserSubscriptionPlanModelReq } from './userSubscriptionPlanModelReq';
 import { PhoneNumberDomainReq } from './phoneNumberDomainReq';
+import { UserSocialProfileModelReq } from './userSocialProfileModelReq';
 
 
 export interface UserDomainReq { 
@@ -55,6 +56,7 @@ export interface UserDomainReq {
     roles?: Set<UserRoleDomain>;
     signUpCode?: string;
     signUpCodeUseCount?: number;
+    socialProfiles?: Array<UserSocialProfileModelReq>;
     subscriptionPlans?: Array<UserSubscriptionPlanModelReq>;
     userAlias?: string;
     userId?: number;

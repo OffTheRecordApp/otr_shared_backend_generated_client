@@ -106,6 +106,7 @@ import { UserPasswordControllerService } from './api/userPasswordController.serv
 import { UserProfileControllerService } from './api/userProfileController.service';
 import { UserSearchControllerService } from './api/userSearchController.service';
 import { UserSettingsControllerService } from './api/userSettingsController.service';
+import { UserSocialProfileControllerService } from './api/userSocialProfileController.service';
 import { UtilityControllerService } from './api/utilityController.service';
 import { ValidationControllerService } from './api/validationController.service';
 import { VerificationControllerService } from './api/verificationController.service';

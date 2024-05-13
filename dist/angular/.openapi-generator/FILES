@@ -106,6 +106,7 @@ api/userPasswordController.service.ts
 api/userProfileController.service.ts
 api/userSearchController.service.ts
 api/userSettingsController.service.ts
+api/userSocialProfileController.service.ts
 api/utilityController.service.ts
 api/validationController.service.ts
 api/verificationController.service.ts
@@ -712,6 +713,8 @@ model/saveLawyerLicenseModel.ts
 model/saveLawyerLicensesRequest.ts
 model/saveLawyerRequest.ts
 model/saveNotesRequest.ts
+model/saveUserSocialProfileModel.ts
+model/saveUserSocialProfileRequest.ts
 model/saveUserWatchlistsRequest.ts
 model/scheduleNewPaymentRequest.ts
 model/scheduledTaskGetResponse.ts
@@ -852,6 +855,9 @@ model/userRefLinkDomain.ts
 model/userReferralSourceTypeModel.ts
 model/userRegistrationStats.ts
 model/userRoleDomain.ts
+model/userSocialProfileModel.ts
+model/userSocialProfileModelReq.ts
+model/userSocialProfileModelRes.ts
 model/userSubscriptionPlanModel.ts
 model/userSubscriptionPlanModelReq.ts
 model/userSubscriptionPlanModelRes.ts
