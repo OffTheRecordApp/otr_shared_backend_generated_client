@@ -110,6 +110,7 @@ __exportStar(require("./CaseModelReq"), exports);
 __exportStar(require("./CaseModelRes"), exports);
 __exportStar(require("./CaseNotesDomain"), exports);
 __exportStar(require("./CaseOutcomeModel"), exports);
+__exportStar(require("./CasePaymentBreakdownItemModel"), exports);
 __exportStar(require("./CasePaymentDomain"), exports);
 __exportStar(require("./CasePaymentModel"), exports);
 __exportStar(require("./CaseStatusDetailsResponse"), exports);

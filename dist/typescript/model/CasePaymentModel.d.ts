@@ -9,8 +9,10 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
+import * as models from './models';
 export interface CasePaymentModel {
     "dueDate"?: string;
     "dueNow"?: boolean;
     "feeAmount"?: number;
+    "items"?: Array<models.CasePaymentBreakdownItemModel>;
 }

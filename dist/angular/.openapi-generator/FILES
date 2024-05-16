@@ -219,6 +219,7 @@ model/caseModelReq.ts
 model/caseModelRes.ts
 model/caseNotesDomain.ts
 model/caseOutcomeModel.ts
+model/casePaymentBreakdownItemModel.ts
 model/casePaymentDomain.ts
 model/casePaymentModel.ts
 model/caseStatusDetailsResponse.ts
