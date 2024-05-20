@@ -744,6 +744,8 @@ model/setStarOnMessageModel.ts
 model/setStarOnMessagesRequest.ts
 model/settingRequest.ts
 model/settingResponse.ts
+model/signImageUrlRequest.ts
+model/signImageUrlResponse.ts
 model/signRecordingUrlRequest.ts
 model/signRecordingUrlResponse.ts
 model/simpleCredentialsResponse.ts

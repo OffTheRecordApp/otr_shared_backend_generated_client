@@ -109,6 +109,12 @@ export declare class CitationControllerApi {
     setLockForCitationUsingPUT(citationId: number, isLocked: boolean, extraHttpRequestParams?: any): ng.IHttpPromise<{}>;
     /**
      *
+     * @summary signImageUrl
+     * @param request request
+     */
+    signImageUrlUsingPOST(request: models.SignImageUrlRequest, extraHttpRequestParams?: any): ng.IHttpPromise<models.SignImageUrlResponse>;
+    /**
+     *
      * @summary toggleDeleteCitation
      * @param citationId citationId
      * @param isDeleteRequest isDeleteRequest

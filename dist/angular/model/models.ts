@@ -622,6 +622,8 @@ export * from './setStarOnMessageModel';
 export * from './setStarOnMessagesRequest';
 export * from './settingRequest';
 export * from './settingResponse';
+export * from './signImageUrlRequest';
+export * from './signImageUrlResponse';
 export * from './signRecordingUrlRequest';
 export * from './signRecordingUrlResponse';
 export * from './simpleCredentialsResponse';

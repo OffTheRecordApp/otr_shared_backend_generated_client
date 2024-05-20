@@ -634,6 +634,8 @@ __exportStar(require("./SetStarOnMessageModel"), exports);
 __exportStar(require("./SetStarOnMessagesRequest"), exports);
 __exportStar(require("./SettingRequest"), exports);
 __exportStar(require("./SettingResponse"), exports);
+__exportStar(require("./SignImageUrlRequest"), exports);
+__exportStar(require("./SignImageUrlResponse"), exports);
 __exportStar(require("./SignRecordingUrlRequest"), exports);
 __exportStar(require("./SignRecordingUrlResponse"), exports);
 __exportStar(require("./SimpleCredentialsResponse"), exports);
