@@ -14,9 +14,17 @@
 export interface UserSubscriptionPlanModelReq { 
     expirationDateUtc?: string;
     id?: string;
+    productName?: UserSubscriptionPlanModelReq.ProductNameEnum;
+    startDateUtc?: string;
     subscriptionStatus?: UserSubscriptionPlanModelReq.SubscriptionStatusEnum;
 }
 export namespace UserSubscriptionPlanModelReq {
+    export type ProductNameEnum = 'CONVOY_PRO' | 'OTR_FASTLANE' | 'OTR_FASTLANE_TEEN';
+    export const ProductNameEnum = {
+        ConvoyPro: 'CONVOY_PRO' as ProductNameEnum,
+        OtrFastlane: 'OTR_FASTLANE' as ProductNameEnum,
+        OtrFastlaneTeen: 'OTR_FASTLANE_TEEN' as ProductNameEnum
+    };
     export type SubscriptionStatusEnum = 'ACTIVE' | 'CANCELED' | 'INCOMPLETE' | 'INCOMPLETE_EXPIRED' | 'IN_TRIAL_PERIOD' | 'PAST_DUE' | 'UNKNOWN' | 'UNPAID';
     export const SubscriptionStatusEnum = {
         Active: 'ACTIVE' as SubscriptionStatusEnum,

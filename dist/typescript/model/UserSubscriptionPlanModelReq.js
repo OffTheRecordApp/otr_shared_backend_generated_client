@@ -14,6 +14,12 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.UserSubscriptionPlanModelReq = void 0;
 var UserSubscriptionPlanModelReq;
 (function (UserSubscriptionPlanModelReq) {
+    var ProductNameEnum;
+    (function (ProductNameEnum) {
+        ProductNameEnum[ProductNameEnum["CONVOYPRO"] = 'CONVOY_PRO'] = "CONVOYPRO";
+        ProductNameEnum[ProductNameEnum["OTRFASTLANE"] = 'OTR_FASTLANE'] = "OTRFASTLANE";
+        ProductNameEnum[ProductNameEnum["OTRFASTLANETEEN"] = 'OTR_FASTLANE_TEEN'] = "OTRFASTLANETEEN";
+    })(ProductNameEnum = UserSubscriptionPlanModelReq.ProductNameEnum || (UserSubscriptionPlanModelReq.ProductNameEnum = {}));
     var SubscriptionStatusEnum;
     (function (SubscriptionStatusEnum) {
         SubscriptionStatusEnum[SubscriptionStatusEnum["ACTIVE"] = 'ACTIVE'] = "ACTIVE";

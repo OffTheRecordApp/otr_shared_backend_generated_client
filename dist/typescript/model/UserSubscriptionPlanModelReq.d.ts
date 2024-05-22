@@ -12,9 +12,16 @@
 export interface UserSubscriptionPlanModelReq {
     "expirationDateUtc"?: string;
     "id"?: string;
+    "productName"?: UserSubscriptionPlanModelReq.ProductNameEnum;
+    "startDateUtc"?: string;
     "subscriptionStatus"?: UserSubscriptionPlanModelReq.SubscriptionStatusEnum;
 }
 export declare namespace UserSubscriptionPlanModelReq {
+    enum ProductNameEnum {
+        CONVOYPRO,
+        OTRFASTLANE,
+        OTRFASTLANETEEN
+    }
     enum SubscriptionStatusEnum {
         ACTIVE,
         CANCELED,
