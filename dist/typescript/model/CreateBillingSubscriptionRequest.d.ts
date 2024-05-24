@@ -9,8 +9,10 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
+import * as models from './models';
 export interface CreateBillingSubscriptionRequest {
     "cardId"?: string;
+    "guardian"?: models.SubscriptionGuardianModel;
     "priceIds"?: Array<string>;
     "productId"?: string;
 }

@@ -662,6 +662,7 @@ export * from './subscriberDomain';
 export * from './subscriptionDiscountEligibility';
 export * from './subscriptionDiscountEligibilityReq';
 export * from './subscriptionDiscountEligibilityRes';
+export * from './subscriptionGuardianModel';
 export * from './syncStripeChargesRequest';
 export * from './syncStripeChargesResponse';
 export * from './syncStripeDisputeResponse';

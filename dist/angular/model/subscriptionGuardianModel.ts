@@ -9,13 +9,11 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-import { SubscriptionGuardianModel } from './subscriptionGuardianModel';
 
 
-export interface CreateBillingSubscriptionRequest { 
-    cardId?: string;
-    guardian?: SubscriptionGuardianModel;
-    priceIds?: Array<string>;
-    productId?: string;
+export interface SubscriptionGuardianModel { 
+    emailAddress: string;
+    firstName: string;
+    lastName: string;
 }
 

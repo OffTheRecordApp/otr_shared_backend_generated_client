@@ -674,6 +674,7 @@ __exportStar(require("./SubscriberDomain"), exports);
 __exportStar(require("./SubscriptionDiscountEligibility"), exports);
 __exportStar(require("./SubscriptionDiscountEligibilityReq"), exports);
 __exportStar(require("./SubscriptionDiscountEligibilityRes"), exports);
+__exportStar(require("./SubscriptionGuardianModel"), exports);
 __exportStar(require("./SyncStripeChargesRequest"), exports);
 __exportStar(require("./SyncStripeChargesResponse"), exports);
 __exportStar(require("./SyncStripeDisputeResponse"), exports);
