@@ -856,6 +856,9 @@ model/userDomainReq.ts
 model/userDomainRes.ts
 model/userItem.ts
 model/userRefLinkDomain.ts
+model/userReferralLinkModel.ts
+model/userReferralLinkModelReq.ts
+model/userReferralLinkModelRes.ts
 model/userReferralSourceTypeModel.ts
 model/userRegistrationStats.ts
 model/userRoleDomain.ts

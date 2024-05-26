@@ -46,6 +46,7 @@ export interface UserDomain {
     "referralCode"?: string;
     "referralCount"?: number;
     "referralLink"?: string;
+    "referralLinks"?: Array<models.UserReferralLinkModel>;
     "roles"?: Array<models.UserRoleDomain>;
     "signUpCode"?: string;
     "signUpCodeUseCount"?: number;

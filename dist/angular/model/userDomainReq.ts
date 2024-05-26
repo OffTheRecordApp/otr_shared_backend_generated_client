@@ -11,6 +11,7 @@
  */
 import { AddressDomainReq } from './addressDomainReq';
 import { UserAccountModel } from './userAccountModel';
+import { UserReferralLinkModelReq } from './userReferralLinkModelReq';
 import { TimestampReq } from './timestampReq';
 import { UserRoleDomain } from './userRoleDomain';
 import { UserSubscriptionPlanModelReq } from './userSubscriptionPlanModelReq';
@@ -53,6 +54,7 @@ export interface UserDomainReq {
     referralCode?: string;
     referralCount?: number;
     referralLink?: string;
+    referralLinks?: Array<UserReferralLinkModelReq>;
     roles?: Set<UserRoleDomain>;
     signUpCode?: string;
     signUpCodeUseCount?: number;

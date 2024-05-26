@@ -9,6 +9,7 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
+import { UserReferralLinkModel } from './userReferralLinkModel';
 import { UserAccountModel } from './userAccountModel';
 import { AddressDomain } from './addressDomain';
 import { PhoneNumberDomain } from './phoneNumberDomain';
@@ -54,6 +55,7 @@ export interface UserDomain {
     referralCode?: string;
     referralCount?: number;
     referralLink?: string;
+    referralLinks?: Array<UserReferralLinkModel>;
     roles?: Set<UserRoleDomain>;
     signUpCode?: string;
     signUpCodeUseCount?: number;

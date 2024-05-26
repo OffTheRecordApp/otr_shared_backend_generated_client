@@ -16,6 +16,7 @@ import { UserRoleDomain } from './userRoleDomain';
 import { AddressDomainRes } from './addressDomainRes';
 import { PhoneNumberDomainRes } from './phoneNumberDomainRes';
 import { TimestampRes } from './timestampRes';
+import { UserReferralLinkModelRes } from './userReferralLinkModelRes';
 
 
 export interface UserDomainRes { 
@@ -54,6 +55,7 @@ export interface UserDomainRes {
     referralCode?: string;
     referralCount?: number;
     referralLink?: string;
+    referralLinks?: Array<UserReferralLinkModelRes>;
     roles?: Set<UserRoleDomain>;
     signUpCode?: string;
     signUpCodeUseCount?: number;
