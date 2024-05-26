@@ -95,8 +95,9 @@ var RecurringBillingControllerApi = /** @class */ (function () {
      * @param active active
      * @param audience audience
      * @param limit limit
+     * @param userId userId
      */
-    RecurringBillingControllerApi.prototype.listBillingProductsUsingGET = function (active, audience, limit, extraHttpRequestParams) {
+    RecurringBillingControllerApi.prototype.listBillingProductsUsingGET = function (active, audience, limit, userId, extraHttpRequestParams) {
         var localVarPath = this.basePath + '/api/v1/billing/products';
         var queryParameters = {};
         var headerParams = Object.assign({}, this.defaultHeaders);
@@ -108,6 +109,9 @@ var RecurringBillingControllerApi = /** @class */ (function () {
         }
         if (limit !== undefined) {
             queryParameters['limit'] = limit;
+        }
+        if (userId !== undefined) {
+            queryParameters['userId'] = userId;
         }
         var httpRequestParams = {
             method: 'GET',

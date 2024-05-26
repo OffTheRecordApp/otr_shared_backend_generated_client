@@ -518,6 +518,7 @@ angular.module('otrBackendService', [])
              * @param {boolean} parameters.active - active
              * @param {string} parameters.audience - audience
              * @param {integer} parameters.limit - limit
+             * @param {string} parameters.userId - userId
              */
             OtrService.prototype.listBillingProductsUsingGET = function(parameters) {
                 if (parameters === undefined) {
@@ -549,6 +550,10 @@ angular.module('otrBackendService', [])
 
                 if (parameters['limit'] !== undefined) {
                     queryParameters['limit'] = parameters['limit'];
+                }
+
+                if (parameters['userId'] !== undefined) {
+                    queryParameters['userId'] = parameters['userId'];
                 }
 
                 queryParameters = mergeQueryParams(parameters, queryParameters);

@@ -20,6 +20,8 @@ export interface BillingPriceModel {
     intervalCount?: number;
     monthlyUnitAmountInCents?: number;
     priceDescription?: string;
+    sampleEndDateUtc?: string;
+    sampleStartDateUtc?: string;
     unitAmountInCents?: number;
     yearlyDiscountInCents?: number;
     yearlyDiscountInPercentage?: number;
