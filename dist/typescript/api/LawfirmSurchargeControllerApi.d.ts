@@ -24,7 +24,7 @@ export declare class LawfirmSurchargeControllerApi {
      * @param lawfirmId lawfirmId
      * @param featureType featureType
      */
-    listLawfirmSurchargesUsingGET(lawfirmId: string, featureType?: 'BLACK_BOX' | 'STATE_PAGE' | 'STOREFRONT', extraHttpRequestParams?: any): ng.IHttpPromise<models.ListLawfirmSurchargesResponse>;
+    listLawfirmSurchargesUsingGET(lawfirmId: string, featureType?: 'BLACK_BOX' | 'FASTLANE_TEEN' | 'STATE_PAGE' | 'STOREFRONT', extraHttpRequestParams?: any): ng.IHttpPromise<models.ListLawfirmSurchargesResponse>;
     /**
      *
      * @summary removeSurcharges

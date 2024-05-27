@@ -20,9 +20,10 @@ export interface ListLawfirmSurchargeModel {
     refundEligibility?: ListLawfirmSurchargeModel.RefundEligibilityEnum;
 }
 export namespace ListLawfirmSurchargeModel {
-    export type FeatureEnum = 'BLACK_BOX' | 'STATE_PAGE' | 'STOREFRONT';
+    export type FeatureEnum = 'BLACK_BOX' | 'FASTLANE_TEEN' | 'STATE_PAGE' | 'STOREFRONT';
     export const FeatureEnum = {
         BlackBox: 'BLACK_BOX' as FeatureEnum,
+        FastlaneTeen: 'FASTLANE_TEEN' as FeatureEnum,
         StatePage: 'STATE_PAGE' as FeatureEnum,
         Storefront: 'STOREFRONT' as FeatureEnum
     };

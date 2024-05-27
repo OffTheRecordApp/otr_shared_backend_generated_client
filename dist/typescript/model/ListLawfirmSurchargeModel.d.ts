@@ -20,6 +20,7 @@ export interface ListLawfirmSurchargeModel {
 export declare namespace ListLawfirmSurchargeModel {
     enum FeatureEnum {
         BLACKBOX,
+        FASTLANETEEN,
         STATEPAGE,
         STOREFRONT
     }

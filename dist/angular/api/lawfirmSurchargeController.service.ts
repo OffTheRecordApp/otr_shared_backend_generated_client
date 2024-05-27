@@ -102,10 +102,10 @@ export class LawfirmSurchargeControllerService {
      * @param observe set whether or not to return the data Observable as the body, response or events. defaults to returning the body.
      * @param reportProgress flag to report request and response progress.
      */
-    public listLawfirmSurchargesUsingGET(lawfirmId: string, featureType?: 'BLACK_BOX' | 'STATE_PAGE' | 'STOREFRONT', observe?: 'body', reportProgress?: boolean, options?: {httpHeaderAccept?: '*/*', context?: HttpContext}): Observable<ListLawfirmSurchargesResponse>;
-    public listLawfirmSurchargesUsingGET(lawfirmId: string, featureType?: 'BLACK_BOX' | 'STATE_PAGE' | 'STOREFRONT', observe?: 'response', reportProgress?: boolean, options?: {httpHeaderAccept?: '*/*', context?: HttpContext}): Observable<HttpResponse<ListLawfirmSurchargesResponse>>;
-    public listLawfirmSurchargesUsingGET(lawfirmId: string, featureType?: 'BLACK_BOX' | 'STATE_PAGE' | 'STOREFRONT', observe?: 'events', reportProgress?: boolean, options?: {httpHeaderAccept?: '*/*', context?: HttpContext}): Observable<HttpEvent<ListLawfirmSurchargesResponse>>;
-    public listLawfirmSurchargesUsingGET(lawfirmId: string, featureType?: 'BLACK_BOX' | 'STATE_PAGE' | 'STOREFRONT', observe: any = 'body', reportProgress: boolean = false, options?: {httpHeaderAccept?: '*/*', context?: HttpContext}): Observable<any> {
+    public listLawfirmSurchargesUsingGET(lawfirmId: string, featureType?: 'BLACK_BOX' | 'FASTLANE_TEEN' | 'STATE_PAGE' | 'STOREFRONT', observe?: 'body', reportProgress?: boolean, options?: {httpHeaderAccept?: '*/*', context?: HttpContext}): Observable<ListLawfirmSurchargesResponse>;
+    public listLawfirmSurchargesUsingGET(lawfirmId: string, featureType?: 'BLACK_BOX' | 'FASTLANE_TEEN' | 'STATE_PAGE' | 'STOREFRONT', observe?: 'response', reportProgress?: boolean, options?: {httpHeaderAccept?: '*/*', context?: HttpContext}): Observable<HttpResponse<ListLawfirmSurchargesResponse>>;
+    public listLawfirmSurchargesUsingGET(lawfirmId: string, featureType?: 'BLACK_BOX' | 'FASTLANE_TEEN' | 'STATE_PAGE' | 'STOREFRONT', observe?: 'events', reportProgress?: boolean, options?: {httpHeaderAccept?: '*/*', context?: HttpContext}): Observable<HttpEvent<ListLawfirmSurchargesResponse>>;
+    public listLawfirmSurchargesUsingGET(lawfirmId: string, featureType?: 'BLACK_BOX' | 'FASTLANE_TEEN' | 'STATE_PAGE' | 'STOREFRONT', observe: any = 'body', reportProgress: boolean = false, options?: {httpHeaderAccept?: '*/*', context?: HttpContext}): Observable<any> {
         if (lawfirmId === null || lawfirmId === undefined) {
             throw new Error('Required parameter lawfirmId was null or undefined when calling listLawfirmSurchargesUsingGET.');
         }

@@ -17,6 +17,7 @@ var ListLawfirmSurchargeModel;
     var FeatureEnum;
     (function (FeatureEnum) {
         FeatureEnum[FeatureEnum["BLACKBOX"] = 'BLACK_BOX'] = "BLACKBOX";
+        FeatureEnum[FeatureEnum["FASTLANETEEN"] = 'FASTLANE_TEEN'] = "FASTLANETEEN";
         FeatureEnum[FeatureEnum["STATEPAGE"] = 'STATE_PAGE'] = "STATEPAGE";
         FeatureEnum[FeatureEnum["STOREFRONT"] = 'STOREFRONT'] = "STOREFRONT";
     })(FeatureEnum = ListLawfirmSurchargeModel.FeatureEnum || (ListLawfirmSurchargeModel.FeatureEnum = {}));

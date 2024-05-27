@@ -21,9 +21,10 @@ export interface SaveLawfirmSurchargeModel {
     surchargeType?: SaveLawfirmSurchargeModel.SurchargeTypeEnum;
 }
 export namespace SaveLawfirmSurchargeModel {
-    export type FeatureTypeEnum = 'BLACK_BOX' | 'STATE_PAGE' | 'STOREFRONT';
+    export type FeatureTypeEnum = 'BLACK_BOX' | 'FASTLANE_TEEN' | 'STATE_PAGE' | 'STOREFRONT';
     export const FeatureTypeEnum = {
         BlackBox: 'BLACK_BOX' as FeatureTypeEnum,
+        FastlaneTeen: 'FASTLANE_TEEN' as FeatureTypeEnum,
         StatePage: 'STATE_PAGE' as FeatureTypeEnum,
         Storefront: 'STOREFRONT' as FeatureTypeEnum
     };

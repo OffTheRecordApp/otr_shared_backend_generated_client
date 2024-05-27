@@ -17,6 +17,7 @@ var SaveLawfirmSurchargeModel;
     var FeatureTypeEnum;
     (function (FeatureTypeEnum) {
         FeatureTypeEnum[FeatureTypeEnum["BLACKBOX"] = 'BLACK_BOX'] = "BLACKBOX";
+        FeatureTypeEnum[FeatureTypeEnum["FASTLANETEEN"] = 'FASTLANE_TEEN'] = "FASTLANETEEN";
         FeatureTypeEnum[FeatureTypeEnum["STATEPAGE"] = 'STATE_PAGE'] = "STATEPAGE";
         FeatureTypeEnum[FeatureTypeEnum["STOREFRONT"] = 'STOREFRONT'] = "STOREFRONT";
     })(FeatureTypeEnum = SaveLawfirmSurchargeModel.FeatureTypeEnum || (SaveLawfirmSurchargeModel.FeatureTypeEnum = {}));

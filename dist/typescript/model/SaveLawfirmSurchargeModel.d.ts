@@ -21,6 +21,7 @@ export interface SaveLawfirmSurchargeModel {
 export declare namespace SaveLawfirmSurchargeModel {
     enum FeatureTypeEnum {
         BLACKBOX,
+        FASTLANETEEN,
         STATEPAGE,
         STOREFRONT
     }
