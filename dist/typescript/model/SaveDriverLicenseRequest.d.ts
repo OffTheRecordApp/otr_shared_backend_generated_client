@@ -20,6 +20,7 @@ export interface SaveDriverLicenseRequest {
     "driverLicenseNumber"?: string;
     "expirationDate"?: string;
     "firstName"?: string;
+    "isBackOfLicense"?: boolean;
     "isDeleted"?: boolean;
     "issueDate"?: string;
     "lastName"?: string;
