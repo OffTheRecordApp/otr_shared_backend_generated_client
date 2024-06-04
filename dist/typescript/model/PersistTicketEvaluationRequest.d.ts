@@ -14,6 +14,7 @@ export interface PersistTicketEvaluationRequest {
     "citationId"?: number;
     "citationState"?: string;
     "emailAddress"?: string;
+    "isOptIntoAutomatedNotifications"?: boolean;
     "phoneNumber"?: string;
     "source"?: PersistTicketEvaluationRequest.SourceEnum;
     "submissionDateUtc"?: models.TimestampReq;
