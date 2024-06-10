@@ -105,6 +105,7 @@ export declare namespace CitationAuditEventModel {
         REFERRALCODEREMOVED,
         SAVEVACATIONMODEENDDATE,
         SAVEVACATIONMODEREASON,
+        SUBSCRIPTIONPLANPURCHASED,
         UNKNOWN,
         USERLOGINEVENT,
         USERMERGE,

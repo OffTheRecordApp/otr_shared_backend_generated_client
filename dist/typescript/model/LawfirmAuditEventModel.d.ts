@@ -105,6 +105,7 @@ export declare namespace LawfirmAuditEventModel {
         REFERRALCODEREMOVED,
         SAVEVACATIONMODEENDDATE,
         SAVEVACATIONMODEREASON,
+        SUBSCRIPTIONPLANPURCHASED,
         UNKNOWN,
         USERLOGINEVENT,
         USERMERGE,
