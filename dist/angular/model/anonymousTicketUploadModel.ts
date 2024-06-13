@@ -16,6 +16,7 @@ export interface AnonymousTicketUploadModel {
     clientEmailAddress?: string;
     creationDateUTC?: string;
     isDismissedFromContactList?: boolean;
+    signedTicketImageUrl?: string;
     ticketImageUrl?: string;
     userId?: number;
 }

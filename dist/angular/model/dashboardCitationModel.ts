@@ -21,6 +21,7 @@ export interface DashboardCitationModel {
     isDeleted?: boolean;
     lastUpdatedDateUtc?: string;
     regionCode?: string;
+    signedTicketImageUrl?: string;
     ticketImageUrl?: string;
     violationCount?: number;
 }
