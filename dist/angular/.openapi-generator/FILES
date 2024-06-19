@@ -33,6 +33,7 @@ api/citationController.service.ts
 api/coachingCardsController.service.ts
 api/configurationController.service.ts
 api/consoleListController.service.ts
+api/contactLoopWebhookController.service.ts
 api/contactTimelineController.service.ts
 api/conversationController.service.ts
 api/countyController.service.ts
@@ -256,6 +257,7 @@ model/coachingCardsModel.ts
 model/coachingLinks.ts
 model/commonHeader.ts
 model/confidenceField.ts
+model/contactLoopWebhookRequest.ts
 model/contactTimelineResponse.ts
 model/convertPdfToImageModel.ts
 model/convertPdfToImageRequest.ts

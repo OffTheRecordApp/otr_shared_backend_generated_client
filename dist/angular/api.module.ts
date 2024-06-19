@@ -33,6 +33,7 @@ import { CitationControllerService } from './api/citationController.service';
 import { CoachingCardsControllerService } from './api/coachingCardsController.service';
 import { ConfigurationControllerService } from './api/configurationController.service';
 import { ConsoleListControllerService } from './api/consoleListController.service';
+import { ContactLoopWebhookControllerService } from './api/contactLoopWebhookController.service';
 import { ContactTimelineControllerService } from './api/contactTimelineController.service';
 import { ConversationControllerService } from './api/conversationController.service';
 import { CountyControllerService } from './api/countyController.service';
