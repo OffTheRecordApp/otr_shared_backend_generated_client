@@ -80,6 +80,7 @@ export declare namespace CreateCitationRequest {
         EMAIL,
         FRESHDESK,
         IOS,
+        LOCALHOST,
         MOBILEWEBAPP,
         OTRADMINCONSOLE,
         OTRADMINCONSOLEDEVO,

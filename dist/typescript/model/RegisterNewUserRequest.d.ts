@@ -35,6 +35,7 @@ export declare namespace RegisterNewUserRequest {
         EMAIL,
         FRESHDESK,
         IOS,
+        LOCALHOST,
         MOBILEWEBAPP,
         OTRADMINCONSOLE,
         OTRADMINCONSOLEDEVO,

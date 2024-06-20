@@ -54,7 +54,7 @@ export namespace CitationModelRes {
         CdlInPersonalVehicle: 'CDL_IN_PERSONAL_VEHICLE' as CdlStatusEnum,
         NoCdl: 'NO_CDL' as CdlStatusEnum
     };
-    export type ClientTypeEnum = 'ANDROID' | 'DESKTOP_WEBAPP' | 'DMV_GO' | 'DMV_ORG' | 'EMAIL' | 'FRESH_DESK' | 'IOS' | 'MOBILE_WEBAPP' | 'OTR_ADMIN_CONSOLE' | 'OTR_ADMIN_CONSOLE_DEVO' | 'OTR_ADMIN_CONSOLE_LOCALHOST' | 'OTR_EXPLORER' | 'OTR_LAWFIRM_PORTAL' | 'OTR_LAWFIRM_PORTAL_DEVO' | 'OTR_LAWFIRM_PORTAL_LOCALHOST' | 'OTR_WEBSITE' | 'OTR_WEBSITE_DEVO' | 'OTR_WEBSITE_LOCALHOST' | 'OTR_WIDGET' | 'UNKNOWN';
+    export type ClientTypeEnum = 'ANDROID' | 'DESKTOP_WEBAPP' | 'DMV_GO' | 'DMV_ORG' | 'EMAIL' | 'FRESH_DESK' | 'IOS' | 'LOCALHOST' | 'MOBILE_WEBAPP' | 'OTR_ADMIN_CONSOLE' | 'OTR_ADMIN_CONSOLE_DEVO' | 'OTR_ADMIN_CONSOLE_LOCALHOST' | 'OTR_EXPLORER' | 'OTR_LAWFIRM_PORTAL' | 'OTR_LAWFIRM_PORTAL_DEVO' | 'OTR_LAWFIRM_PORTAL_LOCALHOST' | 'OTR_WEBSITE' | 'OTR_WEBSITE_DEVO' | 'OTR_WEBSITE_LOCALHOST' | 'OTR_WIDGET' | 'UNKNOWN';
     export const ClientTypeEnum = {
         Android: 'ANDROID' as ClientTypeEnum,
         DesktopWebapp: 'DESKTOP_WEBAPP' as ClientTypeEnum,
@@ -63,6 +63,7 @@ export namespace CitationModelRes {
         Email: 'EMAIL' as ClientTypeEnum,
         FreshDesk: 'FRESH_DESK' as ClientTypeEnum,
         Ios: 'IOS' as ClientTypeEnum,
+        Localhost: 'LOCALHOST' as ClientTypeEnum,
         MobileWebapp: 'MOBILE_WEBAPP' as ClientTypeEnum,
         OtrAdminConsole: 'OTR_ADMIN_CONSOLE' as ClientTypeEnum,
         OtrAdminConsoleDevo: 'OTR_ADMIN_CONSOLE_DEVO' as ClientTypeEnum,

@@ -30,6 +30,7 @@ export declare namespace CitationAuditEventModel {
         EMAIL,
         FRESHDESK,
         IOS,
+        LOCALHOST,
         MOBILEWEBAPP,
         OTRADMINCONSOLE,
         OTRADMINCONSOLEDEVO,

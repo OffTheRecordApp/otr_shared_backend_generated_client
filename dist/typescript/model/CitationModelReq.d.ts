@@ -55,6 +55,7 @@ export declare namespace CitationModelReq {
         EMAIL,
         FRESHDESK,
         IOS,
+        LOCALHOST,
         MOBILEWEBAPP,
         OTRADMINCONSOLE,
         OTRADMINCONSOLEDEVO,
