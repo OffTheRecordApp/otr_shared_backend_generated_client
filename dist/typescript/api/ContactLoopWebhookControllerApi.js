@@ -26,20 +26,20 @@ var ContactLoopWebhookControllerApi = /** @class */ (function () {
     /**
      *
      * @summary handleContactLoopEvent
-     * @param request request
+     * @param requestString requestString
      */
-    ContactLoopWebhookControllerApi.prototype.handleContactLoopEventUsingPOST = function (request, extraHttpRequestParams) {
+    ContactLoopWebhookControllerApi.prototype.handleContactLoopEventUsingPOST = function (requestString, extraHttpRequestParams) {
         var localVarPath = this.basePath + '/api/v1/contact-loop/webhook';
         var queryParameters = {};
         var headerParams = Object.assign({}, this.defaultHeaders);
-        // verify required parameter 'request' is not null or undefined
-        if (request === null || request === undefined) {
-            throw new Error('Required parameter request was null or undefined when calling handleContactLoopEventUsingPOST.');
+        // verify required parameter 'requestString' is not null or undefined
+        if (requestString === null || requestString === undefined) {
+            throw new Error('Required parameter requestString was null or undefined when calling handleContactLoopEventUsingPOST.');
         }
         var httpRequestParams = {
             method: 'POST',
             url: localVarPath,
-            data: request,
+            data: requestString,
             params: queryParameters,
             headers: headerParams
         };

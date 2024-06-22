@@ -135,7 +135,6 @@ export * from './CoachingCardsModel';
 export * from './CoachingLinks';
 export * from './CommonHeader';
 export * from './ConfidenceField';
-export * from './ContactLoopWebhookRequest';
 export * from './ContactTimelineResponse';
 export * from './ConvertPdfToImageModel';
 export * from './ConvertPdfToImageRequest';

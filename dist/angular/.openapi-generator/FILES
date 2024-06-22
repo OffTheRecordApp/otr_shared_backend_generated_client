@@ -257,7 +257,6 @@ model/coachingCardsModel.ts
 model/coachingLinks.ts
 model/commonHeader.ts
 model/confidenceField.ts
-model/contactLoopWebhookRequest.ts
 model/contactTimelineResponse.ts
 model/convertPdfToImageModel.ts
 model/convertPdfToImageRequest.ts

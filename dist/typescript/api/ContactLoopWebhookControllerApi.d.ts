@@ -10,7 +10,6 @@
  * Do not edit the class manually.
  */
 /// <reference types="angular" />
-import * as models from '../model/models';
 export declare class ContactLoopWebhookControllerApi {
     protected $http: ng.IHttpService;
     protected $httpParamSerializer?: (d: any) => any;
@@ -21,7 +20,7 @@ export declare class ContactLoopWebhookControllerApi {
     /**
      *
      * @summary handleContactLoopEvent
-     * @param request request
+     * @param requestString requestString
      */
-    handleContactLoopEventUsingPOST(request: models.ContactLoopWebhookRequest, extraHttpRequestParams?: any): ng.IHttpPromise<string>;
+    handleContactLoopEventUsingPOST(requestString: string, extraHttpRequestParams?: any): ng.IHttpPromise<string>;
 }

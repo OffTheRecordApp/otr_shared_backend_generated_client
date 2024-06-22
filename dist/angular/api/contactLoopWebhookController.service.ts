@@ -18,8 +18,6 @@ import { HttpClient, HttpHeaders, HttpParams,
 import { CustomHttpParameterCodec }                          from '../encoder';
 import { Observable }                                        from 'rxjs';
 
-// @ts-ignore
-import { ContactLoopWebhookRequest } from '../model/contactLoopWebhookRequest';
 
 // @ts-ignore
 import { BASE_PATH, COLLECTION_FORMATS }                     from '../variables';
@@ -93,16 +91,16 @@ export class ContactLoopWebhookControllerService {
 
     /**
      * handleContactLoopEvent
-     * @param request request
+     * @param requestString requestString
      * @param observe set whether or not to return the data Observable as the body, response or events. defaults to returning the body.
      * @param reportProgress flag to report request and response progress.
      */
-    public handleContactLoopEventUsingPOST(request: ContactLoopWebhookRequest, observe?: 'body', reportProgress?: boolean, options?: {httpHeaderAccept?: '*/*', context?: HttpContext}): Observable<string>;
-    public handleContactLoopEventUsingPOST(request: ContactLoopWebhookRequest, observe?: 'response', reportProgress?: boolean, options?: {httpHeaderAccept?: '*/*', context?: HttpContext}): Observable<HttpResponse<string>>;
-    public handleContactLoopEventUsingPOST(request: ContactLoopWebhookRequest, observe?: 'events', reportProgress?: boolean, options?: {httpHeaderAccept?: '*/*', context?: HttpContext}): Observable<HttpEvent<string>>;
-    public handleContactLoopEventUsingPOST(request: ContactLoopWebhookRequest, observe: any = 'body', reportProgress: boolean = false, options?: {httpHeaderAccept?: '*/*', context?: HttpContext}): Observable<any> {
-        if (request === null || request === undefined) {
-            throw new Error('Required parameter request was null or undefined when calling handleContactLoopEventUsingPOST.');
+    public handleContactLoopEventUsingPOST(requestString: string, observe?: 'body', reportProgress?: boolean, options?: {httpHeaderAccept?: '*/*', context?: HttpContext}): Observable<string>;
+    public handleContactLoopEventUsingPOST(requestString: string, observe?: 'response', reportProgress?: boolean, options?: {httpHeaderAccept?: '*/*', context?: HttpContext}): Observable<HttpResponse<string>>;
+    public handleContactLoopEventUsingPOST(requestString: string, observe?: 'events', reportProgress?: boolean, options?: {httpHeaderAccept?: '*/*', context?: HttpContext}): Observable<HttpEvent<string>>;
+    public handleContactLoopEventUsingPOST(requestString: string, observe: any = 'body', reportProgress: boolean = false, options?: {httpHeaderAccept?: '*/*', context?: HttpContext}): Observable<any> {
+        if (requestString === null || requestString === undefined) {
+            throw new Error('Required parameter requestString was null or undefined when calling handleContactLoopEventUsingPOST.');
         }
 
         let localVarHeaders = this.defaultHeaders;
@@ -149,7 +147,7 @@ export class ContactLoopWebhookControllerService {
         return this.httpClient.request<string>('post', `${this.configuration.basePath}${localVarPath}`,
             {
                 context: localVarHttpContext,
-                body: request,
+                body: requestString,
                 responseType: <any>responseType_,
                 withCredentials: this.configuration.withCredentials,
                 headers: localVarHeaders,
