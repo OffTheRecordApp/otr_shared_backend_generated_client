@@ -41,8 +41,9 @@ export declare class UserControllerApi {
      *
      * @summary getSupportTicketsForUser
      * @param email email
+     * @param limit limit
      */
-    getSupportTicketsForUserUsingGET(email: string, extraHttpRequestParams?: any): ng.IHttpPromise<models.GetSupportTicketsResponse>;
+    getSupportTicketsForUserUsingGET(email: string, limit?: number, extraHttpRequestParams?: any): ng.IHttpPromise<models.GetSupportTicketsResponse>;
     /**
      *
      * @summary getUserDetails

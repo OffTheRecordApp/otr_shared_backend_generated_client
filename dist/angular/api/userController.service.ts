@@ -297,15 +297,22 @@ export class UserControllerService {
     /**
      * getSupportTicketsForUser
      * @param email email
+     * @param limit limit
      * @param observe set whether or not to return the data Observable as the body, response or events. defaults to returning the body.
      * @param reportProgress flag to report request and response progress.
      */
-    public getSupportTicketsForUserUsingGET(email: string, observe?: 'body', reportProgress?: boolean, options?: {httpHeaderAccept?: '*/*', context?: HttpContext}): Observable<GetSupportTicketsResponse>;
-    public getSupportTicketsForUserUsingGET(email: string, observe?: 'response', reportProgress?: boolean, options?: {httpHeaderAccept?: '*/*', context?: HttpContext}): Observable<HttpResponse<GetSupportTicketsResponse>>;
-    public getSupportTicketsForUserUsingGET(email: string, observe?: 'events', reportProgress?: boolean, options?: {httpHeaderAccept?: '*/*', context?: HttpContext}): Observable<HttpEvent<GetSupportTicketsResponse>>;
-    public getSupportTicketsForUserUsingGET(email: string, observe: any = 'body', reportProgress: boolean = false, options?: {httpHeaderAccept?: '*/*', context?: HttpContext}): Observable<any> {
+    public getSupportTicketsForUserUsingGET(email: string, limit?: number, observe?: 'body', reportProgress?: boolean, options?: {httpHeaderAccept?: '*/*', context?: HttpContext}): Observable<GetSupportTicketsResponse>;
+    public getSupportTicketsForUserUsingGET(email: string, limit?: number, observe?: 'response', reportProgress?: boolean, options?: {httpHeaderAccept?: '*/*', context?: HttpContext}): Observable<HttpResponse<GetSupportTicketsResponse>>;
+    public getSupportTicketsForUserUsingGET(email: string, limit?: number, observe?: 'events', reportProgress?: boolean, options?: {httpHeaderAccept?: '*/*', context?: HttpContext}): Observable<HttpEvent<GetSupportTicketsResponse>>;
+    public getSupportTicketsForUserUsingGET(email: string, limit?: number, observe: any = 'body', reportProgress: boolean = false, options?: {httpHeaderAccept?: '*/*', context?: HttpContext}): Observable<any> {
         if (email === null || email === undefined) {
             throw new Error('Required parameter email was null or undefined when calling getSupportTicketsForUserUsingGET.');
+        }
+
+        let localVarQueryParameters = new HttpParams({encoder: this.encoder});
+        if (limit !== undefined && limit !== null) {
+          localVarQueryParameters = this.addToHttpParams(localVarQueryParameters,
+            <any>limit, 'limit');
         }
 
         let localVarHeaders = this.defaultHeaders;
@@ -343,6 +350,7 @@ export class UserControllerService {
         return this.httpClient.request<GetSupportTicketsResponse>('get', `${this.configuration.basePath}${localVarPath}`,
             {
                 context: localVarHttpContext,
+                params: localVarQueryParameters,
                 responseType: <any>responseType_,
                 withCredentials: this.configuration.withCredentials,
                 headers: localVarHeaders,

@@ -10,7 +10,7 @@
  * Do not edit the class manually.
  */
 import * as models from './models';
-export interface GetSupportTicketsResponse {
-    "intercomTickets"?: models.IntercomSearchTicketsResponse;
-    "supportTickets"?: Array<models.FreshDeskTicket>;
+export interface TicketPartsWrapper {
+    "ticket_parts"?: Array<models.TicketPart>;
+    "type"?: string;
 }

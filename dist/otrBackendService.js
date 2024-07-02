@@ -3772,6 +3772,7 @@ angular.module('otrBackendService', [])
              * @name OtrService#getSupportTicketsForCaseUsingGET
              * @param {object} parameters - method options and parameters
              * @param {string} parameters.caseId - caseId
+             * @param {integer} parameters.limit - limit
              */
             OtrService.prototype.getSupportTicketsForCaseUsingGET = function(parameters) {
                 if (parameters === undefined) {
@@ -3792,6 +3793,13 @@ angular.module('otrBackendService', [])
                 if (parameters['caseId'] === undefined) {
                     deferred.reject(new Error('Missing required  parameter: caseId'));
                     return deferred.promise;
+                }
+
+                /** set default value **/
+                queryParameters['limit'] = 100;
+
+                if (parameters['limit'] !== undefined) {
+                    queryParameters['limit'] = parameters['limit'];
                 }
 
                 queryParameters = mergeQueryParams(parameters, queryParameters);
@@ -15240,6 +15248,7 @@ angular.module('otrBackendService', [])
              * @name OtrService#getSupportTicketsForUserUsingGET
              * @param {object} parameters - method options and parameters
              * @param {string} parameters.email - email
+             * @param {integer} parameters.limit - limit
              */
             OtrService.prototype.getSupportTicketsForUserUsingGET = function(parameters) {
                 if (parameters === undefined) {
@@ -15260,6 +15269,13 @@ angular.module('otrBackendService', [])
                 if (parameters['email'] === undefined) {
                     deferred.reject(new Error('Missing required  parameter: email'));
                     return deferred.promise;
+                }
+
+                /** set default value **/
+                queryParameters['limit'] = 100;
+
+                if (parameters['limit'] !== undefined) {
+                    queryParameters['limit'] = parameters['limit'];
                 }
 
                 queryParameters = mergeQueryParams(parameters, queryParameters);

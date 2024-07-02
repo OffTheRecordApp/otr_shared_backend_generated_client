@@ -9,10 +9,12 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
+import { IntercomSearchTicketsResponse } from './intercomSearchTicketsResponse';
 import { FreshDeskTicket } from './freshDeskTicket';
 
 
 export interface GetSupportTicketsResponse { 
+    intercomTickets?: IntercomSearchTicketsResponse;
     supportTickets?: Array<FreshDeskTicket>;
 }
 

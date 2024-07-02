@@ -54,8 +54,9 @@ export declare class CaseControllerApi {
      *
      * @summary getSupportTicketsForCase
      * @param caseId caseId
+     * @param limit limit
      */
-    getSupportTicketsForCaseUsingGET(caseId: string, extraHttpRequestParams?: any): ng.IHttpPromise<models.GetSupportTicketsResponse>;
+    getSupportTicketsForCaseUsingGET(caseId: string, limit?: number, extraHttpRequestParams?: any): ng.IHttpPromise<models.GetSupportTicketsResponse>;
     /**
      *
      * @summary initiateCaseAndChargeCustomer

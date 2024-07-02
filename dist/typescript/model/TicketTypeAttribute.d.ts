@@ -9,8 +9,12 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-import * as models from './models';
-export interface GetSupportTicketsResponse {
-    "intercomTickets"?: models.IntercomSearchTicketsResponse;
-    "supportTickets"?: Array<models.FreshDeskTicket>;
+export interface TicketTypeAttribute {
+    "data_type"?: string;
+    "description"?: string;
+    "id"?: string;
+    "name"?: string;
+    "required_to_create"?: boolean;
+    "type"?: string;
+    "visible_on_create"?: boolean;
 }

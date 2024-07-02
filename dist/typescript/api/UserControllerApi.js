@@ -104,8 +104,9 @@ var UserControllerApi = /** @class */ (function () {
      *
      * @summary getSupportTicketsForUser
      * @param email email
+     * @param limit limit
      */
-    UserControllerApi.prototype.getSupportTicketsForUserUsingGET = function (email, extraHttpRequestParams) {
+    UserControllerApi.prototype.getSupportTicketsForUserUsingGET = function (email, limit, extraHttpRequestParams) {
         var localVarPath = this.basePath + '/api/v1/users/{email}/support-tickets'
             .replace('{' + 'email' + '}', encodeURIComponent(String(email)));
         var queryParameters = {};
@@ -113,6 +114,9 @@ var UserControllerApi = /** @class */ (function () {
         // verify required parameter 'email' is not null or undefined
         if (email === null || email === undefined) {
             throw new Error('Required parameter email was null or undefined when calling getSupportTicketsForUserUsingGET.');
+        }
+        if (limit !== undefined) {
+            queryParameters['limit'] = limit;
         }
         var httpRequestParams = {
             method: 'GET',

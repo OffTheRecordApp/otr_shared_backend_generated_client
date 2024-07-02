@@ -164,8 +164,9 @@ var CaseControllerApi = /** @class */ (function () {
      *
      * @summary getSupportTicketsForCase
      * @param caseId caseId
+     * @param limit limit
      */
-    CaseControllerApi.prototype.getSupportTicketsForCaseUsingGET = function (caseId, extraHttpRequestParams) {
+    CaseControllerApi.prototype.getSupportTicketsForCaseUsingGET = function (caseId, limit, extraHttpRequestParams) {
         var localVarPath = this.basePath + '/api/v1/cases/{caseId}/support-tickets'
             .replace('{' + 'caseId' + '}', encodeURIComponent(String(caseId)));
         var queryParameters = {};
@@ -173,6 +174,9 @@ var CaseControllerApi = /** @class */ (function () {
         // verify required parameter 'caseId' is not null or undefined
         if (caseId === null || caseId === undefined) {
             throw new Error('Required parameter caseId was null or undefined when calling getSupportTicketsForCaseUsingGET.');
+        }
+        if (limit !== undefined) {
+            queryParameters['limit'] = limit;
         }
         var httpRequestParams = {
             method: 'GET',

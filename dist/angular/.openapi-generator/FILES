@@ -257,6 +257,8 @@ model/coachingCardsModel.ts
 model/coachingLinks.ts
 model/commonHeader.ts
 model/confidenceField.ts
+model/contact.ts
+model/contactList.ts
 model/contactTimelineResponse.ts
 model/convertPdfToImageModel.ts
 model/convertPdfToImageRequest.ts
@@ -517,6 +519,9 @@ model/initiateCaseCounterRequest.ts
 model/initiateCaseCounterResponse.ts
 model/insertCaseLineItemResponse.ts
 model/insertInvoiceLineItemRequest.ts
+model/intercomCreateTicketResponse.ts
+model/intercomSearchTicketsResponse.ts
+model/intercomTicketAttributes.ts
 model/inviteHouseholdMateRequest.ts
 model/inviteLawyerToLawfirmRequest.ts
 model/isRefundEligibleResponse.ts
@@ -559,6 +564,7 @@ model/letterOfEngagement.ts
 model/lineItem.ts
 model/lineItemModel.ts
 model/lineItemRequest.ts
+model/linkedObjects.ts
 model/listAgentBookingsResponse.ts
 model/listBillingProductsResponse.ts
 model/listBillingSubscribersResponse.ts
@@ -796,9 +802,14 @@ model/syncStripeTransfersRequest.ts
 model/syncStripeTransfersResponse.ts
 model/temporalUnit.ts
 model/ticketLeadDomain.ts
+model/ticketPart.ts
+model/ticketPartsWrapper.ts
 model/ticketReviewRequest.ts
 model/ticketReviewRequestReq.ts
 model/ticketReviewRequestRes.ts
+model/ticketType.ts
+model/ticketTypeAttribute.ts
+model/ticketTypeAttributesWrapper.ts
 model/timeZone.ts
 model/timeZoneReq.ts
 model/timeZoneRes.ts
