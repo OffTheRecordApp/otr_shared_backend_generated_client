@@ -11,6 +11,7 @@
  */
 import * as models from './models';
 export interface RegisterGhostUserRequest {
+    "allowIntercomUserCreation"?: boolean;
     "ghostUser"?: models.GhostUser;
     "roleType"?: RegisterGhostUserRequest.RoleTypeEnum;
 }

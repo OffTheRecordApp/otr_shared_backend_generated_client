@@ -13,6 +13,7 @@ import { GhostUser } from './ghostUser';
 
 
 export interface RegisterGhostUserRequest { 
+    allowIntercomUserCreation?: boolean;
     ghostUser?: GhostUser;
     roleType?: RegisterGhostUserRequest.RoleTypeEnum;
 }
