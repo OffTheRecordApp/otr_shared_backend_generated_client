@@ -94,6 +94,13 @@ export declare class LawfirmControllerApi {
     getLawfirmStatusesUsingGET(extraHttpRequestParams?: any): ng.IHttpPromise<object>;
     /**
      *
+     * @summary getLawfirmSupportTickets
+     * @param lawfirmId lawfirmId
+     * @param limit limit
+     */
+    getLawfirmSupportTicketsUsingGET(lawfirmId: number, limit?: number, extraHttpRequestParams?: any): ng.IHttpPromise<models.IntercomSearchTicketsResponse>;
+    /**
+     *
      * @summary getLawfirm
      * @param lawfirmIdString lawfirmIdString
      * @param isDetailsRequired isDetailsRequired

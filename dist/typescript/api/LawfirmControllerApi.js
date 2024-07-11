@@ -334,6 +334,35 @@ var LawfirmControllerApi = /** @class */ (function () {
     };
     /**
      *
+     * @summary getLawfirmSupportTickets
+     * @param lawfirmId lawfirmId
+     * @param limit limit
+     */
+    LawfirmControllerApi.prototype.getLawfirmSupportTicketsUsingGET = function (lawfirmId, limit, extraHttpRequestParams) {
+        var localVarPath = this.basePath + '/api/v1/lawfirms/lawfirms/{lawfirmId}/support-tickets'
+            .replace('{' + 'lawfirmId' + '}', encodeURIComponent(String(lawfirmId)));
+        var queryParameters = {};
+        var headerParams = Object.assign({}, this.defaultHeaders);
+        // verify required parameter 'lawfirmId' is not null or undefined
+        if (lawfirmId === null || lawfirmId === undefined) {
+            throw new Error('Required parameter lawfirmId was null or undefined when calling getLawfirmSupportTicketsUsingGET.');
+        }
+        if (limit !== undefined) {
+            queryParameters['limit'] = limit;
+        }
+        var httpRequestParams = {
+            method: 'GET',
+            url: localVarPath,
+            params: queryParameters,
+            headers: headerParams
+        };
+        if (extraHttpRequestParams) {
+            httpRequestParams = Object.assign(httpRequestParams, extraHttpRequestParams);
+        }
+        return this.$http(httpRequestParams);
+    };
+    /**
+     *
      * @summary getLawfirm
      * @param lawfirmIdString lawfirmIdString
      * @param isDetailsRequired isDetailsRequired
