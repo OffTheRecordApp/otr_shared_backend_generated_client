@@ -139,8 +139,9 @@ var UserPasswordControllerApi = /** @class */ (function () {
      *
      * @summary sendResetPasswordToken
      * @param email email
+     * @param enableCode enableCode
      */
-    UserPasswordControllerApi.prototype.sendResetPasswordTokenUsingPOST = function (email, extraHttpRequestParams) {
+    UserPasswordControllerApi.prototype.sendResetPasswordTokenUsingPOST = function (email, enableCode, extraHttpRequestParams) {
         var localVarPath = this.basePath + '/api/v1/user/password/token';
         var queryParameters = {};
         var headerParams = Object.assign({}, this.defaultHeaders);
@@ -150,6 +151,9 @@ var UserPasswordControllerApi = /** @class */ (function () {
         }
         if (email !== undefined) {
             queryParameters['email'] = email;
+        }
+        if (enableCode !== undefined) {
+            queryParameters['enableCode'] = enableCode;
         }
         var httpRequestParams = {
             method: 'POST',

@@ -48,8 +48,9 @@ export declare class UserPasswordControllerApi {
      *
      * @summary sendResetPasswordToken
      * @param email email
+     * @param enableCode enableCode
      */
-    sendResetPasswordTokenUsingPOST(email: string, extraHttpRequestParams?: any): ng.IHttpPromise<object>;
+    sendResetPasswordTokenUsingPOST(email: string, enableCode?: boolean, extraHttpRequestParams?: any): ng.IHttpPromise<object>;
     /**
      *
      * @summary verifyPwdResetToken

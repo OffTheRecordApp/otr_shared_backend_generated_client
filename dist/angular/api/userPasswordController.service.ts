@@ -376,13 +376,14 @@ export class UserPasswordControllerService {
     /**
      * sendResetPasswordToken
      * @param email email
+     * @param enableCode enableCode
      * @param observe set whether or not to return the data Observable as the body, response or events. defaults to returning the body.
      * @param reportProgress flag to report request and response progress.
      */
-    public sendResetPasswordTokenUsingPOST(email: string, observe?: 'body', reportProgress?: boolean, options?: {httpHeaderAccept?: '*/*', context?: HttpContext}): Observable<object>;
-    public sendResetPasswordTokenUsingPOST(email: string, observe?: 'response', reportProgress?: boolean, options?: {httpHeaderAccept?: '*/*', context?: HttpContext}): Observable<HttpResponse<object>>;
-    public sendResetPasswordTokenUsingPOST(email: string, observe?: 'events', reportProgress?: boolean, options?: {httpHeaderAccept?: '*/*', context?: HttpContext}): Observable<HttpEvent<object>>;
-    public sendResetPasswordTokenUsingPOST(email: string, observe: any = 'body', reportProgress: boolean = false, options?: {httpHeaderAccept?: '*/*', context?: HttpContext}): Observable<any> {
+    public sendResetPasswordTokenUsingPOST(email: string, enableCode?: boolean, observe?: 'body', reportProgress?: boolean, options?: {httpHeaderAccept?: '*/*', context?: HttpContext}): Observable<object>;
+    public sendResetPasswordTokenUsingPOST(email: string, enableCode?: boolean, observe?: 'response', reportProgress?: boolean, options?: {httpHeaderAccept?: '*/*', context?: HttpContext}): Observable<HttpResponse<object>>;
+    public sendResetPasswordTokenUsingPOST(email: string, enableCode?: boolean, observe?: 'events', reportProgress?: boolean, options?: {httpHeaderAccept?: '*/*', context?: HttpContext}): Observable<HttpEvent<object>>;
+    public sendResetPasswordTokenUsingPOST(email: string, enableCode?: boolean, observe: any = 'body', reportProgress: boolean = false, options?: {httpHeaderAccept?: '*/*', context?: HttpContext}): Observable<any> {
         if (email === null || email === undefined) {
             throw new Error('Required parameter email was null or undefined when calling sendResetPasswordTokenUsingPOST.');
         }
@@ -391,6 +392,10 @@ export class UserPasswordControllerService {
         if (email !== undefined && email !== null) {
           localVarQueryParameters = this.addToHttpParams(localVarQueryParameters,
             <any>email, 'email');
+        }
+        if (enableCode !== undefined && enableCode !== null) {
+          localVarQueryParameters = this.addToHttpParams(localVarQueryParameters,
+            <any>enableCode, 'enableCode');
         }
 
         let localVarHeaders = this.defaultHeaders;

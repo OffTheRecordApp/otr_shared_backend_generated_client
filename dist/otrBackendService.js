@@ -14836,6 +14836,7 @@ angular.module('otrBackendService', [])
              * @name OtrService#sendResetPasswordTokenUsingPOST
              * @param {object} parameters - method options and parameters
              * @param {string} parameters.email - email
+             * @param {boolean} parameters.enableCode - enableCode
              */
             OtrService.prototype.sendResetPasswordTokenUsingPOST = function(parameters) {
                 if (parameters === undefined) {
@@ -14859,6 +14860,10 @@ angular.module('otrBackendService', [])
                 if (parameters['email'] === undefined) {
                     deferred.reject(new Error('Missing required  parameter: email'));
                     return deferred.promise;
+                }
+
+                if (parameters['enableCode'] !== undefined) {
+                    queryParameters['enableCode'] = parameters['enableCode'];
                 }
 
                 queryParameters = mergeQueryParams(parameters, queryParameters);
