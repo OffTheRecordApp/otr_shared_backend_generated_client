@@ -23,6 +23,7 @@ export interface LawfirmLeadDomain {
     "lawfirmName"?: string;
     "lawfirmPostalCode"?: string;
     "lawfirmState"?: LawfirmLeadDomain.LawfirmStateEnum;
+    "lawfirmStatusCategory"?: LawfirmLeadDomain.LawfirmStatusCategoryEnum;
     "lawyerEmailAddress"?: string;
     "lawyerFirstName"?: string;
     "lawyerLastName"?: string;
@@ -122,5 +123,17 @@ export declare namespace LawfirmLeadDomain {
         TERMINATEDPOORSUCCESS,
         TERMINATEDPOORSUCCESSOLD,
         UNDERREVIEWOLD
+    }
+    enum LawfirmStatusCategoryEnum {
+        ACTIVE,
+        ACTIVEOLD,
+        DISABLED,
+        INACTIVE,
+        LEAD,
+        NOTINTERESTED,
+        NOTWITHCOMPANY,
+        REJECTED,
+        TERMINATED,
+        TERMINATEDOLD
     }
 }

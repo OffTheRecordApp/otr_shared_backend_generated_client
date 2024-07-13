@@ -107,4 +107,17 @@ var LawfirmLeadDomain;
         LawfirmStateEnum[LawfirmStateEnum["TERMINATEDPOORSUCCESSOLD"] = 'TERMINATED_POOR_SUCCESS_OLD'] = "TERMINATEDPOORSUCCESSOLD";
         LawfirmStateEnum[LawfirmStateEnum["UNDERREVIEWOLD"] = 'UNDER_REVIEW_OLD'] = "UNDERREVIEWOLD";
     })(LawfirmStateEnum = LawfirmLeadDomain.LawfirmStateEnum || (LawfirmLeadDomain.LawfirmStateEnum = {}));
+    var LawfirmStatusCategoryEnum;
+    (function (LawfirmStatusCategoryEnum) {
+        LawfirmStatusCategoryEnum[LawfirmStatusCategoryEnum["ACTIVE"] = 'ACTIVE'] = "ACTIVE";
+        LawfirmStatusCategoryEnum[LawfirmStatusCategoryEnum["ACTIVEOLD"] = 'ACTIVE_OLD'] = "ACTIVEOLD";
+        LawfirmStatusCategoryEnum[LawfirmStatusCategoryEnum["DISABLED"] = 'DISABLED'] = "DISABLED";
+        LawfirmStatusCategoryEnum[LawfirmStatusCategoryEnum["INACTIVE"] = 'INACTIVE'] = "INACTIVE";
+        LawfirmStatusCategoryEnum[LawfirmStatusCategoryEnum["LEAD"] = 'LEAD'] = "LEAD";
+        LawfirmStatusCategoryEnum[LawfirmStatusCategoryEnum["NOTINTERESTED"] = 'NOT_INTERESTED'] = "NOTINTERESTED";
+        LawfirmStatusCategoryEnum[LawfirmStatusCategoryEnum["NOTWITHCOMPANY"] = 'NOT_WITH_COMPANY'] = "NOTWITHCOMPANY";
+        LawfirmStatusCategoryEnum[LawfirmStatusCategoryEnum["REJECTED"] = 'REJECTED'] = "REJECTED";
+        LawfirmStatusCategoryEnum[LawfirmStatusCategoryEnum["TERMINATED"] = 'TERMINATED'] = "TERMINATED";
+        LawfirmStatusCategoryEnum[LawfirmStatusCategoryEnum["TERMINATEDOLD"] = 'TERMINATED_OLD'] = "TERMINATEDOLD";
+    })(LawfirmStatusCategoryEnum = LawfirmLeadDomain.LawfirmStatusCategoryEnum || (LawfirmLeadDomain.LawfirmStatusCategoryEnum = {}));
 })(LawfirmLeadDomain = exports.LawfirmLeadDomain || (exports.LawfirmLeadDomain = {}));
