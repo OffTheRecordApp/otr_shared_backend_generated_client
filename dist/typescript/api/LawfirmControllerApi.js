@@ -399,9 +399,10 @@ var LawfirmControllerApi = /** @class */ (function () {
      * @param includeVacationMode includeVacationMode
      * @param q q
      * @param states states
+     * @param statusCategories statusCategories
      * @param statuses statuses
      */
-    LawfirmControllerApi.prototype.getLawfirmsUsingGET = function (acceptsAccidentTickets, acceptsPastDueTickets, includeTestLawfirms, includeVacationMode, q, states, statuses, extraHttpRequestParams) {
+    LawfirmControllerApi.prototype.getLawfirmsUsingGET = function (acceptsAccidentTickets, acceptsPastDueTickets, includeTestLawfirms, includeVacationMode, q, states, statusCategories, statuses, extraHttpRequestParams) {
         var localVarPath = this.basePath + '/api/v1/lawfirms';
         var queryParameters = {};
         var headerParams = Object.assign({}, this.defaultHeaders);
@@ -422,6 +423,9 @@ var LawfirmControllerApi = /** @class */ (function () {
         }
         if (states !== undefined) {
             queryParameters['states'] = states;
+        }
+        if (statusCategories !== undefined) {
+            queryParameters['statusCategories'] = statusCategories;
         }
         if (statuses !== undefined) {
             queryParameters['statuses'] = statuses;

@@ -8899,6 +8899,7 @@ angular.module('otrBackendService', [])
              * @param {boolean} parameters.includeVacationMode - includeVacationMode
              * @param {string} parameters.q - q
              * @param {string} parameters.states - states
+             * @param {string} parameters.statusCategories - statusCategories
              * @param {string} parameters.statuses - statuses
              */
             OtrService.prototype.getLawfirmsUsingGET = function(parameters) {
@@ -8937,6 +8938,10 @@ angular.module('otrBackendService', [])
 
                 if (parameters['states'] !== undefined) {
                     queryParameters['states'] = parameters['states'];
+                }
+
+                if (parameters['statusCategories'] !== undefined) {
+                    queryParameters['statusCategories'] = parameters['statusCategories'];
                 }
 
                 if (parameters['statuses'] !== undefined) {
