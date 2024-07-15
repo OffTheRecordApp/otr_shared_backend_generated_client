@@ -1,0 +1,11 @@
+{
+  "compilerOptions": {
+      "moduleResolution": "node",
+      "module": "es2020",
+      "target": "es6",
+      "declaration": true,
+      "experimentalDecorators": true
+  },
+  "include": ["dist/typescript-fetch"],
+  "exclude": ["node_modules"]
+}
