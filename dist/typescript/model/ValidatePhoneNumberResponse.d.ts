@@ -10,8 +10,12 @@
  * Do not edit the class manually.
  */
 export interface ValidatePhoneNumberResponse {
+    "carrier"?: string;
+    "city"?: string;
+    "country"?: string;
     "phoneType"?: ValidatePhoneNumberResponse.PhoneTypeEnum;
     "valid"?: boolean;
+    "zipCode"?: string;
 }
 export declare namespace ValidatePhoneNumberResponse {
     enum PhoneTypeEnum {

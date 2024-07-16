@@ -12,8 +12,12 @@
 
 
 export interface ValidatePhoneNumberResponse { 
+    carrier?: string;
+    city?: string;
+    country?: string;
     phoneType?: ValidatePhoneNumberResponse.PhoneTypeEnum;
     valid?: boolean;
+    zipCode?: string;
 }
 export namespace ValidatePhoneNumberResponse {
     export type PhoneTypeEnum = 'CELLULAR' | 'LANDLINE' | 'UNKNOWN' | 'VOIP';
