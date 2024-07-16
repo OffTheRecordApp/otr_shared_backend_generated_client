@@ -306,20 +306,22 @@ export class UserPasswordControllerService {
 
     /**
      * sendAccountVerificationCode
+     * @param email email
      * @param userId userId
      * @param verificationMethod verificationMethod
      * @param observe set whether or not to return the data Observable as the body, response or events. defaults to returning the body.
      * @param reportProgress flag to report request and response progress.
      */
-    public sendAccountVerificationCodeUsingPOST(userId: string, verificationMethod?: 'CODE_ONLY' | 'WEB_LINK', observe?: 'body', reportProgress?: boolean, options?: {httpHeaderAccept?: undefined, context?: HttpContext}): Observable<any>;
-    public sendAccountVerificationCodeUsingPOST(userId: string, verificationMethod?: 'CODE_ONLY' | 'WEB_LINK', observe?: 'response', reportProgress?: boolean, options?: {httpHeaderAccept?: undefined, context?: HttpContext}): Observable<HttpResponse<any>>;
-    public sendAccountVerificationCodeUsingPOST(userId: string, verificationMethod?: 'CODE_ONLY' | 'WEB_LINK', observe?: 'events', reportProgress?: boolean, options?: {httpHeaderAccept?: undefined, context?: HttpContext}): Observable<HttpEvent<any>>;
-    public sendAccountVerificationCodeUsingPOST(userId: string, verificationMethod?: 'CODE_ONLY' | 'WEB_LINK', observe: any = 'body', reportProgress: boolean = false, options?: {httpHeaderAccept?: undefined, context?: HttpContext}): Observable<any> {
-        if (userId === null || userId === undefined) {
-            throw new Error('Required parameter userId was null or undefined when calling sendAccountVerificationCodeUsingPOST.');
-        }
+    public sendAccountVerificationCodeUsingPOST(email?: string, userId?: string, verificationMethod?: 'CODE_ONLY' | 'WEB_LINK', observe?: 'body', reportProgress?: boolean, options?: {httpHeaderAccept?: undefined, context?: HttpContext}): Observable<any>;
+    public sendAccountVerificationCodeUsingPOST(email?: string, userId?: string, verificationMethod?: 'CODE_ONLY' | 'WEB_LINK', observe?: 'response', reportProgress?: boolean, options?: {httpHeaderAccept?: undefined, context?: HttpContext}): Observable<HttpResponse<any>>;
+    public sendAccountVerificationCodeUsingPOST(email?: string, userId?: string, verificationMethod?: 'CODE_ONLY' | 'WEB_LINK', observe?: 'events', reportProgress?: boolean, options?: {httpHeaderAccept?: undefined, context?: HttpContext}): Observable<HttpEvent<any>>;
+    public sendAccountVerificationCodeUsingPOST(email?: string, userId?: string, verificationMethod?: 'CODE_ONLY' | 'WEB_LINK', observe: any = 'body', reportProgress: boolean = false, options?: {httpHeaderAccept?: undefined, context?: HttpContext}): Observable<any> {
 
         let localVarQueryParameters = new HttpParams({encoder: this.encoder});
+        if (email !== undefined && email !== null) {
+          localVarQueryParameters = this.addToHttpParams(localVarQueryParameters,
+            <any>email, 'email');
+        }
         if (userId !== undefined && userId !== null) {
           localVarQueryParameters = this.addToHttpParams(localVarQueryParameters,
             <any>userId, 'userId');
@@ -511,27 +513,29 @@ export class UserPasswordControllerService {
     /**
      * verifyUserAccount
      * @param code code
-     * @param userId userId
+     * @param email email
      * @param fieldName fieldName
      * @param fieldValue fieldValue
+     * @param userId userId
      * @param observe set whether or not to return the data Observable as the body, response or events. defaults to returning the body.
      * @param reportProgress flag to report request and response progress.
      */
-    public verifyUserAccountUsingPUT(code: string, userId: string, fieldName?: string, fieldValue?: string, observe?: 'body', reportProgress?: boolean, options?: {httpHeaderAccept?: '*/*', context?: HttpContext}): Observable<VerifyUserAccountResponse>;
-    public verifyUserAccountUsingPUT(code: string, userId: string, fieldName?: string, fieldValue?: string, observe?: 'response', reportProgress?: boolean, options?: {httpHeaderAccept?: '*/*', context?: HttpContext}): Observable<HttpResponse<VerifyUserAccountResponse>>;
-    public verifyUserAccountUsingPUT(code: string, userId: string, fieldName?: string, fieldValue?: string, observe?: 'events', reportProgress?: boolean, options?: {httpHeaderAccept?: '*/*', context?: HttpContext}): Observable<HttpEvent<VerifyUserAccountResponse>>;
-    public verifyUserAccountUsingPUT(code: string, userId: string, fieldName?: string, fieldValue?: string, observe: any = 'body', reportProgress: boolean = false, options?: {httpHeaderAccept?: '*/*', context?: HttpContext}): Observable<any> {
+    public verifyUserAccountUsingPUT(code: string, email?: string, fieldName?: string, fieldValue?: string, userId?: string, observe?: 'body', reportProgress?: boolean, options?: {httpHeaderAccept?: '*/*', context?: HttpContext}): Observable<VerifyUserAccountResponse>;
+    public verifyUserAccountUsingPUT(code: string, email?: string, fieldName?: string, fieldValue?: string, userId?: string, observe?: 'response', reportProgress?: boolean, options?: {httpHeaderAccept?: '*/*', context?: HttpContext}): Observable<HttpResponse<VerifyUserAccountResponse>>;
+    public verifyUserAccountUsingPUT(code: string, email?: string, fieldName?: string, fieldValue?: string, userId?: string, observe?: 'events', reportProgress?: boolean, options?: {httpHeaderAccept?: '*/*', context?: HttpContext}): Observable<HttpEvent<VerifyUserAccountResponse>>;
+    public verifyUserAccountUsingPUT(code: string, email?: string, fieldName?: string, fieldValue?: string, userId?: string, observe: any = 'body', reportProgress: boolean = false, options?: {httpHeaderAccept?: '*/*', context?: HttpContext}): Observable<any> {
         if (code === null || code === undefined) {
             throw new Error('Required parameter code was null or undefined when calling verifyUserAccountUsingPUT.');
-        }
-        if (userId === null || userId === undefined) {
-            throw new Error('Required parameter userId was null or undefined when calling verifyUserAccountUsingPUT.');
         }
 
         let localVarQueryParameters = new HttpParams({encoder: this.encoder});
         if (code !== undefined && code !== null) {
           localVarQueryParameters = this.addToHttpParams(localVarQueryParameters,
             <any>code, 'code');
+        }
+        if (email !== undefined && email !== null) {
+          localVarQueryParameters = this.addToHttpParams(localVarQueryParameters,
+            <any>email, 'email');
         }
         if (fieldName !== undefined && fieldName !== null) {
           localVarQueryParameters = this.addToHttpParams(localVarQueryParameters,

@@ -15019,6 +15019,7 @@ angular.module('otrBackendService', [])
              * @method
              * @name OtrService#sendAccountVerificationCodeUsingPOST
              * @param {object} parameters - method options and parameters
+             * @param {string} parameters.email - email
              * @param {string} parameters.userId - userId
              * @param {string} parameters.verificationMethod - verificationMethod
              */
@@ -15037,13 +15038,12 @@ angular.module('otrBackendService', [])
                 headers['Accept'] = ['*/*'];
                 headers['Content-Type'] = ['application/json'];
 
-                if (parameters['userId'] !== undefined) {
-                    queryParameters['userId'] = parameters['userId'];
+                if (parameters['email'] !== undefined) {
+                    queryParameters['email'] = parameters['email'];
                 }
 
-                if (parameters['userId'] === undefined) {
-                    deferred.reject(new Error('Missing required  parameter: userId'));
-                    return deferred.promise;
+                if (parameters['userId'] !== undefined) {
+                    queryParameters['userId'] = parameters['userId'];
                 }
 
                 if (parameters['verificationMethod'] !== undefined) {
@@ -15240,6 +15240,7 @@ angular.module('otrBackendService', [])
              * @name OtrService#verifyUserAccountUsingPUT
              * @param {object} parameters - method options and parameters
              * @param {string} parameters.code - code
+             * @param {string} parameters.email - email
              * @param {string} parameters.fieldName - fieldName
              * @param {string} parameters.fieldValue - fieldValue
              * @param {string} parameters.userId - userId
@@ -15268,6 +15269,10 @@ angular.module('otrBackendService', [])
                     return deferred.promise;
                 }
 
+                if (parameters['email'] !== undefined) {
+                    queryParameters['email'] = parameters['email'];
+                }
+
                 /** set default value **/
                 queryParameters['fieldName'] = email;
 
@@ -15281,11 +15286,6 @@ angular.module('otrBackendService', [])
 
                 if (parameters['userId'] !== undefined) {
                     queryParameters['userId'] = parameters['userId'];
-                }
-
-                if (parameters['userId'] === undefined) {
-                    deferred.reject(new Error('Missing required  parameter: userId'));
-                    return deferred.promise;
                 }
 
                 queryParameters = mergeQueryParams(parameters, queryParameters);

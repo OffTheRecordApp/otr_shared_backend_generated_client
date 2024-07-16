@@ -40,10 +40,11 @@ export declare class UserPasswordControllerApi {
     /**
      *
      * @summary sendAccountVerificationCode
+     * @param email email
      * @param userId userId
      * @param verificationMethod verificationMethod
      */
-    sendAccountVerificationCodeUsingPOST(userId: string, verificationMethod?: 'CODE_ONLY' | 'WEB_LINK', extraHttpRequestParams?: any): ng.IHttpPromise<{}>;
+    sendAccountVerificationCodeUsingPOST(email?: string, userId?: string, verificationMethod?: 'CODE_ONLY' | 'WEB_LINK', extraHttpRequestParams?: any): ng.IHttpPromise<{}>;
     /**
      *
      * @summary sendResetPasswordToken
@@ -61,9 +62,10 @@ export declare class UserPasswordControllerApi {
      *
      * @summary verifyUserAccount
      * @param code code
-     * @param userId userId
+     * @param email email
      * @param fieldName fieldName
      * @param fieldValue fieldValue
+     * @param userId userId
      */
-    verifyUserAccountUsingPUT(code: string, userId: string, fieldName?: string, fieldValue?: string, extraHttpRequestParams?: any): ng.IHttpPromise<models.VerifyUserAccountResponse>;
+    verifyUserAccountUsingPUT(code: string, email?: string, fieldName?: string, fieldValue?: string, userId?: string, extraHttpRequestParams?: any): ng.IHttpPromise<models.VerifyUserAccountResponse>;
 }
