@@ -126,14 +126,10 @@ export declare namespace LawfirmLeadDomain {
     }
     enum LawfirmStatusCategoryEnum {
         ACTIVE,
-        ACTIVEOLD,
-        DISABLED,
         INACTIVE,
         LEAD,
         NOTINTERESTED,
-        NOTWITHCOMPANY,
         REJECTED,
-        TERMINATED,
-        TERMINATEDOLD
+        TERMINATED
     }
 }

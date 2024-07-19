@@ -128,18 +128,14 @@ export namespace LawfirmLeadDomain {
         TerminatedPoorSuccessOld: 'TERMINATED_POOR_SUCCESS_OLD' as LawfirmStateEnum,
         UnderReviewOld: 'UNDER_REVIEW_OLD' as LawfirmStateEnum
     };
-    export type LawfirmStatusCategoryEnum = 'ACTIVE' | 'ACTIVE_OLD' | 'DISABLED' | 'INACTIVE' | 'LEAD' | 'NOT_INTERESTED' | 'NOT_WITH_COMPANY' | 'REJECTED' | 'TERMINATED' | 'TERMINATED_OLD';
+    export type LawfirmStatusCategoryEnum = 'ACTIVE' | 'INACTIVE' | 'LEAD' | 'NOT_INTERESTED' | 'REJECTED' | 'TERMINATED';
     export const LawfirmStatusCategoryEnum = {
         Active: 'ACTIVE' as LawfirmStatusCategoryEnum,
-        ActiveOld: 'ACTIVE_OLD' as LawfirmStatusCategoryEnum,
-        Disabled: 'DISABLED' as LawfirmStatusCategoryEnum,
         Inactive: 'INACTIVE' as LawfirmStatusCategoryEnum,
         Lead: 'LEAD' as LawfirmStatusCategoryEnum,
         NotInterested: 'NOT_INTERESTED' as LawfirmStatusCategoryEnum,
-        NotWithCompany: 'NOT_WITH_COMPANY' as LawfirmStatusCategoryEnum,
         Rejected: 'REJECTED' as LawfirmStatusCategoryEnum,
-        Terminated: 'TERMINATED' as LawfirmStatusCategoryEnum,
-        TerminatedOld: 'TERMINATED_OLD' as LawfirmStatusCategoryEnum
+        Terminated: 'TERMINATED' as LawfirmStatusCategoryEnum
     };
 }
 
