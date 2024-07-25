@@ -8992,6 +8992,40 @@ angular.module('otrBackendService', [])
                 return deferred.promise;
             };
             /**
+             * getLawfirmByPrimaryEmail
+             * @method
+             * @name OtrService#getLawfirmByPrimaryEmailUsingGET
+             * @param {object} parameters - method options and parameters
+             * @param {string} parameters.primaryLawfirmEmail - primaryLawfirmEmail
+             */
+            OtrService.prototype.getLawfirmByPrimaryEmailUsingGET = function(parameters) {
+                if (parameters === undefined) {
+                    parameters = {};
+                }
+                var deferred = $q.defer();
+                var domain = this.domain,
+                    path = '/api/v1/lawfirms/email/{primaryLawfirmEmail}';
+                var body = {},
+                    queryParameters = {},
+                    headers = {},
+                    form = {};
+
+                headers['Accept'] = ['*/*'];
+
+                path = path.replace('{primaryLawfirmEmail}', parameters['primaryLawfirmEmail']);
+
+                if (parameters['primaryLawfirmEmail'] === undefined) {
+                    deferred.reject(new Error('Missing required  parameter: primaryLawfirmEmail'));
+                    return deferred.promise;
+                }
+
+                queryParameters = mergeQueryParams(parameters, queryParameters);
+
+                this.request('GET', domain + path, parameters, body, headers, queryParameters, form, deferred);
+
+                return deferred.promise;
+            };
+            /**
              * deleteLawfirmFeeRecord
              * @method
              * @name OtrService#deleteLawfirmFeeRecordUsingDELETE

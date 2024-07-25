@@ -66,6 +66,12 @@ export declare class LawfirmControllerApi {
     getLawfirmAddressesUsingGET(lawfirmId: number, extraHttpRequestParams?: any): ng.IHttpPromise<models.GetLawfirmAddressesResponse>;
     /**
      *
+     * @summary getLawfirmByPrimaryEmail
+     * @param primaryLawfirmEmail primaryLawfirmEmail
+     */
+    getLawfirmByPrimaryEmailUsingGET(primaryLawfirmEmail: string, extraHttpRequestParams?: any): ng.IHttpPromise<models.GetLawfirmResponse>;
+    /**
+     *
      * @summary getLawfirmByUrl
      * @param seoUrl seoUrl
      */

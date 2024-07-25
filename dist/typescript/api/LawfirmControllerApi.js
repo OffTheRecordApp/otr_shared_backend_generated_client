@@ -219,6 +219,31 @@ var LawfirmControllerApi = /** @class */ (function () {
     };
     /**
      *
+     * @summary getLawfirmByPrimaryEmail
+     * @param primaryLawfirmEmail primaryLawfirmEmail
+     */
+    LawfirmControllerApi.prototype.getLawfirmByPrimaryEmailUsingGET = function (primaryLawfirmEmail, extraHttpRequestParams) {
+        var localVarPath = this.basePath + '/api/v1/lawfirms/email/{primaryLawfirmEmail}'
+            .replace('{' + 'primaryLawfirmEmail' + '}', encodeURIComponent(String(primaryLawfirmEmail)));
+        var queryParameters = {};
+        var headerParams = Object.assign({}, this.defaultHeaders);
+        // verify required parameter 'primaryLawfirmEmail' is not null or undefined
+        if (primaryLawfirmEmail === null || primaryLawfirmEmail === undefined) {
+            throw new Error('Required parameter primaryLawfirmEmail was null or undefined when calling getLawfirmByPrimaryEmailUsingGET.');
+        }
+        var httpRequestParams = {
+            method: 'GET',
+            url: localVarPath,
+            params: queryParameters,
+            headers: headerParams
+        };
+        if (extraHttpRequestParams) {
+            httpRequestParams = Object.assign(httpRequestParams, extraHttpRequestParams);
+        }
+        return this.$http(httpRequestParams);
+    };
+    /**
+     *
      * @summary getLawfirmByUrl
      * @param seoUrl seoUrl
      */
