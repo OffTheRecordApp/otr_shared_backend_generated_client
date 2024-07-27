@@ -30,44 +30,28 @@ export interface LawfirmStorefrontModel {
     website?: string;
 }
 export namespace LawfirmStorefrontModel {
-    export type LawfirmStateEnum = 'ACCOUNT_CLOSED' | 'ACCOUNT_CLOSED_OLD' | 'ACTIVE' | 'BLACKLISTED' | 'DEMO_COMPLETED' | 'DUPLICATE' | 'DUPLICATE_OLD' | 'ESTABLISHED_OLD' | 'FUTURE_LEAD' | 'FUTURE_LEAD_OLD' | 'IN_TRIAL_OLD' | 'LAWFIRM_INTERESTED_OLD' | 'LAWFIRM_LEAD_OLD' | 'LAWFIRM_NOT_INTERESTED_OLD' | 'LEAD' | 'NEW_PARTNER' | 'NOT_A_GOOD_FIT' | 'NOT_INTERESTED_DO_NOT_CONTACT' | 'NOT_INTERESTED_FEE_SPLITTING' | 'NOT_INTERESTED_FEE_SPLITTING_ETHICS_OLD' | 'NOT_INTERESTED_MARKETING_FEE' | 'NOT_INTERESTED_MONEY_BACK_GUARANTEE' | 'NOT_INTERESTED_PLATFORM_RESISTANCE' | 'NOT_INTERESTED_REFUND_ETHICS_OLD' | 'ONBOARDING_OLD' | 'PAST_INTEREST' | 'SUPERVISED' | 'TEMPORARILY_TURNED_OFF' | 'TEMPORARILY_TURNED_OFF_OLD' | 'TERMINATED_FRAUD' | 'TERMINATED_FRAUD_OLD' | 'TERMINATED_POOR_SERVICE' | 'TERMINATED_POOR_SERVICE_OLD' | 'TERMINATED_POOR_SUCCESS' | 'TERMINATED_POOR_SUCCESS_OLD' | 'UNDER_REVIEW_OLD';
+    export type LawfirmStateEnum = 'ACCOUNT_CLOSED' | 'ACTIVE' | 'BLACKLISTED' | 'DEMO_COMPLETED' | 'DUPLICATE' | 'FUTURE_LEAD' | 'LEAD' | 'NEW_PARTNER' | 'NOT_A_GOOD_FIT' | 'NOT_INTERESTED_DO_NOT_CONTACT' | 'NOT_INTERESTED_FEE_SPLITTING' | 'NOT_INTERESTED_MARKETING_FEE' | 'NOT_INTERESTED_MONEY_BACK_GUARANTEE' | 'NOT_INTERESTED_PLATFORM_RESISTANCE' | 'PAST_INTEREST' | 'SUPERVISED' | 'TEMPORARILY_TURNED_OFF' | 'TERMINATED_FRAUD' | 'TERMINATED_POOR_SERVICE' | 'TERMINATED_POOR_SUCCESS';
     export const LawfirmStateEnum = {
         AccountClosed: 'ACCOUNT_CLOSED' as LawfirmStateEnum,
-        AccountClosedOld: 'ACCOUNT_CLOSED_OLD' as LawfirmStateEnum,
         Active: 'ACTIVE' as LawfirmStateEnum,
         Blacklisted: 'BLACKLISTED' as LawfirmStateEnum,
         DemoCompleted: 'DEMO_COMPLETED' as LawfirmStateEnum,
         Duplicate: 'DUPLICATE' as LawfirmStateEnum,
-        DuplicateOld: 'DUPLICATE_OLD' as LawfirmStateEnum,
-        EstablishedOld: 'ESTABLISHED_OLD' as LawfirmStateEnum,
         FutureLead: 'FUTURE_LEAD' as LawfirmStateEnum,
-        FutureLeadOld: 'FUTURE_LEAD_OLD' as LawfirmStateEnum,
-        InTrialOld: 'IN_TRIAL_OLD' as LawfirmStateEnum,
-        LawfirmInterestedOld: 'LAWFIRM_INTERESTED_OLD' as LawfirmStateEnum,
-        LawfirmLeadOld: 'LAWFIRM_LEAD_OLD' as LawfirmStateEnum,
-        LawfirmNotInterestedOld: 'LAWFIRM_NOT_INTERESTED_OLD' as LawfirmStateEnum,
         Lead: 'LEAD' as LawfirmStateEnum,
         NewPartner: 'NEW_PARTNER' as LawfirmStateEnum,
         NotAGoodFit: 'NOT_A_GOOD_FIT' as LawfirmStateEnum,
         NotInterestedDoNotContact: 'NOT_INTERESTED_DO_NOT_CONTACT' as LawfirmStateEnum,
         NotInterestedFeeSplitting: 'NOT_INTERESTED_FEE_SPLITTING' as LawfirmStateEnum,
-        NotInterestedFeeSplittingEthicsOld: 'NOT_INTERESTED_FEE_SPLITTING_ETHICS_OLD' as LawfirmStateEnum,
         NotInterestedMarketingFee: 'NOT_INTERESTED_MARKETING_FEE' as LawfirmStateEnum,
         NotInterestedMoneyBackGuarantee: 'NOT_INTERESTED_MONEY_BACK_GUARANTEE' as LawfirmStateEnum,
         NotInterestedPlatformResistance: 'NOT_INTERESTED_PLATFORM_RESISTANCE' as LawfirmStateEnum,
-        NotInterestedRefundEthicsOld: 'NOT_INTERESTED_REFUND_ETHICS_OLD' as LawfirmStateEnum,
-        OnboardingOld: 'ONBOARDING_OLD' as LawfirmStateEnum,
         PastInterest: 'PAST_INTEREST' as LawfirmStateEnum,
         Supervised: 'SUPERVISED' as LawfirmStateEnum,
         TemporarilyTurnedOff: 'TEMPORARILY_TURNED_OFF' as LawfirmStateEnum,
-        TemporarilyTurnedOffOld: 'TEMPORARILY_TURNED_OFF_OLD' as LawfirmStateEnum,
         TerminatedFraud: 'TERMINATED_FRAUD' as LawfirmStateEnum,
-        TerminatedFraudOld: 'TERMINATED_FRAUD_OLD' as LawfirmStateEnum,
         TerminatedPoorService: 'TERMINATED_POOR_SERVICE' as LawfirmStateEnum,
-        TerminatedPoorServiceOld: 'TERMINATED_POOR_SERVICE_OLD' as LawfirmStateEnum,
-        TerminatedPoorSuccess: 'TERMINATED_POOR_SUCCESS' as LawfirmStateEnum,
-        TerminatedPoorSuccessOld: 'TERMINATED_POOR_SUCCESS_OLD' as LawfirmStateEnum,
-        UnderReviewOld: 'UNDER_REVIEW_OLD' as LawfirmStateEnum
+        TerminatedPoorSuccess: 'TERMINATED_POOR_SUCCESS' as LawfirmStateEnum
     };
 }
 
