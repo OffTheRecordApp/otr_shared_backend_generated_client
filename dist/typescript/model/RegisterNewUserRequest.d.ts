@@ -11,6 +11,7 @@
  */
 import * as models from './models';
 export interface RegisterNewUserRequest {
+    "authCode"?: string;
     "citationId"?: number;
     "clientType"?: RegisterNewUserRequest.ClientTypeEnum;
     "fingerPrintId"?: string;
