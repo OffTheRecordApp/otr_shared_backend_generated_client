@@ -53,6 +53,7 @@ export interface UserDomain {
     "socialProfiles"?: Array<models.UserSocialProfileModel>;
     "subscriptionPlans"?: Array<models.UserSubscriptionPlanModel>;
     "userAlias"?: string;
+    "userDeletedDateUtc"?: string;
     "userId"?: number;
     "userRegistrationDateUtc"?: string;
 }

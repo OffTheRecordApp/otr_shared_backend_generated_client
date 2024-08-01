@@ -61,6 +61,7 @@ export interface UserDomainReq {
     socialProfiles?: Array<UserSocialProfileModelReq>;
     subscriptionPlans?: Array<UserSubscriptionPlanModelReq>;
     userAlias?: string;
+    userDeletedDateUtc?: string;
     userId?: number;
     userRegistrationDateUtc?: string;
 }

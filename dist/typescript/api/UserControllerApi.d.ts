@@ -69,6 +69,18 @@ export declare class UserControllerApi {
     logoutUserUsingDELETE(userId: number, extraHttpRequestParams?: any): ng.IHttpPromise<{}>;
     /**
      *
+     * @summary removeUser
+     * @param userId userId
+     */
+    removeUserUsingDELETE(userId: number, extraHttpRequestParams?: any): ng.IHttpPromise<models.UpdateUserDetailsResponse>;
+    /**
+     *
+     * @summary reviveUser
+     * @param userId userId
+     */
+    reviveUserUsingPUT(userId: number, extraHttpRequestParams?: any): ng.IHttpPromise<models.UpdateUserDetailsResponse>;
+    /**
+     *
      * @summary updateUserProfile
      * @param userId userId
      * @param request request
