@@ -187,4 +187,10 @@ export declare class LawfirmControllerApi {
      * @param request request
      */
     updatePaymentModelUsingPUT(lawfirmId: number, request: models.UpdateLawfirmPaymentModelRequest, extraHttpRequestParams?: any): ng.IHttpPromise<{}>;
+    /**
+     *
+     * @summary uploadLawfirms
+     * @param csvContent csvContent
+     */
+    uploadLawfirmsUsingPOST(csvContent: string, extraHttpRequestParams?: any): ng.IHttpPromise<string>;
 }

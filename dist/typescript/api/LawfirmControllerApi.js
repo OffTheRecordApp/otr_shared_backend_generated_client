@@ -739,6 +739,31 @@ var LawfirmControllerApi = /** @class */ (function () {
         }
         return this.$http(httpRequestParams);
     };
+    /**
+     *
+     * @summary uploadLawfirms
+     * @param csvContent csvContent
+     */
+    LawfirmControllerApi.prototype.uploadLawfirmsUsingPOST = function (csvContent, extraHttpRequestParams) {
+        var localVarPath = this.basePath + '/api/v1/lawfirms/lawfirms/upload-csv';
+        var queryParameters = {};
+        var headerParams = Object.assign({}, this.defaultHeaders);
+        // verify required parameter 'csvContent' is not null or undefined
+        if (csvContent === null || csvContent === undefined) {
+            throw new Error('Required parameter csvContent was null or undefined when calling uploadLawfirmsUsingPOST.');
+        }
+        var httpRequestParams = {
+            method: 'POST',
+            url: localVarPath,
+            data: csvContent,
+            params: queryParameters,
+            headers: headerParams
+        };
+        if (extraHttpRequestParams) {
+            httpRequestParams = Object.assign(httpRequestParams, extraHttpRequestParams);
+        }
+        return this.$http(httpRequestParams);
+    };
     LawfirmControllerApi.$inject = ['$http', '$httpParamSerializer', 'basePath'];
     return LawfirmControllerApi;
 }());
