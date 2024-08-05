@@ -2186,6 +2186,49 @@ angular.module('otrBackendService', [])
                 return deferred.promise;
             };
             /**
+             * withdrawCaseCounter
+             * @method
+             * @name OtrService#withdrawCaseCounterUsingPUT
+             * @param {object} parameters - method options and parameters
+             * @param {string} parameters.caseId - caseId
+             * @param {integer} parameters.counterId - counterId
+             */
+            OtrService.prototype.withdrawCaseCounterUsingPUT = function(parameters) {
+                if (parameters === undefined) {
+                    parameters = {};
+                }
+                var deferred = $q.defer();
+                var domain = this.domain,
+                    path = '/api/v1/cases/{caseId}/counters/{counterId}/withdraw';
+                var body = {},
+                    queryParameters = {},
+                    headers = {},
+                    form = {};
+
+                headers['Accept'] = ['*/*'];
+                headers['Content-Type'] = ['application/json'];
+
+                path = path.replace('{caseId}', parameters['caseId']);
+
+                if (parameters['caseId'] === undefined) {
+                    deferred.reject(new Error('Missing required  parameter: caseId'));
+                    return deferred.promise;
+                }
+
+                path = path.replace('{counterId}', parameters['counterId']);
+
+                if (parameters['counterId'] === undefined) {
+                    deferred.reject(new Error('Missing required  parameter: counterId'));
+                    return deferred.promise;
+                }
+
+                queryParameters = mergeQueryParams(parameters, queryParameters);
+
+                this.request('PUT', domain + path, parameters, body, headers, queryParameters, form, deferred);
+
+                return deferred.promise;
+            };
+            /**
              * setCourtDateForCase
              * @method
              * @name OtrService#setCourtDateForCaseUsingPOST

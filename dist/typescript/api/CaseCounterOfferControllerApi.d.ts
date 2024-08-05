@@ -51,4 +51,11 @@ export declare class CaseCounterOfferControllerApi {
      * @param request request
      */
     initiateCaseCounterUsingPOST(caseId: string, request: models.InitiateCaseCounterRequest, extraHttpRequestParams?: any): ng.IHttpPromise<models.InitiateCaseCounterResponse>;
+    /**
+     *
+     * @summary withdrawCaseCounter
+     * @param caseId caseId
+     * @param counterId counterId
+     */
+    withdrawCaseCounterUsingPUT(caseId: string, counterId: number, extraHttpRequestParams?: any): ng.IHttpPromise<{}>;
 }

@@ -56,6 +56,7 @@ export declare namespace LawfirmAuditEventModel {
         CASECOUNTERACCEPTED,
         CASECOUNTERDECLINED,
         CASECOUNTERINITIATED,
+        CASECOUNTERWITHDRAWN,
         CASEDECLINE,
         CASEMATCH,
         CASEPAYMENTDELETED,

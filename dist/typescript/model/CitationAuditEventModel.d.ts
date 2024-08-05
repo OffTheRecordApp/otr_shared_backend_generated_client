@@ -56,6 +56,7 @@ export declare namespace CitationAuditEventModel {
         CASECOUNTERACCEPTED,
         CASECOUNTERDECLINED,
         CASECOUNTERINITIATED,
+        CASECOUNTERWITHDRAWN,
         CASEDECLINE,
         CASEMATCH,
         CASEPAYMENTDELETED,
