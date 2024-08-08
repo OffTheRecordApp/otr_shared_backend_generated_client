@@ -26,8 +26,8 @@ export declare class UserSearchControllerApi {
     findMatchingUsersUsingPOST(request: models.FindMatchingUsersRequest, extraHttpRequestParams?: any): ng.IHttpPromise<models.FindMatchingUsersResponse>;
     /**
      *
-     * @summary getCountOfMatchingUsers
+     * @summary getUserByEmail
      * @param request request
      */
-    getCountOfMatchingUsersUsingPOST(request: models.GetCountOfMatchingUsersRequest, extraHttpRequestParams?: any): ng.IHttpPromise<models.GetCountOfMatchingUsersResponse>;
+    getUserByEmailUsingPOST(request: models.GetUserByEmailRequest, extraHttpRequestParams?: any): ng.IHttpPromise<models.GetUserByEmailResponse>;
 }

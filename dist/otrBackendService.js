@@ -15018,13 +15018,13 @@ angular.module('otrBackendService', [])
                 return deferred.promise;
             };
             /**
-             * getCountOfMatchingUsers
+             * getUserByEmail
              * @method
-             * @name OtrService#getCountOfMatchingUsersUsingPOST
+             * @name OtrService#getUserByEmailUsingPOST
              * @param {object} parameters - method options and parameters
              * @param {} parameters.request - request
              */
-            OtrService.prototype.getCountOfMatchingUsersUsingPOST = function(parameters) {
+            OtrService.prototype.getUserByEmailUsingPOST = function(parameters) {
                 if (parameters === undefined) {
                     parameters = {};
                 }

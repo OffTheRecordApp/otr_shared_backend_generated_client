@@ -50,16 +50,16 @@ var UserSearchControllerApi = /** @class */ (function () {
     };
     /**
      *
-     * @summary getCountOfMatchingUsers
+     * @summary getUserByEmail
      * @param request request
      */
-    UserSearchControllerApi.prototype.getCountOfMatchingUsersUsingPOST = function (request, extraHttpRequestParams) {
+    UserSearchControllerApi.prototype.getUserByEmailUsingPOST = function (request, extraHttpRequestParams) {
         var localVarPath = this.basePath + '/api/v1/users/matches';
         var queryParameters = {};
         var headerParams = Object.assign({}, this.defaultHeaders);
         // verify required parameter 'request' is not null or undefined
         if (request === null || request === undefined) {
-            throw new Error('Required parameter request was null or undefined when calling getCountOfMatchingUsersUsingPOST.');
+            throw new Error('Required parameter request was null or undefined when calling getUserByEmailUsingPOST.');
         }
         var httpRequestParams = {
             method: 'POST',

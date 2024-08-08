@@ -23,9 +23,9 @@ import { FindMatchingUsersRequest } from '../model/findMatchingUsersRequest';
 // @ts-ignore
 import { FindMatchingUsersResponse } from '../model/findMatchingUsersResponse';
 // @ts-ignore
-import { GetCountOfMatchingUsersRequest } from '../model/getCountOfMatchingUsersRequest';
+import { GetUserByEmailRequest } from '../model/getUserByEmailRequest';
 // @ts-ignore
-import { GetCountOfMatchingUsersResponse } from '../model/getCountOfMatchingUsersResponse';
+import { GetUserByEmailResponse } from '../model/getUserByEmailResponse';
 
 // @ts-ignore
 import { BASE_PATH, COLLECTION_FORMATS }                     from '../variables';
@@ -166,17 +166,17 @@ export class UserSearchControllerService {
     }
 
     /**
-     * getCountOfMatchingUsers
+     * getUserByEmail
      * @param request request
      * @param observe set whether or not to return the data Observable as the body, response or events. defaults to returning the body.
      * @param reportProgress flag to report request and response progress.
      */
-    public getCountOfMatchingUsersUsingPOST(request: GetCountOfMatchingUsersRequest, observe?: 'body', reportProgress?: boolean, options?: {httpHeaderAccept?: '*/*', context?: HttpContext}): Observable<GetCountOfMatchingUsersResponse>;
-    public getCountOfMatchingUsersUsingPOST(request: GetCountOfMatchingUsersRequest, observe?: 'response', reportProgress?: boolean, options?: {httpHeaderAccept?: '*/*', context?: HttpContext}): Observable<HttpResponse<GetCountOfMatchingUsersResponse>>;
-    public getCountOfMatchingUsersUsingPOST(request: GetCountOfMatchingUsersRequest, observe?: 'events', reportProgress?: boolean, options?: {httpHeaderAccept?: '*/*', context?: HttpContext}): Observable<HttpEvent<GetCountOfMatchingUsersResponse>>;
-    public getCountOfMatchingUsersUsingPOST(request: GetCountOfMatchingUsersRequest, observe: any = 'body', reportProgress: boolean = false, options?: {httpHeaderAccept?: '*/*', context?: HttpContext}): Observable<any> {
+    public getUserByEmailUsingPOST(request: GetUserByEmailRequest, observe?: 'body', reportProgress?: boolean, options?: {httpHeaderAccept?: '*/*', context?: HttpContext}): Observable<GetUserByEmailResponse>;
+    public getUserByEmailUsingPOST(request: GetUserByEmailRequest, observe?: 'response', reportProgress?: boolean, options?: {httpHeaderAccept?: '*/*', context?: HttpContext}): Observable<HttpResponse<GetUserByEmailResponse>>;
+    public getUserByEmailUsingPOST(request: GetUserByEmailRequest, observe?: 'events', reportProgress?: boolean, options?: {httpHeaderAccept?: '*/*', context?: HttpContext}): Observable<HttpEvent<GetUserByEmailResponse>>;
+    public getUserByEmailUsingPOST(request: GetUserByEmailRequest, observe: any = 'body', reportProgress: boolean = false, options?: {httpHeaderAccept?: '*/*', context?: HttpContext}): Observable<any> {
         if (request === null || request === undefined) {
-            throw new Error('Required parameter request was null or undefined when calling getCountOfMatchingUsersUsingPOST.');
+            throw new Error('Required parameter request was null or undefined when calling getUserByEmailUsingPOST.');
         }
 
         let localVarHeaders = this.defaultHeaders;
@@ -220,7 +220,7 @@ export class UserSearchControllerService {
         }
 
         let localVarPath = `/api/v1/users/matches`;
-        return this.httpClient.request<GetCountOfMatchingUsersResponse>('post', `${this.configuration.basePath}${localVarPath}`,
+        return this.httpClient.request<GetUserByEmailResponse>('post', `${this.configuration.basePath}${localVarPath}`,
             {
                 context: localVarHttpContext,
                 body: request,

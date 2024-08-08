@@ -407,8 +407,6 @@ model/getClientCasesResponse.ts
 model/getClientConfirmedUnpaidCasesResponse.ts
 model/getCoachingCardCategoriesResponse.ts
 model/getCompetitionResponseModel.ts
-model/getCountOfMatchingUsersRequest.ts
-model/getCountOfMatchingUsersResponse.ts
 model/getCounterOfferResponse.ts
 model/getCountiesResponse.ts
 model/getCountryListResponse.ts
@@ -491,6 +489,8 @@ model/getTicketReviewResponse.ts
 model/getTrafficViolationModel.ts
 model/getTrafficViolationTypesResponse.ts
 model/getUserAddressesResponse.ts
+model/getUserByEmailRequest.ts
+model/getUserByEmailResponse.ts
 model/getUserCasesResponse.ts
 model/getUserDetailsResponse.ts
 model/getUserRefLinksResponse.ts
