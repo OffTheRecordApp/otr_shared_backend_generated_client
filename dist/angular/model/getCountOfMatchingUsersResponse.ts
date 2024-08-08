@@ -12,6 +12,7 @@
 
 
 export interface GetCountOfMatchingUsersResponse { 
+    firstName?: string;
     numMatchingUsers?: number;
 }
 

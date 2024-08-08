@@ -10,5 +10,6 @@
  * Do not edit the class manually.
  */
 export interface GetCountOfMatchingUsersResponse {
+    "firstName"?: string;
     "numMatchingUsers"?: number;
 }
