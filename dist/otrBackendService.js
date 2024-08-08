@@ -8504,6 +8504,50 @@ angular.module('otrBackendService', [])
                 return deferred.promise;
             };
             /**
+             * getTicketsByEmail
+             * @method
+             * @name OtrService#getTicketsByEmailUsingGET
+             * @param {object} parameters - method options and parameters
+             * @param {integer} parameters.length - length
+             * @param {string} parameters.userId - userId
+             */
+            OtrService.prototype.getTicketsByEmailUsingGET = function(parameters) {
+                if (parameters === undefined) {
+                    parameters = {};
+                }
+                var deferred = $q.defer();
+                var domain = this.domain,
+                    path = '/api/v1/intercom/tickets/search';
+                var body = {},
+                    queryParameters = {},
+                    headers = {},
+                    form = {};
+
+                headers['Accept'] = ['application/json'];
+
+                /** set default value **/
+                queryParameters['length'] = 100;
+
+                if (parameters['length'] !== undefined) {
+                    queryParameters['length'] = parameters['length'];
+                }
+
+                if (parameters['userId'] !== undefined) {
+                    queryParameters['userId'] = parameters['userId'];
+                }
+
+                if (parameters['userId'] === undefined) {
+                    deferred.reject(new Error('Missing required  parameter: userId'));
+                    return deferred.promise;
+                }
+
+                queryParameters = mergeQueryParams(parameters, queryParameters);
+
+                this.request('GET', domain + path, parameters, body, headers, queryParameters, form, deferred);
+
+                return deferred.promise;
+            };
+            /**
              * refundLawfirmFee
              * @method
              * @name OtrService#refundLawfirmFeeUsingPOST

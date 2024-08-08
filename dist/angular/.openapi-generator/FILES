@@ -59,6 +59,7 @@ api/getCaseController.service.ts
 api/householdMateController.service.ts
 api/hubspotWebhookController.service.ts
 api/insuranceCalculatorController.service.ts
+api/intercomTicketController.service.ts
 api/lawfirmCaseDecisionController.service.ts
 api/lawfirmCasesController.service.ts
 api/lawfirmController.service.ts
