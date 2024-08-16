@@ -31,6 +31,7 @@ var LineItem;
         LineItemEnum[LineItemEnum["MVSFEE"] = 'MVS_FEE'] = "MVSFEE";
         LineItemEnum[LineItemEnum["OTHER"] = 'OTHER'] = "OTHER";
         LineItemEnum[LineItemEnum["OTRCREDIT"] = 'OTR_CREDIT'] = "OTRCREDIT";
+        LineItemEnum[LineItemEnum["OTRSUBSCRIPTIONCREDIT"] = 'OTR_SUBSCRIPTION_CREDIT'] = "OTRSUBSCRIPTIONCREDIT";
         LineItemEnum[LineItemEnum["PAYMENTPLANSERVICEFEE"] = 'PAYMENT_PLAN_SERVICE_FEE'] = "PAYMENTPLANSERVICEFEE";
         LineItemEnum[LineItemEnum["WARRANTFEE"] = 'WARRANT_FEE'] = "WARRANTFEE";
     })(LineItemEnum = LineItem.LineItemEnum || (LineItem.LineItemEnum = {}));

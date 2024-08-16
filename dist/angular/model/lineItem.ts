@@ -17,7 +17,7 @@ export interface LineItem {
     lineItem?: LineItem.LineItemEnum;
 }
 export namespace LineItem {
-    export type LineItemEnum = 'ACCIDENT_FEE' | 'BASE_LEGAL_FEE' | 'BOND_FEE' | 'BOOKING_FEE' | 'CDL_FEE' | 'COURT_FEE' | 'DISPUTE_FEE' | 'FINE_PAYMENT' | 'FTA_FEE' | 'INITIAL_SUBSCRIPTION_FEE' | 'LATE_FEE' | 'MBG_REFUND' | 'MVS_FEE' | 'OTHER' | 'OTR_CREDIT' | 'PAYMENT_PLAN_SERVICE_FEE' | 'WARRANT_FEE';
+    export type LineItemEnum = 'ACCIDENT_FEE' | 'BASE_LEGAL_FEE' | 'BOND_FEE' | 'BOOKING_FEE' | 'CDL_FEE' | 'COURT_FEE' | 'DISPUTE_FEE' | 'FINE_PAYMENT' | 'FTA_FEE' | 'INITIAL_SUBSCRIPTION_FEE' | 'LATE_FEE' | 'MBG_REFUND' | 'MVS_FEE' | 'OTHER' | 'OTR_CREDIT' | 'OTR_SUBSCRIPTION_CREDIT' | 'PAYMENT_PLAN_SERVICE_FEE' | 'WARRANT_FEE';
     export const LineItemEnum = {
         AccidentFee: 'ACCIDENT_FEE' as LineItemEnum,
         BaseLegalFee: 'BASE_LEGAL_FEE' as LineItemEnum,
@@ -34,6 +34,7 @@ export namespace LineItem {
         MvsFee: 'MVS_FEE' as LineItemEnum,
         Other: 'OTHER' as LineItemEnum,
         OtrCredit: 'OTR_CREDIT' as LineItemEnum,
+        OtrSubscriptionCredit: 'OTR_SUBSCRIPTION_CREDIT' as LineItemEnum,
         PaymentPlanServiceFee: 'PAYMENT_PLAN_SERVICE_FEE' as LineItemEnum,
         WarrantFee: 'WARRANT_FEE' as LineItemEnum
     };

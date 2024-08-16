@@ -33,6 +33,7 @@ export declare namespace WorkflowLineItemModel {
         MVSFEE,
         OTHER,
         OTRCREDIT,
+        OTRSUBSCRIPTIONCREDIT,
         PAYMENTPLANSERVICEFEE,
         WARRANTFEE
     }

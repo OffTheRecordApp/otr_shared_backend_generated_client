@@ -15,7 +15,7 @@ export interface GetLineItemTypesResponse {
     lineItemTypes?: Array<GetLineItemTypesResponse.LineItemTypesEnum>;
 }
 export namespace GetLineItemTypesResponse {
-    export type LineItemTypesEnum = 'ACCIDENT_FEE' | 'BASE_LEGAL_FEE' | 'BOND_FEE' | 'BOOKING_FEE' | 'CDL_FEE' | 'COURT_FEE' | 'DISPUTE_FEE' | 'FINE_PAYMENT' | 'FTA_FEE' | 'INITIAL_SUBSCRIPTION_FEE' | 'LATE_FEE' | 'MBG_REFUND' | 'MVS_FEE' | 'OTHER' | 'OTR_CREDIT' | 'PAYMENT_PLAN_SERVICE_FEE' | 'WARRANT_FEE';
+    export type LineItemTypesEnum = 'ACCIDENT_FEE' | 'BASE_LEGAL_FEE' | 'BOND_FEE' | 'BOOKING_FEE' | 'CDL_FEE' | 'COURT_FEE' | 'DISPUTE_FEE' | 'FINE_PAYMENT' | 'FTA_FEE' | 'INITIAL_SUBSCRIPTION_FEE' | 'LATE_FEE' | 'MBG_REFUND' | 'MVS_FEE' | 'OTHER' | 'OTR_CREDIT' | 'OTR_SUBSCRIPTION_CREDIT' | 'PAYMENT_PLAN_SERVICE_FEE' | 'WARRANT_FEE';
     export const LineItemTypesEnum = {
         AccidentFee: 'ACCIDENT_FEE' as LineItemTypesEnum,
         BaseLegalFee: 'BASE_LEGAL_FEE' as LineItemTypesEnum,
@@ -32,6 +32,7 @@ export namespace GetLineItemTypesResponse {
         MvsFee: 'MVS_FEE' as LineItemTypesEnum,
         Other: 'OTHER' as LineItemTypesEnum,
         OtrCredit: 'OTR_CREDIT' as LineItemTypesEnum,
+        OtrSubscriptionCredit: 'OTR_SUBSCRIPTION_CREDIT' as LineItemTypesEnum,
         PaymentPlanServiceFee: 'PAYMENT_PLAN_SERVICE_FEE' as LineItemTypesEnum,
         WarrantFee: 'WARRANT_FEE' as LineItemTypesEnum
     };

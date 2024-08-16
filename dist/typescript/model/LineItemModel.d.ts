@@ -38,6 +38,7 @@ export declare namespace LineItemModel {
         MVSFEE,
         OTHER,
         OTRCREDIT,
+        OTRSUBSCRIPTIONCREDIT,
         PAYMENTPLANSERVICEFEE,
         WARRANTFEE
     }

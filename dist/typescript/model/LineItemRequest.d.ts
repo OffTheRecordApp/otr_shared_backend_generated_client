@@ -41,6 +41,7 @@ export declare namespace LineItemRequest {
         MVSFEE,
         OTHER,
         OTRCREDIT,
+        OTRSUBSCRIPTIONCREDIT,
         PAYMENTPLANSERVICEFEE,
         WARRANTFEE
     }

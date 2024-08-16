@@ -31,6 +31,7 @@ var CasePaymentBreakdownItemModel;
         TypeEnum[TypeEnum["MVSFEE"] = 'MVS_FEE'] = "MVSFEE";
         TypeEnum[TypeEnum["OTHER"] = 'OTHER'] = "OTHER";
         TypeEnum[TypeEnum["OTRCREDIT"] = 'OTR_CREDIT'] = "OTRCREDIT";
+        TypeEnum[TypeEnum["OTRSUBSCRIPTIONCREDIT"] = 'OTR_SUBSCRIPTION_CREDIT'] = "OTRSUBSCRIPTIONCREDIT";
         TypeEnum[TypeEnum["PAYMENTPLANSERVICEFEE"] = 'PAYMENT_PLAN_SERVICE_FEE'] = "PAYMENTPLANSERVICEFEE";
         TypeEnum[TypeEnum["WARRANTFEE"] = 'WARRANT_FEE'] = "WARRANTFEE";
     })(TypeEnum = CasePaymentBreakdownItemModel.TypeEnum || (CasePaymentBreakdownItemModel.TypeEnum = {}));

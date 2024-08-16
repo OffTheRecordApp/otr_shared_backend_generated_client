@@ -31,6 +31,7 @@ export declare namespace CasePaymentBreakdownItemModel {
         MVSFEE,
         OTHER,
         OTRCREDIT,
+        OTRSUBSCRIPTIONCREDIT,
         PAYMENTPLANSERVICEFEE,
         WARRANTFEE
     }

@@ -33,6 +33,7 @@ export declare namespace MatchCaseLineItemModel {
         MVSFEE,
         OTHER,
         OTRCREDIT,
+        OTRSUBSCRIPTIONCREDIT,
         PAYMENTPLANSERVICEFEE,
         WARRANTFEE
     }

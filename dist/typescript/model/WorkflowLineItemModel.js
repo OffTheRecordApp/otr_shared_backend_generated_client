@@ -31,6 +31,7 @@ var WorkflowLineItemModel;
         LineItemTypeEnum[LineItemTypeEnum["MVSFEE"] = 'MVS_FEE'] = "MVSFEE";
         LineItemTypeEnum[LineItemTypeEnum["OTHER"] = 'OTHER'] = "OTHER";
         LineItemTypeEnum[LineItemTypeEnum["OTRCREDIT"] = 'OTR_CREDIT'] = "OTRCREDIT";
+        LineItemTypeEnum[LineItemTypeEnum["OTRSUBSCRIPTIONCREDIT"] = 'OTR_SUBSCRIPTION_CREDIT'] = "OTRSUBSCRIPTIONCREDIT";
         LineItemTypeEnum[LineItemTypeEnum["PAYMENTPLANSERVICEFEE"] = 'PAYMENT_PLAN_SERVICE_FEE'] = "PAYMENTPLANSERVICEFEE";
         LineItemTypeEnum[LineItemTypeEnum["WARRANTFEE"] = 'WARRANT_FEE'] = "WARRANTFEE";
     })(LineItemTypeEnum = WorkflowLineItemModel.LineItemTypeEnum || (WorkflowLineItemModel.LineItemTypeEnum = {}));

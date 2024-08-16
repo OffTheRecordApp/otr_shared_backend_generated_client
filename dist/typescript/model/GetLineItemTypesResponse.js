@@ -31,6 +31,7 @@ var GetLineItemTypesResponse;
         LineItemTypesEnum[LineItemTypesEnum["MVSFEE"] = 'MVS_FEE'] = "MVSFEE";
         LineItemTypesEnum[LineItemTypesEnum["OTHER"] = 'OTHER'] = "OTHER";
         LineItemTypesEnum[LineItemTypesEnum["OTRCREDIT"] = 'OTR_CREDIT'] = "OTRCREDIT";
+        LineItemTypesEnum[LineItemTypesEnum["OTRSUBSCRIPTIONCREDIT"] = 'OTR_SUBSCRIPTION_CREDIT'] = "OTRSUBSCRIPTIONCREDIT";
         LineItemTypesEnum[LineItemTypesEnum["PAYMENTPLANSERVICEFEE"] = 'PAYMENT_PLAN_SERVICE_FEE'] = "PAYMENTPLANSERVICEFEE";
         LineItemTypesEnum[LineItemTypesEnum["WARRANTFEE"] = 'WARRANT_FEE'] = "WARRANTFEE";
     })(LineItemTypesEnum = GetLineItemTypesResponse.LineItemTypesEnum || (GetLineItemTypesResponse.LineItemTypesEnum = {}));

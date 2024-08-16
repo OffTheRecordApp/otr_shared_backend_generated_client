@@ -17,7 +17,7 @@ export interface CasePaymentBreakdownItemModel {
     type?: CasePaymentBreakdownItemModel.TypeEnum;
 }
 export namespace CasePaymentBreakdownItemModel {
-    export type TypeEnum = 'ACCIDENT_FEE' | 'BASE_LEGAL_FEE' | 'BOND_FEE' | 'BOOKING_FEE' | 'CDL_FEE' | 'COURT_FEE' | 'DISPUTE_FEE' | 'FINE_PAYMENT' | 'FTA_FEE' | 'INITIAL_SUBSCRIPTION_FEE' | 'LATE_FEE' | 'MBG_REFUND' | 'MVS_FEE' | 'OTHER' | 'OTR_CREDIT' | 'PAYMENT_PLAN_SERVICE_FEE' | 'WARRANT_FEE';
+    export type TypeEnum = 'ACCIDENT_FEE' | 'BASE_LEGAL_FEE' | 'BOND_FEE' | 'BOOKING_FEE' | 'CDL_FEE' | 'COURT_FEE' | 'DISPUTE_FEE' | 'FINE_PAYMENT' | 'FTA_FEE' | 'INITIAL_SUBSCRIPTION_FEE' | 'LATE_FEE' | 'MBG_REFUND' | 'MVS_FEE' | 'OTHER' | 'OTR_CREDIT' | 'OTR_SUBSCRIPTION_CREDIT' | 'PAYMENT_PLAN_SERVICE_FEE' | 'WARRANT_FEE';
     export const TypeEnum = {
         AccidentFee: 'ACCIDENT_FEE' as TypeEnum,
         BaseLegalFee: 'BASE_LEGAL_FEE' as TypeEnum,
@@ -34,6 +34,7 @@ export namespace CasePaymentBreakdownItemModel {
         MvsFee: 'MVS_FEE' as TypeEnum,
         Other: 'OTHER' as TypeEnum,
         OtrCredit: 'OTR_CREDIT' as TypeEnum,
+        OtrSubscriptionCredit: 'OTR_SUBSCRIPTION_CREDIT' as TypeEnum,
         PaymentPlanServiceFee: 'PAYMENT_PLAN_SERVICE_FEE' as TypeEnum,
         WarrantFee: 'WARRANT_FEE' as TypeEnum
     };

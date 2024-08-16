@@ -41,7 +41,7 @@ export namespace CaseLineItemDomainRes {
         Lawfirm: 'LAWFIRM' as LineItemOwnerEnum,
         Otr: 'OTR' as LineItemOwnerEnum
     };
-    export type LineItemTypeEnum = 'ACCIDENT_FEE' | 'BASE_LEGAL_FEE' | 'BOND_FEE' | 'BOOKING_FEE' | 'CDL_FEE' | 'COURT_FEE' | 'DISPUTE_FEE' | 'FINE_PAYMENT' | 'FTA_FEE' | 'INITIAL_SUBSCRIPTION_FEE' | 'LATE_FEE' | 'MBG_REFUND' | 'MVS_FEE' | 'OTHER' | 'OTR_CREDIT' | 'PAYMENT_PLAN_SERVICE_FEE' | 'WARRANT_FEE';
+    export type LineItemTypeEnum = 'ACCIDENT_FEE' | 'BASE_LEGAL_FEE' | 'BOND_FEE' | 'BOOKING_FEE' | 'CDL_FEE' | 'COURT_FEE' | 'DISPUTE_FEE' | 'FINE_PAYMENT' | 'FTA_FEE' | 'INITIAL_SUBSCRIPTION_FEE' | 'LATE_FEE' | 'MBG_REFUND' | 'MVS_FEE' | 'OTHER' | 'OTR_CREDIT' | 'OTR_SUBSCRIPTION_CREDIT' | 'PAYMENT_PLAN_SERVICE_FEE' | 'WARRANT_FEE';
     export const LineItemTypeEnum = {
         AccidentFee: 'ACCIDENT_FEE' as LineItemTypeEnum,
         BaseLegalFee: 'BASE_LEGAL_FEE' as LineItemTypeEnum,
@@ -58,6 +58,7 @@ export namespace CaseLineItemDomainRes {
         MvsFee: 'MVS_FEE' as LineItemTypeEnum,
         Other: 'OTHER' as LineItemTypeEnum,
         OtrCredit: 'OTR_CREDIT' as LineItemTypeEnum,
+        OtrSubscriptionCredit: 'OTR_SUBSCRIPTION_CREDIT' as LineItemTypeEnum,
         PaymentPlanServiceFee: 'PAYMENT_PLAN_SERVICE_FEE' as LineItemTypeEnum,
         WarrantFee: 'WARRANT_FEE' as LineItemTypeEnum
     };
