@@ -733,6 +733,8 @@ export * from './updateUserRolesRequest';
 export * from './updateUserSettingsRequest';
 export * from './updateUserSettingsResponse';
 export * from './updateViolationRequest';
+export * from './uploadLawfirmsRequest';
+export * from './uploadLawfirmsResponse';
 export * from './upsertAddressRequest';
 export * from './user';
 export * from './userAccountModel';

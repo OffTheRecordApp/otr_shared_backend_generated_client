@@ -742,20 +742,20 @@ var LawfirmControllerApi = /** @class */ (function () {
     /**
      *
      * @summary uploadLawfirms
-     * @param csvContent csvContent
+     * @param request request
      */
-    LawfirmControllerApi.prototype.uploadLawfirmsUsingPOST = function (csvContent, extraHttpRequestParams) {
+    LawfirmControllerApi.prototype.uploadLawfirmsUsingPOST = function (request, extraHttpRequestParams) {
         var localVarPath = this.basePath + '/api/v1/lawfirms/lawfirms/upload-csv';
         var queryParameters = {};
         var headerParams = Object.assign({}, this.defaultHeaders);
-        // verify required parameter 'csvContent' is not null or undefined
-        if (csvContent === null || csvContent === undefined) {
-            throw new Error('Required parameter csvContent was null or undefined when calling uploadLawfirmsUsingPOST.');
+        // verify required parameter 'request' is not null or undefined
+        if (request === null || request === undefined) {
+            throw new Error('Required parameter request was null or undefined when calling uploadLawfirmsUsingPOST.');
         }
         var httpRequestParams = {
             method: 'POST',
             url: localVarPath,
-            data: csvContent,
+            data: request,
             params: queryParameters,
             headers: headerParams
         };

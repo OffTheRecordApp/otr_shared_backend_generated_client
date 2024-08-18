@@ -190,7 +190,7 @@ export declare class LawfirmControllerApi {
     /**
      *
      * @summary uploadLawfirms
-     * @param csvContent csvContent
+     * @param request request
      */
-    uploadLawfirmsUsingPOST(csvContent: string, extraHttpRequestParams?: any): ng.IHttpPromise<string>;
+    uploadLawfirmsUsingPOST(request: models.UploadLawfirmsRequest, extraHttpRequestParams?: any): ng.IHttpPromise<models.UploadLawfirmsResponse>;
 }

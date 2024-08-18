@@ -51,6 +51,10 @@ import { UpdateLawfirmRequest } from '../model/updateLawfirmRequest';
 // @ts-ignore
 import { UpdateLawyerRoleRequest } from '../model/updateLawyerRoleRequest';
 // @ts-ignore
+import { UploadLawfirmsRequest } from '../model/uploadLawfirmsRequest';
+// @ts-ignore
+import { UploadLawfirmsResponse } from '../model/uploadLawfirmsResponse';
+// @ts-ignore
 import { UpsertAddressRequest } from '../model/upsertAddressRequest';
 
 // @ts-ignore
@@ -1729,16 +1733,16 @@ export class LawfirmControllerService {
 
     /**
      * uploadLawfirms
-     * @param csvContent csvContent
+     * @param request request
      * @param observe set whether or not to return the data Observable as the body, response or events. defaults to returning the body.
      * @param reportProgress flag to report request and response progress.
      */
-    public uploadLawfirmsUsingPOST(csvContent: string, observe?: 'body', reportProgress?: boolean, options?: {httpHeaderAccept?: '*/*', context?: HttpContext}): Observable<string>;
-    public uploadLawfirmsUsingPOST(csvContent: string, observe?: 'response', reportProgress?: boolean, options?: {httpHeaderAccept?: '*/*', context?: HttpContext}): Observable<HttpResponse<string>>;
-    public uploadLawfirmsUsingPOST(csvContent: string, observe?: 'events', reportProgress?: boolean, options?: {httpHeaderAccept?: '*/*', context?: HttpContext}): Observable<HttpEvent<string>>;
-    public uploadLawfirmsUsingPOST(csvContent: string, observe: any = 'body', reportProgress: boolean = false, options?: {httpHeaderAccept?: '*/*', context?: HttpContext}): Observable<any> {
-        if (csvContent === null || csvContent === undefined) {
-            throw new Error('Required parameter csvContent was null or undefined when calling uploadLawfirmsUsingPOST.');
+    public uploadLawfirmsUsingPOST(request: UploadLawfirmsRequest, observe?: 'body', reportProgress?: boolean, options?: {httpHeaderAccept?: '*/*', context?: HttpContext}): Observable<UploadLawfirmsResponse>;
+    public uploadLawfirmsUsingPOST(request: UploadLawfirmsRequest, observe?: 'response', reportProgress?: boolean, options?: {httpHeaderAccept?: '*/*', context?: HttpContext}): Observable<HttpResponse<UploadLawfirmsResponse>>;
+    public uploadLawfirmsUsingPOST(request: UploadLawfirmsRequest, observe?: 'events', reportProgress?: boolean, options?: {httpHeaderAccept?: '*/*', context?: HttpContext}): Observable<HttpEvent<UploadLawfirmsResponse>>;
+    public uploadLawfirmsUsingPOST(request: UploadLawfirmsRequest, observe: any = 'body', reportProgress: boolean = false, options?: {httpHeaderAccept?: '*/*', context?: HttpContext}): Observable<any> {
+        if (request === null || request === undefined) {
+            throw new Error('Required parameter request was null or undefined when calling uploadLawfirmsUsingPOST.');
         }
 
         let localVarHeaders = this.defaultHeaders;
@@ -1782,10 +1786,10 @@ export class LawfirmControllerService {
         }
 
         let localVarPath = `/api/v1/lawfirms/lawfirms/upload-csv`;
-        return this.httpClient.request<string>('post', `${this.configuration.basePath}${localVarPath}`,
+        return this.httpClient.request<UploadLawfirmsResponse>('post', `${this.configuration.basePath}${localVarPath}`,
             {
                 context: localVarHttpContext,
-                body: csvContent,
+                body: request,
                 responseType: <any>responseType_,
                 withCredentials: this.configuration.withCredentials,
                 headers: localVarHeaders,

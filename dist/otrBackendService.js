@@ -9177,7 +9177,7 @@ angular.module('otrBackendService', [])
              * @method
              * @name OtrService#uploadLawfirmsUsingPOST
              * @param {object} parameters - method options and parameters
-             * @param {} parameters.csvContent - csvContent
+             * @param {} parameters.request - request
              */
             OtrService.prototype.uploadLawfirmsUsingPOST = function(parameters) {
                 if (parameters === undefined) {
@@ -9194,12 +9194,12 @@ angular.module('otrBackendService', [])
                 headers['Accept'] = ['*/*'];
                 headers['Content-Type'] = ['application/json'];
 
-                if (parameters['csvContent'] !== undefined) {
-                    body = parameters['csvContent'];
+                if (parameters['request'] !== undefined) {
+                    body = parameters['request'];
                 }
 
-                if (parameters['csvContent'] === undefined) {
-                    deferred.reject(new Error('Missing required  parameter: csvContent'));
+                if (parameters['request'] === undefined) {
+                    deferred.reject(new Error('Missing required  parameter: request'));
                     return deferred.promise;
                 }
 

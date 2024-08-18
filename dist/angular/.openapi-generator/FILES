@@ -857,6 +857,8 @@ model/updateUserRolesRequest.ts
 model/updateUserSettingsRequest.ts
 model/updateUserSettingsResponse.ts
 model/updateViolationRequest.ts
+model/uploadLawfirmsRequest.ts
+model/uploadLawfirmsResponse.ts
 model/upsertAddressRequest.ts
 model/user.ts
 model/userAccountModel.ts

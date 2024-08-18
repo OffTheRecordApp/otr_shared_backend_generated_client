@@ -745,6 +745,8 @@ __exportStar(require("./UpdateUserRolesRequest"), exports);
 __exportStar(require("./UpdateUserSettingsRequest"), exports);
 __exportStar(require("./UpdateUserSettingsResponse"), exports);
 __exportStar(require("./UpdateViolationRequest"), exports);
+__exportStar(require("./UploadLawfirmsRequest"), exports);
+__exportStar(require("./UploadLawfirmsResponse"), exports);
 __exportStar(require("./UpsertAddressRequest"), exports);
 __exportStar(require("./User"), exports);
 __exportStar(require("./UserAccountModel"), exports);
