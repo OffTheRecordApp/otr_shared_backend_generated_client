@@ -745,7 +745,7 @@ var LawfirmControllerApi = /** @class */ (function () {
      * @param request request
      */
     LawfirmControllerApi.prototype.uploadLawfirmsUsingPOST = function (request, extraHttpRequestParams) {
-        var localVarPath = this.basePath + '/api/v1/lawfirms/lawfirms/upload-csv';
+        var localVarPath = this.basePath + '/api/v1/lawfirms/bulk-upload';
         var queryParameters = {};
         var headerParams = Object.assign({}, this.defaultHeaders);
         // verify required parameter 'request' is not null or undefined

@@ -1785,7 +1785,7 @@ export class LawfirmControllerService {
             }
         }
 
-        let localVarPath = `/api/v1/lawfirms/lawfirms/upload-csv`;
+        let localVarPath = `/api/v1/lawfirms/bulk-upload`;
         return this.httpClient.request<UploadLawfirmsResponse>('post', `${this.configuration.basePath}${localVarPath}`,
             {
                 context: localVarHttpContext,
