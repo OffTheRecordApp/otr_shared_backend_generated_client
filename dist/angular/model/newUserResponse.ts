@@ -14,6 +14,7 @@
 export interface NewUserResponse { 
     emailAddress?: string;
     firstname?: string;
+    intercomUserHash?: string;
     isTestUser?: boolean;
     lastname?: string;
     userId?: number;

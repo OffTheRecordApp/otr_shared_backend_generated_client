@@ -13,10 +13,10 @@
   "homepage": "https://offtherecord.com",
   "author": "Off the Record, Inc.",
   "sideEffects": [
-        "./dist/typescript/**/*",
-        "./dist/angular/**/*",
-        "./dist/otrBackendService.js",
-        "./dist/otrBackendService.min.js"
+    "./dist/typescript/**/*",
+    "./dist/angular/**/*",
+    "./dist/otrBackendService.js",
+    "./dist/otrBackendService.min.js"
   ],
   "scripts": {
     "download:devo": "curl https://otr-backend-service-us-devo.offtherecord.com/v2/api-docs -o api/otr-service.json",

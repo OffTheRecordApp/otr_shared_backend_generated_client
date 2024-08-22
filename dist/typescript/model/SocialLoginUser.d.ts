@@ -13,6 +13,7 @@ import * as models from './models';
 export interface SocialLoginUser {
     "emailAddress"?: string;
     "firstname"?: string;
+    "intercomUserHash"?: string;
     "isEmailPrivate"?: boolean;
     "isTestUser"?: boolean;
     "lastname"?: string;

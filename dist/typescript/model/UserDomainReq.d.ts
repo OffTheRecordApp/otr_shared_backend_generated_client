@@ -24,6 +24,7 @@ export interface UserDomainReq {
     "ghostAccountCreationDateUtc"?: string;
     "hasLeftReview"?: boolean;
     "hubspotContactId"?: string;
+    "intercomUserHash"?: string;
     "isEmailConfirmed"?: boolean;
     "isEnabled"?: boolean;
     "isLawfirmAccessGranted"?: boolean;
