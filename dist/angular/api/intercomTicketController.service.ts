@@ -92,18 +92,18 @@ export class IntercomTicketControllerService {
     }
 
     /**
-     * getTicketsByEmail
+     * getTickets
      * @param userId userId
      * @param length length
      * @param observe set whether or not to return the data Observable as the body, response or events. defaults to returning the body.
      * @param reportProgress flag to report request and response progress.
      */
-    public getTicketsByEmailUsingGET(userId: string, length?: number, observe?: 'body', reportProgress?: boolean, options?: {httpHeaderAccept?: 'application/json', context?: HttpContext}): Observable<IntercomSearchTicketsResponse>;
-    public getTicketsByEmailUsingGET(userId: string, length?: number, observe?: 'response', reportProgress?: boolean, options?: {httpHeaderAccept?: 'application/json', context?: HttpContext}): Observable<HttpResponse<IntercomSearchTicketsResponse>>;
-    public getTicketsByEmailUsingGET(userId: string, length?: number, observe?: 'events', reportProgress?: boolean, options?: {httpHeaderAccept?: 'application/json', context?: HttpContext}): Observable<HttpEvent<IntercomSearchTicketsResponse>>;
-    public getTicketsByEmailUsingGET(userId: string, length?: number, observe: any = 'body', reportProgress: boolean = false, options?: {httpHeaderAccept?: 'application/json', context?: HttpContext}): Observable<any> {
+    public getTicketsUsingGET(userId: number, length?: number, observe?: 'body', reportProgress?: boolean, options?: {httpHeaderAccept?: 'application/json', context?: HttpContext}): Observable<IntercomSearchTicketsResponse>;
+    public getTicketsUsingGET(userId: number, length?: number, observe?: 'response', reportProgress?: boolean, options?: {httpHeaderAccept?: 'application/json', context?: HttpContext}): Observable<HttpResponse<IntercomSearchTicketsResponse>>;
+    public getTicketsUsingGET(userId: number, length?: number, observe?: 'events', reportProgress?: boolean, options?: {httpHeaderAccept?: 'application/json', context?: HttpContext}): Observable<HttpEvent<IntercomSearchTicketsResponse>>;
+    public getTicketsUsingGET(userId: number, length?: number, observe: any = 'body', reportProgress: boolean = false, options?: {httpHeaderAccept?: 'application/json', context?: HttpContext}): Observable<any> {
         if (userId === null || userId === undefined) {
-            throw new Error('Required parameter userId was null or undefined when calling getTicketsByEmailUsingGET.');
+            throw new Error('Required parameter userId was null or undefined when calling getTicketsUsingGET.');
         }
 
         let localVarQueryParameters = new HttpParams({encoder: this.encoder});

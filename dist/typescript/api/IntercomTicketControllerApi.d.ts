@@ -20,9 +20,9 @@ export declare class IntercomTicketControllerApi {
     constructor($http: ng.IHttpService, $httpParamSerializer?: (d: any) => any, basePath?: string);
     /**
      *
-     * @summary getTicketsByEmail
+     * @summary getTickets
      * @param userId userId
      * @param length length
      */
-    getTicketsByEmailUsingGET(userId: string, length?: number, extraHttpRequestParams?: any): ng.IHttpPromise<models.IntercomSearchTicketsResponse>;
+    getTicketsUsingGET(userId: number, length?: number, extraHttpRequestParams?: any): ng.IHttpPromise<models.IntercomSearchTicketsResponse>;
 }

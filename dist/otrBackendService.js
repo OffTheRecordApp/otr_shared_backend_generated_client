@@ -8504,14 +8504,14 @@ angular.module('otrBackendService', [])
                 return deferred.promise;
             };
             /**
-             * getTicketsByEmail
+             * getTickets
              * @method
-             * @name OtrService#getTicketsByEmailUsingGET
+             * @name OtrService#getTicketsUsingGET
              * @param {object} parameters - method options and parameters
              * @param {integer} parameters.length - length
-             * @param {string} parameters.userId - userId
+             * @param {integer} parameters.userId - userId
              */
-            OtrService.prototype.getTicketsByEmailUsingGET = function(parameters) {
+            OtrService.prototype.getTicketsUsingGET = function(parameters) {
                 if (parameters === undefined) {
                     parameters = {};
                 }

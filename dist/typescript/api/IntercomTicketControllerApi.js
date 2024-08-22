@@ -25,17 +25,17 @@ var IntercomTicketControllerApi = /** @class */ (function () {
     }
     /**
      *
-     * @summary getTicketsByEmail
+     * @summary getTickets
      * @param userId userId
      * @param length length
      */
-    IntercomTicketControllerApi.prototype.getTicketsByEmailUsingGET = function (userId, length, extraHttpRequestParams) {
+    IntercomTicketControllerApi.prototype.getTicketsUsingGET = function (userId, length, extraHttpRequestParams) {
         var localVarPath = this.basePath + '/api/v1/intercom/tickets/search';
         var queryParameters = {};
         var headerParams = Object.assign({}, this.defaultHeaders);
         // verify required parameter 'userId' is not null or undefined
         if (userId === null || userId === undefined) {
-            throw new Error('Required parameter userId was null or undefined when calling getTicketsByEmailUsingGET.');
+            throw new Error('Required parameter userId was null or undefined when calling getTicketsUsingGET.');
         }
         if (length !== undefined) {
             queryParameters['length'] = length;
