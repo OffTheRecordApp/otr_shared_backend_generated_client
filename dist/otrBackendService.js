@@ -10468,6 +10468,7 @@ angular.module('otrBackendService', [])
              * @name OtrService#getLawfirmLawyersUsingGET
              * @param {object} parameters - method options and parameters
              * @param {integer} parameters.lawfirmId - lawfirmId
+             * @param {string} parameters.settingName - settingName
              */
             OtrService.prototype.getLawfirmLawyersUsingGET = function(parameters) {
                 if (parameters === undefined) {
@@ -10488,6 +10489,10 @@ angular.module('otrBackendService', [])
                 if (parameters['lawfirmId'] === undefined) {
                     deferred.reject(new Error('Missing required  parameter: lawfirmId'));
                     return deferred.promise;
+                }
+
+                if (parameters['settingName'] !== undefined) {
+                    queryParameters['settingName'] = parameters['settingName'];
                 }
 
                 queryParameters = mergeQueryParams(parameters, queryParameters);

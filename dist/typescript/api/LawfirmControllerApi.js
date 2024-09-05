@@ -317,8 +317,9 @@ var LawfirmControllerApi = /** @class */ (function () {
      *
      * @summary getLawfirmLawyers
      * @param lawfirmId lawfirmId
+     * @param settingName settingName
      */
-    LawfirmControllerApi.prototype.getLawfirmLawyersUsingGET = function (lawfirmId, extraHttpRequestParams) {
+    LawfirmControllerApi.prototype.getLawfirmLawyersUsingGET = function (lawfirmId, settingName, extraHttpRequestParams) {
         var localVarPath = this.basePath + '/api/v1/lawfirms/{lawfirmId}/lawyers'
             .replace('{' + 'lawfirmId' + '}', encodeURIComponent(String(lawfirmId)));
         var queryParameters = {};
@@ -326,6 +327,9 @@ var LawfirmControllerApi = /** @class */ (function () {
         // verify required parameter 'lawfirmId' is not null or undefined
         if (lawfirmId === null || lawfirmId === undefined) {
             throw new Error('Required parameter lawfirmId was null or undefined when calling getLawfirmLawyersUsingGET.');
+        }
+        if (settingName !== undefined) {
+            queryParameters['settingName'] = settingName;
         }
         var httpRequestParams = {
             method: 'GET',

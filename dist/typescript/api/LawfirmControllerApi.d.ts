@@ -91,8 +91,9 @@ export declare class LawfirmControllerApi {
      *
      * @summary getLawfirmLawyers
      * @param lawfirmId lawfirmId
+     * @param settingName settingName
      */
-    getLawfirmLawyersUsingGET(lawfirmId: number, extraHttpRequestParams?: any): ng.IHttpPromise<models.GetLawfirmLawyersResponse>;
+    getLawfirmLawyersUsingGET(lawfirmId: number, settingName?: string, extraHttpRequestParams?: any): ng.IHttpPromise<models.GetLawfirmLawyersResponse>;
     /**
      *
      * @summary getLawfirmStatuses
