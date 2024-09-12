@@ -25,6 +25,37 @@ var IntercomTicketControllerApi = /** @class */ (function () {
     }
     /**
      *
+     * @summary getConversations
+     * @param email email
+     * @param length length
+     */
+    IntercomTicketControllerApi.prototype.getConversationsUsingGET = function (email, length, extraHttpRequestParams) {
+        var localVarPath = this.basePath + '/api/v1/intercom/conversations';
+        var queryParameters = {};
+        var headerParams = Object.assign({}, this.defaultHeaders);
+        // verify required parameter 'email' is not null or undefined
+        if (email === null || email === undefined) {
+            throw new Error('Required parameter email was null or undefined when calling getConversationsUsingGET.');
+        }
+        if (email !== undefined) {
+            queryParameters['email'] = email;
+        }
+        if (length !== undefined) {
+            queryParameters['length'] = length;
+        }
+        var httpRequestParams = {
+            method: 'GET',
+            url: localVarPath,
+            params: queryParameters,
+            headers: headerParams
+        };
+        if (extraHttpRequestParams) {
+            httpRequestParams = Object.assign(httpRequestParams, extraHttpRequestParams);
+        }
+        return this.$http(httpRequestParams);
+    };
+    /**
+     *
      * @summary getTickets
      * @param userId userId
      * @param length length

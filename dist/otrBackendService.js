@@ -8504,6 +8504,50 @@ angular.module('otrBackendService', [])
                 return deferred.promise;
             };
             /**
+             * getConversations
+             * @method
+             * @name OtrService#getConversationsUsingGET
+             * @param {object} parameters - method options and parameters
+             * @param {string} parameters.email - email
+             * @param {integer} parameters.length - length
+             */
+            OtrService.prototype.getConversationsUsingGET = function(parameters) {
+                if (parameters === undefined) {
+                    parameters = {};
+                }
+                var deferred = $q.defer();
+                var domain = this.domain,
+                    path = '/api/v1/intercom/conversations';
+                var body = {},
+                    queryParameters = {},
+                    headers = {},
+                    form = {};
+
+                headers['Accept'] = ['application/json'];
+
+                if (parameters['email'] !== undefined) {
+                    queryParameters['email'] = parameters['email'];
+                }
+
+                if (parameters['email'] === undefined) {
+                    deferred.reject(new Error('Missing required  parameter: email'));
+                    return deferred.promise;
+                }
+
+                /** set default value **/
+                queryParameters['length'] = 100;
+
+                if (parameters['length'] !== undefined) {
+                    queryParameters['length'] = parameters['length'];
+                }
+
+                queryParameters = mergeQueryParams(parameters, queryParameters);
+
+                this.request('GET', domain + path, parameters, body, headers, queryParameters, form, deferred);
+
+                return deferred.promise;
+            };
+            /**
              * getTickets
              * @method
              * @name OtrService#getTicketsUsingGET

@@ -153,6 +153,7 @@ model/addressDomain.ts
 model/addressDomainReq.ts
 model/addressDomainRes.ts
 model/addressEntity.ts
+model/admin.ts
 model/agentBookingStats.ts
 model/agentBookingsSummary.ts
 model/aggregateBySource.ts
@@ -167,7 +168,9 @@ model/appEventCreateRequest.ts
 model/appearanceAttorneyDomain.ts
 model/appleLoginRequest.ts
 model/assignCitationOwnerRequest.ts
+model/attachment.ts
 model/auditLog.ts
+model/author.ts
 model/authorModel.ts
 model/authorizeChargeForCasePaymentRequest.ts
 model/authorizeChargeForCasePaymentResponse.ts
@@ -355,6 +358,7 @@ model/findMatchingUsersRequest.ts
 model/findMatchingUsersResponse.ts
 model/findsCourtsResponse.ts
 model/fineInformation.ts
+model/firstContactReply.ts
 model/forwardMessageRequest.ts
 model/freshDeskConversation.ts
 model/freshDeskRequester.ts
@@ -520,7 +524,9 @@ model/initiateCaseCounterRequest.ts
 model/initiateCaseCounterResponse.ts
 model/insertCaseLineItemResponse.ts
 model/insertInvoiceLineItemRequest.ts
+model/intercomConversationResponse.ts
 model/intercomCreateTicketResponse.ts
+model/intercomSearchConversationsResponse.ts
 model/intercomSearchTicketsResponse.ts
 model/intercomTicketAttributes.ts
 model/inviteHouseholdMateRequest.ts
@@ -762,7 +768,9 @@ model/socialLoginRequest.ts
 model/socialLoginResponse.ts
 model/socialLoginUser.ts
 model/socialPhoneNumber.ts
+model/source.ts
 model/sqlResponse.ts
+model/statistics.ts
 model/stripeAccountLinkDomain.ts
 model/stripeApplicationFeeDomain.ts
 model/stripeApplicationFeeRefundDomain.ts
@@ -801,6 +809,9 @@ model/syncStripePaymentsResponse.ts
 model/syncStripeRefundsRequest.ts
 model/syncStripeTransfersRequest.ts
 model/syncStripeTransfersResponse.ts
+model/tag.ts
+model/tags.ts
+model/teammates.ts
 model/temporalUnit.ts
 model/ticketLeadDomain.ts
 model/ticketPart.ts
@@ -817,6 +828,8 @@ model/timeZoneRes.ts
 model/timestamp.ts
 model/timestampReq.ts
 model/timestampRes.ts
+model/topic.ts
+model/topics.ts
 model/trafficViolationInputRequest.ts
 model/transferCaseRequest.ts
 model/uSStateDomain.ts
