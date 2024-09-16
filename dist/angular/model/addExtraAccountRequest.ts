@@ -12,6 +12,7 @@
 
 
 export interface AddExtraAccountRequest { 
+    isEmailConfirmed?: boolean;
     isPrimaryAccount?: boolean;
     newEmailAddress?: string;
     password?: string;

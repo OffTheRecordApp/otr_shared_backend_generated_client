@@ -10,6 +10,7 @@
  * Do not edit the class manually.
  */
 export interface AddExtraAccountRequest {
+    "isEmailConfirmed"?: boolean;
     "isPrimaryAccount"?: boolean;
     "newEmailAddress"?: string;
     "password"?: string;
