@@ -50,6 +50,7 @@ export interface UserDomainReq {
     "roles"?: Array<models.UserRoleDomain>;
     "signUpCode"?: string;
     "signUpCodeUseCount"?: number;
+    "signedProfilePictureUrl"?: string;
     "socialProfiles"?: Array<models.UserSocialProfileModelReq>;
     "subscriptionPlans"?: Array<models.UserSubscriptionPlanModelReq>;
     "userAlias"?: string;

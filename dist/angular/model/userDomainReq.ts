@@ -59,6 +59,7 @@ export interface UserDomainReq {
     roles?: Set<UserRoleDomain>;
     signUpCode?: string;
     signUpCodeUseCount?: number;
+    signedProfilePictureUrl?: string;
     socialProfiles?: Array<UserSocialProfileModelReq>;
     subscriptionPlans?: Array<UserSubscriptionPlanModelReq>;
     userAlias?: string;

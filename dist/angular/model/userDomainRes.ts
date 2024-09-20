@@ -60,6 +60,7 @@ export interface UserDomainRes {
     roles?: Set<UserRoleDomain>;
     signUpCode?: string;
     signUpCodeUseCount?: number;
+    signedProfilePictureUrl?: string;
     socialProfiles?: Array<UserSocialProfileModelRes>;
     subscriptionPlans?: Array<UserSubscriptionPlanModelRes>;
     userAlias?: string;
