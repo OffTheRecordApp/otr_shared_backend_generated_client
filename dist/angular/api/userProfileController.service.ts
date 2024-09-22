@@ -29,6 +29,8 @@ import { SetMarketingEmailOptInRequest } from '../model/setMarketingEmailOptInRe
 // @ts-ignore
 import { UpdateProfilePictureRequest } from '../model/updateProfilePictureRequest';
 // @ts-ignore
+import { UpdateProfilePictureResponse } from '../model/updateProfilePictureResponse';
+// @ts-ignore
 import { UpdateUserDetailsResponse } from '../model/updateUserDetailsResponse';
 // @ts-ignore
 import { UpdateUserPhoneNumberRequest } from '../model/updateUserPhoneNumberRequest';
@@ -522,10 +524,10 @@ export class UserProfileControllerService {
      * @param observe set whether or not to return the data Observable as the body, response or events. defaults to returning the body.
      * @param reportProgress flag to report request and response progress.
      */
-    public updateProfilePictureUsingPUT(userId: number, request: UpdateProfilePictureRequest, observe?: 'body', reportProgress?: boolean, options?: {httpHeaderAccept?: undefined, context?: HttpContext}): Observable<any>;
-    public updateProfilePictureUsingPUT(userId: number, request: UpdateProfilePictureRequest, observe?: 'response', reportProgress?: boolean, options?: {httpHeaderAccept?: undefined, context?: HttpContext}): Observable<HttpResponse<any>>;
-    public updateProfilePictureUsingPUT(userId: number, request: UpdateProfilePictureRequest, observe?: 'events', reportProgress?: boolean, options?: {httpHeaderAccept?: undefined, context?: HttpContext}): Observable<HttpEvent<any>>;
-    public updateProfilePictureUsingPUT(userId: number, request: UpdateProfilePictureRequest, observe: any = 'body', reportProgress: boolean = false, options?: {httpHeaderAccept?: undefined, context?: HttpContext}): Observable<any> {
+    public updateProfilePictureUsingPUT(userId: number, request: UpdateProfilePictureRequest, observe?: 'body', reportProgress?: boolean, options?: {httpHeaderAccept?: '*/*', context?: HttpContext}): Observable<UpdateProfilePictureResponse>;
+    public updateProfilePictureUsingPUT(userId: number, request: UpdateProfilePictureRequest, observe?: 'response', reportProgress?: boolean, options?: {httpHeaderAccept?: '*/*', context?: HttpContext}): Observable<HttpResponse<UpdateProfilePictureResponse>>;
+    public updateProfilePictureUsingPUT(userId: number, request: UpdateProfilePictureRequest, observe?: 'events', reportProgress?: boolean, options?: {httpHeaderAccept?: '*/*', context?: HttpContext}): Observable<HttpEvent<UpdateProfilePictureResponse>>;
+    public updateProfilePictureUsingPUT(userId: number, request: UpdateProfilePictureRequest, observe: any = 'body', reportProgress: boolean = false, options?: {httpHeaderAccept?: '*/*', context?: HttpContext}): Observable<any> {
         if (userId === null || userId === undefined) {
             throw new Error('Required parameter userId was null or undefined when calling updateProfilePictureUsingPUT.');
         }
@@ -539,6 +541,7 @@ export class UserProfileControllerService {
         if (localVarHttpHeaderAcceptSelected === undefined) {
             // to determine the Accept header
             const httpHeaderAccepts: string[] = [
+                '*/*'
             ];
             localVarHttpHeaderAcceptSelected = this.configuration.selectHeaderAccept(httpHeaderAccepts);
         }
@@ -573,7 +576,7 @@ export class UserProfileControllerService {
         }
 
         let localVarPath = `/api/v1/users/${this.configuration.encodeParam({name: "userId", value: userId, in: "path", style: "simple", explode: false, dataType: "number", dataFormat: "int64"})}/profile-picture`;
-        return this.httpClient.request<any>('put', `${this.configuration.basePath}${localVarPath}`,
+        return this.httpClient.request<UpdateProfilePictureResponse>('put', `${this.configuration.basePath}${localVarPath}`,
             {
                 context: localVarHttpContext,
                 body: request,

@@ -65,7 +65,7 @@ export declare class UserProfileControllerApi {
      * @param userId userId
      * @param request request
      */
-    updateProfilePictureUsingPUT(userId: number, request: models.UpdateProfilePictureRequest, extraHttpRequestParams?: any): ng.IHttpPromise<{}>;
+    updateProfilePictureUsingPUT(userId: number, request: models.UpdateProfilePictureRequest, extraHttpRequestParams?: any): ng.IHttpPromise<models.UpdateProfilePictureResponse>;
     /**
      *
      * @summary updateUserAddress

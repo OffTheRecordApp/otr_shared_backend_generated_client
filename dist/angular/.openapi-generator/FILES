@@ -860,6 +860,7 @@ model/updateNoteResponse.ts
 model/updatePaymentDueDateRequest.ts
 model/updatePhoneNumber.ts
 model/updateProfilePictureRequest.ts
+model/updateProfilePictureResponse.ts
 model/updateRefundEligibilityForCaseRequest.ts
 model/updateReplyForCustomerReview.ts
 model/updateUserDetailsResponse.ts

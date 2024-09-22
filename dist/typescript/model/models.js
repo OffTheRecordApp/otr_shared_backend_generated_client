@@ -748,6 +748,7 @@ __exportStar(require("./UpdateNoteResponse"), exports);
 __exportStar(require("./UpdatePaymentDueDateRequest"), exports);
 __exportStar(require("./UpdatePhoneNumber"), exports);
 __exportStar(require("./UpdateProfilePictureRequest"), exports);
+__exportStar(require("./UpdateProfilePictureResponse"), exports);
 __exportStar(require("./UpdateRefundEligibilityForCaseRequest"), exports);
 __exportStar(require("./UpdateReplyForCustomerReview"), exports);
 __exportStar(require("./UpdateUserDetailsResponse"), exports);

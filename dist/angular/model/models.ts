@@ -736,6 +736,7 @@ export * from './updateNoteResponse';
 export * from './updatePaymentDueDateRequest';
 export * from './updatePhoneNumber';
 export * from './updateProfilePictureRequest';
+export * from './updateProfilePictureResponse';
 export * from './updateRefundEligibilityForCaseRequest';
 export * from './updateReplyForCustomerReview';
 export * from './updateUserDetailsResponse';
