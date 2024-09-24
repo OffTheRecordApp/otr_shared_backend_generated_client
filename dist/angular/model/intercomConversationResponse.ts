@@ -12,6 +12,7 @@
 import { LinkedObjects } from './linkedObjects';
 import { Topics } from './topics';
 import { Teammates } from './teammates';
+import { ServiceLevelAgreement } from './serviceLevelAgreement';
 import { ContactList } from './contactList';
 import { Statistics } from './statistics';
 import { Source } from './source';
@@ -33,7 +34,7 @@ export interface IntercomConversationResponse {
     open?: boolean;
     priority?: string;
     read?: boolean;
-    sla_applied?: string;
+    sla_applied?: ServiceLevelAgreement;
     snoozed_until?: number;
     source?: Source;
     state?: string;

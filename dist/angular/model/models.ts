@@ -621,6 +621,7 @@ export * from './sendEmailToUsersRequest';
 export * from './sendOneTimePasswordRequest';
 export * from './sendPayoutToLawfirmRequest';
 export * from './sendPayoutToLawfirmResponse';
+export * from './serviceLevelAgreement';
 export * from './setArchiveCaseModel';
 export * from './setArchiveOnCasesRequest';
 export * from './setCourtDateForCaseRequest';

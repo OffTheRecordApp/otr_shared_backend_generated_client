@@ -24,7 +24,7 @@ export interface IntercomConversationResponse {
     "open"?: boolean;
     "priority"?: string;
     "read"?: boolean;
-    "sla_applied"?: string;
+    "sla_applied"?: models.ServiceLevelAgreement;
     "snoozed_until"?: number;
     "source"?: models.Source;
     "state"?: string;

@@ -633,6 +633,7 @@ __exportStar(require("./SendEmailToUsersRequest"), exports);
 __exportStar(require("./SendOneTimePasswordRequest"), exports);
 __exportStar(require("./SendPayoutToLawfirmRequest"), exports);
 __exportStar(require("./SendPayoutToLawfirmResponse"), exports);
+__exportStar(require("./ServiceLevelAgreement"), exports);
 __exportStar(require("./SetArchiveCaseModel"), exports);
 __exportStar(require("./SetArchiveOnCasesRequest"), exports);
 __exportStar(require("./SetCourtDateForCaseRequest"), exports);

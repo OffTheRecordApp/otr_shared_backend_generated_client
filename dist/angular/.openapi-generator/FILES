@@ -745,6 +745,7 @@ model/sendEmailToUsersRequest.ts
 model/sendOneTimePasswordRequest.ts
 model/sendPayoutToLawfirmRequest.ts
 model/sendPayoutToLawfirmResponse.ts
+model/serviceLevelAgreement.ts
 model/setArchiveCaseModel.ts
 model/setArchiveOnCasesRequest.ts
 model/setCourtDateForCaseRequest.ts
