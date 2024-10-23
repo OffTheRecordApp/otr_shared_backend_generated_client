@@ -16,6 +16,7 @@ export interface GetLawfirmModel {
     "caseAssignmentPriority"?: number;
     "coverPhotoUrl"?: string;
     "createdBy"?: number;
+    "customerServiceScore"?: number;
     "establishedDateUtc"?: string;
     "establishedYear"?: number;
     "isLawfirmDisabled"?: boolean;

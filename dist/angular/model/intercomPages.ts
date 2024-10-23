@@ -9,13 +9,14 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-import { IntercomConversationResponse } from './intercomConversationResponse';
-import { IntercomPages } from './intercomPages';
+import { IntercomNext } from './intercomNext';
 
 
-export interface IntercomSearchConversationsResponse { 
-    conversations?: Array<IntercomConversationResponse>;
-    pages?: IntercomPages;
-    total_count?: number;
+export interface IntercomPages { 
+    next?: IntercomNext;
+    page?: number;
+    per_page?: number;
+    total_pages?: number;
+    type?: string;
 }
 

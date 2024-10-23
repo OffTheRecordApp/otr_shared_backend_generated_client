@@ -526,6 +526,8 @@ model/insertCaseLineItemResponse.ts
 model/insertInvoiceLineItemRequest.ts
 model/intercomConversationResponse.ts
 model/intercomCreateTicketResponse.ts
+model/intercomNext.ts
+model/intercomPages.ts
 model/intercomSearchConversationsResponse.ts
 model/intercomSearchTicketsResponse.ts
 model/intercomTicketAttributes.ts

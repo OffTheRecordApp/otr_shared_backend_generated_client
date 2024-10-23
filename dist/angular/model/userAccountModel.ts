@@ -18,6 +18,7 @@ export interface UserAccountModel {
     merged?: boolean;
     primary?: boolean;
     userHandle?: string;
+    verificationDateUtc?: string;
 }
 export namespace UserAccountModel {
     export type LoginProviderEnum = 'APPLE' | 'EMAIL' | 'FACEBOOK' | 'GOOGLE' | 'PHONE' | 'TWITTER' | 'UNKNOWN';
