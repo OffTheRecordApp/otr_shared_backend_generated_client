@@ -11,6 +11,7 @@
  */
 import * as models from './models';
 export interface ViolationModel {
+    "classDescription"?: string;
     "insuranceIncreasePercent"?: number;
     "isCriminal"?: boolean;
     "isMovingViolation"?: boolean;

@@ -13,6 +13,7 @@ import { ViolationPenaltyModel } from './violationPenaltyModel';
 
 
 export interface ViolationModel { 
+    classDescription?: string;
     insuranceIncreasePercent?: number;
     isCriminal?: boolean;
     isMovingViolation?: boolean;

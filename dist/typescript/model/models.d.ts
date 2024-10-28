@@ -403,6 +403,8 @@ export * from './InsertCaseLineItemResponse';
 export * from './InsertInvoiceLineItemRequest';
 export * from './IntercomConversationResponse';
 export * from './IntercomCreateTicketResponse';
+export * from './IntercomNext';
+export * from './IntercomPages';
 export * from './IntercomSearchConversationsResponse';
 export * from './IntercomSearchTicketsResponse';
 export * from './IntercomTicketAttributes';

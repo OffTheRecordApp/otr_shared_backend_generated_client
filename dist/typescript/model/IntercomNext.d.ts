@@ -9,9 +9,7 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-import * as models from './models';
-export interface IntercomSearchConversationsResponse {
-    "conversations"?: Array<models.IntercomConversationResponse>;
-    "pages"?: models.IntercomPages;
-    "total_count"?: number;
+export interface IntercomNext {
+    "page"?: number;
+    "starting_after"?: string;
 }

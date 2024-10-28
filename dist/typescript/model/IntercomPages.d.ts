@@ -10,8 +10,10 @@
  * Do not edit the class manually.
  */
 import * as models from './models';
-export interface IntercomSearchConversationsResponse {
-    "conversations"?: Array<models.IntercomConversationResponse>;
-    "pages"?: models.IntercomPages;
-    "total_count"?: number;
+export interface IntercomPages {
+    "next"?: models.IntercomNext;
+    "page"?: number;
+    "per_page"?: number;
+    "total_pages"?: number;
+    "type"?: string;
 }

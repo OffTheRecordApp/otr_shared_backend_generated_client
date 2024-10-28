@@ -16,6 +16,7 @@ export interface UserAccountModel {
     "merged"?: boolean;
     "primary"?: boolean;
     "userHandle"?: string;
+    "verificationDateUtc"?: string;
 }
 export declare namespace UserAccountModel {
     enum LoginProviderEnum {

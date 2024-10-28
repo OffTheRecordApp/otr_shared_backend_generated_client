@@ -415,6 +415,8 @@ __exportStar(require("./InsertCaseLineItemResponse"), exports);
 __exportStar(require("./InsertInvoiceLineItemRequest"), exports);
 __exportStar(require("./IntercomConversationResponse"), exports);
 __exportStar(require("./IntercomCreateTicketResponse"), exports);
+__exportStar(require("./IntercomNext"), exports);
+__exportStar(require("./IntercomPages"), exports);
 __exportStar(require("./IntercomSearchConversationsResponse"), exports);
 __exportStar(require("./IntercomSearchTicketsResponse"), exports);
 __exportStar(require("./IntercomTicketAttributes"), exports);

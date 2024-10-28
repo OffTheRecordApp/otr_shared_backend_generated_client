@@ -13,6 +13,7 @@ import { WorkflowViolationPenaltyModel } from './workflowViolationPenaltyModel';
 
 
 export interface WorkflowViolationModel { 
+    classDescription?: string;
     isCriminal?: boolean;
     isWobblerToCriminal?: boolean;
     penalties?: Array<WorkflowViolationPenaltyModel>;
