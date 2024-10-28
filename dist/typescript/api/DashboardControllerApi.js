@@ -280,6 +280,7 @@ var DashboardControllerApi = /** @class */ (function () {
      * @param agentName agentName
      * @param callQueueName callQueueName
      * @param callStatus callStatus
+     * @param callStatusName callStatusName
      * @param customerName customerName
      * @param direction direction
      * @param endDate endDate
@@ -296,7 +297,7 @@ var DashboardControllerApi = /** @class */ (function () {
      * @param totalCalls totalCalls
      * @param totalOtrAccounts totalOtrAccounts
      */
-    DashboardControllerApi.prototype.listPhoneCallsUsingGET = function (agentId, agentName, callQueueName, callStatus, customerName, direction, endDate, ivrName, length, page, phoneNumber, shouldIncludePhoneCalls, sortBy, sortOrder, startDate, teamName, timeZoneId, totalCalls, totalOtrAccounts, extraHttpRequestParams) {
+    DashboardControllerApi.prototype.listPhoneCallsUsingGET = function (agentId, agentName, callQueueName, callStatus, callStatusName, customerName, direction, endDate, ivrName, length, page, phoneNumber, shouldIncludePhoneCalls, sortBy, sortOrder, startDate, teamName, timeZoneId, totalCalls, totalOtrAccounts, extraHttpRequestParams) {
         var localVarPath = this.basePath + '/api/v1/console/phone-calls';
         var queryParameters = {};
         var headerParams = Object.assign({}, this.defaultHeaders);
@@ -311,6 +312,9 @@ var DashboardControllerApi = /** @class */ (function () {
         }
         if (callStatus !== undefined) {
             queryParameters['callStatus'] = callStatus;
+        }
+        if (callStatusName !== undefined) {
+            queryParameters['callStatusName'] = callStatusName;
         }
         if (customerName !== undefined) {
             queryParameters['customerName'] = customerName;

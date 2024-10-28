@@ -6138,6 +6138,7 @@ angular.module('otrBackendService', [])
              * @param {string} parameters.agentName - agentName
              * @param {string} parameters.callQueueName - callQueueName
              * @param {string} parameters.callStatus - callStatus
+             * @param {string} parameters.callStatusName - callStatusName
              * @param {string} parameters.customerName - customerName
              * @param {string} parameters.direction - direction
              * @param {string} parameters.endDate - endDate
@@ -6182,6 +6183,10 @@ angular.module('otrBackendService', [])
 
                 if (parameters['callStatus'] !== undefined) {
                     queryParameters['callStatus'] = parameters['callStatus'];
+                }
+
+                if (parameters['callStatusName'] !== undefined) {
+                    queryParameters['callStatusName'] = parameters['callStatusName'];
                 }
 
                 if (parameters['customerName'] !== undefined) {

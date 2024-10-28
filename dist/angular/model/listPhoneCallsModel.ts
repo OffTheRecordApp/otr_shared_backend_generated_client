@@ -19,6 +19,7 @@ export interface ListPhoneCallsModel {
     callQueueName?: string;
     callStartDateUtc?: string;
     callStatus?: ListPhoneCallsModel.CallStatusEnum;
+    callStatusName?: string;
     customerName?: string;
     holdDurationInSeconds?: number;
     ivrDurationInSeconds?: number;
