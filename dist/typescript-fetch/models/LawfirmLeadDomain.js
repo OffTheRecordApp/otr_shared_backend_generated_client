@@ -33,6 +33,7 @@ export function LawfirmLeadDomainFromJSONTyped(json, ignoreDiscriminator) {
         'lawfirmName': !exists(json, 'lawfirmName') ? undefined : json['lawfirmName'],
         'lawfirmPostalCode': !exists(json, 'lawfirmPostalCode') ? undefined : json['lawfirmPostalCode'],
         'lawfirmState': !exists(json, 'lawfirmState') ? undefined : json['lawfirmState'],
+        'lawfirmStatusCategory': !exists(json, 'lawfirmStatusCategory') ? undefined : json['lawfirmStatusCategory'],
         'lawyerEmailAddress': !exists(json, 'lawyerEmailAddress') ? undefined : json['lawyerEmailAddress'],
         'lawyerFirstName': !exists(json, 'lawyerFirstName') ? undefined : json['lawyerFirstName'],
         'lawyerLastName': !exists(json, 'lawyerLastName') ? undefined : json['lawyerLastName'],
@@ -62,6 +63,7 @@ export function LawfirmLeadDomainToJSON(value) {
         'lawfirmName': value.lawfirmName,
         'lawfirmPostalCode': value.lawfirmPostalCode,
         'lawfirmState': value.lawfirmState,
+        'lawfirmStatusCategory': value.lawfirmStatusCategory,
         'lawyerEmailAddress': value.lawyerEmailAddress,
         'lawyerFirstName': value.lawyerFirstName,
         'lawyerLastName': value.lawyerLastName,
@@ -136,19 +138,36 @@ export var LawfirmLeadDomainLawfirmAddressStateEnum;
 export var LawfirmLeadDomainLawfirmStateEnum;
 (function (LawfirmLeadDomainLawfirmStateEnum) {
     LawfirmLeadDomainLawfirmStateEnum["ACCOUNTCLOSED"] = "ACCOUNT_CLOSED";
+    LawfirmLeadDomainLawfirmStateEnum["ACTIVE"] = "ACTIVE";
+    LawfirmLeadDomainLawfirmStateEnum["BLACKLISTED"] = "BLACKLISTED";
+    LawfirmLeadDomainLawfirmStateEnum["DEMOCOMPLETED"] = "DEMO_COMPLETED";
     LawfirmLeadDomainLawfirmStateEnum["DUPLICATE"] = "DUPLICATE";
-    LawfirmLeadDomainLawfirmStateEnum["ESTABLISHED"] = "ESTABLISHED";
     LawfirmLeadDomainLawfirmStateEnum["FUTURELEAD"] = "FUTURE_LEAD";
-    LawfirmLeadDomainLawfirmStateEnum["INTRIAL"] = "IN_TRIAL";
-    LawfirmLeadDomainLawfirmStateEnum["LAWFIRMINTERESTED"] = "LAWFIRM_INTERESTED";
-    LawfirmLeadDomainLawfirmStateEnum["LAWFIRMLEAD"] = "LAWFIRM_LEAD";
-    LawfirmLeadDomainLawfirmStateEnum["LAWFIRMNOTINTERESTED"] = "LAWFIRM_NOT_INTERESTED";
-    LawfirmLeadDomainLawfirmStateEnum["NOTINTERESTEDFEESPLITTINGETHICS"] = "NOT_INTERESTED_FEE_SPLITTING_ETHICS";
-    LawfirmLeadDomainLawfirmStateEnum["NOTINTERESTEDREFUNDETHICS"] = "NOT_INTERESTED_REFUND_ETHICS";
-    LawfirmLeadDomainLawfirmStateEnum["ONBOARDING"] = "ONBOARDING";
+    LawfirmLeadDomainLawfirmStateEnum["LEAD"] = "LEAD";
+    LawfirmLeadDomainLawfirmStateEnum["NEWPARTNER"] = "NEW_PARTNER";
+    LawfirmLeadDomainLawfirmStateEnum["NOTAGOODFIT"] = "NOT_A_GOOD_FIT";
+    LawfirmLeadDomainLawfirmStateEnum["NOTINTERESTEDDONOTCONTACT"] = "NOT_INTERESTED_DO_NOT_CONTACT";
+    LawfirmLeadDomainLawfirmStateEnum["NOTINTERESTEDFEESPLITTING"] = "NOT_INTERESTED_FEE_SPLITTING";
+    LawfirmLeadDomainLawfirmStateEnum["NOTINTERESTEDMARKETINGFEE"] = "NOT_INTERESTED_MARKETING_FEE";
+    LawfirmLeadDomainLawfirmStateEnum["NOTINTERESTEDMONEYBACKGUARANTEE"] = "NOT_INTERESTED_MONEY_BACK_GUARANTEE";
+    LawfirmLeadDomainLawfirmStateEnum["NOTINTERESTEDPLATFORMRESISTANCE"] = "NOT_INTERESTED_PLATFORM_RESISTANCE";
+    LawfirmLeadDomainLawfirmStateEnum["PASTINTEREST"] = "PAST_INTEREST";
+    LawfirmLeadDomainLawfirmStateEnum["SUPERVISED"] = "SUPERVISED";
     LawfirmLeadDomainLawfirmStateEnum["TEMPORARILYTURNEDOFF"] = "TEMPORARILY_TURNED_OFF";
     LawfirmLeadDomainLawfirmStateEnum["TERMINATEDFRAUD"] = "TERMINATED_FRAUD";
     LawfirmLeadDomainLawfirmStateEnum["TERMINATEDPOORSERVICE"] = "TERMINATED_POOR_SERVICE";
     LawfirmLeadDomainLawfirmStateEnum["TERMINATEDPOORSUCCESS"] = "TERMINATED_POOR_SUCCESS";
-    LawfirmLeadDomainLawfirmStateEnum["UNDERREVIEW"] = "UNDER_REVIEW";
 })(LawfirmLeadDomainLawfirmStateEnum || (LawfirmLeadDomainLawfirmStateEnum = {}));
+/**
+* @export
+* @enum {string}
+*/
+export var LawfirmLeadDomainLawfirmStatusCategoryEnum;
+(function (LawfirmLeadDomainLawfirmStatusCategoryEnum) {
+    LawfirmLeadDomainLawfirmStatusCategoryEnum["ACTIVE"] = "ACTIVE";
+    LawfirmLeadDomainLawfirmStatusCategoryEnum["INACTIVE"] = "INACTIVE";
+    LawfirmLeadDomainLawfirmStatusCategoryEnum["LEAD"] = "LEAD";
+    LawfirmLeadDomainLawfirmStatusCategoryEnum["NOTINTERESTED"] = "NOT_INTERESTED";
+    LawfirmLeadDomainLawfirmStatusCategoryEnum["REJECTED"] = "REJECTED";
+    LawfirmLeadDomainLawfirmStatusCategoryEnum["TERMINATED"] = "TERMINATED";
+})(LawfirmLeadDomainLawfirmStatusCategoryEnum || (LawfirmLeadDomainLawfirmStatusCategoryEnum = {}));

@@ -21,6 +21,7 @@ export function RegisterGhostUserRequestFromJSONTyped(json, ignoreDiscriminator)
         return json;
     }
     return {
+        'allowIntercomUserCreation': !exists(json, 'allowIntercomUserCreation') ? undefined : json['allowIntercomUserCreation'],
         'ghostUser': !exists(json, 'ghostUser') ? undefined : GhostUserFromJSON(json['ghostUser']),
         'roleType': !exists(json, 'roleType') ? undefined : json['roleType'],
     };
@@ -33,6 +34,7 @@ export function RegisterGhostUserRequestToJSON(value) {
         return null;
     }
     return {
+        'allowIntercomUserCreation': value.allowIntercomUserCreation,
         'ghostUser': GhostUserToJSON(value.ghostUser),
         'roleType': value.roleType,
     };

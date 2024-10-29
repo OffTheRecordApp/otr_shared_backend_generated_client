@@ -18,6 +18,12 @@ import { ViolationPenaltyModel } from './';
 export interface ViolationModel {
     /**
      *
+     * @type {string}
+     * @memberof ViolationModel
+     */
+    classDescription?: string;
+    /**
+     *
      * @type {number}
      * @memberof ViolationModel
      */

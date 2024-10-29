@@ -122,6 +122,9 @@ export class UserControllerApi extends runtime.BaseAPI {
                 throw new runtime.RequiredError('email', 'Required parameter requestParameters.email was null or undefined when calling getSupportTicketsForUserUsingGET.');
             }
             const queryParameters = {};
+            if (requestParameters.limit !== undefined) {
+                queryParameters['limit'] = requestParameters.limit;
+            }
             const headerParameters = {};
             const response = yield this.request({
                 path: `/api/v1/users/{email}/support-tickets`.replace(`{${"email"}}`, encodeURIComponent(String(requestParameters.email))),
@@ -247,6 +250,62 @@ export class UserControllerApi extends runtime.BaseAPI {
     logoutUserUsingDELETE(requestParameters) {
         return __awaiter(this, void 0, void 0, function* () {
             yield this.logoutUserUsingDELETERaw(requestParameters);
+        });
+    }
+    /**
+     * removeUser
+     */
+    removeUserUsingDELETERaw(requestParameters) {
+        return __awaiter(this, void 0, void 0, function* () {
+            if (requestParameters.userId === null || requestParameters.userId === undefined) {
+                throw new runtime.RequiredError('userId', 'Required parameter requestParameters.userId was null or undefined when calling removeUserUsingDELETE.');
+            }
+            const queryParameters = {};
+            const headerParameters = {};
+            const response = yield this.request({
+                path: `/api/v1/users/{userId}`.replace(`{${"userId"}}`, encodeURIComponent(String(requestParameters.userId))),
+                method: 'DELETE',
+                headers: headerParameters,
+                query: queryParameters,
+            });
+            return new runtime.JSONApiResponse(response, (jsonValue) => UpdateUserDetailsResponseFromJSON(jsonValue));
+        });
+    }
+    /**
+     * removeUser
+     */
+    removeUserUsingDELETE(requestParameters) {
+        return __awaiter(this, void 0, void 0, function* () {
+            const response = yield this.removeUserUsingDELETERaw(requestParameters);
+            return yield response.value();
+        });
+    }
+    /**
+     * reviveUser
+     */
+    reviveUserUsingPUTRaw(requestParameters) {
+        return __awaiter(this, void 0, void 0, function* () {
+            if (requestParameters.userId === null || requestParameters.userId === undefined) {
+                throw new runtime.RequiredError('userId', 'Required parameter requestParameters.userId was null or undefined when calling reviveUserUsingPUT.');
+            }
+            const queryParameters = {};
+            const headerParameters = {};
+            const response = yield this.request({
+                path: `/api/v1/users/{userId}/revive`.replace(`{${"userId"}}`, encodeURIComponent(String(requestParameters.userId))),
+                method: 'PUT',
+                headers: headerParameters,
+                query: queryParameters,
+            });
+            return new runtime.JSONApiResponse(response, (jsonValue) => UpdateUserDetailsResponseFromJSON(jsonValue));
+        });
+    }
+    /**
+     * reviveUser
+     */
+    reviveUserUsingPUT(requestParameters) {
+        return __awaiter(this, void 0, void 0, function* () {
+            const response = yield this.reviveUserUsingPUTRaw(requestParameters);
+            return yield response.value();
         });
     }
     /**

@@ -9,7 +9,7 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-import { UserDomain, UserRegistrationStats } from './';
+import { RegisteredUserDomain, UserRegistrationStats } from './';
 /**
  *
  * @export
@@ -24,10 +24,10 @@ export interface GetUserRegistrationsResponse {
     stats?: UserRegistrationStats;
     /**
      *
-     * @type {Array<UserDomain>}
+     * @type {Array<RegisteredUserDomain>}
      * @memberof GetUserRegistrationsResponse
      */
-    userRegistrations?: Array<UserDomain>;
+    userRegistrations?: Array<RegisteredUserDomain>;
 }
 export declare function GetUserRegistrationsResponseFromJSON(json: any): GetUserRegistrationsResponse;
 export declare function GetUserRegistrationsResponseFromJSONTyped(json: any, ignoreDiscriminator: boolean): GetUserRegistrationsResponse;

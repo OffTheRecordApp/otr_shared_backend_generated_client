@@ -18,6 +18,12 @@ import { GhostUser } from './';
 export interface RegisterGhostUserRequest {
     /**
      *
+     * @type {boolean}
+     * @memberof RegisterGhostUserRequest
+     */
+    allowIntercomUserCreation?: boolean;
+    /**
+     *
      * @type {GhostUser}
      * @memberof RegisterGhostUserRequest
      */

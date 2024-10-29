@@ -22,20 +22,23 @@ export interface ResetUserPasswordUsingPOSTRequest {
     request: ResetUserPasswordRequest;
 }
 export interface SendAccountVerificationCodeUsingPOSTRequest {
-    userId: string;
+    email?: string;
+    userId?: string;
     verificationMethod?: SendAccountVerificationCodeUsingPOSTVerificationMethodEnum;
 }
 export interface SendResetPasswordTokenUsingPOSTRequest {
     email: string;
+    enableCode?: boolean;
 }
 export interface VerifyPwdResetTokenUsingGETRequest {
     token: string;
 }
 export interface VerifyUserAccountUsingPUTRequest {
     code: string;
-    userId: string;
+    email?: string;
     fieldName?: string;
     fieldValue?: string;
+    userId?: string;
 }
 /**
  *

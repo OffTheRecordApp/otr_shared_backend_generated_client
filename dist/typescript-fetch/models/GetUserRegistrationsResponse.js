@@ -12,7 +12,7 @@
  * Do not edit the class manually.
  */
 import { exists } from '../runtime';
-import { UserDomainFromJSON, UserDomainToJSON, UserRegistrationStatsFromJSON, UserRegistrationStatsToJSON, } from './';
+import { RegisteredUserDomainFromJSON, RegisteredUserDomainToJSON, UserRegistrationStatsFromJSON, UserRegistrationStatsToJSON, } from './';
 export function GetUserRegistrationsResponseFromJSON(json) {
     return GetUserRegistrationsResponseFromJSONTyped(json, false);
 }
@@ -22,7 +22,7 @@ export function GetUserRegistrationsResponseFromJSONTyped(json, ignoreDiscrimina
     }
     return {
         'stats': !exists(json, 'stats') ? undefined : UserRegistrationStatsFromJSON(json['stats']),
-        'userRegistrations': !exists(json, 'userRegistrations') ? undefined : (json['userRegistrations'].map(UserDomainFromJSON)),
+        'userRegistrations': !exists(json, 'userRegistrations') ? undefined : (json['userRegistrations'].map(RegisteredUserDomainFromJSON)),
     };
 }
 export function GetUserRegistrationsResponseToJSON(value) {
@@ -34,6 +34,6 @@ export function GetUserRegistrationsResponseToJSON(value) {
     }
     return {
         'stats': UserRegistrationStatsToJSON(value.stats),
-        'userRegistrations': value.userRegistrations === undefined ? undefined : (value.userRegistrations.map(UserDomainToJSON)),
+        'userRegistrations': value.userRegistrations === undefined ? undefined : (value.userRegistrations.map(RegisteredUserDomainToJSON)),
     };
 }

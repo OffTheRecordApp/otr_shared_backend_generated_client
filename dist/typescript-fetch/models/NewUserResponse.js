@@ -22,6 +22,7 @@ export function NewUserResponseFromJSONTyped(json, ignoreDiscriminator) {
     return {
         'emailAddress': !exists(json, 'emailAddress') ? undefined : json['emailAddress'],
         'firstname': !exists(json, 'firstname') ? undefined : json['firstname'],
+        'intercomUserHash': !exists(json, 'intercomUserHash') ? undefined : json['intercomUserHash'],
         'isTestUser': !exists(json, 'isTestUser') ? undefined : json['isTestUser'],
         'lastname': !exists(json, 'lastname') ? undefined : json['lastname'],
         'userId': !exists(json, 'userId') ? undefined : json['userId'],
@@ -37,6 +38,7 @@ export function NewUserResponseToJSON(value) {
     return {
         'emailAddress': value.emailAddress,
         'firstname': value.firstname,
+        'intercomUserHash': value.intercomUserHash,
         'isTestUser': value.isTestUser,
         'lastname': value.lastname,
         'userId': value.userId,

@@ -41,6 +41,14 @@ export interface GetUserRegistrationsRequest {
     page?: number;
     /**
      *
+     * @type {{ [key: string]: string; }}
+     * @memberof GetUserRegistrationsRequest
+     */
+    sortMap?: {
+        [key: string]: string;
+    };
+    /**
+     *
      * @type {Date}
      * @memberof GetUserRegistrationsRequest
      */

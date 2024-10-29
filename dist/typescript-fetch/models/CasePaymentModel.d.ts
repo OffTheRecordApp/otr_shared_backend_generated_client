@@ -9,6 +9,7 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
+import { CasePaymentBreakdownItemModel } from './';
 /**
  *
  * @export
@@ -33,6 +34,12 @@ export interface CasePaymentModel {
      * @memberof CasePaymentModel
      */
     feeAmount?: number;
+    /**
+     *
+     * @type {Array<CasePaymentBreakdownItemModel>}
+     * @memberof CasePaymentModel
+     */
+    items?: Array<CasePaymentBreakdownItemModel>;
 }
 export declare function CasePaymentModelFromJSON(json: any): CasePaymentModel;
 export declare function CasePaymentModelFromJSONTyped(json: any, ignoreDiscriminator: boolean): CasePaymentModel;

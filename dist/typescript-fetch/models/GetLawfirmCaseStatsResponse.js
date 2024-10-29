@@ -23,6 +23,7 @@ export function GetLawfirmCaseStatsResponseFromJSONTyped(json, ignoreDiscriminat
         'caseCountByStatusMap': !exists(json, 'caseCountByStatusMap') ? undefined : json['caseCountByStatusMap'],
         'numBookedCases': !exists(json, 'numBookedCases') ? undefined : json['numBookedCases'],
         'numResolvedCases': !exists(json, 'numResolvedCases') ? undefined : json['numResolvedCases'],
+        'successRate': !exists(json, 'successRate') ? undefined : json['successRate'],
     };
 }
 export function GetLawfirmCaseStatsResponseToJSON(value) {
@@ -36,5 +37,6 @@ export function GetLawfirmCaseStatsResponseToJSON(value) {
         'caseCountByStatusMap': value.caseCountByStatusMap,
         'numBookedCases': value.numBookedCases,
         'numResolvedCases': value.numResolvedCases,
+        'successRate': value.successRate,
     };
 }

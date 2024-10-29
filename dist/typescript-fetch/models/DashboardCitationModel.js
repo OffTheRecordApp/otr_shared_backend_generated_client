@@ -29,6 +29,7 @@ export function DashboardCitationModelFromJSONTyped(json, ignoreDiscriminator) {
         'isDeleted': !exists(json, 'isDeleted') ? undefined : json['isDeleted'],
         'lastUpdatedDateUtc': !exists(json, 'lastUpdatedDateUtc') ? undefined : (new Date(json['lastUpdatedDateUtc'])),
         'regionCode': !exists(json, 'regionCode') ? undefined : json['regionCode'],
+        'signedTicketImageUrl': !exists(json, 'signedTicketImageUrl') ? undefined : json['signedTicketImageUrl'],
         'ticketImageUrl': !exists(json, 'ticketImageUrl') ? undefined : json['ticketImageUrl'],
         'violationCount': !exists(json, 'violationCount') ? undefined : json['violationCount'],
     };
@@ -49,6 +50,7 @@ export function DashboardCitationModelToJSON(value) {
         'isDeleted': value.isDeleted,
         'lastUpdatedDateUtc': value.lastUpdatedDateUtc === undefined ? undefined : (value.lastUpdatedDateUtc.toISOString()),
         'regionCode': value.regionCode,
+        'signedTicketImageUrl': value.signedTicketImageUrl,
         'ticketImageUrl': value.ticketImageUrl,
         'violationCount': value.violationCount,
     };

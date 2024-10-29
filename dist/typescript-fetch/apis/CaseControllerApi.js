@@ -183,6 +183,9 @@ export class CaseControllerApi extends runtime.BaseAPI {
                 throw new runtime.RequiredError('caseId', 'Required parameter requestParameters.caseId was null or undefined when calling getSupportTicketsForCaseUsingGET.');
             }
             const queryParameters = {};
+            if (requestParameters.limit !== undefined) {
+                queryParameters['limit'] = requestParameters.limit;
+            }
             const headerParameters = {};
             const response = yield this.request({
                 path: `/api/v1/cases/{caseId}/support-tickets`.replace(`{${"caseId"}}`, encodeURIComponent(String(requestParameters.caseId))),

@@ -24,6 +24,7 @@ export interface ListBillingProductsUsingGETRequest {
     active?: boolean;
     audience?: string;
     limit?: number;
+    userId?: string;
 }
 export interface ListBillingSubscriptionsUsingGETRequest {
     userId: number;

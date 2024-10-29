@@ -32,11 +32,32 @@ export interface UserSubscriptionPlanModelReq {
      * @type {string}
      * @memberof UserSubscriptionPlanModelReq
      */
+    productName?: UserSubscriptionPlanModelReqProductNameEnum;
+    /**
+     *
+     * @type {Date}
+     * @memberof UserSubscriptionPlanModelReq
+     */
+    startDateUtc?: Date;
+    /**
+     *
+     * @type {string}
+     * @memberof UserSubscriptionPlanModelReq
+     */
     subscriptionStatus?: UserSubscriptionPlanModelReqSubscriptionStatusEnum;
 }
 export declare function UserSubscriptionPlanModelReqFromJSON(json: any): UserSubscriptionPlanModelReq;
 export declare function UserSubscriptionPlanModelReqFromJSONTyped(json: any, ignoreDiscriminator: boolean): UserSubscriptionPlanModelReq;
 export declare function UserSubscriptionPlanModelReqToJSON(value?: UserSubscriptionPlanModelReq | null): any;
+/**
+* @export
+* @enum {string}
+*/
+export declare enum UserSubscriptionPlanModelReqProductNameEnum {
+    CONVOYPRO = "CONVOY_PRO",
+    OTRFASTLANE = "OTR_FASTLANE",
+    OTRFASTLANETEEN = "OTR_FASTLANE_TEEN"
+}
 /**
 * @export
 * @enum {string}

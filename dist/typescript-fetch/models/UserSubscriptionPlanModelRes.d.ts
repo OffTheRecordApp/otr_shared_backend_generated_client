@@ -29,6 +29,18 @@ export interface UserSubscriptionPlanModelRes {
     id?: string;
     /**
      *
+     * @type {string}
+     * @memberof UserSubscriptionPlanModelRes
+     */
+    productName?: UserSubscriptionPlanModelResProductNameEnum;
+    /**
+     *
+     * @type {Date}
+     * @memberof UserSubscriptionPlanModelRes
+     */
+    startDateUtc?: Date;
+    /**
+     *
      * @type {boolean}
      * @memberof UserSubscriptionPlanModelRes
      */
@@ -43,6 +55,15 @@ export interface UserSubscriptionPlanModelRes {
 export declare function UserSubscriptionPlanModelResFromJSON(json: any): UserSubscriptionPlanModelRes;
 export declare function UserSubscriptionPlanModelResFromJSONTyped(json: any, ignoreDiscriminator: boolean): UserSubscriptionPlanModelRes;
 export declare function UserSubscriptionPlanModelResToJSON(value?: UserSubscriptionPlanModelRes | null): any;
+/**
+* @export
+* @enum {string}
+*/
+export declare enum UserSubscriptionPlanModelResProductNameEnum {
+    CONVOYPRO = "CONVOY_PRO",
+    OTRFASTLANE = "OTR_FASTLANE",
+    OTRFASTLANETEEN = "OTR_FASTLANE_TEEN"
+}
 /**
 * @export
 * @enum {string}

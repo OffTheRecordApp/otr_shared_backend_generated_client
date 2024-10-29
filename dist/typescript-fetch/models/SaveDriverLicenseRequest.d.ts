@@ -80,6 +80,12 @@ export interface SaveDriverLicenseRequest {
      * @type {boolean}
      * @memberof SaveDriverLicenseRequest
      */
+    isBackOfLicense?: boolean;
+    /**
+     *
+     * @type {boolean}
+     * @memberof SaveDriverLicenseRequest
+     */
     isDeleted?: boolean;
     /**
      *

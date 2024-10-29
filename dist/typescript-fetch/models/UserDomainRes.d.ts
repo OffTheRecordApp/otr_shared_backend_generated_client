@@ -9,7 +9,7 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-import { AddressDomainRes, PhoneNumberDomainRes, TimestampRes, UserAccountModel, UserRoleDomain, UserSubscriptionPlanModelRes } from './';
+import { AddressDomainRes, PhoneNumberDomainRes, TimestampRes, UserAccountModel, UserReferralLinkModelRes, UserRoleDomain, UserSocialProfileModelRes, UserSubscriptionPlanModelRes } from './';
 /**
  *
  * @export
@@ -94,6 +94,18 @@ export interface UserDomainRes {
      * @memberof UserDomainRes
      */
     hasLeftReview?: boolean;
+    /**
+     *
+     * @type {string}
+     * @memberof UserDomainRes
+     */
+    hubspotContactId?: string;
+    /**
+     *
+     * @type {string}
+     * @memberof UserDomainRes
+     */
+    intercomUserHash?: string;
     /**
      *
      * @type {boolean}
@@ -216,6 +228,18 @@ export interface UserDomainRes {
     referralCount?: number;
     /**
      *
+     * @type {string}
+     * @memberof UserDomainRes
+     */
+    referralLink?: string;
+    /**
+     *
+     * @type {Array<UserReferralLinkModelRes>}
+     * @memberof UserDomainRes
+     */
+    referralLinks?: Array<UserReferralLinkModelRes>;
+    /**
+     *
      * @type {Array<UserRoleDomain>}
      * @memberof UserDomainRes
      */
@@ -234,6 +258,18 @@ export interface UserDomainRes {
     signUpCodeUseCount?: number;
     /**
      *
+     * @type {string}
+     * @memberof UserDomainRes
+     */
+    signedProfilePictureUrl?: string;
+    /**
+     *
+     * @type {Array<UserSocialProfileModelRes>}
+     * @memberof UserDomainRes
+     */
+    socialProfiles?: Array<UserSocialProfileModelRes>;
+    /**
+     *
      * @type {Array<UserSubscriptionPlanModelRes>}
      * @memberof UserDomainRes
      */
@@ -244,6 +280,12 @@ export interface UserDomainRes {
      * @memberof UserDomainRes
      */
     userAlias?: string;
+    /**
+     *
+     * @type {Date}
+     * @memberof UserDomainRes
+     */
+    userDeletedDateUtc?: Date;
     /**
      *
      * @type {number}

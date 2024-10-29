@@ -29,6 +29,12 @@ export interface NewUserResponse {
     firstname?: string;
     /**
      *
+     * @type {string}
+     * @memberof NewUserResponse
+     */
+    intercomUserHash?: string;
+    /**
+     *
      * @type {boolean}
      * @memberof NewUserResponse
      */

@@ -12,6 +12,7 @@
  * Do not edit the class manually.
  */
 import { exists } from '../runtime';
+import { SubscriptionGuardianModelFromJSON, SubscriptionGuardianModelToJSON, } from './';
 export function CreateBillingSubscriptionRequestFromJSON(json) {
     return CreateBillingSubscriptionRequestFromJSONTyped(json, false);
 }
@@ -21,6 +22,7 @@ export function CreateBillingSubscriptionRequestFromJSONTyped(json, ignoreDiscri
     }
     return {
         'cardId': !exists(json, 'cardId') ? undefined : json['cardId'],
+        'guardian': !exists(json, 'guardian') ? undefined : SubscriptionGuardianModelFromJSON(json['guardian']),
         'priceIds': !exists(json, 'priceIds') ? undefined : json['priceIds'],
         'productId': !exists(json, 'productId') ? undefined : json['productId'],
     };
@@ -34,6 +36,7 @@ export function CreateBillingSubscriptionRequestToJSON(value) {
     }
     return {
         'cardId': value.cardId,
+        'guardian': SubscriptionGuardianModelToJSON(value.guardian),
         'priceIds': value.priceIds,
         'productId': value.productId,
     };

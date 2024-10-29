@@ -21,7 +21,7 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
     });
 };
 import * as runtime from '../runtime';
-import { FindMatchingUsersRequestToJSON, FindMatchingUsersResponseFromJSON, GetCountOfMatchingUsersRequestToJSON, GetCountOfMatchingUsersResponseFromJSON, } from '../models';
+import { FindMatchingUsersRequestToJSON, FindMatchingUsersResponseFromJSON, GetUserByEmailRequestToJSON, GetUserByEmailResponseFromJSON, } from '../models';
 /**
  *
  */
@@ -57,12 +57,12 @@ export class UserSearchControllerApi extends runtime.BaseAPI {
         });
     }
     /**
-     * getCountOfMatchingUsers
+     * getUserByEmail
      */
-    getCountOfMatchingUsersUsingPOSTRaw(requestParameters) {
+    getUserByEmailUsingPOSTRaw(requestParameters) {
         return __awaiter(this, void 0, void 0, function* () {
             if (requestParameters.request === null || requestParameters.request === undefined) {
-                throw new runtime.RequiredError('request', 'Required parameter requestParameters.request was null or undefined when calling getCountOfMatchingUsersUsingPOST.');
+                throw new runtime.RequiredError('request', 'Required parameter requestParameters.request was null or undefined when calling getUserByEmailUsingPOST.');
             }
             const queryParameters = {};
             const headerParameters = {};
@@ -72,17 +72,17 @@ export class UserSearchControllerApi extends runtime.BaseAPI {
                 method: 'POST',
                 headers: headerParameters,
                 query: queryParameters,
-                body: GetCountOfMatchingUsersRequestToJSON(requestParameters.request),
+                body: GetUserByEmailRequestToJSON(requestParameters.request),
             });
-            return new runtime.JSONApiResponse(response, (jsonValue) => GetCountOfMatchingUsersResponseFromJSON(jsonValue));
+            return new runtime.JSONApiResponse(response, (jsonValue) => GetUserByEmailResponseFromJSON(jsonValue));
         });
     }
     /**
-     * getCountOfMatchingUsers
+     * getUserByEmail
      */
-    getCountOfMatchingUsersUsingPOST(requestParameters) {
+    getUserByEmailUsingPOST(requestParameters) {
         return __awaiter(this, void 0, void 0, function* () {
-            const response = yield this.getCountOfMatchingUsersUsingPOSTRaw(requestParameters);
+            const response = yield this.getUserByEmailUsingPOSTRaw(requestParameters);
             return yield response.value();
         });
     }

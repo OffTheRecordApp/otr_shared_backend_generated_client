@@ -44,6 +44,12 @@ export interface AnonymousTicketUploadModel {
      * @type {string}
      * @memberof AnonymousTicketUploadModel
      */
+    signedTicketImageUrl?: string;
+    /**
+     *
+     * @type {string}
+     * @memberof AnonymousTicketUploadModel
+     */
     ticketImageUrl?: string;
     /**
      *

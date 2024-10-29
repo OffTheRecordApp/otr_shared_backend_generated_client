@@ -63,6 +63,7 @@ export var MatchCaseLineItemModelLineItemTypeEnum;
     MatchCaseLineItemModelLineItemTypeEnum["MVSFEE"] = "MVS_FEE";
     MatchCaseLineItemModelLineItemTypeEnum["OTHER"] = "OTHER";
     MatchCaseLineItemModelLineItemTypeEnum["OTRCREDIT"] = "OTR_CREDIT";
+    MatchCaseLineItemModelLineItemTypeEnum["OTRSUBSCRIPTIONCREDIT"] = "OTR_SUBSCRIPTION_CREDIT";
     MatchCaseLineItemModelLineItemTypeEnum["PAYMENTPLANSERVICEFEE"] = "PAYMENT_PLAN_SERVICE_FEE";
     MatchCaseLineItemModelLineItemTypeEnum["WARRANTFEE"] = "WARRANT_FEE";
 })(MatchCaseLineItemModelLineItemTypeEnum || (MatchCaseLineItemModelLineItemTypeEnum = {}));

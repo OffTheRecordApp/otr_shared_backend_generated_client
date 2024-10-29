@@ -21,6 +21,7 @@ export function WorkflowViolationModelFromJSONTyped(json, ignoreDiscriminator) {
         return json;
     }
     return {
+        'classDescription': !exists(json, 'classDescription') ? undefined : json['classDescription'],
         'isCriminal': !exists(json, 'isCriminal') ? undefined : json['isCriminal'],
         'isWobblerToCriminal': !exists(json, 'isWobblerToCriminal') ? undefined : json['isWobblerToCriminal'],
         'penalties': !exists(json, 'penalties') ? undefined : (json['penalties'].map(WorkflowViolationPenaltyModelFromJSON)),
@@ -38,6 +39,7 @@ export function WorkflowViolationModelToJSON(value) {
         return null;
     }
     return {
+        'classDescription': value.classDescription,
         'isCriminal': value.isCriminal,
         'isWobblerToCriminal': value.isWobblerToCriminal,
         'penalties': value.penalties === undefined ? undefined : (value.penalties.map(WorkflowViolationPenaltyModelToJSON)),

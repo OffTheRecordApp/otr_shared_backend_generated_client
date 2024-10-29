@@ -12,7 +12,7 @@
  * Do not edit the class manually.
  */
 import { exists } from '../runtime';
-import { FreshDeskTicketFromJSON, FreshDeskTicketToJSON, } from './';
+import { FreshDeskTicketFromJSON, FreshDeskTicketToJSON, IntercomSearchTicketsResponseFromJSON, IntercomSearchTicketsResponseToJSON, } from './';
 export function GetSupportTicketsResponseFromJSON(json) {
     return GetSupportTicketsResponseFromJSONTyped(json, false);
 }
@@ -21,6 +21,7 @@ export function GetSupportTicketsResponseFromJSONTyped(json, ignoreDiscriminator
         return json;
     }
     return {
+        'intercomTickets': !exists(json, 'intercomTickets') ? undefined : IntercomSearchTicketsResponseFromJSON(json['intercomTickets']),
         'supportTickets': !exists(json, 'supportTickets') ? undefined : (json['supportTickets'].map(FreshDeskTicketFromJSON)),
     };
 }
@@ -32,6 +33,7 @@ export function GetSupportTicketsResponseToJSON(value) {
         return null;
     }
     return {
+        'intercomTickets': IntercomSearchTicketsResponseToJSON(value.intercomTickets),
         'supportTickets': value.supportTickets === undefined ? undefined : (value.supportTickets.map(FreshDeskTicketToJSON)),
     };
 }

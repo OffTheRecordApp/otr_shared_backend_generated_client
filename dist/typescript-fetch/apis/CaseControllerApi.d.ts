@@ -30,6 +30,7 @@ export interface GetAppearanceAttorneysForCaseUsingGETRequest {
 }
 export interface GetSupportTicketsForCaseUsingGETRequest {
     caseId: string;
+    limit?: number;
 }
 export interface InitiateCaseAndChargeCustomerUsingPOSTRequest {
     caseId: string;

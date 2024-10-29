@@ -27,6 +27,12 @@ export interface GetCasesWithUncapturedChargesRequest {
      * @memberof GetCasesWithUncapturedChargesRequest
      */
     showPositiveBalances?: boolean;
+    /**
+     *
+     * @type {number}
+     * @memberof GetCasesWithUncapturedChargesRequest
+     */
+    trailingMonths?: number;
 }
 export declare function GetCasesWithUncapturedChargesRequestFromJSON(json: any): GetCasesWithUncapturedChargesRequest;
 export declare function GetCasesWithUncapturedChargesRequestFromJSONTyped(json: any, ignoreDiscriminator: boolean): GetCasesWithUncapturedChargesRequest;

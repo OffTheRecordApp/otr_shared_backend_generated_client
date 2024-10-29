@@ -67,6 +67,7 @@ export declare function SaveLawfirmSurchargeModelToJSON(value?: SaveLawfirmSurch
 */
 export declare enum SaveLawfirmSurchargeModelFeatureTypeEnum {
     BLACKBOX = "BLACK_BOX",
+    FASTLANETEEN = "FASTLANE_TEEN",
     STATEPAGE = "STATE_PAGE",
     STOREFRONT = "STOREFRONT"
 }

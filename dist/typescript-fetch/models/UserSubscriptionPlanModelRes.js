@@ -22,6 +22,8 @@ export function UserSubscriptionPlanModelResFromJSONTyped(json, ignoreDiscrimina
     return {
         'expirationDateUtc': !exists(json, 'expirationDateUtc') ? undefined : (new Date(json['expirationDateUtc'])),
         'id': !exists(json, 'id') ? undefined : json['id'],
+        'productName': !exists(json, 'productName') ? undefined : json['productName'],
+        'startDateUtc': !exists(json, 'startDateUtc') ? undefined : (new Date(json['startDateUtc'])),
         'subscriptionCovered': !exists(json, 'subscriptionCovered') ? undefined : json['subscriptionCovered'],
         'subscriptionStatus': !exists(json, 'subscriptionStatus') ? undefined : json['subscriptionStatus'],
     };
@@ -36,10 +38,22 @@ export function UserSubscriptionPlanModelResToJSON(value) {
     return {
         'expirationDateUtc': value.expirationDateUtc === undefined ? undefined : (value.expirationDateUtc.toISOString()),
         'id': value.id,
+        'productName': value.productName,
+        'startDateUtc': value.startDateUtc === undefined ? undefined : (value.startDateUtc.toISOString()),
         'subscriptionCovered': value.subscriptionCovered,
         'subscriptionStatus': value.subscriptionStatus,
     };
 }
+/**
+* @export
+* @enum {string}
+*/
+export var UserSubscriptionPlanModelResProductNameEnum;
+(function (UserSubscriptionPlanModelResProductNameEnum) {
+    UserSubscriptionPlanModelResProductNameEnum["CONVOYPRO"] = "CONVOY_PRO";
+    UserSubscriptionPlanModelResProductNameEnum["OTRFASTLANE"] = "OTR_FASTLANE";
+    UserSubscriptionPlanModelResProductNameEnum["OTRFASTLANETEEN"] = "OTR_FASTLANE_TEEN";
+})(UserSubscriptionPlanModelResProductNameEnum || (UserSubscriptionPlanModelResProductNameEnum = {}));
 /**
 * @export
 * @enum {string}

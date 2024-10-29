@@ -65,6 +65,18 @@ export interface BillingPriceModel {
     priceDescription?: string;
     /**
      *
+     * @type {Date}
+     * @memberof BillingPriceModel
+     */
+    sampleEndDateUtc?: Date;
+    /**
+     *
+     * @type {Date}
+     * @memberof BillingPriceModel
+     */
+    sampleStartDateUtc?: Date;
+    /**
+     *
      * @type {number}
      * @memberof BillingPriceModel
      */

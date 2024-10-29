@@ -62,6 +62,12 @@ export interface ListPhoneCallsModel {
      * @type {string}
      * @memberof ListPhoneCallsModel
      */
+    callStatusName?: string;
+    /**
+     *
+     * @type {string}
+     * @memberof ListPhoneCallsModel
+     */
     customerName?: string;
     /**
      *
@@ -86,6 +92,12 @@ export interface ListPhoneCallsModel {
      * @type {string}
      * @memberof ListPhoneCallsModel
      */
+    phoneNumber?: string;
+    /**
+     *
+     * @type {string}
+     * @memberof ListPhoneCallsModel
+     */
     recordingUrl?: string;
     /**
      *
@@ -99,6 +111,24 @@ export interface ListPhoneCallsModel {
      * @memberof ListPhoneCallsModel
      */
     teamName?: string;
+    /**
+     *
+     * @type {number}
+     * @memberof ListPhoneCallsModel
+     */
+    totalCalls?: number;
+    /**
+     *
+     * @type {number}
+     * @memberof ListPhoneCallsModel
+     */
+    totalOtrAccounts?: number;
+    /**
+     *
+     * @type {number}
+     * @memberof ListPhoneCallsModel
+     */
+    userId?: number;
 }
 export declare function ListPhoneCallsModelFromJSON(json: any): ListPhoneCallsModel;
 export declare function ListPhoneCallsModelFromJSONTyped(json: any, ignoreDiscriminator: boolean): ListPhoneCallsModel;

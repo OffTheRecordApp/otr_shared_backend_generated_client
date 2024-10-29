@@ -30,6 +30,12 @@ export interface SocialLoginUser {
     firstname?: string;
     /**
      *
+     * @type {string}
+     * @memberof SocialLoginUser
+     */
+    intercomUserHash?: string;
+    /**
+     *
      * @type {boolean}
      * @memberof SocialLoginUser
      */

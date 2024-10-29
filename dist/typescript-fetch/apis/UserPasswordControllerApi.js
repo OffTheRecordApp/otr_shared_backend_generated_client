@@ -123,10 +123,10 @@ export class UserPasswordControllerApi extends runtime.BaseAPI {
      */
     sendAccountVerificationCodeUsingPOSTRaw(requestParameters) {
         return __awaiter(this, void 0, void 0, function* () {
-            if (requestParameters.userId === null || requestParameters.userId === undefined) {
-                throw new runtime.RequiredError('userId', 'Required parameter requestParameters.userId was null or undefined when calling sendAccountVerificationCodeUsingPOST.');
-            }
             const queryParameters = {};
+            if (requestParameters.email !== undefined) {
+                queryParameters['email'] = requestParameters.email;
+            }
             if (requestParameters.userId !== undefined) {
                 queryParameters['userId'] = requestParameters.userId;
             }
@@ -162,6 +162,9 @@ export class UserPasswordControllerApi extends runtime.BaseAPI {
             const queryParameters = {};
             if (requestParameters.email !== undefined) {
                 queryParameters['email'] = requestParameters.email;
+            }
+            if (requestParameters.enableCode !== undefined) {
+                queryParameters['enableCode'] = requestParameters.enableCode;
             }
             const headerParameters = {};
             const response = yield this.request({
@@ -221,12 +224,12 @@ export class UserPasswordControllerApi extends runtime.BaseAPI {
             if (requestParameters.code === null || requestParameters.code === undefined) {
                 throw new runtime.RequiredError('code', 'Required parameter requestParameters.code was null or undefined when calling verifyUserAccountUsingPUT.');
             }
-            if (requestParameters.userId === null || requestParameters.userId === undefined) {
-                throw new runtime.RequiredError('userId', 'Required parameter requestParameters.userId was null or undefined when calling verifyUserAccountUsingPUT.');
-            }
             const queryParameters = {};
             if (requestParameters.code !== undefined) {
                 queryParameters['code'] = requestParameters.code;
+            }
+            if (requestParameters.email !== undefined) {
+                queryParameters['email'] = requestParameters.email;
             }
             if (requestParameters.fieldName !== undefined) {
                 queryParameters['fieldName'] = requestParameters.fieldName;

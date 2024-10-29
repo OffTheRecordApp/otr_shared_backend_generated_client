@@ -21,7 +21,7 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
     });
 };
 import * as runtime from '../runtime';
-import { CreateNewLawfirmRequestToJSON, GetLawfirmAddressesResponseFromJSON, GetLawfirmCaseStatsResponseFromJSON, GetLawfirmInboxMessagesResponseFromJSON, GetLawfirmJobTitleResponseFromJSON, GetLawfirmLawyersResponseFromJSON, GetLawfirmResponseFromJSON, GetLawfirmSupportedStatesResponseFromJSON, GetLawfirmsResponseFromJSON, GetStripeConnectedAccountsResponseFromJSON, LawfirmPictureRequestToJSON, LawfirmVacationRequestToJSON, UpdateLawfirmPaymentModelRequestToJSON, UpdateLawfirmRequestToJSON, UpdateLawyerRoleRequestToJSON, UpsertAddressRequestToJSON, } from '../models';
+import { CreateNewLawfirmRequestToJSON, GetLawfirmAddressesResponseFromJSON, GetLawfirmCaseStatsResponseFromJSON, GetLawfirmInboxMessagesResponseFromJSON, GetLawfirmJobTitleResponseFromJSON, GetLawfirmLawyersResponseFromJSON, GetLawfirmResponseFromJSON, GetLawfirmSupportedStatesResponseFromJSON, GetLawfirmsResponseFromJSON, GetStripeConnectedAccountsResponseFromJSON, IntercomSearchTicketsResponseFromJSON, LawfirmPictureRequestToJSON, LawfirmVacationRequestToJSON, UpdateLawfirmPaymentModelRequestToJSON, UpdateLawfirmRequestToJSON, UpdateLawyerRoleRequestToJSON, UploadLawfirmsRequestToJSON, UploadLawfirmsResponseFromJSON, UpsertAddressRequestToJSON, } from '../models';
 /**
  *
  */
@@ -227,6 +227,34 @@ export class LawfirmControllerApi extends runtime.BaseAPI {
         });
     }
     /**
+     * getLawfirmByPrimaryEmail
+     */
+    getLawfirmByPrimaryEmailUsingGETRaw(requestParameters) {
+        return __awaiter(this, void 0, void 0, function* () {
+            if (requestParameters.primaryLawfirmEmail === null || requestParameters.primaryLawfirmEmail === undefined) {
+                throw new runtime.RequiredError('primaryLawfirmEmail', 'Required parameter requestParameters.primaryLawfirmEmail was null or undefined when calling getLawfirmByPrimaryEmailUsingGET.');
+            }
+            const queryParameters = {};
+            const headerParameters = {};
+            const response = yield this.request({
+                path: `/api/v1/lawfirms/email/{primaryLawfirmEmail}`.replace(`{${"primaryLawfirmEmail"}}`, encodeURIComponent(String(requestParameters.primaryLawfirmEmail))),
+                method: 'GET',
+                headers: headerParameters,
+                query: queryParameters,
+            });
+            return new runtime.JSONApiResponse(response, (jsonValue) => GetLawfirmResponseFromJSON(jsonValue));
+        });
+    }
+    /**
+     * getLawfirmByPrimaryEmail
+     */
+    getLawfirmByPrimaryEmailUsingGET(requestParameters) {
+        return __awaiter(this, void 0, void 0, function* () {
+            const response = yield this.getLawfirmByPrimaryEmailUsingGETRaw(requestParameters);
+            return yield response.value();
+        });
+    }
+    /**
      * getLawfirmByUrl
      */
     getLawfirmByUrlUsingGETRaw(requestParameters) {
@@ -319,6 +347,9 @@ export class LawfirmControllerApi extends runtime.BaseAPI {
                 throw new runtime.RequiredError('lawfirmId', 'Required parameter requestParameters.lawfirmId was null or undefined when calling getLawfirmLawyersUsingGET.');
             }
             const queryParameters = {};
+            if (requestParameters.settingName !== undefined) {
+                queryParameters['settingName'] = requestParameters.settingName;
+            }
             const headerParameters = {};
             const response = yield this.request({
                 path: `/api/v1/lawfirms/{lawfirmId}/lawyers`.replace(`{${"lawfirmId"}}`, encodeURIComponent(String(requestParameters.lawfirmId))),
@@ -360,6 +391,37 @@ export class LawfirmControllerApi extends runtime.BaseAPI {
     getLawfirmStatusesUsingGET() {
         return __awaiter(this, void 0, void 0, function* () {
             const response = yield this.getLawfirmStatusesUsingGETRaw();
+            return yield response.value();
+        });
+    }
+    /**
+     * getLawfirmSupportTickets
+     */
+    getLawfirmSupportTicketsUsingGETRaw(requestParameters) {
+        return __awaiter(this, void 0, void 0, function* () {
+            if (requestParameters.lawfirmId === null || requestParameters.lawfirmId === undefined) {
+                throw new runtime.RequiredError('lawfirmId', 'Required parameter requestParameters.lawfirmId was null or undefined when calling getLawfirmSupportTicketsUsingGET.');
+            }
+            const queryParameters = {};
+            if (requestParameters.limit !== undefined) {
+                queryParameters['limit'] = requestParameters.limit;
+            }
+            const headerParameters = {};
+            const response = yield this.request({
+                path: `/api/v1/lawfirms/lawfirms/{lawfirmId}/support-tickets`.replace(`{${"lawfirmId"}}`, encodeURIComponent(String(requestParameters.lawfirmId))),
+                method: 'GET',
+                headers: headerParameters,
+                query: queryParameters,
+            });
+            return new runtime.JSONApiResponse(response, (jsonValue) => IntercomSearchTicketsResponseFromJSON(jsonValue));
+        });
+    }
+    /**
+     * getLawfirmSupportTickets
+     */
+    getLawfirmSupportTicketsUsingGET(requestParameters) {
+        return __awaiter(this, void 0, void 0, function* () {
+            const response = yield this.getLawfirmSupportTicketsUsingGETRaw(requestParameters);
             return yield response.value();
         });
     }
@@ -417,6 +479,9 @@ export class LawfirmControllerApi extends runtime.BaseAPI {
             }
             if (requestParameters.states !== undefined) {
                 queryParameters['states'] = requestParameters.states;
+            }
+            if (requestParameters.statusCategories !== undefined) {
+                queryParameters['statusCategories'] = requestParameters.statusCategories;
             }
             if (requestParameters.statuses !== undefined) {
                 queryParameters['statuses'] = requestParameters.statuses;
@@ -725,6 +790,36 @@ export class LawfirmControllerApi extends runtime.BaseAPI {
             yield this.updatePaymentModelUsingPUTRaw(requestParameters);
         });
     }
+    /**
+     * uploadLawfirms
+     */
+    uploadLawfirmsUsingPOSTRaw(requestParameters) {
+        return __awaiter(this, void 0, void 0, function* () {
+            if (requestParameters.request === null || requestParameters.request === undefined) {
+                throw new runtime.RequiredError('request', 'Required parameter requestParameters.request was null or undefined when calling uploadLawfirmsUsingPOST.');
+            }
+            const queryParameters = {};
+            const headerParameters = {};
+            headerParameters['Content-Type'] = 'application/json';
+            const response = yield this.request({
+                path: `/api/v1/lawfirms/bulk-upload`,
+                method: 'POST',
+                headers: headerParameters,
+                query: queryParameters,
+                body: UploadLawfirmsRequestToJSON(requestParameters.request),
+            });
+            return new runtime.JSONApiResponse(response, (jsonValue) => UploadLawfirmsResponseFromJSON(jsonValue));
+        });
+    }
+    /**
+     * uploadLawfirms
+     */
+    uploadLawfirmsUsingPOST(requestParameters) {
+        return __awaiter(this, void 0, void 0, function* () {
+            const response = yield this.uploadLawfirmsUsingPOSTRaw(requestParameters);
+            return yield response.value();
+        });
+    }
 }
 /**
     * @export
@@ -875,22 +970,39 @@ export var GetLawfirmsUsingGETStatesEnum;
     * @export
     * @enum {string}
     */
+export var GetLawfirmsUsingGETStatusCategoriesEnum;
+(function (GetLawfirmsUsingGETStatusCategoriesEnum) {
+    GetLawfirmsUsingGETStatusCategoriesEnum["ACTIVE"] = "ACTIVE";
+    GetLawfirmsUsingGETStatusCategoriesEnum["INACTIVE"] = "INACTIVE";
+    GetLawfirmsUsingGETStatusCategoriesEnum["LEAD"] = "LEAD";
+    GetLawfirmsUsingGETStatusCategoriesEnum["NOTINTERESTED"] = "NOT_INTERESTED";
+    GetLawfirmsUsingGETStatusCategoriesEnum["REJECTED"] = "REJECTED";
+    GetLawfirmsUsingGETStatusCategoriesEnum["TERMINATED"] = "TERMINATED";
+})(GetLawfirmsUsingGETStatusCategoriesEnum || (GetLawfirmsUsingGETStatusCategoriesEnum = {}));
+/**
+    * @export
+    * @enum {string}
+    */
 export var GetLawfirmsUsingGETStatusesEnum;
 (function (GetLawfirmsUsingGETStatusesEnum) {
     GetLawfirmsUsingGETStatusesEnum["ACCOUNTCLOSED"] = "ACCOUNT_CLOSED";
+    GetLawfirmsUsingGETStatusesEnum["ACTIVE"] = "ACTIVE";
+    GetLawfirmsUsingGETStatusesEnum["BLACKLISTED"] = "BLACKLISTED";
+    GetLawfirmsUsingGETStatusesEnum["DEMOCOMPLETED"] = "DEMO_COMPLETED";
     GetLawfirmsUsingGETStatusesEnum["DUPLICATE"] = "DUPLICATE";
-    GetLawfirmsUsingGETStatusesEnum["ESTABLISHED"] = "ESTABLISHED";
     GetLawfirmsUsingGETStatusesEnum["FUTURELEAD"] = "FUTURE_LEAD";
-    GetLawfirmsUsingGETStatusesEnum["INTRIAL"] = "IN_TRIAL";
-    GetLawfirmsUsingGETStatusesEnum["LAWFIRMINTERESTED"] = "LAWFIRM_INTERESTED";
-    GetLawfirmsUsingGETStatusesEnum["LAWFIRMLEAD"] = "LAWFIRM_LEAD";
-    GetLawfirmsUsingGETStatusesEnum["LAWFIRMNOTINTERESTED"] = "LAWFIRM_NOT_INTERESTED";
-    GetLawfirmsUsingGETStatusesEnum["NOTINTERESTEDFEESPLITTINGETHICS"] = "NOT_INTERESTED_FEE_SPLITTING_ETHICS";
-    GetLawfirmsUsingGETStatusesEnum["NOTINTERESTEDREFUNDETHICS"] = "NOT_INTERESTED_REFUND_ETHICS";
-    GetLawfirmsUsingGETStatusesEnum["ONBOARDING"] = "ONBOARDING";
+    GetLawfirmsUsingGETStatusesEnum["LEAD"] = "LEAD";
+    GetLawfirmsUsingGETStatusesEnum["NEWPARTNER"] = "NEW_PARTNER";
+    GetLawfirmsUsingGETStatusesEnum["NOTAGOODFIT"] = "NOT_A_GOOD_FIT";
+    GetLawfirmsUsingGETStatusesEnum["NOTINTERESTEDDONOTCONTACT"] = "NOT_INTERESTED_DO_NOT_CONTACT";
+    GetLawfirmsUsingGETStatusesEnum["NOTINTERESTEDFEESPLITTING"] = "NOT_INTERESTED_FEE_SPLITTING";
+    GetLawfirmsUsingGETStatusesEnum["NOTINTERESTEDMARKETINGFEE"] = "NOT_INTERESTED_MARKETING_FEE";
+    GetLawfirmsUsingGETStatusesEnum["NOTINTERESTEDMONEYBACKGUARANTEE"] = "NOT_INTERESTED_MONEY_BACK_GUARANTEE";
+    GetLawfirmsUsingGETStatusesEnum["NOTINTERESTEDPLATFORMRESISTANCE"] = "NOT_INTERESTED_PLATFORM_RESISTANCE";
+    GetLawfirmsUsingGETStatusesEnum["PASTINTEREST"] = "PAST_INTEREST";
+    GetLawfirmsUsingGETStatusesEnum["SUPERVISED"] = "SUPERVISED";
     GetLawfirmsUsingGETStatusesEnum["TEMPORARILYTURNEDOFF"] = "TEMPORARILY_TURNED_OFF";
     GetLawfirmsUsingGETStatusesEnum["TERMINATEDFRAUD"] = "TERMINATED_FRAUD";
     GetLawfirmsUsingGETStatusesEnum["TERMINATEDPOORSERVICE"] = "TERMINATED_POOR_SERVICE";
     GetLawfirmsUsingGETStatusesEnum["TERMINATEDPOORSUCCESS"] = "TERMINATED_POOR_SUCCESS";
-    GetLawfirmsUsingGETStatusesEnum["UNDERREVIEW"] = "UNDER_REVIEW";
 })(GetLawfirmsUsingGETStatusesEnum || (GetLawfirmsUsingGETStatusesEnum = {}));

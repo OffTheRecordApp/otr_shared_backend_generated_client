@@ -21,6 +21,7 @@ export function PhoneNumberDomainFromJSONTyped(json, ignoreDiscriminator) {
         return json;
     }
     return {
+        'countryCode': !exists(json, 'countryCode') ? undefined : json['countryCode'],
         'creationDateUtc': !exists(json, 'creationDateUtc') ? undefined : TimestampFromJSON(json['creationDateUtc']),
         'entityType': !exists(json, 'entityType') ? undefined : json['entityType'],
         'extension': !exists(json, 'extension') ? undefined : json['extension'],
@@ -40,6 +41,7 @@ export function PhoneNumberDomainToJSON(value) {
         return null;
     }
     return {
+        'countryCode': value.countryCode,
         'creationDateUtc': TimestampToJSON(value.creationDateUtc),
         'entityType': value.entityType,
         'extension': value.extension,

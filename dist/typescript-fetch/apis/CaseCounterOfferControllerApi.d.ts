@@ -27,6 +27,10 @@ export interface InitiateCaseCounterUsingPOSTRequest {
     caseId: string;
     request: InitiateCaseCounterRequest;
 }
+export interface WithdrawCaseCounterUsingPUTRequest {
+    caseId: string;
+    counterId: number;
+}
 /**
  *
  */
@@ -71,4 +75,12 @@ export declare class CaseCounterOfferControllerApi extends runtime.BaseAPI {
      * initiateCaseCounter
      */
     initiateCaseCounterUsingPOST(requestParameters: InitiateCaseCounterUsingPOSTRequest): Promise<InitiateCaseCounterResponse>;
+    /**
+     * withdrawCaseCounter
+     */
+    withdrawCaseCounterUsingPUTRaw(requestParameters: WithdrawCaseCounterUsingPUTRequest): Promise<runtime.ApiResponse<void>>;
+    /**
+     * withdrawCaseCounter
+     */
+    withdrawCaseCounterUsingPUT(requestParameters: WithdrawCaseCounterUsingPUTRequest): Promise<void>;
 }

@@ -20,6 +20,7 @@ export function AddExtraAccountRequestFromJSONTyped(json, ignoreDiscriminator) {
         return json;
     }
     return {
+        'isEmailConfirmed': !exists(json, 'isEmailConfirmed') ? undefined : json['isEmailConfirmed'],
         'isPrimaryAccount': !exists(json, 'isPrimaryAccount') ? undefined : json['isPrimaryAccount'],
         'newEmailAddress': !exists(json, 'newEmailAddress') ? undefined : json['newEmailAddress'],
         'password': !exists(json, 'password') ? undefined : json['password'],
@@ -33,6 +34,7 @@ export function AddExtraAccountRequestToJSON(value) {
         return null;
     }
     return {
+        'isEmailConfirmed': value.isEmailConfirmed,
         'isPrimaryAccount': value.isPrimaryAccount,
         'newEmailAddress': value.newEmailAddress,
         'password': value.password,

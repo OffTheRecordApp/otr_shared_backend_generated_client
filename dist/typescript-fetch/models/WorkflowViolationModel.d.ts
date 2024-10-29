@@ -18,6 +18,12 @@ import { WorkflowViolationPenaltyModel } from './';
 export interface WorkflowViolationModel {
     /**
      *
+     * @type {string}
+     * @memberof WorkflowViolationModel
+     */
+    classDescription?: string;
+    /**
+     *
      * @type {boolean}
      * @memberof WorkflowViolationModel
      */

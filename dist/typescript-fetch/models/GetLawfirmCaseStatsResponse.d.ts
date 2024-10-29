@@ -35,6 +35,12 @@ export interface GetLawfirmCaseStatsResponse {
      * @memberof GetLawfirmCaseStatsResponse
      */
     numResolvedCases?: number;
+    /**
+     *
+     * @type {number}
+     * @memberof GetLawfirmCaseStatsResponse
+     */
+    successRate?: number;
 }
 export declare function GetLawfirmCaseStatsResponseFromJSON(json: any): GetLawfirmCaseStatsResponse;
 export declare function GetLawfirmCaseStatsResponseFromJSONTyped(json: any, ignoreDiscriminator: boolean): GetLawfirmCaseStatsResponse;

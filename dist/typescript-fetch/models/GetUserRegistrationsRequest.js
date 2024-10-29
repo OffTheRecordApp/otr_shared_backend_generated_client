@@ -24,6 +24,7 @@ export function GetUserRegistrationsRequestFromJSONTyped(json, ignoreDiscriminat
         'includeDataRecords': !exists(json, 'includeDataRecords') ? undefined : json['includeDataRecords'],
         'length': !exists(json, 'length') ? undefined : json['length'],
         'page': !exists(json, 'page') ? undefined : json['page'],
+        'sortMap': !exists(json, 'sortMap') ? undefined : json['sortMap'],
         'startDate': !exists(json, 'startDate') ? undefined : (new Date(json['startDate'])),
         'timeZoneId': !exists(json, 'timeZoneId') ? undefined : json['timeZoneId'],
     };
@@ -40,6 +41,7 @@ export function GetUserRegistrationsRequestToJSON(value) {
         'includeDataRecords': value.includeDataRecords,
         'length': value.length,
         'page': value.page,
+        'sortMap': value.sortMap,
         'startDate': value.startDate === undefined ? undefined : (value.startDate.toISOString()),
         'timeZoneId': value.timeZoneId,
     };

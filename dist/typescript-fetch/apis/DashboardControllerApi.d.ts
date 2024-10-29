@@ -46,17 +46,22 @@ export interface ListPhoneCallsUsingGETRequest {
     agentName?: string;
     callQueueName?: string;
     callStatus?: ListPhoneCallsUsingGETCallStatusEnum;
+    callStatusName?: string;
+    customerName?: string;
     direction?: ListPhoneCallsUsingGETDirectionEnum;
     endDate?: Date;
     ivrName?: string;
     length?: number;
     page?: number;
+    phoneNumber?: string;
     shouldIncludePhoneCalls?: boolean;
     sortBy?: string;
     sortOrder?: string;
     startDate?: Date;
     teamName?: string;
     timeZoneId?: string;
+    totalCalls?: number;
+    totalOtrAccounts?: number;
 }
 /**
  *

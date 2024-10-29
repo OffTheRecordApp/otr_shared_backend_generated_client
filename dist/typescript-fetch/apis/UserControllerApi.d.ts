@@ -23,6 +23,7 @@ export interface GetOverduePaymentsUsingGETRequest {
 }
 export interface GetSupportTicketsForUserUsingGETRequest {
     email: string;
+    limit?: number;
 }
 export interface GetUserDetailsUsingGETRequest {
     userIdString: string;
@@ -31,6 +32,12 @@ export interface GetUserStripeAccountUsingGETRequest {
     userId: number;
 }
 export interface LogoutUserUsingDELETERequest {
+    userId: number;
+}
+export interface RemoveUserUsingDELETERequest {
+    userId: number;
+}
+export interface ReviveUserUsingPUTRequest {
     userId: number;
 }
 export interface UpdateUserProfileUsingPUTRequest {
@@ -111,6 +118,22 @@ export declare class UserControllerApi extends runtime.BaseAPI {
      * logoutUser
      */
     logoutUserUsingDELETE(requestParameters: LogoutUserUsingDELETERequest): Promise<void>;
+    /**
+     * removeUser
+     */
+    removeUserUsingDELETERaw(requestParameters: RemoveUserUsingDELETERequest): Promise<runtime.ApiResponse<UpdateUserDetailsResponse>>;
+    /**
+     * removeUser
+     */
+    removeUserUsingDELETE(requestParameters: RemoveUserUsingDELETERequest): Promise<UpdateUserDetailsResponse>;
+    /**
+     * reviveUser
+     */
+    reviveUserUsingPUTRaw(requestParameters: ReviveUserUsingPUTRequest): Promise<runtime.ApiResponse<UpdateUserDetailsResponse>>;
+    /**
+     * reviveUser
+     */
+    reviveUserUsingPUT(requestParameters: ReviveUserUsingPUTRequest): Promise<UpdateUserDetailsResponse>;
     /**
      * updateUserProfile
      */

@@ -10,7 +10,7 @@
  * Do not edit the class manually.
  */
 import * as runtime from '../runtime';
-import { CreateNewLawfirmRequest, GetLawfirmAddressesResponse, GetLawfirmCaseStatsResponse, GetLawfirmInboxMessagesResponse, GetLawfirmJobTitleResponse, GetLawfirmLawyersResponse, GetLawfirmResponse, GetLawfirmSupportedStatesResponse, GetLawfirmsResponse, GetStripeConnectedAccountsResponse, LawfirmPictureRequest, LawfirmVacationRequest, UpdateLawfirmPaymentModelRequest, UpdateLawfirmRequest, UpdateLawyerRoleRequest, UpsertAddressRequest } from '../models';
+import { CreateNewLawfirmRequest, GetLawfirmAddressesResponse, GetLawfirmCaseStatsResponse, GetLawfirmInboxMessagesResponse, GetLawfirmJobTitleResponse, GetLawfirmLawyersResponse, GetLawfirmResponse, GetLawfirmSupportedStatesResponse, GetLawfirmsResponse, GetStripeConnectedAccountsResponse, IntercomSearchTicketsResponse, LawfirmPictureRequest, LawfirmVacationRequest, UpdateLawfirmPaymentModelRequest, UpdateLawfirmRequest, UpdateLawyerRoleRequest, UploadLawfirmsRequest, UploadLawfirmsResponse, UpsertAddressRequest } from '../models';
 export interface AddLawfirmAddressUsingPOSTRequest {
     lawfirmId: number;
     request: UpsertAddressRequest;
@@ -39,6 +39,9 @@ export interface GetInboxMessagesUsingGETRequest {
 export interface GetLawfirmAddressesUsingGETRequest {
     lawfirmId: number;
 }
+export interface GetLawfirmByPrimaryEmailUsingGETRequest {
+    primaryLawfirmEmail: string;
+}
 export interface GetLawfirmByUrlUsingGETRequest {
     seoUrl: string;
 }
@@ -47,6 +50,11 @@ export interface GetLawfirmCaseStatsUsingGETRequest {
 }
 export interface GetLawfirmLawyersUsingGETRequest {
     lawfirmId: number;
+    settingName?: string;
+}
+export interface GetLawfirmSupportTicketsUsingGETRequest {
+    lawfirmId: number;
+    limit?: number;
 }
 export interface GetLawfirmUsingGETRequest {
     lawfirmIdString: string;
@@ -59,6 +67,7 @@ export interface GetLawfirmsUsingGETRequest {
     includeVacationMode?: boolean;
     q?: string;
     states?: GetLawfirmsUsingGETStatesEnum;
+    statusCategories?: GetLawfirmsUsingGETStatusCategoriesEnum;
     statuses?: GetLawfirmsUsingGETStatusesEnum;
 }
 export interface GetOtrLawfirmNotesUsingGETRequest {
@@ -95,6 +104,9 @@ export interface UpdateLawyerRoleUsingPUTRequest {
 export interface UpdatePaymentModelUsingPUTRequest {
     lawfirmId: number;
     request: UpdateLawfirmPaymentModelRequest;
+}
+export interface UploadLawfirmsUsingPOSTRequest {
+    request: UploadLawfirmsRequest;
 }
 /**
  *
@@ -149,6 +161,14 @@ export declare class LawfirmControllerApi extends runtime.BaseAPI {
      */
     getLawfirmAddressesUsingGET(requestParameters: GetLawfirmAddressesUsingGETRequest): Promise<GetLawfirmAddressesResponse>;
     /**
+     * getLawfirmByPrimaryEmail
+     */
+    getLawfirmByPrimaryEmailUsingGETRaw(requestParameters: GetLawfirmByPrimaryEmailUsingGETRequest): Promise<runtime.ApiResponse<GetLawfirmResponse>>;
+    /**
+     * getLawfirmByPrimaryEmail
+     */
+    getLawfirmByPrimaryEmailUsingGET(requestParameters: GetLawfirmByPrimaryEmailUsingGETRequest): Promise<GetLawfirmResponse>;
+    /**
      * getLawfirmByUrl
      */
     getLawfirmByUrlUsingGETRaw(requestParameters: GetLawfirmByUrlUsingGETRequest): Promise<runtime.ApiResponse<GetLawfirmResponse>>;
@@ -188,6 +208,14 @@ export declare class LawfirmControllerApi extends runtime.BaseAPI {
      * getLawfirmStatuses
      */
     getLawfirmStatusesUsingGET(): Promise<object>;
+    /**
+     * getLawfirmSupportTickets
+     */
+    getLawfirmSupportTicketsUsingGETRaw(requestParameters: GetLawfirmSupportTicketsUsingGETRequest): Promise<runtime.ApiResponse<IntercomSearchTicketsResponse>>;
+    /**
+     * getLawfirmSupportTickets
+     */
+    getLawfirmSupportTicketsUsingGET(requestParameters: GetLawfirmSupportTicketsUsingGETRequest): Promise<IntercomSearchTicketsResponse>;
     /**
      * getLawfirm
      */
@@ -276,6 +304,14 @@ export declare class LawfirmControllerApi extends runtime.BaseAPI {
      * updatePaymentModel
      */
     updatePaymentModelUsingPUT(requestParameters: UpdatePaymentModelUsingPUTRequest): Promise<void>;
+    /**
+     * uploadLawfirms
+     */
+    uploadLawfirmsUsingPOSTRaw(requestParameters: UploadLawfirmsUsingPOSTRequest): Promise<runtime.ApiResponse<UploadLawfirmsResponse>>;
+    /**
+     * uploadLawfirms
+     */
+    uploadLawfirmsUsingPOST(requestParameters: UploadLawfirmsUsingPOSTRequest): Promise<UploadLawfirmsResponse>;
 }
 /**
     * @export
@@ -420,21 +456,37 @@ export declare enum GetLawfirmsUsingGETStatesEnum {
     * @export
     * @enum {string}
     */
+export declare enum GetLawfirmsUsingGETStatusCategoriesEnum {
+    ACTIVE = "ACTIVE",
+    INACTIVE = "INACTIVE",
+    LEAD = "LEAD",
+    NOTINTERESTED = "NOT_INTERESTED",
+    REJECTED = "REJECTED",
+    TERMINATED = "TERMINATED"
+}
+/**
+    * @export
+    * @enum {string}
+    */
 export declare enum GetLawfirmsUsingGETStatusesEnum {
     ACCOUNTCLOSED = "ACCOUNT_CLOSED",
+    ACTIVE = "ACTIVE",
+    BLACKLISTED = "BLACKLISTED",
+    DEMOCOMPLETED = "DEMO_COMPLETED",
     DUPLICATE = "DUPLICATE",
-    ESTABLISHED = "ESTABLISHED",
     FUTURELEAD = "FUTURE_LEAD",
-    INTRIAL = "IN_TRIAL",
-    LAWFIRMINTERESTED = "LAWFIRM_INTERESTED",
-    LAWFIRMLEAD = "LAWFIRM_LEAD",
-    LAWFIRMNOTINTERESTED = "LAWFIRM_NOT_INTERESTED",
-    NOTINTERESTEDFEESPLITTINGETHICS = "NOT_INTERESTED_FEE_SPLITTING_ETHICS",
-    NOTINTERESTEDREFUNDETHICS = "NOT_INTERESTED_REFUND_ETHICS",
-    ONBOARDING = "ONBOARDING",
+    LEAD = "LEAD",
+    NEWPARTNER = "NEW_PARTNER",
+    NOTAGOODFIT = "NOT_A_GOOD_FIT",
+    NOTINTERESTEDDONOTCONTACT = "NOT_INTERESTED_DO_NOT_CONTACT",
+    NOTINTERESTEDFEESPLITTING = "NOT_INTERESTED_FEE_SPLITTING",
+    NOTINTERESTEDMARKETINGFEE = "NOT_INTERESTED_MARKETING_FEE",
+    NOTINTERESTEDMONEYBACKGUARANTEE = "NOT_INTERESTED_MONEY_BACK_GUARANTEE",
+    NOTINTERESTEDPLATFORMRESISTANCE = "NOT_INTERESTED_PLATFORM_RESISTANCE",
+    PASTINTEREST = "PAST_INTEREST",
+    SUPERVISED = "SUPERVISED",
     TEMPORARILYTURNEDOFF = "TEMPORARILY_TURNED_OFF",
     TERMINATEDFRAUD = "TERMINATED_FRAUD",
     TERMINATEDPOORSERVICE = "TERMINATED_POOR_SERVICE",
-    TERMINATEDPOORSUCCESS = "TERMINATED_POOR_SUCCESS",
-    UNDERREVIEW = "UNDER_REVIEW"
+    TERMINATEDPOORSUCCESS = "TERMINATED_POOR_SUCCESS"
 }

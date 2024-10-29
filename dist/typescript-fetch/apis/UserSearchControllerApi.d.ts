@@ -10,12 +10,12 @@
  * Do not edit the class manually.
  */
 import * as runtime from '../runtime';
-import { FindMatchingUsersRequest, FindMatchingUsersResponse, GetCountOfMatchingUsersRequest, GetCountOfMatchingUsersResponse } from '../models';
+import { FindMatchingUsersRequest, FindMatchingUsersResponse, GetUserByEmailRequest, GetUserByEmailResponse } from '../models';
 export interface FindMatchingUsersUsingPOSTRequest {
     request: FindMatchingUsersRequest;
 }
-export interface GetCountOfMatchingUsersUsingPOSTRequest {
-    request: GetCountOfMatchingUsersRequest;
+export interface GetUserByEmailUsingPOSTRequest {
+    request: GetUserByEmailRequest;
 }
 /**
  *
@@ -30,11 +30,11 @@ export declare class UserSearchControllerApi extends runtime.BaseAPI {
      */
     findMatchingUsersUsingPOST(requestParameters: FindMatchingUsersUsingPOSTRequest): Promise<FindMatchingUsersResponse>;
     /**
-     * getCountOfMatchingUsers
+     * getUserByEmail
      */
-    getCountOfMatchingUsersUsingPOSTRaw(requestParameters: GetCountOfMatchingUsersUsingPOSTRequest): Promise<runtime.ApiResponse<GetCountOfMatchingUsersResponse>>;
+    getUserByEmailUsingPOSTRaw(requestParameters: GetUserByEmailUsingPOSTRequest): Promise<runtime.ApiResponse<GetUserByEmailResponse>>;
     /**
-     * getCountOfMatchingUsers
+     * getUserByEmail
      */
-    getCountOfMatchingUsersUsingPOST(requestParameters: GetCountOfMatchingUsersUsingPOSTRequest): Promise<GetCountOfMatchingUsersResponse>;
+    getUserByEmailUsingPOST(requestParameters: GetUserByEmailUsingPOSTRequest): Promise<GetUserByEmailResponse>;
 }

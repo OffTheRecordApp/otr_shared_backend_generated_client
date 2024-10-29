@@ -10,7 +10,7 @@
  * Do not edit the class manually.
  */
 import * as runtime from '../runtime';
-import { FindChargeDisputesResponse, FindDisputesRequest, GenericAdminListRequest, GetCasesWithCoverageObtainedResponse, GetCasesWithMissingLawfirmPayoutsResponse, GetCasesWithOverduePaymentsResponse, GetCasesWithUncapturedChargesRequest, GetCitationPhoneLeadsRequest, GetCitationPhoneLeadsResponse, GetCitationsWithMissingFieldsRequest, GetCitationsWithMissingFieldsResponse, GetClientConfirmedUnpaidCasesResponse, GetDeclinedCasesRequest, GetDeclinedCasesResponse, GetInvalidCasesWithStripeChargeResponse, GetLawfirmLeadsRequest, GetLawfirmLeadsResponse, GetLostCasesWithTransferNotReversedRequest, GetLostCasesWithTransferNotReversedResponse, GetPendingCasesResponse, GetPendingTicketReviewsRequest, GetPendingTicketReviewsResponse, GetPotentialCustomersRequest, GetPotentialCustomersResponse, ListBillingSubscribersResponse } from '../models';
+import { FindChargeDisputesResponse, FindDisputesRequest, GenericAdminListRequest, GetCasesWithCoverageObtainedResponse, GetCasesWithMissingLawfirmPayoutsRequest, GetCasesWithMissingLawfirmPayoutsResponse, GetCasesWithOverduePaymentsResponse, GetCasesWithUncapturedChargesRequest, GetCitationPhoneLeadsRequest, GetCitationPhoneLeadsResponse, GetCitationsWithMissingFieldsRequest, GetCitationsWithMissingFieldsResponse, GetClientConfirmedUnpaidCasesResponse, GetDeclinedCasesRequest, GetDeclinedCasesResponse, GetInvalidCasesWithStripeChargeResponse, GetLawfirmLeadsRequest, GetLawfirmLeadsResponse, GetLostCasesWithTransferNotReversedRequest, GetLostCasesWithTransferNotReversedResponse, GetPendingCasesResponse, GetPendingTicketReviewsRequest, GetPendingTicketReviewsResponse, GetPotentialCustomersRequest, GetPotentialCustomersResponse, ListBillingSubscribersResponse } from '../models';
 export interface FindDisputesUsingPOSTRequest {
     request: FindDisputesRequest;
 }
@@ -18,7 +18,7 @@ export interface GetCasesWithCoverageObtainedUsingPOSTRequest {
     request: GenericAdminListRequest;
 }
 export interface GetCasesWithMissingLawfirmPayoutsUsingPOSTRequest {
-    request: object;
+    request: GetCasesWithMissingLawfirmPayoutsRequest;
 }
 export interface GetCasesWithOverduePaymentsUsingPOSTRequest {
     request: GetCasesWithUncapturedChargesRequest;

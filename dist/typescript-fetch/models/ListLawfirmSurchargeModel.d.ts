@@ -61,6 +61,7 @@ export declare function ListLawfirmSurchargeModelToJSON(value?: ListLawfirmSurch
 */
 export declare enum ListLawfirmSurchargeModelFeatureEnum {
     BLACKBOX = "BLACK_BOX",
+    FASTLANETEEN = "FASTLANE_TEEN",
     STATEPAGE = "STATE_PAGE",
     STOREFRONT = "STOREFRONT"
 }

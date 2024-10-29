@@ -21,6 +21,7 @@ export function ViolationModelFromJSONTyped(json, ignoreDiscriminator) {
         return json;
     }
     return {
+        'classDescription': !exists(json, 'classDescription') ? undefined : json['classDescription'],
         'insuranceIncreasePercent': !exists(json, 'insuranceIncreasePercent') ? undefined : json['insuranceIncreasePercent'],
         'isCriminal': !exists(json, 'isCriminal') ? undefined : json['isCriminal'],
         'isMovingViolation': !exists(json, 'isMovingViolation') ? undefined : json['isMovingViolation'],
@@ -42,6 +43,7 @@ export function ViolationModelToJSON(value) {
         return null;
     }
     return {
+        'classDescription': value.classDescription,
         'insuranceIncreasePercent': value.insuranceIncreasePercent,
         'isCriminal': value.isCriminal,
         'isMovingViolation': value.isMovingViolation,

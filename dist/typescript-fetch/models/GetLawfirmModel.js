@@ -26,6 +26,7 @@ export function GetLawfirmModelFromJSONTyped(json, ignoreDiscriminator) {
         'caseAssignmentPriority': !exists(json, 'caseAssignmentPriority') ? undefined : json['caseAssignmentPriority'],
         'coverPhotoUrl': !exists(json, 'coverPhotoUrl') ? undefined : json['coverPhotoUrl'],
         'createdBy': !exists(json, 'createdBy') ? undefined : json['createdBy'],
+        'customerServiceScore': !exists(json, 'customerServiceScore') ? undefined : json['customerServiceScore'],
         'establishedDateUtc': !exists(json, 'establishedDateUtc') ? undefined : (new Date(json['establishedDateUtc'])),
         'establishedYear': !exists(json, 'establishedYear') ? undefined : json['establishedYear'],
         'isLawfirmDisabled': !exists(json, 'isLawfirmDisabled') ? undefined : json['isLawfirmDisabled'],
@@ -62,6 +63,7 @@ export function GetLawfirmModelToJSON(value) {
         'caseAssignmentPriority': value.caseAssignmentPriority,
         'coverPhotoUrl': value.coverPhotoUrl,
         'createdBy': value.createdBy,
+        'customerServiceScore': value.customerServiceScore,
         'establishedDateUtc': value.establishedDateUtc === undefined ? undefined : (value.establishedDateUtc.toISOString()),
         'establishedYear': value.establishedYear,
         'isLawfirmDisabled': value.isLawfirmDisabled,
@@ -102,21 +104,25 @@ export var GetLawfirmModelLawfirmPaymentModelEnum;
 export var GetLawfirmModelLawfirmStateEnum;
 (function (GetLawfirmModelLawfirmStateEnum) {
     GetLawfirmModelLawfirmStateEnum["ACCOUNTCLOSED"] = "ACCOUNT_CLOSED";
+    GetLawfirmModelLawfirmStateEnum["ACTIVE"] = "ACTIVE";
+    GetLawfirmModelLawfirmStateEnum["BLACKLISTED"] = "BLACKLISTED";
+    GetLawfirmModelLawfirmStateEnum["DEMOCOMPLETED"] = "DEMO_COMPLETED";
     GetLawfirmModelLawfirmStateEnum["DUPLICATE"] = "DUPLICATE";
-    GetLawfirmModelLawfirmStateEnum["ESTABLISHED"] = "ESTABLISHED";
     GetLawfirmModelLawfirmStateEnum["FUTURELEAD"] = "FUTURE_LEAD";
-    GetLawfirmModelLawfirmStateEnum["INTRIAL"] = "IN_TRIAL";
-    GetLawfirmModelLawfirmStateEnum["LAWFIRMINTERESTED"] = "LAWFIRM_INTERESTED";
-    GetLawfirmModelLawfirmStateEnum["LAWFIRMLEAD"] = "LAWFIRM_LEAD";
-    GetLawfirmModelLawfirmStateEnum["LAWFIRMNOTINTERESTED"] = "LAWFIRM_NOT_INTERESTED";
-    GetLawfirmModelLawfirmStateEnum["NOTINTERESTEDFEESPLITTINGETHICS"] = "NOT_INTERESTED_FEE_SPLITTING_ETHICS";
-    GetLawfirmModelLawfirmStateEnum["NOTINTERESTEDREFUNDETHICS"] = "NOT_INTERESTED_REFUND_ETHICS";
-    GetLawfirmModelLawfirmStateEnum["ONBOARDING"] = "ONBOARDING";
+    GetLawfirmModelLawfirmStateEnum["LEAD"] = "LEAD";
+    GetLawfirmModelLawfirmStateEnum["NEWPARTNER"] = "NEW_PARTNER";
+    GetLawfirmModelLawfirmStateEnum["NOTAGOODFIT"] = "NOT_A_GOOD_FIT";
+    GetLawfirmModelLawfirmStateEnum["NOTINTERESTEDDONOTCONTACT"] = "NOT_INTERESTED_DO_NOT_CONTACT";
+    GetLawfirmModelLawfirmStateEnum["NOTINTERESTEDFEESPLITTING"] = "NOT_INTERESTED_FEE_SPLITTING";
+    GetLawfirmModelLawfirmStateEnum["NOTINTERESTEDMARKETINGFEE"] = "NOT_INTERESTED_MARKETING_FEE";
+    GetLawfirmModelLawfirmStateEnum["NOTINTERESTEDMONEYBACKGUARANTEE"] = "NOT_INTERESTED_MONEY_BACK_GUARANTEE";
+    GetLawfirmModelLawfirmStateEnum["NOTINTERESTEDPLATFORMRESISTANCE"] = "NOT_INTERESTED_PLATFORM_RESISTANCE";
+    GetLawfirmModelLawfirmStateEnum["PASTINTEREST"] = "PAST_INTEREST";
+    GetLawfirmModelLawfirmStateEnum["SUPERVISED"] = "SUPERVISED";
     GetLawfirmModelLawfirmStateEnum["TEMPORARILYTURNEDOFF"] = "TEMPORARILY_TURNED_OFF";
     GetLawfirmModelLawfirmStateEnum["TERMINATEDFRAUD"] = "TERMINATED_FRAUD";
     GetLawfirmModelLawfirmStateEnum["TERMINATEDPOORSERVICE"] = "TERMINATED_POOR_SERVICE";
     GetLawfirmModelLawfirmStateEnum["TERMINATEDPOORSUCCESS"] = "TERMINATED_POOR_SUCCESS";
-    GetLawfirmModelLawfirmStateEnum["UNDERREVIEW"] = "UNDER_REVIEW";
 })(GetLawfirmModelLawfirmStateEnum || (GetLawfirmModelLawfirmStateEnum = {}));
 /**
 * @export

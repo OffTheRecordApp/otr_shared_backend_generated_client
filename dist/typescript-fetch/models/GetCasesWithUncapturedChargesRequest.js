@@ -22,6 +22,7 @@ export function GetCasesWithUncapturedChargesRequestFromJSONTyped(json, ignoreDi
     return {
         'showNegativeBalances': !exists(json, 'showNegativeBalances') ? undefined : json['showNegativeBalances'],
         'showPositiveBalances': !exists(json, 'showPositiveBalances') ? undefined : json['showPositiveBalances'],
+        'trailingMonths': !exists(json, 'trailingMonths') ? undefined : json['trailingMonths'],
     };
 }
 export function GetCasesWithUncapturedChargesRequestToJSON(value) {
@@ -34,5 +35,6 @@ export function GetCasesWithUncapturedChargesRequestToJSON(value) {
     return {
         'showNegativeBalances': value.showNegativeBalances,
         'showPositiveBalances': value.showPositiveBalances,
+        'trailingMonths': value.trailingMonths,
     };
 }

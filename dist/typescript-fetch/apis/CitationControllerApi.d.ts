@@ -10,7 +10,7 @@
  * Do not edit the class manually.
  */
 import * as runtime from '../runtime';
-import { AssignCitationOwnerRequest, CreateCitationRequest, CreateCitationResponse, CreateReferralSourceForCitation, DeleteCitationResponse, DismissCitationsFromContactListRequest, GetAnonymousTicketUploads, GetCitationResponse, GetListOfCitationsWithMissingCourtResponse, GetNoViolationCitationsResponse, UpdateCitationAddressRequest, UpdateCitationPictureRequest, UpdateCitationRequest } from '../models';
+import { AssignCitationOwnerRequest, CreateCitationRequest, CreateCitationResponse, CreateReferralSourceForCitation, DeleteCitationResponse, DismissCitationsFromContactListRequest, GetAnonymousTicketUploads, GetCitationResponse, GetListOfCitationsWithMissingCourtResponse, GetNoViolationCitationsResponse, SignImageUrlRequest, SignImageUrlResponse, UpdateCitationAddressRequest, UpdateCitationPictureRequest, UpdateCitationRequest } from '../models';
 export interface AssignCitationOwnerUsingPOSTRequest {
     citationId: number;
     request?: AssignCitationOwnerRequest;
@@ -55,6 +55,9 @@ export interface SetCitationContactListFlagUsingPOSTRequest {
 export interface SetLockForCitationUsingPUTRequest {
     citationId: number;
     isLocked: boolean;
+}
+export interface SignImageUrlUsingPOSTRequest {
+    request: SignImageUrlRequest;
 }
 export interface ToggleDeleteCitationUsingDELETERequest {
     citationId: number;
@@ -188,6 +191,14 @@ export declare class CitationControllerApi extends runtime.BaseAPI {
      * setLockForCitation
      */
     setLockForCitationUsingPUT(requestParameters: SetLockForCitationUsingPUTRequest): Promise<void>;
+    /**
+     * signImageUrl
+     */
+    signImageUrlUsingPOSTRaw(requestParameters: SignImageUrlUsingPOSTRequest): Promise<runtime.ApiResponse<SignImageUrlResponse>>;
+    /**
+     * signImageUrl
+     */
+    signImageUrlUsingPOST(requestParameters: SignImageUrlUsingPOSTRequest): Promise<SignImageUrlResponse>;
     /**
      * toggleDeleteCitation
      */

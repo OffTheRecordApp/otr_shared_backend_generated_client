@@ -51,6 +51,12 @@ export interface UserAccountModel {
      * @memberof UserAccountModel
      */
     userHandle?: string;
+    /**
+     *
+     * @type {Date}
+     * @memberof UserAccountModel
+     */
+    verificationDateUtc?: Date;
 }
 export declare function UserAccountModelFromJSON(json: any): UserAccountModel;
 export declare function UserAccountModelFromJSONTyped(json: any, ignoreDiscriminator: boolean): UserAccountModel;

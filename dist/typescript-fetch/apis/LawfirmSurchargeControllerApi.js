@@ -131,6 +131,7 @@ export class LawfirmSurchargeControllerApi extends runtime.BaseAPI {
 export var ListLawfirmSurchargesUsingGETFeatureTypeEnum;
 (function (ListLawfirmSurchargesUsingGETFeatureTypeEnum) {
     ListLawfirmSurchargesUsingGETFeatureTypeEnum["BLACKBOX"] = "BLACK_BOX";
+    ListLawfirmSurchargesUsingGETFeatureTypeEnum["FASTLANETEEN"] = "FASTLANE_TEEN";
     ListLawfirmSurchargesUsingGETFeatureTypeEnum["STATEPAGE"] = "STATE_PAGE";
     ListLawfirmSurchargesUsingGETFeatureTypeEnum["STOREFRONT"] = "STOREFRONT";
 })(ListLawfirmSurchargesUsingGETFeatureTypeEnum || (ListLawfirmSurchargesUsingGETFeatureTypeEnum = {}));

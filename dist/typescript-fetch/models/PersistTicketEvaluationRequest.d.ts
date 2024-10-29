@@ -36,6 +36,12 @@ export interface PersistTicketEvaluationRequest {
     emailAddress?: string;
     /**
      *
+     * @type {boolean}
+     * @memberof PersistTicketEvaluationRequest
+     */
+    isOptIntoAutomatedNotifications?: boolean;
+    /**
+     *
      * @type {string}
      * @memberof PersistTicketEvaluationRequest
      */

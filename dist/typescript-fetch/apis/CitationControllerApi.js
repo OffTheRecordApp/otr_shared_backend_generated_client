@@ -21,7 +21,7 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
     });
 };
 import * as runtime from '../runtime';
-import { AssignCitationOwnerRequestToJSON, CreateCitationRequestToJSON, CreateCitationResponseFromJSON, CreateReferralSourceForCitationToJSON, DeleteCitationResponseFromJSON, DismissCitationsFromContactListRequestToJSON, GetAnonymousTicketUploadsFromJSON, GetCitationResponseFromJSON, GetListOfCitationsWithMissingCourtResponseFromJSON, GetNoViolationCitationsResponseFromJSON, UpdateCitationAddressRequestToJSON, UpdateCitationPictureRequestToJSON, UpdateCitationRequestToJSON, } from '../models';
+import { AssignCitationOwnerRequestToJSON, CreateCitationRequestToJSON, CreateCitationResponseFromJSON, CreateReferralSourceForCitationToJSON, DeleteCitationResponseFromJSON, DismissCitationsFromContactListRequestToJSON, GetAnonymousTicketUploadsFromJSON, GetCitationResponseFromJSON, GetListOfCitationsWithMissingCourtResponseFromJSON, GetNoViolationCitationsResponseFromJSON, SignImageUrlRequestToJSON, SignImageUrlResponseFromJSON, UpdateCitationAddressRequestToJSON, UpdateCitationPictureRequestToJSON, UpdateCitationRequestToJSON, } from '../models';
 /**
  *
  */
@@ -439,6 +439,36 @@ export class CitationControllerApi extends runtime.BaseAPI {
     setLockForCitationUsingPUT(requestParameters) {
         return __awaiter(this, void 0, void 0, function* () {
             yield this.setLockForCitationUsingPUTRaw(requestParameters);
+        });
+    }
+    /**
+     * signImageUrl
+     */
+    signImageUrlUsingPOSTRaw(requestParameters) {
+        return __awaiter(this, void 0, void 0, function* () {
+            if (requestParameters.request === null || requestParameters.request === undefined) {
+                throw new runtime.RequiredError('request', 'Required parameter requestParameters.request was null or undefined when calling signImageUrlUsingPOST.');
+            }
+            const queryParameters = {};
+            const headerParameters = {};
+            headerParameters['Content-Type'] = 'application/json';
+            const response = yield this.request({
+                path: `/api/v1/citations/sign-image-url`,
+                method: 'POST',
+                headers: headerParameters,
+                query: queryParameters,
+                body: SignImageUrlRequestToJSON(requestParameters.request),
+            });
+            return new runtime.JSONApiResponse(response, (jsonValue) => SignImageUrlResponseFromJSON(jsonValue));
+        });
+    }
+    /**
+     * signImageUrl
+     */
+    signImageUrlUsingPOST(requestParameters) {
+        return __awaiter(this, void 0, void 0, function* () {
+            const response = yield this.signImageUrlUsingPOSTRaw(requestParameters);
+            return yield response.value();
         });
     }
     /**

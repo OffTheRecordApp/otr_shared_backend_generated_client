@@ -21,7 +21,7 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
     });
 };
 import * as runtime from '../runtime';
-import { GetUserAddressesResponseFromJSON, MergeUserRequestToJSON, MergeUserResponseFromJSON, SetMarketingEmailOptInRequestToJSON, UpdateProfilePictureRequestToJSON, UpdateUserDetailsResponseFromJSON, UpdateUserPhoneNumberRequestToJSON, UpsertAddressRequestToJSON, ValidatePhoneNumberRequestToJSON, ValidatePhoneNumberResponseFromJSON, } from '../models';
+import { GetUserAddressesResponseFromJSON, MergeUserRequestToJSON, MergeUserResponseFromJSON, SetMarketingEmailOptInRequestToJSON, UpdateProfilePictureRequestToJSON, UpdateProfilePictureResponseFromJSON, UpdateUserDetailsResponseFromJSON, UpdateUserPhoneNumberRequestToJSON, UpsertAddressRequestToJSON, ValidatePhoneNumberRequestToJSON, ValidatePhoneNumberResponseFromJSON, } from '../models';
 /**
  *
  */
@@ -236,7 +236,7 @@ export class UserProfileControllerApi extends runtime.BaseAPI {
                 query: queryParameters,
                 body: UpdateProfilePictureRequestToJSON(requestParameters.request),
             });
-            return new runtime.VoidApiResponse(response);
+            return new runtime.JSONApiResponse(response, (jsonValue) => UpdateProfilePictureResponseFromJSON(jsonValue));
         });
     }
     /**
@@ -244,7 +244,8 @@ export class UserProfileControllerApi extends runtime.BaseAPI {
      */
     updateProfilePictureUsingPUT(requestParameters) {
         return __awaiter(this, void 0, void 0, function* () {
-            yield this.updateProfilePictureUsingPUTRaw(requestParameters);
+            const response = yield this.updateProfilePictureUsingPUTRaw(requestParameters);
+            return yield response.value();
         });
     }
     /**

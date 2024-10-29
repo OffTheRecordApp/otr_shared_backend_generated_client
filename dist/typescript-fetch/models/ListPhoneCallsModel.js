@@ -27,13 +27,18 @@ export function ListPhoneCallsModelFromJSONTyped(json, ignoreDiscriminator) {
         'callQueueName': !exists(json, 'callQueueName') ? undefined : json['callQueueName'],
         'callStartDateUtc': !exists(json, 'callStartDateUtc') ? undefined : (new Date(json['callStartDateUtc'])),
         'callStatus': !exists(json, 'callStatus') ? undefined : json['callStatus'],
+        'callStatusName': !exists(json, 'callStatusName') ? undefined : json['callStatusName'],
         'customerName': !exists(json, 'customerName') ? undefined : json['customerName'],
         'holdDurationInSeconds': !exists(json, 'holdDurationInSeconds') ? undefined : json['holdDurationInSeconds'],
         'ivrDurationInSeconds': !exists(json, 'ivrDurationInSeconds') ? undefined : json['ivrDurationInSeconds'],
         'ivrName': !exists(json, 'ivrName') ? undefined : json['ivrName'],
+        'phoneNumber': !exists(json, 'phoneNumber') ? undefined : json['phoneNumber'],
         'recordingUrl': !exists(json, 'recordingUrl') ? undefined : json['recordingUrl'],
         'talkDurationInSeconds': !exists(json, 'talkDurationInSeconds') ? undefined : json['talkDurationInSeconds'],
         'teamName': !exists(json, 'teamName') ? undefined : json['teamName'],
+        'totalCalls': !exists(json, 'totalCalls') ? undefined : json['totalCalls'],
+        'totalOtrAccounts': !exists(json, 'totalOtrAccounts') ? undefined : json['totalOtrAccounts'],
+        'userId': !exists(json, 'userId') ? undefined : json['userId'],
     };
 }
 export function ListPhoneCallsModelToJSON(value) {
@@ -51,13 +56,18 @@ export function ListPhoneCallsModelToJSON(value) {
         'callQueueName': value.callQueueName,
         'callStartDateUtc': value.callStartDateUtc === undefined ? undefined : (value.callStartDateUtc.toISOString()),
         'callStatus': value.callStatus,
+        'callStatusName': value.callStatusName,
         'customerName': value.customerName,
         'holdDurationInSeconds': value.holdDurationInSeconds,
         'ivrDurationInSeconds': value.ivrDurationInSeconds,
         'ivrName': value.ivrName,
+        'phoneNumber': value.phoneNumber,
         'recordingUrl': value.recordingUrl,
         'talkDurationInSeconds': value.talkDurationInSeconds,
         'teamName': value.teamName,
+        'totalCalls': value.totalCalls,
+        'totalOtrAccounts': value.totalOtrAccounts,
+        'userId': value.userId,
     };
 }
 /**

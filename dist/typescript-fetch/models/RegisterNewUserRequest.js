@@ -21,6 +21,7 @@ export function RegisterNewUserRequestFromJSONTyped(json, ignoreDiscriminator) {
         return json;
     }
     return {
+        'authCode': !exists(json, 'authCode') ? undefined : json['authCode'],
         'citationId': !exists(json, 'citationId') ? undefined : json['citationId'],
         'clientType': !exists(json, 'clientType') ? undefined : json['clientType'],
         'fingerPrintId': !exists(json, 'fingerPrintId') ? undefined : json['fingerPrintId'],
@@ -43,6 +44,7 @@ export function RegisterNewUserRequestToJSON(value) {
         return null;
     }
     return {
+        'authCode': value.authCode,
         'citationId': value.citationId,
         'clientType': value.clientType,
         'fingerPrintId': value.fingerPrintId,
@@ -70,11 +72,13 @@ export var RegisterNewUserRequestClientTypeEnum;
     RegisterNewUserRequestClientTypeEnum["EMAIL"] = "EMAIL";
     RegisterNewUserRequestClientTypeEnum["FRESHDESK"] = "FRESH_DESK";
     RegisterNewUserRequestClientTypeEnum["IOS"] = "IOS";
+    RegisterNewUserRequestClientTypeEnum["LOCALHOST"] = "LOCALHOST";
     RegisterNewUserRequestClientTypeEnum["MOBILEWEBAPP"] = "MOBILE_WEBAPP";
     RegisterNewUserRequestClientTypeEnum["OTRADMINCONSOLE"] = "OTR_ADMIN_CONSOLE";
     RegisterNewUserRequestClientTypeEnum["OTRADMINCONSOLEDEVO"] = "OTR_ADMIN_CONSOLE_DEVO";
     RegisterNewUserRequestClientTypeEnum["OTRADMINCONSOLELOCALHOST"] = "OTR_ADMIN_CONSOLE_LOCALHOST";
     RegisterNewUserRequestClientTypeEnum["OTREXPLORER"] = "OTR_EXPLORER";
+    RegisterNewUserRequestClientTypeEnum["OTRJOBSCHEDULER"] = "OTR_JOB_SCHEDULER";
     RegisterNewUserRequestClientTypeEnum["OTRLAWFIRMPORTAL"] = "OTR_LAWFIRM_PORTAL";
     RegisterNewUserRequestClientTypeEnum["OTRLAWFIRMPORTALDEVO"] = "OTR_LAWFIRM_PORTAL_DEVO";
     RegisterNewUserRequestClientTypeEnum["OTRLAWFIRMPORTALLOCALHOST"] = "OTR_LAWFIRM_PORTAL_LOCALHOST";

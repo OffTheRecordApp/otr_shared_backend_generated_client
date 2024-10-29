@@ -24,6 +24,7 @@ export function AnonymousTicketUploadModelFromJSONTyped(json, ignoreDiscriminato
         'clientEmailAddress': !exists(json, 'clientEmailAddress') ? undefined : json['clientEmailAddress'],
         'creationDateUTC': !exists(json, 'creationDateUTC') ? undefined : (new Date(json['creationDateUTC'])),
         'isDismissedFromContactList': !exists(json, 'isDismissedFromContactList') ? undefined : json['isDismissedFromContactList'],
+        'signedTicketImageUrl': !exists(json, 'signedTicketImageUrl') ? undefined : json['signedTicketImageUrl'],
         'ticketImageUrl': !exists(json, 'ticketImageUrl') ? undefined : json['ticketImageUrl'],
         'userId': !exists(json, 'userId') ? undefined : json['userId'],
     };
@@ -40,6 +41,7 @@ export function AnonymousTicketUploadModelToJSON(value) {
         'clientEmailAddress': value.clientEmailAddress,
         'creationDateUTC': value.creationDateUTC === undefined ? undefined : (value.creationDateUTC.toISOString()),
         'isDismissedFromContactList': value.isDismissedFromContactList,
+        'signedTicketImageUrl': value.signedTicketImageUrl,
         'ticketImageUrl': value.ticketImageUrl,
         'userId': value.userId,
     };

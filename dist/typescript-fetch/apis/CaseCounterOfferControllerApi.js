@@ -177,4 +177,34 @@ export class CaseCounterOfferControllerApi extends runtime.BaseAPI {
             return yield response.value();
         });
     }
+    /**
+     * withdrawCaseCounter
+     */
+    withdrawCaseCounterUsingPUTRaw(requestParameters) {
+        return __awaiter(this, void 0, void 0, function* () {
+            if (requestParameters.caseId === null || requestParameters.caseId === undefined) {
+                throw new runtime.RequiredError('caseId', 'Required parameter requestParameters.caseId was null or undefined when calling withdrawCaseCounterUsingPUT.');
+            }
+            if (requestParameters.counterId === null || requestParameters.counterId === undefined) {
+                throw new runtime.RequiredError('counterId', 'Required parameter requestParameters.counterId was null or undefined when calling withdrawCaseCounterUsingPUT.');
+            }
+            const queryParameters = {};
+            const headerParameters = {};
+            const response = yield this.request({
+                path: `/api/v1/cases/{caseId}/counters/{counterId}/withdraw`.replace(`{${"caseId"}}`, encodeURIComponent(String(requestParameters.caseId))).replace(`{${"counterId"}}`, encodeURIComponent(String(requestParameters.counterId))),
+                method: 'PUT',
+                headers: headerParameters,
+                query: queryParameters,
+            });
+            return new runtime.VoidApiResponse(response);
+        });
+    }
+    /**
+     * withdrawCaseCounter
+     */
+    withdrawCaseCounterUsingPUT(requestParameters) {
+        return __awaiter(this, void 0, void 0, function* () {
+            yield this.withdrawCaseCounterUsingPUTRaw(requestParameters);
+        });
+    }
 }

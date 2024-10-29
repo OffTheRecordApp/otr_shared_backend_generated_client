@@ -26,6 +26,7 @@ export function UserAccountModelFromJSONTyped(json, ignoreDiscriminator) {
         'merged': !exists(json, 'merged') ? undefined : json['merged'],
         'primary': !exists(json, 'primary') ? undefined : json['primary'],
         'userHandle': !exists(json, 'userHandle') ? undefined : json['userHandle'],
+        'verificationDateUtc': !exists(json, 'verificationDateUtc') ? undefined : (new Date(json['verificationDateUtc'])),
     };
 }
 export function UserAccountModelToJSON(value) {
@@ -42,6 +43,7 @@ export function UserAccountModelToJSON(value) {
         'merged': value.merged,
         'primary': value.primary,
         'userHandle': value.userHandle,
+        'verificationDateUtc': value.verificationDateUtc === undefined ? undefined : (value.verificationDateUtc.toISOString()),
     };
 }
 /**

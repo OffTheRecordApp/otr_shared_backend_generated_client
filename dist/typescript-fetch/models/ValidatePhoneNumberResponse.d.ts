@@ -20,6 +20,24 @@ export interface ValidatePhoneNumberResponse {
      * @type {string}
      * @memberof ValidatePhoneNumberResponse
      */
+    carrier?: string;
+    /**
+     *
+     * @type {string}
+     * @memberof ValidatePhoneNumberResponse
+     */
+    city?: string;
+    /**
+     *
+     * @type {string}
+     * @memberof ValidatePhoneNumberResponse
+     */
+    country?: string;
+    /**
+     *
+     * @type {string}
+     * @memberof ValidatePhoneNumberResponse
+     */
     phoneType?: ValidatePhoneNumberResponsePhoneTypeEnum;
     /**
      *
@@ -27,6 +45,12 @@ export interface ValidatePhoneNumberResponse {
      * @memberof ValidatePhoneNumberResponse
      */
     valid?: boolean;
+    /**
+     *
+     * @type {string}
+     * @memberof ValidatePhoneNumberResponse
+     */
+    zipCode?: string;
 }
 export declare function ValidatePhoneNumberResponseFromJSON(json: any): ValidatePhoneNumberResponse;
 export declare function ValidatePhoneNumberResponseFromJSONTyped(json: any, ignoreDiscriminator: boolean): ValidatePhoneNumberResponse;

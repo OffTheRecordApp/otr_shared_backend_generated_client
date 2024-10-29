@@ -21,7 +21,7 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
     });
 };
 import * as runtime from '../runtime';
-import { FindChargeDisputesResponseFromJSON, FindDisputesRequestToJSON, GenericAdminListRequestToJSON, GetCasesWithCoverageObtainedResponseFromJSON, GetCasesWithMissingLawfirmPayoutsResponseFromJSON, GetCasesWithOverduePaymentsResponseFromJSON, GetCasesWithUncapturedChargesRequestToJSON, GetCitationPhoneLeadsRequestToJSON, GetCitationPhoneLeadsResponseFromJSON, GetCitationsWithMissingFieldsRequestToJSON, GetCitationsWithMissingFieldsResponseFromJSON, GetClientConfirmedUnpaidCasesResponseFromJSON, GetDeclinedCasesRequestToJSON, GetDeclinedCasesResponseFromJSON, GetInvalidCasesWithStripeChargeResponseFromJSON, GetLawfirmLeadsRequestToJSON, GetLawfirmLeadsResponseFromJSON, GetLostCasesWithTransferNotReversedRequestToJSON, GetLostCasesWithTransferNotReversedResponseFromJSON, GetPendingCasesResponseFromJSON, GetPendingTicketReviewsRequestToJSON, GetPendingTicketReviewsResponseFromJSON, GetPotentialCustomersRequestToJSON, GetPotentialCustomersResponseFromJSON, ListBillingSubscribersResponseFromJSON, } from '../models';
+import { FindChargeDisputesResponseFromJSON, FindDisputesRequestToJSON, GenericAdminListRequestToJSON, GetCasesWithCoverageObtainedResponseFromJSON, GetCasesWithMissingLawfirmPayoutsRequestToJSON, GetCasesWithMissingLawfirmPayoutsResponseFromJSON, GetCasesWithOverduePaymentsResponseFromJSON, GetCasesWithUncapturedChargesRequestToJSON, GetCitationPhoneLeadsRequestToJSON, GetCitationPhoneLeadsResponseFromJSON, GetCitationsWithMissingFieldsRequestToJSON, GetCitationsWithMissingFieldsResponseFromJSON, GetClientConfirmedUnpaidCasesResponseFromJSON, GetDeclinedCasesRequestToJSON, GetDeclinedCasesResponseFromJSON, GetInvalidCasesWithStripeChargeResponseFromJSON, GetLawfirmLeadsRequestToJSON, GetLawfirmLeadsResponseFromJSON, GetLostCasesWithTransferNotReversedRequestToJSON, GetLostCasesWithTransferNotReversedResponseFromJSON, GetPendingCasesResponseFromJSON, GetPendingTicketReviewsRequestToJSON, GetPendingTicketReviewsResponseFromJSON, GetPotentialCustomersRequestToJSON, GetPotentialCustomersResponseFromJSON, ListBillingSubscribersResponseFromJSON, } from '../models';
 /**
  *
  */
@@ -102,7 +102,7 @@ export class ConsoleListControllerApi extends runtime.BaseAPI {
                 method: 'POST',
                 headers: headerParameters,
                 query: queryParameters,
-                body: requestParameters.request,
+                body: GetCasesWithMissingLawfirmPayoutsRequestToJSON(requestParameters.request),
             });
             return new runtime.JSONApiResponse(response, (jsonValue) => GetCasesWithMissingLawfirmPayoutsResponseFromJSON(jsonValue));
         });

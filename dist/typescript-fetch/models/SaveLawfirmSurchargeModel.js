@@ -53,6 +53,7 @@ export function SaveLawfirmSurchargeModelToJSON(value) {
 export var SaveLawfirmSurchargeModelFeatureTypeEnum;
 (function (SaveLawfirmSurchargeModelFeatureTypeEnum) {
     SaveLawfirmSurchargeModelFeatureTypeEnum["BLACKBOX"] = "BLACK_BOX";
+    SaveLawfirmSurchargeModelFeatureTypeEnum["FASTLANETEEN"] = "FASTLANE_TEEN";
     SaveLawfirmSurchargeModelFeatureTypeEnum["STATEPAGE"] = "STATE_PAGE";
     SaveLawfirmSurchargeModelFeatureTypeEnum["STOREFRONT"] = "STOREFRONT";
 })(SaveLawfirmSurchargeModelFeatureTypeEnum || (SaveLawfirmSurchargeModelFeatureTypeEnum = {}));

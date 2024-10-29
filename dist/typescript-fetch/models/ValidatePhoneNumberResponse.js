@@ -20,8 +20,12 @@ export function ValidatePhoneNumberResponseFromJSONTyped(json, ignoreDiscriminat
         return json;
     }
     return {
+        'carrier': !exists(json, 'carrier') ? undefined : json['carrier'],
+        'city': !exists(json, 'city') ? undefined : json['city'],
+        'country': !exists(json, 'country') ? undefined : json['country'],
         'phoneType': !exists(json, 'phoneType') ? undefined : json['phoneType'],
         'valid': !exists(json, 'valid') ? undefined : json['valid'],
+        'zipCode': !exists(json, 'zipCode') ? undefined : json['zipCode'],
     };
 }
 export function ValidatePhoneNumberResponseToJSON(value) {
@@ -32,8 +36,12 @@ export function ValidatePhoneNumberResponseToJSON(value) {
         return null;
     }
     return {
+        'carrier': value.carrier,
+        'city': value.city,
+        'country': value.country,
         'phoneType': value.phoneType,
         'valid': value.valid,
+        'zipCode': value.zipCode,
     };
 }
 /**

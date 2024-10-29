@@ -104,6 +104,7 @@ export var CaseLineItemDomainResLineItemTypeEnum;
     CaseLineItemDomainResLineItemTypeEnum["MVSFEE"] = "MVS_FEE";
     CaseLineItemDomainResLineItemTypeEnum["OTHER"] = "OTHER";
     CaseLineItemDomainResLineItemTypeEnum["OTRCREDIT"] = "OTR_CREDIT";
+    CaseLineItemDomainResLineItemTypeEnum["OTRSUBSCRIPTIONCREDIT"] = "OTR_SUBSCRIPTION_CREDIT";
     CaseLineItemDomainResLineItemTypeEnum["PAYMENTPLANSERVICEFEE"] = "PAYMENT_PLAN_SERVICE_FEE";
     CaseLineItemDomainResLineItemTypeEnum["WARRANTFEE"] = "WARRANT_FEE";
 })(CaseLineItemDomainResLineItemTypeEnum || (CaseLineItemDomainResLineItemTypeEnum = {}));

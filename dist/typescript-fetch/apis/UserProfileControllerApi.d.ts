@@ -10,7 +10,7 @@
  * Do not edit the class manually.
  */
 import * as runtime from '../runtime';
-import { GetUserAddressesResponse, MergeUserRequest, MergeUserResponse, SetMarketingEmailOptInRequest, UpdateProfilePictureRequest, UpdateUserDetailsResponse, UpdateUserPhoneNumberRequest, UpsertAddressRequest, ValidatePhoneNumberRequest, ValidatePhoneNumberResponse } from '../models';
+import { GetUserAddressesResponse, MergeUserRequest, MergeUserResponse, SetMarketingEmailOptInRequest, UpdateProfilePictureRequest, UpdateProfilePictureResponse, UpdateUserDetailsResponse, UpdateUserPhoneNumberRequest, UpsertAddressRequest, ValidatePhoneNumberRequest, ValidatePhoneNumberResponse } from '../models';
 export interface AddUserAddressUsingPOSTRequest {
     userId: number;
     request: UpsertAddressRequest;
@@ -106,11 +106,11 @@ export declare class UserProfileControllerApi extends runtime.BaseAPI {
     /**
      * updateProfilePicture
      */
-    updateProfilePictureUsingPUTRaw(requestParameters: UpdateProfilePictureUsingPUTRequest): Promise<runtime.ApiResponse<void>>;
+    updateProfilePictureUsingPUTRaw(requestParameters: UpdateProfilePictureUsingPUTRequest): Promise<runtime.ApiResponse<UpdateProfilePictureResponse>>;
     /**
      * updateProfilePicture
      */
-    updateProfilePictureUsingPUT(requestParameters: UpdateProfilePictureUsingPUTRequest): Promise<void>;
+    updateProfilePictureUsingPUT(requestParameters: UpdateProfilePictureUsingPUTRequest): Promise<UpdateProfilePictureResponse>;
     /**
      * updateUserAddress
      */

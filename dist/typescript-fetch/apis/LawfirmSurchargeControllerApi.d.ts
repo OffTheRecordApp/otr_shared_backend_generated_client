@@ -58,6 +58,7 @@ export declare class LawfirmSurchargeControllerApi extends runtime.BaseAPI {
     */
 export declare enum ListLawfirmSurchargesUsingGETFeatureTypeEnum {
     BLACKBOX = "BLACK_BOX",
+    FASTLANETEEN = "FASTLANE_TEEN",
     STATEPAGE = "STATE_PAGE",
     STOREFRONT = "STOREFRONT"
 }

@@ -12,7 +12,7 @@
  * Do not edit the class manually.
  */
 import { exists } from '../runtime';
-import { AddressDomainReqFromJSON, AddressDomainReqToJSON, PhoneNumberDomainReqFromJSON, PhoneNumberDomainReqToJSON, TimestampReqFromJSON, TimestampReqToJSON, UserAccountModelFromJSON, UserAccountModelToJSON, UserRoleDomainFromJSON, UserRoleDomainToJSON, UserSubscriptionPlanModelReqFromJSON, UserSubscriptionPlanModelReqToJSON, } from './';
+import { AddressDomainReqFromJSON, AddressDomainReqToJSON, PhoneNumberDomainReqFromJSON, PhoneNumberDomainReqToJSON, TimestampReqFromJSON, TimestampReqToJSON, UserAccountModelFromJSON, UserAccountModelToJSON, UserReferralLinkModelReqFromJSON, UserReferralLinkModelReqToJSON, UserRoleDomainFromJSON, UserRoleDomainToJSON, UserSocialProfileModelReqFromJSON, UserSocialProfileModelReqToJSON, UserSubscriptionPlanModelReqFromJSON, UserSubscriptionPlanModelReqToJSON, } from './';
 export function UserDomainReqFromJSON(json) {
     return UserDomainReqFromJSONTyped(json, false);
 }
@@ -33,6 +33,8 @@ export function UserDomainReqFromJSONTyped(json, ignoreDiscriminator) {
         'genderType': !exists(json, 'genderType') ? undefined : json['genderType'],
         'ghostAccountCreationDateUtc': !exists(json, 'ghostAccountCreationDateUtc') ? undefined : (new Date(json['ghostAccountCreationDateUtc'])),
         'hasLeftReview': !exists(json, 'hasLeftReview') ? undefined : json['hasLeftReview'],
+        'hubspotContactId': !exists(json, 'hubspotContactId') ? undefined : json['hubspotContactId'],
+        'intercomUserHash': !exists(json, 'intercomUserHash') ? undefined : json['intercomUserHash'],
         'isEmailConfirmed': !exists(json, 'isEmailConfirmed') ? undefined : json['isEmailConfirmed'],
         'isEnabled': !exists(json, 'isEnabled') ? undefined : json['isEnabled'],
         'isLawfirmAccessGranted': !exists(json, 'isLawfirmAccessGranted') ? undefined : json['isLawfirmAccessGranted'],
@@ -53,11 +55,16 @@ export function UserDomainReqFromJSONTyped(json, ignoreDiscriminator) {
         'race': !exists(json, 'race') ? undefined : json['race'],
         'referralCode': !exists(json, 'referralCode') ? undefined : json['referralCode'],
         'referralCount': !exists(json, 'referralCount') ? undefined : json['referralCount'],
+        'referralLink': !exists(json, 'referralLink') ? undefined : json['referralLink'],
+        'referralLinks': !exists(json, 'referralLinks') ? undefined : (json['referralLinks'].map(UserReferralLinkModelReqFromJSON)),
         'roles': !exists(json, 'roles') ? undefined : (json['roles'].map(UserRoleDomainFromJSON)),
         'signUpCode': !exists(json, 'signUpCode') ? undefined : json['signUpCode'],
         'signUpCodeUseCount': !exists(json, 'signUpCodeUseCount') ? undefined : json['signUpCodeUseCount'],
+        'signedProfilePictureUrl': !exists(json, 'signedProfilePictureUrl') ? undefined : json['signedProfilePictureUrl'],
+        'socialProfiles': !exists(json, 'socialProfiles') ? undefined : (json['socialProfiles'].map(UserSocialProfileModelReqFromJSON)),
         'subscriptionPlans': !exists(json, 'subscriptionPlans') ? undefined : (json['subscriptionPlans'].map(UserSubscriptionPlanModelReqFromJSON)),
         'userAlias': !exists(json, 'userAlias') ? undefined : json['userAlias'],
+        'userDeletedDateUtc': !exists(json, 'userDeletedDateUtc') ? undefined : (new Date(json['userDeletedDateUtc'])),
         'userId': !exists(json, 'userId') ? undefined : json['userId'],
         'userRegistrationDateUtc': !exists(json, 'userRegistrationDateUtc') ? undefined : (new Date(json['userRegistrationDateUtc'])),
     };
@@ -82,6 +89,8 @@ export function UserDomainReqToJSON(value) {
         'genderType': value.genderType,
         'ghostAccountCreationDateUtc': value.ghostAccountCreationDateUtc === undefined ? undefined : (value.ghostAccountCreationDateUtc.toISOString()),
         'hasLeftReview': value.hasLeftReview,
+        'hubspotContactId': value.hubspotContactId,
+        'intercomUserHash': value.intercomUserHash,
         'isEmailConfirmed': value.isEmailConfirmed,
         'isEnabled': value.isEnabled,
         'isLawfirmAccessGranted': value.isLawfirmAccessGranted,
@@ -102,11 +111,16 @@ export function UserDomainReqToJSON(value) {
         'race': value.race,
         'referralCode': value.referralCode,
         'referralCount': value.referralCount,
+        'referralLink': value.referralLink,
+        'referralLinks': value.referralLinks === undefined ? undefined : (value.referralLinks.map(UserReferralLinkModelReqToJSON)),
         'roles': value.roles === undefined ? undefined : (value.roles.map(UserRoleDomainToJSON)),
         'signUpCode': value.signUpCode,
         'signUpCodeUseCount': value.signUpCodeUseCount,
+        'signedProfilePictureUrl': value.signedProfilePictureUrl,
+        'socialProfiles': value.socialProfiles === undefined ? undefined : (value.socialProfiles.map(UserSocialProfileModelReqToJSON)),
         'subscriptionPlans': value.subscriptionPlans === undefined ? undefined : (value.subscriptionPlans.map(UserSubscriptionPlanModelReqToJSON)),
         'userAlias': value.userAlias,
+        'userDeletedDateUtc': value.userDeletedDateUtc === undefined ? undefined : (value.userDeletedDateUtc.toISOString()),
         'userId': value.userId,
         'userRegistrationDateUtc': value.userRegistrationDateUtc === undefined ? undefined : (value.userRegistrationDateUtc.toISOString()),
     };

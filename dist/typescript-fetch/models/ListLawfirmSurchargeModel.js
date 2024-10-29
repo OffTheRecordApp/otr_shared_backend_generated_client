@@ -51,6 +51,7 @@ export function ListLawfirmSurchargeModelToJSON(value) {
 export var ListLawfirmSurchargeModelFeatureEnum;
 (function (ListLawfirmSurchargeModelFeatureEnum) {
     ListLawfirmSurchargeModelFeatureEnum["BLACKBOX"] = "BLACK_BOX";
+    ListLawfirmSurchargeModelFeatureEnum["FASTLANETEEN"] = "FASTLANE_TEEN";
     ListLawfirmSurchargeModelFeatureEnum["STATEPAGE"] = "STATE_PAGE";
     ListLawfirmSurchargeModelFeatureEnum["STOREFRONT"] = "STOREFRONT";
 })(ListLawfirmSurchargeModelFeatureEnum || (ListLawfirmSurchargeModelFeatureEnum = {}));

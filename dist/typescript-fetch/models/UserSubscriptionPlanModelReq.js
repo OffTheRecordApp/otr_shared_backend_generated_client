@@ -22,6 +22,8 @@ export function UserSubscriptionPlanModelReqFromJSONTyped(json, ignoreDiscrimina
     return {
         'expirationDateUtc': !exists(json, 'expirationDateUtc') ? undefined : (new Date(json['expirationDateUtc'])),
         'id': !exists(json, 'id') ? undefined : json['id'],
+        'productName': !exists(json, 'productName') ? undefined : json['productName'],
+        'startDateUtc': !exists(json, 'startDateUtc') ? undefined : (new Date(json['startDateUtc'])),
         'subscriptionStatus': !exists(json, 'subscriptionStatus') ? undefined : json['subscriptionStatus'],
     };
 }
@@ -35,9 +37,21 @@ export function UserSubscriptionPlanModelReqToJSON(value) {
     return {
         'expirationDateUtc': value.expirationDateUtc === undefined ? undefined : (value.expirationDateUtc.toISOString()),
         'id': value.id,
+        'productName': value.productName,
+        'startDateUtc': value.startDateUtc === undefined ? undefined : (value.startDateUtc.toISOString()),
         'subscriptionStatus': value.subscriptionStatus,
     };
 }
+/**
+* @export
+* @enum {string}
+*/
+export var UserSubscriptionPlanModelReqProductNameEnum;
+(function (UserSubscriptionPlanModelReqProductNameEnum) {
+    UserSubscriptionPlanModelReqProductNameEnum["CONVOYPRO"] = "CONVOY_PRO";
+    UserSubscriptionPlanModelReqProductNameEnum["OTRFASTLANE"] = "OTR_FASTLANE";
+    UserSubscriptionPlanModelReqProductNameEnum["OTRFASTLANETEEN"] = "OTR_FASTLANE_TEEN";
+})(UserSubscriptionPlanModelReqProductNameEnum || (UserSubscriptionPlanModelReqProductNameEnum = {}));
 /**
 * @export
 * @enum {string}

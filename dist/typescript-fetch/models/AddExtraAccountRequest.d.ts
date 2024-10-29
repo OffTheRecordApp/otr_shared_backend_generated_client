@@ -20,6 +20,12 @@ export interface AddExtraAccountRequest {
      * @type {boolean}
      * @memberof AddExtraAccountRequest
      */
+    isEmailConfirmed?: boolean;
+    /**
+     *
+     * @type {boolean}
+     * @memberof AddExtraAccountRequest
+     */
     isPrimaryAccount?: boolean;
     /**
      *

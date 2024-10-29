@@ -9,6 +9,7 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
+import { SubscriptionGuardianModel } from './';
 /**
  *
  * @export
@@ -21,6 +22,12 @@ export interface CreateBillingSubscriptionRequest {
      * @memberof CreateBillingSubscriptionRequest
      */
     cardId?: string;
+    /**
+     *
+     * @type {SubscriptionGuardianModel}
+     * @memberof CreateBillingSubscriptionRequest
+     */
+    guardian?: SubscriptionGuardianModel;
     /**
      *
      * @type {Array<string>}

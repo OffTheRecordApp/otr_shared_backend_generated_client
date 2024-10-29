@@ -9,13 +9,19 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-import { FreshDeskTicket } from './';
+import { FreshDeskTicket, IntercomSearchTicketsResponse } from './';
 /**
  *
  * @export
  * @interface GetSupportTicketsResponse
  */
 export interface GetSupportTicketsResponse {
+    /**
+     *
+     * @type {IntercomSearchTicketsResponse}
+     * @memberof GetSupportTicketsResponse
+     */
+    intercomTickets?: IntercomSearchTicketsResponse;
     /**
      *
      * @type {Array<FreshDeskTicket>}

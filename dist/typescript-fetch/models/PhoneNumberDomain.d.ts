@@ -18,6 +18,12 @@ import { Timestamp } from './';
 export interface PhoneNumberDomain {
     /**
      *
+     * @type {string}
+     * @memberof PhoneNumberDomain
+     */
+    countryCode?: string;
+    /**
+     *
      * @type {Timestamp}
      * @memberof PhoneNumberDomain
      */

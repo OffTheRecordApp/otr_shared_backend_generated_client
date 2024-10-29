@@ -108,6 +108,9 @@ export class RecurringBillingControllerApi extends runtime.BaseAPI {
             if (requestParameters.limit !== undefined) {
                 queryParameters['limit'] = requestParameters.limit;
             }
+            if (requestParameters.userId !== undefined) {
+                queryParameters['userId'] = requestParameters.userId;
+            }
             const headerParameters = {};
             const response = yield this.request({
                 path: `/api/v1/billing/products`,

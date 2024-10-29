@@ -344,6 +344,12 @@ export class DashboardControllerApi extends runtime.BaseAPI {
             if (requestParameters.callStatus !== undefined) {
                 queryParameters['callStatus'] = requestParameters.callStatus;
             }
+            if (requestParameters.callStatusName !== undefined) {
+                queryParameters['callStatusName'] = requestParameters.callStatusName;
+            }
+            if (requestParameters.customerName !== undefined) {
+                queryParameters['customerName'] = requestParameters.customerName;
+            }
             if (requestParameters.direction !== undefined) {
                 queryParameters['direction'] = requestParameters.direction;
             }
@@ -358,6 +364,9 @@ export class DashboardControllerApi extends runtime.BaseAPI {
             }
             if (requestParameters.page !== undefined) {
                 queryParameters['page'] = requestParameters.page;
+            }
+            if (requestParameters.phoneNumber !== undefined) {
+                queryParameters['phoneNumber'] = requestParameters.phoneNumber;
             }
             if (requestParameters.shouldIncludePhoneCalls !== undefined) {
                 queryParameters['shouldIncludePhoneCalls'] = requestParameters.shouldIncludePhoneCalls;
@@ -376,6 +385,12 @@ export class DashboardControllerApi extends runtime.BaseAPI {
             }
             if (requestParameters.timeZoneId !== undefined) {
                 queryParameters['timeZoneId'] = requestParameters.timeZoneId;
+            }
+            if (requestParameters.totalCalls !== undefined) {
+                queryParameters['totalCalls'] = requestParameters.totalCalls;
+            }
+            if (requestParameters.totalOtrAccounts !== undefined) {
+                queryParameters['totalOtrAccounts'] = requestParameters.totalOtrAccounts;
             }
             const headerParameters = {};
             const response = yield this.request({

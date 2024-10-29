@@ -12,6 +12,7 @@
  * Do not edit the class manually.
  */
 import { exists } from '../runtime';
+import { CasePaymentBreakdownItemModelFromJSON, CasePaymentBreakdownItemModelToJSON, } from './';
 export function CasePaymentModelFromJSON(json) {
     return CasePaymentModelFromJSONTyped(json, false);
 }
@@ -23,6 +24,7 @@ export function CasePaymentModelFromJSONTyped(json, ignoreDiscriminator) {
         'dueDate': !exists(json, 'dueDate') ? undefined : (new Date(json['dueDate'])),
         'dueNow': !exists(json, 'dueNow') ? undefined : json['dueNow'],
         'feeAmount': !exists(json, 'feeAmount') ? undefined : json['feeAmount'],
+        'items': !exists(json, 'items') ? undefined : (json['items'].map(CasePaymentBreakdownItemModelFromJSON)),
     };
 }
 export function CasePaymentModelToJSON(value) {
@@ -36,5 +38,6 @@ export function CasePaymentModelToJSON(value) {
         'dueDate': value.dueDate === undefined ? undefined : (value.dueDate.toISOString()),
         'dueNow': value.dueNow,
         'feeAmount': value.feeAmount,
+        'items': value.items === undefined ? undefined : (value.items.map(CasePaymentBreakdownItemModelToJSON)),
     };
 }

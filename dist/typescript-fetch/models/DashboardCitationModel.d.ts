@@ -69,6 +69,12 @@ export interface DashboardCitationModel {
      * @type {string}
      * @memberof DashboardCitationModel
      */
+    signedTicketImageUrl?: string;
+    /**
+     *
+     * @type {string}
+     * @memberof DashboardCitationModel
+     */
     ticketImageUrl?: string;
     /**
      *
