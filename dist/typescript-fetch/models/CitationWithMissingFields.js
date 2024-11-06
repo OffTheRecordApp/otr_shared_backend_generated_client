@@ -139,6 +139,7 @@ export var CitationWithMissingFieldsGenderEnum;
     CitationWithMissingFieldsGenderEnum["NOTAVAILABLE"] = "NOT_AVAILABLE";
     CitationWithMissingFieldsGenderEnum["NOTLISTED"] = "NOT_LISTED";
     CitationWithMissingFieldsGenderEnum["UNVERIFIED"] = "UNVERIFIED";
+    CitationWithMissingFieldsGenderEnum["X"] = "X";
 })(CitationWithMissingFieldsGenderEnum || (CitationWithMissingFieldsGenderEnum = {}));
 /**
 * @export

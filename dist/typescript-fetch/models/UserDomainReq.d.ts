@@ -305,7 +305,8 @@ export declare enum UserDomainReqGenderTypeEnum {
     MALE = "MALE",
     NOTAVAILABLE = "NOT_AVAILABLE",
     NOTLISTED = "NOT_LISTED",
-    UNVERIFIED = "UNVERIFIED"
+    UNVERIFIED = "UNVERIFIED",
+    X = "X"
 }
 /**
 * @export

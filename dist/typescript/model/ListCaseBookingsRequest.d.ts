@@ -71,7 +71,8 @@ export declare namespace ListCaseBookingsRequest {
         MALE,
         NOTAVAILABLE,
         NOTLISTED,
-        UNVERIFIED
+        UNVERIFIED,
+        X
     }
     enum RaceFilterListEnum {
         ASIAN,

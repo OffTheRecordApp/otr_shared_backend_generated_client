@@ -64,7 +64,8 @@ export declare namespace UserDomainReq {
         MALE,
         NOTAVAILABLE,
         NOTLISTED,
-        UNVERIFIED
+        UNVERIFIED,
+        X
     }
     enum LawyerJobTitleEnum {
         ACCOUNTANT,

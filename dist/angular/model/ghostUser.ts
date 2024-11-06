@@ -50,13 +50,14 @@ export namespace GhostUser {
         OtrWidget: 'OTR_WIDGET' as ClientTypeEnum,
         Unknown: 'UNKNOWN' as ClientTypeEnum
     };
-    export type GenderEnum = 'FEMALE' | 'MALE' | 'NOT_AVAILABLE' | 'NOT_LISTED' | 'UNVERIFIED';
+    export type GenderEnum = 'FEMALE' | 'MALE' | 'NOT_AVAILABLE' | 'NOT_LISTED' | 'UNVERIFIED' | 'X';
     export const GenderEnum = {
         Female: 'FEMALE' as GenderEnum,
         Male: 'MALE' as GenderEnum,
         NotAvailable: 'NOT_AVAILABLE' as GenderEnum,
         NotListed: 'NOT_LISTED' as GenderEnum,
-        Unverified: 'UNVERIFIED' as GenderEnum
+        Unverified: 'UNVERIFIED' as GenderEnum,
+        X: 'X' as GenderEnum
     };
     export type RaceEnum = 'ASIAN' | 'BLACK' | 'HISPANIC' | 'MIDDLE_EASTERN' | 'NATIVE' | 'NOT_AVAILABLE' | 'PACIFIC_ISLANDER' | 'TWO_OR_MORE' | 'UNKNOWN' | 'UNVERIFIED' | 'WHITE';
     export const RaceEnum = {

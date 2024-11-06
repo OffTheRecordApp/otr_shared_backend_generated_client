@@ -25,7 +25,8 @@ export declare namespace GhostUserResponse {
         MALE,
         NOTAVAILABLE,
         NOTLISTED,
-        UNVERIFIED
+        UNVERIFIED,
+        X
     }
     enum RaceEnum {
         ASIAN,

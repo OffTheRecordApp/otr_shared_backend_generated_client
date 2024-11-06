@@ -59,6 +59,7 @@ export var GhostUserResponseGenderEnum;
     GhostUserResponseGenderEnum["NOTAVAILABLE"] = "NOT_AVAILABLE";
     GhostUserResponseGenderEnum["NOTLISTED"] = "NOT_LISTED";
     GhostUserResponseGenderEnum["UNVERIFIED"] = "UNVERIFIED";
+    GhostUserResponseGenderEnum["X"] = "X";
 })(GhostUserResponseGenderEnum || (GhostUserResponseGenderEnum = {}));
 /**
 * @export

@@ -21,6 +21,7 @@ var UserDomainRes;
         GenderTypeEnum[GenderTypeEnum["NOTAVAILABLE"] = 'NOT_AVAILABLE'] = "NOTAVAILABLE";
         GenderTypeEnum[GenderTypeEnum["NOTLISTED"] = 'NOT_LISTED'] = "NOTLISTED";
         GenderTypeEnum[GenderTypeEnum["UNVERIFIED"] = 'UNVERIFIED'] = "UNVERIFIED";
+        GenderTypeEnum[GenderTypeEnum["X"] = 'X'] = "X";
     })(GenderTypeEnum = UserDomainRes.GenderTypeEnum || (UserDomainRes.GenderTypeEnum = {}));
     var LawyerJobTitleEnum;
     (function (LawyerJobTitleEnum) {

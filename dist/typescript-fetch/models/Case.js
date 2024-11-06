@@ -124,6 +124,7 @@ export var CaseGenderEnum;
     CaseGenderEnum["NOTAVAILABLE"] = "NOT_AVAILABLE";
     CaseGenderEnum["NOTLISTED"] = "NOT_LISTED";
     CaseGenderEnum["UNVERIFIED"] = "UNVERIFIED";
+    CaseGenderEnum["X"] = "X";
 })(CaseGenderEnum || (CaseGenderEnum = {}));
 /**
 * @export

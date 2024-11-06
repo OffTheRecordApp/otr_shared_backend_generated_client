@@ -67,13 +67,14 @@ export namespace ListCaseBookingsRequest {
         TrafficSchool: 'TRAFFIC_SCHOOL' as CaseStatusFilterEnum,
         Unconfirmed: 'UNCONFIRMED' as CaseStatusFilterEnum
     };
-    export type GenderFilterListEnum = 'FEMALE' | 'MALE' | 'NOT_AVAILABLE' | 'NOT_LISTED' | 'UNVERIFIED';
+    export type GenderFilterListEnum = 'FEMALE' | 'MALE' | 'NOT_AVAILABLE' | 'NOT_LISTED' | 'UNVERIFIED' | 'X';
     export const GenderFilterListEnum = {
         Female: 'FEMALE' as GenderFilterListEnum,
         Male: 'MALE' as GenderFilterListEnum,
         NotAvailable: 'NOT_AVAILABLE' as GenderFilterListEnum,
         NotListed: 'NOT_LISTED' as GenderFilterListEnum,
-        Unverified: 'UNVERIFIED' as GenderFilterListEnum
+        Unverified: 'UNVERIFIED' as GenderFilterListEnum,
+        X: 'X' as GenderFilterListEnum
     };
     export type RaceFilterListEnum = 'ASIAN' | 'BLACK' | 'HISPANIC' | 'MIDDLE_EASTERN' | 'NATIVE' | 'NOT_AVAILABLE' | 'PACIFIC_ISLANDER' | 'TWO_OR_MORE' | 'UNKNOWN' | 'UNVERIFIED' | 'WHITE';
     export const RaceFilterListEnum = {

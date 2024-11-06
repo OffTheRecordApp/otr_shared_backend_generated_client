@@ -57,7 +57,8 @@ export declare namespace RegisteredUserDomain {
         MALE,
         NOTAVAILABLE,
         NOTLISTED,
-        UNVERIFIED
+        UNVERIFIED,
+        X
     }
     enum LoginProviderEnum {
         APPLE,

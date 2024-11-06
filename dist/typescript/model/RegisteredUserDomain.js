@@ -46,6 +46,7 @@ var RegisteredUserDomain;
         GenderTypeEnum[GenderTypeEnum["NOTAVAILABLE"] = 'NOT_AVAILABLE'] = "NOTAVAILABLE";
         GenderTypeEnum[GenderTypeEnum["NOTLISTED"] = 'NOT_LISTED'] = "NOTLISTED";
         GenderTypeEnum[GenderTypeEnum["UNVERIFIED"] = 'UNVERIFIED'] = "UNVERIFIED";
+        GenderTypeEnum[GenderTypeEnum["X"] = 'X'] = "X";
     })(GenderTypeEnum = RegisteredUserDomain.GenderTypeEnum || (RegisteredUserDomain.GenderTypeEnum = {}));
     var LoginProviderEnum;
     (function (LoginProviderEnum) {

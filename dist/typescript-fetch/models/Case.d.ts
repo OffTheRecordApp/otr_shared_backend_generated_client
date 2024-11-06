@@ -180,7 +180,8 @@ export declare enum CaseGenderEnum {
     MALE = "MALE",
     NOTAVAILABLE = "NOT_AVAILABLE",
     NOTLISTED = "NOT_LISTED",
-    UNVERIFIED = "UNVERIFIED"
+    UNVERIFIED = "UNVERIFIED",
+    X = "X"
 }
 /**
 * @export

@@ -69,13 +69,14 @@ export interface UserDomainRes {
     userRegistrationDateUtc?: string;
 }
 export namespace UserDomainRes {
-    export type GenderTypeEnum = 'FEMALE' | 'MALE' | 'NOT_AVAILABLE' | 'NOT_LISTED' | 'UNVERIFIED';
+    export type GenderTypeEnum = 'FEMALE' | 'MALE' | 'NOT_AVAILABLE' | 'NOT_LISTED' | 'UNVERIFIED' | 'X';
     export const GenderTypeEnum = {
         Female: 'FEMALE' as GenderTypeEnum,
         Male: 'MALE' as GenderTypeEnum,
         NotAvailable: 'NOT_AVAILABLE' as GenderTypeEnum,
         NotListed: 'NOT_LISTED' as GenderTypeEnum,
-        Unverified: 'UNVERIFIED' as GenderTypeEnum
+        Unverified: 'UNVERIFIED' as GenderTypeEnum,
+        X: 'X' as GenderTypeEnum
     };
     export type LawyerJobTitleEnum = 'ACCOUNTANT' | 'ATTORNEY' | 'ATTORNEY_ASSOCIATE' | 'ATTORNEY_COUNSEL' | 'ATTORNEY_MANAGING_PARTNER' | 'ATTORNEY_PARTNER' | 'ATTORNEY_STAFF' | 'CUSTOMER_SERVICE_REP' | 'LEGAL_ASSISTANT' | 'LEGAL_INTERN' | 'LEGAL_SECRETARY' | 'OTHER' | 'PARALEGAL';
     export const LawyerJobTitleEnum = {

@@ -104,6 +104,7 @@ export var RegisteredUserDomainGenderTypeEnum;
     RegisteredUserDomainGenderTypeEnum["NOTAVAILABLE"] = "NOT_AVAILABLE";
     RegisteredUserDomainGenderTypeEnum["NOTLISTED"] = "NOT_LISTED";
     RegisteredUserDomainGenderTypeEnum["UNVERIFIED"] = "UNVERIFIED";
+    RegisteredUserDomainGenderTypeEnum["X"] = "X";
 })(RegisteredUserDomainGenderTypeEnum || (RegisteredUserDomainGenderTypeEnum = {}));
 /**
 * @export

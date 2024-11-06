@@ -75,7 +75,8 @@ export declare namespace Case {
         MALE,
         NOTAVAILABLE,
         NOTLISTED,
-        UNVERIFIED
+        UNVERIFIED,
+        X
     }
     enum RaceEnum {
         ASIAN,

@@ -136,6 +136,7 @@ export var UserDomainReqGenderTypeEnum;
     UserDomainReqGenderTypeEnum["NOTAVAILABLE"] = "NOT_AVAILABLE";
     UserDomainReqGenderTypeEnum["NOTLISTED"] = "NOT_LISTED";
     UserDomainReqGenderTypeEnum["UNVERIFIED"] = "UNVERIFIED";
+    UserDomainReqGenderTypeEnum["X"] = "X";
 })(UserDomainReqGenderTypeEnum || (UserDomainReqGenderTypeEnum = {}));
 /**
 * @export

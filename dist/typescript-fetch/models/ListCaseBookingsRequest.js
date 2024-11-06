@@ -113,6 +113,7 @@ export var ListCaseBookingsRequestGenderFilterListEnum;
     ListCaseBookingsRequestGenderFilterListEnum["NOTAVAILABLE"] = "NOT_AVAILABLE";
     ListCaseBookingsRequestGenderFilterListEnum["NOTLISTED"] = "NOT_LISTED";
     ListCaseBookingsRequestGenderFilterListEnum["UNVERIFIED"] = "UNVERIFIED";
+    ListCaseBookingsRequestGenderFilterListEnum["X"] = "X";
 })(ListCaseBookingsRequestGenderFilterListEnum || (ListCaseBookingsRequestGenderFilterListEnum = {}));
 /**
 * @export

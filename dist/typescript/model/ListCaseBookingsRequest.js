@@ -61,6 +61,7 @@ var ListCaseBookingsRequest;
         GenderFilterListEnum[GenderFilterListEnum["NOTAVAILABLE"] = 'NOT_AVAILABLE'] = "NOTAVAILABLE";
         GenderFilterListEnum[GenderFilterListEnum["NOTLISTED"] = 'NOT_LISTED'] = "NOTLISTED";
         GenderFilterListEnum[GenderFilterListEnum["UNVERIFIED"] = 'UNVERIFIED'] = "UNVERIFIED";
+        GenderFilterListEnum[GenderFilterListEnum["X"] = 'X'] = "X";
     })(GenderFilterListEnum = ListCaseBookingsRequest.GenderFilterListEnum || (ListCaseBookingsRequest.GenderFilterListEnum = {}));
     var RaceFilterListEnum;
     (function (RaceFilterListEnum) {

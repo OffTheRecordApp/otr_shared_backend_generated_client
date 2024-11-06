@@ -61,6 +61,7 @@ var Case;
         GenderEnum[GenderEnum["NOTAVAILABLE"] = 'NOT_AVAILABLE'] = "NOTAVAILABLE";
         GenderEnum[GenderEnum["NOTLISTED"] = 'NOT_LISTED'] = "NOTLISTED";
         GenderEnum[GenderEnum["UNVERIFIED"] = 'UNVERIFIED'] = "UNVERIFIED";
+        GenderEnum[GenderEnum["X"] = 'X'] = "X";
     })(GenderEnum = Case.GenderEnum || (Case.GenderEnum = {}));
     var RaceEnum;
     (function (RaceEnum) {

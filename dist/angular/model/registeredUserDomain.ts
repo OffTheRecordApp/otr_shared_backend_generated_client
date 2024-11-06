@@ -55,13 +55,14 @@ export namespace RegisteredUserDomain {
         OtrWidget: 'OTR_WIDGET' as ClientTypeEnum,
         Unknown: 'UNKNOWN' as ClientTypeEnum
     };
-    export type GenderTypeEnum = 'FEMALE' | 'MALE' | 'NOT_AVAILABLE' | 'NOT_LISTED' | 'UNVERIFIED';
+    export type GenderTypeEnum = 'FEMALE' | 'MALE' | 'NOT_AVAILABLE' | 'NOT_LISTED' | 'UNVERIFIED' | 'X';
     export const GenderTypeEnum = {
         Female: 'FEMALE' as GenderTypeEnum,
         Male: 'MALE' as GenderTypeEnum,
         NotAvailable: 'NOT_AVAILABLE' as GenderTypeEnum,
         NotListed: 'NOT_LISTED' as GenderTypeEnum,
-        Unverified: 'UNVERIFIED' as GenderTypeEnum
+        Unverified: 'UNVERIFIED' as GenderTypeEnum,
+        X: 'X' as GenderTypeEnum
     };
     export type LoginProviderEnum = 'APPLE' | 'EMAIL' | 'FACEBOOK' | 'GOOGLE' | 'PHONE' | 'TWITTER' | 'UNKNOWN';
     export const LoginProviderEnum = {
