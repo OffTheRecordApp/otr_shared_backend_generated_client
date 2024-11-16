@@ -257,6 +257,7 @@ export var ValidateDirectMailResponseOtrErrorEnum;
     ValidateDirectMailResponseOtrErrorEnum["NOLAWFIRMAVAILABLE"] = "NO_LAWFIRM_AVAILABLE";
     ValidateDirectMailResponseOtrErrorEnum["NOLEGALSERVICESINREGION"] = "NO_LEGAL_SERVICES_IN_REGION";
     ValidateDirectMailResponseOtrErrorEnum["NOSTRIPEACCOUNT"] = "NO_STRIPE_ACCOUNT";
+    ValidateDirectMailResponseOtrErrorEnum["OLDPASSWORDINCORRECT"] = "OLD_PASSWORD_INCORRECT";
     ValidateDirectMailResponseOtrErrorEnum["OWNERCASEMESSAGEMISMATCH"] = "OWNER_CASE_MESSAGE_MISMATCH";
     ValidateDirectMailResponseOtrErrorEnum["PAYMENTPLANSDENIED"] = "PAYMENT_PLANS_DENIED";
     ValidateDirectMailResponseOtrErrorEnum["PAYMENTPLANLEGALFEEHASCENTS"] = "PAYMENT_PLAN_LEGAL_FEE_HAS_CENTS";

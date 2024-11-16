@@ -21,7 +21,7 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
     });
 };
 import * as runtime from '../runtime';
-import { ChangeUserPasswordRequestToJSON, ResetUserPasswordRequestToJSON, VerifyPasswordResetTokenResponseFromJSON, VerifyUserAccountResponseFromJSON, } from '../models';
+import { ChangeUserPasswordRequestToJSON, ResetUserPasswordRequestToJSON, VerifyPasswordResetTokenResponseFromJSON, VerifyUserAccountResponseFromJSON, VerifyUserPasswordRequestToJSON, } from '../models';
 /**
  *
  */
@@ -53,39 +53,6 @@ export class UserPasswordControllerApi extends runtime.BaseAPI {
     changeUserPasswordUsingPUT(requestParameters) {
         return __awaiter(this, void 0, void 0, function* () {
             const response = yield this.changeUserPasswordUsingPUTRaw(requestParameters);
-            return yield response.value();
-        });
-    }
-    /**
-     * resetUserPasswordByAdmin
-     */
-    resetUserPasswordByAdminUsingPUTRaw(requestParameters) {
-        return __awaiter(this, void 0, void 0, function* () {
-            if (requestParameters.userId === null || requestParameters.userId === undefined) {
-                throw new runtime.RequiredError('userId', 'Required parameter requestParameters.userId was null or undefined when calling resetUserPasswordByAdminUsingPUT.');
-            }
-            if (requestParameters.request === null || requestParameters.request === undefined) {
-                throw new runtime.RequiredError('request', 'Required parameter requestParameters.request was null or undefined when calling resetUserPasswordByAdminUsingPUT.');
-            }
-            const queryParameters = {};
-            const headerParameters = {};
-            headerParameters['Content-Type'] = 'application/json';
-            const response = yield this.request({
-                path: `/api/v1/users/{userId}/password`.replace(`{${"userId"}}`, encodeURIComponent(String(requestParameters.userId))),
-                method: 'PUT',
-                headers: headerParameters,
-                query: queryParameters,
-                body: ResetUserPasswordRequestToJSON(requestParameters.request),
-            });
-            return new runtime.JSONApiResponse(response);
-        });
-    }
-    /**
-     * resetUserPasswordByAdmin
-     */
-    resetUserPasswordByAdminUsingPUT(requestParameters) {
-        return __awaiter(this, void 0, void 0, function* () {
-            const response = yield this.resetUserPasswordByAdminUsingPUTRaw(requestParameters);
             return yield response.value();
         });
     }
@@ -256,6 +223,39 @@ export class UserPasswordControllerApi extends runtime.BaseAPI {
     verifyUserAccountUsingPUT(requestParameters) {
         return __awaiter(this, void 0, void 0, function* () {
             const response = yield this.verifyUserAccountUsingPUTRaw(requestParameters);
+            return yield response.value();
+        });
+    }
+    /**
+     * verifyUserPassword
+     */
+    verifyUserPasswordUsingPUTRaw(requestParameters) {
+        return __awaiter(this, void 0, void 0, function* () {
+            if (requestParameters.userId === null || requestParameters.userId === undefined) {
+                throw new runtime.RequiredError('userId', 'Required parameter requestParameters.userId was null or undefined when calling verifyUserPasswordUsingPUT.');
+            }
+            if (requestParameters.request === null || requestParameters.request === undefined) {
+                throw new runtime.RequiredError('request', 'Required parameter requestParameters.request was null or undefined when calling verifyUserPasswordUsingPUT.');
+            }
+            const queryParameters = {};
+            const headerParameters = {};
+            headerParameters['Content-Type'] = 'application/json';
+            const response = yield this.request({
+                path: `/api/v1/users/{userId}/verify-password`.replace(`{${"userId"}}`, encodeURIComponent(String(requestParameters.userId))),
+                method: 'PUT',
+                headers: headerParameters,
+                query: queryParameters,
+                body: VerifyUserPasswordRequestToJSON(requestParameters.request),
+            });
+            return new runtime.JSONApiResponse(response);
+        });
+    }
+    /**
+     * verifyUserPassword
+     */
+    verifyUserPasswordUsingPUT(requestParameters) {
+        return __awaiter(this, void 0, void 0, function* () {
+            const response = yield this.verifyUserPasswordUsingPUTRaw(requestParameters);
             return yield response.value();
         });
     }

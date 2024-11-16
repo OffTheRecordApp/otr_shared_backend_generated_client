@@ -801,6 +801,7 @@ __exportStar(require("./VerifyMailingAddressRequest"), exports);
 __exportStar(require("./VerifyMailingAddressResponse"), exports);
 __exportStar(require("./VerifyPasswordResetTokenResponse"), exports);
 __exportStar(require("./VerifyUserAccountResponse"), exports);
+__exportStar(require("./VerifyUserPasswordRequest"), exports);
 __exportStar(require("./Violation"), exports);
 __exportStar(require("./ViolationClassificationModel"), exports);
 __exportStar(require("./ViolationInput"), exports);

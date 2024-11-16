@@ -26,13 +26,6 @@ export declare class UserPasswordControllerApi {
     changeUserPasswordUsingPUT(request: models.ChangeUserPasswordRequest, extraHttpRequestParams?: any): ng.IHttpPromise<object>;
     /**
      *
-     * @summary resetUserPasswordByAdmin
-     * @param userId userId
-     * @param request request
-     */
-    resetUserPasswordByAdminUsingPUT(userId: number, request: models.ResetUserPasswordRequest, extraHttpRequestParams?: any): ng.IHttpPromise<object>;
-    /**
-     *
      * @summary resetUserPassword
      * @param request request
      */
@@ -68,4 +61,11 @@ export declare class UserPasswordControllerApi {
      * @param userId userId
      */
     verifyUserAccountUsingPUT(code: string, email?: string, fieldName?: string, fieldValue?: string, userId?: string, extraHttpRequestParams?: any): ng.IHttpPromise<models.VerifyUserAccountResponse>;
+    /**
+     *
+     * @summary verifyUserPassword
+     * @param userId userId
+     * @param request request
+     */
+    verifyUserPasswordUsingPUT(userId: number, request: models.VerifyUserPasswordRequest, extraHttpRequestParams?: any): ng.IHttpPromise<object>;
 }

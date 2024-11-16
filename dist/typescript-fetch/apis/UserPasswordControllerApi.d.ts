@@ -10,13 +10,9 @@
  * Do not edit the class manually.
  */
 import * as runtime from '../runtime';
-import { ChangeUserPasswordRequest, ResetUserPasswordRequest, VerifyPasswordResetTokenResponse, VerifyUserAccountResponse } from '../models';
+import { ChangeUserPasswordRequest, ResetUserPasswordRequest, VerifyPasswordResetTokenResponse, VerifyUserAccountResponse, VerifyUserPasswordRequest } from '../models';
 export interface ChangeUserPasswordUsingPUTRequest {
     request: ChangeUserPasswordRequest;
-}
-export interface ResetUserPasswordByAdminUsingPUTRequest {
-    userId: number;
-    request: ResetUserPasswordRequest;
 }
 export interface ResetUserPasswordUsingPOSTRequest {
     request: ResetUserPasswordRequest;
@@ -40,6 +36,10 @@ export interface VerifyUserAccountUsingPUTRequest {
     fieldValue?: string;
     userId?: string;
 }
+export interface VerifyUserPasswordUsingPUTRequest {
+    userId: number;
+    request: VerifyUserPasswordRequest;
+}
 /**
  *
  */
@@ -52,14 +52,6 @@ export declare class UserPasswordControllerApi extends runtime.BaseAPI {
      * changeUserPassword
      */
     changeUserPasswordUsingPUT(requestParameters: ChangeUserPasswordUsingPUTRequest): Promise<object>;
-    /**
-     * resetUserPasswordByAdmin
-     */
-    resetUserPasswordByAdminUsingPUTRaw(requestParameters: ResetUserPasswordByAdminUsingPUTRequest): Promise<runtime.ApiResponse<object>>;
-    /**
-     * resetUserPasswordByAdmin
-     */
-    resetUserPasswordByAdminUsingPUT(requestParameters: ResetUserPasswordByAdminUsingPUTRequest): Promise<object>;
     /**
      * resetUserPassword
      */
@@ -100,6 +92,14 @@ export declare class UserPasswordControllerApi extends runtime.BaseAPI {
      * verifyUserAccount
      */
     verifyUserAccountUsingPUT(requestParameters: VerifyUserAccountUsingPUTRequest): Promise<VerifyUserAccountResponse>;
+    /**
+     * verifyUserPassword
+     */
+    verifyUserPasswordUsingPUTRaw(requestParameters: VerifyUserPasswordUsingPUTRequest): Promise<runtime.ApiResponse<object>>;
+    /**
+     * verifyUserPassword
+     */
+    verifyUserPasswordUsingPUT(requestParameters: VerifyUserPasswordUsingPUTRequest): Promise<object>;
 }
 /**
     * @export

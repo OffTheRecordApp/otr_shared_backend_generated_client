@@ -913,6 +913,7 @@ model/verifyMailingAddressRequest.ts
 model/verifyMailingAddressResponse.ts
 model/verifyPasswordResetTokenResponse.ts
 model/verifyUserAccountResponse.ts
+model/verifyUserPasswordRequest.ts
 model/violation.ts
 model/violationClassificationModel.ts
 model/violationInput.ts

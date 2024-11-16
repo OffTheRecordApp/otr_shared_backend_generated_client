@@ -16402,51 +16402,6 @@ angular.module('otrBackendService', [])
                 return deferred.promise;
             };
             /**
-             * resetUserPasswordByAdmin
-             * @method
-             * @name OtrService#resetUserPasswordByAdminUsingPUT
-             * @param {object} parameters - method options and parameters
-             * @param {} parameters.request - request
-             * @param {integer} parameters.userId - userId
-             */
-            OtrService.prototype.resetUserPasswordByAdminUsingPUT = function(parameters) {
-                if (parameters === undefined) {
-                    parameters = {};
-                }
-                var deferred = $q.defer();
-                var domain = this.domain,
-                    path = '/api/v1/users/{userId}/password';
-                var body = {},
-                    queryParameters = {},
-                    headers = {},
-                    form = {};
-
-                headers['Accept'] = ['*/*'];
-                headers['Content-Type'] = ['application/json'];
-
-                if (parameters['request'] !== undefined) {
-                    body = parameters['request'];
-                }
-
-                if (parameters['request'] === undefined) {
-                    deferred.reject(new Error('Missing required  parameter: request'));
-                    return deferred.promise;
-                }
-
-                path = path.replace('{userId}', parameters['userId']);
-
-                if (parameters['userId'] === undefined) {
-                    deferred.reject(new Error('Missing required  parameter: userId'));
-                    return deferred.promise;
-                }
-
-                queryParameters = mergeQueryParams(parameters, queryParameters);
-
-                this.request('PUT', domain + path, parameters, body, headers, queryParameters, form, deferred);
-
-                return deferred.promise;
-            };
-            /**
              * addUserPhoneNumber
              * @method
              * @name OtrService#addUserPhoneNumberUsingPOST
@@ -16918,6 +16873,51 @@ angular.module('otrBackendService', [])
                 queryParameters = mergeQueryParams(parameters, queryParameters);
 
                 this.request('POST', domain + path, parameters, body, headers, queryParameters, form, deferred);
+
+                return deferred.promise;
+            };
+            /**
+             * verifyUserPassword
+             * @method
+             * @name OtrService#verifyUserPasswordUsingPUT
+             * @param {object} parameters - method options and parameters
+             * @param {} parameters.request - request
+             * @param {integer} parameters.userId - userId
+             */
+            OtrService.prototype.verifyUserPasswordUsingPUT = function(parameters) {
+                if (parameters === undefined) {
+                    parameters = {};
+                }
+                var deferred = $q.defer();
+                var domain = this.domain,
+                    path = '/api/v1/users/{userId}/verify-password';
+                var body = {},
+                    queryParameters = {},
+                    headers = {},
+                    form = {};
+
+                headers['Accept'] = ['*/*'];
+                headers['Content-Type'] = ['application/json'];
+
+                if (parameters['request'] !== undefined) {
+                    body = parameters['request'];
+                }
+
+                if (parameters['request'] === undefined) {
+                    deferred.reject(new Error('Missing required  parameter: request'));
+                    return deferred.promise;
+                }
+
+                path = path.replace('{userId}', parameters['userId']);
+
+                if (parameters['userId'] === undefined) {
+                    deferred.reject(new Error('Missing required  parameter: userId'));
+                    return deferred.promise;
+                }
+
+                queryParameters = mergeQueryParams(parameters, queryParameters);
+
+                this.request('PUT', domain + path, parameters, body, headers, queryParameters, form, deferred);
 
                 return deferred.promise;
             };

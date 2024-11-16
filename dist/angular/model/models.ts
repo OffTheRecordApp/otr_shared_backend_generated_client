@@ -789,6 +789,7 @@ export * from './verifyMailingAddressRequest';
 export * from './verifyMailingAddressResponse';
 export * from './verifyPasswordResetTokenResponse';
 export * from './verifyUserAccountResponse';
+export * from './verifyUserPasswordRequest';
 export * from './violation';
 export * from './violationClassificationModel';
 export * from './violationInput';
