@@ -66,6 +66,12 @@ export interface BillingSubscriptionModel {
     status?: BillingSubscriptionModelStatusEnum;
     /**
      *
+     * @type {Date}
+     * @memberof BillingSubscriptionModel
+     */
+    trialEndAt?: Date;
+    /**
+     *
      * @type {BillingUpcomingInvoiceModel}
      * @memberof BillingSubscriptionModel
      */

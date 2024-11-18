@@ -22,6 +22,7 @@ export interface BillingSubscriptionModel {
     productName?: string;
     startAt?: string;
     status?: BillingSubscriptionModel.StatusEnum;
+    trialEndAt?: string;
     upcomingInvoicePreview?: BillingUpcomingInvoiceModel;
 }
 export namespace BillingSubscriptionModel {

@@ -29,6 +29,7 @@ export function BillingSubscriptionModelFromJSONTyped(json, ignoreDiscriminator)
         'productName': !exists(json, 'productName') ? undefined : json['productName'],
         'startAt': !exists(json, 'startAt') ? undefined : (new Date(json['startAt'])),
         'status': !exists(json, 'status') ? undefined : json['status'],
+        'trialEndAt': !exists(json, 'trialEndAt') ? undefined : (new Date(json['trialEndAt'])),
         'upcomingInvoicePreview': !exists(json, 'upcomingInvoicePreview') ? undefined : BillingUpcomingInvoiceModelFromJSON(json['upcomingInvoicePreview']),
     };
 }
@@ -48,6 +49,7 @@ export function BillingSubscriptionModelToJSON(value) {
         'productName': value.productName,
         'startAt': value.startAt === undefined ? undefined : (value.startAt.toISOString()),
         'status': value.status,
+        'trialEndAt': value.trialEndAt === undefined ? undefined : (value.trialEndAt.toISOString()),
         'upcomingInvoicePreview': BillingUpcomingInvoiceModelToJSON(value.upcomingInvoicePreview),
     };
 }
