@@ -25,6 +25,7 @@ export function CreateBillingSubscriptionRequestFromJSONTyped(json, ignoreDiscri
         'guardian': !exists(json, 'guardian') ? undefined : SubscriptionGuardianModelFromJSON(json['guardian']),
         'priceIds': !exists(json, 'priceIds') ? undefined : json['priceIds'],
         'productId': !exists(json, 'productId') ? undefined : json['productId'],
+        'trialEndDate': !exists(json, 'trialEndDate') ? undefined : (new Date(json['trialEndDate'])),
     };
 }
 export function CreateBillingSubscriptionRequestToJSON(value) {
@@ -39,5 +40,6 @@ export function CreateBillingSubscriptionRequestToJSON(value) {
         'guardian': SubscriptionGuardianModelToJSON(value.guardian),
         'priceIds': value.priceIds,
         'productId': value.productId,
+        'trialEndDate': value.trialEndDate === undefined ? undefined : (value.trialEndDate.toISOString().substr(0, 10)),
     };
 }

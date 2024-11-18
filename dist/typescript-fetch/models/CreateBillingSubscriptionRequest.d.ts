@@ -40,6 +40,12 @@ export interface CreateBillingSubscriptionRequest {
      * @memberof CreateBillingSubscriptionRequest
      */
     productId?: string;
+    /**
+     *
+     * @type {Date}
+     * @memberof CreateBillingSubscriptionRequest
+     */
+    trialEndDate?: Date;
 }
 export declare function CreateBillingSubscriptionRequestFromJSON(json: any): CreateBillingSubscriptionRequest;
 export declare function CreateBillingSubscriptionRequestFromJSONTyped(json: any, ignoreDiscriminator: boolean): CreateBillingSubscriptionRequest;

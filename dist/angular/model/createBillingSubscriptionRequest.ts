@@ -17,5 +17,6 @@ export interface CreateBillingSubscriptionRequest {
     guardian?: SubscriptionGuardianModel;
     priceIds?: Array<string>;
     productId?: string;
+    trialEndDate?: string;
 }
 
