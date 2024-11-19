@@ -14,6 +14,10 @@ import { ChangeUserPasswordRequest, ResetUserPasswordRequest, VerifyPasswordRese
 export interface ChangeUserPasswordUsingPUTRequest {
     request: ChangeUserPasswordRequest;
 }
+export interface ResetUserPasswordByAdminUsingPUTRequest {
+    userId: number;
+    request: ResetUserPasswordRequest;
+}
 export interface ResetUserPasswordUsingPOSTRequest {
     request: ResetUserPasswordRequest;
 }
@@ -52,6 +56,14 @@ export declare class UserPasswordControllerApi extends runtime.BaseAPI {
      * changeUserPassword
      */
     changeUserPasswordUsingPUT(requestParameters: ChangeUserPasswordUsingPUTRequest): Promise<object>;
+    /**
+     * resetUserPasswordByAdmin
+     */
+    resetUserPasswordByAdminUsingPUTRaw(requestParameters: ResetUserPasswordByAdminUsingPUTRequest): Promise<runtime.ApiResponse<object>>;
+    /**
+     * resetUserPasswordByAdmin
+     */
+    resetUserPasswordByAdminUsingPUT(requestParameters: ResetUserPasswordByAdminUsingPUTRequest): Promise<object>;
     /**
      * resetUserPassword
      */

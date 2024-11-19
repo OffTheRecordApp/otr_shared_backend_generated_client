@@ -50,6 +50,37 @@ var UserPasswordControllerApi = /** @class */ (function () {
     };
     /**
      *
+     * @summary resetUserPasswordByAdmin
+     * @param userId userId
+     * @param request request
+     */
+    UserPasswordControllerApi.prototype.resetUserPasswordByAdminUsingPUT = function (userId, request, extraHttpRequestParams) {
+        var localVarPath = this.basePath + '/api/v1/users/{userId}/password'
+            .replace('{' + 'userId' + '}', encodeURIComponent(String(userId)));
+        var queryParameters = {};
+        var headerParams = Object.assign({}, this.defaultHeaders);
+        // verify required parameter 'userId' is not null or undefined
+        if (userId === null || userId === undefined) {
+            throw new Error('Required parameter userId was null or undefined when calling resetUserPasswordByAdminUsingPUT.');
+        }
+        // verify required parameter 'request' is not null or undefined
+        if (request === null || request === undefined) {
+            throw new Error('Required parameter request was null or undefined when calling resetUserPasswordByAdminUsingPUT.');
+        }
+        var httpRequestParams = {
+            method: 'PUT',
+            url: localVarPath,
+            data: request,
+            params: queryParameters,
+            headers: headerParams
+        };
+        if (extraHttpRequestParams) {
+            httpRequestParams = Object.assign(httpRequestParams, extraHttpRequestParams);
+        }
+        return this.$http(httpRequestParams);
+    };
+    /**
+     *
      * @summary resetUserPassword
      * @param request request
      */

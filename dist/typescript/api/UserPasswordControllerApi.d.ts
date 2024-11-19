@@ -26,6 +26,13 @@ export declare class UserPasswordControllerApi {
     changeUserPasswordUsingPUT(request: models.ChangeUserPasswordRequest, extraHttpRequestParams?: any): ng.IHttpPromise<object>;
     /**
      *
+     * @summary resetUserPasswordByAdmin
+     * @param userId userId
+     * @param request request
+     */
+    resetUserPasswordByAdminUsingPUT(userId: number, request: models.ResetUserPasswordRequest, extraHttpRequestParams?: any): ng.IHttpPromise<object>;
+    /**
+     *
      * @summary resetUserPassword
      * @param request request
      */
