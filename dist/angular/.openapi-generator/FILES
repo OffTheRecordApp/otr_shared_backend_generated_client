@@ -78,6 +78,7 @@ api/listCasesController.service.ts
 api/mediaCreationController.service.ts
 api/messagesController.service.ts
 api/notesController.service.ts
+api/ocrPipelineController.service.ts
 api/ocrPredictionController.service.ts
 api/onDemandRequestController.service.ts
 api/oneTimePasswordController.service.ts
@@ -244,6 +245,7 @@ model/chargeFeeToLawfirmResponse.ts
 model/citationAuditEventModel.ts
 model/citationAuditLog.ts
 model/citationInputRequest.ts
+model/citationIssueDate.ts
 model/citationModel.ts
 model/citationModelReq.ts
 model/citationModelRes.ts
@@ -280,6 +282,7 @@ model/courtDomainReq.ts
 model/courtDomainRes.ts
 model/courtEntity.ts
 model/courtInputRequest.ts
+model/courtName.ts
 model/courtResponseModel.ts
 model/coverageToRemove.ts
 model/createBillingSubscriptionItemModel.ts
@@ -672,9 +675,12 @@ model/phoneNumberDomainRes.ts
 model/postCourtCoverageRequest.ts
 model/postFeedbackRequest.ts
 model/potentialCustomerDomain.ts
+model/predictCitationRequest.ts
+model/predictCitationResponse.ts
 model/predictCitationTextRequest.ts
 model/predictImageClassificationRequest.ts
 model/predictImageClassificationResponse.ts
+model/predictRichCitationResponse.ts
 model/previewDocumentRequest.ts
 model/priceMatchRequest.ts
 model/priceMatchResponse.ts
@@ -710,6 +716,7 @@ model/reverseLawfirmPayoutRequest.ts
 model/reviewCommentModel.ts
 model/reviewRatingModel.ts
 model/reviewVoteAggregateModel.ts
+model/richCitationInferenceResponse.ts
 model/sNSNotificationRequest.ts
 model/sSLCertificateResponse.ts
 model/saveAgentBookingRequest.ts
@@ -767,6 +774,8 @@ model/signRecordingUrlRequest.ts
 model/signRecordingUrlResponse.ts
 model/simpleCredentialsResponse.ts
 model/singleSignOnResponse.ts
+model/skipMap.ts
+model/slimCitationInferenceResponse.ts
 model/socialLoginRequest.ts
 model/socialLoginResponse.ts
 model/socialLoginUser.ts
@@ -919,6 +928,7 @@ model/violationClassificationModel.ts
 model/violationInput.ts
 model/violationInputRequest.ts
 model/violationModel.ts
+model/violationNames.ts
 model/violationPenaltyModel.ts
 model/violationPenaltyResponse.ts
 model/violationResponse.ts

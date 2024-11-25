@@ -74,6 +74,7 @@ export * from './ListCasesControllerApi';
 export * from './MediaCreationControllerApi';
 export * from './MessagesControllerApi';
 export * from './NotesControllerApi';
+export * from './OcrPipelineControllerApi';
 export * from './OcrPredictionControllerApi';
 export * from './OnDemandRequestControllerApi';
 export * from './OneTimePasswordControllerApi';
