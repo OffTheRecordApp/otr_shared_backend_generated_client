@@ -12,8 +12,10 @@
 export interface ExistingAccountDetails {
     "firstName"?: string;
     "ghostAccount"?: boolean;
+    "isPhoneVerified"?: boolean;
     "lastName"?: string;
     "obfuscatedEmailAddress"?: string;
-    "phoneVerified"?: boolean;
+    "phoneNumber"?: string;
+    "profilePictureUrl"?: string;
     "userId"?: number;
 }

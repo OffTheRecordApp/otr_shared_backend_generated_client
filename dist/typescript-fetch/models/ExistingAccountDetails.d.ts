@@ -29,6 +29,12 @@ export interface ExistingAccountDetails {
     ghostAccount?: boolean;
     /**
      *
+     * @type {boolean}
+     * @memberof ExistingAccountDetails
+     */
+    isPhoneVerified?: boolean;
+    /**
+     *
      * @type {string}
      * @memberof ExistingAccountDetails
      */
@@ -41,10 +47,16 @@ export interface ExistingAccountDetails {
     obfuscatedEmailAddress?: string;
     /**
      *
-     * @type {boolean}
+     * @type {string}
      * @memberof ExistingAccountDetails
      */
-    phoneVerified?: boolean;
+    phoneNumber?: string;
+    /**
+     *
+     * @type {string}
+     * @memberof ExistingAccountDetails
+     */
+    profilePictureUrl?: string;
     /**
      *
      * @type {number}

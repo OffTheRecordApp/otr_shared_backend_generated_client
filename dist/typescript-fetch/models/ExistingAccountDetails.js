@@ -22,9 +22,11 @@ export function ExistingAccountDetailsFromJSONTyped(json, ignoreDiscriminator) {
     return {
         'firstName': !exists(json, 'firstName') ? undefined : json['firstName'],
         'ghostAccount': !exists(json, 'ghostAccount') ? undefined : json['ghostAccount'],
+        'isPhoneVerified': !exists(json, 'isPhoneVerified') ? undefined : json['isPhoneVerified'],
         'lastName': !exists(json, 'lastName') ? undefined : json['lastName'],
         'obfuscatedEmailAddress': !exists(json, 'obfuscatedEmailAddress') ? undefined : json['obfuscatedEmailAddress'],
-        'phoneVerified': !exists(json, 'phoneVerified') ? undefined : json['phoneVerified'],
+        'phoneNumber': !exists(json, 'phoneNumber') ? undefined : json['phoneNumber'],
+        'profilePictureUrl': !exists(json, 'profilePictureUrl') ? undefined : json['profilePictureUrl'],
         'userId': !exists(json, 'userId') ? undefined : json['userId'],
     };
 }
@@ -38,9 +40,11 @@ export function ExistingAccountDetailsToJSON(value) {
     return {
         'firstName': value.firstName,
         'ghostAccount': value.ghostAccount,
+        'isPhoneVerified': value.isPhoneVerified,
         'lastName': value.lastName,
         'obfuscatedEmailAddress': value.obfuscatedEmailAddress,
-        'phoneVerified': value.phoneVerified,
+        'phoneNumber': value.phoneNumber,
+        'profilePictureUrl': value.profilePictureUrl,
         'userId': value.userId,
     };
 }
