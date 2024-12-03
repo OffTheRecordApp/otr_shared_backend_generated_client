@@ -22,6 +22,7 @@ export function ExistingAccountDetailsFromJSONTyped(json, ignoreDiscriminator) {
     return {
         'firstName': !exists(json, 'firstName') ? undefined : json['firstName'],
         'ghostAccount': !exists(json, 'ghostAccount') ? undefined : json['ghostAccount'],
+        'hasActiveCase': !exists(json, 'hasActiveCase') ? undefined : json['hasActiveCase'],
         'isPhoneVerified': !exists(json, 'isPhoneVerified') ? undefined : json['isPhoneVerified'],
         'lastName': !exists(json, 'lastName') ? undefined : json['lastName'],
         'obfuscatedEmailAddress': !exists(json, 'obfuscatedEmailAddress') ? undefined : json['obfuscatedEmailAddress'],
@@ -40,6 +41,7 @@ export function ExistingAccountDetailsToJSON(value) {
     return {
         'firstName': value.firstName,
         'ghostAccount': value.ghostAccount,
+        'hasActiveCase': value.hasActiveCase,
         'isPhoneVerified': value.isPhoneVerified,
         'lastName': value.lastName,
         'obfuscatedEmailAddress': value.obfuscatedEmailAddress,

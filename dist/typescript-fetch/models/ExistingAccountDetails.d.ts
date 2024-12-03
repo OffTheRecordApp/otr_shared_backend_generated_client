@@ -32,6 +32,12 @@ export interface ExistingAccountDetails {
      * @type {boolean}
      * @memberof ExistingAccountDetails
      */
+    hasActiveCase?: boolean;
+    /**
+     *
+     * @type {boolean}
+     * @memberof ExistingAccountDetails
+     */
     isPhoneVerified?: boolean;
     /**
      *
