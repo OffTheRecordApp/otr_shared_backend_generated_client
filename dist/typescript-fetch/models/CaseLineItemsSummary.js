@@ -22,6 +22,7 @@ export function CaseLineItemsSummaryFromJSONTyped(json, ignoreDiscriminator) {
     return {
         'caseBaseCostInCents': !exists(json, 'caseBaseCostInCents') ? undefined : json['caseBaseCostInCents'],
         'clientTotalCostInCents': !exists(json, 'clientTotalCostInCents') ? undefined : json['clientTotalCostInCents'],
+        'hasPredictedOrAdjustedFee': !exists(json, 'hasPredictedOrAdjustedFee') ? undefined : json['hasPredictedOrAdjustedFee'],
         'lawfirmAssumedCostInCents': !exists(json, 'lawfirmAssumedCostInCents') ? undefined : json['lawfirmAssumedCostInCents'],
         'lawfirmCaseFees': !exists(json, 'lawfirmCaseFees') ? undefined : json['lawfirmCaseFees'],
         'lawfirmEarningsForCase': !exists(json, 'lawfirmEarningsForCase') ? undefined : json['lawfirmEarningsForCase'],
@@ -45,6 +46,7 @@ export function CaseLineItemsSummaryToJSON(value) {
     return {
         'caseBaseCostInCents': value.caseBaseCostInCents,
         'clientTotalCostInCents': value.clientTotalCostInCents,
+        'hasPredictedOrAdjustedFee': value.hasPredictedOrAdjustedFee,
         'lawfirmAssumedCostInCents': value.lawfirmAssumedCostInCents,
         'lawfirmCaseFees': value.lawfirmCaseFees,
         'lawfirmEarningsForCase': value.lawfirmEarningsForCase,

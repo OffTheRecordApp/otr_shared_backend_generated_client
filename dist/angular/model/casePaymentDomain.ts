@@ -21,6 +21,7 @@ export interface CasePaymentDomain {
     clientTotalCost?: number;
     creationDateUTC?: Timestamp;
     dueDate?: string;
+    hasPredictedOrAdjustedFee?: boolean;
     isLocked?: boolean;
     isPaymentActive?: boolean;
     lastAttemptDate?: string;

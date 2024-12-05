@@ -12,6 +12,7 @@
 export interface CaseLineItemsSummary {
     "caseBaseCostInCents"?: number;
     "clientTotalCostInCents"?: number;
+    "hasPredictedOrAdjustedFee"?: boolean;
     "lawfirmAssumedCostInCents"?: number;
     "lawfirmCaseFees"?: number;
     "lawfirmEarningsForCase"?: number;

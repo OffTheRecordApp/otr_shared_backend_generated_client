@@ -29,6 +29,12 @@ export interface CaseLineItemsSummary {
     clientTotalCostInCents?: number;
     /**
      *
+     * @type {boolean}
+     * @memberof CaseLineItemsSummary
+     */
+    hasPredictedOrAdjustedFee?: boolean;
+    /**
+     *
      * @type {number}
      * @memberof CaseLineItemsSummary
      */

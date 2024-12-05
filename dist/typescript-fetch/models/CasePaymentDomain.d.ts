@@ -57,6 +57,12 @@ export interface CasePaymentDomain {
      * @type {boolean}
      * @memberof CasePaymentDomain
      */
+    hasPredictedOrAdjustedFee?: boolean;
+    /**
+     *
+     * @type {boolean}
+     * @memberof CasePaymentDomain
+     */
     isLocked?: boolean;
     /**
      *

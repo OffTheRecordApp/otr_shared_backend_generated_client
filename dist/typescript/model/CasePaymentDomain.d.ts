@@ -17,6 +17,7 @@ export interface CasePaymentDomain {
     "clientTotalCost"?: number;
     "creationDateUTC"?: models.Timestamp;
     "dueDate"?: string;
+    "hasPredictedOrAdjustedFee"?: boolean;
     "isLocked"?: boolean;
     "isPaymentActive"?: boolean;
     "lastAttemptDate"?: string;
