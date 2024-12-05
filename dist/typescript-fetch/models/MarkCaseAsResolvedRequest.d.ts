@@ -29,6 +29,12 @@ export interface MarkCaseAsResolvedRequest {
     adjustedPointCount?: number;
     /**
      *
+     * @type {boolean}
+     * @memberof MarkCaseAsResolvedRequest
+     */
+    isSilentResolution?: boolean;
+    /**
+     *
      * @type {number}
      * @memberof MarkCaseAsResolvedRequest
      */

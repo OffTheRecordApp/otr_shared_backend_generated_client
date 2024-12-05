@@ -22,6 +22,7 @@ export function MarkCaseAsResolvedRequestFromJSONTyped(json, ignoreDiscriminator
     return {
         'adjustedFineAmount': !exists(json, 'adjustedFineAmount') ? undefined : json['adjustedFineAmount'],
         'adjustedPointCount': !exists(json, 'adjustedPointCount') ? undefined : json['adjustedPointCount'],
+        'isSilentResolution': !exists(json, 'isSilentResolution') ? undefined : json['isSilentResolution'],
         'originalPointCount': !exists(json, 'originalPointCount') ? undefined : json['originalPointCount'],
         'resolutionStatus': !exists(json, 'resolutionStatus') ? undefined : json['resolutionStatus'],
         'resolutionSummary': !exists(json, 'resolutionSummary') ? undefined : json['resolutionSummary'],
@@ -37,6 +38,7 @@ export function MarkCaseAsResolvedRequestToJSON(value) {
     return {
         'adjustedFineAmount': value.adjustedFineAmount,
         'adjustedPointCount': value.adjustedPointCount,
+        'isSilentResolution': value.isSilentResolution,
         'originalPointCount': value.originalPointCount,
         'resolutionStatus': value.resolutionStatus,
         'resolutionSummary': value.resolutionSummary,

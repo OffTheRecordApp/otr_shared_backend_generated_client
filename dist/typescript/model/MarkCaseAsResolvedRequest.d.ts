@@ -12,6 +12,7 @@
 export interface MarkCaseAsResolvedRequest {
     "adjustedFineAmount"?: number;
     "adjustedPointCount"?: number;
+    "isSilentResolution"?: boolean;
     "originalPointCount"?: number;
     "resolutionStatus"?: MarkCaseAsResolvedRequest.ResolutionStatusEnum;
     "resolutionSummary"?: string;
