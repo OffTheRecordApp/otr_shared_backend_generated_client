@@ -21,7 +21,7 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
     });
 };
 import * as runtime from '../runtime';
-import { AuthorizeChargeForCasePaymentRequestToJSON, AuthorizeChargeForCasePaymentResponseFromJSON, CaptureChargeFromCasePaymentRequestToJSON, GetAvailablePaymentPlansResponseFromJSON, GetCaseCostsAttorneyResponseFromJSON, GetCasePaymentsResponseFromJSON, GetStripeChargeResponseFromJSON, GetStripeChargesResponseFromJSON, ListCostItemsForCustomerResponseFromJSON, ScheduleNewPaymentRequestToJSON, UpdateCasePaymentRequestToJSON, UpdatePaymentDueDateRequestToJSON, } from '../models';
+import { AuthorizeChargeForCasePaymentRequestToJSON, AuthorizeChargeForCasePaymentResponseFromJSON, CaptureChargeFromCasePaymentRequestToJSON, GetAvailablePaymentPlansResponseFromJSON, GetCasePaymentsResponseFromJSON, GetStripeChargeResponseFromJSON, GetStripeChargesResponseFromJSON, ListCostItemsForCustomerResponseFromJSON, ScheduleNewPaymentRequestToJSON, UpdateCasePaymentRequestToJSON, UpdatePaymentDueDateRequestToJSON, } from '../models';
 /**
  *
  */
@@ -326,34 +326,6 @@ export class CasePaymentControllerApi extends runtime.BaseAPI {
     getStripeChargesUsingGET(requestParameters) {
         return __awaiter(this, void 0, void 0, function* () {
             const response = yield this.getStripeChargesUsingGETRaw(requestParameters);
-            return yield response.value();
-        });
-    }
-    /**
-     * listCostItemsForAttorney
-     */
-    listCostItemsForAttorneyUsingGETRaw(requestParameters) {
-        return __awaiter(this, void 0, void 0, function* () {
-            if (requestParameters.caseId === null || requestParameters.caseId === undefined) {
-                throw new runtime.RequiredError('caseId', 'Required parameter requestParameters.caseId was null or undefined when calling listCostItemsForAttorneyUsingGET.');
-            }
-            const queryParameters = {};
-            const headerParameters = {};
-            const response = yield this.request({
-                path: `/api/v1/cases/{caseId}/attorney/cost`.replace(`{${"caseId"}}`, encodeURIComponent(String(requestParameters.caseId))),
-                method: 'GET',
-                headers: headerParameters,
-                query: queryParameters,
-            });
-            return new runtime.JSONApiResponse(response, (jsonValue) => GetCaseCostsAttorneyResponseFromJSON(jsonValue));
-        });
-    }
-    /**
-     * listCostItemsForAttorney
-     */
-    listCostItemsForAttorneyUsingGET(requestParameters) {
-        return __awaiter(this, void 0, void 0, function* () {
-            const response = yield this.listCostItemsForAttorneyUsingGETRaw(requestParameters);
             return yield response.value();
         });
     }

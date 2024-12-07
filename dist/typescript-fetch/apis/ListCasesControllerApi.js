@@ -94,6 +94,9 @@ export class ListCasesControllerApi extends runtime.BaseAPI {
             if (requestParameters.caseStatuses !== undefined) {
                 queryParameters['caseStatuses'] = requestParameters.caseStatuses;
             }
+            if (requestParameters.includeDeleted !== undefined) {
+                queryParameters['includeDeleted'] = requestParameters.includeDeleted;
+            }
             if (requestParameters.limit !== undefined) {
                 queryParameters['limit'] = requestParameters.limit;
             }

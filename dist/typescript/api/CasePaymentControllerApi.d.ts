@@ -88,12 +88,6 @@ export declare class CasePaymentControllerApi {
     getStripeChargesUsingGET(caseId: string, extraHttpRequestParams?: any): ng.IHttpPromise<models.GetStripeChargesResponse>;
     /**
      *
-     * @summary listCostItemsForAttorney
-     * @param caseId caseId
-     */
-    listCostItemsForAttorneyUsingGET(caseId: string, extraHttpRequestParams?: any): ng.IHttpPromise<models.GetCaseCostsAttorneyResponse>;
-    /**
-     *
      * @summary listCostItemsForCustomer
      * @param caseId caseId
      * @param period period

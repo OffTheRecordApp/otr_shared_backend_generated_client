@@ -10,7 +10,7 @@
  * Do not edit the class manually.
  */
 import * as runtime from '../runtime';
-import { AuthorizeChargeForCasePaymentRequest, AuthorizeChargeForCasePaymentResponse, CaptureChargeFromCasePaymentRequest, GetAvailablePaymentPlansResponse, GetCaseCostsAttorneyResponse, GetCasePaymentsResponse, GetStripeChargeResponse, GetStripeChargesResponse, ListCostItemsForCustomerResponse, ScheduleNewPaymentRequest, UpdateCasePaymentRequest, UpdatePaymentDueDateRequest } from '../models';
+import { AuthorizeChargeForCasePaymentRequest, AuthorizeChargeForCasePaymentResponse, CaptureChargeFromCasePaymentRequest, GetAvailablePaymentPlansResponse, GetCasePaymentsResponse, GetStripeChargeResponse, GetStripeChargesResponse, ListCostItemsForCustomerResponse, ScheduleNewPaymentRequest, UpdateCasePaymentRequest, UpdatePaymentDueDateRequest } from '../models';
 export interface AuthorizeChargeForCasePaymentUsingPOSTRequest {
     caseId: string;
     casePaymentId: string;
@@ -50,9 +50,6 @@ export interface GetStripeChargeUsingGETRequest {
     stripeChargeId: string;
 }
 export interface GetStripeChargesUsingGETRequest {
-    caseId: string;
-}
-export interface ListCostItemsForAttorneyUsingGETRequest {
     caseId: string;
 }
 export interface ListCostItemsForCustomerUsingGETRequest {
@@ -152,14 +149,6 @@ export declare class CasePaymentControllerApi extends runtime.BaseAPI {
      * getStripeCharges
      */
     getStripeChargesUsingGET(requestParameters: GetStripeChargesUsingGETRequest): Promise<GetStripeChargesResponse>;
-    /**
-     * listCostItemsForAttorney
-     */
-    listCostItemsForAttorneyUsingGETRaw(requestParameters: ListCostItemsForAttorneyUsingGETRequest): Promise<runtime.ApiResponse<GetCaseCostsAttorneyResponse>>;
-    /**
-     * listCostItemsForAttorney
-     */
-    listCostItemsForAttorneyUsingGET(requestParameters: ListCostItemsForAttorneyUsingGETRequest): Promise<GetCaseCostsAttorneyResponse>;
     /**
      * listCostItemsForCustomer
      */

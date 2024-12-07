@@ -373,7 +373,6 @@ model/freshdeskAttachmentReq.ts
 model/freshdeskAttachmentRes.ts
 model/freshdeskTicketReferenceDomain.ts
 model/freshdeskWebhookRequest.ts
-model/futurePayment.ts
 model/generateTemplateRequest.ts
 model/genericAdminListRequest.ts
 model/geoRatesRequest.ts
@@ -388,7 +387,6 @@ model/getBookingsResponse.ts
 model/getCaseActionResponse.ts
 model/getCaseActionTimelineResponse.ts
 model/getCaseActionTypesResponse.ts
-model/getCaseCostsAttorneyResponse.ts
 model/getCaseCounterOptionsResponse.ts
 model/getCaseDeclineReasonTypesResponse.ts
 model/getCaseDocumentResponse.ts

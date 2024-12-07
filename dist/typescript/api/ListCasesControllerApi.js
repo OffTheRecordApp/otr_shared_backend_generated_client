@@ -78,12 +78,13 @@ var ListCasesControllerApi = /** @class */ (function () {
      * @summary listDashboardCases
      * @param userId userId
      * @param caseStatuses caseStatuses
+     * @param includeDeleted includeDeleted
      * @param limit limit
      * @param previousPageToken previousPageToken
      * @param sortBy sortBy
      * @param statusCategories statusCategories
      */
-    ListCasesControllerApi.prototype.listDashboardCasesUsingGET = function (userId, caseStatuses, limit, previousPageToken, sortBy, statusCategories, extraHttpRequestParams) {
+    ListCasesControllerApi.prototype.listDashboardCasesUsingGET = function (userId, caseStatuses, includeDeleted, limit, previousPageToken, sortBy, statusCategories, extraHttpRequestParams) {
         var localVarPath = this.basePath + '/api/v3/users/{userId}/cases'
             .replace('{' + 'userId' + '}', encodeURIComponent(String(userId)));
         var queryParameters = {};
@@ -94,6 +95,9 @@ var ListCasesControllerApi = /** @class */ (function () {
         }
         if (caseStatuses !== undefined) {
             queryParameters['caseStatuses'] = caseStatuses;
+        }
+        if (includeDeleted !== undefined) {
+            queryParameters['includeDeleted'] = includeDeleted;
         }
         if (limit !== undefined) {
             queryParameters['limit'] = limit;

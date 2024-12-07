@@ -328,31 +328,6 @@ var CasePaymentControllerApi = /** @class */ (function () {
     };
     /**
      *
-     * @summary listCostItemsForAttorney
-     * @param caseId caseId
-     */
-    CasePaymentControllerApi.prototype.listCostItemsForAttorneyUsingGET = function (caseId, extraHttpRequestParams) {
-        var localVarPath = this.basePath + '/api/v1/cases/{caseId}/attorney/cost'
-            .replace('{' + 'caseId' + '}', encodeURIComponent(String(caseId)));
-        var queryParameters = {};
-        var headerParams = Object.assign({}, this.defaultHeaders);
-        // verify required parameter 'caseId' is not null or undefined
-        if (caseId === null || caseId === undefined) {
-            throw new Error('Required parameter caseId was null or undefined when calling listCostItemsForAttorneyUsingGET.');
-        }
-        var httpRequestParams = {
-            method: 'GET',
-            url: localVarPath,
-            params: queryParameters,
-            headers: headerParams
-        };
-        if (extraHttpRequestParams) {
-            httpRequestParams = Object.assign(httpRequestParams, extraHttpRequestParams);
-        }
-        return this.$http(httpRequestParams);
-    };
-    /**
-     *
      * @summary listCostItemsForCustomer
      * @param caseId caseId
      * @param period period

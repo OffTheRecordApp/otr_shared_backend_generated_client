@@ -1574,40 +1574,6 @@ angular.module('otrBackendService', [])
                 return deferred.promise;
             };
             /**
-             * listCostItemsForAttorney
-             * @method
-             * @name OtrService#listCostItemsForAttorneyUsingGET
-             * @param {object} parameters - method options and parameters
-             * @param {string} parameters.caseId - caseId
-             */
-            OtrService.prototype.listCostItemsForAttorneyUsingGET = function(parameters) {
-                if (parameters === undefined) {
-                    parameters = {};
-                }
-                var deferred = $q.defer();
-                var domain = this.domain,
-                    path = '/api/v1/cases/{caseId}/attorney/cost';
-                var body = {},
-                    queryParameters = {},
-                    headers = {},
-                    form = {};
-
-                headers['Accept'] = ['*/*'];
-
-                path = path.replace('{caseId}', parameters['caseId']);
-
-                if (parameters['caseId'] === undefined) {
-                    deferred.reject(new Error('Missing required  parameter: caseId'));
-                    return deferred.promise;
-                }
-
-                queryParameters = mergeQueryParams(parameters, queryParameters);
-
-                this.request('GET', domain + path, parameters, body, headers, queryParameters, form, deferred);
-
-                return deferred.promise;
-            };
-            /**
              * getStripeCharge
              * @method
              * @name OtrService#getStripeChargeUsingGET
@@ -18630,6 +18596,7 @@ angular.module('otrBackendService', [])
              * @name OtrService#listDashboardCasesUsingGET
              * @param {object} parameters - method options and parameters
              * @param {string} parameters.caseStatuses - caseStatuses
+             * @param {boolean} parameters.includeDeleted - includeDeleted
              * @param {integer} parameters.limit - limit
              * @param {string} parameters.previousPageToken - previousPageToken
              * @param {string} parameters.sortBy - sortBy
@@ -18652,6 +18619,10 @@ angular.module('otrBackendService', [])
 
                 if (parameters['caseStatuses'] !== undefined) {
                     queryParameters['caseStatuses'] = parameters['caseStatuses'];
+                }
+
+                if (parameters['includeDeleted'] !== undefined) {
+                    queryParameters['includeDeleted'] = parameters['includeDeleted'];
                 }
 
                 /** set default value **/

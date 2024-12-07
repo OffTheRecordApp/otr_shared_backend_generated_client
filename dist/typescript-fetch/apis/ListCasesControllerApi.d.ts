@@ -20,6 +20,7 @@ export interface GetUserCasesUsingGETRequest {
 export interface ListDashboardCasesUsingGETRequest {
     userId: number;
     caseStatuses?: ListDashboardCasesUsingGETCaseStatusesEnum;
+    includeDeleted?: boolean;
     limit?: number;
     previousPageToken?: string;
     sortBy?: ListDashboardCasesUsingGETSortByEnum;
