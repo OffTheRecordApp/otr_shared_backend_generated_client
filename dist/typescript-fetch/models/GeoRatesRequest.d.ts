@@ -33,6 +33,12 @@ export interface GeoRatesRequest {
      * @type {boolean}
      * @memberof GeoRatesRequest
      */
+    isAccidentCitation?: boolean;
+    /**
+     *
+     * @type {boolean}
+     * @memberof GeoRatesRequest
+     */
     isCDL?: boolean;
     /**
      *
@@ -40,6 +46,12 @@ export interface GeoRatesRequest {
      * @memberof GeoRatesRequest
      */
     isFTA?: boolean;
+    /**
+     *
+     * @type {boolean}
+     * @memberof GeoRatesRequest
+     */
+    isPaymentPlan?: boolean;
     /**
      *
      * @type {number}

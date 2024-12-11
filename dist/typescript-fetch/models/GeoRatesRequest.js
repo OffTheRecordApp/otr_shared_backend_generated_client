@@ -23,8 +23,10 @@ export function GeoRatesRequestFromJSONTyped(json, ignoreDiscriminator) {
     return {
         'courtDate': !exists(json, 'courtDate') ? undefined : (new Date(json['courtDate'])),
         'courtId': !exists(json, 'courtId') ? undefined : json['courtId'],
+        'isAccidentCitation': !exists(json, 'isAccidentCitation') ? undefined : json['isAccidentCitation'],
         'isCDL': !exists(json, 'isCDL') ? undefined : json['isCDL'],
         'isFTA': !exists(json, 'isFTA') ? undefined : json['isFTA'],
+        'isPaymentPlan': !exists(json, 'isPaymentPlan') ? undefined : json['isPaymentPlan'],
         'legalServiceId': !exists(json, 'legalServiceId') ? undefined : json['legalServiceId'],
         'violationCount': !exists(json, 'violationCount') ? undefined : json['violationCount'],
         'violations': !exists(json, 'violations') ? undefined : (json['violations'].map(ViolationInputRequestFromJSON)),
@@ -40,8 +42,10 @@ export function GeoRatesRequestToJSON(value) {
     return {
         'courtDate': value.courtDate === undefined ? undefined : (value.courtDate.toISOString()),
         'courtId': value.courtId,
+        'isAccidentCitation': value.isAccidentCitation,
         'isCDL': value.isCDL,
         'isFTA': value.isFTA,
+        'isPaymentPlan': value.isPaymentPlan,
         'legalServiceId': value.legalServiceId,
         'violationCount': value.violationCount,
         'violations': value.violations === undefined ? undefined : (value.violations.map(ViolationInputRequestToJSON)),

@@ -13,8 +13,10 @@ import * as models from './models';
 export interface GeoRatesRequest {
     "courtDate"?: string;
     "courtId"?: string;
+    "isAccidentCitation"?: boolean;
     "isCDL"?: boolean;
     "isFTA"?: boolean;
+    "isPaymentPlan"?: boolean;
     "legalServiceId"?: number;
     "violationCount"?: number;
     "violations"?: Array<models.ViolationInputRequest>;
