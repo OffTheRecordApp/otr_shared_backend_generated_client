@@ -50,6 +50,12 @@ export interface UserAccountModel {
      * @type {string}
      * @memberof UserAccountModel
      */
+    signedProfilePictureUrl?: string;
+    /**
+     *
+     * @type {string}
+     * @memberof UserAccountModel
+     */
     userHandle?: string;
     /**
      *

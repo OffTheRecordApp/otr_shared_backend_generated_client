@@ -25,6 +25,7 @@ export function UserAccountModelFromJSONTyped(json, ignoreDiscriminator) {
         'loginProvider': !exists(json, 'loginProvider') ? undefined : json['loginProvider'],
         'merged': !exists(json, 'merged') ? undefined : json['merged'],
         'primary': !exists(json, 'primary') ? undefined : json['primary'],
+        'signedProfilePictureUrl': !exists(json, 'signedProfilePictureUrl') ? undefined : json['signedProfilePictureUrl'],
         'userHandle': !exists(json, 'userHandle') ? undefined : json['userHandle'],
         'verificationDateUtc': !exists(json, 'verificationDateUtc') ? undefined : (new Date(json['verificationDateUtc'])),
     };
@@ -42,6 +43,7 @@ export function UserAccountModelToJSON(value) {
         'loginProvider': value.loginProvider,
         'merged': value.merged,
         'primary': value.primary,
+        'signedProfilePictureUrl': value.signedProfilePictureUrl,
         'userHandle': value.userHandle,
         'verificationDateUtc': value.verificationDateUtc === undefined ? undefined : (value.verificationDateUtc.toISOString()),
     };

@@ -15,6 +15,7 @@ export interface UserAccountModel {
     "loginProvider"?: UserAccountModel.LoginProviderEnum;
     "merged"?: boolean;
     "primary"?: boolean;
+    "signedProfilePictureUrl"?: string;
     "userHandle"?: string;
     "verificationDateUtc"?: string;
 }
