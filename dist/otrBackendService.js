@@ -181,6 +181,7 @@ angular.module('otrBackendService', [])
              * @param {integer} parameters.limit - limit
              * @param {string} parameters.nextPageToken - nextPageToken
              * @param {string} parameters.previousPageToken - previousPageToken
+             * @param {string} parameters.regionCode - regionCode
              */
             OtrService.prototype.listActivityFeedUsingGET = function(parameters) {
                 if (parameters === undefined) {
@@ -211,6 +212,10 @@ angular.module('otrBackendService', [])
 
                 if (parameters['previousPageToken'] !== undefined) {
                     queryParameters['previousPageToken'] = parameters['previousPageToken'];
+                }
+
+                if (parameters['regionCode'] !== undefined) {
+                    queryParameters['regionCode'] = parameters['regionCode'];
                 }
 
                 queryParameters = mergeQueryParams(parameters, queryParameters);

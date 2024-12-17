@@ -44,6 +44,9 @@ export class ActivityFeedControllerApi extends runtime.BaseAPI {
             if (requestParameters.previousPageToken !== undefined) {
                 queryParameters['previousPageToken'] = requestParameters.previousPageToken;
             }
+            if (requestParameters.regionCode !== undefined) {
+                queryParameters['regionCode'] = requestParameters.regionCode;
+            }
             const headerParameters = {};
             const response = yield this.request({
                 path: `/api/v1/activity-feed`,

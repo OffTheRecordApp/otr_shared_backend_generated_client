@@ -15,6 +15,7 @@ export interface ListActivityFeedUsingGETRequest {
     limit: number;
     nextPageToken?: string;
     previousPageToken?: string;
+    regionCode?: string;
 }
 export interface ListCaseOutcomesUsingGETRequest {
     includeCriminal?: boolean;

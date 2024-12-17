@@ -24,8 +24,9 @@ export declare class ActivityFeedControllerApi {
      * @param limit limit
      * @param nextPageToken nextPageToken
      * @param previousPageToken previousPageToken
+     * @param regionCode regionCode
      */
-    listActivityFeedUsingGET(limit: number, nextPageToken?: string, previousPageToken?: string, extraHttpRequestParams?: any): ng.IHttpPromise<models.GetActivityFeedResponse>;
+    listActivityFeedUsingGET(limit: number, nextPageToken?: string, previousPageToken?: string, regionCode?: string, extraHttpRequestParams?: any): ng.IHttpPromise<models.GetActivityFeedResponse>;
     /**
      *
      * @summary listCaseOutcomes

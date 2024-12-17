@@ -14,9 +14,11 @@ export interface ActivityFeedModel {
     "activityDescription"?: string;
     "activityDescriptionInHtml"?: string;
     "activityType"?: ActivityFeedModel.ActivityTypeEnum;
+    "city"?: string;
     "ownerName"?: string;
     "privacyMode"?: ActivityFeedModel.PrivacyModeEnum;
     "profilePicUrl"?: string;
+    "regionCode"?: string;
 }
 export declare namespace ActivityFeedModel {
     enum ActivityTypeEnum {

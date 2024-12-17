@@ -29,8 +29,9 @@ var ActivityFeedControllerApi = /** @class */ (function () {
      * @param limit limit
      * @param nextPageToken nextPageToken
      * @param previousPageToken previousPageToken
+     * @param regionCode regionCode
      */
-    ActivityFeedControllerApi.prototype.listActivityFeedUsingGET = function (limit, nextPageToken, previousPageToken, extraHttpRequestParams) {
+    ActivityFeedControllerApi.prototype.listActivityFeedUsingGET = function (limit, nextPageToken, previousPageToken, regionCode, extraHttpRequestParams) {
         var localVarPath = this.basePath + '/api/v1/activity-feed';
         var queryParameters = {};
         var headerParams = Object.assign({}, this.defaultHeaders);
@@ -46,6 +47,9 @@ var ActivityFeedControllerApi = /** @class */ (function () {
         }
         if (previousPageToken !== undefined) {
             queryParameters['previousPageToken'] = previousPageToken;
+        }
+        if (regionCode !== undefined) {
+            queryParameters['regionCode'] = regionCode;
         }
         var httpRequestParams = {
             method: 'GET',

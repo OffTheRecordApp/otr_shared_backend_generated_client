@@ -48,6 +48,12 @@ export interface ActivityFeedModel {
      * @type {string}
      * @memberof ActivityFeedModel
      */
+    city?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof ActivityFeedModel
+     */
     ownerName?: string;
     /**
      * 
@@ -61,6 +67,12 @@ export interface ActivityFeedModel {
      * @memberof ActivityFeedModel
      */
     profilePicUrl?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof ActivityFeedModel
+     */
+    regionCode?: string;
 }
 
 export function ActivityFeedModelFromJSON(json: any): ActivityFeedModel {
@@ -77,9 +89,11 @@ export function ActivityFeedModelFromJSONTyped(json: any, ignoreDiscriminator: b
         'activityDescription': !exists(json, 'activityDescription') ? undefined : json['activityDescription'],
         'activityDescriptionInHtml': !exists(json, 'activityDescriptionInHtml') ? undefined : json['activityDescriptionInHtml'],
         'activityType': !exists(json, 'activityType') ? undefined : json['activityType'],
+        'city': !exists(json, 'city') ? undefined : json['city'],
         'ownerName': !exists(json, 'ownerName') ? undefined : json['ownerName'],
         'privacyMode': !exists(json, 'privacyMode') ? undefined : json['privacyMode'],
         'profilePicUrl': !exists(json, 'profilePicUrl') ? undefined : json['profilePicUrl'],
+        'regionCode': !exists(json, 'regionCode') ? undefined : json['regionCode'],
     };
 }
 
@@ -96,9 +110,11 @@ export function ActivityFeedModelToJSON(value?: ActivityFeedModel | null): any {
         'activityDescription': value.activityDescription,
         'activityDescriptionInHtml': value.activityDescriptionInHtml,
         'activityType': value.activityType,
+        'city': value.city,
         'ownerName': value.ownerName,
         'privacyMode': value.privacyMode,
         'profilePicUrl': value.profilePicUrl,
+        'regionCode': value.regionCode,
     };
 }
 

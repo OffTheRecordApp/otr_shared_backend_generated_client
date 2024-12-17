@@ -24,9 +24,11 @@ export function ActivityFeedModelFromJSONTyped(json, ignoreDiscriminator) {
         'activityDescription': !exists(json, 'activityDescription') ? undefined : json['activityDescription'],
         'activityDescriptionInHtml': !exists(json, 'activityDescriptionInHtml') ? undefined : json['activityDescriptionInHtml'],
         'activityType': !exists(json, 'activityType') ? undefined : json['activityType'],
+        'city': !exists(json, 'city') ? undefined : json['city'],
         'ownerName': !exists(json, 'ownerName') ? undefined : json['ownerName'],
         'privacyMode': !exists(json, 'privacyMode') ? undefined : json['privacyMode'],
         'profilePicUrl': !exists(json, 'profilePicUrl') ? undefined : json['profilePicUrl'],
+        'regionCode': !exists(json, 'regionCode') ? undefined : json['regionCode'],
     };
 }
 export function ActivityFeedModelToJSON(value) {
@@ -41,9 +43,11 @@ export function ActivityFeedModelToJSON(value) {
         'activityDescription': value.activityDescription,
         'activityDescriptionInHtml': value.activityDescriptionInHtml,
         'activityType': value.activityType,
+        'city': value.city,
         'ownerName': value.ownerName,
         'privacyMode': value.privacyMode,
         'profilePicUrl': value.profilePicUrl,
+        'regionCode': value.regionCode,
     };
 }
 /**

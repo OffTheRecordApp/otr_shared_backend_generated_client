@@ -27,6 +27,7 @@ export interface ListActivityFeedUsingGETRequest {
     limit: number;
     nextPageToken?: string;
     previousPageToken?: string;
+    regionCode?: string;
 }
 
 export interface ListCaseOutcomesUsingGETRequest {
@@ -62,6 +63,10 @@ export class ActivityFeedControllerApi extends runtime.BaseAPI {
 
         if (requestParameters.previousPageToken !== undefined) {
             queryParameters['previousPageToken'] = requestParameters.previousPageToken;
+        }
+
+        if (requestParameters.regionCode !== undefined) {
+            queryParameters['regionCode'] = requestParameters.regionCode;
         }
 
         const headerParameters: runtime.HTTPHeaders = {};

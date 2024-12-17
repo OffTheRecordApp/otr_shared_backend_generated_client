@@ -32,8 +32,9 @@ export class ActivityFeedControllerApi {
      * @param limit limit
      * @param nextPageToken nextPageToken
      * @param previousPageToken previousPageToken
+     * @param regionCode regionCode
      */
-    public listActivityFeedUsingGET (limit: number, nextPageToken?: string, previousPageToken?: string, extraHttpRequestParams?: any ) : ng.IHttpPromise<models.GetActivityFeedResponse> {
+    public listActivityFeedUsingGET (limit: number, nextPageToken?: string, previousPageToken?: string, regionCode?: string, extraHttpRequestParams?: any ) : ng.IHttpPromise<models.GetActivityFeedResponse> {
         const localVarPath = this.basePath + '/api/v1/activity-feed';
 
         let queryParameters: any = {};
@@ -53,6 +54,10 @@ export class ActivityFeedControllerApi {
 
         if (previousPageToken !== undefined) {
             queryParameters['previousPageToken'] = previousPageToken;
+        }
+
+        if (regionCode !== undefined) {
+            queryParameters['regionCode'] = regionCode;
         }
 
         let httpRequestParams: ng.IRequestConfig = {

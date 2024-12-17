@@ -44,6 +44,12 @@ export interface ActivityFeedModel {
      * @type {string}
      * @memberof ActivityFeedModel
      */
+    city?: string;
+    /**
+     *
+     * @type {string}
+     * @memberof ActivityFeedModel
+     */
     ownerName?: string;
     /**
      *
@@ -57,6 +63,12 @@ export interface ActivityFeedModel {
      * @memberof ActivityFeedModel
      */
     profilePicUrl?: string;
+    /**
+     *
+     * @type {string}
+     * @memberof ActivityFeedModel
+     */
+    regionCode?: string;
 }
 export declare function ActivityFeedModelFromJSON(json: any): ActivityFeedModel;
 export declare function ActivityFeedModelFromJSONTyped(json: any, ignoreDiscriminator: boolean): ActivityFeedModel;
