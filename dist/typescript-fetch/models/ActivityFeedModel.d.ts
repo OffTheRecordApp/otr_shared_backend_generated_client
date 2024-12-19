@@ -69,6 +69,12 @@ export interface ActivityFeedModel {
      * @memberof ActivityFeedModel
      */
     regionCode?: string;
+    /**
+     *
+     * @type {string}
+     * @memberof ActivityFeedModel
+     */
+    violationDescription?: string;
 }
 export declare function ActivityFeedModelFromJSON(json: any): ActivityFeedModel;
 export declare function ActivityFeedModelFromJSONTyped(json: any, ignoreDiscriminator: boolean): ActivityFeedModel;

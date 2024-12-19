@@ -21,6 +21,7 @@ export interface ActivityFeedModel {
     privacyMode?: ActivityFeedModel.PrivacyModeEnum;
     profilePicUrl?: string;
     regionCode?: string;
+    violationDescription?: string;
 }
 export namespace ActivityFeedModel {
     export type ActivityTypeEnum = 'PURCHASE' | 'REFERRAL' | 'REFUND' | 'RESOLUTION' | 'TICKET_REVIEW';

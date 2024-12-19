@@ -73,6 +73,12 @@ export interface ActivityFeedModel {
      * @memberof ActivityFeedModel
      */
     regionCode?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof ActivityFeedModel
+     */
+    violationDescription?: string;
 }
 
 export function ActivityFeedModelFromJSON(json: any): ActivityFeedModel {
@@ -94,6 +100,7 @@ export function ActivityFeedModelFromJSONTyped(json: any, ignoreDiscriminator: b
         'privacyMode': !exists(json, 'privacyMode') ? undefined : json['privacyMode'],
         'profilePicUrl': !exists(json, 'profilePicUrl') ? undefined : json['profilePicUrl'],
         'regionCode': !exists(json, 'regionCode') ? undefined : json['regionCode'],
+        'violationDescription': !exists(json, 'violationDescription') ? undefined : json['violationDescription'],
     };
 }
 
@@ -115,6 +122,7 @@ export function ActivityFeedModelToJSON(value?: ActivityFeedModel | null): any {
         'privacyMode': value.privacyMode,
         'profilePicUrl': value.profilePicUrl,
         'regionCode': value.regionCode,
+        'violationDescription': value.violationDescription,
     };
 }
 

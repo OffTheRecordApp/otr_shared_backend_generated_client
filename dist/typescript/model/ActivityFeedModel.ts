@@ -22,6 +22,7 @@ export interface ActivityFeedModel {
     "privacyMode"?: ActivityFeedModel.PrivacyModeEnum;
     "profilePicUrl"?: string;
     "regionCode"?: string;
+    "violationDescription"?: string;
 }
 
 export namespace ActivityFeedModel {

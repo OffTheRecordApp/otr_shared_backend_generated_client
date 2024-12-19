@@ -29,6 +29,7 @@ export function ActivityFeedModelFromJSONTyped(json, ignoreDiscriminator) {
         'privacyMode': !exists(json, 'privacyMode') ? undefined : json['privacyMode'],
         'profilePicUrl': !exists(json, 'profilePicUrl') ? undefined : json['profilePicUrl'],
         'regionCode': !exists(json, 'regionCode') ? undefined : json['regionCode'],
+        'violationDescription': !exists(json, 'violationDescription') ? undefined : json['violationDescription'],
     };
 }
 export function ActivityFeedModelToJSON(value) {
@@ -48,6 +49,7 @@ export function ActivityFeedModelToJSON(value) {
         'privacyMode': value.privacyMode,
         'profilePicUrl': value.profilePicUrl,
         'regionCode': value.regionCode,
+        'violationDescription': value.violationDescription,
     };
 }
 /**

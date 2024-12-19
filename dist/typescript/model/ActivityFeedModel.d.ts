@@ -19,6 +19,7 @@ export interface ActivityFeedModel {
     "privacyMode"?: ActivityFeedModel.PrivacyModeEnum;
     "profilePicUrl"?: string;
     "regionCode"?: string;
+    "violationDescription"?: string;
 }
 export declare namespace ActivityFeedModel {
     enum ActivityTypeEnum {
