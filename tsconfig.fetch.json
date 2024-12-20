@@ -2,10 +2,11 @@
   "compilerOptions": {
       "moduleResolution": "node",
       "module": "es2020",
+      "rootDir": "myclient/typescript-fetch",
       "target": "es6",
       "declaration": true,
       "experimentalDecorators": true
   },
-  "include": ["dist/typescript-fetch"],
+  "include": ["myclient/typescript-fetch"],
   "exclude": ["node_modules"]
 }
