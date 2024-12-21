@@ -1,4 +1,3 @@
-"use strict";
 /**
  * OffTheRecord Rest Service API - Devo
  * A service to handle your traffic tickets
@@ -10,11 +9,9 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.RegistrationControllerApi = void 0;
 /* tslint:disable:no-unused-variable member-ordering */
-var RegistrationControllerApi = /** @class */ (function () {
-    function RegistrationControllerApi($http, $httpParamSerializer, basePath) {
+export class RegistrationControllerApi {
+    constructor($http, $httpParamSerializer, basePath) {
         this.$http = $http;
         this.$httpParamSerializer = $httpParamSerializer;
         this.basePath = 'http://otr-backend-service-us-devo.offtherecord.com';
@@ -28,15 +25,15 @@ var RegistrationControllerApi = /** @class */ (function () {
      * @summary registerGhostUser
      * @param request request
      */
-    RegistrationControllerApi.prototype.registerGhostUserUsingPOST = function (request, extraHttpRequestParams) {
-        var localVarPath = this.basePath + '/api/v1/register-ghost';
-        var queryParameters = {};
-        var headerParams = Object.assign({}, this.defaultHeaders);
+    registerGhostUserUsingPOST(request, extraHttpRequestParams) {
+        const localVarPath = this.basePath + '/api/v1/register-ghost';
+        let queryParameters = {};
+        let headerParams = Object.assign({}, this.defaultHeaders);
         // verify required parameter 'request' is not null or undefined
         if (request === null || request === undefined) {
             throw new Error('Required parameter request was null or undefined when calling registerGhostUserUsingPOST.');
         }
-        var httpRequestParams = {
+        let httpRequestParams = {
             method: 'POST',
             url: localVarPath,
             data: request,
@@ -47,21 +44,21 @@ var RegistrationControllerApi = /** @class */ (function () {
             httpRequestParams = Object.assign(httpRequestParams, extraHttpRequestParams);
         }
         return this.$http(httpRequestParams);
-    };
+    }
     /**
      *
      * @summary registerNewUser
      * @param request request
      */
-    RegistrationControllerApi.prototype.registerNewUserUsingPOST = function (request, extraHttpRequestParams) {
-        var localVarPath = this.basePath + '/api/v1/signup';
-        var queryParameters = {};
-        var headerParams = Object.assign({}, this.defaultHeaders);
+    registerNewUserUsingPOST(request, extraHttpRequestParams) {
+        const localVarPath = this.basePath + '/api/v1/signup';
+        let queryParameters = {};
+        let headerParams = Object.assign({}, this.defaultHeaders);
         // verify required parameter 'request' is not null or undefined
         if (request === null || request === undefined) {
             throw new Error('Required parameter request was null or undefined when calling registerNewUserUsingPOST.');
         }
-        var httpRequestParams = {
+        let httpRequestParams = {
             method: 'POST',
             url: localVarPath,
             data: request,
@@ -72,8 +69,6 @@ var RegistrationControllerApi = /** @class */ (function () {
             httpRequestParams = Object.assign(httpRequestParams, extraHttpRequestParams);
         }
         return this.$http(httpRequestParams);
-    };
-    RegistrationControllerApi.$inject = ['$http', '$httpParamSerializer', 'basePath'];
-    return RegistrationControllerApi;
-}());
-exports.RegistrationControllerApi = RegistrationControllerApi;
+    }
+}
+RegistrationControllerApi.$inject = ['$http', '$httpParamSerializer', 'basePath'];

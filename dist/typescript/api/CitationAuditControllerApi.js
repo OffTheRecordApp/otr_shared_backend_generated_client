@@ -1,4 +1,3 @@
-"use strict";
 /**
  * OffTheRecord Rest Service API - Devo
  * A service to handle your traffic tickets
@@ -10,11 +9,9 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.CitationAuditControllerApi = void 0;
 /* tslint:disable:no-unused-variable member-ordering */
-var CitationAuditControllerApi = /** @class */ (function () {
-    function CitationAuditControllerApi($http, $httpParamSerializer, basePath) {
+export class CitationAuditControllerApi {
+    constructor($http, $httpParamSerializer, basePath) {
         this.$http = $http;
         this.$httpParamSerializer = $httpParamSerializer;
         this.basePath = 'http://otr-backend-service-us-devo.offtherecord.com';
@@ -32,11 +29,11 @@ var CitationAuditControllerApi = /** @class */ (function () {
      * @param limit limit
      * @param nextPageToken nextPageToken
      */
-    CitationAuditControllerApi.prototype.listCitationAuditEventsUsingGET = function (citationId, excludeTypes, includeTypes, limit, nextPageToken, extraHttpRequestParams) {
-        var localVarPath = this.basePath + '/api/v1/citations/{citationId}/audit-events'
+    listCitationAuditEventsUsingGET(citationId, excludeTypes, includeTypes, limit, nextPageToken, extraHttpRequestParams) {
+        const localVarPath = this.basePath + '/api/v1/citations/{citationId}/audit-events'
             .replace('{' + 'citationId' + '}', encodeURIComponent(String(citationId)));
-        var queryParameters = {};
-        var headerParams = Object.assign({}, this.defaultHeaders);
+        let queryParameters = {};
+        let headerParams = Object.assign({}, this.defaultHeaders);
         // verify required parameter 'citationId' is not null or undefined
         if (citationId === null || citationId === undefined) {
             throw new Error('Required parameter citationId was null or undefined when calling listCitationAuditEventsUsingGET.');
@@ -53,7 +50,7 @@ var CitationAuditControllerApi = /** @class */ (function () {
         if (nextPageToken !== undefined) {
             queryParameters['nextPageToken'] = nextPageToken;
         }
-        var httpRequestParams = {
+        let httpRequestParams = {
             method: 'GET',
             url: localVarPath,
             params: queryParameters,
@@ -63,8 +60,6 @@ var CitationAuditControllerApi = /** @class */ (function () {
             httpRequestParams = Object.assign(httpRequestParams, extraHttpRequestParams);
         }
         return this.$http(httpRequestParams);
-    };
-    CitationAuditControllerApi.$inject = ['$http', '$httpParamSerializer', 'basePath'];
-    return CitationAuditControllerApi;
-}());
-exports.CitationAuditControllerApi = CitationAuditControllerApi;
+    }
+}
+CitationAuditControllerApi.$inject = ['$http', '$httpParamSerializer', 'basePath'];

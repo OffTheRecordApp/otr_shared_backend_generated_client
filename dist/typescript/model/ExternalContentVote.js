@@ -1,4 +1,3 @@
-"use strict";
 /**
  * OffTheRecord Rest Service API - Devo
  * A service to handle your traffic tickets
@@ -10,13 +9,11 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.ExternalContentVote = void 0;
-var ExternalContentVote;
+export var ExternalContentVote;
 (function (ExternalContentVote) {
-    var VoteTypeEnum;
+    let VoteTypeEnum;
     (function (VoteTypeEnum) {
         VoteTypeEnum[VoteTypeEnum["DISLIKE"] = 'DISLIKE'] = "DISLIKE";
         VoteTypeEnum[VoteTypeEnum["LIKE"] = 'LIKE'] = "LIKE";
     })(VoteTypeEnum = ExternalContentVote.VoteTypeEnum || (ExternalContentVote.VoteTypeEnum = {}));
-})(ExternalContentVote = exports.ExternalContentVote || (exports.ExternalContentVote = {}));
+})(ExternalContentVote || (ExternalContentVote = {}));

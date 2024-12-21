@@ -1,4 +1,3 @@
-"use strict";
 /**
  * OffTheRecord Rest Service API - Devo
  * A service to handle your traffic tickets
@@ -10,11 +9,9 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.PushNotificationRequest = void 0;
-var PushNotificationRequest;
+export var PushNotificationRequest;
 (function (PushNotificationRequest) {
-    var PageTypeEnum;
+    let PageTypeEnum;
     (function (PageTypeEnum) {
         PageTypeEnum[PageTypeEnum["CASEACTION"] = 'CASE_ACTION'] = "CASEACTION";
         PageTypeEnum[PageTypeEnum["CASEMESSAGES"] = 'CASE_MESSAGES'] = "CASEMESSAGES";
@@ -23,10 +20,10 @@ var PushNotificationRequest;
         PageTypeEnum[PageTypeEnum["NEWTICKET"] = 'NEW_TICKET'] = "NEWTICKET";
         PageTypeEnum[PageTypeEnum["PROFILE"] = 'PROFILE'] = "PROFILE";
     })(PageTypeEnum = PushNotificationRequest.PageTypeEnum || (PushNotificationRequest.PageTypeEnum = {}));
-    var PlatformTypeEnum;
+    let PlatformTypeEnum;
     (function (PlatformTypeEnum) {
         PlatformTypeEnum[PlatformTypeEnum["ANDROID"] = 'ANDROID'] = "ANDROID";
         PlatformTypeEnum[PlatformTypeEnum["IOS"] = 'IOS'] = "IOS";
         PlatformTypeEnum[PlatformTypeEnum["WEBAPP"] = 'WEBAPP'] = "WEBAPP";
     })(PlatformTypeEnum = PushNotificationRequest.PlatformTypeEnum || (PushNotificationRequest.PlatformTypeEnum = {}));
-})(PushNotificationRequest = exports.PushNotificationRequest || (exports.PushNotificationRequest = {}));
+})(PushNotificationRequest || (PushNotificationRequest = {}));

@@ -1,4 +1,3 @@
-"use strict";
 /**
  * OffTheRecord Rest Service API - Devo
  * A service to handle your traffic tickets
@@ -10,11 +9,9 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.CitationsResponseModel = void 0;
-var CitationsResponseModel;
+export var CitationsResponseModel;
 (function (CitationsResponseModel) {
-    var CaseStatusEnum;
+    let CaseStatusEnum;
     (function (CaseStatusEnum) {
         CaseStatusEnum[CaseStatusEnum["AMENDEDDOWNWITHINCLASS"] = 'AMENDED_DOWN_WITHIN_CLASS'] = "AMENDEDDOWNWITHINCLASS";
         CaseStatusEnum[CaseStatusEnum["AMENDEDFULLFINE"] = 'AMENDED_FULL_FINE'] = "AMENDEDFULLFINE";
@@ -54,17 +51,17 @@ var CitationsResponseModel;
         CaseStatusEnum[CaseStatusEnum["TRAFFICSCHOOL"] = 'TRAFFIC_SCHOOL'] = "TRAFFICSCHOOL";
         CaseStatusEnum[CaseStatusEnum["UNCONFIRMED"] = 'UNCONFIRMED'] = "UNCONFIRMED";
     })(CaseStatusEnum = CitationsResponseModel.CaseStatusEnum || (CitationsResponseModel.CaseStatusEnum = {}));
-    var CdlStatusEnum;
+    let CdlStatusEnum;
     (function (CdlStatusEnum) {
         CdlStatusEnum[CdlStatusEnum["CDLINCOMMERCIALVEHICLE"] = 'CDL_IN_COMMERCIAL_VEHICLE'] = "CDLINCOMMERCIALVEHICLE";
         CdlStatusEnum[CdlStatusEnum["CDLINPERSONALVEHICLE"] = 'CDL_IN_PERSONAL_VEHICLE'] = "CDLINPERSONALVEHICLE";
         CdlStatusEnum[CdlStatusEnum["NOCDL"] = 'NO_CDL'] = "NOCDL";
     })(CdlStatusEnum = CitationsResponseModel.CdlStatusEnum || (CitationsResponseModel.CdlStatusEnum = {}));
-    var ExperimentNameEnum;
+    let ExperimentNameEnum;
     (function (ExperimentNameEnum) {
         ExperimentNameEnum[ExperimentNameEnum["PRINCETONPROJECT1"] = 'PRINCETON_PROJECT_1'] = "PRINCETONPROJECT1";
     })(ExperimentNameEnum = CitationsResponseModel.ExperimentNameEnum || (CitationsResponseModel.ExperimentNameEnum = {}));
-    var MaxViolationClassificationEnum;
+    let MaxViolationClassificationEnum;
     (function (MaxViolationClassificationEnum) {
         MaxViolationClassificationEnum[MaxViolationClassificationEnum["CLASS1FELONY"] = 'CLASS_1_FELONY'] = "CLASS1FELONY";
         MaxViolationClassificationEnum[MaxViolationClassificationEnum["CLASS1MISDEMEANOR"] = 'CLASS_1_MISDEMEANOR'] = "CLASS1MISDEMEANOR";
@@ -124,7 +121,7 @@ var CitationsResponseModel;
         MaxViolationClassificationEnum[MaxViolationClassificationEnum["WOBBLERTOFELONY"] = 'WOBBLER_TO_FELONY'] = "WOBBLERTOFELONY";
         MaxViolationClassificationEnum[MaxViolationClassificationEnum["WOBBLERTOMISDEMEANOR"] = 'WOBBLER_TO_MISDEMEANOR'] = "WOBBLERTOMISDEMEANOR";
     })(MaxViolationClassificationEnum = CitationsResponseModel.MaxViolationClassificationEnum || (CitationsResponseModel.MaxViolationClassificationEnum = {}));
-    var TicketLocationStateEnum;
+    let TicketLocationStateEnum;
     (function (TicketLocationStateEnum) {
         TicketLocationStateEnum[TicketLocationStateEnum["AK"] = 'AK'] = "AK";
         TicketLocationStateEnum[TicketLocationStateEnum["AL"] = 'AL'] = "AL";
@@ -178,4 +175,4 @@ var CitationsResponseModel;
         TicketLocationStateEnum[TicketLocationStateEnum["WV"] = 'WV'] = "WV";
         TicketLocationStateEnum[TicketLocationStateEnum["WY"] = 'WY'] = "WY";
     })(TicketLocationStateEnum = CitationsResponseModel.TicketLocationStateEnum || (CitationsResponseModel.TicketLocationStateEnum = {}));
-})(CitationsResponseModel = exports.CitationsResponseModel || (exports.CitationsResponseModel = {}));
+})(CitationsResponseModel || (CitationsResponseModel = {}));

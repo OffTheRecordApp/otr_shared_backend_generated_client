@@ -1,4 +1,3 @@
-"use strict";
 /**
  * OffTheRecord Rest Service API - Devo
  * A service to handle your traffic tickets
@@ -10,13 +9,11 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.VerifyCaptchaTokenRequest = void 0;
-var VerifyCaptchaTokenRequest;
+export var VerifyCaptchaTokenRequest;
 (function (VerifyCaptchaTokenRequest) {
-    var VersionEnum;
+    let VersionEnum;
     (function (VersionEnum) {
         VersionEnum[VersionEnum["V2GOOGLE"] = 'V2_GOOGLE'] = "V2GOOGLE";
         VersionEnum[VersionEnum["V3GOOGLE"] = 'V3_GOOGLE'] = "V3GOOGLE";
     })(VersionEnum = VerifyCaptchaTokenRequest.VersionEnum || (VerifyCaptchaTokenRequest.VersionEnum = {}));
-})(VerifyCaptchaTokenRequest = exports.VerifyCaptchaTokenRequest || (exports.VerifyCaptchaTokenRequest = {}));
+})(VerifyCaptchaTokenRequest || (VerifyCaptchaTokenRequest = {}));

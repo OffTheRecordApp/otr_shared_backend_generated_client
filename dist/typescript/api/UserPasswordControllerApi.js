@@ -1,4 +1,3 @@
-"use strict";
 /**
  * OffTheRecord Rest Service API - Devo
  * A service to handle your traffic tickets
@@ -10,11 +9,9 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.UserPasswordControllerApi = void 0;
 /* tslint:disable:no-unused-variable member-ordering */
-var UserPasswordControllerApi = /** @class */ (function () {
-    function UserPasswordControllerApi($http, $httpParamSerializer, basePath) {
+export class UserPasswordControllerApi {
+    constructor($http, $httpParamSerializer, basePath) {
         this.$http = $http;
         this.$httpParamSerializer = $httpParamSerializer;
         this.basePath = 'http://otr-backend-service-us-devo.offtherecord.com';
@@ -28,15 +25,15 @@ var UserPasswordControllerApi = /** @class */ (function () {
      * @summary changeUserPassword
      * @param request request
      */
-    UserPasswordControllerApi.prototype.changeUserPasswordUsingPUT = function (request, extraHttpRequestParams) {
-        var localVarPath = this.basePath + '/api/v1/user/p';
-        var queryParameters = {};
-        var headerParams = Object.assign({}, this.defaultHeaders);
+    changeUserPasswordUsingPUT(request, extraHttpRequestParams) {
+        const localVarPath = this.basePath + '/api/v1/user/p';
+        let queryParameters = {};
+        let headerParams = Object.assign({}, this.defaultHeaders);
         // verify required parameter 'request' is not null or undefined
         if (request === null || request === undefined) {
             throw new Error('Required parameter request was null or undefined when calling changeUserPasswordUsingPUT.');
         }
-        var httpRequestParams = {
+        let httpRequestParams = {
             method: 'PUT',
             url: localVarPath,
             data: request,
@@ -47,18 +44,18 @@ var UserPasswordControllerApi = /** @class */ (function () {
             httpRequestParams = Object.assign(httpRequestParams, extraHttpRequestParams);
         }
         return this.$http(httpRequestParams);
-    };
+    }
     /**
      *
      * @summary resetUserPasswordByAdmin
      * @param userId userId
      * @param request request
      */
-    UserPasswordControllerApi.prototype.resetUserPasswordByAdminUsingPUT = function (userId, request, extraHttpRequestParams) {
-        var localVarPath = this.basePath + '/api/v1/users/{userId}/password'
+    resetUserPasswordByAdminUsingPUT(userId, request, extraHttpRequestParams) {
+        const localVarPath = this.basePath + '/api/v1/users/{userId}/password'
             .replace('{' + 'userId' + '}', encodeURIComponent(String(userId)));
-        var queryParameters = {};
-        var headerParams = Object.assign({}, this.defaultHeaders);
+        let queryParameters = {};
+        let headerParams = Object.assign({}, this.defaultHeaders);
         // verify required parameter 'userId' is not null or undefined
         if (userId === null || userId === undefined) {
             throw new Error('Required parameter userId was null or undefined when calling resetUserPasswordByAdminUsingPUT.');
@@ -67,7 +64,7 @@ var UserPasswordControllerApi = /** @class */ (function () {
         if (request === null || request === undefined) {
             throw new Error('Required parameter request was null or undefined when calling resetUserPasswordByAdminUsingPUT.');
         }
-        var httpRequestParams = {
+        let httpRequestParams = {
             method: 'PUT',
             url: localVarPath,
             data: request,
@@ -78,21 +75,21 @@ var UserPasswordControllerApi = /** @class */ (function () {
             httpRequestParams = Object.assign(httpRequestParams, extraHttpRequestParams);
         }
         return this.$http(httpRequestParams);
-    };
+    }
     /**
      *
      * @summary resetUserPassword
      * @param request request
      */
-    UserPasswordControllerApi.prototype.resetUserPasswordUsingPOST = function (request, extraHttpRequestParams) {
-        var localVarPath = this.basePath + '/api/v1/user/p/reset';
-        var queryParameters = {};
-        var headerParams = Object.assign({}, this.defaultHeaders);
+    resetUserPasswordUsingPOST(request, extraHttpRequestParams) {
+        const localVarPath = this.basePath + '/api/v1/user/p/reset';
+        let queryParameters = {};
+        let headerParams = Object.assign({}, this.defaultHeaders);
         // verify required parameter 'request' is not null or undefined
         if (request === null || request === undefined) {
             throw new Error('Required parameter request was null or undefined when calling resetUserPasswordUsingPOST.');
         }
-        var httpRequestParams = {
+        let httpRequestParams = {
             method: 'POST',
             url: localVarPath,
             data: request,
@@ -103,7 +100,7 @@ var UserPasswordControllerApi = /** @class */ (function () {
             httpRequestParams = Object.assign(httpRequestParams, extraHttpRequestParams);
         }
         return this.$http(httpRequestParams);
-    };
+    }
     /**
      *
      * @summary sendAccountVerificationCode
@@ -111,10 +108,10 @@ var UserPasswordControllerApi = /** @class */ (function () {
      * @param userId userId
      * @param verificationMethod verificationMethod
      */
-    UserPasswordControllerApi.prototype.sendAccountVerificationCodeUsingPOST = function (email, userId, verificationMethod, extraHttpRequestParams) {
-        var localVarPath = this.basePath + '/api/v1/users/send-verification-code';
-        var queryParameters = {};
-        var headerParams = Object.assign({}, this.defaultHeaders);
+    sendAccountVerificationCodeUsingPOST(email, userId, verificationMethod, extraHttpRequestParams) {
+        const localVarPath = this.basePath + '/api/v1/users/send-verification-code';
+        let queryParameters = {};
+        let headerParams = Object.assign({}, this.defaultHeaders);
         if (email !== undefined) {
             queryParameters['email'] = email;
         }
@@ -124,7 +121,7 @@ var UserPasswordControllerApi = /** @class */ (function () {
         if (verificationMethod !== undefined) {
             queryParameters['verificationMethod'] = verificationMethod;
         }
-        var httpRequestParams = {
+        let httpRequestParams = {
             method: 'POST',
             url: localVarPath,
             params: queryParameters,
@@ -134,17 +131,17 @@ var UserPasswordControllerApi = /** @class */ (function () {
             httpRequestParams = Object.assign(httpRequestParams, extraHttpRequestParams);
         }
         return this.$http(httpRequestParams);
-    };
+    }
     /**
      *
      * @summary sendResetPasswordToken
      * @param email email
      * @param enableCode enableCode
      */
-    UserPasswordControllerApi.prototype.sendResetPasswordTokenUsingPOST = function (email, enableCode, extraHttpRequestParams) {
-        var localVarPath = this.basePath + '/api/v1/user/password/token';
-        var queryParameters = {};
-        var headerParams = Object.assign({}, this.defaultHeaders);
+    sendResetPasswordTokenUsingPOST(email, enableCode, extraHttpRequestParams) {
+        const localVarPath = this.basePath + '/api/v1/user/password/token';
+        let queryParameters = {};
+        let headerParams = Object.assign({}, this.defaultHeaders);
         // verify required parameter 'email' is not null or undefined
         if (email === null || email === undefined) {
             throw new Error('Required parameter email was null or undefined when calling sendResetPasswordTokenUsingPOST.');
@@ -155,7 +152,7 @@ var UserPasswordControllerApi = /** @class */ (function () {
         if (enableCode !== undefined) {
             queryParameters['enableCode'] = enableCode;
         }
-        var httpRequestParams = {
+        let httpRequestParams = {
             method: 'POST',
             url: localVarPath,
             params: queryParameters,
@@ -165,16 +162,16 @@ var UserPasswordControllerApi = /** @class */ (function () {
             httpRequestParams = Object.assign(httpRequestParams, extraHttpRequestParams);
         }
         return this.$http(httpRequestParams);
-    };
+    }
     /**
      *
      * @summary verifyPwdResetToken
      * @param token token
      */
-    UserPasswordControllerApi.prototype.verifyPwdResetTokenUsingGET = function (token, extraHttpRequestParams) {
-        var localVarPath = this.basePath + '/api/v1/user/password/token';
-        var queryParameters = {};
-        var headerParams = Object.assign({}, this.defaultHeaders);
+    verifyPwdResetTokenUsingGET(token, extraHttpRequestParams) {
+        const localVarPath = this.basePath + '/api/v1/user/password/token';
+        let queryParameters = {};
+        let headerParams = Object.assign({}, this.defaultHeaders);
         // verify required parameter 'token' is not null or undefined
         if (token === null || token === undefined) {
             throw new Error('Required parameter token was null or undefined when calling verifyPwdResetTokenUsingGET.');
@@ -182,7 +179,7 @@ var UserPasswordControllerApi = /** @class */ (function () {
         if (token !== undefined) {
             queryParameters['token'] = token;
         }
-        var httpRequestParams = {
+        let httpRequestParams = {
             method: 'GET',
             url: localVarPath,
             params: queryParameters,
@@ -192,7 +189,7 @@ var UserPasswordControllerApi = /** @class */ (function () {
             httpRequestParams = Object.assign(httpRequestParams, extraHttpRequestParams);
         }
         return this.$http(httpRequestParams);
-    };
+    }
     /**
      *
      * @summary verifyUserAccount
@@ -202,10 +199,10 @@ var UserPasswordControllerApi = /** @class */ (function () {
      * @param fieldValue fieldValue
      * @param userId userId
      */
-    UserPasswordControllerApi.prototype.verifyUserAccountUsingPUT = function (code, email, fieldName, fieldValue, userId, extraHttpRequestParams) {
-        var localVarPath = this.basePath + '/api/v1/users/verify-account';
-        var queryParameters = {};
-        var headerParams = Object.assign({}, this.defaultHeaders);
+    verifyUserAccountUsingPUT(code, email, fieldName, fieldValue, userId, extraHttpRequestParams) {
+        const localVarPath = this.basePath + '/api/v1/users/verify-account';
+        let queryParameters = {};
+        let headerParams = Object.assign({}, this.defaultHeaders);
         // verify required parameter 'code' is not null or undefined
         if (code === null || code === undefined) {
             throw new Error('Required parameter code was null or undefined when calling verifyUserAccountUsingPUT.');
@@ -225,7 +222,7 @@ var UserPasswordControllerApi = /** @class */ (function () {
         if (userId !== undefined) {
             queryParameters['userId'] = userId;
         }
-        var httpRequestParams = {
+        let httpRequestParams = {
             method: 'PUT',
             url: localVarPath,
             params: queryParameters,
@@ -235,18 +232,18 @@ var UserPasswordControllerApi = /** @class */ (function () {
             httpRequestParams = Object.assign(httpRequestParams, extraHttpRequestParams);
         }
         return this.$http(httpRequestParams);
-    };
+    }
     /**
      *
      * @summary verifyUserPassword
      * @param userId userId
      * @param request request
      */
-    UserPasswordControllerApi.prototype.verifyUserPasswordUsingPUT = function (userId, request, extraHttpRequestParams) {
-        var localVarPath = this.basePath + '/api/v1/users/{userId}/verify-password'
+    verifyUserPasswordUsingPUT(userId, request, extraHttpRequestParams) {
+        const localVarPath = this.basePath + '/api/v1/users/{userId}/verify-password'
             .replace('{' + 'userId' + '}', encodeURIComponent(String(userId)));
-        var queryParameters = {};
-        var headerParams = Object.assign({}, this.defaultHeaders);
+        let queryParameters = {};
+        let headerParams = Object.assign({}, this.defaultHeaders);
         // verify required parameter 'userId' is not null or undefined
         if (userId === null || userId === undefined) {
             throw new Error('Required parameter userId was null or undefined when calling verifyUserPasswordUsingPUT.');
@@ -255,7 +252,7 @@ var UserPasswordControllerApi = /** @class */ (function () {
         if (request === null || request === undefined) {
             throw new Error('Required parameter request was null or undefined when calling verifyUserPasswordUsingPUT.');
         }
-        var httpRequestParams = {
+        let httpRequestParams = {
             method: 'PUT',
             url: localVarPath,
             data: request,
@@ -266,8 +263,6 @@ var UserPasswordControllerApi = /** @class */ (function () {
             httpRequestParams = Object.assign(httpRequestParams, extraHttpRequestParams);
         }
         return this.$http(httpRequestParams);
-    };
-    UserPasswordControllerApi.$inject = ['$http', '$httpParamSerializer', 'basePath'];
-    return UserPasswordControllerApi;
-}());
-exports.UserPasswordControllerApi = UserPasswordControllerApi;
+    }
+}
+UserPasswordControllerApi.$inject = ['$http', '$httpParamSerializer', 'basePath'];

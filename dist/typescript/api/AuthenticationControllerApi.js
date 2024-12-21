@@ -1,4 +1,3 @@
-"use strict";
 /**
  * OffTheRecord Rest Service API - Devo
  * A service to handle your traffic tickets
@@ -10,11 +9,9 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.AuthenticationControllerApi = void 0;
 /* tslint:disable:no-unused-variable member-ordering */
-var AuthenticationControllerApi = /** @class */ (function () {
-    function AuthenticationControllerApi($http, $httpParamSerializer, basePath) {
+export class AuthenticationControllerApi {
+    constructor($http, $httpParamSerializer, basePath) {
         this.$http = $http;
         this.$httpParamSerializer = $httpParamSerializer;
         this.basePath = 'http://otr-backend-service-us-devo.offtherecord.com';
@@ -27,11 +24,11 @@ var AuthenticationControllerApi = /** @class */ (function () {
      *
      * @summary getUserInfo
      */
-    AuthenticationControllerApi.prototype.getUserInfoUsingGET = function (extraHttpRequestParams) {
-        var localVarPath = this.basePath + '/api/v1/authentication/user';
-        var queryParameters = {};
-        var headerParams = Object.assign({}, this.defaultHeaders);
-        var httpRequestParams = {
+    getUserInfoUsingGET(extraHttpRequestParams) {
+        const localVarPath = this.basePath + '/api/v1/authentication/user';
+        let queryParameters = {};
+        let headerParams = Object.assign({}, this.defaultHeaders);
+        let httpRequestParams = {
             method: 'GET',
             url: localVarPath,
             params: queryParameters,
@@ -41,8 +38,6 @@ var AuthenticationControllerApi = /** @class */ (function () {
             httpRequestParams = Object.assign(httpRequestParams, extraHttpRequestParams);
         }
         return this.$http(httpRequestParams);
-    };
-    AuthenticationControllerApi.$inject = ['$http', '$httpParamSerializer', 'basePath'];
-    return AuthenticationControllerApi;
-}());
-exports.AuthenticationControllerApi = AuthenticationControllerApi;
+    }
+}
+AuthenticationControllerApi.$inject = ['$http', '$httpParamSerializer', 'basePath'];

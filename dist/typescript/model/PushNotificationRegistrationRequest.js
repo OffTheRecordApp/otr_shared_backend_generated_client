@@ -1,4 +1,3 @@
-"use strict";
 /**
  * OffTheRecord Rest Service API - Devo
  * A service to handle your traffic tickets
@@ -10,14 +9,12 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.PushNotificationRegistrationRequest = void 0;
-var PushNotificationRegistrationRequest;
+export var PushNotificationRegistrationRequest;
 (function (PushNotificationRegistrationRequest) {
-    var PlatformTypeEnum;
+    let PlatformTypeEnum;
     (function (PlatformTypeEnum) {
         PlatformTypeEnum[PlatformTypeEnum["ANDROID"] = 'ANDROID'] = "ANDROID";
         PlatformTypeEnum[PlatformTypeEnum["IOS"] = 'IOS'] = "IOS";
         PlatformTypeEnum[PlatformTypeEnum["WEBAPP"] = 'WEBAPP'] = "WEBAPP";
     })(PlatformTypeEnum = PushNotificationRegistrationRequest.PlatformTypeEnum || (PushNotificationRegistrationRequest.PlatformTypeEnum = {}));
-})(PushNotificationRegistrationRequest = exports.PushNotificationRegistrationRequest || (exports.PushNotificationRegistrationRequest = {}));
+})(PushNotificationRegistrationRequest || (PushNotificationRegistrationRequest = {}));

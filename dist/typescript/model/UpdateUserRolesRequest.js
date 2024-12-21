@@ -1,4 +1,3 @@
-"use strict";
 /**
  * OffTheRecord Rest Service API - Devo
  * A service to handle your traffic tickets
@@ -10,11 +9,9 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.UpdateUserRolesRequest = void 0;
-var UpdateUserRolesRequest;
+export var UpdateUserRolesRequest;
 (function (UpdateUserRolesRequest) {
-    var RolesEnum;
+    let RolesEnum;
     (function (RolesEnum) {
         RolesEnum[RolesEnum["ADMIN"] = 'ADMIN'] = "ADMIN";
         RolesEnum[RolesEnum["DEFENDANT"] = 'DEFENDANT'] = "DEFENDANT";
@@ -23,4 +20,4 @@ var UpdateUserRolesRequest;
         RolesEnum[RolesEnum["PARTNER"] = 'PARTNER'] = "PARTNER";
         RolesEnum[RolesEnum["UNKNOWN"] = 'UNKNOWN'] = "UNKNOWN";
     })(RolesEnum = UpdateUserRolesRequest.RolesEnum || (UpdateUserRolesRequest.RolesEnum = {}));
-})(UpdateUserRolesRequest = exports.UpdateUserRolesRequest || (exports.UpdateUserRolesRequest = {}));
+})(UpdateUserRolesRequest || (UpdateUserRolesRequest = {}));

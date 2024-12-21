@@ -1,4 +1,3 @@
-"use strict";
 /**
  * OffTheRecord Rest Service API - Devo
  * A service to handle your traffic tickets
@@ -10,11 +9,9 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.ScheduledTaskResponse = void 0;
-var ScheduledTaskResponse;
+export var ScheduledTaskResponse;
 (function (ScheduledTaskResponse) {
-    var TaskStatusEnum;
+    let TaskStatusEnum;
     (function (TaskStatusEnum) {
         TaskStatusEnum[TaskStatusEnum["CANCELLED"] = 'CANCELLED'] = "CANCELLED";
         TaskStatusEnum[TaskStatusEnum["COMPLETE"] = 'COMPLETE'] = "COMPLETE";
@@ -23,7 +20,7 @@ var ScheduledTaskResponse;
         TaskStatusEnum[TaskStatusEnum["NOOPERATION"] = 'NO_OPERATION'] = "NOOPERATION";
         TaskStatusEnum[TaskStatusEnum["QUEUED"] = 'QUEUED'] = "QUEUED";
     })(TaskStatusEnum = ScheduledTaskResponse.TaskStatusEnum || (ScheduledTaskResponse.TaskStatusEnum = {}));
-    var TaskTypeEnum;
+    let TaskTypeEnum;
     (function (TaskTypeEnum) {
         TaskTypeEnum[TaskTypeEnum["EMAILFOLLOWUPTASK"] = 'EMAIL_FOLLOW_UP_TASK'] = "EMAILFOLLOWUPTASK";
         TaskTypeEnum[TaskTypeEnum["PAYINSTALLMENTTASK"] = 'PAY_INSTALLMENT_TASK'] = "PAYINSTALLMENTTASK";
@@ -31,4 +28,4 @@ var ScheduledTaskResponse;
         TaskTypeEnum[TaskTypeEnum["TICKETREVIEWTASK"] = 'TICKET_REVIEW_TASK'] = "TICKETREVIEWTASK";
         TaskTypeEnum[TaskTypeEnum["VALIDATESUBSCRIPTIONTASK"] = 'VALIDATE_SUBSCRIPTION_TASK'] = "VALIDATESUBSCRIPTIONTASK";
     })(TaskTypeEnum = ScheduledTaskResponse.TaskTypeEnum || (ScheduledTaskResponse.TaskTypeEnum = {}));
-})(ScheduledTaskResponse = exports.ScheduledTaskResponse || (exports.ScheduledTaskResponse = {}));
+})(ScheduledTaskResponse || (ScheduledTaskResponse = {}));

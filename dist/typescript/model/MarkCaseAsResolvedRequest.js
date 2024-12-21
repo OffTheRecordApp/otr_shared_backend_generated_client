@@ -1,4 +1,3 @@
-"use strict";
 /**
  * OffTheRecord Rest Service API - Devo
  * A service to handle your traffic tickets
@@ -10,11 +9,9 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.MarkCaseAsResolvedRequest = void 0;
-var MarkCaseAsResolvedRequest;
+export var MarkCaseAsResolvedRequest;
 (function (MarkCaseAsResolvedRequest) {
-    var ResolutionStatusEnum;
+    let ResolutionStatusEnum;
     (function (ResolutionStatusEnum) {
         ResolutionStatusEnum[ResolutionStatusEnum["AMENDEDDOWNWITHINCLASS"] = 'AMENDED_DOWN_WITHIN_CLASS'] = "AMENDEDDOWNWITHINCLASS";
         ResolutionStatusEnum[ResolutionStatusEnum["AMENDEDFULLFINE"] = 'AMENDED_FULL_FINE'] = "AMENDEDFULLFINE";
@@ -54,4 +51,4 @@ var MarkCaseAsResolvedRequest;
         ResolutionStatusEnum[ResolutionStatusEnum["TRAFFICSCHOOL"] = 'TRAFFIC_SCHOOL'] = "TRAFFICSCHOOL";
         ResolutionStatusEnum[ResolutionStatusEnum["UNCONFIRMED"] = 'UNCONFIRMED'] = "UNCONFIRMED";
     })(ResolutionStatusEnum = MarkCaseAsResolvedRequest.ResolutionStatusEnum || (MarkCaseAsResolvedRequest.ResolutionStatusEnum = {}));
-})(MarkCaseAsResolvedRequest = exports.MarkCaseAsResolvedRequest || (exports.MarkCaseAsResolvedRequest = {}));
+})(MarkCaseAsResolvedRequest || (MarkCaseAsResolvedRequest = {}));

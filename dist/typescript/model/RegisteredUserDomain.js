@@ -1,4 +1,3 @@
-"use strict";
 /**
  * OffTheRecord Rest Service API - Devo
  * A service to handle your traffic tickets
@@ -10,11 +9,9 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.RegisteredUserDomain = void 0;
-var RegisteredUserDomain;
+export var RegisteredUserDomain;
 (function (RegisteredUserDomain) {
-    var ClientTypeEnum;
+    let ClientTypeEnum;
     (function (ClientTypeEnum) {
         ClientTypeEnum[ClientTypeEnum["ANDROID"] = 'ANDROID'] = "ANDROID";
         ClientTypeEnum[ClientTypeEnum["DESKTOPWEBAPP"] = 'DESKTOP_WEBAPP'] = "DESKTOPWEBAPP";
@@ -39,7 +36,7 @@ var RegisteredUserDomain;
         ClientTypeEnum[ClientTypeEnum["OTRWIDGET"] = 'OTR_WIDGET'] = "OTRWIDGET";
         ClientTypeEnum[ClientTypeEnum["UNKNOWN"] = 'UNKNOWN'] = "UNKNOWN";
     })(ClientTypeEnum = RegisteredUserDomain.ClientTypeEnum || (RegisteredUserDomain.ClientTypeEnum = {}));
-    var GenderTypeEnum;
+    let GenderTypeEnum;
     (function (GenderTypeEnum) {
         GenderTypeEnum[GenderTypeEnum["FEMALE"] = 'FEMALE'] = "FEMALE";
         GenderTypeEnum[GenderTypeEnum["MALE"] = 'MALE'] = "MALE";
@@ -48,7 +45,7 @@ var RegisteredUserDomain;
         GenderTypeEnum[GenderTypeEnum["UNVERIFIED"] = 'UNVERIFIED'] = "UNVERIFIED";
         GenderTypeEnum[GenderTypeEnum["X"] = 'X'] = "X";
     })(GenderTypeEnum = RegisteredUserDomain.GenderTypeEnum || (RegisteredUserDomain.GenderTypeEnum = {}));
-    var LoginProviderEnum;
+    let LoginProviderEnum;
     (function (LoginProviderEnum) {
         LoginProviderEnum[LoginProviderEnum["APPLE"] = 'APPLE'] = "APPLE";
         LoginProviderEnum[LoginProviderEnum["EMAIL"] = 'EMAIL'] = "EMAIL";
@@ -58,7 +55,7 @@ var RegisteredUserDomain;
         LoginProviderEnum[LoginProviderEnum["TWITTER"] = 'TWITTER'] = "TWITTER";
         LoginProviderEnum[LoginProviderEnum["UNKNOWN"] = 'UNKNOWN'] = "UNKNOWN";
     })(LoginProviderEnum = RegisteredUserDomain.LoginProviderEnum || (RegisteredUserDomain.LoginProviderEnum = {}));
-    var RaceEnum;
+    let RaceEnum;
     (function (RaceEnum) {
         RaceEnum[RaceEnum["ASIAN"] = 'ASIAN'] = "ASIAN";
         RaceEnum[RaceEnum["BLACK"] = 'BLACK'] = "BLACK";
@@ -72,4 +69,4 @@ var RegisteredUserDomain;
         RaceEnum[RaceEnum["UNVERIFIED"] = 'UNVERIFIED'] = "UNVERIFIED";
         RaceEnum[RaceEnum["WHITE"] = 'WHITE'] = "WHITE";
     })(RaceEnum = RegisteredUserDomain.RaceEnum || (RegisteredUserDomain.RaceEnum = {}));
-})(RegisteredUserDomain = exports.RegisteredUserDomain || (exports.RegisteredUserDomain = {}));
+})(RegisteredUserDomain || (RegisteredUserDomain = {}));

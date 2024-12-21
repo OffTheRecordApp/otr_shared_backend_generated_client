@@ -1,4 +1,3 @@
-"use strict";
 /**
  * OffTheRecord Rest Service API - Devo
  * A service to handle your traffic tickets
@@ -10,11 +9,9 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.DashboardControllerApi = void 0;
 /* tslint:disable:no-unused-variable member-ordering */
-var DashboardControllerApi = /** @class */ (function () {
-    function DashboardControllerApi($http, $httpParamSerializer, basePath) {
+export class DashboardControllerApi {
+    constructor($http, $httpParamSerializer, basePath) {
         this.$http = $http;
         this.$httpParamSerializer = $httpParamSerializer;
         this.basePath = 'http://otr-backend-service-us-devo.offtherecord.com';
@@ -28,15 +25,15 @@ var DashboardControllerApi = /** @class */ (function () {
      * @summary getBookings
      * @param request request
      */
-    DashboardControllerApi.prototype.getBookingsUsingPOST = function (request, extraHttpRequestParams) {
-        var localVarPath = this.basePath + '/api/v1/console/bookings';
-        var queryParameters = {};
-        var headerParams = Object.assign({}, this.defaultHeaders);
+    getBookingsUsingPOST(request, extraHttpRequestParams) {
+        const localVarPath = this.basePath + '/api/v1/console/bookings';
+        let queryParameters = {};
+        let headerParams = Object.assign({}, this.defaultHeaders);
         // verify required parameter 'request' is not null or undefined
         if (request === null || request === undefined) {
             throw new Error('Required parameter request was null or undefined when calling getBookingsUsingPOST.');
         }
-        var httpRequestParams = {
+        let httpRequestParams = {
             method: 'POST',
             url: localVarPath,
             data: request,
@@ -47,21 +44,21 @@ var DashboardControllerApi = /** @class */ (function () {
             httpRequestParams = Object.assign(httpRequestParams, extraHttpRequestParams);
         }
         return this.$http(httpRequestParams);
-    };
+    }
     /**
      *
      * @summary getUserRegistrations
      * @param request request
      */
-    DashboardControllerApi.prototype.getUserRegistrationsUsingPOST = function (request, extraHttpRequestParams) {
-        var localVarPath = this.basePath + '/api/v1/console/registrations';
-        var queryParameters = {};
-        var headerParams = Object.assign({}, this.defaultHeaders);
+    getUserRegistrationsUsingPOST(request, extraHttpRequestParams) {
+        const localVarPath = this.basePath + '/api/v1/console/registrations';
+        let queryParameters = {};
+        let headerParams = Object.assign({}, this.defaultHeaders);
         // verify required parameter 'request' is not null or undefined
         if (request === null || request === undefined) {
             throw new Error('Required parameter request was null or undefined when calling getUserRegistrationsUsingPOST.');
         }
-        var httpRequestParams = {
+        let httpRequestParams = {
             method: 'POST',
             url: localVarPath,
             data: request,
@@ -72,21 +69,21 @@ var DashboardControllerApi = /** @class */ (function () {
             httpRequestParams = Object.assign(httpRequestParams, extraHttpRequestParams);
         }
         return this.$http(httpRequestParams);
-    };
+    }
     /**
      *
      * @summary listCaseBookings
      * @param request request
      */
-    DashboardControllerApi.prototype.listCaseBookingsUsingPOST = function (request, extraHttpRequestParams) {
-        var localVarPath = this.basePath + '/api/v1/console/bookings2';
-        var queryParameters = {};
-        var headerParams = Object.assign({}, this.defaultHeaders);
+    listCaseBookingsUsingPOST(request, extraHttpRequestParams) {
+        const localVarPath = this.basePath + '/api/v1/console/bookings2';
+        let queryParameters = {};
+        let headerParams = Object.assign({}, this.defaultHeaders);
         // verify required parameter 'request' is not null or undefined
         if (request === null || request === undefined) {
             throw new Error('Required parameter request was null or undefined when calling listCaseBookingsUsingPOST.');
         }
-        var httpRequestParams = {
+        let httpRequestParams = {
             method: 'POST',
             url: localVarPath,
             data: request,
@@ -97,21 +94,21 @@ var DashboardControllerApi = /** @class */ (function () {
             httpRequestParams = Object.assign(httpRequestParams, extraHttpRequestParams);
         }
         return this.$http(httpRequestParams);
-    };
+    }
     /**
      *
      * @summary listCaseCancellations
      * @param request request
      */
-    DashboardControllerApi.prototype.listCaseCancellationsUsingPOST = function (request, extraHttpRequestParams) {
-        var localVarPath = this.basePath + '/api/v1/console/cancellations';
-        var queryParameters = {};
-        var headerParams = Object.assign({}, this.defaultHeaders);
+    listCaseCancellationsUsingPOST(request, extraHttpRequestParams) {
+        const localVarPath = this.basePath + '/api/v1/console/cancellations';
+        let queryParameters = {};
+        let headerParams = Object.assign({}, this.defaultHeaders);
         // verify required parameter 'request' is not null or undefined
         if (request === null || request === undefined) {
             throw new Error('Required parameter request was null or undefined when calling listCaseCancellationsUsingPOST.');
         }
-        var httpRequestParams = {
+        let httpRequestParams = {
             method: 'POST',
             url: localVarPath,
             data: request,
@@ -122,21 +119,21 @@ var DashboardControllerApi = /** @class */ (function () {
             httpRequestParams = Object.assign(httpRequestParams, extraHttpRequestParams);
         }
         return this.$http(httpRequestParams);
-    };
+    }
     /**
      *
      * @summary listCitations
      * @param request request
      */
-    DashboardControllerApi.prototype.listCitationsUsingPOST = function (request, extraHttpRequestParams) {
-        var localVarPath = this.basePath + '/api/v1/console/citations';
-        var queryParameters = {};
-        var headerParams = Object.assign({}, this.defaultHeaders);
+    listCitationsUsingPOST(request, extraHttpRequestParams) {
+        const localVarPath = this.basePath + '/api/v1/console/citations';
+        let queryParameters = {};
+        let headerParams = Object.assign({}, this.defaultHeaders);
         // verify required parameter 'request' is not null or undefined
         if (request === null || request === undefined) {
             throw new Error('Required parameter request was null or undefined when calling listCitationsUsingPOST.');
         }
-        var httpRequestParams = {
+        let httpRequestParams = {
             method: 'POST',
             url: localVarPath,
             data: request,
@@ -147,21 +144,21 @@ var DashboardControllerApi = /** @class */ (function () {
             httpRequestParams = Object.assign(httpRequestParams, extraHttpRequestParams);
         }
         return this.$http(httpRequestParams);
-    };
+    }
     /**
      *
      * @summary listCustomers
      * @param graphRequest graphRequest
      */
-    DashboardControllerApi.prototype.listCustomersUsingPOST = function (graphRequest, extraHttpRequestParams) {
-        var localVarPath = this.basePath + '/api/v1/console/customers';
-        var queryParameters = {};
-        var headerParams = Object.assign({}, this.defaultHeaders);
+    listCustomersUsingPOST(graphRequest, extraHttpRequestParams) {
+        const localVarPath = this.basePath + '/api/v1/console/customers';
+        let queryParameters = {};
+        let headerParams = Object.assign({}, this.defaultHeaders);
         // verify required parameter 'graphRequest' is not null or undefined
         if (graphRequest === null || graphRequest === undefined) {
             throw new Error('Required parameter graphRequest was null or undefined when calling listCustomersUsingPOST.');
         }
-        var httpRequestParams = {
+        let httpRequestParams = {
             method: 'POST',
             url: localVarPath,
             data: graphRequest,
@@ -172,21 +169,21 @@ var DashboardControllerApi = /** @class */ (function () {
             httpRequestParams = Object.assign(httpRequestParams, extraHttpRequestParams);
         }
         return this.$http(httpRequestParams);
-    };
+    }
     /**
      *
      * @summary listDropoffs
      * @param graphRequest graphRequest
      */
-    DashboardControllerApi.prototype.listDropoffsUsingPOST = function (graphRequest, extraHttpRequestParams) {
-        var localVarPath = this.basePath + '/api/v1/console/dropoff';
-        var queryParameters = {};
-        var headerParams = Object.assign({}, this.defaultHeaders);
+    listDropoffsUsingPOST(graphRequest, extraHttpRequestParams) {
+        const localVarPath = this.basePath + '/api/v1/console/dropoff';
+        let queryParameters = {};
+        let headerParams = Object.assign({}, this.defaultHeaders);
         // verify required parameter 'graphRequest' is not null or undefined
         if (graphRequest === null || graphRequest === undefined) {
             throw new Error('Required parameter graphRequest was null or undefined when calling listDropoffsUsingPOST.');
         }
-        var httpRequestParams = {
+        let httpRequestParams = {
             method: 'POST',
             url: localVarPath,
             data: graphRequest,
@@ -197,21 +194,21 @@ var DashboardControllerApi = /** @class */ (function () {
             httpRequestParams = Object.assign(httpRequestParams, extraHttpRequestParams);
         }
         return this.$http(httpRequestParams);
-    };
+    }
     /**
      *
      * @summary listExpenses
      * @param graphRequest graphRequest
      */
-    DashboardControllerApi.prototype.listExpensesUsingPOST = function (graphRequest, extraHttpRequestParams) {
-        var localVarPath = this.basePath + '/api/v1/console/expenses';
-        var queryParameters = {};
-        var headerParams = Object.assign({}, this.defaultHeaders);
+    listExpensesUsingPOST(graphRequest, extraHttpRequestParams) {
+        const localVarPath = this.basePath + '/api/v1/console/expenses';
+        let queryParameters = {};
+        let headerParams = Object.assign({}, this.defaultHeaders);
         // verify required parameter 'graphRequest' is not null or undefined
         if (graphRequest === null || graphRequest === undefined) {
             throw new Error('Required parameter graphRequest was null or undefined when calling listExpensesUsingPOST.');
         }
-        var httpRequestParams = {
+        let httpRequestParams = {
             method: 'POST',
             url: localVarPath,
             data: graphRequest,
@@ -222,21 +219,21 @@ var DashboardControllerApi = /** @class */ (function () {
             httpRequestParams = Object.assign(httpRequestParams, extraHttpRequestParams);
         }
         return this.$http(httpRequestParams);
-    };
+    }
     /**
      *
      * @summary listLawfirmsEngaged
      * @param request request
      */
-    DashboardControllerApi.prototype.listLawfirmsEngagedUsingPOST = function (request, extraHttpRequestParams) {
-        var localVarPath = this.basePath + '/api/v1/console/lawfirm-engagement';
-        var queryParameters = {};
-        var headerParams = Object.assign({}, this.defaultHeaders);
+    listLawfirmsEngagedUsingPOST(request, extraHttpRequestParams) {
+        const localVarPath = this.basePath + '/api/v1/console/lawfirm-engagement';
+        let queryParameters = {};
+        let headerParams = Object.assign({}, this.defaultHeaders);
         // verify required parameter 'request' is not null or undefined
         if (request === null || request === undefined) {
             throw new Error('Required parameter request was null or undefined when calling listLawfirmsEngagedUsingPOST.');
         }
-        var httpRequestParams = {
+        let httpRequestParams = {
             method: 'POST',
             url: localVarPath,
             data: request,
@@ -247,21 +244,21 @@ var DashboardControllerApi = /** @class */ (function () {
             httpRequestParams = Object.assign(httpRequestParams, extraHttpRequestParams);
         }
         return this.$http(httpRequestParams);
-    };
+    }
     /**
      *
      * @summary listLawyerLeads
      * @param graphRequest graphRequest
      */
-    DashboardControllerApi.prototype.listLawyerLeadsUsingPOST = function (graphRequest, extraHttpRequestParams) {
-        var localVarPath = this.basePath + '/api/v1/console/lawyer-leads';
-        var queryParameters = {};
-        var headerParams = Object.assign({}, this.defaultHeaders);
+    listLawyerLeadsUsingPOST(graphRequest, extraHttpRequestParams) {
+        const localVarPath = this.basePath + '/api/v1/console/lawyer-leads';
+        let queryParameters = {};
+        let headerParams = Object.assign({}, this.defaultHeaders);
         // verify required parameter 'graphRequest' is not null or undefined
         if (graphRequest === null || graphRequest === undefined) {
             throw new Error('Required parameter graphRequest was null or undefined when calling listLawyerLeadsUsingPOST.');
         }
-        var httpRequestParams = {
+        let httpRequestParams = {
             method: 'POST',
             url: localVarPath,
             data: graphRequest,
@@ -272,7 +269,7 @@ var DashboardControllerApi = /** @class */ (function () {
             httpRequestParams = Object.assign(httpRequestParams, extraHttpRequestParams);
         }
         return this.$http(httpRequestParams);
-    };
+    }
     /**
      *
      * @summary listPhoneCalls
@@ -297,10 +294,10 @@ var DashboardControllerApi = /** @class */ (function () {
      * @param totalCalls totalCalls
      * @param totalOtrAccounts totalOtrAccounts
      */
-    DashboardControllerApi.prototype.listPhoneCallsUsingGET = function (agentId, agentName, callQueueName, callStatus, callStatusName, customerName, direction, endDate, ivrName, length, page, phoneNumber, shouldIncludePhoneCalls, sortBy, sortOrder, startDate, teamName, timeZoneId, totalCalls, totalOtrAccounts, extraHttpRequestParams) {
-        var localVarPath = this.basePath + '/api/v1/console/phone-calls';
-        var queryParameters = {};
-        var headerParams = Object.assign({}, this.defaultHeaders);
+    listPhoneCallsUsingGET(agentId, agentName, callQueueName, callStatus, callStatusName, customerName, direction, endDate, ivrName, length, page, phoneNumber, shouldIncludePhoneCalls, sortBy, sortOrder, startDate, teamName, timeZoneId, totalCalls, totalOtrAccounts, extraHttpRequestParams) {
+        const localVarPath = this.basePath + '/api/v1/console/phone-calls';
+        let queryParameters = {};
+        let headerParams = Object.assign({}, this.defaultHeaders);
         if (agentId !== undefined) {
             queryParameters['agentId'] = agentId;
         }
@@ -361,7 +358,7 @@ var DashboardControllerApi = /** @class */ (function () {
         if (totalOtrAccounts !== undefined) {
             queryParameters['totalOtrAccounts'] = totalOtrAccounts;
         }
-        var httpRequestParams = {
+        let httpRequestParams = {
             method: 'GET',
             url: localVarPath,
             params: queryParameters,
@@ -371,8 +368,6 @@ var DashboardControllerApi = /** @class */ (function () {
             httpRequestParams = Object.assign(httpRequestParams, extraHttpRequestParams);
         }
         return this.$http(httpRequestParams);
-    };
-    DashboardControllerApi.$inject = ['$http', '$httpParamSerializer', 'basePath'];
-    return DashboardControllerApi;
-}());
-exports.DashboardControllerApi = DashboardControllerApi;
+    }
+}
+DashboardControllerApi.$inject = ['$http', '$httpParamSerializer', 'basePath'];

@@ -1,4 +1,3 @@
-"use strict";
 /**
  * OffTheRecord Rest Service API - Devo
  * A service to handle your traffic tickets
@@ -10,11 +9,9 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.PotentialCustomerDomain = void 0;
-var PotentialCustomerDomain;
+export var PotentialCustomerDomain;
 (function (PotentialCustomerDomain) {
-    var CaseStatusEnum;
+    let CaseStatusEnum;
     (function (CaseStatusEnum) {
         CaseStatusEnum[CaseStatusEnum["AMENDEDDOWNWITHINCLASS"] = 'AMENDED_DOWN_WITHIN_CLASS'] = "AMENDEDDOWNWITHINCLASS";
         CaseStatusEnum[CaseStatusEnum["AMENDEDFULLFINE"] = 'AMENDED_FULL_FINE'] = "AMENDEDFULLFINE";
@@ -54,7 +51,7 @@ var PotentialCustomerDomain;
         CaseStatusEnum[CaseStatusEnum["TRAFFICSCHOOL"] = 'TRAFFIC_SCHOOL'] = "TRAFFICSCHOOL";
         CaseStatusEnum[CaseStatusEnum["UNCONFIRMED"] = 'UNCONFIRMED'] = "UNCONFIRMED";
     })(CaseStatusEnum = PotentialCustomerDomain.CaseStatusEnum || (PotentialCustomerDomain.CaseStatusEnum = {}));
-    var CitationStateEnum;
+    let CitationStateEnum;
     (function (CitationStateEnum) {
         CitationStateEnum[CitationStateEnum["AK"] = 'AK'] = "AK";
         CitationStateEnum[CitationStateEnum["AL"] = 'AL'] = "AL";
@@ -108,4 +105,4 @@ var PotentialCustomerDomain;
         CitationStateEnum[CitationStateEnum["WV"] = 'WV'] = "WV";
         CitationStateEnum[CitationStateEnum["WY"] = 'WY'] = "WY";
     })(CitationStateEnum = PotentialCustomerDomain.CitationStateEnum || (PotentialCustomerDomain.CitationStateEnum = {}));
-})(PotentialCustomerDomain = exports.PotentialCustomerDomain || (exports.PotentialCustomerDomain = {}));
+})(PotentialCustomerDomain || (PotentialCustomerDomain = {}));

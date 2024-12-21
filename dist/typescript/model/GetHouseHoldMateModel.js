@@ -1,4 +1,3 @@
-"use strict";
 /**
  * OffTheRecord Rest Service API - Devo
  * A service to handle your traffic tickets
@@ -10,17 +9,15 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.GetHouseHoldMateModel = void 0;
-var GetHouseHoldMateModel;
+export var GetHouseHoldMateModel;
 (function (GetHouseHoldMateModel) {
-    var InviteStatusEnum;
+    let InviteStatusEnum;
     (function (InviteStatusEnum) {
         InviteStatusEnum[InviteStatusEnum["CANCELLED"] = 'CANCELLED'] = "CANCELLED";
         InviteStatusEnum[InviteStatusEnum["PENDING"] = 'PENDING'] = "PENDING";
         InviteStatusEnum[InviteStatusEnum["VERIFIED"] = 'VERIFIED'] = "VERIFIED";
     })(InviteStatusEnum = GetHouseHoldMateModel.InviteStatusEnum || (GetHouseHoldMateModel.InviteStatusEnum = {}));
-    var RelationshipTypeEnum;
+    let RelationshipTypeEnum;
     (function (RelationshipTypeEnum) {
         RelationshipTypeEnum[RelationshipTypeEnum["OWNER"] = 'OWNER'] = "OWNER";
         RelationshipTypeEnum[RelationshipTypeEnum["SIBLING"] = 'SIBLING'] = "SIBLING";
@@ -28,4 +25,4 @@ var GetHouseHoldMateModel;
         RelationshipTypeEnum[RelationshipTypeEnum["TEENAGER"] = 'TEENAGER'] = "TEENAGER";
         RelationshipTypeEnum[RelationshipTypeEnum["UNKNOWN"] = 'UNKNOWN'] = "UNKNOWN";
     })(RelationshipTypeEnum = GetHouseHoldMateModel.RelationshipTypeEnum || (GetHouseHoldMateModel.RelationshipTypeEnum = {}));
-})(GetHouseHoldMateModel = exports.GetHouseHoldMateModel || (exports.GetHouseHoldMateModel = {}));
+})(GetHouseHoldMateModel || (GetHouseHoldMateModel = {}));

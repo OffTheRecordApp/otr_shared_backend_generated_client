@@ -1,4 +1,3 @@
-"use strict";
 /**
  * OffTheRecord Rest Service API - Devo
  * A service to handle your traffic tickets
@@ -10,11 +9,9 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.FreshdeskTicketControllerApi = void 0;
 /* tslint:disable:no-unused-variable member-ordering */
-var FreshdeskTicketControllerApi = /** @class */ (function () {
-    function FreshdeskTicketControllerApi($http, $httpParamSerializer, basePath) {
+export class FreshdeskTicketControllerApi {
+    constructor($http, $httpParamSerializer, basePath) {
         this.$http = $http;
         this.$httpParamSerializer = $httpParamSerializer;
         this.basePath = 'http://otr-backend-service-us-devo.offtherecord.com';
@@ -29,11 +26,11 @@ var FreshdeskTicketControllerApi = /** @class */ (function () {
      * @param ticketId ticketId
      * @param request request
      */
-    FreshdeskTicketControllerApi.prototype.mergeTicketUsingPOST = function (ticketId, request, extraHttpRequestParams) {
-        var localVarPath = this.basePath + '/api/v1/freshdesk/webhook/ticket/{ticketId}/merge'
+    mergeTicketUsingPOST(ticketId, request, extraHttpRequestParams) {
+        const localVarPath = this.basePath + '/api/v1/freshdesk/webhook/ticket/{ticketId}/merge'
             .replace('{' + 'ticketId' + '}', encodeURIComponent(String(ticketId)));
-        var queryParameters = {};
-        var headerParams = Object.assign({}, this.defaultHeaders);
+        let queryParameters = {};
+        let headerParams = Object.assign({}, this.defaultHeaders);
         // verify required parameter 'ticketId' is not null or undefined
         if (ticketId === null || ticketId === undefined) {
             throw new Error('Required parameter ticketId was null or undefined when calling mergeTicketUsingPOST.');
@@ -42,7 +39,7 @@ var FreshdeskTicketControllerApi = /** @class */ (function () {
         if (request === null || request === undefined) {
             throw new Error('Required parameter request was null or undefined when calling mergeTicketUsingPOST.');
         }
-        var httpRequestParams = {
+        let httpRequestParams = {
             method: 'POST',
             url: localVarPath,
             data: request,
@@ -53,18 +50,18 @@ var FreshdeskTicketControllerApi = /** @class */ (function () {
             httpRequestParams = Object.assign(httpRequestParams, extraHttpRequestParams);
         }
         return this.$http(httpRequestParams);
-    };
+    }
     /**
      *
      * @summary ticketStatusChangeHook
      * @param ticketId ticketId
      * @param request request
      */
-    FreshdeskTicketControllerApi.prototype.ticketStatusChangeHookUsingPUT = function (ticketId, request, extraHttpRequestParams) {
-        var localVarPath = this.basePath + '/api/v1/freshdesk/ticket/{ticketId}/webhook/status-change'
+    ticketStatusChangeHookUsingPUT(ticketId, request, extraHttpRequestParams) {
+        const localVarPath = this.basePath + '/api/v1/freshdesk/ticket/{ticketId}/webhook/status-change'
             .replace('{' + 'ticketId' + '}', encodeURIComponent(String(ticketId)));
-        var queryParameters = {};
-        var headerParams = Object.assign({}, this.defaultHeaders);
+        let queryParameters = {};
+        let headerParams = Object.assign({}, this.defaultHeaders);
         // verify required parameter 'ticketId' is not null or undefined
         if (ticketId === null || ticketId === undefined) {
             throw new Error('Required parameter ticketId was null or undefined when calling ticketStatusChangeHookUsingPUT.');
@@ -73,7 +70,7 @@ var FreshdeskTicketControllerApi = /** @class */ (function () {
         if (request === null || request === undefined) {
             throw new Error('Required parameter request was null or undefined when calling ticketStatusChangeHookUsingPUT.');
         }
-        var httpRequestParams = {
+        let httpRequestParams = {
             method: 'PUT',
             url: localVarPath,
             data: request,
@@ -84,18 +81,18 @@ var FreshdeskTicketControllerApi = /** @class */ (function () {
             httpRequestParams = Object.assign(httpRequestParams, extraHttpRequestParams);
         }
         return this.$http(httpRequestParams);
-    };
+    }
     /**
      *
      * @summary updateFreshdeskTicket
      * @param ticketId ticketId
      * @param request request
      */
-    FreshdeskTicketControllerApi.prototype.updateFreshdeskTicketUsingPUT = function (ticketId, request, extraHttpRequestParams) {
-        var localVarPath = this.basePath + '/api/v1/freshdesk/ticket/{ticketId}'
+    updateFreshdeskTicketUsingPUT(ticketId, request, extraHttpRequestParams) {
+        const localVarPath = this.basePath + '/api/v1/freshdesk/ticket/{ticketId}'
             .replace('{' + 'ticketId' + '}', encodeURIComponent(String(ticketId)));
-        var queryParameters = {};
-        var headerParams = Object.assign({}, this.defaultHeaders);
+        let queryParameters = {};
+        let headerParams = Object.assign({}, this.defaultHeaders);
         // verify required parameter 'ticketId' is not null or undefined
         if (ticketId === null || ticketId === undefined) {
             throw new Error('Required parameter ticketId was null or undefined when calling updateFreshdeskTicketUsingPUT.');
@@ -104,7 +101,7 @@ var FreshdeskTicketControllerApi = /** @class */ (function () {
         if (request === null || request === undefined) {
             throw new Error('Required parameter request was null or undefined when calling updateFreshdeskTicketUsingPUT.');
         }
-        var httpRequestParams = {
+        let httpRequestParams = {
             method: 'PUT',
             url: localVarPath,
             data: request,
@@ -115,8 +112,6 @@ var FreshdeskTicketControllerApi = /** @class */ (function () {
             httpRequestParams = Object.assign(httpRequestParams, extraHttpRequestParams);
         }
         return this.$http(httpRequestParams);
-    };
-    FreshdeskTicketControllerApi.$inject = ['$http', '$httpParamSerializer', 'basePath'];
-    return FreshdeskTicketControllerApi;
-}());
-exports.FreshdeskTicketControllerApi = FreshdeskTicketControllerApi;
+    }
+}
+FreshdeskTicketControllerApi.$inject = ['$http', '$httpParamSerializer', 'basePath'];

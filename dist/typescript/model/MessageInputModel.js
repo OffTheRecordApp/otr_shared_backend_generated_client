@@ -1,4 +1,3 @@
-"use strict";
 /**
  * OffTheRecord Rest Service API - Devo
  * A service to handle your traffic tickets
@@ -10,11 +9,9 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.MessageInputModel = void 0;
-var MessageInputModel;
+export var MessageInputModel;
 (function (MessageInputModel) {
-    var AuthorEnum;
+    let AuthorEnum;
     (function (AuthorEnum) {
         AuthorEnum[AuthorEnum["ADMIN"] = 'ADMIN'] = "ADMIN";
         AuthorEnum[AuthorEnum["DEFENDANT"] = 'DEFENDANT'] = "DEFENDANT";
@@ -23,9 +20,9 @@ var MessageInputModel;
         AuthorEnum[AuthorEnum["PARTNER"] = 'PARTNER'] = "PARTNER";
         AuthorEnum[AuthorEnum["UNKNOWN"] = 'UNKNOWN'] = "UNKNOWN";
     })(AuthorEnum = MessageInputModel.AuthorEnum || (MessageInputModel.AuthorEnum = {}));
-    var MediaTypeEnum;
+    let MediaTypeEnum;
     (function (MediaTypeEnum) {
         MediaTypeEnum[MediaTypeEnum["IMAGE"] = 'IMAGE'] = "IMAGE";
         MediaTypeEnum[MediaTypeEnum["PDF"] = 'PDF'] = "PDF";
     })(MediaTypeEnum = MessageInputModel.MediaTypeEnum || (MessageInputModel.MediaTypeEnum = {}));
-})(MessageInputModel = exports.MessageInputModel || (exports.MessageInputModel = {}));
+})(MessageInputModel || (MessageInputModel = {}));

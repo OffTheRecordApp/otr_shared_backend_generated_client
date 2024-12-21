@@ -1,4 +1,3 @@
-"use strict";
 /**
  * OffTheRecord Rest Service API - Devo
  * A service to handle your traffic tickets
@@ -10,11 +9,9 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.LawfirmCasesControllerApi = void 0;
 /* tslint:disable:no-unused-variable member-ordering */
-var LawfirmCasesControllerApi = /** @class */ (function () {
-    function LawfirmCasesControllerApi($http, $httpParamSerializer, basePath) {
+export class LawfirmCasesControllerApi {
+    constructor($http, $httpParamSerializer, basePath) {
         this.$http = $http;
         this.$httpParamSerializer = $httpParamSerializer;
         this.basePath = 'http://otr-backend-service-us-devo.offtherecord.com';
@@ -35,11 +32,11 @@ var LawfirmCasesControllerApi = /** @class */ (function () {
      * @param page page
      * @param start start
      */
-    LawfirmCasesControllerApi.prototype.getLawfirmCasesByPageUsingPOST = function (lawfirmIdString, request, courtDateFilter, end, hasPaymentPlan, length, page, start, extraHttpRequestParams) {
-        var localVarPath = this.basePath + '/api/v2/lawfirm/{lawfirmIdString}/cases'
+    getLawfirmCasesByPageUsingPOST(lawfirmIdString, request, courtDateFilter, end, hasPaymentPlan, length, page, start, extraHttpRequestParams) {
+        const localVarPath = this.basePath + '/api/v2/lawfirm/{lawfirmIdString}/cases'
             .replace('{' + 'lawfirmIdString' + '}', encodeURIComponent(String(lawfirmIdString)));
-        var queryParameters = {};
-        var headerParams = Object.assign({}, this.defaultHeaders);
+        let queryParameters = {};
+        let headerParams = Object.assign({}, this.defaultHeaders);
         // verify required parameter 'lawfirmIdString' is not null or undefined
         if (lawfirmIdString === null || lawfirmIdString === undefined) {
             throw new Error('Required parameter lawfirmIdString was null or undefined when calling getLawfirmCasesByPageUsingPOST.');
@@ -66,7 +63,7 @@ var LawfirmCasesControllerApi = /** @class */ (function () {
         if (start !== undefined) {
             queryParameters['start'] = start;
         }
-        var httpRequestParams = {
+        let httpRequestParams = {
             method: 'POST',
             url: localVarPath,
             data: request,
@@ -77,8 +74,6 @@ var LawfirmCasesControllerApi = /** @class */ (function () {
             httpRequestParams = Object.assign(httpRequestParams, extraHttpRequestParams);
         }
         return this.$http(httpRequestParams);
-    };
-    LawfirmCasesControllerApi.$inject = ['$http', '$httpParamSerializer', 'basePath'];
-    return LawfirmCasesControllerApi;
-}());
-exports.LawfirmCasesControllerApi = LawfirmCasesControllerApi;
+    }
+}
+LawfirmCasesControllerApi.$inject = ['$http', '$httpParamSerializer', 'basePath'];

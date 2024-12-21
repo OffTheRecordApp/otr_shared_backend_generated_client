@@ -1,4 +1,3 @@
-"use strict";
 /**
  * OffTheRecord Rest Service API - Devo
  * A service to handle your traffic tickets
@@ -10,11 +9,9 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.CaseReferralCodeControllerApi = void 0;
 /* tslint:disable:no-unused-variable member-ordering */
-var CaseReferralCodeControllerApi = /** @class */ (function () {
-    function CaseReferralCodeControllerApi($http, $httpParamSerializer, basePath) {
+export class CaseReferralCodeControllerApi {
+    constructor($http, $httpParamSerializer, basePath) {
         this.$http = $http;
         this.$httpParamSerializer = $httpParamSerializer;
         this.basePath = 'http://otr-backend-service-us-devo.offtherecord.com';
@@ -29,12 +26,12 @@ var CaseReferralCodeControllerApi = /** @class */ (function () {
      * @param caseId caseId
      * @param codeId codeId
      */
-    CaseReferralCodeControllerApi.prototype.applyReferralCodeUsingPOST = function (caseId, codeId, extraHttpRequestParams) {
-        var localVarPath = this.basePath + '/api/v1/cases/{caseId}/referralcode/{codeId}'
+    applyReferralCodeUsingPOST(caseId, codeId, extraHttpRequestParams) {
+        const localVarPath = this.basePath + '/api/v1/cases/{caseId}/referralcode/{codeId}'
             .replace('{' + 'caseId' + '}', encodeURIComponent(String(caseId)))
             .replace('{' + 'codeId' + '}', encodeURIComponent(String(codeId)));
-        var queryParameters = {};
-        var headerParams = Object.assign({}, this.defaultHeaders);
+        let queryParameters = {};
+        let headerParams = Object.assign({}, this.defaultHeaders);
         // verify required parameter 'caseId' is not null or undefined
         if (caseId === null || caseId === undefined) {
             throw new Error('Required parameter caseId was null or undefined when calling applyReferralCodeUsingPOST.');
@@ -43,7 +40,7 @@ var CaseReferralCodeControllerApi = /** @class */ (function () {
         if (codeId === null || codeId === undefined) {
             throw new Error('Required parameter codeId was null or undefined when calling applyReferralCodeUsingPOST.');
         }
-        var httpRequestParams = {
+        let httpRequestParams = {
             method: 'POST',
             url: localVarPath,
             params: queryParameters,
@@ -53,19 +50,19 @@ var CaseReferralCodeControllerApi = /** @class */ (function () {
             httpRequestParams = Object.assign(httpRequestParams, extraHttpRequestParams);
         }
         return this.$http(httpRequestParams);
-    };
+    }
     /**
      *
      * @summary removeReferralCodeFromCase
      * @param caseId caseId
      * @param codeId codeId
      */
-    CaseReferralCodeControllerApi.prototype.removeReferralCodeFromCaseUsingDELETE = function (caseId, codeId, extraHttpRequestParams) {
-        var localVarPath = this.basePath + '/api/v1/cases/{caseId}/referralcode/{codeId}'
+    removeReferralCodeFromCaseUsingDELETE(caseId, codeId, extraHttpRequestParams) {
+        const localVarPath = this.basePath + '/api/v1/cases/{caseId}/referralcode/{codeId}'
             .replace('{' + 'caseId' + '}', encodeURIComponent(String(caseId)))
             .replace('{' + 'codeId' + '}', encodeURIComponent(String(codeId)));
-        var queryParameters = {};
-        var headerParams = Object.assign({}, this.defaultHeaders);
+        let queryParameters = {};
+        let headerParams = Object.assign({}, this.defaultHeaders);
         // verify required parameter 'caseId' is not null or undefined
         if (caseId === null || caseId === undefined) {
             throw new Error('Required parameter caseId was null or undefined when calling removeReferralCodeFromCaseUsingDELETE.');
@@ -74,7 +71,7 @@ var CaseReferralCodeControllerApi = /** @class */ (function () {
         if (codeId === null || codeId === undefined) {
             throw new Error('Required parameter codeId was null or undefined when calling removeReferralCodeFromCaseUsingDELETE.');
         }
-        var httpRequestParams = {
+        let httpRequestParams = {
             method: 'DELETE',
             url: localVarPath,
             params: queryParameters,
@@ -84,8 +81,6 @@ var CaseReferralCodeControllerApi = /** @class */ (function () {
             httpRequestParams = Object.assign(httpRequestParams, extraHttpRequestParams);
         }
         return this.$http(httpRequestParams);
-    };
-    CaseReferralCodeControllerApi.$inject = ['$http', '$httpParamSerializer', 'basePath'];
-    return CaseReferralCodeControllerApi;
-}());
-exports.CaseReferralCodeControllerApi = CaseReferralCodeControllerApi;
+    }
+}
+CaseReferralCodeControllerApi.$inject = ['$http', '$httpParamSerializer', 'basePath'];

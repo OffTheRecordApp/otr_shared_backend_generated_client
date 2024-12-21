@@ -1,4 +1,3 @@
-"use strict";
 /**
  * OffTheRecord Rest Service API - Devo
  * A service to handle your traffic tickets
@@ -10,14 +9,12 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.ReferralContactStatus = void 0;
-var ReferralContactStatus;
+export var ReferralContactStatus;
 (function (ReferralContactStatus) {
-    var ErrorTypeEnum;
+    let ErrorTypeEnum;
     (function (ErrorTypeEnum) {
         ErrorTypeEnum[ErrorTypeEnum["EMAILALREADYEXISTS"] = 'EMAIL_ALREADY_EXISTS'] = "EMAILALREADYEXISTS";
         ErrorTypeEnum[ErrorTypeEnum["EMAILNOTSENT"] = 'EMAIL_NOT_SENT'] = "EMAILNOTSENT";
         ErrorTypeEnum[ErrorTypeEnum["INVALIDEMAIL"] = 'INVALID_EMAIL'] = "INVALIDEMAIL";
     })(ErrorTypeEnum = ReferralContactStatus.ErrorTypeEnum || (ReferralContactStatus.ErrorTypeEnum = {}));
-})(ReferralContactStatus = exports.ReferralContactStatus || (exports.ReferralContactStatus = {}));
+})(ReferralContactStatus || (ReferralContactStatus = {}));

@@ -1,4 +1,3 @@
-"use strict";
 /**
  * OffTheRecord Rest Service API - Devo
  * A service to handle your traffic tickets
@@ -10,13 +9,11 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.DripRemoveRequest = void 0;
-var DripRemoveRequest;
+export var DripRemoveRequest;
 (function (DripRemoveRequest) {
-    var DripActionEnum;
+    let DripActionEnum;
     (function (DripActionEnum) {
         DripActionEnum[DripActionEnum["DELETE"] = 'DELETE'] = "DELETE";
         DripActionEnum[DripActionEnum["UNSUBSCRIBE"] = 'UNSUBSCRIBE'] = "UNSUBSCRIBE";
     })(DripActionEnum = DripRemoveRequest.DripActionEnum || (DripRemoveRequest.DripActionEnum = {}));
-})(DripRemoveRequest = exports.DripRemoveRequest || (exports.DripRemoveRequest = {}));
+})(DripRemoveRequest || (DripRemoveRequest = {}));

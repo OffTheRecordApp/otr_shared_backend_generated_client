@@ -1,4 +1,3 @@
-"use strict";
 /**
  * OffTheRecord Rest Service API - Devo
  * A service to handle your traffic tickets
@@ -10,11 +9,9 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.CustomerServiceAgentControllerApi = void 0;
 /* tslint:disable:no-unused-variable member-ordering */
-var CustomerServiceAgentControllerApi = /** @class */ (function () {
-    function CustomerServiceAgentControllerApi($http, $httpParamSerializer, basePath) {
+export class CustomerServiceAgentControllerApi {
+    constructor($http, $httpParamSerializer, basePath) {
         this.$http = $http;
         this.$httpParamSerializer = $httpParamSerializer;
         this.basePath = 'http://otr-backend-service-us-devo.offtherecord.com';
@@ -28,14 +25,14 @@ var CustomerServiceAgentControllerApi = /** @class */ (function () {
      * @summary getCustomerServiceAgents
      * @param isActive isActive
      */
-    CustomerServiceAgentControllerApi.prototype.getCustomerServiceAgentsUsingGET = function (isActive, extraHttpRequestParams) {
-        var localVarPath = this.basePath + '/api/v1/cs-agents';
-        var queryParameters = {};
-        var headerParams = Object.assign({}, this.defaultHeaders);
+    getCustomerServiceAgentsUsingGET(isActive, extraHttpRequestParams) {
+        const localVarPath = this.basePath + '/api/v1/cs-agents';
+        let queryParameters = {};
+        let headerParams = Object.assign({}, this.defaultHeaders);
         if (isActive !== undefined) {
             queryParameters['isActive'] = isActive;
         }
-        var httpRequestParams = {
+        let httpRequestParams = {
             method: 'GET',
             url: localVarPath,
             params: queryParameters,
@@ -45,8 +42,6 @@ var CustomerServiceAgentControllerApi = /** @class */ (function () {
             httpRequestParams = Object.assign(httpRequestParams, extraHttpRequestParams);
         }
         return this.$http(httpRequestParams);
-    };
-    CustomerServiceAgentControllerApi.$inject = ['$http', '$httpParamSerializer', 'basePath'];
-    return CustomerServiceAgentControllerApi;
-}());
-exports.CustomerServiceAgentControllerApi = CustomerServiceAgentControllerApi;
+    }
+}
+CustomerServiceAgentControllerApi.$inject = ['$http', '$httpParamSerializer', 'basePath'];

@@ -1,4 +1,3 @@
-"use strict";
 /**
  * OffTheRecord Rest Service API - Devo
  * A service to handle your traffic tickets
@@ -10,11 +9,9 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.ReplyToTicketRequest = void 0;
-var ReplyToTicketRequest;
+export var ReplyToTicketRequest;
 (function (ReplyToTicketRequest) {
-    var NewTicketStatusEnum;
+    let NewTicketStatusEnum;
     (function (NewTicketStatusEnum) {
         NewTicketStatusEnum[NewTicketStatusEnum["CLOSED"] = 'CLOSED'] = "CLOSED";
         NewTicketStatusEnum[NewTicketStatusEnum["OPEN"] = 'OPEN'] = "OPEN";
@@ -29,4 +26,4 @@ var ReplyToTicketRequest;
         NewTicketStatusEnum[NewTicketStatusEnum["WAITINGONOTR"] = 'WAITING_ON_OTR'] = "WAITINGONOTR";
         NewTicketStatusEnum[NewTicketStatusEnum["WAITINGONTHIRDPARTY"] = 'WAITING_ON_THIRD_PARTY'] = "WAITINGONTHIRDPARTY";
     })(NewTicketStatusEnum = ReplyToTicketRequest.NewTicketStatusEnum || (ReplyToTicketRequest.NewTicketStatusEnum = {}));
-})(ReplyToTicketRequest = exports.ReplyToTicketRequest || (exports.ReplyToTicketRequest = {}));
+})(ReplyToTicketRequest || (ReplyToTicketRequest = {}));

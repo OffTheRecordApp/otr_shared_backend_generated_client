@@ -1,4 +1,3 @@
-"use strict";
 /**
  * OffTheRecord Rest Service API - Devo
  * A service to handle your traffic tickets
@@ -10,11 +9,9 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.CaseModelRes = void 0;
-var CaseModelRes;
+export var CaseModelRes;
 (function (CaseModelRes) {
-    var CaseStatusEnum;
+    let CaseStatusEnum;
     (function (CaseStatusEnum) {
         CaseStatusEnum[CaseStatusEnum["AMENDEDDOWNWITHINCLASS"] = 'AMENDED_DOWN_WITHIN_CLASS'] = "AMENDEDDOWNWITHINCLASS";
         CaseStatusEnum[CaseStatusEnum["AMENDEDFULLFINE"] = 'AMENDED_FULL_FINE'] = "AMENDEDFULLFINE";
@@ -54,16 +51,16 @@ var CaseModelRes;
         CaseStatusEnum[CaseStatusEnum["TRAFFICSCHOOL"] = 'TRAFFIC_SCHOOL'] = "TRAFFICSCHOOL";
         CaseStatusEnum[CaseStatusEnum["UNCONFIRMED"] = 'UNCONFIRMED'] = "UNCONFIRMED";
     })(CaseStatusEnum = CaseModelRes.CaseStatusEnum || (CaseModelRes.CaseStatusEnum = {}));
-    var CaseStatusCategoryEnum;
+    let CaseStatusCategoryEnum;
     (function (CaseStatusCategoryEnum) {
         CaseStatusCategoryEnum[CaseStatusCategoryEnum["ACTIVE"] = 'ACTIVE'] = "ACTIVE";
         CaseStatusCategoryEnum[CaseStatusCategoryEnum["CANCELLED"] = 'CANCELLED'] = "CANCELLED";
         CaseStatusCategoryEnum[CaseStatusCategoryEnum["RESOLVED"] = 'RESOLVED'] = "RESOLVED";
         CaseStatusCategoryEnum[CaseStatusCategoryEnum["UNCONFIRMED"] = 'UNCONFIRMED'] = "UNCONFIRMED";
     })(CaseStatusCategoryEnum = CaseModelRes.CaseStatusCategoryEnum || (CaseModelRes.CaseStatusCategoryEnum = {}));
-    var RefundEligibilityEnum;
+    let RefundEligibilityEnum;
     (function (RefundEligibilityEnum) {
         RefundEligibilityEnum[RefundEligibilityEnum["FULLREFUND"] = 'FULL_REFUND'] = "FULLREFUND";
         RefundEligibilityEnum[RefundEligibilityEnum["NOREFUND"] = 'NO_REFUND'] = "NOREFUND";
     })(RefundEligibilityEnum = CaseModelRes.RefundEligibilityEnum || (CaseModelRes.RefundEligibilityEnum = {}));
-})(CaseModelRes = exports.CaseModelRes || (exports.CaseModelRes = {}));
+})(CaseModelRes || (CaseModelRes = {}));

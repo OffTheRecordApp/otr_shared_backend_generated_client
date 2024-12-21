@@ -1,4 +1,3 @@
-"use strict";
 /**
  * OffTheRecord Rest Service API - Devo
  * A service to handle your traffic tickets
@@ -10,11 +9,9 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.UrlRedirectControllerApi = void 0;
 /* tslint:disable:no-unused-variable member-ordering */
-var UrlRedirectControllerApi = /** @class */ (function () {
-    function UrlRedirectControllerApi($http, $httpParamSerializer, basePath) {
+export class UrlRedirectControllerApi {
+    constructor($http, $httpParamSerializer, basePath) {
         this.$http = $http;
         this.$httpParamSerializer = $httpParamSerializer;
         this.basePath = 'http://otr-backend-service-us-devo.offtherecord.com';
@@ -28,15 +25,15 @@ var UrlRedirectControllerApi = /** @class */ (function () {
      * @summary addRedirectUrl
      * @param request request
      */
-    UrlRedirectControllerApi.prototype.addRedirectUrlUsingPOST = function (request, extraHttpRequestParams) {
-        var localVarPath = this.basePath + '/api/v1/redirects';
-        var queryParameters = {};
-        var headerParams = Object.assign({}, this.defaultHeaders);
+    addRedirectUrlUsingPOST(request, extraHttpRequestParams) {
+        const localVarPath = this.basePath + '/api/v1/redirects';
+        let queryParameters = {};
+        let headerParams = Object.assign({}, this.defaultHeaders);
         // verify required parameter 'request' is not null or undefined
         if (request === null || request === undefined) {
             throw new Error('Required parameter request was null or undefined when calling addRedirectUrlUsingPOST.');
         }
-        var httpRequestParams = {
+        let httpRequestParams = {
             method: 'POST',
             url: localVarPath,
             data: request,
@@ -47,16 +44,16 @@ var UrlRedirectControllerApi = /** @class */ (function () {
             httpRequestParams = Object.assign(httpRequestParams, extraHttpRequestParams);
         }
         return this.$http(httpRequestParams);
-    };
+    }
     /**
      *
      * @summary clearCache
      */
-    UrlRedirectControllerApi.prototype.clearCacheUsingPOST = function (extraHttpRequestParams) {
-        var localVarPath = this.basePath + '/api/v1/redirects/clear-cache';
-        var queryParameters = {};
-        var headerParams = Object.assign({}, this.defaultHeaders);
-        var httpRequestParams = {
+    clearCacheUsingPOST(extraHttpRequestParams) {
+        const localVarPath = this.basePath + '/api/v1/redirects/clear-cache';
+        let queryParameters = {};
+        let headerParams = Object.assign({}, this.defaultHeaders);
+        let httpRequestParams = {
             method: 'POST',
             url: localVarPath,
             params: queryParameters,
@@ -66,7 +63,7 @@ var UrlRedirectControllerApi = /** @class */ (function () {
             httpRequestParams = Object.assign(httpRequestParams, extraHttpRequestParams);
         }
         return this.$http(httpRequestParams);
-    };
+    }
     /**
      *
      * @summary getRedirectUrl
@@ -74,10 +71,10 @@ var UrlRedirectControllerApi = /** @class */ (function () {
      * @param lawfirmId lawfirmId
      * @param pageType pageType
      */
-    UrlRedirectControllerApi.prototype.getRedirectUrlUsingGET = function (landingPageUrl, lawfirmId, pageType, extraHttpRequestParams) {
-        var localVarPath = this.basePath + '/api/v1/redirects';
-        var queryParameters = {};
-        var headerParams = Object.assign({}, this.defaultHeaders);
+    getRedirectUrlUsingGET(landingPageUrl, lawfirmId, pageType, extraHttpRequestParams) {
+        const localVarPath = this.basePath + '/api/v1/redirects';
+        let queryParameters = {};
+        let headerParams = Object.assign({}, this.defaultHeaders);
         if (landingPageUrl !== undefined) {
             queryParameters['landingPageUrl'] = landingPageUrl;
         }
@@ -87,7 +84,7 @@ var UrlRedirectControllerApi = /** @class */ (function () {
         if (pageType !== undefined) {
             queryParameters['pageType'] = pageType;
         }
-        var httpRequestParams = {
+        let httpRequestParams = {
             method: 'GET',
             url: localVarPath,
             params: queryParameters,
@@ -97,8 +94,6 @@ var UrlRedirectControllerApi = /** @class */ (function () {
             httpRequestParams = Object.assign(httpRequestParams, extraHttpRequestParams);
         }
         return this.$http(httpRequestParams);
-    };
-    UrlRedirectControllerApi.$inject = ['$http', '$httpParamSerializer', 'basePath'];
-    return UrlRedirectControllerApi;
-}());
-exports.UrlRedirectControllerApi = UrlRedirectControllerApi;
+    }
+}
+UrlRedirectControllerApi.$inject = ['$http', '$httpParamSerializer', 'basePath'];

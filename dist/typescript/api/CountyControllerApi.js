@@ -1,4 +1,3 @@
-"use strict";
 /**
  * OffTheRecord Rest Service API - Devo
  * A service to handle your traffic tickets
@@ -10,11 +9,9 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.CountyControllerApi = void 0;
 /* tslint:disable:no-unused-variable member-ordering */
-var CountyControllerApi = /** @class */ (function () {
-    function CountyControllerApi($http, $httpParamSerializer, basePath) {
+export class CountyControllerApi {
+    constructor($http, $httpParamSerializer, basePath) {
         this.$http = $http;
         this.$httpParamSerializer = $httpParamSerializer;
         this.basePath = 'http://otr-backend-service-us-devo.offtherecord.com';
@@ -28,10 +25,10 @@ var CountyControllerApi = /** @class */ (function () {
      * @summary getCounties
      * @param state state
      */
-    CountyControllerApi.prototype.getCountiesUsingGET = function (state, extraHttpRequestParams) {
-        var localVarPath = this.basePath + '/api/v1/counties';
-        var queryParameters = {};
-        var headerParams = Object.assign({}, this.defaultHeaders);
+    getCountiesUsingGET(state, extraHttpRequestParams) {
+        const localVarPath = this.basePath + '/api/v1/counties';
+        let queryParameters = {};
+        let headerParams = Object.assign({}, this.defaultHeaders);
         // verify required parameter 'state' is not null or undefined
         if (state === null || state === undefined) {
             throw new Error('Required parameter state was null or undefined when calling getCountiesUsingGET.');
@@ -39,7 +36,7 @@ var CountyControllerApi = /** @class */ (function () {
         if (state !== undefined) {
             queryParameters['state'] = state;
         }
-        var httpRequestParams = {
+        let httpRequestParams = {
             method: 'GET',
             url: localVarPath,
             params: queryParameters,
@@ -49,8 +46,6 @@ var CountyControllerApi = /** @class */ (function () {
             httpRequestParams = Object.assign(httpRequestParams, extraHttpRequestParams);
         }
         return this.$http(httpRequestParams);
-    };
-    CountyControllerApi.$inject = ['$http', '$httpParamSerializer', 'basePath'];
-    return CountyControllerApi;
-}());
-exports.CountyControllerApi = CountyControllerApi;
+    }
+}
+CountyControllerApi.$inject = ['$http', '$httpParamSerializer', 'basePath'];

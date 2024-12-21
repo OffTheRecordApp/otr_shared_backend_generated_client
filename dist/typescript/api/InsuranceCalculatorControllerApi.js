@@ -1,4 +1,3 @@
-"use strict";
 /**
  * OffTheRecord Rest Service API - Devo
  * A service to handle your traffic tickets
@@ -10,11 +9,9 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.InsuranceCalculatorControllerApi = void 0;
 /* tslint:disable:no-unused-variable member-ordering */
-var InsuranceCalculatorControllerApi = /** @class */ (function () {
-    function InsuranceCalculatorControllerApi($http, $httpParamSerializer, basePath) {
+export class InsuranceCalculatorControllerApi {
+    constructor($http, $httpParamSerializer, basePath) {
         this.$http = $http;
         this.$httpParamSerializer = $httpParamSerializer;
         this.basePath = 'http://otr-backend-service-us-devo.offtherecord.com';
@@ -28,15 +25,15 @@ var InsuranceCalculatorControllerApi = /** @class */ (function () {
      * @summary calculateTicketSavings
      * @param request request
      */
-    InsuranceCalculatorControllerApi.prototype.calculateTicketSavingsUsingPOST = function (request, extraHttpRequestParams) {
-        var localVarPath = this.basePath + '/api/v1/insurance/ticket/savings';
-        var queryParameters = {};
-        var headerParams = Object.assign({}, this.defaultHeaders);
+    calculateTicketSavingsUsingPOST(request, extraHttpRequestParams) {
+        const localVarPath = this.basePath + '/api/v1/insurance/ticket/savings';
+        let queryParameters = {};
+        let headerParams = Object.assign({}, this.defaultHeaders);
         // verify required parameter 'request' is not null or undefined
         if (request === null || request === undefined) {
             throw new Error('Required parameter request was null or undefined when calling calculateTicketSavingsUsingPOST.');
         }
-        var httpRequestParams = {
+        let httpRequestParams = {
             method: 'POST',
             url: localVarPath,
             data: request,
@@ -47,8 +44,6 @@ var InsuranceCalculatorControllerApi = /** @class */ (function () {
             httpRequestParams = Object.assign(httpRequestParams, extraHttpRequestParams);
         }
         return this.$http(httpRequestParams);
-    };
-    InsuranceCalculatorControllerApi.$inject = ['$http', '$httpParamSerializer', 'basePath'];
-    return InsuranceCalculatorControllerApi;
-}());
-exports.InsuranceCalculatorControllerApi = InsuranceCalculatorControllerApi;
+    }
+}
+InsuranceCalculatorControllerApi.$inject = ['$http', '$httpParamSerializer', 'basePath'];

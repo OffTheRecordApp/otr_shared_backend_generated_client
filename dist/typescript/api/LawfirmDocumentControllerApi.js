@@ -1,4 +1,3 @@
-"use strict";
 /**
  * OffTheRecord Rest Service API - Devo
  * A service to handle your traffic tickets
@@ -10,11 +9,9 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.LawfirmDocumentControllerApi = void 0;
 /* tslint:disable:no-unused-variable member-ordering */
-var LawfirmDocumentControllerApi = /** @class */ (function () {
-    function LawfirmDocumentControllerApi($http, $httpParamSerializer, basePath) {
+export class LawfirmDocumentControllerApi {
+    constructor($http, $httpParamSerializer, basePath) {
         this.$http = $http;
         this.$httpParamSerializer = $httpParamSerializer;
         this.basePath = 'http://otr-backend-service-us-devo.offtherecord.com';
@@ -30,11 +27,11 @@ var LawfirmDocumentControllerApi = /** @class */ (function () {
      * @param lawfirmId lawfirmId
      * @param request request
      */
-    LawfirmDocumentControllerApi.prototype.generateDocUsingPOST = function (docType, lawfirmId, request, extraHttpRequestParams) {
-        var localVarPath = this.basePath + '/api/v1/lawfirms/{lawfirmId}/documents'
+    generateDocUsingPOST(docType, lawfirmId, request, extraHttpRequestParams) {
+        const localVarPath = this.basePath + '/api/v1/lawfirms/{lawfirmId}/documents'
             .replace('{' + 'lawfirmId' + '}', encodeURIComponent(String(lawfirmId)));
-        var queryParameters = {};
-        var headerParams = Object.assign({}, this.defaultHeaders);
+        let queryParameters = {};
+        let headerParams = Object.assign({}, this.defaultHeaders);
         // verify required parameter 'docType' is not null or undefined
         if (docType === null || docType === undefined) {
             throw new Error('Required parameter docType was null or undefined when calling generateDocUsingPOST.');
@@ -46,7 +43,7 @@ var LawfirmDocumentControllerApi = /** @class */ (function () {
         if (docType !== undefined) {
             queryParameters['doc_type'] = docType;
         }
-        var httpRequestParams = {
+        let httpRequestParams = {
             method: 'POST',
             url: localVarPath,
             data: request,
@@ -57,18 +54,18 @@ var LawfirmDocumentControllerApi = /** @class */ (function () {
             httpRequestParams = Object.assign(httpRequestParams, extraHttpRequestParams);
         }
         return this.$http(httpRequestParams);
-    };
+    }
     /**
      *
      * @summary getDocument
      * @param docType doc_type
      * @param lawfirmId lawfirmId
      */
-    LawfirmDocumentControllerApi.prototype.getDocumentUsingGET = function (docType, lawfirmId, extraHttpRequestParams) {
-        var localVarPath = this.basePath + '/api/v1/lawfirms/{lawfirmId}/documents'
+    getDocumentUsingGET(docType, lawfirmId, extraHttpRequestParams) {
+        const localVarPath = this.basePath + '/api/v1/lawfirms/{lawfirmId}/documents'
             .replace('{' + 'lawfirmId' + '}', encodeURIComponent(String(lawfirmId)));
-        var queryParameters = {};
-        var headerParams = Object.assign({}, this.defaultHeaders);
+        let queryParameters = {};
+        let headerParams = Object.assign({}, this.defaultHeaders);
         // verify required parameter 'docType' is not null or undefined
         if (docType === null || docType === undefined) {
             throw new Error('Required parameter docType was null or undefined when calling getDocumentUsingGET.');
@@ -80,7 +77,7 @@ var LawfirmDocumentControllerApi = /** @class */ (function () {
         if (docType !== undefined) {
             queryParameters['doc_type'] = docType;
         }
-        var httpRequestParams = {
+        let httpRequestParams = {
             method: 'GET',
             url: localVarPath,
             params: queryParameters,
@@ -90,22 +87,22 @@ var LawfirmDocumentControllerApi = /** @class */ (function () {
             httpRequestParams = Object.assign(httpRequestParams, extraHttpRequestParams);
         }
         return this.$http(httpRequestParams);
-    };
+    }
     /**
      *
      * @summary getLawfirmCaseDocuments
      * @param caseId caseId
      */
-    LawfirmDocumentControllerApi.prototype.getLawfirmCaseDocumentsUsingGET = function (caseId, extraHttpRequestParams) {
-        var localVarPath = this.basePath + '/api/v1/cases/{caseId}/documents'
+    getLawfirmCaseDocumentsUsingGET(caseId, extraHttpRequestParams) {
+        const localVarPath = this.basePath + '/api/v1/cases/{caseId}/documents'
             .replace('{' + 'caseId' + '}', encodeURIComponent(String(caseId)));
-        var queryParameters = {};
-        var headerParams = Object.assign({}, this.defaultHeaders);
+        let queryParameters = {};
+        let headerParams = Object.assign({}, this.defaultHeaders);
         // verify required parameter 'caseId' is not null or undefined
         if (caseId === null || caseId === undefined) {
             throw new Error('Required parameter caseId was null or undefined when calling getLawfirmCaseDocumentsUsingGET.');
         }
-        var httpRequestParams = {
+        let httpRequestParams = {
             method: 'GET',
             url: localVarPath,
             params: queryParameters,
@@ -115,18 +112,18 @@ var LawfirmDocumentControllerApi = /** @class */ (function () {
             httpRequestParams = Object.assign(httpRequestParams, extraHttpRequestParams);
         }
         return this.$http(httpRequestParams);
-    };
+    }
     /**
      *
      * @summary markDocumentWithDecision
      * @param docId docId
      * @param decisionRequest decisionRequest
      */
-    LawfirmDocumentControllerApi.prototype.markDocumentWithDecisionUsingPOST = function (docId, decisionRequest, extraHttpRequestParams) {
-        var localVarPath = this.basePath + '/api/v1/documents/{docId}/decision'
+    markDocumentWithDecisionUsingPOST(docId, decisionRequest, extraHttpRequestParams) {
+        const localVarPath = this.basePath + '/api/v1/documents/{docId}/decision'
             .replace('{' + 'docId' + '}', encodeURIComponent(String(docId)));
-        var queryParameters = {};
-        var headerParams = Object.assign({}, this.defaultHeaders);
+        let queryParameters = {};
+        let headerParams = Object.assign({}, this.defaultHeaders);
         // verify required parameter 'docId' is not null or undefined
         if (docId === null || docId === undefined) {
             throw new Error('Required parameter docId was null or undefined when calling markDocumentWithDecisionUsingPOST.');
@@ -135,7 +132,7 @@ var LawfirmDocumentControllerApi = /** @class */ (function () {
         if (decisionRequest === null || decisionRequest === undefined) {
             throw new Error('Required parameter decisionRequest was null or undefined when calling markDocumentWithDecisionUsingPOST.');
         }
-        var httpRequestParams = {
+        let httpRequestParams = {
             method: 'POST',
             url: localVarPath,
             data: decisionRequest,
@@ -146,7 +143,7 @@ var LawfirmDocumentControllerApi = /** @class */ (function () {
             httpRequestParams = Object.assign(httpRequestParams, extraHttpRequestParams);
         }
         return this.$http(httpRequestParams);
-    };
+    }
     /**
      *
      * @summary previewDoc
@@ -154,11 +151,11 @@ var LawfirmDocumentControllerApi = /** @class */ (function () {
      * @param lawfirmId lawfirmId
      * @param request request
      */
-    LawfirmDocumentControllerApi.prototype.previewDocUsingPOST = function (docType, lawfirmId, request, extraHttpRequestParams) {
-        var localVarPath = this.basePath + '/api/v1/lawfirms/{lawfirmId}/documents/preview'
+    previewDocUsingPOST(docType, lawfirmId, request, extraHttpRequestParams) {
+        const localVarPath = this.basePath + '/api/v1/lawfirms/{lawfirmId}/documents/preview'
             .replace('{' + 'lawfirmId' + '}', encodeURIComponent(String(lawfirmId)));
-        var queryParameters = {};
-        var headerParams = Object.assign({}, this.defaultHeaders);
+        let queryParameters = {};
+        let headerParams = Object.assign({}, this.defaultHeaders);
         // verify required parameter 'docType' is not null or undefined
         if (docType === null || docType === undefined) {
             throw new Error('Required parameter docType was null or undefined when calling previewDocUsingPOST.');
@@ -174,7 +171,7 @@ var LawfirmDocumentControllerApi = /** @class */ (function () {
         if (docType !== undefined) {
             queryParameters['doc_type'] = docType;
         }
-        var httpRequestParams = {
+        let httpRequestParams = {
             method: 'POST',
             url: localVarPath,
             data: request,
@@ -185,18 +182,18 @@ var LawfirmDocumentControllerApi = /** @class */ (function () {
             httpRequestParams = Object.assign(httpRequestParams, extraHttpRequestParams);
         }
         return this.$http(httpRequestParams);
-    };
+    }
     /**
      *
      * @summary uploadCopy
      * @param lawfirmId lawfirmId
      * @param request request
      */
-    LawfirmDocumentControllerApi.prototype.uploadCopyUsingPUT = function (lawfirmId, request, extraHttpRequestParams) {
-        var localVarPath = this.basePath + '/api/v1/lawfirms/{lawfirmId}/documents'
+    uploadCopyUsingPUT(lawfirmId, request, extraHttpRequestParams) {
+        const localVarPath = this.basePath + '/api/v1/lawfirms/{lawfirmId}/documents'
             .replace('{' + 'lawfirmId' + '}', encodeURIComponent(String(lawfirmId)));
-        var queryParameters = {};
-        var headerParams = Object.assign({}, this.defaultHeaders);
+        let queryParameters = {};
+        let headerParams = Object.assign({}, this.defaultHeaders);
         // verify required parameter 'lawfirmId' is not null or undefined
         if (lawfirmId === null || lawfirmId === undefined) {
             throw new Error('Required parameter lawfirmId was null or undefined when calling uploadCopyUsingPUT.');
@@ -205,7 +202,7 @@ var LawfirmDocumentControllerApi = /** @class */ (function () {
         if (request === null || request === undefined) {
             throw new Error('Required parameter request was null or undefined when calling uploadCopyUsingPUT.');
         }
-        var httpRequestParams = {
+        let httpRequestParams = {
             method: 'PUT',
             url: localVarPath,
             data: request,
@@ -216,8 +213,6 @@ var LawfirmDocumentControllerApi = /** @class */ (function () {
             httpRequestParams = Object.assign(httpRequestParams, extraHttpRequestParams);
         }
         return this.$http(httpRequestParams);
-    };
-    LawfirmDocumentControllerApi.$inject = ['$http', '$httpParamSerializer', 'basePath'];
-    return LawfirmDocumentControllerApi;
-}());
-exports.LawfirmDocumentControllerApi = LawfirmDocumentControllerApi;
+    }
+}
+LawfirmDocumentControllerApi.$inject = ['$http', '$httpParamSerializer', 'basePath'];

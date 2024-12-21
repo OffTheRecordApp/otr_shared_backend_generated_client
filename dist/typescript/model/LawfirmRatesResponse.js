@@ -1,4 +1,3 @@
-"use strict";
 /**
  * OffTheRecord Rest Service API - Devo
  * A service to handle your traffic tickets
@@ -10,18 +9,16 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.LawfirmRatesResponse = void 0;
-var LawfirmRatesResponse;
+export var LawfirmRatesResponse;
 (function (LawfirmRatesResponse) {
-    var FeeLevelEnum;
+    let FeeLevelEnum;
     (function (FeeLevelEnum) {
         FeeLevelEnum[FeeLevelEnum["ACCOUNTCLASSFEE"] = 'ACCOUNT_CLASS_FEE'] = "ACCOUNTCLASSFEE";
         FeeLevelEnum[FeeLevelEnum["ACCOUNTVIOLATIONFEE"] = 'ACCOUNT_VIOLATION_FEE'] = "ACCOUNTVIOLATIONFEE";
         FeeLevelEnum[FeeLevelEnum["COURTCLASSFEE"] = 'COURT_CLASS_FEE'] = "COURTCLASSFEE";
         FeeLevelEnum[FeeLevelEnum["COURTVIOLATIONFEE"] = 'COURT_VIOLATION_FEE'] = "COURTVIOLATIONFEE";
     })(FeeLevelEnum = LawfirmRatesResponse.FeeLevelEnum || (LawfirmRatesResponse.FeeLevelEnum = {}));
-    var IneligibleMatchReasonsEnum;
+    let IneligibleMatchReasonsEnum;
     (function (IneligibleMatchReasonsEnum) {
         IneligibleMatchReasonsEnum[IneligibleMatchReasonsEnum["CDLMISMATCH"] = 'CDL_MISMATCH'] = "CDLMISMATCH";
         IneligibleMatchReasonsEnum[IneligibleMatchReasonsEnum["DAILYCAPACITYBREACHED"] = 'DAILY_CAPACITY_BREACHED'] = "DAILYCAPACITYBREACHED";
@@ -30,4 +27,4 @@ var LawfirmRatesResponse;
         IneligibleMatchReasonsEnum[IneligibleMatchReasonsEnum["OUTPRICED"] = 'OUT_PRICED'] = "OUTPRICED";
         IneligibleMatchReasonsEnum[IneligibleMatchReasonsEnum["OUTRANKED"] = 'OUT_RANKED'] = "OUTRANKED";
     })(IneligibleMatchReasonsEnum = LawfirmRatesResponse.IneligibleMatchReasonsEnum || (LawfirmRatesResponse.IneligibleMatchReasonsEnum = {}));
-})(LawfirmRatesResponse = exports.LawfirmRatesResponse || (exports.LawfirmRatesResponse = {}));
+})(LawfirmRatesResponse || (LawfirmRatesResponse = {}));

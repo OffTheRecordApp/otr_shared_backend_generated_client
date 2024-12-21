@@ -1,4 +1,3 @@
-"use strict";
 /**
  * OffTheRecord Rest Service API - Devo
  * A service to handle your traffic tickets
@@ -10,17 +9,15 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.CaseLineItemDomainRes = void 0;
-var CaseLineItemDomainRes;
+export var CaseLineItemDomainRes;
 (function (CaseLineItemDomainRes) {
-    var LineItemOwnerEnum;
+    let LineItemOwnerEnum;
     (function (LineItemOwnerEnum) {
         LineItemOwnerEnum[LineItemOwnerEnum["COURT"] = 'COURT'] = "COURT";
         LineItemOwnerEnum[LineItemOwnerEnum["LAWFIRM"] = 'LAWFIRM'] = "LAWFIRM";
         LineItemOwnerEnum[LineItemOwnerEnum["OTR"] = 'OTR'] = "OTR";
     })(LineItemOwnerEnum = CaseLineItemDomainRes.LineItemOwnerEnum || (CaseLineItemDomainRes.LineItemOwnerEnum = {}));
-    var LineItemTypeEnum;
+    let LineItemTypeEnum;
     (function (LineItemTypeEnum) {
         LineItemTypeEnum[LineItemTypeEnum["ACCIDENTFEE"] = 'ACCIDENT_FEE'] = "ACCIDENTFEE";
         LineItemTypeEnum[LineItemTypeEnum["BASELEGALFEE"] = 'BASE_LEGAL_FEE'] = "BASELEGALFEE";
@@ -41,4 +38,4 @@ var CaseLineItemDomainRes;
         LineItemTypeEnum[LineItemTypeEnum["PAYMENTPLANSERVICEFEE"] = 'PAYMENT_PLAN_SERVICE_FEE'] = "PAYMENTPLANSERVICEFEE";
         LineItemTypeEnum[LineItemTypeEnum["WARRANTFEE"] = 'WARRANT_FEE'] = "WARRANTFEE";
     })(LineItemTypeEnum = CaseLineItemDomainRes.LineItemTypeEnum || (CaseLineItemDomainRes.LineItemTypeEnum = {}));
-})(CaseLineItemDomainRes = exports.CaseLineItemDomainRes || (exports.CaseLineItemDomainRes = {}));
+})(CaseLineItemDomainRes || (CaseLineItemDomainRes = {}));

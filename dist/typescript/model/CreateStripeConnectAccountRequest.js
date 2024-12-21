@@ -1,4 +1,3 @@
-"use strict";
 /**
  * OffTheRecord Rest Service API - Devo
  * A service to handle your traffic tickets
@@ -10,13 +9,11 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.CreateStripeConnectAccountRequest = void 0;
-var CreateStripeConnectAccountRequest;
+export var CreateStripeConnectAccountRequest;
 (function (CreateStripeConnectAccountRequest) {
-    var AccountTypeEnum;
+    let AccountTypeEnum;
     (function (AccountTypeEnum) {
         AccountTypeEnum[AccountTypeEnum["EXPRESS"] = 'EXPRESS'] = "EXPRESS";
         AccountTypeEnum[AccountTypeEnum["STANDARD"] = 'STANDARD'] = "STANDARD";
     })(AccountTypeEnum = CreateStripeConnectAccountRequest.AccountTypeEnum || (CreateStripeConnectAccountRequest.AccountTypeEnum = {}));
-})(CreateStripeConnectAccountRequest = exports.CreateStripeConnectAccountRequest || (exports.CreateStripeConnectAccountRequest = {}));
+})(CreateStripeConnectAccountRequest || (CreateStripeConnectAccountRequest = {}));

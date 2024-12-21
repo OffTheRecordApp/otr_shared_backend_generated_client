@@ -1,4 +1,3 @@
-"use strict";
 /**
  * OffTheRecord Rest Service API - Devo
  * A service to handle your traffic tickets
@@ -10,11 +9,9 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.CaseUserDetailsModel = void 0;
-var CaseUserDetailsModel;
+export var CaseUserDetailsModel;
 (function (CaseUserDetailsModel) {
-    var RelationshipToClientTypeEnum;
+    let RelationshipToClientTypeEnum;
     (function (RelationshipToClientTypeEnum) {
         RelationshipToClientTypeEnum[RelationshipToClientTypeEnum["EMPLOYER"] = 'EMPLOYER'] = "EMPLOYER";
         RelationshipToClientTypeEnum[RelationshipToClientTypeEnum["FAMILYMEMBER"] = 'FAMILY_MEMBER'] = "FAMILYMEMBER";
@@ -24,4 +21,4 @@ var CaseUserDetailsModel;
         RelationshipToClientTypeEnum[RelationshipToClientTypeEnum["SELF"] = 'SELF'] = "SELF";
         RelationshipToClientTypeEnum[RelationshipToClientTypeEnum["UNKNOWN"] = 'UNKNOWN'] = "UNKNOWN";
     })(RelationshipToClientTypeEnum = CaseUserDetailsModel.RelationshipToClientTypeEnum || (CaseUserDetailsModel.RelationshipToClientTypeEnum = {}));
-})(CaseUserDetailsModel = exports.CaseUserDetailsModel || (exports.CaseUserDetailsModel = {}));
+})(CaseUserDetailsModel || (CaseUserDetailsModel = {}));

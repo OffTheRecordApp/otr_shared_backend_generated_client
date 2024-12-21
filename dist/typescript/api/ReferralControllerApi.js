@@ -1,4 +1,3 @@
-"use strict";
 /**
  * OffTheRecord Rest Service API - Devo
  * A service to handle your traffic tickets
@@ -10,11 +9,9 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.ReferralControllerApi = void 0;
 /* tslint:disable:no-unused-variable member-ordering */
-var ReferralControllerApi = /** @class */ (function () {
-    function ReferralControllerApi($http, $httpParamSerializer, basePath) {
+export class ReferralControllerApi {
+    constructor($http, $httpParamSerializer, basePath) {
         this.$http = $http;
         this.$httpParamSerializer = $httpParamSerializer;
         this.basePath = 'http://otr-backend-service-us-devo.offtherecord.com';
@@ -28,15 +25,15 @@ var ReferralControllerApi = /** @class */ (function () {
      * @summary addReferral
      * @param request request
      */
-    ReferralControllerApi.prototype.addReferralUsingPOST = function (request, extraHttpRequestParams) {
-        var localVarPath = this.basePath + '/api/v1/referrals';
-        var queryParameters = {};
-        var headerParams = Object.assign({}, this.defaultHeaders);
+    addReferralUsingPOST(request, extraHttpRequestParams) {
+        const localVarPath = this.basePath + '/api/v1/referrals';
+        let queryParameters = {};
+        let headerParams = Object.assign({}, this.defaultHeaders);
         // verify required parameter 'request' is not null or undefined
         if (request === null || request === undefined) {
             throw new Error('Required parameter request was null or undefined when calling addReferralUsingPOST.');
         }
-        var httpRequestParams = {
+        let httpRequestParams = {
             method: 'POST',
             url: localVarPath,
             data: request,
@@ -47,16 +44,16 @@ var ReferralControllerApi = /** @class */ (function () {
             httpRequestParams = Object.assign(httpRequestParams, extraHttpRequestParams);
         }
         return this.$http(httpRequestParams);
-    };
+    }
     /**
      *
      * @summary getReferralHistory
      */
-    ReferralControllerApi.prototype.getReferralHistoryUsingGET = function (extraHttpRequestParams) {
-        var localVarPath = this.basePath + '/api/v1/referrals';
-        var queryParameters = {};
-        var headerParams = Object.assign({}, this.defaultHeaders);
-        var httpRequestParams = {
+    getReferralHistoryUsingGET(extraHttpRequestParams) {
+        const localVarPath = this.basePath + '/api/v1/referrals';
+        let queryParameters = {};
+        let headerParams = Object.assign({}, this.defaultHeaders);
+        let httpRequestParams = {
             method: 'GET',
             url: localVarPath,
             params: queryParameters,
@@ -66,16 +63,16 @@ var ReferralControllerApi = /** @class */ (function () {
             httpRequestParams = Object.assign(httpRequestParams, extraHttpRequestParams);
         }
         return this.$http(httpRequestParams);
-    };
+    }
     /**
      *
      * @summary listReferrals
      * @param userId userId
      */
-    ReferralControllerApi.prototype.listReferralsUsingGET = function (userId, extraHttpRequestParams) {
-        var localVarPath = this.basePath + '/api/v2/referrals';
-        var queryParameters = {};
-        var headerParams = Object.assign({}, this.defaultHeaders);
+    listReferralsUsingGET(userId, extraHttpRequestParams) {
+        const localVarPath = this.basePath + '/api/v2/referrals';
+        let queryParameters = {};
+        let headerParams = Object.assign({}, this.defaultHeaders);
         // verify required parameter 'userId' is not null or undefined
         if (userId === null || userId === undefined) {
             throw new Error('Required parameter userId was null or undefined when calling listReferralsUsingGET.');
@@ -83,7 +80,7 @@ var ReferralControllerApi = /** @class */ (function () {
         if (userId !== undefined) {
             queryParameters['userId'] = userId;
         }
-        var httpRequestParams = {
+        let httpRequestParams = {
             method: 'GET',
             url: localVarPath,
             params: queryParameters,
@@ -93,21 +90,21 @@ var ReferralControllerApi = /** @class */ (function () {
             httpRequestParams = Object.assign(httpRequestParams, extraHttpRequestParams);
         }
         return this.$http(httpRequestParams);
-    };
+    }
     /**
      *
      * @summary publishReferralContacts
      * @param request request
      */
-    ReferralControllerApi.prototype.publishReferralContactsUsingPOST = function (request, extraHttpRequestParams) {
-        var localVarPath = this.basePath + '/api/v1/referrals/contacts';
-        var queryParameters = {};
-        var headerParams = Object.assign({}, this.defaultHeaders);
+    publishReferralContactsUsingPOST(request, extraHttpRequestParams) {
+        const localVarPath = this.basePath + '/api/v1/referrals/contacts';
+        let queryParameters = {};
+        let headerParams = Object.assign({}, this.defaultHeaders);
         // verify required parameter 'request' is not null or undefined
         if (request === null || request === undefined) {
             throw new Error('Required parameter request was null or undefined when calling publishReferralContactsUsingPOST.');
         }
-        var httpRequestParams = {
+        let httpRequestParams = {
             method: 'POST',
             url: localVarPath,
             data: request,
@@ -118,8 +115,6 @@ var ReferralControllerApi = /** @class */ (function () {
             httpRequestParams = Object.assign(httpRequestParams, extraHttpRequestParams);
         }
         return this.$http(httpRequestParams);
-    };
-    ReferralControllerApi.$inject = ['$http', '$httpParamSerializer', 'basePath'];
-    return ReferralControllerApi;
-}());
-exports.ReferralControllerApi = ReferralControllerApi;
+    }
+}
+ReferralControllerApi.$inject = ['$http', '$httpParamSerializer', 'basePath'];

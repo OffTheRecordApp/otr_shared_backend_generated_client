@@ -1,4 +1,3 @@
-"use strict";
 /**
  * OffTheRecord Rest Service API - Devo
  * A service to handle your traffic tickets
@@ -10,11 +9,9 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.ReferralResponseByUser = void 0;
-var ReferralResponseByUser;
+export var ReferralResponseByUser;
 (function (ReferralResponseByUser) {
-    var LatestCreditStatusEnum;
+    let LatestCreditStatusEnum;
     (function (LatestCreditStatusEnum) {
         LatestCreditStatusEnum[LatestCreditStatusEnum["APPLIED"] = 'APPLIED'] = "APPLIED";
         LatestCreditStatusEnum[LatestCreditStatusEnum["CASECANCELLED"] = 'CASE_CANCELLED'] = "CASECANCELLED";
@@ -23,4 +20,4 @@ var ReferralResponseByUser;
         LatestCreditStatusEnum[LatestCreditStatusEnum["SAVED"] = 'SAVED'] = "SAVED";
         LatestCreditStatusEnum[LatestCreditStatusEnum["SUPERSEDED"] = 'SUPERSEDED'] = "SUPERSEDED";
     })(LatestCreditStatusEnum = ReferralResponseByUser.LatestCreditStatusEnum || (ReferralResponseByUser.LatestCreditStatusEnum = {}));
-})(ReferralResponseByUser = exports.ReferralResponseByUser || (exports.ReferralResponseByUser = {}));
+})(ReferralResponseByUser || (ReferralResponseByUser = {}));

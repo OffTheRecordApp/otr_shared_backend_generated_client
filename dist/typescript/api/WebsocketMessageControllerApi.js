@@ -1,4 +1,3 @@
-"use strict";
 /**
  * OffTheRecord Rest Service API - Devo
  * A service to handle your traffic tickets
@@ -10,11 +9,9 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.WebsocketMessageControllerApi = void 0;
 /* tslint:disable:no-unused-variable member-ordering */
-var WebsocketMessageControllerApi = /** @class */ (function () {
-    function WebsocketMessageControllerApi($http, $httpParamSerializer, basePath) {
+export class WebsocketMessageControllerApi {
+    constructor($http, $httpParamSerializer, basePath) {
         this.$http = $http;
         this.$httpParamSerializer = $httpParamSerializer;
         this.basePath = 'http://otr-backend-service-us-devo.offtherecord.com';
@@ -29,10 +26,10 @@ var WebsocketMessageControllerApi = /** @class */ (function () {
      * @param xSessionId X-Session-Id
      * @param request request
      */
-    WebsocketMessageControllerApi.prototype.forwardMessageUsingPOST = function (xSessionId, request, extraHttpRequestParams) {
-        var localVarPath = this.basePath + '/api/v1/forward-message';
-        var queryParameters = {};
-        var headerParams = Object.assign({}, this.defaultHeaders);
+    forwardMessageUsingPOST(xSessionId, request, extraHttpRequestParams) {
+        const localVarPath = this.basePath + '/api/v1/forward-message';
+        let queryParameters = {};
+        let headerParams = Object.assign({}, this.defaultHeaders);
         // verify required parameter 'xSessionId' is not null or undefined
         if (xSessionId === null || xSessionId === undefined) {
             throw new Error('Required parameter xSessionId was null or undefined when calling forwardMessageUsingPOST.');
@@ -42,7 +39,7 @@ var WebsocketMessageControllerApi = /** @class */ (function () {
             throw new Error('Required parameter request was null or undefined when calling forwardMessageUsingPOST.');
         }
         headerParams['X-Session-Id'] = xSessionId;
-        var httpRequestParams = {
+        let httpRequestParams = {
             method: 'POST',
             url: localVarPath,
             data: request,
@@ -53,8 +50,6 @@ var WebsocketMessageControllerApi = /** @class */ (function () {
             httpRequestParams = Object.assign(httpRequestParams, extraHttpRequestParams);
         }
         return this.$http(httpRequestParams);
-    };
-    WebsocketMessageControllerApi.$inject = ['$http', '$httpParamSerializer', 'basePath'];
-    return WebsocketMessageControllerApi;
-}());
-exports.WebsocketMessageControllerApi = WebsocketMessageControllerApi;
+    }
+}
+WebsocketMessageControllerApi.$inject = ['$http', '$httpParamSerializer', 'basePath'];

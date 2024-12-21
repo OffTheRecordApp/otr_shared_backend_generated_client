@@ -1,4 +1,3 @@
-"use strict";
 /**
  * OffTheRecord Rest Service API - Devo
  * A service to handle your traffic tickets
@@ -10,11 +9,9 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.EmployeeControllerApi = void 0;
 /* tslint:disable:no-unused-variable member-ordering */
-var EmployeeControllerApi = /** @class */ (function () {
-    function EmployeeControllerApi($http, $httpParamSerializer, basePath) {
+export class EmployeeControllerApi {
+    constructor($http, $httpParamSerializer, basePath) {
         this.$http = $http;
         this.$httpParamSerializer = $httpParamSerializer;
         this.basePath = 'http://otr-backend-service-us-devo.offtherecord.com';
@@ -31,10 +28,10 @@ var EmployeeControllerApi = /** @class */ (function () {
      * @param page page
      * @param team team
      */
-    EmployeeControllerApi.prototype.listEmployeesUsingGET = function (isActive, length, page, team, extraHttpRequestParams) {
-        var localVarPath = this.basePath + '/api/v1/employees';
-        var queryParameters = {};
-        var headerParams = Object.assign({}, this.defaultHeaders);
+    listEmployeesUsingGET(isActive, length, page, team, extraHttpRequestParams) {
+        const localVarPath = this.basePath + '/api/v1/employees';
+        let queryParameters = {};
+        let headerParams = Object.assign({}, this.defaultHeaders);
         if (isActive !== undefined) {
             queryParameters['isActive'] = isActive;
         }
@@ -47,7 +44,7 @@ var EmployeeControllerApi = /** @class */ (function () {
         if (team !== undefined) {
             queryParameters['team'] = team;
         }
-        var httpRequestParams = {
+        let httpRequestParams = {
             method: 'GET',
             url: localVarPath,
             params: queryParameters,
@@ -57,8 +54,6 @@ var EmployeeControllerApi = /** @class */ (function () {
             httpRequestParams = Object.assign(httpRequestParams, extraHttpRequestParams);
         }
         return this.$http(httpRequestParams);
-    };
-    EmployeeControllerApi.$inject = ['$http', '$httpParamSerializer', 'basePath'];
-    return EmployeeControllerApi;
-}());
-exports.EmployeeControllerApi = EmployeeControllerApi;
+    }
+}
+EmployeeControllerApi.$inject = ['$http', '$httpParamSerializer', 'basePath'];

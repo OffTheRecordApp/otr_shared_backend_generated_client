@@ -1,4 +1,3 @@
-"use strict";
 /**
  * OffTheRecord Rest Service API - Devo
  * A service to handle your traffic tickets
@@ -10,11 +9,9 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.UserDomain = void 0;
-var UserDomain;
+export var UserDomain;
 (function (UserDomain) {
-    var GenderTypeEnum;
+    let GenderTypeEnum;
     (function (GenderTypeEnum) {
         GenderTypeEnum[GenderTypeEnum["FEMALE"] = 'FEMALE'] = "FEMALE";
         GenderTypeEnum[GenderTypeEnum["MALE"] = 'MALE'] = "MALE";
@@ -23,7 +20,7 @@ var UserDomain;
         GenderTypeEnum[GenderTypeEnum["UNVERIFIED"] = 'UNVERIFIED'] = "UNVERIFIED";
         GenderTypeEnum[GenderTypeEnum["X"] = 'X'] = "X";
     })(GenderTypeEnum = UserDomain.GenderTypeEnum || (UserDomain.GenderTypeEnum = {}));
-    var LawyerJobTitleEnum;
+    let LawyerJobTitleEnum;
     (function (LawyerJobTitleEnum) {
         LawyerJobTitleEnum[LawyerJobTitleEnum["ACCOUNTANT"] = 'ACCOUNTANT'] = "ACCOUNTANT";
         LawyerJobTitleEnum[LawyerJobTitleEnum["ATTORNEY"] = 'ATTORNEY'] = "ATTORNEY";
@@ -39,7 +36,7 @@ var UserDomain;
         LawyerJobTitleEnum[LawyerJobTitleEnum["OTHER"] = 'OTHER'] = "OTHER";
         LawyerJobTitleEnum[LawyerJobTitleEnum["PARALEGAL"] = 'PARALEGAL'] = "PARALEGAL";
     })(LawyerJobTitleEnum = UserDomain.LawyerJobTitleEnum || (UserDomain.LawyerJobTitleEnum = {}));
-    var LoginProviderEnum;
+    let LoginProviderEnum;
     (function (LoginProviderEnum) {
         LoginProviderEnum[LoginProviderEnum["APPLE"] = 'APPLE'] = "APPLE";
         LoginProviderEnum[LoginProviderEnum["EMAIL"] = 'EMAIL'] = "EMAIL";
@@ -49,14 +46,14 @@ var UserDomain;
         LoginProviderEnum[LoginProviderEnum["TWITTER"] = 'TWITTER'] = "TWITTER";
         LoginProviderEnum[LoginProviderEnum["UNKNOWN"] = 'UNKNOWN'] = "UNKNOWN";
     })(LoginProviderEnum = UserDomain.LoginProviderEnum || (UserDomain.LoginProviderEnum = {}));
-    var PrivacyModeEnum;
+    let PrivacyModeEnum;
     (function (PrivacyModeEnum) {
         PrivacyModeEnum[PrivacyModeEnum["FRIENDS"] = 'FRIENDS'] = "FRIENDS";
         PrivacyModeEnum[PrivacyModeEnum["PRIVATE"] = 'PRIVATE'] = "PRIVATE";
         PrivacyModeEnum[PrivacyModeEnum["PUBLIC"] = 'PUBLIC'] = "PUBLIC";
         PrivacyModeEnum[PrivacyModeEnum["SEMIPUBLIC"] = 'SEMI_PUBLIC'] = "SEMIPUBLIC";
     })(PrivacyModeEnum = UserDomain.PrivacyModeEnum || (UserDomain.PrivacyModeEnum = {}));
-    var RaceEnum;
+    let RaceEnum;
     (function (RaceEnum) {
         RaceEnum[RaceEnum["ASIAN"] = 'ASIAN'] = "ASIAN";
         RaceEnum[RaceEnum["BLACK"] = 'BLACK'] = "BLACK";
@@ -70,4 +67,4 @@ var UserDomain;
         RaceEnum[RaceEnum["UNVERIFIED"] = 'UNVERIFIED'] = "UNVERIFIED";
         RaceEnum[RaceEnum["WHITE"] = 'WHITE'] = "WHITE";
     })(RaceEnum = UserDomain.RaceEnum || (UserDomain.RaceEnum = {}));
-})(UserDomain = exports.UserDomain || (exports.UserDomain = {}));
+})(UserDomain || (UserDomain = {}));

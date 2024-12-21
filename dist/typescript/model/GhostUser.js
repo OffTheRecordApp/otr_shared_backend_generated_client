@@ -1,4 +1,3 @@
-"use strict";
 /**
  * OffTheRecord Rest Service API - Devo
  * A service to handle your traffic tickets
@@ -10,11 +9,9 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.GhostUser = void 0;
-var GhostUser;
+export var GhostUser;
 (function (GhostUser) {
-    var ClientTypeEnum;
+    let ClientTypeEnum;
     (function (ClientTypeEnum) {
         ClientTypeEnum[ClientTypeEnum["ANDROID"] = 'ANDROID'] = "ANDROID";
         ClientTypeEnum[ClientTypeEnum["DESKTOPWEBAPP"] = 'DESKTOP_WEBAPP'] = "DESKTOPWEBAPP";
@@ -39,7 +36,7 @@ var GhostUser;
         ClientTypeEnum[ClientTypeEnum["OTRWIDGET"] = 'OTR_WIDGET'] = "OTRWIDGET";
         ClientTypeEnum[ClientTypeEnum["UNKNOWN"] = 'UNKNOWN'] = "UNKNOWN";
     })(ClientTypeEnum = GhostUser.ClientTypeEnum || (GhostUser.ClientTypeEnum = {}));
-    var GenderEnum;
+    let GenderEnum;
     (function (GenderEnum) {
         GenderEnum[GenderEnum["FEMALE"] = 'FEMALE'] = "FEMALE";
         GenderEnum[GenderEnum["MALE"] = 'MALE'] = "MALE";
@@ -48,7 +45,7 @@ var GhostUser;
         GenderEnum[GenderEnum["UNVERIFIED"] = 'UNVERIFIED'] = "UNVERIFIED";
         GenderEnum[GenderEnum["X"] = 'X'] = "X";
     })(GenderEnum = GhostUser.GenderEnum || (GhostUser.GenderEnum = {}));
-    var RaceEnum;
+    let RaceEnum;
     (function (RaceEnum) {
         RaceEnum[RaceEnum["ASIAN"] = 'ASIAN'] = "ASIAN";
         RaceEnum[RaceEnum["BLACK"] = 'BLACK'] = "BLACK";
@@ -62,4 +59,4 @@ var GhostUser;
         RaceEnum[RaceEnum["UNVERIFIED"] = 'UNVERIFIED'] = "UNVERIFIED";
         RaceEnum[RaceEnum["WHITE"] = 'WHITE'] = "WHITE";
     })(RaceEnum = GhostUser.RaceEnum || (GhostUser.RaceEnum = {}));
-})(GhostUser = exports.GhostUser || (exports.GhostUser = {}));
+})(GhostUser || (GhostUser = {}));

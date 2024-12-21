@@ -1,4 +1,3 @@
-"use strict";
 /**
  * OffTheRecord Rest Service API - Devo
  * A service to handle your traffic tickets
@@ -10,11 +9,9 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.ScheduledTaskControllerApi = void 0;
 /* tslint:disable:no-unused-variable member-ordering */
-var ScheduledTaskControllerApi = /** @class */ (function () {
-    function ScheduledTaskControllerApi($http, $httpParamSerializer, basePath) {
+export class ScheduledTaskControllerApi {
+    constructor($http, $httpParamSerializer, basePath) {
         this.$http = $http;
         this.$httpParamSerializer = $httpParamSerializer;
         this.basePath = 'http://otr-backend-service-us-devo.offtherecord.com';
@@ -28,16 +25,16 @@ var ScheduledTaskControllerApi = /** @class */ (function () {
      * @summary deleteScheduledTask
      * @param taskId taskId
      */
-    ScheduledTaskControllerApi.prototype.deleteScheduledTaskUsingDELETE = function (taskId, extraHttpRequestParams) {
-        var localVarPath = this.basePath + '/api/v1/scheduled-tasks/{taskId}'
+    deleteScheduledTaskUsingDELETE(taskId, extraHttpRequestParams) {
+        const localVarPath = this.basePath + '/api/v1/scheduled-tasks/{taskId}'
             .replace('{' + 'taskId' + '}', encodeURIComponent(String(taskId)));
-        var queryParameters = {};
-        var headerParams = Object.assign({}, this.defaultHeaders);
+        let queryParameters = {};
+        let headerParams = Object.assign({}, this.defaultHeaders);
         // verify required parameter 'taskId' is not null or undefined
         if (taskId === null || taskId === undefined) {
             throw new Error('Required parameter taskId was null or undefined when calling deleteScheduledTaskUsingDELETE.');
         }
-        var httpRequestParams = {
+        let httpRequestParams = {
             method: 'DELETE',
             url: localVarPath,
             params: queryParameters,
@@ -47,22 +44,22 @@ var ScheduledTaskControllerApi = /** @class */ (function () {
             httpRequestParams = Object.assign(httpRequestParams, extraHttpRequestParams);
         }
         return this.$http(httpRequestParams);
-    };
+    }
     /**
      *
      * @summary getScheduledTasks
      * @param caseId caseId
      */
-    ScheduledTaskControllerApi.prototype.getScheduledTasksUsingGET = function (caseId, extraHttpRequestParams) {
-        var localVarPath = this.basePath + '/api/v1/scheduled-tasks/{caseId}'
+    getScheduledTasksUsingGET(caseId, extraHttpRequestParams) {
+        const localVarPath = this.basePath + '/api/v1/scheduled-tasks/{caseId}'
             .replace('{' + 'caseId' + '}', encodeURIComponent(String(caseId)));
-        var queryParameters = {};
-        var headerParams = Object.assign({}, this.defaultHeaders);
+        let queryParameters = {};
+        let headerParams = Object.assign({}, this.defaultHeaders);
         // verify required parameter 'caseId' is not null or undefined
         if (caseId === null || caseId === undefined) {
             throw new Error('Required parameter caseId was null or undefined when calling getScheduledTasksUsingGET.');
         }
-        var httpRequestParams = {
+        let httpRequestParams = {
             method: 'GET',
             url: localVarPath,
             params: queryParameters,
@@ -72,18 +69,18 @@ var ScheduledTaskControllerApi = /** @class */ (function () {
             httpRequestParams = Object.assign(httpRequestParams, extraHttpRequestParams);
         }
         return this.$http(httpRequestParams);
-    };
+    }
     /**
      *
      * @summary rescheduleTask
      * @param taskId taskId
      * @param request request
      */
-    ScheduledTaskControllerApi.prototype.rescheduleTaskUsingPUT = function (taskId, request, extraHttpRequestParams) {
-        var localVarPath = this.basePath + '/api/v1/scheduled-tasks/{taskId}/reschedule'
+    rescheduleTaskUsingPUT(taskId, request, extraHttpRequestParams) {
+        const localVarPath = this.basePath + '/api/v1/scheduled-tasks/{taskId}/reschedule'
             .replace('{' + 'taskId' + '}', encodeURIComponent(String(taskId)));
-        var queryParameters = {};
-        var headerParams = Object.assign({}, this.defaultHeaders);
+        let queryParameters = {};
+        let headerParams = Object.assign({}, this.defaultHeaders);
         // verify required parameter 'taskId' is not null or undefined
         if (taskId === null || taskId === undefined) {
             throw new Error('Required parameter taskId was null or undefined when calling rescheduleTaskUsingPUT.');
@@ -92,7 +89,7 @@ var ScheduledTaskControllerApi = /** @class */ (function () {
         if (request === null || request === undefined) {
             throw new Error('Required parameter request was null or undefined when calling rescheduleTaskUsingPUT.');
         }
-        var httpRequestParams = {
+        let httpRequestParams = {
             method: 'PUT',
             url: localVarPath,
             data: request,
@@ -103,8 +100,6 @@ var ScheduledTaskControllerApi = /** @class */ (function () {
             httpRequestParams = Object.assign(httpRequestParams, extraHttpRequestParams);
         }
         return this.$http(httpRequestParams);
-    };
-    ScheduledTaskControllerApi.$inject = ['$http', '$httpParamSerializer', 'basePath'];
-    return ScheduledTaskControllerApi;
-}());
-exports.ScheduledTaskControllerApi = ScheduledTaskControllerApi;
+    }
+}
+ScheduledTaskControllerApi.$inject = ['$http', '$httpParamSerializer', 'basePath'];

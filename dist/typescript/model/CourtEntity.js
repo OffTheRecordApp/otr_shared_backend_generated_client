@@ -1,4 +1,3 @@
-"use strict";
 /**
  * OffTheRecord Rest Service API - Devo
  * A service to handle your traffic tickets
@@ -10,11 +9,9 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.CourtEntity = void 0;
-var CourtEntity;
+export var CourtEntity;
 (function (CourtEntity) {
-    var CourtTypeEnum;
+    let CourtTypeEnum;
     (function (CourtTypeEnum) {
         CourtTypeEnum[CourtTypeEnum["CIRCUIT"] = 'CIRCUIT'] = "CIRCUIT";
         CourtTypeEnum[CourtTypeEnum["COUNTYCLERK"] = 'COUNTY_CLERK'] = "COUNTYCLERK";
@@ -25,4 +22,4 @@ var CourtEntity;
         CourtTypeEnum[CourtTypeEnum["SUPERIOR"] = 'SUPERIOR'] = "SUPERIOR";
         CourtTypeEnum[CourtTypeEnum["VIOLATIONSBUREAU"] = 'VIOLATIONS_BUREAU'] = "VIOLATIONSBUREAU";
     })(CourtTypeEnum = CourtEntity.CourtTypeEnum || (CourtEntity.CourtTypeEnum = {}));
-})(CourtEntity = exports.CourtEntity || (exports.CourtEntity = {}));
+})(CourtEntity || (CourtEntity = {}));

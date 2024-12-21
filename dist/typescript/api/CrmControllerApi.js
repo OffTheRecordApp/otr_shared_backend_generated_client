@@ -1,4 +1,3 @@
-"use strict";
 /**
  * OffTheRecord Rest Service API - Devo
  * A service to handle your traffic tickets
@@ -10,11 +9,9 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.CrmControllerApi = void 0;
 /* tslint:disable:no-unused-variable member-ordering */
-var CrmControllerApi = /** @class */ (function () {
-    function CrmControllerApi($http, $httpParamSerializer, basePath) {
+export class CrmControllerApi {
+    constructor($http, $httpParamSerializer, basePath) {
         this.$http = $http;
         this.$httpParamSerializer = $httpParamSerializer;
         this.basePath = 'http://otr-backend-service-us-devo.offtherecord.com';
@@ -28,15 +25,15 @@ var CrmControllerApi = /** @class */ (function () {
      * @summary generateTemplate
      * @param request request
      */
-    CrmControllerApi.prototype.generateTemplateUsingPOST = function (request, extraHttpRequestParams) {
-        var localVarPath = this.basePath + '/api/v1/crm/generate-template';
-        var queryParameters = {};
-        var headerParams = Object.assign({}, this.defaultHeaders);
+    generateTemplateUsingPOST(request, extraHttpRequestParams) {
+        const localVarPath = this.basePath + '/api/v1/crm/generate-template';
+        let queryParameters = {};
+        let headerParams = Object.assign({}, this.defaultHeaders);
         // verify required parameter 'request' is not null or undefined
         if (request === null || request === undefined) {
             throw new Error('Required parameter request was null or undefined when calling generateTemplateUsingPOST.');
         }
-        var httpRequestParams = {
+        let httpRequestParams = {
             method: 'POST',
             url: localVarPath,
             data: request,
@@ -47,16 +44,16 @@ var CrmControllerApi = /** @class */ (function () {
             httpRequestParams = Object.assign(httpRequestParams, extraHttpRequestParams);
         }
         return this.$http(httpRequestParams);
-    };
+    }
     /**
      *
      * @summary getOutgoingContacts
      * @param recipientEmailAddress recipientEmailAddress
      */
-    CrmControllerApi.prototype.getOutgoingContactsUsingGET = function (recipientEmailAddress, extraHttpRequestParams) {
-        var localVarPath = this.basePath + '/api/v1/crm/contacts';
-        var queryParameters = {};
-        var headerParams = Object.assign({}, this.defaultHeaders);
+    getOutgoingContactsUsingGET(recipientEmailAddress, extraHttpRequestParams) {
+        const localVarPath = this.basePath + '/api/v1/crm/contacts';
+        let queryParameters = {};
+        let headerParams = Object.assign({}, this.defaultHeaders);
         // verify required parameter 'recipientEmailAddress' is not null or undefined
         if (recipientEmailAddress === null || recipientEmailAddress === undefined) {
             throw new Error('Required parameter recipientEmailAddress was null or undefined when calling getOutgoingContactsUsingGET.');
@@ -64,7 +61,7 @@ var CrmControllerApi = /** @class */ (function () {
         if (recipientEmailAddress !== undefined) {
             queryParameters['recipientEmailAddress'] = recipientEmailAddress;
         }
-        var httpRequestParams = {
+        let httpRequestParams = {
             method: 'GET',
             url: localVarPath,
             params: queryParameters,
@@ -74,20 +71,20 @@ var CrmControllerApi = /** @class */ (function () {
             httpRequestParams = Object.assign(httpRequestParams, extraHttpRequestParams);
         }
         return this.$http(httpRequestParams);
-    };
+    }
     /**
      *
      * @summary getTemplates
      * @param category category
      */
-    CrmControllerApi.prototype.getTemplatesUsingGET = function (category, extraHttpRequestParams) {
-        var localVarPath = this.basePath + '/api/v1/crm/templates';
-        var queryParameters = {};
-        var headerParams = Object.assign({}, this.defaultHeaders);
+    getTemplatesUsingGET(category, extraHttpRequestParams) {
+        const localVarPath = this.basePath + '/api/v1/crm/templates';
+        let queryParameters = {};
+        let headerParams = Object.assign({}, this.defaultHeaders);
         if (category !== undefined) {
             queryParameters['category'] = category;
         }
-        var httpRequestParams = {
+        let httpRequestParams = {
             method: 'GET',
             url: localVarPath,
             params: queryParameters,
@@ -97,18 +94,18 @@ var CrmControllerApi = /** @class */ (function () {
             httpRequestParams = Object.assign(httpRequestParams, extraHttpRequestParams);
         }
         return this.$http(httpRequestParams);
-    };
+    }
     /**
      *
      * @summary replyToTicket
      * @param ticketId ticketId
      * @param request request
      */
-    CrmControllerApi.prototype.replyToTicketUsingPOST = function (ticketId, request, extraHttpRequestParams) {
-        var localVarPath = this.basePath + '/api/v1/crm/ticket/{ticketId}/reply'
+    replyToTicketUsingPOST(ticketId, request, extraHttpRequestParams) {
+        const localVarPath = this.basePath + '/api/v1/crm/ticket/{ticketId}/reply'
             .replace('{' + 'ticketId' + '}', encodeURIComponent(String(ticketId)));
-        var queryParameters = {};
-        var headerParams = Object.assign({}, this.defaultHeaders);
+        let queryParameters = {};
+        let headerParams = Object.assign({}, this.defaultHeaders);
         // verify required parameter 'ticketId' is not null or undefined
         if (ticketId === null || ticketId === undefined) {
             throw new Error('Required parameter ticketId was null or undefined when calling replyToTicketUsingPOST.');
@@ -117,7 +114,7 @@ var CrmControllerApi = /** @class */ (function () {
         if (request === null || request === undefined) {
             throw new Error('Required parameter request was null or undefined when calling replyToTicketUsingPOST.');
         }
-        var httpRequestParams = {
+        let httpRequestParams = {
             method: 'POST',
             url: localVarPath,
             data: request,
@@ -128,21 +125,21 @@ var CrmControllerApi = /** @class */ (function () {
             httpRequestParams = Object.assign(httpRequestParams, extraHttpRequestParams);
         }
         return this.$http(httpRequestParams);
-    };
+    }
     /**
      *
      * @summary sendBookingReceipt
      * @param request request
      */
-    CrmControllerApi.prototype.sendBookingReceiptUsingPOST = function (request, extraHttpRequestParams) {
-        var localVarPath = this.basePath + '/api/v1/crm/booking-receipt';
-        var queryParameters = {};
-        var headerParams = Object.assign({}, this.defaultHeaders);
+    sendBookingReceiptUsingPOST(request, extraHttpRequestParams) {
+        const localVarPath = this.basePath + '/api/v1/crm/booking-receipt';
+        let queryParameters = {};
+        let headerParams = Object.assign({}, this.defaultHeaders);
         // verify required parameter 'request' is not null or undefined
         if (request === null || request === undefined) {
             throw new Error('Required parameter request was null or undefined when calling sendBookingReceiptUsingPOST.');
         }
-        var httpRequestParams = {
+        let httpRequestParams = {
             method: 'POST',
             url: localVarPath,
             data: request,
@@ -153,21 +150,21 @@ var CrmControllerApi = /** @class */ (function () {
             httpRequestParams = Object.assign(httpRequestParams, extraHttpRequestParams);
         }
         return this.$http(httpRequestParams);
-    };
+    }
     /**
      *
      * @summary sendConsolidatedEmailToUser
      * @param request request
      */
-    CrmControllerApi.prototype.sendConsolidatedEmailToUserUsingPOST = function (request, extraHttpRequestParams) {
-        var localVarPath = this.basePath + '/api/v1/crm/user/consolidate-email';
-        var queryParameters = {};
-        var headerParams = Object.assign({}, this.defaultHeaders);
+    sendConsolidatedEmailToUserUsingPOST(request, extraHttpRequestParams) {
+        const localVarPath = this.basePath + '/api/v1/crm/user/consolidate-email';
+        let queryParameters = {};
+        let headerParams = Object.assign({}, this.defaultHeaders);
         // verify required parameter 'request' is not null or undefined
         if (request === null || request === undefined) {
             throw new Error('Required parameter request was null or undefined when calling sendConsolidatedEmailToUserUsingPOST.');
         }
-        var httpRequestParams = {
+        let httpRequestParams = {
             method: 'POST',
             url: localVarPath,
             data: request,
@@ -178,21 +175,21 @@ var CrmControllerApi = /** @class */ (function () {
             httpRequestParams = Object.assign(httpRequestParams, extraHttpRequestParams);
         }
         return this.$http(httpRequestParams);
-    };
+    }
     /**
      *
      * @summary sendEmailToUser
      * @param request request
      */
-    CrmControllerApi.prototype.sendEmailToUserUsingPOST = function (request, extraHttpRequestParams) {
-        var localVarPath = this.basePath + '/api/v1/crm/user/email';
-        var queryParameters = {};
-        var headerParams = Object.assign({}, this.defaultHeaders);
+    sendEmailToUserUsingPOST(request, extraHttpRequestParams) {
+        const localVarPath = this.basePath + '/api/v1/crm/user/email';
+        let queryParameters = {};
+        let headerParams = Object.assign({}, this.defaultHeaders);
         // verify required parameter 'request' is not null or undefined
         if (request === null || request === undefined) {
             throw new Error('Required parameter request was null or undefined when calling sendEmailToUserUsingPOST.');
         }
-        var httpRequestParams = {
+        let httpRequestParams = {
             method: 'POST',
             url: localVarPath,
             data: request,
@@ -203,21 +200,21 @@ var CrmControllerApi = /** @class */ (function () {
             httpRequestParams = Object.assign(httpRequestParams, extraHttpRequestParams);
         }
         return this.$http(httpRequestParams);
-    };
+    }
     /**
      *
      * @summary sendEmailToUsers
      * @param request request
      */
-    CrmControllerApi.prototype.sendEmailToUsersUsingPOST = function (request, extraHttpRequestParams) {
-        var localVarPath = this.basePath + '/api/v1/crm/users/email';
-        var queryParameters = {};
-        var headerParams = Object.assign({}, this.defaultHeaders);
+    sendEmailToUsersUsingPOST(request, extraHttpRequestParams) {
+        const localVarPath = this.basePath + '/api/v1/crm/users/email';
+        let queryParameters = {};
+        let headerParams = Object.assign({}, this.defaultHeaders);
         // verify required parameter 'request' is not null or undefined
         if (request === null || request === undefined) {
             throw new Error('Required parameter request was null or undefined when calling sendEmailToUsersUsingPOST.');
         }
-        var httpRequestParams = {
+        let httpRequestParams = {
             method: 'POST',
             url: localVarPath,
             data: request,
@@ -228,8 +225,6 @@ var CrmControllerApi = /** @class */ (function () {
             httpRequestParams = Object.assign(httpRequestParams, extraHttpRequestParams);
         }
         return this.$http(httpRequestParams);
-    };
-    CrmControllerApi.$inject = ['$http', '$httpParamSerializer', 'basePath'];
-    return CrmControllerApi;
-}());
-exports.CrmControllerApi = CrmControllerApi;
+    }
+}
+CrmControllerApi.$inject = ['$http', '$httpParamSerializer', 'basePath'];

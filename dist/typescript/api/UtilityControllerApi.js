@@ -1,4 +1,3 @@
-"use strict";
 /**
  * OffTheRecord Rest Service API - Devo
  * A service to handle your traffic tickets
@@ -10,11 +9,9 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.UtilityControllerApi = void 0;
 /* tslint:disable:no-unused-variable member-ordering */
-var UtilityControllerApi = /** @class */ (function () {
-    function UtilityControllerApi($http, $httpParamSerializer, basePath) {
+export class UtilityControllerApi {
+    constructor($http, $httpParamSerializer, basePath) {
         this.$http = $http;
         this.$httpParamSerializer = $httpParamSerializer;
         this.basePath = 'http://otr-backend-service-us-devo.offtherecord.com';
@@ -28,15 +25,15 @@ var UtilityControllerApi = /** @class */ (function () {
      * @summary backfillLawfirmTransactionRecords
      * @param request request
      */
-    UtilityControllerApi.prototype.backfillLawfirmTransactionRecordsUsingPOST = function (request, extraHttpRequestParams) {
-        var localVarPath = this.basePath + '/api/v1/utility/backfill-lawfirm-transaction-records';
-        var queryParameters = {};
-        var headerParams = Object.assign({}, this.defaultHeaders);
+    backfillLawfirmTransactionRecordsUsingPOST(request, extraHttpRequestParams) {
+        const localVarPath = this.basePath + '/api/v1/utility/backfill-lawfirm-transaction-records';
+        let queryParameters = {};
+        let headerParams = Object.assign({}, this.defaultHeaders);
         // verify required parameter 'request' is not null or undefined
         if (request === null || request === undefined) {
             throw new Error('Required parameter request was null or undefined when calling backfillLawfirmTransactionRecordsUsingPOST.');
         }
-        var httpRequestParams = {
+        let httpRequestParams = {
             method: 'POST',
             url: localVarPath,
             data: request,
@@ -47,16 +44,16 @@ var UtilityControllerApi = /** @class */ (function () {
             httpRequestParams = Object.assign(httpRequestParams, extraHttpRequestParams);
         }
         return this.$http(httpRequestParams);
-    };
+    }
     /**
      *
      * @summary getStatus
      */
-    UtilityControllerApi.prototype.getStatusUsingGET = function (extraHttpRequestParams) {
-        var localVarPath = this.basePath + '/api/v1/utility/status';
-        var queryParameters = {};
-        var headerParams = Object.assign({}, this.defaultHeaders);
-        var httpRequestParams = {
+    getStatusUsingGET(extraHttpRequestParams) {
+        const localVarPath = this.basePath + '/api/v1/utility/status';
+        let queryParameters = {};
+        let headerParams = Object.assign({}, this.defaultHeaders);
+        let httpRequestParams = {
             method: 'GET',
             url: localVarPath,
             params: queryParameters,
@@ -66,24 +63,24 @@ var UtilityControllerApi = /** @class */ (function () {
             httpRequestParams = Object.assign(httpRequestParams, extraHttpRequestParams);
         }
         return this.$http(httpRequestParams);
-    };
+    }
     /**
      *
      * @summary setStatus
      * @param lawfirmTransactionsStatus lawfirmTransactionsStatus
      * @param syncStatus syncStatus
      */
-    UtilityControllerApi.prototype.setStatusUsingPOST = function (lawfirmTransactionsStatus, syncStatus, extraHttpRequestParams) {
-        var localVarPath = this.basePath + '/api/v1/utility/status';
-        var queryParameters = {};
-        var headerParams = Object.assign({}, this.defaultHeaders);
+    setStatusUsingPOST(lawfirmTransactionsStatus, syncStatus, extraHttpRequestParams) {
+        const localVarPath = this.basePath + '/api/v1/utility/status';
+        let queryParameters = {};
+        let headerParams = Object.assign({}, this.defaultHeaders);
         if (lawfirmTransactionsStatus !== undefined) {
             queryParameters['lawfirmTransactionsStatus'] = lawfirmTransactionsStatus;
         }
         if (syncStatus !== undefined) {
             queryParameters['syncStatus'] = syncStatus;
         }
-        var httpRequestParams = {
+        let httpRequestParams = {
             method: 'POST',
             url: localVarPath,
             params: queryParameters,
@@ -93,8 +90,6 @@ var UtilityControllerApi = /** @class */ (function () {
             httpRequestParams = Object.assign(httpRequestParams, extraHttpRequestParams);
         }
         return this.$http(httpRequestParams);
-    };
-    UtilityControllerApi.$inject = ['$http', '$httpParamSerializer', 'basePath'];
-    return UtilityControllerApi;
-}());
-exports.UtilityControllerApi = UtilityControllerApi;
+    }
+}
+UtilityControllerApi.$inject = ['$http', '$httpParamSerializer', 'basePath'];

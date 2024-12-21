@@ -1,4 +1,3 @@
-"use strict";
 /**
  * OffTheRecord Rest Service API - Devo
  * A service to handle your traffic tickets
@@ -10,11 +9,9 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.CustomerLead = void 0;
-var CustomerLead;
+export var CustomerLead;
 (function (CustomerLead) {
-    var ChannelEnum;
+    let ChannelEnum;
     (function (ChannelEnum) {
         ChannelEnum[ChannelEnum["DMVCOM"] = 'DMV_COM'] = "DMVCOM";
         ChannelEnum[ChannelEnum["DMVORG"] = 'DMV_ORG'] = "DMVORG";
@@ -26,7 +23,7 @@ var CustomerLead;
         ChannelEnum[ChannelEnum["UNKNOWN"] = 'UNKNOWN'] = "UNKNOWN";
         ChannelEnum[ChannelEnum["WTL"] = 'WTL'] = "WTL";
     })(ChannelEnum = CustomerLead.ChannelEnum || (CustomerLead.ChannelEnum = {}));
-    var StateEnum;
+    let StateEnum;
     (function (StateEnum) {
         StateEnum[StateEnum["AK"] = 'AK'] = "AK";
         StateEnum[StateEnum["AL"] = 'AL'] = "AL";
@@ -80,4 +77,4 @@ var CustomerLead;
         StateEnum[StateEnum["WV"] = 'WV'] = "WV";
         StateEnum[StateEnum["WY"] = 'WY'] = "WY";
     })(StateEnum = CustomerLead.StateEnum || (CustomerLead.StateEnum = {}));
-})(CustomerLead = exports.CustomerLead || (exports.CustomerLead = {}));
+})(CustomerLead || (CustomerLead = {}));

@@ -1,4 +1,3 @@
-"use strict";
 /**
  * OffTheRecord Rest Service API - Devo
  * A service to handle your traffic tickets
@@ -10,14 +9,12 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.MatchingFieldValue = void 0;
-var MatchingFieldValue;
+export var MatchingFieldValue;
 (function (MatchingFieldValue) {
-    var MatchingFieldEnum;
+    let MatchingFieldEnum;
     (function (MatchingFieldEnum) {
         MatchingFieldEnum[MatchingFieldEnum["COURTID"] = 'COURT_ID'] = "COURTID";
         MatchingFieldEnum[MatchingFieldEnum["VIOLATIONCLASSIFICATIONID"] = 'VIOLATION_CLASSIFICATION_ID'] = "VIOLATIONCLASSIFICATIONID";
         MatchingFieldEnum[MatchingFieldEnum["VIOLATIONID"] = 'VIOLATION_ID'] = "VIOLATIONID";
     })(MatchingFieldEnum = MatchingFieldValue.MatchingFieldEnum || (MatchingFieldValue.MatchingFieldEnum = {}));
-})(MatchingFieldValue = exports.MatchingFieldValue || (exports.MatchingFieldValue = {}));
+})(MatchingFieldValue || (MatchingFieldValue = {}));

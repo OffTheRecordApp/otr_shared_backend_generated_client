@@ -1,4 +1,3 @@
-"use strict";
 /**
  * OffTheRecord Rest Service API - Devo
  * A service to handle your traffic tickets
@@ -10,12 +9,10 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.SubscriberDomain = void 0;
-var SubscriberDomain;
+export var SubscriberDomain;
 (function (SubscriberDomain) {
-    var SubscriptionTypeEnum;
+    let SubscriptionTypeEnum;
     (function (SubscriptionTypeEnum) {
         SubscriptionTypeEnum[SubscriptionTypeEnum["WEBBROCHURELAUNCHNOTIFICATION"] = 'WEB_BROCHURE_LAUNCH_NOTIFICATION'] = "WEBBROCHURELAUNCHNOTIFICATION";
     })(SubscriptionTypeEnum = SubscriberDomain.SubscriptionTypeEnum || (SubscriberDomain.SubscriptionTypeEnum = {}));
-})(SubscriberDomain = exports.SubscriberDomain || (exports.SubscriberDomain = {}));
+})(SubscriberDomain || (SubscriberDomain = {}));

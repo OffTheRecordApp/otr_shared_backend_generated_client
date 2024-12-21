@@ -1,4 +1,3 @@
-"use strict";
 /**
  * OffTheRecord Rest Service API - Devo
  * A service to handle your traffic tickets
@@ -10,11 +9,9 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.UpdateViolationRequest = void 0;
-var UpdateViolationRequest;
+export var UpdateViolationRequest;
 (function (UpdateViolationRequest) {
-    var ClassificationEnum;
+    let ClassificationEnum;
     (function (ClassificationEnum) {
         ClassificationEnum[ClassificationEnum["CLASS1FELONY"] = 'CLASS_1_FELONY'] = "CLASS1FELONY";
         ClassificationEnum[ClassificationEnum["CLASS1MISDEMEANOR"] = 'CLASS_1_MISDEMEANOR'] = "CLASS1MISDEMEANOR";
@@ -74,9 +71,9 @@ var UpdateViolationRequest;
         ClassificationEnum[ClassificationEnum["WOBBLERTOFELONY"] = 'WOBBLER_TO_FELONY'] = "WOBBLERTOFELONY";
         ClassificationEnum[ClassificationEnum["WOBBLERTOMISDEMEANOR"] = 'WOBBLER_TO_MISDEMEANOR'] = "WOBBLERTOMISDEMEANOR";
     })(ClassificationEnum = UpdateViolationRequest.ClassificationEnum || (UpdateViolationRequest.ClassificationEnum = {}));
-    var RefundEligibilityTypeEnum;
+    let RefundEligibilityTypeEnum;
     (function (RefundEligibilityTypeEnum) {
         RefundEligibilityTypeEnum[RefundEligibilityTypeEnum["FULLREFUND"] = 'FULL_REFUND'] = "FULLREFUND";
         RefundEligibilityTypeEnum[RefundEligibilityTypeEnum["NOREFUND"] = 'NO_REFUND'] = "NOREFUND";
     })(RefundEligibilityTypeEnum = UpdateViolationRequest.RefundEligibilityTypeEnum || (UpdateViolationRequest.RefundEligibilityTypeEnum = {}));
-})(UpdateViolationRequest = exports.UpdateViolationRequest || (exports.UpdateViolationRequest = {}));
+})(UpdateViolationRequest || (UpdateViolationRequest = {}));

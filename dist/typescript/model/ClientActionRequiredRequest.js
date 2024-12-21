@@ -1,4 +1,3 @@
-"use strict";
 /**
  * OffTheRecord Rest Service API - Devo
  * A service to handle your traffic tickets
@@ -10,14 +9,12 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.ClientActionRequiredRequest = void 0;
-var ClientActionRequiredRequest;
+export var ClientActionRequiredRequest;
 (function (ClientActionRequiredRequest) {
-    var CaseActionItemEnum;
+    let CaseActionItemEnum;
     (function (CaseActionItemEnum) {
         CaseActionItemEnum[CaseActionItemEnum["FEEADJUSTMENT"] = 'FEE_ADJUSTMENT'] = "FEEADJUSTMENT";
         CaseActionItemEnum[CaseActionItemEnum["NOREFUNDOFFERED"] = 'NO_REFUND_OFFERED'] = "NOREFUNDOFFERED";
         CaseActionItemEnum[CaseActionItemEnum["REQUESTCOURTEXTENSION"] = 'REQUEST_COURT_EXTENSION'] = "REQUESTCOURTEXTENSION";
     })(CaseActionItemEnum = ClientActionRequiredRequest.CaseActionItemEnum || (ClientActionRequiredRequest.CaseActionItemEnum = {}));
-})(ClientActionRequiredRequest = exports.ClientActionRequiredRequest || (exports.ClientActionRequiredRequest = {}));
+})(ClientActionRequiredRequest || (ClientActionRequiredRequest = {}));

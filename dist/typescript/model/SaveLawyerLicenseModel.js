@@ -1,4 +1,3 @@
-"use strict";
 /**
  * OffTheRecord Rest Service API - Devo
  * A service to handle your traffic tickets
@@ -10,11 +9,9 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.SaveLawyerLicenseModel = void 0;
-var SaveLawyerLicenseModel;
+export var SaveLawyerLicenseModel;
 (function (SaveLawyerLicenseModel) {
-    var RegionCodeEnum;
+    let RegionCodeEnum;
     (function (RegionCodeEnum) {
         RegionCodeEnum[RegionCodeEnum["AK"] = 'AK'] = "AK";
         RegionCodeEnum[RegionCodeEnum["AL"] = 'AL'] = "AL";
@@ -68,8 +65,8 @@ var SaveLawyerLicenseModel;
         RegionCodeEnum[RegionCodeEnum["WV"] = 'WV'] = "WV";
         RegionCodeEnum[RegionCodeEnum["WY"] = 'WY'] = "WY";
     })(RegionCodeEnum = SaveLawyerLicenseModel.RegionCodeEnum || (SaveLawyerLicenseModel.RegionCodeEnum = {}));
-    var TypeEnum;
+    let TypeEnum;
     (function (TypeEnum) {
         TypeEnum[TypeEnum["BAR"] = 'BAR'] = "BAR";
     })(TypeEnum = SaveLawyerLicenseModel.TypeEnum || (SaveLawyerLicenseModel.TypeEnum = {}));
-})(SaveLawyerLicenseModel = exports.SaveLawyerLicenseModel || (exports.SaveLawyerLicenseModel = {}));
+})(SaveLawyerLicenseModel || (SaveLawyerLicenseModel = {}));

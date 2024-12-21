@@ -1,4 +1,3 @@
-"use strict";
 /**
  * OffTheRecord Rest Service API - Devo
  * A service to handle your traffic tickets
@@ -10,11 +9,9 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.CoachingCardsControllerApi = void 0;
 /* tslint:disable:no-unused-variable member-ordering */
-var CoachingCardsControllerApi = /** @class */ (function () {
-    function CoachingCardsControllerApi($http, $httpParamSerializer, basePath) {
+export class CoachingCardsControllerApi {
+    constructor($http, $httpParamSerializer, basePath) {
         this.$http = $http;
         this.$httpParamSerializer = $httpParamSerializer;
         this.basePath = 'http://otr-backend-service-us-devo.offtherecord.com';
@@ -28,15 +25,15 @@ var CoachingCardsControllerApi = /** @class */ (function () {
      * @summary acknowledgeCoachingCard
      * @param request request
      */
-    CoachingCardsControllerApi.prototype.acknowledgeCoachingCardUsingPUT = function (request, extraHttpRequestParams) {
-        var localVarPath = this.basePath + '/api/api/v1/coaching-cards/acknowledge';
-        var queryParameters = {};
-        var headerParams = Object.assign({}, this.defaultHeaders);
+    acknowledgeCoachingCardUsingPUT(request, extraHttpRequestParams) {
+        const localVarPath = this.basePath + '/api/api/v1/coaching-cards/acknowledge';
+        let queryParameters = {};
+        let headerParams = Object.assign({}, this.defaultHeaders);
         // verify required parameter 'request' is not null or undefined
         if (request === null || request === undefined) {
             throw new Error('Required parameter request was null or undefined when calling acknowledgeCoachingCardUsingPUT.');
         }
-        var httpRequestParams = {
+        let httpRequestParams = {
             method: 'PUT',
             url: localVarPath,
             data: request,
@@ -47,16 +44,16 @@ var CoachingCardsControllerApi = /** @class */ (function () {
             httpRequestParams = Object.assign(httpRequestParams, extraHttpRequestParams);
         }
         return this.$http(httpRequestParams);
-    };
+    }
     /**
      *
      * @summary getCoachingCardCategories
      */
-    CoachingCardsControllerApi.prototype.getCoachingCardCategoriesUsingGET = function (extraHttpRequestParams) {
-        var localVarPath = this.basePath + '/api/api/v1/coaching-cards/categories';
-        var queryParameters = {};
-        var headerParams = Object.assign({}, this.defaultHeaders);
-        var httpRequestParams = {
+    getCoachingCardCategoriesUsingGET(extraHttpRequestParams) {
+        const localVarPath = this.basePath + '/api/api/v1/coaching-cards/categories';
+        let queryParameters = {};
+        let headerParams = Object.assign({}, this.defaultHeaders);
+        let httpRequestParams = {
             method: 'GET',
             url: localVarPath,
             params: queryParameters,
@@ -66,7 +63,7 @@ var CoachingCardsControllerApi = /** @class */ (function () {
             httpRequestParams = Object.assign(httpRequestParams, extraHttpRequestParams);
         }
         return this.$http(httpRequestParams);
-    };
+    }
     /**
      *
      * @summary listUserCoachingCards
@@ -75,11 +72,11 @@ var CoachingCardsControllerApi = /** @class */ (function () {
      * @param includeCreated includeCreated
      * @param includeReceived includeReceived
      */
-    CoachingCardsControllerApi.prototype.listUserCoachingCardsUsingGET = function (userId, coachingCardType, includeCreated, includeReceived, extraHttpRequestParams) {
-        var localVarPath = this.basePath + '/api/v1/coaching-cards/{userId}/cards'
+    listUserCoachingCardsUsingGET(userId, coachingCardType, includeCreated, includeReceived, extraHttpRequestParams) {
+        const localVarPath = this.basePath + '/api/v1/coaching-cards/{userId}/cards'
             .replace('{' + 'userId' + '}', encodeURIComponent(String(userId)));
-        var queryParameters = {};
-        var headerParams = Object.assign({}, this.defaultHeaders);
+        let queryParameters = {};
+        let headerParams = Object.assign({}, this.defaultHeaders);
         // verify required parameter 'userId' is not null or undefined
         if (userId === null || userId === undefined) {
             throw new Error('Required parameter userId was null or undefined when calling listUserCoachingCardsUsingGET.');
@@ -93,7 +90,7 @@ var CoachingCardsControllerApi = /** @class */ (function () {
         if (includeReceived !== undefined) {
             queryParameters['includeReceived'] = includeReceived;
         }
-        var httpRequestParams = {
+        let httpRequestParams = {
             method: 'GET',
             url: localVarPath,
             params: queryParameters,
@@ -103,21 +100,21 @@ var CoachingCardsControllerApi = /** @class */ (function () {
             httpRequestParams = Object.assign(httpRequestParams, extraHttpRequestParams);
         }
         return this.$http(httpRequestParams);
-    };
+    }
     /**
      *
      * @summary saveCoachingCard
      * @param request request
      */
-    CoachingCardsControllerApi.prototype.saveCoachingCardUsingPOST = function (request, extraHttpRequestParams) {
-        var localVarPath = this.basePath + '/api/v1/coaching-cards/cards';
-        var queryParameters = {};
-        var headerParams = Object.assign({}, this.defaultHeaders);
+    saveCoachingCardUsingPOST(request, extraHttpRequestParams) {
+        const localVarPath = this.basePath + '/api/v1/coaching-cards/cards';
+        let queryParameters = {};
+        let headerParams = Object.assign({}, this.defaultHeaders);
         // verify required parameter 'request' is not null or undefined
         if (request === null || request === undefined) {
             throw new Error('Required parameter request was null or undefined when calling saveCoachingCardUsingPOST.');
         }
-        var httpRequestParams = {
+        let httpRequestParams = {
             method: 'POST',
             url: localVarPath,
             data: request,
@@ -128,8 +125,6 @@ var CoachingCardsControllerApi = /** @class */ (function () {
             httpRequestParams = Object.assign(httpRequestParams, extraHttpRequestParams);
         }
         return this.$http(httpRequestParams);
-    };
-    CoachingCardsControllerApi.$inject = ['$http', '$httpParamSerializer', 'basePath'];
-    return CoachingCardsControllerApi;
-}());
-exports.CoachingCardsControllerApi = CoachingCardsControllerApi;
+    }
+}
+CoachingCardsControllerApi.$inject = ['$http', '$httpParamSerializer', 'basePath'];
