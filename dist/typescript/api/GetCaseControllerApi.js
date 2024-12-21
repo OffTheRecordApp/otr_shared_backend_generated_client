@@ -1,4 +1,3 @@
-"use strict";
 /**
  * OffTheRecord Rest Service API - Devo
  * A service to handle your traffic tickets
@@ -10,11 +9,9 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.GetCaseControllerApi = void 0;
 /* tslint:disable:no-unused-variable member-ordering */
-var GetCaseControllerApi = /** @class */ (function () {
-    function GetCaseControllerApi($http, $httpParamSerializer, basePath) {
+export class GetCaseControllerApi {
+    constructor($http, $httpParamSerializer, basePath) {
         this.$http = $http;
         this.$httpParamSerializer = $httpParamSerializer;
         this.basePath = 'http://otr-backend-service-us-devo.offtherecord.com';
@@ -28,16 +25,16 @@ var GetCaseControllerApi = /** @class */ (function () {
      * @summary getCaseClient
      * @param caseId caseId
      */
-    GetCaseControllerApi.prototype.getCaseClientUsingGET = function (caseId, extraHttpRequestParams) {
-        var localVarPath = this.basePath + '/api/v1/cases/{caseId}/client'
+    getCaseClientUsingGET(caseId, extraHttpRequestParams) {
+        const localVarPath = this.basePath + '/api/v1/cases/{caseId}/client'
             .replace('{' + 'caseId' + '}', encodeURIComponent(String(caseId)));
-        var queryParameters = {};
-        var headerParams = Object.assign({}, this.defaultHeaders);
+        let queryParameters = {};
+        let headerParams = Object.assign({}, this.defaultHeaders);
         // verify required parameter 'caseId' is not null or undefined
         if (caseId === null || caseId === undefined) {
             throw new Error('Required parameter caseId was null or undefined when calling getCaseClientUsingGET.');
         }
-        var httpRequestParams = {
+        let httpRequestParams = {
             method: 'GET',
             url: localVarPath,
             params: queryParameters,
@@ -47,22 +44,22 @@ var GetCaseControllerApi = /** @class */ (function () {
             httpRequestParams = Object.assign(httpRequestParams, extraHttpRequestParams);
         }
         return this.$http(httpRequestParams);
-    };
+    }
     /**
      *
      * @summary getCaseFromCitation
      * @param citationId citationId
      */
-    GetCaseControllerApi.prototype.getCaseFromCitationUsingGET = function (citationId, extraHttpRequestParams) {
-        var localVarPath = this.basePath + '/api/v1/citations/{citationId}/case'
+    getCaseFromCitationUsingGET(citationId, extraHttpRequestParams) {
+        const localVarPath = this.basePath + '/api/v1/citations/{citationId}/case'
             .replace('{' + 'citationId' + '}', encodeURIComponent(String(citationId)));
-        var queryParameters = {};
-        var headerParams = Object.assign({}, this.defaultHeaders);
+        let queryParameters = {};
+        let headerParams = Object.assign({}, this.defaultHeaders);
         // verify required parameter 'citationId' is not null or undefined
         if (citationId === null || citationId === undefined) {
             throw new Error('Required parameter citationId was null or undefined when calling getCaseFromCitationUsingGET.');
         }
-        var httpRequestParams = {
+        let httpRequestParams = {
             method: 'GET',
             url: localVarPath,
             params: queryParameters,
@@ -72,22 +69,22 @@ var GetCaseControllerApi = /** @class */ (function () {
             httpRequestParams = Object.assign(httpRequestParams, extraHttpRequestParams);
         }
         return this.$http(httpRequestParams);
-    };
+    }
     /**
      *
      * @summary getCase
      * @param caseId caseId
      */
-    GetCaseControllerApi.prototype.getCaseUsingGET = function (caseId, extraHttpRequestParams) {
-        var localVarPath = this.basePath + '/api/v1/cases/{caseId}'
+    getCaseUsingGET(caseId, extraHttpRequestParams) {
+        const localVarPath = this.basePath + '/api/v1/cases/{caseId}'
             .replace('{' + 'caseId' + '}', encodeURIComponent(String(caseId)));
-        var queryParameters = {};
-        var headerParams = Object.assign({}, this.defaultHeaders);
+        let queryParameters = {};
+        let headerParams = Object.assign({}, this.defaultHeaders);
         // verify required parameter 'caseId' is not null or undefined
         if (caseId === null || caseId === undefined) {
             throw new Error('Required parameter caseId was null or undefined when calling getCaseUsingGET.');
         }
-        var httpRequestParams = {
+        let httpRequestParams = {
             method: 'GET',
             url: localVarPath,
             params: queryParameters,
@@ -97,8 +94,6 @@ var GetCaseControllerApi = /** @class */ (function () {
             httpRequestParams = Object.assign(httpRequestParams, extraHttpRequestParams);
         }
         return this.$http(httpRequestParams);
-    };
-    GetCaseControllerApi.$inject = ['$http', '$httpParamSerializer', 'basePath'];
-    return GetCaseControllerApi;
-}());
-exports.GetCaseControllerApi = GetCaseControllerApi;
+    }
+}
+GetCaseControllerApi.$inject = ['$http', '$httpParamSerializer', 'basePath'];

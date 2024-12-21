@@ -1,4 +1,3 @@
-"use strict";
 /**
  * OffTheRecord Rest Service API - Devo
  * A service to handle your traffic tickets
@@ -10,11 +9,9 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.StripeCardControllerApi = void 0;
 /* tslint:disable:no-unused-variable member-ordering */
-var StripeCardControllerApi = /** @class */ (function () {
-    function StripeCardControllerApi($http, $httpParamSerializer, basePath) {
+export class StripeCardControllerApi {
+    constructor($http, $httpParamSerializer, basePath) {
         this.$http = $http;
         this.$httpParamSerializer = $httpParamSerializer;
         this.basePath = 'http://otr-backend-service-us-devo.offtherecord.com';
@@ -29,11 +26,11 @@ var StripeCardControllerApi = /** @class */ (function () {
      * @param lawfirmId lawfirmId
      * @param request request
      */
-    StripeCardControllerApi.prototype.addACHToLawfirmStripeAccountUsingPOST = function (lawfirmId, request, extraHttpRequestParams) {
-        var localVarPath = this.basePath + '/api/v1/lawfirms/{lawfirmId}/stripe/ach'
+    addACHToLawfirmStripeAccountUsingPOST(lawfirmId, request, extraHttpRequestParams) {
+        const localVarPath = this.basePath + '/api/v1/lawfirms/{lawfirmId}/stripe/ach'
             .replace('{' + 'lawfirmId' + '}', encodeURIComponent(String(lawfirmId)));
-        var queryParameters = {};
-        var headerParams = Object.assign({}, this.defaultHeaders);
+        let queryParameters = {};
+        let headerParams = Object.assign({}, this.defaultHeaders);
         // verify required parameter 'lawfirmId' is not null or undefined
         if (lawfirmId === null || lawfirmId === undefined) {
             throw new Error('Required parameter lawfirmId was null or undefined when calling addACHToLawfirmStripeAccountUsingPOST.');
@@ -42,7 +39,7 @@ var StripeCardControllerApi = /** @class */ (function () {
         if (request === null || request === undefined) {
             throw new Error('Required parameter request was null or undefined when calling addACHToLawfirmStripeAccountUsingPOST.');
         }
-        var httpRequestParams = {
+        let httpRequestParams = {
             method: 'POST',
             url: localVarPath,
             data: request,
@@ -53,18 +50,18 @@ var StripeCardControllerApi = /** @class */ (function () {
             httpRequestParams = Object.assign(httpRequestParams, extraHttpRequestParams);
         }
         return this.$http(httpRequestParams);
-    };
+    }
     /**
      *
      * @summary addACHToUserStripeAccount
      * @param userId userId
      * @param request request
      */
-    StripeCardControllerApi.prototype.addACHToUserStripeAccountUsingPOST = function (userId, request, extraHttpRequestParams) {
-        var localVarPath = this.basePath + '/api/v1/users/{userId}/stripe/ach'
+    addACHToUserStripeAccountUsingPOST(userId, request, extraHttpRequestParams) {
+        const localVarPath = this.basePath + '/api/v1/users/{userId}/stripe/ach'
             .replace('{' + 'userId' + '}', encodeURIComponent(String(userId)));
-        var queryParameters = {};
-        var headerParams = Object.assign({}, this.defaultHeaders);
+        let queryParameters = {};
+        let headerParams = Object.assign({}, this.defaultHeaders);
         // verify required parameter 'userId' is not null or undefined
         if (userId === null || userId === undefined) {
             throw new Error('Required parameter userId was null or undefined when calling addACHToUserStripeAccountUsingPOST.');
@@ -73,7 +70,7 @@ var StripeCardControllerApi = /** @class */ (function () {
         if (request === null || request === undefined) {
             throw new Error('Required parameter request was null or undefined when calling addACHToUserStripeAccountUsingPOST.');
         }
-        var httpRequestParams = {
+        let httpRequestParams = {
             method: 'POST',
             url: localVarPath,
             data: request,
@@ -84,21 +81,21 @@ var StripeCardControllerApi = /** @class */ (function () {
             httpRequestParams = Object.assign(httpRequestParams, extraHttpRequestParams);
         }
         return this.$http(httpRequestParams);
-    };
+    }
     /**
      *
      * @summary addCardToStripeAccount
      * @param request request
      */
-    StripeCardControllerApi.prototype.addCardToStripeAccountUsingPOST = function (request, extraHttpRequestParams) {
-        var localVarPath = this.basePath + '/api/v1/users/stripe/account/cards';
-        var queryParameters = {};
-        var headerParams = Object.assign({}, this.defaultHeaders);
+    addCardToStripeAccountUsingPOST(request, extraHttpRequestParams) {
+        const localVarPath = this.basePath + '/api/v1/users/stripe/account/cards';
+        let queryParameters = {};
+        let headerParams = Object.assign({}, this.defaultHeaders);
         // verify required parameter 'request' is not null or undefined
         if (request === null || request === undefined) {
             throw new Error('Required parameter request was null or undefined when calling addCardToStripeAccountUsingPOST.');
         }
-        var httpRequestParams = {
+        let httpRequestParams = {
             method: 'POST',
             url: localVarPath,
             data: request,
@@ -109,19 +106,19 @@ var StripeCardControllerApi = /** @class */ (function () {
             httpRequestParams = Object.assign(httpRequestParams, extraHttpRequestParams);
         }
         return this.$http(httpRequestParams);
-    };
+    }
     /**
      *
      * @summary deleteBankAccountFromLawfirmStripeAccount
      * @param bankAccountId bankAccountId
      * @param lawfirmId lawfirmId
      */
-    StripeCardControllerApi.prototype.deleteBankAccountFromLawfirmStripeAccountUsingDELETE = function (bankAccountId, lawfirmId, extraHttpRequestParams) {
-        var localVarPath = this.basePath + '/api/v1/lawfirms/{lawfirmId}/stripe/bank-accounts/{bankAccountId}'
+    deleteBankAccountFromLawfirmStripeAccountUsingDELETE(bankAccountId, lawfirmId, extraHttpRequestParams) {
+        const localVarPath = this.basePath + '/api/v1/lawfirms/{lawfirmId}/stripe/bank-accounts/{bankAccountId}'
             .replace('{' + 'bankAccountId' + '}', encodeURIComponent(String(bankAccountId)))
             .replace('{' + 'lawfirmId' + '}', encodeURIComponent(String(lawfirmId)));
-        var queryParameters = {};
-        var headerParams = Object.assign({}, this.defaultHeaders);
+        let queryParameters = {};
+        let headerParams = Object.assign({}, this.defaultHeaders);
         // verify required parameter 'bankAccountId' is not null or undefined
         if (bankAccountId === null || bankAccountId === undefined) {
             throw new Error('Required parameter bankAccountId was null or undefined when calling deleteBankAccountFromLawfirmStripeAccountUsingDELETE.');
@@ -130,7 +127,7 @@ var StripeCardControllerApi = /** @class */ (function () {
         if (lawfirmId === null || lawfirmId === undefined) {
             throw new Error('Required parameter lawfirmId was null or undefined when calling deleteBankAccountFromLawfirmStripeAccountUsingDELETE.');
         }
-        var httpRequestParams = {
+        let httpRequestParams = {
             method: 'DELETE',
             url: localVarPath,
             params: queryParameters,
@@ -140,19 +137,19 @@ var StripeCardControllerApi = /** @class */ (function () {
             httpRequestParams = Object.assign(httpRequestParams, extraHttpRequestParams);
         }
         return this.$http(httpRequestParams);
-    };
+    }
     /**
      *
      * @summary deleteCardForUser
      * @param cardId cardId
      * @param userId userId
      */
-    StripeCardControllerApi.prototype.deleteCardForUserUsingDELETE = function (cardId, userId, extraHttpRequestParams) {
-        var localVarPath = this.basePath + '/api/v1/users/{userId}/stripe/account/cards/{cardId}'
+    deleteCardForUserUsingDELETE(cardId, userId, extraHttpRequestParams) {
+        const localVarPath = this.basePath + '/api/v1/users/{userId}/stripe/account/cards/{cardId}'
             .replace('{' + 'cardId' + '}', encodeURIComponent(String(cardId)))
             .replace('{' + 'userId' + '}', encodeURIComponent(String(userId)));
-        var queryParameters = {};
-        var headerParams = Object.assign({}, this.defaultHeaders);
+        let queryParameters = {};
+        let headerParams = Object.assign({}, this.defaultHeaders);
         // verify required parameter 'cardId' is not null or undefined
         if (cardId === null || cardId === undefined) {
             throw new Error('Required parameter cardId was null or undefined when calling deleteCardForUserUsingDELETE.');
@@ -161,7 +158,7 @@ var StripeCardControllerApi = /** @class */ (function () {
         if (userId === null || userId === undefined) {
             throw new Error('Required parameter userId was null or undefined when calling deleteCardForUserUsingDELETE.');
         }
-        var httpRequestParams = {
+        let httpRequestParams = {
             method: 'DELETE',
             url: localVarPath,
             params: queryParameters,
@@ -171,22 +168,22 @@ var StripeCardControllerApi = /** @class */ (function () {
             httpRequestParams = Object.assign(httpRequestParams, extraHttpRequestParams);
         }
         return this.$http(httpRequestParams);
-    };
+    }
     /**
      *
      * @summary deleteCard
      * @param cardId cardId
      */
-    StripeCardControllerApi.prototype.deleteCardUsingDELETE = function (cardId, extraHttpRequestParams) {
-        var localVarPath = this.basePath + '/api/v1/users/stripe/account/cards/{cardId}'
+    deleteCardUsingDELETE(cardId, extraHttpRequestParams) {
+        const localVarPath = this.basePath + '/api/v1/users/stripe/account/cards/{cardId}'
             .replace('{' + 'cardId' + '}', encodeURIComponent(String(cardId)));
-        var queryParameters = {};
-        var headerParams = Object.assign({}, this.defaultHeaders);
+        let queryParameters = {};
+        let headerParams = Object.assign({}, this.defaultHeaders);
         // verify required parameter 'cardId' is not null or undefined
         if (cardId === null || cardId === undefined) {
             throw new Error('Required parameter cardId was null or undefined when calling deleteCardUsingDELETE.');
         }
-        var httpRequestParams = {
+        let httpRequestParams = {
             method: 'DELETE',
             url: localVarPath,
             params: queryParameters,
@@ -196,22 +193,22 @@ var StripeCardControllerApi = /** @class */ (function () {
             httpRequestParams = Object.assign(httpRequestParams, extraHttpRequestParams);
         }
         return this.$http(httpRequestParams);
-    };
+    }
     /**
      *
      * @summary getCard
      * @param cardId cardId
      */
-    StripeCardControllerApi.prototype.getCardUsingGET = function (cardId, extraHttpRequestParams) {
-        var localVarPath = this.basePath + '/api/v1/users/stripe/account/cards/{cardId}'
+    getCardUsingGET(cardId, extraHttpRequestParams) {
+        const localVarPath = this.basePath + '/api/v1/users/stripe/account/cards/{cardId}'
             .replace('{' + 'cardId' + '}', encodeURIComponent(String(cardId)));
-        var queryParameters = {};
-        var headerParams = Object.assign({}, this.defaultHeaders);
+        let queryParameters = {};
+        let headerParams = Object.assign({}, this.defaultHeaders);
         // verify required parameter 'cardId' is not null or undefined
         if (cardId === null || cardId === undefined) {
             throw new Error('Required parameter cardId was null or undefined when calling getCardUsingGET.');
         }
-        var httpRequestParams = {
+        let httpRequestParams = {
             method: 'GET',
             url: localVarPath,
             params: queryParameters,
@@ -221,22 +218,22 @@ var StripeCardControllerApi = /** @class */ (function () {
             httpRequestParams = Object.assign(httpRequestParams, extraHttpRequestParams);
         }
         return this.$http(httpRequestParams);
-    };
+    }
     /**
      *
      * @summary Retrieves all the payment methods available on the lawfirm\'s Stripe account.
      * @param lawfirmId lawfirmId
      */
-    StripeCardControllerApi.prototype.getLawfirmPaymentMethodsUsingGET = function (lawfirmId, extraHttpRequestParams) {
-        var localVarPath = this.basePath + '/api/v1/lawfirms/{lawfirmId}/paymentmethods'
+    getLawfirmPaymentMethodsUsingGET(lawfirmId, extraHttpRequestParams) {
+        const localVarPath = this.basePath + '/api/v1/lawfirms/{lawfirmId}/paymentmethods'
             .replace('{' + 'lawfirmId' + '}', encodeURIComponent(String(lawfirmId)));
-        var queryParameters = {};
-        var headerParams = Object.assign({}, this.defaultHeaders);
+        let queryParameters = {};
+        let headerParams = Object.assign({}, this.defaultHeaders);
         // verify required parameter 'lawfirmId' is not null or undefined
         if (lawfirmId === null || lawfirmId === undefined) {
             throw new Error('Required parameter lawfirmId was null or undefined when calling getLawfirmPaymentMethodsUsingGET.');
         }
-        var httpRequestParams = {
+        let httpRequestParams = {
             method: 'GET',
             url: localVarPath,
             params: queryParameters,
@@ -246,22 +243,22 @@ var StripeCardControllerApi = /** @class */ (function () {
             httpRequestParams = Object.assign(httpRequestParams, extraHttpRequestParams);
         }
         return this.$http(httpRequestParams);
-    };
+    }
     /**
      *
      * @summary Retrieves all the payment methods available on the user\'s Stripe account.
      * @param userIdString userIdString
      */
-    StripeCardControllerApi.prototype.getPaymentMethodsForUserUsingGET = function (userIdString, extraHttpRequestParams) {
-        var localVarPath = this.basePath + '/api/v1/users/{userIdString}/paymentmethods'
+    getPaymentMethodsForUserUsingGET(userIdString, extraHttpRequestParams) {
+        const localVarPath = this.basePath + '/api/v1/users/{userIdString}/paymentmethods'
             .replace('{' + 'userIdString' + '}', encodeURIComponent(String(userIdString)));
-        var queryParameters = {};
-        var headerParams = Object.assign({}, this.defaultHeaders);
+        let queryParameters = {};
+        let headerParams = Object.assign({}, this.defaultHeaders);
         // verify required parameter 'userIdString' is not null or undefined
         if (userIdString === null || userIdString === undefined) {
             throw new Error('Required parameter userIdString was null or undefined when calling getPaymentMethodsForUserUsingGET.');
         }
-        var httpRequestParams = {
+        let httpRequestParams = {
             method: 'GET',
             url: localVarPath,
             params: queryParameters,
@@ -271,19 +268,19 @@ var StripeCardControllerApi = /** @class */ (function () {
             httpRequestParams = Object.assign(httpRequestParams, extraHttpRequestParams);
         }
         return this.$http(httpRequestParams);
-    };
+    }
     /**
      *
      * @summary setCardAsPrimary
      * @param cardId cardId
      * @param userId userId
      */
-    StripeCardControllerApi.prototype.setCardAsPrimaryUsingPUT = function (cardId, userId, extraHttpRequestParams) {
-        var localVarPath = this.basePath + '/api/v1/users/{userId}/account/cards/{cardId}/primary'
+    setCardAsPrimaryUsingPUT(cardId, userId, extraHttpRequestParams) {
+        const localVarPath = this.basePath + '/api/v1/users/{userId}/account/cards/{cardId}/primary'
             .replace('{' + 'cardId' + '}', encodeURIComponent(String(cardId)))
             .replace('{' + 'userId' + '}', encodeURIComponent(String(userId)));
-        var queryParameters = {};
-        var headerParams = Object.assign({}, this.defaultHeaders);
+        let queryParameters = {};
+        let headerParams = Object.assign({}, this.defaultHeaders);
         // verify required parameter 'cardId' is not null or undefined
         if (cardId === null || cardId === undefined) {
             throw new Error('Required parameter cardId was null or undefined when calling setCardAsPrimaryUsingPUT.');
@@ -292,7 +289,7 @@ var StripeCardControllerApi = /** @class */ (function () {
         if (userId === null || userId === undefined) {
             throw new Error('Required parameter userId was null or undefined when calling setCardAsPrimaryUsingPUT.');
         }
-        var httpRequestParams = {
+        let httpRequestParams = {
             method: 'PUT',
             url: localVarPath,
             params: queryParameters,
@@ -302,18 +299,18 @@ var StripeCardControllerApi = /** @class */ (function () {
             httpRequestParams = Object.assign(httpRequestParams, extraHttpRequestParams);
         }
         return this.$http(httpRequestParams);
-    };
+    }
     /**
      *
      * @summary setDefaultPaymentMethodForLawfirm
      * @param lawfirmId lawfirmId
      * @param stripePaymentSourceId stripePaymentSourceId
      */
-    StripeCardControllerApi.prototype.setDefaultPaymentMethodForLawfirmUsingPUT = function (lawfirmId, stripePaymentSourceId, extraHttpRequestParams) {
-        var localVarPath = this.basePath + '/api/v1/lawfirms/{lawfirmId}/stripe/payment-methods/default'
+    setDefaultPaymentMethodForLawfirmUsingPUT(lawfirmId, stripePaymentSourceId, extraHttpRequestParams) {
+        const localVarPath = this.basePath + '/api/v1/lawfirms/{lawfirmId}/stripe/payment-methods/default'
             .replace('{' + 'lawfirmId' + '}', encodeURIComponent(String(lawfirmId)));
-        var queryParameters = {};
-        var headerParams = Object.assign({}, this.defaultHeaders);
+        let queryParameters = {};
+        let headerParams = Object.assign({}, this.defaultHeaders);
         // verify required parameter 'lawfirmId' is not null or undefined
         if (lawfirmId === null || lawfirmId === undefined) {
             throw new Error('Required parameter lawfirmId was null or undefined when calling setDefaultPaymentMethodForLawfirmUsingPUT.');
@@ -325,7 +322,7 @@ var StripeCardControllerApi = /** @class */ (function () {
         if (stripePaymentSourceId !== undefined) {
             queryParameters['stripePaymentSourceId'] = stripePaymentSourceId;
         }
-        var httpRequestParams = {
+        let httpRequestParams = {
             method: 'PUT',
             url: localVarPath,
             params: queryParameters,
@@ -335,8 +332,6 @@ var StripeCardControllerApi = /** @class */ (function () {
             httpRequestParams = Object.assign(httpRequestParams, extraHttpRequestParams);
         }
         return this.$http(httpRequestParams);
-    };
-    StripeCardControllerApi.$inject = ['$http', '$httpParamSerializer', 'basePath'];
-    return StripeCardControllerApi;
-}());
-exports.StripeCardControllerApi = StripeCardControllerApi;
+    }
+}
+StripeCardControllerApi.$inject = ['$http', '$httpParamSerializer', 'basePath'];

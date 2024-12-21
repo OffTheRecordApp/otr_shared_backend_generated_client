@@ -1,4 +1,3 @@
-"use strict";
 /**
  * OffTheRecord Rest Service API - Devo
  * A service to handle your traffic tickets
@@ -10,13 +9,11 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.UserReferralLinkModel = void 0;
-var UserReferralLinkModel;
+export var UserReferralLinkModel;
 (function (UserReferralLinkModel) {
-    var ReferralLinkTypeEnum;
+    let ReferralLinkTypeEnum;
     (function (ReferralLinkTypeEnum) {
         ReferralLinkTypeEnum[ReferralLinkTypeEnum["FASTLANETEEN"] = 'FASTLANE_TEEN'] = "FASTLANETEEN";
         ReferralLinkTypeEnum[ReferralLinkTypeEnum["PRIMARY"] = 'PRIMARY'] = "PRIMARY";
     })(ReferralLinkTypeEnum = UserReferralLinkModel.ReferralLinkTypeEnum || (UserReferralLinkModel.ReferralLinkTypeEnum = {}));
-})(UserReferralLinkModel = exports.UserReferralLinkModel || (exports.UserReferralLinkModel = {}));
+})(UserReferralLinkModel || (UserReferralLinkModel = {}));

@@ -1,4 +1,3 @@
-"use strict";
 /**
  * OffTheRecord Rest Service API - Devo
  * A service to handle your traffic tickets
@@ -10,11 +9,9 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.NotesControllerApi = void 0;
 /* tslint:disable:no-unused-variable member-ordering */
-var NotesControllerApi = /** @class */ (function () {
-    function NotesControllerApi($http, $httpParamSerializer, basePath) {
+export class NotesControllerApi {
+    constructor($http, $httpParamSerializer, basePath) {
         this.$http = $http;
         this.$httpParamSerializer = $httpParamSerializer;
         this.basePath = 'http://otr-backend-service-us-devo.offtherecord.com';
@@ -28,15 +25,15 @@ var NotesControllerApi = /** @class */ (function () {
      * @summary createNote
      * @param request request
      */
-    NotesControllerApi.prototype.createNoteUsingPOST = function (request, extraHttpRequestParams) {
-        var localVarPath = this.basePath + '/api/v1/notes';
-        var queryParameters = {};
-        var headerParams = Object.assign({}, this.defaultHeaders);
+    createNoteUsingPOST(request, extraHttpRequestParams) {
+        const localVarPath = this.basePath + '/api/v1/notes';
+        let queryParameters = {};
+        let headerParams = Object.assign({}, this.defaultHeaders);
         // verify required parameter 'request' is not null or undefined
         if (request === null || request === undefined) {
             throw new Error('Required parameter request was null or undefined when calling createNoteUsingPOST.');
         }
-        var httpRequestParams = {
+        let httpRequestParams = {
             method: 'POST',
             url: localVarPath,
             data: request,
@@ -47,22 +44,22 @@ var NotesControllerApi = /** @class */ (function () {
             httpRequestParams = Object.assign(httpRequestParams, extraHttpRequestParams);
         }
         return this.$http(httpRequestParams);
-    };
+    }
     /**
      *
      * @summary deleteNote
      * @param noteId noteId
      */
-    NotesControllerApi.prototype.deleteNoteUsingDELETE = function (noteId, extraHttpRequestParams) {
-        var localVarPath = this.basePath + '/api/v1/notes/{noteId}'
+    deleteNoteUsingDELETE(noteId, extraHttpRequestParams) {
+        const localVarPath = this.basePath + '/api/v1/notes/{noteId}'
             .replace('{' + 'noteId' + '}', encodeURIComponent(String(noteId)));
-        var queryParameters = {};
-        var headerParams = Object.assign({}, this.defaultHeaders);
+        let queryParameters = {};
+        let headerParams = Object.assign({}, this.defaultHeaders);
         // verify required parameter 'noteId' is not null or undefined
         if (noteId === null || noteId === undefined) {
             throw new Error('Required parameter noteId was null or undefined when calling deleteNoteUsingDELETE.');
         }
-        var httpRequestParams = {
+        let httpRequestParams = {
             method: 'DELETE',
             url: localVarPath,
             params: queryParameters,
@@ -72,7 +69,7 @@ var NotesControllerApi = /** @class */ (function () {
             httpRequestParams = Object.assign(httpRequestParams, extraHttpRequestParams);
         }
         return this.$http(httpRequestParams);
-    };
+    }
     /**
      *
      * @summary listNotes
@@ -85,12 +82,12 @@ var NotesControllerApi = /** @class */ (function () {
      * @param nextPageToken nextPageToken
      * @param previousPageToken previousPageToken
      */
-    NotesControllerApi.prototype.listNotesUsingGET = function (noteType, referenceId, authorUserId, includeDeleted, initialNoteId, limit, nextPageToken, previousPageToken, extraHttpRequestParams) {
-        var localVarPath = this.basePath + '/api/v2/notes/{noteType}/{referenceId}'
+    listNotesUsingGET(noteType, referenceId, authorUserId, includeDeleted, initialNoteId, limit, nextPageToken, previousPageToken, extraHttpRequestParams) {
+        const localVarPath = this.basePath + '/api/v2/notes/{noteType}/{referenceId}'
             .replace('{' + 'noteType' + '}', encodeURIComponent(String(noteType)))
             .replace('{' + 'referenceId' + '}', encodeURIComponent(String(referenceId)));
-        var queryParameters = {};
-        var headerParams = Object.assign({}, this.defaultHeaders);
+        let queryParameters = {};
+        let headerParams = Object.assign({}, this.defaultHeaders);
         // verify required parameter 'noteType' is not null or undefined
         if (noteType === null || noteType === undefined) {
             throw new Error('Required parameter noteType was null or undefined when calling listNotesUsingGET.');
@@ -117,7 +114,7 @@ var NotesControllerApi = /** @class */ (function () {
         if (previousPageToken !== undefined) {
             queryParameters['previousPageToken'] = previousPageToken;
         }
-        var httpRequestParams = {
+        let httpRequestParams = {
             method: 'GET',
             url: localVarPath,
             params: queryParameters,
@@ -127,18 +124,18 @@ var NotesControllerApi = /** @class */ (function () {
             httpRequestParams = Object.assign(httpRequestParams, extraHttpRequestParams);
         }
         return this.$http(httpRequestParams);
-    };
+    }
     /**
      *
      * @summary saveNotes
      * @param userId userId
      * @param request request
      */
-    NotesControllerApi.prototype.saveNotesUsingPOST = function (userId, request, extraHttpRequestParams) {
-        var localVarPath = this.basePath + '/api/v2/notes/{userId}'
+    saveNotesUsingPOST(userId, request, extraHttpRequestParams) {
+        const localVarPath = this.basePath + '/api/v2/notes/{userId}'
             .replace('{' + 'userId' + '}', encodeURIComponent(String(userId)));
-        var queryParameters = {};
-        var headerParams = Object.assign({}, this.defaultHeaders);
+        let queryParameters = {};
+        let headerParams = Object.assign({}, this.defaultHeaders);
         // verify required parameter 'userId' is not null or undefined
         if (userId === null || userId === undefined) {
             throw new Error('Required parameter userId was null or undefined when calling saveNotesUsingPOST.');
@@ -147,7 +144,7 @@ var NotesControllerApi = /** @class */ (function () {
         if (request === null || request === undefined) {
             throw new Error('Required parameter request was null or undefined when calling saveNotesUsingPOST.');
         }
-        var httpRequestParams = {
+        let httpRequestParams = {
             method: 'POST',
             url: localVarPath,
             data: request,
@@ -158,7 +155,7 @@ var NotesControllerApi = /** @class */ (function () {
             httpRequestParams = Object.assign(httpRequestParams, extraHttpRequestParams);
         }
         return this.$http(httpRequestParams);
-    };
+    }
     /**
      *
      * @summary searchNotes
@@ -166,10 +163,10 @@ var NotesControllerApi = /** @class */ (function () {
      * @param query query
      * @param referenceId referenceId
      */
-    NotesControllerApi.prototype.searchNotesUsingGET = function (noteType, query, referenceId, extraHttpRequestParams) {
-        var localVarPath = this.basePath + '/api/v2/notes/search';
-        var queryParameters = {};
-        var headerParams = Object.assign({}, this.defaultHeaders);
+    searchNotesUsingGET(noteType, query, referenceId, extraHttpRequestParams) {
+        const localVarPath = this.basePath + '/api/v2/notes/search';
+        let queryParameters = {};
+        let headerParams = Object.assign({}, this.defaultHeaders);
         // verify required parameter 'noteType' is not null or undefined
         if (noteType === null || noteType === undefined) {
             throw new Error('Required parameter noteType was null or undefined when calling searchNotesUsingGET.');
@@ -191,7 +188,7 @@ var NotesControllerApi = /** @class */ (function () {
         if (referenceId !== undefined) {
             queryParameters['referenceId'] = referenceId;
         }
-        var httpRequestParams = {
+        let httpRequestParams = {
             method: 'GET',
             url: localVarPath,
             params: queryParameters,
@@ -201,18 +198,18 @@ var NotesControllerApi = /** @class */ (function () {
             httpRequestParams = Object.assign(httpRequestParams, extraHttpRequestParams);
         }
         return this.$http(httpRequestParams);
-    };
+    }
     /**
      *
      * @summary updateNote
      * @param noteId noteId
      * @param request request
      */
-    NotesControllerApi.prototype.updateNoteUsingPUT = function (noteId, request, extraHttpRequestParams) {
-        var localVarPath = this.basePath + '/api/v1/notes/{noteId}'
+    updateNoteUsingPUT(noteId, request, extraHttpRequestParams) {
+        const localVarPath = this.basePath + '/api/v1/notes/{noteId}'
             .replace('{' + 'noteId' + '}', encodeURIComponent(String(noteId)));
-        var queryParameters = {};
-        var headerParams = Object.assign({}, this.defaultHeaders);
+        let queryParameters = {};
+        let headerParams = Object.assign({}, this.defaultHeaders);
         // verify required parameter 'noteId' is not null or undefined
         if (noteId === null || noteId === undefined) {
             throw new Error('Required parameter noteId was null or undefined when calling updateNoteUsingPUT.');
@@ -221,7 +218,7 @@ var NotesControllerApi = /** @class */ (function () {
         if (request === null || request === undefined) {
             throw new Error('Required parameter request was null or undefined when calling updateNoteUsingPUT.');
         }
-        var httpRequestParams = {
+        let httpRequestParams = {
             method: 'PUT',
             url: localVarPath,
             data: request,
@@ -232,8 +229,6 @@ var NotesControllerApi = /** @class */ (function () {
             httpRequestParams = Object.assign(httpRequestParams, extraHttpRequestParams);
         }
         return this.$http(httpRequestParams);
-    };
-    NotesControllerApi.$inject = ['$http', '$httpParamSerializer', 'basePath'];
-    return NotesControllerApi;
-}());
-exports.NotesControllerApi = NotesControllerApi;
+    }
+}
+NotesControllerApi.$inject = ['$http', '$httpParamSerializer', 'basePath'];

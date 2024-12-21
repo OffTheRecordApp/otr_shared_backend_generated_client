@@ -1,4 +1,3 @@
-"use strict";
 /**
  * OffTheRecord Rest Service API - Devo
  * A service to handle your traffic tickets
@@ -10,11 +9,9 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.CustomerReviewControllerApi = void 0;
 /* tslint:disable:no-unused-variable member-ordering */
-var CustomerReviewControllerApi = /** @class */ (function () {
-    function CustomerReviewControllerApi($http, $httpParamSerializer, basePath) {
+export class CustomerReviewControllerApi {
+    constructor($http, $httpParamSerializer, basePath) {
         this.$http = $http;
         this.$httpParamSerializer = $httpParamSerializer;
         this.basePath = 'http://otr-backend-service-us-devo.offtherecord.com';
@@ -28,15 +25,15 @@ var CustomerReviewControllerApi = /** @class */ (function () {
      * @summary addCustomerReview
      * @param addReviewRequest addReviewRequest
      */
-    CustomerReviewControllerApi.prototype.addCustomerReviewUsingPOST = function (addReviewRequest, extraHttpRequestParams) {
-        var localVarPath = this.basePath + '/api/v1/reviews';
-        var queryParameters = {};
-        var headerParams = Object.assign({}, this.defaultHeaders);
+    addCustomerReviewUsingPOST(addReviewRequest, extraHttpRequestParams) {
+        const localVarPath = this.basePath + '/api/v1/reviews';
+        let queryParameters = {};
+        let headerParams = Object.assign({}, this.defaultHeaders);
         // verify required parameter 'addReviewRequest' is not null or undefined
         if (addReviewRequest === null || addReviewRequest === undefined) {
             throw new Error('Required parameter addReviewRequest was null or undefined when calling addCustomerReviewUsingPOST.');
         }
-        var httpRequestParams = {
+        let httpRequestParams = {
             method: 'POST',
             url: localVarPath,
             data: addReviewRequest,
@@ -47,18 +44,18 @@ var CustomerReviewControllerApi = /** @class */ (function () {
             httpRequestParams = Object.assign(httpRequestParams, extraHttpRequestParams);
         }
         return this.$http(httpRequestParams);
-    };
+    }
     /**
      *
      * @summary editCustomerReview
      * @param reviewId reviewId
      * @param editCustomerReviewRequest editCustomerReviewRequest
      */
-    CustomerReviewControllerApi.prototype.editCustomerReviewUsingPUT = function (reviewId, editCustomerReviewRequest, extraHttpRequestParams) {
-        var localVarPath = this.basePath + '/api/v1/reviews/api/v1/reviews/{reviewId}'
+    editCustomerReviewUsingPUT(reviewId, editCustomerReviewRequest, extraHttpRequestParams) {
+        const localVarPath = this.basePath + '/api/v1/reviews/api/v1/reviews/{reviewId}'
             .replace('{' + 'reviewId' + '}', encodeURIComponent(String(reviewId)));
-        var queryParameters = {};
-        var headerParams = Object.assign({}, this.defaultHeaders);
+        let queryParameters = {};
+        let headerParams = Object.assign({}, this.defaultHeaders);
         // verify required parameter 'reviewId' is not null or undefined
         if (reviewId === null || reviewId === undefined) {
             throw new Error('Required parameter reviewId was null or undefined when calling editCustomerReviewUsingPUT.');
@@ -67,7 +64,7 @@ var CustomerReviewControllerApi = /** @class */ (function () {
         if (editCustomerReviewRequest === null || editCustomerReviewRequest === undefined) {
             throw new Error('Required parameter editCustomerReviewRequest was null or undefined when calling editCustomerReviewUsingPUT.');
         }
-        var httpRequestParams = {
+        let httpRequestParams = {
             method: 'PUT',
             url: localVarPath,
             data: editCustomerReviewRequest,
@@ -78,7 +75,7 @@ var CustomerReviewControllerApi = /** @class */ (function () {
             httpRequestParams = Object.assign(httpRequestParams, extraHttpRequestParams);
         }
         return this.$http(httpRequestParams);
-    };
+    }
     /**
      *
      * @summary listCustomerReviews
@@ -94,10 +91,10 @@ var CustomerReviewControllerApi = /** @class */ (function () {
      * @param tags tags
      * @param version version
      */
-    CustomerReviewControllerApi.prototype.listCustomerReviewsUsingGET = function (includeAnonymous, includeDeleted, includeRatings, isFeatured, lawfirmId, limit, nextPageToken, previousPageToken, state, tags, version, extraHttpRequestParams) {
-        var localVarPath = this.basePath + '/api/v1/reviews';
-        var queryParameters = {};
-        var headerParams = Object.assign({}, this.defaultHeaders);
+    listCustomerReviewsUsingGET(includeAnonymous, includeDeleted, includeRatings, isFeatured, lawfirmId, limit, nextPageToken, previousPageToken, state, tags, version, extraHttpRequestParams) {
+        const localVarPath = this.basePath + '/api/v1/reviews';
+        let queryParameters = {};
+        let headerParams = Object.assign({}, this.defaultHeaders);
         if (includeAnonymous !== undefined) {
             queryParameters['includeAnonymous'] = includeAnonymous;
         }
@@ -131,7 +128,7 @@ var CustomerReviewControllerApi = /** @class */ (function () {
         if (version !== undefined) {
             queryParameters['version'] = version;
         }
-        var httpRequestParams = {
+        let httpRequestParams = {
             method: 'GET',
             url: localVarPath,
             params: queryParameters,
@@ -141,16 +138,16 @@ var CustomerReviewControllerApi = /** @class */ (function () {
             httpRequestParams = Object.assign(httpRequestParams, extraHttpRequestParams);
         }
         return this.$http(httpRequestParams);
-    };
+    }
     /**
      *
      * @summary listEligibleStatusesForReview
      */
-    CustomerReviewControllerApi.prototype.listEligibleStatusesForReviewUsingGET = function (extraHttpRequestParams) {
-        var localVarPath = this.basePath + '/api/v1/reviews/eligible-statuses';
-        var queryParameters = {};
-        var headerParams = Object.assign({}, this.defaultHeaders);
-        var httpRequestParams = {
+    listEligibleStatusesForReviewUsingGET(extraHttpRequestParams) {
+        const localVarPath = this.basePath + '/api/v1/reviews/eligible-statuses';
+        let queryParameters = {};
+        let headerParams = Object.assign({}, this.defaultHeaders);
+        let httpRequestParams = {
             method: 'GET',
             url: localVarPath,
             params: queryParameters,
@@ -160,7 +157,7 @@ var CustomerReviewControllerApi = /** @class */ (function () {
             httpRequestParams = Object.assign(httpRequestParams, extraHttpRequestParams);
         }
         return this.$http(httpRequestParams);
-    };
+    }
     /**
      *
      * @summary markCommentWithVote
@@ -168,12 +165,12 @@ var CustomerReviewControllerApi = /** @class */ (function () {
      * @param reviewId reviewId
      * @param like like
      */
-    CustomerReviewControllerApi.prototype.markCommentWithVoteUsingPUT = function (commentId, reviewId, like, extraHttpRequestParams) {
-        var localVarPath = this.basePath + '/api/v1/reviews/{reviewId}/comments/{commentId}/vote'
+    markCommentWithVoteUsingPUT(commentId, reviewId, like, extraHttpRequestParams) {
+        const localVarPath = this.basePath + '/api/v1/reviews/{reviewId}/comments/{commentId}/vote'
             .replace('{' + 'commentId' + '}', encodeURIComponent(String(commentId)))
             .replace('{' + 'reviewId' + '}', encodeURIComponent(String(reviewId)));
-        var queryParameters = {};
-        var headerParams = Object.assign({}, this.defaultHeaders);
+        let queryParameters = {};
+        let headerParams = Object.assign({}, this.defaultHeaders);
         // verify required parameter 'commentId' is not null or undefined
         if (commentId === null || commentId === undefined) {
             throw new Error('Required parameter commentId was null or undefined when calling markCommentWithVoteUsingPUT.');
@@ -185,7 +182,7 @@ var CustomerReviewControllerApi = /** @class */ (function () {
         if (like !== undefined) {
             queryParameters['like'] = like;
         }
-        var httpRequestParams = {
+        let httpRequestParams = {
             method: 'PUT',
             url: localVarPath,
             params: queryParameters,
@@ -195,18 +192,18 @@ var CustomerReviewControllerApi = /** @class */ (function () {
             httpRequestParams = Object.assign(httpRequestParams, extraHttpRequestParams);
         }
         return this.$http(httpRequestParams);
-    };
+    }
     /**
      *
      * @summary markReviewWithVote
      * @param reviewId reviewId
      * @param helpful helpful
      */
-    CustomerReviewControllerApi.prototype.markReviewWithVoteUsingPUT = function (reviewId, helpful, extraHttpRequestParams) {
-        var localVarPath = this.basePath + '/api/v1/reviews/{reviewId}/vote'
+    markReviewWithVoteUsingPUT(reviewId, helpful, extraHttpRequestParams) {
+        const localVarPath = this.basePath + '/api/v1/reviews/{reviewId}/vote'
             .replace('{' + 'reviewId' + '}', encodeURIComponent(String(reviewId)));
-        var queryParameters = {};
-        var headerParams = Object.assign({}, this.defaultHeaders);
+        let queryParameters = {};
+        let headerParams = Object.assign({}, this.defaultHeaders);
         // verify required parameter 'reviewId' is not null or undefined
         if (reviewId === null || reviewId === undefined) {
             throw new Error('Required parameter reviewId was null or undefined when calling markReviewWithVoteUsingPUT.');
@@ -214,7 +211,7 @@ var CustomerReviewControllerApi = /** @class */ (function () {
         if (helpful !== undefined) {
             queryParameters['helpful'] = helpful;
         }
-        var httpRequestParams = {
+        let httpRequestParams = {
             method: 'PUT',
             url: localVarPath,
             params: queryParameters,
@@ -224,18 +221,18 @@ var CustomerReviewControllerApi = /** @class */ (function () {
             httpRequestParams = Object.assign(httpRequestParams, extraHttpRequestParams);
         }
         return this.$http(httpRequestParams);
-    };
+    }
     /**
      *
      * @summary replyToCustomerReview
      * @param reviewId reviewId
      * @param request request
      */
-    CustomerReviewControllerApi.prototype.replyToCustomerReviewUsingPOST = function (reviewId, request, extraHttpRequestParams) {
-        var localVarPath = this.basePath + '/api/v1/reviews/{reviewId}/comments'
+    replyToCustomerReviewUsingPOST(reviewId, request, extraHttpRequestParams) {
+        const localVarPath = this.basePath + '/api/v1/reviews/{reviewId}/comments'
             .replace('{' + 'reviewId' + '}', encodeURIComponent(String(reviewId)));
-        var queryParameters = {};
-        var headerParams = Object.assign({}, this.defaultHeaders);
+        let queryParameters = {};
+        let headerParams = Object.assign({}, this.defaultHeaders);
         // verify required parameter 'reviewId' is not null or undefined
         if (reviewId === null || reviewId === undefined) {
             throw new Error('Required parameter reviewId was null or undefined when calling replyToCustomerReviewUsingPOST.');
@@ -244,7 +241,7 @@ var CustomerReviewControllerApi = /** @class */ (function () {
         if (request === null || request === undefined) {
             throw new Error('Required parameter request was null or undefined when calling replyToCustomerReviewUsingPOST.');
         }
-        var httpRequestParams = {
+        let httpRequestParams = {
             method: 'POST',
             url: localVarPath,
             data: request,
@@ -255,18 +252,18 @@ var CustomerReviewControllerApi = /** @class */ (function () {
             httpRequestParams = Object.assign(httpRequestParams, extraHttpRequestParams);
         }
         return this.$http(httpRequestParams);
-    };
+    }
     /**
      *
      * @summary setCustomerReviewStatus
      * @param reviewId reviewId
      * @param setCustomerReviewStatusRequest setCustomerReviewStatusRequest
      */
-    CustomerReviewControllerApi.prototype.setCustomerReviewStatusUsingPUT = function (reviewId, setCustomerReviewStatusRequest, extraHttpRequestParams) {
-        var localVarPath = this.basePath + '/api/v1/reviews/api/v1/reviews/{reviewId}/status'
+    setCustomerReviewStatusUsingPUT(reviewId, setCustomerReviewStatusRequest, extraHttpRequestParams) {
+        const localVarPath = this.basePath + '/api/v1/reviews/api/v1/reviews/{reviewId}/status'
             .replace('{' + 'reviewId' + '}', encodeURIComponent(String(reviewId)));
-        var queryParameters = {};
-        var headerParams = Object.assign({}, this.defaultHeaders);
+        let queryParameters = {};
+        let headerParams = Object.assign({}, this.defaultHeaders);
         // verify required parameter 'reviewId' is not null or undefined
         if (reviewId === null || reviewId === undefined) {
             throw new Error('Required parameter reviewId was null or undefined when calling setCustomerReviewStatusUsingPUT.');
@@ -275,7 +272,7 @@ var CustomerReviewControllerApi = /** @class */ (function () {
         if (setCustomerReviewStatusRequest === null || setCustomerReviewStatusRequest === undefined) {
             throw new Error('Required parameter setCustomerReviewStatusRequest was null or undefined when calling setCustomerReviewStatusUsingPUT.');
         }
-        var httpRequestParams = {
+        let httpRequestParams = {
             method: 'PUT',
             url: localVarPath,
             data: setCustomerReviewStatusRequest,
@@ -286,7 +283,7 @@ var CustomerReviewControllerApi = /** @class */ (function () {
             httpRequestParams = Object.assign(httpRequestParams, extraHttpRequestParams);
         }
         return this.$http(httpRequestParams);
-    };
+    }
     /**
      *
      * @summary updateCommentForCustomerReview
@@ -294,12 +291,12 @@ var CustomerReviewControllerApi = /** @class */ (function () {
      * @param reviewId reviewId
      * @param request request
      */
-    CustomerReviewControllerApi.prototype.updateCommentForCustomerReviewUsingPOST = function (commentId, reviewId, request, extraHttpRequestParams) {
-        var localVarPath = this.basePath + '/api/v1/reviews/{reviewId}/comments/{commentId}'
+    updateCommentForCustomerReviewUsingPOST(commentId, reviewId, request, extraHttpRequestParams) {
+        const localVarPath = this.basePath + '/api/v1/reviews/{reviewId}/comments/{commentId}'
             .replace('{' + 'commentId' + '}', encodeURIComponent(String(commentId)))
             .replace('{' + 'reviewId' + '}', encodeURIComponent(String(reviewId)));
-        var queryParameters = {};
-        var headerParams = Object.assign({}, this.defaultHeaders);
+        let queryParameters = {};
+        let headerParams = Object.assign({}, this.defaultHeaders);
         // verify required parameter 'commentId' is not null or undefined
         if (commentId === null || commentId === undefined) {
             throw new Error('Required parameter commentId was null or undefined when calling updateCommentForCustomerReviewUsingPOST.');
@@ -312,7 +309,7 @@ var CustomerReviewControllerApi = /** @class */ (function () {
         if (request === null || request === undefined) {
             throw new Error('Required parameter request was null or undefined when calling updateCommentForCustomerReviewUsingPOST.');
         }
-        var httpRequestParams = {
+        let httpRequestParams = {
             method: 'POST',
             url: localVarPath,
             data: request,
@@ -323,8 +320,6 @@ var CustomerReviewControllerApi = /** @class */ (function () {
             httpRequestParams = Object.assign(httpRequestParams, extraHttpRequestParams);
         }
         return this.$http(httpRequestParams);
-    };
-    CustomerReviewControllerApi.$inject = ['$http', '$httpParamSerializer', 'basePath'];
-    return CustomerReviewControllerApi;
-}());
-exports.CustomerReviewControllerApi = CustomerReviewControllerApi;
+    }
+}
+CustomerReviewControllerApi.$inject = ['$http', '$httpParamSerializer', 'basePath'];

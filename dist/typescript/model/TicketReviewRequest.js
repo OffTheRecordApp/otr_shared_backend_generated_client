@@ -1,4 +1,3 @@
-"use strict";
 /**
  * OffTheRecord Rest Service API - Devo
  * A service to handle your traffic tickets
@@ -10,14 +9,12 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.TicketReviewRequest = void 0;
-var TicketReviewRequest;
+export var TicketReviewRequest;
 (function (TicketReviewRequest) {
-    var SourceEnum;
+    let SourceEnum;
     (function (SourceEnum) {
         SourceEnum[SourceEnum["OTREXITPOPUP"] = 'OTR_EXIT_POPUP'] = "OTREXITPOPUP";
         SourceEnum[SourceEnum["QUARANTINELANDINGPAGE"] = 'QUARANTINE_LANDING_PAGE'] = "QUARANTINELANDINGPAGE";
         SourceEnum[SourceEnum["TICKETREVIEWPAGE"] = 'TICKET_REVIEW_PAGE'] = "TICKETREVIEWPAGE";
     })(SourceEnum = TicketReviewRequest.SourceEnum || (TicketReviewRequest.SourceEnum = {}));
-})(TicketReviewRequest = exports.TicketReviewRequest || (exports.TicketReviewRequest = {}));
+})(TicketReviewRequest || (TicketReviewRequest = {}));

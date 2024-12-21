@@ -1,4 +1,3 @@
-"use strict";
 /**
  * OffTheRecord Rest Service API - Devo
  * A service to handle your traffic tickets
@@ -10,11 +9,9 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.OneTimePasswordControllerApi = void 0;
 /* tslint:disable:no-unused-variable member-ordering */
-var OneTimePasswordControllerApi = /** @class */ (function () {
-    function OneTimePasswordControllerApi($http, $httpParamSerializer, basePath) {
+export class OneTimePasswordControllerApi {
+    constructor($http, $httpParamSerializer, basePath) {
         this.$http = $http;
         this.$httpParamSerializer = $httpParamSerializer;
         this.basePath = 'http://otr-backend-service-us-devo.offtherecord.com';
@@ -28,11 +25,11 @@ var OneTimePasswordControllerApi = /** @class */ (function () {
      * @summary sendOneTimePassword
      * @param request request
      */
-    OneTimePasswordControllerApi.prototype.sendOneTimePasswordUsingPOST = function (request, extraHttpRequestParams) {
-        var localVarPath = this.basePath + '/api/v1/one_time_password';
-        var queryParameters = {};
-        var headerParams = Object.assign({}, this.defaultHeaders);
-        var httpRequestParams = {
+    sendOneTimePasswordUsingPOST(request, extraHttpRequestParams) {
+        const localVarPath = this.basePath + '/api/v1/one_time_password';
+        let queryParameters = {};
+        let headerParams = Object.assign({}, this.defaultHeaders);
+        let httpRequestParams = {
             method: 'POST',
             url: localVarPath,
             data: request,
@@ -43,8 +40,6 @@ var OneTimePasswordControllerApi = /** @class */ (function () {
             httpRequestParams = Object.assign(httpRequestParams, extraHttpRequestParams);
         }
         return this.$http(httpRequestParams);
-    };
-    OneTimePasswordControllerApi.$inject = ['$http', '$httpParamSerializer', 'basePath'];
-    return OneTimePasswordControllerApi;
-}());
-exports.OneTimePasswordControllerApi = OneTimePasswordControllerApi;
+    }
+}
+OneTimePasswordControllerApi.$inject = ['$http', '$httpParamSerializer', 'basePath'];

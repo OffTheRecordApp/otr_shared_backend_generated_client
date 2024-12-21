@@ -1,4 +1,3 @@
-"use strict";
 /**
  * OffTheRecord Rest Service API - Devo
  * A service to handle your traffic tickets
@@ -10,11 +9,9 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.SendEmailToUsersRequest = void 0;
-var SendEmailToUsersRequest;
+export var SendEmailToUsersRequest;
 (function (SendEmailToUsersRequest) {
-    var EmailTemplateIdEnum;
+    let EmailTemplateIdEnum;
     (function (EmailTemplateIdEnum) {
         EmailTemplateIdEnum[EmailTemplateIdEnum["AFTERNOONHELLO2"] = 'AFTERNOON_HELLO_2'] = "AFTERNOONHELLO2";
         EmailTemplateIdEnum[EmailTemplateIdEnum["ATTICUSATTORNEYCONTACT1"] = 'ATTICUS_ATTORNEY_CONTACT_1'] = "ATTICUSATTORNEYCONTACT1";
@@ -54,4 +51,4 @@ var SendEmailToUsersRequest;
         EmailTemplateIdEnum[EmailTemplateIdEnum["TICKETEVALWITHCITATION2NDFOLLOWUP"] = 'TICKET_EVAL_WITH_CITATION_2ND_FOLLOW_UP'] = "TICKETEVALWITHCITATION2NDFOLLOWUP";
         EmailTemplateIdEnum[EmailTemplateIdEnum["TICKETEVALWITHCITATIONCLOSEOUT"] = 'TICKET_EVAL_WITH_CITATION_CLOSE_OUT'] = "TICKETEVALWITHCITATIONCLOSEOUT";
     })(EmailTemplateIdEnum = SendEmailToUsersRequest.EmailTemplateIdEnum || (SendEmailToUsersRequest.EmailTemplateIdEnum = {}));
-})(SendEmailToUsersRequest = exports.SendEmailToUsersRequest || (exports.SendEmailToUsersRequest = {}));
+})(SendEmailToUsersRequest || (SendEmailToUsersRequest = {}));

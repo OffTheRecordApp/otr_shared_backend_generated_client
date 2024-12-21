@@ -1,4 +1,3 @@
-"use strict";
 /**
  * OffTheRecord Rest Service API - Devo
  * A service to handle your traffic tickets
@@ -10,18 +9,16 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.MatchInnerCaseResponse = void 0;
-var MatchInnerCaseResponse;
+export var MatchInnerCaseResponse;
 (function (MatchInnerCaseResponse) {
-    var ReferralCodeOwnerEnum;
+    let ReferralCodeOwnerEnum;
     (function (ReferralCodeOwnerEnum) {
         ReferralCodeOwnerEnum[ReferralCodeOwnerEnum["LAWFIRM"] = 'LAWFIRM'] = "LAWFIRM";
         ReferralCodeOwnerEnum[ReferralCodeOwnerEnum["OTR"] = 'OTR'] = "OTR";
     })(ReferralCodeOwnerEnum = MatchInnerCaseResponse.ReferralCodeOwnerEnum || (MatchInnerCaseResponse.ReferralCodeOwnerEnum = {}));
-    var RefundEligibilityEnum;
+    let RefundEligibilityEnum;
     (function (RefundEligibilityEnum) {
         RefundEligibilityEnum[RefundEligibilityEnum["FULLREFUND"] = 'FULL_REFUND'] = "FULLREFUND";
         RefundEligibilityEnum[RefundEligibilityEnum["NOREFUND"] = 'NO_REFUND'] = "NOREFUND";
     })(RefundEligibilityEnum = MatchInnerCaseResponse.RefundEligibilityEnum || (MatchInnerCaseResponse.RefundEligibilityEnum = {}));
-})(MatchInnerCaseResponse = exports.MatchInnerCaseResponse || (exports.MatchInnerCaseResponse = {}));
+})(MatchInnerCaseResponse || (MatchInnerCaseResponse = {}));

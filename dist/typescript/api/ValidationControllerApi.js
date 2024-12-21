@@ -1,4 +1,3 @@
-"use strict";
 /**
  * OffTheRecord Rest Service API - Devo
  * A service to handle your traffic tickets
@@ -10,11 +9,9 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.ValidationControllerApi = void 0;
 /* tslint:disable:no-unused-variable member-ordering */
-var ValidationControllerApi = /** @class */ (function () {
-    function ValidationControllerApi($http, $httpParamSerializer, basePath) {
+export class ValidationControllerApi {
+    constructor($http, $httpParamSerializer, basePath) {
         this.$http = $http;
         this.$httpParamSerializer = $httpParamSerializer;
         this.basePath = 'http://otr-backend-service-us-devo.offtherecord.com';
@@ -28,10 +25,10 @@ var ValidationControllerApi = /** @class */ (function () {
      * @summary validateEmailAddress
      * @param email email
      */
-    ValidationControllerApi.prototype.validateEmailAddressUsingGET = function (email, extraHttpRequestParams) {
-        var localVarPath = this.basePath + '/api/v1/validate/email';
-        var queryParameters = {};
-        var headerParams = Object.assign({}, this.defaultHeaders);
+    validateEmailAddressUsingGET(email, extraHttpRequestParams) {
+        const localVarPath = this.basePath + '/api/v1/validate/email';
+        let queryParameters = {};
+        let headerParams = Object.assign({}, this.defaultHeaders);
         // verify required parameter 'email' is not null or undefined
         if (email === null || email === undefined) {
             throw new Error('Required parameter email was null or undefined when calling validateEmailAddressUsingGET.');
@@ -39,7 +36,7 @@ var ValidationControllerApi = /** @class */ (function () {
         if (email !== undefined) {
             queryParameters['email'] = email;
         }
-        var httpRequestParams = {
+        let httpRequestParams = {
             method: 'GET',
             url: localVarPath,
             params: queryParameters,
@@ -49,8 +46,6 @@ var ValidationControllerApi = /** @class */ (function () {
             httpRequestParams = Object.assign(httpRequestParams, extraHttpRequestParams);
         }
         return this.$http(httpRequestParams);
-    };
-    ValidationControllerApi.$inject = ['$http', '$httpParamSerializer', 'basePath'];
-    return ValidationControllerApi;
-}());
-exports.ValidationControllerApi = ValidationControllerApi;
+    }
+}
+ValidationControllerApi.$inject = ['$http', '$httpParamSerializer', 'basePath'];

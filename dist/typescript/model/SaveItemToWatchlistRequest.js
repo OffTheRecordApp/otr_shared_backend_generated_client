@@ -1,4 +1,3 @@
-"use strict";
 /**
  * OffTheRecord Rest Service API - Devo
  * A service to handle your traffic tickets
@@ -10,21 +9,19 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.SaveItemToWatchlistRequest = void 0;
-var SaveItemToWatchlistRequest;
+export var SaveItemToWatchlistRequest;
 (function (SaveItemToWatchlistRequest) {
-    var EntityTypeEnum;
+    let EntityTypeEnum;
     (function (EntityTypeEnum) {
         EntityTypeEnum[EntityTypeEnum["CASE"] = 'CASE'] = "CASE";
         EntityTypeEnum[EntityTypeEnum["LAWFIRM"] = 'LAWFIRM'] = "LAWFIRM";
         EntityTypeEnum[EntityTypeEnum["UNKNOWN"] = 'UNKNOWN'] = "UNKNOWN";
         EntityTypeEnum[EntityTypeEnum["USER"] = 'USER'] = "USER";
     })(EntityTypeEnum = SaveItemToWatchlistRequest.EntityTypeEnum || (SaveItemToWatchlistRequest.EntityTypeEnum = {}));
-    var PriorityEnum;
+    let PriorityEnum;
     (function (PriorityEnum) {
         PriorityEnum[PriorityEnum["HIGH"] = 'HIGH'] = "HIGH";
         PriorityEnum[PriorityEnum["LOW"] = 'LOW'] = "LOW";
         PriorityEnum[PriorityEnum["MEDIUM"] = 'MEDIUM'] = "MEDIUM";
     })(PriorityEnum = SaveItemToWatchlistRequest.PriorityEnum || (SaveItemToWatchlistRequest.PriorityEnum = {}));
-})(SaveItemToWatchlistRequest = exports.SaveItemToWatchlistRequest || (exports.SaveItemToWatchlistRequest = {}));
+})(SaveItemToWatchlistRequest || (SaveItemToWatchlistRequest = {}));

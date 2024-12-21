@@ -1,4 +1,3 @@
-"use strict";
 /**
  * OffTheRecord Rest Service API - Devo
  * A service to handle your traffic tickets
@@ -10,11 +9,9 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.ReportingControllerApi = void 0;
 /* tslint:disable:no-unused-variable member-ordering */
-var ReportingControllerApi = /** @class */ (function () {
-    function ReportingControllerApi($http, $httpParamSerializer, basePath) {
+export class ReportingControllerApi {
+    constructor($http, $httpParamSerializer, basePath) {
         this.$http = $http;
         this.$httpParamSerializer = $httpParamSerializer;
         this.basePath = 'http://otr-backend-service-us-devo.offtherecord.com';
@@ -30,12 +27,12 @@ var ReportingControllerApi = /** @class */ (function () {
      * @param regionCode regionCode
      * @param urWindowInDays urWindowInDays
      */
-    ReportingControllerApi.prototype.getCourtCoverageForCountyReportUsingGET = function (countyId, regionCode, urWindowInDays, extraHttpRequestParams) {
-        var localVarPath = this.basePath + '/api/v1/reports/court-coverage/{regionCode}/{countyId}'
+    getCourtCoverageForCountyReportUsingGET(countyId, regionCode, urWindowInDays, extraHttpRequestParams) {
+        const localVarPath = this.basePath + '/api/v1/reports/court-coverage/{regionCode}/{countyId}'
             .replace('{' + 'countyId' + '}', encodeURIComponent(String(countyId)))
             .replace('{' + 'regionCode' + '}', encodeURIComponent(String(regionCode)));
-        var queryParameters = {};
-        var headerParams = Object.assign({}, this.defaultHeaders);
+        let queryParameters = {};
+        let headerParams = Object.assign({}, this.defaultHeaders);
         // verify required parameter 'countyId' is not null or undefined
         if (countyId === null || countyId === undefined) {
             throw new Error('Required parameter countyId was null or undefined when calling getCourtCoverageForCountyReportUsingGET.');
@@ -47,7 +44,7 @@ var ReportingControllerApi = /** @class */ (function () {
         if (urWindowInDays !== undefined) {
             queryParameters['urWindowInDays'] = urWindowInDays;
         }
-        var httpRequestParams = {
+        let httpRequestParams = {
             method: 'GET',
             url: localVarPath,
             params: queryParameters,
@@ -57,7 +54,7 @@ var ReportingControllerApi = /** @class */ (function () {
             httpRequestParams = Object.assign(httpRequestParams, extraHttpRequestParams);
         }
         return this.$http(httpRequestParams);
-    };
+    }
     /**
      *
      * @summary getCourtCoverageForStateReport
@@ -65,11 +62,11 @@ var ReportingControllerApi = /** @class */ (function () {
      * @param countyId countyId
      * @param urWindowInDays urWindowInDays
      */
-    ReportingControllerApi.prototype.getCourtCoverageForStateReportUsingGET = function (regionCode, countyId, urWindowInDays, extraHttpRequestParams) {
-        var localVarPath = this.basePath + '/api/v1/reports/court-coverage/{regionCode}'
+    getCourtCoverageForStateReportUsingGET(regionCode, countyId, urWindowInDays, extraHttpRequestParams) {
+        const localVarPath = this.basePath + '/api/v1/reports/court-coverage/{regionCode}'
             .replace('{' + 'regionCode' + '}', encodeURIComponent(String(regionCode)));
-        var queryParameters = {};
-        var headerParams = Object.assign({}, this.defaultHeaders);
+        let queryParameters = {};
+        let headerParams = Object.assign({}, this.defaultHeaders);
         // verify required parameter 'regionCode' is not null or undefined
         if (regionCode === null || regionCode === undefined) {
             throw new Error('Required parameter regionCode was null or undefined when calling getCourtCoverageForStateReportUsingGET.');
@@ -80,7 +77,7 @@ var ReportingControllerApi = /** @class */ (function () {
         if (urWindowInDays !== undefined) {
             queryParameters['urWindowInDays'] = urWindowInDays;
         }
-        var httpRequestParams = {
+        let httpRequestParams = {
             method: 'GET',
             url: localVarPath,
             params: queryParameters,
@@ -90,20 +87,20 @@ var ReportingControllerApi = /** @class */ (function () {
             httpRequestParams = Object.assign(httpRequestParams, extraHttpRequestParams);
         }
         return this.$http(httpRequestParams);
-    };
+    }
     /**
      *
      * @summary getCourtCoverageReport
      * @param urWindowInDays urWindowInDays
      */
-    ReportingControllerApi.prototype.getCourtCoverageReportUsingGET = function (urWindowInDays, extraHttpRequestParams) {
-        var localVarPath = this.basePath + '/api/v1/reports/court-coverage';
-        var queryParameters = {};
-        var headerParams = Object.assign({}, this.defaultHeaders);
+    getCourtCoverageReportUsingGET(urWindowInDays, extraHttpRequestParams) {
+        const localVarPath = this.basePath + '/api/v1/reports/court-coverage';
+        let queryParameters = {};
+        let headerParams = Object.assign({}, this.defaultHeaders);
         if (urWindowInDays !== undefined) {
             queryParameters['urWindowInDays'] = urWindowInDays;
         }
-        var httpRequestParams = {
+        let httpRequestParams = {
             method: 'GET',
             url: localVarPath,
             params: queryParameters,
@@ -113,24 +110,24 @@ var ReportingControllerApi = /** @class */ (function () {
             httpRequestParams = Object.assign(httpRequestParams, extraHttpRequestParams);
         }
         return this.$http(httpRequestParams);
-    };
+    }
     /**
      *
      * @summary getLawfirmCoverageReport
      * @param countyId countyId
      * @param regionCode regionCode
      */
-    ReportingControllerApi.prototype.getLawfirmCoverageReportUsingGET = function (countyId, regionCode, extraHttpRequestParams) {
-        var localVarPath = this.basePath + '/api/v1/reports/court-coverage/lawfirms';
-        var queryParameters = {};
-        var headerParams = Object.assign({}, this.defaultHeaders);
+    getLawfirmCoverageReportUsingGET(countyId, regionCode, extraHttpRequestParams) {
+        const localVarPath = this.basePath + '/api/v1/reports/court-coverage/lawfirms';
+        let queryParameters = {};
+        let headerParams = Object.assign({}, this.defaultHeaders);
         if (countyId !== undefined) {
             queryParameters['countyId'] = countyId;
         }
         if (regionCode !== undefined) {
             queryParameters['regionCode'] = regionCode;
         }
-        var httpRequestParams = {
+        let httpRequestParams = {
             method: 'GET',
             url: localVarPath,
             params: queryParameters,
@@ -140,8 +137,6 @@ var ReportingControllerApi = /** @class */ (function () {
             httpRequestParams = Object.assign(httpRequestParams, extraHttpRequestParams);
         }
         return this.$http(httpRequestParams);
-    };
-    ReportingControllerApi.$inject = ['$http', '$httpParamSerializer', 'basePath'];
-    return ReportingControllerApi;
-}());
-exports.ReportingControllerApi = ReportingControllerApi;
+    }
+}
+ReportingControllerApi.$inject = ['$http', '$httpParamSerializer', 'basePath'];

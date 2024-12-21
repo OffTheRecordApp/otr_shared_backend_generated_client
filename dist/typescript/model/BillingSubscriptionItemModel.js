@@ -1,4 +1,3 @@
-"use strict";
 /**
  * OffTheRecord Rest Service API - Devo
  * A service to handle your traffic tickets
@@ -10,17 +9,15 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.BillingSubscriptionItemModel = void 0;
-var BillingSubscriptionItemModel;
+export var BillingSubscriptionItemModel;
 (function (BillingSubscriptionItemModel) {
-    var BillingSchemeEnum;
+    let BillingSchemeEnum;
     (function (BillingSchemeEnum) {
         BillingSchemeEnum[BillingSchemeEnum["PERUNIT"] = 'PER_UNIT'] = "PERUNIT";
         BillingSchemeEnum[BillingSchemeEnum["TIERED"] = 'TIERED'] = "TIERED";
         BillingSchemeEnum[BillingSchemeEnum["UNKNOWN"] = 'UNKNOWN'] = "UNKNOWN";
     })(BillingSchemeEnum = BillingSubscriptionItemModel.BillingSchemeEnum || (BillingSubscriptionItemModel.BillingSchemeEnum = {}));
-    var IntervalEnum;
+    let IntervalEnum;
     (function (IntervalEnum) {
         IntervalEnum[IntervalEnum["DAILY"] = 'DAILY'] = "DAILY";
         IntervalEnum[IntervalEnum["MONTHLY"] = 'MONTHLY'] = "MONTHLY";
@@ -28,14 +25,14 @@ var BillingSubscriptionItemModel;
         IntervalEnum[IntervalEnum["WEEKLY"] = 'WEEKLY'] = "WEEKLY";
         IntervalEnum[IntervalEnum["YEARLY"] = 'YEARLY'] = "YEARLY";
     })(IntervalEnum = BillingSubscriptionItemModel.IntervalEnum || (BillingSubscriptionItemModel.IntervalEnum = {}));
-    var TiersModeEnum;
+    let TiersModeEnum;
     (function (TiersModeEnum) {
         TiersModeEnum[TiersModeEnum["GRADUATED"] = 'GRADUATED'] = "GRADUATED";
         TiersModeEnum[TiersModeEnum["VOLUME"] = 'VOLUME'] = "VOLUME";
     })(TiersModeEnum = BillingSubscriptionItemModel.TiersModeEnum || (BillingSubscriptionItemModel.TiersModeEnum = {}));
-    var UsageTypeEnum;
+    let UsageTypeEnum;
     (function (UsageTypeEnum) {
         UsageTypeEnum[UsageTypeEnum["LICENSED"] = 'LICENSED'] = "LICENSED";
         UsageTypeEnum[UsageTypeEnum["METERED"] = 'METERED'] = "METERED";
     })(UsageTypeEnum = BillingSubscriptionItemModel.UsageTypeEnum || (BillingSubscriptionItemModel.UsageTypeEnum = {}));
-})(BillingSubscriptionItemModel = exports.BillingSubscriptionItemModel || (exports.BillingSubscriptionItemModel = {}));
+})(BillingSubscriptionItemModel || (BillingSubscriptionItemModel = {}));

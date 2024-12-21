@@ -1,4 +1,3 @@
-"use strict";
 /**
  * OffTheRecord Rest Service API - Devo
  * A service to handle your traffic tickets
@@ -10,11 +9,9 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.GhostUserResponse = void 0;
-var GhostUserResponse;
+export var GhostUserResponse;
 (function (GhostUserResponse) {
-    var GenderEnum;
+    let GenderEnum;
     (function (GenderEnum) {
         GenderEnum[GenderEnum["FEMALE"] = 'FEMALE'] = "FEMALE";
         GenderEnum[GenderEnum["MALE"] = 'MALE'] = "MALE";
@@ -23,7 +20,7 @@ var GhostUserResponse;
         GenderEnum[GenderEnum["UNVERIFIED"] = 'UNVERIFIED'] = "UNVERIFIED";
         GenderEnum[GenderEnum["X"] = 'X'] = "X";
     })(GenderEnum = GhostUserResponse.GenderEnum || (GhostUserResponse.GenderEnum = {}));
-    var RaceEnum;
+    let RaceEnum;
     (function (RaceEnum) {
         RaceEnum[RaceEnum["ASIAN"] = 'ASIAN'] = "ASIAN";
         RaceEnum[RaceEnum["BLACK"] = 'BLACK'] = "BLACK";
@@ -37,4 +34,4 @@ var GhostUserResponse;
         RaceEnum[RaceEnum["UNVERIFIED"] = 'UNVERIFIED'] = "UNVERIFIED";
         RaceEnum[RaceEnum["WHITE"] = 'WHITE'] = "WHITE";
     })(RaceEnum = GhostUserResponse.RaceEnum || (GhostUserResponse.RaceEnum = {}));
-})(GhostUserResponse = exports.GhostUserResponse || (exports.GhostUserResponse = {}));
+})(GhostUserResponse || (GhostUserResponse = {}));

@@ -1,4 +1,3 @@
-"use strict";
 /**
  * OffTheRecord Rest Service API - Devo
  * A service to handle your traffic tickets
@@ -10,11 +9,9 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.ExternalContentVoteControllerApi = void 0;
 /* tslint:disable:no-unused-variable member-ordering */
-var ExternalContentVoteControllerApi = /** @class */ (function () {
-    function ExternalContentVoteControllerApi($http, $httpParamSerializer, basePath) {
+export class ExternalContentVoteControllerApi {
+    constructor($http, $httpParamSerializer, basePath) {
         this.$http = $http;
         this.$httpParamSerializer = $httpParamSerializer;
         this.basePath = 'http://otr-backend-service-us-devo.offtherecord.com';
@@ -28,15 +25,15 @@ var ExternalContentVoteControllerApi = /** @class */ (function () {
      * @summary saveExternalContentVote
      * @param request request
      */
-    ExternalContentVoteControllerApi.prototype.saveExternalContentVoteUsingPOST = function (request, extraHttpRequestParams) {
-        var localVarPath = this.basePath + '/api/v1/external-content-votes';
-        var queryParameters = {};
-        var headerParams = Object.assign({}, this.defaultHeaders);
+    saveExternalContentVoteUsingPOST(request, extraHttpRequestParams) {
+        const localVarPath = this.basePath + '/api/v1/external-content-votes';
+        let queryParameters = {};
+        let headerParams = Object.assign({}, this.defaultHeaders);
         // verify required parameter 'request' is not null or undefined
         if (request === null || request === undefined) {
             throw new Error('Required parameter request was null or undefined when calling saveExternalContentVoteUsingPOST.');
         }
-        var httpRequestParams = {
+        let httpRequestParams = {
             method: 'POST',
             url: localVarPath,
             data: request,
@@ -47,8 +44,6 @@ var ExternalContentVoteControllerApi = /** @class */ (function () {
             httpRequestParams = Object.assign(httpRequestParams, extraHttpRequestParams);
         }
         return this.$http(httpRequestParams);
-    };
-    ExternalContentVoteControllerApi.$inject = ['$http', '$httpParamSerializer', 'basePath'];
-    return ExternalContentVoteControllerApi;
-}());
-exports.ExternalContentVoteControllerApi = ExternalContentVoteControllerApi;
+    }
+}
+ExternalContentVoteControllerApi.$inject = ['$http', '$httpParamSerializer', 'basePath'];

@@ -1,4 +1,3 @@
-"use strict";
 /**
  * OffTheRecord Rest Service API - Devo
  * A service to handle your traffic tickets
@@ -10,11 +9,9 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.HouseholdMateControllerApi = void 0;
 /* tslint:disable:no-unused-variable member-ordering */
-var HouseholdMateControllerApi = /** @class */ (function () {
-    function HouseholdMateControllerApi($http, $httpParamSerializer, basePath) {
+export class HouseholdMateControllerApi {
+    constructor($http, $httpParamSerializer, basePath) {
         this.$http = $http;
         this.$httpParamSerializer = $httpParamSerializer;
         this.basePath = 'http://otr-backend-service-us-devo.offtherecord.com';
@@ -29,10 +26,10 @@ var HouseholdMateControllerApi = /** @class */ (function () {
      * @param email email
      * @param token token
      */
-    HouseholdMateControllerApi.prototype.acceptHouseholdInviteUsingPUT = function (email, token, extraHttpRequestParams) {
-        var localVarPath = this.basePath + '/api/v1/household-mates/accept-invite';
-        var queryParameters = {};
-        var headerParams = Object.assign({}, this.defaultHeaders);
+    acceptHouseholdInviteUsingPUT(email, token, extraHttpRequestParams) {
+        const localVarPath = this.basePath + '/api/v1/household-mates/accept-invite';
+        let queryParameters = {};
+        let headerParams = Object.assign({}, this.defaultHeaders);
         // verify required parameter 'email' is not null or undefined
         if (email === null || email === undefined) {
             throw new Error('Required parameter email was null or undefined when calling acceptHouseholdInviteUsingPUT.');
@@ -47,7 +44,7 @@ var HouseholdMateControllerApi = /** @class */ (function () {
         if (token !== undefined) {
             queryParameters['token'] = token;
         }
-        var httpRequestParams = {
+        let httpRequestParams = {
             method: 'PUT',
             url: localVarPath,
             params: queryParameters,
@@ -57,18 +54,18 @@ var HouseholdMateControllerApi = /** @class */ (function () {
             httpRequestParams = Object.assign(httpRequestParams, extraHttpRequestParams);
         }
         return this.$http(httpRequestParams);
-    };
+    }
     /**
      *
      * @summary cancelHouseholdMateInvite
      * @param inviteeEmail inviteeEmail
      * @param userId userId
      */
-    HouseholdMateControllerApi.prototype.cancelHouseholdMateInviteUsingDELETE = function (inviteeEmail, userId, extraHttpRequestParams) {
-        var localVarPath = this.basePath + '/api/v1/household-mates/{userId}/invite'
+    cancelHouseholdMateInviteUsingDELETE(inviteeEmail, userId, extraHttpRequestParams) {
+        const localVarPath = this.basePath + '/api/v1/household-mates/{userId}/invite'
             .replace('{' + 'userId' + '}', encodeURIComponent(String(userId)));
-        var queryParameters = {};
-        var headerParams = Object.assign({}, this.defaultHeaders);
+        let queryParameters = {};
+        let headerParams = Object.assign({}, this.defaultHeaders);
         // verify required parameter 'inviteeEmail' is not null or undefined
         if (inviteeEmail === null || inviteeEmail === undefined) {
             throw new Error('Required parameter inviteeEmail was null or undefined when calling cancelHouseholdMateInviteUsingDELETE.');
@@ -80,7 +77,7 @@ var HouseholdMateControllerApi = /** @class */ (function () {
         if (inviteeEmail !== undefined) {
             queryParameters['inviteeEmail'] = inviteeEmail;
         }
-        var httpRequestParams = {
+        let httpRequestParams = {
             method: 'DELETE',
             url: localVarPath,
             params: queryParameters,
@@ -90,22 +87,22 @@ var HouseholdMateControllerApi = /** @class */ (function () {
             httpRequestParams = Object.assign(httpRequestParams, extraHttpRequestParams);
         }
         return this.$http(httpRequestParams);
-    };
+    }
     /**
      *
      * @summary getHouseholdMates
      * @param userId userId
      */
-    HouseholdMateControllerApi.prototype.getHouseholdMatesUsingGET = function (userId, extraHttpRequestParams) {
-        var localVarPath = this.basePath + '/api/v1/household-mates/{userId}'
+    getHouseholdMatesUsingGET(userId, extraHttpRequestParams) {
+        const localVarPath = this.basePath + '/api/v1/household-mates/{userId}'
             .replace('{' + 'userId' + '}', encodeURIComponent(String(userId)));
-        var queryParameters = {};
-        var headerParams = Object.assign({}, this.defaultHeaders);
+        let queryParameters = {};
+        let headerParams = Object.assign({}, this.defaultHeaders);
         // verify required parameter 'userId' is not null or undefined
         if (userId === null || userId === undefined) {
             throw new Error('Required parameter userId was null or undefined when calling getHouseholdMatesUsingGET.');
         }
-        var httpRequestParams = {
+        let httpRequestParams = {
             method: 'GET',
             url: localVarPath,
             params: queryParameters,
@@ -115,18 +112,18 @@ var HouseholdMateControllerApi = /** @class */ (function () {
             httpRequestParams = Object.assign(httpRequestParams, extraHttpRequestParams);
         }
         return this.$http(httpRequestParams);
-    };
+    }
     /**
      *
      * @summary inviteHouseholdMate
      * @param userId userId
      * @param request request
      */
-    HouseholdMateControllerApi.prototype.inviteHouseholdMateUsingPOST = function (userId, request, extraHttpRequestParams) {
-        var localVarPath = this.basePath + '/api/v1/household-mates/{userId}/invite'
+    inviteHouseholdMateUsingPOST(userId, request, extraHttpRequestParams) {
+        const localVarPath = this.basePath + '/api/v1/household-mates/{userId}/invite'
             .replace('{' + 'userId' + '}', encodeURIComponent(String(userId)));
-        var queryParameters = {};
-        var headerParams = Object.assign({}, this.defaultHeaders);
+        let queryParameters = {};
+        let headerParams = Object.assign({}, this.defaultHeaders);
         // verify required parameter 'userId' is not null or undefined
         if (userId === null || userId === undefined) {
             throw new Error('Required parameter userId was null or undefined when calling inviteHouseholdMateUsingPOST.');
@@ -135,7 +132,7 @@ var HouseholdMateControllerApi = /** @class */ (function () {
         if (request === null || request === undefined) {
             throw new Error('Required parameter request was null or undefined when calling inviteHouseholdMateUsingPOST.');
         }
-        var httpRequestParams = {
+        let httpRequestParams = {
             method: 'POST',
             url: localVarPath,
             data: request,
@@ -146,18 +143,18 @@ var HouseholdMateControllerApi = /** @class */ (function () {
             httpRequestParams = Object.assign(httpRequestParams, extraHttpRequestParams);
         }
         return this.$http(httpRequestParams);
-    };
+    }
     /**
      *
      * @summary removeHouseholdMate
      * @param mateUserId mateUserId
      * @param userId userId
      */
-    HouseholdMateControllerApi.prototype.removeHouseholdMateUsingDELETE = function (mateUserId, userId, extraHttpRequestParams) {
-        var localVarPath = this.basePath + '/api/v1/household-mates/{userId}'
+    removeHouseholdMateUsingDELETE(mateUserId, userId, extraHttpRequestParams) {
+        const localVarPath = this.basePath + '/api/v1/household-mates/{userId}'
             .replace('{' + 'userId' + '}', encodeURIComponent(String(userId)));
-        var queryParameters = {};
-        var headerParams = Object.assign({}, this.defaultHeaders);
+        let queryParameters = {};
+        let headerParams = Object.assign({}, this.defaultHeaders);
         // verify required parameter 'mateUserId' is not null or undefined
         if (mateUserId === null || mateUserId === undefined) {
             throw new Error('Required parameter mateUserId was null or undefined when calling removeHouseholdMateUsingDELETE.');
@@ -169,7 +166,7 @@ var HouseholdMateControllerApi = /** @class */ (function () {
         if (mateUserId !== undefined) {
             queryParameters['mateUserId'] = mateUserId;
         }
-        var httpRequestParams = {
+        let httpRequestParams = {
             method: 'DELETE',
             url: localVarPath,
             params: queryParameters,
@@ -179,8 +176,6 @@ var HouseholdMateControllerApi = /** @class */ (function () {
             httpRequestParams = Object.assign(httpRequestParams, extraHttpRequestParams);
         }
         return this.$http(httpRequestParams);
-    };
-    HouseholdMateControllerApi.$inject = ['$http', '$httpParamSerializer', 'basePath'];
-    return HouseholdMateControllerApi;
-}());
-exports.HouseholdMateControllerApi = HouseholdMateControllerApi;
+    }
+}
+HouseholdMateControllerApi.$inject = ['$http', '$httpParamSerializer', 'basePath'];

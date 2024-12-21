@@ -1,4 +1,3 @@
-"use strict";
 /**
  * OffTheRecord Rest Service API - Devo
  * A service to handle your traffic tickets
@@ -10,11 +9,9 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.RefLinkControllerApi = void 0;
 /* tslint:disable:no-unused-variable member-ordering */
-var RefLinkControllerApi = /** @class */ (function () {
-    function RefLinkControllerApi($http, $httpParamSerializer, basePath) {
+export class RefLinkControllerApi {
+    constructor($http, $httpParamSerializer, basePath) {
         this.$http = $http;
         this.$httpParamSerializer = $httpParamSerializer;
         this.basePath = 'http://otr-backend-service-us-devo.offtherecord.com';
@@ -28,16 +25,16 @@ var RefLinkControllerApi = /** @class */ (function () {
      * @summary getRefLinksForUser
      * @param userIdString userIdString
      */
-    RefLinkControllerApi.prototype.getRefLinksForUserUsingGET = function (userIdString, extraHttpRequestParams) {
-        var localVarPath = this.basePath + '/api/v1/reflinks/{userIdString}'
+    getRefLinksForUserUsingGET(userIdString, extraHttpRequestParams) {
+        const localVarPath = this.basePath + '/api/v1/reflinks/{userIdString}'
             .replace('{' + 'userIdString' + '}', encodeURIComponent(String(userIdString)));
-        var queryParameters = {};
-        var headerParams = Object.assign({}, this.defaultHeaders);
+        let queryParameters = {};
+        let headerParams = Object.assign({}, this.defaultHeaders);
         // verify required parameter 'userIdString' is not null or undefined
         if (userIdString === null || userIdString === undefined) {
             throw new Error('Required parameter userIdString was null or undefined when calling getRefLinksForUserUsingGET.');
         }
-        var httpRequestParams = {
+        let httpRequestParams = {
             method: 'GET',
             url: localVarPath,
             params: queryParameters,
@@ -47,8 +44,6 @@ var RefLinkControllerApi = /** @class */ (function () {
             httpRequestParams = Object.assign(httpRequestParams, extraHttpRequestParams);
         }
         return this.$http(httpRequestParams);
-    };
-    RefLinkControllerApi.$inject = ['$http', '$httpParamSerializer', 'basePath'];
-    return RefLinkControllerApi;
-}());
-exports.RefLinkControllerApi = RefLinkControllerApi;
+    }
+}
+RefLinkControllerApi.$inject = ['$http', '$httpParamSerializer', 'basePath'];

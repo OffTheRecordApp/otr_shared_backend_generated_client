@@ -1,4 +1,3 @@
-"use strict";
 /**
  * OffTheRecord Rest Service API - Devo
  * A service to handle your traffic tickets
@@ -10,11 +9,9 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.CaseActionsControllerApi = void 0;
 /* tslint:disable:no-unused-variable member-ordering */
-var CaseActionsControllerApi = /** @class */ (function () {
-    function CaseActionsControllerApi($http, $httpParamSerializer, basePath) {
+export class CaseActionsControllerApi {
+    constructor($http, $httpParamSerializer, basePath) {
         this.$http = $http;
         this.$httpParamSerializer = $httpParamSerializer;
         this.basePath = 'http://otr-backend-service-us-devo.offtherecord.com';
@@ -29,11 +26,11 @@ var CaseActionsControllerApi = /** @class */ (function () {
      * @param caseId caseId
      * @param request request
      */
-    CaseActionsControllerApi.prototype.addActionToCaseV2UsingPOST = function (caseId, request, extraHttpRequestParams) {
-        var localVarPath = this.basePath + '/api/v2/cases/{caseId}/actions'
+    addActionToCaseV2UsingPOST(caseId, request, extraHttpRequestParams) {
+        const localVarPath = this.basePath + '/api/v2/cases/{caseId}/actions'
             .replace('{' + 'caseId' + '}', encodeURIComponent(String(caseId)));
-        var queryParameters = {};
-        var headerParams = Object.assign({}, this.defaultHeaders);
+        let queryParameters = {};
+        let headerParams = Object.assign({}, this.defaultHeaders);
         // verify required parameter 'caseId' is not null or undefined
         if (caseId === null || caseId === undefined) {
             throw new Error('Required parameter caseId was null or undefined when calling addActionToCaseV2UsingPOST.');
@@ -42,7 +39,7 @@ var CaseActionsControllerApi = /** @class */ (function () {
         if (request === null || request === undefined) {
             throw new Error('Required parameter request was null or undefined when calling addActionToCaseV2UsingPOST.');
         }
-        var httpRequestParams = {
+        let httpRequestParams = {
             method: 'POST',
             url: localVarPath,
             data: request,
@@ -53,22 +50,22 @@ var CaseActionsControllerApi = /** @class */ (function () {
             httpRequestParams = Object.assign(httpRequestParams, extraHttpRequestParams);
         }
         return this.$http(httpRequestParams);
-    };
+    }
     /**
      *
      * @summary getActionTimeline
      * @param caseId caseId
      */
-    CaseActionsControllerApi.prototype.getActionTimelineUsingGET = function (caseId, extraHttpRequestParams) {
-        var localVarPath = this.basePath + '/api/v1/cases/{caseId}/actions/timeline'
+    getActionTimelineUsingGET(caseId, extraHttpRequestParams) {
+        const localVarPath = this.basePath + '/api/v1/cases/{caseId}/actions/timeline'
             .replace('{' + 'caseId' + '}', encodeURIComponent(String(caseId)));
-        var queryParameters = {};
-        var headerParams = Object.assign({}, this.defaultHeaders);
+        let queryParameters = {};
+        let headerParams = Object.assign({}, this.defaultHeaders);
         // verify required parameter 'caseId' is not null or undefined
         if (caseId === null || caseId === undefined) {
             throw new Error('Required parameter caseId was null or undefined when calling getActionTimelineUsingGET.');
         }
-        var httpRequestParams = {
+        let httpRequestParams = {
             method: 'GET',
             url: localVarPath,
             params: queryParameters,
@@ -78,16 +75,16 @@ var CaseActionsControllerApi = /** @class */ (function () {
             httpRequestParams = Object.assign(httpRequestParams, extraHttpRequestParams);
         }
         return this.$http(httpRequestParams);
-    };
+    }
     /**
      *
      * @summary getAllActions
      */
-    CaseActionsControllerApi.prototype.getAllActionsUsingGET = function (extraHttpRequestParams) {
-        var localVarPath = this.basePath + '/api/v1/cases/actions';
-        var queryParameters = {};
-        var headerParams = Object.assign({}, this.defaultHeaders);
-        var httpRequestParams = {
+    getAllActionsUsingGET(extraHttpRequestParams) {
+        const localVarPath = this.basePath + '/api/v1/cases/actions';
+        let queryParameters = {};
+        let headerParams = Object.assign({}, this.defaultHeaders);
+        let httpRequestParams = {
             method: 'GET',
             url: localVarPath,
             params: queryParameters,
@@ -97,18 +94,18 @@ var CaseActionsControllerApi = /** @class */ (function () {
             httpRequestParams = Object.assign(httpRequestParams, extraHttpRequestParams);
         }
         return this.$http(httpRequestParams);
-    };
+    }
     /**
      *
      * @summary getCaseActions
      * @param caseId caseId
      * @param showDeleted showDeleted
      */
-    CaseActionsControllerApi.prototype.getCaseActionsUsingGET = function (caseId, showDeleted, extraHttpRequestParams) {
-        var localVarPath = this.basePath + '/api/v1/cases/{caseId}/actions'
+    getCaseActionsUsingGET(caseId, showDeleted, extraHttpRequestParams) {
+        const localVarPath = this.basePath + '/api/v1/cases/{caseId}/actions'
             .replace('{' + 'caseId' + '}', encodeURIComponent(String(caseId)));
-        var queryParameters = {};
-        var headerParams = Object.assign({}, this.defaultHeaders);
+        let queryParameters = {};
+        let headerParams = Object.assign({}, this.defaultHeaders);
         // verify required parameter 'caseId' is not null or undefined
         if (caseId === null || caseId === undefined) {
             throw new Error('Required parameter caseId was null or undefined when calling getCaseActionsUsingGET.');
@@ -116,7 +113,7 @@ var CaseActionsControllerApi = /** @class */ (function () {
         if (showDeleted !== undefined) {
             queryParameters['showDeleted'] = showDeleted;
         }
-        var httpRequestParams = {
+        let httpRequestParams = {
             method: 'GET',
             url: localVarPath,
             params: queryParameters,
@@ -126,7 +123,7 @@ var CaseActionsControllerApi = /** @class */ (function () {
             httpRequestParams = Object.assign(httpRequestParams, extraHttpRequestParams);
         }
         return this.$http(httpRequestParams);
-    };
+    }
     /**
      *
      * @summary markActionAsDeleted
@@ -134,12 +131,12 @@ var CaseActionsControllerApi = /** @class */ (function () {
      * @param caseId caseId
      * @param isDeleted isDeleted
      */
-    CaseActionsControllerApi.prototype.markActionAsDeletedUsingDELETE = function (caseActionId, caseId, isDeleted, extraHttpRequestParams) {
-        var localVarPath = this.basePath + '/api/v1/cases/{caseId}/actions/{caseActionId}'
+    markActionAsDeletedUsingDELETE(caseActionId, caseId, isDeleted, extraHttpRequestParams) {
+        const localVarPath = this.basePath + '/api/v1/cases/{caseId}/actions/{caseActionId}'
             .replace('{' + 'caseActionId' + '}', encodeURIComponent(String(caseActionId)))
             .replace('{' + 'caseId' + '}', encodeURIComponent(String(caseId)));
-        var queryParameters = {};
-        var headerParams = Object.assign({}, this.defaultHeaders);
+        let queryParameters = {};
+        let headerParams = Object.assign({}, this.defaultHeaders);
         // verify required parameter 'caseActionId' is not null or undefined
         if (caseActionId === null || caseActionId === undefined) {
             throw new Error('Required parameter caseActionId was null or undefined when calling markActionAsDeletedUsingDELETE.');
@@ -155,7 +152,7 @@ var CaseActionsControllerApi = /** @class */ (function () {
         if (isDeleted !== undefined) {
             queryParameters['isDeleted'] = isDeleted;
         }
-        var httpRequestParams = {
+        let httpRequestParams = {
             method: 'DELETE',
             url: localVarPath,
             params: queryParameters,
@@ -165,7 +162,7 @@ var CaseActionsControllerApi = /** @class */ (function () {
             httpRequestParams = Object.assign(httpRequestParams, extraHttpRequestParams);
         }
         return this.$http(httpRequestParams);
-    };
+    }
     /**
      *
      * @summary updateCaseAction
@@ -173,12 +170,12 @@ var CaseActionsControllerApi = /** @class */ (function () {
      * @param caseId caseId
      * @param request request
      */
-    CaseActionsControllerApi.prototype.updateCaseActionUsingPUT = function (caseActionId, caseId, request, extraHttpRequestParams) {
-        var localVarPath = this.basePath + '/api/v1/cases/{caseId}/actions/{caseActionId}'
+    updateCaseActionUsingPUT(caseActionId, caseId, request, extraHttpRequestParams) {
+        const localVarPath = this.basePath + '/api/v1/cases/{caseId}/actions/{caseActionId}'
             .replace('{' + 'caseActionId' + '}', encodeURIComponent(String(caseActionId)))
             .replace('{' + 'caseId' + '}', encodeURIComponent(String(caseId)));
-        var queryParameters = {};
-        var headerParams = Object.assign({}, this.defaultHeaders);
+        let queryParameters = {};
+        let headerParams = Object.assign({}, this.defaultHeaders);
         // verify required parameter 'caseActionId' is not null or undefined
         if (caseActionId === null || caseActionId === undefined) {
             throw new Error('Required parameter caseActionId was null or undefined when calling updateCaseActionUsingPUT.');
@@ -191,7 +188,7 @@ var CaseActionsControllerApi = /** @class */ (function () {
         if (request === null || request === undefined) {
             throw new Error('Required parameter request was null or undefined when calling updateCaseActionUsingPUT.');
         }
-        var httpRequestParams = {
+        let httpRequestParams = {
             method: 'PUT',
             url: localVarPath,
             data: request,
@@ -202,8 +199,6 @@ var CaseActionsControllerApi = /** @class */ (function () {
             httpRequestParams = Object.assign(httpRequestParams, extraHttpRequestParams);
         }
         return this.$http(httpRequestParams);
-    };
-    CaseActionsControllerApi.$inject = ['$http', '$httpParamSerializer', 'basePath'];
-    return CaseActionsControllerApi;
-}());
-exports.CaseActionsControllerApi = CaseActionsControllerApi;
+    }
+}
+CaseActionsControllerApi.$inject = ['$http', '$httpParamSerializer', 'basePath'];

@@ -1,4 +1,3 @@
-"use strict";
 /**
  * OffTheRecord Rest Service API - Devo
  * A service to handle your traffic tickets
@@ -10,17 +9,15 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.BillingPriceModel = void 0;
-var BillingPriceModel;
+export var BillingPriceModel;
 (function (BillingPriceModel) {
-    var BillingSchemeEnum;
+    let BillingSchemeEnum;
     (function (BillingSchemeEnum) {
         BillingSchemeEnum[BillingSchemeEnum["PERUNIT"] = 'PER_UNIT'] = "PERUNIT";
         BillingSchemeEnum[BillingSchemeEnum["TIERED"] = 'TIERED'] = "TIERED";
         BillingSchemeEnum[BillingSchemeEnum["UNKNOWN"] = 'UNKNOWN'] = "UNKNOWN";
     })(BillingSchemeEnum = BillingPriceModel.BillingSchemeEnum || (BillingPriceModel.BillingSchemeEnum = {}));
-    var IntervalEnum;
+    let IntervalEnum;
     (function (IntervalEnum) {
         IntervalEnum[IntervalEnum["DAILY"] = 'DAILY'] = "DAILY";
         IntervalEnum[IntervalEnum["MONTHLY"] = 'MONTHLY'] = "MONTHLY";
@@ -28,4 +25,4 @@ var BillingPriceModel;
         IntervalEnum[IntervalEnum["WEEKLY"] = 'WEEKLY'] = "WEEKLY";
         IntervalEnum[IntervalEnum["YEARLY"] = 'YEARLY'] = "YEARLY";
     })(IntervalEnum = BillingPriceModel.IntervalEnum || (BillingPriceModel.IntervalEnum = {}));
-})(BillingPriceModel = exports.BillingPriceModel || (exports.BillingPriceModel = {}));
+})(BillingPriceModel || (BillingPriceModel = {}));

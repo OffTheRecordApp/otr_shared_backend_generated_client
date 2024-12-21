@@ -1,4 +1,3 @@
-"use strict";
 /**
  * OffTheRecord Rest Service API - Devo
  * A service to handle your traffic tickets
@@ -10,14 +9,12 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.LawfirmRedirectModel = void 0;
-var LawfirmRedirectModel;
+export var LawfirmRedirectModel;
 (function (LawfirmRedirectModel) {
-    var LandingPageTypeEnum;
+    let LandingPageTypeEnum;
     (function (LandingPageTypeEnum) {
         LandingPageTypeEnum[LandingPageTypeEnum["DEBUG"] = 'DEBUG'] = "DEBUG";
         LandingPageTypeEnum[LandingPageTypeEnum["SEO"] = 'SEO'] = "SEO";
         LandingPageTypeEnum[LandingPageTypeEnum["VANITY"] = 'VANITY'] = "VANITY";
     })(LandingPageTypeEnum = LawfirmRedirectModel.LandingPageTypeEnum || (LawfirmRedirectModel.LandingPageTypeEnum = {}));
-})(LawfirmRedirectModel = exports.LawfirmRedirectModel || (exports.LawfirmRedirectModel = {}));
+})(LawfirmRedirectModel || (LawfirmRedirectModel = {}));

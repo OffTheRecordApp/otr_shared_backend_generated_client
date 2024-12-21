@@ -1,4 +1,3 @@
-"use strict";
 /**
  * OffTheRecord Rest Service API - Devo
  * A service to handle your traffic tickets
@@ -10,11 +9,9 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.CreateCitationRequest = void 0;
-var CreateCitationRequest;
+export var CreateCitationRequest;
 (function (CreateCitationRequest) {
-    var CitationStateEnum;
+    let CitationStateEnum;
     (function (CitationStateEnum) {
         CitationStateEnum[CitationStateEnum["AK"] = 'AK'] = "AK";
         CitationStateEnum[CitationStateEnum["AL"] = 'AL'] = "AL";
@@ -68,7 +65,7 @@ var CreateCitationRequest;
         CitationStateEnum[CitationStateEnum["WV"] = 'WV'] = "WV";
         CitationStateEnum[CitationStateEnum["WY"] = 'WY'] = "WY";
     })(CitationStateEnum = CreateCitationRequest.CitationStateEnum || (CreateCitationRequest.CitationStateEnum = {}));
-    var ClientTypeEnum;
+    let ClientTypeEnum;
     (function (ClientTypeEnum) {
         ClientTypeEnum[ClientTypeEnum["ANDROID"] = 'ANDROID'] = "ANDROID";
         ClientTypeEnum[ClientTypeEnum["DESKTOPWEBAPP"] = 'DESKTOP_WEBAPP'] = "DESKTOPWEBAPP";
@@ -93,4 +90,4 @@ var CreateCitationRequest;
         ClientTypeEnum[ClientTypeEnum["OTRWIDGET"] = 'OTR_WIDGET'] = "OTRWIDGET";
         ClientTypeEnum[ClientTypeEnum["UNKNOWN"] = 'UNKNOWN'] = "UNKNOWN";
     })(ClientTypeEnum = CreateCitationRequest.ClientTypeEnum || (CreateCitationRequest.ClientTypeEnum = {}));
-})(CreateCitationRequest = exports.CreateCitationRequest || (exports.CreateCitationRequest = {}));
+})(CreateCitationRequest || (CreateCitationRequest = {}));

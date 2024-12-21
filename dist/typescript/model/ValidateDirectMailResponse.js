@@ -1,4 +1,3 @@
-"use strict";
 /**
  * OffTheRecord Rest Service API - Devo
  * A service to handle your traffic tickets
@@ -10,11 +9,9 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.ValidateDirectMailResponse = void 0;
-var ValidateDirectMailResponse;
+export var ValidateDirectMailResponse;
 (function (ValidateDirectMailResponse) {
-    var OtrErrorEnum;
+    let OtrErrorEnum;
     (function (OtrErrorEnum) {
         OtrErrorEnum[OtrErrorEnum["ACCESSDENIED"] = 'ACCESS_DENIED'] = "ACCESSDENIED";
         OtrErrorEnum[OtrErrorEnum["ACCOUNTDISABLED"] = 'ACCOUNT_DISABLED'] = "ACCOUNTDISABLED";
@@ -303,4 +300,4 @@ var ValidateDirectMailResponse;
         OtrErrorEnum[OtrErrorEnum["VERIFICATIONCODENOTVALID"] = 'VERIFICATION_CODE_NOT_VALID'] = "VERIFICATIONCODENOTVALID";
         OtrErrorEnum[OtrErrorEnum["VERIFICATIONLINKNOTVALID"] = 'VERIFICATION_LINK_NOT_VALID'] = "VERIFICATIONLINKNOTVALID";
     })(OtrErrorEnum = ValidateDirectMailResponse.OtrErrorEnum || (ValidateDirectMailResponse.OtrErrorEnum = {}));
-})(ValidateDirectMailResponse = exports.ValidateDirectMailResponse || (exports.ValidateDirectMailResponse = {}));
+})(ValidateDirectMailResponse || (ValidateDirectMailResponse = {}));

@@ -1,4 +1,3 @@
-"use strict";
 /**
  * OffTheRecord Rest Service API - Devo
  * A service to handle your traffic tickets
@@ -10,11 +9,9 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.LineItemControllerApi = void 0;
 /* tslint:disable:no-unused-variable member-ordering */
-var LineItemControllerApi = /** @class */ (function () {
-    function LineItemControllerApi($http, $httpParamSerializer, basePath) {
+export class LineItemControllerApi {
+    constructor($http, $httpParamSerializer, basePath) {
         this.$http = $http;
         this.$httpParamSerializer = $httpParamSerializer;
         this.basePath = 'http://otr-backend-service-us-devo.offtherecord.com';
@@ -29,12 +26,12 @@ var LineItemControllerApi = /** @class */ (function () {
      * @param caseId caseId
      * @param lineItemId lineItemId
      */
-    LineItemControllerApi.prototype.deleteCaseLineItemUsingDELETE = function (caseId, lineItemId, extraHttpRequestParams) {
-        var localVarPath = this.basePath + '/api/v1/cases/{caseId}/lineitems/{lineItemId}'
+    deleteCaseLineItemUsingDELETE(caseId, lineItemId, extraHttpRequestParams) {
+        const localVarPath = this.basePath + '/api/v1/cases/{caseId}/lineitems/{lineItemId}'
             .replace('{' + 'caseId' + '}', encodeURIComponent(String(caseId)))
             .replace('{' + 'lineItemId' + '}', encodeURIComponent(String(lineItemId)));
-        var queryParameters = {};
-        var headerParams = Object.assign({}, this.defaultHeaders);
+        let queryParameters = {};
+        let headerParams = Object.assign({}, this.defaultHeaders);
         // verify required parameter 'caseId' is not null or undefined
         if (caseId === null || caseId === undefined) {
             throw new Error('Required parameter caseId was null or undefined when calling deleteCaseLineItemUsingDELETE.');
@@ -43,7 +40,7 @@ var LineItemControllerApi = /** @class */ (function () {
         if (lineItemId === null || lineItemId === undefined) {
             throw new Error('Required parameter lineItemId was null or undefined when calling deleteCaseLineItemUsingDELETE.');
         }
-        var httpRequestParams = {
+        let httpRequestParams = {
             method: 'DELETE',
             url: localVarPath,
             params: queryParameters,
@@ -53,16 +50,16 @@ var LineItemControllerApi = /** @class */ (function () {
             httpRequestParams = Object.assign(httpRequestParams, extraHttpRequestParams);
         }
         return this.$http(httpRequestParams);
-    };
+    }
     /**
      *
      * @summary getLineItemTypes
      */
-    LineItemControllerApi.prototype.getLineItemTypesUsingGET = function (extraHttpRequestParams) {
-        var localVarPath = this.basePath + '/api/v1/lineitems';
-        var queryParameters = {};
-        var headerParams = Object.assign({}, this.defaultHeaders);
-        var httpRequestParams = {
+    getLineItemTypesUsingGET(extraHttpRequestParams) {
+        const localVarPath = this.basePath + '/api/v1/lineitems';
+        let queryParameters = {};
+        let headerParams = Object.assign({}, this.defaultHeaders);
+        let httpRequestParams = {
             method: 'GET',
             url: localVarPath,
             params: queryParameters,
@@ -72,22 +69,22 @@ var LineItemControllerApi = /** @class */ (function () {
             httpRequestParams = Object.assign(httpRequestParams, extraHttpRequestParams);
         }
         return this.$http(httpRequestParams);
-    };
+    }
     /**
      *
      * @summary getLineItems
      * @param caseId caseId
      */
-    LineItemControllerApi.prototype.getLineItemsUsingGET = function (caseId, extraHttpRequestParams) {
-        var localVarPath = this.basePath + '/api/v1/cases/{caseId}/line-items'
+    getLineItemsUsingGET(caseId, extraHttpRequestParams) {
+        const localVarPath = this.basePath + '/api/v1/cases/{caseId}/line-items'
             .replace('{' + 'caseId' + '}', encodeURIComponent(String(caseId)));
-        var queryParameters = {};
-        var headerParams = Object.assign({}, this.defaultHeaders);
+        let queryParameters = {};
+        let headerParams = Object.assign({}, this.defaultHeaders);
         // verify required parameter 'caseId' is not null or undefined
         if (caseId === null || caseId === undefined) {
             throw new Error('Required parameter caseId was null or undefined when calling getLineItemsUsingGET.');
         }
-        var httpRequestParams = {
+        let httpRequestParams = {
             method: 'GET',
             url: localVarPath,
             params: queryParameters,
@@ -97,18 +94,18 @@ var LineItemControllerApi = /** @class */ (function () {
             httpRequestParams = Object.assign(httpRequestParams, extraHttpRequestParams);
         }
         return this.$http(httpRequestParams);
-    };
+    }
     /**
      *
      * @summary insertCaseLineItem
      * @param caseId caseId
      * @param request request
      */
-    LineItemControllerApi.prototype.insertCaseLineItemUsingPOST = function (caseId, request, extraHttpRequestParams) {
-        var localVarPath = this.basePath + '/api/v1/cases/{caseId}/lineitems'
+    insertCaseLineItemUsingPOST(caseId, request, extraHttpRequestParams) {
+        const localVarPath = this.basePath + '/api/v1/cases/{caseId}/lineitems'
             .replace('{' + 'caseId' + '}', encodeURIComponent(String(caseId)));
-        var queryParameters = {};
-        var headerParams = Object.assign({}, this.defaultHeaders);
+        let queryParameters = {};
+        let headerParams = Object.assign({}, this.defaultHeaders);
         // verify required parameter 'caseId' is not null or undefined
         if (caseId === null || caseId === undefined) {
             throw new Error('Required parameter caseId was null or undefined when calling insertCaseLineItemUsingPOST.');
@@ -117,7 +114,7 @@ var LineItemControllerApi = /** @class */ (function () {
         if (request === null || request === undefined) {
             throw new Error('Required parameter request was null or undefined when calling insertCaseLineItemUsingPOST.');
         }
-        var httpRequestParams = {
+        let httpRequestParams = {
             method: 'POST',
             url: localVarPath,
             data: request,
@@ -128,7 +125,7 @@ var LineItemControllerApi = /** @class */ (function () {
             httpRequestParams = Object.assign(httpRequestParams, extraHttpRequestParams);
         }
         return this.$http(httpRequestParams);
-    };
+    }
     /**
      *
      * @summary updateCaseLineItem
@@ -136,12 +133,12 @@ var LineItemControllerApi = /** @class */ (function () {
      * @param lineItemId lineItemId
      * @param request request
      */
-    LineItemControllerApi.prototype.updateCaseLineItemUsingPUT = function (caseId, lineItemId, request, extraHttpRequestParams) {
-        var localVarPath = this.basePath + '/api/v1/cases/{caseId}/lineitems/{lineItemId}'
+    updateCaseLineItemUsingPUT(caseId, lineItemId, request, extraHttpRequestParams) {
+        const localVarPath = this.basePath + '/api/v1/cases/{caseId}/lineitems/{lineItemId}'
             .replace('{' + 'caseId' + '}', encodeURIComponent(String(caseId)))
             .replace('{' + 'lineItemId' + '}', encodeURIComponent(String(lineItemId)));
-        var queryParameters = {};
-        var headerParams = Object.assign({}, this.defaultHeaders);
+        let queryParameters = {};
+        let headerParams = Object.assign({}, this.defaultHeaders);
         // verify required parameter 'caseId' is not null or undefined
         if (caseId === null || caseId === undefined) {
             throw new Error('Required parameter caseId was null or undefined when calling updateCaseLineItemUsingPUT.');
@@ -154,7 +151,7 @@ var LineItemControllerApi = /** @class */ (function () {
         if (request === null || request === undefined) {
             throw new Error('Required parameter request was null or undefined when calling updateCaseLineItemUsingPUT.');
         }
-        var httpRequestParams = {
+        let httpRequestParams = {
             method: 'PUT',
             url: localVarPath,
             data: request,
@@ -165,8 +162,6 @@ var LineItemControllerApi = /** @class */ (function () {
             httpRequestParams = Object.assign(httpRequestParams, extraHttpRequestParams);
         }
         return this.$http(httpRequestParams);
-    };
-    LineItemControllerApi.$inject = ['$http', '$httpParamSerializer', 'basePath'];
-    return LineItemControllerApi;
-}());
-exports.LineItemControllerApi = LineItemControllerApi;
+    }
+}
+LineItemControllerApi.$inject = ['$http', '$httpParamSerializer', 'basePath'];

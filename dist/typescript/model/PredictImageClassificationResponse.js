@@ -1,4 +1,3 @@
-"use strict";
 /**
  * OffTheRecord Rest Service API - Devo
  * A service to handle your traffic tickets
@@ -10,11 +9,9 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.PredictImageClassificationResponse = void 0;
-var PredictImageClassificationResponse;
+export var PredictImageClassificationResponse;
 (function (PredictImageClassificationResponse) {
-    var DocumentTypeEnum;
+    let DocumentTypeEnum;
     (function (DocumentTypeEnum) {
         DocumentTypeEnum[DocumentTypeEnum["CAMERATICKET"] = 'CAMERA_TICKET'] = "CAMERATICKET";
         DocumentTypeEnum[DocumentTypeEnum["CASEDOCKET"] = 'CASE_DOCKET'] = "CASEDOCKET";
@@ -40,4 +37,4 @@ var PredictImageClassificationResponse;
         DocumentTypeEnum[DocumentTypeEnum["WARNINGNOTICE"] = 'WARNING_NOTICE'] = "WARNINGNOTICE";
         DocumentTypeEnum[DocumentTypeEnum["WARRANT"] = 'WARRANT'] = "WARRANT";
     })(DocumentTypeEnum = PredictImageClassificationResponse.DocumentTypeEnum || (PredictImageClassificationResponse.DocumentTypeEnum = {}));
-})(PredictImageClassificationResponse = exports.PredictImageClassificationResponse || (exports.PredictImageClassificationResponse = {}));
+})(PredictImageClassificationResponse || (PredictImageClassificationResponse = {}));

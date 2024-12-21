@@ -1,4 +1,3 @@
-"use strict";
 /**
  * OffTheRecord Rest Service API - Devo
  * A service to handle your traffic tickets
@@ -10,11 +9,9 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.FreshDeskTicket = void 0;
-var FreshDeskTicket;
+export var FreshDeskTicket;
 (function (FreshDeskTicket) {
-    var PriorityTypeEnum;
+    let PriorityTypeEnum;
     (function (PriorityTypeEnum) {
         PriorityTypeEnum[PriorityTypeEnum["HIGH"] = 'HIGH'] = "HIGH";
         PriorityTypeEnum[PriorityTypeEnum["LOW"] = 'LOW'] = "LOW";
@@ -22,7 +19,7 @@ var FreshDeskTicket;
         PriorityTypeEnum[PriorityTypeEnum["UNKNOWN"] = 'UNKNOWN'] = "UNKNOWN";
         PriorityTypeEnum[PriorityTypeEnum["URGENT"] = 'URGENT'] = "URGENT";
     })(PriorityTypeEnum = FreshDeskTicket.PriorityTypeEnum || (FreshDeskTicket.PriorityTypeEnum = {}));
-    var StatusTypeEnum;
+    let StatusTypeEnum;
     (function (StatusTypeEnum) {
         StatusTypeEnum[StatusTypeEnum["CLOSED"] = 'CLOSED'] = "CLOSED";
         StatusTypeEnum[StatusTypeEnum["OPEN"] = 'OPEN'] = "OPEN";
@@ -37,4 +34,4 @@ var FreshDeskTicket;
         StatusTypeEnum[StatusTypeEnum["WAITINGONOTR"] = 'WAITING_ON_OTR'] = "WAITINGONOTR";
         StatusTypeEnum[StatusTypeEnum["WAITINGONTHIRDPARTY"] = 'WAITING_ON_THIRD_PARTY'] = "WAITINGONTHIRDPARTY";
     })(StatusTypeEnum = FreshDeskTicket.StatusTypeEnum || (FreshDeskTicket.StatusTypeEnum = {}));
-})(FreshDeskTicket = exports.FreshDeskTicket || (exports.FreshDeskTicket = {}));
+})(FreshDeskTicket || (FreshDeskTicket = {}));

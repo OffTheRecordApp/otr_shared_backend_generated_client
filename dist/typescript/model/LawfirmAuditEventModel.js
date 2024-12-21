@@ -1,4 +1,3 @@
-"use strict";
 /**
  * OffTheRecord Rest Service API - Devo
  * A service to handle your traffic tickets
@@ -10,11 +9,9 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.LawfirmAuditEventModel = void 0;
-var LawfirmAuditEventModel;
+export var LawfirmAuditEventModel;
 (function (LawfirmAuditEventModel) {
-    var ClientTypeEnum;
+    let ClientTypeEnum;
     (function (ClientTypeEnum) {
         ClientTypeEnum[ClientTypeEnum["ANDROID"] = 'ANDROID'] = "ANDROID";
         ClientTypeEnum[ClientTypeEnum["DESKTOPWEBAPP"] = 'DESKTOP_WEBAPP'] = "DESKTOPWEBAPP";
@@ -39,7 +36,7 @@ var LawfirmAuditEventModel;
         ClientTypeEnum[ClientTypeEnum["OTRWIDGET"] = 'OTR_WIDGET'] = "OTRWIDGET";
         ClientTypeEnum[ClientTypeEnum["UNKNOWN"] = 'UNKNOWN'] = "UNKNOWN";
     })(ClientTypeEnum = LawfirmAuditEventModel.ClientTypeEnum || (LawfirmAuditEventModel.ClientTypeEnum = {}));
-    var EventEnum;
+    let EventEnum;
     (function (EventEnum) {
         EventEnum[EventEnum["ACCOUNTCOVERAGEADDED"] = 'ACCOUNT_COVERAGE_ADDED'] = "ACCOUNTCOVERAGEADDED";
         EventEnum[EventEnum["ACCOUNTCOVERAGEREMOVED"] = 'ACCOUNT_COVERAGE_REMOVED'] = "ACCOUNTCOVERAGEREMOVED";
@@ -121,4 +118,4 @@ var LawfirmAuditEventModel;
         EventEnum[EventEnum["VERIFYPHONE"] = 'VERIFY_PHONE'] = "VERIFYPHONE";
         EventEnum[EventEnum["VIOLATIONENABLEDFORALLCOVEREDCOURTS"] = 'VIOLATION_ENABLED_FOR_ALL_COVERED_COURTS'] = "VIOLATIONENABLEDFORALLCOVEREDCOURTS";
     })(EventEnum = LawfirmAuditEventModel.EventEnum || (LawfirmAuditEventModel.EventEnum = {}));
-})(LawfirmAuditEventModel = exports.LawfirmAuditEventModel || (exports.LawfirmAuditEventModel = {}));
+})(LawfirmAuditEventModel || (LawfirmAuditEventModel = {}));

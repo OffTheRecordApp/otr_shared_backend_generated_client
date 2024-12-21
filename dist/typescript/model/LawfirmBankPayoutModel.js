@@ -1,4 +1,3 @@
-"use strict";
 /**
  * OffTheRecord Rest Service API - Devo
  * A service to handle your traffic tickets
@@ -10,22 +9,20 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.LawfirmBankPayoutModel = void 0;
-var LawfirmBankPayoutModel;
+export var LawfirmBankPayoutModel;
 (function (LawfirmBankPayoutModel) {
-    var MethodEnum;
+    let MethodEnum;
     (function (MethodEnum) {
         MethodEnum[MethodEnum["INSTANT"] = 'INSTANT'] = "INSTANT";
         MethodEnum[MethodEnum["STANDARD"] = 'STANDARD'] = "STANDARD";
     })(MethodEnum = LawfirmBankPayoutModel.MethodEnum || (LawfirmBankPayoutModel.MethodEnum = {}));
-    var ReconciliationStatusEnum;
+    let ReconciliationStatusEnum;
     (function (ReconciliationStatusEnum) {
         ReconciliationStatusEnum[ReconciliationStatusEnum["COMPLETED"] = 'COMPLETED'] = "COMPLETED";
         ReconciliationStatusEnum[ReconciliationStatusEnum["INPROGRESS"] = 'IN_PROGRESS'] = "INPROGRESS";
         ReconciliationStatusEnum[ReconciliationStatusEnum["NOTAPPLICABLE"] = 'NOT_APPLICABLE'] = "NOTAPPLICABLE";
     })(ReconciliationStatusEnum = LawfirmBankPayoutModel.ReconciliationStatusEnum || (LawfirmBankPayoutModel.ReconciliationStatusEnum = {}));
-    var StatusEnum;
+    let StatusEnum;
     (function (StatusEnum) {
         StatusEnum[StatusEnum["CANCELED"] = 'CANCELED'] = "CANCELED";
         StatusEnum[StatusEnum["FAILED"] = 'FAILED'] = "FAILED";
@@ -33,9 +30,9 @@ var LawfirmBankPayoutModel;
         StatusEnum[StatusEnum["PAID"] = 'PAID'] = "PAID";
         StatusEnum[StatusEnum["PENDING"] = 'PENDING'] = "PENDING";
     })(StatusEnum = LawfirmBankPayoutModel.StatusEnum || (LawfirmBankPayoutModel.StatusEnum = {}));
-    var TypeEnum;
+    let TypeEnum;
     (function (TypeEnum) {
         TypeEnum[TypeEnum["BANKACCOUNT"] = 'BANK_ACCOUNT'] = "BANKACCOUNT";
         TypeEnum[TypeEnum["CARD"] = 'CARD'] = "CARD";
     })(TypeEnum = LawfirmBankPayoutModel.TypeEnum || (LawfirmBankPayoutModel.TypeEnum = {}));
-})(LawfirmBankPayoutModel = exports.LawfirmBankPayoutModel || (exports.LawfirmBankPayoutModel = {}));
+})(LawfirmBankPayoutModel || (LawfirmBankPayoutModel = {}));

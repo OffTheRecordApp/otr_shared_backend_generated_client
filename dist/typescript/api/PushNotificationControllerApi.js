@@ -1,4 +1,3 @@
-"use strict";
 /**
  * OffTheRecord Rest Service API - Devo
  * A service to handle your traffic tickets
@@ -10,11 +9,9 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.PushNotificationControllerApi = void 0;
 /* tslint:disable:no-unused-variable member-ordering */
-var PushNotificationControllerApi = /** @class */ (function () {
-    function PushNotificationControllerApi($http, $httpParamSerializer, basePath) {
+export class PushNotificationControllerApi {
+    constructor($http, $httpParamSerializer, basePath) {
         this.$http = $http;
         this.$httpParamSerializer = $httpParamSerializer;
         this.basePath = 'http://otr-backend-service-us-devo.offtherecord.com';
@@ -28,14 +25,14 @@ var PushNotificationControllerApi = /** @class */ (function () {
      * @summary getUnreadCounts
      * @param includeMessage includeMessage
      */
-    PushNotificationControllerApi.prototype.getUnreadCountsUsingGET = function (includeMessage, extraHttpRequestParams) {
-        var localVarPath = this.basePath + '/api/v1/notifications/unread';
-        var queryParameters = {};
-        var headerParams = Object.assign({}, this.defaultHeaders);
+    getUnreadCountsUsingGET(includeMessage, extraHttpRequestParams) {
+        const localVarPath = this.basePath + '/api/v1/notifications/unread';
+        let queryParameters = {};
+        let headerParams = Object.assign({}, this.defaultHeaders);
         if (includeMessage !== undefined) {
             queryParameters['includeMessage'] = includeMessage;
         }
-        var httpRequestParams = {
+        let httpRequestParams = {
             method: 'GET',
             url: localVarPath,
             params: queryParameters,
@@ -45,22 +42,22 @@ var PushNotificationControllerApi = /** @class */ (function () {
             httpRequestParams = Object.assign(httpRequestParams, extraHttpRequestParams);
         }
         return this.$http(httpRequestParams);
-    };
+    }
     /**
      *
      * @summary markAllReadForUser
      * @param userId userId
      */
-    PushNotificationControllerApi.prototype.markAllReadForUserUsingDELETE = function (userId, extraHttpRequestParams) {
-        var localVarPath = this.basePath + '/api/v1/notifications/unread/{userId}/user'
+    markAllReadForUserUsingDELETE(userId, extraHttpRequestParams) {
+        const localVarPath = this.basePath + '/api/v1/notifications/unread/{userId}/user'
             .replace('{' + 'userId' + '}', encodeURIComponent(String(userId)));
-        var queryParameters = {};
-        var headerParams = Object.assign({}, this.defaultHeaders);
+        let queryParameters = {};
+        let headerParams = Object.assign({}, this.defaultHeaders);
         // verify required parameter 'userId' is not null or undefined
         if (userId === null || userId === undefined) {
             throw new Error('Required parameter userId was null or undefined when calling markAllReadForUserUsingDELETE.');
         }
-        var httpRequestParams = {
+        let httpRequestParams = {
             method: 'DELETE',
             url: localVarPath,
             params: queryParameters,
@@ -70,19 +67,19 @@ var PushNotificationControllerApi = /** @class */ (function () {
             httpRequestParams = Object.assign(httpRequestParams, extraHttpRequestParams);
         }
         return this.$http(httpRequestParams);
-    };
+    }
     /**
      *
      * @summary markCaseNotificationsAsUnread
      * @param caseId caseId
      * @param userId userId
      */
-    PushNotificationControllerApi.prototype.markCaseNotificationsAsUnreadUsingPUT = function (caseId, userId, extraHttpRequestParams) {
-        var localVarPath = this.basePath + '/api/v1/notifications/{userId}/unread/{caseId}/message'
+    markCaseNotificationsAsUnreadUsingPUT(caseId, userId, extraHttpRequestParams) {
+        const localVarPath = this.basePath + '/api/v1/notifications/{userId}/unread/{caseId}/message'
             .replace('{' + 'caseId' + '}', encodeURIComponent(String(caseId)))
             .replace('{' + 'userId' + '}', encodeURIComponent(String(userId)));
-        var queryParameters = {};
-        var headerParams = Object.assign({}, this.defaultHeaders);
+        let queryParameters = {};
+        let headerParams = Object.assign({}, this.defaultHeaders);
         // verify required parameter 'caseId' is not null or undefined
         if (caseId === null || caseId === undefined) {
             throw new Error('Required parameter caseId was null or undefined when calling markCaseNotificationsAsUnreadUsingPUT.');
@@ -91,7 +88,7 @@ var PushNotificationControllerApi = /** @class */ (function () {
         if (userId === null || userId === undefined) {
             throw new Error('Required parameter userId was null or undefined when calling markCaseNotificationsAsUnreadUsingPUT.');
         }
-        var httpRequestParams = {
+        let httpRequestParams = {
             method: 'PUT',
             url: localVarPath,
             params: queryParameters,
@@ -101,18 +98,18 @@ var PushNotificationControllerApi = /** @class */ (function () {
             httpRequestParams = Object.assign(httpRequestParams, extraHttpRequestParams);
         }
         return this.$http(httpRequestParams);
-    };
+    }
     /**
      *
      * @summary markPageTypesAsRead
      * @param caseId caseId
      * @param request request
      */
-    PushNotificationControllerApi.prototype.markPageTypesAsReadUsingDELETE = function (caseId, request, extraHttpRequestParams) {
-        var localVarPath = this.basePath + '/api/v2/notifications/unread/{caseId}'
+    markPageTypesAsReadUsingDELETE(caseId, request, extraHttpRequestParams) {
+        const localVarPath = this.basePath + '/api/v2/notifications/unread/{caseId}'
             .replace('{' + 'caseId' + '}', encodeURIComponent(String(caseId)));
-        var queryParameters = {};
-        var headerParams = Object.assign({}, this.defaultHeaders);
+        let queryParameters = {};
+        let headerParams = Object.assign({}, this.defaultHeaders);
         // verify required parameter 'caseId' is not null or undefined
         if (caseId === null || caseId === undefined) {
             throw new Error('Required parameter caseId was null or undefined when calling markPageTypesAsReadUsingDELETE.');
@@ -121,7 +118,7 @@ var PushNotificationControllerApi = /** @class */ (function () {
         if (request === null || request === undefined) {
             throw new Error('Required parameter request was null or undefined when calling markPageTypesAsReadUsingDELETE.');
         }
-        var httpRequestParams = {
+        let httpRequestParams = {
             method: 'DELETE',
             url: localVarPath,
             data: request,
@@ -132,18 +129,18 @@ var PushNotificationControllerApi = /** @class */ (function () {
             httpRequestParams = Object.assign(httpRequestParams, extraHttpRequestParams);
         }
         return this.$http(httpRequestParams);
-    };
+    }
     /**
      *
      * @summary markRead
      * @param caseId caseId
      * @param request request
      */
-    PushNotificationControllerApi.prototype.markReadUsingDELETE = function (caseId, request, extraHttpRequestParams) {
-        var localVarPath = this.basePath + '/api/v1/notifications/unread/{caseId}'
+    markReadUsingDELETE(caseId, request, extraHttpRequestParams) {
+        const localVarPath = this.basePath + '/api/v1/notifications/unread/{caseId}'
             .replace('{' + 'caseId' + '}', encodeURIComponent(String(caseId)));
-        var queryParameters = {};
-        var headerParams = Object.assign({}, this.defaultHeaders);
+        let queryParameters = {};
+        let headerParams = Object.assign({}, this.defaultHeaders);
         // verify required parameter 'caseId' is not null or undefined
         if (caseId === null || caseId === undefined) {
             throw new Error('Required parameter caseId was null or undefined when calling markReadUsingDELETE.');
@@ -152,7 +149,7 @@ var PushNotificationControllerApi = /** @class */ (function () {
         if (request === null || request === undefined) {
             throw new Error('Required parameter request was null or undefined when calling markReadUsingDELETE.');
         }
-        var httpRequestParams = {
+        let httpRequestParams = {
             method: 'DELETE',
             url: localVarPath,
             data: request,
@@ -163,18 +160,18 @@ var PushNotificationControllerApi = /** @class */ (function () {
             httpRequestParams = Object.assign(httpRequestParams, extraHttpRequestParams);
         }
         return this.$http(httpRequestParams);
-    };
+    }
     /**
      *
      * @summary pushCaseMessage
      * @param caseId caseId
      * @param pushRequest pushRequest
      */
-    PushNotificationControllerApi.prototype.pushCaseMessageUsingPOST = function (caseId, pushRequest, extraHttpRequestParams) {
-        var localVarPath = this.basePath + '/api/v1/notifications/cases/{caseId}'
+    pushCaseMessageUsingPOST(caseId, pushRequest, extraHttpRequestParams) {
+        const localVarPath = this.basePath + '/api/v1/notifications/cases/{caseId}'
             .replace('{' + 'caseId' + '}', encodeURIComponent(String(caseId)));
-        var queryParameters = {};
-        var headerParams = Object.assign({}, this.defaultHeaders);
+        let queryParameters = {};
+        let headerParams = Object.assign({}, this.defaultHeaders);
         // verify required parameter 'caseId' is not null or undefined
         if (caseId === null || caseId === undefined) {
             throw new Error('Required parameter caseId was null or undefined when calling pushCaseMessageUsingPOST.');
@@ -183,7 +180,7 @@ var PushNotificationControllerApi = /** @class */ (function () {
         if (pushRequest === null || pushRequest === undefined) {
             throw new Error('Required parameter pushRequest was null or undefined when calling pushCaseMessageUsingPOST.');
         }
-        var httpRequestParams = {
+        let httpRequestParams = {
             method: 'POST',
             url: localVarPath,
             data: pushRequest,
@@ -194,21 +191,21 @@ var PushNotificationControllerApi = /** @class */ (function () {
             httpRequestParams = Object.assign(httpRequestParams, extraHttpRequestParams);
         }
         return this.$http(httpRequestParams);
-    };
+    }
     /**
      *
      * @summary pushNotificationToUser
      * @param body body
      */
-    PushNotificationControllerApi.prototype.pushNotificationToUserUsingPOST = function (body, extraHttpRequestParams) {
-        var localVarPath = this.basePath + '/api/v1/notifications/users';
-        var queryParameters = {};
-        var headerParams = Object.assign({}, this.defaultHeaders);
+    pushNotificationToUserUsingPOST(body, extraHttpRequestParams) {
+        const localVarPath = this.basePath + '/api/v1/notifications/users';
+        let queryParameters = {};
+        let headerParams = Object.assign({}, this.defaultHeaders);
         // verify required parameter 'body' is not null or undefined
         if (body === null || body === undefined) {
             throw new Error('Required parameter body was null or undefined when calling pushNotificationToUserUsingPOST.');
         }
-        var httpRequestParams = {
+        let httpRequestParams = {
             method: 'POST',
             url: localVarPath,
             data: body,
@@ -219,21 +216,21 @@ var PushNotificationControllerApi = /** @class */ (function () {
             httpRequestParams = Object.assign(httpRequestParams, extraHttpRequestParams);
         }
         return this.$http(httpRequestParams);
-    };
+    }
     /**
      *
      * @summary register
      * @param request request
      */
-    PushNotificationControllerApi.prototype.registerUsingPOST = function (request, extraHttpRequestParams) {
-        var localVarPath = this.basePath + '/api/v1/notifications/register';
-        var queryParameters = {};
-        var headerParams = Object.assign({}, this.defaultHeaders);
+    registerUsingPOST(request, extraHttpRequestParams) {
+        const localVarPath = this.basePath + '/api/v1/notifications/register';
+        let queryParameters = {};
+        let headerParams = Object.assign({}, this.defaultHeaders);
         // verify required parameter 'request' is not null or undefined
         if (request === null || request === undefined) {
             throw new Error('Required parameter request was null or undefined when calling registerUsingPOST.');
         }
-        var httpRequestParams = {
+        let httpRequestParams = {
             method: 'POST',
             url: localVarPath,
             data: request,
@@ -244,8 +241,6 @@ var PushNotificationControllerApi = /** @class */ (function () {
             httpRequestParams = Object.assign(httpRequestParams, extraHttpRequestParams);
         }
         return this.$http(httpRequestParams);
-    };
-    PushNotificationControllerApi.$inject = ['$http', '$httpParamSerializer', 'basePath'];
-    return PushNotificationControllerApi;
-}());
-exports.PushNotificationControllerApi = PushNotificationControllerApi;
+    }
+}
+PushNotificationControllerApi.$inject = ['$http', '$httpParamSerializer', 'basePath'];

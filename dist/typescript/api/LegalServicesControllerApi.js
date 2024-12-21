@@ -1,4 +1,3 @@
-"use strict";
 /**
  * OffTheRecord Rest Service API - Devo
  * A service to handle your traffic tickets
@@ -10,11 +9,9 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.LegalServicesControllerApi = void 0;
 /* tslint:disable:no-unused-variable member-ordering */
-var LegalServicesControllerApi = /** @class */ (function () {
-    function LegalServicesControllerApi($http, $httpParamSerializer, basePath) {
+export class LegalServicesControllerApi {
+    constructor($http, $httpParamSerializer, basePath) {
         this.$http = $http;
         this.$httpParamSerializer = $httpParamSerializer;
         this.basePath = 'http://otr-backend-service-us-devo.offtherecord.com';
@@ -29,11 +26,11 @@ var LegalServicesControllerApi = /** @class */ (function () {
      * @param citationId citationId
      * @param request request
      */
-    LegalServicesControllerApi.prototype.createLegalServicesUsingPOST = function (citationId, request, extraHttpRequestParams) {
-        var localVarPath = this.basePath + '/api/v1/citations/{citationId}/legal-services'
+    createLegalServicesUsingPOST(citationId, request, extraHttpRequestParams) {
+        const localVarPath = this.basePath + '/api/v1/citations/{citationId}/legal-services'
             .replace('{' + 'citationId' + '}', encodeURIComponent(String(citationId)));
-        var queryParameters = {};
-        var headerParams = Object.assign({}, this.defaultHeaders);
+        let queryParameters = {};
+        let headerParams = Object.assign({}, this.defaultHeaders);
         // verify required parameter 'citationId' is not null or undefined
         if (citationId === null || citationId === undefined) {
             throw new Error('Required parameter citationId was null or undefined when calling createLegalServicesUsingPOST.');
@@ -42,7 +39,7 @@ var LegalServicesControllerApi = /** @class */ (function () {
         if (request === null || request === undefined) {
             throw new Error('Required parameter request was null or undefined when calling createLegalServicesUsingPOST.');
         }
-        var httpRequestParams = {
+        let httpRequestParams = {
             method: 'POST',
             url: localVarPath,
             data: request,
@@ -53,19 +50,19 @@ var LegalServicesControllerApi = /** @class */ (function () {
             httpRequestParams = Object.assign(httpRequestParams, extraHttpRequestParams);
         }
         return this.$http(httpRequestParams);
-    };
+    }
     /**
      *
      * @summary selectLegalService
      * @param citationId citationId
      * @param lawfirmCaseId lawfirmCaseId
      */
-    LegalServicesControllerApi.prototype.selectLegalServiceUsingPUT = function (citationId, lawfirmCaseId, extraHttpRequestParams) {
-        var localVarPath = this.basePath + '/api/v1/citations/{citationId}/select-legal-service/{lawfirmCaseId}'
+    selectLegalServiceUsingPUT(citationId, lawfirmCaseId, extraHttpRequestParams) {
+        const localVarPath = this.basePath + '/api/v1/citations/{citationId}/select-legal-service/{lawfirmCaseId}'
             .replace('{' + 'citationId' + '}', encodeURIComponent(String(citationId)))
             .replace('{' + 'lawfirmCaseId' + '}', encodeURIComponent(String(lawfirmCaseId)));
-        var queryParameters = {};
-        var headerParams = Object.assign({}, this.defaultHeaders);
+        let queryParameters = {};
+        let headerParams = Object.assign({}, this.defaultHeaders);
         // verify required parameter 'citationId' is not null or undefined
         if (citationId === null || citationId === undefined) {
             throw new Error('Required parameter citationId was null or undefined when calling selectLegalServiceUsingPUT.');
@@ -74,7 +71,7 @@ var LegalServicesControllerApi = /** @class */ (function () {
         if (lawfirmCaseId === null || lawfirmCaseId === undefined) {
             throw new Error('Required parameter lawfirmCaseId was null or undefined when calling selectLegalServiceUsingPUT.');
         }
-        var httpRequestParams = {
+        let httpRequestParams = {
             method: 'PUT',
             url: localVarPath,
             params: queryParameters,
@@ -84,8 +81,6 @@ var LegalServicesControllerApi = /** @class */ (function () {
             httpRequestParams = Object.assign(httpRequestParams, extraHttpRequestParams);
         }
         return this.$http(httpRequestParams);
-    };
-    LegalServicesControllerApi.$inject = ['$http', '$httpParamSerializer', 'basePath'];
-    return LegalServicesControllerApi;
-}());
-exports.LegalServicesControllerApi = LegalServicesControllerApi;
+    }
+}
+LegalServicesControllerApi.$inject = ['$http', '$httpParamSerializer', 'basePath'];

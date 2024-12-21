@@ -1,4 +1,3 @@
-"use strict";
 /**
  * OffTheRecord Rest Service API - Devo
  * A service to handle your traffic tickets
@@ -10,11 +9,9 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.UpdateUserModel = void 0;
-var UpdateUserModel;
+export var UpdateUserModel;
 (function (UpdateUserModel) {
-    var LoginProviderEnum;
+    let LoginProviderEnum;
     (function (LoginProviderEnum) {
         LoginProviderEnum[LoginProviderEnum["APPLE"] = 'APPLE'] = "APPLE";
         LoginProviderEnum[LoginProviderEnum["EMAIL"] = 'EMAIL'] = "EMAIL";
@@ -24,14 +21,14 @@ var UpdateUserModel;
         LoginProviderEnum[LoginProviderEnum["TWITTER"] = 'TWITTER'] = "TWITTER";
         LoginProviderEnum[LoginProviderEnum["UNKNOWN"] = 'UNKNOWN'] = "UNKNOWN";
     })(LoginProviderEnum = UpdateUserModel.LoginProviderEnum || (UpdateUserModel.LoginProviderEnum = {}));
-    var PrivacyModeEnum;
+    let PrivacyModeEnum;
     (function (PrivacyModeEnum) {
         PrivacyModeEnum[PrivacyModeEnum["FRIENDS"] = 'FRIENDS'] = "FRIENDS";
         PrivacyModeEnum[PrivacyModeEnum["PRIVATE"] = 'PRIVATE'] = "PRIVATE";
         PrivacyModeEnum[PrivacyModeEnum["PUBLIC"] = 'PUBLIC'] = "PUBLIC";
         PrivacyModeEnum[PrivacyModeEnum["SEMIPUBLIC"] = 'SEMI_PUBLIC'] = "SEMIPUBLIC";
     })(PrivacyModeEnum = UpdateUserModel.PrivacyModeEnum || (UpdateUserModel.PrivacyModeEnum = {}));
-    var RaceEnum;
+    let RaceEnum;
     (function (RaceEnum) {
         RaceEnum[RaceEnum["ASIAN"] = 'ASIAN'] = "ASIAN";
         RaceEnum[RaceEnum["BLACK"] = 'BLACK'] = "BLACK";
@@ -45,4 +42,4 @@ var UpdateUserModel;
         RaceEnum[RaceEnum["UNVERIFIED"] = 'UNVERIFIED'] = "UNVERIFIED";
         RaceEnum[RaceEnum["WHITE"] = 'WHITE'] = "WHITE";
     })(RaceEnum = UpdateUserModel.RaceEnum || (UpdateUserModel.RaceEnum = {}));
-})(UpdateUserModel = exports.UpdateUserModel || (exports.UpdateUserModel = {}));
+})(UpdateUserModel || (UpdateUserModel = {}));

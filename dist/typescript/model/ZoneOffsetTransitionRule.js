@@ -1,4 +1,3 @@
-"use strict";
 /**
  * OffTheRecord Rest Service API - Devo
  * A service to handle your traffic tickets
@@ -10,11 +9,9 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.ZoneOffsetTransitionRule = void 0;
-var ZoneOffsetTransitionRule;
+export var ZoneOffsetTransitionRule;
 (function (ZoneOffsetTransitionRule) {
-    var DayOfWeekEnum;
+    let DayOfWeekEnum;
     (function (DayOfWeekEnum) {
         DayOfWeekEnum[DayOfWeekEnum["FRIDAY"] = 'FRIDAY'] = "FRIDAY";
         DayOfWeekEnum[DayOfWeekEnum["MONDAY"] = 'MONDAY'] = "MONDAY";
@@ -24,7 +21,7 @@ var ZoneOffsetTransitionRule;
         DayOfWeekEnum[DayOfWeekEnum["TUESDAY"] = 'TUESDAY'] = "TUESDAY";
         DayOfWeekEnum[DayOfWeekEnum["WEDNESDAY"] = 'WEDNESDAY'] = "WEDNESDAY";
     })(DayOfWeekEnum = ZoneOffsetTransitionRule.DayOfWeekEnum || (ZoneOffsetTransitionRule.DayOfWeekEnum = {}));
-    var MonthEnum;
+    let MonthEnum;
     (function (MonthEnum) {
         MonthEnum[MonthEnum["APRIL"] = 'APRIL'] = "APRIL";
         MonthEnum[MonthEnum["AUGUST"] = 'AUGUST'] = "AUGUST";
@@ -39,10 +36,10 @@ var ZoneOffsetTransitionRule;
         MonthEnum[MonthEnum["OCTOBER"] = 'OCTOBER'] = "OCTOBER";
         MonthEnum[MonthEnum["SEPTEMBER"] = 'SEPTEMBER'] = "SEPTEMBER";
     })(MonthEnum = ZoneOffsetTransitionRule.MonthEnum || (ZoneOffsetTransitionRule.MonthEnum = {}));
-    var TimeDefinitionEnum;
+    let TimeDefinitionEnum;
     (function (TimeDefinitionEnum) {
         TimeDefinitionEnum[TimeDefinitionEnum["STANDARD"] = 'STANDARD'] = "STANDARD";
         TimeDefinitionEnum[TimeDefinitionEnum["UTC"] = 'UTC'] = "UTC";
         TimeDefinitionEnum[TimeDefinitionEnum["WALL"] = 'WALL'] = "WALL";
     })(TimeDefinitionEnum = ZoneOffsetTransitionRule.TimeDefinitionEnum || (ZoneOffsetTransitionRule.TimeDefinitionEnum = {}));
-})(ZoneOffsetTransitionRule = exports.ZoneOffsetTransitionRule || (exports.ZoneOffsetTransitionRule = {}));
+})(ZoneOffsetTransitionRule || (ZoneOffsetTransitionRule = {}));

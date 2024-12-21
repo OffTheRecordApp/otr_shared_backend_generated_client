@@ -1,4 +1,3 @@
-"use strict";
 /**
  * OffTheRecord Rest Service API - Devo
  * A service to handle your traffic tickets
@@ -10,11 +9,9 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.GetInviteByTokenResponse = void 0;
-var GetInviteByTokenResponse;
+export var GetInviteByTokenResponse;
 (function (GetInviteByTokenResponse) {
-    var InviteeRoleTypeEnum;
+    let InviteeRoleTypeEnum;
     (function (InviteeRoleTypeEnum) {
         InviteeRoleTypeEnum[InviteeRoleTypeEnum["ADMIN"] = 'ADMIN'] = "ADMIN";
         InviteeRoleTypeEnum[InviteeRoleTypeEnum["DEFENDANT"] = 'DEFENDANT'] = "DEFENDANT";
@@ -23,10 +20,10 @@ var GetInviteByTokenResponse;
         InviteeRoleTypeEnum[InviteeRoleTypeEnum["PARTNER"] = 'PARTNER'] = "PARTNER";
         InviteeRoleTypeEnum[InviteeRoleTypeEnum["UNKNOWN"] = 'UNKNOWN'] = "UNKNOWN";
     })(InviteeRoleTypeEnum = GetInviteByTokenResponse.InviteeRoleTypeEnum || (GetInviteByTokenResponse.InviteeRoleTypeEnum = {}));
-    var VerificationStatusEnum;
+    let VerificationStatusEnum;
     (function (VerificationStatusEnum) {
         VerificationStatusEnum[VerificationStatusEnum["CANCELLED"] = 'CANCELLED'] = "CANCELLED";
         VerificationStatusEnum[VerificationStatusEnum["PENDING"] = 'PENDING'] = "PENDING";
         VerificationStatusEnum[VerificationStatusEnum["VERIFIED"] = 'VERIFIED'] = "VERIFIED";
     })(VerificationStatusEnum = GetInviteByTokenResponse.VerificationStatusEnum || (GetInviteByTokenResponse.VerificationStatusEnum = {}));
-})(GetInviteByTokenResponse = exports.GetInviteByTokenResponse || (exports.GetInviteByTokenResponse = {}));
+})(GetInviteByTokenResponse || (GetInviteByTokenResponse = {}));

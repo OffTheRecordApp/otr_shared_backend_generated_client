@@ -1,4 +1,3 @@
-"use strict";
 /**
  * OffTheRecord Rest Service API - Devo
  * A service to handle your traffic tickets
@@ -10,11 +9,9 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.CourtControllerApi = void 0;
 /* tslint:disable:no-unused-variable member-ordering */
-var CourtControllerApi = /** @class */ (function () {
-    function CourtControllerApi($http, $httpParamSerializer, basePath) {
+export class CourtControllerApi {
+    constructor($http, $httpParamSerializer, basePath) {
         this.$http = $http;
         this.$httpParamSerializer = $httpParamSerializer;
         this.basePath = 'http://otr-backend-service-us-devo.offtherecord.com';
@@ -28,15 +25,15 @@ var CourtControllerApi = /** @class */ (function () {
      * @summary addCourt
      * @param request request
      */
-    CourtControllerApi.prototype.addCourtUsingPOST = function (request, extraHttpRequestParams) {
-        var localVarPath = this.basePath + '/api/v1/courts';
-        var queryParameters = {};
-        var headerParams = Object.assign({}, this.defaultHeaders);
+    addCourtUsingPOST(request, extraHttpRequestParams) {
+        const localVarPath = this.basePath + '/api/v1/courts';
+        let queryParameters = {};
+        let headerParams = Object.assign({}, this.defaultHeaders);
         // verify required parameter 'request' is not null or undefined
         if (request === null || request === undefined) {
             throw new Error('Required parameter request was null or undefined when calling addCourtUsingPOST.');
         }
-        var httpRequestParams = {
+        let httpRequestParams = {
             method: 'POST',
             url: localVarPath,
             data: request,
@@ -47,7 +44,7 @@ var CourtControllerApi = /** @class */ (function () {
             httpRequestParams = Object.assign(httpRequestParams, extraHttpRequestParams);
         }
         return this.$http(httpRequestParams);
-    };
+    }
     /**
      *
      * @summary findCourts
@@ -61,10 +58,10 @@ var CourtControllerApi = /** @class */ (function () {
      * @param regionCode regionCode
      * @param state state
      */
-    CourtControllerApi.prototype.findCourtsUsingGET = function (citationId, city, countryCode, county, length, offset, q, regionCode, state, extraHttpRequestParams) {
-        var localVarPath = this.basePath + '/api/v2/courts/traffic';
-        var queryParameters = {};
-        var headerParams = Object.assign({}, this.defaultHeaders);
+    findCourtsUsingGET(citationId, city, countryCode, county, length, offset, q, regionCode, state, extraHttpRequestParams) {
+        const localVarPath = this.basePath + '/api/v2/courts/traffic';
+        let queryParameters = {};
+        let headerParams = Object.assign({}, this.defaultHeaders);
         if (citationId !== undefined) {
             queryParameters['citationId'] = citationId;
         }
@@ -92,7 +89,7 @@ var CourtControllerApi = /** @class */ (function () {
         if (state !== undefined) {
             queryParameters['state'] = state;
         }
-        var httpRequestParams = {
+        let httpRequestParams = {
             method: 'GET',
             url: localVarPath,
             params: queryParameters,
@@ -102,7 +99,7 @@ var CourtControllerApi = /** @class */ (function () {
             httpRequestParams = Object.assign(httpRequestParams, extraHttpRequestParams);
         }
         return this.$http(httpRequestParams);
-    };
+    }
     /**
      *
      * @summary findCourtsWithNoCoverage
@@ -111,10 +108,10 @@ var CourtControllerApi = /** @class */ (function () {
      * @param regionCode regionCode
      * @param trailingDays trailingDays
      */
-    CourtControllerApi.prototype.findCourtsWithNoCoverageUsingGET = function (countryCode, countyId, regionCode, trailingDays, extraHttpRequestParams) {
-        var localVarPath = this.basePath + '/api/v1/courts/no-coverage';
-        var queryParameters = {};
-        var headerParams = Object.assign({}, this.defaultHeaders);
+    findCourtsWithNoCoverageUsingGET(countryCode, countyId, regionCode, trailingDays, extraHttpRequestParams) {
+        const localVarPath = this.basePath + '/api/v1/courts/no-coverage';
+        let queryParameters = {};
+        let headerParams = Object.assign({}, this.defaultHeaders);
         if (countryCode !== undefined) {
             queryParameters['countryCode'] = countryCode;
         }
@@ -127,7 +124,7 @@ var CourtControllerApi = /** @class */ (function () {
         if (trailingDays !== undefined) {
             queryParameters['trailingDays'] = trailingDays;
         }
-        var httpRequestParams = {
+        let httpRequestParams = {
             method: 'GET',
             url: localVarPath,
             params: queryParameters,
@@ -137,22 +134,22 @@ var CourtControllerApi = /** @class */ (function () {
             httpRequestParams = Object.assign(httpRequestParams, extraHttpRequestParams);
         }
         return this.$http(httpRequestParams);
-    };
+    }
     /**
      *
      * @summary getCourt
      * @param courtId courtId
      */
-    CourtControllerApi.prototype.getCourtUsingGET = function (courtId, extraHttpRequestParams) {
-        var localVarPath = this.basePath + '/api/v1/courts/{courtId}'
+    getCourtUsingGET(courtId, extraHttpRequestParams) {
+        const localVarPath = this.basePath + '/api/v1/courts/{courtId}'
             .replace('{' + 'courtId' + '}', encodeURIComponent(String(courtId)));
-        var queryParameters = {};
-        var headerParams = Object.assign({}, this.defaultHeaders);
+        let queryParameters = {};
+        let headerParams = Object.assign({}, this.defaultHeaders);
         // verify required parameter 'courtId' is not null or undefined
         if (courtId === null || courtId === undefined) {
             throw new Error('Required parameter courtId was null or undefined when calling getCourtUsingGET.');
         }
-        var httpRequestParams = {
+        let httpRequestParams = {
             method: 'GET',
             url: localVarPath,
             params: queryParameters,
@@ -162,7 +159,7 @@ var CourtControllerApi = /** @class */ (function () {
             httpRequestParams = Object.assign(httpRequestParams, extraHttpRequestParams);
         }
         return this.$http(httpRequestParams);
-    };
+    }
     /**
      *
      * @summary searchCourts
@@ -176,10 +173,10 @@ var CourtControllerApi = /** @class */ (function () {
      * @param regionCode regionCode
      * @param state state
      */
-    CourtControllerApi.prototype.searchCourtsUsingGET = function (citationId, city, countryCode, county, length, offset, q, regionCode, state, extraHttpRequestParams) {
-        var localVarPath = this.basePath + '/api/v1/courts/traffic';
-        var queryParameters = {};
-        var headerParams = Object.assign({}, this.defaultHeaders);
+    searchCourtsUsingGET(citationId, city, countryCode, county, length, offset, q, regionCode, state, extraHttpRequestParams) {
+        const localVarPath = this.basePath + '/api/v1/courts/traffic';
+        let queryParameters = {};
+        let headerParams = Object.assign({}, this.defaultHeaders);
         if (citationId !== undefined) {
             queryParameters['citationId'] = citationId;
         }
@@ -207,7 +204,7 @@ var CourtControllerApi = /** @class */ (function () {
         if (state !== undefined) {
             queryParameters['state'] = state;
         }
-        var httpRequestParams = {
+        let httpRequestParams = {
             method: 'GET',
             url: localVarPath,
             params: queryParameters,
@@ -217,7 +214,7 @@ var CourtControllerApi = /** @class */ (function () {
             httpRequestParams = Object.assign(httpRequestParams, extraHttpRequestParams);
         }
         return this.$http(httpRequestParams);
-    };
+    }
     /**
      *
      * @summary updateCourtAddress
@@ -225,12 +222,12 @@ var CourtControllerApi = /** @class */ (function () {
      * @param courtId courtId
      * @param request request
      */
-    CourtControllerApi.prototype.updateCourtAddressUsingPUT = function (addressId, courtId, request, extraHttpRequestParams) {
-        var localVarPath = this.basePath + '/api/v1/courts/{courtId}/addresses/{addressId}'
+    updateCourtAddressUsingPUT(addressId, courtId, request, extraHttpRequestParams) {
+        const localVarPath = this.basePath + '/api/v1/courts/{courtId}/addresses/{addressId}'
             .replace('{' + 'addressId' + '}', encodeURIComponent(String(addressId)))
             .replace('{' + 'courtId' + '}', encodeURIComponent(String(courtId)));
-        var queryParameters = {};
-        var headerParams = Object.assign({}, this.defaultHeaders);
+        let queryParameters = {};
+        let headerParams = Object.assign({}, this.defaultHeaders);
         // verify required parameter 'addressId' is not null or undefined
         if (addressId === null || addressId === undefined) {
             throw new Error('Required parameter addressId was null or undefined when calling updateCourtAddressUsingPUT.');
@@ -243,7 +240,7 @@ var CourtControllerApi = /** @class */ (function () {
         if (request === null || request === undefined) {
             throw new Error('Required parameter request was null or undefined when calling updateCourtAddressUsingPUT.');
         }
-        var httpRequestParams = {
+        let httpRequestParams = {
             method: 'PUT',
             url: localVarPath,
             data: request,
@@ -254,18 +251,18 @@ var CourtControllerApi = /** @class */ (function () {
             httpRequestParams = Object.assign(httpRequestParams, extraHttpRequestParams);
         }
         return this.$http(httpRequestParams);
-    };
+    }
     /**
      *
      * @summary updateCourt
      * @param courtId courtId
      * @param request request
      */
-    CourtControllerApi.prototype.updateCourtUsingPUT = function (courtId, request, extraHttpRequestParams) {
-        var localVarPath = this.basePath + '/api/v1/courts/{courtId}'
+    updateCourtUsingPUT(courtId, request, extraHttpRequestParams) {
+        const localVarPath = this.basePath + '/api/v1/courts/{courtId}'
             .replace('{' + 'courtId' + '}', encodeURIComponent(String(courtId)));
-        var queryParameters = {};
-        var headerParams = Object.assign({}, this.defaultHeaders);
+        let queryParameters = {};
+        let headerParams = Object.assign({}, this.defaultHeaders);
         // verify required parameter 'courtId' is not null or undefined
         if (courtId === null || courtId === undefined) {
             throw new Error('Required parameter courtId was null or undefined when calling updateCourtUsingPUT.');
@@ -274,7 +271,7 @@ var CourtControllerApi = /** @class */ (function () {
         if (request === null || request === undefined) {
             throw new Error('Required parameter request was null or undefined when calling updateCourtUsingPUT.');
         }
-        var httpRequestParams = {
+        let httpRequestParams = {
             method: 'PUT',
             url: localVarPath,
             data: request,
@@ -285,8 +282,6 @@ var CourtControllerApi = /** @class */ (function () {
             httpRequestParams = Object.assign(httpRequestParams, extraHttpRequestParams);
         }
         return this.$http(httpRequestParams);
-    };
-    CourtControllerApi.$inject = ['$http', '$httpParamSerializer', 'basePath'];
-    return CourtControllerApi;
-}());
-exports.CourtControllerApi = CourtControllerApi;
+    }
+}
+CourtControllerApi.$inject = ['$http', '$httpParamSerializer', 'basePath'];

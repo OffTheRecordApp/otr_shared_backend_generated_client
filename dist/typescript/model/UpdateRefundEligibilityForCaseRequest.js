@@ -1,4 +1,3 @@
-"use strict";
 /**
  * OffTheRecord Rest Service API - Devo
  * A service to handle your traffic tickets
@@ -10,14 +9,12 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.UpdateRefundEligibilityForCaseRequest = void 0;
-var UpdateRefundEligibilityForCaseRequest;
+export var UpdateRefundEligibilityForCaseRequest;
 (function (UpdateRefundEligibilityForCaseRequest) {
-    var RefundOwnerEnum;
+    let RefundOwnerEnum;
     (function (RefundOwnerEnum) {
         RefundOwnerEnum[RefundOwnerEnum["LAWFIRM"] = 'LAWFIRM'] = "LAWFIRM";
         RefundOwnerEnum[RefundOwnerEnum["NONE"] = 'NONE'] = "NONE";
         RefundOwnerEnum[RefundOwnerEnum["OTR"] = 'OTR'] = "OTR";
     })(RefundOwnerEnum = UpdateRefundEligibilityForCaseRequest.RefundOwnerEnum || (UpdateRefundEligibilityForCaseRequest.RefundOwnerEnum = {}));
-})(UpdateRefundEligibilityForCaseRequest = exports.UpdateRefundEligibilityForCaseRequest || (exports.UpdateRefundEligibilityForCaseRequest = {}));
+})(UpdateRefundEligibilityForCaseRequest || (UpdateRefundEligibilityForCaseRequest = {}));

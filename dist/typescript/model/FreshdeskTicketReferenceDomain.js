@@ -1,4 +1,3 @@
-"use strict";
 /**
  * OffTheRecord Rest Service API - Devo
  * A service to handle your traffic tickets
@@ -10,11 +9,9 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.FreshdeskTicketReferenceDomain = void 0;
-var FreshdeskTicketReferenceDomain;
+export var FreshdeskTicketReferenceDomain;
 (function (FreshdeskTicketReferenceDomain) {
-    var ReferenceEntityTypeEnum;
+    let ReferenceEntityTypeEnum;
     (function (ReferenceEntityTypeEnum) {
         ReferenceEntityTypeEnum[ReferenceEntityTypeEnum["CASE"] = 'CASE'] = "CASE";
         ReferenceEntityTypeEnum[ReferenceEntityTypeEnum["CASEPAYMENT"] = 'CASE_PAYMENT'] = "CASEPAYMENT";
@@ -27,10 +24,10 @@ var FreshdeskTicketReferenceDomain;
         ReferenceEntityTypeEnum[ReferenceEntityTypeEnum["STRIPECHARGE"] = 'STRIPE_CHARGE'] = "STRIPECHARGE";
         ReferenceEntityTypeEnum[ReferenceEntityTypeEnum["USER"] = 'USER'] = "USER";
     })(ReferenceEntityTypeEnum = FreshdeskTicketReferenceDomain.ReferenceEntityTypeEnum || (FreshdeskTicketReferenceDomain.ReferenceEntityTypeEnum = {}));
-    var TicketTypeEnum;
+    let TicketTypeEnum;
     (function (TicketTypeEnum) {
         TicketTypeEnum[TicketTypeEnum["CARDPROBLEM"] = 'CARD_PROBLEM'] = "CARDPROBLEM";
         TicketTypeEnum[TicketTypeEnum["POSTBOOKINGPAYMENTFAILURE"] = 'POST_BOOKING_PAYMENT_FAILURE'] = "POSTBOOKINGPAYMENTFAILURE";
         TicketTypeEnum[TicketTypeEnum["PREBOOKINGPAYMENTFAILURE"] = 'PRE_BOOKING_PAYMENT_FAILURE'] = "PREBOOKINGPAYMENTFAILURE";
     })(TicketTypeEnum = FreshdeskTicketReferenceDomain.TicketTypeEnum || (FreshdeskTicketReferenceDomain.TicketTypeEnum = {}));
-})(FreshdeskTicketReferenceDomain = exports.FreshdeskTicketReferenceDomain || (exports.FreshdeskTicketReferenceDomain = {}));
+})(FreshdeskTicketReferenceDomain || (FreshdeskTicketReferenceDomain = {}));

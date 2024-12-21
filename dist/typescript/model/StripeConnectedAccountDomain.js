@@ -1,4 +1,3 @@
-"use strict";
 /**
  * OffTheRecord Rest Service API - Devo
  * A service to handle your traffic tickets
@@ -10,13 +9,11 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.StripeConnectedAccountDomain = void 0;
-var StripeConnectedAccountDomain;
+export var StripeConnectedAccountDomain;
 (function (StripeConnectedAccountDomain) {
-    var AccountTypeEnum;
+    let AccountTypeEnum;
     (function (AccountTypeEnum) {
         AccountTypeEnum[AccountTypeEnum["EXPRESS"] = 'EXPRESS'] = "EXPRESS";
         AccountTypeEnum[AccountTypeEnum["STANDARD"] = 'STANDARD'] = "STANDARD";
     })(AccountTypeEnum = StripeConnectedAccountDomain.AccountTypeEnum || (StripeConnectedAccountDomain.AccountTypeEnum = {}));
-})(StripeConnectedAccountDomain = exports.StripeConnectedAccountDomain || (exports.StripeConnectedAccountDomain = {}));
+})(StripeConnectedAccountDomain || (StripeConnectedAccountDomain = {}));

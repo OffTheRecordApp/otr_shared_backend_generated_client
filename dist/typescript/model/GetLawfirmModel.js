@@ -1,4 +1,3 @@
-"use strict";
 /**
  * OffTheRecord Rest Service API - Devo
  * A service to handle your traffic tickets
@@ -10,17 +9,15 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.GetLawfirmModel = void 0;
-var GetLawfirmModel;
+export var GetLawfirmModel;
 (function (GetLawfirmModel) {
-    var LawfirmPaymentModelEnum;
+    let LawfirmPaymentModelEnum;
     (function (LawfirmPaymentModelEnum) {
         LawfirmPaymentModelEnum[LawfirmPaymentModelEnum["DESTINATIONACCOUNT"] = 'DESTINATION_ACCOUNT'] = "DESTINATIONACCOUNT";
         LawfirmPaymentModelEnum[LawfirmPaymentModelEnum["SEPARATECHARGE"] = 'SEPARATE_CHARGE'] = "SEPARATECHARGE";
         LawfirmPaymentModelEnum[LawfirmPaymentModelEnum["TRANSFERDEDUCTION"] = 'TRANSFER_DEDUCTION'] = "TRANSFERDEDUCTION";
     })(LawfirmPaymentModelEnum = GetLawfirmModel.LawfirmPaymentModelEnum || (GetLawfirmModel.LawfirmPaymentModelEnum = {}));
-    var LawfirmStateEnum;
+    let LawfirmStateEnum;
     (function (LawfirmStateEnum) {
         LawfirmStateEnum[LawfirmStateEnum["ACCOUNTCLOSED"] = 'ACCOUNT_CLOSED'] = "ACCOUNTCLOSED";
         LawfirmStateEnum[LawfirmStateEnum["ACTIVE"] = 'ACTIVE'] = "ACTIVE";
@@ -43,7 +40,7 @@ var GetLawfirmModel;
         LawfirmStateEnum[LawfirmStateEnum["TERMINATEDPOORSERVICE"] = 'TERMINATED_POOR_SERVICE'] = "TERMINATEDPOORSERVICE";
         LawfirmStateEnum[LawfirmStateEnum["TERMINATEDPOORSUCCESS"] = 'TERMINATED_POOR_SUCCESS'] = "TERMINATEDPOORSUCCESS";
     })(LawfirmStateEnum = GetLawfirmModel.LawfirmStateEnum || (GetLawfirmModel.LawfirmStateEnum = {}));
-    var SupportedStatesEnum;
+    let SupportedStatesEnum;
     (function (SupportedStatesEnum) {
         SupportedStatesEnum[SupportedStatesEnum["AK"] = 'AK'] = "AK";
         SupportedStatesEnum[SupportedStatesEnum["AL"] = 'AL'] = "AL";
@@ -97,4 +94,4 @@ var GetLawfirmModel;
         SupportedStatesEnum[SupportedStatesEnum["WV"] = 'WV'] = "WV";
         SupportedStatesEnum[SupportedStatesEnum["WY"] = 'WY'] = "WY";
     })(SupportedStatesEnum = GetLawfirmModel.SupportedStatesEnum || (GetLawfirmModel.SupportedStatesEnum = {}));
-})(GetLawfirmModel = exports.GetLawfirmModel || (exports.GetLawfirmModel = {}));
+})(GetLawfirmModel || (GetLawfirmModel = {}));

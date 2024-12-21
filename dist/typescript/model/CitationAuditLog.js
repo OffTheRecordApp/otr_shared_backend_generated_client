@@ -1,4 +1,3 @@
-"use strict";
 /**
  * OffTheRecord Rest Service API - Devo
  * A service to handle your traffic tickets
@@ -10,11 +9,9 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.CitationAuditLog = void 0;
-var CitationAuditLog;
+export var CitationAuditLog;
 (function (CitationAuditLog) {
-    var AuditLogTypeEnum;
+    let AuditLogTypeEnum;
     (function (AuditLogTypeEnum) {
         AuditLogTypeEnum[AuditLogTypeEnum["APPLYREFERRALCODE"] = 'APPLY_REFERRAL_CODE'] = "APPLYREFERRALCODE";
         AuditLogTypeEnum[AuditLogTypeEnum["CREATELEGALSERVICES"] = 'CREATE_LEGAL_SERVICES'] = "CREATELEGALSERVICES";
@@ -23,4 +20,4 @@ var CitationAuditLog;
         AuditLogTypeEnum[AuditLogTypeEnum["OTHER"] = 'OTHER'] = "OTHER";
         AuditLogTypeEnum[AuditLogTypeEnum["TRANSFERCASE"] = 'TRANSFER_CASE'] = "TRANSFERCASE";
     })(AuditLogTypeEnum = CitationAuditLog.AuditLogTypeEnum || (CitationAuditLog.AuditLogTypeEnum = {}));
-})(CitationAuditLog = exports.CitationAuditLog || (exports.CitationAuditLog = {}));
+})(CitationAuditLog || (CitationAuditLog = {}));

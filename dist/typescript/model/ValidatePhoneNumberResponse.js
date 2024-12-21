@@ -1,4 +1,3 @@
-"use strict";
 /**
  * OffTheRecord Rest Service API - Devo
  * A service to handle your traffic tickets
@@ -10,15 +9,13 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.ValidatePhoneNumberResponse = void 0;
-var ValidatePhoneNumberResponse;
+export var ValidatePhoneNumberResponse;
 (function (ValidatePhoneNumberResponse) {
-    var PhoneTypeEnum;
+    let PhoneTypeEnum;
     (function (PhoneTypeEnum) {
         PhoneTypeEnum[PhoneTypeEnum["CELLULAR"] = 'CELLULAR'] = "CELLULAR";
         PhoneTypeEnum[PhoneTypeEnum["LANDLINE"] = 'LANDLINE'] = "LANDLINE";
         PhoneTypeEnum[PhoneTypeEnum["UNKNOWN"] = 'UNKNOWN'] = "UNKNOWN";
         PhoneTypeEnum[PhoneTypeEnum["VOIP"] = 'VOIP'] = "VOIP";
     })(PhoneTypeEnum = ValidatePhoneNumberResponse.PhoneTypeEnum || (ValidatePhoneNumberResponse.PhoneTypeEnum = {}));
-})(ValidatePhoneNumberResponse = exports.ValidatePhoneNumberResponse || (exports.ValidatePhoneNumberResponse = {}));
+})(ValidatePhoneNumberResponse || (ValidatePhoneNumberResponse = {}));

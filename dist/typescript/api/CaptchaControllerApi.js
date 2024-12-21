@@ -1,4 +1,3 @@
-"use strict";
 /**
  * OffTheRecord Rest Service API - Devo
  * A service to handle your traffic tickets
@@ -10,11 +9,9 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.CaptchaControllerApi = void 0;
 /* tslint:disable:no-unused-variable member-ordering */
-var CaptchaControllerApi = /** @class */ (function () {
-    function CaptchaControllerApi($http, $httpParamSerializer, basePath) {
+export class CaptchaControllerApi {
+    constructor($http, $httpParamSerializer, basePath) {
         this.$http = $http;
         this.$httpParamSerializer = $httpParamSerializer;
         this.basePath = 'http://otr-backend-service-us-devo.offtherecord.com';
@@ -28,15 +25,15 @@ var CaptchaControllerApi = /** @class */ (function () {
      * @summary verifyCaptchaToken
      * @param request request
      */
-    CaptchaControllerApi.prototype.verifyCaptchaTokenUsingPOST = function (request, extraHttpRequestParams) {
-        var localVarPath = this.basePath + '/api/v1/captcha/verify-token';
-        var queryParameters = {};
-        var headerParams = Object.assign({}, this.defaultHeaders);
+    verifyCaptchaTokenUsingPOST(request, extraHttpRequestParams) {
+        const localVarPath = this.basePath + '/api/v1/captcha/verify-token';
+        let queryParameters = {};
+        let headerParams = Object.assign({}, this.defaultHeaders);
         // verify required parameter 'request' is not null or undefined
         if (request === null || request === undefined) {
             throw new Error('Required parameter request was null or undefined when calling verifyCaptchaTokenUsingPOST.');
         }
-        var httpRequestParams = {
+        let httpRequestParams = {
             method: 'POST',
             url: localVarPath,
             data: request,
@@ -47,8 +44,6 @@ var CaptchaControllerApi = /** @class */ (function () {
             httpRequestParams = Object.assign(httpRequestParams, extraHttpRequestParams);
         }
         return this.$http(httpRequestParams);
-    };
-    CaptchaControllerApi.$inject = ['$http', '$httpParamSerializer', 'basePath'];
-    return CaptchaControllerApi;
-}());
-exports.CaptchaControllerApi = CaptchaControllerApi;
+    }
+}
+CaptchaControllerApi.$inject = ['$http', '$httpParamSerializer', 'basePath'];

@@ -1,4 +1,3 @@
-"use strict";
 /**
  * OffTheRecord Rest Service API - Devo
  * A service to handle your traffic tickets
@@ -10,11 +9,9 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.IntercomTicketControllerApi = void 0;
 /* tslint:disable:no-unused-variable member-ordering */
-var IntercomTicketControllerApi = /** @class */ (function () {
-    function IntercomTicketControllerApi($http, $httpParamSerializer, basePath) {
+export class IntercomTicketControllerApi {
+    constructor($http, $httpParamSerializer, basePath) {
         this.$http = $http;
         this.$httpParamSerializer = $httpParamSerializer;
         this.basePath = 'http://otr-backend-service-us-devo.offtherecord.com';
@@ -29,10 +26,10 @@ var IntercomTicketControllerApi = /** @class */ (function () {
      * @param email email
      * @param length length
      */
-    IntercomTicketControllerApi.prototype.getConversationsUsingGET = function (email, length, extraHttpRequestParams) {
-        var localVarPath = this.basePath + '/api/v1/intercom/conversations';
-        var queryParameters = {};
-        var headerParams = Object.assign({}, this.defaultHeaders);
+    getConversationsUsingGET(email, length, extraHttpRequestParams) {
+        const localVarPath = this.basePath + '/api/v1/intercom/conversations';
+        let queryParameters = {};
+        let headerParams = Object.assign({}, this.defaultHeaders);
         // verify required parameter 'email' is not null or undefined
         if (email === null || email === undefined) {
             throw new Error('Required parameter email was null or undefined when calling getConversationsUsingGET.');
@@ -43,7 +40,7 @@ var IntercomTicketControllerApi = /** @class */ (function () {
         if (length !== undefined) {
             queryParameters['length'] = length;
         }
-        var httpRequestParams = {
+        let httpRequestParams = {
             method: 'GET',
             url: localVarPath,
             params: queryParameters,
@@ -53,17 +50,17 @@ var IntercomTicketControllerApi = /** @class */ (function () {
             httpRequestParams = Object.assign(httpRequestParams, extraHttpRequestParams);
         }
         return this.$http(httpRequestParams);
-    };
+    }
     /**
      *
      * @summary getTickets
      * @param userId userId
      * @param length length
      */
-    IntercomTicketControllerApi.prototype.getTicketsUsingGET = function (userId, length, extraHttpRequestParams) {
-        var localVarPath = this.basePath + '/api/v1/intercom/tickets/search';
-        var queryParameters = {};
-        var headerParams = Object.assign({}, this.defaultHeaders);
+    getTicketsUsingGET(userId, length, extraHttpRequestParams) {
+        const localVarPath = this.basePath + '/api/v1/intercom/tickets/search';
+        let queryParameters = {};
+        let headerParams = Object.assign({}, this.defaultHeaders);
         // verify required parameter 'userId' is not null or undefined
         if (userId === null || userId === undefined) {
             throw new Error('Required parameter userId was null or undefined when calling getTicketsUsingGET.');
@@ -74,7 +71,7 @@ var IntercomTicketControllerApi = /** @class */ (function () {
         if (userId !== undefined) {
             queryParameters['userId'] = userId;
         }
-        var httpRequestParams = {
+        let httpRequestParams = {
             method: 'GET',
             url: localVarPath,
             params: queryParameters,
@@ -84,8 +81,6 @@ var IntercomTicketControllerApi = /** @class */ (function () {
             httpRequestParams = Object.assign(httpRequestParams, extraHttpRequestParams);
         }
         return this.$http(httpRequestParams);
-    };
-    IntercomTicketControllerApi.$inject = ['$http', '$httpParamSerializer', 'basePath'];
-    return IntercomTicketControllerApi;
-}());
-exports.IntercomTicketControllerApi = IntercomTicketControllerApi;
+    }
+}
+IntercomTicketControllerApi.$inject = ['$http', '$httpParamSerializer', 'basePath'];

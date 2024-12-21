@@ -1,4 +1,3 @@
-"use strict";
 /**
  * OffTheRecord Rest Service API - Devo
  * A service to handle your traffic tickets
@@ -10,11 +9,9 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.LawfirmInboxMessageDomain = void 0;
-var LawfirmInboxMessageDomain;
+export var LawfirmInboxMessageDomain;
 (function (LawfirmInboxMessageDomain) {
-    var AuthorRoleTypeEnum;
+    let AuthorRoleTypeEnum;
     (function (AuthorRoleTypeEnum) {
         AuthorRoleTypeEnum[AuthorRoleTypeEnum["ADMIN"] = 'ADMIN'] = "ADMIN";
         AuthorRoleTypeEnum[AuthorRoleTypeEnum["DEFENDANT"] = 'DEFENDANT'] = "DEFENDANT";
@@ -23,7 +20,7 @@ var LawfirmInboxMessageDomain;
         AuthorRoleTypeEnum[AuthorRoleTypeEnum["PARTNER"] = 'PARTNER'] = "PARTNER";
         AuthorRoleTypeEnum[AuthorRoleTypeEnum["UNKNOWN"] = 'UNKNOWN'] = "UNKNOWN";
     })(AuthorRoleTypeEnum = LawfirmInboxMessageDomain.AuthorRoleTypeEnum || (LawfirmInboxMessageDomain.AuthorRoleTypeEnum = {}));
-    var CaseStatusEnum;
+    let CaseStatusEnum;
     (function (CaseStatusEnum) {
         CaseStatusEnum[CaseStatusEnum["AMENDEDDOWNWITHINCLASS"] = 'AMENDED_DOWN_WITHIN_CLASS'] = "AMENDEDDOWNWITHINCLASS";
         CaseStatusEnum[CaseStatusEnum["AMENDEDFULLFINE"] = 'AMENDED_FULL_FINE'] = "AMENDEDFULLFINE";
@@ -63,14 +60,14 @@ var LawfirmInboxMessageDomain;
         CaseStatusEnum[CaseStatusEnum["TRAFFICSCHOOL"] = 'TRAFFIC_SCHOOL'] = "TRAFFICSCHOOL";
         CaseStatusEnum[CaseStatusEnum["UNCONFIRMED"] = 'UNCONFIRMED'] = "UNCONFIRMED";
     })(CaseStatusEnum = LawfirmInboxMessageDomain.CaseStatusEnum || (LawfirmInboxMessageDomain.CaseStatusEnum = {}));
-    var CaseStatusCategoryEnum;
+    let CaseStatusCategoryEnum;
     (function (CaseStatusCategoryEnum) {
         CaseStatusCategoryEnum[CaseStatusCategoryEnum["ACTIVE"] = 'ACTIVE'] = "ACTIVE";
         CaseStatusCategoryEnum[CaseStatusCategoryEnum["CANCELLED"] = 'CANCELLED'] = "CANCELLED";
         CaseStatusCategoryEnum[CaseStatusCategoryEnum["RESOLVED"] = 'RESOLVED'] = "RESOLVED";
         CaseStatusCategoryEnum[CaseStatusCategoryEnum["UNCONFIRMED"] = 'UNCONFIRMED'] = "UNCONFIRMED";
     })(CaseStatusCategoryEnum = LawfirmInboxMessageDomain.CaseStatusCategoryEnum || (LawfirmInboxMessageDomain.CaseStatusCategoryEnum = {}));
-    var LawfirmCaseDecisionStatusEnum;
+    let LawfirmCaseDecisionStatusEnum;
     (function (LawfirmCaseDecisionStatusEnum) {
         LawfirmCaseDecisionStatusEnum[LawfirmCaseDecisionStatusEnum["ACCEPTED"] = 'ACCEPTED'] = "ACCEPTED";
         LawfirmCaseDecisionStatusEnum[LawfirmCaseDecisionStatusEnum["CREATED"] = 'CREATED'] = "CREATED";
@@ -80,4 +77,4 @@ var LawfirmInboxMessageDomain;
         LawfirmCaseDecisionStatusEnum[LawfirmCaseDecisionStatusEnum["REMATCHED"] = 'REMATCHED'] = "REMATCHED";
         LawfirmCaseDecisionStatusEnum[LawfirmCaseDecisionStatusEnum["REMATCHEDREFERRAL"] = 'REMATCHED_REFERRAL'] = "REMATCHEDREFERRAL";
     })(LawfirmCaseDecisionStatusEnum = LawfirmInboxMessageDomain.LawfirmCaseDecisionStatusEnum || (LawfirmInboxMessageDomain.LawfirmCaseDecisionStatusEnum = {}));
-})(LawfirmInboxMessageDomain = exports.LawfirmInboxMessageDomain || (exports.LawfirmInboxMessageDomain = {}));
+})(LawfirmInboxMessageDomain || (LawfirmInboxMessageDomain = {}));

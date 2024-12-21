@@ -1,4 +1,3 @@
-"use strict";
 /**
  * OffTheRecord Rest Service API - Devo
  * A service to handle your traffic tickets
@@ -10,30 +9,28 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.SaveLawfirmSurchargeModel = void 0;
-var SaveLawfirmSurchargeModel;
+export var SaveLawfirmSurchargeModel;
 (function (SaveLawfirmSurchargeModel) {
-    var FeatureTypeEnum;
+    let FeatureTypeEnum;
     (function (FeatureTypeEnum) {
         FeatureTypeEnum[FeatureTypeEnum["BLACKBOX"] = 'BLACK_BOX'] = "BLACKBOX";
         FeatureTypeEnum[FeatureTypeEnum["FASTLANETEEN"] = 'FASTLANE_TEEN'] = "FASTLANETEEN";
         FeatureTypeEnum[FeatureTypeEnum["STATEPAGE"] = 'STATE_PAGE'] = "STATEPAGE";
         FeatureTypeEnum[FeatureTypeEnum["STOREFRONT"] = 'STOREFRONT'] = "STOREFRONT";
     })(FeatureTypeEnum = SaveLawfirmSurchargeModel.FeatureTypeEnum || (SaveLawfirmSurchargeModel.FeatureTypeEnum = {}));
-    var FeeTypeEnum;
+    let FeeTypeEnum;
     (function (FeeTypeEnum) {
         FeeTypeEnum[FeeTypeEnum["FLATFEEINCENTS"] = 'FLAT_FEE_IN_CENTS'] = "FLATFEEINCENTS";
         FeeTypeEnum[FeeTypeEnum["FORMULA"] = 'FORMULA'] = "FORMULA";
         FeeTypeEnum[FeeTypeEnum["PERCENT"] = 'PERCENT'] = "PERCENT";
     })(FeeTypeEnum = SaveLawfirmSurchargeModel.FeeTypeEnum || (SaveLawfirmSurchargeModel.FeeTypeEnum = {}));
-    var RefundEligibilityEnum;
+    let RefundEligibilityEnum;
     (function (RefundEligibilityEnum) {
         RefundEligibilityEnum[RefundEligibilityEnum["DEFAULT"] = 'DEFAULT'] = "DEFAULT";
         RefundEligibilityEnum[RefundEligibilityEnum["NONREFUNDABLE"] = 'NON_REFUNDABLE'] = "NONREFUNDABLE";
         RefundEligibilityEnum[RefundEligibilityEnum["SURCHARGEONLY"] = 'SURCHARGE_ONLY'] = "SURCHARGEONLY";
     })(RefundEligibilityEnum = SaveLawfirmSurchargeModel.RefundEligibilityEnum || (SaveLawfirmSurchargeModel.RefundEligibilityEnum = {}));
-    var SurchargeTypeEnum;
+    let SurchargeTypeEnum;
     (function (SurchargeTypeEnum) {
         SurchargeTypeEnum[SurchargeTypeEnum["CDL"] = 'CDL'] = "CDL";
         SurchargeTypeEnum[SurchargeTypeEnum["FAILURETOAPPEAR"] = 'FAILURE_TO_APPEAR'] = "FAILURETOAPPEAR";
@@ -43,4 +40,4 @@ var SaveLawfirmSurchargeModel;
         SurchargeTypeEnum[SurchargeTypeEnum["SHORTNOTICE"] = 'SHORT_NOTICE'] = "SHORTNOTICE";
         SurchargeTypeEnum[SurchargeTypeEnum["WARRANT"] = 'WARRANT'] = "WARRANT";
     })(SurchargeTypeEnum = SaveLawfirmSurchargeModel.SurchargeTypeEnum || (SaveLawfirmSurchargeModel.SurchargeTypeEnum = {}));
-})(SaveLawfirmSurchargeModel = exports.SaveLawfirmSurchargeModel || (exports.SaveLawfirmSurchargeModel = {}));
+})(SaveLawfirmSurchargeModel || (SaveLawfirmSurchargeModel = {}));

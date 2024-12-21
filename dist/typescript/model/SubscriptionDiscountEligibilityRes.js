@@ -1,4 +1,3 @@
-"use strict";
 /**
  * OffTheRecord Rest Service API - Devo
  * A service to handle your traffic tickets
@@ -10,14 +9,12 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.SubscriptionDiscountEligibilityRes = void 0;
-var SubscriptionDiscountEligibilityRes;
+export var SubscriptionDiscountEligibilityRes;
 (function (SubscriptionDiscountEligibilityRes) {
-    var SubscriptionDiscountEligibilityTypeEnum;
+    let SubscriptionDiscountEligibilityTypeEnum;
     (function (SubscriptionDiscountEligibilityTypeEnum) {
         SubscriptionDiscountEligibilityTypeEnum[SubscriptionDiscountEligibilityTypeEnum["ISELIGIBLE"] = 'IS_ELIGIBLE'] = "ISELIGIBLE";
         SubscriptionDiscountEligibilityTypeEnum[SubscriptionDiscountEligibilityTypeEnum["ISNOTELIGIBLE"] = 'IS_NOT_ELIGIBLE'] = "ISNOTELIGIBLE";
         SubscriptionDiscountEligibilityTypeEnum[SubscriptionDiscountEligibilityTypeEnum["NOTAPPLICABLE"] = 'NOT_APPLICABLE'] = "NOTAPPLICABLE";
     })(SubscriptionDiscountEligibilityTypeEnum = SubscriptionDiscountEligibilityRes.SubscriptionDiscountEligibilityTypeEnum || (SubscriptionDiscountEligibilityRes.SubscriptionDiscountEligibilityTypeEnum = {}));
-})(SubscriptionDiscountEligibilityRes = exports.SubscriptionDiscountEligibilityRes || (exports.SubscriptionDiscountEligibilityRes = {}));
+})(SubscriptionDiscountEligibilityRes || (SubscriptionDiscountEligibilityRes = {}));

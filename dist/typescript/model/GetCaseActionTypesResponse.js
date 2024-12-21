@@ -1,4 +1,3 @@
-"use strict";
 /**
  * OffTheRecord Rest Service API - Devo
  * A service to handle your traffic tickets
@@ -10,11 +9,9 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.GetCaseActionTypesResponse = void 0;
-var GetCaseActionTypesResponse;
+export var GetCaseActionTypesResponse;
 (function (GetCaseActionTypesResponse) {
-    var CaseActionTypesEnum;
+    let CaseActionTypesEnum;
     (function (CaseActionTypesEnum) {
         CaseActionTypesEnum[CaseActionTypesEnum["CASEACCEPT"] = 'CASE_ACCEPT'] = "CASEACCEPT";
         CaseActionTypesEnum[CaseActionTypesEnum["CASECOUNTERACCEPTED"] = 'CASE_COUNTER_ACCEPTED'] = "CASECOUNTERACCEPTED";
@@ -37,4 +34,4 @@ var GetCaseActionTypesResponse;
         CaseActionTypesEnum[CaseActionTypesEnum["SOCIALMEDIAASK"] = 'SOCIAL_MEDIA_ASK'] = "SOCIALMEDIAASK";
         CaseActionTypesEnum[CaseActionTypesEnum["TICKETMAILEDTOCOURT"] = 'TICKET_MAILED_TO_COURT'] = "TICKETMAILEDTOCOURT";
     })(CaseActionTypesEnum = GetCaseActionTypesResponse.CaseActionTypesEnum || (GetCaseActionTypesResponse.CaseActionTypesEnum = {}));
-})(GetCaseActionTypesResponse = exports.GetCaseActionTypesResponse || (exports.GetCaseActionTypesResponse = {}));
+})(GetCaseActionTypesResponse || (GetCaseActionTypesResponse = {}));

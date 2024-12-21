@@ -1,4 +1,3 @@
-"use strict";
 /**
  * OffTheRecord Rest Service API - Devo
  * A service to handle your traffic tickets
@@ -10,13 +9,11 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.SetCustomerReviewStatusRequest = void 0;
-var SetCustomerReviewStatusRequest;
+export var SetCustomerReviewStatusRequest;
 (function (SetCustomerReviewStatusRequest) {
-    var StatusEnum;
+    let StatusEnum;
     (function (StatusEnum) {
         StatusEnum[StatusEnum["APPROVED"] = 'APPROVED'] = "APPROVED";
         StatusEnum[StatusEnum["REJECTED"] = 'REJECTED'] = "REJECTED";
     })(StatusEnum = SetCustomerReviewStatusRequest.StatusEnum || (SetCustomerReviewStatusRequest.StatusEnum = {}));
-})(SetCustomerReviewStatusRequest = exports.SetCustomerReviewStatusRequest || (exports.SetCustomerReviewStatusRequest = {}));
+})(SetCustomerReviewStatusRequest || (SetCustomerReviewStatusRequest = {}));

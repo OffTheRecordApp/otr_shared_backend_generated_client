@@ -1,4 +1,3 @@
-"use strict";
 /**
  * OffTheRecord Rest Service API - Devo
  * A service to handle your traffic tickets
@@ -10,17 +9,15 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.DirectMailContact = void 0;
-var DirectMailContact;
+export var DirectMailContact;
 (function (DirectMailContact) {
-    var MailTypeEnum;
+    let MailTypeEnum;
     (function (MailTypeEnum) {
         MailTypeEnum[MailTypeEnum["CHECK"] = 'CHECK'] = "CHECK";
         MailTypeEnum[MailTypeEnum["LETTER"] = 'LETTER'] = "LETTER";
         MailTypeEnum[MailTypeEnum["POSTCARD"] = 'POST_CARD'] = "POSTCARD";
     })(MailTypeEnum = DirectMailContact.MailTypeEnum || (DirectMailContact.MailTypeEnum = {}));
-    var TrackingStatusEnum;
+    let TrackingStatusEnum;
     (function (TrackingStatusEnum) {
         TrackingStatusEnum[TrackingStatusEnum["CREATED"] = 'CREATED'] = "CREATED";
         TrackingStatusEnum[TrackingStatusEnum["INLOCALAREA"] = 'IN_LOCAL_AREA'] = "INLOCALAREA";
@@ -29,4 +26,4 @@ var DirectMailContact;
         TrackingStatusEnum[TrackingStatusEnum["RETURNEDTOSENDER"] = 'RETURNED_TO_SENDER'] = "RETURNEDTOSENDER";
         TrackingStatusEnum[TrackingStatusEnum["REROUTED"] = 'RE_ROUTED'] = "REROUTED";
     })(TrackingStatusEnum = DirectMailContact.TrackingStatusEnum || (DirectMailContact.TrackingStatusEnum = {}));
-})(DirectMailContact = exports.DirectMailContact || (exports.DirectMailContact = {}));
+})(DirectMailContact || (DirectMailContact = {}));

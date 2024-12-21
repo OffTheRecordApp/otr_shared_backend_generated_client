@@ -1,4 +1,3 @@
-"use strict";
 /**
  * OffTheRecord Rest Service API - Devo
  * A service to handle your traffic tickets
@@ -10,11 +9,9 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.ActivityFeedModel = void 0;
-var ActivityFeedModel;
+export var ActivityFeedModel;
 (function (ActivityFeedModel) {
-    var ActivityTypeEnum;
+    let ActivityTypeEnum;
     (function (ActivityTypeEnum) {
         ActivityTypeEnum[ActivityTypeEnum["PURCHASE"] = 'PURCHASE'] = "PURCHASE";
         ActivityTypeEnum[ActivityTypeEnum["REFERRAL"] = 'REFERRAL'] = "REFERRAL";
@@ -22,11 +19,11 @@ var ActivityFeedModel;
         ActivityTypeEnum[ActivityTypeEnum["RESOLUTION"] = 'RESOLUTION'] = "RESOLUTION";
         ActivityTypeEnum[ActivityTypeEnum["TICKETREVIEW"] = 'TICKET_REVIEW'] = "TICKETREVIEW";
     })(ActivityTypeEnum = ActivityFeedModel.ActivityTypeEnum || (ActivityFeedModel.ActivityTypeEnum = {}));
-    var PrivacyModeEnum;
+    let PrivacyModeEnum;
     (function (PrivacyModeEnum) {
         PrivacyModeEnum[PrivacyModeEnum["FRIENDS"] = 'FRIENDS'] = "FRIENDS";
         PrivacyModeEnum[PrivacyModeEnum["PRIVATE"] = 'PRIVATE'] = "PRIVATE";
         PrivacyModeEnum[PrivacyModeEnum["PUBLIC"] = 'PUBLIC'] = "PUBLIC";
         PrivacyModeEnum[PrivacyModeEnum["SEMIPUBLIC"] = 'SEMI_PUBLIC'] = "SEMIPUBLIC";
     })(PrivacyModeEnum = ActivityFeedModel.PrivacyModeEnum || (ActivityFeedModel.PrivacyModeEnum = {}));
-})(ActivityFeedModel = exports.ActivityFeedModel || (exports.ActivityFeedModel = {}));
+})(ActivityFeedModel || (ActivityFeedModel = {}));

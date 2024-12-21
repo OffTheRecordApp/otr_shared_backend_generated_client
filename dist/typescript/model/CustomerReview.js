@@ -1,4 +1,3 @@
-"use strict";
 /**
  * OffTheRecord Rest Service API - Devo
  * A service to handle your traffic tickets
@@ -10,22 +9,20 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.CustomerReview = void 0;
-var CustomerReview;
+export var CustomerReview;
 (function (CustomerReview) {
-    var LoggedInUserVoteEnum;
+    let LoggedInUserVoteEnum;
     (function (LoggedInUserVoteEnum) {
         LoggedInUserVoteEnum[LoggedInUserVoteEnum["HELPFUL"] = 'HELPFUL'] = "HELPFUL";
         LoggedInUserVoteEnum[LoggedInUserVoteEnum["UNHELPFUL"] = 'UNHELPFUL'] = "UNHELPFUL";
     })(LoggedInUserVoteEnum = CustomerReview.LoggedInUserVoteEnum || (CustomerReview.LoggedInUserVoteEnum = {}));
-    var NameSettingEnum;
+    let NameSettingEnum;
     (function (NameSettingEnum) {
         NameSettingEnum[NameSettingEnum["ANONYMOUS"] = 'ANONYMOUS'] = "ANONYMOUS";
         NameSettingEnum[NameSettingEnum["FIRSTNAMELASTINITIAL"] = 'FIRST_NAME_LAST_INITIAL'] = "FIRSTNAMELASTINITIAL";
         NameSettingEnum[NameSettingEnum["FULLNAME"] = 'FULL_NAME'] = "FULLNAME";
     })(NameSettingEnum = CustomerReview.NameSettingEnum || (CustomerReview.NameSettingEnum = {}));
-    var SourceEnum;
+    let SourceEnum;
     (function (SourceEnum) {
         SourceEnum[SourceEnum["ANDROID"] = 'ANDROID'] = "ANDROID";
         SourceEnum[SourceEnum["APPLE"] = 'APPLE'] = "APPLE";
@@ -34,4 +31,4 @@ var CustomerReview;
         SourceEnum[SourceEnum["OTR"] = 'OTR'] = "OTR";
         SourceEnum[SourceEnum["REVIEWSIO"] = 'REVIEWS_IO'] = "REVIEWSIO";
     })(SourceEnum = CustomerReview.SourceEnum || (CustomerReview.SourceEnum = {}));
-})(CustomerReview = exports.CustomerReview || (exports.CustomerReview = {}));
+})(CustomerReview || (CustomerReview = {}));

@@ -1,4 +1,3 @@
-"use strict";
 /**
  * OffTheRecord Rest Service API - Devo
  * A service to handle your traffic tickets
@@ -10,11 +9,9 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.ViolationControllerApi = void 0;
 /* tslint:disable:no-unused-variable member-ordering */
-var ViolationControllerApi = /** @class */ (function () {
-    function ViolationControllerApi($http, $httpParamSerializer, basePath) {
+export class ViolationControllerApi {
+    constructor($http, $httpParamSerializer, basePath) {
         this.$http = $http;
         this.$httpParamSerializer = $httpParamSerializer;
         this.basePath = 'http://otr-backend-service-us-devo.offtherecord.com';
@@ -29,10 +26,10 @@ var ViolationControllerApi = /** @class */ (function () {
      * @param isLive isLive
      * @param request request
      */
-    ViolationControllerApi.prototype.addViolationUsingPOST = function (isLive, request, extraHttpRequestParams) {
-        var localVarPath = this.basePath + '/api/v1/violations';
-        var queryParameters = {};
-        var headerParams = Object.assign({}, this.defaultHeaders);
+    addViolationUsingPOST(isLive, request, extraHttpRequestParams) {
+        const localVarPath = this.basePath + '/api/v1/violations';
+        let queryParameters = {};
+        let headerParams = Object.assign({}, this.defaultHeaders);
         // verify required parameter 'isLive' is not null or undefined
         if (isLive === null || isLive === undefined) {
             throw new Error('Required parameter isLive was null or undefined when calling addViolationUsingPOST.');
@@ -44,7 +41,7 @@ var ViolationControllerApi = /** @class */ (function () {
         if (isLive !== undefined) {
             queryParameters['isLive'] = isLive;
         }
-        var httpRequestParams = {
+        let httpRequestParams = {
             method: 'POST',
             url: localVarPath,
             data: request,
@@ -55,22 +52,22 @@ var ViolationControllerApi = /** @class */ (function () {
             httpRequestParams = Object.assign(httpRequestParams, extraHttpRequestParams);
         }
         return this.$http(httpRequestParams);
-    };
+    }
     /**
      *
      * @summary deleteViolation
      * @param violationId violationId
      */
-    ViolationControllerApi.prototype.deleteViolationUsingDELETE = function (violationId, extraHttpRequestParams) {
-        var localVarPath = this.basePath + '/api/v1/violations/{violationId}'
+    deleteViolationUsingDELETE(violationId, extraHttpRequestParams) {
+        const localVarPath = this.basePath + '/api/v1/violations/{violationId}'
             .replace('{' + 'violationId' + '}', encodeURIComponent(String(violationId)));
-        var queryParameters = {};
-        var headerParams = Object.assign({}, this.defaultHeaders);
+        let queryParameters = {};
+        let headerParams = Object.assign({}, this.defaultHeaders);
         // verify required parameter 'violationId' is not null or undefined
         if (violationId === null || violationId === undefined) {
             throw new Error('Required parameter violationId was null or undefined when calling deleteViolationUsingDELETE.');
         }
-        var httpRequestParams = {
+        let httpRequestParams = {
             method: 'DELETE',
             url: localVarPath,
             params: queryParameters,
@@ -80,16 +77,16 @@ var ViolationControllerApi = /** @class */ (function () {
             httpRequestParams = Object.assign(httpRequestParams, extraHttpRequestParams);
         }
         return this.$http(httpRequestParams);
-    };
+    }
     /**
      *
      * @summary getRegionsWithViolations
      */
-    ViolationControllerApi.prototype.getRegionsWithViolationsUsingGET = function (extraHttpRequestParams) {
-        var localVarPath = this.basePath + '/api/v1/violations/region-availability';
-        var queryParameters = {};
-        var headerParams = Object.assign({}, this.defaultHeaders);
-        var httpRequestParams = {
+    getRegionsWithViolationsUsingGET(extraHttpRequestParams) {
+        const localVarPath = this.basePath + '/api/v1/violations/region-availability';
+        let queryParameters = {};
+        let headerParams = Object.assign({}, this.defaultHeaders);
+        let httpRequestParams = {
             method: 'GET',
             url: localVarPath,
             params: queryParameters,
@@ -99,7 +96,7 @@ var ViolationControllerApi = /** @class */ (function () {
             httpRequestParams = Object.assign(httpRequestParams, extraHttpRequestParams);
         }
         return this.$http(httpRequestParams);
-    };
+    }
     /**
      *
      * @summary getTrafficViolationTypes
@@ -108,10 +105,10 @@ var ViolationControllerApi = /** @class */ (function () {
      * @param includePenalties includePenalties
      * @param state state
      */
-    ViolationControllerApi.prototype.getTrafficViolationTypesUsingGET = function (audience, flavor, includePenalties, state, extraHttpRequestParams) {
-        var localVarPath = this.basePath + '/api/v1/violations';
-        var queryParameters = {};
-        var headerParams = Object.assign({}, this.defaultHeaders);
+    getTrafficViolationTypesUsingGET(audience, flavor, includePenalties, state, extraHttpRequestParams) {
+        const localVarPath = this.basePath + '/api/v1/violations';
+        let queryParameters = {};
+        let headerParams = Object.assign({}, this.defaultHeaders);
         if (audience !== undefined) {
             queryParameters['audience'] = audience;
         }
@@ -124,7 +121,7 @@ var ViolationControllerApi = /** @class */ (function () {
         if (state !== undefined) {
             queryParameters['state'] = state;
         }
-        var httpRequestParams = {
+        let httpRequestParams = {
             method: 'GET',
             url: localVarPath,
             params: queryParameters,
@@ -134,20 +131,20 @@ var ViolationControllerApi = /** @class */ (function () {
             httpRequestParams = Object.assign(httpRequestParams, extraHttpRequestParams);
         }
         return this.$http(httpRequestParams);
-    };
+    }
     /**
      *
      * @summary listViolationClassifications
      * @param regionCode regionCode
      */
-    ViolationControllerApi.prototype.listViolationClassificationsUsingGET = function (regionCode, extraHttpRequestParams) {
-        var localVarPath = this.basePath + '/api/v1/violations/classifications';
-        var queryParameters = {};
-        var headerParams = Object.assign({}, this.defaultHeaders);
+    listViolationClassificationsUsingGET(regionCode, extraHttpRequestParams) {
+        const localVarPath = this.basePath + '/api/v1/violations/classifications';
+        let queryParameters = {};
+        let headerParams = Object.assign({}, this.defaultHeaders);
         if (regionCode !== undefined) {
             queryParameters['regionCode'] = regionCode;
         }
-        var httpRequestParams = {
+        let httpRequestParams = {
             method: 'GET',
             url: localVarPath,
             params: queryParameters,
@@ -157,18 +154,18 @@ var ViolationControllerApi = /** @class */ (function () {
             httpRequestParams = Object.assign(httpRequestParams, extraHttpRequestParams);
         }
         return this.$http(httpRequestParams);
-    };
+    }
     /**
      *
      * @summary updateViolation
      * @param violationId violationId
      * @param request request
      */
-    ViolationControllerApi.prototype.updateViolationUsingPUT = function (violationId, request, extraHttpRequestParams) {
-        var localVarPath = this.basePath + '/api/v1/violations/{violationId}'
+    updateViolationUsingPUT(violationId, request, extraHttpRequestParams) {
+        const localVarPath = this.basePath + '/api/v1/violations/{violationId}'
             .replace('{' + 'violationId' + '}', encodeURIComponent(String(violationId)));
-        var queryParameters = {};
-        var headerParams = Object.assign({}, this.defaultHeaders);
+        let queryParameters = {};
+        let headerParams = Object.assign({}, this.defaultHeaders);
         // verify required parameter 'violationId' is not null or undefined
         if (violationId === null || violationId === undefined) {
             throw new Error('Required parameter violationId was null or undefined when calling updateViolationUsingPUT.');
@@ -177,7 +174,7 @@ var ViolationControllerApi = /** @class */ (function () {
         if (request === null || request === undefined) {
             throw new Error('Required parameter request was null or undefined when calling updateViolationUsingPUT.');
         }
-        var httpRequestParams = {
+        let httpRequestParams = {
             method: 'PUT',
             url: localVarPath,
             data: request,
@@ -188,8 +185,6 @@ var ViolationControllerApi = /** @class */ (function () {
             httpRequestParams = Object.assign(httpRequestParams, extraHttpRequestParams);
         }
         return this.$http(httpRequestParams);
-    };
-    ViolationControllerApi.$inject = ['$http', '$httpParamSerializer', 'basePath'];
-    return ViolationControllerApi;
-}());
-exports.ViolationControllerApi = ViolationControllerApi;
+    }
+}
+ViolationControllerApi.$inject = ['$http', '$httpParamSerializer', 'basePath'];

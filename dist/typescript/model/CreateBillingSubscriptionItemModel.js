@@ -1,4 +1,3 @@
-"use strict";
 /**
  * OffTheRecord Rest Service API - Devo
  * A service to handle your traffic tickets
@@ -10,17 +9,15 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.CreateBillingSubscriptionItemModel = void 0;
-var CreateBillingSubscriptionItemModel;
+export var CreateBillingSubscriptionItemModel;
 (function (CreateBillingSubscriptionItemModel) {
-    var BillingSchemeEnum;
+    let BillingSchemeEnum;
     (function (BillingSchemeEnum) {
         BillingSchemeEnum[BillingSchemeEnum["PERUNIT"] = 'PER_UNIT'] = "PERUNIT";
         BillingSchemeEnum[BillingSchemeEnum["TIERED"] = 'TIERED'] = "TIERED";
         BillingSchemeEnum[BillingSchemeEnum["UNKNOWN"] = 'UNKNOWN'] = "UNKNOWN";
     })(BillingSchemeEnum = CreateBillingSubscriptionItemModel.BillingSchemeEnum || (CreateBillingSubscriptionItemModel.BillingSchemeEnum = {}));
-    var IntervalEnum;
+    let IntervalEnum;
     (function (IntervalEnum) {
         IntervalEnum[IntervalEnum["DAILY"] = 'DAILY'] = "DAILY";
         IntervalEnum[IntervalEnum["MONTHLY"] = 'MONTHLY'] = "MONTHLY";
@@ -28,14 +25,14 @@ var CreateBillingSubscriptionItemModel;
         IntervalEnum[IntervalEnum["WEEKLY"] = 'WEEKLY'] = "WEEKLY";
         IntervalEnum[IntervalEnum["YEARLY"] = 'YEARLY'] = "YEARLY";
     })(IntervalEnum = CreateBillingSubscriptionItemModel.IntervalEnum || (CreateBillingSubscriptionItemModel.IntervalEnum = {}));
-    var TiersModeEnum;
+    let TiersModeEnum;
     (function (TiersModeEnum) {
         TiersModeEnum[TiersModeEnum["GRADUATED"] = 'GRADUATED'] = "GRADUATED";
         TiersModeEnum[TiersModeEnum["VOLUME"] = 'VOLUME'] = "VOLUME";
     })(TiersModeEnum = CreateBillingSubscriptionItemModel.TiersModeEnum || (CreateBillingSubscriptionItemModel.TiersModeEnum = {}));
-    var UsageTypeEnum;
+    let UsageTypeEnum;
     (function (UsageTypeEnum) {
         UsageTypeEnum[UsageTypeEnum["LICENSED"] = 'LICENSED'] = "LICENSED";
         UsageTypeEnum[UsageTypeEnum["METERED"] = 'METERED'] = "METERED";
     })(UsageTypeEnum = CreateBillingSubscriptionItemModel.UsageTypeEnum || (CreateBillingSubscriptionItemModel.UsageTypeEnum = {}));
-})(CreateBillingSubscriptionItemModel = exports.CreateBillingSubscriptionItemModel || (exports.CreateBillingSubscriptionItemModel = {}));
+})(CreateBillingSubscriptionItemModel || (CreateBillingSubscriptionItemModel = {}));

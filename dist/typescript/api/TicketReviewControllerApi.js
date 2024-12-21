@@ -1,4 +1,3 @@
-"use strict";
 /**
  * OffTheRecord Rest Service API - Devo
  * A service to handle your traffic tickets
@@ -10,11 +9,9 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.TicketReviewControllerApi = void 0;
 /* tslint:disable:no-unused-variable member-ordering */
-var TicketReviewControllerApi = /** @class */ (function () {
-    function TicketReviewControllerApi($http, $httpParamSerializer, basePath) {
+export class TicketReviewControllerApi {
+    constructor($http, $httpParamSerializer, basePath) {
         this.$http = $http;
         this.$httpParamSerializer = $httpParamSerializer;
         this.basePath = 'http://otr-backend-service-us-devo.offtherecord.com';
@@ -28,16 +25,16 @@ var TicketReviewControllerApi = /** @class */ (function () {
      * @summary getTicketReviewInfo
      * @param citationId citationId
      */
-    TicketReviewControllerApi.prototype.getTicketReviewInfoUsingGET = function (citationId, extraHttpRequestParams) {
-        var localVarPath = this.basePath + '/api/v1/citations/{citationId}/ticket-review'
+    getTicketReviewInfoUsingGET(citationId, extraHttpRequestParams) {
+        const localVarPath = this.basePath + '/api/v1/citations/{citationId}/ticket-review'
             .replace('{' + 'citationId' + '}', encodeURIComponent(String(citationId)));
-        var queryParameters = {};
-        var headerParams = Object.assign({}, this.defaultHeaders);
+        let queryParameters = {};
+        let headerParams = Object.assign({}, this.defaultHeaders);
         // verify required parameter 'citationId' is not null or undefined
         if (citationId === null || citationId === undefined) {
             throw new Error('Required parameter citationId was null or undefined when calling getTicketReviewInfoUsingGET.');
         }
-        var httpRequestParams = {
+        let httpRequestParams = {
             method: 'GET',
             url: localVarPath,
             params: queryParameters,
@@ -47,21 +44,21 @@ var TicketReviewControllerApi = /** @class */ (function () {
             httpRequestParams = Object.assign(httpRequestParams, extraHttpRequestParams);
         }
         return this.$http(httpRequestParams);
-    };
+    }
     /**
      *
      * @summary persistTicketEvaluation
      * @param request request
      */
-    TicketReviewControllerApi.prototype.persistTicketEvaluationUsingPOST = function (request, extraHttpRequestParams) {
-        var localVarPath = this.basePath + '/api/v1/ticket-evaluation';
-        var queryParameters = {};
-        var headerParams = Object.assign({}, this.defaultHeaders);
+    persistTicketEvaluationUsingPOST(request, extraHttpRequestParams) {
+        const localVarPath = this.basePath + '/api/v1/ticket-evaluation';
+        let queryParameters = {};
+        let headerParams = Object.assign({}, this.defaultHeaders);
         // verify required parameter 'request' is not null or undefined
         if (request === null || request === undefined) {
             throw new Error('Required parameter request was null or undefined when calling persistTicketEvaluationUsingPOST.');
         }
-        var httpRequestParams = {
+        let httpRequestParams = {
             method: 'POST',
             url: localVarPath,
             data: request,
@@ -72,18 +69,18 @@ var TicketReviewControllerApi = /** @class */ (function () {
             httpRequestParams = Object.assign(httpRequestParams, extraHttpRequestParams);
         }
         return this.$http(httpRequestParams);
-    };
+    }
     /**
      *
      * @summary updateTicketEvaluationRequest
      * @param ticketEvaluationRequestId ticketEvaluationRequestId
      * @param request request
      */
-    TicketReviewControllerApi.prototype.updateTicketEvaluationRequestUsingPUT = function (ticketEvaluationRequestId, request, extraHttpRequestParams) {
-        var localVarPath = this.basePath + '/api/v1/ticket-evaluation/{ticketEvaluationRequestId}'
+    updateTicketEvaluationRequestUsingPUT(ticketEvaluationRequestId, request, extraHttpRequestParams) {
+        const localVarPath = this.basePath + '/api/v1/ticket-evaluation/{ticketEvaluationRequestId}'
             .replace('{' + 'ticketEvaluationRequestId' + '}', encodeURIComponent(String(ticketEvaluationRequestId)));
-        var queryParameters = {};
-        var headerParams = Object.assign({}, this.defaultHeaders);
+        let queryParameters = {};
+        let headerParams = Object.assign({}, this.defaultHeaders);
         // verify required parameter 'ticketEvaluationRequestId' is not null or undefined
         if (ticketEvaluationRequestId === null || ticketEvaluationRequestId === undefined) {
             throw new Error('Required parameter ticketEvaluationRequestId was null or undefined when calling updateTicketEvaluationRequestUsingPUT.');
@@ -92,7 +89,7 @@ var TicketReviewControllerApi = /** @class */ (function () {
         if (request === null || request === undefined) {
             throw new Error('Required parameter request was null or undefined when calling updateTicketEvaluationRequestUsingPUT.');
         }
-        var httpRequestParams = {
+        let httpRequestParams = {
             method: 'PUT',
             url: localVarPath,
             data: request,
@@ -103,8 +100,6 @@ var TicketReviewControllerApi = /** @class */ (function () {
             httpRequestParams = Object.assign(httpRequestParams, extraHttpRequestParams);
         }
         return this.$http(httpRequestParams);
-    };
-    TicketReviewControllerApi.$inject = ['$http', '$httpParamSerializer', 'basePath'];
-    return TicketReviewControllerApi;
-}());
-exports.TicketReviewControllerApi = TicketReviewControllerApi;
+    }
+}
+TicketReviewControllerApi.$inject = ['$http', '$httpParamSerializer', 'basePath'];

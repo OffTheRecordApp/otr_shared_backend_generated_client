@@ -1,4 +1,3 @@
-"use strict";
 /**
  * OffTheRecord Rest Service API - Devo
  * A service to handle your traffic tickets
@@ -10,11 +9,9 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.CaseUserControllerApi = void 0;
 /* tslint:disable:no-unused-variable member-ordering */
-var CaseUserControllerApi = /** @class */ (function () {
-    function CaseUserControllerApi($http, $httpParamSerializer, basePath) {
+export class CaseUserControllerApi {
+    constructor($http, $httpParamSerializer, basePath) {
         this.$http = $http;
         this.$httpParamSerializer = $httpParamSerializer;
         this.basePath = 'http://otr-backend-service-us-devo.offtherecord.com';
@@ -29,11 +26,11 @@ var CaseUserControllerApi = /** @class */ (function () {
      * @param caseId caseId
      * @param getRemovedUsers getRemovedUsers
      */
-    CaseUserControllerApi.prototype.getCaseUsersByCaseUsingGET = function (caseId, getRemovedUsers, extraHttpRequestParams) {
-        var localVarPath = this.basePath + '/api/v1/cases/{caseId}/users'
+    getCaseUsersByCaseUsingGET(caseId, getRemovedUsers, extraHttpRequestParams) {
+        const localVarPath = this.basePath + '/api/v1/cases/{caseId}/users'
             .replace('{' + 'caseId' + '}', encodeURIComponent(String(caseId)));
-        var queryParameters = {};
-        var headerParams = Object.assign({}, this.defaultHeaders);
+        let queryParameters = {};
+        let headerParams = Object.assign({}, this.defaultHeaders);
         // verify required parameter 'caseId' is not null or undefined
         if (caseId === null || caseId === undefined) {
             throw new Error('Required parameter caseId was null or undefined when calling getCaseUsersByCaseUsingGET.');
@@ -41,7 +38,7 @@ var CaseUserControllerApi = /** @class */ (function () {
         if (getRemovedUsers !== undefined) {
             queryParameters['getRemovedUsers'] = getRemovedUsers;
         }
-        var httpRequestParams = {
+        let httpRequestParams = {
             method: 'GET',
             url: localVarPath,
             params: queryParameters,
@@ -51,18 +48,18 @@ var CaseUserControllerApi = /** @class */ (function () {
             httpRequestParams = Object.assign(httpRequestParams, extraHttpRequestParams);
         }
         return this.$http(httpRequestParams);
-    };
+    }
     /**
      *
      * @summary saveCaseUser
      * @param caseId caseId
      * @param request request
      */
-    CaseUserControllerApi.prototype.saveCaseUserUsingPOST = function (caseId, request, extraHttpRequestParams) {
-        var localVarPath = this.basePath + '/api/v1/cases/{caseId}/users'
+    saveCaseUserUsingPOST(caseId, request, extraHttpRequestParams) {
+        const localVarPath = this.basePath + '/api/v1/cases/{caseId}/users'
             .replace('{' + 'caseId' + '}', encodeURIComponent(String(caseId)));
-        var queryParameters = {};
-        var headerParams = Object.assign({}, this.defaultHeaders);
+        let queryParameters = {};
+        let headerParams = Object.assign({}, this.defaultHeaders);
         // verify required parameter 'caseId' is not null or undefined
         if (caseId === null || caseId === undefined) {
             throw new Error('Required parameter caseId was null or undefined when calling saveCaseUserUsingPOST.');
@@ -71,7 +68,7 @@ var CaseUserControllerApi = /** @class */ (function () {
         if (request === null || request === undefined) {
             throw new Error('Required parameter request was null or undefined when calling saveCaseUserUsingPOST.');
         }
-        var httpRequestParams = {
+        let httpRequestParams = {
             method: 'POST',
             url: localVarPath,
             data: request,
@@ -82,8 +79,6 @@ var CaseUserControllerApi = /** @class */ (function () {
             httpRequestParams = Object.assign(httpRequestParams, extraHttpRequestParams);
         }
         return this.$http(httpRequestParams);
-    };
-    CaseUserControllerApi.$inject = ['$http', '$httpParamSerializer', 'basePath'];
-    return CaseUserControllerApi;
-}());
-exports.CaseUserControllerApi = CaseUserControllerApi;
+    }
+}
+CaseUserControllerApi.$inject = ['$http', '$httpParamSerializer', 'basePath'];

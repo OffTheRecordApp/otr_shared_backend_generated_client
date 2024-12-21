@@ -1,4 +1,3 @@
-"use strict";
 /**
  * OffTheRecord Rest Service API - Devo
  * A service to handle your traffic tickets
@@ -10,11 +9,9 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.CaseDeclineControllerApi = void 0;
 /* tslint:disable:no-unused-variable member-ordering */
-var CaseDeclineControllerApi = /** @class */ (function () {
-    function CaseDeclineControllerApi($http, $httpParamSerializer, basePath) {
+export class CaseDeclineControllerApi {
+    constructor($http, $httpParamSerializer, basePath) {
         this.$http = $http;
         this.$httpParamSerializer = $httpParamSerializer;
         this.basePath = 'http://otr-backend-service-us-devo.offtherecord.com';
@@ -27,11 +24,11 @@ var CaseDeclineControllerApi = /** @class */ (function () {
      *
      * @summary getCaseDeclineReasonTypes
      */
-    CaseDeclineControllerApi.prototype.getCaseDeclineReasonTypesUsingGET = function (extraHttpRequestParams) {
-        var localVarPath = this.basePath + '/api/v1/cases/declines/reasons';
-        var queryParameters = {};
-        var headerParams = Object.assign({}, this.defaultHeaders);
-        var httpRequestParams = {
+    getCaseDeclineReasonTypesUsingGET(extraHttpRequestParams) {
+        const localVarPath = this.basePath + '/api/v1/cases/declines/reasons';
+        let queryParameters = {};
+        let headerParams = Object.assign({}, this.defaultHeaders);
+        let httpRequestParams = {
             method: 'GET',
             url: localVarPath,
             params: queryParameters,
@@ -41,8 +38,6 @@ var CaseDeclineControllerApi = /** @class */ (function () {
             httpRequestParams = Object.assign(httpRequestParams, extraHttpRequestParams);
         }
         return this.$http(httpRequestParams);
-    };
-    CaseDeclineControllerApi.$inject = ['$http', '$httpParamSerializer', 'basePath'];
-    return CaseDeclineControllerApi;
-}());
-exports.CaseDeclineControllerApi = CaseDeclineControllerApi;
+    }
+}
+CaseDeclineControllerApi.$inject = ['$http', '$httpParamSerializer', 'basePath'];

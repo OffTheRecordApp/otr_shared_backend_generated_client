@@ -1,8 +1,6 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-var api = require("./api/api");
-var angular = require("angular");
-var apiModule = angular.module('api', [])
+import * as api from './api/api';
+import * as angular from 'angular';
+const apiModule = angular.module('api', [])
     .service('ActionRequiredControllerApi', api.ActionRequiredControllerApi)
     .service('ActivityFeedControllerApi', api.ActivityFeedControllerApi)
     .service('AddressControllerApi', api.AddressControllerApi)
@@ -119,4 +117,4 @@ var apiModule = angular.module('api', [])
     .service('WatchlistsControllerApi', api.WatchlistsControllerApi)
     .service('WebsocketMessageControllerApi', api.WebsocketMessageControllerApi)
     .service('WorkflowStateControllerApi', api.WorkflowStateControllerApi);
-exports.default = apiModule;
+export default apiModule;

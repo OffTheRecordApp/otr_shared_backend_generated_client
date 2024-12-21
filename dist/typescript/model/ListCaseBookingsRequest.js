@@ -1,4 +1,3 @@
-"use strict";
 /**
  * OffTheRecord Rest Service API - Devo
  * A service to handle your traffic tickets
@@ -10,11 +9,9 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.ListCaseBookingsRequest = void 0;
-var ListCaseBookingsRequest;
+export var ListCaseBookingsRequest;
 (function (ListCaseBookingsRequest) {
-    var CaseStatusFilterEnum;
+    let CaseStatusFilterEnum;
     (function (CaseStatusFilterEnum) {
         CaseStatusFilterEnum[CaseStatusFilterEnum["AMENDEDDOWNWITHINCLASS"] = 'AMENDED_DOWN_WITHIN_CLASS'] = "AMENDEDDOWNWITHINCLASS";
         CaseStatusFilterEnum[CaseStatusFilterEnum["AMENDEDFULLFINE"] = 'AMENDED_FULL_FINE'] = "AMENDEDFULLFINE";
@@ -54,7 +51,7 @@ var ListCaseBookingsRequest;
         CaseStatusFilterEnum[CaseStatusFilterEnum["TRAFFICSCHOOL"] = 'TRAFFIC_SCHOOL'] = "TRAFFICSCHOOL";
         CaseStatusFilterEnum[CaseStatusFilterEnum["UNCONFIRMED"] = 'UNCONFIRMED'] = "UNCONFIRMED";
     })(CaseStatusFilterEnum = ListCaseBookingsRequest.CaseStatusFilterEnum || (ListCaseBookingsRequest.CaseStatusFilterEnum = {}));
-    var GenderFilterListEnum;
+    let GenderFilterListEnum;
     (function (GenderFilterListEnum) {
         GenderFilterListEnum[GenderFilterListEnum["FEMALE"] = 'FEMALE'] = "FEMALE";
         GenderFilterListEnum[GenderFilterListEnum["MALE"] = 'MALE'] = "MALE";
@@ -63,7 +60,7 @@ var ListCaseBookingsRequest;
         GenderFilterListEnum[GenderFilterListEnum["UNVERIFIED"] = 'UNVERIFIED'] = "UNVERIFIED";
         GenderFilterListEnum[GenderFilterListEnum["X"] = 'X'] = "X";
     })(GenderFilterListEnum = ListCaseBookingsRequest.GenderFilterListEnum || (ListCaseBookingsRequest.GenderFilterListEnum = {}));
-    var RaceFilterListEnum;
+    let RaceFilterListEnum;
     (function (RaceFilterListEnum) {
         RaceFilterListEnum[RaceFilterListEnum["ASIAN"] = 'ASIAN'] = "ASIAN";
         RaceFilterListEnum[RaceFilterListEnum["BLACK"] = 'BLACK'] = "BLACK";
@@ -77,7 +74,7 @@ var ListCaseBookingsRequest;
         RaceFilterListEnum[RaceFilterListEnum["UNVERIFIED"] = 'UNVERIFIED'] = "UNVERIFIED";
         RaceFilterListEnum[RaceFilterListEnum["WHITE"] = 'WHITE'] = "WHITE";
     })(RaceFilterListEnum = ListCaseBookingsRequest.RaceFilterListEnum || (ListCaseBookingsRequest.RaceFilterListEnum = {}));
-    var StateFilterListEnum;
+    let StateFilterListEnum;
     (function (StateFilterListEnum) {
         StateFilterListEnum[StateFilterListEnum["AK"] = 'AK'] = "AK";
         StateFilterListEnum[StateFilterListEnum["AL"] = 'AL'] = "AL";
@@ -131,11 +128,11 @@ var ListCaseBookingsRequest;
         StateFilterListEnum[StateFilterListEnum["WV"] = 'WV'] = "WV";
         StateFilterListEnum[StateFilterListEnum["WY"] = 'WY'] = "WY";
     })(StateFilterListEnum = ListCaseBookingsRequest.StateFilterListEnum || (ListCaseBookingsRequest.StateFilterListEnum = {}));
-    var StatusCategoryFilterEnum;
+    let StatusCategoryFilterEnum;
     (function (StatusCategoryFilterEnum) {
         StatusCategoryFilterEnum[StatusCategoryFilterEnum["ACTIVE"] = 'ACTIVE'] = "ACTIVE";
         StatusCategoryFilterEnum[StatusCategoryFilterEnum["CANCELLED"] = 'CANCELLED'] = "CANCELLED";
         StatusCategoryFilterEnum[StatusCategoryFilterEnum["RESOLVED"] = 'RESOLVED'] = "RESOLVED";
         StatusCategoryFilterEnum[StatusCategoryFilterEnum["UNCONFIRMED"] = 'UNCONFIRMED'] = "UNCONFIRMED";
     })(StatusCategoryFilterEnum = ListCaseBookingsRequest.StatusCategoryFilterEnum || (ListCaseBookingsRequest.StatusCategoryFilterEnum = {}));
-})(ListCaseBookingsRequest = exports.ListCaseBookingsRequest || (exports.ListCaseBookingsRequest = {}));
+})(ListCaseBookingsRequest || (ListCaseBookingsRequest = {}));

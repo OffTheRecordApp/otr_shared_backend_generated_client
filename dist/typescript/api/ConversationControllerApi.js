@@ -1,4 +1,3 @@
-"use strict";
 /**
  * OffTheRecord Rest Service API - Devo
  * A service to handle your traffic tickets
@@ -10,11 +9,9 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.ConversationControllerApi = void 0;
 /* tslint:disable:no-unused-variable member-ordering */
-var ConversationControllerApi = /** @class */ (function () {
-    function ConversationControllerApi($http, $httpParamSerializer, basePath) {
+export class ConversationControllerApi {
+    constructor($http, $httpParamSerializer, basePath) {
         this.$http = $http;
         this.$httpParamSerializer = $httpParamSerializer;
         this.basePath = 'http://otr-backend-service-us-devo.offtherecord.com';
@@ -29,11 +26,11 @@ var ConversationControllerApi = /** @class */ (function () {
      * @param caseId caseId
      * @param request request
      */
-    ConversationControllerApi.prototype.addMessageToConversationUsingPOST = function (caseId, request, extraHttpRequestParams) {
-        var localVarPath = this.basePath + '/api/v1/cases/{caseId}/conversation'
+    addMessageToConversationUsingPOST(caseId, request, extraHttpRequestParams) {
+        const localVarPath = this.basePath + '/api/v1/cases/{caseId}/conversation'
             .replace('{' + 'caseId' + '}', encodeURIComponent(String(caseId)));
-        var queryParameters = {};
-        var headerParams = Object.assign({}, this.defaultHeaders);
+        let queryParameters = {};
+        let headerParams = Object.assign({}, this.defaultHeaders);
         // verify required parameter 'caseId' is not null or undefined
         if (caseId === null || caseId === undefined) {
             throw new Error('Required parameter caseId was null or undefined when calling addMessageToConversationUsingPOST.');
@@ -42,7 +39,7 @@ var ConversationControllerApi = /** @class */ (function () {
         if (request === null || request === undefined) {
             throw new Error('Required parameter request was null or undefined when calling addMessageToConversationUsingPOST.');
         }
-        var httpRequestParams = {
+        let httpRequestParams = {
             method: 'POST',
             url: localVarPath,
             data: request,
@@ -53,7 +50,7 @@ var ConversationControllerApi = /** @class */ (function () {
             httpRequestParams = Object.assign(httpRequestParams, extraHttpRequestParams);
         }
         return this.$http(httpRequestParams);
-    };
+    }
     /**
      *
      * @summary editMessage
@@ -61,12 +58,12 @@ var ConversationControllerApi = /** @class */ (function () {
      * @param messageId messageId
      * @param request request
      */
-    ConversationControllerApi.prototype.editMessageUsingPUT = function (caseId, messageId, request, extraHttpRequestParams) {
-        var localVarPath = this.basePath + '/api/v1/cases/{caseId}/conversation/{messageId}/edit'
+    editMessageUsingPUT(caseId, messageId, request, extraHttpRequestParams) {
+        const localVarPath = this.basePath + '/api/v1/cases/{caseId}/conversation/{messageId}/edit'
             .replace('{' + 'caseId' + '}', encodeURIComponent(String(caseId)))
             .replace('{' + 'messageId' + '}', encodeURIComponent(String(messageId)));
-        var queryParameters = {};
-        var headerParams = Object.assign({}, this.defaultHeaders);
+        let queryParameters = {};
+        let headerParams = Object.assign({}, this.defaultHeaders);
         // verify required parameter 'caseId' is not null or undefined
         if (caseId === null || caseId === undefined) {
             throw new Error('Required parameter caseId was null or undefined when calling editMessageUsingPUT.');
@@ -79,7 +76,7 @@ var ConversationControllerApi = /** @class */ (function () {
         if (request === null || request === undefined) {
             throw new Error('Required parameter request was null or undefined when calling editMessageUsingPUT.');
         }
-        var httpRequestParams = {
+        let httpRequestParams = {
             method: 'PUT',
             url: localVarPath,
             data: request,
@@ -90,7 +87,7 @@ var ConversationControllerApi = /** @class */ (function () {
             httpRequestParams = Object.assign(httpRequestParams, extraHttpRequestParams);
         }
         return this.$http(httpRequestParams);
-    };
+    }
     /**
      *
      * @summary getConversation
@@ -98,11 +95,11 @@ var ConversationControllerApi = /** @class */ (function () {
      * @param length length
      * @param page page
      */
-    ConversationControllerApi.prototype.getConversationUsingGET = function (caseId, length, page, extraHttpRequestParams) {
-        var localVarPath = this.basePath + '/api/v1/cases/{caseId}/conversation'
+    getConversationUsingGET(caseId, length, page, extraHttpRequestParams) {
+        const localVarPath = this.basePath + '/api/v1/cases/{caseId}/conversation'
             .replace('{' + 'caseId' + '}', encodeURIComponent(String(caseId)));
-        var queryParameters = {};
-        var headerParams = Object.assign({}, this.defaultHeaders);
+        let queryParameters = {};
+        let headerParams = Object.assign({}, this.defaultHeaders);
         // verify required parameter 'caseId' is not null or undefined
         if (caseId === null || caseId === undefined) {
             throw new Error('Required parameter caseId was null or undefined when calling getConversationUsingGET.');
@@ -113,7 +110,7 @@ var ConversationControllerApi = /** @class */ (function () {
         if (page !== undefined) {
             queryParameters['page'] = page;
         }
-        var httpRequestParams = {
+        let httpRequestParams = {
             method: 'GET',
             url: localVarPath,
             params: queryParameters,
@@ -123,19 +120,19 @@ var ConversationControllerApi = /** @class */ (function () {
             httpRequestParams = Object.assign(httpRequestParams, extraHttpRequestParams);
         }
         return this.$http(httpRequestParams);
-    };
+    }
     /**
      *
      * @summary getMessage
      * @param caseId caseId
      * @param messageId messageId
      */
-    ConversationControllerApi.prototype.getMessageUsingGET = function (caseId, messageId, extraHttpRequestParams) {
-        var localVarPath = this.basePath + '/api/v1/cases/{caseId}/conversation/{messageId}'
+    getMessageUsingGET(caseId, messageId, extraHttpRequestParams) {
+        const localVarPath = this.basePath + '/api/v1/cases/{caseId}/conversation/{messageId}'
             .replace('{' + 'caseId' + '}', encodeURIComponent(String(caseId)))
             .replace('{' + 'messageId' + '}', encodeURIComponent(String(messageId)));
-        var queryParameters = {};
-        var headerParams = Object.assign({}, this.defaultHeaders);
+        let queryParameters = {};
+        let headerParams = Object.assign({}, this.defaultHeaders);
         // verify required parameter 'caseId' is not null or undefined
         if (caseId === null || caseId === undefined) {
             throw new Error('Required parameter caseId was null or undefined when calling getMessageUsingGET.');
@@ -144,7 +141,7 @@ var ConversationControllerApi = /** @class */ (function () {
         if (messageId === null || messageId === undefined) {
             throw new Error('Required parameter messageId was null or undefined when calling getMessageUsingGET.');
         }
-        var httpRequestParams = {
+        let httpRequestParams = {
             method: 'GET',
             url: localVarPath,
             params: queryParameters,
@@ -154,7 +151,7 @@ var ConversationControllerApi = /** @class */ (function () {
             httpRequestParams = Object.assign(httpRequestParams, extraHttpRequestParams);
         }
         return this.$http(httpRequestParams);
-    };
+    }
     /**
      *
      * @summary markMessageAsDeleted
@@ -162,12 +159,12 @@ var ConversationControllerApi = /** @class */ (function () {
      * @param isDeleted isDeleted
      * @param messageId messageId
      */
-    ConversationControllerApi.prototype.markMessageAsDeletedUsingPUT = function (caseId, isDeleted, messageId, extraHttpRequestParams) {
-        var localVarPath = this.basePath + '/api/v1/cases/{caseId}/conversation/{messageId}'
+    markMessageAsDeletedUsingPUT(caseId, isDeleted, messageId, extraHttpRequestParams) {
+        const localVarPath = this.basePath + '/api/v1/cases/{caseId}/conversation/{messageId}'
             .replace('{' + 'caseId' + '}', encodeURIComponent(String(caseId)))
             .replace('{' + 'messageId' + '}', encodeURIComponent(String(messageId)));
-        var queryParameters = {};
-        var headerParams = Object.assign({}, this.defaultHeaders);
+        let queryParameters = {};
+        let headerParams = Object.assign({}, this.defaultHeaders);
         // verify required parameter 'caseId' is not null or undefined
         if (caseId === null || caseId === undefined) {
             throw new Error('Required parameter caseId was null or undefined when calling markMessageAsDeletedUsingPUT.');
@@ -183,7 +180,7 @@ var ConversationControllerApi = /** @class */ (function () {
         if (isDeleted !== undefined) {
             queryParameters['isDeleted'] = isDeleted;
         }
-        var httpRequestParams = {
+        let httpRequestParams = {
             method: 'PUT',
             url: localVarPath,
             params: queryParameters,
@@ -193,21 +190,21 @@ var ConversationControllerApi = /** @class */ (function () {
             httpRequestParams = Object.assign(httpRequestParams, extraHttpRequestParams);
         }
         return this.$http(httpRequestParams);
-    };
+    }
     /**
      *
      * @summary setFlagOnMessages
      * @param request request
      */
-    ConversationControllerApi.prototype.setFlagOnMessagesUsingPUT = function (request, extraHttpRequestParams) {
-        var localVarPath = this.basePath + '/api/v1/cases/conversation/flag';
-        var queryParameters = {};
-        var headerParams = Object.assign({}, this.defaultHeaders);
+    setFlagOnMessagesUsingPUT(request, extraHttpRequestParams) {
+        const localVarPath = this.basePath + '/api/v1/cases/conversation/flag';
+        let queryParameters = {};
+        let headerParams = Object.assign({}, this.defaultHeaders);
         // verify required parameter 'request' is not null or undefined
         if (request === null || request === undefined) {
             throw new Error('Required parameter request was null or undefined when calling setFlagOnMessagesUsingPUT.');
         }
-        var httpRequestParams = {
+        let httpRequestParams = {
             method: 'PUT',
             url: localVarPath,
             data: request,
@@ -218,21 +215,21 @@ var ConversationControllerApi = /** @class */ (function () {
             httpRequestParams = Object.assign(httpRequestParams, extraHttpRequestParams);
         }
         return this.$http(httpRequestParams);
-    };
+    }
     /**
      *
      * @summary setStarOnMessages
      * @param request request
      */
-    ConversationControllerApi.prototype.setStarOnMessagesUsingPUT = function (request, extraHttpRequestParams) {
-        var localVarPath = this.basePath + '/api/v1/cases/conversation/star';
-        var queryParameters = {};
-        var headerParams = Object.assign({}, this.defaultHeaders);
+    setStarOnMessagesUsingPUT(request, extraHttpRequestParams) {
+        const localVarPath = this.basePath + '/api/v1/cases/conversation/star';
+        let queryParameters = {};
+        let headerParams = Object.assign({}, this.defaultHeaders);
         // verify required parameter 'request' is not null or undefined
         if (request === null || request === undefined) {
             throw new Error('Required parameter request was null or undefined when calling setStarOnMessagesUsingPUT.');
         }
-        var httpRequestParams = {
+        let httpRequestParams = {
             method: 'PUT',
             url: localVarPath,
             data: request,
@@ -243,8 +240,6 @@ var ConversationControllerApi = /** @class */ (function () {
             httpRequestParams = Object.assign(httpRequestParams, extraHttpRequestParams);
         }
         return this.$http(httpRequestParams);
-    };
-    ConversationControllerApi.$inject = ['$http', '$httpParamSerializer', 'basePath'];
-    return ConversationControllerApi;
-}());
-exports.ConversationControllerApi = ConversationControllerApi;
+    }
+}
+ConversationControllerApi.$inject = ['$http', '$httpParamSerializer', 'basePath'];

@@ -1,4 +1,3 @@
-"use strict";
 /**
  * OffTheRecord Rest Service API - Devo
  * A service to handle your traffic tickets
@@ -10,11 +9,9 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.ListCasesControllerApi = void 0;
 /* tslint:disable:no-unused-variable member-ordering */
-var ListCasesControllerApi = /** @class */ (function () {
-    function ListCasesControllerApi($http, $httpParamSerializer, basePath) {
+export class ListCasesControllerApi {
+    constructor($http, $httpParamSerializer, basePath) {
         this.$http = $http;
         this.$httpParamSerializer = $httpParamSerializer;
         this.basePath = 'http://otr-backend-service-us-devo.offtherecord.com';
@@ -28,16 +25,16 @@ var ListCasesControllerApi = /** @class */ (function () {
      * @summary getCasesForUser
      * @param userId userId
      */
-    ListCasesControllerApi.prototype.getCasesForUserUsingGET = function (userId, extraHttpRequestParams) {
-        var localVarPath = this.basePath + '/api/v1/users/{userId}/cases'
+    getCasesForUserUsingGET(userId, extraHttpRequestParams) {
+        const localVarPath = this.basePath + '/api/v1/users/{userId}/cases'
             .replace('{' + 'userId' + '}', encodeURIComponent(String(userId)));
-        var queryParameters = {};
-        var headerParams = Object.assign({}, this.defaultHeaders);
+        let queryParameters = {};
+        let headerParams = Object.assign({}, this.defaultHeaders);
         // verify required parameter 'userId' is not null or undefined
         if (userId === null || userId === undefined) {
             throw new Error('Required parameter userId was null or undefined when calling getCasesForUserUsingGET.');
         }
-        var httpRequestParams = {
+        let httpRequestParams = {
             method: 'GET',
             url: localVarPath,
             params: queryParameters,
@@ -47,22 +44,22 @@ var ListCasesControllerApi = /** @class */ (function () {
             httpRequestParams = Object.assign(httpRequestParams, extraHttpRequestParams);
         }
         return this.$http(httpRequestParams);
-    };
+    }
     /**
      *
      * @summary getUserCases
      * @param userId userId
      */
-    ListCasesControllerApi.prototype.getUserCasesUsingGET = function (userId, extraHttpRequestParams) {
-        var localVarPath = this.basePath + '/api/v2/users/{userId}/cases'
+    getUserCasesUsingGET(userId, extraHttpRequestParams) {
+        const localVarPath = this.basePath + '/api/v2/users/{userId}/cases'
             .replace('{' + 'userId' + '}', encodeURIComponent(String(userId)));
-        var queryParameters = {};
-        var headerParams = Object.assign({}, this.defaultHeaders);
+        let queryParameters = {};
+        let headerParams = Object.assign({}, this.defaultHeaders);
         // verify required parameter 'userId' is not null or undefined
         if (userId === null || userId === undefined) {
             throw new Error('Required parameter userId was null or undefined when calling getUserCasesUsingGET.');
         }
-        var httpRequestParams = {
+        let httpRequestParams = {
             method: 'GET',
             url: localVarPath,
             params: queryParameters,
@@ -72,7 +69,7 @@ var ListCasesControllerApi = /** @class */ (function () {
             httpRequestParams = Object.assign(httpRequestParams, extraHttpRequestParams);
         }
         return this.$http(httpRequestParams);
-    };
+    }
     /**
      *
      * @summary listDashboardCases
@@ -84,11 +81,11 @@ var ListCasesControllerApi = /** @class */ (function () {
      * @param sortBy sortBy
      * @param statusCategories statusCategories
      */
-    ListCasesControllerApi.prototype.listDashboardCasesUsingGET = function (userId, caseStatuses, includeDeleted, limit, previousPageToken, sortBy, statusCategories, extraHttpRequestParams) {
-        var localVarPath = this.basePath + '/api/v3/users/{userId}/cases'
+    listDashboardCasesUsingGET(userId, caseStatuses, includeDeleted, limit, previousPageToken, sortBy, statusCategories, extraHttpRequestParams) {
+        const localVarPath = this.basePath + '/api/v3/users/{userId}/cases'
             .replace('{' + 'userId' + '}', encodeURIComponent(String(userId)));
-        var queryParameters = {};
-        var headerParams = Object.assign({}, this.defaultHeaders);
+        let queryParameters = {};
+        let headerParams = Object.assign({}, this.defaultHeaders);
         // verify required parameter 'userId' is not null or undefined
         if (userId === null || userId === undefined) {
             throw new Error('Required parameter userId was null or undefined when calling listDashboardCasesUsingGET.');
@@ -111,7 +108,7 @@ var ListCasesControllerApi = /** @class */ (function () {
         if (statusCategories !== undefined) {
             queryParameters['statusCategories'] = statusCategories;
         }
-        var httpRequestParams = {
+        let httpRequestParams = {
             method: 'GET',
             url: localVarPath,
             params: queryParameters,
@@ -121,8 +118,6 @@ var ListCasesControllerApi = /** @class */ (function () {
             httpRequestParams = Object.assign(httpRequestParams, extraHttpRequestParams);
         }
         return this.$http(httpRequestParams);
-    };
-    ListCasesControllerApi.$inject = ['$http', '$httpParamSerializer', 'basePath'];
-    return ListCasesControllerApi;
-}());
-exports.ListCasesControllerApi = ListCasesControllerApi;
+    }
+}
+ListCasesControllerApi.$inject = ['$http', '$httpParamSerializer', 'basePath'];

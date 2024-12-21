@@ -1,4 +1,3 @@
-"use strict";
 /**
  * OffTheRecord Rest Service API - Devo
  * A service to handle your traffic tickets
@@ -10,13 +9,11 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.LawfirmSettingsDomainRes = void 0;
-var LawfirmSettingsDomainRes;
+export var LawfirmSettingsDomainRes;
 (function (LawfirmSettingsDomainRes) {
-    var ReferralFeeTypeEnum;
+    let ReferralFeeTypeEnum;
     (function (ReferralFeeTypeEnum) {
         ReferralFeeTypeEnum[ReferralFeeTypeEnum["FLATFEEINCENTS"] = 'FLAT_FEE_IN_CENTS'] = "FLATFEEINCENTS";
         ReferralFeeTypeEnum[ReferralFeeTypeEnum["PERCENT"] = 'PERCENT'] = "PERCENT";
     })(ReferralFeeTypeEnum = LawfirmSettingsDomainRes.ReferralFeeTypeEnum || (LawfirmSettingsDomainRes.ReferralFeeTypeEnum = {}));
-})(LawfirmSettingsDomainRes = exports.LawfirmSettingsDomainRes || (exports.LawfirmSettingsDomainRes = {}));
+})(LawfirmSettingsDomainRes || (LawfirmSettingsDomainRes = {}));

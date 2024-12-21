@@ -1,4 +1,3 @@
-"use strict";
 /**
  * OffTheRecord Rest Service API - Devo
  * A service to handle your traffic tickets
@@ -10,11 +9,9 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.DripControllerApi = void 0;
 /* tslint:disable:no-unused-variable member-ordering */
-var DripControllerApi = /** @class */ (function () {
-    function DripControllerApi($http, $httpParamSerializer, basePath) {
+export class DripControllerApi {
+    constructor($http, $httpParamSerializer, basePath) {
         this.$http = $http;
         this.$httpParamSerializer = $httpParamSerializer;
         this.basePath = 'http://otr-backend-service-us-devo.offtherecord.com';
@@ -28,15 +25,15 @@ var DripControllerApi = /** @class */ (function () {
      * @summary removeFromDrip
      * @param request request
      */
-    DripControllerApi.prototype.removeFromDripUsingDELETE = function (request, extraHttpRequestParams) {
-        var localVarPath = this.basePath + '/api/v1/drip';
-        var queryParameters = {};
-        var headerParams = Object.assign({}, this.defaultHeaders);
+    removeFromDripUsingDELETE(request, extraHttpRequestParams) {
+        const localVarPath = this.basePath + '/api/v1/drip';
+        let queryParameters = {};
+        let headerParams = Object.assign({}, this.defaultHeaders);
         // verify required parameter 'request' is not null or undefined
         if (request === null || request === undefined) {
             throw new Error('Required parameter request was null or undefined when calling removeFromDripUsingDELETE.');
         }
-        var httpRequestParams = {
+        let httpRequestParams = {
             method: 'DELETE',
             url: localVarPath,
             data: request,
@@ -47,8 +44,6 @@ var DripControllerApi = /** @class */ (function () {
             httpRequestParams = Object.assign(httpRequestParams, extraHttpRequestParams);
         }
         return this.$http(httpRequestParams);
-    };
-    DripControllerApi.$inject = ['$http', '$httpParamSerializer', 'basePath'];
-    return DripControllerApi;
-}());
-exports.DripControllerApi = DripControllerApi;
+    }
+}
+DripControllerApi.$inject = ['$http', '$httpParamSerializer', 'basePath'];

@@ -1,4 +1,3 @@
-"use strict";
 /**
  * OffTheRecord Rest Service API - Devo
  * A service to handle your traffic tickets
@@ -10,11 +9,9 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.GetLawfirmJobTitleResponse = void 0;
-var GetLawfirmJobTitleResponse;
+export var GetLawfirmJobTitleResponse;
 (function (GetLawfirmJobTitleResponse) {
-    var JobTitlesEnum;
+    let JobTitlesEnum;
     (function (JobTitlesEnum) {
         JobTitlesEnum[JobTitlesEnum["ACCOUNTANT"] = 'ACCOUNTANT'] = "ACCOUNTANT";
         JobTitlesEnum[JobTitlesEnum["ATTORNEY"] = 'ATTORNEY'] = "ATTORNEY";
@@ -30,4 +27,4 @@ var GetLawfirmJobTitleResponse;
         JobTitlesEnum[JobTitlesEnum["OTHER"] = 'OTHER'] = "OTHER";
         JobTitlesEnum[JobTitlesEnum["PARALEGAL"] = 'PARALEGAL'] = "PARALEGAL";
     })(JobTitlesEnum = GetLawfirmJobTitleResponse.JobTitlesEnum || (GetLawfirmJobTitleResponse.JobTitlesEnum = {}));
-})(GetLawfirmJobTitleResponse = exports.GetLawfirmJobTitleResponse || (exports.GetLawfirmJobTitleResponse = {}));
+})(GetLawfirmJobTitleResponse || (GetLawfirmJobTitleResponse = {}));

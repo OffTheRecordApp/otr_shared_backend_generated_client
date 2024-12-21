@@ -1,4 +1,3 @@
-"use strict";
 /**
  * OffTheRecord Rest Service API - Devo
  * A service to handle your traffic tickets
@@ -10,11 +9,9 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.GetLawfirmFeeModel = void 0;
-var GetLawfirmFeeModel;
+export var GetLawfirmFeeModel;
 (function (GetLawfirmFeeModel) {
-    var ClassificationEnum;
+    let ClassificationEnum;
     (function (ClassificationEnum) {
         ClassificationEnum[ClassificationEnum["CLASS1FELONY"] = 'CLASS_1_FELONY'] = "CLASS1FELONY";
         ClassificationEnum[ClassificationEnum["CLASS1MISDEMEANOR"] = 'CLASS_1_MISDEMEANOR'] = "CLASS1MISDEMEANOR";
@@ -74,9 +71,9 @@ var GetLawfirmFeeModel;
         ClassificationEnum[ClassificationEnum["WOBBLERTOFELONY"] = 'WOBBLER_TO_FELONY'] = "WOBBLERTOFELONY";
         ClassificationEnum[ClassificationEnum["WOBBLERTOMISDEMEANOR"] = 'WOBBLER_TO_MISDEMEANOR'] = "WOBBLERTOMISDEMEANOR";
     })(ClassificationEnum = GetLawfirmFeeModel.ClassificationEnum || (GetLawfirmFeeModel.ClassificationEnum = {}));
-    var RefundEligibilityEnum;
+    let RefundEligibilityEnum;
     (function (RefundEligibilityEnum) {
         RefundEligibilityEnum[RefundEligibilityEnum["FULLREFUND"] = 'FULL_REFUND'] = "FULLREFUND";
         RefundEligibilityEnum[RefundEligibilityEnum["NOREFUND"] = 'NO_REFUND'] = "NOREFUND";
     })(RefundEligibilityEnum = GetLawfirmFeeModel.RefundEligibilityEnum || (GetLawfirmFeeModel.RefundEligibilityEnum = {}));
-})(GetLawfirmFeeModel = exports.GetLawfirmFeeModel || (exports.GetLawfirmFeeModel = {}));
+})(GetLawfirmFeeModel || (GetLawfirmFeeModel = {}));

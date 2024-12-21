@@ -1,4 +1,3 @@
-"use strict";
 /**
  * OffTheRecord Rest Service API - Devo
  * A service to handle your traffic tickets
@@ -10,11 +9,9 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.CaseMessageDomain = void 0;
-var CaseMessageDomain;
+export var CaseMessageDomain;
 (function (CaseMessageDomain) {
-    var AuthorRoleTypeEnum;
+    let AuthorRoleTypeEnum;
     (function (AuthorRoleTypeEnum) {
         AuthorRoleTypeEnum[AuthorRoleTypeEnum["ADMIN"] = 'ADMIN'] = "ADMIN";
         AuthorRoleTypeEnum[AuthorRoleTypeEnum["DEFENDANT"] = 'DEFENDANT'] = "DEFENDANT";
@@ -23,9 +20,9 @@ var CaseMessageDomain;
         AuthorRoleTypeEnum[AuthorRoleTypeEnum["PARTNER"] = 'PARTNER'] = "PARTNER";
         AuthorRoleTypeEnum[AuthorRoleTypeEnum["UNKNOWN"] = 'UNKNOWN'] = "UNKNOWN";
     })(AuthorRoleTypeEnum = CaseMessageDomain.AuthorRoleTypeEnum || (CaseMessageDomain.AuthorRoleTypeEnum = {}));
-    var MediaTypeEnum;
+    let MediaTypeEnum;
     (function (MediaTypeEnum) {
         MediaTypeEnum[MediaTypeEnum["IMAGE"] = 'IMAGE'] = "IMAGE";
         MediaTypeEnum[MediaTypeEnum["PDF"] = 'PDF'] = "PDF";
     })(MediaTypeEnum = CaseMessageDomain.MediaTypeEnum || (CaseMessageDomain.MediaTypeEnum = {}));
-})(CaseMessageDomain = exports.CaseMessageDomain || (exports.CaseMessageDomain = {}));
+})(CaseMessageDomain || (CaseMessageDomain = {}));

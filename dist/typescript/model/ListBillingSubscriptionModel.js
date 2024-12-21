@@ -1,4 +1,3 @@
-"use strict";
 /**
  * OffTheRecord Rest Service API - Devo
  * A service to handle your traffic tickets
@@ -10,11 +9,9 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.ListBillingSubscriptionModel = void 0;
-var ListBillingSubscriptionModel;
+export var ListBillingSubscriptionModel;
 (function (ListBillingSubscriptionModel) {
-    var BillingIntervalEnum;
+    let BillingIntervalEnum;
     (function (BillingIntervalEnum) {
         BillingIntervalEnum[BillingIntervalEnum["DAILY"] = 'DAILY'] = "DAILY";
         BillingIntervalEnum[BillingIntervalEnum["MONTHLY"] = 'MONTHLY'] = "MONTHLY";
@@ -22,7 +19,7 @@ var ListBillingSubscriptionModel;
         BillingIntervalEnum[BillingIntervalEnum["WEEKLY"] = 'WEEKLY'] = "WEEKLY";
         BillingIntervalEnum[BillingIntervalEnum["YEARLY"] = 'YEARLY'] = "YEARLY";
     })(BillingIntervalEnum = ListBillingSubscriptionModel.BillingIntervalEnum || (ListBillingSubscriptionModel.BillingIntervalEnum = {}));
-    var SubscriptionStatusEnum;
+    let SubscriptionStatusEnum;
     (function (SubscriptionStatusEnum) {
         SubscriptionStatusEnum[SubscriptionStatusEnum["ACTIVE"] = 'ACTIVE'] = "ACTIVE";
         SubscriptionStatusEnum[SubscriptionStatusEnum["CANCELED"] = 'CANCELED'] = "CANCELED";
@@ -33,4 +30,4 @@ var ListBillingSubscriptionModel;
         SubscriptionStatusEnum[SubscriptionStatusEnum["UNKNOWN"] = 'UNKNOWN'] = "UNKNOWN";
         SubscriptionStatusEnum[SubscriptionStatusEnum["UNPAID"] = 'UNPAID'] = "UNPAID";
     })(SubscriptionStatusEnum = ListBillingSubscriptionModel.SubscriptionStatusEnum || (ListBillingSubscriptionModel.SubscriptionStatusEnum = {}));
-})(ListBillingSubscriptionModel = exports.ListBillingSubscriptionModel || (exports.ListBillingSubscriptionModel = {}));
+})(ListBillingSubscriptionModel || (ListBillingSubscriptionModel = {}));

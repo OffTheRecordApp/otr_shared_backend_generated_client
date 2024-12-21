@@ -1,4 +1,3 @@
-"use strict";
 /**
  * OffTheRecord Rest Service API - Devo
  * A service to handle your traffic tickets
@@ -10,11 +9,9 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.LawyerInviteModel = void 0;
-var LawyerInviteModel;
+export var LawyerInviteModel;
 (function (LawyerInviteModel) {
-    var RoleTypesEnum;
+    let RoleTypesEnum;
     (function (RoleTypesEnum) {
         RoleTypesEnum[RoleTypesEnum["ADMIN"] = 'ADMIN'] = "ADMIN";
         RoleTypesEnum[RoleTypesEnum["DEFENDANT"] = 'DEFENDANT'] = "DEFENDANT";
@@ -23,10 +20,10 @@ var LawyerInviteModel;
         RoleTypesEnum[RoleTypesEnum["PARTNER"] = 'PARTNER'] = "PARTNER";
         RoleTypesEnum[RoleTypesEnum["UNKNOWN"] = 'UNKNOWN'] = "UNKNOWN";
     })(RoleTypesEnum = LawyerInviteModel.RoleTypesEnum || (LawyerInviteModel.RoleTypesEnum = {}));
-    var VerificationStatusEnum;
+    let VerificationStatusEnum;
     (function (VerificationStatusEnum) {
         VerificationStatusEnum[VerificationStatusEnum["CANCELLED"] = 'CANCELLED'] = "CANCELLED";
         VerificationStatusEnum[VerificationStatusEnum["PENDING"] = 'PENDING'] = "PENDING";
         VerificationStatusEnum[VerificationStatusEnum["VERIFIED"] = 'VERIFIED'] = "VERIFIED";
     })(VerificationStatusEnum = LawyerInviteModel.VerificationStatusEnum || (LawyerInviteModel.VerificationStatusEnum = {}));
-})(LawyerInviteModel = exports.LawyerInviteModel || (exports.LawyerInviteModel = {}));
+})(LawyerInviteModel || (LawyerInviteModel = {}));

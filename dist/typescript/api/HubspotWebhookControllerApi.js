@@ -1,4 +1,3 @@
-"use strict";
 /**
  * OffTheRecord Rest Service API - Devo
  * A service to handle your traffic tickets
@@ -10,11 +9,9 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.HubspotWebhookControllerApi = void 0;
 /* tslint:disable:no-unused-variable member-ordering */
-var HubspotWebhookControllerApi = /** @class */ (function () {
-    function HubspotWebhookControllerApi($http, $httpParamSerializer, basePath) {
+export class HubspotWebhookControllerApi {
+    constructor($http, $httpParamSerializer, basePath) {
         this.$http = $http;
         this.$httpParamSerializer = $httpParamSerializer;
         this.basePath = 'http://otr-backend-service-us-devo.offtherecord.com';
@@ -28,15 +25,15 @@ var HubspotWebhookControllerApi = /** @class */ (function () {
      * @summary onDeliveredEmailFromHubspot
      * @param body body
      */
-    HubspotWebhookControllerApi.prototype.onDeliveredEmailFromHubspotUsingPOST = function (body, extraHttpRequestParams) {
-        var localVarPath = this.basePath + '/api/v1/hubspot/webhook/email-delivered';
-        var queryParameters = {};
-        var headerParams = Object.assign({}, this.defaultHeaders);
+    onDeliveredEmailFromHubspotUsingPOST(body, extraHttpRequestParams) {
+        const localVarPath = this.basePath + '/api/v1/hubspot/webhook/email-delivered';
+        let queryParameters = {};
+        let headerParams = Object.assign({}, this.defaultHeaders);
         // verify required parameter 'body' is not null or undefined
         if (body === null || body === undefined) {
             throw new Error('Required parameter body was null or undefined when calling onDeliveredEmailFromHubspotUsingPOST.');
         }
-        var httpRequestParams = {
+        let httpRequestParams = {
             method: 'POST',
             url: localVarPath,
             data: body,
@@ -47,8 +44,6 @@ var HubspotWebhookControllerApi = /** @class */ (function () {
             httpRequestParams = Object.assign(httpRequestParams, extraHttpRequestParams);
         }
         return this.$http(httpRequestParams);
-    };
-    HubspotWebhookControllerApi.$inject = ['$http', '$httpParamSerializer', 'basePath'];
-    return HubspotWebhookControllerApi;
-}());
-exports.HubspotWebhookControllerApi = HubspotWebhookControllerApi;
+    }
+}
+HubspotWebhookControllerApi.$inject = ['$http', '$httpParamSerializer', 'basePath'];

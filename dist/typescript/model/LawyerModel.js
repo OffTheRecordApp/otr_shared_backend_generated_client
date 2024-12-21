@@ -1,4 +1,3 @@
-"use strict";
 /**
  * OffTheRecord Rest Service API - Devo
  * A service to handle your traffic tickets
@@ -10,11 +9,9 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.LawyerModel = void 0;
-var LawyerModel;
+export var LawyerModel;
 (function (LawyerModel) {
-    var JobTitleEnum;
+    let JobTitleEnum;
     (function (JobTitleEnum) {
         JobTitleEnum[JobTitleEnum["ACCOUNTANT"] = 'ACCOUNTANT'] = "ACCOUNTANT";
         JobTitleEnum[JobTitleEnum["ATTORNEY"] = 'ATTORNEY'] = "ATTORNEY";
@@ -30,7 +27,7 @@ var LawyerModel;
         JobTitleEnum[JobTitleEnum["OTHER"] = 'OTHER'] = "OTHER";
         JobTitleEnum[JobTitleEnum["PARALEGAL"] = 'PARALEGAL'] = "PARALEGAL";
     })(JobTitleEnum = LawyerModel.JobTitleEnum || (LawyerModel.JobTitleEnum = {}));
-    var RoleTypesEnum;
+    let RoleTypesEnum;
     (function (RoleTypesEnum) {
         RoleTypesEnum[RoleTypesEnum["ADMIN"] = 'ADMIN'] = "ADMIN";
         RoleTypesEnum[RoleTypesEnum["DEFENDANT"] = 'DEFENDANT'] = "DEFENDANT";
@@ -39,4 +36,4 @@ var LawyerModel;
         RoleTypesEnum[RoleTypesEnum["PARTNER"] = 'PARTNER'] = "PARTNER";
         RoleTypesEnum[RoleTypesEnum["UNKNOWN"] = 'UNKNOWN'] = "UNKNOWN";
     })(RoleTypesEnum = LawyerModel.RoleTypesEnum || (LawyerModel.RoleTypesEnum = {}));
-})(LawyerModel = exports.LawyerModel || (exports.LawyerModel = {}));
+})(LawyerModel || (LawyerModel = {}));

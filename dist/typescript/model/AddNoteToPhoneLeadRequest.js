@@ -1,4 +1,3 @@
-"use strict";
 /**
  * OffTheRecord Rest Service API - Devo
  * A service to handle your traffic tickets
@@ -10,11 +9,9 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.AddNoteToPhoneLeadRequest = void 0;
-var AddNoteToPhoneLeadRequest;
+export var AddNoteToPhoneLeadRequest;
 (function (AddNoteToPhoneLeadRequest) {
-    var EntityTypeEnum;
+    let EntityTypeEnum;
     (function (EntityTypeEnum) {
         EntityTypeEnum[EntityTypeEnum["CASE"] = 'CASE'] = "CASE";
         EntityTypeEnum[EntityTypeEnum["CASEPAYMENT"] = 'CASE_PAYMENT'] = "CASEPAYMENT";
@@ -27,4 +24,4 @@ var AddNoteToPhoneLeadRequest;
         EntityTypeEnum[EntityTypeEnum["STRIPECHARGE"] = 'STRIPE_CHARGE'] = "STRIPECHARGE";
         EntityTypeEnum[EntityTypeEnum["USER"] = 'USER'] = "USER";
     })(EntityTypeEnum = AddNoteToPhoneLeadRequest.EntityTypeEnum || (AddNoteToPhoneLeadRequest.EntityTypeEnum = {}));
-})(AddNoteToPhoneLeadRequest = exports.AddNoteToPhoneLeadRequest || (exports.AddNoteToPhoneLeadRequest = {}));
+})(AddNoteToPhoneLeadRequest || (AddNoteToPhoneLeadRequest = {}));

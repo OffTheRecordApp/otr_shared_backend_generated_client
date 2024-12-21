@@ -1,4 +1,3 @@
-"use strict";
 /**
  * OffTheRecord Rest Service API - Devo
  * A service to handle your traffic tickets
@@ -10,15 +9,13 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.CreateNoteInput = void 0;
-var CreateNoteInput;
+export var CreateNoteInput;
 (function (CreateNoteInput) {
-    var NoteTypeEnum;
+    let NoteTypeEnum;
     (function (NoteTypeEnum) {
         NoteTypeEnum[NoteTypeEnum["CASE"] = 'CASE'] = "CASE";
         NoteTypeEnum[NoteTypeEnum["LAWFIRM"] = 'LAWFIRM'] = "LAWFIRM";
         NoteTypeEnum[NoteTypeEnum["PHONELEAD"] = 'PHONE_LEAD'] = "PHONELEAD";
         NoteTypeEnum[NoteTypeEnum["USER"] = 'USER'] = "USER";
     })(NoteTypeEnum = CreateNoteInput.NoteTypeEnum || (CreateNoteInput.NoteTypeEnum = {}));
-})(CreateNoteInput = exports.CreateNoteInput || (exports.CreateNoteInput = {}));
+})(CreateNoteInput || (CreateNoteInput = {}));

@@ -1,4 +1,3 @@
-"use strict";
 /**
  * OffTheRecord Rest Service API - Devo
  * A service to handle your traffic tickets
@@ -10,11 +9,9 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.VerificationControllerApi = void 0;
 /* tslint:disable:no-unused-variable member-ordering */
-var VerificationControllerApi = /** @class */ (function () {
-    function VerificationControllerApi($http, $httpParamSerializer, basePath) {
+export class VerificationControllerApi {
+    constructor($http, $httpParamSerializer, basePath) {
         this.$http = $http;
         this.$httpParamSerializer = $httpParamSerializer;
         this.basePath = 'http://otr-backend-service-us-devo.offtherecord.com';
@@ -28,10 +25,10 @@ var VerificationControllerApi = /** @class */ (function () {
      * @summary getInviteByToken
      * @param token token
      */
-    VerificationControllerApi.prototype.getInviteByTokenUsingGET = function (token, extraHttpRequestParams) {
-        var localVarPath = this.basePath + '/api/v1/verification-tokens';
-        var queryParameters = {};
-        var headerParams = Object.assign({}, this.defaultHeaders);
+    getInviteByTokenUsingGET(token, extraHttpRequestParams) {
+        const localVarPath = this.basePath + '/api/v1/verification-tokens';
+        let queryParameters = {};
+        let headerParams = Object.assign({}, this.defaultHeaders);
         // verify required parameter 'token' is not null or undefined
         if (token === null || token === undefined) {
             throw new Error('Required parameter token was null or undefined when calling getInviteByTokenUsingGET.');
@@ -39,7 +36,7 @@ var VerificationControllerApi = /** @class */ (function () {
         if (token !== undefined) {
             queryParameters['token'] = token;
         }
-        var httpRequestParams = {
+        let httpRequestParams = {
             method: 'GET',
             url: localVarPath,
             params: queryParameters,
@@ -49,8 +46,6 @@ var VerificationControllerApi = /** @class */ (function () {
             httpRequestParams = Object.assign(httpRequestParams, extraHttpRequestParams);
         }
         return this.$http(httpRequestParams);
-    };
-    VerificationControllerApi.$inject = ['$http', '$httpParamSerializer', 'basePath'];
-    return VerificationControllerApi;
-}());
-exports.VerificationControllerApi = VerificationControllerApi;
+    }
+}
+VerificationControllerApi.$inject = ['$http', '$httpParamSerializer', 'basePath'];

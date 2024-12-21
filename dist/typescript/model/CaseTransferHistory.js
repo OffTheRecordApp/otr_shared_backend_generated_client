@@ -1,4 +1,3 @@
-"use strict";
 /**
  * OffTheRecord Rest Service API - Devo
  * A service to handle your traffic tickets
@@ -10,11 +9,9 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.CaseTransferHistory = void 0;
-var CaseTransferHistory;
+export var CaseTransferHistory;
 (function (CaseTransferHistory) {
-    var DecisionStatusEnum;
+    let DecisionStatusEnum;
     (function (DecisionStatusEnum) {
         DecisionStatusEnum[DecisionStatusEnum["ACCEPTED"] = 'ACCEPTED'] = "ACCEPTED";
         DecisionStatusEnum[DecisionStatusEnum["CREATED"] = 'CREATED'] = "CREATED";
@@ -24,10 +21,10 @@ var CaseTransferHistory;
         DecisionStatusEnum[DecisionStatusEnum["REMATCHED"] = 'REMATCHED'] = "REMATCHED";
         DecisionStatusEnum[DecisionStatusEnum["REMATCHEDREFERRAL"] = 'REMATCHED_REFERRAL'] = "REMATCHEDREFERRAL";
     })(DecisionStatusEnum = CaseTransferHistory.DecisionStatusEnum || (CaseTransferHistory.DecisionStatusEnum = {}));
-    var RefundOwnerEnum;
+    let RefundOwnerEnum;
     (function (RefundOwnerEnum) {
         RefundOwnerEnum[RefundOwnerEnum["LAWFIRM"] = 'LAWFIRM'] = "LAWFIRM";
         RefundOwnerEnum[RefundOwnerEnum["NONE"] = 'NONE'] = "NONE";
         RefundOwnerEnum[RefundOwnerEnum["OTR"] = 'OTR'] = "OTR";
     })(RefundOwnerEnum = CaseTransferHistory.RefundOwnerEnum || (CaseTransferHistory.RefundOwnerEnum = {}));
-})(CaseTransferHistory = exports.CaseTransferHistory || (exports.CaseTransferHistory = {}));
+})(CaseTransferHistory || (CaseTransferHistory = {}));

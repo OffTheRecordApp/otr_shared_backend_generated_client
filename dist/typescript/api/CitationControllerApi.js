@@ -1,4 +1,3 @@
-"use strict";
 /**
  * OffTheRecord Rest Service API - Devo
  * A service to handle your traffic tickets
@@ -10,11 +9,9 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.CitationControllerApi = void 0;
 /* tslint:disable:no-unused-variable member-ordering */
-var CitationControllerApi = /** @class */ (function () {
-    function CitationControllerApi($http, $httpParamSerializer, basePath) {
+export class CitationControllerApi {
+    constructor($http, $httpParamSerializer, basePath) {
         this.$http = $http;
         this.$httpParamSerializer = $httpParamSerializer;
         this.basePath = 'http://otr-backend-service-us-devo.offtherecord.com';
@@ -29,16 +26,16 @@ var CitationControllerApi = /** @class */ (function () {
      * @param citationId citationId
      * @param request request
      */
-    CitationControllerApi.prototype.assignCitationOwnerUsingPOST = function (citationId, request, extraHttpRequestParams) {
-        var localVarPath = this.basePath + '/api/v1/citations/{citationId}/owner'
+    assignCitationOwnerUsingPOST(citationId, request, extraHttpRequestParams) {
+        const localVarPath = this.basePath + '/api/v1/citations/{citationId}/owner'
             .replace('{' + 'citationId' + '}', encodeURIComponent(String(citationId)));
-        var queryParameters = {};
-        var headerParams = Object.assign({}, this.defaultHeaders);
+        let queryParameters = {};
+        let headerParams = Object.assign({}, this.defaultHeaders);
         // verify required parameter 'citationId' is not null or undefined
         if (citationId === null || citationId === undefined) {
             throw new Error('Required parameter citationId was null or undefined when calling assignCitationOwnerUsingPOST.');
         }
-        var httpRequestParams = {
+        let httpRequestParams = {
             method: 'POST',
             url: localVarPath,
             data: request,
@@ -49,21 +46,21 @@ var CitationControllerApi = /** @class */ (function () {
             httpRequestParams = Object.assign(httpRequestParams, extraHttpRequestParams);
         }
         return this.$http(httpRequestParams);
-    };
+    }
     /**
      *
      * @summary createNewCitation
      * @param request request
      */
-    CitationControllerApi.prototype.createNewCitationUsingPOST = function (request, extraHttpRequestParams) {
-        var localVarPath = this.basePath + '/api/v1/citations';
-        var queryParameters = {};
-        var headerParams = Object.assign({}, this.defaultHeaders);
+    createNewCitationUsingPOST(request, extraHttpRequestParams) {
+        const localVarPath = this.basePath + '/api/v1/citations';
+        let queryParameters = {};
+        let headerParams = Object.assign({}, this.defaultHeaders);
         // verify required parameter 'request' is not null or undefined
         if (request === null || request === undefined) {
             throw new Error('Required parameter request was null or undefined when calling createNewCitationUsingPOST.');
         }
-        var httpRequestParams = {
+        let httpRequestParams = {
             method: 'POST',
             url: localVarPath,
             data: request,
@@ -74,18 +71,18 @@ var CitationControllerApi = /** @class */ (function () {
             httpRequestParams = Object.assign(httpRequestParams, extraHttpRequestParams);
         }
         return this.$http(httpRequestParams);
-    };
+    }
     /**
      *
      * @summary createReferralSourceForCitation
      * @param citationId citationId
      * @param request request
      */
-    CitationControllerApi.prototype.createReferralSourceForCitationUsingPOST = function (citationId, request, extraHttpRequestParams) {
-        var localVarPath = this.basePath + '/api/v1/citations/{citationId}/referral-source'
+    createReferralSourceForCitationUsingPOST(citationId, request, extraHttpRequestParams) {
+        const localVarPath = this.basePath + '/api/v1/citations/{citationId}/referral-source'
             .replace('{' + 'citationId' + '}', encodeURIComponent(String(citationId)));
-        var queryParameters = {};
-        var headerParams = Object.assign({}, this.defaultHeaders);
+        let queryParameters = {};
+        let headerParams = Object.assign({}, this.defaultHeaders);
         // verify required parameter 'citationId' is not null or undefined
         if (citationId === null || citationId === undefined) {
             throw new Error('Required parameter citationId was null or undefined when calling createReferralSourceForCitationUsingPOST.');
@@ -94,7 +91,7 @@ var CitationControllerApi = /** @class */ (function () {
         if (request === null || request === undefined) {
             throw new Error('Required parameter request was null or undefined when calling createReferralSourceForCitationUsingPOST.');
         }
-        var httpRequestParams = {
+        let httpRequestParams = {
             method: 'POST',
             url: localVarPath,
             data: request,
@@ -105,22 +102,22 @@ var CitationControllerApi = /** @class */ (function () {
             httpRequestParams = Object.assign(httpRequestParams, extraHttpRequestParams);
         }
         return this.$http(httpRequestParams);
-    };
+    }
     /**
      *
      * @summary deleteCitationCourt
      * @param citationId citationId
      */
-    CitationControllerApi.prototype.deleteCitationCourtUsingDELETE = function (citationId, extraHttpRequestParams) {
-        var localVarPath = this.basePath + '/api/v1/citations/{citationId}/court'
+    deleteCitationCourtUsingDELETE(citationId, extraHttpRequestParams) {
+        const localVarPath = this.basePath + '/api/v1/citations/{citationId}/court'
             .replace('{' + 'citationId' + '}', encodeURIComponent(String(citationId)));
-        var queryParameters = {};
-        var headerParams = Object.assign({}, this.defaultHeaders);
+        let queryParameters = {};
+        let headerParams = Object.assign({}, this.defaultHeaders);
         // verify required parameter 'citationId' is not null or undefined
         if (citationId === null || citationId === undefined) {
             throw new Error('Required parameter citationId was null or undefined when calling deleteCitationCourtUsingDELETE.');
         }
-        var httpRequestParams = {
+        let httpRequestParams = {
             method: 'DELETE',
             url: localVarPath,
             params: queryParameters,
@@ -130,22 +127,22 @@ var CitationControllerApi = /** @class */ (function () {
             httpRequestParams = Object.assign(httpRequestParams, extraHttpRequestParams);
         }
         return this.$http(httpRequestParams);
-    };
+    }
     /**
      *
      * @summary deleteCitation
      * @param citationIdString citationIdString
      */
-    CitationControllerApi.prototype.deleteCitationUsingDELETE = function (citationIdString, extraHttpRequestParams) {
-        var localVarPath = this.basePath + '/api/v1/citations/{citationIdString}'
+    deleteCitationUsingDELETE(citationIdString, extraHttpRequestParams) {
+        const localVarPath = this.basePath + '/api/v1/citations/{citationIdString}'
             .replace('{' + 'citationIdString' + '}', encodeURIComponent(String(citationIdString)));
-        var queryParameters = {};
-        var headerParams = Object.assign({}, this.defaultHeaders);
+        let queryParameters = {};
+        let headerParams = Object.assign({}, this.defaultHeaders);
         // verify required parameter 'citationIdString' is not null or undefined
         if (citationIdString === null || citationIdString === undefined) {
             throw new Error('Required parameter citationIdString was null or undefined when calling deleteCitationUsingDELETE.');
         }
-        var httpRequestParams = {
+        let httpRequestParams = {
             method: 'DELETE',
             url: localVarPath,
             params: queryParameters,
@@ -155,22 +152,22 @@ var CitationControllerApi = /** @class */ (function () {
             httpRequestParams = Object.assign(httpRequestParams, extraHttpRequestParams);
         }
         return this.$http(httpRequestParams);
-    };
+    }
     /**
      *
      * @summary deleteMissingCourtRecord
      * @param citationId citationId
      */
-    CitationControllerApi.prototype.deleteMissingCourtRecordUsingDELETE = function (citationId, extraHttpRequestParams) {
-        var localVarPath = this.basePath + '/api/v1/citations/{citationId}/courts/missing'
+    deleteMissingCourtRecordUsingDELETE(citationId, extraHttpRequestParams) {
+        const localVarPath = this.basePath + '/api/v1/citations/{citationId}/courts/missing'
             .replace('{' + 'citationId' + '}', encodeURIComponent(String(citationId)));
-        var queryParameters = {};
-        var headerParams = Object.assign({}, this.defaultHeaders);
+        let queryParameters = {};
+        let headerParams = Object.assign({}, this.defaultHeaders);
         // verify required parameter 'citationId' is not null or undefined
         if (citationId === null || citationId === undefined) {
             throw new Error('Required parameter citationId was null or undefined when calling deleteMissingCourtRecordUsingDELETE.');
         }
-        var httpRequestParams = {
+        let httpRequestParams = {
             method: 'DELETE',
             url: localVarPath,
             params: queryParameters,
@@ -180,21 +177,21 @@ var CitationControllerApi = /** @class */ (function () {
             httpRequestParams = Object.assign(httpRequestParams, extraHttpRequestParams);
         }
         return this.$http(httpRequestParams);
-    };
+    }
     /**
      *
      * @summary dismissCitationsFromContactList
      * @param request request
      */
-    CitationControllerApi.prototype.dismissCitationsFromContactListUsingPOST = function (request, extraHttpRequestParams) {
-        var localVarPath = this.basePath + '/api/v1/citations/dismiss';
-        var queryParameters = {};
-        var headerParams = Object.assign({}, this.defaultHeaders);
+    dismissCitationsFromContactListUsingPOST(request, extraHttpRequestParams) {
+        const localVarPath = this.basePath + '/api/v1/citations/dismiss';
+        let queryParameters = {};
+        let headerParams = Object.assign({}, this.defaultHeaders);
         // verify required parameter 'request' is not null or undefined
         if (request === null || request === undefined) {
             throw new Error('Required parameter request was null or undefined when calling dismissCitationsFromContactListUsingPOST.');
         }
-        var httpRequestParams = {
+        let httpRequestParams = {
             method: 'POST',
             url: localVarPath,
             data: request,
@@ -205,22 +202,22 @@ var CitationControllerApi = /** @class */ (function () {
             httpRequestParams = Object.assign(httpRequestParams, extraHttpRequestParams);
         }
         return this.$http(httpRequestParams);
-    };
+    }
     /**
      *
      * @summary getAnonymousTicketUploads
      * @param emailAddress emailAddress
      */
-    CitationControllerApi.prototype.getAnonymousTicketUploadsUsingGET = function (emailAddress, extraHttpRequestParams) {
-        var localVarPath = this.basePath + '/api/v1/citations/{emailAddress}/anonymous-tickets'
+    getAnonymousTicketUploadsUsingGET(emailAddress, extraHttpRequestParams) {
+        const localVarPath = this.basePath + '/api/v1/citations/{emailAddress}/anonymous-tickets'
             .replace('{' + 'emailAddress' + '}', encodeURIComponent(String(emailAddress)));
-        var queryParameters = {};
-        var headerParams = Object.assign({}, this.defaultHeaders);
+        let queryParameters = {};
+        let headerParams = Object.assign({}, this.defaultHeaders);
         // verify required parameter 'emailAddress' is not null or undefined
         if (emailAddress === null || emailAddress === undefined) {
             throw new Error('Required parameter emailAddress was null or undefined when calling getAnonymousTicketUploadsUsingGET.');
         }
-        var httpRequestParams = {
+        let httpRequestParams = {
             method: 'GET',
             url: localVarPath,
             params: queryParameters,
@@ -230,22 +227,22 @@ var CitationControllerApi = /** @class */ (function () {
             httpRequestParams = Object.assign(httpRequestParams, extraHttpRequestParams);
         }
         return this.$http(httpRequestParams);
-    };
+    }
     /**
      *
      * @summary getCitation
      * @param citationIdString citationIdString
      */
-    CitationControllerApi.prototype.getCitationUsingGET = function (citationIdString, extraHttpRequestParams) {
-        var localVarPath = this.basePath + '/api/v1/citations/{citationIdString}'
+    getCitationUsingGET(citationIdString, extraHttpRequestParams) {
+        const localVarPath = this.basePath + '/api/v1/citations/{citationIdString}'
             .replace('{' + 'citationIdString' + '}', encodeURIComponent(String(citationIdString)));
-        var queryParameters = {};
-        var headerParams = Object.assign({}, this.defaultHeaders);
+        let queryParameters = {};
+        let headerParams = Object.assign({}, this.defaultHeaders);
         // verify required parameter 'citationIdString' is not null or undefined
         if (citationIdString === null || citationIdString === undefined) {
             throw new Error('Required parameter citationIdString was null or undefined when calling getCitationUsingGET.');
         }
-        var httpRequestParams = {
+        let httpRequestParams = {
             method: 'GET',
             url: localVarPath,
             params: queryParameters,
@@ -255,16 +252,16 @@ var CitationControllerApi = /** @class */ (function () {
             httpRequestParams = Object.assign(httpRequestParams, extraHttpRequestParams);
         }
         return this.$http(httpRequestParams);
-    };
+    }
     /**
      *
      * @summary getListOfCitationsWithMissingCourt
      */
-    CitationControllerApi.prototype.getListOfCitationsWithMissingCourtUsingGET = function (extraHttpRequestParams) {
-        var localVarPath = this.basePath + '/api/v1/citations/courts/missing';
-        var queryParameters = {};
-        var headerParams = Object.assign({}, this.defaultHeaders);
-        var httpRequestParams = {
+    getListOfCitationsWithMissingCourtUsingGET(extraHttpRequestParams) {
+        const localVarPath = this.basePath + '/api/v1/citations/courts/missing';
+        let queryParameters = {};
+        let headerParams = Object.assign({}, this.defaultHeaders);
+        let httpRequestParams = {
             method: 'GET',
             url: localVarPath,
             params: queryParameters,
@@ -274,24 +271,24 @@ var CitationControllerApi = /** @class */ (function () {
             httpRequestParams = Object.assign(httpRequestParams, extraHttpRequestParams);
         }
         return this.$http(httpRequestParams);
-    };
+    }
     /**
      *
      * @summary getNoViolationCitations
      * @param regionCodes regionCodes
      * @param trailingDays trailingDays
      */
-    CitationControllerApi.prototype.getNoViolationCitationsUsingGET = function (regionCodes, trailingDays, extraHttpRequestParams) {
-        var localVarPath = this.basePath + '/api/v1/citations/no-violation-uploads';
-        var queryParameters = {};
-        var headerParams = Object.assign({}, this.defaultHeaders);
+    getNoViolationCitationsUsingGET(regionCodes, trailingDays, extraHttpRequestParams) {
+        const localVarPath = this.basePath + '/api/v1/citations/no-violation-uploads';
+        let queryParameters = {};
+        let headerParams = Object.assign({}, this.defaultHeaders);
         if (regionCodes !== undefined) {
             queryParameters['regionCodes'] = regionCodes;
         }
         if (trailingDays !== undefined) {
             queryParameters['trailingDays'] = trailingDays;
         }
-        var httpRequestParams = {
+        let httpRequestParams = {
             method: 'GET',
             url: localVarPath,
             params: queryParameters,
@@ -301,18 +298,18 @@ var CitationControllerApi = /** @class */ (function () {
             httpRequestParams = Object.assign(httpRequestParams, extraHttpRequestParams);
         }
         return this.$http(httpRequestParams);
-    };
+    }
     /**
      *
      * @summary postMissingCourtForCitation
      * @param citationId citationId
      * @param state state
      */
-    CitationControllerApi.prototype.postMissingCourtForCitationUsingPOST = function (citationId, state, extraHttpRequestParams) {
-        var localVarPath = this.basePath + '/api/v1/citations/{citationId}/court/missing'
+    postMissingCourtForCitationUsingPOST(citationId, state, extraHttpRequestParams) {
+        const localVarPath = this.basePath + '/api/v1/citations/{citationId}/court/missing'
             .replace('{' + 'citationId' + '}', encodeURIComponent(String(citationId)));
-        var queryParameters = {};
-        var headerParams = Object.assign({}, this.defaultHeaders);
+        let queryParameters = {};
+        let headerParams = Object.assign({}, this.defaultHeaders);
         // verify required parameter 'citationId' is not null or undefined
         if (citationId === null || citationId === undefined) {
             throw new Error('Required parameter citationId was null or undefined when calling postMissingCourtForCitationUsingPOST.');
@@ -324,7 +321,7 @@ var CitationControllerApi = /** @class */ (function () {
         if (state !== undefined) {
             queryParameters['state'] = state;
         }
-        var httpRequestParams = {
+        let httpRequestParams = {
             method: 'POST',
             url: localVarPath,
             params: queryParameters,
@@ -334,18 +331,18 @@ var CitationControllerApi = /** @class */ (function () {
             httpRequestParams = Object.assign(httpRequestParams, extraHttpRequestParams);
         }
         return this.$http(httpRequestParams);
-    };
+    }
     /**
      *
      * @summary setCitationContactListFlag
      * @param citationIdString citationIdString
      * @param isDismissed isDismissed
      */
-    CitationControllerApi.prototype.setCitationContactListFlagUsingPOST = function (citationIdString, isDismissed, extraHttpRequestParams) {
-        var localVarPath = this.basePath + '/api/v1/citations/{citationIdString}/dismiss'
+    setCitationContactListFlagUsingPOST(citationIdString, isDismissed, extraHttpRequestParams) {
+        const localVarPath = this.basePath + '/api/v1/citations/{citationIdString}/dismiss'
             .replace('{' + 'citationIdString' + '}', encodeURIComponent(String(citationIdString)));
-        var queryParameters = {};
-        var headerParams = Object.assign({}, this.defaultHeaders);
+        let queryParameters = {};
+        let headerParams = Object.assign({}, this.defaultHeaders);
         // verify required parameter 'citationIdString' is not null or undefined
         if (citationIdString === null || citationIdString === undefined) {
             throw new Error('Required parameter citationIdString was null or undefined when calling setCitationContactListFlagUsingPOST.');
@@ -357,7 +354,7 @@ var CitationControllerApi = /** @class */ (function () {
         if (isDismissed !== undefined) {
             queryParameters['isDismissed'] = isDismissed;
         }
-        var httpRequestParams = {
+        let httpRequestParams = {
             method: 'POST',
             url: localVarPath,
             params: queryParameters,
@@ -367,19 +364,19 @@ var CitationControllerApi = /** @class */ (function () {
             httpRequestParams = Object.assign(httpRequestParams, extraHttpRequestParams);
         }
         return this.$http(httpRequestParams);
-    };
+    }
     /**
      *
      * @summary setLockForCitation
      * @param citationId citationId
      * @param isLocked isLocked
      */
-    CitationControllerApi.prototype.setLockForCitationUsingPUT = function (citationId, isLocked, extraHttpRequestParams) {
-        var localVarPath = this.basePath + '/api/v1/citations/{citationId}/lock-citation/{isLocked}'
+    setLockForCitationUsingPUT(citationId, isLocked, extraHttpRequestParams) {
+        const localVarPath = this.basePath + '/api/v1/citations/{citationId}/lock-citation/{isLocked}'
             .replace('{' + 'citationId' + '}', encodeURIComponent(String(citationId)))
             .replace('{' + 'isLocked' + '}', encodeURIComponent(String(isLocked)));
-        var queryParameters = {};
-        var headerParams = Object.assign({}, this.defaultHeaders);
+        let queryParameters = {};
+        let headerParams = Object.assign({}, this.defaultHeaders);
         // verify required parameter 'citationId' is not null or undefined
         if (citationId === null || citationId === undefined) {
             throw new Error('Required parameter citationId was null or undefined when calling setLockForCitationUsingPUT.');
@@ -388,7 +385,7 @@ var CitationControllerApi = /** @class */ (function () {
         if (isLocked === null || isLocked === undefined) {
             throw new Error('Required parameter isLocked was null or undefined when calling setLockForCitationUsingPUT.');
         }
-        var httpRequestParams = {
+        let httpRequestParams = {
             method: 'PUT',
             url: localVarPath,
             params: queryParameters,
@@ -398,21 +395,21 @@ var CitationControllerApi = /** @class */ (function () {
             httpRequestParams = Object.assign(httpRequestParams, extraHttpRequestParams);
         }
         return this.$http(httpRequestParams);
-    };
+    }
     /**
      *
      * @summary signImageUrl
      * @param request request
      */
-    CitationControllerApi.prototype.signImageUrlUsingPOST = function (request, extraHttpRequestParams) {
-        var localVarPath = this.basePath + '/api/v1/citations/sign-image-url';
-        var queryParameters = {};
-        var headerParams = Object.assign({}, this.defaultHeaders);
+    signImageUrlUsingPOST(request, extraHttpRequestParams) {
+        const localVarPath = this.basePath + '/api/v1/citations/sign-image-url';
+        let queryParameters = {};
+        let headerParams = Object.assign({}, this.defaultHeaders);
         // verify required parameter 'request' is not null or undefined
         if (request === null || request === undefined) {
             throw new Error('Required parameter request was null or undefined when calling signImageUrlUsingPOST.');
         }
-        var httpRequestParams = {
+        let httpRequestParams = {
             method: 'POST',
             url: localVarPath,
             data: request,
@@ -423,18 +420,18 @@ var CitationControllerApi = /** @class */ (function () {
             httpRequestParams = Object.assign(httpRequestParams, extraHttpRequestParams);
         }
         return this.$http(httpRequestParams);
-    };
+    }
     /**
      *
      * @summary toggleDeleteCitation
      * @param citationId citationId
      * @param isDeleteRequest isDeleteRequest
      */
-    CitationControllerApi.prototype.toggleDeleteCitationUsingDELETE = function (citationId, isDeleteRequest, extraHttpRequestParams) {
-        var localVarPath = this.basePath + '/api/v2/citations/{citationId}'
+    toggleDeleteCitationUsingDELETE(citationId, isDeleteRequest, extraHttpRequestParams) {
+        const localVarPath = this.basePath + '/api/v2/citations/{citationId}'
             .replace('{' + 'citationId' + '}', encodeURIComponent(String(citationId)));
-        var queryParameters = {};
-        var headerParams = Object.assign({}, this.defaultHeaders);
+        let queryParameters = {};
+        let headerParams = Object.assign({}, this.defaultHeaders);
         // verify required parameter 'citationId' is not null or undefined
         if (citationId === null || citationId === undefined) {
             throw new Error('Required parameter citationId was null or undefined when calling toggleDeleteCitationUsingDELETE.');
@@ -446,7 +443,7 @@ var CitationControllerApi = /** @class */ (function () {
         if (isDeleteRequest !== undefined) {
             queryParameters['isDeleteRequest'] = isDeleteRequest;
         }
-        var httpRequestParams = {
+        let httpRequestParams = {
             method: 'DELETE',
             url: localVarPath,
             params: queryParameters,
@@ -456,18 +453,18 @@ var CitationControllerApi = /** @class */ (function () {
             httpRequestParams = Object.assign(httpRequestParams, extraHttpRequestParams);
         }
         return this.$http(httpRequestParams);
-    };
+    }
     /**
      *
      * @summary updateCitationAddress
      * @param citationId citationId
      * @param request request
      */
-    CitationControllerApi.prototype.updateCitationAddressUsingPOST = function (citationId, request, extraHttpRequestParams) {
-        var localVarPath = this.basePath + '/api/v1/citations/{citationId}/address'
+    updateCitationAddressUsingPOST(citationId, request, extraHttpRequestParams) {
+        const localVarPath = this.basePath + '/api/v1/citations/{citationId}/address'
             .replace('{' + 'citationId' + '}', encodeURIComponent(String(citationId)));
-        var queryParameters = {};
-        var headerParams = Object.assign({}, this.defaultHeaders);
+        let queryParameters = {};
+        let headerParams = Object.assign({}, this.defaultHeaders);
         // verify required parameter 'citationId' is not null or undefined
         if (citationId === null || citationId === undefined) {
             throw new Error('Required parameter citationId was null or undefined when calling updateCitationAddressUsingPOST.');
@@ -476,7 +473,7 @@ var CitationControllerApi = /** @class */ (function () {
         if (request === null || request === undefined) {
             throw new Error('Required parameter request was null or undefined when calling updateCitationAddressUsingPOST.');
         }
-        var httpRequestParams = {
+        let httpRequestParams = {
             method: 'POST',
             url: localVarPath,
             data: request,
@@ -487,18 +484,18 @@ var CitationControllerApi = /** @class */ (function () {
             httpRequestParams = Object.assign(httpRequestParams, extraHttpRequestParams);
         }
         return this.$http(httpRequestParams);
-    };
+    }
     /**
      *
      * @summary updateCitationPicture
      * @param citationId citationId
      * @param request request
      */
-    CitationControllerApi.prototype.updateCitationPictureUsingPUT = function (citationId, request, extraHttpRequestParams) {
-        var localVarPath = this.basePath + '/api/v1/citations/{citationId}/picture'
+    updateCitationPictureUsingPUT(citationId, request, extraHttpRequestParams) {
+        const localVarPath = this.basePath + '/api/v1/citations/{citationId}/picture'
             .replace('{' + 'citationId' + '}', encodeURIComponent(String(citationId)));
-        var queryParameters = {};
-        var headerParams = Object.assign({}, this.defaultHeaders);
+        let queryParameters = {};
+        let headerParams = Object.assign({}, this.defaultHeaders);
         // verify required parameter 'citationId' is not null or undefined
         if (citationId === null || citationId === undefined) {
             throw new Error('Required parameter citationId was null or undefined when calling updateCitationPictureUsingPUT.');
@@ -507,7 +504,7 @@ var CitationControllerApi = /** @class */ (function () {
         if (request === null || request === undefined) {
             throw new Error('Required parameter request was null or undefined when calling updateCitationPictureUsingPUT.');
         }
-        var httpRequestParams = {
+        let httpRequestParams = {
             method: 'PUT',
             url: localVarPath,
             data: request,
@@ -518,18 +515,18 @@ var CitationControllerApi = /** @class */ (function () {
             httpRequestParams = Object.assign(httpRequestParams, extraHttpRequestParams);
         }
         return this.$http(httpRequestParams);
-    };
+    }
     /**
      *
      * @summary updateCitation
      * @param citationIdString citationIdString
      * @param updateCitationRequest updateCitationRequest
      */
-    CitationControllerApi.prototype.updateCitationUsingPUT = function (citationIdString, updateCitationRequest, extraHttpRequestParams) {
-        var localVarPath = this.basePath + '/api/v1/citations/{citationIdString}'
+    updateCitationUsingPUT(citationIdString, updateCitationRequest, extraHttpRequestParams) {
+        const localVarPath = this.basePath + '/api/v1/citations/{citationIdString}'
             .replace('{' + 'citationIdString' + '}', encodeURIComponent(String(citationIdString)));
-        var queryParameters = {};
-        var headerParams = Object.assign({}, this.defaultHeaders);
+        let queryParameters = {};
+        let headerParams = Object.assign({}, this.defaultHeaders);
         // verify required parameter 'citationIdString' is not null or undefined
         if (citationIdString === null || citationIdString === undefined) {
             throw new Error('Required parameter citationIdString was null or undefined when calling updateCitationUsingPUT.');
@@ -538,7 +535,7 @@ var CitationControllerApi = /** @class */ (function () {
         if (updateCitationRequest === null || updateCitationRequest === undefined) {
             throw new Error('Required parameter updateCitationRequest was null or undefined when calling updateCitationUsingPUT.');
         }
-        var httpRequestParams = {
+        let httpRequestParams = {
             method: 'PUT',
             url: localVarPath,
             data: updateCitationRequest,
@@ -549,8 +546,6 @@ var CitationControllerApi = /** @class */ (function () {
             httpRequestParams = Object.assign(httpRequestParams, extraHttpRequestParams);
         }
         return this.$http(httpRequestParams);
-    };
-    CitationControllerApi.$inject = ['$http', '$httpParamSerializer', 'basePath'];
-    return CitationControllerApi;
-}());
-exports.CitationControllerApi = CitationControllerApi;
+    }
+}
+CitationControllerApi.$inject = ['$http', '$httpParamSerializer', 'basePath'];

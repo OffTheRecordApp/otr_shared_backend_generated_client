@@ -1,4 +1,3 @@
-"use strict";
 /**
  * OffTheRecord Rest Service API - Devo
  * A service to handle your traffic tickets
@@ -10,11 +9,9 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.ReferralCodeControllerApi = void 0;
 /* tslint:disable:no-unused-variable member-ordering */
-var ReferralCodeControllerApi = /** @class */ (function () {
-    function ReferralCodeControllerApi($http, $httpParamSerializer, basePath) {
+export class ReferralCodeControllerApi {
+    constructor($http, $httpParamSerializer, basePath) {
         this.$http = $http;
         this.$httpParamSerializer = $httpParamSerializer;
         this.basePath = 'http://otr-backend-service-us-devo.offtherecord.com';
@@ -28,16 +25,16 @@ var ReferralCodeControllerApi = /** @class */ (function () {
      * @summary Only for admins. This will approve and activate a given referral code
      * @param codeId codeId
      */
-    ReferralCodeControllerApi.prototype.approveReferralCodeUsingPUT = function (codeId, extraHttpRequestParams) {
-        var localVarPath = this.basePath + '/api/v1/referrals/codes/{codeId}/approve'
+    approveReferralCodeUsingPUT(codeId, extraHttpRequestParams) {
+        const localVarPath = this.basePath + '/api/v1/referrals/codes/{codeId}/approve'
             .replace('{' + 'codeId' + '}', encodeURIComponent(String(codeId)));
-        var queryParameters = {};
-        var headerParams = Object.assign({}, this.defaultHeaders);
+        let queryParameters = {};
+        let headerParams = Object.assign({}, this.defaultHeaders);
         // verify required parameter 'codeId' is not null or undefined
         if (codeId === null || codeId === undefined) {
             throw new Error('Required parameter codeId was null or undefined when calling approveReferralCodeUsingPUT.');
         }
-        var httpRequestParams = {
+        let httpRequestParams = {
             method: 'PUT',
             url: localVarPath,
             params: queryParameters,
@@ -47,21 +44,21 @@ var ReferralCodeControllerApi = /** @class */ (function () {
             httpRequestParams = Object.assign(httpRequestParams, extraHttpRequestParams);
         }
         return this.$http(httpRequestParams);
-    };
+    }
     /**
      *
      * @summary Referral codes are currently immutable. Meaning, once a referral code is created then no modification is allowed. In urgent scenarios, we can update the values via SQL. If you want to apply a discount to the referee then enter a negative value (applies both for percentage_discount and cents_value types), and enter a positive value if you want to increase the price.
      * @param request request
      */
-    ReferralCodeControllerApi.prototype.generateReferralCodeUsingPOST = function (request, extraHttpRequestParams) {
-        var localVarPath = this.basePath + '/api/v1/referrals/codes';
-        var queryParameters = {};
-        var headerParams = Object.assign({}, this.defaultHeaders);
+    generateReferralCodeUsingPOST(request, extraHttpRequestParams) {
+        const localVarPath = this.basePath + '/api/v1/referrals/codes';
+        let queryParameters = {};
+        let headerParams = Object.assign({}, this.defaultHeaders);
         // verify required parameter 'request' is not null or undefined
         if (request === null || request === undefined) {
             throw new Error('Required parameter request was null or undefined when calling generateReferralCodeUsingPOST.');
         }
-        var httpRequestParams = {
+        let httpRequestParams = {
             method: 'POST',
             url: localVarPath,
             data: request,
@@ -72,22 +69,22 @@ var ReferralCodeControllerApi = /** @class */ (function () {
             httpRequestParams = Object.assign(httpRequestParams, extraHttpRequestParams);
         }
         return this.$http(httpRequestParams);
-    };
+    }
     /**
      *
      * @summary getReferralCode
      * @param codeId codeId
      */
-    ReferralCodeControllerApi.prototype.getReferralCodeUsingGET = function (codeId, extraHttpRequestParams) {
-        var localVarPath = this.basePath + '/api/v1/referrals/codes/{codeId}'
+    getReferralCodeUsingGET(codeId, extraHttpRequestParams) {
+        const localVarPath = this.basePath + '/api/v1/referrals/codes/{codeId}'
             .replace('{' + 'codeId' + '}', encodeURIComponent(String(codeId)));
-        var queryParameters = {};
-        var headerParams = Object.assign({}, this.defaultHeaders);
+        let queryParameters = {};
+        let headerParams = Object.assign({}, this.defaultHeaders);
         // verify required parameter 'codeId' is not null or undefined
         if (codeId === null || codeId === undefined) {
             throw new Error('Required parameter codeId was null or undefined when calling getReferralCodeUsingGET.');
         }
-        var httpRequestParams = {
+        let httpRequestParams = {
             method: 'GET',
             url: localVarPath,
             params: queryParameters,
@@ -97,20 +94,20 @@ var ReferralCodeControllerApi = /** @class */ (function () {
             httpRequestParams = Object.assign(httpRequestParams, extraHttpRequestParams);
         }
         return this.$http(httpRequestParams);
-    };
+    }
     /**
      *
      * @summary getReferralCodes
      * @param isActive isActive
      */
-    ReferralCodeControllerApi.prototype.getReferralCodesUsingGET = function (isActive, extraHttpRequestParams) {
-        var localVarPath = this.basePath + '/api/v1/referrals/codes';
-        var queryParameters = {};
-        var headerParams = Object.assign({}, this.defaultHeaders);
+    getReferralCodesUsingGET(isActive, extraHttpRequestParams) {
+        const localVarPath = this.basePath + '/api/v1/referrals/codes';
+        let queryParameters = {};
+        let headerParams = Object.assign({}, this.defaultHeaders);
         if (isActive !== undefined) {
             queryParameters['isActive'] = isActive;
         }
-        var httpRequestParams = {
+        let httpRequestParams = {
             method: 'GET',
             url: localVarPath,
             params: queryParameters,
@@ -120,22 +117,22 @@ var ReferralCodeControllerApi = /** @class */ (function () {
             httpRequestParams = Object.assign(httpRequestParams, extraHttpRequestParams);
         }
         return this.$http(httpRequestParams);
-    };
+    }
     /**
      *
      * @summary markCodeAsInactive
      * @param codeId codeId
      */
-    ReferralCodeControllerApi.prototype.markCodeAsInactiveUsingDELETE = function (codeId, extraHttpRequestParams) {
-        var localVarPath = this.basePath + '/api/v1/referrals/codes/{codeId}'
+    markCodeAsInactiveUsingDELETE(codeId, extraHttpRequestParams) {
+        const localVarPath = this.basePath + '/api/v1/referrals/codes/{codeId}'
             .replace('{' + 'codeId' + '}', encodeURIComponent(String(codeId)));
-        var queryParameters = {};
-        var headerParams = Object.assign({}, this.defaultHeaders);
+        let queryParameters = {};
+        let headerParams = Object.assign({}, this.defaultHeaders);
         // verify required parameter 'codeId' is not null or undefined
         if (codeId === null || codeId === undefined) {
             throw new Error('Required parameter codeId was null or undefined when calling markCodeAsInactiveUsingDELETE.');
         }
-        var httpRequestParams = {
+        let httpRequestParams = {
             method: 'DELETE',
             url: localVarPath,
             params: queryParameters,
@@ -145,22 +142,22 @@ var ReferralCodeControllerApi = /** @class */ (function () {
             httpRequestParams = Object.assign(httpRequestParams, extraHttpRequestParams);
         }
         return this.$http(httpRequestParams);
-    };
+    }
     /**
      *
      * @summary Validates and returns the referral code. Validation includes: Are we passed the expiration date? Has the code exceeded it\'s max use count?
      * @param codeId codeId
      */
-    ReferralCodeControllerApi.prototype.validateReferralCodeUsingGET = function (codeId, extraHttpRequestParams) {
-        var localVarPath = this.basePath + '/api/v1/referrals/codes/{codeId}/validate'
+    validateReferralCodeUsingGET(codeId, extraHttpRequestParams) {
+        const localVarPath = this.basePath + '/api/v1/referrals/codes/{codeId}/validate'
             .replace('{' + 'codeId' + '}', encodeURIComponent(String(codeId)));
-        var queryParameters = {};
-        var headerParams = Object.assign({}, this.defaultHeaders);
+        let queryParameters = {};
+        let headerParams = Object.assign({}, this.defaultHeaders);
         // verify required parameter 'codeId' is not null or undefined
         if (codeId === null || codeId === undefined) {
             throw new Error('Required parameter codeId was null or undefined when calling validateReferralCodeUsingGET.');
         }
-        var httpRequestParams = {
+        let httpRequestParams = {
             method: 'GET',
             url: localVarPath,
             params: queryParameters,
@@ -170,8 +167,6 @@ var ReferralCodeControllerApi = /** @class */ (function () {
             httpRequestParams = Object.assign(httpRequestParams, extraHttpRequestParams);
         }
         return this.$http(httpRequestParams);
-    };
-    ReferralCodeControllerApi.$inject = ['$http', '$httpParamSerializer', 'basePath'];
-    return ReferralCodeControllerApi;
-}());
-exports.ReferralCodeControllerApi = ReferralCodeControllerApi;
+    }
+}
+ReferralCodeControllerApi.$inject = ['$http', '$httpParamSerializer', 'basePath'];

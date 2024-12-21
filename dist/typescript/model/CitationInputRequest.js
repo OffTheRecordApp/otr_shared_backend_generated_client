@@ -1,4 +1,3 @@
-"use strict";
 /**
  * OffTheRecord Rest Service API - Devo
  * A service to handle your traffic tickets
@@ -10,17 +9,15 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.CitationInputRequest = void 0;
-var CitationInputRequest;
+export var CitationInputRequest;
 (function (CitationInputRequest) {
-    var CdlStatusEnum;
+    let CdlStatusEnum;
     (function (CdlStatusEnum) {
         CdlStatusEnum[CdlStatusEnum["CDLINCOMMERCIALVEHICLE"] = 'CDL_IN_COMMERCIAL_VEHICLE'] = "CDLINCOMMERCIALVEHICLE";
         CdlStatusEnum[CdlStatusEnum["CDLINPERSONALVEHICLE"] = 'CDL_IN_PERSONAL_VEHICLE'] = "CDLINPERSONALVEHICLE";
         CdlStatusEnum[CdlStatusEnum["NOCDL"] = 'NO_CDL'] = "NOCDL";
     })(CdlStatusEnum = CitationInputRequest.CdlStatusEnum || (CitationInputRequest.CdlStatusEnum = {}));
-    var StateEnum;
+    let StateEnum;
     (function (StateEnum) {
         StateEnum[StateEnum["AK"] = 'AK'] = "AK";
         StateEnum[StateEnum["AL"] = 'AL'] = "AL";
@@ -74,4 +71,4 @@ var CitationInputRequest;
         StateEnum[StateEnum["WV"] = 'WV'] = "WV";
         StateEnum[StateEnum["WY"] = 'WY'] = "WY";
     })(StateEnum = CitationInputRequest.StateEnum || (CitationInputRequest.StateEnum = {}));
-})(CitationInputRequest = exports.CitationInputRequest || (exports.CitationInputRequest = {}));
+})(CitationInputRequest || (CitationInputRequest = {}));

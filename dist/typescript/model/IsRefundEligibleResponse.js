@@ -1,4 +1,3 @@
-"use strict";
 /**
  * OffTheRecord Rest Service API - Devo
  * A service to handle your traffic tickets
@@ -10,13 +9,11 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.IsRefundEligibleResponse = void 0;
-var IsRefundEligibleResponse;
+export var IsRefundEligibleResponse;
 (function (IsRefundEligibleResponse) {
-    var RefundEligibilityTypeEnum;
+    let RefundEligibilityTypeEnum;
     (function (RefundEligibilityTypeEnum) {
         RefundEligibilityTypeEnum[RefundEligibilityTypeEnum["FULLREFUND"] = 'FULL_REFUND'] = "FULLREFUND";
         RefundEligibilityTypeEnum[RefundEligibilityTypeEnum["NOREFUND"] = 'NO_REFUND'] = "NOREFUND";
     })(RefundEligibilityTypeEnum = IsRefundEligibleResponse.RefundEligibilityTypeEnum || (IsRefundEligibleResponse.RefundEligibilityTypeEnum = {}));
-})(IsRefundEligibleResponse = exports.IsRefundEligibleResponse || (exports.IsRefundEligibleResponse = {}));
+})(IsRefundEligibleResponse || (IsRefundEligibleResponse = {}));

@@ -1,4 +1,3 @@
-"use strict";
 /**
  * OffTheRecord Rest Service API - Devo
  * A service to handle your traffic tickets
@@ -10,11 +9,9 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.AppEventsControllerApi = void 0;
 /* tslint:disable:no-unused-variable member-ordering */
-var AppEventsControllerApi = /** @class */ (function () {
-    function AppEventsControllerApi($http, $httpParamSerializer, basePath) {
+export class AppEventsControllerApi {
+    constructor($http, $httpParamSerializer, basePath) {
         this.$http = $http;
         this.$httpParamSerializer = $httpParamSerializer;
         this.basePath = 'http://otr-backend-service-us-devo.offtherecord.com';
@@ -28,15 +25,15 @@ var AppEventsControllerApi = /** @class */ (function () {
      * @summary addAppEvent
      * @param request request
      */
-    AppEventsControllerApi.prototype.addAppEventUsingPOST = function (request, extraHttpRequestParams) {
-        var localVarPath = this.basePath + '/api/v1/app-events';
-        var queryParameters = {};
-        var headerParams = Object.assign({}, this.defaultHeaders);
+    addAppEventUsingPOST(request, extraHttpRequestParams) {
+        const localVarPath = this.basePath + '/api/v1/app-events';
+        let queryParameters = {};
+        let headerParams = Object.assign({}, this.defaultHeaders);
         // verify required parameter 'request' is not null or undefined
         if (request === null || request === undefined) {
             throw new Error('Required parameter request was null or undefined when calling addAppEventUsingPOST.');
         }
-        var httpRequestParams = {
+        let httpRequestParams = {
             method: 'POST',
             url: localVarPath,
             data: request,
@@ -47,8 +44,6 @@ var AppEventsControllerApi = /** @class */ (function () {
             httpRequestParams = Object.assign(httpRequestParams, extraHttpRequestParams);
         }
         return this.$http(httpRequestParams);
-    };
-    AppEventsControllerApi.$inject = ['$http', '$httpParamSerializer', 'basePath'];
-    return AppEventsControllerApi;
-}());
-exports.AppEventsControllerApi = AppEventsControllerApi;
+    }
+}
+AppEventsControllerApi.$inject = ['$http', '$httpParamSerializer', 'basePath'];

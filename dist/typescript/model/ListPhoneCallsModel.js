@@ -1,4 +1,3 @@
-"use strict";
 /**
  * OffTheRecord Rest Service API - Devo
  * A service to handle your traffic tickets
@@ -10,16 +9,14 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.ListPhoneCallsModel = void 0;
-var ListPhoneCallsModel;
+export var ListPhoneCallsModel;
 (function (ListPhoneCallsModel) {
-    var CallDirectionEnum;
+    let CallDirectionEnum;
     (function (CallDirectionEnum) {
         CallDirectionEnum[CallDirectionEnum["INCOMING"] = 'INCOMING'] = "INCOMING";
         CallDirectionEnum[CallDirectionEnum["OUTGOING"] = 'OUTGOING'] = "OUTGOING";
     })(CallDirectionEnum = ListPhoneCallsModel.CallDirectionEnum || (ListPhoneCallsModel.CallDirectionEnum = {}));
-    var CallStatusEnum;
+    let CallStatusEnum;
     (function (CallStatusEnum) {
         CallStatusEnum[CallStatusEnum["ABANDONED"] = 'ABANDONED'] = "ABANDONED";
         CallStatusEnum[CallStatusEnum["BLOCKED"] = 'BLOCKED'] = "BLOCKED";
@@ -38,4 +35,4 @@ var ListPhoneCallsModel;
         CallStatusEnum[CallStatusEnum["VOICEMAIL"] = 'VOICEMAIL'] = "VOICEMAIL";
         CallStatusEnum[CallStatusEnum["VOICEMAILRECORDINGINPROGRESS"] = 'VOICEMAIL_RECORDING_IN_PROGRESS'] = "VOICEMAILRECORDINGINPROGRESS";
     })(CallStatusEnum = ListPhoneCallsModel.CallStatusEnum || (ListPhoneCallsModel.CallStatusEnum = {}));
-})(ListPhoneCallsModel = exports.ListPhoneCallsModel || (exports.ListPhoneCallsModel = {}));
+})(ListPhoneCallsModel || (ListPhoneCallsModel = {}));

@@ -1,4 +1,3 @@
-"use strict";
 /**
  * OffTheRecord Rest Service API - Devo
  * A service to handle your traffic tickets
@@ -10,15 +9,13 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.SocialPhoneNumber = void 0;
-var SocialPhoneNumber;
+export var SocialPhoneNumber;
 (function (SocialPhoneNumber) {
-    var TypeEnum;
+    let TypeEnum;
     (function (TypeEnum) {
         TypeEnum[TypeEnum["HOME"] = 'HOME'] = "HOME";
         TypeEnum[TypeEnum["MOBILE"] = 'MOBILE'] = "MOBILE";
         TypeEnum[TypeEnum["NOTSPECIFIED"] = 'NOT_SPECIFIED'] = "NOTSPECIFIED";
         TypeEnum[TypeEnum["OFFICE"] = 'OFFICE'] = "OFFICE";
     })(TypeEnum = SocialPhoneNumber.TypeEnum || (SocialPhoneNumber.TypeEnum = {}));
-})(SocialPhoneNumber = exports.SocialPhoneNumber || (exports.SocialPhoneNumber = {}));
+})(SocialPhoneNumber || (SocialPhoneNumber = {}));

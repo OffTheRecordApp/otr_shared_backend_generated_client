@@ -1,4 +1,3 @@
-"use strict";
 /**
  * OffTheRecord Rest Service API - Devo
  * A service to handle your traffic tickets
@@ -10,11 +9,9 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.ActivityFeedControllerApi = void 0;
 /* tslint:disable:no-unused-variable member-ordering */
-var ActivityFeedControllerApi = /** @class */ (function () {
-    function ActivityFeedControllerApi($http, $httpParamSerializer, basePath) {
+export class ActivityFeedControllerApi {
+    constructor($http, $httpParamSerializer, basePath) {
         this.$http = $http;
         this.$httpParamSerializer = $httpParamSerializer;
         this.basePath = 'http://otr-backend-service-us-devo.offtherecord.com';
@@ -31,10 +28,10 @@ var ActivityFeedControllerApi = /** @class */ (function () {
      * @param previousPageToken previousPageToken
      * @param regionCode regionCode
      */
-    ActivityFeedControllerApi.prototype.listActivityFeedUsingGET = function (limit, nextPageToken, previousPageToken, regionCode, extraHttpRequestParams) {
-        var localVarPath = this.basePath + '/api/v1/activity-feed';
-        var queryParameters = {};
-        var headerParams = Object.assign({}, this.defaultHeaders);
+    listActivityFeedUsingGET(limit, nextPageToken, previousPageToken, regionCode, extraHttpRequestParams) {
+        const localVarPath = this.basePath + '/api/v1/activity-feed';
+        let queryParameters = {};
+        let headerParams = Object.assign({}, this.defaultHeaders);
         // verify required parameter 'limit' is not null or undefined
         if (limit === null || limit === undefined) {
             throw new Error('Required parameter limit was null or undefined when calling listActivityFeedUsingGET.');
@@ -51,7 +48,7 @@ var ActivityFeedControllerApi = /** @class */ (function () {
         if (regionCode !== undefined) {
             queryParameters['regionCode'] = regionCode;
         }
-        var httpRequestParams = {
+        let httpRequestParams = {
             method: 'GET',
             url: localVarPath,
             params: queryParameters,
@@ -61,7 +58,7 @@ var ActivityFeedControllerApi = /** @class */ (function () {
             httpRequestParams = Object.assign(httpRequestParams, extraHttpRequestParams);
         }
         return this.$http(httpRequestParams);
-    };
+    }
     /**
      *
      * @summary listCaseOutcomes
@@ -71,10 +68,10 @@ var ActivityFeedControllerApi = /** @class */ (function () {
      * @param resolutionStatuses resolutionStatuses
      * @param startDate startDate
      */
-    ActivityFeedControllerApi.prototype.listCaseOutcomesUsingGET = function (includeCriminal, limit, regionCode, resolutionStatuses, startDate, extraHttpRequestParams) {
-        var localVarPath = this.basePath + '/api/v1/activity-feed/case-outcomes';
-        var queryParameters = {};
-        var headerParams = Object.assign({}, this.defaultHeaders);
+    listCaseOutcomesUsingGET(includeCriminal, limit, regionCode, resolutionStatuses, startDate, extraHttpRequestParams) {
+        const localVarPath = this.basePath + '/api/v1/activity-feed/case-outcomes';
+        let queryParameters = {};
+        let headerParams = Object.assign({}, this.defaultHeaders);
         if (includeCriminal !== undefined) {
             queryParameters['includeCriminal'] = includeCriminal;
         }
@@ -90,7 +87,7 @@ var ActivityFeedControllerApi = /** @class */ (function () {
         if (startDate !== undefined) {
             queryParameters['startDate'] = startDate;
         }
-        var httpRequestParams = {
+        let httpRequestParams = {
             method: 'GET',
             url: localVarPath,
             params: queryParameters,
@@ -100,8 +97,6 @@ var ActivityFeedControllerApi = /** @class */ (function () {
             httpRequestParams = Object.assign(httpRequestParams, extraHttpRequestParams);
         }
         return this.$http(httpRequestParams);
-    };
-    ActivityFeedControllerApi.$inject = ['$http', '$httpParamSerializer', 'basePath'];
-    return ActivityFeedControllerApi;
-}());
-exports.ActivityFeedControllerApi = ActivityFeedControllerApi;
+    }
+}
+ActivityFeedControllerApi.$inject = ['$http', '$httpParamSerializer', 'basePath'];

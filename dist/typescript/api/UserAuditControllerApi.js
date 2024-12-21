@@ -1,4 +1,3 @@
-"use strict";
 /**
  * OffTheRecord Rest Service API - Devo
  * A service to handle your traffic tickets
@@ -10,11 +9,9 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.UserAuditControllerApi = void 0;
 /* tslint:disable:no-unused-variable member-ordering */
-var UserAuditControllerApi = /** @class */ (function () {
-    function UserAuditControllerApi($http, $httpParamSerializer, basePath) {
+export class UserAuditControllerApi {
+    constructor($http, $httpParamSerializer, basePath) {
         this.$http = $http;
         this.$httpParamSerializer = $httpParamSerializer;
         this.basePath = 'http://otr-backend-service-us-devo.offtherecord.com';
@@ -29,11 +26,11 @@ var UserAuditControllerApi = /** @class */ (function () {
      * @param userId userId
      * @param clients clients
      */
-    UserAuditControllerApi.prototype.getLastLoginUsingGET = function (userId, clients, extraHttpRequestParams) {
-        var localVarPath = this.basePath + '/api/v1/api/v1/users/{userId}/last-login'
+    getLastLoginUsingGET(userId, clients, extraHttpRequestParams) {
+        const localVarPath = this.basePath + '/api/v1/api/v1/users/{userId}/last-login'
             .replace('{' + 'userId' + '}', encodeURIComponent(String(userId)));
-        var queryParameters = {};
-        var headerParams = Object.assign({}, this.defaultHeaders);
+        let queryParameters = {};
+        let headerParams = Object.assign({}, this.defaultHeaders);
         // verify required parameter 'userId' is not null or undefined
         if (userId === null || userId === undefined) {
             throw new Error('Required parameter userId was null or undefined when calling getLastLoginUsingGET.');
@@ -41,7 +38,7 @@ var UserAuditControllerApi = /** @class */ (function () {
         if (clients !== undefined) {
             queryParameters['clients'] = clients;
         }
-        var httpRequestParams = {
+        let httpRequestParams = {
             method: 'GET',
             url: localVarPath,
             params: queryParameters,
@@ -51,7 +48,7 @@ var UserAuditControllerApi = /** @class */ (function () {
             httpRequestParams = Object.assign(httpRequestParams, extraHttpRequestParams);
         }
         return this.$http(httpRequestParams);
-    };
+    }
     /**
      *
      * @summary listUserAuditEventsByCursor
@@ -61,11 +58,11 @@ var UserAuditControllerApi = /** @class */ (function () {
      * @param limit limit
      * @param nextPageToken nextPageToken
      */
-    UserAuditControllerApi.prototype.listUserAuditEventsByCursorUsingGET = function (userId, excludeTypes, includeTypes, limit, nextPageToken, extraHttpRequestParams) {
-        var localVarPath = this.basePath + '/api/v1/users/{userId}/audit-events'
+    listUserAuditEventsByCursorUsingGET(userId, excludeTypes, includeTypes, limit, nextPageToken, extraHttpRequestParams) {
+        const localVarPath = this.basePath + '/api/v1/users/{userId}/audit-events'
             .replace('{' + 'userId' + '}', encodeURIComponent(String(userId)));
-        var queryParameters = {};
-        var headerParams = Object.assign({}, this.defaultHeaders);
+        let queryParameters = {};
+        let headerParams = Object.assign({}, this.defaultHeaders);
         // verify required parameter 'userId' is not null or undefined
         if (userId === null || userId === undefined) {
             throw new Error('Required parameter userId was null or undefined when calling listUserAuditEventsByCursorUsingGET.');
@@ -82,7 +79,7 @@ var UserAuditControllerApi = /** @class */ (function () {
         if (nextPageToken !== undefined) {
             queryParameters['nextPageToken'] = nextPageToken;
         }
-        var httpRequestParams = {
+        let httpRequestParams = {
             method: 'GET',
             url: localVarPath,
             params: queryParameters,
@@ -92,8 +89,6 @@ var UserAuditControllerApi = /** @class */ (function () {
             httpRequestParams = Object.assign(httpRequestParams, extraHttpRequestParams);
         }
         return this.$http(httpRequestParams);
-    };
-    UserAuditControllerApi.$inject = ['$http', '$httpParamSerializer', 'basePath'];
-    return UserAuditControllerApi;
-}());
-exports.UserAuditControllerApi = UserAuditControllerApi;
+    }
+}
+UserAuditControllerApi.$inject = ['$http', '$httpParamSerializer', 'basePath'];

@@ -1,4 +1,3 @@
-"use strict";
 /**
  * OffTheRecord Rest Service API - Devo
  * A service to handle your traffic tickets
@@ -10,11 +9,9 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.DirectMailControllerApi = void 0;
 /* tslint:disable:no-unused-variable member-ordering */
-var DirectMailControllerApi = /** @class */ (function () {
-    function DirectMailControllerApi($http, $httpParamSerializer, basePath) {
+export class DirectMailControllerApi {
+    constructor($http, $httpParamSerializer, basePath) {
         this.$http = $http;
         this.$httpParamSerializer = $httpParamSerializer;
         this.basePath = 'http://otr-backend-service-us-devo.offtherecord.com';
@@ -28,15 +25,15 @@ var DirectMailControllerApi = /** @class */ (function () {
      * @summary addDirectMailTemplate
      * @param request request
      */
-    DirectMailControllerApi.prototype.addDirectMailTemplateUsingPOST = function (request, extraHttpRequestParams) {
-        var localVarPath = this.basePath + '/api/v1/direct-mail/templates';
-        var queryParameters = {};
-        var headerParams = Object.assign({}, this.defaultHeaders);
+    addDirectMailTemplateUsingPOST(request, extraHttpRequestParams) {
+        const localVarPath = this.basePath + '/api/v1/direct-mail/templates';
+        let queryParameters = {};
+        let headerParams = Object.assign({}, this.defaultHeaders);
         // verify required parameter 'request' is not null or undefined
         if (request === null || request === undefined) {
             throw new Error('Required parameter request was null or undefined when calling addDirectMailTemplateUsingPOST.');
         }
-        var httpRequestParams = {
+        let httpRequestParams = {
             method: 'POST',
             url: localVarPath,
             data: request,
@@ -47,16 +44,16 @@ var DirectMailControllerApi = /** @class */ (function () {
             httpRequestParams = Object.assign(httpRequestParams, extraHttpRequestParams);
         }
         return this.$http(httpRequestParams);
-    };
+    }
     /**
      *
      * @summary getDirectMailTemplates
      */
-    DirectMailControllerApi.prototype.getDirectMailTemplatesUsingGET = function (extraHttpRequestParams) {
-        var localVarPath = this.basePath + '/api/v1/direct-mail/templates';
-        var queryParameters = {};
-        var headerParams = Object.assign({}, this.defaultHeaders);
-        var httpRequestParams = {
+    getDirectMailTemplatesUsingGET(extraHttpRequestParams) {
+        const localVarPath = this.basePath + '/api/v1/direct-mail/templates';
+        let queryParameters = {};
+        let headerParams = Object.assign({}, this.defaultHeaders);
+        let httpRequestParams = {
             method: 'GET',
             url: localVarPath,
             params: queryParameters,
@@ -66,21 +63,21 @@ var DirectMailControllerApi = /** @class */ (function () {
             httpRequestParams = Object.assign(httpRequestParams, extraHttpRequestParams);
         }
         return this.$http(httpRequestParams);
-    };
+    }
     /**
      *
      * @summary getSentMail
      * @param request request
      */
-    DirectMailControllerApi.prototype.getSentMailUsingPOST = function (request, extraHttpRequestParams) {
-        var localVarPath = this.basePath + '/api/v1/direct-mail/fetch-sent-mail';
-        var queryParameters = {};
-        var headerParams = Object.assign({}, this.defaultHeaders);
+    getSentMailUsingPOST(request, extraHttpRequestParams) {
+        const localVarPath = this.basePath + '/api/v1/direct-mail/fetch-sent-mail';
+        let queryParameters = {};
+        let headerParams = Object.assign({}, this.defaultHeaders);
         // verify required parameter 'request' is not null or undefined
         if (request === null || request === undefined) {
             throw new Error('Required parameter request was null or undefined when calling getSentMailUsingPOST.');
         }
-        var httpRequestParams = {
+        let httpRequestParams = {
             method: 'POST',
             url: localVarPath,
             data: request,
@@ -91,21 +88,21 @@ var DirectMailControllerApi = /** @class */ (function () {
             httpRequestParams = Object.assign(httpRequestParams, extraHttpRequestParams);
         }
         return this.$http(httpRequestParams);
-    };
+    }
     /**
      *
      * @summary handleLobEvent
      * @param request request
      */
-    DirectMailControllerApi.prototype.handleLobEventUsingPOST = function (request, extraHttpRequestParams) {
-        var localVarPath = this.basePath + '/api/v1/direct-mail/lob-events';
-        var queryParameters = {};
-        var headerParams = Object.assign({}, this.defaultHeaders);
+    handleLobEventUsingPOST(request, extraHttpRequestParams) {
+        const localVarPath = this.basePath + '/api/v1/direct-mail/lob-events';
+        let queryParameters = {};
+        let headerParams = Object.assign({}, this.defaultHeaders);
         // verify required parameter 'request' is not null or undefined
         if (request === null || request === undefined) {
             throw new Error('Required parameter request was null or undefined when calling handleLobEventUsingPOST.');
         }
-        var httpRequestParams = {
+        let httpRequestParams = {
             method: 'POST',
             url: localVarPath,
             data: request,
@@ -116,21 +113,21 @@ var DirectMailControllerApi = /** @class */ (function () {
             httpRequestParams = Object.assign(httpRequestParams, extraHttpRequestParams);
         }
         return this.$http(httpRequestParams);
-    };
+    }
     /**
      *
      * @summary sendDirectMail
      * @param request request
      */
-    DirectMailControllerApi.prototype.sendDirectMailUsingPOST = function (request, extraHttpRequestParams) {
-        var localVarPath = this.basePath + '/api/v1/direct-mail';
-        var queryParameters = {};
-        var headerParams = Object.assign({}, this.defaultHeaders);
+    sendDirectMailUsingPOST(request, extraHttpRequestParams) {
+        const localVarPath = this.basePath + '/api/v1/direct-mail';
+        let queryParameters = {};
+        let headerParams = Object.assign({}, this.defaultHeaders);
         // verify required parameter 'request' is not null or undefined
         if (request === null || request === undefined) {
             throw new Error('Required parameter request was null or undefined when calling sendDirectMailUsingPOST.');
         }
-        var httpRequestParams = {
+        let httpRequestParams = {
             method: 'POST',
             url: localVarPath,
             data: request,
@@ -141,18 +138,18 @@ var DirectMailControllerApi = /** @class */ (function () {
             httpRequestParams = Object.assign(httpRequestParams, extraHttpRequestParams);
         }
         return this.$http(httpRequestParams);
-    };
+    }
     /**
      *
      * @summary sendDirectReferralCheck
      * @param userId userId
      * @param request request
      */
-    DirectMailControllerApi.prototype.sendDirectReferralCheckUsingPOST = function (userId, request, extraHttpRequestParams) {
-        var localVarPath = this.basePath + '/api/v1/direct-mail/{userId}/send-referral-check'
+    sendDirectReferralCheckUsingPOST(userId, request, extraHttpRequestParams) {
+        const localVarPath = this.basePath + '/api/v1/direct-mail/{userId}/send-referral-check'
             .replace('{' + 'userId' + '}', encodeURIComponent(String(userId)));
-        var queryParameters = {};
-        var headerParams = Object.assign({}, this.defaultHeaders);
+        let queryParameters = {};
+        let headerParams = Object.assign({}, this.defaultHeaders);
         // verify required parameter 'userId' is not null or undefined
         if (userId === null || userId === undefined) {
             throw new Error('Required parameter userId was null or undefined when calling sendDirectReferralCheckUsingPOST.');
@@ -161,7 +158,7 @@ var DirectMailControllerApi = /** @class */ (function () {
         if (request === null || request === undefined) {
             throw new Error('Required parameter request was null or undefined when calling sendDirectReferralCheckUsingPOST.');
         }
-        var httpRequestParams = {
+        let httpRequestParams = {
             method: 'POST',
             url: localVarPath,
             data: request,
@@ -172,21 +169,21 @@ var DirectMailControllerApi = /** @class */ (function () {
             httpRequestParams = Object.assign(httpRequestParams, extraHttpRequestParams);
         }
         return this.$http(httpRequestParams);
-    };
+    }
     /**
      *
      * @summary validateDirectMailRequestForSend
      * @param request request
      */
-    DirectMailControllerApi.prototype.validateDirectMailRequestForSendUsingPOST = function (request, extraHttpRequestParams) {
-        var localVarPath = this.basePath + '/api/v1/direct-mail/validate';
-        var queryParameters = {};
-        var headerParams = Object.assign({}, this.defaultHeaders);
+    validateDirectMailRequestForSendUsingPOST(request, extraHttpRequestParams) {
+        const localVarPath = this.basePath + '/api/v1/direct-mail/validate';
+        let queryParameters = {};
+        let headerParams = Object.assign({}, this.defaultHeaders);
         // verify required parameter 'request' is not null or undefined
         if (request === null || request === undefined) {
             throw new Error('Required parameter request was null or undefined when calling validateDirectMailRequestForSendUsingPOST.');
         }
-        var httpRequestParams = {
+        let httpRequestParams = {
             method: 'POST',
             url: localVarPath,
             data: request,
@@ -197,21 +194,21 @@ var DirectMailControllerApi = /** @class */ (function () {
             httpRequestParams = Object.assign(httpRequestParams, extraHttpRequestParams);
         }
         return this.$http(httpRequestParams);
-    };
+    }
     /**
      *
      * @summary verifyMailingAddress
      * @param request request
      */
-    DirectMailControllerApi.prototype.verifyMailingAddressUsingPOST = function (request, extraHttpRequestParams) {
-        var localVarPath = this.basePath + '/api/v1/direct-mail/verify-address';
-        var queryParameters = {};
-        var headerParams = Object.assign({}, this.defaultHeaders);
+    verifyMailingAddressUsingPOST(request, extraHttpRequestParams) {
+        const localVarPath = this.basePath + '/api/v1/direct-mail/verify-address';
+        let queryParameters = {};
+        let headerParams = Object.assign({}, this.defaultHeaders);
         // verify required parameter 'request' is not null or undefined
         if (request === null || request === undefined) {
             throw new Error('Required parameter request was null or undefined when calling verifyMailingAddressUsingPOST.');
         }
-        var httpRequestParams = {
+        let httpRequestParams = {
             method: 'POST',
             url: localVarPath,
             data: request,
@@ -222,8 +219,6 @@ var DirectMailControllerApi = /** @class */ (function () {
             httpRequestParams = Object.assign(httpRequestParams, extraHttpRequestParams);
         }
         return this.$http(httpRequestParams);
-    };
-    DirectMailControllerApi.$inject = ['$http', '$httpParamSerializer', 'basePath'];
-    return DirectMailControllerApi;
-}());
-exports.DirectMailControllerApi = DirectMailControllerApi;
+    }
+}
+DirectMailControllerApi.$inject = ['$http', '$httpParamSerializer', 'basePath'];

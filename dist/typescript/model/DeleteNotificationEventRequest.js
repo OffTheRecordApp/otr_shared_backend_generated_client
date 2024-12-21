@@ -1,4 +1,3 @@
-"use strict";
 /**
  * OffTheRecord Rest Service API - Devo
  * A service to handle your traffic tickets
@@ -10,11 +9,9 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.DeleteNotificationEventRequest = void 0;
-var DeleteNotificationEventRequest;
+export var DeleteNotificationEventRequest;
 (function (DeleteNotificationEventRequest) {
-    var PageTypeEnum;
+    let PageTypeEnum;
     (function (PageTypeEnum) {
         PageTypeEnum[PageTypeEnum["CASEACTION"] = 'CASE_ACTION'] = "CASEACTION";
         PageTypeEnum[PageTypeEnum["CASEMESSAGES"] = 'CASE_MESSAGES'] = "CASEMESSAGES";
@@ -23,4 +20,4 @@ var DeleteNotificationEventRequest;
         PageTypeEnum[PageTypeEnum["NEWTICKET"] = 'NEW_TICKET'] = "NEWTICKET";
         PageTypeEnum[PageTypeEnum["PROFILE"] = 'PROFILE'] = "PROFILE";
     })(PageTypeEnum = DeleteNotificationEventRequest.PageTypeEnum || (DeleteNotificationEventRequest.PageTypeEnum = {}));
-})(DeleteNotificationEventRequest = exports.DeleteNotificationEventRequest || (exports.DeleteNotificationEventRequest = {}));
+})(DeleteNotificationEventRequest || (DeleteNotificationEventRequest = {}));

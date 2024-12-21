@@ -1,4 +1,3 @@
-"use strict";
 /**
  * OffTheRecord Rest Service API - Devo
  * A service to handle your traffic tickets
@@ -10,11 +9,9 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.RefundLawfirmFeeRequest = void 0;
-var RefundLawfirmFeeRequest;
+export var RefundLawfirmFeeRequest;
 (function (RefundLawfirmFeeRequest) {
-    var RefundReasonEnum;
+    let RefundReasonEnum;
     (function (RefundReasonEnum) {
         RefundReasonEnum[RefundReasonEnum["CANCELATION"] = 'CANCELATION'] = "CANCELATION";
         RefundReasonEnum[RefundReasonEnum["CLIENTDISPUTEDCHARGE"] = 'CLIENT_DISPUTED_CHARGE'] = "CLIENTDISPUTEDCHARGE";
@@ -22,4 +19,4 @@ var RefundLawfirmFeeRequest;
         RefundReasonEnum[RefundReasonEnum["LOSTCASE"] = 'LOST_CASE'] = "LOSTCASE";
         RefundReasonEnum[RefundReasonEnum["OTHER"] = 'OTHER'] = "OTHER";
     })(RefundReasonEnum = RefundLawfirmFeeRequest.RefundReasonEnum || (RefundLawfirmFeeRequest.RefundReasonEnum = {}));
-})(RefundLawfirmFeeRequest = exports.RefundLawfirmFeeRequest || (exports.RefundLawfirmFeeRequest = {}));
+})(RefundLawfirmFeeRequest || (RefundLawfirmFeeRequest = {}));

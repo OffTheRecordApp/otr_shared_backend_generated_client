@@ -1,4 +1,3 @@
-"use strict";
 /**
  * OffTheRecord Rest Service API - Devo
  * A service to handle your traffic tickets
@@ -10,11 +9,9 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.LawfirmCaseModelRes = void 0;
-var LawfirmCaseModelRes;
+export var LawfirmCaseModelRes;
 (function (LawfirmCaseModelRes) {
-    var CaseDecisionStatusEnum;
+    let CaseDecisionStatusEnum;
     (function (CaseDecisionStatusEnum) {
         CaseDecisionStatusEnum[CaseDecisionStatusEnum["ACCEPTED"] = 'ACCEPTED'] = "ACCEPTED";
         CaseDecisionStatusEnum[CaseDecisionStatusEnum["CREATED"] = 'CREATED'] = "CREATED";
@@ -24,10 +21,10 @@ var LawfirmCaseModelRes;
         CaseDecisionStatusEnum[CaseDecisionStatusEnum["REMATCHED"] = 'REMATCHED'] = "REMATCHED";
         CaseDecisionStatusEnum[CaseDecisionStatusEnum["REMATCHEDREFERRAL"] = 'REMATCHED_REFERRAL'] = "REMATCHEDREFERRAL";
     })(CaseDecisionStatusEnum = LawfirmCaseModelRes.CaseDecisionStatusEnum || (LawfirmCaseModelRes.CaseDecisionStatusEnum = {}));
-    var RefundOwnerEnum;
+    let RefundOwnerEnum;
     (function (RefundOwnerEnum) {
         RefundOwnerEnum[RefundOwnerEnum["LAWFIRM"] = 'LAWFIRM'] = "LAWFIRM";
         RefundOwnerEnum[RefundOwnerEnum["NONE"] = 'NONE'] = "NONE";
         RefundOwnerEnum[RefundOwnerEnum["OTR"] = 'OTR'] = "OTR";
     })(RefundOwnerEnum = LawfirmCaseModelRes.RefundOwnerEnum || (LawfirmCaseModelRes.RefundOwnerEnum = {}));
-})(LawfirmCaseModelRes = exports.LawfirmCaseModelRes || (exports.LawfirmCaseModelRes = {}));
+})(LawfirmCaseModelRes || (LawfirmCaseModelRes = {}));

@@ -1,4 +1,3 @@
-"use strict";
 /**
  * OffTheRecord Rest Service API - Devo
  * A service to handle your traffic tickets
@@ -10,17 +9,15 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.UpdateCasePaymentRequest = void 0;
-var UpdateCasePaymentRequest;
+export var UpdateCasePaymentRequest;
 (function (UpdateCasePaymentRequest) {
-    var RecipientEnum;
+    let RecipientEnum;
     (function (RecipientEnum) {
         RecipientEnum[RecipientEnum["COURT"] = 'COURT'] = "COURT";
         RecipientEnum[RecipientEnum["LAWFIRM"] = 'LAWFIRM'] = "LAWFIRM";
         RecipientEnum[RecipientEnum["OTR"] = 'OTR'] = "OTR";
     })(RecipientEnum = UpdateCasePaymentRequest.RecipientEnum || (UpdateCasePaymentRequest.RecipientEnum = {}));
-    var TransactionMethodEnum;
+    let TransactionMethodEnum;
     (function (TransactionMethodEnum) {
         TransactionMethodEnum[TransactionMethodEnum["CASH"] = 'CASH'] = "CASH";
         TransactionMethodEnum[TransactionMethodEnum["CHECK"] = 'CHECK'] = "CHECK";
@@ -36,4 +33,4 @@ var UpdateCasePaymentRequest;
         TransactionMethodEnum[TransactionMethodEnum["WIRETRANSFER"] = 'WIRE_TRANSFER'] = "WIRETRANSFER";
         TransactionMethodEnum[TransactionMethodEnum["ZELLE"] = 'ZELLE'] = "ZELLE";
     })(TransactionMethodEnum = UpdateCasePaymentRequest.TransactionMethodEnum || (UpdateCasePaymentRequest.TransactionMethodEnum = {}));
-})(UpdateCasePaymentRequest = exports.UpdateCasePaymentRequest || (exports.UpdateCasePaymentRequest = {}));
+})(UpdateCasePaymentRequest || (UpdateCasePaymentRequest = {}));

@@ -1,4 +1,3 @@
-"use strict";
 /**
  * OffTheRecord Rest Service API - Devo
  * A service to handle your traffic tickets
@@ -10,11 +9,9 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.LawfirmSurchargeControllerApi = void 0;
 /* tslint:disable:no-unused-variable member-ordering */
-var LawfirmSurchargeControllerApi = /** @class */ (function () {
-    function LawfirmSurchargeControllerApi($http, $httpParamSerializer, basePath) {
+export class LawfirmSurchargeControllerApi {
+    constructor($http, $httpParamSerializer, basePath) {
         this.$http = $http;
         this.$httpParamSerializer = $httpParamSerializer;
         this.basePath = 'http://otr-backend-service-us-devo.offtherecord.com';
@@ -29,11 +26,11 @@ var LawfirmSurchargeControllerApi = /** @class */ (function () {
      * @param lawfirmId lawfirmId
      * @param featureType featureType
      */
-    LawfirmSurchargeControllerApi.prototype.listLawfirmSurchargesUsingGET = function (lawfirmId, featureType, extraHttpRequestParams) {
-        var localVarPath = this.basePath + '/api/v1/lawfirms/{lawfirmId}/surcharges'
+    listLawfirmSurchargesUsingGET(lawfirmId, featureType, extraHttpRequestParams) {
+        const localVarPath = this.basePath + '/api/v1/lawfirms/{lawfirmId}/surcharges'
             .replace('{' + 'lawfirmId' + '}', encodeURIComponent(String(lawfirmId)));
-        var queryParameters = {};
-        var headerParams = Object.assign({}, this.defaultHeaders);
+        let queryParameters = {};
+        let headerParams = Object.assign({}, this.defaultHeaders);
         // verify required parameter 'lawfirmId' is not null or undefined
         if (lawfirmId === null || lawfirmId === undefined) {
             throw new Error('Required parameter lawfirmId was null or undefined when calling listLawfirmSurchargesUsingGET.');
@@ -41,7 +38,7 @@ var LawfirmSurchargeControllerApi = /** @class */ (function () {
         if (featureType !== undefined) {
             queryParameters['featureType'] = featureType;
         }
-        var httpRequestParams = {
+        let httpRequestParams = {
             method: 'GET',
             url: localVarPath,
             params: queryParameters,
@@ -51,18 +48,18 @@ var LawfirmSurchargeControllerApi = /** @class */ (function () {
             httpRequestParams = Object.assign(httpRequestParams, extraHttpRequestParams);
         }
         return this.$http(httpRequestParams);
-    };
+    }
     /**
      *
      * @summary removeSurcharges
      * @param lawfirmId lawfirmId
      * @param request request
      */
-    LawfirmSurchargeControllerApi.prototype.removeSurchargesUsingDELETE = function (lawfirmId, request, extraHttpRequestParams) {
-        var localVarPath = this.basePath + '/api/v1/lawfirms/{lawfirmId}/surcharges'
+    removeSurchargesUsingDELETE(lawfirmId, request, extraHttpRequestParams) {
+        const localVarPath = this.basePath + '/api/v1/lawfirms/{lawfirmId}/surcharges'
             .replace('{' + 'lawfirmId' + '}', encodeURIComponent(String(lawfirmId)));
-        var queryParameters = {};
-        var headerParams = Object.assign({}, this.defaultHeaders);
+        let queryParameters = {};
+        let headerParams = Object.assign({}, this.defaultHeaders);
         // verify required parameter 'lawfirmId' is not null or undefined
         if (lawfirmId === null || lawfirmId === undefined) {
             throw new Error('Required parameter lawfirmId was null or undefined when calling removeSurchargesUsingDELETE.');
@@ -71,7 +68,7 @@ var LawfirmSurchargeControllerApi = /** @class */ (function () {
         if (request === null || request === undefined) {
             throw new Error('Required parameter request was null or undefined when calling removeSurchargesUsingDELETE.');
         }
-        var httpRequestParams = {
+        let httpRequestParams = {
             method: 'DELETE',
             url: localVarPath,
             data: request,
@@ -82,18 +79,18 @@ var LawfirmSurchargeControllerApi = /** @class */ (function () {
             httpRequestParams = Object.assign(httpRequestParams, extraHttpRequestParams);
         }
         return this.$http(httpRequestParams);
-    };
+    }
     /**
      *
      * @summary saveLawfirmSurcharges
      * @param lawfirmId lawfirmId
      * @param request request
      */
-    LawfirmSurchargeControllerApi.prototype.saveLawfirmSurchargesUsingPOST = function (lawfirmId, request, extraHttpRequestParams) {
-        var localVarPath = this.basePath + '/api/v1/lawfirms/{lawfirmId}/surcharges'
+    saveLawfirmSurchargesUsingPOST(lawfirmId, request, extraHttpRequestParams) {
+        const localVarPath = this.basePath + '/api/v1/lawfirms/{lawfirmId}/surcharges'
             .replace('{' + 'lawfirmId' + '}', encodeURIComponent(String(lawfirmId)));
-        var queryParameters = {};
-        var headerParams = Object.assign({}, this.defaultHeaders);
+        let queryParameters = {};
+        let headerParams = Object.assign({}, this.defaultHeaders);
         // verify required parameter 'lawfirmId' is not null or undefined
         if (lawfirmId === null || lawfirmId === undefined) {
             throw new Error('Required parameter lawfirmId was null or undefined when calling saveLawfirmSurchargesUsingPOST.');
@@ -102,7 +99,7 @@ var LawfirmSurchargeControllerApi = /** @class */ (function () {
         if (request === null || request === undefined) {
             throw new Error('Required parameter request was null or undefined when calling saveLawfirmSurchargesUsingPOST.');
         }
-        var httpRequestParams = {
+        let httpRequestParams = {
             method: 'POST',
             url: localVarPath,
             data: request,
@@ -113,8 +110,6 @@ var LawfirmSurchargeControllerApi = /** @class */ (function () {
             httpRequestParams = Object.assign(httpRequestParams, extraHttpRequestParams);
         }
         return this.$http(httpRequestParams);
-    };
-    LawfirmSurchargeControllerApi.$inject = ['$http', '$httpParamSerializer', 'basePath'];
-    return LawfirmSurchargeControllerApi;
-}());
-exports.LawfirmSurchargeControllerApi = LawfirmSurchargeControllerApi;
+    }
+}
+LawfirmSurchargeControllerApi.$inject = ['$http', '$httpParamSerializer', 'basePath'];

@@ -1,4 +1,3 @@
-"use strict";
 /**
  * OffTheRecord Rest Service API - Devo
  * A service to handle your traffic tickets
@@ -10,11 +9,9 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.CitationWithMissingCourt = void 0;
-var CitationWithMissingCourt;
+export var CitationWithMissingCourt;
 (function (CitationWithMissingCourt) {
-    var StateEnum;
+    let StateEnum;
     (function (StateEnum) {
         StateEnum[StateEnum["AK"] = 'AK'] = "AK";
         StateEnum[StateEnum["AL"] = 'AL'] = "AL";
@@ -68,4 +65,4 @@ var CitationWithMissingCourt;
         StateEnum[StateEnum["WV"] = 'WV'] = "WV";
         StateEnum[StateEnum["WY"] = 'WY'] = "WY";
     })(StateEnum = CitationWithMissingCourt.StateEnum || (CitationWithMissingCourt.StateEnum = {}));
-})(CitationWithMissingCourt = exports.CitationWithMissingCourt || (exports.CitationWithMissingCourt = {}));
+})(CitationWithMissingCourt || (CitationWithMissingCourt = {}));

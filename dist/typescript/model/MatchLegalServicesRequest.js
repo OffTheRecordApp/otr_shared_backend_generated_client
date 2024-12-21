@@ -1,4 +1,3 @@
-"use strict";
 /**
  * OffTheRecord Rest Service API - Devo
  * A service to handle your traffic tickets
@@ -10,17 +9,15 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.MatchLegalServicesRequest = void 0;
-var MatchLegalServicesRequest;
+export var MatchLegalServicesRequest;
 (function (MatchLegalServicesRequest) {
-    var LegalServiceTypeEnum;
+    let LegalServiceTypeEnum;
     (function (LegalServiceTypeEnum) {
         LegalServiceTypeEnum[LegalServiceTypeEnum["DEFER"] = 'DEFER'] = "DEFER";
         LegalServiceTypeEnum[LegalServiceTypeEnum["FIGHT"] = 'FIGHT'] = "FIGHT";
     })(LegalServiceTypeEnum = MatchLegalServicesRequest.LegalServiceTypeEnum || (MatchLegalServicesRequest.LegalServiceTypeEnum = {}));
-    var LegalVerticalEnum;
+    let LegalVerticalEnum;
     (function (LegalVerticalEnum) {
         LegalVerticalEnum[LegalVerticalEnum["TRAFFIC"] = 'TRAFFIC'] = "TRAFFIC";
     })(LegalVerticalEnum = MatchLegalServicesRequest.LegalVerticalEnum || (MatchLegalServicesRequest.LegalVerticalEnum = {}));
-})(MatchLegalServicesRequest = exports.MatchLegalServicesRequest || (exports.MatchLegalServicesRequest = {}));
+})(MatchLegalServicesRequest || (MatchLegalServicesRequest = {}));

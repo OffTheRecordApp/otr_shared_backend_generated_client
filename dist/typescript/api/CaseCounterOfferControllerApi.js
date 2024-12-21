@@ -1,4 +1,3 @@
-"use strict";
 /**
  * OffTheRecord Rest Service API - Devo
  * A service to handle your traffic tickets
@@ -10,11 +9,9 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.CaseCounterOfferControllerApi = void 0;
 /* tslint:disable:no-unused-variable member-ordering */
-var CaseCounterOfferControllerApi = /** @class */ (function () {
-    function CaseCounterOfferControllerApi($http, $httpParamSerializer, basePath) {
+export class CaseCounterOfferControllerApi {
+    constructor($http, $httpParamSerializer, basePath) {
         this.$http = $http;
         this.$httpParamSerializer = $httpParamSerializer;
         this.basePath = 'http://otr-backend-service-us-devo.offtherecord.com';
@@ -29,12 +26,12 @@ var CaseCounterOfferControllerApi = /** @class */ (function () {
      * @param caseId caseId
      * @param counterId counterId
      */
-    CaseCounterOfferControllerApi.prototype.acceptCaseCounterUsingPUT = function (caseId, counterId, extraHttpRequestParams) {
-        var localVarPath = this.basePath + '/api/v1/cases/{caseId}/counters/{counterId}/accept'
+    acceptCaseCounterUsingPUT(caseId, counterId, extraHttpRequestParams) {
+        const localVarPath = this.basePath + '/api/v1/cases/{caseId}/counters/{counterId}/accept'
             .replace('{' + 'caseId' + '}', encodeURIComponent(String(caseId)))
             .replace('{' + 'counterId' + '}', encodeURIComponent(String(counterId)));
-        var queryParameters = {};
-        var headerParams = Object.assign({}, this.defaultHeaders);
+        let queryParameters = {};
+        let headerParams = Object.assign({}, this.defaultHeaders);
         // verify required parameter 'caseId' is not null or undefined
         if (caseId === null || caseId === undefined) {
             throw new Error('Required parameter caseId was null or undefined when calling acceptCaseCounterUsingPUT.');
@@ -43,7 +40,7 @@ var CaseCounterOfferControllerApi = /** @class */ (function () {
         if (counterId === null || counterId === undefined) {
             throw new Error('Required parameter counterId was null or undefined when calling acceptCaseCounterUsingPUT.');
         }
-        var httpRequestParams = {
+        let httpRequestParams = {
             method: 'PUT',
             url: localVarPath,
             params: queryParameters,
@@ -53,7 +50,7 @@ var CaseCounterOfferControllerApi = /** @class */ (function () {
             httpRequestParams = Object.assign(httpRequestParams, extraHttpRequestParams);
         }
         return this.$http(httpRequestParams);
-    };
+    }
     /**
      *
      * @summary declineCaseCounter
@@ -61,12 +58,12 @@ var CaseCounterOfferControllerApi = /** @class */ (function () {
      * @param counterId counterId
      * @param request request
      */
-    CaseCounterOfferControllerApi.prototype.declineCaseCounterUsingPUT = function (caseId, counterId, request, extraHttpRequestParams) {
-        var localVarPath = this.basePath + '/api/v1/cases/{caseId}/counters/{counterId}/decline'
+    declineCaseCounterUsingPUT(caseId, counterId, request, extraHttpRequestParams) {
+        const localVarPath = this.basePath + '/api/v1/cases/{caseId}/counters/{counterId}/decline'
             .replace('{' + 'caseId' + '}', encodeURIComponent(String(caseId)))
             .replace('{' + 'counterId' + '}', encodeURIComponent(String(counterId)));
-        var queryParameters = {};
-        var headerParams = Object.assign({}, this.defaultHeaders);
+        let queryParameters = {};
+        let headerParams = Object.assign({}, this.defaultHeaders);
         // verify required parameter 'caseId' is not null or undefined
         if (caseId === null || caseId === undefined) {
             throw new Error('Required parameter caseId was null or undefined when calling declineCaseCounterUsingPUT.');
@@ -79,7 +76,7 @@ var CaseCounterOfferControllerApi = /** @class */ (function () {
         if (request === null || request === undefined) {
             throw new Error('Required parameter request was null or undefined when calling declineCaseCounterUsingPUT.');
         }
-        var httpRequestParams = {
+        let httpRequestParams = {
             method: 'PUT',
             url: localVarPath,
             data: request,
@@ -90,16 +87,16 @@ var CaseCounterOfferControllerApi = /** @class */ (function () {
             httpRequestParams = Object.assign(httpRequestParams, extraHttpRequestParams);
         }
         return this.$http(httpRequestParams);
-    };
+    }
     /**
      *
      * @summary getCaseCounterOptions
      */
-    CaseCounterOfferControllerApi.prototype.getCaseCounterOptionsUsingGET = function (extraHttpRequestParams) {
-        var localVarPath = this.basePath + '/api/v1/cases/counter-options';
-        var queryParameters = {};
-        var headerParams = Object.assign({}, this.defaultHeaders);
-        var httpRequestParams = {
+    getCaseCounterOptionsUsingGET(extraHttpRequestParams) {
+        const localVarPath = this.basePath + '/api/v1/cases/counter-options';
+        let queryParameters = {};
+        let headerParams = Object.assign({}, this.defaultHeaders);
+        let httpRequestParams = {
             method: 'GET',
             url: localVarPath,
             params: queryParameters,
@@ -109,22 +106,22 @@ var CaseCounterOfferControllerApi = /** @class */ (function () {
             httpRequestParams = Object.assign(httpRequestParams, extraHttpRequestParams);
         }
         return this.$http(httpRequestParams);
-    };
+    }
     /**
      *
      * @summary getCounterOffer
      * @param caseId caseId
      */
-    CaseCounterOfferControllerApi.prototype.getCounterOfferUsingGET = function (caseId, extraHttpRequestParams) {
-        var localVarPath = this.basePath + '/api/v1/cases/{caseId}/counters'
+    getCounterOfferUsingGET(caseId, extraHttpRequestParams) {
+        const localVarPath = this.basePath + '/api/v1/cases/{caseId}/counters'
             .replace('{' + 'caseId' + '}', encodeURIComponent(String(caseId)));
-        var queryParameters = {};
-        var headerParams = Object.assign({}, this.defaultHeaders);
+        let queryParameters = {};
+        let headerParams = Object.assign({}, this.defaultHeaders);
         // verify required parameter 'caseId' is not null or undefined
         if (caseId === null || caseId === undefined) {
             throw new Error('Required parameter caseId was null or undefined when calling getCounterOfferUsingGET.');
         }
-        var httpRequestParams = {
+        let httpRequestParams = {
             method: 'GET',
             url: localVarPath,
             params: queryParameters,
@@ -134,18 +131,18 @@ var CaseCounterOfferControllerApi = /** @class */ (function () {
             httpRequestParams = Object.assign(httpRequestParams, extraHttpRequestParams);
         }
         return this.$http(httpRequestParams);
-    };
+    }
     /**
      *
      * @summary initiateCaseCounter
      * @param caseId caseId
      * @param request request
      */
-    CaseCounterOfferControllerApi.prototype.initiateCaseCounterUsingPOST = function (caseId, request, extraHttpRequestParams) {
-        var localVarPath = this.basePath + '/api/v1/cases/{caseId}/counters'
+    initiateCaseCounterUsingPOST(caseId, request, extraHttpRequestParams) {
+        const localVarPath = this.basePath + '/api/v1/cases/{caseId}/counters'
             .replace('{' + 'caseId' + '}', encodeURIComponent(String(caseId)));
-        var queryParameters = {};
-        var headerParams = Object.assign({}, this.defaultHeaders);
+        let queryParameters = {};
+        let headerParams = Object.assign({}, this.defaultHeaders);
         // verify required parameter 'caseId' is not null or undefined
         if (caseId === null || caseId === undefined) {
             throw new Error('Required parameter caseId was null or undefined when calling initiateCaseCounterUsingPOST.');
@@ -154,7 +151,7 @@ var CaseCounterOfferControllerApi = /** @class */ (function () {
         if (request === null || request === undefined) {
             throw new Error('Required parameter request was null or undefined when calling initiateCaseCounterUsingPOST.');
         }
-        var httpRequestParams = {
+        let httpRequestParams = {
             method: 'POST',
             url: localVarPath,
             data: request,
@@ -165,19 +162,19 @@ var CaseCounterOfferControllerApi = /** @class */ (function () {
             httpRequestParams = Object.assign(httpRequestParams, extraHttpRequestParams);
         }
         return this.$http(httpRequestParams);
-    };
+    }
     /**
      *
      * @summary withdrawCaseCounter
      * @param caseId caseId
      * @param counterId counterId
      */
-    CaseCounterOfferControllerApi.prototype.withdrawCaseCounterUsingPUT = function (caseId, counterId, extraHttpRequestParams) {
-        var localVarPath = this.basePath + '/api/v1/cases/{caseId}/counters/{counterId}/withdraw'
+    withdrawCaseCounterUsingPUT(caseId, counterId, extraHttpRequestParams) {
+        const localVarPath = this.basePath + '/api/v1/cases/{caseId}/counters/{counterId}/withdraw'
             .replace('{' + 'caseId' + '}', encodeURIComponent(String(caseId)))
             .replace('{' + 'counterId' + '}', encodeURIComponent(String(counterId)));
-        var queryParameters = {};
-        var headerParams = Object.assign({}, this.defaultHeaders);
+        let queryParameters = {};
+        let headerParams = Object.assign({}, this.defaultHeaders);
         // verify required parameter 'caseId' is not null or undefined
         if (caseId === null || caseId === undefined) {
             throw new Error('Required parameter caseId was null or undefined when calling withdrawCaseCounterUsingPUT.');
@@ -186,7 +183,7 @@ var CaseCounterOfferControllerApi = /** @class */ (function () {
         if (counterId === null || counterId === undefined) {
             throw new Error('Required parameter counterId was null or undefined when calling withdrawCaseCounterUsingPUT.');
         }
-        var httpRequestParams = {
+        let httpRequestParams = {
             method: 'PUT',
             url: localVarPath,
             params: queryParameters,
@@ -196,8 +193,6 @@ var CaseCounterOfferControllerApi = /** @class */ (function () {
             httpRequestParams = Object.assign(httpRequestParams, extraHttpRequestParams);
         }
         return this.$http(httpRequestParams);
-    };
-    CaseCounterOfferControllerApi.$inject = ['$http', '$httpParamSerializer', 'basePath'];
-    return CaseCounterOfferControllerApi;
-}());
-exports.CaseCounterOfferControllerApi = CaseCounterOfferControllerApi;
+    }
+}
+CaseCounterOfferControllerApi.$inject = ['$http', '$httpParamSerializer', 'basePath'];

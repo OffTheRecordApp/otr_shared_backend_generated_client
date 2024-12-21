@@ -1,4 +1,3 @@
-"use strict";
 /**
  * OffTheRecord Rest Service API - Devo
  * A service to handle your traffic tickets
@@ -10,11 +9,9 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.CaseStatusControllerApi = void 0;
 /* tslint:disable:no-unused-variable member-ordering */
-var CaseStatusControllerApi = /** @class */ (function () {
-    function CaseStatusControllerApi($http, $httpParamSerializer, basePath) {
+export class CaseStatusControllerApi {
+    constructor($http, $httpParamSerializer, basePath) {
         this.$http = $http;
         this.$httpParamSerializer = $httpParamSerializer;
         this.basePath = 'http://otr-backend-service-us-devo.offtherecord.com';
@@ -28,14 +25,14 @@ var CaseStatusControllerApi = /** @class */ (function () {
      * @summary getCaseResolutionStatuses
      * @param stateCode stateCode
      */
-    CaseStatusControllerApi.prototype.getCaseResolutionStatusesUsingGET = function (stateCode, extraHttpRequestParams) {
-        var localVarPath = this.basePath + '/api/v1/case-statuses/resolution-statuses';
-        var queryParameters = {};
-        var headerParams = Object.assign({}, this.defaultHeaders);
+    getCaseResolutionStatusesUsingGET(stateCode, extraHttpRequestParams) {
+        const localVarPath = this.basePath + '/api/v1/case-statuses/resolution-statuses';
+        let queryParameters = {};
+        let headerParams = Object.assign({}, this.defaultHeaders);
         if (stateCode !== undefined) {
             queryParameters['stateCode'] = stateCode;
         }
-        var httpRequestParams = {
+        let httpRequestParams = {
             method: 'GET',
             url: localVarPath,
             params: queryParameters,
@@ -45,20 +42,20 @@ var CaseStatusControllerApi = /** @class */ (function () {
             httpRequestParams = Object.assign(httpRequestParams, extraHttpRequestParams);
         }
         return this.$http(httpRequestParams);
-    };
+    }
     /**
      *
      * @summary getCaseStatuses
      * @param categories categories
      */
-    CaseStatusControllerApi.prototype.getCaseStatusesUsingGET = function (categories, extraHttpRequestParams) {
-        var localVarPath = this.basePath + '/api/v1/case-statuses';
-        var queryParameters = {};
-        var headerParams = Object.assign({}, this.defaultHeaders);
+    getCaseStatusesUsingGET(categories, extraHttpRequestParams) {
+        const localVarPath = this.basePath + '/api/v1/case-statuses';
+        let queryParameters = {};
+        let headerParams = Object.assign({}, this.defaultHeaders);
         if (categories !== undefined) {
             queryParameters['categories'] = categories;
         }
-        var httpRequestParams = {
+        let httpRequestParams = {
             method: 'GET',
             url: localVarPath,
             params: queryParameters,
@@ -68,8 +65,6 @@ var CaseStatusControllerApi = /** @class */ (function () {
             httpRequestParams = Object.assign(httpRequestParams, extraHttpRequestParams);
         }
         return this.$http(httpRequestParams);
-    };
-    CaseStatusControllerApi.$inject = ['$http', '$httpParamSerializer', 'basePath'];
-    return CaseStatusControllerApi;
-}());
-exports.CaseStatusControllerApi = CaseStatusControllerApi;
+    }
+}
+CaseStatusControllerApi.$inject = ['$http', '$httpParamSerializer', 'basePath'];

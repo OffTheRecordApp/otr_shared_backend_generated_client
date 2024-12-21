@@ -1,4 +1,3 @@
-"use strict";
 /**
  * OffTheRecord Rest Service API - Devo
  * A service to handle your traffic tickets
@@ -10,14 +9,12 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.PaymentPlanTypeModel = void 0;
-var PaymentPlanTypeModel;
+export var PaymentPlanTypeModel;
 (function (PaymentPlanTypeModel) {
-    var PaymentPlanTypeEnum;
+    let PaymentPlanTypeEnum;
     (function (PaymentPlanTypeEnum) {
         PaymentPlanTypeEnum[PaymentPlanTypeEnum["ALLUPFRONT"] = 'ALL_UPFRONT'] = "ALLUPFRONT";
         PaymentPlanTypeEnum[PaymentPlanTypeEnum["THREEPAYMENTSHALFFIRST"] = 'THREE_PAYMENTS_HALF_FIRST'] = "THREEPAYMENTSHALFFIRST";
         PaymentPlanTypeEnum[PaymentPlanTypeEnum["TWOPAYMENTSMONTHLY"] = 'TWO_PAYMENTS_MONTHLY'] = "TWOPAYMENTSMONTHLY";
     })(PaymentPlanTypeEnum = PaymentPlanTypeModel.PaymentPlanTypeEnum || (PaymentPlanTypeModel.PaymentPlanTypeEnum = {}));
-})(PaymentPlanTypeModel = exports.PaymentPlanTypeModel || (exports.PaymentPlanTypeModel = {}));
+})(PaymentPlanTypeModel || (PaymentPlanTypeModel = {}));

@@ -1,4 +1,3 @@
-"use strict";
 /**
  * OffTheRecord Rest Service API - Devo
  * A service to handle your traffic tickets
@@ -10,11 +9,9 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.NewUser = void 0;
-var NewUser;
+export var NewUser;
 (function (NewUser) {
-    var LoginProviderEnum;
+    let LoginProviderEnum;
     (function (LoginProviderEnum) {
         LoginProviderEnum[LoginProviderEnum["APPLE"] = 'APPLE'] = "APPLE";
         LoginProviderEnum[LoginProviderEnum["EMAIL"] = 'EMAIL'] = "EMAIL";
@@ -24,4 +21,4 @@ var NewUser;
         LoginProviderEnum[LoginProviderEnum["TWITTER"] = 'TWITTER'] = "TWITTER";
         LoginProviderEnum[LoginProviderEnum["UNKNOWN"] = 'UNKNOWN'] = "UNKNOWN";
     })(LoginProviderEnum = NewUser.LoginProviderEnum || (NewUser.LoginProviderEnum = {}));
-})(NewUser = exports.NewUser || (exports.NewUser = {}));
+})(NewUser || (NewUser = {}));

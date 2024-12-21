@@ -1,4 +1,3 @@
-"use strict";
 /**
  * OffTheRecord Rest Service API - Devo
  * A service to handle your traffic tickets
@@ -10,11 +9,9 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.OcrPipelineControllerApi = void 0;
 /* tslint:disable:no-unused-variable member-ordering */
-var OcrPipelineControllerApi = /** @class */ (function () {
-    function OcrPipelineControllerApi($http, $httpParamSerializer, basePath) {
+export class OcrPipelineControllerApi {
+    constructor($http, $httpParamSerializer, basePath) {
         this.$http = $http;
         this.$httpParamSerializer = $httpParamSerializer;
         this.basePath = 'http://otr-backend-service-us-devo.offtherecord.com';
@@ -28,15 +25,15 @@ var OcrPipelineControllerApi = /** @class */ (function () {
      * @summary predictCitationFields
      * @param request request
      */
-    OcrPipelineControllerApi.prototype.predictCitationFieldsUsingPOST = function (request, extraHttpRequestParams) {
-        var localVarPath = this.basePath + '/api/v1/ocr_pipeline/predict_citation';
-        var queryParameters = {};
-        var headerParams = Object.assign({}, this.defaultHeaders);
+    predictCitationFieldsUsingPOST(request, extraHttpRequestParams) {
+        const localVarPath = this.basePath + '/api/v1/ocr_pipeline/predict_citation';
+        let queryParameters = {};
+        let headerParams = Object.assign({}, this.defaultHeaders);
         // verify required parameter 'request' is not null or undefined
         if (request === null || request === undefined) {
             throw new Error('Required parameter request was null or undefined when calling predictCitationFieldsUsingPOST.');
         }
-        var httpRequestParams = {
+        let httpRequestParams = {
             method: 'POST',
             url: localVarPath,
             data: request,
@@ -47,21 +44,21 @@ var OcrPipelineControllerApi = /** @class */ (function () {
             httpRequestParams = Object.assign(httpRequestParams, extraHttpRequestParams);
         }
         return this.$http(httpRequestParams);
-    };
+    }
     /**
      *
      * @summary predictRichCitationFields
      * @param request request
      */
-    OcrPipelineControllerApi.prototype.predictRichCitationFieldsUsingPOST = function (request, extraHttpRequestParams) {
-        var localVarPath = this.basePath + '/api/v1/ocr_pipeline/predict_rich_citation';
-        var queryParameters = {};
-        var headerParams = Object.assign({}, this.defaultHeaders);
+    predictRichCitationFieldsUsingPOST(request, extraHttpRequestParams) {
+        const localVarPath = this.basePath + '/api/v1/ocr_pipeline/predict_rich_citation';
+        let queryParameters = {};
+        let headerParams = Object.assign({}, this.defaultHeaders);
         // verify required parameter 'request' is not null or undefined
         if (request === null || request === undefined) {
             throw new Error('Required parameter request was null or undefined when calling predictRichCitationFieldsUsingPOST.');
         }
-        var httpRequestParams = {
+        let httpRequestParams = {
             method: 'POST',
             url: localVarPath,
             data: request,
@@ -72,8 +69,6 @@ var OcrPipelineControllerApi = /** @class */ (function () {
             httpRequestParams = Object.assign(httpRequestParams, extraHttpRequestParams);
         }
         return this.$http(httpRequestParams);
-    };
-    OcrPipelineControllerApi.$inject = ['$http', '$httpParamSerializer', 'basePath'];
-    return OcrPipelineControllerApi;
-}());
-exports.OcrPipelineControllerApi = OcrPipelineControllerApi;
+    }
+}
+OcrPipelineControllerApi.$inject = ['$http', '$httpParamSerializer', 'basePath'];

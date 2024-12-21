@@ -1,4 +1,3 @@
-"use strict";
 /**
  * OffTheRecord Rest Service API - Devo
  * A service to handle your traffic tickets
@@ -10,11 +9,9 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.LawfirmPaymentModelControllerApi = void 0;
 /* tslint:disable:no-unused-variable member-ordering */
-var LawfirmPaymentModelControllerApi = /** @class */ (function () {
-    function LawfirmPaymentModelControllerApi($http, $httpParamSerializer, basePath) {
+export class LawfirmPaymentModelControllerApi {
+    constructor($http, $httpParamSerializer, basePath) {
         this.$http = $http;
         this.$httpParamSerializer = $httpParamSerializer;
         this.basePath = 'http://otr-backend-service-us-devo.offtherecord.com';
@@ -27,11 +24,11 @@ var LawfirmPaymentModelControllerApi = /** @class */ (function () {
      *
      * @summary getPaymentModelTypes
      */
-    LawfirmPaymentModelControllerApi.prototype.getPaymentModelTypesUsingGET = function (extraHttpRequestParams) {
-        var localVarPath = this.basePath + '/api/v1/payment-models';
-        var queryParameters = {};
-        var headerParams = Object.assign({}, this.defaultHeaders);
-        var httpRequestParams = {
+    getPaymentModelTypesUsingGET(extraHttpRequestParams) {
+        const localVarPath = this.basePath + '/api/v1/payment-models';
+        let queryParameters = {};
+        let headerParams = Object.assign({}, this.defaultHeaders);
+        let httpRequestParams = {
             method: 'GET',
             url: localVarPath,
             params: queryParameters,
@@ -41,8 +38,6 @@ var LawfirmPaymentModelControllerApi = /** @class */ (function () {
             httpRequestParams = Object.assign(httpRequestParams, extraHttpRequestParams);
         }
         return this.$http(httpRequestParams);
-    };
-    LawfirmPaymentModelControllerApi.$inject = ['$http', '$httpParamSerializer', 'basePath'];
-    return LawfirmPaymentModelControllerApi;
-}());
-exports.LawfirmPaymentModelControllerApi = LawfirmPaymentModelControllerApi;
+    }
+}
+LawfirmPaymentModelControllerApi.$inject = ['$http', '$httpParamSerializer', 'basePath'];

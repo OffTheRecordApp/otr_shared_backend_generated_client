@@ -1,4 +1,3 @@
-"use strict";
 /**
  * OffTheRecord Rest Service API - Devo
  * A service to handle your traffic tickets
@@ -10,11 +9,9 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.WatchlistsControllerApi = void 0;
 /* tslint:disable:no-unused-variable member-ordering */
-var WatchlistsControllerApi = /** @class */ (function () {
-    function WatchlistsControllerApi($http, $httpParamSerializer, basePath) {
+export class WatchlistsControllerApi {
+    constructor($http, $httpParamSerializer, basePath) {
         this.$http = $http;
         this.$httpParamSerializer = $httpParamSerializer;
         this.basePath = 'http://otr-backend-service-us-devo.offtherecord.com';
@@ -31,11 +28,11 @@ var WatchlistsControllerApi = /** @class */ (function () {
      * @param includeDeleted includeDeleted
      * @param watchlistId watchlistId
      */
-    WatchlistsControllerApi.prototype.listUserWatchlistsUsingGET = function (userId, includeArchived, includeDeleted, watchlistId, extraHttpRequestParams) {
-        var localVarPath = this.basePath + '/api/v1/watchlists/{userId}/lists'
+    listUserWatchlistsUsingGET(userId, includeArchived, includeDeleted, watchlistId, extraHttpRequestParams) {
+        const localVarPath = this.basePath + '/api/v1/watchlists/{userId}/lists'
             .replace('{' + 'userId' + '}', encodeURIComponent(String(userId)));
-        var queryParameters = {};
-        var headerParams = Object.assign({}, this.defaultHeaders);
+        let queryParameters = {};
+        let headerParams = Object.assign({}, this.defaultHeaders);
         // verify required parameter 'userId' is not null or undefined
         if (userId === null || userId === undefined) {
             throw new Error('Required parameter userId was null or undefined when calling listUserWatchlistsUsingGET.');
@@ -49,7 +46,7 @@ var WatchlistsControllerApi = /** @class */ (function () {
         if (watchlistId !== undefined) {
             queryParameters['watchlistId'] = watchlistId;
         }
-        var httpRequestParams = {
+        let httpRequestParams = {
             method: 'GET',
             url: localVarPath,
             params: queryParameters,
@@ -59,19 +56,19 @@ var WatchlistsControllerApi = /** @class */ (function () {
             httpRequestParams = Object.assign(httpRequestParams, extraHttpRequestParams);
         }
         return this.$http(httpRequestParams);
-    };
+    }
     /**
      *
      * @summary removeItemFromWatchlist
      * @param itemId itemId
      * @param watchlistId watchlistId
      */
-    WatchlistsControllerApi.prototype.removeItemFromWatchlistUsingDELETE = function (itemId, watchlistId, extraHttpRequestParams) {
-        var localVarPath = this.basePath + '/api/v1/watchlists/{watchlistId}/items/{itemId}'
+    removeItemFromWatchlistUsingDELETE(itemId, watchlistId, extraHttpRequestParams) {
+        const localVarPath = this.basePath + '/api/v1/watchlists/{watchlistId}/items/{itemId}'
             .replace('{' + 'itemId' + '}', encodeURIComponent(String(itemId)))
             .replace('{' + 'watchlistId' + '}', encodeURIComponent(String(watchlistId)));
-        var queryParameters = {};
-        var headerParams = Object.assign({}, this.defaultHeaders);
+        let queryParameters = {};
+        let headerParams = Object.assign({}, this.defaultHeaders);
         // verify required parameter 'itemId' is not null or undefined
         if (itemId === null || itemId === undefined) {
             throw new Error('Required parameter itemId was null or undefined when calling removeItemFromWatchlistUsingDELETE.');
@@ -80,7 +77,7 @@ var WatchlistsControllerApi = /** @class */ (function () {
         if (watchlistId === null || watchlistId === undefined) {
             throw new Error('Required parameter watchlistId was null or undefined when calling removeItemFromWatchlistUsingDELETE.');
         }
-        var httpRequestParams = {
+        let httpRequestParams = {
             method: 'DELETE',
             url: localVarPath,
             params: queryParameters,
@@ -90,18 +87,18 @@ var WatchlistsControllerApi = /** @class */ (function () {
             httpRequestParams = Object.assign(httpRequestParams, extraHttpRequestParams);
         }
         return this.$http(httpRequestParams);
-    };
+    }
     /**
      *
      * @summary saveItemToWatchlist
      * @param watchlistId watchlistId
      * @param request request
      */
-    WatchlistsControllerApi.prototype.saveItemToWatchlistUsingPOST = function (watchlistId, request, extraHttpRequestParams) {
-        var localVarPath = this.basePath + '/api/v1/watchlists/{watchlistId}/items'
+    saveItemToWatchlistUsingPOST(watchlistId, request, extraHttpRequestParams) {
+        const localVarPath = this.basePath + '/api/v1/watchlists/{watchlistId}/items'
             .replace('{' + 'watchlistId' + '}', encodeURIComponent(String(watchlistId)));
-        var queryParameters = {};
-        var headerParams = Object.assign({}, this.defaultHeaders);
+        let queryParameters = {};
+        let headerParams = Object.assign({}, this.defaultHeaders);
         // verify required parameter 'watchlistId' is not null or undefined
         if (watchlistId === null || watchlistId === undefined) {
             throw new Error('Required parameter watchlistId was null or undefined when calling saveItemToWatchlistUsingPOST.');
@@ -110,7 +107,7 @@ var WatchlistsControllerApi = /** @class */ (function () {
         if (request === null || request === undefined) {
             throw new Error('Required parameter request was null or undefined when calling saveItemToWatchlistUsingPOST.');
         }
-        var httpRequestParams = {
+        let httpRequestParams = {
             method: 'POST',
             url: localVarPath,
             data: request,
@@ -121,18 +118,18 @@ var WatchlistsControllerApi = /** @class */ (function () {
             httpRequestParams = Object.assign(httpRequestParams, extraHttpRequestParams);
         }
         return this.$http(httpRequestParams);
-    };
+    }
     /**
      *
      * @summary saveUserWatchlists
      * @param userId userId
      * @param request request
      */
-    WatchlistsControllerApi.prototype.saveUserWatchlistsUsingPOST = function (userId, request, extraHttpRequestParams) {
-        var localVarPath = this.basePath + '/api/v1/watchlists/{userId}/lists'
+    saveUserWatchlistsUsingPOST(userId, request, extraHttpRequestParams) {
+        const localVarPath = this.basePath + '/api/v1/watchlists/{userId}/lists'
             .replace('{' + 'userId' + '}', encodeURIComponent(String(userId)));
-        var queryParameters = {};
-        var headerParams = Object.assign({}, this.defaultHeaders);
+        let queryParameters = {};
+        let headerParams = Object.assign({}, this.defaultHeaders);
         // verify required parameter 'userId' is not null or undefined
         if (userId === null || userId === undefined) {
             throw new Error('Required parameter userId was null or undefined when calling saveUserWatchlistsUsingPOST.');
@@ -141,7 +138,7 @@ var WatchlistsControllerApi = /** @class */ (function () {
         if (request === null || request === undefined) {
             throw new Error('Required parameter request was null or undefined when calling saveUserWatchlistsUsingPOST.');
         }
-        var httpRequestParams = {
+        let httpRequestParams = {
             method: 'POST',
             url: localVarPath,
             data: request,
@@ -152,8 +149,6 @@ var WatchlistsControllerApi = /** @class */ (function () {
             httpRequestParams = Object.assign(httpRequestParams, extraHttpRequestParams);
         }
         return this.$http(httpRequestParams);
-    };
-    WatchlistsControllerApi.$inject = ['$http', '$httpParamSerializer', 'basePath'];
-    return WatchlistsControllerApi;
-}());
-exports.WatchlistsControllerApi = WatchlistsControllerApi;
+    }
+}
+WatchlistsControllerApi.$inject = ['$http', '$httpParamSerializer', 'basePath'];

@@ -1,4 +1,3 @@
-"use strict";
 /**
  * OffTheRecord Rest Service API - Devo
  * A service to handle your traffic tickets
@@ -10,11 +9,9 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.StripeDisputeDomain = void 0;
-var StripeDisputeDomain;
+export var StripeDisputeDomain;
 (function (StripeDisputeDomain) {
-    var CaseStatusEnum;
+    let CaseStatusEnum;
     (function (CaseStatusEnum) {
         CaseStatusEnum[CaseStatusEnum["AMENDEDDOWNWITHINCLASS"] = 'AMENDED_DOWN_WITHIN_CLASS'] = "AMENDEDDOWNWITHINCLASS";
         CaseStatusEnum[CaseStatusEnum["AMENDEDFULLFINE"] = 'AMENDED_FULL_FINE'] = "AMENDEDFULLFINE";
@@ -54,10 +51,10 @@ var StripeDisputeDomain;
         CaseStatusEnum[CaseStatusEnum["TRAFFICSCHOOL"] = 'TRAFFIC_SCHOOL'] = "TRAFFICSCHOOL";
         CaseStatusEnum[CaseStatusEnum["UNCONFIRMED"] = 'UNCONFIRMED'] = "UNCONFIRMED";
     })(CaseStatusEnum = StripeDisputeDomain.CaseStatusEnum || (StripeDisputeDomain.CaseStatusEnum = {}));
-    var PaymentRecipientEnum;
+    let PaymentRecipientEnum;
     (function (PaymentRecipientEnum) {
         PaymentRecipientEnum[PaymentRecipientEnum["COURT"] = 'COURT'] = "COURT";
         PaymentRecipientEnum[PaymentRecipientEnum["LAWFIRM"] = 'LAWFIRM'] = "LAWFIRM";
         PaymentRecipientEnum[PaymentRecipientEnum["OTR"] = 'OTR'] = "OTR";
     })(PaymentRecipientEnum = StripeDisputeDomain.PaymentRecipientEnum || (StripeDisputeDomain.PaymentRecipientEnum = {}));
-})(StripeDisputeDomain = exports.StripeDisputeDomain || (exports.StripeDisputeDomain = {}));
+})(StripeDisputeDomain || (StripeDisputeDomain = {}));

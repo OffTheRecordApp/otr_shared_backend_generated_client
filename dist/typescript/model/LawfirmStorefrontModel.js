@@ -1,4 +1,3 @@
-"use strict";
 /**
  * OffTheRecord Rest Service API - Devo
  * A service to handle your traffic tickets
@@ -10,11 +9,9 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.LawfirmStorefrontModel = void 0;
-var LawfirmStorefrontModel;
+export var LawfirmStorefrontModel;
 (function (LawfirmStorefrontModel) {
-    var LawfirmStateEnum;
+    let LawfirmStateEnum;
     (function (LawfirmStateEnum) {
         LawfirmStateEnum[LawfirmStateEnum["ACCOUNTCLOSED"] = 'ACCOUNT_CLOSED'] = "ACCOUNTCLOSED";
         LawfirmStateEnum[LawfirmStateEnum["ACTIVE"] = 'ACTIVE'] = "ACTIVE";
@@ -37,4 +34,4 @@ var LawfirmStorefrontModel;
         LawfirmStateEnum[LawfirmStateEnum["TERMINATEDPOORSERVICE"] = 'TERMINATED_POOR_SERVICE'] = "TERMINATEDPOORSERVICE";
         LawfirmStateEnum[LawfirmStateEnum["TERMINATEDPOORSUCCESS"] = 'TERMINATED_POOR_SUCCESS'] = "TERMINATEDPOORSUCCESS";
     })(LawfirmStateEnum = LawfirmStorefrontModel.LawfirmStateEnum || (LawfirmStorefrontModel.LawfirmStateEnum = {}));
-})(LawfirmStorefrontModel = exports.LawfirmStorefrontModel || (exports.LawfirmStorefrontModel = {}));
+})(LawfirmStorefrontModel || (LawfirmStorefrontModel = {}));

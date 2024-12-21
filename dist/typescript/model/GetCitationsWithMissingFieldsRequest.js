@@ -1,4 +1,3 @@
-"use strict";
 /**
  * OffTheRecord Rest Service API - Devo
  * A service to handle your traffic tickets
@@ -10,11 +9,9 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.GetCitationsWithMissingFieldsRequest = void 0;
-var GetCitationsWithMissingFieldsRequest;
+export var GetCitationsWithMissingFieldsRequest;
 (function (GetCitationsWithMissingFieldsRequest) {
-    var CaseStatusesEnum;
+    let CaseStatusesEnum;
     (function (CaseStatusesEnum) {
         CaseStatusesEnum[CaseStatusesEnum["AMENDEDDOWNWITHINCLASS"] = 'AMENDED_DOWN_WITHIN_CLASS'] = "AMENDEDDOWNWITHINCLASS";
         CaseStatusesEnum[CaseStatusesEnum["AMENDEDFULLFINE"] = 'AMENDED_FULL_FINE'] = "AMENDEDFULLFINE";
@@ -54,7 +51,7 @@ var GetCitationsWithMissingFieldsRequest;
         CaseStatusesEnum[CaseStatusesEnum["TRAFFICSCHOOL"] = 'TRAFFIC_SCHOOL'] = "TRAFFICSCHOOL";
         CaseStatusesEnum[CaseStatusesEnum["UNCONFIRMED"] = 'UNCONFIRMED'] = "UNCONFIRMED";
     })(CaseStatusesEnum = GetCitationsWithMissingFieldsRequest.CaseStatusesEnum || (GetCitationsWithMissingFieldsRequest.CaseStatusesEnum = {}));
-    var SelectedStatesEnum;
+    let SelectedStatesEnum;
     (function (SelectedStatesEnum) {
         SelectedStatesEnum[SelectedStatesEnum["AK"] = 'AK'] = "AK";
         SelectedStatesEnum[SelectedStatesEnum["AL"] = 'AL'] = "AL";
@@ -108,11 +105,11 @@ var GetCitationsWithMissingFieldsRequest;
         SelectedStatesEnum[SelectedStatesEnum["WV"] = 'WV'] = "WV";
         SelectedStatesEnum[SelectedStatesEnum["WY"] = 'WY'] = "WY";
     })(SelectedStatesEnum = GetCitationsWithMissingFieldsRequest.SelectedStatesEnum || (GetCitationsWithMissingFieldsRequest.SelectedStatesEnum = {}));
-    var StatusCategoriesEnum;
+    let StatusCategoriesEnum;
     (function (StatusCategoriesEnum) {
         StatusCategoriesEnum[StatusCategoriesEnum["ACTIVE"] = 'ACTIVE'] = "ACTIVE";
         StatusCategoriesEnum[StatusCategoriesEnum["CANCELLED"] = 'CANCELLED'] = "CANCELLED";
         StatusCategoriesEnum[StatusCategoriesEnum["RESOLVED"] = 'RESOLVED'] = "RESOLVED";
         StatusCategoriesEnum[StatusCategoriesEnum["UNCONFIRMED"] = 'UNCONFIRMED'] = "UNCONFIRMED";
     })(StatusCategoriesEnum = GetCitationsWithMissingFieldsRequest.StatusCategoriesEnum || (GetCitationsWithMissingFieldsRequest.StatusCategoriesEnum = {}));
-})(GetCitationsWithMissingFieldsRequest = exports.GetCitationsWithMissingFieldsRequest || (exports.GetCitationsWithMissingFieldsRequest = {}));
+})(GetCitationsWithMissingFieldsRequest || (GetCitationsWithMissingFieldsRequest = {}));

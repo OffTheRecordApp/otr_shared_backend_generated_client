@@ -1,4 +1,3 @@
-"use strict";
 /**
  * OffTheRecord Rest Service API - Devo
  * A service to handle your traffic tickets
@@ -10,11 +9,9 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.GetPenaltyType = void 0;
-var GetPenaltyType;
+export var GetPenaltyType;
 (function (GetPenaltyType) {
-    var TypeEnum;
+    let TypeEnum;
     (function (TypeEnum) {
         TypeEnum[TypeEnum["DEMERITPOINTS"] = 'DEMERIT_POINTS'] = "DEMERITPOINTS";
         TypeEnum[TypeEnum["INCARCERATIONMAXDAYS"] = 'INCARCERATION_MAX_DAYS'] = "INCARCERATIONMAXDAYS";
@@ -32,4 +29,4 @@ var GetPenaltyType;
         TypeEnum[TypeEnum["PROBATIONINDAYS"] = 'PROBATION_IN_DAYS'] = "PROBATIONINDAYS";
         TypeEnum[TypeEnum["TOTALBAILAMOUNT"] = 'TOTAL_BAIL_AMOUNT'] = "TOTALBAILAMOUNT";
     })(TypeEnum = GetPenaltyType.TypeEnum || (GetPenaltyType.TypeEnum = {}));
-})(GetPenaltyType = exports.GetPenaltyType || (exports.GetPenaltyType = {}));
+})(GetPenaltyType || (GetPenaltyType = {}));

@@ -1,4 +1,3 @@
-"use strict";
 /**
  * OffTheRecord Rest Service API - Devo
  * A service to handle your traffic tickets
@@ -10,11 +9,9 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.StripeControllerApi = void 0;
 /* tslint:disable:no-unused-variable member-ordering */
-var StripeControllerApi = /** @class */ (function () {
-    function StripeControllerApi($http, $httpParamSerializer, basePath) {
+export class StripeControllerApi {
+    constructor($http, $httpParamSerializer, basePath) {
         this.$http = $http;
         this.$httpParamSerializer = $httpParamSerializer;
         this.basePath = 'http://otr-backend-service-us-devo.offtherecord.com';
@@ -28,10 +25,10 @@ var StripeControllerApi = /** @class */ (function () {
      * @summary connectStripeAccount
      * @param code code
      */
-    StripeControllerApi.prototype.connectStripeAccountUsingPOST = function (code, extraHttpRequestParams) {
-        var localVarPath = this.basePath + '/api/v1/stripe/connect';
-        var queryParameters = {};
-        var headerParams = Object.assign({}, this.defaultHeaders);
+    connectStripeAccountUsingPOST(code, extraHttpRequestParams) {
+        const localVarPath = this.basePath + '/api/v1/stripe/connect';
+        let queryParameters = {};
+        let headerParams = Object.assign({}, this.defaultHeaders);
         // verify required parameter 'code' is not null or undefined
         if (code === null || code === undefined) {
             throw new Error('Required parameter code was null or undefined when calling connectStripeAccountUsingPOST.');
@@ -39,7 +36,7 @@ var StripeControllerApi = /** @class */ (function () {
         if (code !== undefined) {
             queryParameters['code'] = code;
         }
-        var httpRequestParams = {
+        let httpRequestParams = {
             method: 'POST',
             url: localVarPath,
             params: queryParameters,
@@ -49,21 +46,21 @@ var StripeControllerApi = /** @class */ (function () {
             httpRequestParams = Object.assign(httpRequestParams, extraHttpRequestParams);
         }
         return this.$http(httpRequestParams);
-    };
+    }
     /**
      *
      * @summary createConnectAccountLink
      * @param request request
      */
-    StripeControllerApi.prototype.createConnectAccountLinkUsingPOST = function (request, extraHttpRequestParams) {
-        var localVarPath = this.basePath + '/api/v1/stripe/account/link';
-        var queryParameters = {};
-        var headerParams = Object.assign({}, this.defaultHeaders);
+    createConnectAccountLinkUsingPOST(request, extraHttpRequestParams) {
+        const localVarPath = this.basePath + '/api/v1/stripe/account/link';
+        let queryParameters = {};
+        let headerParams = Object.assign({}, this.defaultHeaders);
         // verify required parameter 'request' is not null or undefined
         if (request === null || request === undefined) {
             throw new Error('Required parameter request was null or undefined when calling createConnectAccountLinkUsingPOST.');
         }
-        var httpRequestParams = {
+        let httpRequestParams = {
             method: 'POST',
             url: localVarPath,
             data: request,
@@ -74,21 +71,21 @@ var StripeControllerApi = /** @class */ (function () {
             httpRequestParams = Object.assign(httpRequestParams, extraHttpRequestParams);
         }
         return this.$http(httpRequestParams);
-    };
+    }
     /**
      *
      * @summary createStripeConnectAccount
      * @param request request
      */
-    StripeControllerApi.prototype.createStripeConnectAccountUsingPOST = function (request, extraHttpRequestParams) {
-        var localVarPath = this.basePath + '/api/v1/stripe/account';
-        var queryParameters = {};
-        var headerParams = Object.assign({}, this.defaultHeaders);
+    createStripeConnectAccountUsingPOST(request, extraHttpRequestParams) {
+        const localVarPath = this.basePath + '/api/v1/stripe/account';
+        let queryParameters = {};
+        let headerParams = Object.assign({}, this.defaultHeaders);
         // verify required parameter 'request' is not null or undefined
         if (request === null || request === undefined) {
             throw new Error('Required parameter request was null or undefined when calling createStripeConnectAccountUsingPOST.');
         }
-        var httpRequestParams = {
+        let httpRequestParams = {
             method: 'POST',
             url: localVarPath,
             data: request,
@@ -99,21 +96,21 @@ var StripeControllerApi = /** @class */ (function () {
             httpRequestParams = Object.assign(httpRequestParams, extraHttpRequestParams);
         }
         return this.$http(httpRequestParams);
-    };
+    }
     /**
      *
      * @summary handleOrphanedStripeCharges
      * @param request request
      */
-    StripeControllerApi.prototype.handleOrphanedStripeChargesUsingPOST = function (request, extraHttpRequestParams) {
-        var localVarPath = this.basePath + '/api/v1/stripe/handle-orphaned-stripe-charges';
-        var queryParameters = {};
-        var headerParams = Object.assign({}, this.defaultHeaders);
+    handleOrphanedStripeChargesUsingPOST(request, extraHttpRequestParams) {
+        const localVarPath = this.basePath + '/api/v1/stripe/handle-orphaned-stripe-charges';
+        let queryParameters = {};
+        let headerParams = Object.assign({}, this.defaultHeaders);
         // verify required parameter 'request' is not null or undefined
         if (request === null || request === undefined) {
             throw new Error('Required parameter request was null or undefined when calling handleOrphanedStripeChargesUsingPOST.');
         }
-        var httpRequestParams = {
+        let httpRequestParams = {
             method: 'POST',
             url: localVarPath,
             data: request,
@@ -124,18 +121,18 @@ var StripeControllerApi = /** @class */ (function () {
             httpRequestParams = Object.assign(httpRequestParams, extraHttpRequestParams);
         }
         return this.$http(httpRequestParams);
-    };
+    }
     /**
      *
      * @summary updateDispute
      * @param disputeId disputeId
      * @param request request
      */
-    StripeControllerApi.prototype.updateDisputeUsingPUT = function (disputeId, request, extraHttpRequestParams) {
-        var localVarPath = this.basePath + '/api/v1/stripe/disputes/{disputeId}'
+    updateDisputeUsingPUT(disputeId, request, extraHttpRequestParams) {
+        const localVarPath = this.basePath + '/api/v1/stripe/disputes/{disputeId}'
             .replace('{' + 'disputeId' + '}', encodeURIComponent(String(disputeId)));
-        var queryParameters = {};
-        var headerParams = Object.assign({}, this.defaultHeaders);
+        let queryParameters = {};
+        let headerParams = Object.assign({}, this.defaultHeaders);
         // verify required parameter 'disputeId' is not null or undefined
         if (disputeId === null || disputeId === undefined) {
             throw new Error('Required parameter disputeId was null or undefined when calling updateDisputeUsingPUT.');
@@ -144,7 +141,7 @@ var StripeControllerApi = /** @class */ (function () {
         if (request === null || request === undefined) {
             throw new Error('Required parameter request was null or undefined when calling updateDisputeUsingPUT.');
         }
-        var httpRequestParams = {
+        let httpRequestParams = {
             method: 'PUT',
             url: localVarPath,
             data: request,
@@ -155,8 +152,6 @@ var StripeControllerApi = /** @class */ (function () {
             httpRequestParams = Object.assign(httpRequestParams, extraHttpRequestParams);
         }
         return this.$http(httpRequestParams);
-    };
-    StripeControllerApi.$inject = ['$http', '$httpParamSerializer', 'basePath'];
-    return StripeControllerApi;
-}());
-exports.StripeControllerApi = StripeControllerApi;
+    }
+}
+StripeControllerApi.$inject = ['$http', '$httpParamSerializer', 'basePath'];

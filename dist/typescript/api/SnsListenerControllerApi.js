@@ -1,4 +1,3 @@
-"use strict";
 /**
  * OffTheRecord Rest Service API - Devo
  * A service to handle your traffic tickets
@@ -10,11 +9,9 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.SnsListenerControllerApi = void 0;
 /* tslint:disable:no-unused-variable member-ordering */
-var SnsListenerControllerApi = /** @class */ (function () {
-    function SnsListenerControllerApi($http, $httpParamSerializer, basePath) {
+export class SnsListenerControllerApi {
+    constructor($http, $httpParamSerializer, basePath) {
         this.$http = $http;
         this.$httpParamSerializer = $httpParamSerializer;
         this.basePath = 'http://otr-backend-service-us-devo.offtherecord.com';
@@ -28,15 +25,15 @@ var SnsListenerControllerApi = /** @class */ (function () {
      * @summary handleBounceComplaintEmails
      * @param request request
      */
-    SnsListenerControllerApi.prototype.handleBounceComplaintEmailsUsingPOST = function (request, extraHttpRequestParams) {
-        var localVarPath = this.basePath + '/api/v1/blacklists/ses/emails/';
-        var queryParameters = {};
-        var headerParams = Object.assign({}, this.defaultHeaders);
+    handleBounceComplaintEmailsUsingPOST(request, extraHttpRequestParams) {
+        const localVarPath = this.basePath + '/api/v1/blacklists/ses/emails/';
+        let queryParameters = {};
+        let headerParams = Object.assign({}, this.defaultHeaders);
         // verify required parameter 'request' is not null or undefined
         if (request === null || request === undefined) {
             throw new Error('Required parameter request was null or undefined when calling handleBounceComplaintEmailsUsingPOST.');
         }
-        var httpRequestParams = {
+        let httpRequestParams = {
             method: 'POST',
             url: localVarPath,
             data: request,
@@ -47,21 +44,21 @@ var SnsListenerControllerApi = /** @class */ (function () {
             httpRequestParams = Object.assign(httpRequestParams, extraHttpRequestParams);
         }
         return this.$http(httpRequestParams);
-    };
+    }
     /**
      *
      * @summary handleIncomingEmails
      * @param request request
      */
-    SnsListenerControllerApi.prototype.handleIncomingEmailsUsingPOST = function (request, extraHttpRequestParams) {
-        var localVarPath = this.basePath + '/api/v1/ses/inbound-emails';
-        var queryParameters = {};
-        var headerParams = Object.assign({}, this.defaultHeaders);
+    handleIncomingEmailsUsingPOST(request, extraHttpRequestParams) {
+        const localVarPath = this.basePath + '/api/v1/ses/inbound-emails';
+        let queryParameters = {};
+        let headerParams = Object.assign({}, this.defaultHeaders);
         // verify required parameter 'request' is not null or undefined
         if (request === null || request === undefined) {
             throw new Error('Required parameter request was null or undefined when calling handleIncomingEmailsUsingPOST.');
         }
-        var httpRequestParams = {
+        let httpRequestParams = {
             method: 'POST',
             url: localVarPath,
             data: request,
@@ -72,21 +69,21 @@ var SnsListenerControllerApi = /** @class */ (function () {
             httpRequestParams = Object.assign(httpRequestParams, extraHttpRequestParams);
         }
         return this.$http(httpRequestParams);
-    };
+    }
     /**
      *
      * @summary handleIncomingHelloEmails
      * @param request request
      */
-    SnsListenerControllerApi.prototype.handleIncomingHelloEmailsUsingPOST = function (request, extraHttpRequestParams) {
-        var localVarPath = this.basePath + '/api/v1/ses/inbound-hello-emails';
-        var queryParameters = {};
-        var headerParams = Object.assign({}, this.defaultHeaders);
+    handleIncomingHelloEmailsUsingPOST(request, extraHttpRequestParams) {
+        const localVarPath = this.basePath + '/api/v1/ses/inbound-hello-emails';
+        let queryParameters = {};
+        let headerParams = Object.assign({}, this.defaultHeaders);
         // verify required parameter 'request' is not null or undefined
         if (request === null || request === undefined) {
             throw new Error('Required parameter request was null or undefined when calling handleIncomingHelloEmailsUsingPOST.');
         }
-        var httpRequestParams = {
+        let httpRequestParams = {
             method: 'POST',
             url: localVarPath,
             data: request,
@@ -97,8 +94,6 @@ var SnsListenerControllerApi = /** @class */ (function () {
             httpRequestParams = Object.assign(httpRequestParams, extraHttpRequestParams);
         }
         return this.$http(httpRequestParams);
-    };
-    SnsListenerControllerApi.$inject = ['$http', '$httpParamSerializer', 'basePath'];
-    return SnsListenerControllerApi;
-}());
-exports.SnsListenerControllerApi = SnsListenerControllerApi;
+    }
+}
+SnsListenerControllerApi.$inject = ['$http', '$httpParamSerializer', 'basePath'];

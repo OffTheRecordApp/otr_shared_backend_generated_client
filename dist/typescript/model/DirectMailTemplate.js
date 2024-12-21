@@ -1,4 +1,3 @@
-"use strict";
 /**
  * OffTheRecord Rest Service API - Devo
  * A service to handle your traffic tickets
@@ -10,14 +9,12 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.DirectMailTemplate = void 0;
-var DirectMailTemplate;
+export var DirectMailTemplate;
 (function (DirectMailTemplate) {
-    var MailTypeEnum;
+    let MailTypeEnum;
     (function (MailTypeEnum) {
         MailTypeEnum[MailTypeEnum["CHECK"] = 'CHECK'] = "CHECK";
         MailTypeEnum[MailTypeEnum["LETTER"] = 'LETTER'] = "LETTER";
         MailTypeEnum[MailTypeEnum["POSTCARD"] = 'POST_CARD'] = "POSTCARD";
     })(MailTypeEnum = DirectMailTemplate.MailTypeEnum || (DirectMailTemplate.MailTypeEnum = {}));
-})(DirectMailTemplate = exports.DirectMailTemplate || (exports.DirectMailTemplate = {}));
+})(DirectMailTemplate || (DirectMailTemplate = {}));

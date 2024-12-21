@@ -1,4 +1,3 @@
-"use strict";
 /**
  * OffTheRecord Rest Service API - Devo
  * A service to handle your traffic tickets
@@ -10,15 +9,13 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.EditCustomerReviewRequest = void 0;
-var EditCustomerReviewRequest;
+export var EditCustomerReviewRequest;
 (function (EditCustomerReviewRequest) {
-    var PrivacyModeEnum;
+    let PrivacyModeEnum;
     (function (PrivacyModeEnum) {
         PrivacyModeEnum[PrivacyModeEnum["FRIENDS"] = 'FRIENDS'] = "FRIENDS";
         PrivacyModeEnum[PrivacyModeEnum["PRIVATE"] = 'PRIVATE'] = "PRIVATE";
         PrivacyModeEnum[PrivacyModeEnum["PUBLIC"] = 'PUBLIC'] = "PUBLIC";
         PrivacyModeEnum[PrivacyModeEnum["SEMIPUBLIC"] = 'SEMI_PUBLIC'] = "SEMIPUBLIC";
     })(PrivacyModeEnum = EditCustomerReviewRequest.PrivacyModeEnum || (EditCustomerReviewRequest.PrivacyModeEnum = {}));
-})(EditCustomerReviewRequest = exports.EditCustomerReviewRequest || (exports.EditCustomerReviewRequest = {}));
+})(EditCustomerReviewRequest || (EditCustomerReviewRequest = {}));

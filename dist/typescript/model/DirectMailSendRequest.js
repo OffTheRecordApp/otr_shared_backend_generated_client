@@ -1,4 +1,3 @@
-"use strict";
 /**
  * OffTheRecord Rest Service API - Devo
  * A service to handle your traffic tickets
@@ -10,14 +9,12 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.DirectMailSendRequest = void 0;
-var DirectMailSendRequest;
+export var DirectMailSendRequest;
 (function (DirectMailSendRequest) {
-    var ReconcileTypeEnum;
+    let ReconcileTypeEnum;
     (function (ReconcileTypeEnum) {
         ReconcileTypeEnum[ReconcileTypeEnum["OTRCITATIONID"] = 'OTR_CITATION_ID'] = "OTRCITATIONID";
         ReconcileTypeEnum[ReconcileTypeEnum["OTRLAWFIRMID"] = 'OTR_LAWFIRM_ID'] = "OTRLAWFIRMID";
         ReconcileTypeEnum[ReconcileTypeEnum["TICKETREFERENCEID"] = 'TICKET_REFERENCE_ID'] = "TICKETREFERENCEID";
     })(ReconcileTypeEnum = DirectMailSendRequest.ReconcileTypeEnum || (DirectMailSendRequest.ReconcileTypeEnum = {}));
-})(DirectMailSendRequest = exports.DirectMailSendRequest || (exports.DirectMailSendRequest = {}));
+})(DirectMailSendRequest || (DirectMailSendRequest = {}));

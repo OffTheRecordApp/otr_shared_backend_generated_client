@@ -1,4 +1,3 @@
-"use strict";
 /**
  * OffTheRecord Rest Service API - Devo
  * A service to handle your traffic tickets
@@ -10,18 +9,16 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.CaseStatusDetailsResponse = void 0;
-var CaseStatusDetailsResponse;
+export var CaseStatusDetailsResponse;
 (function (CaseStatusDetailsResponse) {
-    var CategoryEnum;
+    let CategoryEnum;
     (function (CategoryEnum) {
         CategoryEnum[CategoryEnum["ACTIVE"] = 'ACTIVE'] = "ACTIVE";
         CategoryEnum[CategoryEnum["CANCELLED"] = 'CANCELLED'] = "CANCELLED";
         CategoryEnum[CategoryEnum["RESOLVED"] = 'RESOLVED'] = "RESOLVED";
         CategoryEnum[CategoryEnum["UNCONFIRMED"] = 'UNCONFIRMED'] = "UNCONFIRMED";
     })(CategoryEnum = CaseStatusDetailsResponse.CategoryEnum || (CaseStatusDetailsResponse.CategoryEnum = {}));
-    var StatusEnum;
+    let StatusEnum;
     (function (StatusEnum) {
         StatusEnum[StatusEnum["AMENDEDDOWNWITHINCLASS"] = 'AMENDED_DOWN_WITHIN_CLASS'] = "AMENDEDDOWNWITHINCLASS";
         StatusEnum[StatusEnum["AMENDEDFULLFINE"] = 'AMENDED_FULL_FINE'] = "AMENDEDFULLFINE";
@@ -61,4 +58,4 @@ var CaseStatusDetailsResponse;
         StatusEnum[StatusEnum["TRAFFICSCHOOL"] = 'TRAFFIC_SCHOOL'] = "TRAFFICSCHOOL";
         StatusEnum[StatusEnum["UNCONFIRMED"] = 'UNCONFIRMED'] = "UNCONFIRMED";
     })(StatusEnum = CaseStatusDetailsResponse.StatusEnum || (CaseStatusDetailsResponse.StatusEnum = {}));
-})(CaseStatusDetailsResponse = exports.CaseStatusDetailsResponse || (exports.CaseStatusDetailsResponse = {}));
+})(CaseStatusDetailsResponse || (CaseStatusDetailsResponse = {}));

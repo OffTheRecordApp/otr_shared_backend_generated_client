@@ -1,4 +1,3 @@
-"use strict";
 /**
  * OffTheRecord Rest Service API - Devo
  * A service to handle your traffic tickets
@@ -10,21 +9,19 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.LawfirmDocument = void 0;
-var LawfirmDocument;
+export var LawfirmDocument;
 (function (LawfirmDocument) {
-    var ClientDocRequirementEnum;
+    let ClientDocRequirementEnum;
     (function (ClientDocRequirementEnum) {
         ClientDocRequirementEnum[ClientDocRequirementEnum["ACK"] = 'ACK'] = "ACK";
         ClientDocRequirementEnum[ClientDocRequirementEnum["NONE"] = 'NONE'] = "NONE";
         ClientDocRequirementEnum[ClientDocRequirementEnum["NOTARY"] = 'NOTARY'] = "NOTARY";
         ClientDocRequirementEnum[ClientDocRequirementEnum["SIGNATURE"] = 'SIGNATURE'] = "SIGNATURE";
     })(ClientDocRequirementEnum = LawfirmDocument.ClientDocRequirementEnum || (LawfirmDocument.ClientDocRequirementEnum = {}));
-    var DocTypeEnum;
+    let DocTypeEnum;
     (function (DocTypeEnum) {
         DocTypeEnum[DocTypeEnum["ENGAGEMENTLETTER"] = 'ENGAGEMENT_LETTER'] = "ENGAGEMENTLETTER";
         DocTypeEnum[DocTypeEnum["OTHERDOCUMENT"] = 'OTHER_DOCUMENT'] = "OTHERDOCUMENT";
         DocTypeEnum[DocTypeEnum["OTHERIMAGE"] = 'OTHER_IMAGE'] = "OTHERIMAGE";
     })(DocTypeEnum = LawfirmDocument.DocTypeEnum || (LawfirmDocument.DocTypeEnum = {}));
-})(LawfirmDocument = exports.LawfirmDocument || (exports.LawfirmDocument = {}));
+})(LawfirmDocument || (LawfirmDocument = {}));

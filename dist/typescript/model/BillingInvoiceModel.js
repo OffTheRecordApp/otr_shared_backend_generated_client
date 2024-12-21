@@ -1,4 +1,3 @@
-"use strict";
 /**
  * OffTheRecord Rest Service API - Devo
  * A service to handle your traffic tickets
@@ -10,11 +9,9 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.BillingInvoiceModel = void 0;
-var BillingInvoiceModel;
+export var BillingInvoiceModel;
 (function (BillingInvoiceModel) {
-    var StatusEnum;
+    let StatusEnum;
     (function (StatusEnum) {
         StatusEnum[StatusEnum["DRAFT"] = 'DRAFT'] = "DRAFT";
         StatusEnum[StatusEnum["OPEN"] = 'OPEN'] = "OPEN";
@@ -22,4 +19,4 @@ var BillingInvoiceModel;
         StatusEnum[StatusEnum["UNCOLLECTIBLE"] = 'UNCOLLECTIBLE'] = "UNCOLLECTIBLE";
         StatusEnum[StatusEnum["VOID"] = 'VOID'] = "VOID";
     })(StatusEnum = BillingInvoiceModel.StatusEnum || (BillingInvoiceModel.StatusEnum = {}));
-})(BillingInvoiceModel = exports.BillingInvoiceModel || (exports.BillingInvoiceModel = {}));
+})(BillingInvoiceModel || (BillingInvoiceModel = {}));

@@ -1,4 +1,3 @@
-"use strict";
 /**
  * OffTheRecord Rest Service API - Devo
  * A service to handle your traffic tickets
@@ -10,11 +9,9 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.DriverLicenseControllerApi = void 0;
 /* tslint:disable:no-unused-variable member-ordering */
-var DriverLicenseControllerApi = /** @class */ (function () {
-    function DriverLicenseControllerApi($http, $httpParamSerializer, basePath) {
+export class DriverLicenseControllerApi {
+    constructor($http, $httpParamSerializer, basePath) {
         this.$http = $http;
         this.$httpParamSerializer = $httpParamSerializer;
         this.basePath = 'http://otr-backend-service-us-devo.offtherecord.com';
@@ -29,11 +26,11 @@ var DriverLicenseControllerApi = /** @class */ (function () {
      * @param userId userId
      * @param includeDeleted includeDeleted
      */
-    DriverLicenseControllerApi.prototype.getDriverLicensesUsingGET = function (userId, includeDeleted, extraHttpRequestParams) {
-        var localVarPath = this.basePath + '/api/v1/users/{userId}/driver-license'
+    getDriverLicensesUsingGET(userId, includeDeleted, extraHttpRequestParams) {
+        const localVarPath = this.basePath + '/api/v1/users/{userId}/driver-license'
             .replace('{' + 'userId' + '}', encodeURIComponent(String(userId)));
-        var queryParameters = {};
-        var headerParams = Object.assign({}, this.defaultHeaders);
+        let queryParameters = {};
+        let headerParams = Object.assign({}, this.defaultHeaders);
         // verify required parameter 'userId' is not null or undefined
         if (userId === null || userId === undefined) {
             throw new Error('Required parameter userId was null or undefined when calling getDriverLicensesUsingGET.');
@@ -41,7 +38,7 @@ var DriverLicenseControllerApi = /** @class */ (function () {
         if (includeDeleted !== undefined) {
             queryParameters['includeDeleted'] = includeDeleted;
         }
-        var httpRequestParams = {
+        let httpRequestParams = {
             method: 'GET',
             url: localVarPath,
             params: queryParameters,
@@ -51,18 +48,18 @@ var DriverLicenseControllerApi = /** @class */ (function () {
             httpRequestParams = Object.assign(httpRequestParams, extraHttpRequestParams);
         }
         return this.$http(httpRequestParams);
-    };
+    }
     /**
      *
      * @summary saveDriverLicensePicture
      * @param userId userId
      * @param request request
      */
-    DriverLicenseControllerApi.prototype.saveDriverLicensePictureUsingPOST = function (userId, request, extraHttpRequestParams) {
-        var localVarPath = this.basePath + '/api/v1/users/{userId}/driver-license/picture'
+    saveDriverLicensePictureUsingPOST(userId, request, extraHttpRequestParams) {
+        const localVarPath = this.basePath + '/api/v1/users/{userId}/driver-license/picture'
             .replace('{' + 'userId' + '}', encodeURIComponent(String(userId)));
-        var queryParameters = {};
-        var headerParams = Object.assign({}, this.defaultHeaders);
+        let queryParameters = {};
+        let headerParams = Object.assign({}, this.defaultHeaders);
         // verify required parameter 'userId' is not null or undefined
         if (userId === null || userId === undefined) {
             throw new Error('Required parameter userId was null or undefined when calling saveDriverLicensePictureUsingPOST.');
@@ -71,7 +68,7 @@ var DriverLicenseControllerApi = /** @class */ (function () {
         if (request === null || request === undefined) {
             throw new Error('Required parameter request was null or undefined when calling saveDriverLicensePictureUsingPOST.');
         }
-        var httpRequestParams = {
+        let httpRequestParams = {
             method: 'POST',
             url: localVarPath,
             data: request,
@@ -82,18 +79,18 @@ var DriverLicenseControllerApi = /** @class */ (function () {
             httpRequestParams = Object.assign(httpRequestParams, extraHttpRequestParams);
         }
         return this.$http(httpRequestParams);
-    };
+    }
     /**
      *
      * @summary saveDriverLicense
      * @param userId userId
      * @param request request
      */
-    DriverLicenseControllerApi.prototype.saveDriverLicenseUsingPOST = function (userId, request, extraHttpRequestParams) {
-        var localVarPath = this.basePath + '/api/v1/users/{userId}/driver-license'
+    saveDriverLicenseUsingPOST(userId, request, extraHttpRequestParams) {
+        const localVarPath = this.basePath + '/api/v1/users/{userId}/driver-license'
             .replace('{' + 'userId' + '}', encodeURIComponent(String(userId)));
-        var queryParameters = {};
-        var headerParams = Object.assign({}, this.defaultHeaders);
+        let queryParameters = {};
+        let headerParams = Object.assign({}, this.defaultHeaders);
         // verify required parameter 'userId' is not null or undefined
         if (userId === null || userId === undefined) {
             throw new Error('Required parameter userId was null or undefined when calling saveDriverLicenseUsingPOST.');
@@ -102,7 +99,7 @@ var DriverLicenseControllerApi = /** @class */ (function () {
         if (request === null || request === undefined) {
             throw new Error('Required parameter request was null or undefined when calling saveDriverLicenseUsingPOST.');
         }
-        var httpRequestParams = {
+        let httpRequestParams = {
             method: 'POST',
             url: localVarPath,
             data: request,
@@ -113,8 +110,6 @@ var DriverLicenseControllerApi = /** @class */ (function () {
             httpRequestParams = Object.assign(httpRequestParams, extraHttpRequestParams);
         }
         return this.$http(httpRequestParams);
-    };
-    DriverLicenseControllerApi.$inject = ['$http', '$httpParamSerializer', 'basePath'];
-    return DriverLicenseControllerApi;
-}());
-exports.DriverLicenseControllerApi = DriverLicenseControllerApi;
+    }
+}
+DriverLicenseControllerApi.$inject = ['$http', '$httpParamSerializer', 'basePath'];

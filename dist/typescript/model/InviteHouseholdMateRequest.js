@@ -1,4 +1,3 @@
-"use strict";
 /**
  * OffTheRecord Rest Service API - Devo
  * A service to handle your traffic tickets
@@ -10,11 +9,9 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.InviteHouseholdMateRequest = void 0;
-var InviteHouseholdMateRequest;
+export var InviteHouseholdMateRequest;
 (function (InviteHouseholdMateRequest) {
-    var RelationshipTypeEnum;
+    let RelationshipTypeEnum;
     (function (RelationshipTypeEnum) {
         RelationshipTypeEnum[RelationshipTypeEnum["OWNER"] = 'OWNER'] = "OWNER";
         RelationshipTypeEnum[RelationshipTypeEnum["SIBLING"] = 'SIBLING'] = "SIBLING";
@@ -22,4 +19,4 @@ var InviteHouseholdMateRequest;
         RelationshipTypeEnum[RelationshipTypeEnum["TEENAGER"] = 'TEENAGER'] = "TEENAGER";
         RelationshipTypeEnum[RelationshipTypeEnum["UNKNOWN"] = 'UNKNOWN'] = "UNKNOWN";
     })(RelationshipTypeEnum = InviteHouseholdMateRequest.RelationshipTypeEnum || (InviteHouseholdMateRequest.RelationshipTypeEnum = {}));
-})(InviteHouseholdMateRequest = exports.InviteHouseholdMateRequest || (exports.InviteHouseholdMateRequest = {}));
+})(InviteHouseholdMateRequest || (InviteHouseholdMateRequest = {}));

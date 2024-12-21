@@ -1,4 +1,3 @@
-"use strict";
 /**
  * OffTheRecord Rest Service API - Devo
  * A service to handle your traffic tickets
@@ -10,11 +9,9 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.UserAccountControllerApi = void 0;
 /* tslint:disable:no-unused-variable member-ordering */
-var UserAccountControllerApi = /** @class */ (function () {
-    function UserAccountControllerApi($http, $httpParamSerializer, basePath) {
+export class UserAccountControllerApi {
+    constructor($http, $httpParamSerializer, basePath) {
         this.$http = $http;
         this.$httpParamSerializer = $httpParamSerializer;
         this.basePath = 'http://otr-backend-service-us-devo.offtherecord.com';
@@ -29,11 +26,11 @@ var UserAccountControllerApi = /** @class */ (function () {
      * @param userId userId
      * @param request request
      */
-    UserAccountControllerApi.prototype.addExtraAccountUsingPOST = function (userId, request, extraHttpRequestParams) {
-        var localVarPath = this.basePath + '/api/v1/users/{userId}/account'
+    addExtraAccountUsingPOST(userId, request, extraHttpRequestParams) {
+        const localVarPath = this.basePath + '/api/v1/users/{userId}/account'
             .replace('{' + 'userId' + '}', encodeURIComponent(String(userId)));
-        var queryParameters = {};
-        var headerParams = Object.assign({}, this.defaultHeaders);
+        let queryParameters = {};
+        let headerParams = Object.assign({}, this.defaultHeaders);
         // verify required parameter 'userId' is not null or undefined
         if (userId === null || userId === undefined) {
             throw new Error('Required parameter userId was null or undefined when calling addExtraAccountUsingPOST.');
@@ -42,7 +39,7 @@ var UserAccountControllerApi = /** @class */ (function () {
         if (request === null || request === undefined) {
             throw new Error('Required parameter request was null or undefined when calling addExtraAccountUsingPOST.');
         }
-        var httpRequestParams = {
+        let httpRequestParams = {
             method: 'POST',
             url: localVarPath,
             data: request,
@@ -53,19 +50,19 @@ var UserAccountControllerApi = /** @class */ (function () {
             httpRequestParams = Object.assign(httpRequestParams, extraHttpRequestParams);
         }
         return this.$http(httpRequestParams);
-    };
+    }
     /**
      *
      * @summary removeAdditionalUserHandle
      * @param userHandle userHandle
      * @param userId userId
      */
-    UserAccountControllerApi.prototype.removeAdditionalUserHandleUsingDELETE = function (userHandle, userId, extraHttpRequestParams) {
-        var localVarPath = this.basePath + '/api/v1/users/{userId}/accounts/{userHandle}'
+    removeAdditionalUserHandleUsingDELETE(userHandle, userId, extraHttpRequestParams) {
+        const localVarPath = this.basePath + '/api/v1/users/{userId}/accounts/{userHandle}'
             .replace('{' + 'userHandle' + '}', encodeURIComponent(String(userHandle)))
             .replace('{' + 'userId' + '}', encodeURIComponent(String(userId)));
-        var queryParameters = {};
-        var headerParams = Object.assign({}, this.defaultHeaders);
+        let queryParameters = {};
+        let headerParams = Object.assign({}, this.defaultHeaders);
         // verify required parameter 'userHandle' is not null or undefined
         if (userHandle === null || userHandle === undefined) {
             throw new Error('Required parameter userHandle was null or undefined when calling removeAdditionalUserHandleUsingDELETE.');
@@ -74,7 +71,7 @@ var UserAccountControllerApi = /** @class */ (function () {
         if (userId === null || userId === undefined) {
             throw new Error('Required parameter userId was null or undefined when calling removeAdditionalUserHandleUsingDELETE.');
         }
-        var httpRequestParams = {
+        let httpRequestParams = {
             method: 'DELETE',
             url: localVarPath,
             params: queryParameters,
@@ -84,19 +81,19 @@ var UserAccountControllerApi = /** @class */ (function () {
             httpRequestParams = Object.assign(httpRequestParams, extraHttpRequestParams);
         }
         return this.$http(httpRequestParams);
-    };
+    }
     /**
      *
      * @summary setPrimaryUserHandle
      * @param userHandle userHandle
      * @param userId userId
      */
-    UserAccountControllerApi.prototype.setPrimaryUserHandleUsingPUT = function (userHandle, userId, extraHttpRequestParams) {
-        var localVarPath = this.basePath + '/api/v1/users/{userId}/accounts/{userHandle}/set-primary-user-handle'
+    setPrimaryUserHandleUsingPUT(userHandle, userId, extraHttpRequestParams) {
+        const localVarPath = this.basePath + '/api/v1/users/{userId}/accounts/{userHandle}/set-primary-user-handle'
             .replace('{' + 'userHandle' + '}', encodeURIComponent(String(userHandle)))
             .replace('{' + 'userId' + '}', encodeURIComponent(String(userId)));
-        var queryParameters = {};
-        var headerParams = Object.assign({}, this.defaultHeaders);
+        let queryParameters = {};
+        let headerParams = Object.assign({}, this.defaultHeaders);
         // verify required parameter 'userHandle' is not null or undefined
         if (userHandle === null || userHandle === undefined) {
             throw new Error('Required parameter userHandle was null or undefined when calling setPrimaryUserHandleUsingPUT.');
@@ -105,7 +102,7 @@ var UserAccountControllerApi = /** @class */ (function () {
         if (userId === null || userId === undefined) {
             throw new Error('Required parameter userId was null or undefined when calling setPrimaryUserHandleUsingPUT.');
         }
-        var httpRequestParams = {
+        let httpRequestParams = {
             method: 'PUT',
             url: localVarPath,
             params: queryParameters,
@@ -115,8 +112,6 @@ var UserAccountControllerApi = /** @class */ (function () {
             httpRequestParams = Object.assign(httpRequestParams, extraHttpRequestParams);
         }
         return this.$http(httpRequestParams);
-    };
-    UserAccountControllerApi.$inject = ['$http', '$httpParamSerializer', 'basePath'];
-    return UserAccountControllerApi;
-}());
-exports.UserAccountControllerApi = UserAccountControllerApi;
+    }
+}
+UserAccountControllerApi.$inject = ['$http', '$httpParamSerializer', 'basePath'];

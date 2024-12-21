@@ -1,4 +1,3 @@
-"use strict";
 /**
  * OffTheRecord Rest Service API - Devo
  * A service to handle your traffic tickets
@@ -10,11 +9,9 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.UserAuditEventModel = void 0;
-var UserAuditEventModel;
+export var UserAuditEventModel;
 (function (UserAuditEventModel) {
-    var ClientTypeEnum;
+    let ClientTypeEnum;
     (function (ClientTypeEnum) {
         ClientTypeEnum[ClientTypeEnum["ANDROID"] = 'ANDROID'] = "ANDROID";
         ClientTypeEnum[ClientTypeEnum["DESKTOPWEBAPP"] = 'DESKTOP_WEBAPP'] = "DESKTOPWEBAPP";
@@ -39,7 +36,7 @@ var UserAuditEventModel;
         ClientTypeEnum[ClientTypeEnum["OTRWIDGET"] = 'OTR_WIDGET'] = "OTRWIDGET";
         ClientTypeEnum[ClientTypeEnum["UNKNOWN"] = 'UNKNOWN'] = "UNKNOWN";
     })(ClientTypeEnum = UserAuditEventModel.ClientTypeEnum || (UserAuditEventModel.ClientTypeEnum = {}));
-    var EventEnum;
+    let EventEnum;
     (function (EventEnum) {
         EventEnum[EventEnum["ACCOUNTCOVERAGEADDED"] = 'ACCOUNT_COVERAGE_ADDED'] = "ACCOUNTCOVERAGEADDED";
         EventEnum[EventEnum["ACCOUNTCOVERAGEREMOVED"] = 'ACCOUNT_COVERAGE_REMOVED'] = "ACCOUNTCOVERAGEREMOVED";
@@ -121,7 +118,7 @@ var UserAuditEventModel;
         EventEnum[EventEnum["VERIFYPHONE"] = 'VERIFY_PHONE'] = "VERIFYPHONE";
         EventEnum[EventEnum["VIOLATIONENABLEDFORALLCOVEREDCOURTS"] = 'VIOLATION_ENABLED_FOR_ALL_COVERED_COURTS'] = "VIOLATIONENABLEDFORALLCOVEREDCOURTS";
     })(EventEnum = UserAuditEventModel.EventEnum || (UserAuditEventModel.EventEnum = {}));
-    var EventTypeEnum;
+    let EventTypeEnum;
     (function (EventTypeEnum) {
         EventTypeEnum[EventTypeEnum["ACCOUNTCOVERAGEADDED"] = 'ACCOUNT_COVERAGE_ADDED'] = "ACCOUNTCOVERAGEADDED";
         EventTypeEnum[EventTypeEnum["ACCOUNTCOVERAGEREMOVED"] = 'ACCOUNT_COVERAGE_REMOVED'] = "ACCOUNTCOVERAGEREMOVED";
@@ -203,4 +200,4 @@ var UserAuditEventModel;
         EventTypeEnum[EventTypeEnum["VERIFYPHONE"] = 'VERIFY_PHONE'] = "VERIFYPHONE";
         EventTypeEnum[EventTypeEnum["VIOLATIONENABLEDFORALLCOVEREDCOURTS"] = 'VIOLATION_ENABLED_FOR_ALL_COVERED_COURTS'] = "VIOLATIONENABLEDFORALLCOVEREDCOURTS";
     })(EventTypeEnum = UserAuditEventModel.EventTypeEnum || (UserAuditEventModel.EventTypeEnum = {}));
-})(UserAuditEventModel = exports.UserAuditEventModel || (exports.UserAuditEventModel = {}));
+})(UserAuditEventModel || (UserAuditEventModel = {}));

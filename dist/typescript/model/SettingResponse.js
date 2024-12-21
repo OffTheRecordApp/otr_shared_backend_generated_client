@@ -1,4 +1,3 @@
-"use strict";
 /**
  * OffTheRecord Rest Service API - Devo
  * A service to handle your traffic tickets
@@ -10,15 +9,13 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.SettingResponse = void 0;
-var SettingResponse;
+export var SettingResponse;
 (function (SettingResponse) {
-    var TypeEnum;
+    let TypeEnum;
     (function (TypeEnum) {
         TypeEnum[TypeEnum["Boolean"] = 'Boolean'] = "Boolean";
         TypeEnum[TypeEnum["Integer"] = 'Integer'] = "Integer";
         TypeEnum[TypeEnum["List"] = 'List'] = "List";
         TypeEnum[TypeEnum["String"] = 'String'] = "String";
     })(TypeEnum = SettingResponse.TypeEnum || (SettingResponse.TypeEnum = {}));
-})(SettingResponse = exports.SettingResponse || (exports.SettingResponse = {}));
+})(SettingResponse || (SettingResponse = {}));

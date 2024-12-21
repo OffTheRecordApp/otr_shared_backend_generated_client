@@ -1,4 +1,3 @@
-"use strict";
 /**
  * OffTheRecord Rest Service API - Devo
  * A service to handle your traffic tickets
@@ -10,17 +9,15 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.LineItemModel = void 0;
-var LineItemModel;
+export var LineItemModel;
 (function (LineItemModel) {
-    var LineItemOwnerEnum;
+    let LineItemOwnerEnum;
     (function (LineItemOwnerEnum) {
         LineItemOwnerEnum[LineItemOwnerEnum["COURT"] = 'COURT'] = "COURT";
         LineItemOwnerEnum[LineItemOwnerEnum["LAWFIRM"] = 'LAWFIRM'] = "LAWFIRM";
         LineItemOwnerEnum[LineItemOwnerEnum["OTR"] = 'OTR'] = "OTR";
     })(LineItemOwnerEnum = LineItemModel.LineItemOwnerEnum || (LineItemModel.LineItemOwnerEnum = {}));
-    var LineItemTypeEnum;
+    let LineItemTypeEnum;
     (function (LineItemTypeEnum) {
         LineItemTypeEnum[LineItemTypeEnum["ACCIDENTFEE"] = 'ACCIDENT_FEE'] = "ACCIDENTFEE";
         LineItemTypeEnum[LineItemTypeEnum["BASELEGALFEE"] = 'BASE_LEGAL_FEE'] = "BASELEGALFEE";
@@ -41,4 +38,4 @@ var LineItemModel;
         LineItemTypeEnum[LineItemTypeEnum["PAYMENTPLANSERVICEFEE"] = 'PAYMENT_PLAN_SERVICE_FEE'] = "PAYMENTPLANSERVICEFEE";
         LineItemTypeEnum[LineItemTypeEnum["WARRANTFEE"] = 'WARRANT_FEE'] = "WARRANTFEE";
     })(LineItemTypeEnum = LineItemModel.LineItemTypeEnum || (LineItemModel.LineItemTypeEnum = {}));
-})(LineItemModel = exports.LineItemModel || (exports.LineItemModel = {}));
+})(LineItemModel || (LineItemModel = {}));

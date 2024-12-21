@@ -1,4 +1,3 @@
-"use strict";
 /**
  * OffTheRecord Rest Service API - Devo
  * A service to handle your traffic tickets
@@ -10,16 +9,14 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.AddViolationResponse = void 0;
-var AddViolationResponse;
+export var AddViolationResponse;
 (function (AddViolationResponse) {
-    var RefundEligibilityTypeEnum;
+    let RefundEligibilityTypeEnum;
     (function (RefundEligibilityTypeEnum) {
         RefundEligibilityTypeEnum[RefundEligibilityTypeEnum["FULLREFUND"] = 'FULL_REFUND'] = "FULLREFUND";
         RefundEligibilityTypeEnum[RefundEligibilityTypeEnum["NOREFUND"] = 'NO_REFUND'] = "NOREFUND";
     })(RefundEligibilityTypeEnum = AddViolationResponse.RefundEligibilityTypeEnum || (AddViolationResponse.RefundEligibilityTypeEnum = {}));
-    var ViolationClassificationEnum;
+    let ViolationClassificationEnum;
     (function (ViolationClassificationEnum) {
         ViolationClassificationEnum[ViolationClassificationEnum["CLASS1FELONY"] = 'CLASS_1_FELONY'] = "CLASS1FELONY";
         ViolationClassificationEnum[ViolationClassificationEnum["CLASS1MISDEMEANOR"] = 'CLASS_1_MISDEMEANOR'] = "CLASS1MISDEMEANOR";
@@ -79,4 +76,4 @@ var AddViolationResponse;
         ViolationClassificationEnum[ViolationClassificationEnum["WOBBLERTOFELONY"] = 'WOBBLER_TO_FELONY'] = "WOBBLERTOFELONY";
         ViolationClassificationEnum[ViolationClassificationEnum["WOBBLERTOMISDEMEANOR"] = 'WOBBLER_TO_MISDEMEANOR'] = "WOBBLERTOMISDEMEANOR";
     })(ViolationClassificationEnum = AddViolationResponse.ViolationClassificationEnum || (AddViolationResponse.ViolationClassificationEnum = {}));
-})(AddViolationResponse = exports.AddViolationResponse || (exports.AddViolationResponse = {}));
+})(AddViolationResponse || (AddViolationResponse = {}));

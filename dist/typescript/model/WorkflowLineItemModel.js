@@ -1,4 +1,3 @@
-"use strict";
 /**
  * OffTheRecord Rest Service API - Devo
  * A service to handle your traffic tickets
@@ -10,11 +9,9 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.WorkflowLineItemModel = void 0;
-var WorkflowLineItemModel;
+export var WorkflowLineItemModel;
 (function (WorkflowLineItemModel) {
-    var LineItemTypeEnum;
+    let LineItemTypeEnum;
     (function (LineItemTypeEnum) {
         LineItemTypeEnum[LineItemTypeEnum["ACCIDENTFEE"] = 'ACCIDENT_FEE'] = "ACCIDENTFEE";
         LineItemTypeEnum[LineItemTypeEnum["BASELEGALFEE"] = 'BASE_LEGAL_FEE'] = "BASELEGALFEE";
@@ -35,10 +32,10 @@ var WorkflowLineItemModel;
         LineItemTypeEnum[LineItemTypeEnum["PAYMENTPLANSERVICEFEE"] = 'PAYMENT_PLAN_SERVICE_FEE'] = "PAYMENTPLANSERVICEFEE";
         LineItemTypeEnum[LineItemTypeEnum["WARRANTFEE"] = 'WARRANT_FEE'] = "WARRANTFEE";
     })(LineItemTypeEnum = WorkflowLineItemModel.LineItemTypeEnum || (WorkflowLineItemModel.LineItemTypeEnum = {}));
-    var RecipientEnum;
+    let RecipientEnum;
     (function (RecipientEnum) {
         RecipientEnum[RecipientEnum["COURT"] = 'COURT'] = "COURT";
         RecipientEnum[RecipientEnum["LAWFIRM"] = 'LAWFIRM'] = "LAWFIRM";
         RecipientEnum[RecipientEnum["OTR"] = 'OTR'] = "OTR";
     })(RecipientEnum = WorkflowLineItemModel.RecipientEnum || (WorkflowLineItemModel.RecipientEnum = {}));
-})(WorkflowLineItemModel = exports.WorkflowLineItemModel || (exports.WorkflowLineItemModel = {}));
+})(WorkflowLineItemModel || (WorkflowLineItemModel = {}));

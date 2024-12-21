@@ -1,4 +1,3 @@
-"use strict";
 /**
  * OffTheRecord Rest Service API - Devo
  * A service to handle your traffic tickets
@@ -10,22 +9,20 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.MatchLegalServiceModel = void 0;
-var MatchLegalServiceModel;
+export var MatchLegalServiceModel;
 (function (MatchLegalServiceModel) {
-    var LegalServiceTypeEnum;
+    let LegalServiceTypeEnum;
     (function (LegalServiceTypeEnum) {
         LegalServiceTypeEnum[LegalServiceTypeEnum["DEFER"] = 'DEFER'] = "DEFER";
         LegalServiceTypeEnum[LegalServiceTypeEnum["FIGHT"] = 'FIGHT'] = "FIGHT";
     })(LegalServiceTypeEnum = MatchLegalServiceModel.LegalServiceTypeEnum || (MatchLegalServiceModel.LegalServiceTypeEnum = {}));
-    var LegalVerticalEnum;
+    let LegalVerticalEnum;
     (function (LegalVerticalEnum) {
         LegalVerticalEnum[LegalVerticalEnum["TRAFFIC"] = 'TRAFFIC'] = "TRAFFIC";
     })(LegalVerticalEnum = MatchLegalServiceModel.LegalVerticalEnum || (MatchLegalServiceModel.LegalVerticalEnum = {}));
-    var RefundEligibilityEnum;
+    let RefundEligibilityEnum;
     (function (RefundEligibilityEnum) {
         RefundEligibilityEnum[RefundEligibilityEnum["FULLREFUND"] = 'FULL_REFUND'] = "FULLREFUND";
         RefundEligibilityEnum[RefundEligibilityEnum["NOREFUND"] = 'NO_REFUND'] = "NOREFUND";
     })(RefundEligibilityEnum = MatchLegalServiceModel.RefundEligibilityEnum || (MatchLegalServiceModel.RefundEligibilityEnum = {}));
-})(MatchLegalServiceModel = exports.MatchLegalServiceModel || (exports.MatchLegalServiceModel = {}));
+})(MatchLegalServiceModel || (MatchLegalServiceModel = {}));
