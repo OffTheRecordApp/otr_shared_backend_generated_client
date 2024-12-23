@@ -1,4 +1,3 @@
-"use strict";
 /**
  * OffTheRecord Rest Service API - Devo
  * A service to handle your traffic tickets
@@ -10,11 +9,9 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.SetLawfirmCaseDecisionRequest = void 0;
-var SetLawfirmCaseDecisionRequest;
+export var SetLawfirmCaseDecisionRequest;
 (function (SetLawfirmCaseDecisionRequest) {
-    var CaseDecisionStatusEnum;
+    let CaseDecisionStatusEnum;
     (function (CaseDecisionStatusEnum) {
         CaseDecisionStatusEnum[CaseDecisionStatusEnum["ACCEPTED"] = 'ACCEPTED'] = "ACCEPTED";
         CaseDecisionStatusEnum[CaseDecisionStatusEnum["CREATED"] = 'CREATED'] = "CREATED";
@@ -24,4 +21,4 @@ var SetLawfirmCaseDecisionRequest;
         CaseDecisionStatusEnum[CaseDecisionStatusEnum["REMATCHED"] = 'REMATCHED'] = "REMATCHED";
         CaseDecisionStatusEnum[CaseDecisionStatusEnum["REMATCHEDREFERRAL"] = 'REMATCHED_REFERRAL'] = "REMATCHEDREFERRAL";
     })(CaseDecisionStatusEnum = SetLawfirmCaseDecisionRequest.CaseDecisionStatusEnum || (SetLawfirmCaseDecisionRequest.CaseDecisionStatusEnum = {}));
-})(SetLawfirmCaseDecisionRequest = exports.SetLawfirmCaseDecisionRequest || (exports.SetLawfirmCaseDecisionRequest = {}));
+})(SetLawfirmCaseDecisionRequest || (SetLawfirmCaseDecisionRequest = {}));

@@ -1,4 +1,3 @@
-"use strict";
 /**
  * OffTheRecord Rest Service API - Devo
  * A service to handle your traffic tickets
@@ -10,11 +9,9 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.LawfirmFeeDomain = void 0;
-var LawfirmFeeDomain;
+export var LawfirmFeeDomain;
 (function (LawfirmFeeDomain) {
-    var TransactionMethodEnum;
+    let TransactionMethodEnum;
     (function (TransactionMethodEnum) {
         TransactionMethodEnum[TransactionMethodEnum["CASH"] = 'CASH'] = "CASH";
         TransactionMethodEnum[TransactionMethodEnum["CHECK"] = 'CHECK'] = "CHECK";
@@ -30,4 +27,4 @@ var LawfirmFeeDomain;
         TransactionMethodEnum[TransactionMethodEnum["WIRETRANSFER"] = 'WIRE_TRANSFER'] = "WIRETRANSFER";
         TransactionMethodEnum[TransactionMethodEnum["ZELLE"] = 'ZELLE'] = "ZELLE";
     })(TransactionMethodEnum = LawfirmFeeDomain.TransactionMethodEnum || (LawfirmFeeDomain.TransactionMethodEnum = {}));
-})(LawfirmFeeDomain = exports.LawfirmFeeDomain || (exports.LawfirmFeeDomain = {}));
+})(LawfirmFeeDomain || (LawfirmFeeDomain = {}));

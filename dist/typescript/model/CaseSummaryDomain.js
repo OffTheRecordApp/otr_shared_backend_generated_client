@@ -1,4 +1,3 @@
-"use strict";
 /**
  * OffTheRecord Rest Service API - Devo
  * A service to handle your traffic tickets
@@ -10,11 +9,9 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.CaseSummaryDomain = void 0;
-var CaseSummaryDomain;
+export var CaseSummaryDomain;
 (function (CaseSummaryDomain) {
-    var CaseDecisionStatusEnum;
+    let CaseDecisionStatusEnum;
     (function (CaseDecisionStatusEnum) {
         CaseDecisionStatusEnum[CaseDecisionStatusEnum["ACCEPTED"] = 'ACCEPTED'] = "ACCEPTED";
         CaseDecisionStatusEnum[CaseDecisionStatusEnum["CREATED"] = 'CREATED'] = "CREATED";
@@ -24,4 +21,4 @@ var CaseSummaryDomain;
         CaseDecisionStatusEnum[CaseDecisionStatusEnum["REMATCHED"] = 'REMATCHED'] = "REMATCHED";
         CaseDecisionStatusEnum[CaseDecisionStatusEnum["REMATCHEDREFERRAL"] = 'REMATCHED_REFERRAL'] = "REMATCHEDREFERRAL";
     })(CaseDecisionStatusEnum = CaseSummaryDomain.CaseDecisionStatusEnum || (CaseSummaryDomain.CaseDecisionStatusEnum = {}));
-})(CaseSummaryDomain = exports.CaseSummaryDomain || (exports.CaseSummaryDomain = {}));
+})(CaseSummaryDomain || (CaseSummaryDomain = {}));

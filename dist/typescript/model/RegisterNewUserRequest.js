@@ -1,4 +1,3 @@
-"use strict";
 /**
  * OffTheRecord Rest Service API - Devo
  * A service to handle your traffic tickets
@@ -10,11 +9,9 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.RegisterNewUserRequest = void 0;
-var RegisterNewUserRequest;
+export var RegisterNewUserRequest;
 (function (RegisterNewUserRequest) {
-    var ClientTypeEnum;
+    let ClientTypeEnum;
     (function (ClientTypeEnum) {
         ClientTypeEnum[ClientTypeEnum["ANDROID"] = 'ANDROID'] = "ANDROID";
         ClientTypeEnum[ClientTypeEnum["DESKTOPWEBAPP"] = 'DESKTOP_WEBAPP'] = "DESKTOPWEBAPP";
@@ -39,7 +36,7 @@ var RegisterNewUserRequest;
         ClientTypeEnum[ClientTypeEnum["OTRWIDGET"] = 'OTR_WIDGET'] = "OTRWIDGET";
         ClientTypeEnum[ClientTypeEnum["UNKNOWN"] = 'UNKNOWN'] = "UNKNOWN";
     })(ClientTypeEnum = RegisterNewUserRequest.ClientTypeEnum || (RegisterNewUserRequest.ClientTypeEnum = {}));
-    var RoleTypeEnum;
+    let RoleTypeEnum;
     (function (RoleTypeEnum) {
         RoleTypeEnum[RoleTypeEnum["ADMIN"] = 'ADMIN'] = "ADMIN";
         RoleTypeEnum[RoleTypeEnum["DEFENDANT"] = 'DEFENDANT'] = "DEFENDANT";
@@ -48,4 +45,4 @@ var RegisterNewUserRequest;
         RoleTypeEnum[RoleTypeEnum["PARTNER"] = 'PARTNER'] = "PARTNER";
         RoleTypeEnum[RoleTypeEnum["UNKNOWN"] = 'UNKNOWN'] = "UNKNOWN";
     })(RoleTypeEnum = RegisterNewUserRequest.RoleTypeEnum || (RegisterNewUserRequest.RoleTypeEnum = {}));
-})(RegisterNewUserRequest = exports.RegisterNewUserRequest || (exports.RegisterNewUserRequest = {}));
+})(RegisterNewUserRequest || (RegisterNewUserRequest = {}));

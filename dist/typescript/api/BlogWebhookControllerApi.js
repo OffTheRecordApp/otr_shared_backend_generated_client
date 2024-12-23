@@ -1,4 +1,3 @@
-"use strict";
 /**
  * OffTheRecord Rest Service API - Devo
  * A service to handle your traffic tickets
@@ -10,11 +9,9 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.BlogWebhookControllerApi = void 0;
 /* tslint:disable:no-unused-variable member-ordering */
-var BlogWebhookControllerApi = /** @class */ (function () {
-    function BlogWebhookControllerApi($http, $httpParamSerializer, basePath) {
+export class BlogWebhookControllerApi {
+    constructor($http, $httpParamSerializer, basePath) {
         this.$http = $http;
         this.$httpParamSerializer = $httpParamSerializer;
         this.basePath = 'http://otr-backend-service-us-devo.offtherecord.com';
@@ -28,15 +25,15 @@ var BlogWebhookControllerApi = /** @class */ (function () {
      * @summary handleEvent
      * @param event event
      */
-    BlogWebhookControllerApi.prototype.handleEventUsingPOST = function (event, extraHttpRequestParams) {
-        var localVarPath = this.basePath + '/api/v1/webhooks/prismic';
-        var queryParameters = {};
-        var headerParams = Object.assign({}, this.defaultHeaders);
+    handleEventUsingPOST(event, extraHttpRequestParams) {
+        const localVarPath = this.basePath + '/api/v1/webhooks/prismic';
+        let queryParameters = {};
+        let headerParams = Object.assign({}, this.defaultHeaders);
         // verify required parameter 'event' is not null or undefined
         if (event === null || event === undefined) {
             throw new Error('Required parameter event was null or undefined when calling handleEventUsingPOST.');
         }
-        var httpRequestParams = {
+        let httpRequestParams = {
             method: 'POST',
             url: localVarPath,
             data: event,
@@ -47,8 +44,6 @@ var BlogWebhookControllerApi = /** @class */ (function () {
             httpRequestParams = Object.assign(httpRequestParams, extraHttpRequestParams);
         }
         return this.$http(httpRequestParams);
-    };
-    BlogWebhookControllerApi.$inject = ['$http', '$httpParamSerializer', 'basePath'];
-    return BlogWebhookControllerApi;
-}());
-exports.BlogWebhookControllerApi = BlogWebhookControllerApi;
+    }
+}
+BlogWebhookControllerApi.$inject = ['$http', '$httpParamSerializer', 'basePath'];

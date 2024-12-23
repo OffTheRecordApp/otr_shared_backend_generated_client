@@ -1,4 +1,3 @@
-"use strict";
 /**
  * OffTheRecord Rest Service API - Devo
  * A service to handle your traffic tickets
@@ -10,17 +9,15 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.UpdateLawfirmModel = void 0;
-var UpdateLawfirmModel;
+export var UpdateLawfirmModel;
 (function (UpdateLawfirmModel) {
-    var LawfirmPaymentModelEnum;
+    let LawfirmPaymentModelEnum;
     (function (LawfirmPaymentModelEnum) {
         LawfirmPaymentModelEnum[LawfirmPaymentModelEnum["DESTINATIONACCOUNT"] = 'DESTINATION_ACCOUNT'] = "DESTINATIONACCOUNT";
         LawfirmPaymentModelEnum[LawfirmPaymentModelEnum["SEPARATECHARGE"] = 'SEPARATE_CHARGE'] = "SEPARATECHARGE";
         LawfirmPaymentModelEnum[LawfirmPaymentModelEnum["TRANSFERDEDUCTION"] = 'TRANSFER_DEDUCTION'] = "TRANSFERDEDUCTION";
     })(LawfirmPaymentModelEnum = UpdateLawfirmModel.LawfirmPaymentModelEnum || (UpdateLawfirmModel.LawfirmPaymentModelEnum = {}));
-    var LawfirmStateEnum;
+    let LawfirmStateEnum;
     (function (LawfirmStateEnum) {
         LawfirmStateEnum[LawfirmStateEnum["ACCOUNTCLOSED"] = 'ACCOUNT_CLOSED'] = "ACCOUNTCLOSED";
         LawfirmStateEnum[LawfirmStateEnum["ACTIVE"] = 'ACTIVE'] = "ACTIVE";
@@ -43,4 +40,4 @@ var UpdateLawfirmModel;
         LawfirmStateEnum[LawfirmStateEnum["TERMINATEDPOORSERVICE"] = 'TERMINATED_POOR_SERVICE'] = "TERMINATEDPOORSERVICE";
         LawfirmStateEnum[LawfirmStateEnum["TERMINATEDPOORSUCCESS"] = 'TERMINATED_POOR_SUCCESS'] = "TERMINATEDPOORSUCCESS";
     })(LawfirmStateEnum = UpdateLawfirmModel.LawfirmStateEnum || (UpdateLawfirmModel.LawfirmStateEnum = {}));
-})(UpdateLawfirmModel = exports.UpdateLawfirmModel || (exports.UpdateLawfirmModel = {}));
+})(UpdateLawfirmModel || (UpdateLawfirmModel = {}));

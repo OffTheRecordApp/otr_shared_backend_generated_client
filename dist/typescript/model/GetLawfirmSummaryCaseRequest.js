@@ -1,4 +1,3 @@
-"use strict";
 /**
  * OffTheRecord Rest Service API - Devo
  * A service to handle your traffic tickets
@@ -10,18 +9,16 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.GetLawfirmSummaryCaseRequest = void 0;
-var GetLawfirmSummaryCaseRequest;
+export var GetLawfirmSummaryCaseRequest;
 (function (GetLawfirmSummaryCaseRequest) {
-    var CaseStatusCategoriesEnum;
+    let CaseStatusCategoriesEnum;
     (function (CaseStatusCategoriesEnum) {
         CaseStatusCategoriesEnum[CaseStatusCategoriesEnum["ACTIVE"] = 'ACTIVE'] = "ACTIVE";
         CaseStatusCategoriesEnum[CaseStatusCategoriesEnum["CANCELLED"] = 'CANCELLED'] = "CANCELLED";
         CaseStatusCategoriesEnum[CaseStatusCategoriesEnum["RESOLVED"] = 'RESOLVED'] = "RESOLVED";
         CaseStatusCategoriesEnum[CaseStatusCategoriesEnum["UNCONFIRMED"] = 'UNCONFIRMED'] = "UNCONFIRMED";
     })(CaseStatusCategoriesEnum = GetLawfirmSummaryCaseRequest.CaseStatusCategoriesEnum || (GetLawfirmSummaryCaseRequest.CaseStatusCategoriesEnum = {}));
-    var CaseStatusesEnum;
+    let CaseStatusesEnum;
     (function (CaseStatusesEnum) {
         CaseStatusesEnum[CaseStatusesEnum["AMENDEDDOWNWITHINCLASS"] = 'AMENDED_DOWN_WITHIN_CLASS'] = "AMENDEDDOWNWITHINCLASS";
         CaseStatusesEnum[CaseStatusesEnum["AMENDEDFULLFINE"] = 'AMENDED_FULL_FINE'] = "AMENDEDFULLFINE";
@@ -61,7 +58,7 @@ var GetLawfirmSummaryCaseRequest;
         CaseStatusesEnum[CaseStatusesEnum["TRAFFICSCHOOL"] = 'TRAFFIC_SCHOOL'] = "TRAFFICSCHOOL";
         CaseStatusesEnum[CaseStatusesEnum["UNCONFIRMED"] = 'UNCONFIRMED'] = "UNCONFIRMED";
     })(CaseStatusesEnum = GetLawfirmSummaryCaseRequest.CaseStatusesEnum || (GetLawfirmSummaryCaseRequest.CaseStatusesEnum = {}));
-    var ExcludedCaseStatusesEnum;
+    let ExcludedCaseStatusesEnum;
     (function (ExcludedCaseStatusesEnum) {
         ExcludedCaseStatusesEnum[ExcludedCaseStatusesEnum["AMENDEDDOWNWITHINCLASS"] = 'AMENDED_DOWN_WITHIN_CLASS'] = "AMENDEDDOWNWITHINCLASS";
         ExcludedCaseStatusesEnum[ExcludedCaseStatusesEnum["AMENDEDFULLFINE"] = 'AMENDED_FULL_FINE'] = "AMENDEDFULLFINE";
@@ -101,4 +98,4 @@ var GetLawfirmSummaryCaseRequest;
         ExcludedCaseStatusesEnum[ExcludedCaseStatusesEnum["TRAFFICSCHOOL"] = 'TRAFFIC_SCHOOL'] = "TRAFFICSCHOOL";
         ExcludedCaseStatusesEnum[ExcludedCaseStatusesEnum["UNCONFIRMED"] = 'UNCONFIRMED'] = "UNCONFIRMED";
     })(ExcludedCaseStatusesEnum = GetLawfirmSummaryCaseRequest.ExcludedCaseStatusesEnum || (GetLawfirmSummaryCaseRequest.ExcludedCaseStatusesEnum = {}));
-})(GetLawfirmSummaryCaseRequest = exports.GetLawfirmSummaryCaseRequest || (exports.GetLawfirmSummaryCaseRequest = {}));
+})(GetLawfirmSummaryCaseRequest || (GetLawfirmSummaryCaseRequest = {}));

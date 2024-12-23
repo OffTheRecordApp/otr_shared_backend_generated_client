@@ -1,4 +1,3 @@
-"use strict";
 /**
  * OffTheRecord Rest Service API - Devo
  * A service to handle your traffic tickets
@@ -10,11 +9,9 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.MatchCaseLineItemModel = void 0;
-var MatchCaseLineItemModel;
+export var MatchCaseLineItemModel;
 (function (MatchCaseLineItemModel) {
-    var LineItemTypeEnum;
+    let LineItemTypeEnum;
     (function (LineItemTypeEnum) {
         LineItemTypeEnum[LineItemTypeEnum["ACCIDENTFEE"] = 'ACCIDENT_FEE'] = "ACCIDENTFEE";
         LineItemTypeEnum[LineItemTypeEnum["BASELEGALFEE"] = 'BASE_LEGAL_FEE'] = "BASELEGALFEE";
@@ -35,10 +32,10 @@ var MatchCaseLineItemModel;
         LineItemTypeEnum[LineItemTypeEnum["PAYMENTPLANSERVICEFEE"] = 'PAYMENT_PLAN_SERVICE_FEE'] = "PAYMENTPLANSERVICEFEE";
         LineItemTypeEnum[LineItemTypeEnum["WARRANTFEE"] = 'WARRANT_FEE'] = "WARRANTFEE";
     })(LineItemTypeEnum = MatchCaseLineItemModel.LineItemTypeEnum || (MatchCaseLineItemModel.LineItemTypeEnum = {}));
-    var RecipientEnum;
+    let RecipientEnum;
     (function (RecipientEnum) {
         RecipientEnum[RecipientEnum["COURT"] = 'COURT'] = "COURT";
         RecipientEnum[RecipientEnum["LAWFIRM"] = 'LAWFIRM'] = "LAWFIRM";
         RecipientEnum[RecipientEnum["OTR"] = 'OTR'] = "OTR";
     })(RecipientEnum = MatchCaseLineItemModel.RecipientEnum || (MatchCaseLineItemModel.RecipientEnum = {}));
-})(MatchCaseLineItemModel = exports.MatchCaseLineItemModel || (exports.MatchCaseLineItemModel = {}));
+})(MatchCaseLineItemModel || (MatchCaseLineItemModel = {}));

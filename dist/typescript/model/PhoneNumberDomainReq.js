@@ -1,4 +1,3 @@
-"use strict";
 /**
  * OffTheRecord Rest Service API - Devo
  * A service to handle your traffic tickets
@@ -10,11 +9,9 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.PhoneNumberDomainReq = void 0;
-var PhoneNumberDomainReq;
+export var PhoneNumberDomainReq;
 (function (PhoneNumberDomainReq) {
-    var EntityTypeEnum;
+    let EntityTypeEnum;
     (function (EntityTypeEnum) {
         EntityTypeEnum[EntityTypeEnum["CASE"] = 'CASE'] = "CASE";
         EntityTypeEnum[EntityTypeEnum["CASEPAYMENT"] = 'CASE_PAYMENT'] = "CASEPAYMENT";
@@ -27,11 +24,11 @@ var PhoneNumberDomainReq;
         EntityTypeEnum[EntityTypeEnum["STRIPECHARGE"] = 'STRIPE_CHARGE'] = "STRIPECHARGE";
         EntityTypeEnum[EntityTypeEnum["USER"] = 'USER'] = "USER";
     })(EntityTypeEnum = PhoneNumberDomainReq.EntityTypeEnum || (PhoneNumberDomainReq.EntityTypeEnum = {}));
-    var TypeEnum;
+    let TypeEnum;
     (function (TypeEnum) {
         TypeEnum[TypeEnum["HOME"] = 'HOME'] = "HOME";
         TypeEnum[TypeEnum["MOBILE"] = 'MOBILE'] = "MOBILE";
         TypeEnum[TypeEnum["NOTSPECIFIED"] = 'NOT_SPECIFIED'] = "NOTSPECIFIED";
         TypeEnum[TypeEnum["OFFICE"] = 'OFFICE'] = "OFFICE";
     })(TypeEnum = PhoneNumberDomainReq.TypeEnum || (PhoneNumberDomainReq.TypeEnum = {}));
-})(PhoneNumberDomainReq = exports.PhoneNumberDomainReq || (exports.PhoneNumberDomainReq = {}));
+})(PhoneNumberDomainReq || (PhoneNumberDomainReq = {}));

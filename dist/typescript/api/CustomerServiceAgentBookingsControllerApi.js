@@ -1,4 +1,3 @@
-"use strict";
 /**
  * OffTheRecord Rest Service API - Devo
  * A service to handle your traffic tickets
@@ -10,11 +9,9 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.CustomerServiceAgentBookingsControllerApi = void 0;
 /* tslint:disable:no-unused-variable member-ordering */
-var CustomerServiceAgentBookingsControllerApi = /** @class */ (function () {
-    function CustomerServiceAgentBookingsControllerApi($http, $httpParamSerializer, basePath) {
+export class CustomerServiceAgentBookingsControllerApi {
+    constructor($http, $httpParamSerializer, basePath) {
         this.$http = $http;
         this.$httpParamSerializer = $httpParamSerializer;
         this.basePath = 'http://otr-backend-service-us-devo.offtherecord.com';
@@ -28,16 +25,16 @@ var CustomerServiceAgentBookingsControllerApi = /** @class */ (function () {
      * @summary deleteAgentBooking
      * @param agentBookingId agentBookingId
      */
-    CustomerServiceAgentBookingsControllerApi.prototype.deleteAgentBookingUsingDELETE = function (agentBookingId, extraHttpRequestParams) {
-        var localVarPath = this.basePath + '/api/v1/cs-agent-bookings/{agentBookingId}'
+    deleteAgentBookingUsingDELETE(agentBookingId, extraHttpRequestParams) {
+        const localVarPath = this.basePath + '/api/v1/cs-agent-bookings/{agentBookingId}'
             .replace('{' + 'agentBookingId' + '}', encodeURIComponent(String(agentBookingId)));
-        var queryParameters = {};
-        var headerParams = Object.assign({}, this.defaultHeaders);
+        let queryParameters = {};
+        let headerParams = Object.assign({}, this.defaultHeaders);
         // verify required parameter 'agentBookingId' is not null or undefined
         if (agentBookingId === null || agentBookingId === undefined) {
             throw new Error('Required parameter agentBookingId was null or undefined when calling deleteAgentBookingUsingDELETE.');
         }
-        var httpRequestParams = {
+        let httpRequestParams = {
             method: 'DELETE',
             url: localVarPath,
             params: queryParameters,
@@ -47,7 +44,7 @@ var CustomerServiceAgentBookingsControllerApi = /** @class */ (function () {
             httpRequestParams = Object.assign(httpRequestParams, extraHttpRequestParams);
         }
         return this.$http(httpRequestParams);
-    };
+    }
     /**
      *
      * @summary listAgentBookings
@@ -66,10 +63,10 @@ var CustomerServiceAgentBookingsControllerApi = /** @class */ (function () {
      * @param statusCategory statusCategory
      * @param timeZoneId timeZoneId
      */
-    CustomerServiceAgentBookingsControllerApi.prototype.listAgentBookingsUsingGET = function (agentTeam, agentUserId, caseStatus, channel, direction, endDate, length, offset, sortBy, sortOrder, startDate, state, statusCategory, timeZoneId, extraHttpRequestParams) {
-        var localVarPath = this.basePath + '/api/v1/cs-agent-bookings';
-        var queryParameters = {};
-        var headerParams = Object.assign({}, this.defaultHeaders);
+    listAgentBookingsUsingGET(agentTeam, agentUserId, caseStatus, channel, direction, endDate, length, offset, sortBy, sortOrder, startDate, state, statusCategory, timeZoneId, extraHttpRequestParams) {
+        const localVarPath = this.basePath + '/api/v1/cs-agent-bookings';
+        let queryParameters = {};
+        let headerParams = Object.assign({}, this.defaultHeaders);
         if (agentTeam !== undefined) {
             queryParameters['agentTeam'] = agentTeam;
         }
@@ -112,7 +109,7 @@ var CustomerServiceAgentBookingsControllerApi = /** @class */ (function () {
         if (timeZoneId !== undefined) {
             queryParameters['timeZoneId'] = timeZoneId;
         }
-        var httpRequestParams = {
+        let httpRequestParams = {
             method: 'GET',
             url: localVarPath,
             params: queryParameters,
@@ -122,21 +119,21 @@ var CustomerServiceAgentBookingsControllerApi = /** @class */ (function () {
             httpRequestParams = Object.assign(httpRequestParams, extraHttpRequestParams);
         }
         return this.$http(httpRequestParams);
-    };
+    }
     /**
      *
      * @summary saveAgentBooking
      * @param request request
      */
-    CustomerServiceAgentBookingsControllerApi.prototype.saveAgentBookingUsingPOST = function (request, extraHttpRequestParams) {
-        var localVarPath = this.basePath + '/api/v1/cs-agent-bookings';
-        var queryParameters = {};
-        var headerParams = Object.assign({}, this.defaultHeaders);
+    saveAgentBookingUsingPOST(request, extraHttpRequestParams) {
+        const localVarPath = this.basePath + '/api/v1/cs-agent-bookings';
+        let queryParameters = {};
+        let headerParams = Object.assign({}, this.defaultHeaders);
         // verify required parameter 'request' is not null or undefined
         if (request === null || request === undefined) {
             throw new Error('Required parameter request was null or undefined when calling saveAgentBookingUsingPOST.');
         }
-        var httpRequestParams = {
+        let httpRequestParams = {
             method: 'POST',
             url: localVarPath,
             data: request,
@@ -147,8 +144,6 @@ var CustomerServiceAgentBookingsControllerApi = /** @class */ (function () {
             httpRequestParams = Object.assign(httpRequestParams, extraHttpRequestParams);
         }
         return this.$http(httpRequestParams);
-    };
-    CustomerServiceAgentBookingsControllerApi.$inject = ['$http', '$httpParamSerializer', 'basePath'];
-    return CustomerServiceAgentBookingsControllerApi;
-}());
-exports.CustomerServiceAgentBookingsControllerApi = CustomerServiceAgentBookingsControllerApi;
+    }
+}
+CustomerServiceAgentBookingsControllerApi.$inject = ['$http', '$httpParamSerializer', 'basePath'];

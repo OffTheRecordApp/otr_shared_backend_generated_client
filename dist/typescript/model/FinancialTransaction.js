@@ -1,4 +1,3 @@
-"use strict";
 /**
  * OffTheRecord Rest Service API - Devo
  * A service to handle your traffic tickets
@@ -10,11 +9,9 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.FinancialTransaction = void 0;
-var FinancialTransaction;
+export var FinancialTransaction;
 (function (FinancialTransaction) {
-    var TaskStatusEnum;
+    let TaskStatusEnum;
     (function (TaskStatusEnum) {
         TaskStatusEnum[TaskStatusEnum["CANCELLED"] = 'CANCELLED'] = "CANCELLED";
         TaskStatusEnum[TaskStatusEnum["COMPLETE"] = 'COMPLETE'] = "COMPLETE";
@@ -23,7 +20,7 @@ var FinancialTransaction;
         TaskStatusEnum[TaskStatusEnum["NOOPERATION"] = 'NO_OPERATION'] = "NOOPERATION";
         TaskStatusEnum[TaskStatusEnum["QUEUED"] = 'QUEUED'] = "QUEUED";
     })(TaskStatusEnum = FinancialTransaction.TaskStatusEnum || (FinancialTransaction.TaskStatusEnum = {}));
-    var TransactionMethodEnum;
+    let TransactionMethodEnum;
     (function (TransactionMethodEnum) {
         TransactionMethodEnum[TransactionMethodEnum["CASH"] = 'CASH'] = "CASH";
         TransactionMethodEnum[TransactionMethodEnum["CHECK"] = 'CHECK'] = "CHECK";
@@ -39,11 +36,11 @@ var FinancialTransaction;
         TransactionMethodEnum[TransactionMethodEnum["WIRETRANSFER"] = 'WIRE_TRANSFER'] = "WIRETRANSFER";
         TransactionMethodEnum[TransactionMethodEnum["ZELLE"] = 'ZELLE'] = "ZELLE";
     })(TransactionMethodEnum = FinancialTransaction.TransactionMethodEnum || (FinancialTransaction.TransactionMethodEnum = {}));
-    var TransactionTypeEnum;
+    let TransactionTypeEnum;
     (function (TransactionTypeEnum) {
         TransactionTypeEnum[TransactionTypeEnum["FEE"] = 'FEE'] = "FEE";
         TransactionTypeEnum[TransactionTypeEnum["FEEREFUND"] = 'FEE_REFUND'] = "FEEREFUND";
         TransactionTypeEnum[TransactionTypeEnum["TRANSFER"] = 'TRANSFER'] = "TRANSFER";
         TransactionTypeEnum[TransactionTypeEnum["TRANSFERREVERSAL"] = 'TRANSFER_REVERSAL'] = "TRANSFERREVERSAL";
     })(TransactionTypeEnum = FinancialTransaction.TransactionTypeEnum || (FinancialTransaction.TransactionTypeEnum = {}));
-})(FinancialTransaction = exports.FinancialTransaction || (exports.FinancialTransaction = {}));
+})(FinancialTransaction || (FinancialTransaction = {}));

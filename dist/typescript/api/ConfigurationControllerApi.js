@@ -1,4 +1,3 @@
-"use strict";
 /**
  * OffTheRecord Rest Service API - Devo
  * A service to handle your traffic tickets
@@ -10,11 +9,9 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.ConfigurationControllerApi = void 0;
 /* tslint:disable:no-unused-variable member-ordering */
-var ConfigurationControllerApi = /** @class */ (function () {
-    function ConfigurationControllerApi($http, $httpParamSerializer, basePath) {
+export class ConfigurationControllerApi {
+    constructor($http, $httpParamSerializer, basePath) {
         this.$http = $http;
         this.$httpParamSerializer = $httpParamSerializer;
         this.basePath = 'http://otr-backend-service-us-devo.offtherecord.com';
@@ -27,11 +24,11 @@ var ConfigurationControllerApi = /** @class */ (function () {
      *
      * @summary getAppConfiguration
      */
-    ConfigurationControllerApi.prototype.getAppConfigurationUsingGET = function (extraHttpRequestParams) {
-        var localVarPath = this.basePath + '/api/v1/config/app';
-        var queryParameters = {};
-        var headerParams = Object.assign({}, this.defaultHeaders);
-        var httpRequestParams = {
+    getAppConfigurationUsingGET(extraHttpRequestParams) {
+        const localVarPath = this.basePath + '/api/v1/config/app';
+        let queryParameters = {};
+        let headerParams = Object.assign({}, this.defaultHeaders);
+        let httpRequestParams = {
             method: 'GET',
             url: localVarPath,
             params: queryParameters,
@@ -41,8 +38,6 @@ var ConfigurationControllerApi = /** @class */ (function () {
             httpRequestParams = Object.assign(httpRequestParams, extraHttpRequestParams);
         }
         return this.$http(httpRequestParams);
-    };
-    ConfigurationControllerApi.$inject = ['$http', '$httpParamSerializer', 'basePath'];
-    return ConfigurationControllerApi;
-}());
-exports.ConfigurationControllerApi = ConfigurationControllerApi;
+    }
+}
+ConfigurationControllerApi.$inject = ['$http', '$httpParamSerializer', 'basePath'];

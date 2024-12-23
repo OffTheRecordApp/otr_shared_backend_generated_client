@@ -1,4 +1,3 @@
-"use strict";
 /**
  * OffTheRecord Rest Service API - Devo
  * A service to handle your traffic tickets
@@ -10,11 +9,9 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.ViolationClassificationModel = void 0;
-var ViolationClassificationModel;
+export var ViolationClassificationModel;
 (function (ViolationClassificationModel) {
-    var ClassificationEnum;
+    let ClassificationEnum;
     (function (ClassificationEnum) {
         ClassificationEnum[ClassificationEnum["CLASS1FELONY"] = 'CLASS_1_FELONY'] = "CLASS1FELONY";
         ClassificationEnum[ClassificationEnum["CLASS1MISDEMEANOR"] = 'CLASS_1_MISDEMEANOR'] = "CLASS1MISDEMEANOR";
@@ -74,4 +71,4 @@ var ViolationClassificationModel;
         ClassificationEnum[ClassificationEnum["WOBBLERTOFELONY"] = 'WOBBLER_TO_FELONY'] = "WOBBLERTOFELONY";
         ClassificationEnum[ClassificationEnum["WOBBLERTOMISDEMEANOR"] = 'WOBBLER_TO_MISDEMEANOR'] = "WOBBLERTOMISDEMEANOR";
     })(ClassificationEnum = ViolationClassificationModel.ClassificationEnum || (ViolationClassificationModel.ClassificationEnum = {}));
-})(ViolationClassificationModel = exports.ViolationClassificationModel || (exports.ViolationClassificationModel = {}));
+})(ViolationClassificationModel || (ViolationClassificationModel = {}));

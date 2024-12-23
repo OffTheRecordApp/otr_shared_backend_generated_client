@@ -1,4 +1,3 @@
-"use strict";
 /**
  * OffTheRecord Rest Service API - Devo
  * A service to handle your traffic tickets
@@ -10,14 +9,12 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.Source = void 0;
-var Source;
+export var Source;
 (function (Source) {
-    var DeliveredAsEnum;
+    let DeliveredAsEnum;
     (function (DeliveredAsEnum) {
         DeliveredAsEnum[DeliveredAsEnum["ADMININITIATED"] = 'ADMIN_INITIATED'] = "ADMININITIATED";
         DeliveredAsEnum[DeliveredAsEnum["INBOUND"] = 'INBOUND'] = "INBOUND";
         DeliveredAsEnum[DeliveredAsEnum["OUTBOUND"] = 'OUTBOUND'] = "OUTBOUND";
     })(DeliveredAsEnum = Source.DeliveredAsEnum || (Source.DeliveredAsEnum = {}));
-})(Source = exports.Source || (exports.Source = {}));
+})(Source || (Source = {}));

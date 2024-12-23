@@ -1,4 +1,3 @@
-"use strict";
 /**
  * OffTheRecord Rest Service API - Devo
  * A service to handle your traffic tickets
@@ -10,15 +9,13 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.CaseOutcomeModel = void 0;
-var CaseOutcomeModel;
+export var CaseOutcomeModel;
 (function (CaseOutcomeModel) {
-    var ResolutionStatusEnum;
+    let ResolutionStatusEnum;
     (function (ResolutionStatusEnum) {
         ResolutionStatusEnum[ResolutionStatusEnum["LOST"] = 'LOST'] = "LOST";
         ResolutionStatusEnum[ResolutionStatusEnum["POINTSREDUCED"] = 'POINTS_REDUCED'] = "POINTSREDUCED";
         ResolutionStatusEnum[ResolutionStatusEnum["REDUCEDTONONMOVER"] = 'REDUCED_TO_NON_MOVER'] = "REDUCEDTONONMOVER";
         ResolutionStatusEnum[ResolutionStatusEnum["TICKETDISMISSED"] = 'TICKET_DISMISSED'] = "TICKETDISMISSED";
     })(ResolutionStatusEnum = CaseOutcomeModel.ResolutionStatusEnum || (CaseOutcomeModel.ResolutionStatusEnum = {}));
-})(CaseOutcomeModel = exports.CaseOutcomeModel || (exports.CaseOutcomeModel = {}));
+})(CaseOutcomeModel || (CaseOutcomeModel = {}));

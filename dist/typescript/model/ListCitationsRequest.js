@@ -1,4 +1,3 @@
-"use strict";
 /**
  * OffTheRecord Rest Service API - Devo
  * A service to handle your traffic tickets
@@ -10,30 +9,28 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.ListCitationsRequest = void 0;
-var ListCitationsRequest;
+export var ListCitationsRequest;
 (function (ListCitationsRequest) {
-    var CaseStatusCategoryFilterEnum;
+    let CaseStatusCategoryFilterEnum;
     (function (CaseStatusCategoryFilterEnum) {
         CaseStatusCategoryFilterEnum[CaseStatusCategoryFilterEnum["ACTIVE"] = 'ACTIVE'] = "ACTIVE";
         CaseStatusCategoryFilterEnum[CaseStatusCategoryFilterEnum["CANCELLED"] = 'CANCELLED'] = "CANCELLED";
         CaseStatusCategoryFilterEnum[CaseStatusCategoryFilterEnum["RESOLVED"] = 'RESOLVED'] = "RESOLVED";
         CaseStatusCategoryFilterEnum[CaseStatusCategoryFilterEnum["UNCONFIRMED"] = 'UNCONFIRMED'] = "UNCONFIRMED";
     })(CaseStatusCategoryFilterEnum = ListCitationsRequest.CaseStatusCategoryFilterEnum || (ListCitationsRequest.CaseStatusCategoryFilterEnum = {}));
-    var CdlStatusEnum;
+    let CdlStatusEnum;
     (function (CdlStatusEnum) {
         CdlStatusEnum[CdlStatusEnum["CDLINCOMMERCIALVEHICLE"] = 'CDL_IN_COMMERCIAL_VEHICLE'] = "CDLINCOMMERCIALVEHICLE";
         CdlStatusEnum[CdlStatusEnum["CDLINPERSONALVEHICLE"] = 'CDL_IN_PERSONAL_VEHICLE'] = "CDLINPERSONALVEHICLE";
         CdlStatusEnum[CdlStatusEnum["NOCDL"] = 'NO_CDL'] = "NOCDL";
     })(CdlStatusEnum = ListCitationsRequest.CdlStatusEnum || (ListCitationsRequest.CdlStatusEnum = {}));
-    var ExperimentGroupEnum;
+    let ExperimentGroupEnum;
     (function (ExperimentGroupEnum) {
         ExperimentGroupEnum[ExperimentGroupEnum["CONTROL"] = 'CONTROL'] = "CONTROL";
         ExperimentGroupEnum[ExperimentGroupEnum["VARIATION1"] = 'VARIATION_1'] = "VARIATION1";
         ExperimentGroupEnum[ExperimentGroupEnum["VARIATION2"] = 'VARIATION_2'] = "VARIATION2";
     })(ExperimentGroupEnum = ListCitationsRequest.ExperimentGroupEnum || (ListCitationsRequest.ExperimentGroupEnum = {}));
-    var StateFilterListEnum;
+    let StateFilterListEnum;
     (function (StateFilterListEnum) {
         StateFilterListEnum[StateFilterListEnum["AK"] = 'AK'] = "AK";
         StateFilterListEnum[StateFilterListEnum["AL"] = 'AL'] = "AL";
@@ -87,4 +84,4 @@ var ListCitationsRequest;
         StateFilterListEnum[StateFilterListEnum["WV"] = 'WV'] = "WV";
         StateFilterListEnum[StateFilterListEnum["WY"] = 'WY'] = "WY";
     })(StateFilterListEnum = ListCitationsRequest.StateFilterListEnum || (ListCitationsRequest.StateFilterListEnum = {}));
-})(ListCitationsRequest = exports.ListCitationsRequest || (exports.ListCitationsRequest = {}));
+})(ListCitationsRequest || (ListCitationsRequest = {}));

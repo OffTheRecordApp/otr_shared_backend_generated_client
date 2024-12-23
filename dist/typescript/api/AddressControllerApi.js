@@ -1,4 +1,3 @@
-"use strict";
 /**
  * OffTheRecord Rest Service API - Devo
  * A service to handle your traffic tickets
@@ -10,11 +9,9 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.AddressControllerApi = void 0;
 /* tslint:disable:no-unused-variable member-ordering */
-var AddressControllerApi = /** @class */ (function () {
-    function AddressControllerApi($http, $httpParamSerializer, basePath) {
+export class AddressControllerApi {
+    constructor($http, $httpParamSerializer, basePath) {
         this.$http = $http;
         this.$httpParamSerializer = $httpParamSerializer;
         this.basePath = 'http://otr-backend-service-us-devo.offtherecord.com';
@@ -27,11 +24,11 @@ var AddressControllerApi = /** @class */ (function () {
      *
      * @summary getCountryList
      */
-    AddressControllerApi.prototype.getCountryListUsingGET = function (extraHttpRequestParams) {
-        var localVarPath = this.basePath + '/api/v1/countries';
-        var queryParameters = {};
-        var headerParams = Object.assign({}, this.defaultHeaders);
-        var httpRequestParams = {
+    getCountryListUsingGET(extraHttpRequestParams) {
+        const localVarPath = this.basePath + '/api/v1/countries';
+        let queryParameters = {};
+        let headerParams = Object.assign({}, this.defaultHeaders);
+        let httpRequestParams = {
             method: 'GET',
             url: localVarPath,
             params: queryParameters,
@@ -41,22 +38,22 @@ var AddressControllerApi = /** @class */ (function () {
             httpRequestParams = Object.assign(httpRequestParams, extraHttpRequestParams);
         }
         return this.$http(httpRequestParams);
-    };
+    }
     /**
      *
      * @summary getCountryRegions
      * @param countryCode countryCode
      */
-    AddressControllerApi.prototype.getCountryRegionsUsingGET = function (countryCode, extraHttpRequestParams) {
-        var localVarPath = this.basePath + '/api/v1/countries/{countryCode}/regions'
+    getCountryRegionsUsingGET(countryCode, extraHttpRequestParams) {
+        const localVarPath = this.basePath + '/api/v1/countries/{countryCode}/regions'
             .replace('{' + 'countryCode' + '}', encodeURIComponent(String(countryCode)));
-        var queryParameters = {};
-        var headerParams = Object.assign({}, this.defaultHeaders);
+        let queryParameters = {};
+        let headerParams = Object.assign({}, this.defaultHeaders);
         // verify required parameter 'countryCode' is not null or undefined
         if (countryCode === null || countryCode === undefined) {
             throw new Error('Required parameter countryCode was null or undefined when calling getCountryRegionsUsingGET.');
         }
-        var httpRequestParams = {
+        let httpRequestParams = {
             method: 'GET',
             url: localVarPath,
             params: queryParameters,
@@ -66,17 +63,17 @@ var AddressControllerApi = /** @class */ (function () {
             httpRequestParams = Object.assign(httpRequestParams, extraHttpRequestParams);
         }
         return this.$http(httpRequestParams);
-    };
+    }
     /**
      *
      * @summary getLocation
      * @param zipCode zipCode
      * @param countryCode countryCode
      */
-    AddressControllerApi.prototype.getLocationUsingGET = function (zipCode, countryCode, extraHttpRequestParams) {
-        var localVarPath = this.basePath + '/api/v1/locations';
-        var queryParameters = {};
-        var headerParams = Object.assign({}, this.defaultHeaders);
+    getLocationUsingGET(zipCode, countryCode, extraHttpRequestParams) {
+        const localVarPath = this.basePath + '/api/v1/locations';
+        let queryParameters = {};
+        let headerParams = Object.assign({}, this.defaultHeaders);
         // verify required parameter 'zipCode' is not null or undefined
         if (zipCode === null || zipCode === undefined) {
             throw new Error('Required parameter zipCode was null or undefined when calling getLocationUsingGET.');
@@ -87,7 +84,7 @@ var AddressControllerApi = /** @class */ (function () {
         if (zipCode !== undefined) {
             queryParameters['zipCode'] = zipCode;
         }
-        var httpRequestParams = {
+        let httpRequestParams = {
             method: 'GET',
             url: localVarPath,
             params: queryParameters,
@@ -97,8 +94,6 @@ var AddressControllerApi = /** @class */ (function () {
             httpRequestParams = Object.assign(httpRequestParams, extraHttpRequestParams);
         }
         return this.$http(httpRequestParams);
-    };
-    AddressControllerApi.$inject = ['$http', '$httpParamSerializer', 'basePath'];
-    return AddressControllerApi;
-}());
-exports.AddressControllerApi = AddressControllerApi;
+    }
+}
+AddressControllerApi.$inject = ['$http', '$httpParamSerializer', 'basePath'];

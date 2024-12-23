@@ -1,4 +1,3 @@
-"use strict";
 /**
  * OffTheRecord Rest Service API - Devo
  * A service to handle your traffic tickets
@@ -10,13 +9,11 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.CaseCounterOptionModel = void 0;
-var CaseCounterOptionModel;
+export var CaseCounterOptionModel;
 (function (CaseCounterOptionModel) {
-    var TypeEnum;
+    let TypeEnum;
     (function (TypeEnum) {
         TypeEnum[TypeEnum["FEE"] = 'CHANGE_FEE'] = "FEE";
         TypeEnum[TypeEnum["MBG"] = 'CHANGE_MBG'] = "MBG";
     })(TypeEnum = CaseCounterOptionModel.TypeEnum || (CaseCounterOptionModel.TypeEnum = {}));
-})(CaseCounterOptionModel = exports.CaseCounterOptionModel || (exports.CaseCounterOptionModel = {}));
+})(CaseCounterOptionModel || (CaseCounterOptionModel = {}));

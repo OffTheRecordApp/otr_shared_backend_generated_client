@@ -1,4 +1,3 @@
-"use strict";
 /**
  * OffTheRecord Rest Service API - Devo
  * A service to handle your traffic tickets
@@ -10,19 +9,17 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.AddRedirectUrlRequest = void 0;
-var AddRedirectUrlRequest;
+export var AddRedirectUrlRequest;
 (function (AddRedirectUrlRequest) {
-    var PageTypeEnum;
+    let PageTypeEnum;
     (function (PageTypeEnum) {
         PageTypeEnum[PageTypeEnum["DEBUG"] = 'DEBUG'] = "DEBUG";
         PageTypeEnum[PageTypeEnum["SEO"] = 'SEO'] = "SEO";
         PageTypeEnum[PageTypeEnum["VANITY"] = 'VANITY'] = "VANITY";
     })(PageTypeEnum = AddRedirectUrlRequest.PageTypeEnum || (AddRedirectUrlRequest.PageTypeEnum = {}));
-    var RedirectTypeEnum;
+    let RedirectTypeEnum;
     (function (RedirectTypeEnum) {
         RedirectTypeEnum[RedirectTypeEnum["PERMANENT"] = 'PERMANENT'] = "PERMANENT";
         RedirectTypeEnum[RedirectTypeEnum["TEMPORARY"] = 'TEMPORARY'] = "TEMPORARY";
     })(RedirectTypeEnum = AddRedirectUrlRequest.RedirectTypeEnum || (AddRedirectUrlRequest.RedirectTypeEnum = {}));
-})(AddRedirectUrlRequest = exports.AddRedirectUrlRequest || (exports.AddRedirectUrlRequest = {}));
+})(AddRedirectUrlRequest || (AddRedirectUrlRequest = {}));

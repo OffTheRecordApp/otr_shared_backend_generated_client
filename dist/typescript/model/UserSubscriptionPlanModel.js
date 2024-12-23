@@ -1,4 +1,3 @@
-"use strict";
 /**
  * OffTheRecord Rest Service API - Devo
  * A service to handle your traffic tickets
@@ -10,17 +9,15 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.UserSubscriptionPlanModel = void 0;
-var UserSubscriptionPlanModel;
+export var UserSubscriptionPlanModel;
 (function (UserSubscriptionPlanModel) {
-    var ProductNameEnum;
+    let ProductNameEnum;
     (function (ProductNameEnum) {
         ProductNameEnum[ProductNameEnum["CONVOYPRO"] = 'CONVOY_PRO'] = "CONVOYPRO";
         ProductNameEnum[ProductNameEnum["OTRFASTLANE"] = 'OTR_FASTLANE'] = "OTRFASTLANE";
         ProductNameEnum[ProductNameEnum["OTRFASTLANETEEN"] = 'OTR_FASTLANE_TEEN'] = "OTRFASTLANETEEN";
     })(ProductNameEnum = UserSubscriptionPlanModel.ProductNameEnum || (UserSubscriptionPlanModel.ProductNameEnum = {}));
-    var SubscriptionStatusEnum;
+    let SubscriptionStatusEnum;
     (function (SubscriptionStatusEnum) {
         SubscriptionStatusEnum[SubscriptionStatusEnum["ACTIVE"] = 'ACTIVE'] = "ACTIVE";
         SubscriptionStatusEnum[SubscriptionStatusEnum["CANCELED"] = 'CANCELED'] = "CANCELED";
@@ -31,4 +28,4 @@ var UserSubscriptionPlanModel;
         SubscriptionStatusEnum[SubscriptionStatusEnum["UNKNOWN"] = 'UNKNOWN'] = "UNKNOWN";
         SubscriptionStatusEnum[SubscriptionStatusEnum["UNPAID"] = 'UNPAID'] = "UNPAID";
     })(SubscriptionStatusEnum = UserSubscriptionPlanModel.SubscriptionStatusEnum || (UserSubscriptionPlanModel.SubscriptionStatusEnum = {}));
-})(UserSubscriptionPlanModel = exports.UserSubscriptionPlanModel || (exports.UserSubscriptionPlanModel = {}));
+})(UserSubscriptionPlanModel || (UserSubscriptionPlanModel = {}));

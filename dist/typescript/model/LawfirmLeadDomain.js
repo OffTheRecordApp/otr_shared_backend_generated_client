@@ -1,4 +1,3 @@
-"use strict";
 /**
  * OffTheRecord Rest Service API - Devo
  * A service to handle your traffic tickets
@@ -10,11 +9,9 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.LawfirmLeadDomain = void 0;
-var LawfirmLeadDomain;
+export var LawfirmLeadDomain;
 (function (LawfirmLeadDomain) {
-    var LawfirmAddressStateEnum;
+    let LawfirmAddressStateEnum;
     (function (LawfirmAddressStateEnum) {
         LawfirmAddressStateEnum[LawfirmAddressStateEnum["AK"] = 'AK'] = "AK";
         LawfirmAddressStateEnum[LawfirmAddressStateEnum["AL"] = 'AL'] = "AL";
@@ -68,7 +65,7 @@ var LawfirmLeadDomain;
         LawfirmAddressStateEnum[LawfirmAddressStateEnum["WV"] = 'WV'] = "WV";
         LawfirmAddressStateEnum[LawfirmAddressStateEnum["WY"] = 'WY'] = "WY";
     })(LawfirmAddressStateEnum = LawfirmLeadDomain.LawfirmAddressStateEnum || (LawfirmLeadDomain.LawfirmAddressStateEnum = {}));
-    var LawfirmStateEnum;
+    let LawfirmStateEnum;
     (function (LawfirmStateEnum) {
         LawfirmStateEnum[LawfirmStateEnum["ACCOUNTCLOSED"] = 'ACCOUNT_CLOSED'] = "ACCOUNTCLOSED";
         LawfirmStateEnum[LawfirmStateEnum["ACTIVE"] = 'ACTIVE'] = "ACTIVE";
@@ -91,7 +88,7 @@ var LawfirmLeadDomain;
         LawfirmStateEnum[LawfirmStateEnum["TERMINATEDPOORSERVICE"] = 'TERMINATED_POOR_SERVICE'] = "TERMINATEDPOORSERVICE";
         LawfirmStateEnum[LawfirmStateEnum["TERMINATEDPOORSUCCESS"] = 'TERMINATED_POOR_SUCCESS'] = "TERMINATEDPOORSUCCESS";
     })(LawfirmStateEnum = LawfirmLeadDomain.LawfirmStateEnum || (LawfirmLeadDomain.LawfirmStateEnum = {}));
-    var LawfirmStatusCategoryEnum;
+    let LawfirmStatusCategoryEnum;
     (function (LawfirmStatusCategoryEnum) {
         LawfirmStatusCategoryEnum[LawfirmStatusCategoryEnum["ACTIVE"] = 'ACTIVE'] = "ACTIVE";
         LawfirmStatusCategoryEnum[LawfirmStatusCategoryEnum["INACTIVE"] = 'INACTIVE'] = "INACTIVE";
@@ -100,4 +97,4 @@ var LawfirmLeadDomain;
         LawfirmStatusCategoryEnum[LawfirmStatusCategoryEnum["REJECTED"] = 'REJECTED'] = "REJECTED";
         LawfirmStatusCategoryEnum[LawfirmStatusCategoryEnum["TERMINATED"] = 'TERMINATED'] = "TERMINATED";
     })(LawfirmStatusCategoryEnum = LawfirmLeadDomain.LawfirmStatusCategoryEnum || (LawfirmLeadDomain.LawfirmStatusCategoryEnum = {}));
-})(LawfirmLeadDomain = exports.LawfirmLeadDomain || (exports.LawfirmLeadDomain = {}));
+})(LawfirmLeadDomain || (LawfirmLeadDomain = {}));

@@ -1,4 +1,3 @@
-"use strict";
 /**
  * OffTheRecord Rest Service API - Devo
  * A service to handle your traffic tickets
@@ -10,11 +9,9 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.CitationWithMissingFields = void 0;
-var CitationWithMissingFields;
+export var CitationWithMissingFields;
 (function (CitationWithMissingFields) {
-    var CaseStatusEnum;
+    let CaseStatusEnum;
     (function (CaseStatusEnum) {
         CaseStatusEnum[CaseStatusEnum["AMENDEDDOWNWITHINCLASS"] = 'AMENDED_DOWN_WITHIN_CLASS'] = "AMENDEDDOWNWITHINCLASS";
         CaseStatusEnum[CaseStatusEnum["AMENDEDFULLFINE"] = 'AMENDED_FULL_FINE'] = "AMENDEDFULLFINE";
@@ -54,14 +51,14 @@ var CitationWithMissingFields;
         CaseStatusEnum[CaseStatusEnum["TRAFFICSCHOOL"] = 'TRAFFIC_SCHOOL'] = "TRAFFICSCHOOL";
         CaseStatusEnum[CaseStatusEnum["UNCONFIRMED"] = 'UNCONFIRMED'] = "UNCONFIRMED";
     })(CaseStatusEnum = CitationWithMissingFields.CaseStatusEnum || (CitationWithMissingFields.CaseStatusEnum = {}));
-    var CaseStatusCategoryEnum;
+    let CaseStatusCategoryEnum;
     (function (CaseStatusCategoryEnum) {
         CaseStatusCategoryEnum[CaseStatusCategoryEnum["ACTIVE"] = 'ACTIVE'] = "ACTIVE";
         CaseStatusCategoryEnum[CaseStatusCategoryEnum["CANCELLED"] = 'CANCELLED'] = "CANCELLED";
         CaseStatusCategoryEnum[CaseStatusCategoryEnum["RESOLVED"] = 'RESOLVED'] = "RESOLVED";
         CaseStatusCategoryEnum[CaseStatusCategoryEnum["UNCONFIRMED"] = 'UNCONFIRMED'] = "UNCONFIRMED";
     })(CaseStatusCategoryEnum = CitationWithMissingFields.CaseStatusCategoryEnum || (CitationWithMissingFields.CaseStatusCategoryEnum = {}));
-    var GenderEnum;
+    let GenderEnum;
     (function (GenderEnum) {
         GenderEnum[GenderEnum["FEMALE"] = 'FEMALE'] = "FEMALE";
         GenderEnum[GenderEnum["MALE"] = 'MALE'] = "MALE";
@@ -70,7 +67,7 @@ var CitationWithMissingFields;
         GenderEnum[GenderEnum["UNVERIFIED"] = 'UNVERIFIED'] = "UNVERIFIED";
         GenderEnum[GenderEnum["X"] = 'X'] = "X";
     })(GenderEnum = CitationWithMissingFields.GenderEnum || (CitationWithMissingFields.GenderEnum = {}));
-    var RaceEnum;
+    let RaceEnum;
     (function (RaceEnum) {
         RaceEnum[RaceEnum["ASIAN"] = 'ASIAN'] = "ASIAN";
         RaceEnum[RaceEnum["BLACK"] = 'BLACK'] = "BLACK";
@@ -84,7 +81,7 @@ var CitationWithMissingFields;
         RaceEnum[RaceEnum["UNVERIFIED"] = 'UNVERIFIED'] = "UNVERIFIED";
         RaceEnum[RaceEnum["WHITE"] = 'WHITE'] = "WHITE";
     })(RaceEnum = CitationWithMissingFields.RaceEnum || (CitationWithMissingFields.RaceEnum = {}));
-    var StateEnum;
+    let StateEnum;
     (function (StateEnum) {
         StateEnum[StateEnum["AK"] = 'AK'] = "AK";
         StateEnum[StateEnum["AL"] = 'AL'] = "AL";
@@ -138,4 +135,4 @@ var CitationWithMissingFields;
         StateEnum[StateEnum["WV"] = 'WV'] = "WV";
         StateEnum[StateEnum["WY"] = 'WY'] = "WY";
     })(StateEnum = CitationWithMissingFields.StateEnum || (CitationWithMissingFields.StateEnum = {}));
-})(CitationWithMissingFields = exports.CitationWithMissingFields || (exports.CitationWithMissingFields = {}));
+})(CitationWithMissingFields || (CitationWithMissingFields = {}));

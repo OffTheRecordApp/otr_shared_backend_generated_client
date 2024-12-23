@@ -1,4 +1,3 @@
-"use strict";
 /**
  * OffTheRecord Rest Service API - Devo
  * A service to handle your traffic tickets
@@ -10,11 +9,9 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.ViolationPenaltyControllerApi = void 0;
 /* tslint:disable:no-unused-variable member-ordering */
-var ViolationPenaltyControllerApi = /** @class */ (function () {
-    function ViolationPenaltyControllerApi($http, $httpParamSerializer, basePath) {
+export class ViolationPenaltyControllerApi {
+    constructor($http, $httpParamSerializer, basePath) {
         this.$http = $http;
         this.$httpParamSerializer = $httpParamSerializer;
         this.basePath = 'http://otr-backend-service-us-devo.offtherecord.com';
@@ -29,11 +26,11 @@ var ViolationPenaltyControllerApi = /** @class */ (function () {
      * @param violationId violationId
      * @param flavor flavor
      */
-    ViolationPenaltyControllerApi.prototype.getPenaltiesByViolationUsingGET = function (violationId, flavor, extraHttpRequestParams) {
-        var localVarPath = this.basePath + '/api/v1/violations/{violationId}/penalties'
+    getPenaltiesByViolationUsingGET(violationId, flavor, extraHttpRequestParams) {
+        const localVarPath = this.basePath + '/api/v1/violations/{violationId}/penalties'
             .replace('{' + 'violationId' + '}', encodeURIComponent(String(violationId)));
-        var queryParameters = {};
-        var headerParams = Object.assign({}, this.defaultHeaders);
+        let queryParameters = {};
+        let headerParams = Object.assign({}, this.defaultHeaders);
         // verify required parameter 'violationId' is not null or undefined
         if (violationId === null || violationId === undefined) {
             throw new Error('Required parameter violationId was null or undefined when calling getPenaltiesByViolationUsingGET.');
@@ -41,7 +38,7 @@ var ViolationPenaltyControllerApi = /** @class */ (function () {
         if (flavor !== undefined) {
             queryParameters['flavor'] = flavor;
         }
-        var httpRequestParams = {
+        let httpRequestParams = {
             method: 'GET',
             url: localVarPath,
             params: queryParameters,
@@ -51,16 +48,16 @@ var ViolationPenaltyControllerApi = /** @class */ (function () {
             httpRequestParams = Object.assign(httpRequestParams, extraHttpRequestParams);
         }
         return this.$http(httpRequestParams);
-    };
+    }
     /**
      *
      * @summary getPenaltyTypes
      */
-    ViolationPenaltyControllerApi.prototype.getPenaltyTypesUsingGET = function (extraHttpRequestParams) {
-        var localVarPath = this.basePath + '/api/v1/violations/penalties';
-        var queryParameters = {};
-        var headerParams = Object.assign({}, this.defaultHeaders);
-        var httpRequestParams = {
+    getPenaltyTypesUsingGET(extraHttpRequestParams) {
+        const localVarPath = this.basePath + '/api/v1/violations/penalties';
+        let queryParameters = {};
+        let headerParams = Object.assign({}, this.defaultHeaders);
+        let httpRequestParams = {
             method: 'GET',
             url: localVarPath,
             params: queryParameters,
@@ -70,19 +67,19 @@ var ViolationPenaltyControllerApi = /** @class */ (function () {
             httpRequestParams = Object.assign(httpRequestParams, extraHttpRequestParams);
         }
         return this.$http(httpRequestParams);
-    };
+    }
     /**
      *
      * @summary removePenalty
      * @param penaltyTypeId penaltyTypeId
      * @param violationId violationId
      */
-    ViolationPenaltyControllerApi.prototype.removePenaltyUsingDELETE = function (penaltyTypeId, violationId, extraHttpRequestParams) {
-        var localVarPath = this.basePath + '/api/v1/violations/{violationId}/penalties/{penaltyTypeId}'
+    removePenaltyUsingDELETE(penaltyTypeId, violationId, extraHttpRequestParams) {
+        const localVarPath = this.basePath + '/api/v1/violations/{violationId}/penalties/{penaltyTypeId}'
             .replace('{' + 'penaltyTypeId' + '}', encodeURIComponent(String(penaltyTypeId)))
             .replace('{' + 'violationId' + '}', encodeURIComponent(String(violationId)));
-        var queryParameters = {};
-        var headerParams = Object.assign({}, this.defaultHeaders);
+        let queryParameters = {};
+        let headerParams = Object.assign({}, this.defaultHeaders);
         // verify required parameter 'penaltyTypeId' is not null or undefined
         if (penaltyTypeId === null || penaltyTypeId === undefined) {
             throw new Error('Required parameter penaltyTypeId was null or undefined when calling removePenaltyUsingDELETE.');
@@ -91,7 +88,7 @@ var ViolationPenaltyControllerApi = /** @class */ (function () {
         if (violationId === null || violationId === undefined) {
             throw new Error('Required parameter violationId was null or undefined when calling removePenaltyUsingDELETE.');
         }
-        var httpRequestParams = {
+        let httpRequestParams = {
             method: 'DELETE',
             url: localVarPath,
             params: queryParameters,
@@ -101,18 +98,18 @@ var ViolationPenaltyControllerApi = /** @class */ (function () {
             httpRequestParams = Object.assign(httpRequestParams, extraHttpRequestParams);
         }
         return this.$http(httpRequestParams);
-    };
+    }
     /**
      *
      * @summary upsertPenalty
      * @param violationId violationId
      * @param penaltyToAdd penaltyToAdd
      */
-    ViolationPenaltyControllerApi.prototype.upsertPenaltyUsingPOST = function (violationId, penaltyToAdd, extraHttpRequestParams) {
-        var localVarPath = this.basePath + '/api/v1/violations/{violationId}/penalties'
+    upsertPenaltyUsingPOST(violationId, penaltyToAdd, extraHttpRequestParams) {
+        const localVarPath = this.basePath + '/api/v1/violations/{violationId}/penalties'
             .replace('{' + 'violationId' + '}', encodeURIComponent(String(violationId)));
-        var queryParameters = {};
-        var headerParams = Object.assign({}, this.defaultHeaders);
+        let queryParameters = {};
+        let headerParams = Object.assign({}, this.defaultHeaders);
         // verify required parameter 'violationId' is not null or undefined
         if (violationId === null || violationId === undefined) {
             throw new Error('Required parameter violationId was null or undefined when calling upsertPenaltyUsingPOST.');
@@ -121,7 +118,7 @@ var ViolationPenaltyControllerApi = /** @class */ (function () {
         if (penaltyToAdd === null || penaltyToAdd === undefined) {
             throw new Error('Required parameter penaltyToAdd was null or undefined when calling upsertPenaltyUsingPOST.');
         }
-        var httpRequestParams = {
+        let httpRequestParams = {
             method: 'POST',
             url: localVarPath,
             data: penaltyToAdd,
@@ -132,8 +129,6 @@ var ViolationPenaltyControllerApi = /** @class */ (function () {
             httpRequestParams = Object.assign(httpRequestParams, extraHttpRequestParams);
         }
         return this.$http(httpRequestParams);
-    };
-    ViolationPenaltyControllerApi.$inject = ['$http', '$httpParamSerializer', 'basePath'];
-    return ViolationPenaltyControllerApi;
-}());
-exports.ViolationPenaltyControllerApi = ViolationPenaltyControllerApi;
+    }
+}
+ViolationPenaltyControllerApi.$inject = ['$http', '$httpParamSerializer', 'basePath'];

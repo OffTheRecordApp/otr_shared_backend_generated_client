@@ -1,4 +1,3 @@
-"use strict";
 /**
  * OffTheRecord Rest Service API - Devo
  * A service to handle your traffic tickets
@@ -10,11 +9,9 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.ReferralResponse = void 0;
-var ReferralResponse;
+export var ReferralResponse;
 (function (ReferralResponse) {
-    var ReferralCreditStatusEnum;
+    let ReferralCreditStatusEnum;
     (function (ReferralCreditStatusEnum) {
         ReferralCreditStatusEnum[ReferralCreditStatusEnum["APPLIED"] = 'APPLIED'] = "APPLIED";
         ReferralCreditStatusEnum[ReferralCreditStatusEnum["CASECANCELLED"] = 'CASE_CANCELLED'] = "CASECANCELLED";
@@ -23,20 +20,20 @@ var ReferralResponse;
         ReferralCreditStatusEnum[ReferralCreditStatusEnum["SAVED"] = 'SAVED'] = "SAVED";
         ReferralCreditStatusEnum[ReferralCreditStatusEnum["SUPERSEDED"] = 'SUPERSEDED'] = "SUPERSEDED";
     })(ReferralCreditStatusEnum = ReferralResponse.ReferralCreditStatusEnum || (ReferralResponse.ReferralCreditStatusEnum = {}));
-    var ReferralCreditTypeEnum;
+    let ReferralCreditTypeEnum;
     (function (ReferralCreditTypeEnum) {
         ReferralCreditTypeEnum[ReferralCreditTypeEnum["CENTSVALUE"] = 'CENTS_VALUE'] = "CENTSVALUE";
         ReferralCreditTypeEnum[ReferralCreditTypeEnum["NOCREDIT"] = 'NO_CREDIT'] = "NOCREDIT";
         ReferralCreditTypeEnum[ReferralCreditTypeEnum["PERCENTAGEDISCOUNT"] = 'PERCENTAGE_DISCOUNT'] = "PERCENTAGEDISCOUNT";
     })(ReferralCreditTypeEnum = ReferralResponse.ReferralCreditTypeEnum || (ReferralResponse.ReferralCreditTypeEnum = {}));
-    var ReferralEventEnum;
+    let ReferralEventEnum;
     (function (ReferralEventEnum) {
         ReferralEventEnum[ReferralEventEnum["CASEBOOKING"] = 'CASE_BOOKING'] = "CASEBOOKING";
         ReferralEventEnum[ReferralEventEnum["CASEMATCH"] = 'CASE_MATCH'] = "CASEMATCH";
         ReferralEventEnum[ReferralEventEnum["INVITE"] = 'INVITE'] = "INVITE";
         ReferralEventEnum[ReferralEventEnum["REGISTRATION"] = 'REGISTRATION'] = "REGISTRATION";
     })(ReferralEventEnum = ReferralResponse.ReferralEventEnum || (ReferralResponse.ReferralEventEnum = {}));
-    var ReferralPaymentStatusEnum;
+    let ReferralPaymentStatusEnum;
     (function (ReferralPaymentStatusEnum) {
         ReferralPaymentStatusEnum[ReferralPaymentStatusEnum["ERROR"] = 'ERROR'] = "ERROR";
         ReferralPaymentStatusEnum[ReferralPaymentStatusEnum["NONE"] = 'NONE'] = "NONE";
@@ -44,7 +41,7 @@ var ReferralResponse;
         ReferralPaymentStatusEnum[ReferralPaymentStatusEnum["PENDINGACCOUNTVERIFICATION"] = 'PENDING_ACCOUNT_VERIFICATION'] = "PENDINGACCOUNTVERIFICATION";
         ReferralPaymentStatusEnum[ReferralPaymentStatusEnum["PENDINGCASERESOLUTION"] = 'PENDING_CASE_RESOLUTION'] = "PENDINGCASERESOLUTION";
     })(ReferralPaymentStatusEnum = ReferralResponse.ReferralPaymentStatusEnum || (ReferralResponse.ReferralPaymentStatusEnum = {}));
-    var ReferralSourceTypeEnum;
+    let ReferralSourceTypeEnum;
     (function (ReferralSourceTypeEnum) {
         ReferralSourceTypeEnum[ReferralSourceTypeEnum["ADMIN"] = 'ADMIN'] = "ADMIN";
         ReferralSourceTypeEnum[ReferralSourceTypeEnum["BILLBOARDS"] = 'BILLBOARDS'] = "BILLBOARDS";
@@ -65,4 +62,4 @@ var ReferralResponse;
         ReferralSourceTypeEnum[ReferralSourceTypeEnum["VINWIKI"] = 'VINWIKI'] = "VINWIKI";
         ReferralSourceTypeEnum[ReferralSourceTypeEnum["YOUTUBEAD"] = 'YOUTUBE_AD'] = "YOUTUBEAD";
     })(ReferralSourceTypeEnum = ReferralResponse.ReferralSourceTypeEnum || (ReferralResponse.ReferralSourceTypeEnum = {}));
-})(ReferralResponse = exports.ReferralResponse || (exports.ReferralResponse = {}));
+})(ReferralResponse || (ReferralResponse = {}));

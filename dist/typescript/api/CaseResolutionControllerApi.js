@@ -1,4 +1,3 @@
-"use strict";
 /**
  * OffTheRecord Rest Service API - Devo
  * A service to handle your traffic tickets
@@ -10,11 +9,9 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.CaseResolutionControllerApi = void 0;
 /* tslint:disable:no-unused-variable member-ordering */
-var CaseResolutionControllerApi = /** @class */ (function () {
-    function CaseResolutionControllerApi($http, $httpParamSerializer, basePath) {
+export class CaseResolutionControllerApi {
+    constructor($http, $httpParamSerializer, basePath) {
         this.$http = $http;
         this.$httpParamSerializer = $httpParamSerializer;
         this.basePath = 'http://otr-backend-service-us-devo.offtherecord.com';
@@ -28,16 +25,16 @@ var CaseResolutionControllerApi = /** @class */ (function () {
      * @summary addSocialMediaAction
      * @param caseId caseId
      */
-    CaseResolutionControllerApi.prototype.addSocialMediaActionUsingPOST = function (caseId, extraHttpRequestParams) {
-        var localVarPath = this.basePath + '/api/v1/cases/{caseId}/send-social-media-ask'
+    addSocialMediaActionUsingPOST(caseId, extraHttpRequestParams) {
+        const localVarPath = this.basePath + '/api/v1/cases/{caseId}/send-social-media-ask'
             .replace('{' + 'caseId' + '}', encodeURIComponent(String(caseId)));
-        var queryParameters = {};
-        var headerParams = Object.assign({}, this.defaultHeaders);
+        let queryParameters = {};
+        let headerParams = Object.assign({}, this.defaultHeaders);
         // verify required parameter 'caseId' is not null or undefined
         if (caseId === null || caseId === undefined) {
             throw new Error('Required parameter caseId was null or undefined when calling addSocialMediaActionUsingPOST.');
         }
-        var httpRequestParams = {
+        let httpRequestParams = {
             method: 'POST',
             url: localVarPath,
             params: queryParameters,
@@ -47,8 +44,6 @@ var CaseResolutionControllerApi = /** @class */ (function () {
             httpRequestParams = Object.assign(httpRequestParams, extraHttpRequestParams);
         }
         return this.$http(httpRequestParams);
-    };
-    CaseResolutionControllerApi.$inject = ['$http', '$httpParamSerializer', 'basePath'];
-    return CaseResolutionControllerApi;
-}());
-exports.CaseResolutionControllerApi = CaseResolutionControllerApi;
+    }
+}
+CaseResolutionControllerApi.$inject = ['$http', '$httpParamSerializer', 'basePath'];

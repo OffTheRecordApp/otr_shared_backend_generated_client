@@ -1,4 +1,3 @@
-"use strict";
 /**
  * OffTheRecord Rest Service API - Devo
  * A service to handle your traffic tickets
@@ -10,11 +9,9 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.ListLawfirmSurchargeTypeModel = void 0;
-var ListLawfirmSurchargeTypeModel;
+export var ListLawfirmSurchargeTypeModel;
 (function (ListLawfirmSurchargeTypeModel) {
-    var TypeEnum;
+    let TypeEnum;
     (function (TypeEnum) {
         TypeEnum[TypeEnum["CDL"] = 'CDL'] = "CDL";
         TypeEnum[TypeEnum["FAILURETOAPPEAR"] = 'FAILURE_TO_APPEAR'] = "FAILURETOAPPEAR";
@@ -24,4 +21,4 @@ var ListLawfirmSurchargeTypeModel;
         TypeEnum[TypeEnum["SHORTNOTICE"] = 'SHORT_NOTICE'] = "SHORTNOTICE";
         TypeEnum[TypeEnum["WARRANT"] = 'WARRANT'] = "WARRANT";
     })(TypeEnum = ListLawfirmSurchargeTypeModel.TypeEnum || (ListLawfirmSurchargeTypeModel.TypeEnum = {}));
-})(ListLawfirmSurchargeTypeModel = exports.ListLawfirmSurchargeTypeModel || (exports.ListLawfirmSurchargeTypeModel = {}));
+})(ListLawfirmSurchargeTypeModel || (ListLawfirmSurchargeTypeModel = {}));

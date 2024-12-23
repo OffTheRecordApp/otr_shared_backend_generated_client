@@ -1,4 +1,3 @@
-"use strict";
 /**
  * OffTheRecord Rest Service API - Devo
  * A service to handle your traffic tickets
@@ -10,14 +9,12 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.AppEventCreateRequest = void 0;
-var AppEventCreateRequest;
+export var AppEventCreateRequest;
 (function (AppEventCreateRequest) {
-    var AppEventNameEnum;
+    let AppEventNameEnum;
     (function (AppEventNameEnum) {
         AppEventNameEnum[AppEventNameEnum["FIRSTOPEN"] = 'FIRST_OPEN'] = "FIRSTOPEN";
         AppEventNameEnum[AppEventNameEnum["INSTALL"] = 'INSTALL'] = "INSTALL";
         AppEventNameEnum[AppEventNameEnum["PREINSTALLENGAGEMENT"] = 'PRE_INSTALL_ENGAGEMENT'] = "PREINSTALLENGAGEMENT";
     })(AppEventNameEnum = AppEventCreateRequest.AppEventNameEnum || (AppEventCreateRequest.AppEventNameEnum = {}));
-})(AppEventCreateRequest = exports.AppEventCreateRequest || (exports.AppEventCreateRequest = {}));
+})(AppEventCreateRequest || (AppEventCreateRequest = {}));

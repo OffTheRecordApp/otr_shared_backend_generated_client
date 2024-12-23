@@ -1,4 +1,3 @@
-"use strict";
 /**
  * OffTheRecord Rest Service API - Devo
  * A service to handle your traffic tickets
@@ -10,11 +9,9 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.LawfirmCaseDecisionControllerApi = void 0;
 /* tslint:disable:no-unused-variable member-ordering */
-var LawfirmCaseDecisionControllerApi = /** @class */ (function () {
-    function LawfirmCaseDecisionControllerApi($http, $httpParamSerializer, basePath) {
+export class LawfirmCaseDecisionControllerApi {
+    constructor($http, $httpParamSerializer, basePath) {
         this.$http = $http;
         this.$httpParamSerializer = $httpParamSerializer;
         this.basePath = 'http://otr-backend-service-us-devo.offtherecord.com';
@@ -29,11 +26,11 @@ var LawfirmCaseDecisionControllerApi = /** @class */ (function () {
      * @param caseId caseId
      * @param request request
      */
-    LawfirmCaseDecisionControllerApi.prototype.setLawfirmCaseDecisionUsingPOST = function (caseId, request, extraHttpRequestParams) {
-        var localVarPath = this.basePath + '/api/v1/lawfirm/cases/{caseId}/decision'
+    setLawfirmCaseDecisionUsingPOST(caseId, request, extraHttpRequestParams) {
+        const localVarPath = this.basePath + '/api/v1/lawfirm/cases/{caseId}/decision'
             .replace('{' + 'caseId' + '}', encodeURIComponent(String(caseId)));
-        var queryParameters = {};
-        var headerParams = Object.assign({}, this.defaultHeaders);
+        let queryParameters = {};
+        let headerParams = Object.assign({}, this.defaultHeaders);
         // verify required parameter 'caseId' is not null or undefined
         if (caseId === null || caseId === undefined) {
             throw new Error('Required parameter caseId was null or undefined when calling setLawfirmCaseDecisionUsingPOST.');
@@ -42,7 +39,7 @@ var LawfirmCaseDecisionControllerApi = /** @class */ (function () {
         if (request === null || request === undefined) {
             throw new Error('Required parameter request was null or undefined when calling setLawfirmCaseDecisionUsingPOST.');
         }
-        var httpRequestParams = {
+        let httpRequestParams = {
             method: 'POST',
             url: localVarPath,
             data: request,
@@ -53,8 +50,6 @@ var LawfirmCaseDecisionControllerApi = /** @class */ (function () {
             httpRequestParams = Object.assign(httpRequestParams, extraHttpRequestParams);
         }
         return this.$http(httpRequestParams);
-    };
-    LawfirmCaseDecisionControllerApi.$inject = ['$http', '$httpParamSerializer', 'basePath'];
-    return LawfirmCaseDecisionControllerApi;
-}());
-exports.LawfirmCaseDecisionControllerApi = LawfirmCaseDecisionControllerApi;
+    }
+}
+LawfirmCaseDecisionControllerApi.$inject = ['$http', '$httpParamSerializer', 'basePath'];

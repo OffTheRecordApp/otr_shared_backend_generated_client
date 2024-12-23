@@ -1,4 +1,3 @@
-"use strict";
 /**
  * OffTheRecord Rest Service API - Devo
  * A service to handle your traffic tickets
@@ -10,15 +9,13 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.AddReferralRequest = void 0;
-var AddReferralRequest;
+export var AddReferralRequest;
 (function (AddReferralRequest) {
-    var ReferralEventEnum;
+    let ReferralEventEnum;
     (function (ReferralEventEnum) {
         ReferralEventEnum[ReferralEventEnum["CASEBOOKING"] = 'CASE_BOOKING'] = "CASEBOOKING";
         ReferralEventEnum[ReferralEventEnum["CASEMATCH"] = 'CASE_MATCH'] = "CASEMATCH";
         ReferralEventEnum[ReferralEventEnum["INVITE"] = 'INVITE'] = "INVITE";
         ReferralEventEnum[ReferralEventEnum["REGISTRATION"] = 'REGISTRATION'] = "REGISTRATION";
     })(ReferralEventEnum = AddReferralRequest.ReferralEventEnum || (AddReferralRequest.ReferralEventEnum = {}));
-})(AddReferralRequest = exports.AddReferralRequest || (exports.AddReferralRequest = {}));
+})(AddReferralRequest || (AddReferralRequest = {}));

@@ -1,4 +1,3 @@
-"use strict";
 /**
  * OffTheRecord Rest Service API - Devo
  * A service to handle your traffic tickets
@@ -10,11 +9,9 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.Booking = void 0;
-var Booking;
+export var Booking;
 (function (Booking) {
-    var CaseStatusEnum;
+    let CaseStatusEnum;
     (function (CaseStatusEnum) {
         CaseStatusEnum[CaseStatusEnum["AMENDEDDOWNWITHINCLASS"] = 'AMENDED_DOWN_WITHIN_CLASS'] = "AMENDEDDOWNWITHINCLASS";
         CaseStatusEnum[CaseStatusEnum["AMENDEDFULLFINE"] = 'AMENDED_FULL_FINE'] = "AMENDEDFULLFINE";
@@ -54,7 +51,7 @@ var Booking;
         CaseStatusEnum[CaseStatusEnum["TRAFFICSCHOOL"] = 'TRAFFIC_SCHOOL'] = "TRAFFICSCHOOL";
         CaseStatusEnum[CaseStatusEnum["UNCONFIRMED"] = 'UNCONFIRMED'] = "UNCONFIRMED";
     })(CaseStatusEnum = Booking.CaseStatusEnum || (Booking.CaseStatusEnum = {}));
-    var StateEnum;
+    let StateEnum;
     (function (StateEnum) {
         StateEnum[StateEnum["AK"] = 'AK'] = "AK";
         StateEnum[StateEnum["AL"] = 'AL'] = "AL";
@@ -108,4 +105,4 @@ var Booking;
         StateEnum[StateEnum["WV"] = 'WV'] = "WV";
         StateEnum[StateEnum["WY"] = 'WY'] = "WY";
     })(StateEnum = Booking.StateEnum || (Booking.StateEnum = {}));
-})(Booking = exports.Booking || (exports.Booking = {}));
+})(Booking || (Booking = {}));

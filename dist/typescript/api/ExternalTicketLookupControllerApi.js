@@ -1,4 +1,3 @@
-"use strict";
 /**
  * OffTheRecord Rest Service API - Devo
  * A service to handle your traffic tickets
@@ -10,11 +9,9 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.ExternalTicketLookupControllerApi = void 0;
 /* tslint:disable:no-unused-variable member-ordering */
-var ExternalTicketLookupControllerApi = /** @class */ (function () {
-    function ExternalTicketLookupControllerApi($http, $httpParamSerializer, basePath) {
+export class ExternalTicketLookupControllerApi {
+    constructor($http, $httpParamSerializer, basePath) {
         this.$http = $http;
         this.$httpParamSerializer = $httpParamSerializer;
         this.basePath = 'http://otr-backend-service-us-devo.offtherecord.com';
@@ -39,10 +36,10 @@ var ExternalTicketLookupControllerApi = /** @class */ (function () {
      * @param sessionId sessionId
      * @param userId userId
      */
-    ExternalTicketLookupControllerApi.prototype.getExternalTicketsUsingGET = function (regionCode, attempts, citationId, countyId, dateOfBirth, driversLicenseId, lastName, organizationName, searchType, searchValue, sessionId, userId, extraHttpRequestParams) {
-        var localVarPath = this.basePath + '/api/v1/external-tickets';
-        var queryParameters = {};
-        var headerParams = Object.assign({}, this.defaultHeaders);
+    getExternalTicketsUsingGET(regionCode, attempts, citationId, countyId, dateOfBirth, driversLicenseId, lastName, organizationName, searchType, searchValue, sessionId, userId, extraHttpRequestParams) {
+        const localVarPath = this.basePath + '/api/v1/external-tickets';
+        let queryParameters = {};
+        let headerParams = Object.assign({}, this.defaultHeaders);
         // verify required parameter 'regionCode' is not null or undefined
         if (regionCode === null || regionCode === undefined) {
             throw new Error('Required parameter regionCode was null or undefined when calling getExternalTicketsUsingGET.');
@@ -83,7 +80,7 @@ var ExternalTicketLookupControllerApi = /** @class */ (function () {
         if (userId !== undefined) {
             queryParameters['userId'] = userId;
         }
-        var httpRequestParams = {
+        let httpRequestParams = {
             method: 'GET',
             url: localVarPath,
             params: queryParameters,
@@ -93,16 +90,16 @@ var ExternalTicketLookupControllerApi = /** @class */ (function () {
             httpRequestParams = Object.assign(httpRequestParams, extraHttpRequestParams);
         }
         return this.$http(httpRequestParams);
-    };
+    }
     /**
      *
      * @summary getInputParameters
      * @param regionCode regionCode
      */
-    ExternalTicketLookupControllerApi.prototype.getInputParametersUsingGET = function (regionCode, extraHttpRequestParams) {
-        var localVarPath = this.basePath + '/api/v1/external-tickets/input-parameters';
-        var queryParameters = {};
-        var headerParams = Object.assign({}, this.defaultHeaders);
+    getInputParametersUsingGET(regionCode, extraHttpRequestParams) {
+        const localVarPath = this.basePath + '/api/v1/external-tickets/input-parameters';
+        let queryParameters = {};
+        let headerParams = Object.assign({}, this.defaultHeaders);
         // verify required parameter 'regionCode' is not null or undefined
         if (regionCode === null || regionCode === undefined) {
             throw new Error('Required parameter regionCode was null or undefined when calling getInputParametersUsingGET.');
@@ -110,7 +107,7 @@ var ExternalTicketLookupControllerApi = /** @class */ (function () {
         if (regionCode !== undefined) {
             queryParameters['regionCode'] = regionCode;
         }
-        var httpRequestParams = {
+        let httpRequestParams = {
             method: 'GET',
             url: localVarPath,
             params: queryParameters,
@@ -120,8 +117,6 @@ var ExternalTicketLookupControllerApi = /** @class */ (function () {
             httpRequestParams = Object.assign(httpRequestParams, extraHttpRequestParams);
         }
         return this.$http(httpRequestParams);
-    };
-    ExternalTicketLookupControllerApi.$inject = ['$http', '$httpParamSerializer', 'basePath'];
-    return ExternalTicketLookupControllerApi;
-}());
-exports.ExternalTicketLookupControllerApi = ExternalTicketLookupControllerApi;
+    }
+}
+ExternalTicketLookupControllerApi.$inject = ['$http', '$httpParamSerializer', 'basePath'];

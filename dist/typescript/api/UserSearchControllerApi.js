@@ -1,4 +1,3 @@
-"use strict";
 /**
  * OffTheRecord Rest Service API - Devo
  * A service to handle your traffic tickets
@@ -10,11 +9,9 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.UserSearchControllerApi = void 0;
 /* tslint:disable:no-unused-variable member-ordering */
-var UserSearchControllerApi = /** @class */ (function () {
-    function UserSearchControllerApi($http, $httpParamSerializer, basePath) {
+export class UserSearchControllerApi {
+    constructor($http, $httpParamSerializer, basePath) {
         this.$http = $http;
         this.$httpParamSerializer = $httpParamSerializer;
         this.basePath = 'http://otr-backend-service-us-devo.offtherecord.com';
@@ -28,15 +25,15 @@ var UserSearchControllerApi = /** @class */ (function () {
      * @summary findMatchingUsers
      * @param request request
      */
-    UserSearchControllerApi.prototype.findMatchingUsersUsingPOST = function (request, extraHttpRequestParams) {
-        var localVarPath = this.basePath + '/api/v1/users/search';
-        var queryParameters = {};
-        var headerParams = Object.assign({}, this.defaultHeaders);
+    findMatchingUsersUsingPOST(request, extraHttpRequestParams) {
+        const localVarPath = this.basePath + '/api/v1/users/search';
+        let queryParameters = {};
+        let headerParams = Object.assign({}, this.defaultHeaders);
         // verify required parameter 'request' is not null or undefined
         if (request === null || request === undefined) {
             throw new Error('Required parameter request was null or undefined when calling findMatchingUsersUsingPOST.');
         }
-        var httpRequestParams = {
+        let httpRequestParams = {
             method: 'POST',
             url: localVarPath,
             data: request,
@@ -47,21 +44,21 @@ var UserSearchControllerApi = /** @class */ (function () {
             httpRequestParams = Object.assign(httpRequestParams, extraHttpRequestParams);
         }
         return this.$http(httpRequestParams);
-    };
+    }
     /**
      *
      * @summary getUserByEmail
      * @param request request
      */
-    UserSearchControllerApi.prototype.getUserByEmailUsingPOST = function (request, extraHttpRequestParams) {
-        var localVarPath = this.basePath + '/api/v1/users/matches';
-        var queryParameters = {};
-        var headerParams = Object.assign({}, this.defaultHeaders);
+    getUserByEmailUsingPOST(request, extraHttpRequestParams) {
+        const localVarPath = this.basePath + '/api/v1/users/matches';
+        let queryParameters = {};
+        let headerParams = Object.assign({}, this.defaultHeaders);
         // verify required parameter 'request' is not null or undefined
         if (request === null || request === undefined) {
             throw new Error('Required parameter request was null or undefined when calling getUserByEmailUsingPOST.');
         }
-        var httpRequestParams = {
+        let httpRequestParams = {
             method: 'POST',
             url: localVarPath,
             data: request,
@@ -72,8 +69,6 @@ var UserSearchControllerApi = /** @class */ (function () {
             httpRequestParams = Object.assign(httpRequestParams, extraHttpRequestParams);
         }
         return this.$http(httpRequestParams);
-    };
-    UserSearchControllerApi.$inject = ['$http', '$httpParamSerializer', 'basePath'];
-    return UserSearchControllerApi;
-}());
-exports.UserSearchControllerApi = UserSearchControllerApi;
+    }
+}
+UserSearchControllerApi.$inject = ['$http', '$httpParamSerializer', 'basePath'];

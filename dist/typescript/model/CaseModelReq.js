@@ -1,4 +1,3 @@
-"use strict";
 /**
  * OffTheRecord Rest Service API - Devo
  * A service to handle your traffic tickets
@@ -10,11 +9,9 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.CaseModelReq = void 0;
-var CaseModelReq;
+export var CaseModelReq;
 (function (CaseModelReq) {
-    var CaseStatusEnum;
+    let CaseStatusEnum;
     (function (CaseStatusEnum) {
         CaseStatusEnum[CaseStatusEnum["AMENDEDDOWNWITHINCLASS"] = 'AMENDED_DOWN_WITHIN_CLASS'] = "AMENDEDDOWNWITHINCLASS";
         CaseStatusEnum[CaseStatusEnum["AMENDEDFULLFINE"] = 'AMENDED_FULL_FINE'] = "AMENDEDFULLFINE";
@@ -54,16 +51,16 @@ var CaseModelReq;
         CaseStatusEnum[CaseStatusEnum["TRAFFICSCHOOL"] = 'TRAFFIC_SCHOOL'] = "TRAFFICSCHOOL";
         CaseStatusEnum[CaseStatusEnum["UNCONFIRMED"] = 'UNCONFIRMED'] = "UNCONFIRMED";
     })(CaseStatusEnum = CaseModelReq.CaseStatusEnum || (CaseModelReq.CaseStatusEnum = {}));
-    var CaseStatusCategoryEnum;
+    let CaseStatusCategoryEnum;
     (function (CaseStatusCategoryEnum) {
         CaseStatusCategoryEnum[CaseStatusCategoryEnum["ACTIVE"] = 'ACTIVE'] = "ACTIVE";
         CaseStatusCategoryEnum[CaseStatusCategoryEnum["CANCELLED"] = 'CANCELLED'] = "CANCELLED";
         CaseStatusCategoryEnum[CaseStatusCategoryEnum["RESOLVED"] = 'RESOLVED'] = "RESOLVED";
         CaseStatusCategoryEnum[CaseStatusCategoryEnum["UNCONFIRMED"] = 'UNCONFIRMED'] = "UNCONFIRMED";
     })(CaseStatusCategoryEnum = CaseModelReq.CaseStatusCategoryEnum || (CaseModelReq.CaseStatusCategoryEnum = {}));
-    var RefundEligibilityEnum;
+    let RefundEligibilityEnum;
     (function (RefundEligibilityEnum) {
         RefundEligibilityEnum[RefundEligibilityEnum["FULLREFUND"] = 'FULL_REFUND'] = "FULLREFUND";
         RefundEligibilityEnum[RefundEligibilityEnum["NOREFUND"] = 'NO_REFUND'] = "NOREFUND";
     })(RefundEligibilityEnum = CaseModelReq.RefundEligibilityEnum || (CaseModelReq.RefundEligibilityEnum = {}));
-})(CaseModelReq = exports.CaseModelReq || (exports.CaseModelReq = {}));
+})(CaseModelReq || (CaseModelReq = {}));

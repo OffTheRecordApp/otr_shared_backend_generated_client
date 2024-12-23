@@ -1,4 +1,3 @@
-"use strict";
 /**
  * OffTheRecord Rest Service API - Devo
  * A service to handle your traffic tickets
@@ -10,11 +9,9 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.LawfirmTransactionsControllerApi = void 0;
 /* tslint:disable:no-unused-variable member-ordering */
-var LawfirmTransactionsControllerApi = /** @class */ (function () {
-    function LawfirmTransactionsControllerApi($http, $httpParamSerializer, basePath) {
+export class LawfirmTransactionsControllerApi {
+    constructor($http, $httpParamSerializer, basePath) {
         this.$http = $http;
         this.$httpParamSerializer = $httpParamSerializer;
         this.basePath = 'http://otr-backend-service-us-devo.offtherecord.com';
@@ -29,11 +26,11 @@ var LawfirmTransactionsControllerApi = /** @class */ (function () {
      * @param lawfirmId lawfirmId
      * @param request request
      */
-    LawfirmTransactionsControllerApi.prototype.chargeFeeToLawfirmUsingPOST = function (lawfirmId, request, extraHttpRequestParams) {
-        var localVarPath = this.basePath + '/api/v1/lawfirms/{lawfirmId}/debits'
+    chargeFeeToLawfirmUsingPOST(lawfirmId, request, extraHttpRequestParams) {
+        const localVarPath = this.basePath + '/api/v1/lawfirms/{lawfirmId}/debits'
             .replace('{' + 'lawfirmId' + '}', encodeURIComponent(String(lawfirmId)));
-        var queryParameters = {};
-        var headerParams = Object.assign({}, this.defaultHeaders);
+        let queryParameters = {};
+        let headerParams = Object.assign({}, this.defaultHeaders);
         // verify required parameter 'lawfirmId' is not null or undefined
         if (lawfirmId === null || lawfirmId === undefined) {
             throw new Error('Required parameter lawfirmId was null or undefined when calling chargeFeeToLawfirmUsingPOST.');
@@ -42,7 +39,7 @@ var LawfirmTransactionsControllerApi = /** @class */ (function () {
         if (request === null || request === undefined) {
             throw new Error('Required parameter request was null or undefined when calling chargeFeeToLawfirmUsingPOST.');
         }
-        var httpRequestParams = {
+        let httpRequestParams = {
             method: 'POST',
             url: localVarPath,
             data: request,
@@ -53,22 +50,22 @@ var LawfirmTransactionsControllerApi = /** @class */ (function () {
             httpRequestParams = Object.assign(httpRequestParams, extraHttpRequestParams);
         }
         return this.$http(httpRequestParams);
-    };
+    }
     /**
      *
      * @summary debitLawfirmFee
      * @param lawfirmFeeId lawfirmFeeId
      */
-    LawfirmTransactionsControllerApi.prototype.debitLawfirmFeeUsingPOST = function (lawfirmFeeId, extraHttpRequestParams) {
-        var localVarPath = this.basePath + '/api/v1/lawfirm-fees/{lawfirmFeeId}/debit'
+    debitLawfirmFeeUsingPOST(lawfirmFeeId, extraHttpRequestParams) {
+        const localVarPath = this.basePath + '/api/v1/lawfirm-fees/{lawfirmFeeId}/debit'
             .replace('{' + 'lawfirmFeeId' + '}', encodeURIComponent(String(lawfirmFeeId)));
-        var queryParameters = {};
-        var headerParams = Object.assign({}, this.defaultHeaders);
+        let queryParameters = {};
+        let headerParams = Object.assign({}, this.defaultHeaders);
         // verify required parameter 'lawfirmFeeId' is not null or undefined
         if (lawfirmFeeId === null || lawfirmFeeId === undefined) {
             throw new Error('Required parameter lawfirmFeeId was null or undefined when calling debitLawfirmFeeUsingPOST.');
         }
-        var httpRequestParams = {
+        let httpRequestParams = {
             method: 'POST',
             url: localVarPath,
             params: queryParameters,
@@ -78,22 +75,22 @@ var LawfirmTransactionsControllerApi = /** @class */ (function () {
             httpRequestParams = Object.assign(httpRequestParams, extraHttpRequestParams);
         }
         return this.$http(httpRequestParams);
-    };
+    }
     /**
      *
      * @summary deleteLawfirmFeeRecord
      * @param lawfirmFeeId lawfirmFeeId
      */
-    LawfirmTransactionsControllerApi.prototype.deleteLawfirmFeeRecordUsingDELETE = function (lawfirmFeeId, extraHttpRequestParams) {
-        var localVarPath = this.basePath + '/api/v1/lawfirms/fees/{lawfirmFeeId}'
+    deleteLawfirmFeeRecordUsingDELETE(lawfirmFeeId, extraHttpRequestParams) {
+        const localVarPath = this.basePath + '/api/v1/lawfirms/fees/{lawfirmFeeId}'
             .replace('{' + 'lawfirmFeeId' + '}', encodeURIComponent(String(lawfirmFeeId)));
-        var queryParameters = {};
-        var headerParams = Object.assign({}, this.defaultHeaders);
+        let queryParameters = {};
+        let headerParams = Object.assign({}, this.defaultHeaders);
         // verify required parameter 'lawfirmFeeId' is not null or undefined
         if (lawfirmFeeId === null || lawfirmFeeId === undefined) {
             throw new Error('Required parameter lawfirmFeeId was null or undefined when calling deleteLawfirmFeeRecordUsingDELETE.');
         }
-        var httpRequestParams = {
+        let httpRequestParams = {
             method: 'DELETE',
             url: localVarPath,
             params: queryParameters,
@@ -103,22 +100,22 @@ var LawfirmTransactionsControllerApi = /** @class */ (function () {
             httpRequestParams = Object.assign(httpRequestParams, extraHttpRequestParams);
         }
         return this.$http(httpRequestParams);
-    };
+    }
     /**
      *
      * @summary deleteLawfirmPayoutRecord
      * @param lawfirmPayoutId lawfirmPayoutId
      */
-    LawfirmTransactionsControllerApi.prototype.deleteLawfirmPayoutRecordUsingDELETE = function (lawfirmPayoutId, extraHttpRequestParams) {
-        var localVarPath = this.basePath + '/api/v1/lawfirms/payouts/{lawfirmPayoutId}'
+    deleteLawfirmPayoutRecordUsingDELETE(lawfirmPayoutId, extraHttpRequestParams) {
+        const localVarPath = this.basePath + '/api/v1/lawfirms/payouts/{lawfirmPayoutId}'
             .replace('{' + 'lawfirmPayoutId' + '}', encodeURIComponent(String(lawfirmPayoutId)));
-        var queryParameters = {};
-        var headerParams = Object.assign({}, this.defaultHeaders);
+        let queryParameters = {};
+        let headerParams = Object.assign({}, this.defaultHeaders);
         // verify required parameter 'lawfirmPayoutId' is not null or undefined
         if (lawfirmPayoutId === null || lawfirmPayoutId === undefined) {
             throw new Error('Required parameter lawfirmPayoutId was null or undefined when calling deleteLawfirmPayoutRecordUsingDELETE.');
         }
-        var httpRequestParams = {
+        let httpRequestParams = {
             method: 'DELETE',
             url: localVarPath,
             params: queryParameters,
@@ -128,22 +125,22 @@ var LawfirmTransactionsControllerApi = /** @class */ (function () {
             httpRequestParams = Object.assign(httpRequestParams, extraHttpRequestParams);
         }
         return this.$http(httpRequestParams);
-    };
+    }
     /**
      *
      * @summary executeLawfirmPayout
      * @param lawfirmPayoutId lawfirmPayoutId
      */
-    LawfirmTransactionsControllerApi.prototype.executeLawfirmPayoutUsingPOST = function (lawfirmPayoutId, extraHttpRequestParams) {
-        var localVarPath = this.basePath + '/api/v1/lawfirm-payouts/{lawfirmPayoutId}/transfer'
+    executeLawfirmPayoutUsingPOST(lawfirmPayoutId, extraHttpRequestParams) {
+        const localVarPath = this.basePath + '/api/v1/lawfirm-payouts/{lawfirmPayoutId}/transfer'
             .replace('{' + 'lawfirmPayoutId' + '}', encodeURIComponent(String(lawfirmPayoutId)));
-        var queryParameters = {};
-        var headerParams = Object.assign({}, this.defaultHeaders);
+        let queryParameters = {};
+        let headerParams = Object.assign({}, this.defaultHeaders);
         // verify required parameter 'lawfirmPayoutId' is not null or undefined
         if (lawfirmPayoutId === null || lawfirmPayoutId === undefined) {
             throw new Error('Required parameter lawfirmPayoutId was null or undefined when calling executeLawfirmPayoutUsingPOST.');
         }
-        var httpRequestParams = {
+        let httpRequestParams = {
             method: 'POST',
             url: localVarPath,
             params: queryParameters,
@@ -153,22 +150,22 @@ var LawfirmTransactionsControllerApi = /** @class */ (function () {
             httpRequestParams = Object.assign(httpRequestParams, extraHttpRequestParams);
         }
         return this.$http(httpRequestParams);
-    };
+    }
     /**
      *
      * @summary getLawfirmFees
      * @param caseId caseId
      */
-    LawfirmTransactionsControllerApi.prototype.getLawfirmFeesUsingGET = function (caseId, extraHttpRequestParams) {
-        var localVarPath = this.basePath + '/api/v1/cases/{caseId}/lawfirm-fees'
+    getLawfirmFeesUsingGET(caseId, extraHttpRequestParams) {
+        const localVarPath = this.basePath + '/api/v1/cases/{caseId}/lawfirm-fees'
             .replace('{' + 'caseId' + '}', encodeURIComponent(String(caseId)));
-        var queryParameters = {};
-        var headerParams = Object.assign({}, this.defaultHeaders);
+        let queryParameters = {};
+        let headerParams = Object.assign({}, this.defaultHeaders);
         // verify required parameter 'caseId' is not null or undefined
         if (caseId === null || caseId === undefined) {
             throw new Error('Required parameter caseId was null or undefined when calling getLawfirmFeesUsingGET.');
         }
-        var httpRequestParams = {
+        let httpRequestParams = {
             method: 'GET',
             url: localVarPath,
             params: queryParameters,
@@ -178,7 +175,7 @@ var LawfirmTransactionsControllerApi = /** @class */ (function () {
             httpRequestParams = Object.assign(httpRequestParams, extraHttpRequestParams);
         }
         return this.$http(httpRequestParams);
-    };
+    }
     /**
      *
      * @summary getLawfirmFinancialTransactions
@@ -186,11 +183,11 @@ var LawfirmTransactionsControllerApi = /** @class */ (function () {
      * @param length length
      * @param page page
      */
-    LawfirmTransactionsControllerApi.prototype.getLawfirmFinancialTransactionsUsingGET = function (lawfirmId, length, page, extraHttpRequestParams) {
-        var localVarPath = this.basePath + '/api/v2/lawfirms/{lawfirmId}/transactions'
+    getLawfirmFinancialTransactionsUsingGET(lawfirmId, length, page, extraHttpRequestParams) {
+        const localVarPath = this.basePath + '/api/v2/lawfirms/{lawfirmId}/transactions'
             .replace('{' + 'lawfirmId' + '}', encodeURIComponent(String(lawfirmId)));
-        var queryParameters = {};
-        var headerParams = Object.assign({}, this.defaultHeaders);
+        let queryParameters = {};
+        let headerParams = Object.assign({}, this.defaultHeaders);
         // verify required parameter 'lawfirmId' is not null or undefined
         if (lawfirmId === null || lawfirmId === undefined) {
             throw new Error('Required parameter lawfirmId was null or undefined when calling getLawfirmFinancialTransactionsUsingGET.');
@@ -201,7 +198,7 @@ var LawfirmTransactionsControllerApi = /** @class */ (function () {
         if (page !== undefined) {
             queryParameters['page'] = page;
         }
-        var httpRequestParams = {
+        let httpRequestParams = {
             method: 'GET',
             url: localVarPath,
             params: queryParameters,
@@ -211,22 +208,22 @@ var LawfirmTransactionsControllerApi = /** @class */ (function () {
             httpRequestParams = Object.assign(httpRequestParams, extraHttpRequestParams);
         }
         return this.$http(httpRequestParams);
-    };
+    }
     /**
      *
      * @summary getLawfirmPayoutReversals
      * @param caseId caseId
      */
-    LawfirmTransactionsControllerApi.prototype.getLawfirmPayoutReversalsUsingGET = function (caseId, extraHttpRequestParams) {
-        var localVarPath = this.basePath + '/api/v1/cases/{caseId}/reversals'
+    getLawfirmPayoutReversalsUsingGET(caseId, extraHttpRequestParams) {
+        const localVarPath = this.basePath + '/api/v1/cases/{caseId}/reversals'
             .replace('{' + 'caseId' + '}', encodeURIComponent(String(caseId)));
-        var queryParameters = {};
-        var headerParams = Object.assign({}, this.defaultHeaders);
+        let queryParameters = {};
+        let headerParams = Object.assign({}, this.defaultHeaders);
         // verify required parameter 'caseId' is not null or undefined
         if (caseId === null || caseId === undefined) {
             throw new Error('Required parameter caseId was null or undefined when calling getLawfirmPayoutReversalsUsingGET.');
         }
-        var httpRequestParams = {
+        let httpRequestParams = {
             method: 'GET',
             url: localVarPath,
             params: queryParameters,
@@ -236,22 +233,22 @@ var LawfirmTransactionsControllerApi = /** @class */ (function () {
             httpRequestParams = Object.assign(httpRequestParams, extraHttpRequestParams);
         }
         return this.$http(httpRequestParams);
-    };
+    }
     /**
      *
      * @summary getLawfirmPayouts
      * @param caseId caseId
      */
-    LawfirmTransactionsControllerApi.prototype.getLawfirmPayoutsUsingGET = function (caseId, extraHttpRequestParams) {
-        var localVarPath = this.basePath + '/api/v1/cases/{caseId}/payouts'
+    getLawfirmPayoutsUsingGET(caseId, extraHttpRequestParams) {
+        const localVarPath = this.basePath + '/api/v1/cases/{caseId}/payouts'
             .replace('{' + 'caseId' + '}', encodeURIComponent(String(caseId)));
-        var queryParameters = {};
-        var headerParams = Object.assign({}, this.defaultHeaders);
+        let queryParameters = {};
+        let headerParams = Object.assign({}, this.defaultHeaders);
         // verify required parameter 'caseId' is not null or undefined
         if (caseId === null || caseId === undefined) {
             throw new Error('Required parameter caseId was null or undefined when calling getLawfirmPayoutsUsingGET.');
         }
-        var httpRequestParams = {
+        let httpRequestParams = {
             method: 'GET',
             url: localVarPath,
             params: queryParameters,
@@ -261,22 +258,22 @@ var LawfirmTransactionsControllerApi = /** @class */ (function () {
             httpRequestParams = Object.assign(httpRequestParams, extraHttpRequestParams);
         }
         return this.$http(httpRequestParams);
-    };
+    }
     /**
      *
      * @summary getLawfirmTransactionsForCase
      * @param caseId caseId
      */
-    LawfirmTransactionsControllerApi.prototype.getLawfirmTransactionsForCaseUsingGET = function (caseId, extraHttpRequestParams) {
-        var localVarPath = this.basePath + '/api/v1/cases/{caseId}/lawfirm-transactions'
+    getLawfirmTransactionsForCaseUsingGET(caseId, extraHttpRequestParams) {
+        const localVarPath = this.basePath + '/api/v1/cases/{caseId}/lawfirm-transactions'
             .replace('{' + 'caseId' + '}', encodeURIComponent(String(caseId)));
-        var queryParameters = {};
-        var headerParams = Object.assign({}, this.defaultHeaders);
+        let queryParameters = {};
+        let headerParams = Object.assign({}, this.defaultHeaders);
         // verify required parameter 'caseId' is not null or undefined
         if (caseId === null || caseId === undefined) {
             throw new Error('Required parameter caseId was null or undefined when calling getLawfirmTransactionsForCaseUsingGET.');
         }
-        var httpRequestParams = {
+        let httpRequestParams = {
             method: 'GET',
             url: localVarPath,
             params: queryParameters,
@@ -286,7 +283,7 @@ var LawfirmTransactionsControllerApi = /** @class */ (function () {
             httpRequestParams = Object.assign(httpRequestParams, extraHttpRequestParams);
         }
         return this.$http(httpRequestParams);
-    };
+    }
     /**
      *
      * @summary listLawfirmBankPayouts
@@ -295,11 +292,11 @@ var LawfirmTransactionsControllerApi = /** @class */ (function () {
      * @param lawfirmId lawfirmId
      * @param size size
      */
-    LawfirmTransactionsControllerApi.prototype.listLawfirmBankPayoutsUsingGET = function (includeTransactions, index, lawfirmId, size, extraHttpRequestParams) {
-        var localVarPath = this.basePath + '/api/v1/lawfirms/{lawfirmId}/bank-payouts'
+    listLawfirmBankPayoutsUsingGET(includeTransactions, index, lawfirmId, size, extraHttpRequestParams) {
+        const localVarPath = this.basePath + '/api/v1/lawfirms/{lawfirmId}/bank-payouts'
             .replace('{' + 'lawfirmId' + '}', encodeURIComponent(String(lawfirmId)));
-        var queryParameters = {};
-        var headerParams = Object.assign({}, this.defaultHeaders);
+        let queryParameters = {};
+        let headerParams = Object.assign({}, this.defaultHeaders);
         // verify required parameter 'includeTransactions' is not null or undefined
         if (includeTransactions === null || includeTransactions === undefined) {
             throw new Error('Required parameter includeTransactions was null or undefined when calling listLawfirmBankPayoutsUsingGET.');
@@ -321,7 +318,7 @@ var LawfirmTransactionsControllerApi = /** @class */ (function () {
         if (size !== undefined) {
             queryParameters['size'] = size;
         }
-        var httpRequestParams = {
+        let httpRequestParams = {
             method: 'GET',
             url: localVarPath,
             params: queryParameters,
@@ -331,18 +328,18 @@ var LawfirmTransactionsControllerApi = /** @class */ (function () {
             httpRequestParams = Object.assign(httpRequestParams, extraHttpRequestParams);
         }
         return this.$http(httpRequestParams);
-    };
+    }
     /**
      *
      * @summary refundLawfirmFee
      * @param lawfirmFeeId lawfirmFeeId
      * @param request request
      */
-    LawfirmTransactionsControllerApi.prototype.refundLawfirmFeeUsingPOST = function (lawfirmFeeId, request, extraHttpRequestParams) {
-        var localVarPath = this.basePath + '/api/v1/lawfirm-fee/{lawfirmFeeId}/refund'
+    refundLawfirmFeeUsingPOST(lawfirmFeeId, request, extraHttpRequestParams) {
+        const localVarPath = this.basePath + '/api/v1/lawfirm-fee/{lawfirmFeeId}/refund'
             .replace('{' + 'lawfirmFeeId' + '}', encodeURIComponent(String(lawfirmFeeId)));
-        var queryParameters = {};
-        var headerParams = Object.assign({}, this.defaultHeaders);
+        let queryParameters = {};
+        let headerParams = Object.assign({}, this.defaultHeaders);
         // verify required parameter 'lawfirmFeeId' is not null or undefined
         if (lawfirmFeeId === null || lawfirmFeeId === undefined) {
             throw new Error('Required parameter lawfirmFeeId was null or undefined when calling refundLawfirmFeeUsingPOST.');
@@ -351,7 +348,7 @@ var LawfirmTransactionsControllerApi = /** @class */ (function () {
         if (request === null || request === undefined) {
             throw new Error('Required parameter request was null or undefined when calling refundLawfirmFeeUsingPOST.');
         }
-        var httpRequestParams = {
+        let httpRequestParams = {
             method: 'POST',
             url: localVarPath,
             data: request,
@@ -362,18 +359,18 @@ var LawfirmTransactionsControllerApi = /** @class */ (function () {
             httpRequestParams = Object.assign(httpRequestParams, extraHttpRequestParams);
         }
         return this.$http(httpRequestParams);
-    };
+    }
     /**
      *
      * @summary reverseLawfirmPayout
      * @param lawfirmPayoutId lawfirmPayoutId
      * @param request request
      */
-    LawfirmTransactionsControllerApi.prototype.reverseLawfirmPayoutUsingPOST = function (lawfirmPayoutId, request, extraHttpRequestParams) {
-        var localVarPath = this.basePath + '/api/v1/lawfirm-payouts/{lawfirmPayoutId}/reverse'
+    reverseLawfirmPayoutUsingPOST(lawfirmPayoutId, request, extraHttpRequestParams) {
+        const localVarPath = this.basePath + '/api/v1/lawfirm-payouts/{lawfirmPayoutId}/reverse'
             .replace('{' + 'lawfirmPayoutId' + '}', encodeURIComponent(String(lawfirmPayoutId)));
-        var queryParameters = {};
-        var headerParams = Object.assign({}, this.defaultHeaders);
+        let queryParameters = {};
+        let headerParams = Object.assign({}, this.defaultHeaders);
         // verify required parameter 'lawfirmPayoutId' is not null or undefined
         if (lawfirmPayoutId === null || lawfirmPayoutId === undefined) {
             throw new Error('Required parameter lawfirmPayoutId was null or undefined when calling reverseLawfirmPayoutUsingPOST.');
@@ -382,7 +379,7 @@ var LawfirmTransactionsControllerApi = /** @class */ (function () {
         if (request === null || request === undefined) {
             throw new Error('Required parameter request was null or undefined when calling reverseLawfirmPayoutUsingPOST.');
         }
-        var httpRequestParams = {
+        let httpRequestParams = {
             method: 'POST',
             url: localVarPath,
             data: request,
@@ -393,18 +390,18 @@ var LawfirmTransactionsControllerApi = /** @class */ (function () {
             httpRequestParams = Object.assign(httpRequestParams, extraHttpRequestParams);
         }
         return this.$http(httpRequestParams);
-    };
+    }
     /**
      *
      * @summary sendPayoutToLawfirm
      * @param lawfirmId lawfirmId
      * @param request request
      */
-    LawfirmTransactionsControllerApi.prototype.sendPayoutToLawfirmUsingPOST = function (lawfirmId, request, extraHttpRequestParams) {
-        var localVarPath = this.basePath + '/api/v1/lawfirms/{lawfirmId}/payouts'
+    sendPayoutToLawfirmUsingPOST(lawfirmId, request, extraHttpRequestParams) {
+        const localVarPath = this.basePath + '/api/v1/lawfirms/{lawfirmId}/payouts'
             .replace('{' + 'lawfirmId' + '}', encodeURIComponent(String(lawfirmId)));
-        var queryParameters = {};
-        var headerParams = Object.assign({}, this.defaultHeaders);
+        let queryParameters = {};
+        let headerParams = Object.assign({}, this.defaultHeaders);
         // verify required parameter 'lawfirmId' is not null or undefined
         if (lawfirmId === null || lawfirmId === undefined) {
             throw new Error('Required parameter lawfirmId was null or undefined when calling sendPayoutToLawfirmUsingPOST.');
@@ -413,7 +410,7 @@ var LawfirmTransactionsControllerApi = /** @class */ (function () {
         if (request === null || request === undefined) {
             throw new Error('Required parameter request was null or undefined when calling sendPayoutToLawfirmUsingPOST.');
         }
-        var httpRequestParams = {
+        let httpRequestParams = {
             method: 'POST',
             url: localVarPath,
             data: request,
@@ -424,18 +421,18 @@ var LawfirmTransactionsControllerApi = /** @class */ (function () {
             httpRequestParams = Object.assign(httpRequestParams, extraHttpRequestParams);
         }
         return this.$http(httpRequestParams);
-    };
+    }
     /**
      *
      * @summary updateLawfirmFee
      * @param lawfirmFeeId lawfirmFeeId
      * @param request request
      */
-    LawfirmTransactionsControllerApi.prototype.updateLawfirmFeeUsingPUT = function (lawfirmFeeId, request, extraHttpRequestParams) {
-        var localVarPath = this.basePath + '/api/v1/lawfirm-fees/{lawfirmFeeId}'
+    updateLawfirmFeeUsingPUT(lawfirmFeeId, request, extraHttpRequestParams) {
+        const localVarPath = this.basePath + '/api/v1/lawfirm-fees/{lawfirmFeeId}'
             .replace('{' + 'lawfirmFeeId' + '}', encodeURIComponent(String(lawfirmFeeId)));
-        var queryParameters = {};
-        var headerParams = Object.assign({}, this.defaultHeaders);
+        let queryParameters = {};
+        let headerParams = Object.assign({}, this.defaultHeaders);
         // verify required parameter 'lawfirmFeeId' is not null or undefined
         if (lawfirmFeeId === null || lawfirmFeeId === undefined) {
             throw new Error('Required parameter lawfirmFeeId was null or undefined when calling updateLawfirmFeeUsingPUT.');
@@ -444,7 +441,7 @@ var LawfirmTransactionsControllerApi = /** @class */ (function () {
         if (request === null || request === undefined) {
             throw new Error('Required parameter request was null or undefined when calling updateLawfirmFeeUsingPUT.');
         }
-        var httpRequestParams = {
+        let httpRequestParams = {
             method: 'PUT',
             url: localVarPath,
             data: request,
@@ -455,18 +452,18 @@ var LawfirmTransactionsControllerApi = /** @class */ (function () {
             httpRequestParams = Object.assign(httpRequestParams, extraHttpRequestParams);
         }
         return this.$http(httpRequestParams);
-    };
+    }
     /**
      *
      * @summary updateLawfirmPayout
      * @param lawfirmPayoutId lawfirmPayoutId
      * @param request request
      */
-    LawfirmTransactionsControllerApi.prototype.updateLawfirmPayoutUsingPUT = function (lawfirmPayoutId, request, extraHttpRequestParams) {
-        var localVarPath = this.basePath + '/api/v1/lawfirm-payouts/{lawfirmPayoutId}'
+    updateLawfirmPayoutUsingPUT(lawfirmPayoutId, request, extraHttpRequestParams) {
+        const localVarPath = this.basePath + '/api/v1/lawfirm-payouts/{lawfirmPayoutId}'
             .replace('{' + 'lawfirmPayoutId' + '}', encodeURIComponent(String(lawfirmPayoutId)));
-        var queryParameters = {};
-        var headerParams = Object.assign({}, this.defaultHeaders);
+        let queryParameters = {};
+        let headerParams = Object.assign({}, this.defaultHeaders);
         // verify required parameter 'lawfirmPayoutId' is not null or undefined
         if (lawfirmPayoutId === null || lawfirmPayoutId === undefined) {
             throw new Error('Required parameter lawfirmPayoutId was null or undefined when calling updateLawfirmPayoutUsingPUT.');
@@ -475,7 +472,7 @@ var LawfirmTransactionsControllerApi = /** @class */ (function () {
         if (request === null || request === undefined) {
             throw new Error('Required parameter request was null or undefined when calling updateLawfirmPayoutUsingPUT.');
         }
-        var httpRequestParams = {
+        let httpRequestParams = {
             method: 'PUT',
             url: localVarPath,
             data: request,
@@ -486,8 +483,6 @@ var LawfirmTransactionsControllerApi = /** @class */ (function () {
             httpRequestParams = Object.assign(httpRequestParams, extraHttpRequestParams);
         }
         return this.$http(httpRequestParams);
-    };
-    LawfirmTransactionsControllerApi.$inject = ['$http', '$httpParamSerializer', 'basePath'];
-    return LawfirmTransactionsControllerApi;
-}());
-exports.LawfirmTransactionsControllerApi = LawfirmTransactionsControllerApi;
+    }
+}
+LawfirmTransactionsControllerApi.$inject = ['$http', '$httpParamSerializer', 'basePath'];

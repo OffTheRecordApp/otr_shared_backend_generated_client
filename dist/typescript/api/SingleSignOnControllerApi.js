@@ -1,4 +1,3 @@
-"use strict";
 /**
  * OffTheRecord Rest Service API - Devo
  * A service to handle your traffic tickets
@@ -10,11 +9,9 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.SingleSignOnControllerApi = void 0;
 /* tslint:disable:no-unused-variable member-ordering */
-var SingleSignOnControllerApi = /** @class */ (function () {
-    function SingleSignOnControllerApi($http, $httpParamSerializer, basePath) {
+export class SingleSignOnControllerApi {
+    constructor($http, $httpParamSerializer, basePath) {
         this.$http = $http;
         this.$httpParamSerializer = $httpParamSerializer;
         this.basePath = 'http://otr-backend-service-us-devo.offtherecord.com';
@@ -31,10 +28,10 @@ var SingleSignOnControllerApi = /** @class */ (function () {
      * @param isAdmin isAdmin
      * @param password password
      */
-    SingleSignOnControllerApi.prototype.loginWithSSOUsingPOST = function (brandId, email, isAdmin, password, extraHttpRequestParams) {
-        var localVarPath = this.basePath + '/api/v1/authentication/sso/login';
-        var queryParameters = {};
-        var headerParams = Object.assign({}, this.defaultHeaders);
+    loginWithSSOUsingPOST(brandId, email, isAdmin, password, extraHttpRequestParams) {
+        const localVarPath = this.basePath + '/api/v1/authentication/sso/login';
+        let queryParameters = {};
+        let headerParams = Object.assign({}, this.defaultHeaders);
         // verify required parameter 'brandId' is not null or undefined
         if (brandId === null || brandId === undefined) {
             throw new Error('Required parameter brandId was null or undefined when calling loginWithSSOUsingPOST.');
@@ -63,7 +60,7 @@ var SingleSignOnControllerApi = /** @class */ (function () {
         if (password !== undefined) {
             queryParameters['password'] = password;
         }
-        var httpRequestParams = {
+        let httpRequestParams = {
             method: 'POST',
             url: localVarPath,
             params: queryParameters,
@@ -73,8 +70,6 @@ var SingleSignOnControllerApi = /** @class */ (function () {
             httpRequestParams = Object.assign(httpRequestParams, extraHttpRequestParams);
         }
         return this.$http(httpRequestParams);
-    };
-    SingleSignOnControllerApi.$inject = ['$http', '$httpParamSerializer', 'basePath'];
-    return SingleSignOnControllerApi;
-}());
-exports.SingleSignOnControllerApi = SingleSignOnControllerApi;
+    }
+}
+SingleSignOnControllerApi.$inject = ['$http', '$httpParamSerializer', 'basePath'];

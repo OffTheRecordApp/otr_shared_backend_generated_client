@@ -1,4 +1,3 @@
-"use strict";
 /**
  * OffTheRecord Rest Service API - Devo
  * A service to handle your traffic tickets
@@ -10,11 +9,9 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.BookingCancelation = void 0;
-var BookingCancelation;
+export var BookingCancelation;
 (function (BookingCancelation) {
-    var CaseStatusEnum;
+    let CaseStatusEnum;
     (function (CaseStatusEnum) {
         CaseStatusEnum[CaseStatusEnum["AMENDEDDOWNWITHINCLASS"] = 'AMENDED_DOWN_WITHIN_CLASS'] = "AMENDEDDOWNWITHINCLASS";
         CaseStatusEnum[CaseStatusEnum["AMENDEDFULLFINE"] = 'AMENDED_FULL_FINE'] = "AMENDEDFULLFINE";
@@ -54,7 +51,7 @@ var BookingCancelation;
         CaseStatusEnum[CaseStatusEnum["TRAFFICSCHOOL"] = 'TRAFFIC_SCHOOL'] = "TRAFFICSCHOOL";
         CaseStatusEnum[CaseStatusEnum["UNCONFIRMED"] = 'UNCONFIRMED'] = "UNCONFIRMED";
     })(CaseStatusEnum = BookingCancelation.CaseStatusEnum || (BookingCancelation.CaseStatusEnum = {}));
-    var StateEnum;
+    let StateEnum;
     (function (StateEnum) {
         StateEnum[StateEnum["AK"] = 'AK'] = "AK";
         StateEnum[StateEnum["AL"] = 'AL'] = "AL";
@@ -108,4 +105,4 @@ var BookingCancelation;
         StateEnum[StateEnum["WV"] = 'WV'] = "WV";
         StateEnum[StateEnum["WY"] = 'WY'] = "WY";
     })(StateEnum = BookingCancelation.StateEnum || (BookingCancelation.StateEnum = {}));
-})(BookingCancelation = exports.BookingCancelation || (exports.BookingCancelation = {}));
+})(BookingCancelation || (BookingCancelation = {}));

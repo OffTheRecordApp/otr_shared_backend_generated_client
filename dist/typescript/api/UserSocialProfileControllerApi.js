@@ -1,4 +1,3 @@
-"use strict";
 /**
  * OffTheRecord Rest Service API - Devo
  * A service to handle your traffic tickets
@@ -10,11 +9,9 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.UserSocialProfileControllerApi = void 0;
 /* tslint:disable:no-unused-variable member-ordering */
-var UserSocialProfileControllerApi = /** @class */ (function () {
-    function UserSocialProfileControllerApi($http, $httpParamSerializer, basePath) {
+export class UserSocialProfileControllerApi {
+    constructor($http, $httpParamSerializer, basePath) {
         this.$http = $http;
         this.$httpParamSerializer = $httpParamSerializer;
         this.basePath = 'http://otr-backend-service-us-devo.offtherecord.com';
@@ -29,11 +26,11 @@ var UserSocialProfileControllerApi = /** @class */ (function () {
      * @param platform platform
      * @param userId userId
      */
-    UserSocialProfileControllerApi.prototype.removeUserSocialProfileUsingDELETE = function (platform, userId, extraHttpRequestParams) {
-        var localVarPath = this.basePath + '/api/v1/users/{userId}/social-profiles'
+    removeUserSocialProfileUsingDELETE(platform, userId, extraHttpRequestParams) {
+        const localVarPath = this.basePath + '/api/v1/users/{userId}/social-profiles'
             .replace('{' + 'userId' + '}', encodeURIComponent(String(userId)));
-        var queryParameters = {};
-        var headerParams = Object.assign({}, this.defaultHeaders);
+        let queryParameters = {};
+        let headerParams = Object.assign({}, this.defaultHeaders);
         // verify required parameter 'platform' is not null or undefined
         if (platform === null || platform === undefined) {
             throw new Error('Required parameter platform was null or undefined when calling removeUserSocialProfileUsingDELETE.');
@@ -45,7 +42,7 @@ var UserSocialProfileControllerApi = /** @class */ (function () {
         if (platform !== undefined) {
             queryParameters['platform'] = platform;
         }
-        var httpRequestParams = {
+        let httpRequestParams = {
             method: 'DELETE',
             url: localVarPath,
             params: queryParameters,
@@ -55,18 +52,18 @@ var UserSocialProfileControllerApi = /** @class */ (function () {
             httpRequestParams = Object.assign(httpRequestParams, extraHttpRequestParams);
         }
         return this.$http(httpRequestParams);
-    };
+    }
     /**
      *
      * @summary saveUserSocialProfiles
      * @param userId userId
      * @param request request
      */
-    UserSocialProfileControllerApi.prototype.saveUserSocialProfilesUsingPOST = function (userId, request, extraHttpRequestParams) {
-        var localVarPath = this.basePath + '/api/v1/users/{userId}/social-profiles'
+    saveUserSocialProfilesUsingPOST(userId, request, extraHttpRequestParams) {
+        const localVarPath = this.basePath + '/api/v1/users/{userId}/social-profiles'
             .replace('{' + 'userId' + '}', encodeURIComponent(String(userId)));
-        var queryParameters = {};
-        var headerParams = Object.assign({}, this.defaultHeaders);
+        let queryParameters = {};
+        let headerParams = Object.assign({}, this.defaultHeaders);
         // verify required parameter 'userId' is not null or undefined
         if (userId === null || userId === undefined) {
             throw new Error('Required parameter userId was null or undefined when calling saveUserSocialProfilesUsingPOST.');
@@ -75,7 +72,7 @@ var UserSocialProfileControllerApi = /** @class */ (function () {
         if (request === null || request === undefined) {
             throw new Error('Required parameter request was null or undefined when calling saveUserSocialProfilesUsingPOST.');
         }
-        var httpRequestParams = {
+        let httpRequestParams = {
             method: 'POST',
             url: localVarPath,
             data: request,
@@ -86,8 +83,6 @@ var UserSocialProfileControllerApi = /** @class */ (function () {
             httpRequestParams = Object.assign(httpRequestParams, extraHttpRequestParams);
         }
         return this.$http(httpRequestParams);
-    };
-    UserSocialProfileControllerApi.$inject = ['$http', '$httpParamSerializer', 'basePath'];
-    return UserSocialProfileControllerApi;
-}());
-exports.UserSocialProfileControllerApi = UserSocialProfileControllerApi;
+    }
+}
+UserSocialProfileControllerApi.$inject = ['$http', '$httpParamSerializer', 'basePath'];

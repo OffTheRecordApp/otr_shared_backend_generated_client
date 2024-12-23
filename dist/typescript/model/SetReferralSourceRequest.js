@@ -1,4 +1,3 @@
-"use strict";
 /**
  * OffTheRecord Rest Service API - Devo
  * A service to handle your traffic tickets
@@ -10,11 +9,9 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.SetReferralSourceRequest = void 0;
-var SetReferralSourceRequest;
+export var SetReferralSourceRequest;
 (function (SetReferralSourceRequest) {
-    var ClientTypeEnum;
+    let ClientTypeEnum;
     (function (ClientTypeEnum) {
         ClientTypeEnum[ClientTypeEnum["ANDROID"] = 'ANDROID'] = "ANDROID";
         ClientTypeEnum[ClientTypeEnum["DESKTOPWEBAPP"] = 'DESKTOP_WEBAPP'] = "DESKTOPWEBAPP";
@@ -39,4 +36,4 @@ var SetReferralSourceRequest;
         ClientTypeEnum[ClientTypeEnum["OTRWIDGET"] = 'OTR_WIDGET'] = "OTRWIDGET";
         ClientTypeEnum[ClientTypeEnum["UNKNOWN"] = 'UNKNOWN'] = "UNKNOWN";
     })(ClientTypeEnum = SetReferralSourceRequest.ClientTypeEnum || (SetReferralSourceRequest.ClientTypeEnum = {}));
-})(SetReferralSourceRequest = exports.SetReferralSourceRequest || (exports.SetReferralSourceRequest = {}));
+})(SetReferralSourceRequest || (SetReferralSourceRequest = {}));

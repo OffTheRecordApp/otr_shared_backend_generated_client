@@ -1,4 +1,3 @@
-"use strict";
 /**
  * OffTheRecord Rest Service API - Devo
  * A service to handle your traffic tickets
@@ -10,11 +9,9 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.SaveUserSocialProfileModel = void 0;
-var SaveUserSocialProfileModel;
+export var SaveUserSocialProfileModel;
 (function (SaveUserSocialProfileModel) {
-    var PlatformEnum;
+    let PlatformEnum;
     (function (PlatformEnum) {
         PlatformEnum[PlatformEnum["INSTAGRAM"] = 'INSTAGRAM'] = "INSTAGRAM";
         PlatformEnum[PlatformEnum["SNAPCHAT"] = 'SNAPCHAT'] = "SNAPCHAT";
@@ -23,4 +20,4 @@ var SaveUserSocialProfileModel;
         PlatformEnum[PlatformEnum["X"] = 'X'] = "X";
         PlatformEnum[PlatformEnum["YOUTUBE"] = 'YOUTUBE'] = "YOUTUBE";
     })(PlatformEnum = SaveUserSocialProfileModel.PlatformEnum || (SaveUserSocialProfileModel.PlatformEnum = {}));
-})(SaveUserSocialProfileModel = exports.SaveUserSocialProfileModel || (exports.SaveUserSocialProfileModel = {}));
+})(SaveUserSocialProfileModel || (SaveUserSocialProfileModel = {}));

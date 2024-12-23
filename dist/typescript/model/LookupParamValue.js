@@ -1,4 +1,3 @@
-"use strict";
 /**
  * OffTheRecord Rest Service API - Devo
  * A service to handle your traffic tickets
@@ -10,11 +9,9 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.LookupParamValue = void 0;
-var LookupParamValue;
+export var LookupParamValue;
 (function (LookupParamValue) {
-    var ValueEnum;
+    let ValueEnum;
     (function (ValueEnum) {
         ValueEnum[ValueEnum["CITATIONID"] = 'CITATION_ID'] = "CITATIONID";
         ValueEnum[ValueEnum["DATEOFBIRTH"] = 'DATE_OF_BIRTH'] = "DATEOFBIRTH";
@@ -24,4 +21,4 @@ var LookupParamValue;
         ValueEnum[ValueEnum["LASTNAME"] = 'LAST_NAME'] = "LASTNAME";
         ValueEnum[ValueEnum["ORGANIZATIONNAME"] = 'ORGANIZATION_NAME'] = "ORGANIZATIONNAME";
     })(ValueEnum = LookupParamValue.ValueEnum || (LookupParamValue.ValueEnum = {}));
-})(LookupParamValue = exports.LookupParamValue || (exports.LookupParamValue = {}));
+})(LookupParamValue || (LookupParamValue = {}));

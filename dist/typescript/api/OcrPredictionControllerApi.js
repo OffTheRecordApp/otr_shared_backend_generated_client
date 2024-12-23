@@ -1,4 +1,3 @@
-"use strict";
 /**
  * OffTheRecord Rest Service API - Devo
  * A service to handle your traffic tickets
@@ -10,11 +9,9 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.OcrPredictionControllerApi = void 0;
 /* tslint:disable:no-unused-variable member-ordering */
-var OcrPredictionControllerApi = /** @class */ (function () {
-    function OcrPredictionControllerApi($http, $httpParamSerializer, basePath) {
+export class OcrPredictionControllerApi {
+    constructor($http, $httpParamSerializer, basePath) {
         this.$http = $http;
         this.$httpParamSerializer = $httpParamSerializer;
         this.basePath = 'http://otr-backend-service-us-devo.offtherecord.com';
@@ -28,15 +25,15 @@ var OcrPredictionControllerApi = /** @class */ (function () {
      * @summary predictCitationText
      * @param request request
      */
-    OcrPredictionControllerApi.prototype.predictCitationTextUsingPOST = function (request, extraHttpRequestParams) {
-        var localVarPath = this.basePath + '/api/v1/predictions/predict-citation-text';
-        var queryParameters = {};
-        var headerParams = Object.assign({}, this.defaultHeaders);
+    predictCitationTextUsingPOST(request, extraHttpRequestParams) {
+        const localVarPath = this.basePath + '/api/v1/predictions/predict-citation-text';
+        let queryParameters = {};
+        let headerParams = Object.assign({}, this.defaultHeaders);
         // verify required parameter 'request' is not null or undefined
         if (request === null || request === undefined) {
             throw new Error('Required parameter request was null or undefined when calling predictCitationTextUsingPOST.');
         }
-        var httpRequestParams = {
+        let httpRequestParams = {
             method: 'POST',
             url: localVarPath,
             data: request,
@@ -47,21 +44,21 @@ var OcrPredictionControllerApi = /** @class */ (function () {
             httpRequestParams = Object.assign(httpRequestParams, extraHttpRequestParams);
         }
         return this.$http(httpRequestParams);
-    };
+    }
     /**
      *
      * @summary predictImageClassification
      * @param request request
      */
-    OcrPredictionControllerApi.prototype.predictImageClassificationUsingPOST = function (request, extraHttpRequestParams) {
-        var localVarPath = this.basePath + '/api/v1/predictions/classify-image';
-        var queryParameters = {};
-        var headerParams = Object.assign({}, this.defaultHeaders);
+    predictImageClassificationUsingPOST(request, extraHttpRequestParams) {
+        const localVarPath = this.basePath + '/api/v1/predictions/classify-image';
+        let queryParameters = {};
+        let headerParams = Object.assign({}, this.defaultHeaders);
         // verify required parameter 'request' is not null or undefined
         if (request === null || request === undefined) {
             throw new Error('Required parameter request was null or undefined when calling predictImageClassificationUsingPOST.');
         }
-        var httpRequestParams = {
+        let httpRequestParams = {
             method: 'POST',
             url: localVarPath,
             data: request,
@@ -72,8 +69,6 @@ var OcrPredictionControllerApi = /** @class */ (function () {
             httpRequestParams = Object.assign(httpRequestParams, extraHttpRequestParams);
         }
         return this.$http(httpRequestParams);
-    };
-    OcrPredictionControllerApi.$inject = ['$http', '$httpParamSerializer', 'basePath'];
-    return OcrPredictionControllerApi;
-}());
-exports.OcrPredictionControllerApi = OcrPredictionControllerApi;
+    }
+}
+OcrPredictionControllerApi.$inject = ['$http', '$httpParamSerializer', 'basePath'];

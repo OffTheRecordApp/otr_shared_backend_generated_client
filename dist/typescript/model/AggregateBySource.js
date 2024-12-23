@@ -1,4 +1,3 @@
-"use strict";
 /**
  * OffTheRecord Rest Service API - Devo
  * A service to handle your traffic tickets
@@ -10,11 +9,9 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.AggregateBySource = void 0;
-var AggregateBySource;
+export var AggregateBySource;
 (function (AggregateBySource) {
-    var ReviewSourceEnum;
+    let ReviewSourceEnum;
     (function (ReviewSourceEnum) {
         ReviewSourceEnum[ReviewSourceEnum["ANDROID"] = 'ANDROID'] = "ANDROID";
         ReviewSourceEnum[ReviewSourceEnum["APPLE"] = 'APPLE'] = "APPLE";
@@ -23,4 +20,4 @@ var AggregateBySource;
         ReviewSourceEnum[ReviewSourceEnum["OTR"] = 'OTR'] = "OTR";
         ReviewSourceEnum[ReviewSourceEnum["REVIEWSIO"] = 'REVIEWS_IO'] = "REVIEWSIO";
     })(ReviewSourceEnum = AggregateBySource.ReviewSourceEnum || (AggregateBySource.ReviewSourceEnum = {}));
-})(AggregateBySource = exports.AggregateBySource || (exports.AggregateBySource = {}));
+})(AggregateBySource || (AggregateBySource = {}));

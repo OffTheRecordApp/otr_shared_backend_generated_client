@@ -1,4 +1,3 @@
-"use strict";
 /**
  * OffTheRecord Rest Service API - Devo
  * A service to handle your traffic tickets
@@ -10,12 +9,10 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.AwsCredentialsRequest = void 0;
-var AwsCredentialsRequest;
+export var AwsCredentialsRequest;
 (function (AwsCredentialsRequest) {
-    var KeyNameEnum;
+    let KeyNameEnum;
     (function (KeyNameEnum) {
         KeyNameEnum[KeyNameEnum["S3CITATIONIMAGESRO"] = 'S3_CITATION_IMAGES_RO'] = "S3CITATIONIMAGESRO";
     })(KeyNameEnum = AwsCredentialsRequest.KeyNameEnum || (AwsCredentialsRequest.KeyNameEnum = {}));
-})(AwsCredentialsRequest = exports.AwsCredentialsRequest || (exports.AwsCredentialsRequest = {}));
+})(AwsCredentialsRequest || (AwsCredentialsRequest = {}));

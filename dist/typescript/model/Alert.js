@@ -1,4 +1,3 @@
-"use strict";
 /**
  * OffTheRecord Rest Service API - Devo
  * A service to handle your traffic tickets
@@ -10,20 +9,18 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.Alert = void 0;
-var Alert;
+export var Alert;
 (function (Alert) {
-    var ActionTypeEnum;
+    let ActionTypeEnum;
     (function (ActionTypeEnum) {
         ActionTypeEnum[ActionTypeEnum["ANNOUNCEMENT"] = 'ANNOUNCEMENT'] = "ANNOUNCEMENT";
         ActionTypeEnum[ActionTypeEnum["ENGAGEMENTLETTER"] = 'ENGAGEMENT_LETTER'] = "ENGAGEMENTLETTER";
     })(ActionTypeEnum = Alert.ActionTypeEnum || (Alert.ActionTypeEnum = {}));
-    var AlertTypeEnum;
+    let AlertTypeEnum;
     (function (AlertTypeEnum) {
         AlertTypeEnum[AlertTypeEnum["ERROR"] = 'ERROR'] = "ERROR";
         AlertTypeEnum[AlertTypeEnum["INFO"] = 'INFO'] = "INFO";
         AlertTypeEnum[AlertTypeEnum["SUCCESS"] = 'SUCCESS'] = "SUCCESS";
         AlertTypeEnum[AlertTypeEnum["WARNING"] = 'WARNING'] = "WARNING";
     })(AlertTypeEnum = Alert.AlertTypeEnum || (Alert.AlertTypeEnum = {}));
-})(Alert = exports.Alert || (exports.Alert = {}));
+})(Alert || (Alert = {}));

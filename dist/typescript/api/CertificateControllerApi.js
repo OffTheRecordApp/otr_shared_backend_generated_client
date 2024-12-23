@@ -1,4 +1,3 @@
-"use strict";
 /**
  * OffTheRecord Rest Service API - Devo
  * A service to handle your traffic tickets
@@ -10,11 +9,9 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.CertificateControllerApi = void 0;
 /* tslint:disable:no-unused-variable member-ordering */
-var CertificateControllerApi = /** @class */ (function () {
-    function CertificateControllerApi($http, $httpParamSerializer, basePath) {
+export class CertificateControllerApi {
+    constructor($http, $httpParamSerializer, basePath) {
         this.$http = $http;
         this.$httpParamSerializer = $httpParamSerializer;
         this.basePath = 'http://otr-backend-service-us-devo.offtherecord.com';
@@ -28,10 +25,10 @@ var CertificateControllerApi = /** @class */ (function () {
      * @summary getSSLPublicCertFile
      * @param encoding encoding
      */
-    CertificateControllerApi.prototype.getSSLPublicCertFileUsingGET = function (encoding, extraHttpRequestParams) {
-        var localVarPath = this.basePath + '/api/v1/certificates/ssl';
-        var queryParameters = {};
-        var headerParams = Object.assign({}, this.defaultHeaders);
+    getSSLPublicCertFileUsingGET(encoding, extraHttpRequestParams) {
+        const localVarPath = this.basePath + '/api/v1/certificates/ssl';
+        let queryParameters = {};
+        let headerParams = Object.assign({}, this.defaultHeaders);
         // verify required parameter 'encoding' is not null or undefined
         if (encoding === null || encoding === undefined) {
             throw new Error('Required parameter encoding was null or undefined when calling getSSLPublicCertFileUsingGET.');
@@ -39,7 +36,7 @@ var CertificateControllerApi = /** @class */ (function () {
         if (encoding !== undefined) {
             queryParameters['encoding'] = encoding;
         }
-        var httpRequestParams = {
+        let httpRequestParams = {
             method: 'GET',
             url: localVarPath,
             params: queryParameters,
@@ -49,8 +46,6 @@ var CertificateControllerApi = /** @class */ (function () {
             httpRequestParams = Object.assign(httpRequestParams, extraHttpRequestParams);
         }
         return this.$http(httpRequestParams);
-    };
-    CertificateControllerApi.$inject = ['$http', '$httpParamSerializer', 'basePath'];
-    return CertificateControllerApi;
-}());
-exports.CertificateControllerApi = CertificateControllerApi;
+    }
+}
+CertificateControllerApi.$inject = ['$http', '$httpParamSerializer', 'basePath'];

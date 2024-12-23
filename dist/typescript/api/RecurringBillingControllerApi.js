@@ -1,4 +1,3 @@
-"use strict";
 /**
  * OffTheRecord Rest Service API - Devo
  * A service to handle your traffic tickets
@@ -10,11 +9,9 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.RecurringBillingControllerApi = void 0;
 /* tslint:disable:no-unused-variable member-ordering */
-var RecurringBillingControllerApi = /** @class */ (function () {
-    function RecurringBillingControllerApi($http, $httpParamSerializer, basePath) {
+export class RecurringBillingControllerApi {
+    constructor($http, $httpParamSerializer, basePath) {
         this.$http = $http;
         this.$httpParamSerializer = $httpParamSerializer;
         this.basePath = 'http://otr-backend-service-us-devo.offtherecord.com';
@@ -30,12 +27,12 @@ var RecurringBillingControllerApi = /** @class */ (function () {
      * @param userId userId
      * @param isProrated isProrated
      */
-    RecurringBillingControllerApi.prototype.cancelBillingSubscriptionUsingDELETE = function (id, userId, isProrated, extraHttpRequestParams) {
-        var localVarPath = this.basePath + '/api/v1/billing/{userId}/subscriptions/{id}'
+    cancelBillingSubscriptionUsingDELETE(id, userId, isProrated, extraHttpRequestParams) {
+        const localVarPath = this.basePath + '/api/v1/billing/{userId}/subscriptions/{id}'
             .replace('{' + 'id' + '}', encodeURIComponent(String(id)))
             .replace('{' + 'userId' + '}', encodeURIComponent(String(userId)));
-        var queryParameters = {};
-        var headerParams = Object.assign({}, this.defaultHeaders);
+        let queryParameters = {};
+        let headerParams = Object.assign({}, this.defaultHeaders);
         // verify required parameter 'id' is not null or undefined
         if (id === null || id === undefined) {
             throw new Error('Required parameter id was null or undefined when calling cancelBillingSubscriptionUsingDELETE.');
@@ -47,7 +44,7 @@ var RecurringBillingControllerApi = /** @class */ (function () {
         if (isProrated !== undefined) {
             queryParameters['isProrated'] = isProrated;
         }
-        var httpRequestParams = {
+        let httpRequestParams = {
             method: 'DELETE',
             url: localVarPath,
             params: queryParameters,
@@ -57,18 +54,18 @@ var RecurringBillingControllerApi = /** @class */ (function () {
             httpRequestParams = Object.assign(httpRequestParams, extraHttpRequestParams);
         }
         return this.$http(httpRequestParams);
-    };
+    }
     /**
      *
      * @summary createBillingSubscription
      * @param userId userId
      * @param request request
      */
-    RecurringBillingControllerApi.prototype.createBillingSubscriptionUsingPOST = function (userId, request, extraHttpRequestParams) {
-        var localVarPath = this.basePath + '/api/v1/billing/{userId}/subscriptions'
+    createBillingSubscriptionUsingPOST(userId, request, extraHttpRequestParams) {
+        const localVarPath = this.basePath + '/api/v1/billing/{userId}/subscriptions'
             .replace('{' + 'userId' + '}', encodeURIComponent(String(userId)));
-        var queryParameters = {};
-        var headerParams = Object.assign({}, this.defaultHeaders);
+        let queryParameters = {};
+        let headerParams = Object.assign({}, this.defaultHeaders);
         // verify required parameter 'userId' is not null or undefined
         if (userId === null || userId === undefined) {
             throw new Error('Required parameter userId was null or undefined when calling createBillingSubscriptionUsingPOST.');
@@ -77,7 +74,7 @@ var RecurringBillingControllerApi = /** @class */ (function () {
         if (request === null || request === undefined) {
             throw new Error('Required parameter request was null or undefined when calling createBillingSubscriptionUsingPOST.');
         }
-        var httpRequestParams = {
+        let httpRequestParams = {
             method: 'POST',
             url: localVarPath,
             data: request,
@@ -88,7 +85,7 @@ var RecurringBillingControllerApi = /** @class */ (function () {
             httpRequestParams = Object.assign(httpRequestParams, extraHttpRequestParams);
         }
         return this.$http(httpRequestParams);
-    };
+    }
     /**
      *
      * @summary listBillingProducts
@@ -97,10 +94,10 @@ var RecurringBillingControllerApi = /** @class */ (function () {
      * @param limit limit
      * @param userId userId
      */
-    RecurringBillingControllerApi.prototype.listBillingProductsUsingGET = function (active, audience, limit, userId, extraHttpRequestParams) {
-        var localVarPath = this.basePath + '/api/v1/billing/products';
-        var queryParameters = {};
-        var headerParams = Object.assign({}, this.defaultHeaders);
+    listBillingProductsUsingGET(active, audience, limit, userId, extraHttpRequestParams) {
+        const localVarPath = this.basePath + '/api/v1/billing/products';
+        let queryParameters = {};
+        let headerParams = Object.assign({}, this.defaultHeaders);
         if (active !== undefined) {
             queryParameters['active'] = active;
         }
@@ -113,7 +110,7 @@ var RecurringBillingControllerApi = /** @class */ (function () {
         if (userId !== undefined) {
             queryParameters['userId'] = userId;
         }
-        var httpRequestParams = {
+        let httpRequestParams = {
             method: 'GET',
             url: localVarPath,
             params: queryParameters,
@@ -123,18 +120,18 @@ var RecurringBillingControllerApi = /** @class */ (function () {
             httpRequestParams = Object.assign(httpRequestParams, extraHttpRequestParams);
         }
         return this.$http(httpRequestParams);
-    };
+    }
     /**
      *
      * @summary listBillingSubscriptions
      * @param userId userId
      * @param includeInactive includeInactive
      */
-    RecurringBillingControllerApi.prototype.listBillingSubscriptionsUsingGET = function (userId, includeInactive, extraHttpRequestParams) {
-        var localVarPath = this.basePath + '/api/v1/billing/{userId}/subscriptions'
+    listBillingSubscriptionsUsingGET(userId, includeInactive, extraHttpRequestParams) {
+        const localVarPath = this.basePath + '/api/v1/billing/{userId}/subscriptions'
             .replace('{' + 'userId' + '}', encodeURIComponent(String(userId)));
-        var queryParameters = {};
-        var headerParams = Object.assign({}, this.defaultHeaders);
+        let queryParameters = {};
+        let headerParams = Object.assign({}, this.defaultHeaders);
         // verify required parameter 'userId' is not null or undefined
         if (userId === null || userId === undefined) {
             throw new Error('Required parameter userId was null or undefined when calling listBillingSubscriptionsUsingGET.');
@@ -142,7 +139,7 @@ var RecurringBillingControllerApi = /** @class */ (function () {
         if (includeInactive !== undefined) {
             queryParameters['includeInactive'] = includeInactive;
         }
-        var httpRequestParams = {
+        let httpRequestParams = {
             method: 'GET',
             url: localVarPath,
             params: queryParameters,
@@ -152,7 +149,7 @@ var RecurringBillingControllerApi = /** @class */ (function () {
             httpRequestParams = Object.assign(httpRequestParams, extraHttpRequestParams);
         }
         return this.$http(httpRequestParams);
-    };
+    }
     /**
      *
      * @summary listSubscriptionInvoices
@@ -160,12 +157,12 @@ var RecurringBillingControllerApi = /** @class */ (function () {
      * @param userId userId
      * @param limit limit
      */
-    RecurringBillingControllerApi.prototype.listSubscriptionInvoicesUsingGET = function (id, userId, limit, extraHttpRequestParams) {
-        var localVarPath = this.basePath + '/api/v1/billing/{userId}/subscriptions/{id}/invoices'
+    listSubscriptionInvoicesUsingGET(id, userId, limit, extraHttpRequestParams) {
+        const localVarPath = this.basePath + '/api/v1/billing/{userId}/subscriptions/{id}/invoices'
             .replace('{' + 'id' + '}', encodeURIComponent(String(id)))
             .replace('{' + 'userId' + '}', encodeURIComponent(String(userId)));
-        var queryParameters = {};
-        var headerParams = Object.assign({}, this.defaultHeaders);
+        let queryParameters = {};
+        let headerParams = Object.assign({}, this.defaultHeaders);
         // verify required parameter 'id' is not null or undefined
         if (id === null || id === undefined) {
             throw new Error('Required parameter id was null or undefined when calling listSubscriptionInvoicesUsingGET.');
@@ -177,7 +174,7 @@ var RecurringBillingControllerApi = /** @class */ (function () {
         if (limit !== undefined) {
             queryParameters['limit'] = limit;
         }
-        var httpRequestParams = {
+        let httpRequestParams = {
             method: 'GET',
             url: localVarPath,
             params: queryParameters,
@@ -187,8 +184,6 @@ var RecurringBillingControllerApi = /** @class */ (function () {
             httpRequestParams = Object.assign(httpRequestParams, extraHttpRequestParams);
         }
         return this.$http(httpRequestParams);
-    };
-    RecurringBillingControllerApi.$inject = ['$http', '$httpParamSerializer', 'basePath'];
-    return RecurringBillingControllerApi;
-}());
-exports.RecurringBillingControllerApi = RecurringBillingControllerApi;
+    }
+}
+RecurringBillingControllerApi.$inject = ['$http', '$httpParamSerializer', 'basePath'];

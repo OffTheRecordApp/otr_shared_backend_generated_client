@@ -1,4 +1,3 @@
-"use strict";
 /**
  * OffTheRecord Rest Service API - Devo
  * A service to handle your traffic tickets
@@ -10,11 +9,9 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.AddressDomain = void 0;
-var AddressDomain;
+export var AddressDomain;
 (function (AddressDomain) {
-    var EntityTypeEnum;
+    let EntityTypeEnum;
     (function (EntityTypeEnum) {
         EntityTypeEnum[EntityTypeEnum["CASE"] = 'CASE'] = "CASE";
         EntityTypeEnum[EntityTypeEnum["CASEPAYMENT"] = 'CASE_PAYMENT'] = "CASEPAYMENT";
@@ -27,7 +24,7 @@ var AddressDomain;
         EntityTypeEnum[EntityTypeEnum["STRIPECHARGE"] = 'STRIPE_CHARGE'] = "STRIPECHARGE";
         EntityTypeEnum[EntityTypeEnum["USER"] = 'USER'] = "USER";
     })(EntityTypeEnum = AddressDomain.EntityTypeEnum || (AddressDomain.EntityTypeEnum = {}));
-    var StateEnum;
+    let StateEnum;
     (function (StateEnum) {
         StateEnum[StateEnum["AK"] = 'AK'] = "AK";
         StateEnum[StateEnum["AL"] = 'AL'] = "AL";
@@ -81,4 +78,4 @@ var AddressDomain;
         StateEnum[StateEnum["WV"] = 'WV'] = "WV";
         StateEnum[StateEnum["WY"] = 'WY'] = "WY";
     })(StateEnum = AddressDomain.StateEnum || (AddressDomain.StateEnum = {}));
-})(AddressDomain = exports.AddressDomain || (exports.AddressDomain = {}));
+})(AddressDomain || (AddressDomain = {}));

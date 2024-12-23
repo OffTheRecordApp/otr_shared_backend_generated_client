@@ -1,4 +1,3 @@
-"use strict";
 /**
  * OffTheRecord Rest Service API - Devo
  * A service to handle your traffic tickets
@@ -10,13 +9,11 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.AuditLog = void 0;
-var AuditLog;
+export var AuditLog;
 (function (AuditLog) {
-    var LevelEnum;
+    let LevelEnum;
     (function (LevelEnum) {
         LevelEnum[LevelEnum["NONTECHNICAL"] = 'NON_TECHNICAL'] = "NONTECHNICAL";
         LevelEnum[LevelEnum["TECHNICAL"] = 'TECHNICAL'] = "TECHNICAL";
     })(LevelEnum = AuditLog.LevelEnum || (AuditLog.LevelEnum = {}));
-})(AuditLog = exports.AuditLog || (exports.AuditLog = {}));
+})(AuditLog || (AuditLog = {}));

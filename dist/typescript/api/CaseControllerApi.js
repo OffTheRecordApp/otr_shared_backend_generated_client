@@ -1,4 +1,3 @@
-"use strict";
 /**
  * OffTheRecord Rest Service API - Devo
  * A service to handle your traffic tickets
@@ -10,11 +9,9 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.CaseControllerApi = void 0;
 /* tslint:disable:no-unused-variable member-ordering */
-var CaseControllerApi = /** @class */ (function () {
-    function CaseControllerApi($http, $httpParamSerializer, basePath) {
+export class CaseControllerApi {
+    constructor($http, $httpParamSerializer, basePath) {
         this.$http = $http;
         this.$httpParamSerializer = $httpParamSerializer;
         this.basePath = 'http://otr-backend-service-us-devo.offtherecord.com';
@@ -29,11 +26,11 @@ var CaseControllerApi = /** @class */ (function () {
      * @param caseId caseId
      * @param request request
      */
-    CaseControllerApi.prototype.addViolationsToCitationUsingPOST = function (caseId, request, extraHttpRequestParams) {
-        var localVarPath = this.basePath + '/api/v1/cases/{caseId}/citation/violations'
+    addViolationsToCitationUsingPOST(caseId, request, extraHttpRequestParams) {
+        const localVarPath = this.basePath + '/api/v1/cases/{caseId}/citation/violations'
             .replace('{' + 'caseId' + '}', encodeURIComponent(String(caseId)));
-        var queryParameters = {};
-        var headerParams = Object.assign({}, this.defaultHeaders);
+        let queryParameters = {};
+        let headerParams = Object.assign({}, this.defaultHeaders);
         // verify required parameter 'caseId' is not null or undefined
         if (caseId === null || caseId === undefined) {
             throw new Error('Required parameter caseId was null or undefined when calling addViolationsToCitationUsingPOST.');
@@ -42,7 +39,7 @@ var CaseControllerApi = /** @class */ (function () {
         if (request === null || request === undefined) {
             throw new Error('Required parameter request was null or undefined when calling addViolationsToCitationUsingPOST.');
         }
-        var httpRequestParams = {
+        let httpRequestParams = {
             method: 'POST',
             url: localVarPath,
             data: request,
@@ -53,19 +50,19 @@ var CaseControllerApi = /** @class */ (function () {
             httpRequestParams = Object.assign(httpRequestParams, extraHttpRequestParams);
         }
         return this.$http(httpRequestParams);
-    };
+    }
     /**
      *
      * @summary assignCaseToUser
      * @param caseId caseId
      * @param userId userId
      */
-    CaseControllerApi.prototype.assignCaseToUserUsingPOST = function (caseId, userId, extraHttpRequestParams) {
-        var localVarPath = this.basePath + '/api/v1/cases/{caseId}/owner/{userId}'
+    assignCaseToUserUsingPOST(caseId, userId, extraHttpRequestParams) {
+        const localVarPath = this.basePath + '/api/v1/cases/{caseId}/owner/{userId}'
             .replace('{' + 'caseId' + '}', encodeURIComponent(String(caseId)))
             .replace('{' + 'userId' + '}', encodeURIComponent(String(userId)));
-        var queryParameters = {};
-        var headerParams = Object.assign({}, this.defaultHeaders);
+        let queryParameters = {};
+        let headerParams = Object.assign({}, this.defaultHeaders);
         // verify required parameter 'caseId' is not null or undefined
         if (caseId === null || caseId === undefined) {
             throw new Error('Required parameter caseId was null or undefined when calling assignCaseToUserUsingPOST.');
@@ -74,7 +71,7 @@ var CaseControllerApi = /** @class */ (function () {
         if (userId === null || userId === undefined) {
             throw new Error('Required parameter userId was null or undefined when calling assignCaseToUserUsingPOST.');
         }
-        var httpRequestParams = {
+        let httpRequestParams = {
             method: 'POST',
             url: localVarPath,
             params: queryParameters,
@@ -84,22 +81,22 @@ var CaseControllerApi = /** @class */ (function () {
             httpRequestParams = Object.assign(httpRequestParams, extraHttpRequestParams);
         }
         return this.$http(httpRequestParams);
-    };
+    }
     /**
      *
      * @summary assignOwner
      * @param caseId caseId
      */
-    CaseControllerApi.prototype.assignOwnerUsingPOST = function (caseId, extraHttpRequestParams) {
-        var localVarPath = this.basePath + '/api/v1/cases/{caseId}/owner'
+    assignOwnerUsingPOST(caseId, extraHttpRequestParams) {
+        const localVarPath = this.basePath + '/api/v1/cases/{caseId}/owner'
             .replace('{' + 'caseId' + '}', encodeURIComponent(String(caseId)));
-        var queryParameters = {};
-        var headerParams = Object.assign({}, this.defaultHeaders);
+        let queryParameters = {};
+        let headerParams = Object.assign({}, this.defaultHeaders);
         // verify required parameter 'caseId' is not null or undefined
         if (caseId === null || caseId === undefined) {
             throw new Error('Required parameter caseId was null or undefined when calling assignOwnerUsingPOST.');
         }
-        var httpRequestParams = {
+        let httpRequestParams = {
             method: 'POST',
             url: localVarPath,
             params: queryParameters,
@@ -109,22 +106,22 @@ var CaseControllerApi = /** @class */ (function () {
             httpRequestParams = Object.assign(httpRequestParams, extraHttpRequestParams);
         }
         return this.$http(httpRequestParams);
-    };
+    }
     /**
      *
      * @summary findChargeDisputesByCaseId
      * @param caseId caseId
      */
-    CaseControllerApi.prototype.findChargeDisputesByCaseIdUsingGET = function (caseId, extraHttpRequestParams) {
-        var localVarPath = this.basePath + '/api/v1/cases/{caseId}/disputes'
+    findChargeDisputesByCaseIdUsingGET(caseId, extraHttpRequestParams) {
+        const localVarPath = this.basePath + '/api/v1/cases/{caseId}/disputes'
             .replace('{' + 'caseId' + '}', encodeURIComponent(String(caseId)));
-        var queryParameters = {};
-        var headerParams = Object.assign({}, this.defaultHeaders);
+        let queryParameters = {};
+        let headerParams = Object.assign({}, this.defaultHeaders);
         // verify required parameter 'caseId' is not null or undefined
         if (caseId === null || caseId === undefined) {
             throw new Error('Required parameter caseId was null or undefined when calling findChargeDisputesByCaseIdUsingGET.');
         }
-        var httpRequestParams = {
+        let httpRequestParams = {
             method: 'GET',
             url: localVarPath,
             params: queryParameters,
@@ -134,22 +131,22 @@ var CaseControllerApi = /** @class */ (function () {
             httpRequestParams = Object.assign(httpRequestParams, extraHttpRequestParams);
         }
         return this.$http(httpRequestParams);
-    };
+    }
     /**
      *
      * @summary getAppearanceAttorneysForCase
      * @param caseId caseId
      */
-    CaseControllerApi.prototype.getAppearanceAttorneysForCaseUsingGET = function (caseId, extraHttpRequestParams) {
-        var localVarPath = this.basePath + '/api/v1/cases/{caseId}/appearance-attorneys'
+    getAppearanceAttorneysForCaseUsingGET(caseId, extraHttpRequestParams) {
+        const localVarPath = this.basePath + '/api/v1/cases/{caseId}/appearance-attorneys'
             .replace('{' + 'caseId' + '}', encodeURIComponent(String(caseId)));
-        var queryParameters = {};
-        var headerParams = Object.assign({}, this.defaultHeaders);
+        let queryParameters = {};
+        let headerParams = Object.assign({}, this.defaultHeaders);
         // verify required parameter 'caseId' is not null or undefined
         if (caseId === null || caseId === undefined) {
             throw new Error('Required parameter caseId was null or undefined when calling getAppearanceAttorneysForCaseUsingGET.');
         }
-        var httpRequestParams = {
+        let httpRequestParams = {
             method: 'GET',
             url: localVarPath,
             params: queryParameters,
@@ -159,18 +156,18 @@ var CaseControllerApi = /** @class */ (function () {
             httpRequestParams = Object.assign(httpRequestParams, extraHttpRequestParams);
         }
         return this.$http(httpRequestParams);
-    };
+    }
     /**
      *
      * @summary getSupportTicketsForCase
      * @param caseId caseId
      * @param limit limit
      */
-    CaseControllerApi.prototype.getSupportTicketsForCaseUsingGET = function (caseId, limit, extraHttpRequestParams) {
-        var localVarPath = this.basePath + '/api/v1/cases/{caseId}/support-tickets'
+    getSupportTicketsForCaseUsingGET(caseId, limit, extraHttpRequestParams) {
+        const localVarPath = this.basePath + '/api/v1/cases/{caseId}/support-tickets'
             .replace('{' + 'caseId' + '}', encodeURIComponent(String(caseId)));
-        var queryParameters = {};
-        var headerParams = Object.assign({}, this.defaultHeaders);
+        let queryParameters = {};
+        let headerParams = Object.assign({}, this.defaultHeaders);
         // verify required parameter 'caseId' is not null or undefined
         if (caseId === null || caseId === undefined) {
             throw new Error('Required parameter caseId was null or undefined when calling getSupportTicketsForCaseUsingGET.');
@@ -178,7 +175,7 @@ var CaseControllerApi = /** @class */ (function () {
         if (limit !== undefined) {
             queryParameters['limit'] = limit;
         }
-        var httpRequestParams = {
+        let httpRequestParams = {
             method: 'GET',
             url: localVarPath,
             params: queryParameters,
@@ -188,18 +185,18 @@ var CaseControllerApi = /** @class */ (function () {
             httpRequestParams = Object.assign(httpRequestParams, extraHttpRequestParams);
         }
         return this.$http(httpRequestParams);
-    };
+    }
     /**
      *
      * @summary initiateCaseAndChargeCustomer
      * @param caseId caseId
      * @param request request
      */
-    CaseControllerApi.prototype.initiateCaseAndChargeCustomerUsingPOST = function (caseId, request, extraHttpRequestParams) {
-        var localVarPath = this.basePath + '/api/v1/cases/{caseId}/initiate-with-payment'
+    initiateCaseAndChargeCustomerUsingPOST(caseId, request, extraHttpRequestParams) {
+        const localVarPath = this.basePath + '/api/v1/cases/{caseId}/initiate-with-payment'
             .replace('{' + 'caseId' + '}', encodeURIComponent(String(caseId)));
-        var queryParameters = {};
-        var headerParams = Object.assign({}, this.defaultHeaders);
+        let queryParameters = {};
+        let headerParams = Object.assign({}, this.defaultHeaders);
         // verify required parameter 'caseId' is not null or undefined
         if (caseId === null || caseId === undefined) {
             throw new Error('Required parameter caseId was null or undefined when calling initiateCaseAndChargeCustomerUsingPOST.');
@@ -208,7 +205,7 @@ var CaseControllerApi = /** @class */ (function () {
         if (request === null || request === undefined) {
             throw new Error('Required parameter request was null or undefined when calling initiateCaseAndChargeCustomerUsingPOST.');
         }
-        var httpRequestParams = {
+        let httpRequestParams = {
             method: 'POST',
             url: localVarPath,
             data: request,
@@ -219,23 +216,23 @@ var CaseControllerApi = /** @class */ (function () {
             httpRequestParams = Object.assign(httpRequestParams, extraHttpRequestParams);
         }
         return this.$http(httpRequestParams);
-    };
+    }
     /**
      *
      * @summary initiateCase
      * @param caseId caseId
      * @param request request
      */
-    CaseControllerApi.prototype.initiateCaseUsingPOST = function (caseId, request, extraHttpRequestParams) {
-        var localVarPath = this.basePath + '/api/v1/cases/{caseId}/initiate'
+    initiateCaseUsingPOST(caseId, request, extraHttpRequestParams) {
+        const localVarPath = this.basePath + '/api/v1/cases/{caseId}/initiate'
             .replace('{' + 'caseId' + '}', encodeURIComponent(String(caseId)));
-        var queryParameters = {};
-        var headerParams = Object.assign({}, this.defaultHeaders);
+        let queryParameters = {};
+        let headerParams = Object.assign({}, this.defaultHeaders);
         // verify required parameter 'caseId' is not null or undefined
         if (caseId === null || caseId === undefined) {
             throw new Error('Required parameter caseId was null or undefined when calling initiateCaseUsingPOST.');
         }
-        var httpRequestParams = {
+        let httpRequestParams = {
             method: 'POST',
             url: localVarPath,
             data: request,
@@ -246,18 +243,18 @@ var CaseControllerApi = /** @class */ (function () {
             httpRequestParams = Object.assign(httpRequestParams, extraHttpRequestParams);
         }
         return this.$http(httpRequestParams);
-    };
+    }
     /**
      *
      * @summary markCaseAsResolved
      * @param caseId caseId
      * @param request request
      */
-    CaseControllerApi.prototype.markCaseAsResolvedUsingPOST = function (caseId, request, extraHttpRequestParams) {
-        var localVarPath = this.basePath + '/api/v1/cases/{caseId}/resolution'
+    markCaseAsResolvedUsingPOST(caseId, request, extraHttpRequestParams) {
+        const localVarPath = this.basePath + '/api/v1/cases/{caseId}/resolution'
             .replace('{' + 'caseId' + '}', encodeURIComponent(String(caseId)));
-        var queryParameters = {};
-        var headerParams = Object.assign({}, this.defaultHeaders);
+        let queryParameters = {};
+        let headerParams = Object.assign({}, this.defaultHeaders);
         // verify required parameter 'caseId' is not null or undefined
         if (caseId === null || caseId === undefined) {
             throw new Error('Required parameter caseId was null or undefined when calling markCaseAsResolvedUsingPOST.');
@@ -266,7 +263,7 @@ var CaseControllerApi = /** @class */ (function () {
         if (request === null || request === undefined) {
             throw new Error('Required parameter request was null or undefined when calling markCaseAsResolvedUsingPOST.');
         }
-        var httpRequestParams = {
+        let httpRequestParams = {
             method: 'POST',
             url: localVarPath,
             data: request,
@@ -277,19 +274,19 @@ var CaseControllerApi = /** @class */ (function () {
             httpRequestParams = Object.assign(httpRequestParams, extraHttpRequestParams);
         }
         return this.$http(httpRequestParams);
-    };
+    }
     /**
      *
      * @summary removeViolationsFromCitation
      * @param caseId caseId
      * @param violationTypes violationTypes
      */
-    CaseControllerApi.prototype.removeViolationsFromCitationUsingDELETE = function (caseId, violationTypes, extraHttpRequestParams) {
-        var localVarPath = this.basePath + '/api/v1/cases/{caseId}/citation/violations/{violationTypes}'
+    removeViolationsFromCitationUsingDELETE(caseId, violationTypes, extraHttpRequestParams) {
+        const localVarPath = this.basePath + '/api/v1/cases/{caseId}/citation/violations/{violationTypes}'
             .replace('{' + 'caseId' + '}', encodeURIComponent(String(caseId)))
             .replace('{' + 'violationTypes' + '}', encodeURIComponent(String(violationTypes)));
-        var queryParameters = {};
-        var headerParams = Object.assign({}, this.defaultHeaders);
+        let queryParameters = {};
+        let headerParams = Object.assign({}, this.defaultHeaders);
         // verify required parameter 'caseId' is not null or undefined
         if (caseId === null || caseId === undefined) {
             throw new Error('Required parameter caseId was null or undefined when calling removeViolationsFromCitationUsingDELETE.');
@@ -298,7 +295,7 @@ var CaseControllerApi = /** @class */ (function () {
         if (violationTypes === null || violationTypes === undefined) {
             throw new Error('Required parameter violationTypes was null or undefined when calling removeViolationsFromCitationUsingDELETE.');
         }
-        var httpRequestParams = {
+        let httpRequestParams = {
             method: 'DELETE',
             url: localVarPath,
             params: queryParameters,
@@ -308,22 +305,22 @@ var CaseControllerApi = /** @class */ (function () {
             httpRequestParams = Object.assign(httpRequestParams, extraHttpRequestParams);
         }
         return this.$http(httpRequestParams);
-    };
+    }
     /**
      *
      * @summary reopenCase
      * @param caseId caseId
      */
-    CaseControllerApi.prototype.reopenCaseUsingPUT = function (caseId, extraHttpRequestParams) {
-        var localVarPath = this.basePath + '/api/v1/cases/{caseId}/reopen'
+    reopenCaseUsingPUT(caseId, extraHttpRequestParams) {
+        const localVarPath = this.basePath + '/api/v1/cases/{caseId}/reopen'
             .replace('{' + 'caseId' + '}', encodeURIComponent(String(caseId)));
-        var queryParameters = {};
-        var headerParams = Object.assign({}, this.defaultHeaders);
+        let queryParameters = {};
+        let headerParams = Object.assign({}, this.defaultHeaders);
         // verify required parameter 'caseId' is not null or undefined
         if (caseId === null || caseId === undefined) {
             throw new Error('Required parameter caseId was null or undefined when calling reopenCaseUsingPUT.');
         }
-        var httpRequestParams = {
+        let httpRequestParams = {
             method: 'PUT',
             url: localVarPath,
             params: queryParameters,
@@ -333,21 +330,21 @@ var CaseControllerApi = /** @class */ (function () {
             httpRequestParams = Object.assign(httpRequestParams, extraHttpRequestParams);
         }
         return this.$http(httpRequestParams);
-    };
+    }
     /**
      *
      * @summary setArchiveOnCases
      * @param request request
      */
-    CaseControllerApi.prototype.setArchiveOnCasesUsingPUT = function (request, extraHttpRequestParams) {
-        var localVarPath = this.basePath + '/api/v1/cases/archive';
-        var queryParameters = {};
-        var headerParams = Object.assign({}, this.defaultHeaders);
+    setArchiveOnCasesUsingPUT(request, extraHttpRequestParams) {
+        const localVarPath = this.basePath + '/api/v1/cases/archive';
+        let queryParameters = {};
+        let headerParams = Object.assign({}, this.defaultHeaders);
         // verify required parameter 'request' is not null or undefined
         if (request === null || request === undefined) {
             throw new Error('Required parameter request was null or undefined when calling setArchiveOnCasesUsingPUT.');
         }
-        var httpRequestParams = {
+        let httpRequestParams = {
             method: 'PUT',
             url: localVarPath,
             data: request,
@@ -358,18 +355,18 @@ var CaseControllerApi = /** @class */ (function () {
             httpRequestParams = Object.assign(httpRequestParams, extraHttpRequestParams);
         }
         return this.$http(httpRequestParams);
-    };
+    }
     /**
      *
      * @summary setCourtDateForCase
      * @param caseId caseId
      * @param request request
      */
-    CaseControllerApi.prototype.setCourtDateForCaseUsingPOST = function (caseId, request, extraHttpRequestParams) {
-        var localVarPath = this.basePath + '/api/v1/cases/{caseId}/courtdate'
+    setCourtDateForCaseUsingPOST(caseId, request, extraHttpRequestParams) {
+        const localVarPath = this.basePath + '/api/v1/cases/{caseId}/courtdate'
             .replace('{' + 'caseId' + '}', encodeURIComponent(String(caseId)));
-        var queryParameters = {};
-        var headerParams = Object.assign({}, this.defaultHeaders);
+        let queryParameters = {};
+        let headerParams = Object.assign({}, this.defaultHeaders);
         // verify required parameter 'caseId' is not null or undefined
         if (caseId === null || caseId === undefined) {
             throw new Error('Required parameter caseId was null or undefined when calling setCourtDateForCaseUsingPOST.');
@@ -378,7 +375,7 @@ var CaseControllerApi = /** @class */ (function () {
         if (request === null || request === undefined) {
             throw new Error('Required parameter request was null or undefined when calling setCourtDateForCaseUsingPOST.');
         }
-        var httpRequestParams = {
+        let httpRequestParams = {
             method: 'POST',
             url: localVarPath,
             data: request,
@@ -389,18 +386,18 @@ var CaseControllerApi = /** @class */ (function () {
             httpRequestParams = Object.assign(httpRequestParams, extraHttpRequestParams);
         }
         return this.$http(httpRequestParams);
-    };
+    }
     /**
      *
      * @summary submitRequestForPriceMatch
      * @param caseId caseId
      * @param priceMatchRequest priceMatchRequest
      */
-    CaseControllerApi.prototype.submitRequestForPriceMatchUsingPOST = function (caseId, priceMatchRequest, extraHttpRequestParams) {
-        var localVarPath = this.basePath + '/api/v1/cases/{caseId}/price-match'
+    submitRequestForPriceMatchUsingPOST(caseId, priceMatchRequest, extraHttpRequestParams) {
+        const localVarPath = this.basePath + '/api/v1/cases/{caseId}/price-match'
             .replace('{' + 'caseId' + '}', encodeURIComponent(String(caseId)));
-        var queryParameters = {};
-        var headerParams = Object.assign({}, this.defaultHeaders);
+        let queryParameters = {};
+        let headerParams = Object.assign({}, this.defaultHeaders);
         // verify required parameter 'caseId' is not null or undefined
         if (caseId === null || caseId === undefined) {
             throw new Error('Required parameter caseId was null or undefined when calling submitRequestForPriceMatchUsingPOST.');
@@ -409,7 +406,7 @@ var CaseControllerApi = /** @class */ (function () {
         if (priceMatchRequest === null || priceMatchRequest === undefined) {
             throw new Error('Required parameter priceMatchRequest was null or undefined when calling submitRequestForPriceMatchUsingPOST.');
         }
-        var httpRequestParams = {
+        let httpRequestParams = {
             method: 'POST',
             url: localVarPath,
             data: priceMatchRequest,
@@ -420,18 +417,18 @@ var CaseControllerApi = /** @class */ (function () {
             httpRequestParams = Object.assign(httpRequestParams, extraHttpRequestParams);
         }
         return this.$http(httpRequestParams);
-    };
+    }
     /**
      *
      * @summary updateCase
      * @param caseId caseId
      * @param caseFromRequest caseFromRequest
      */
-    CaseControllerApi.prototype.updateCaseUsingPUT = function (caseId, caseFromRequest, extraHttpRequestParams) {
-        var localVarPath = this.basePath + '/api/v1/cases/{caseId}'
+    updateCaseUsingPUT(caseId, caseFromRequest, extraHttpRequestParams) {
+        const localVarPath = this.basePath + '/api/v1/cases/{caseId}'
             .replace('{' + 'caseId' + '}', encodeURIComponent(String(caseId)));
-        var queryParameters = {};
-        var headerParams = Object.assign({}, this.defaultHeaders);
+        let queryParameters = {};
+        let headerParams = Object.assign({}, this.defaultHeaders);
         // verify required parameter 'caseId' is not null or undefined
         if (caseId === null || caseId === undefined) {
             throw new Error('Required parameter caseId was null or undefined when calling updateCaseUsingPUT.');
@@ -440,7 +437,7 @@ var CaseControllerApi = /** @class */ (function () {
         if (caseFromRequest === null || caseFromRequest === undefined) {
             throw new Error('Required parameter caseFromRequest was null or undefined when calling updateCaseUsingPUT.');
         }
-        var httpRequestParams = {
+        let httpRequestParams = {
             method: 'PUT',
             url: localVarPath,
             data: caseFromRequest,
@@ -451,18 +448,18 @@ var CaseControllerApi = /** @class */ (function () {
             httpRequestParams = Object.assign(httpRequestParams, extraHttpRequestParams);
         }
         return this.$http(httpRequestParams);
-    };
+    }
     /**
      *
      * @summary updateDeclineTickets
      * @param caseId caseId
      * @param request request
      */
-    CaseControllerApi.prototype.updateDeclineTicketsUsingPUT = function (caseId, request, extraHttpRequestParams) {
-        var localVarPath = this.basePath + '/api/v1/cases/{caseId}/decline-tickets'
+    updateDeclineTicketsUsingPUT(caseId, request, extraHttpRequestParams) {
+        const localVarPath = this.basePath + '/api/v1/cases/{caseId}/decline-tickets'
             .replace('{' + 'caseId' + '}', encodeURIComponent(String(caseId)));
-        var queryParameters = {};
-        var headerParams = Object.assign({}, this.defaultHeaders);
+        let queryParameters = {};
+        let headerParams = Object.assign({}, this.defaultHeaders);
         // verify required parameter 'caseId' is not null or undefined
         if (caseId === null || caseId === undefined) {
             throw new Error('Required parameter caseId was null or undefined when calling updateDeclineTicketsUsingPUT.');
@@ -471,7 +468,7 @@ var CaseControllerApi = /** @class */ (function () {
         if (request === null || request === undefined) {
             throw new Error('Required parameter request was null or undefined when calling updateDeclineTicketsUsingPUT.');
         }
-        var httpRequestParams = {
+        let httpRequestParams = {
             method: 'PUT',
             url: localVarPath,
             data: request,
@@ -482,8 +479,6 @@ var CaseControllerApi = /** @class */ (function () {
             httpRequestParams = Object.assign(httpRequestParams, extraHttpRequestParams);
         }
         return this.$http(httpRequestParams);
-    };
-    CaseControllerApi.$inject = ['$http', '$httpParamSerializer', 'basePath'];
-    return CaseControllerApi;
-}());
-exports.CaseControllerApi = CaseControllerApi;
+    }
+}
+CaseControllerApi.$inject = ['$http', '$httpParamSerializer', 'basePath'];

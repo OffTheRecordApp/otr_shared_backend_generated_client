@@ -1,4 +1,3 @@
-"use strict";
 /**
  * OffTheRecord Rest Service API - Devo
  * A service to handle your traffic tickets
@@ -10,11 +9,9 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.AuditLawfirmEventsControllerApi = void 0;
 /* tslint:disable:no-unused-variable member-ordering */
-var AuditLawfirmEventsControllerApi = /** @class */ (function () {
-    function AuditLawfirmEventsControllerApi($http, $httpParamSerializer, basePath) {
+export class AuditLawfirmEventsControllerApi {
+    constructor($http, $httpParamSerializer, basePath) {
         this.$http = $http;
         this.$httpParamSerializer = $httpParamSerializer;
         this.basePath = 'http://otr-backend-service-us-devo.offtherecord.com';
@@ -32,11 +29,11 @@ var AuditLawfirmEventsControllerApi = /** @class */ (function () {
      * @param limit limit
      * @param nextPageToken nextPageToken
      */
-    AuditLawfirmEventsControllerApi.prototype.listLawfirmAuditEventsByCursorUsingGET = function (lawfirmId, excludeTypes, includeTypes, limit, nextPageToken, extraHttpRequestParams) {
-        var localVarPath = this.basePath + '/api/v1/lawfirms/{lawfirmId}/audit-events'
+    listLawfirmAuditEventsByCursorUsingGET(lawfirmId, excludeTypes, includeTypes, limit, nextPageToken, extraHttpRequestParams) {
+        const localVarPath = this.basePath + '/api/v1/lawfirms/{lawfirmId}/audit-events'
             .replace('{' + 'lawfirmId' + '}', encodeURIComponent(String(lawfirmId)));
-        var queryParameters = {};
-        var headerParams = Object.assign({}, this.defaultHeaders);
+        let queryParameters = {};
+        let headerParams = Object.assign({}, this.defaultHeaders);
         // verify required parameter 'lawfirmId' is not null or undefined
         if (lawfirmId === null || lawfirmId === undefined) {
             throw new Error('Required parameter lawfirmId was null or undefined when calling listLawfirmAuditEventsByCursorUsingGET.');
@@ -53,7 +50,7 @@ var AuditLawfirmEventsControllerApi = /** @class */ (function () {
         if (nextPageToken !== undefined) {
             queryParameters['nextPageToken'] = nextPageToken;
         }
-        var httpRequestParams = {
+        let httpRequestParams = {
             method: 'GET',
             url: localVarPath,
             params: queryParameters,
@@ -63,8 +60,6 @@ var AuditLawfirmEventsControllerApi = /** @class */ (function () {
             httpRequestParams = Object.assign(httpRequestParams, extraHttpRequestParams);
         }
         return this.$http(httpRequestParams);
-    };
-    AuditLawfirmEventsControllerApi.$inject = ['$http', '$httpParamSerializer', 'basePath'];
-    return AuditLawfirmEventsControllerApi;
-}());
-exports.AuditLawfirmEventsControllerApi = AuditLawfirmEventsControllerApi;
+    }
+}
+AuditLawfirmEventsControllerApi.$inject = ['$http', '$httpParamSerializer', 'basePath'];

@@ -1,4 +1,3 @@
-"use strict";
 /**
  * OffTheRecord Rest Service API - Devo
  * A service to handle your traffic tickets
@@ -10,11 +9,9 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.UpdatePhoneNumber = void 0;
-var UpdatePhoneNumber;
+export var UpdatePhoneNumber;
 (function (UpdatePhoneNumber) {
-    var EntityTypeEnum;
+    let EntityTypeEnum;
     (function (EntityTypeEnum) {
         EntityTypeEnum[EntityTypeEnum["CASE"] = 'CASE'] = "CASE";
         EntityTypeEnum[EntityTypeEnum["CASEPAYMENT"] = 'CASE_PAYMENT'] = "CASEPAYMENT";
@@ -27,11 +24,11 @@ var UpdatePhoneNumber;
         EntityTypeEnum[EntityTypeEnum["STRIPECHARGE"] = 'STRIPE_CHARGE'] = "STRIPECHARGE";
         EntityTypeEnum[EntityTypeEnum["USER"] = 'USER'] = "USER";
     })(EntityTypeEnum = UpdatePhoneNumber.EntityTypeEnum || (UpdatePhoneNumber.EntityTypeEnum = {}));
-    var TypeEnum;
+    let TypeEnum;
     (function (TypeEnum) {
         TypeEnum[TypeEnum["HOME"] = 'HOME'] = "HOME";
         TypeEnum[TypeEnum["MOBILE"] = 'MOBILE'] = "MOBILE";
         TypeEnum[TypeEnum["NOTSPECIFIED"] = 'NOT_SPECIFIED'] = "NOTSPECIFIED";
         TypeEnum[TypeEnum["OFFICE"] = 'OFFICE'] = "OFFICE";
     })(TypeEnum = UpdatePhoneNumber.TypeEnum || (UpdatePhoneNumber.TypeEnum = {}));
-})(UpdatePhoneNumber = exports.UpdatePhoneNumber || (exports.UpdatePhoneNumber = {}));
+})(UpdatePhoneNumber || (UpdatePhoneNumber = {}));
