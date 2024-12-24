@@ -102,6 +102,12 @@ export interface CitationModelRes {
     hasCase?: boolean;
     /**
      *
+     * @type {boolean}
+     * @memberof CitationModelRes
+     */
+    hasCitationImage?: boolean;
+    /**
+     *
      * @type {string}
      * @memberof CitationModelRes
      */

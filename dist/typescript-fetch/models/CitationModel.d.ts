@@ -102,6 +102,12 @@ export interface CitationModel {
     hasCase?: boolean;
     /**
      *
+     * @type {boolean}
+     * @memberof CitationModel
+     */
+    hasCitationImage?: boolean;
+    /**
+     *
      * @type {string}
      * @memberof CitationModel
      */

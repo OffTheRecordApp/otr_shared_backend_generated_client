@@ -87,6 +87,12 @@ export interface WorkflowCitationModel {
      * @type {boolean}
      * @memberof WorkflowCitationModel
      */
+    hasCitationImage?: boolean;
+    /**
+     *
+     * @type {boolean}
+     * @memberof WorkflowCitationModel
+     */
     involvesAccident?: boolean;
     /**
      *

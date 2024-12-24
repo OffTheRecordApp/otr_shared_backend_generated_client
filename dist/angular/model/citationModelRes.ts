@@ -31,6 +31,7 @@ export interface CitationModelRes {
     documentUrlToConvert?: string;
     fineAmount?: number;
     hasCase?: boolean;
+    hasCitationImage?: boolean;
     hubspotContactId?: string;
     involvesAccident?: boolean;
     isDeleted?: boolean;
