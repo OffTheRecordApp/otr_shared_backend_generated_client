@@ -262,6 +262,7 @@ export class CitationControllerService {
      * @param request request
      * @param observe set whether or not to return the data Observable as the body, response or events. defaults to returning the body.
      * @param reportProgress flag to report request and response progress.
+     * @deprecated
      */
     public createReferralSourceForCitationUsingPOST(citationId: string, request: CreateReferralSourceForCitation, observe?: 'body', reportProgress?: boolean, options?: {httpHeaderAccept?: undefined, context?: HttpContext}): Observable<any>;
     public createReferralSourceForCitationUsingPOST(citationId: string, request: CreateReferralSourceForCitation, observe?: 'response', reportProgress?: boolean, options?: {httpHeaderAccept?: undefined, context?: HttpContext}): Observable<HttpResponse<any>>;

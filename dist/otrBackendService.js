@@ -4026,6 +4026,7 @@ angular.module('otrBackendService', [])
              * @method
              * @name OtrService#createNewCitationUsingPOST
              * @param {object} parameters - method options and parameters
+             * @param {} parameters.branchLinkCookie - branchLinkCookie
              * @param {} parameters.request - request
              */
             OtrService.prototype.createNewCitationUsingPOST = function(parameters) {
@@ -4042,6 +4043,10 @@ angular.module('otrBackendService', [])
 
                 headers['Accept'] = ['*/*'];
                 headers['Content-Type'] = ['application/json'];
+
+                if (parameters['branchLinkCookie'] !== undefined) {
+                    body = parameters['branchLinkCookie'];
+                }
 
                 if (parameters['request'] !== undefined) {
                     body = parameters['request'];
