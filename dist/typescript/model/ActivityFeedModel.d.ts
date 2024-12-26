@@ -14,6 +14,7 @@ export interface ActivityFeedModel {
     "activityDescription"?: string;
     "activityDescriptionInHtml"?: string;
     "activityType"?: ActivityFeedModel.ActivityTypeEnum;
+    "caseStatus"?: ActivityFeedModel.CaseStatusEnum;
     "city"?: string;
     "ownerName"?: string;
     "privacyMode"?: ActivityFeedModel.PrivacyModeEnum;
@@ -28,6 +29,45 @@ export declare namespace ActivityFeedModel {
         REFUND,
         RESOLUTION,
         TICKETREVIEW
+    }
+    enum CaseStatusEnum {
+        AMENDEDDOWNWITHINCLASS,
+        AMENDEDFULLFINE,
+        AMENDEDINCREASEDFINE,
+        AMENDEDNOFINE,
+        AMENDEDREDUCEDFINE,
+        AMENDEDTOINFRACTION,
+        AMENDEDTONMV,
+        CANCELLEDATTORNEYATFAULT,
+        CANCELLEDBYLAWFIRM,
+        CANCELLEDBYUSER,
+        CANCELLEDDUPLICATE,
+        CANCELLEDNMV,
+        CANCELLEDNONPAYMENT,
+        CANCELLEDNOLAWFIRM,
+        CANCELLEDOVERDUE,
+        CANCELLEDTOOSHORTNOTICE,
+        CASEINPROGRESS,
+        CLIENTCONFIRMED,
+        CLIENTCONFIRMEDUNPAID,
+        CLIENTFIREDLAWFIRM,
+        CLIENTFORCEDLOSS,
+        CLIENTPAIDFINE,
+        CLIENTUNRESPONSIVE,
+        DEFERRED,
+        DISMISSED,
+        DIVERSION,
+        FEESDISPUTED,
+        FINEREDUCTIONONLY,
+        LAWFIRMWITHDRAWN,
+        LOST,
+        NOLAWFIRMAVAILABLE,
+        POINTREDUCTION,
+        REFUSEDBYLAWFIRM,
+        RESOLVEDNONPAYMENT,
+        STALE,
+        TRAFFICSCHOOL,
+        UNCONFIRMED
     }
     enum PrivacyModeEnum {
         FRIENDS,

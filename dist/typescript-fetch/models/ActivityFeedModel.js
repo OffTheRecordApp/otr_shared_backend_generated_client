@@ -24,6 +24,7 @@ export function ActivityFeedModelFromJSONTyped(json, ignoreDiscriminator) {
         'activityDescription': !exists(json, 'activityDescription') ? undefined : json['activityDescription'],
         'activityDescriptionInHtml': !exists(json, 'activityDescriptionInHtml') ? undefined : json['activityDescriptionInHtml'],
         'activityType': !exists(json, 'activityType') ? undefined : json['activityType'],
+        'caseStatus': !exists(json, 'caseStatus') ? undefined : json['caseStatus'],
         'city': !exists(json, 'city') ? undefined : json['city'],
         'ownerName': !exists(json, 'ownerName') ? undefined : json['ownerName'],
         'privacyMode': !exists(json, 'privacyMode') ? undefined : json['privacyMode'],
@@ -44,6 +45,7 @@ export function ActivityFeedModelToJSON(value) {
         'activityDescription': value.activityDescription,
         'activityDescriptionInHtml': value.activityDescriptionInHtml,
         'activityType': value.activityType,
+        'caseStatus': value.caseStatus,
         'city': value.city,
         'ownerName': value.ownerName,
         'privacyMode': value.privacyMode,
@@ -64,6 +66,50 @@ export var ActivityFeedModelActivityTypeEnum;
     ActivityFeedModelActivityTypeEnum["RESOLUTION"] = "RESOLUTION";
     ActivityFeedModelActivityTypeEnum["TICKETREVIEW"] = "TICKET_REVIEW";
 })(ActivityFeedModelActivityTypeEnum || (ActivityFeedModelActivityTypeEnum = {}));
+/**
+* @export
+* @enum {string}
+*/
+export var ActivityFeedModelCaseStatusEnum;
+(function (ActivityFeedModelCaseStatusEnum) {
+    ActivityFeedModelCaseStatusEnum["AMENDEDDOWNWITHINCLASS"] = "AMENDED_DOWN_WITHIN_CLASS";
+    ActivityFeedModelCaseStatusEnum["AMENDEDFULLFINE"] = "AMENDED_FULL_FINE";
+    ActivityFeedModelCaseStatusEnum["AMENDEDINCREASEDFINE"] = "AMENDED_INCREASED_FINE";
+    ActivityFeedModelCaseStatusEnum["AMENDEDNOFINE"] = "AMENDED_NO_FINE";
+    ActivityFeedModelCaseStatusEnum["AMENDEDREDUCEDFINE"] = "AMENDED_REDUCED_FINE";
+    ActivityFeedModelCaseStatusEnum["AMENDEDTOINFRACTION"] = "AMENDED_TO_INFRACTION";
+    ActivityFeedModelCaseStatusEnum["AMENDEDTONMV"] = "AMENDED_TO_NMV";
+    ActivityFeedModelCaseStatusEnum["CANCELLEDATTORNEYATFAULT"] = "CANCELLED_ATTORNEY_AT_FAULT";
+    ActivityFeedModelCaseStatusEnum["CANCELLEDBYLAWFIRM"] = "CANCELLED_BY_LAWFIRM";
+    ActivityFeedModelCaseStatusEnum["CANCELLEDBYUSER"] = "CANCELLED_BY_USER";
+    ActivityFeedModelCaseStatusEnum["CANCELLEDDUPLICATE"] = "CANCELLED_DUPLICATE";
+    ActivityFeedModelCaseStatusEnum["CANCELLEDNMV"] = "CANCELLED_NMV";
+    ActivityFeedModelCaseStatusEnum["CANCELLEDNONPAYMENT"] = "CANCELLED_NON_PAYMENT";
+    ActivityFeedModelCaseStatusEnum["CANCELLEDNOLAWFIRM"] = "CANCELLED_NO_LAWFIRM";
+    ActivityFeedModelCaseStatusEnum["CANCELLEDOVERDUE"] = "CANCELLED_OVERDUE";
+    ActivityFeedModelCaseStatusEnum["CANCELLEDTOOSHORTNOTICE"] = "CANCELLED_TOO_SHORT_NOTICE";
+    ActivityFeedModelCaseStatusEnum["CASEINPROGRESS"] = "CASE_IN_PROGRESS";
+    ActivityFeedModelCaseStatusEnum["CLIENTCONFIRMED"] = "CLIENT_CONFIRMED";
+    ActivityFeedModelCaseStatusEnum["CLIENTCONFIRMEDUNPAID"] = "CLIENT_CONFIRMED_UNPAID";
+    ActivityFeedModelCaseStatusEnum["CLIENTFIREDLAWFIRM"] = "CLIENT_FIRED_LAWFIRM";
+    ActivityFeedModelCaseStatusEnum["CLIENTFORCEDLOSS"] = "CLIENT_FORCED_LOSS";
+    ActivityFeedModelCaseStatusEnum["CLIENTPAIDFINE"] = "CLIENT_PAID_FINE";
+    ActivityFeedModelCaseStatusEnum["CLIENTUNRESPONSIVE"] = "CLIENT_UNRESPONSIVE";
+    ActivityFeedModelCaseStatusEnum["DEFERRED"] = "DEFERRED";
+    ActivityFeedModelCaseStatusEnum["DISMISSED"] = "DISMISSED";
+    ActivityFeedModelCaseStatusEnum["DIVERSION"] = "DIVERSION";
+    ActivityFeedModelCaseStatusEnum["FEESDISPUTED"] = "FEES_DISPUTED";
+    ActivityFeedModelCaseStatusEnum["FINEREDUCTIONONLY"] = "FINE_REDUCTION_ONLY";
+    ActivityFeedModelCaseStatusEnum["LAWFIRMWITHDRAWN"] = "LAWFIRM_WITHDRAWN";
+    ActivityFeedModelCaseStatusEnum["LOST"] = "LOST";
+    ActivityFeedModelCaseStatusEnum["NOLAWFIRMAVAILABLE"] = "NO_LAWFIRM_AVAILABLE";
+    ActivityFeedModelCaseStatusEnum["POINTREDUCTION"] = "POINT_REDUCTION";
+    ActivityFeedModelCaseStatusEnum["REFUSEDBYLAWFIRM"] = "REFUSED_BY_LAWFIRM";
+    ActivityFeedModelCaseStatusEnum["RESOLVEDNONPAYMENT"] = "RESOLVED_NON_PAYMENT";
+    ActivityFeedModelCaseStatusEnum["STALE"] = "STALE";
+    ActivityFeedModelCaseStatusEnum["TRAFFICSCHOOL"] = "TRAFFIC_SCHOOL";
+    ActivityFeedModelCaseStatusEnum["UNCONFIRMED"] = "UNCONFIRMED";
+})(ActivityFeedModelCaseStatusEnum || (ActivityFeedModelCaseStatusEnum = {}));
 /**
 * @export
 * @enum {string}
