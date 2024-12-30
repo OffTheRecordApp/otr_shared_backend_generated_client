@@ -53,6 +53,12 @@ export interface ActivityFeedModel {
     city?: string;
     /**
      *
+     * @type {boolean}
+     * @memberof ActivityFeedModel
+     */
+    hasStateViolationData?: boolean;
+    /**
+     *
      * @type {string}
      * @memberof ActivityFeedModel
      */
@@ -75,6 +81,12 @@ export interface ActivityFeedModel {
      * @memberof ActivityFeedModel
      */
     regionCode?: string;
+    /**
+     *
+     * @type {number}
+     * @memberof ActivityFeedModel
+     */
+    totalLegalFeeInCents?: number;
     /**
      *
      * @type {string}

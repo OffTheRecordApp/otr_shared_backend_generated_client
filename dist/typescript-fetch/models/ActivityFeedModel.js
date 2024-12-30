@@ -26,10 +26,12 @@ export function ActivityFeedModelFromJSONTyped(json, ignoreDiscriminator) {
         'activityType': !exists(json, 'activityType') ? undefined : json['activityType'],
         'caseStatus': !exists(json, 'caseStatus') ? undefined : json['caseStatus'],
         'city': !exists(json, 'city') ? undefined : json['city'],
+        'hasStateViolationData': !exists(json, 'hasStateViolationData') ? undefined : json['hasStateViolationData'],
         'ownerName': !exists(json, 'ownerName') ? undefined : json['ownerName'],
         'privacyMode': !exists(json, 'privacyMode') ? undefined : json['privacyMode'],
         'profilePicUrl': !exists(json, 'profilePicUrl') ? undefined : json['profilePicUrl'],
         'regionCode': !exists(json, 'regionCode') ? undefined : json['regionCode'],
+        'totalLegalFeeInCents': !exists(json, 'totalLegalFeeInCents') ? undefined : json['totalLegalFeeInCents'],
         'violationDescription': !exists(json, 'violationDescription') ? undefined : json['violationDescription'],
     };
 }
@@ -47,10 +49,12 @@ export function ActivityFeedModelToJSON(value) {
         'activityType': value.activityType,
         'caseStatus': value.caseStatus,
         'city': value.city,
+        'hasStateViolationData': value.hasStateViolationData,
         'ownerName': value.ownerName,
         'privacyMode': value.privacyMode,
         'profilePicUrl': value.profilePicUrl,
         'regionCode': value.regionCode,
+        'totalLegalFeeInCents': value.totalLegalFeeInCents,
         'violationDescription': value.violationDescription,
     };
 }

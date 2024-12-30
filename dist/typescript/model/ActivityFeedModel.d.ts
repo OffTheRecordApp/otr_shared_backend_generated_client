@@ -16,10 +16,12 @@ export interface ActivityFeedModel {
     "activityType"?: ActivityFeedModel.ActivityTypeEnum;
     "caseStatus"?: ActivityFeedModel.CaseStatusEnum;
     "city"?: string;
+    "hasStateViolationData"?: boolean;
     "ownerName"?: string;
     "privacyMode"?: ActivityFeedModel.PrivacyModeEnum;
     "profilePicUrl"?: string;
     "regionCode"?: string;
+    "totalLegalFeeInCents"?: number;
     "violationDescription"?: string;
 }
 export declare namespace ActivityFeedModel {
