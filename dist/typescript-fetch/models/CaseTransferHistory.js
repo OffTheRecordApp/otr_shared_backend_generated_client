@@ -22,7 +22,9 @@ export function CaseTransferHistoryFromJSONTyped(json, ignoreDiscriminator) {
     return {
         'decisionDate': !exists(json, 'decisionDate') ? undefined : (new Date(json['decisionDate'])),
         'decisionStatus': !exists(json, 'decisionStatus') ? undefined : json['decisionStatus'],
+        'declineCategory': !exists(json, 'declineCategory') ? undefined : json['declineCategory'],
         'declineNote': !exists(json, 'declineNote') ? undefined : json['declineNote'],
+        'declineReasonType': !exists(json, 'declineReasonType') ? undefined : json['declineReasonType'],
         'discountInCents': !exists(json, 'discountInCents') ? undefined : json['discountInCents'],
         'lawfirmCaseCreationDate': !exists(json, 'lawfirmCaseCreationDate') ? undefined : (new Date(json['lawfirmCaseCreationDate'])),
         'lawfirmCaseId': !exists(json, 'lawfirmCaseId') ? undefined : json['lawfirmCaseId'],
@@ -42,7 +44,9 @@ export function CaseTransferHistoryToJSON(value) {
     return {
         'decisionDate': value.decisionDate === undefined ? undefined : (value.decisionDate.toISOString()),
         'decisionStatus': value.decisionStatus,
+        'declineCategory': value.declineCategory,
         'declineNote': value.declineNote,
+        'declineReasonType': value.declineReasonType,
         'discountInCents': value.discountInCents,
         'lawfirmCaseCreationDate': value.lawfirmCaseCreationDate === undefined ? undefined : (value.lawfirmCaseCreationDate.toISOString()),
         'lawfirmCaseId': value.lawfirmCaseId,

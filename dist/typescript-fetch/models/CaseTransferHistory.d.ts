@@ -32,7 +32,19 @@ export interface CaseTransferHistory {
      * @type {string}
      * @memberof CaseTransferHistory
      */
+    declineCategory?: string;
+    /**
+     *
+     * @type {string}
+     * @memberof CaseTransferHistory
+     */
     declineNote?: string;
+    /**
+     *
+     * @type {string}
+     * @memberof CaseTransferHistory
+     */
+    declineReasonType?: string;
     /**
      *
      * @type {number}

@@ -31,6 +31,8 @@ export function CaseActionDomainFromJSONTyped(json, ignoreDiscriminator) {
         'courtDateActionNote': !exists(json, 'courtDateActionNote') ? undefined : json['courtDateActionNote'],
         'courtDateActionTitle': !exists(json, 'courtDateActionTitle') ? undefined : json['courtDateActionTitle'],
         'isDeleted': !exists(json, 'isDeleted') ? undefined : json['isDeleted'],
+        'label1': !exists(json, 'label1') ? undefined : json['label1'],
+        'label2': !exists(json, 'label2') ? undefined : json['label2'],
     };
 }
 export function CaseActionDomainToJSON(value) {
@@ -51,6 +53,8 @@ export function CaseActionDomainToJSON(value) {
         'courtDateActionNote': value.courtDateActionNote,
         'courtDateActionTitle': value.courtDateActionTitle,
         'isDeleted': value.isDeleted,
+        'label1': value.label1,
+        'label2': value.label2,
     };
 }
 /**

@@ -21,6 +21,8 @@ export interface CaseActionDomain {
     "courtDateActionNote"?: string;
     "courtDateActionTitle"?: string;
     "isDeleted"?: boolean;
+    "label1"?: string;
+    "label2"?: string;
 }
 export declare namespace CaseActionDomain {
     enum ActionTypeEnum {

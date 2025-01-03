@@ -23,6 +23,8 @@ export interface CaseActionDomain {
     courtDateActionNote?: string;
     courtDateActionTitle?: string;
     isDeleted?: boolean;
+    label1?: string;
+    label2?: string;
 }
 export namespace CaseActionDomain {
     export type ActionTypeEnum = 'CASE_ACCEPT' | 'CASE_COUNTER_ACCEPTED' | 'CASE_COUNTER_DECLINED' | 'CASE_COUNTER_INITIATED' | 'CASE_COUNTER_WITHDRAWN' | 'CASE_DECLINE' | 'CITATION_DATA_EXTRACTED' | 'COURT_DATE_REMOVED' | 'COURT_DATE_SCHEDULED' | 'DISCOVERY_RECEIVED' | 'DISCOVERY_REQUESTED' | 'DISPUTE_FILED' | 'DRIVER_LICENSE_REQUESTED' | 'FAILED_PAYMENT_ATTEMPT' | 'NOTICE_OF_APPEARANCE_FILED' | 'OTHER' | 'OVERDUE_BALANCE_PAID' | 'REVIEWED_BY_LAWFIRM' | 'SOCIAL_MEDIA_ASK' | 'TICKET_MAILED_TO_COURT';

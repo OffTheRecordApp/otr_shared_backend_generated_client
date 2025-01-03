@@ -76,6 +76,18 @@ export interface CaseActionDomain {
      * @memberof CaseActionDomain
      */
     isDeleted?: boolean;
+    /**
+     *
+     * @type {string}
+     * @memberof CaseActionDomain
+     */
+    label1?: string;
+    /**
+     *
+     * @type {string}
+     * @memberof CaseActionDomain
+     */
+    label2?: string;
 }
 export declare function CaseActionDomainFromJSON(json: any): CaseActionDomain;
 export declare function CaseActionDomainFromJSONTyped(json: any, ignoreDiscriminator: boolean): CaseActionDomain;

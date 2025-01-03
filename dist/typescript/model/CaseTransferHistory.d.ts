@@ -12,7 +12,9 @@
 export interface CaseTransferHistory {
     "decisionDate"?: string;
     "decisionStatus"?: CaseTransferHistory.DecisionStatusEnum;
+    "declineCategory"?: string;
     "declineNote"?: string;
+    "declineReasonType"?: string;
     "discountInCents"?: number;
     "lawfirmCaseCreationDate"?: string;
     "lawfirmCaseId"?: string;
