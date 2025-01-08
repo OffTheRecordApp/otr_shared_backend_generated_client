@@ -298,6 +298,33 @@ export class ConsoleListControllerApi {
     /**
      *
      * @summary getPendingCases
+     * @param length length
+     * @param page page
+     */
+    getPendingCasesUsingGET(length, page, extraHttpRequestParams) {
+        const localVarPath = this.basePath + '/api/v1/cases/pending';
+        let queryParameters = {};
+        let headerParams = Object.assign({}, this.defaultHeaders);
+        if (length !== undefined) {
+            queryParameters['length'] = length;
+        }
+        if (page !== undefined) {
+            queryParameters['page'] = page;
+        }
+        let httpRequestParams = {
+            method: 'GET',
+            url: localVarPath,
+            params: queryParameters,
+            headers: headerParams
+        };
+        if (extraHttpRequestParams) {
+            httpRequestParams = Object.assign(httpRequestParams, extraHttpRequestParams);
+        }
+        return this.$http(httpRequestParams);
+    }
+    /**
+     *
+     * @summary getPendingCases
      * @param request request
      */
     getPendingCasesUsingPOST(request, extraHttpRequestParams) {

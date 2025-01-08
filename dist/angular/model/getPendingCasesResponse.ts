@@ -14,5 +14,6 @@ import { CaseModel } from './caseModel';
 
 export interface GetPendingCasesResponse { 
     pendingCases?: Array<CaseModel>;
+    totalPendingCases?: number;
 }
 

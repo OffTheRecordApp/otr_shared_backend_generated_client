@@ -22,6 +22,7 @@ export function GetPendingCasesResponseFromJSONTyped(json, ignoreDiscriminator) 
     }
     return {
         'pendingCases': !exists(json, 'pendingCases') ? undefined : (json['pendingCases'].map(CaseModelFromJSON)),
+        'totalPendingCases': !exists(json, 'totalPendingCases') ? undefined : json['totalPendingCases'],
     };
 }
 export function GetPendingCasesResponseToJSON(value) {
@@ -33,5 +34,6 @@ export function GetPendingCasesResponseToJSON(value) {
     }
     return {
         'pendingCases': value.pendingCases === undefined ? undefined : (value.pendingCases.map(CaseModelToJSON)),
+        'totalPendingCases': value.totalPendingCases,
     };
 }

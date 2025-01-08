@@ -22,6 +22,12 @@ export interface GetPendingCasesResponse {
      * @memberof GetPendingCasesResponse
      */
     pendingCases?: Array<CaseModel>;
+    /**
+     *
+     * @type {number}
+     * @memberof GetPendingCasesResponse
+     */
+    totalPendingCases?: number;
 }
 export declare function GetPendingCasesResponseFromJSON(json: any): GetPendingCasesResponse;
 export declare function GetPendingCasesResponseFromJSONTyped(json: any, ignoreDiscriminator: boolean): GetPendingCasesResponse;

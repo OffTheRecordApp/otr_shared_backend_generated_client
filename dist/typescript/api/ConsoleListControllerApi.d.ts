@@ -87,6 +87,13 @@ export declare class ConsoleListControllerApi {
     /**
      *
      * @summary getPendingCases
+     * @param length length
+     * @param page page
+     */
+    getPendingCasesUsingGET(length?: number, page?: number, extraHttpRequestParams?: any): ng.IHttpPromise<models.GetPendingCasesResponse>;
+    /**
+     *
+     * @summary getPendingCases
      * @param request request
      */
     getPendingCasesUsingPOST(request: object, extraHttpRequestParams?: any): ng.IHttpPromise<models.GetPendingCasesResponse>;

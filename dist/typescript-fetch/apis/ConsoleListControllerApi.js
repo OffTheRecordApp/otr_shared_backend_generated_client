@@ -359,6 +359,37 @@ export class ConsoleListControllerApi extends runtime.BaseAPI {
     /**
      * getPendingCases
      */
+    getPendingCasesUsingGETRaw(requestParameters) {
+        return __awaiter(this, void 0, void 0, function* () {
+            const queryParameters = {};
+            if (requestParameters.length !== undefined) {
+                queryParameters['length'] = requestParameters.length;
+            }
+            if (requestParameters.page !== undefined) {
+                queryParameters['page'] = requestParameters.page;
+            }
+            const headerParameters = {};
+            const response = yield this.request({
+                path: `/api/v1/cases/pending`,
+                method: 'GET',
+                headers: headerParameters,
+                query: queryParameters,
+            });
+            return new runtime.JSONApiResponse(response, (jsonValue) => GetPendingCasesResponseFromJSON(jsonValue));
+        });
+    }
+    /**
+     * getPendingCases
+     */
+    getPendingCasesUsingGET(requestParameters) {
+        return __awaiter(this, void 0, void 0, function* () {
+            const response = yield this.getPendingCasesUsingGETRaw(requestParameters);
+            return yield response.value();
+        });
+    }
+    /**
+     * getPendingCases
+     */
     getPendingCasesUsingPOSTRaw(requestParameters) {
         return __awaiter(this, void 0, void 0, function* () {
             if (requestParameters.request === null || requestParameters.request === undefined) {

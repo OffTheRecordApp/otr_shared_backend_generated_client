@@ -44,6 +44,10 @@ export interface GetInvalidCasesWithStripeChargeUsingPOSTRequest {
 export interface GetLostCasesWithTransferNotReversedUsingPOSTRequest {
     request: GetLostCasesWithTransferNotReversedRequest;
 }
+export interface GetPendingCasesUsingGETRequest {
+    length?: number;
+    page?: number;
+}
 export interface GetPendingCasesUsingPOSTRequest {
     request: object;
 }
@@ -163,6 +167,14 @@ export declare class ConsoleListControllerApi extends runtime.BaseAPI {
      * getLostCasesWithTransferNotReversed
      */
     getLostCasesWithTransferNotReversedUsingPOST(requestParameters: GetLostCasesWithTransferNotReversedUsingPOSTRequest): Promise<GetLostCasesWithTransferNotReversedResponse>;
+    /**
+     * getPendingCases
+     */
+    getPendingCasesUsingGETRaw(requestParameters: GetPendingCasesUsingGETRequest): Promise<runtime.ApiResponse<GetPendingCasesResponse>>;
+    /**
+     * getPendingCases
+     */
+    getPendingCasesUsingGET(requestParameters: GetPendingCasesUsingGETRequest): Promise<GetPendingCasesResponse>;
     /**
      * getPendingCases
      */

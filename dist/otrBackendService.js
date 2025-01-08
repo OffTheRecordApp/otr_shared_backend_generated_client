@@ -1253,6 +1253,45 @@ angular.module('otrBackendService', [])
             /**
              * getPendingCases
              * @method
+             * @name OtrService#getPendingCasesUsingGET
+             * @param {object} parameters - method options and parameters
+             * @param {integer} parameters.length - length
+             * @param {integer} parameters.page - page
+             */
+            OtrService.prototype.getPendingCasesUsingGET = function(parameters) {
+                if (parameters === undefined) {
+                    parameters = {};
+                }
+                var deferred = $q.defer();
+                var domain = this.domain,
+                    path = '/api/v1/cases/pending';
+                var body = {},
+                    queryParameters = {},
+                    headers = {},
+                    form = {};
+
+                headers['Accept'] = ['application/json'];
+
+                /** set default value **/
+                queryParameters['length'] = 50;
+
+                if (parameters['length'] !== undefined) {
+                    queryParameters['length'] = parameters['length'];
+                }
+
+                if (parameters['page'] !== undefined) {
+                    queryParameters['page'] = parameters['page'];
+                }
+
+                queryParameters = mergeQueryParams(parameters, queryParameters);
+
+                this.request('GET', domain + path, parameters, body, headers, queryParameters, form, deferred);
+
+                return deferred.promise;
+            };
+            /**
+             * getPendingCases
+             * @method
              * @name OtrService#getPendingCasesUsingPOST
              * @param {object} parameters - method options and parameters
              * @param {} parameters.request - request
