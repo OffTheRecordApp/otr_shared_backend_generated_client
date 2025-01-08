@@ -87,6 +87,12 @@ export interface MatchCitationModel {
      * @type {boolean}
      * @memberof MatchCitationModel
      */
+    hasCitationImage?: boolean;
+    /**
+     *
+     * @type {boolean}
+     * @memberof MatchCitationModel
+     */
     involvesAccident?: boolean;
     /**
      *

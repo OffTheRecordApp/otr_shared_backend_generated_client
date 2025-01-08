@@ -28,6 +28,7 @@ export interface MatchCitationModel {
     court?: CourtDomain;
     documentUrlToConvert?: string;
     fineAmount?: number;
+    hasCitationImage?: boolean;
     involvesAccident?: boolean;
     isDeleted?: boolean;
     regionCode?: string;
