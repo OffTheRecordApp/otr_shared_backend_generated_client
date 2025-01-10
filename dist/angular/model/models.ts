@@ -530,6 +530,7 @@ export * from './noteEntity';
 export * from './noteModel';
 export * from './notificationEvent';
 export * from './notificationEvents';
+export * from './oCRCitationPredictionResponse';
 export * from './oCRCourtModel';
 export * from './oCRPredictionCaseResponse';
 export * from './oCRViolationModel';

@@ -21,11 +21,39 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
     });
 };
 import * as runtime from '../runtime';
-import { OCRPredictionCaseResponseFromJSON, PredictCitationTextRequestToJSON, PredictImageClassificationRequestToJSON, PredictImageClassificationResponseFromJSON, } from '../models';
+import { OCRCitationPredictionResponseFromJSON, OCRPredictionCaseResponseFromJSON, PredictCitationTextRequestToJSON, PredictImageClassificationRequestToJSON, PredictImageClassificationResponseFromJSON, } from '../models';
 /**
  *
  */
 export class OcrPredictionControllerApi extends runtime.BaseAPI {
+    /**
+     * getCitationPrediction
+     */
+    getCitationPredictionUsingGETRaw(requestParameters) {
+        return __awaiter(this, void 0, void 0, function* () {
+            if (requestParameters.citationId === null || requestParameters.citationId === undefined) {
+                throw new runtime.RequiredError('citationId', 'Required parameter requestParameters.citationId was null or undefined when calling getCitationPredictionUsingGET.');
+            }
+            const queryParameters = {};
+            const headerParameters = {};
+            const response = yield this.request({
+                path: `/api/v1/predictions/citations/{citationId}`.replace(`{${"citationId"}}`, encodeURIComponent(String(requestParameters.citationId))),
+                method: 'GET',
+                headers: headerParameters,
+                query: queryParameters,
+            });
+            return new runtime.JSONApiResponse(response, (jsonValue) => OCRCitationPredictionResponseFromJSON(jsonValue));
+        });
+    }
+    /**
+     * getCitationPrediction
+     */
+    getCitationPredictionUsingGET(requestParameters) {
+        return __awaiter(this, void 0, void 0, function* () {
+            const response = yield this.getCitationPredictionUsingGETRaw(requestParameters);
+            return yield response.value();
+        });
+    }
     /**
      * predictCitationText
      */

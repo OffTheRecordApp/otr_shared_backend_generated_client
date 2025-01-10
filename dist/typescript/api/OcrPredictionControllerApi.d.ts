@@ -20,6 +20,12 @@ export declare class OcrPredictionControllerApi {
     constructor($http: ng.IHttpService, $httpParamSerializer?: (d: any) => any, basePath?: string);
     /**
      *
+     * @summary getCitationPrediction
+     * @param citationId citationId
+     */
+    getCitationPredictionUsingGET(citationId: number, extraHttpRequestParams?: any): ng.IHttpPromise<models.OCRCitationPredictionResponse>;
+    /**
+     *
      * @summary predictCitationText
      * @param request request
      */

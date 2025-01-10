@@ -22,6 +22,31 @@ export class OcrPredictionControllerApi {
     }
     /**
      *
+     * @summary getCitationPrediction
+     * @param citationId citationId
+     */
+    getCitationPredictionUsingGET(citationId, extraHttpRequestParams) {
+        const localVarPath = this.basePath + '/api/v1/predictions/citations/{citationId}'
+            .replace('{' + 'citationId' + '}', encodeURIComponent(String(citationId)));
+        let queryParameters = {};
+        let headerParams = Object.assign({}, this.defaultHeaders);
+        // verify required parameter 'citationId' is not null or undefined
+        if (citationId === null || citationId === undefined) {
+            throw new Error('Required parameter citationId was null or undefined when calling getCitationPredictionUsingGET.');
+        }
+        let httpRequestParams = {
+            method: 'GET',
+            url: localVarPath,
+            params: queryParameters,
+            headers: headerParams
+        };
+        if (extraHttpRequestParams) {
+            httpRequestParams = Object.assign(httpRequestParams, extraHttpRequestParams);
+        }
+        return this.$http(httpRequestParams);
+    }
+    /**
+     *
      * @summary predictCitationText
      * @param request request
      */

@@ -655,6 +655,7 @@ model/noteEntity.ts
 model/noteModel.ts
 model/notificationEvent.ts
 model/notificationEvents.ts
+model/oCRCitationPredictionResponse.ts
 model/oCRCourtModel.ts
 model/oCRPredictionCaseResponse.ts
 model/oCRViolationModel.ts

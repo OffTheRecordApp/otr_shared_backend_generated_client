@@ -10,7 +10,10 @@
  * Do not edit the class manually.
  */
 import * as runtime from '../runtime';
-import { OCRPredictionCaseResponse, PredictCitationTextRequest, PredictImageClassificationRequest, PredictImageClassificationResponse } from '../models';
+import { OCRCitationPredictionResponse, OCRPredictionCaseResponse, PredictCitationTextRequest, PredictImageClassificationRequest, PredictImageClassificationResponse } from '../models';
+export interface GetCitationPredictionUsingGETRequest {
+    citationId: number;
+}
 export interface PredictCitationTextUsingPOSTRequest {
     request: PredictCitationTextRequest;
 }
@@ -21,6 +24,14 @@ export interface PredictImageClassificationUsingPOSTRequest {
  *
  */
 export declare class OcrPredictionControllerApi extends runtime.BaseAPI {
+    /**
+     * getCitationPrediction
+     */
+    getCitationPredictionUsingGETRaw(requestParameters: GetCitationPredictionUsingGETRequest): Promise<runtime.ApiResponse<OCRCitationPredictionResponse>>;
+    /**
+     * getCitationPrediction
+     */
+    getCitationPredictionUsingGET(requestParameters: GetCitationPredictionUsingGETRequest): Promise<OCRCitationPredictionResponse>;
     /**
      * predictCitationText
      */

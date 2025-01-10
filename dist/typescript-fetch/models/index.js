@@ -530,6 +530,7 @@ export * from './NoteEntity';
 export * from './NoteModel';
 export * from './NotificationEvent';
 export * from './NotificationEvents';
+export * from './OCRCitationPredictionResponse';
 export * from './OCRCourtModel';
 export * from './OCRPredictionCaseResponse';
 export * from './OCRViolationModel';
