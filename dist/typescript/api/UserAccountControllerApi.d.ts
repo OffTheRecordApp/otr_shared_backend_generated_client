@@ -27,6 +27,13 @@ export declare class UserAccountControllerApi {
     addExtraAccountUsingPOST(userId: string, request: models.AddExtraAccountRequest, extraHttpRequestParams?: any): ng.IHttpPromise<{}>;
     /**
      *
+     * @summary associateOAuthAccount
+     * @param userId userId
+     * @param request request
+     */
+    associateOAuthAccountUsingPOST(userId: number, request: models.AssociateOAuthAccountRequest, extraHttpRequestParams?: any): ng.IHttpPromise<models.AssociateOAuthAccountResponse>;
+    /**
+     *
      * @summary removeAdditionalUserHandle
      * @param userHandle userHandle
      * @param userId userId

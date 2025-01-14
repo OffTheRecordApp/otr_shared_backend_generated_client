@@ -168,6 +168,7 @@ export var ValidateDirectMailResponseOtrErrorEnum;
     ValidateDirectMailResponseOtrErrorEnum["INVALIDRESOLUTIONSTATUS"] = "INVALID_RESOLUTION_STATUS";
     ValidateDirectMailResponseOtrErrorEnum["INVALIDREVIEWCOPY"] = "INVALID_REVIEW_COPY";
     ValidateDirectMailResponseOtrErrorEnum["INVALIDROLETYPE"] = "INVALID_ROLE_TYPE";
+    ValidateDirectMailResponseOtrErrorEnum["INVALIDSOCIALLOGINPROVIDER"] = "INVALID_SOCIAL_LOGIN_PROVIDER";
     ValidateDirectMailResponseOtrErrorEnum["INVALIDSTATE"] = "INVALID_STATE";
     ValidateDirectMailResponseOtrErrorEnum["INVALIDSTRIPEACCOUNT"] = "INVALID_STRIPE_ACCOUNT";
     ValidateDirectMailResponseOtrErrorEnum["INVALIDSTRIPECHARGEID"] = "INVALID_STRIPE_CHARGE_ID";

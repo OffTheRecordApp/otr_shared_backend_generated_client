@@ -21,7 +21,7 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
     });
 };
 import * as runtime from '../runtime';
-import { AddExtraAccountRequestToJSON, } from '../models';
+import { AddExtraAccountRequestToJSON, AssociateOAuthAccountRequestToJSON, AssociateOAuthAccountResponseFromJSON, } from '../models';
 /**
  *
  */
@@ -56,6 +56,39 @@ export class UserAccountControllerApi extends runtime.BaseAPI {
     addExtraAccountUsingPOST(requestParameters) {
         return __awaiter(this, void 0, void 0, function* () {
             yield this.addExtraAccountUsingPOSTRaw(requestParameters);
+        });
+    }
+    /**
+     * associateOAuthAccount
+     */
+    associateOAuthAccountUsingPOSTRaw(requestParameters) {
+        return __awaiter(this, void 0, void 0, function* () {
+            if (requestParameters.userId === null || requestParameters.userId === undefined) {
+                throw new runtime.RequiredError('userId', 'Required parameter requestParameters.userId was null or undefined when calling associateOAuthAccountUsingPOST.');
+            }
+            if (requestParameters.request === null || requestParameters.request === undefined) {
+                throw new runtime.RequiredError('request', 'Required parameter requestParameters.request was null or undefined when calling associateOAuthAccountUsingPOST.');
+            }
+            const queryParameters = {};
+            const headerParameters = {};
+            headerParameters['Content-Type'] = 'application/json';
+            const response = yield this.request({
+                path: `/api/v1/users/{userId}/accounts/associate-oauth`.replace(`{${"userId"}}`, encodeURIComponent(String(requestParameters.userId))),
+                method: 'POST',
+                headers: headerParameters,
+                query: queryParameters,
+                body: AssociateOAuthAccountRequestToJSON(requestParameters.request),
+            });
+            return new runtime.JSONApiResponse(response, (jsonValue) => AssociateOAuthAccountResponseFromJSON(jsonValue));
+        });
+    }
+    /**
+     * associateOAuthAccount
+     */
+    associateOAuthAccountUsingPOST(requestParameters) {
+        return __awaiter(this, void 0, void 0, function* () {
+            const response = yield this.associateOAuthAccountUsingPOSTRaw(requestParameters);
+            return yield response.value();
         });
     }
     /**

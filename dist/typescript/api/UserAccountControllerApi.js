@@ -53,6 +53,37 @@ export class UserAccountControllerApi {
     }
     /**
      *
+     * @summary associateOAuthAccount
+     * @param userId userId
+     * @param request request
+     */
+    associateOAuthAccountUsingPOST(userId, request, extraHttpRequestParams) {
+        const localVarPath = this.basePath + '/api/v1/users/{userId}/accounts/associate-oauth'
+            .replace('{' + 'userId' + '}', encodeURIComponent(String(userId)));
+        let queryParameters = {};
+        let headerParams = Object.assign({}, this.defaultHeaders);
+        // verify required parameter 'userId' is not null or undefined
+        if (userId === null || userId === undefined) {
+            throw new Error('Required parameter userId was null or undefined when calling associateOAuthAccountUsingPOST.');
+        }
+        // verify required parameter 'request' is not null or undefined
+        if (request === null || request === undefined) {
+            throw new Error('Required parameter request was null or undefined when calling associateOAuthAccountUsingPOST.');
+        }
+        let httpRequestParams = {
+            method: 'POST',
+            url: localVarPath,
+            data: request,
+            params: queryParameters,
+            headers: headerParams
+        };
+        if (extraHttpRequestParams) {
+            httpRequestParams = Object.assign(httpRequestParams, extraHttpRequestParams);
+        }
+        return this.$http(httpRequestParams);
+    }
+    /**
+     *
      * @summary removeAdditionalUserHandle
      * @param userHandle userHandle
      * @param userId userId

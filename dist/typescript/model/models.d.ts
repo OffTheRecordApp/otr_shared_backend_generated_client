@@ -45,6 +45,8 @@ export * from './AppEventCreateRequest';
 export * from './AppearanceAttorneyDomain';
 export * from './AppleLoginRequest';
 export * from './AssignCitationOwnerRequest';
+export * from './AssociateOAuthAccountRequest';
+export * from './AssociateOAuthAccountResponse';
 export * from './Attachment';
 export * from './AuditLog';
 export * from './Author';

@@ -10,10 +10,14 @@
  * Do not edit the class manually.
  */
 import * as runtime from '../runtime';
-import { AddExtraAccountRequest } from '../models';
+import { AddExtraAccountRequest, AssociateOAuthAccountRequest, AssociateOAuthAccountResponse } from '../models';
 export interface AddExtraAccountUsingPOSTRequest {
     userId: string;
     request: AddExtraAccountRequest;
+}
+export interface AssociateOAuthAccountUsingPOSTRequest {
+    userId: number;
+    request: AssociateOAuthAccountRequest;
 }
 export interface RemoveAdditionalUserHandleUsingDELETERequest {
     userHandle: string;
@@ -35,6 +39,14 @@ export declare class UserAccountControllerApi extends runtime.BaseAPI {
      * addExtraAccount
      */
     addExtraAccountUsingPOST(requestParameters: AddExtraAccountUsingPOSTRequest): Promise<void>;
+    /**
+     * associateOAuthAccount
+     */
+    associateOAuthAccountUsingPOSTRaw(requestParameters: AssociateOAuthAccountUsingPOSTRequest): Promise<runtime.ApiResponse<AssociateOAuthAccountResponse>>;
+    /**
+     * associateOAuthAccount
+     */
+    associateOAuthAccountUsingPOST(requestParameters: AssociateOAuthAccountUsingPOSTRequest): Promise<AssociateOAuthAccountResponse>;
     /**
      * removeAdditionalUserHandle
      */

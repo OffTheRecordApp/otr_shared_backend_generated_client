@@ -169,6 +169,8 @@ model/appEventCreateRequest.ts
 model/appearanceAttorneyDomain.ts
 model/appleLoginRequest.ts
 model/assignCitationOwnerRequest.ts
+model/associateOAuthAccountRequest.ts
+model/associateOAuthAccountResponse.ts
 model/attachment.ts
 model/auditLog.ts
 model/author.ts
