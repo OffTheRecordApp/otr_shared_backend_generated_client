@@ -38,6 +38,12 @@ export interface ListCaseBookingsRequest {
      * @type {boolean}
      * @memberof ListCaseBookingsRequest
      */
+    hasSubscriptionPlanFilter?: boolean;
+    /**
+     *
+     * @type {boolean}
+     * @memberof ListCaseBookingsRequest
+     */
     includeDataRecords?: boolean;
     /**
      *

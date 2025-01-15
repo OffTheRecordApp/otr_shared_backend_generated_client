@@ -18,6 +18,7 @@ export interface Case {
     "clientTotalCost"?: number;
     "dob"?: string;
     "gender"?: Case.GenderEnum;
+    "hasSubscriptionPlan"?: boolean;
     "lawfirmId"?: number;
     "lawfirmName"?: string;
     "numPayments"?: number;

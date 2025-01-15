@@ -60,6 +60,12 @@ export interface Case {
     gender?: CaseGenderEnum;
     /**
      *
+     * @type {boolean}
+     * @memberof Case
+     */
+    hasSubscriptionPlan?: boolean;
+    /**
+     *
      * @type {number}
      * @memberof Case
      */

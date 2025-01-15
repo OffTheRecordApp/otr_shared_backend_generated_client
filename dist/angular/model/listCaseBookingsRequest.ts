@@ -15,6 +15,7 @@ export interface ListCaseBookingsRequest {
     caseStatusFilter?: Array<ListCaseBookingsRequest.CaseStatusFilterEnum>;
     endDate?: string;
     genderFilterList?: Array<ListCaseBookingsRequest.GenderFilterListEnum>;
+    hasSubscriptionPlanFilter?: boolean;
     includeDataRecords?: boolean;
     lawfirmStringFilter?: string;
     length?: number;
