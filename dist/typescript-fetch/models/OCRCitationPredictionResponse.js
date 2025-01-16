@@ -38,7 +38,7 @@ export function OCRCitationPredictionResponseToJSON(value) {
         return null;
     }
     return {
-        'citationIssueDate': value.citationIssueDate === undefined ? undefined : (value.citationIssueDate.toISOString().substr(0, 10)),
+        'citationIssueDate': value.citationIssueDate === undefined ? undefined : (value.citationIssueDate.toISOString()),
         'courtName': value.courtName,
         'dateOfBirth': value.dateOfBirth === undefined ? undefined : (value.dateOfBirth.toISOString().substr(0, 10)),
         'firstName': value.firstName,
