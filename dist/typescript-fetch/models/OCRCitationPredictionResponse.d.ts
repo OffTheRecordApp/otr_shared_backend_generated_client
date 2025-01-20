@@ -17,10 +17,10 @@
 export interface OCRCitationPredictionResponse {
     /**
      *
-     * @type {Date}
+     * @type {string}
      * @memberof OCRCitationPredictionResponse
      */
-    citationIssueDate?: Date;
+    citationIssueDate?: string;
     /**
      *
      * @type {string}
@@ -29,10 +29,10 @@ export interface OCRCitationPredictionResponse {
     courtName?: string;
     /**
      *
-     * @type {Date}
+     * @type {string}
      * @memberof OCRCitationPredictionResponse
      */
-    dateOfBirth?: Date;
+    dateOfBirth?: string;
     /**
      *
      * @type {string}

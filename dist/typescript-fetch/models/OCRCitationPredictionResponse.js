@@ -20,9 +20,9 @@ export function OCRCitationPredictionResponseFromJSONTyped(json, ignoreDiscrimin
         return json;
     }
     return {
-        'citationIssueDate': !exists(json, 'citationIssueDate') ? undefined : (new Date(json['citationIssueDate'])),
+        'citationIssueDate': !exists(json, 'citationIssueDate') ? undefined : json['citationIssueDate'],
         'courtName': !exists(json, 'courtName') ? undefined : json['courtName'],
-        'dateOfBirth': !exists(json, 'dateOfBirth') ? undefined : (new Date(json['dateOfBirth'])),
+        'dateOfBirth': !exists(json, 'dateOfBirth') ? undefined : json['dateOfBirth'],
         'firstName': !exists(json, 'firstName') ? undefined : json['firstName'],
         'lastName': !exists(json, 'lastName') ? undefined : json['lastName'],
         'licenseNumber': !exists(json, 'licenseNumber') ? undefined : json['licenseNumber'],
@@ -38,9 +38,9 @@ export function OCRCitationPredictionResponseToJSON(value) {
         return null;
     }
     return {
-        'citationIssueDate': value.citationIssueDate === undefined ? undefined : (value.citationIssueDate.toISOString()),
+        'citationIssueDate': value.citationIssueDate,
         'courtName': value.courtName,
-        'dateOfBirth': value.dateOfBirth === undefined ? undefined : (value.dateOfBirth.toISOString().substr(0, 10)),
+        'dateOfBirth': value.dateOfBirth,
         'firstName': value.firstName,
         'lastName': value.lastName,
         'licenseNumber': value.licenseNumber,
