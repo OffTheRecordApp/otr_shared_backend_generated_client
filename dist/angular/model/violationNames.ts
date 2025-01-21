@@ -13,6 +13,7 @@
 
 export interface ViolationNames { 
     llm_prediction?: Array<string>;
+    pinecone_ids?: Array<number>;
     pinecone_matches?: Array<string>;
     pinecone_scores?: Array<number>;
 }

@@ -21,6 +21,7 @@ export function ViolationNamesFromJSONTyped(json, ignoreDiscriminator) {
     }
     return {
         'llmPrediction': !exists(json, 'llm_prediction') ? undefined : json['llm_prediction'],
+        'pineconeIds': !exists(json, 'pinecone_ids') ? undefined : json['pinecone_ids'],
         'pineconeMatches': !exists(json, 'pinecone_matches') ? undefined : json['pinecone_matches'],
         'pineconeScores': !exists(json, 'pinecone_scores') ? undefined : json['pinecone_scores'],
     };
@@ -34,6 +35,7 @@ export function ViolationNamesToJSON(value) {
     }
     return {
         'llm_prediction': value.llmPrediction,
+        'pinecone_ids': value.pineconeIds,
         'pinecone_matches': value.pineconeMatches,
         'pinecone_scores': value.pineconeScores,
     };

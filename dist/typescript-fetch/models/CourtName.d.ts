@@ -23,6 +23,12 @@ export interface CourtName {
     llmPrediction?: string;
     /**
      *
+     * @type {Array<number>}
+     * @memberof CourtName
+     */
+    pineconeIds?: Array<number>;
+    /**
+     *
      * @type {Array<string>}
      * @memberof CourtName
      */

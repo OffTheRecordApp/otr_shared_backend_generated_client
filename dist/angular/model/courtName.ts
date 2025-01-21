@@ -13,6 +13,7 @@
 
 export interface CourtName { 
     llm_prediction?: string;
+    pinecone_ids?: Array<number>;
     pinecone_match?: Array<string>;
     pinecone_matches?: Array<string>;
     pinecone_scores?: Array<number>;

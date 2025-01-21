@@ -23,6 +23,12 @@ export interface ViolationNames {
     llmPrediction?: Array<string>;
     /**
      *
+     * @type {Array<number>}
+     * @memberof ViolationNames
+     */
+    pineconeIds?: Array<number>;
+    /**
+     *
      * @type {Array<string>}
      * @memberof ViolationNames
      */
