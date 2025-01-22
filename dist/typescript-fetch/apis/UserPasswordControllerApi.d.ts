@@ -38,6 +38,7 @@ export interface VerifyUserAccountUsingPUTRequest {
     email?: string;
     fieldName?: string;
     fieldValue?: string;
+    loginProvider?: VerifyUserAccountUsingPUTLoginProviderEnum;
     userId?: string;
 }
 export interface VerifyUserPasswordUsingPUTRequest {
@@ -120,4 +121,17 @@ export declare class UserPasswordControllerApi extends runtime.BaseAPI {
 export declare enum SendAccountVerificationCodeUsingPOSTVerificationMethodEnum {
     CODEONLY = "CODE_ONLY",
     WEBLINK = "WEB_LINK"
+}
+/**
+    * @export
+    * @enum {string}
+    */
+export declare enum VerifyUserAccountUsingPUTLoginProviderEnum {
+    APPLE = "APPLE",
+    EMAIL = "EMAIL",
+    FACEBOOK = "FACEBOOK",
+    GOOGLE = "GOOGLE",
+    PHONE = "PHONE",
+    TWITTER = "TWITTER",
+    UNKNOWN = "UNKNOWN"
 }

@@ -87,8 +87,9 @@ export class UserAccountControllerApi {
      * @summary removeAdditionalUserHandle
      * @param userHandle userHandle
      * @param userId userId
+     * @param request request
      */
-    removeAdditionalUserHandleUsingDELETE(userHandle, userId, extraHttpRequestParams) {
+    removeAdditionalUserHandleUsingDELETE(userHandle, userId, request, extraHttpRequestParams) {
         const localVarPath = this.basePath + '/api/v1/users/{userId}/accounts/{userHandle}'
             .replace('{' + 'userHandle' + '}', encodeURIComponent(String(userHandle)))
             .replace('{' + 'userId' + '}', encodeURIComponent(String(userId)));
@@ -102,9 +103,14 @@ export class UserAccountControllerApi {
         if (userId === null || userId === undefined) {
             throw new Error('Required parameter userId was null or undefined when calling removeAdditionalUserHandleUsingDELETE.');
         }
+        // verify required parameter 'request' is not null or undefined
+        if (request === null || request === undefined) {
+            throw new Error('Required parameter request was null or undefined when calling removeAdditionalUserHandleUsingDELETE.');
+        }
         let httpRequestParams = {
             method: 'DELETE',
             url: localVarPath,
+            data: request,
             params: queryParameters,
             headers: headerParams
         };
@@ -118,8 +124,9 @@ export class UserAccountControllerApi {
      * @summary setPrimaryUserHandle
      * @param userHandle userHandle
      * @param userId userId
+     * @param request request
      */
-    setPrimaryUserHandleUsingPUT(userHandle, userId, extraHttpRequestParams) {
+    setPrimaryUserHandleUsingPUT(userHandle, userId, request, extraHttpRequestParams) {
         const localVarPath = this.basePath + '/api/v1/users/{userId}/accounts/{userHandle}/set-primary-user-handle'
             .replace('{' + 'userHandle' + '}', encodeURIComponent(String(userHandle)))
             .replace('{' + 'userId' + '}', encodeURIComponent(String(userId)));
@@ -133,9 +140,14 @@ export class UserAccountControllerApi {
         if (userId === null || userId === undefined) {
             throw new Error('Required parameter userId was null or undefined when calling setPrimaryUserHandleUsingPUT.');
         }
+        // verify required parameter 'request' is not null or undefined
+        if (request === null || request === undefined) {
+            throw new Error('Required parameter request was null or undefined when calling setPrimaryUserHandleUsingPUT.');
+        }
         let httpRequestParams = {
             method: 'PUT',
             url: localVarPath,
+            data: request,
             params: queryParameters,
             headers: headerParams
         };

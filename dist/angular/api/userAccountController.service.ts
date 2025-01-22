@@ -24,6 +24,10 @@ import { AddExtraAccountRequest } from '../model/addExtraAccountRequest';
 import { AssociateOAuthAccountRequest } from '../model/associateOAuthAccountRequest';
 // @ts-ignore
 import { AssociateOAuthAccountResponse } from '../model/associateOAuthAccountResponse';
+// @ts-ignore
+import { RemoveAdditionalUserHandleRequest } from '../model/removeAdditionalUserHandleRequest';
+// @ts-ignore
+import { SetPrimaryUserHandleRequest } from '../model/setPrimaryUserHandleRequest';
 
 // @ts-ignore
 import { BASE_PATH, COLLECTION_FORMATS }                     from '../variables';
@@ -242,18 +246,22 @@ export class UserAccountControllerService {
      * removeAdditionalUserHandle
      * @param userHandle userHandle
      * @param userId userId
+     * @param request request
      * @param observe set whether or not to return the data Observable as the body, response or events. defaults to returning the body.
      * @param reportProgress flag to report request and response progress.
      */
-    public removeAdditionalUserHandleUsingDELETE(userHandle: string, userId: number, observe?: 'body', reportProgress?: boolean, options?: {httpHeaderAccept?: undefined, context?: HttpContext}): Observable<any>;
-    public removeAdditionalUserHandleUsingDELETE(userHandle: string, userId: number, observe?: 'response', reportProgress?: boolean, options?: {httpHeaderAccept?: undefined, context?: HttpContext}): Observable<HttpResponse<any>>;
-    public removeAdditionalUserHandleUsingDELETE(userHandle: string, userId: number, observe?: 'events', reportProgress?: boolean, options?: {httpHeaderAccept?: undefined, context?: HttpContext}): Observable<HttpEvent<any>>;
-    public removeAdditionalUserHandleUsingDELETE(userHandle: string, userId: number, observe: any = 'body', reportProgress: boolean = false, options?: {httpHeaderAccept?: undefined, context?: HttpContext}): Observable<any> {
+    public removeAdditionalUserHandleUsingDELETE(userHandle: string, userId: number, request: RemoveAdditionalUserHandleRequest, observe?: 'body', reportProgress?: boolean, options?: {httpHeaderAccept?: undefined, context?: HttpContext}): Observable<any>;
+    public removeAdditionalUserHandleUsingDELETE(userHandle: string, userId: number, request: RemoveAdditionalUserHandleRequest, observe?: 'response', reportProgress?: boolean, options?: {httpHeaderAccept?: undefined, context?: HttpContext}): Observable<HttpResponse<any>>;
+    public removeAdditionalUserHandleUsingDELETE(userHandle: string, userId: number, request: RemoveAdditionalUserHandleRequest, observe?: 'events', reportProgress?: boolean, options?: {httpHeaderAccept?: undefined, context?: HttpContext}): Observable<HttpEvent<any>>;
+    public removeAdditionalUserHandleUsingDELETE(userHandle: string, userId: number, request: RemoveAdditionalUserHandleRequest, observe: any = 'body', reportProgress: boolean = false, options?: {httpHeaderAccept?: undefined, context?: HttpContext}): Observable<any> {
         if (userHandle === null || userHandle === undefined) {
             throw new Error('Required parameter userHandle was null or undefined when calling removeAdditionalUserHandleUsingDELETE.');
         }
         if (userId === null || userId === undefined) {
             throw new Error('Required parameter userId was null or undefined when calling removeAdditionalUserHandleUsingDELETE.');
+        }
+        if (request === null || request === undefined) {
+            throw new Error('Required parameter request was null or undefined when calling removeAdditionalUserHandleUsingDELETE.');
         }
 
         let localVarHeaders = this.defaultHeaders;
@@ -274,6 +282,14 @@ export class UserAccountControllerService {
             localVarHttpContext = new HttpContext();
         }
 
+
+        // to determine the Content-Type header
+        const consumes: string[] = [
+        ];
+        const httpContentTypeSelected: string | undefined = this.configuration.selectHeaderContentType(consumes);
+        if (httpContentTypeSelected !== undefined) {
+            localVarHeaders = localVarHeaders.set('Content-Type', httpContentTypeSelected);
+        }
 
         let responseType_: 'text' | 'json' | 'blob' = 'json';
         if (localVarHttpHeaderAcceptSelected) {
@@ -290,6 +306,7 @@ export class UserAccountControllerService {
         return this.httpClient.request<any>('delete', `${this.configuration.basePath}${localVarPath}`,
             {
                 context: localVarHttpContext,
+                body: request,
                 responseType: <any>responseType_,
                 withCredentials: this.configuration.withCredentials,
                 headers: localVarHeaders,
@@ -303,18 +320,22 @@ export class UserAccountControllerService {
      * setPrimaryUserHandle
      * @param userHandle userHandle
      * @param userId userId
+     * @param request request
      * @param observe set whether or not to return the data Observable as the body, response or events. defaults to returning the body.
      * @param reportProgress flag to report request and response progress.
      */
-    public setPrimaryUserHandleUsingPUT(userHandle: string, userId: number, observe?: 'body', reportProgress?: boolean, options?: {httpHeaderAccept?: undefined, context?: HttpContext}): Observable<any>;
-    public setPrimaryUserHandleUsingPUT(userHandle: string, userId: number, observe?: 'response', reportProgress?: boolean, options?: {httpHeaderAccept?: undefined, context?: HttpContext}): Observable<HttpResponse<any>>;
-    public setPrimaryUserHandleUsingPUT(userHandle: string, userId: number, observe?: 'events', reportProgress?: boolean, options?: {httpHeaderAccept?: undefined, context?: HttpContext}): Observable<HttpEvent<any>>;
-    public setPrimaryUserHandleUsingPUT(userHandle: string, userId: number, observe: any = 'body', reportProgress: boolean = false, options?: {httpHeaderAccept?: undefined, context?: HttpContext}): Observable<any> {
+    public setPrimaryUserHandleUsingPUT(userHandle: string, userId: number, request: SetPrimaryUserHandleRequest, observe?: 'body', reportProgress?: boolean, options?: {httpHeaderAccept?: undefined, context?: HttpContext}): Observable<any>;
+    public setPrimaryUserHandleUsingPUT(userHandle: string, userId: number, request: SetPrimaryUserHandleRequest, observe?: 'response', reportProgress?: boolean, options?: {httpHeaderAccept?: undefined, context?: HttpContext}): Observable<HttpResponse<any>>;
+    public setPrimaryUserHandleUsingPUT(userHandle: string, userId: number, request: SetPrimaryUserHandleRequest, observe?: 'events', reportProgress?: boolean, options?: {httpHeaderAccept?: undefined, context?: HttpContext}): Observable<HttpEvent<any>>;
+    public setPrimaryUserHandleUsingPUT(userHandle: string, userId: number, request: SetPrimaryUserHandleRequest, observe: any = 'body', reportProgress: boolean = false, options?: {httpHeaderAccept?: undefined, context?: HttpContext}): Observable<any> {
         if (userHandle === null || userHandle === undefined) {
             throw new Error('Required parameter userHandle was null or undefined when calling setPrimaryUserHandleUsingPUT.');
         }
         if (userId === null || userId === undefined) {
             throw new Error('Required parameter userId was null or undefined when calling setPrimaryUserHandleUsingPUT.');
+        }
+        if (request === null || request === undefined) {
+            throw new Error('Required parameter request was null or undefined when calling setPrimaryUserHandleUsingPUT.');
         }
 
         let localVarHeaders = this.defaultHeaders;
@@ -336,6 +357,15 @@ export class UserAccountControllerService {
         }
 
 
+        // to determine the Content-Type header
+        const consumes: string[] = [
+            'application/json'
+        ];
+        const httpContentTypeSelected: string | undefined = this.configuration.selectHeaderContentType(consumes);
+        if (httpContentTypeSelected !== undefined) {
+            localVarHeaders = localVarHeaders.set('Content-Type', httpContentTypeSelected);
+        }
+
         let responseType_: 'text' | 'json' | 'blob' = 'json';
         if (localVarHttpHeaderAcceptSelected) {
             if (localVarHttpHeaderAcceptSelected.startsWith('text')) {
@@ -351,6 +381,7 @@ export class UserAccountControllerService {
         return this.httpClient.request<any>('put', `${this.configuration.basePath}${localVarPath}`,
             {
                 context: localVarHttpContext,
+                body: request,
                 responseType: <any>responseType_,
                 withCredentials: this.configuration.withCredentials,
                 headers: localVarHeaders,

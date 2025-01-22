@@ -237,6 +237,9 @@ export class UserPasswordControllerApi extends runtime.BaseAPI {
             if (requestParameters.fieldValue !== undefined) {
                 queryParameters['fieldValue'] = requestParameters.fieldValue;
             }
+            if (requestParameters.loginProvider !== undefined) {
+                queryParameters['loginProvider'] = requestParameters.loginProvider;
+            }
             if (requestParameters.userId !== undefined) {
                 queryParameters['userId'] = requestParameters.userId;
             }
@@ -302,3 +305,17 @@ export var SendAccountVerificationCodeUsingPOSTVerificationMethodEnum;
     SendAccountVerificationCodeUsingPOSTVerificationMethodEnum["CODEONLY"] = "CODE_ONLY";
     SendAccountVerificationCodeUsingPOSTVerificationMethodEnum["WEBLINK"] = "WEB_LINK";
 })(SendAccountVerificationCodeUsingPOSTVerificationMethodEnum || (SendAccountVerificationCodeUsingPOSTVerificationMethodEnum = {}));
+/**
+    * @export
+    * @enum {string}
+    */
+export var VerifyUserAccountUsingPUTLoginProviderEnum;
+(function (VerifyUserAccountUsingPUTLoginProviderEnum) {
+    VerifyUserAccountUsingPUTLoginProviderEnum["APPLE"] = "APPLE";
+    VerifyUserAccountUsingPUTLoginProviderEnum["EMAIL"] = "EMAIL";
+    VerifyUserAccountUsingPUTLoginProviderEnum["FACEBOOK"] = "FACEBOOK";
+    VerifyUserAccountUsingPUTLoginProviderEnum["GOOGLE"] = "GOOGLE";
+    VerifyUserAccountUsingPUTLoginProviderEnum["PHONE"] = "PHONE";
+    VerifyUserAccountUsingPUTLoginProviderEnum["TWITTER"] = "TWITTER";
+    VerifyUserAccountUsingPUTLoginProviderEnum["UNKNOWN"] = "UNKNOWN";
+})(VerifyUserAccountUsingPUTLoginProviderEnum || (VerifyUserAccountUsingPUTLoginProviderEnum = {}));

@@ -15578,6 +15578,7 @@ angular.module('otrBackendService', [])
              * @param {string} parameters.email - email
              * @param {string} parameters.fieldName - fieldName
              * @param {string} parameters.fieldValue - fieldValue
+             * @param {string} parameters.loginProvider - loginProvider
              * @param {string} parameters.userId - userId
              */
             OtrService.prototype.verifyUserAccountUsingPUT = function(parameters) {
@@ -15617,6 +15618,10 @@ angular.module('otrBackendService', [])
 
                 if (parameters['fieldValue'] !== undefined) {
                     queryParameters['fieldValue'] = parameters['fieldValue'];
+                }
+
+                if (parameters['loginProvider'] !== undefined) {
+                    queryParameters['loginProvider'] = parameters['loginProvider'];
                 }
 
                 if (parameters['userId'] !== undefined) {
@@ -16001,6 +16006,7 @@ angular.module('otrBackendService', [])
              * @method
              * @name OtrService#removeAdditionalUserHandleUsingDELETE
              * @param {object} parameters - method options and parameters
+             * @param {} parameters.request - request
              * @param {string} parameters.userHandle - userHandle
              * @param {integer} parameters.userId - userId
              */
@@ -16017,6 +16023,15 @@ angular.module('otrBackendService', [])
                     form = {};
 
                 headers['Accept'] = ['*/*'];
+
+                if (parameters['request'] !== undefined) {
+                    body = parameters['request'];
+                }
+
+                if (parameters['request'] === undefined) {
+                    deferred.reject(new Error('Missing required  parameter: request'));
+                    return deferred.promise;
+                }
 
                 path = path.replace('{userHandle}', parameters['userHandle']);
 
@@ -16043,6 +16058,7 @@ angular.module('otrBackendService', [])
              * @method
              * @name OtrService#setPrimaryUserHandleUsingPUT
              * @param {object} parameters - method options and parameters
+             * @param {} parameters.request - request
              * @param {string} parameters.userHandle - userHandle
              * @param {integer} parameters.userId - userId
              */
@@ -16060,6 +16076,15 @@ angular.module('otrBackendService', [])
 
                 headers['Accept'] = ['*/*'];
                 headers['Content-Type'] = ['application/json'];
+
+                if (parameters['request'] !== undefined) {
+                    body = parameters['request'];
+                }
+
+                if (parameters['request'] === undefined) {
+                    deferred.reject(new Error('Missing required  parameter: request'));
+                    return deferred.promise;
+                }
 
                 path = path.replace('{userHandle}', parameters['userHandle']);
 

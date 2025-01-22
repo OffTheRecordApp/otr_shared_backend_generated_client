@@ -21,7 +21,7 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
     });
 };
 import * as runtime from '../runtime';
-import { AddExtraAccountRequestToJSON, AssociateOAuthAccountRequestToJSON, AssociateOAuthAccountResponseFromJSON, } from '../models';
+import { AddExtraAccountRequestToJSON, AssociateOAuthAccountRequestToJSON, AssociateOAuthAccountResponseFromJSON, RemoveAdditionalUserHandleRequestToJSON, SetPrimaryUserHandleRequestToJSON, } from '../models';
 /**
  *
  */
@@ -102,13 +102,18 @@ export class UserAccountControllerApi extends runtime.BaseAPI {
             if (requestParameters.userId === null || requestParameters.userId === undefined) {
                 throw new runtime.RequiredError('userId', 'Required parameter requestParameters.userId was null or undefined when calling removeAdditionalUserHandleUsingDELETE.');
             }
+            if (requestParameters.request === null || requestParameters.request === undefined) {
+                throw new runtime.RequiredError('request', 'Required parameter requestParameters.request was null or undefined when calling removeAdditionalUserHandleUsingDELETE.');
+            }
             const queryParameters = {};
             const headerParameters = {};
+            headerParameters['Content-Type'] = 'application/json';
             const response = yield this.request({
                 path: `/api/v1/users/{userId}/accounts/{userHandle}`.replace(`{${"userHandle"}}`, encodeURIComponent(String(requestParameters.userHandle))).replace(`{${"userId"}}`, encodeURIComponent(String(requestParameters.userId))),
                 method: 'DELETE',
                 headers: headerParameters,
                 query: queryParameters,
+                body: RemoveAdditionalUserHandleRequestToJSON(requestParameters.request),
             });
             return new runtime.VoidApiResponse(response);
         });
@@ -132,13 +137,18 @@ export class UserAccountControllerApi extends runtime.BaseAPI {
             if (requestParameters.userId === null || requestParameters.userId === undefined) {
                 throw new runtime.RequiredError('userId', 'Required parameter requestParameters.userId was null or undefined when calling setPrimaryUserHandleUsingPUT.');
             }
+            if (requestParameters.request === null || requestParameters.request === undefined) {
+                throw new runtime.RequiredError('request', 'Required parameter requestParameters.request was null or undefined when calling setPrimaryUserHandleUsingPUT.');
+            }
             const queryParameters = {};
             const headerParameters = {};
+            headerParameters['Content-Type'] = 'application/json';
             const response = yield this.request({
                 path: `/api/v1/users/{userId}/accounts/{userHandle}/set-primary-user-handle`.replace(`{${"userHandle"}}`, encodeURIComponent(String(requestParameters.userHandle))).replace(`{${"userId"}}`, encodeURIComponent(String(requestParameters.userId))),
                 method: 'PUT',
                 headers: headerParameters,
                 query: queryParameters,
+                body: SetPrimaryUserHandleRequestToJSON(requestParameters.request),
             });
             return new runtime.VoidApiResponse(response);
         });

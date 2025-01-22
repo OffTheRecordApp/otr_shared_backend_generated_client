@@ -251,6 +251,7 @@ export var ValidateDirectMailResponseOtrErrorEnum;
     ValidateDirectMailResponseOtrErrorEnum["NOTIFICATIONTOOLONG"] = "NOTIFICATION_TOO_LONG";
     ValidateDirectMailResponseOtrErrorEnum["NOTIFICATIONTOSELF"] = "NOTIFICATION_TO_SELF";
     ValidateDirectMailResponseOtrErrorEnum["NOTAUTHENTICATED"] = "NOT_AUTHENTICATED";
+    ValidateDirectMailResponseOtrErrorEnum["NOACCOUNTFOUNDWITHPROVIDER"] = "NO_ACCOUNT_FOUND_WITH_PROVIDER";
     ValidateDirectMailResponseOtrErrorEnum["NOACCOUNTWITHEMAIL"] = "NO_ACCOUNT_WITH_EMAIL";
     ValidateDirectMailResponseOtrErrorEnum["NOCASEOWNER"] = "NO_CASE_OWNER";
     ValidateDirectMailResponseOtrErrorEnum["NOCHARGESONCASE"] = "NO_CHARGES_ON_CASE";

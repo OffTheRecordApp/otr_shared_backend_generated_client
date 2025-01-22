@@ -65,9 +65,10 @@ export declare class UserPasswordControllerApi {
      * @param email email
      * @param fieldName fieldName
      * @param fieldValue fieldValue
+     * @param loginProvider loginProvider
      * @param userId userId
      */
-    verifyUserAccountUsingPUT(code: string, email?: string, fieldName?: string, fieldValue?: string, userId?: string, extraHttpRequestParams?: any): ng.IHttpPromise<models.VerifyUserAccountResponse>;
+    verifyUserAccountUsingPUT(code: string, email?: string, fieldName?: string, fieldValue?: string, loginProvider?: 'APPLE' | 'EMAIL' | 'FACEBOOK' | 'GOOGLE' | 'PHONE' | 'TWITTER' | 'UNKNOWN', userId?: string, extraHttpRequestParams?: any): ng.IHttpPromise<models.VerifyUserAccountResponse>;
     /**
      *
      * @summary verifyUserPassword

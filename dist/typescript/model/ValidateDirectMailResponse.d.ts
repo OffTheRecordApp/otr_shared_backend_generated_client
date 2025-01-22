@@ -225,6 +225,7 @@ export declare namespace ValidateDirectMailResponse {
         NOTIFICATIONTOOLONG,
         NOTIFICATIONTOSELF,
         NOTAUTHENTICATED,
+        NOACCOUNTFOUNDWITHPROVIDER,
         NOACCOUNTWITHEMAIL,
         NOCASEOWNER,
         NOCHARGESONCASE,

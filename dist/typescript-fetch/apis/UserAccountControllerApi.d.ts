@@ -10,7 +10,7 @@
  * Do not edit the class manually.
  */
 import * as runtime from '../runtime';
-import { AddExtraAccountRequest, AssociateOAuthAccountRequest, AssociateOAuthAccountResponse } from '../models';
+import { AddExtraAccountRequest, AssociateOAuthAccountRequest, AssociateOAuthAccountResponse, RemoveAdditionalUserHandleRequest, SetPrimaryUserHandleRequest } from '../models';
 export interface AddExtraAccountUsingPOSTRequest {
     userId: string;
     request: AddExtraAccountRequest;
@@ -22,10 +22,12 @@ export interface AssociateOAuthAccountUsingPOSTRequest {
 export interface RemoveAdditionalUserHandleUsingDELETERequest {
     userHandle: string;
     userId: number;
+    request: RemoveAdditionalUserHandleRequest;
 }
 export interface SetPrimaryUserHandleUsingPUTRequest {
     userHandle: string;
     userId: number;
+    request: SetPrimaryUserHandleRequest;
 }
 /**
  *

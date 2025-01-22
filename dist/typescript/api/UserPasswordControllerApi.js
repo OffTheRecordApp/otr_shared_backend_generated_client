@@ -197,9 +197,10 @@ export class UserPasswordControllerApi {
      * @param email email
      * @param fieldName fieldName
      * @param fieldValue fieldValue
+     * @param loginProvider loginProvider
      * @param userId userId
      */
-    verifyUserAccountUsingPUT(code, email, fieldName, fieldValue, userId, extraHttpRequestParams) {
+    verifyUserAccountUsingPUT(code, email, fieldName, fieldValue, loginProvider, userId, extraHttpRequestParams) {
         const localVarPath = this.basePath + '/api/v1/users/verify-account';
         let queryParameters = {};
         let headerParams = Object.assign({}, this.defaultHeaders);
@@ -218,6 +219,9 @@ export class UserPasswordControllerApi {
         }
         if (fieldValue !== undefined) {
             queryParameters['fieldValue'] = fieldValue;
+        }
+        if (loginProvider !== undefined) {
+            queryParameters['loginProvider'] = loginProvider;
         }
         if (userId !== undefined) {
             queryParameters['userId'] = userId;
