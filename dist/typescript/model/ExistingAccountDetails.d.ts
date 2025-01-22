@@ -15,6 +15,7 @@ export interface ExistingAccountDetails {
     "hasActiveCase"?: boolean;
     "isPhoneVerified"?: boolean;
     "lastName"?: string;
+    "merged"?: boolean;
     "obfuscatedEmailAddress"?: string;
     "phoneNumber"?: string;
     "profilePictureUrl"?: string;

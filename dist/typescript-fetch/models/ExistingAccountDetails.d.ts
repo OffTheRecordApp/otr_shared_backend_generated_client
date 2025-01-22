@@ -47,6 +47,12 @@ export interface ExistingAccountDetails {
     lastName?: string;
     /**
      *
+     * @type {boolean}
+     * @memberof ExistingAccountDetails
+     */
+    merged?: boolean;
+    /**
+     *
      * @type {string}
      * @memberof ExistingAccountDetails
      */
