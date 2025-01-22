@@ -103,10 +103,6 @@ export class UserAccountControllerApi {
         if (userId === null || userId === undefined) {
             throw new Error('Required parameter userId was null or undefined when calling removeAdditionalUserHandleUsingDELETE.');
         }
-        // verify required parameter 'request' is not null or undefined
-        if (request === null || request === undefined) {
-            throw new Error('Required parameter request was null or undefined when calling removeAdditionalUserHandleUsingDELETE.');
-        }
         let httpRequestParams = {
             method: 'DELETE',
             url: localVarPath,
@@ -139,10 +135,6 @@ export class UserAccountControllerApi {
         // verify required parameter 'userId' is not null or undefined
         if (userId === null || userId === undefined) {
             throw new Error('Required parameter userId was null or undefined when calling setPrimaryUserHandleUsingPUT.');
-        }
-        // verify required parameter 'request' is not null or undefined
-        if (request === null || request === undefined) {
-            throw new Error('Required parameter request was null or undefined when calling setPrimaryUserHandleUsingPUT.');
         }
         let httpRequestParams = {
             method: 'PUT',

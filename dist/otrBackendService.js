@@ -16028,11 +16028,6 @@ angular.module('otrBackendService', [])
                     body = parameters['request'];
                 }
 
-                if (parameters['request'] === undefined) {
-                    deferred.reject(new Error('Missing required  parameter: request'));
-                    return deferred.promise;
-                }
-
                 path = path.replace('{userHandle}', parameters['userHandle']);
 
                 if (parameters['userHandle'] === undefined) {
@@ -16079,11 +16074,6 @@ angular.module('otrBackendService', [])
 
                 if (parameters['request'] !== undefined) {
                     body = parameters['request'];
-                }
-
-                if (parameters['request'] === undefined) {
-                    deferred.reject(new Error('Missing required  parameter: request'));
-                    return deferred.promise;
                 }
 
                 path = path.replace('{userHandle}', parameters['userHandle']);

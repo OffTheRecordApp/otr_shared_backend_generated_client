@@ -22,12 +22,12 @@ export interface AssociateOAuthAccountUsingPOSTRequest {
 export interface RemoveAdditionalUserHandleUsingDELETERequest {
     userHandle: string;
     userId: number;
-    request: RemoveAdditionalUserHandleRequest;
+    request?: RemoveAdditionalUserHandleRequest;
 }
 export interface SetPrimaryUserHandleUsingPUTRequest {
     userHandle: string;
     userId: number;
-    request: SetPrimaryUserHandleRequest;
+    request?: SetPrimaryUserHandleRequest;
 }
 /**
  *

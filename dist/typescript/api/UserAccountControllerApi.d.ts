@@ -39,7 +39,7 @@ export declare class UserAccountControllerApi {
      * @param userId userId
      * @param request request
      */
-    removeAdditionalUserHandleUsingDELETE(userHandle: string, userId: number, request: models.RemoveAdditionalUserHandleRequest, extraHttpRequestParams?: any): ng.IHttpPromise<{}>;
+    removeAdditionalUserHandleUsingDELETE(userHandle: string, userId: number, request?: models.RemoveAdditionalUserHandleRequest, extraHttpRequestParams?: any): ng.IHttpPromise<{}>;
     /**
      *
      * @summary setPrimaryUserHandle
@@ -47,5 +47,5 @@ export declare class UserAccountControllerApi {
      * @param userId userId
      * @param request request
      */
-    setPrimaryUserHandleUsingPUT(userHandle: string, userId: number, request: models.SetPrimaryUserHandleRequest, extraHttpRequestParams?: any): ng.IHttpPromise<{}>;
+    setPrimaryUserHandleUsingPUT(userHandle: string, userId: number, request?: models.SetPrimaryUserHandleRequest, extraHttpRequestParams?: any): ng.IHttpPromise<{}>;
 }

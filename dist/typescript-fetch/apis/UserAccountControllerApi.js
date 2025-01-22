@@ -102,9 +102,6 @@ export class UserAccountControllerApi extends runtime.BaseAPI {
             if (requestParameters.userId === null || requestParameters.userId === undefined) {
                 throw new runtime.RequiredError('userId', 'Required parameter requestParameters.userId was null or undefined when calling removeAdditionalUserHandleUsingDELETE.');
             }
-            if (requestParameters.request === null || requestParameters.request === undefined) {
-                throw new runtime.RequiredError('request', 'Required parameter requestParameters.request was null or undefined when calling removeAdditionalUserHandleUsingDELETE.');
-            }
             const queryParameters = {};
             const headerParameters = {};
             headerParameters['Content-Type'] = 'application/json';
@@ -136,9 +133,6 @@ export class UserAccountControllerApi extends runtime.BaseAPI {
             }
             if (requestParameters.userId === null || requestParameters.userId === undefined) {
                 throw new runtime.RequiredError('userId', 'Required parameter requestParameters.userId was null or undefined when calling setPrimaryUserHandleUsingPUT.');
-            }
-            if (requestParameters.request === null || requestParameters.request === undefined) {
-                throw new runtime.RequiredError('request', 'Required parameter requestParameters.request was null or undefined when calling setPrimaryUserHandleUsingPUT.');
             }
             const queryParameters = {};
             const headerParameters = {};
