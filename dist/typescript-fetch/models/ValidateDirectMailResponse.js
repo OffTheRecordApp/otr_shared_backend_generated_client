@@ -49,6 +49,7 @@ export var ValidateDirectMailResponseOtrErrorEnum;
     ValidateDirectMailResponseOtrErrorEnum["AUTHORIZATIONSERVICEFAILURE"] = "AUTHORIZATION_SERVICE_FAILURE";
     ValidateDirectMailResponseOtrErrorEnum["AUTHORIZEDCHARGESONCASE"] = "AUTHORIZED_CHARGES_ON_CASE";
     ValidateDirectMailResponseOtrErrorEnum["BADCREDENTIALS"] = "BAD_CREDENTIALS";
+    ValidateDirectMailResponseOtrErrorEnum["BLOCKEDDUETOFIREWALL"] = "BLOCKED_DUE_TO_FIREWALL";
     ValidateDirectMailResponseOtrErrorEnum["BLOCKEDFROMBOOKING"] = "BLOCKED_FROM_BOOKING";
     ValidateDirectMailResponseOtrErrorEnum["CANCELLATIONWINDOWCLOSED"] = "CANCELLATION_WINDOW_CLOSED";
     ValidateDirectMailResponseOtrErrorEnum["CASEALREADYEXISTS"] = "CASE_ALREADY_EXISTS";
