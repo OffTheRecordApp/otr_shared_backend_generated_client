@@ -24,6 +24,7 @@ export interface LawfirmCaseModelRes {
     "lawfirmName"?: string;
     "lawfirmPrimaryEmail"?: string;
     "lawfirmReceiptDateUtc"?: models.TimestampRes;
+    "lawyerCounterOfferTicketId"?: number;
     "matchExpirationDateUtc"?: string;
     "obfuscatedPictureUrl"?: string;
     "profilePictureUrl"?: string;

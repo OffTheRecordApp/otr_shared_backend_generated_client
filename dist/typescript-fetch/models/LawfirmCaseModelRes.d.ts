@@ -96,6 +96,12 @@ export interface LawfirmCaseModelRes {
     lawfirmReceiptDateUtc?: TimestampRes;
     /**
      *
+     * @type {number}
+     * @memberof LawfirmCaseModelRes
+     */
+    lawyerCounterOfferTicketId?: number;
+    /**
+     *
      * @type {Date}
      * @memberof LawfirmCaseModelRes
      */

@@ -96,6 +96,12 @@ export interface LawfirmCaseModelReq {
     lawfirmReceiptDateUtc?: TimestampReq;
     /**
      *
+     * @type {number}
+     * @memberof LawfirmCaseModelReq
+     */
+    lawyerCounterOfferTicketId?: number;
+    /**
+     *
      * @type {Date}
      * @memberof LawfirmCaseModelReq
      */
