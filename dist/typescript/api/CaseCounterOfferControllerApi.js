@@ -25,8 +25,9 @@ export class CaseCounterOfferControllerApi {
      * @summary acceptCaseCounter
      * @param caseId caseId
      * @param counterId counterId
+     * @param request request
      */
-    acceptCaseCounterUsingPUT(caseId, counterId, extraHttpRequestParams) {
+    acceptCaseCounterUsingPUT(caseId, counterId, request, extraHttpRequestParams) {
         const localVarPath = this.basePath + '/api/v1/cases/{caseId}/counters/{counterId}/accept'
             .replace('{' + 'caseId' + '}', encodeURIComponent(String(caseId)))
             .replace('{' + 'counterId' + '}', encodeURIComponent(String(counterId)));
@@ -43,6 +44,7 @@ export class CaseCounterOfferControllerApi {
         let httpRequestParams = {
             method: 'PUT',
             url: localVarPath,
+            data: request,
             params: queryParameters,
             headers: headerParams
         };

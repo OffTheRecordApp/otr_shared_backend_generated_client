@@ -10,10 +10,11 @@
  * Do not edit the class manually.
  */
 import * as runtime from '../runtime';
-import { DeclineCaseCounterRequest, GetCaseCounterOptionsResponse, GetCounterOfferResponse, InitiateCaseCounterRequest, InitiateCaseCounterResponse } from '../models';
+import { AcceptCaseCounterRequest, DeclineCaseCounterRequest, GetCaseCounterOptionsResponse, GetCounterOfferResponse, InitiateCaseCounterRequest, InitiateCaseCounterResponse } from '../models';
 export interface AcceptCaseCounterUsingPUTRequest {
     caseId: string;
     counterId: number;
+    request?: AcceptCaseCounterRequest;
 }
 export interface DeclineCaseCounterUsingPUTRequest {
     caseId: string;

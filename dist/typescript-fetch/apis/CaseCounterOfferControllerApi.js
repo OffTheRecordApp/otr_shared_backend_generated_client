@@ -21,7 +21,7 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
     });
 };
 import * as runtime from '../runtime';
-import { DeclineCaseCounterRequestToJSON, GetCaseCounterOptionsResponseFromJSON, GetCounterOfferResponseFromJSON, InitiateCaseCounterRequestToJSON, InitiateCaseCounterResponseFromJSON, } from '../models';
+import { AcceptCaseCounterRequestToJSON, DeclineCaseCounterRequestToJSON, GetCaseCounterOptionsResponseFromJSON, GetCounterOfferResponseFromJSON, InitiateCaseCounterRequestToJSON, InitiateCaseCounterResponseFromJSON, } from '../models';
 /**
  *
  */
@@ -39,11 +39,13 @@ export class CaseCounterOfferControllerApi extends runtime.BaseAPI {
             }
             const queryParameters = {};
             const headerParameters = {};
+            headerParameters['Content-Type'] = 'application/json';
             const response = yield this.request({
                 path: `/api/v1/cases/{caseId}/counters/{counterId}/accept`.replace(`{${"caseId"}}`, encodeURIComponent(String(requestParameters.caseId))).replace(`{${"counterId"}}`, encodeURIComponent(String(requestParameters.counterId))),
                 method: 'PUT',
                 headers: headerParameters,
                 query: queryParameters,
+                body: AcceptCaseCounterRequestToJSON(requestParameters.request),
             });
             return new runtime.VoidApiResponse(response);
         });

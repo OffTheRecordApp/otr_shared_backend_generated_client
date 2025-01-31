@@ -2106,6 +2106,7 @@ angular.module('otrBackendService', [])
              * @param {object} parameters - method options and parameters
              * @param {string} parameters.caseId - caseId
              * @param {integer} parameters.counterId - counterId
+             * @param {} parameters.request - request
              */
             OtrService.prototype.acceptCaseCounterUsingPUT = function(parameters) {
                 if (parameters === undefined) {
@@ -2134,6 +2135,10 @@ angular.module('otrBackendService', [])
                 if (parameters['counterId'] === undefined) {
                     deferred.reject(new Error('Missing required  parameter: counterId'));
                     return deferred.promise;
+                }
+
+                if (parameters['request'] !== undefined) {
+                    body = parameters['request'];
                 }
 
                 queryParameters = mergeQueryParams(parameters, queryParameters);
