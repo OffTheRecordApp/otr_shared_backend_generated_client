@@ -144,6 +144,12 @@ export interface UserDomainRes {
     isUnsubscribed?: boolean;
     /**
      *
+     * @type {Date}
+     * @memberof UserDomainRes
+     */
+    lastLoginDateUtc?: Date;
+    /**
+     *
      * @type {string}
      * @memberof UserDomainRes
      */

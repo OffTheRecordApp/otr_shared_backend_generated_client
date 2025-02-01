@@ -12,6 +12,7 @@
  * Do not edit the class manually.
  */
 import { exists } from '../runtime';
+import { LastLoginAttributesFromJSON, LastLoginAttributesToJSON, } from './';
 export function UserAccountModelFromJSON(json) {
     return UserAccountModelFromJSONTyped(json, false);
 }
@@ -22,6 +23,7 @@ export function UserAccountModelFromJSONTyped(json, ignoreDiscriminator) {
     return {
         'accountCreationDateUtc': !exists(json, 'accountCreationDateUtc') ? undefined : (new Date(json['accountCreationDateUtc'])),
         'formerUserId': !exists(json, 'formerUserId') ? undefined : json['formerUserId'],
+        'lastLoginAttributes': !exists(json, 'lastLoginAttributes') ? undefined : LastLoginAttributesFromJSON(json['lastLoginAttributes']),
         'loginProvider': !exists(json, 'loginProvider') ? undefined : json['loginProvider'],
         'merged': !exists(json, 'merged') ? undefined : json['merged'],
         'primary': !exists(json, 'primary') ? undefined : json['primary'],
@@ -40,6 +42,7 @@ export function UserAccountModelToJSON(value) {
     return {
         'accountCreationDateUtc': value.accountCreationDateUtc === undefined ? undefined : (value.accountCreationDateUtc.toISOString()),
         'formerUserId': value.formerUserId,
+        'lastLoginAttributes': LastLoginAttributesToJSON(value.lastLoginAttributes),
         'loginProvider': value.loginProvider,
         'merged': value.merged,
         'primary': value.primary,

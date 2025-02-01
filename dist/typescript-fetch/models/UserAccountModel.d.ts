@@ -9,6 +9,7 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
+import { LastLoginAttributes } from './';
 /**
  *
  * @export
@@ -27,6 +28,12 @@ export interface UserAccountModel {
      * @memberof UserAccountModel
      */
     formerUserId?: number;
+    /**
+     *
+     * @type {LastLoginAttributes}
+     * @memberof UserAccountModel
+     */
+    lastLoginAttributes?: LastLoginAttributes;
     /**
      *
      * @type {string}

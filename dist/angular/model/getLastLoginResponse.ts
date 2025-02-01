@@ -10,9 +10,12 @@
  * Do not edit the class manually.
  */
 import { LastLoginDateModel } from './lastLoginDateModel';
+import { LastLoginDateByUserAccount } from './lastLoginDateByUserAccount';
 
 
 export interface GetLastLoginResponse { 
+    lastLoginDateByUserAccount?: Array<LastLoginDateByUserAccount>;
     lastLoginDateModels?: Array<LastLoginDateModel>;
+    lastLoginDateUtc?: string;
 }
 

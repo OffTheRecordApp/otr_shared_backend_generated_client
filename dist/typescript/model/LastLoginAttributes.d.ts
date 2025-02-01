@@ -10,8 +10,6 @@
  * Do not edit the class manually.
  */
 import * as models from './models';
-export interface GetLastLoginResponse {
-    "lastLoginDateByUserAccount"?: Array<models.LastLoginDateByUserAccount>;
-    "lastLoginDateModels"?: Array<models.LastLoginDateModel>;
-    "lastLoginDateUtc"?: string;
+export interface LastLoginAttributes {
+    "lastLoginItems"?: Array<models.LastLoginItem>;
 }

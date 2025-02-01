@@ -40,6 +40,7 @@ export interface UserDomainReq {
     isPaymentPlansAllowed?: boolean;
     isTestUser?: boolean;
     isUnsubscribed?: boolean;
+    lastLoginDateUtc?: string;
     lastname?: string;
     lawfirmId?: number;
     lawyerJobTitle?: UserDomainReq.LawyerJobTitleEnum;

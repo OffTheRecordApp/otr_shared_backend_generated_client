@@ -539,7 +539,10 @@ model/inviteHouseholdMateRequest.ts
 model/inviteLawyerToLawfirmRequest.ts
 model/isRefundEligibleResponse.ts
 model/isUserLoggedInResponse.ts
+model/lastLoginAttributes.ts
+model/lastLoginDateByUserAccount.ts
 model/lastLoginDateModel.ts
+model/lastLoginItem.ts
 model/lawfirm.ts
 model/lawfirmAuditEventModel.ts
 model/lawfirmBankPayoutModel.ts

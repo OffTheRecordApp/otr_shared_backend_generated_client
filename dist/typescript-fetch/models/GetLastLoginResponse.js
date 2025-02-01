@@ -12,7 +12,7 @@
  * Do not edit the class manually.
  */
 import { exists } from '../runtime';
-import { LastLoginDateModelFromJSON, LastLoginDateModelToJSON, } from './';
+import { LastLoginDateByUserAccountFromJSON, LastLoginDateByUserAccountToJSON, LastLoginDateModelFromJSON, LastLoginDateModelToJSON, } from './';
 export function GetLastLoginResponseFromJSON(json) {
     return GetLastLoginResponseFromJSONTyped(json, false);
 }
@@ -21,7 +21,9 @@ export function GetLastLoginResponseFromJSONTyped(json, ignoreDiscriminator) {
         return json;
     }
     return {
+        'lastLoginDateByUserAccount': !exists(json, 'lastLoginDateByUserAccount') ? undefined : (json['lastLoginDateByUserAccount'].map(LastLoginDateByUserAccountFromJSON)),
         'lastLoginDateModels': !exists(json, 'lastLoginDateModels') ? undefined : (json['lastLoginDateModels'].map(LastLoginDateModelFromJSON)),
+        'lastLoginDateUtc': !exists(json, 'lastLoginDateUtc') ? undefined : (new Date(json['lastLoginDateUtc'])),
     };
 }
 export function GetLastLoginResponseToJSON(value) {
@@ -32,6 +34,8 @@ export function GetLastLoginResponseToJSON(value) {
         return null;
     }
     return {
+        'lastLoginDateByUserAccount': value.lastLoginDateByUserAccount === undefined ? undefined : (value.lastLoginDateByUserAccount.map(LastLoginDateByUserAccountToJSON)),
         'lastLoginDateModels': value.lastLoginDateModels === undefined ? undefined : (value.lastLoginDateModels.map(LastLoginDateModelToJSON)),
+        'lastLoginDateUtc': value.lastLoginDateUtc === undefined ? undefined : (value.lastLoginDateUtc.toISOString()),
     };
 }

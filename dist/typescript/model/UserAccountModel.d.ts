@@ -9,9 +9,11 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
+import * as models from './models';
 export interface UserAccountModel {
     "accountCreationDateUtc"?: string;
     "formerUserId"?: number;
+    "lastLoginAttributes"?: models.LastLoginAttributes;
     "loginProvider"?: UserAccountModel.LoginProviderEnum;
     "merged"?: boolean;
     "primary"?: boolean;

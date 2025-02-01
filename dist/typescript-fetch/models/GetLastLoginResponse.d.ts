@@ -9,7 +9,7 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-import { LastLoginDateModel } from './';
+import { LastLoginDateByUserAccount, LastLoginDateModel } from './';
 /**
  *
  * @export
@@ -18,10 +18,22 @@ import { LastLoginDateModel } from './';
 export interface GetLastLoginResponse {
     /**
      *
+     * @type {Array<LastLoginDateByUserAccount>}
+     * @memberof GetLastLoginResponse
+     */
+    lastLoginDateByUserAccount?: Array<LastLoginDateByUserAccount>;
+    /**
+     *
      * @type {Array<LastLoginDateModel>}
      * @memberof GetLastLoginResponse
      */
     lastLoginDateModels?: Array<LastLoginDateModel>;
+    /**
+     *
+     * @type {Date}
+     * @memberof GetLastLoginResponse
+     */
+    lastLoginDateUtc?: Date;
 }
 export declare function GetLastLoginResponseFromJSON(json: any): GetLastLoginResponse;
 export declare function GetLastLoginResponseFromJSONTyped(json: any, ignoreDiscriminator: boolean): GetLastLoginResponse;

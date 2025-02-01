@@ -138,6 +138,12 @@ export interface UserDomainReq {
     isUnsubscribed?: boolean;
     /**
      *
+     * @type {Date}
+     * @memberof UserDomainReq
+     */
+    lastLoginDateUtc?: Date;
+    /**
+     *
      * @type {string}
      * @memberof UserDomainReq
      */

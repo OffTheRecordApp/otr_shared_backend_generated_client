@@ -32,6 +32,7 @@ export interface UserDomain {
     "isPaymentPlansAllowed"?: boolean;
     "isTestUser"?: boolean;
     "isUnsubscribed"?: boolean;
+    "lastLoginDateUtc"?: string;
     "lastname"?: string;
     "lawfirmId"?: number;
     "lawyerJobTitle"?: UserDomain.LawyerJobTitleEnum;
