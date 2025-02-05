@@ -231,6 +231,7 @@ export var ValidateDirectMailResponseOtrErrorEnum;
     ValidateDirectMailResponseOtrErrorEnum["MISSINGNUMVIOLATIONS"] = "MISSING_NUM_VIOLATIONS";
     ValidateDirectMailResponseOtrErrorEnum["MISSINGPARAMETER"] = "MISSING_PARAMETER";
     ValidateDirectMailResponseOtrErrorEnum["MISSINGPASSWORD"] = "MISSING_PASSWORD";
+    ValidateDirectMailResponseOtrErrorEnum["MISSINGPAYMENTMETHOD"] = "MISSING_PAYMENT_METHOD";
     ValidateDirectMailResponseOtrErrorEnum["MISSINGRECIPIENTEMAIL"] = "MISSING_RECIPIENT_EMAIL";
     ValidateDirectMailResponseOtrErrorEnum["MISSINGREQUESTBODY"] = "MISSING_REQUEST_BODY";
     ValidateDirectMailResponseOtrErrorEnum["MISSINGRESOLUTIONSTATUS"] = "MISSING_RESOLUTION_STATUS";
