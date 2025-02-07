@@ -57,6 +57,12 @@ export interface UserAccountModel {
      * @type {string}
      * @memberof UserAccountModel
      */
+    profilePictureUrl?: string;
+    /**
+     *
+     * @type {string}
+     * @memberof UserAccountModel
+     */
     signedProfilePictureUrl?: string;
     /**
      *
