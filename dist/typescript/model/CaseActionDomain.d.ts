@@ -13,6 +13,7 @@ import * as models from './models';
 export interface CaseActionDomain {
     "actionDate"?: string;
     "actionNote"?: string;
+    "actionReferenceId"?: number;
     "actionType"?: CaseActionDomain.ActionTypeEnum;
     "author"?: models.AuthorModel;
     "authorId"?: number;

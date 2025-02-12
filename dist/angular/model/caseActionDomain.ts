@@ -15,6 +15,7 @@ import { AuthorModel } from './authorModel';
 export interface CaseActionDomain { 
     actionDate?: string;
     actionNote?: string;
+    actionReferenceId?: number;
     actionType?: CaseActionDomain.ActionTypeEnum;
     author?: AuthorModel;
     authorId?: number;

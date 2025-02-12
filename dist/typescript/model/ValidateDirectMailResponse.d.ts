@@ -29,6 +29,7 @@ export declare namespace ValidateDirectMailResponse {
         CASEALREADYEXISTS,
         CASEALREADYPAID,
         CASEALREADYRESOLVED,
+        CASECOUNTERMISMATCH,
         CASEIDCOLLISION,
         CASEISCANCELLED,
         CASEMATCHFAILED,

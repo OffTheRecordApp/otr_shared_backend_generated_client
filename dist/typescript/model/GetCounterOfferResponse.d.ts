@@ -18,6 +18,8 @@ export interface GetCounterOfferResponse {
     "counterOptions"?: Array<models.CaseCounterOptionModel>;
     "createdByUserId"?: number;
     "createdByUserRoleId"?: number;
+    "initialLegalFeeInCents"?: number;
+    "initialRefundPercentage"?: number;
     "lawfirmCaseId"?: number;
     "legalFeeDifferenceInCents"?: number;
     "noteToClient"?: string;

@@ -23,6 +23,7 @@ export function CaseActionDomainFromJSONTyped(json, ignoreDiscriminator) {
     return {
         'actionDate': !exists(json, 'actionDate') ? undefined : (new Date(json['actionDate'])),
         'actionNote': !exists(json, 'actionNote') ? undefined : json['actionNote'],
+        'actionReferenceId': !exists(json, 'actionReferenceId') ? undefined : json['actionReferenceId'],
         'actionType': !exists(json, 'actionType') ? undefined : json['actionType'],
         'author': !exists(json, 'author') ? undefined : AuthorModelFromJSON(json['author']),
         'authorId': !exists(json, 'authorId') ? undefined : json['authorId'],
@@ -45,6 +46,7 @@ export function CaseActionDomainToJSON(value) {
     return {
         'actionDate': value.actionDate === undefined ? undefined : (value.actionDate.toISOString()),
         'actionNote': value.actionNote,
+        'actionReferenceId': value.actionReferenceId,
         'actionType': value.actionType,
         'author': AuthorModelToJSON(value.author),
         'authorId': value.authorId,

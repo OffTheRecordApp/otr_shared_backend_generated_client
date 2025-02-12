@@ -119,6 +119,37 @@ export class CaseCounterOfferControllerApi extends runtime.BaseAPI {
         });
     }
     /**
+     * getCounterOfferByCounterId
+     */
+    getCounterOfferByCounterIdUsingGETRaw(requestParameters) {
+        return __awaiter(this, void 0, void 0, function* () {
+            if (requestParameters.caseId === null || requestParameters.caseId === undefined) {
+                throw new runtime.RequiredError('caseId', 'Required parameter requestParameters.caseId was null or undefined when calling getCounterOfferByCounterIdUsingGET.');
+            }
+            if (requestParameters.counterId === null || requestParameters.counterId === undefined) {
+                throw new runtime.RequiredError('counterId', 'Required parameter requestParameters.counterId was null or undefined when calling getCounterOfferByCounterIdUsingGET.');
+            }
+            const queryParameters = {};
+            const headerParameters = {};
+            const response = yield this.request({
+                path: `/api/v1/cases/{caseId}/counters/{counterId}`.replace(`{${"caseId"}}`, encodeURIComponent(String(requestParameters.caseId))).replace(`{${"counterId"}}`, encodeURIComponent(String(requestParameters.counterId))),
+                method: 'GET',
+                headers: headerParameters,
+                query: queryParameters,
+            });
+            return new runtime.JSONApiResponse(response, (jsonValue) => GetCounterOfferResponseFromJSON(jsonValue));
+        });
+    }
+    /**
+     * getCounterOfferByCounterId
+     */
+    getCounterOfferByCounterIdUsingGET(requestParameters) {
+        return __awaiter(this, void 0, void 0, function* () {
+            const response = yield this.getCounterOfferByCounterIdUsingGETRaw(requestParameters);
+            return yield response.value();
+        });
+    }
+    /**
      * getCounterOffer
      */
     getCounterOfferUsingGETRaw(requestParameters) {

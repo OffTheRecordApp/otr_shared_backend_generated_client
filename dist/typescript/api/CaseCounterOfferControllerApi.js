@@ -111,6 +111,37 @@ export class CaseCounterOfferControllerApi {
     }
     /**
      *
+     * @summary getCounterOfferByCounterId
+     * @param caseId caseId
+     * @param counterId counterId
+     */
+    getCounterOfferByCounterIdUsingGET(caseId, counterId, extraHttpRequestParams) {
+        const localVarPath = this.basePath + '/api/v1/cases/{caseId}/counters/{counterId}'
+            .replace('{' + 'caseId' + '}', encodeURIComponent(String(caseId)))
+            .replace('{' + 'counterId' + '}', encodeURIComponent(String(counterId)));
+        let queryParameters = {};
+        let headerParams = Object.assign({}, this.defaultHeaders);
+        // verify required parameter 'caseId' is not null or undefined
+        if (caseId === null || caseId === undefined) {
+            throw new Error('Required parameter caseId was null or undefined when calling getCounterOfferByCounterIdUsingGET.');
+        }
+        // verify required parameter 'counterId' is not null or undefined
+        if (counterId === null || counterId === undefined) {
+            throw new Error('Required parameter counterId was null or undefined when calling getCounterOfferByCounterIdUsingGET.');
+        }
+        let httpRequestParams = {
+            method: 'GET',
+            url: localVarPath,
+            params: queryParameters,
+            headers: headerParams
+        };
+        if (extraHttpRequestParams) {
+            httpRequestParams = Object.assign(httpRequestParams, extraHttpRequestParams);
+        }
+        return this.$http(httpRequestParams);
+    }
+    /**
+     *
      * @summary getCounterOffer
      * @param caseId caseId
      */

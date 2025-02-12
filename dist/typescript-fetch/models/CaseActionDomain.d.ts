@@ -30,6 +30,12 @@ export interface CaseActionDomain {
     actionNote?: string;
     /**
      *
+     * @type {number}
+     * @memberof CaseActionDomain
+     */
+    actionReferenceId?: number;
+    /**
+     *
      * @type {string}
      * @memberof CaseActionDomain
      */

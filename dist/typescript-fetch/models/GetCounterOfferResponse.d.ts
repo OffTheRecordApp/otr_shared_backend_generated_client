@@ -63,6 +63,18 @@ export interface GetCounterOfferResponse {
      * @type {number}
      * @memberof GetCounterOfferResponse
      */
+    initialLegalFeeInCents?: number;
+    /**
+     *
+     * @type {number}
+     * @memberof GetCounterOfferResponse
+     */
+    initialRefundPercentage?: number;
+    /**
+     *
+     * @type {number}
+     * @memberof GetCounterOfferResponse
+     */
     lawfirmCaseId?: number;
     /**
      *

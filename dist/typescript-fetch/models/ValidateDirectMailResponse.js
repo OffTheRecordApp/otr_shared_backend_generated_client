@@ -55,6 +55,7 @@ export var ValidateDirectMailResponseOtrErrorEnum;
     ValidateDirectMailResponseOtrErrorEnum["CASEALREADYEXISTS"] = "CASE_ALREADY_EXISTS";
     ValidateDirectMailResponseOtrErrorEnum["CASEALREADYPAID"] = "CASE_ALREADY_PAID";
     ValidateDirectMailResponseOtrErrorEnum["CASEALREADYRESOLVED"] = "CASE_ALREADY_RESOLVED";
+    ValidateDirectMailResponseOtrErrorEnum["CASECOUNTERMISMATCH"] = "CASE_COUNTER_MISMATCH";
     ValidateDirectMailResponseOtrErrorEnum["CASEIDCOLLISION"] = "CASE_ID_COLLISION";
     ValidateDirectMailResponseOtrErrorEnum["CASEISCANCELLED"] = "CASE_IS_CANCELLED";
     ValidateDirectMailResponseOtrErrorEnum["CASEMATCHFAILED"] = "CASE_MATCH_FAILED";

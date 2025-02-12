@@ -2100,6 +2100,48 @@ angular.module('otrBackendService', [])
                 return deferred.promise;
             };
             /**
+             * getCounterOfferByCounterId
+             * @method
+             * @name OtrService#getCounterOfferByCounterIdUsingGET
+             * @param {object} parameters - method options and parameters
+             * @param {string} parameters.caseId - caseId
+             * @param {integer} parameters.counterId - counterId
+             */
+            OtrService.prototype.getCounterOfferByCounterIdUsingGET = function(parameters) {
+                if (parameters === undefined) {
+                    parameters = {};
+                }
+                var deferred = $q.defer();
+                var domain = this.domain,
+                    path = '/api/v1/cases/{caseId}/counters/{counterId}';
+                var body = {},
+                    queryParameters = {},
+                    headers = {},
+                    form = {};
+
+                headers['Accept'] = ['*/*'];
+
+                path = path.replace('{caseId}', parameters['caseId']);
+
+                if (parameters['caseId'] === undefined) {
+                    deferred.reject(new Error('Missing required  parameter: caseId'));
+                    return deferred.promise;
+                }
+
+                path = path.replace('{counterId}', parameters['counterId']);
+
+                if (parameters['counterId'] === undefined) {
+                    deferred.reject(new Error('Missing required  parameter: counterId'));
+                    return deferred.promise;
+                }
+
+                queryParameters = mergeQueryParams(parameters, queryParameters);
+
+                this.request('GET', domain + path, parameters, body, headers, queryParameters, form, deferred);
+
+                return deferred.promise;
+            };
+            /**
              * acceptCaseCounter
              * @method
              * @name OtrService#acceptCaseCounterUsingPUT

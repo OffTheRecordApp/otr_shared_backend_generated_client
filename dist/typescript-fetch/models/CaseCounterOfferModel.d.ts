@@ -57,6 +57,18 @@ export interface CaseCounterOfferModel {
      * @type {number}
      * @memberof CaseCounterOfferModel
      */
+    initialLegalFeeInCents?: number;
+    /**
+     *
+     * @type {number}
+     * @memberof CaseCounterOfferModel
+     */
+    initialRefundPercentage?: number;
+    /**
+     *
+     * @type {number}
+     * @memberof CaseCounterOfferModel
+     */
     lawfirmCaseId?: number;
     /**
      *

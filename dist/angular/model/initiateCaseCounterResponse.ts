@@ -20,6 +20,8 @@ export interface InitiateCaseCounterResponse {
     counterOptions?: Array<CaseCounterOptionModel>;
     createdByUserId?: number;
     createdByUserRoleId?: number;
+    initialLegalFeeInCents?: number;
+    initialRefundPercentage?: number;
     lawfirmCaseId?: number;
     noteToClient?: string;
     noteToOtr?: string;

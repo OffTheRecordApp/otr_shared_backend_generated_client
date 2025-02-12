@@ -19,6 +19,8 @@ export interface CaseCounterOfferModel {
     counterOfferStatus?: string;
     createdByUserId?: number;
     createdByUserRoleId?: number;
+    initialLegalFeeInCents?: number;
+    initialRefundPercentage?: number;
     lawfirmCaseId?: number;
     noteToClient?: string;
     noteToOtr?: string;

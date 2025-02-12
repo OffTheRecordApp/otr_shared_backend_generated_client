@@ -41,6 +41,13 @@ export declare class CaseCounterOfferControllerApi {
     getCaseCounterOptionsUsingGET(extraHttpRequestParams?: any): ng.IHttpPromise<models.GetCaseCounterOptionsResponse>;
     /**
      *
+     * @summary getCounterOfferByCounterId
+     * @param caseId caseId
+     * @param counterId counterId
+     */
+    getCounterOfferByCounterIdUsingGET(caseId: string, counterId: number, extraHttpRequestParams?: any): ng.IHttpPromise<models.GetCounterOfferResponse>;
+    /**
+     *
      * @summary getCounterOffer
      * @param caseId caseId
      */

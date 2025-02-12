@@ -63,6 +63,18 @@ export interface InitiateCaseCounterResponse {
      * @type {number}
      * @memberof InitiateCaseCounterResponse
      */
+    initialLegalFeeInCents?: number;
+    /**
+     *
+     * @type {number}
+     * @memberof InitiateCaseCounterResponse
+     */
+    initialRefundPercentage?: number;
+    /**
+     *
+     * @type {number}
+     * @memberof InitiateCaseCounterResponse
+     */
     lawfirmCaseId?: number;
     /**
      *

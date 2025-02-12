@@ -21,6 +21,10 @@ export interface DeclineCaseCounterUsingPUTRequest {
     counterId: number;
     request: DeclineCaseCounterRequest;
 }
+export interface GetCounterOfferByCounterIdUsingGETRequest {
+    caseId: string;
+    counterId: number;
+}
 export interface GetCounterOfferUsingGETRequest {
     caseId: string;
 }
@@ -60,6 +64,14 @@ export declare class CaseCounterOfferControllerApi extends runtime.BaseAPI {
      * getCaseCounterOptions
      */
     getCaseCounterOptionsUsingGET(): Promise<GetCaseCounterOptionsResponse>;
+    /**
+     * getCounterOfferByCounterId
+     */
+    getCounterOfferByCounterIdUsingGETRaw(requestParameters: GetCounterOfferByCounterIdUsingGETRequest): Promise<runtime.ApiResponse<GetCounterOfferResponse>>;
+    /**
+     * getCounterOfferByCounterId
+     */
+    getCounterOfferByCounterIdUsingGET(requestParameters: GetCounterOfferByCounterIdUsingGETRequest): Promise<GetCounterOfferResponse>;
     /**
      * getCounterOffer
      */
