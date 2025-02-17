@@ -20,6 +20,12 @@ export interface SubscriptionDiscountEligibility {
      * @type {string}
      * @memberof SubscriptionDiscountEligibility
      */
+    productName?: string;
+    /**
+     *
+     * @type {string}
+     * @memberof SubscriptionDiscountEligibility
+     */
     subscriptionDiscountEligibilityType?: SubscriptionDiscountEligibilitySubscriptionDiscountEligibilityTypeEnum;
     /**
      *

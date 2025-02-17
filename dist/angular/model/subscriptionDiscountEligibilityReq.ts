@@ -12,6 +12,7 @@
 
 
 export interface SubscriptionDiscountEligibilityReq { 
+    productName?: string;
     subscriptionDiscountEligibilityType?: SubscriptionDiscountEligibilityReq.SubscriptionDiscountEligibilityTypeEnum;
     uiSubscriptionEligibilityMsg?: string;
 }

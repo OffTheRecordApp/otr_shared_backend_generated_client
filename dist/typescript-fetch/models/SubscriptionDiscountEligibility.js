@@ -20,6 +20,7 @@ export function SubscriptionDiscountEligibilityFromJSONTyped(json, ignoreDiscrim
         return json;
     }
     return {
+        'productName': !exists(json, 'productName') ? undefined : json['productName'],
         'subscriptionDiscountEligibilityType': !exists(json, 'subscriptionDiscountEligibilityType') ? undefined : json['subscriptionDiscountEligibilityType'],
         'uiSubscriptionEligibilityMsg': !exists(json, 'uiSubscriptionEligibilityMsg') ? undefined : json['uiSubscriptionEligibilityMsg'],
     };
@@ -32,6 +33,7 @@ export function SubscriptionDiscountEligibilityToJSON(value) {
         return null;
     }
     return {
+        'productName': value.productName,
         'subscriptionDiscountEligibilityType': value.subscriptionDiscountEligibilityType,
         'uiSubscriptionEligibilityMsg': value.uiSubscriptionEligibilityMsg,
     };

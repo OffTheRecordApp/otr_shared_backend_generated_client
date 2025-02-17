@@ -10,6 +10,7 @@
  * Do not edit the class manually.
  */
 export interface SubscriptionDiscountEligibilityRes {
+    "productName"?: string;
     "subscriptionDiscountEligibilityType"?: SubscriptionDiscountEligibilityRes.SubscriptionDiscountEligibilityTypeEnum;
     "uiSubscriptionEligibilityMsg"?: string;
 }
