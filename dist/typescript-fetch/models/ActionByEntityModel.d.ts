@@ -9,6 +9,7 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
+import { CaseActionTypeModel } from './';
 /**
  *
  * @export
@@ -35,10 +36,10 @@ export interface ActionByEntityModel {
     actionNote?: string;
     /**
      *
-     * @type {string}
+     * @type {CaseActionTypeModel}
      * @memberof ActionByEntityModel
      */
-    actionType?: ActionByEntityModelActionTypeEnum;
+    actionType?: CaseActionTypeModel;
     /**
      *
      * @type {string}
@@ -103,32 +104,6 @@ export interface ActionByEntityModel {
 export declare function ActionByEntityModelFromJSON(json: any): ActionByEntityModel;
 export declare function ActionByEntityModelFromJSONTyped(json: any, ignoreDiscriminator: boolean): ActionByEntityModel;
 export declare function ActionByEntityModelToJSON(value?: ActionByEntityModel | null): any;
-/**
-* @export
-* @enum {string}
-*/
-export declare enum ActionByEntityModelActionTypeEnum {
-    CASEACCEPT = "CASE_ACCEPT",
-    CASECOUNTERACCEPTED = "CASE_COUNTER_ACCEPTED",
-    CASECOUNTERDECLINED = "CASE_COUNTER_DECLINED",
-    CASECOUNTERINITIATED = "CASE_COUNTER_INITIATED",
-    CASECOUNTERWITHDRAWN = "CASE_COUNTER_WITHDRAWN",
-    CASEDECLINE = "CASE_DECLINE",
-    CITATIONDATAEXTRACTED = "CITATION_DATA_EXTRACTED",
-    COURTDATEREMOVED = "COURT_DATE_REMOVED",
-    COURTDATESCHEDULED = "COURT_DATE_SCHEDULED",
-    DISCOVERYRECEIVED = "DISCOVERY_RECEIVED",
-    DISCOVERYREQUESTED = "DISCOVERY_REQUESTED",
-    DISPUTEFILED = "DISPUTE_FILED",
-    DRIVERLICENSEREQUESTED = "DRIVER_LICENSE_REQUESTED",
-    FAILEDPAYMENTATTEMPT = "FAILED_PAYMENT_ATTEMPT",
-    NOTICEOFAPPEARANCEFILED = "NOTICE_OF_APPEARANCE_FILED",
-    OTHER = "OTHER",
-    OVERDUEBALANCEPAID = "OVERDUE_BALANCE_PAID",
-    REVIEWEDBYLAWFIRM = "REVIEWED_BY_LAWFIRM",
-    SOCIALMEDIAASK = "SOCIAL_MEDIA_ASK",
-    TICKETMAILEDTOCOURT = "TICKET_MAILED_TO_COURT"
-}
 /**
 * @export
 * @enum {string}

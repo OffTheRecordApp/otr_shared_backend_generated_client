@@ -9,4 +9,9 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-export {};
+export interface CaseActionTypeModel {
+    "id"?: number;
+    "name"?: string;
+    "rank"?: number;
+    "uiString"?: string;
+}

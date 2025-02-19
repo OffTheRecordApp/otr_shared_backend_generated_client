@@ -12,7 +12,7 @@
  * Do not edit the class manually.
  */
 import { exists } from '../runtime';
-import { AuthorModelFromJSON, AuthorModelToJSON, } from './';
+import { AuthorModelFromJSON, AuthorModelToJSON, CaseActionTypeModelFromJSON, CaseActionTypeModelToJSON, } from './';
 export function CaseActionDomainFromJSON(json) {
     return CaseActionDomainFromJSONTyped(json, false);
 }
@@ -24,7 +24,7 @@ export function CaseActionDomainFromJSONTyped(json, ignoreDiscriminator) {
         'actionDate': !exists(json, 'actionDate') ? undefined : (new Date(json['actionDate'])),
         'actionNote': !exists(json, 'actionNote') ? undefined : json['actionNote'],
         'actionReferenceId': !exists(json, 'actionReferenceId') ? undefined : json['actionReferenceId'],
-        'actionType': !exists(json, 'actionType') ? undefined : json['actionType'],
+        'actionType': !exists(json, 'actionType') ? undefined : CaseActionTypeModelFromJSON(json['actionType']),
         'author': !exists(json, 'author') ? undefined : AuthorModelFromJSON(json['author']),
         'authorId': !exists(json, 'authorId') ? undefined : json['authorId'],
         'authorName': !exists(json, 'authorName') ? undefined : json['authorName'],
@@ -47,7 +47,7 @@ export function CaseActionDomainToJSON(value) {
         'actionDate': value.actionDate === undefined ? undefined : (value.actionDate.toISOString()),
         'actionNote': value.actionNote,
         'actionReferenceId': value.actionReferenceId,
-        'actionType': value.actionType,
+        'actionType': CaseActionTypeModelToJSON(value.actionType),
         'author': AuthorModelToJSON(value.author),
         'authorId': value.authorId,
         'authorName': value.authorName,
@@ -59,30 +59,3 @@ export function CaseActionDomainToJSON(value) {
         'label2': value.label2,
     };
 }
-/**
-* @export
-* @enum {string}
-*/
-export var CaseActionDomainActionTypeEnum;
-(function (CaseActionDomainActionTypeEnum) {
-    CaseActionDomainActionTypeEnum["CASEACCEPT"] = "CASE_ACCEPT";
-    CaseActionDomainActionTypeEnum["CASECOUNTERACCEPTED"] = "CASE_COUNTER_ACCEPTED";
-    CaseActionDomainActionTypeEnum["CASECOUNTERDECLINED"] = "CASE_COUNTER_DECLINED";
-    CaseActionDomainActionTypeEnum["CASECOUNTERINITIATED"] = "CASE_COUNTER_INITIATED";
-    CaseActionDomainActionTypeEnum["CASECOUNTERWITHDRAWN"] = "CASE_COUNTER_WITHDRAWN";
-    CaseActionDomainActionTypeEnum["CASEDECLINE"] = "CASE_DECLINE";
-    CaseActionDomainActionTypeEnum["CITATIONDATAEXTRACTED"] = "CITATION_DATA_EXTRACTED";
-    CaseActionDomainActionTypeEnum["COURTDATEREMOVED"] = "COURT_DATE_REMOVED";
-    CaseActionDomainActionTypeEnum["COURTDATESCHEDULED"] = "COURT_DATE_SCHEDULED";
-    CaseActionDomainActionTypeEnum["DISCOVERYRECEIVED"] = "DISCOVERY_RECEIVED";
-    CaseActionDomainActionTypeEnum["DISCOVERYREQUESTED"] = "DISCOVERY_REQUESTED";
-    CaseActionDomainActionTypeEnum["DISPUTEFILED"] = "DISPUTE_FILED";
-    CaseActionDomainActionTypeEnum["DRIVERLICENSEREQUESTED"] = "DRIVER_LICENSE_REQUESTED";
-    CaseActionDomainActionTypeEnum["FAILEDPAYMENTATTEMPT"] = "FAILED_PAYMENT_ATTEMPT";
-    CaseActionDomainActionTypeEnum["NOTICEOFAPPEARANCEFILED"] = "NOTICE_OF_APPEARANCE_FILED";
-    CaseActionDomainActionTypeEnum["OTHER"] = "OTHER";
-    CaseActionDomainActionTypeEnum["OVERDUEBALANCEPAID"] = "OVERDUE_BALANCE_PAID";
-    CaseActionDomainActionTypeEnum["REVIEWEDBYLAWFIRM"] = "REVIEWED_BY_LAWFIRM";
-    CaseActionDomainActionTypeEnum["SOCIALMEDIAASK"] = "SOCIAL_MEDIA_ASK";
-    CaseActionDomainActionTypeEnum["TICKETMAILEDTOCOURT"] = "TICKET_MAILED_TO_COURT";
-})(CaseActionDomainActionTypeEnum || (CaseActionDomainActionTypeEnum = {}));

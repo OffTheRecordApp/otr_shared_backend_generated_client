@@ -14,7 +14,7 @@ export interface CaseActionDomain {
     "actionDate"?: string;
     "actionNote"?: string;
     "actionReferenceId"?: number;
-    "actionType"?: CaseActionDomain.ActionTypeEnum;
+    "actionType"?: models.CaseActionTypeModel;
     "author"?: models.AuthorModel;
     "authorId"?: number;
     "authorName"?: string;
@@ -24,28 +24,4 @@ export interface CaseActionDomain {
     "isDeleted"?: boolean;
     "label1"?: string;
     "label2"?: string;
-}
-export declare namespace CaseActionDomain {
-    enum ActionTypeEnum {
-        CASEACCEPT,
-        CASECOUNTERACCEPTED,
-        CASECOUNTERDECLINED,
-        CASECOUNTERINITIATED,
-        CASECOUNTERWITHDRAWN,
-        CASEDECLINE,
-        CITATIONDATAEXTRACTED,
-        COURTDATEREMOVED,
-        COURTDATESCHEDULED,
-        DISCOVERYRECEIVED,
-        DISCOVERYREQUESTED,
-        DISPUTEFILED,
-        DRIVERLICENSEREQUESTED,
-        FAILEDPAYMENTATTEMPT,
-        NOTICEOFAPPEARANCEFILED,
-        OTHER,
-        OVERDUEBALANCEPAID,
-        REVIEWEDBYLAWFIRM,
-        SOCIALMEDIAASK,
-        TICKETMAILEDTOCOURT
-    }
 }

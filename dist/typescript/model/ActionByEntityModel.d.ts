@@ -9,11 +9,12 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
+import * as models from './models';
 export interface ActionByEntityModel {
     "actionDateUtc"?: string;
     "actionId"?: number;
     "actionNote"?: string;
-    "actionType"?: ActionByEntityModel.ActionTypeEnum;
+    "actionType"?: models.CaseActionTypeModel;
     "authorFirstName"?: string;
     "authorLastName"?: string;
     "authorUserId"?: number;
@@ -26,28 +27,6 @@ export interface ActionByEntityModel {
     "profilePictureUrl"?: string;
 }
 export declare namespace ActionByEntityModel {
-    enum ActionTypeEnum {
-        CASEACCEPT,
-        CASECOUNTERACCEPTED,
-        CASECOUNTERDECLINED,
-        CASECOUNTERINITIATED,
-        CASECOUNTERWITHDRAWN,
-        CASEDECLINE,
-        CITATIONDATAEXTRACTED,
-        COURTDATEREMOVED,
-        COURTDATESCHEDULED,
-        DISCOVERYRECEIVED,
-        DISCOVERYREQUESTED,
-        DISPUTEFILED,
-        DRIVERLICENSEREQUESTED,
-        FAILEDPAYMENTATTEMPT,
-        NOTICEOFAPPEARANCEFILED,
-        OTHER,
-        OVERDUEBALANCEPAID,
-        REVIEWEDBYLAWFIRM,
-        SOCIALMEDIAASK,
-        TICKETMAILEDTOCOURT
-    }
     enum CaseStatusEnum {
         AMENDEDDOWNWITHINCLASS,
         AMENDEDFULLFINE,

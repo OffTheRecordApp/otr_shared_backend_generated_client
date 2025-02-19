@@ -84,6 +84,7 @@ export * from './CaptureChargeFromCasePaymentRequest';
 export * from './Case';
 export * from './CaseActionDomain';
 export * from './CaseActionRequestModel';
+export * from './CaseActionTypeModel';
 export * from './CaseAlert';
 export * from './CaseBookingsStats';
 export * from './CaseChargeResponsePojo';

@@ -9,35 +9,10 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
+import { CaseActionTypeModel } from './caseActionTypeModel';
 
 
 export interface GetCaseActionTypesResponse { 
-    caseActionTypes?: Array<GetCaseActionTypesResponse.CaseActionTypesEnum>;
+    caseActionTypes?: Array<CaseActionTypeModel>;
 }
-export namespace GetCaseActionTypesResponse {
-    export type CaseActionTypesEnum = 'CASE_ACCEPT' | 'CASE_COUNTER_ACCEPTED' | 'CASE_COUNTER_DECLINED' | 'CASE_COUNTER_INITIATED' | 'CASE_COUNTER_WITHDRAWN' | 'CASE_DECLINE' | 'CITATION_DATA_EXTRACTED' | 'COURT_DATE_REMOVED' | 'COURT_DATE_SCHEDULED' | 'DISCOVERY_RECEIVED' | 'DISCOVERY_REQUESTED' | 'DISPUTE_FILED' | 'DRIVER_LICENSE_REQUESTED' | 'FAILED_PAYMENT_ATTEMPT' | 'NOTICE_OF_APPEARANCE_FILED' | 'OTHER' | 'OVERDUE_BALANCE_PAID' | 'REVIEWED_BY_LAWFIRM' | 'SOCIAL_MEDIA_ASK' | 'TICKET_MAILED_TO_COURT';
-    export const CaseActionTypesEnum = {
-        CaseAccept: 'CASE_ACCEPT' as CaseActionTypesEnum,
-        CaseCounterAccepted: 'CASE_COUNTER_ACCEPTED' as CaseActionTypesEnum,
-        CaseCounterDeclined: 'CASE_COUNTER_DECLINED' as CaseActionTypesEnum,
-        CaseCounterInitiated: 'CASE_COUNTER_INITIATED' as CaseActionTypesEnum,
-        CaseCounterWithdrawn: 'CASE_COUNTER_WITHDRAWN' as CaseActionTypesEnum,
-        CaseDecline: 'CASE_DECLINE' as CaseActionTypesEnum,
-        CitationDataExtracted: 'CITATION_DATA_EXTRACTED' as CaseActionTypesEnum,
-        CourtDateRemoved: 'COURT_DATE_REMOVED' as CaseActionTypesEnum,
-        CourtDateScheduled: 'COURT_DATE_SCHEDULED' as CaseActionTypesEnum,
-        DiscoveryReceived: 'DISCOVERY_RECEIVED' as CaseActionTypesEnum,
-        DiscoveryRequested: 'DISCOVERY_REQUESTED' as CaseActionTypesEnum,
-        DisputeFiled: 'DISPUTE_FILED' as CaseActionTypesEnum,
-        DriverLicenseRequested: 'DRIVER_LICENSE_REQUESTED' as CaseActionTypesEnum,
-        FailedPaymentAttempt: 'FAILED_PAYMENT_ATTEMPT' as CaseActionTypesEnum,
-        NoticeOfAppearanceFiled: 'NOTICE_OF_APPEARANCE_FILED' as CaseActionTypesEnum,
-        Other: 'OTHER' as CaseActionTypesEnum,
-        OverdueBalancePaid: 'OVERDUE_BALANCE_PAID' as CaseActionTypesEnum,
-        ReviewedByLawfirm: 'REVIEWED_BY_LAWFIRM' as CaseActionTypesEnum,
-        SocialMediaAsk: 'SOCIAL_MEDIA_ASK' as CaseActionTypesEnum,
-        TicketMailedToCourt: 'TICKET_MAILED_TO_COURT' as CaseActionTypesEnum
-    };
-}
-
 

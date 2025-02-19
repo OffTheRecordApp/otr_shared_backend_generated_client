@@ -12,19 +12,21 @@
  * Do not edit the class manually.
  */
 import { exists } from '../runtime';
-import { CaseActionTypeModelFromJSON, CaseActionTypeModelToJSON, } from './';
-export function GetCaseActionTypesResponseFromJSON(json) {
-    return GetCaseActionTypesResponseFromJSONTyped(json, false);
+export function CaseActionTypeModelFromJSON(json) {
+    return CaseActionTypeModelFromJSONTyped(json, false);
 }
-export function GetCaseActionTypesResponseFromJSONTyped(json, ignoreDiscriminator) {
+export function CaseActionTypeModelFromJSONTyped(json, ignoreDiscriminator) {
     if ((json === undefined) || (json === null)) {
         return json;
     }
     return {
-        'caseActionTypes': !exists(json, 'caseActionTypes') ? undefined : (json['caseActionTypes'].map(CaseActionTypeModelFromJSON)),
+        'id': !exists(json, 'id') ? undefined : json['id'],
+        'name': !exists(json, 'name') ? undefined : json['name'],
+        'rank': !exists(json, 'rank') ? undefined : json['rank'],
+        'uiString': !exists(json, 'uiString') ? undefined : json['uiString'],
     };
 }
-export function GetCaseActionTypesResponseToJSON(value) {
+export function CaseActionTypeModelToJSON(value) {
     if (value === undefined) {
         return undefined;
     }
@@ -32,6 +34,9 @@ export function GetCaseActionTypesResponseToJSON(value) {
         return null;
     }
     return {
-        'caseActionTypes': value.caseActionTypes === undefined ? undefined : (value.caseActionTypes.map(CaseActionTypeModelToJSON)),
+        'id': value.id,
+        'name': value.name,
+        'rank': value.rank,
+        'uiString': value.uiString,
     };
 }

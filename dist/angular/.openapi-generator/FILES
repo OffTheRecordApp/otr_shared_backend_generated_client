@@ -208,6 +208,7 @@ model/captureChargeFromCasePaymentRequest.ts
 model/case.ts
 model/caseActionDomain.ts
 model/caseActionRequestModel.ts
+model/caseActionTypeModel.ts
 model/caseAlert.ts
 model/caseBookingsStats.ts
 model/caseChargeResponsePojo.ts

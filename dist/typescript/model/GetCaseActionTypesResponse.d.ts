@@ -9,30 +9,7 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
+import * as models from './models';
 export interface GetCaseActionTypesResponse {
-    "caseActionTypes"?: Array<GetCaseActionTypesResponse.CaseActionTypesEnum>;
-}
-export declare namespace GetCaseActionTypesResponse {
-    enum CaseActionTypesEnum {
-        CASEACCEPT,
-        CASECOUNTERACCEPTED,
-        CASECOUNTERDECLINED,
-        CASECOUNTERINITIATED,
-        CASECOUNTERWITHDRAWN,
-        CASEDECLINE,
-        CITATIONDATAEXTRACTED,
-        COURTDATEREMOVED,
-        COURTDATESCHEDULED,
-        DISCOVERYRECEIVED,
-        DISCOVERYREQUESTED,
-        DISPUTEFILED,
-        DRIVERLICENSEREQUESTED,
-        FAILEDPAYMENTATTEMPT,
-        NOTICEOFAPPEARANCEFILED,
-        OTHER,
-        OVERDUEBALANCEPAID,
-        REVIEWEDBYLAWFIRM,
-        SOCIALMEDIAASK,
-        TICKETMAILEDTOCOURT
-    }
+    "caseActionTypes"?: Array<models.CaseActionTypeModel>;
 }

@@ -12,6 +12,7 @@
  * Do not edit the class manually.
  */
 import { exists } from '../runtime';
+import { CaseActionTypeModelFromJSON, CaseActionTypeModelToJSON, } from './';
 export function ActionByEntityModelFromJSON(json) {
     return ActionByEntityModelFromJSONTyped(json, false);
 }
@@ -23,7 +24,7 @@ export function ActionByEntityModelFromJSONTyped(json, ignoreDiscriminator) {
         'actionDateUtc': !exists(json, 'actionDateUtc') ? undefined : (new Date(json['actionDateUtc'])),
         'actionId': !exists(json, 'actionId') ? undefined : json['actionId'],
         'actionNote': !exists(json, 'actionNote') ? undefined : json['actionNote'],
-        'actionType': !exists(json, 'actionType') ? undefined : json['actionType'],
+        'actionType': !exists(json, 'actionType') ? undefined : CaseActionTypeModelFromJSON(json['actionType']),
         'authorFirstName': !exists(json, 'authorFirstName') ? undefined : json['authorFirstName'],
         'authorLastName': !exists(json, 'authorLastName') ? undefined : json['authorLastName'],
         'authorUserId': !exists(json, 'authorUserId') ? undefined : json['authorUserId'],
@@ -47,7 +48,7 @@ export function ActionByEntityModelToJSON(value) {
         'actionDateUtc': value.actionDateUtc === undefined ? undefined : (value.actionDateUtc.toISOString()),
         'actionId': value.actionId,
         'actionNote': value.actionNote,
-        'actionType': value.actionType,
+        'actionType': CaseActionTypeModelToJSON(value.actionType),
         'authorFirstName': value.authorFirstName,
         'authorLastName': value.authorLastName,
         'authorUserId': value.authorUserId,
@@ -60,33 +61,6 @@ export function ActionByEntityModelToJSON(value) {
         'profilePictureUrl': value.profilePictureUrl,
     };
 }
-/**
-* @export
-* @enum {string}
-*/
-export var ActionByEntityModelActionTypeEnum;
-(function (ActionByEntityModelActionTypeEnum) {
-    ActionByEntityModelActionTypeEnum["CASEACCEPT"] = "CASE_ACCEPT";
-    ActionByEntityModelActionTypeEnum["CASECOUNTERACCEPTED"] = "CASE_COUNTER_ACCEPTED";
-    ActionByEntityModelActionTypeEnum["CASECOUNTERDECLINED"] = "CASE_COUNTER_DECLINED";
-    ActionByEntityModelActionTypeEnum["CASECOUNTERINITIATED"] = "CASE_COUNTER_INITIATED";
-    ActionByEntityModelActionTypeEnum["CASECOUNTERWITHDRAWN"] = "CASE_COUNTER_WITHDRAWN";
-    ActionByEntityModelActionTypeEnum["CASEDECLINE"] = "CASE_DECLINE";
-    ActionByEntityModelActionTypeEnum["CITATIONDATAEXTRACTED"] = "CITATION_DATA_EXTRACTED";
-    ActionByEntityModelActionTypeEnum["COURTDATEREMOVED"] = "COURT_DATE_REMOVED";
-    ActionByEntityModelActionTypeEnum["COURTDATESCHEDULED"] = "COURT_DATE_SCHEDULED";
-    ActionByEntityModelActionTypeEnum["DISCOVERYRECEIVED"] = "DISCOVERY_RECEIVED";
-    ActionByEntityModelActionTypeEnum["DISCOVERYREQUESTED"] = "DISCOVERY_REQUESTED";
-    ActionByEntityModelActionTypeEnum["DISPUTEFILED"] = "DISPUTE_FILED";
-    ActionByEntityModelActionTypeEnum["DRIVERLICENSEREQUESTED"] = "DRIVER_LICENSE_REQUESTED";
-    ActionByEntityModelActionTypeEnum["FAILEDPAYMENTATTEMPT"] = "FAILED_PAYMENT_ATTEMPT";
-    ActionByEntityModelActionTypeEnum["NOTICEOFAPPEARANCEFILED"] = "NOTICE_OF_APPEARANCE_FILED";
-    ActionByEntityModelActionTypeEnum["OTHER"] = "OTHER";
-    ActionByEntityModelActionTypeEnum["OVERDUEBALANCEPAID"] = "OVERDUE_BALANCE_PAID";
-    ActionByEntityModelActionTypeEnum["REVIEWEDBYLAWFIRM"] = "REVIEWED_BY_LAWFIRM";
-    ActionByEntityModelActionTypeEnum["SOCIALMEDIAASK"] = "SOCIAL_MEDIA_ASK";
-    ActionByEntityModelActionTypeEnum["TICKETMAILEDTOCOURT"] = "TICKET_MAILED_TO_COURT";
-})(ActionByEntityModelActionTypeEnum || (ActionByEntityModelActionTypeEnum = {}));
 /**
 * @export
 * @enum {string}

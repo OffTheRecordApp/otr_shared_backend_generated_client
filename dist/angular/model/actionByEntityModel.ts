@@ -9,13 +9,14 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
+import { CaseActionTypeModel } from './caseActionTypeModel';
 
 
 export interface ActionByEntityModel { 
     actionDateUtc?: string;
     actionId?: number;
     actionNote?: string;
-    actionType?: ActionByEntityModel.ActionTypeEnum;
+    actionType?: CaseActionTypeModel;
     authorFirstName?: string;
     authorLastName?: string;
     authorUserId?: number;
@@ -28,29 +29,6 @@ export interface ActionByEntityModel {
     profilePictureUrl?: string;
 }
 export namespace ActionByEntityModel {
-    export type ActionTypeEnum = 'CASE_ACCEPT' | 'CASE_COUNTER_ACCEPTED' | 'CASE_COUNTER_DECLINED' | 'CASE_COUNTER_INITIATED' | 'CASE_COUNTER_WITHDRAWN' | 'CASE_DECLINE' | 'CITATION_DATA_EXTRACTED' | 'COURT_DATE_REMOVED' | 'COURT_DATE_SCHEDULED' | 'DISCOVERY_RECEIVED' | 'DISCOVERY_REQUESTED' | 'DISPUTE_FILED' | 'DRIVER_LICENSE_REQUESTED' | 'FAILED_PAYMENT_ATTEMPT' | 'NOTICE_OF_APPEARANCE_FILED' | 'OTHER' | 'OVERDUE_BALANCE_PAID' | 'REVIEWED_BY_LAWFIRM' | 'SOCIAL_MEDIA_ASK' | 'TICKET_MAILED_TO_COURT';
-    export const ActionTypeEnum = {
-        CaseAccept: 'CASE_ACCEPT' as ActionTypeEnum,
-        CaseCounterAccepted: 'CASE_COUNTER_ACCEPTED' as ActionTypeEnum,
-        CaseCounterDeclined: 'CASE_COUNTER_DECLINED' as ActionTypeEnum,
-        CaseCounterInitiated: 'CASE_COUNTER_INITIATED' as ActionTypeEnum,
-        CaseCounterWithdrawn: 'CASE_COUNTER_WITHDRAWN' as ActionTypeEnum,
-        CaseDecline: 'CASE_DECLINE' as ActionTypeEnum,
-        CitationDataExtracted: 'CITATION_DATA_EXTRACTED' as ActionTypeEnum,
-        CourtDateRemoved: 'COURT_DATE_REMOVED' as ActionTypeEnum,
-        CourtDateScheduled: 'COURT_DATE_SCHEDULED' as ActionTypeEnum,
-        DiscoveryReceived: 'DISCOVERY_RECEIVED' as ActionTypeEnum,
-        DiscoveryRequested: 'DISCOVERY_REQUESTED' as ActionTypeEnum,
-        DisputeFiled: 'DISPUTE_FILED' as ActionTypeEnum,
-        DriverLicenseRequested: 'DRIVER_LICENSE_REQUESTED' as ActionTypeEnum,
-        FailedPaymentAttempt: 'FAILED_PAYMENT_ATTEMPT' as ActionTypeEnum,
-        NoticeOfAppearanceFiled: 'NOTICE_OF_APPEARANCE_FILED' as ActionTypeEnum,
-        Other: 'OTHER' as ActionTypeEnum,
-        OverdueBalancePaid: 'OVERDUE_BALANCE_PAID' as ActionTypeEnum,
-        ReviewedByLawfirm: 'REVIEWED_BY_LAWFIRM' as ActionTypeEnum,
-        SocialMediaAsk: 'SOCIAL_MEDIA_ASK' as ActionTypeEnum,
-        TicketMailedToCourt: 'TICKET_MAILED_TO_COURT' as ActionTypeEnum
-    };
     export type CaseStatusEnum = 'AMENDED_DOWN_WITHIN_CLASS' | 'AMENDED_FULL_FINE' | 'AMENDED_INCREASED_FINE' | 'AMENDED_NO_FINE' | 'AMENDED_REDUCED_FINE' | 'AMENDED_TO_INFRACTION' | 'AMENDED_TO_NMV' | 'CANCELLED_ATTORNEY_AT_FAULT' | 'CANCELLED_BY_LAWFIRM' | 'CANCELLED_BY_USER' | 'CANCELLED_DUPLICATE' | 'CANCELLED_NMV' | 'CANCELLED_NON_PAYMENT' | 'CANCELLED_NO_LAWFIRM' | 'CANCELLED_OVERDUE' | 'CANCELLED_TOO_SHORT_NOTICE' | 'CASE_IN_PROGRESS' | 'CLIENT_CONFIRMED' | 'CLIENT_CONFIRMED_UNPAID' | 'CLIENT_FIRED_LAWFIRM' | 'CLIENT_FORCED_LOSS' | 'CLIENT_PAID_FINE' | 'CLIENT_UNRESPONSIVE' | 'DEFERRED' | 'DISMISSED' | 'DIVERSION' | 'FEES_DISPUTED' | 'FINE_REDUCTION_ONLY' | 'LAWFIRM_WITHDRAWN' | 'LOST' | 'NO_LAWFIRM_AVAILABLE' | 'POINT_REDUCTION' | 'REFUSED_BY_LAWFIRM' | 'RESOLVED_NON_PAYMENT' | 'STALE' | 'TRAFFIC_SCHOOL' | 'UNCONFIRMED';
     export const CaseStatusEnum = {
         AmendedDownWithinClass: 'AMENDED_DOWN_WITHIN_CLASS' as CaseStatusEnum,
