@@ -40,3 +40,30 @@ export function CaseActionTypeModelToJSON(value) {
         'uiString': value.uiString,
     };
 }
+/**
+* @export
+* @enum {string}
+*/
+export var CaseActionTypeModelNameEnum;
+(function (CaseActionTypeModelNameEnum) {
+    CaseActionTypeModelNameEnum["CASEACCEPT"] = "CASE_ACCEPT";
+    CaseActionTypeModelNameEnum["CASECOUNTERACCEPTED"] = "CASE_COUNTER_ACCEPTED";
+    CaseActionTypeModelNameEnum["CASECOUNTERDECLINED"] = "CASE_COUNTER_DECLINED";
+    CaseActionTypeModelNameEnum["CASECOUNTERINITIATED"] = "CASE_COUNTER_INITIATED";
+    CaseActionTypeModelNameEnum["CASECOUNTERWITHDRAWN"] = "CASE_COUNTER_WITHDRAWN";
+    CaseActionTypeModelNameEnum["CASEDECLINE"] = "CASE_DECLINE";
+    CaseActionTypeModelNameEnum["CITATIONDATAEXTRACTED"] = "CITATION_DATA_EXTRACTED";
+    CaseActionTypeModelNameEnum["COURTDATEREMOVED"] = "COURT_DATE_REMOVED";
+    CaseActionTypeModelNameEnum["COURTDATESCHEDULED"] = "COURT_DATE_SCHEDULED";
+    CaseActionTypeModelNameEnum["DISCOVERYRECEIVED"] = "DISCOVERY_RECEIVED";
+    CaseActionTypeModelNameEnum["DISCOVERYREQUESTED"] = "DISCOVERY_REQUESTED";
+    CaseActionTypeModelNameEnum["DISPUTEFILED"] = "DISPUTE_FILED";
+    CaseActionTypeModelNameEnum["DRIVERLICENSEREQUESTED"] = "DRIVER_LICENSE_REQUESTED";
+    CaseActionTypeModelNameEnum["FAILEDPAYMENTATTEMPT"] = "FAILED_PAYMENT_ATTEMPT";
+    CaseActionTypeModelNameEnum["NOTICEOFAPPEARANCEFILED"] = "NOTICE_OF_APPEARANCE_FILED";
+    CaseActionTypeModelNameEnum["OTHER"] = "OTHER";
+    CaseActionTypeModelNameEnum["OVERDUEBALANCEPAID"] = "OVERDUE_BALANCE_PAID";
+    CaseActionTypeModelNameEnum["REVIEWEDBYLAWFIRM"] = "REVIEWED_BY_LAWFIRM";
+    CaseActionTypeModelNameEnum["SOCIALMEDIAASK"] = "SOCIAL_MEDIA_ASK";
+    CaseActionTypeModelNameEnum["TICKETMAILEDTOCOURT"] = "TICKET_MAILED_TO_COURT";
+})(CaseActionTypeModelNameEnum || (CaseActionTypeModelNameEnum = {}));

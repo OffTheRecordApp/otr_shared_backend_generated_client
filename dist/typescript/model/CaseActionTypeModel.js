@@ -9,4 +9,29 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-export {};
+export var CaseActionTypeModel;
+(function (CaseActionTypeModel) {
+    let NameEnum;
+    (function (NameEnum) {
+        NameEnum[NameEnum["CASEACCEPT"] = 'CASE_ACCEPT'] = "CASEACCEPT";
+        NameEnum[NameEnum["CASECOUNTERACCEPTED"] = 'CASE_COUNTER_ACCEPTED'] = "CASECOUNTERACCEPTED";
+        NameEnum[NameEnum["CASECOUNTERDECLINED"] = 'CASE_COUNTER_DECLINED'] = "CASECOUNTERDECLINED";
+        NameEnum[NameEnum["CASECOUNTERINITIATED"] = 'CASE_COUNTER_INITIATED'] = "CASECOUNTERINITIATED";
+        NameEnum[NameEnum["CASECOUNTERWITHDRAWN"] = 'CASE_COUNTER_WITHDRAWN'] = "CASECOUNTERWITHDRAWN";
+        NameEnum[NameEnum["CASEDECLINE"] = 'CASE_DECLINE'] = "CASEDECLINE";
+        NameEnum[NameEnum["CITATIONDATAEXTRACTED"] = 'CITATION_DATA_EXTRACTED'] = "CITATIONDATAEXTRACTED";
+        NameEnum[NameEnum["COURTDATEREMOVED"] = 'COURT_DATE_REMOVED'] = "COURTDATEREMOVED";
+        NameEnum[NameEnum["COURTDATESCHEDULED"] = 'COURT_DATE_SCHEDULED'] = "COURTDATESCHEDULED";
+        NameEnum[NameEnum["DISCOVERYRECEIVED"] = 'DISCOVERY_RECEIVED'] = "DISCOVERYRECEIVED";
+        NameEnum[NameEnum["DISCOVERYREQUESTED"] = 'DISCOVERY_REQUESTED'] = "DISCOVERYREQUESTED";
+        NameEnum[NameEnum["DISPUTEFILED"] = 'DISPUTE_FILED'] = "DISPUTEFILED";
+        NameEnum[NameEnum["DRIVERLICENSEREQUESTED"] = 'DRIVER_LICENSE_REQUESTED'] = "DRIVERLICENSEREQUESTED";
+        NameEnum[NameEnum["FAILEDPAYMENTATTEMPT"] = 'FAILED_PAYMENT_ATTEMPT'] = "FAILEDPAYMENTATTEMPT";
+        NameEnum[NameEnum["NOTICEOFAPPEARANCEFILED"] = 'NOTICE_OF_APPEARANCE_FILED'] = "NOTICEOFAPPEARANCEFILED";
+        NameEnum[NameEnum["OTHER"] = 'OTHER'] = "OTHER";
+        NameEnum[NameEnum["OVERDUEBALANCEPAID"] = 'OVERDUE_BALANCE_PAID'] = "OVERDUEBALANCEPAID";
+        NameEnum[NameEnum["REVIEWEDBYLAWFIRM"] = 'REVIEWED_BY_LAWFIRM'] = "REVIEWEDBYLAWFIRM";
+        NameEnum[NameEnum["SOCIALMEDIAASK"] = 'SOCIAL_MEDIA_ASK'] = "SOCIALMEDIAASK";
+        NameEnum[NameEnum["TICKETMAILEDTOCOURT"] = 'TICKET_MAILED_TO_COURT'] = "TICKETMAILEDTOCOURT";
+    })(NameEnum = CaseActionTypeModel.NameEnum || (CaseActionTypeModel.NameEnum = {}));
+})(CaseActionTypeModel || (CaseActionTypeModel = {}));

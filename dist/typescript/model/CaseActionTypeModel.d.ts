@@ -11,7 +11,31 @@
  */
 export interface CaseActionTypeModel {
     "id"?: number;
-    "name"?: string;
+    "name"?: CaseActionTypeModel.NameEnum;
     "rank"?: number;
     "uiString"?: string;
+}
+export declare namespace CaseActionTypeModel {
+    enum NameEnum {
+        CASEACCEPT,
+        CASECOUNTERACCEPTED,
+        CASECOUNTERDECLINED,
+        CASECOUNTERINITIATED,
+        CASECOUNTERWITHDRAWN,
+        CASEDECLINE,
+        CITATIONDATAEXTRACTED,
+        COURTDATEREMOVED,
+        COURTDATESCHEDULED,
+        DISCOVERYRECEIVED,
+        DISCOVERYREQUESTED,
+        DISPUTEFILED,
+        DRIVERLICENSEREQUESTED,
+        FAILEDPAYMENTATTEMPT,
+        NOTICEOFAPPEARANCEFILED,
+        OTHER,
+        OVERDUEBALANCEPAID,
+        REVIEWEDBYLAWFIRM,
+        SOCIALMEDIAASK,
+        TICKETMAILEDTOCOURT
+    }
 }

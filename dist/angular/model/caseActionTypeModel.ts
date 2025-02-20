@@ -13,8 +13,34 @@
 
 export interface CaseActionTypeModel { 
     id?: number;
-    name?: string;
+    name?: CaseActionTypeModel.NameEnum;
     rank?: number;
     uiString?: string;
 }
+export namespace CaseActionTypeModel {
+    export type NameEnum = 'CASE_ACCEPT' | 'CASE_COUNTER_ACCEPTED' | 'CASE_COUNTER_DECLINED' | 'CASE_COUNTER_INITIATED' | 'CASE_COUNTER_WITHDRAWN' | 'CASE_DECLINE' | 'CITATION_DATA_EXTRACTED' | 'COURT_DATE_REMOVED' | 'COURT_DATE_SCHEDULED' | 'DISCOVERY_RECEIVED' | 'DISCOVERY_REQUESTED' | 'DISPUTE_FILED' | 'DRIVER_LICENSE_REQUESTED' | 'FAILED_PAYMENT_ATTEMPT' | 'NOTICE_OF_APPEARANCE_FILED' | 'OTHER' | 'OVERDUE_BALANCE_PAID' | 'REVIEWED_BY_LAWFIRM' | 'SOCIAL_MEDIA_ASK' | 'TICKET_MAILED_TO_COURT';
+    export const NameEnum = {
+        CaseAccept: 'CASE_ACCEPT' as NameEnum,
+        CaseCounterAccepted: 'CASE_COUNTER_ACCEPTED' as NameEnum,
+        CaseCounterDeclined: 'CASE_COUNTER_DECLINED' as NameEnum,
+        CaseCounterInitiated: 'CASE_COUNTER_INITIATED' as NameEnum,
+        CaseCounterWithdrawn: 'CASE_COUNTER_WITHDRAWN' as NameEnum,
+        CaseDecline: 'CASE_DECLINE' as NameEnum,
+        CitationDataExtracted: 'CITATION_DATA_EXTRACTED' as NameEnum,
+        CourtDateRemoved: 'COURT_DATE_REMOVED' as NameEnum,
+        CourtDateScheduled: 'COURT_DATE_SCHEDULED' as NameEnum,
+        DiscoveryReceived: 'DISCOVERY_RECEIVED' as NameEnum,
+        DiscoveryRequested: 'DISCOVERY_REQUESTED' as NameEnum,
+        DisputeFiled: 'DISPUTE_FILED' as NameEnum,
+        DriverLicenseRequested: 'DRIVER_LICENSE_REQUESTED' as NameEnum,
+        FailedPaymentAttempt: 'FAILED_PAYMENT_ATTEMPT' as NameEnum,
+        NoticeOfAppearanceFiled: 'NOTICE_OF_APPEARANCE_FILED' as NameEnum,
+        Other: 'OTHER' as NameEnum,
+        OverdueBalancePaid: 'OVERDUE_BALANCE_PAID' as NameEnum,
+        ReviewedByLawfirm: 'REVIEWED_BY_LAWFIRM' as NameEnum,
+        SocialMediaAsk: 'SOCIAL_MEDIA_ASK' as NameEnum,
+        TicketMailedToCourt: 'TICKET_MAILED_TO_COURT' as NameEnum
+    };
+}
+
 
