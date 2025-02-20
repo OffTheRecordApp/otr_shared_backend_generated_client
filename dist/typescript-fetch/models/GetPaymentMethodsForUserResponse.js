@@ -12,7 +12,7 @@
  * Do not edit the class manually.
  */
 import { exists } from '../runtime';
-import { StripePaymentSourceDomainFromJSON, StripePaymentSourceDomainToJSON, } from './';
+import { StripeBankAccountDomainFromJSON, StripeBankAccountDomainToJSON, StripeCardDomainFromJSON, StripeCardDomainToJSON, StripePaymentSourceDomainFromJSON, StripePaymentSourceDomainToJSON, } from './';
 export function GetPaymentMethodsForUserResponseFromJSON(json) {
     return GetPaymentMethodsForUserResponseFromJSONTyped(json, false);
 }
@@ -21,6 +21,8 @@ export function GetPaymentMethodsForUserResponseFromJSONTyped(json, ignoreDiscri
         return json;
     }
     return {
+        'bankAccounts': !exists(json, 'bankAccounts') ? undefined : (json['bankAccounts'].map(StripeBankAccountDomainFromJSON)),
+        'cards': !exists(json, 'cards') ? undefined : (json['cards'].map(StripeCardDomainFromJSON)),
         'paymentMethods': !exists(json, 'paymentMethods') ? undefined : (json['paymentMethods'].map(StripePaymentSourceDomainFromJSON)),
         'totalRecords': !exists(json, 'totalRecords') ? undefined : json['totalRecords'],
     };
@@ -33,6 +35,8 @@ export function GetPaymentMethodsForUserResponseToJSON(value) {
         return null;
     }
     return {
+        'bankAccounts': value.bankAccounts === undefined ? undefined : (value.bankAccounts.map(StripeBankAccountDomainToJSON)),
+        'cards': value.cards === undefined ? undefined : (value.cards.map(StripeCardDomainToJSON)),
         'paymentMethods': value.paymentMethods === undefined ? undefined : (value.paymentMethods.map(StripePaymentSourceDomainToJSON)),
         'totalRecords': value.totalRecords,
     };

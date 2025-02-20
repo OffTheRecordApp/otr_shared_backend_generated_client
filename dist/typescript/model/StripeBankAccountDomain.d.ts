@@ -10,9 +10,13 @@
  * Do not edit the class manually.
  */
 import * as models from './models';
-export interface GetPaymentMethodsForUserResponse {
-    "bankAccounts"?: Array<models.StripeBankAccountDomain>;
-    "cards"?: Array<models.StripeCardDomain>;
-    "paymentMethods"?: Array<models.StripePaymentSourceDomain>;
-    "totalRecords"?: number;
+export interface StripeBankAccountDomain {
+    "bankName"?: string;
+    "country"?: string;
+    "creationDateUtc"?: models.Timestamp;
+    "id"?: string;
+    "isDefault"?: boolean;
+    "last4"?: string;
+    "object"?: string;
+    "status"?: string;
 }

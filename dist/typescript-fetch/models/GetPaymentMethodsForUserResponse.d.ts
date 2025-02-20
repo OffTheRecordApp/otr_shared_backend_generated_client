@@ -9,13 +9,25 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-import { StripePaymentSourceDomain } from './';
+import { StripeBankAccountDomain, StripeCardDomain, StripePaymentSourceDomain } from './';
 /**
  *
  * @export
  * @interface GetPaymentMethodsForUserResponse
  */
 export interface GetPaymentMethodsForUserResponse {
+    /**
+     *
+     * @type {Array<StripeBankAccountDomain>}
+     * @memberof GetPaymentMethodsForUserResponse
+     */
+    bankAccounts?: Array<StripeBankAccountDomain>;
+    /**
+     *
+     * @type {Array<StripeCardDomain>}
+     * @memberof GetPaymentMethodsForUserResponse
+     */
+    cards?: Array<StripeCardDomain>;
     /**
      *
      * @type {Array<StripePaymentSourceDomain>}

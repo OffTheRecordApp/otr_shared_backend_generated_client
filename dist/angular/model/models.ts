@@ -671,6 +671,7 @@ export * from './stripeApplicationFeeDomain';
 export * from './stripeApplicationFeeRefundDomain';
 export * from './stripeApplicationFeeRefundSyncResults';
 export * from './stripeApplicationFeeSyncResults';
+export * from './stripeBankAccountDomain';
 export * from './stripeCardDomain';
 export * from './stripeChargeDomain';
 export * from './stripeChargeSyncResults';

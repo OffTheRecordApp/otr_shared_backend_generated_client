@@ -796,6 +796,7 @@ model/stripeApplicationFeeDomain.ts
 model/stripeApplicationFeeRefundDomain.ts
 model/stripeApplicationFeeRefundSyncResults.ts
 model/stripeApplicationFeeSyncResults.ts
+model/stripeBankAccountDomain.ts
 model/stripeCardDomain.ts
 model/stripeChargeDomain.ts
 model/stripeChargeSyncResults.ts

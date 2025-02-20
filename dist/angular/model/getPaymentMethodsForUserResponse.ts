@@ -10,9 +10,13 @@
  * Do not edit the class manually.
  */
 import { StripePaymentSourceDomain } from './stripePaymentSourceDomain';
+import { StripeBankAccountDomain } from './stripeBankAccountDomain';
+import { StripeCardDomain } from './stripeCardDomain';
 
 
 export interface GetPaymentMethodsForUserResponse { 
+    bankAccounts?: Array<StripeBankAccountDomain>;
+    cards?: Array<StripeCardDomain>;
     paymentMethods?: Array<StripePaymentSourceDomain>;
     totalRecords?: number;
 }
