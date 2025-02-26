@@ -9,30 +9,9 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
+import * as models from './models';
 export interface CasePaymentBreakdownItemModel {
     "amount"?: number;
     "friendlyTitle"?: string;
-    "type"?: CasePaymentBreakdownItemModel.TypeEnum;
-}
-export declare namespace CasePaymentBreakdownItemModel {
-    enum TypeEnum {
-        ACCIDENTFEE,
-        BASELEGALFEE,
-        BONDFEE,
-        BOOKINGFEE,
-        CDLFEE,
-        COURTFEE,
-        DISPUTEFEE,
-        FINEPAYMENT,
-        FTAFEE,
-        INITIALSUBSCRIPTIONFEE,
-        LATEFEE,
-        MBGREFUND,
-        MVSFEE,
-        OTHER,
-        OTRCREDIT,
-        OTRSUBSCRIPTIONCREDIT,
-        PAYMENTPLANSERVICEFEE,
-        WARRANTFEE
-    }
+    "type"?: models.InvoiceLineItemModel;
 }

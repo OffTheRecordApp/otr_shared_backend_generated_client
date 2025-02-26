@@ -12,6 +12,7 @@
  * Do not edit the class manually.
  */
 import { exists } from '../runtime';
+import { InvoiceLineItemModelFromJSON, InvoiceLineItemModelToJSON, } from './';
 export function LineItemModelFromJSON(json) {
     return LineItemModelFromJSONTyped(json, false);
 }
@@ -24,7 +25,7 @@ export function LineItemModelFromJSONTyped(json, ignoreDiscriminator) {
         'feeAmount': !exists(json, 'feeAmount') ? undefined : json['feeAmount'],
         'feeDescription': !exists(json, 'feeDescription') ? undefined : json['feeDescription'],
         'lineItemOwner': !exists(json, 'lineItemOwner') ? undefined : json['lineItemOwner'],
-        'lineItemType': !exists(json, 'lineItemType') ? undefined : json['lineItemType'],
+        'lineItemType': !exists(json, 'lineItemType') ? undefined : InvoiceLineItemModelFromJSON(json['lineItemType']),
     };
 }
 export function LineItemModelToJSON(value) {
@@ -39,7 +40,7 @@ export function LineItemModelToJSON(value) {
         'feeAmount': value.feeAmount,
         'feeDescription': value.feeDescription,
         'lineItemOwner': value.lineItemOwner,
-        'lineItemType': value.lineItemType,
+        'lineItemType': InvoiceLineItemModelToJSON(value.lineItemType),
     };
 }
 /**
@@ -52,28 +53,3 @@ export var LineItemModelLineItemOwnerEnum;
     LineItemModelLineItemOwnerEnum["LAWFIRM"] = "LAWFIRM";
     LineItemModelLineItemOwnerEnum["OTR"] = "OTR";
 })(LineItemModelLineItemOwnerEnum || (LineItemModelLineItemOwnerEnum = {}));
-/**
-* @export
-* @enum {string}
-*/
-export var LineItemModelLineItemTypeEnum;
-(function (LineItemModelLineItemTypeEnum) {
-    LineItemModelLineItemTypeEnum["ACCIDENTFEE"] = "ACCIDENT_FEE";
-    LineItemModelLineItemTypeEnum["BASELEGALFEE"] = "BASE_LEGAL_FEE";
-    LineItemModelLineItemTypeEnum["BONDFEE"] = "BOND_FEE";
-    LineItemModelLineItemTypeEnum["BOOKINGFEE"] = "BOOKING_FEE";
-    LineItemModelLineItemTypeEnum["CDLFEE"] = "CDL_FEE";
-    LineItemModelLineItemTypeEnum["COURTFEE"] = "COURT_FEE";
-    LineItemModelLineItemTypeEnum["DISPUTEFEE"] = "DISPUTE_FEE";
-    LineItemModelLineItemTypeEnum["FINEPAYMENT"] = "FINE_PAYMENT";
-    LineItemModelLineItemTypeEnum["FTAFEE"] = "FTA_FEE";
-    LineItemModelLineItemTypeEnum["INITIALSUBSCRIPTIONFEE"] = "INITIAL_SUBSCRIPTION_FEE";
-    LineItemModelLineItemTypeEnum["LATEFEE"] = "LATE_FEE";
-    LineItemModelLineItemTypeEnum["MBGREFUND"] = "MBG_REFUND";
-    LineItemModelLineItemTypeEnum["MVSFEE"] = "MVS_FEE";
-    LineItemModelLineItemTypeEnum["OTHER"] = "OTHER";
-    LineItemModelLineItemTypeEnum["OTRCREDIT"] = "OTR_CREDIT";
-    LineItemModelLineItemTypeEnum["OTRSUBSCRIPTIONCREDIT"] = "OTR_SUBSCRIPTION_CREDIT";
-    LineItemModelLineItemTypeEnum["PAYMENTPLANSERVICEFEE"] = "PAYMENT_PLAN_SERVICE_FEE";
-    LineItemModelLineItemTypeEnum["WARRANTFEE"] = "WARRANT_FEE";
-})(LineItemModelLineItemTypeEnum || (LineItemModelLineItemTypeEnum = {}));

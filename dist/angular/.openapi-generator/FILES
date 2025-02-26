@@ -538,6 +538,7 @@ model/intercomSearchTicketsResponse.ts
 model/intercomTicketAttributes.ts
 model/inviteHouseholdMateRequest.ts
 model/inviteLawyerToLawfirmRequest.ts
+model/invoiceLineItemModel.ts
 model/isRefundEligibleResponse.ts
 model/isUserLoggedInResponse.ts
 model/lastLoginAttributes.ts

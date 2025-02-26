@@ -12,6 +12,7 @@
  * Do not edit the class manually.
  */
 import { exists } from '../runtime';
+import { InvoiceLineItemModelFromJSON, InvoiceLineItemModelToJSON, } from './';
 export function WorkflowLineItemModelFromJSON(json) {
     return WorkflowLineItemModelFromJSONTyped(json, false);
 }
@@ -23,7 +24,7 @@ export function WorkflowLineItemModelFromJSONTyped(json, ignoreDiscriminator) {
         'additionalDescription': !exists(json, 'additionalDescription') ? undefined : json['additionalDescription'],
         'lawfirmCaseId': !exists(json, 'lawfirmCaseId') ? undefined : json['lawfirmCaseId'],
         'lineItemFeeInCents': !exists(json, 'lineItemFeeInCents') ? undefined : json['lineItemFeeInCents'],
-        'lineItemType': !exists(json, 'lineItemType') ? undefined : json['lineItemType'],
+        'lineItemType': !exists(json, 'lineItemType') ? undefined : InvoiceLineItemModelFromJSON(json['lineItemType']),
         'recipient': !exists(json, 'recipient') ? undefined : json['recipient'],
     };
 }
@@ -38,35 +39,10 @@ export function WorkflowLineItemModelToJSON(value) {
         'additionalDescription': value.additionalDescription,
         'lawfirmCaseId': value.lawfirmCaseId,
         'lineItemFeeInCents': value.lineItemFeeInCents,
-        'lineItemType': value.lineItemType,
+        'lineItemType': InvoiceLineItemModelToJSON(value.lineItemType),
         'recipient': value.recipient,
     };
 }
-/**
-* @export
-* @enum {string}
-*/
-export var WorkflowLineItemModelLineItemTypeEnum;
-(function (WorkflowLineItemModelLineItemTypeEnum) {
-    WorkflowLineItemModelLineItemTypeEnum["ACCIDENTFEE"] = "ACCIDENT_FEE";
-    WorkflowLineItemModelLineItemTypeEnum["BASELEGALFEE"] = "BASE_LEGAL_FEE";
-    WorkflowLineItemModelLineItemTypeEnum["BONDFEE"] = "BOND_FEE";
-    WorkflowLineItemModelLineItemTypeEnum["BOOKINGFEE"] = "BOOKING_FEE";
-    WorkflowLineItemModelLineItemTypeEnum["CDLFEE"] = "CDL_FEE";
-    WorkflowLineItemModelLineItemTypeEnum["COURTFEE"] = "COURT_FEE";
-    WorkflowLineItemModelLineItemTypeEnum["DISPUTEFEE"] = "DISPUTE_FEE";
-    WorkflowLineItemModelLineItemTypeEnum["FINEPAYMENT"] = "FINE_PAYMENT";
-    WorkflowLineItemModelLineItemTypeEnum["FTAFEE"] = "FTA_FEE";
-    WorkflowLineItemModelLineItemTypeEnum["INITIALSUBSCRIPTIONFEE"] = "INITIAL_SUBSCRIPTION_FEE";
-    WorkflowLineItemModelLineItemTypeEnum["LATEFEE"] = "LATE_FEE";
-    WorkflowLineItemModelLineItemTypeEnum["MBGREFUND"] = "MBG_REFUND";
-    WorkflowLineItemModelLineItemTypeEnum["MVSFEE"] = "MVS_FEE";
-    WorkflowLineItemModelLineItemTypeEnum["OTHER"] = "OTHER";
-    WorkflowLineItemModelLineItemTypeEnum["OTRCREDIT"] = "OTR_CREDIT";
-    WorkflowLineItemModelLineItemTypeEnum["OTRSUBSCRIPTIONCREDIT"] = "OTR_SUBSCRIPTION_CREDIT";
-    WorkflowLineItemModelLineItemTypeEnum["PAYMENTPLANSERVICEFEE"] = "PAYMENT_PLAN_SERVICE_FEE";
-    WorkflowLineItemModelLineItemTypeEnum["WARRANTFEE"] = "WARRANT_FEE";
-})(WorkflowLineItemModelLineItemTypeEnum || (WorkflowLineItemModelLineItemTypeEnum = {}));
 /**
 * @export
 * @enum {string}

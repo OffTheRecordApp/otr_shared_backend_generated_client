@@ -9,34 +9,15 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
+import * as models from './models';
 export interface WorkflowLineItemModel {
     "additionalDescription"?: string;
     "lawfirmCaseId"?: number;
     "lineItemFeeInCents"?: number;
-    "lineItemType"?: WorkflowLineItemModel.LineItemTypeEnum;
+    "lineItemType"?: models.InvoiceLineItemModel;
     "recipient"?: WorkflowLineItemModel.RecipientEnum;
 }
 export declare namespace WorkflowLineItemModel {
-    enum LineItemTypeEnum {
-        ACCIDENTFEE,
-        BASELEGALFEE,
-        BONDFEE,
-        BOOKINGFEE,
-        CDLFEE,
-        COURTFEE,
-        DISPUTEFEE,
-        FINEPAYMENT,
-        FTAFEE,
-        INITIALSUBSCRIPTIONFEE,
-        LATEFEE,
-        MBGREFUND,
-        MVSFEE,
-        OTHER,
-        OTRCREDIT,
-        OTRSUBSCRIPTIONCREDIT,
-        PAYMENTPLANSERVICEFEE,
-        WARRANTFEE
-    }
     enum RecipientEnum {
         COURT,
         LAWFIRM,

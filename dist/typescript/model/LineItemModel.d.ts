@@ -9,37 +9,18 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
+import * as models from './models';
 export interface LineItemModel {
     "additionalDescription"?: string;
     "feeAmount"?: number;
     "feeDescription"?: string;
     "lineItemOwner"?: LineItemModel.LineItemOwnerEnum;
-    "lineItemType"?: LineItemModel.LineItemTypeEnum;
+    "lineItemType"?: models.InvoiceLineItemModel;
 }
 export declare namespace LineItemModel {
     enum LineItemOwnerEnum {
         COURT,
         LAWFIRM,
         OTR
-    }
-    enum LineItemTypeEnum {
-        ACCIDENTFEE,
-        BASELEGALFEE,
-        BONDFEE,
-        BOOKINGFEE,
-        CDLFEE,
-        COURTFEE,
-        DISPUTEFEE,
-        FINEPAYMENT,
-        FTAFEE,
-        INITIALSUBSCRIPTIONFEE,
-        LATEFEE,
-        MBGREFUND,
-        MVSFEE,
-        OTHER,
-        OTRCREDIT,
-        OTRSUBSCRIPTIONCREDIT,
-        PAYMENTPLANSERVICEFEE,
-        WARRANTFEE
     }
 }

@@ -12,6 +12,7 @@
  * Do not edit the class manually.
  */
 import { exists } from '../runtime';
+import { InvoiceLineItemModelFromJSON, InvoiceLineItemModelToJSON, } from './';
 export function MatchCaseLineItemModelFromJSON(json) {
     return MatchCaseLineItemModelFromJSONTyped(json, false);
 }
@@ -23,7 +24,7 @@ export function MatchCaseLineItemModelFromJSONTyped(json, ignoreDiscriminator) {
         'additionalDescription': !exists(json, 'additionalDescription') ? undefined : json['additionalDescription'],
         'lawfirmCaseId': !exists(json, 'lawfirmCaseId') ? undefined : json['lawfirmCaseId'],
         'lineItemFeeInCents': !exists(json, 'lineItemFeeInCents') ? undefined : json['lineItemFeeInCents'],
-        'lineItemType': !exists(json, 'lineItemType') ? undefined : json['lineItemType'],
+        'lineItemType': !exists(json, 'lineItemType') ? undefined : InvoiceLineItemModelFromJSON(json['lineItemType']),
         'recipient': !exists(json, 'recipient') ? undefined : json['recipient'],
     };
 }
@@ -38,35 +39,10 @@ export function MatchCaseLineItemModelToJSON(value) {
         'additionalDescription': value.additionalDescription,
         'lawfirmCaseId': value.lawfirmCaseId,
         'lineItemFeeInCents': value.lineItemFeeInCents,
-        'lineItemType': value.lineItemType,
+        'lineItemType': InvoiceLineItemModelToJSON(value.lineItemType),
         'recipient': value.recipient,
     };
 }
-/**
-* @export
-* @enum {string}
-*/
-export var MatchCaseLineItemModelLineItemTypeEnum;
-(function (MatchCaseLineItemModelLineItemTypeEnum) {
-    MatchCaseLineItemModelLineItemTypeEnum["ACCIDENTFEE"] = "ACCIDENT_FEE";
-    MatchCaseLineItemModelLineItemTypeEnum["BASELEGALFEE"] = "BASE_LEGAL_FEE";
-    MatchCaseLineItemModelLineItemTypeEnum["BONDFEE"] = "BOND_FEE";
-    MatchCaseLineItemModelLineItemTypeEnum["BOOKINGFEE"] = "BOOKING_FEE";
-    MatchCaseLineItemModelLineItemTypeEnum["CDLFEE"] = "CDL_FEE";
-    MatchCaseLineItemModelLineItemTypeEnum["COURTFEE"] = "COURT_FEE";
-    MatchCaseLineItemModelLineItemTypeEnum["DISPUTEFEE"] = "DISPUTE_FEE";
-    MatchCaseLineItemModelLineItemTypeEnum["FINEPAYMENT"] = "FINE_PAYMENT";
-    MatchCaseLineItemModelLineItemTypeEnum["FTAFEE"] = "FTA_FEE";
-    MatchCaseLineItemModelLineItemTypeEnum["INITIALSUBSCRIPTIONFEE"] = "INITIAL_SUBSCRIPTION_FEE";
-    MatchCaseLineItemModelLineItemTypeEnum["LATEFEE"] = "LATE_FEE";
-    MatchCaseLineItemModelLineItemTypeEnum["MBGREFUND"] = "MBG_REFUND";
-    MatchCaseLineItemModelLineItemTypeEnum["MVSFEE"] = "MVS_FEE";
-    MatchCaseLineItemModelLineItemTypeEnum["OTHER"] = "OTHER";
-    MatchCaseLineItemModelLineItemTypeEnum["OTRCREDIT"] = "OTR_CREDIT";
-    MatchCaseLineItemModelLineItemTypeEnum["OTRSUBSCRIPTIONCREDIT"] = "OTR_SUBSCRIPTION_CREDIT";
-    MatchCaseLineItemModelLineItemTypeEnum["PAYMENTPLANSERVICEFEE"] = "PAYMENT_PLAN_SERVICE_FEE";
-    MatchCaseLineItemModelLineItemTypeEnum["WARRANTFEE"] = "WARRANT_FEE";
-})(MatchCaseLineItemModelLineItemTypeEnum || (MatchCaseLineItemModelLineItemTypeEnum = {}));
 /**
 * @export
 * @enum {string}

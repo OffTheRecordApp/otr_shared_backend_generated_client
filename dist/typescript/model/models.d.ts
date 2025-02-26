@@ -414,6 +414,7 @@ export * from './IntercomSearchTicketsResponse';
 export * from './IntercomTicketAttributes';
 export * from './InviteHouseholdMateRequest';
 export * from './InviteLawyerToLawfirmRequest';
+export * from './InvoiceLineItemModel';
 export * from './IsRefundEligibleResponse';
 export * from './IsUserLoggedInResponse';
 export * from './LastLoginAttributes';

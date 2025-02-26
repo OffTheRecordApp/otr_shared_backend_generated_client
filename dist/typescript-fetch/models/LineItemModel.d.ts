@@ -9,6 +9,7 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
+import { InvoiceLineItemModel } from './';
 /**
  *
  * @export
@@ -41,10 +42,10 @@ export interface LineItemModel {
     lineItemOwner?: LineItemModelLineItemOwnerEnum;
     /**
      *
-     * @type {string}
+     * @type {InvoiceLineItemModel}
      * @memberof LineItemModel
      */
-    lineItemType?: LineItemModelLineItemTypeEnum;
+    lineItemType?: InvoiceLineItemModel;
 }
 export declare function LineItemModelFromJSON(json: any): LineItemModel;
 export declare function LineItemModelFromJSONTyped(json: any, ignoreDiscriminator: boolean): LineItemModel;
@@ -57,28 +58,4 @@ export declare enum LineItemModelLineItemOwnerEnum {
     COURT = "COURT",
     LAWFIRM = "LAWFIRM",
     OTR = "OTR"
-}
-/**
-* @export
-* @enum {string}
-*/
-export declare enum LineItemModelLineItemTypeEnum {
-    ACCIDENTFEE = "ACCIDENT_FEE",
-    BASELEGALFEE = "BASE_LEGAL_FEE",
-    BONDFEE = "BOND_FEE",
-    BOOKINGFEE = "BOOKING_FEE",
-    CDLFEE = "CDL_FEE",
-    COURTFEE = "COURT_FEE",
-    DISPUTEFEE = "DISPUTE_FEE",
-    FINEPAYMENT = "FINE_PAYMENT",
-    FTAFEE = "FTA_FEE",
-    INITIALSUBSCRIPTIONFEE = "INITIAL_SUBSCRIPTION_FEE",
-    LATEFEE = "LATE_FEE",
-    MBGREFUND = "MBG_REFUND",
-    MVSFEE = "MVS_FEE",
-    OTHER = "OTHER",
-    OTRCREDIT = "OTR_CREDIT",
-    OTRSUBSCRIPTIONCREDIT = "OTR_SUBSCRIPTION_CREDIT",
-    PAYMENTPLANSERVICEFEE = "PAYMENT_PLAN_SERVICE_FEE",
-    WARRANTFEE = "WARRANT_FEE"
 }

@@ -11,27 +11,6 @@
  */
 export var MatchCaseLineItemModel;
 (function (MatchCaseLineItemModel) {
-    let LineItemTypeEnum;
-    (function (LineItemTypeEnum) {
-        LineItemTypeEnum[LineItemTypeEnum["ACCIDENTFEE"] = 'ACCIDENT_FEE'] = "ACCIDENTFEE";
-        LineItemTypeEnum[LineItemTypeEnum["BASELEGALFEE"] = 'BASE_LEGAL_FEE'] = "BASELEGALFEE";
-        LineItemTypeEnum[LineItemTypeEnum["BONDFEE"] = 'BOND_FEE'] = "BONDFEE";
-        LineItemTypeEnum[LineItemTypeEnum["BOOKINGFEE"] = 'BOOKING_FEE'] = "BOOKINGFEE";
-        LineItemTypeEnum[LineItemTypeEnum["CDLFEE"] = 'CDL_FEE'] = "CDLFEE";
-        LineItemTypeEnum[LineItemTypeEnum["COURTFEE"] = 'COURT_FEE'] = "COURTFEE";
-        LineItemTypeEnum[LineItemTypeEnum["DISPUTEFEE"] = 'DISPUTE_FEE'] = "DISPUTEFEE";
-        LineItemTypeEnum[LineItemTypeEnum["FINEPAYMENT"] = 'FINE_PAYMENT'] = "FINEPAYMENT";
-        LineItemTypeEnum[LineItemTypeEnum["FTAFEE"] = 'FTA_FEE'] = "FTAFEE";
-        LineItemTypeEnum[LineItemTypeEnum["INITIALSUBSCRIPTIONFEE"] = 'INITIAL_SUBSCRIPTION_FEE'] = "INITIALSUBSCRIPTIONFEE";
-        LineItemTypeEnum[LineItemTypeEnum["LATEFEE"] = 'LATE_FEE'] = "LATEFEE";
-        LineItemTypeEnum[LineItemTypeEnum["MBGREFUND"] = 'MBG_REFUND'] = "MBGREFUND";
-        LineItemTypeEnum[LineItemTypeEnum["MVSFEE"] = 'MVS_FEE'] = "MVSFEE";
-        LineItemTypeEnum[LineItemTypeEnum["OTHER"] = 'OTHER'] = "OTHER";
-        LineItemTypeEnum[LineItemTypeEnum["OTRCREDIT"] = 'OTR_CREDIT'] = "OTRCREDIT";
-        LineItemTypeEnum[LineItemTypeEnum["OTRSUBSCRIPTIONCREDIT"] = 'OTR_SUBSCRIPTION_CREDIT'] = "OTRSUBSCRIPTIONCREDIT";
-        LineItemTypeEnum[LineItemTypeEnum["PAYMENTPLANSERVICEFEE"] = 'PAYMENT_PLAN_SERVICE_FEE'] = "PAYMENTPLANSERVICEFEE";
-        LineItemTypeEnum[LineItemTypeEnum["WARRANTFEE"] = 'WARRANT_FEE'] = "WARRANTFEE";
-    })(LineItemTypeEnum = MatchCaseLineItemModel.LineItemTypeEnum || (MatchCaseLineItemModel.LineItemTypeEnum = {}));
     let RecipientEnum;
     (function (RecipientEnum) {
         RecipientEnum[RecipientEnum["COURT"] = 'COURT'] = "COURT";
