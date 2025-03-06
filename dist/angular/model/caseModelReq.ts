@@ -11,6 +11,7 @@
  */
 import { LawfirmCaseModelReq } from './lawfirmCaseModelReq';
 import { SubscriptionDiscountEligibilityReq } from './subscriptionDiscountEligibilityReq';
+import { PaymentCardInput } from './paymentCardInput';
 import { CaseStatusDomain } from './caseStatusDomain';
 import { CancelationDetailsReq } from './cancelationDetailsReq';
 import { CaseViolationPenalty } from './caseViolationPenalty';
@@ -30,6 +31,7 @@ export interface CaseModelReq {
     cancelationDetails?: CancelationDetailsReq;
     cancelationReason?: string;
     cancellationExpiryDate?: TimestampReq;
+    cardInput?: PaymentCardInput;
     caseCancellationDate?: TimestampReq;
     caseCreationDate?: TimestampReq;
     caseId?: string;

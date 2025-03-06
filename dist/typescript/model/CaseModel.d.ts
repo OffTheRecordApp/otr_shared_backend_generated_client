@@ -18,6 +18,7 @@ export interface CaseModel {
     "cancelationDetails"?: models.CancelationDetails;
     "cancelationReason"?: string;
     "cancellationExpiryDate"?: models.Timestamp;
+    "cardInput"?: models.PaymentCardInput;
     "caseCancellationDate"?: models.Timestamp;
     "caseCreationDate"?: models.Timestamp;
     "caseId"?: string;

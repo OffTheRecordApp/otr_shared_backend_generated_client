@@ -544,6 +544,7 @@ export * from './oCRPredictionCaseResponse';
 export * from './oCRViolationModel';
 export * from './otherCase';
 export * from './outgoingContactDomain';
+export * from './paymentCardInput';
 export * from './paymentPlanTypeModel';
 export * from './paymentPlanTypeModelReq';
 export * from './paymentPlanTypeModelRes';

@@ -9,14 +9,9 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-import { CasePaymentBreakdownItemModel } from './casePaymentBreakdownItemModel';
 
 
-export interface CasePaymentModel { 
-    captureDateUtc?: string;
-    dueDate?: string;
-    dueNow?: boolean;
-    feeAmount?: number;
-    items?: Array<CasePaymentBreakdownItemModel>;
+export interface PaymentCardInput { 
+    last4?: string;
 }
 

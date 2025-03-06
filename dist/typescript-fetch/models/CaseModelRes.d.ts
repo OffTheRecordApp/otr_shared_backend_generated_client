@@ -9,7 +9,7 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-import { CancelationDetailsRes, CaseActionDomain, CaseStatusDomain, CaseViolationPenalty, CitationModelRes, LawfirmCaseModelRes, LetterOfEngagement, PaymentPlanTypeModelRes, SubscriptionDiscountEligibilityRes, TimestampRes, UserDomainRes } from './';
+import { CancelationDetailsRes, CaseActionDomain, CaseStatusDomain, CaseViolationPenalty, CitationModelRes, LawfirmCaseModelRes, LetterOfEngagement, PaymentCardInput, PaymentPlanTypeModelRes, SubscriptionDiscountEligibilityRes, TimestampRes, UserDomainRes } from './';
 /**
  *
  * @export
@@ -58,6 +58,12 @@ export interface CaseModelRes {
      * @memberof CaseModelRes
      */
     cancellationExpiryDate?: TimestampRes;
+    /**
+     *
+     * @type {PaymentCardInput}
+     * @memberof CaseModelRes
+     */
+    cardInput?: PaymentCardInput;
     /**
      *
      * @type {TimestampRes}

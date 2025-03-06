@@ -11,6 +11,7 @@
  */
 import { CitationModel } from './citationModel';
 import { LawfirmCaseModel } from './lawfirmCaseModel';
+import { PaymentCardInput } from './paymentCardInput';
 import { CaseStatusDomain } from './caseStatusDomain';
 import { CaseViolationPenalty } from './caseViolationPenalty';
 import { SubscriptionDiscountEligibility } from './subscriptionDiscountEligibility';
@@ -30,6 +31,7 @@ export interface CaseModel {
     cancelationDetails?: CancelationDetails;
     cancelationReason?: string;
     cancellationExpiryDate?: Timestamp;
+    cardInput?: PaymentCardInput;
     caseCancellationDate?: Timestamp;
     caseCreationDate?: Timestamp;
     caseId?: string;

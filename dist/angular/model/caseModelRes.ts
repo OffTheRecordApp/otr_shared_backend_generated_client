@@ -10,6 +10,7 @@
  * Do not edit the class manually.
  */
 import { LawfirmCaseModelRes } from './lawfirmCaseModelRes';
+import { PaymentCardInput } from './paymentCardInput';
 import { CaseStatusDomain } from './caseStatusDomain';
 import { UserDomainRes } from './userDomainRes';
 import { PaymentPlanTypeModelRes } from './paymentPlanTypeModelRes';
@@ -30,6 +31,7 @@ export interface CaseModelRes {
     cancelationDetails?: CancelationDetailsRes;
     cancelationReason?: string;
     cancellationExpiryDate?: TimestampRes;
+    cardInput?: PaymentCardInput;
     caseCancellationDate?: TimestampRes;
     caseCreationDate?: TimestampRes;
     caseId?: string;

@@ -669,6 +669,7 @@ model/oCRPredictionCaseResponse.ts
 model/oCRViolationModel.ts
 model/otherCase.ts
 model/outgoingContactDomain.ts
+model/paymentCardInput.ts
 model/paymentPlanTypeModel.ts
 model/paymentPlanTypeModelReq.ts
 model/paymentPlanTypeModelRes.ts

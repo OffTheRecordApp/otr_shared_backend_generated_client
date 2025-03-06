@@ -21,6 +21,7 @@ export function CasePaymentModelFromJSONTyped(json, ignoreDiscriminator) {
         return json;
     }
     return {
+        'captureDateUtc': !exists(json, 'captureDateUtc') ? undefined : (new Date(json['captureDateUtc'])),
         'dueDate': !exists(json, 'dueDate') ? undefined : (new Date(json['dueDate'])),
         'dueNow': !exists(json, 'dueNow') ? undefined : json['dueNow'],
         'feeAmount': !exists(json, 'feeAmount') ? undefined : json['feeAmount'],
@@ -35,6 +36,7 @@ export function CasePaymentModelToJSON(value) {
         return null;
     }
     return {
+        'captureDateUtc': value.captureDateUtc === undefined ? undefined : (value.captureDateUtc.toISOString()),
         'dueDate': value.dueDate === undefined ? undefined : (value.dueDate.toISOString()),
         'dueNow': value.dueNow,
         'feeAmount': value.feeAmount,

@@ -12,7 +12,7 @@
  * Do not edit the class manually.
  */
 import { exists } from '../runtime';
-import { CancelationDetailsReqFromJSON, CancelationDetailsReqToJSON, CaseActionDomainFromJSON, CaseActionDomainToJSON, CaseStatusDomainFromJSON, CaseStatusDomainToJSON, CaseViolationPenaltyFromJSON, CaseViolationPenaltyToJSON, CitationModelReqFromJSON, CitationModelReqToJSON, LawfirmCaseModelReqFromJSON, LawfirmCaseModelReqToJSON, LetterOfEngagementFromJSON, LetterOfEngagementToJSON, PaymentPlanTypeModelReqFromJSON, PaymentPlanTypeModelReqToJSON, SubscriptionDiscountEligibilityReqFromJSON, SubscriptionDiscountEligibilityReqToJSON, TimestampReqFromJSON, TimestampReqToJSON, UserDomainReqFromJSON, UserDomainReqToJSON, } from './';
+import { CancelationDetailsReqFromJSON, CancelationDetailsReqToJSON, CaseActionDomainFromJSON, CaseActionDomainToJSON, CaseStatusDomainFromJSON, CaseStatusDomainToJSON, CaseViolationPenaltyFromJSON, CaseViolationPenaltyToJSON, CitationModelReqFromJSON, CitationModelReqToJSON, LawfirmCaseModelReqFromJSON, LawfirmCaseModelReqToJSON, LetterOfEngagementFromJSON, LetterOfEngagementToJSON, PaymentCardInputFromJSON, PaymentCardInputToJSON, PaymentPlanTypeModelReqFromJSON, PaymentPlanTypeModelReqToJSON, SubscriptionDiscountEligibilityReqFromJSON, SubscriptionDiscountEligibilityReqToJSON, TimestampReqFromJSON, TimestampReqToJSON, UserDomainReqFromJSON, UserDomainReqToJSON, } from './';
 export function CaseModelReqFromJSON(json) {
     return CaseModelReqFromJSONTyped(json, false);
 }
@@ -28,6 +28,7 @@ export function CaseModelReqFromJSONTyped(json, ignoreDiscriminator) {
         'cancelationDetails': !exists(json, 'cancelationDetails') ? undefined : CancelationDetailsReqFromJSON(json['cancelationDetails']),
         'cancelationReason': !exists(json, 'cancelationReason') ? undefined : json['cancelationReason'],
         'cancellationExpiryDate': !exists(json, 'cancellationExpiryDate') ? undefined : TimestampReqFromJSON(json['cancellationExpiryDate']),
+        'cardInput': !exists(json, 'cardInput') ? undefined : PaymentCardInputFromJSON(json['cardInput']),
         'caseCancellationDate': !exists(json, 'caseCancellationDate') ? undefined : TimestampReqFromJSON(json['caseCancellationDate']),
         'caseCreationDate': !exists(json, 'caseCreationDate') ? undefined : TimestampReqFromJSON(json['caseCreationDate']),
         'caseId': !exists(json, 'caseId') ? undefined : json['caseId'],
@@ -68,6 +69,7 @@ export function CaseModelReqToJSON(value) {
         'cancelationDetails': CancelationDetailsReqToJSON(value.cancelationDetails),
         'cancelationReason': value.cancelationReason,
         'cancellationExpiryDate': TimestampReqToJSON(value.cancellationExpiryDate),
+        'cardInput': PaymentCardInputToJSON(value.cardInput),
         'caseCancellationDate': TimestampReqToJSON(value.caseCancellationDate),
         'caseCreationDate': TimestampReqToJSON(value.caseCreationDate),
         'caseId': value.caseId,

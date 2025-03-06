@@ -11,6 +11,7 @@
  */
 import * as models from './models';
 export interface CasePaymentModel {
+    "captureDateUtc"?: string;
     "dueDate"?: string;
     "dueNow"?: boolean;
     "feeAmount"?: number;
