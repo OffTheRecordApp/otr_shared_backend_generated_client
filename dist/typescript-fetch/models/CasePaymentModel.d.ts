@@ -36,6 +36,12 @@ export interface CasePaymentModel {
     dueNow?: boolean;
     /**
      *
+     * @type {Date}
+     * @memberof CasePaymentModel
+     */
+    expiryDateUtc?: Date;
+    /**
+     *
      * @type {number}
      * @memberof CasePaymentModel
      */

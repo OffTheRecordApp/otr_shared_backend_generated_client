@@ -14,6 +14,7 @@ export interface CasePaymentModel {
     "captureDateUtc"?: string;
     "dueDate"?: string;
     "dueNow"?: boolean;
+    "expiryDateUtc"?: string;
     "feeAmount"?: number;
     "items"?: Array<models.CasePaymentBreakdownItemModel>;
 }

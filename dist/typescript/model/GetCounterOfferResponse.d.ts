@@ -11,6 +11,7 @@
  */
 import * as models from './models';
 export interface GetCounterOfferResponse {
+    "author"?: models.AuthorModel;
     "counterOfferAmountInCents"?: number;
     "counterOfferDateUtc"?: string;
     "counterOfferId"?: number;

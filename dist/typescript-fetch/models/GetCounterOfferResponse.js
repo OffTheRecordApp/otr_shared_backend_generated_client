@@ -12,7 +12,7 @@
  * Do not edit the class manually.
  */
 import { exists } from '../runtime';
-import { CaseCounterOptionModelFromJSON, CaseCounterOptionModelToJSON, } from './';
+import { AuthorModelFromJSON, AuthorModelToJSON, CaseCounterOptionModelFromJSON, CaseCounterOptionModelToJSON, } from './';
 export function GetCounterOfferResponseFromJSON(json) {
     return GetCounterOfferResponseFromJSONTyped(json, false);
 }
@@ -21,6 +21,7 @@ export function GetCounterOfferResponseFromJSONTyped(json, ignoreDiscriminator) 
         return json;
     }
     return {
+        'author': !exists(json, 'author') ? undefined : AuthorModelFromJSON(json['author']),
         'counterOfferAmountInCents': !exists(json, 'counterOfferAmountInCents') ? undefined : json['counterOfferAmountInCents'],
         'counterOfferDateUtc': !exists(json, 'counterOfferDateUtc') ? undefined : (new Date(json['counterOfferDateUtc'])),
         'counterOfferId': !exists(json, 'counterOfferId') ? undefined : json['counterOfferId'],
@@ -46,6 +47,7 @@ export function GetCounterOfferResponseToJSON(value) {
         return null;
     }
     return {
+        'author': AuthorModelToJSON(value.author),
         'counterOfferAmountInCents': value.counterOfferAmountInCents,
         'counterOfferDateUtc': value.counterOfferDateUtc === undefined ? undefined : (value.counterOfferDateUtc.toISOString()),
         'counterOfferId': value.counterOfferId,

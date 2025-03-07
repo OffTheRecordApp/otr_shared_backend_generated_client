@@ -9,10 +9,12 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
+import { AuthorModel } from './authorModel';
 import { CaseCounterOptionModel } from './caseCounterOptionModel';
 
 
 export interface GetCounterOfferResponse { 
+    author?: AuthorModel;
     counterOfferAmountInCents?: number;
     counterOfferDateUtc?: string;
     counterOfferId?: number;

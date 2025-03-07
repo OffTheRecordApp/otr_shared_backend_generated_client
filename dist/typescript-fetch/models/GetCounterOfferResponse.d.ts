@@ -9,13 +9,19 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-import { CaseCounterOptionModel } from './';
+import { AuthorModel, CaseCounterOptionModel } from './';
 /**
  *
  * @export
  * @interface GetCounterOfferResponse
  */
 export interface GetCounterOfferResponse {
+    /**
+     *
+     * @type {AuthorModel}
+     * @memberof GetCounterOfferResponse
+     */
+    author?: AuthorModel;
     /**
      *
      * @type {number}
