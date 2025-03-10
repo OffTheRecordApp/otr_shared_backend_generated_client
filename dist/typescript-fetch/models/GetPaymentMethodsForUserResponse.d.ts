@@ -30,6 +30,12 @@ export interface GetPaymentMethodsForUserResponse {
     cards?: Array<StripeCardDomain>;
     /**
      *
+     * @type {boolean}
+     * @memberof GetPaymentMethodsForUserResponse
+     */
+    hasOutstandingPayments?: boolean;
+    /**
+     *
      * @type {Array<StripePaymentSourceDomain>}
      * @memberof GetPaymentMethodsForUserResponse
      */

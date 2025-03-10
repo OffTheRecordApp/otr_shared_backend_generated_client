@@ -23,6 +23,7 @@ export function GetPaymentMethodsForUserResponseFromJSONTyped(json, ignoreDiscri
     return {
         'bankAccounts': !exists(json, 'bankAccounts') ? undefined : (json['bankAccounts'].map(StripeBankAccountDomainFromJSON)),
         'cards': !exists(json, 'cards') ? undefined : (json['cards'].map(StripeCardDomainFromJSON)),
+        'hasOutstandingPayments': !exists(json, 'hasOutstandingPayments') ? undefined : json['hasOutstandingPayments'],
         'paymentMethods': !exists(json, 'paymentMethods') ? undefined : (json['paymentMethods'].map(StripePaymentSourceDomainFromJSON)),
         'totalRecords': !exists(json, 'totalRecords') ? undefined : json['totalRecords'],
     };
@@ -37,6 +38,7 @@ export function GetPaymentMethodsForUserResponseToJSON(value) {
     return {
         'bankAccounts': value.bankAccounts === undefined ? undefined : (value.bankAccounts.map(StripeBankAccountDomainToJSON)),
         'cards': value.cards === undefined ? undefined : (value.cards.map(StripeCardDomainToJSON)),
+        'hasOutstandingPayments': value.hasOutstandingPayments,
         'paymentMethods': value.paymentMethods === undefined ? undefined : (value.paymentMethods.map(StripePaymentSourceDomainToJSON)),
         'totalRecords': value.totalRecords,
     };

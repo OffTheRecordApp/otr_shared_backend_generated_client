@@ -17,6 +17,7 @@ import { StripeCardDomain } from './stripeCardDomain';
 export interface GetPaymentMethodsForUserResponse { 
     bankAccounts?: Array<StripeBankAccountDomain>;
     cards?: Array<StripeCardDomain>;
+    hasOutstandingPayments?: boolean;
     paymentMethods?: Array<StripePaymentSourceDomain>;
     totalRecords?: number;
 }

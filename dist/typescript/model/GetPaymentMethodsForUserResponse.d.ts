@@ -13,6 +13,7 @@ import * as models from './models';
 export interface GetPaymentMethodsForUserResponse {
     "bankAccounts"?: Array<models.StripeBankAccountDomain>;
     "cards"?: Array<models.StripeCardDomain>;
+    "hasOutstandingPayments"?: boolean;
     "paymentMethods"?: Array<models.StripePaymentSourceDomain>;
     "totalRecords"?: number;
 }
