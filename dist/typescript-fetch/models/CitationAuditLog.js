@@ -12,7 +12,7 @@
  * Do not edit the class manually.
  */
 import { exists } from '../runtime';
-import { AuditLogFromJSON, AuditLogToJSON, TimestampFromJSON, TimestampToJSON, } from './';
+import { AuditLogFromJSON, AuditLogToJSON, } from './';
 export function CitationAuditLogFromJSON(json) {
     return CitationAuditLogFromJSONTyped(json, false);
 }
@@ -23,7 +23,7 @@ export function CitationAuditLogFromJSONTyped(json, ignoreDiscriminator) {
     return {
         'auditLogType': !exists(json, 'auditLogType') ? undefined : json['auditLogType'],
         'citationId': !exists(json, 'citationId') ? undefined : json['citationId'],
-        'creationDateUTC': !exists(json, 'creationDateUTC') ? undefined : TimestampFromJSON(json['creationDateUTC']),
+        'eventDateUtc': !exists(json, 'eventDateUtc') ? undefined : (new Date(json['eventDateUtc'])),
         'isActive': !exists(json, 'isActive') ? undefined : json['isActive'],
         'logTrails': !exists(json, 'logTrails') ? undefined : (json['logTrails'].map(AuditLogFromJSON)),
     };
@@ -38,7 +38,7 @@ export function CitationAuditLogToJSON(value) {
     return {
         'auditLogType': value.auditLogType,
         'citationId': value.citationId,
-        'creationDateUTC': TimestampToJSON(value.creationDateUTC),
+        'eventDateUtc': value.eventDateUtc === undefined ? undefined : (value.eventDateUtc.toISOString()),
         'isActive': value.isActive,
         'logTrails': value.logTrails === undefined ? undefined : (value.logTrails.map(AuditLogToJSON)),
     };

@@ -9,7 +9,7 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-import { AuditLog, Timestamp } from './';
+import { AuditLog } from './';
 /**
  *
  * @export
@@ -30,10 +30,10 @@ export interface CitationAuditLog {
     citationId?: number;
     /**
      *
-     * @type {Timestamp}
+     * @type {Date}
      * @memberof CitationAuditLog
      */
-    creationDateUTC?: Timestamp;
+    eventDateUtc?: Date;
     /**
      *
      * @type {boolean}

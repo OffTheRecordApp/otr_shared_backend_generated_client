@@ -9,14 +9,13 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-import { Timestamp } from './timestamp';
 import { AuditLog } from './auditLog';
 
 
 export interface CitationAuditLog { 
     auditLogType?: CitationAuditLog.AuditLogTypeEnum;
     citationId?: number;
-    creationDateUTC?: Timestamp;
+    eventDateUtc?: string;
     isActive?: boolean;
     logTrails?: Array<AuditLog>;
 }

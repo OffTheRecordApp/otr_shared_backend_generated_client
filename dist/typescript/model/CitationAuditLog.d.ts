@@ -13,7 +13,7 @@ import * as models from './models';
 export interface CitationAuditLog {
     "auditLogType"?: CitationAuditLog.AuditLogTypeEnum;
     "citationId"?: number;
-    "creationDateUTC"?: models.Timestamp;
+    "eventDateUtc"?: string;
     "isActive"?: boolean;
     "logTrails"?: Array<models.AuditLog>;
 }
