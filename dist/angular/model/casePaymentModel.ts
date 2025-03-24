@@ -13,6 +13,7 @@ import { CasePaymentBreakdownItemModel } from './casePaymentBreakdownItemModel';
 
 
 export interface CasePaymentModel { 
+    authorizationDateUtc?: string;
     captureDateUtc?: string;
     dueDate?: string;
     dueNow?: boolean;

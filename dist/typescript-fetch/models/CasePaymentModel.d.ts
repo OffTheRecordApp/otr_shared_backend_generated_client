@@ -21,6 +21,12 @@ export interface CasePaymentModel {
      * @type {Date}
      * @memberof CasePaymentModel
      */
+    authorizationDateUtc?: Date;
+    /**
+     *
+     * @type {Date}
+     * @memberof CasePaymentModel
+     */
     captureDateUtc?: Date;
     /**
      *
