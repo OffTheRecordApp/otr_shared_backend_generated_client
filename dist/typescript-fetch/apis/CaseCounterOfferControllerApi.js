@@ -21,7 +21,7 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
     });
 };
 import * as runtime from '../runtime';
-import { AcceptCaseCounterRequestToJSON, DeclineCaseCounterRequestToJSON, GetCaseCounterOptionsResponseFromJSON, GetCounterOfferResponseFromJSON, InitiateCaseCounterRequestToJSON, InitiateCaseCounterResponseFromJSON, } from '../models';
+import { AcceptCaseCounterRequestToJSON, DeclineCaseCounterRequestToJSON, GenerateCounterOfferCasePaymentsRequestToJSON, GenerateCounterOfferCasePaymentsResponseFromJSON, GetCaseCounterOptionsResponseFromJSON, GetCounterOfferResponseFromJSON, InitiateCaseCounterRequestToJSON, InitiateCaseCounterResponseFromJSON, } from '../models';
 /**
  *
  */
@@ -91,6 +91,42 @@ export class CaseCounterOfferControllerApi extends runtime.BaseAPI {
     declineCaseCounterUsingPUT(requestParameters) {
         return __awaiter(this, void 0, void 0, function* () {
             yield this.declineCaseCounterUsingPUTRaw(requestParameters);
+        });
+    }
+    /**
+     * generateCounterOfferCasePayments
+     */
+    generateCounterOfferCasePaymentsUsingPOSTRaw(requestParameters) {
+        return __awaiter(this, void 0, void 0, function* () {
+            if (requestParameters.caseId === null || requestParameters.caseId === undefined) {
+                throw new runtime.RequiredError('caseId', 'Required parameter requestParameters.caseId was null or undefined when calling generateCounterOfferCasePaymentsUsingPOST.');
+            }
+            if (requestParameters.counterId === null || requestParameters.counterId === undefined) {
+                throw new runtime.RequiredError('counterId', 'Required parameter requestParameters.counterId was null or undefined when calling generateCounterOfferCasePaymentsUsingPOST.');
+            }
+            if (requestParameters.request === null || requestParameters.request === undefined) {
+                throw new runtime.RequiredError('request', 'Required parameter requestParameters.request was null or undefined when calling generateCounterOfferCasePaymentsUsingPOST.');
+            }
+            const queryParameters = {};
+            const headerParameters = {};
+            headerParameters['Content-Type'] = 'application/json';
+            const response = yield this.request({
+                path: `/api/cases/{caseId}/counters/{counterId}/generate-payment-plan`.replace(`{${"caseId"}}`, encodeURIComponent(String(requestParameters.caseId))).replace(`{${"counterId"}}`, encodeURIComponent(String(requestParameters.counterId))),
+                method: 'POST',
+                headers: headerParameters,
+                query: queryParameters,
+                body: GenerateCounterOfferCasePaymentsRequestToJSON(requestParameters.request),
+            });
+            return new runtime.JSONApiResponse(response, (jsonValue) => GenerateCounterOfferCasePaymentsResponseFromJSON(jsonValue));
+        });
+    }
+    /**
+     * generateCounterOfferCasePayments
+     */
+    generateCounterOfferCasePaymentsUsingPOST(requestParameters) {
+        return __awaiter(this, void 0, void 0, function* () {
+            const response = yield this.generateCounterOfferCasePaymentsUsingPOSTRaw(requestParameters);
+            return yield response.value();
         });
     }
     /**

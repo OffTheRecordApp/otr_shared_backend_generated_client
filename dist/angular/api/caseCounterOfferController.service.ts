@@ -23,6 +23,10 @@ import { AcceptCaseCounterRequest } from '../model/acceptCaseCounterRequest';
 // @ts-ignore
 import { DeclineCaseCounterRequest } from '../model/declineCaseCounterRequest';
 // @ts-ignore
+import { GenerateCounterOfferCasePaymentsRequest } from '../model/generateCounterOfferCasePaymentsRequest';
+// @ts-ignore
+import { GenerateCounterOfferCasePaymentsResponse } from '../model/generateCounterOfferCasePaymentsResponse';
+// @ts-ignore
 import { GetCaseCounterOptionsResponse } from '../model/getCaseCounterOptionsResponse';
 // @ts-ignore
 import { GetCounterOfferResponse } from '../model/getCounterOfferResponse';
@@ -236,6 +240,82 @@ export class CaseCounterOfferControllerService {
 
         let localVarPath = `/api/v1/cases/${this.configuration.encodeParam({name: "caseId", value: caseId, in: "path", style: "simple", explode: false, dataType: "string", dataFormat: undefined})}/counters/${this.configuration.encodeParam({name: "counterId", value: counterId, in: "path", style: "simple", explode: false, dataType: "number", dataFormat: "int64"})}/decline`;
         return this.httpClient.request<any>('put', `${this.configuration.basePath}${localVarPath}`,
+            {
+                context: localVarHttpContext,
+                body: request,
+                responseType: <any>responseType_,
+                withCredentials: this.configuration.withCredentials,
+                headers: localVarHeaders,
+                observe: observe,
+                reportProgress: reportProgress
+            }
+        );
+    }
+
+    /**
+     * generateCounterOfferCasePayments
+     * @param caseId caseId
+     * @param counterId counterId
+     * @param request request
+     * @param observe set whether or not to return the data Observable as the body, response or events. defaults to returning the body.
+     * @param reportProgress flag to report request and response progress.
+     */
+    public generateCounterOfferCasePaymentsUsingPOST(caseId: string, counterId: number, request: GenerateCounterOfferCasePaymentsRequest, observe?: 'body', reportProgress?: boolean, options?: {httpHeaderAccept?: '*/*', context?: HttpContext}): Observable<GenerateCounterOfferCasePaymentsResponse>;
+    public generateCounterOfferCasePaymentsUsingPOST(caseId: string, counterId: number, request: GenerateCounterOfferCasePaymentsRequest, observe?: 'response', reportProgress?: boolean, options?: {httpHeaderAccept?: '*/*', context?: HttpContext}): Observable<HttpResponse<GenerateCounterOfferCasePaymentsResponse>>;
+    public generateCounterOfferCasePaymentsUsingPOST(caseId: string, counterId: number, request: GenerateCounterOfferCasePaymentsRequest, observe?: 'events', reportProgress?: boolean, options?: {httpHeaderAccept?: '*/*', context?: HttpContext}): Observable<HttpEvent<GenerateCounterOfferCasePaymentsResponse>>;
+    public generateCounterOfferCasePaymentsUsingPOST(caseId: string, counterId: number, request: GenerateCounterOfferCasePaymentsRequest, observe: any = 'body', reportProgress: boolean = false, options?: {httpHeaderAccept?: '*/*', context?: HttpContext}): Observable<any> {
+        if (caseId === null || caseId === undefined) {
+            throw new Error('Required parameter caseId was null or undefined when calling generateCounterOfferCasePaymentsUsingPOST.');
+        }
+        if (counterId === null || counterId === undefined) {
+            throw new Error('Required parameter counterId was null or undefined when calling generateCounterOfferCasePaymentsUsingPOST.');
+        }
+        if (request === null || request === undefined) {
+            throw new Error('Required parameter request was null or undefined when calling generateCounterOfferCasePaymentsUsingPOST.');
+        }
+
+        let localVarHeaders = this.defaultHeaders;
+
+        let localVarHttpHeaderAcceptSelected: string | undefined = options && options.httpHeaderAccept;
+        if (localVarHttpHeaderAcceptSelected === undefined) {
+            // to determine the Accept header
+            const httpHeaderAccepts: string[] = [
+                '*/*'
+            ];
+            localVarHttpHeaderAcceptSelected = this.configuration.selectHeaderAccept(httpHeaderAccepts);
+        }
+        if (localVarHttpHeaderAcceptSelected !== undefined) {
+            localVarHeaders = localVarHeaders.set('Accept', localVarHttpHeaderAcceptSelected);
+        }
+
+        let localVarHttpContext: HttpContext | undefined = options && options.context;
+        if (localVarHttpContext === undefined) {
+            localVarHttpContext = new HttpContext();
+        }
+
+
+        // to determine the Content-Type header
+        const consumes: string[] = [
+            'application/json'
+        ];
+        const httpContentTypeSelected: string | undefined = this.configuration.selectHeaderContentType(consumes);
+        if (httpContentTypeSelected !== undefined) {
+            localVarHeaders = localVarHeaders.set('Content-Type', httpContentTypeSelected);
+        }
+
+        let responseType_: 'text' | 'json' | 'blob' = 'json';
+        if (localVarHttpHeaderAcceptSelected) {
+            if (localVarHttpHeaderAcceptSelected.startsWith('text')) {
+                responseType_ = 'text';
+            } else if (this.configuration.isJsonMime(localVarHttpHeaderAcceptSelected)) {
+                responseType_ = 'json';
+            } else {
+                responseType_ = 'blob';
+            }
+        }
+
+        let localVarPath = `/api/cases/${this.configuration.encodeParam({name: "caseId", value: caseId, in: "path", style: "simple", explode: false, dataType: "string", dataFormat: undefined})}/counters/${this.configuration.encodeParam({name: "counterId", value: counterId, in: "path", style: "simple", explode: false, dataType: "number", dataFormat: "int32"})}/generate-payment-plan`;
+        return this.httpClient.request<GenerateCounterOfferCasePaymentsResponse>('post', `${this.configuration.basePath}${localVarPath}`,
             {
                 context: localVarHttpContext,
                 body: request,

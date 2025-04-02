@@ -10,7 +10,7 @@
  * Do not edit the class manually.
  */
 import * as runtime from '../runtime';
-import { AcceptCaseCounterRequest, DeclineCaseCounterRequest, GetCaseCounterOptionsResponse, GetCounterOfferResponse, InitiateCaseCounterRequest, InitiateCaseCounterResponse } from '../models';
+import { AcceptCaseCounterRequest, DeclineCaseCounterRequest, GenerateCounterOfferCasePaymentsRequest, GenerateCounterOfferCasePaymentsResponse, GetCaseCounterOptionsResponse, GetCounterOfferResponse, InitiateCaseCounterRequest, InitiateCaseCounterResponse } from '../models';
 export interface AcceptCaseCounterUsingPUTRequest {
     caseId: string;
     counterId: number;
@@ -20,6 +20,11 @@ export interface DeclineCaseCounterUsingPUTRequest {
     caseId: string;
     counterId: number;
     request: DeclineCaseCounterRequest;
+}
+export interface GenerateCounterOfferCasePaymentsUsingPOSTRequest {
+    caseId: string;
+    counterId: number;
+    request: GenerateCounterOfferCasePaymentsRequest;
 }
 export interface GetCounterOfferByCounterIdUsingGETRequest {
     caseId: string;
@@ -56,6 +61,14 @@ export declare class CaseCounterOfferControllerApi extends runtime.BaseAPI {
      * declineCaseCounter
      */
     declineCaseCounterUsingPUT(requestParameters: DeclineCaseCounterUsingPUTRequest): Promise<void>;
+    /**
+     * generateCounterOfferCasePayments
+     */
+    generateCounterOfferCasePaymentsUsingPOSTRaw(requestParameters: GenerateCounterOfferCasePaymentsUsingPOSTRequest): Promise<runtime.ApiResponse<GenerateCounterOfferCasePaymentsResponse>>;
+    /**
+     * generateCounterOfferCasePayments
+     */
+    generateCounterOfferCasePaymentsUsingPOST(requestParameters: GenerateCounterOfferCasePaymentsUsingPOSTRequest): Promise<GenerateCounterOfferCasePaymentsResponse>;
     /**
      * getCaseCounterOptions
      */

@@ -253,6 +253,8 @@ export * from './FreshdeskAttachmentReq';
 export * from './FreshdeskAttachmentRes';
 export * from './FreshdeskTicketReferenceDomain';
 export * from './FreshdeskWebhookRequest';
+export * from './GenerateCounterOfferCasePaymentsRequest';
+export * from './GenerateCounterOfferCasePaymentsResponse';
 export * from './GenerateTemplateRequest';
 export * from './GenericAdminListRequest';
 export * from './GeoRatesRequest';

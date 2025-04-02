@@ -36,6 +36,14 @@ export declare class CaseCounterOfferControllerApi {
     declineCaseCounterUsingPUT(caseId: string, counterId: number, request: models.DeclineCaseCounterRequest, extraHttpRequestParams?: any): ng.IHttpPromise<{}>;
     /**
      *
+     * @summary generateCounterOfferCasePayments
+     * @param caseId caseId
+     * @param counterId counterId
+     * @param request request
+     */
+    generateCounterOfferCasePaymentsUsingPOST(caseId: string, counterId: number, request: models.GenerateCounterOfferCasePaymentsRequest, extraHttpRequestParams?: any): ng.IHttpPromise<models.GenerateCounterOfferCasePaymentsResponse>;
+    /**
+     *
      * @summary getCaseCounterOptions
      */
     getCaseCounterOptionsUsingGET(extraHttpRequestParams?: any): ng.IHttpPromise<models.GetCaseCounterOptionsResponse>;

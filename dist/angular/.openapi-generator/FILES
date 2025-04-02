@@ -377,6 +377,8 @@ model/freshdeskAttachmentReq.ts
 model/freshdeskAttachmentRes.ts
 model/freshdeskTicketReferenceDomain.ts
 model/freshdeskWebhookRequest.ts
+model/generateCounterOfferCasePaymentsRequest.ts
+model/generateCounterOfferCasePaymentsResponse.ts
 model/generateTemplateRequest.ts
 model/genericAdminListRequest.ts
 model/geoRatesRequest.ts

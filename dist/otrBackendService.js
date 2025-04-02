@@ -174,6 +174,59 @@ angular.module('otrBackendService', [])
                 return deferred.promise;
             };
             /**
+             * generateCounterOfferCasePayments
+             * @method
+             * @name OtrService#generateCounterOfferCasePaymentsUsingPOST
+             * @param {object} parameters - method options and parameters
+             * @param {string} parameters.caseId - caseId
+             * @param {integer} parameters.counterId - counterId
+             * @param {} parameters.request - request
+             */
+            OtrService.prototype.generateCounterOfferCasePaymentsUsingPOST = function(parameters) {
+                if (parameters === undefined) {
+                    parameters = {};
+                }
+                var deferred = $q.defer();
+                var domain = this.domain,
+                    path = '/api/cases/{caseId}/counters/{counterId}/generate-payment-plan';
+                var body = {},
+                    queryParameters = {},
+                    headers = {},
+                    form = {};
+
+                headers['Accept'] = ['*/*'];
+                headers['Content-Type'] = ['application/json'];
+
+                path = path.replace('{caseId}', parameters['caseId']);
+
+                if (parameters['caseId'] === undefined) {
+                    deferred.reject(new Error('Missing required  parameter: caseId'));
+                    return deferred.promise;
+                }
+
+                path = path.replace('{counterId}', parameters['counterId']);
+
+                if (parameters['counterId'] === undefined) {
+                    deferred.reject(new Error('Missing required  parameter: counterId'));
+                    return deferred.promise;
+                }
+
+                if (parameters['request'] !== undefined) {
+                    body = parameters['request'];
+                }
+
+                if (parameters['request'] === undefined) {
+                    deferred.reject(new Error('Missing required  parameter: request'));
+                    return deferred.promise;
+                }
+
+                queryParameters = mergeQueryParams(parameters, queryParameters);
+
+                this.request('POST', domain + path, parameters, body, headers, queryParameters, form, deferred);
+
+                return deferred.promise;
+            };
+            /**
              * listActivityFeed
              * @method
              * @name OtrService#listActivityFeedUsingGET

@@ -92,6 +92,43 @@ export class CaseCounterOfferControllerApi {
     }
     /**
      *
+     * @summary generateCounterOfferCasePayments
+     * @param caseId caseId
+     * @param counterId counterId
+     * @param request request
+     */
+    generateCounterOfferCasePaymentsUsingPOST(caseId, counterId, request, extraHttpRequestParams) {
+        const localVarPath = this.basePath + '/api/cases/{caseId}/counters/{counterId}/generate-payment-plan'
+            .replace('{' + 'caseId' + '}', encodeURIComponent(String(caseId)))
+            .replace('{' + 'counterId' + '}', encodeURIComponent(String(counterId)));
+        let queryParameters = {};
+        let headerParams = Object.assign({}, this.defaultHeaders);
+        // verify required parameter 'caseId' is not null or undefined
+        if (caseId === null || caseId === undefined) {
+            throw new Error('Required parameter caseId was null or undefined when calling generateCounterOfferCasePaymentsUsingPOST.');
+        }
+        // verify required parameter 'counterId' is not null or undefined
+        if (counterId === null || counterId === undefined) {
+            throw new Error('Required parameter counterId was null or undefined when calling generateCounterOfferCasePaymentsUsingPOST.');
+        }
+        // verify required parameter 'request' is not null or undefined
+        if (request === null || request === undefined) {
+            throw new Error('Required parameter request was null or undefined when calling generateCounterOfferCasePaymentsUsingPOST.');
+        }
+        let httpRequestParams = {
+            method: 'POST',
+            url: localVarPath,
+            data: request,
+            params: queryParameters,
+            headers: headerParams
+        };
+        if (extraHttpRequestParams) {
+            httpRequestParams = Object.assign(httpRequestParams, extraHttpRequestParams);
+        }
+        return this.$http(httpRequestParams);
+    }
+    /**
+     *
      * @summary getCaseCounterOptions
      */
     getCaseCounterOptionsUsingGET(extraHttpRequestParams) {
