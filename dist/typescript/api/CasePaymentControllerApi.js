@@ -358,6 +358,45 @@ export class CasePaymentControllerApi {
     }
     /**
      *
+     * @summary saveCasePaymentPlan
+     * @param caseId caseId
+     * @param paymentPlanTypeId paymentPlanTypeId
+     * @param period period
+     * @param productId productId
+     */
+    saveCasePaymentPlanUsingPOST(caseId, paymentPlanTypeId, period, productId, extraHttpRequestParams) {
+        const localVarPath = this.basePath + '/api/v1/cases/{caseId}/payment-plans/{paymentPlanTypeId}'
+            .replace('{' + 'caseId' + '}', encodeURIComponent(String(caseId)))
+            .replace('{' + 'paymentPlanTypeId' + '}', encodeURIComponent(String(paymentPlanTypeId)));
+        let queryParameters = {};
+        let headerParams = Object.assign({}, this.defaultHeaders);
+        // verify required parameter 'caseId' is not null or undefined
+        if (caseId === null || caseId === undefined) {
+            throw new Error('Required parameter caseId was null or undefined when calling saveCasePaymentPlanUsingPOST.');
+        }
+        // verify required parameter 'paymentPlanTypeId' is not null or undefined
+        if (paymentPlanTypeId === null || paymentPlanTypeId === undefined) {
+            throw new Error('Required parameter paymentPlanTypeId was null or undefined when calling saveCasePaymentPlanUsingPOST.');
+        }
+        if (period !== undefined) {
+            queryParameters['period'] = period;
+        }
+        if (productId !== undefined) {
+            queryParameters['productId'] = productId;
+        }
+        let httpRequestParams = {
+            method: 'POST',
+            url: localVarPath,
+            params: queryParameters,
+            headers: headerParams
+        };
+        if (extraHttpRequestParams) {
+            httpRequestParams = Object.assign(httpRequestParams, extraHttpRequestParams);
+        }
+        return this.$http(httpRequestParams);
+    }
+    /**
+     *
      * @summary scheduleNewPayment
      * @param caseId caseId
      * @param request request

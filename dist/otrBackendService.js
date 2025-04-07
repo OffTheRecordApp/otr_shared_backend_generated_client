@@ -3136,6 +3136,59 @@ angular.module('otrBackendService', [])
                 return deferred.promise;
             };
             /**
+             * saveCasePaymentPlan
+             * @method
+             * @name OtrService#saveCasePaymentPlanUsingPOST
+             * @param {object} parameters - method options and parameters
+             * @param {string} parameters.caseId - caseId
+             * @param {string} parameters.paymentPlanTypeId - paymentPlanTypeId
+             * @param {string} parameters.period - period
+             * @param {string} parameters.productId - productId
+             */
+            OtrService.prototype.saveCasePaymentPlanUsingPOST = function(parameters) {
+                if (parameters === undefined) {
+                    parameters = {};
+                }
+                var deferred = $q.defer();
+                var domain = this.domain,
+                    path = '/api/v1/cases/{caseId}/payment-plans/{paymentPlanTypeId}';
+                var body = {},
+                    queryParameters = {},
+                    headers = {},
+                    form = {};
+
+                headers['Accept'] = ['*/*'];
+                headers['Content-Type'] = ['application/json'];
+
+                path = path.replace('{caseId}', parameters['caseId']);
+
+                if (parameters['caseId'] === undefined) {
+                    deferred.reject(new Error('Missing required  parameter: caseId'));
+                    return deferred.promise;
+                }
+
+                path = path.replace('{paymentPlanTypeId}', parameters['paymentPlanTypeId']);
+
+                if (parameters['paymentPlanTypeId'] === undefined) {
+                    deferred.reject(new Error('Missing required  parameter: paymentPlanTypeId'));
+                    return deferred.promise;
+                }
+
+                if (parameters['period'] !== undefined) {
+                    queryParameters['period'] = parameters['period'];
+                }
+
+                if (parameters['productId'] !== undefined) {
+                    queryParameters['productId'] = parameters['productId'];
+                }
+
+                queryParameters = mergeQueryParams(parameters, queryParameters);
+
+                this.request('POST', domain + path, parameters, body, headers, queryParameters, form, deferred);
+
+                return deferred.promise;
+            };
+            /**
              * getCasePayments
              * @method
              * @name OtrService#getCasePaymentsUsingGET

@@ -57,6 +57,12 @@ export interface ListCostItemsForCustomerUsingGETRequest {
     period?: ListCostItemsForCustomerUsingGETPeriodEnum;
     productId?: string;
 }
+export interface SaveCasePaymentPlanUsingPOSTRequest {
+    caseId: string;
+    paymentPlanTypeId: string;
+    period?: SaveCasePaymentPlanUsingPOSTPeriodEnum;
+    productId?: string;
+}
 export interface ScheduleNewPaymentUsingPOSTRequest {
     caseId: string;
     request: ScheduleNewPaymentRequest;
@@ -158,6 +164,14 @@ export declare class CasePaymentControllerApi extends runtime.BaseAPI {
      */
     listCostItemsForCustomerUsingGET(requestParameters: ListCostItemsForCustomerUsingGETRequest): Promise<ListCostItemsForCustomerResponse>;
     /**
+     * saveCasePaymentPlan
+     */
+    saveCasePaymentPlanUsingPOSTRaw(requestParameters: SaveCasePaymentPlanUsingPOSTRequest): Promise<runtime.ApiResponse<ListCostItemsForCustomerResponse>>;
+    /**
+     * saveCasePaymentPlan
+     */
+    saveCasePaymentPlanUsingPOST(requestParameters: SaveCasePaymentPlanUsingPOSTRequest): Promise<ListCostItemsForCustomerResponse>;
+    /**
      * scheduleNewPayment
      */
     scheduleNewPaymentUsingPOSTRaw(requestParameters: ScheduleNewPaymentUsingPOSTRequest): Promise<runtime.ApiResponse<void>>;
@@ -206,6 +220,17 @@ export declare enum GenerateCasePaymentPlanUsingGETPeriodEnum {
     * @enum {string}
     */
 export declare enum ListCostItemsForCustomerUsingGETPeriodEnum {
+    DAILY = "DAILY",
+    MONTHLY = "MONTHLY",
+    QUARTERLY = "QUARTERLY",
+    WEEKLY = "WEEKLY",
+    YEARLY = "YEARLY"
+}
+/**
+    * @export
+    * @enum {string}
+    */
+export declare enum SaveCasePaymentPlanUsingPOSTPeriodEnum {
     DAILY = "DAILY",
     MONTHLY = "MONTHLY",
     QUARTERLY = "QUARTERLY",

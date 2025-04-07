@@ -364,6 +364,43 @@ export class CasePaymentControllerApi extends runtime.BaseAPI {
         });
     }
     /**
+     * saveCasePaymentPlan
+     */
+    saveCasePaymentPlanUsingPOSTRaw(requestParameters) {
+        return __awaiter(this, void 0, void 0, function* () {
+            if (requestParameters.caseId === null || requestParameters.caseId === undefined) {
+                throw new runtime.RequiredError('caseId', 'Required parameter requestParameters.caseId was null or undefined when calling saveCasePaymentPlanUsingPOST.');
+            }
+            if (requestParameters.paymentPlanTypeId === null || requestParameters.paymentPlanTypeId === undefined) {
+                throw new runtime.RequiredError('paymentPlanTypeId', 'Required parameter requestParameters.paymentPlanTypeId was null or undefined when calling saveCasePaymentPlanUsingPOST.');
+            }
+            const queryParameters = {};
+            if (requestParameters.period !== undefined) {
+                queryParameters['period'] = requestParameters.period;
+            }
+            if (requestParameters.productId !== undefined) {
+                queryParameters['productId'] = requestParameters.productId;
+            }
+            const headerParameters = {};
+            const response = yield this.request({
+                path: `/api/v1/cases/{caseId}/payment-plans/{paymentPlanTypeId}`.replace(`{${"caseId"}}`, encodeURIComponent(String(requestParameters.caseId))).replace(`{${"paymentPlanTypeId"}}`, encodeURIComponent(String(requestParameters.paymentPlanTypeId))),
+                method: 'POST',
+                headers: headerParameters,
+                query: queryParameters,
+            });
+            return new runtime.JSONApiResponse(response, (jsonValue) => ListCostItemsForCustomerResponseFromJSON(jsonValue));
+        });
+    }
+    /**
+     * saveCasePaymentPlan
+     */
+    saveCasePaymentPlanUsingPOST(requestParameters) {
+        return __awaiter(this, void 0, void 0, function* () {
+            const response = yield this.saveCasePaymentPlanUsingPOSTRaw(requestParameters);
+            return yield response.value();
+        });
+    }
+    /**
      * scheduleNewPayment
      */
     scheduleNewPaymentUsingPOSTRaw(requestParameters) {
@@ -517,6 +554,18 @@ export var ListCostItemsForCustomerUsingGETPeriodEnum;
     ListCostItemsForCustomerUsingGETPeriodEnum["WEEKLY"] = "WEEKLY";
     ListCostItemsForCustomerUsingGETPeriodEnum["YEARLY"] = "YEARLY";
 })(ListCostItemsForCustomerUsingGETPeriodEnum || (ListCostItemsForCustomerUsingGETPeriodEnum = {}));
+/**
+    * @export
+    * @enum {string}
+    */
+export var SaveCasePaymentPlanUsingPOSTPeriodEnum;
+(function (SaveCasePaymentPlanUsingPOSTPeriodEnum) {
+    SaveCasePaymentPlanUsingPOSTPeriodEnum["DAILY"] = "DAILY";
+    SaveCasePaymentPlanUsingPOSTPeriodEnum["MONTHLY"] = "MONTHLY";
+    SaveCasePaymentPlanUsingPOSTPeriodEnum["QUARTERLY"] = "QUARTERLY";
+    SaveCasePaymentPlanUsingPOSTPeriodEnum["WEEKLY"] = "WEEKLY";
+    SaveCasePaymentPlanUsingPOSTPeriodEnum["YEARLY"] = "YEARLY";
+})(SaveCasePaymentPlanUsingPOSTPeriodEnum || (SaveCasePaymentPlanUsingPOSTPeriodEnum = {}));
 /**
     * @export
     * @enum {string}
