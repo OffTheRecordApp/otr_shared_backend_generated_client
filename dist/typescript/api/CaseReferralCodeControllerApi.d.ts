@@ -32,4 +32,11 @@ export declare class CaseReferralCodeControllerApi {
      * @param codeId codeId
      */
     removeReferralCodeFromCaseUsingDELETE(caseId: string, codeId: string, extraHttpRequestParams?: any): ng.IHttpPromise<{}>;
+    /**
+     *
+     * @summary removeReferralCodeFromCaseV2
+     * @param caseId caseId
+     * @param codeId codeId
+     */
+    removeReferralCodeFromCaseV2UsingDELETE(caseId: string, codeId: string, extraHttpRequestParams?: any): ng.IHttpPromise<{}>;
 }
