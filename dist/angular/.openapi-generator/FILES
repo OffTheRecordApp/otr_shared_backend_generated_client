@@ -733,6 +733,7 @@ model/sSLCertificateResponse.ts
 model/saveAgentBookingRequest.ts
 model/saveAgentBookingResponse.ts
 model/saveCaseNotesRequest.ts
+model/saveCasePaymentPlanRequest.ts
 model/saveCaseUserRequest.ts
 model/saveCoachingCardRequest.ts
 model/saveCoachingCardUserRequest.ts

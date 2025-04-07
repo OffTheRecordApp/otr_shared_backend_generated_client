@@ -99,10 +99,9 @@ export declare class CasePaymentControllerApi {
      * @summary saveCasePaymentPlan
      * @param caseId caseId
      * @param paymentPlanTypeId paymentPlanTypeId
-     * @param period period
-     * @param productId productId
+     * @param request request
      */
-    saveCasePaymentPlanUsingPOST(caseId: string, paymentPlanTypeId: string, period?: 'DAILY' | 'MONTHLY' | 'QUARTERLY' | 'WEEKLY' | 'YEARLY', productId?: string, extraHttpRequestParams?: any): ng.IHttpPromise<{}>;
+    saveCasePaymentPlanUsingPOST(caseId: string, paymentPlanTypeId: string, request: models.SaveCasePaymentPlanRequest, extraHttpRequestParams?: any): ng.IHttpPromise<{}>;
     /**
      *
      * @summary scheduleNewPayment

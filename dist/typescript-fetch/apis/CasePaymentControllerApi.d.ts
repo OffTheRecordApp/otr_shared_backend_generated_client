@@ -10,7 +10,7 @@
  * Do not edit the class manually.
  */
 import * as runtime from '../runtime';
-import { AuthorizeChargeForCasePaymentRequest, AuthorizeChargeForCasePaymentResponse, CaptureChargeFromCasePaymentRequest, GetAvailablePaymentPlansResponse, GetCasePaymentsResponse, GetStripeChargeResponse, GetStripeChargesResponse, ListCostItemsForCustomerResponse, ScheduleNewPaymentRequest, UpdateCasePaymentRequest, UpdatePaymentDueDateRequest } from '../models';
+import { AuthorizeChargeForCasePaymentRequest, AuthorizeChargeForCasePaymentResponse, CaptureChargeFromCasePaymentRequest, GetAvailablePaymentPlansResponse, GetCasePaymentsResponse, GetStripeChargeResponse, GetStripeChargesResponse, ListCostItemsForCustomerResponse, SaveCasePaymentPlanRequest, ScheduleNewPaymentRequest, UpdateCasePaymentRequest, UpdatePaymentDueDateRequest } from '../models';
 export interface AuthorizeChargeForCasePaymentUsingPOSTRequest {
     caseId: string;
     casePaymentId: string;
@@ -60,8 +60,7 @@ export interface ListCostItemsForCustomerUsingGETRequest {
 export interface SaveCasePaymentPlanUsingPOSTRequest {
     caseId: string;
     paymentPlanTypeId: string;
-    period?: SaveCasePaymentPlanUsingPOSTPeriodEnum;
-    productId?: string;
+    request: SaveCasePaymentPlanRequest;
 }
 export interface ScheduleNewPaymentUsingPOSTRequest {
     caseId: string;
@@ -220,17 +219,6 @@ export declare enum GenerateCasePaymentPlanUsingGETPeriodEnum {
     * @enum {string}
     */
 export declare enum ListCostItemsForCustomerUsingGETPeriodEnum {
-    DAILY = "DAILY",
-    MONTHLY = "MONTHLY",
-    QUARTERLY = "QUARTERLY",
-    WEEKLY = "WEEKLY",
-    YEARLY = "YEARLY"
-}
-/**
-    * @export
-    * @enum {string}
-    */
-export declare enum SaveCasePaymentPlanUsingPOSTPeriodEnum {
     DAILY = "DAILY",
     MONTHLY = "MONTHLY",
     QUARTERLY = "QUARTERLY",

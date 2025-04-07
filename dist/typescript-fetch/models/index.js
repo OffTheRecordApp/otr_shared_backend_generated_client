@@ -608,6 +608,7 @@ export * from './SSLCertificateResponse';
 export * from './SaveAgentBookingRequest';
 export * from './SaveAgentBookingResponse';
 export * from './SaveCaseNotesRequest';
+export * from './SaveCasePaymentPlanRequest';
 export * from './SaveCaseUserRequest';
 export * from './SaveCoachingCardRequest';
 export * from './SaveCoachingCardUserRequest';

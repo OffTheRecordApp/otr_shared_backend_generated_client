@@ -361,10 +361,9 @@ export class CasePaymentControllerApi {
      * @summary saveCasePaymentPlan
      * @param caseId caseId
      * @param paymentPlanTypeId paymentPlanTypeId
-     * @param period period
-     * @param productId productId
+     * @param request request
      */
-    saveCasePaymentPlanUsingPOST(caseId, paymentPlanTypeId, period, productId, extraHttpRequestParams) {
+    saveCasePaymentPlanUsingPOST(caseId, paymentPlanTypeId, request, extraHttpRequestParams) {
         const localVarPath = this.basePath + '/api/v1/cases/{caseId}/payment-plans/{paymentPlanTypeId}'
             .replace('{' + 'caseId' + '}', encodeURIComponent(String(caseId)))
             .replace('{' + 'paymentPlanTypeId' + '}', encodeURIComponent(String(paymentPlanTypeId)));
@@ -378,15 +377,14 @@ export class CasePaymentControllerApi {
         if (paymentPlanTypeId === null || paymentPlanTypeId === undefined) {
             throw new Error('Required parameter paymentPlanTypeId was null or undefined when calling saveCasePaymentPlanUsingPOST.');
         }
-        if (period !== undefined) {
-            queryParameters['period'] = period;
-        }
-        if (productId !== undefined) {
-            queryParameters['productId'] = productId;
+        // verify required parameter 'request' is not null or undefined
+        if (request === null || request === undefined) {
+            throw new Error('Required parameter request was null or undefined when calling saveCasePaymentPlanUsingPOST.');
         }
         let httpRequestParams = {
             method: 'POST',
             url: localVarPath,
+            data: request,
             params: queryParameters,
             headers: headerParams
         };

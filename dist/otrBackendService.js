@@ -3142,8 +3142,7 @@ angular.module('otrBackendService', [])
              * @param {object} parameters - method options and parameters
              * @param {string} parameters.caseId - caseId
              * @param {string} parameters.paymentPlanTypeId - paymentPlanTypeId
-             * @param {string} parameters.period - period
-             * @param {string} parameters.productId - productId
+             * @param {} parameters.request - request
              */
             OtrService.prototype.saveCasePaymentPlanUsingPOST = function(parameters) {
                 if (parameters === undefined) {
@@ -3174,12 +3173,13 @@ angular.module('otrBackendService', [])
                     return deferred.promise;
                 }
 
-                if (parameters['period'] !== undefined) {
-                    queryParameters['period'] = parameters['period'];
+                if (parameters['request'] !== undefined) {
+                    body = parameters['request'];
                 }
 
-                if (parameters['productId'] !== undefined) {
-                    queryParameters['productId'] = parameters['productId'];
+                if (parameters['request'] === undefined) {
+                    deferred.reject(new Error('Missing required  parameter: request'));
+                    return deferred.promise;
                 }
 
                 queryParameters = mergeQueryParams(parameters, queryParameters);
