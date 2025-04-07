@@ -388,7 +388,7 @@ export class CasePaymentControllerApi extends runtime.BaseAPI {
                 headers: headerParameters,
                 query: queryParameters,
             });
-            return new runtime.JSONApiResponse(response, (jsonValue) => ListCostItemsForCustomerResponseFromJSON(jsonValue));
+            return new runtime.VoidApiResponse(response);
         });
     }
     /**
@@ -396,8 +396,7 @@ export class CasePaymentControllerApi extends runtime.BaseAPI {
      */
     saveCasePaymentPlanUsingPOST(requestParameters) {
         return __awaiter(this, void 0, void 0, function* () {
-            const response = yield this.saveCasePaymentPlanUsingPOSTRaw(requestParameters);
-            return yield response.value();
+            yield this.saveCasePaymentPlanUsingPOSTRaw(requestParameters);
         });
     }
     /**

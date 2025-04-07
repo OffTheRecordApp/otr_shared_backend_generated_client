@@ -166,11 +166,11 @@ export declare class CasePaymentControllerApi extends runtime.BaseAPI {
     /**
      * saveCasePaymentPlan
      */
-    saveCasePaymentPlanUsingPOSTRaw(requestParameters: SaveCasePaymentPlanUsingPOSTRequest): Promise<runtime.ApiResponse<ListCostItemsForCustomerResponse>>;
+    saveCasePaymentPlanUsingPOSTRaw(requestParameters: SaveCasePaymentPlanUsingPOSTRequest): Promise<runtime.ApiResponse<void>>;
     /**
      * saveCasePaymentPlan
      */
-    saveCasePaymentPlanUsingPOST(requestParameters: SaveCasePaymentPlanUsingPOSTRequest): Promise<ListCostItemsForCustomerResponse>;
+    saveCasePaymentPlanUsingPOST(requestParameters: SaveCasePaymentPlanUsingPOSTRequest): Promise<void>;
     /**
      * scheduleNewPayment
      */
