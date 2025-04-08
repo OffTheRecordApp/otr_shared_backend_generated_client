@@ -9,12 +9,35 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-import { InvoiceLineItemModel } from './invoiceLineItemModel';
 
 
 export interface CasePaymentBreakdownItemModel { 
     amount?: number;
     friendlyTitle?: string;
-    type?: InvoiceLineItemModel;
+    type?: CasePaymentBreakdownItemModel.TypeEnum;
 }
+export namespace CasePaymentBreakdownItemModel {
+    export type TypeEnum = 'ACCIDENT_FEE' | 'BASE_LEGAL_FEE' | 'BOND_FEE' | 'BOOKING_FEE' | 'CDL_FEE' | 'COURT_FEE' | 'DISPUTE_FEE' | 'FINE_PAYMENT' | 'FTA_FEE' | 'INITIAL_SUBSCRIPTION_FEE' | 'LATE_FEE' | 'MBG_REFUND' | 'MVS_FEE' | 'OTHER' | 'OTR_CREDIT' | 'OTR_SUBSCRIPTION_CREDIT' | 'PAYMENT_PLAN_SERVICE_FEE' | 'WARRANT_FEE';
+    export const TypeEnum = {
+        AccidentFee: 'ACCIDENT_FEE' as TypeEnum,
+        BaseLegalFee: 'BASE_LEGAL_FEE' as TypeEnum,
+        BondFee: 'BOND_FEE' as TypeEnum,
+        BookingFee: 'BOOKING_FEE' as TypeEnum,
+        CdlFee: 'CDL_FEE' as TypeEnum,
+        CourtFee: 'COURT_FEE' as TypeEnum,
+        DisputeFee: 'DISPUTE_FEE' as TypeEnum,
+        FinePayment: 'FINE_PAYMENT' as TypeEnum,
+        FtaFee: 'FTA_FEE' as TypeEnum,
+        InitialSubscriptionFee: 'INITIAL_SUBSCRIPTION_FEE' as TypeEnum,
+        LateFee: 'LATE_FEE' as TypeEnum,
+        MbgRefund: 'MBG_REFUND' as TypeEnum,
+        MvsFee: 'MVS_FEE' as TypeEnum,
+        Other: 'OTHER' as TypeEnum,
+        OtrCredit: 'OTR_CREDIT' as TypeEnum,
+        OtrSubscriptionCredit: 'OTR_SUBSCRIPTION_CREDIT' as TypeEnum,
+        PaymentPlanServiceFee: 'PAYMENT_PLAN_SERVICE_FEE' as TypeEnum,
+        WarrantFee: 'WARRANT_FEE' as TypeEnum
+    };
+}
+
 

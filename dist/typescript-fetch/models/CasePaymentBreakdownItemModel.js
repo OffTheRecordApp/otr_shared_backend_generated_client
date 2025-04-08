@@ -12,7 +12,6 @@
  * Do not edit the class manually.
  */
 import { exists } from '../runtime';
-import { InvoiceLineItemModelFromJSON, InvoiceLineItemModelToJSON, } from './';
 export function CasePaymentBreakdownItemModelFromJSON(json) {
     return CasePaymentBreakdownItemModelFromJSONTyped(json, false);
 }
@@ -23,7 +22,7 @@ export function CasePaymentBreakdownItemModelFromJSONTyped(json, ignoreDiscrimin
     return {
         'amount': !exists(json, 'amount') ? undefined : json['amount'],
         'friendlyTitle': !exists(json, 'friendlyTitle') ? undefined : json['friendlyTitle'],
-        'type': !exists(json, 'type') ? undefined : InvoiceLineItemModelFromJSON(json['type']),
+        'type': !exists(json, 'type') ? undefined : json['type'],
     };
 }
 export function CasePaymentBreakdownItemModelToJSON(value) {
@@ -36,6 +35,31 @@ export function CasePaymentBreakdownItemModelToJSON(value) {
     return {
         'amount': value.amount,
         'friendlyTitle': value.friendlyTitle,
-        'type': InvoiceLineItemModelToJSON(value.type),
+        'type': value.type,
     };
 }
+/**
+* @export
+* @enum {string}
+*/
+export var CasePaymentBreakdownItemModelTypeEnum;
+(function (CasePaymentBreakdownItemModelTypeEnum) {
+    CasePaymentBreakdownItemModelTypeEnum["ACCIDENTFEE"] = "ACCIDENT_FEE";
+    CasePaymentBreakdownItemModelTypeEnum["BASELEGALFEE"] = "BASE_LEGAL_FEE";
+    CasePaymentBreakdownItemModelTypeEnum["BONDFEE"] = "BOND_FEE";
+    CasePaymentBreakdownItemModelTypeEnum["BOOKINGFEE"] = "BOOKING_FEE";
+    CasePaymentBreakdownItemModelTypeEnum["CDLFEE"] = "CDL_FEE";
+    CasePaymentBreakdownItemModelTypeEnum["COURTFEE"] = "COURT_FEE";
+    CasePaymentBreakdownItemModelTypeEnum["DISPUTEFEE"] = "DISPUTE_FEE";
+    CasePaymentBreakdownItemModelTypeEnum["FINEPAYMENT"] = "FINE_PAYMENT";
+    CasePaymentBreakdownItemModelTypeEnum["FTAFEE"] = "FTA_FEE";
+    CasePaymentBreakdownItemModelTypeEnum["INITIALSUBSCRIPTIONFEE"] = "INITIAL_SUBSCRIPTION_FEE";
+    CasePaymentBreakdownItemModelTypeEnum["LATEFEE"] = "LATE_FEE";
+    CasePaymentBreakdownItemModelTypeEnum["MBGREFUND"] = "MBG_REFUND";
+    CasePaymentBreakdownItemModelTypeEnum["MVSFEE"] = "MVS_FEE";
+    CasePaymentBreakdownItemModelTypeEnum["OTHER"] = "OTHER";
+    CasePaymentBreakdownItemModelTypeEnum["OTRCREDIT"] = "OTR_CREDIT";
+    CasePaymentBreakdownItemModelTypeEnum["OTRSUBSCRIPTIONCREDIT"] = "OTR_SUBSCRIPTION_CREDIT";
+    CasePaymentBreakdownItemModelTypeEnum["PAYMENTPLANSERVICEFEE"] = "PAYMENT_PLAN_SERVICE_FEE";
+    CasePaymentBreakdownItemModelTypeEnum["WARRANTFEE"] = "WARRANT_FEE";
+})(CasePaymentBreakdownItemModelTypeEnum || (CasePaymentBreakdownItemModelTypeEnum = {}));

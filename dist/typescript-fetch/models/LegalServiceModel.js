@@ -12,7 +12,7 @@
  * Do not edit the class manually.
  */
 import { exists } from '../runtime';
-import { WorkflowLineItemModelFromJSON, WorkflowLineItemModelToJSON, } from './';
+import { WorkflowFinancialsFromJSON, WorkflowFinancialsToJSON, WorkflowLineItemModelFromJSON, WorkflowLineItemModelToJSON, } from './';
 export function LegalServiceModelFromJSON(json) {
     return LegalServiceModelFromJSONTyped(json, false);
 }
@@ -22,6 +22,7 @@ export function LegalServiceModelFromJSONTyped(json, ignoreDiscriminator) {
     }
     return {
         'chanceOfSuccess': !exists(json, 'chanceOfSuccess') ? undefined : json['chanceOfSuccess'],
+        'financials': !exists(json, 'financials') ? undefined : WorkflowFinancialsFromJSON(json['financials']),
         'isSelected': !exists(json, 'isSelected') ? undefined : json['isSelected'],
         'lawfirmCaseId': !exists(json, 'lawfirmCaseId') ? undefined : json['lawfirmCaseId'],
         'lawfirmId': !exists(json, 'lawfirmId') ? undefined : json['lawfirmId'],
@@ -49,6 +50,7 @@ export function LegalServiceModelToJSON(value) {
     }
     return {
         'chanceOfSuccess': value.chanceOfSuccess,
+        'financials': WorkflowFinancialsToJSON(value.financials),
         'isSelected': value.isSelected,
         'lawfirmCaseId': value.lawfirmCaseId,
         'lawfirmId': value.lawfirmId,

@@ -12,6 +12,7 @@
 import * as models from './models';
 export interface LegalServiceModel {
     "chanceOfSuccess"?: number;
+    "financials"?: models.WorkflowFinancials;
     "isSelected"?: boolean;
     "lawfirmCaseId"?: number;
     "lawfirmId"?: number;

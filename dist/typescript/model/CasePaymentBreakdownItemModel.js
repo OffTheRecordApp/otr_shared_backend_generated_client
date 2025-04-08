@@ -9,4 +9,27 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-export {};
+export var CasePaymentBreakdownItemModel;
+(function (CasePaymentBreakdownItemModel) {
+    let TypeEnum;
+    (function (TypeEnum) {
+        TypeEnum[TypeEnum["ACCIDENTFEE"] = 'ACCIDENT_FEE'] = "ACCIDENTFEE";
+        TypeEnum[TypeEnum["BASELEGALFEE"] = 'BASE_LEGAL_FEE'] = "BASELEGALFEE";
+        TypeEnum[TypeEnum["BONDFEE"] = 'BOND_FEE'] = "BONDFEE";
+        TypeEnum[TypeEnum["BOOKINGFEE"] = 'BOOKING_FEE'] = "BOOKINGFEE";
+        TypeEnum[TypeEnum["CDLFEE"] = 'CDL_FEE'] = "CDLFEE";
+        TypeEnum[TypeEnum["COURTFEE"] = 'COURT_FEE'] = "COURTFEE";
+        TypeEnum[TypeEnum["DISPUTEFEE"] = 'DISPUTE_FEE'] = "DISPUTEFEE";
+        TypeEnum[TypeEnum["FINEPAYMENT"] = 'FINE_PAYMENT'] = "FINEPAYMENT";
+        TypeEnum[TypeEnum["FTAFEE"] = 'FTA_FEE'] = "FTAFEE";
+        TypeEnum[TypeEnum["INITIALSUBSCRIPTIONFEE"] = 'INITIAL_SUBSCRIPTION_FEE'] = "INITIALSUBSCRIPTIONFEE";
+        TypeEnum[TypeEnum["LATEFEE"] = 'LATE_FEE'] = "LATEFEE";
+        TypeEnum[TypeEnum["MBGREFUND"] = 'MBG_REFUND'] = "MBGREFUND";
+        TypeEnum[TypeEnum["MVSFEE"] = 'MVS_FEE'] = "MVSFEE";
+        TypeEnum[TypeEnum["OTHER"] = 'OTHER'] = "OTHER";
+        TypeEnum[TypeEnum["OTRCREDIT"] = 'OTR_CREDIT'] = "OTRCREDIT";
+        TypeEnum[TypeEnum["OTRSUBSCRIPTIONCREDIT"] = 'OTR_SUBSCRIPTION_CREDIT'] = "OTRSUBSCRIPTIONCREDIT";
+        TypeEnum[TypeEnum["PAYMENTPLANSERVICEFEE"] = 'PAYMENT_PLAN_SERVICE_FEE'] = "PAYMENTPLANSERVICEFEE";
+        TypeEnum[TypeEnum["WARRANTFEE"] = 'WARRANT_FEE'] = "WARRANTFEE";
+    })(TypeEnum = CasePaymentBreakdownItemModel.TypeEnum || (CasePaymentBreakdownItemModel.TypeEnum = {}));
+})(CasePaymentBreakdownItemModel || (CasePaymentBreakdownItemModel = {}));

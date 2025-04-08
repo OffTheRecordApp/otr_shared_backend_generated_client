@@ -948,7 +948,9 @@ model/violationPenaltyResponse.ts
 model/violationResponse.ts
 model/watchlistItemsModel.ts
 model/workflowCaseModel.ts
+model/workflowCasePaymentModel.ts
 model/workflowCitationModel.ts
+model/workflowFinancials.ts
 model/workflowLineItemModel.ts
 model/workflowViolationModel.ts
 model/workflowViolationPenaltyModel.ts

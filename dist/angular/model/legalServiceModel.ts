@@ -9,11 +9,13 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
+import { WorkflowFinancials } from './workflowFinancials';
 import { WorkflowLineItemModel } from './workflowLineItemModel';
 
 
 export interface LegalServiceModel { 
     chanceOfSuccess?: number;
+    financials?: WorkflowFinancials;
     isSelected?: boolean;
     lawfirmCaseId?: number;
     lawfirmId?: number;

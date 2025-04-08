@@ -9,7 +9,7 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-import { WorkflowLineItemModel } from './';
+import { WorkflowFinancials, WorkflowLineItemModel } from './';
 /**
  *
  * @export
@@ -22,6 +22,12 @@ export interface LegalServiceModel {
      * @memberof LegalServiceModel
      */
     chanceOfSuccess?: number;
+    /**
+     *
+     * @type {WorkflowFinancials}
+     * @memberof LegalServiceModel
+     */
+    financials?: WorkflowFinancials;
     /**
      *
      * @type {boolean}
