@@ -12,10 +12,10 @@
  * Do not edit the class manually.
  */
 import { exists } from '../runtime';
-export function SaveCasePaymentPlanRequestFromJSON(json) {
-    return SaveCasePaymentPlanRequestFromJSONTyped(json, false);
+export function SaveCasePlanRequestFromJSON(json) {
+    return SaveCasePlanRequestFromJSONTyped(json, false);
 }
-export function SaveCasePaymentPlanRequestFromJSONTyped(json, ignoreDiscriminator) {
+export function SaveCasePlanRequestFromJSONTyped(json, ignoreDiscriminator) {
     if ((json === undefined) || (json === null)) {
         return json;
     }
@@ -24,7 +24,7 @@ export function SaveCasePaymentPlanRequestFromJSONTyped(json, ignoreDiscriminato
         'productId': !exists(json, 'productId') ? undefined : json['productId'],
     };
 }
-export function SaveCasePaymentPlanRequestToJSON(value) {
+export function SaveCasePlanRequestToJSON(value) {
     if (value === undefined) {
         return undefined;
     }
@@ -40,11 +40,11 @@ export function SaveCasePaymentPlanRequestToJSON(value) {
 * @export
 * @enum {string}
 */
-export var SaveCasePaymentPlanRequestIntervalEnum;
-(function (SaveCasePaymentPlanRequestIntervalEnum) {
-    SaveCasePaymentPlanRequestIntervalEnum["DAILY"] = "DAILY";
-    SaveCasePaymentPlanRequestIntervalEnum["MONTHLY"] = "MONTHLY";
-    SaveCasePaymentPlanRequestIntervalEnum["QUARTERLY"] = "QUARTERLY";
-    SaveCasePaymentPlanRequestIntervalEnum["WEEKLY"] = "WEEKLY";
-    SaveCasePaymentPlanRequestIntervalEnum["YEARLY"] = "YEARLY";
-})(SaveCasePaymentPlanRequestIntervalEnum || (SaveCasePaymentPlanRequestIntervalEnum = {}));
+export var SaveCasePlanRequestIntervalEnum;
+(function (SaveCasePlanRequestIntervalEnum) {
+    SaveCasePlanRequestIntervalEnum["DAILY"] = "DAILY";
+    SaveCasePlanRequestIntervalEnum["MONTHLY"] = "MONTHLY";
+    SaveCasePlanRequestIntervalEnum["QUARTERLY"] = "QUARTERLY";
+    SaveCasePlanRequestIntervalEnum["WEEKLY"] = "WEEKLY";
+    SaveCasePlanRequestIntervalEnum["YEARLY"] = "YEARLY";
+})(SaveCasePlanRequestIntervalEnum || (SaveCasePlanRequestIntervalEnum = {}));

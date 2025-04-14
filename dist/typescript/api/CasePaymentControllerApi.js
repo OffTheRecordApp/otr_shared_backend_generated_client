@@ -358,12 +358,12 @@ export class CasePaymentControllerApi {
     }
     /**
      *
-     * @summary saveCasePaymentPlan
+     * @summary saveCasePlan
      * @param caseId caseId
      * @param paymentPlanTypeId paymentPlanTypeId
      * @param request request
      */
-    saveCasePaymentPlanUsingPOST(caseId, paymentPlanTypeId, request, extraHttpRequestParams) {
+    saveCasePlanUsingPOST(caseId, paymentPlanTypeId, request, extraHttpRequestParams) {
         const localVarPath = this.basePath + '/api/v1/cases/{caseId}/payment-plans/{paymentPlanTypeId}'
             .replace('{' + 'caseId' + '}', encodeURIComponent(String(caseId)))
             .replace('{' + 'paymentPlanTypeId' + '}', encodeURIComponent(String(paymentPlanTypeId)));
@@ -371,15 +371,15 @@ export class CasePaymentControllerApi {
         let headerParams = Object.assign({}, this.defaultHeaders);
         // verify required parameter 'caseId' is not null or undefined
         if (caseId === null || caseId === undefined) {
-            throw new Error('Required parameter caseId was null or undefined when calling saveCasePaymentPlanUsingPOST.');
+            throw new Error('Required parameter caseId was null or undefined when calling saveCasePlanUsingPOST.');
         }
         // verify required parameter 'paymentPlanTypeId' is not null or undefined
         if (paymentPlanTypeId === null || paymentPlanTypeId === undefined) {
-            throw new Error('Required parameter paymentPlanTypeId was null or undefined when calling saveCasePaymentPlanUsingPOST.');
+            throw new Error('Required parameter paymentPlanTypeId was null or undefined when calling saveCasePlanUsingPOST.');
         }
         // verify required parameter 'request' is not null or undefined
         if (request === null || request === undefined) {
-            throw new Error('Required parameter request was null or undefined when calling saveCasePaymentPlanUsingPOST.');
+            throw new Error('Required parameter request was null or undefined when calling saveCasePlanUsingPOST.');
         }
         let httpRequestParams = {
             method: 'POST',

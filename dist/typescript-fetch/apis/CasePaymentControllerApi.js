@@ -21,7 +21,7 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
     });
 };
 import * as runtime from '../runtime';
-import { AuthorizeChargeForCasePaymentRequestToJSON, AuthorizeChargeForCasePaymentResponseFromJSON, CaptureChargeFromCasePaymentRequestToJSON, GetAvailablePaymentPlansResponseFromJSON, GetCasePaymentsResponseFromJSON, GetStripeChargeResponseFromJSON, GetStripeChargesResponseFromJSON, ListCostItemsForCustomerResponseFromJSON, SaveCasePaymentPlanRequestToJSON, ScheduleNewPaymentRequestToJSON, UpdateCasePaymentRequestToJSON, UpdatePaymentDueDateRequestToJSON, } from '../models';
+import { AuthorizeChargeForCasePaymentRequestToJSON, AuthorizeChargeForCasePaymentResponseFromJSON, CaptureChargeFromCasePaymentRequestToJSON, GetAvailablePaymentPlansResponseFromJSON, GetCasePaymentsResponseFromJSON, GetStripeChargeResponseFromJSON, GetStripeChargesResponseFromJSON, ListCostItemsForCustomerResponseFromJSON, SaveCasePlanRequestToJSON, ScheduleNewPaymentRequestToJSON, UpdateCasePaymentRequestToJSON, UpdatePaymentDueDateRequestToJSON, } from '../models';
 /**
  *
  */
@@ -364,18 +364,18 @@ export class CasePaymentControllerApi extends runtime.BaseAPI {
         });
     }
     /**
-     * saveCasePaymentPlan
+     * saveCasePlan
      */
-    saveCasePaymentPlanUsingPOSTRaw(requestParameters) {
+    saveCasePlanUsingPOSTRaw(requestParameters) {
         return __awaiter(this, void 0, void 0, function* () {
             if (requestParameters.caseId === null || requestParameters.caseId === undefined) {
-                throw new runtime.RequiredError('caseId', 'Required parameter requestParameters.caseId was null or undefined when calling saveCasePaymentPlanUsingPOST.');
+                throw new runtime.RequiredError('caseId', 'Required parameter requestParameters.caseId was null or undefined when calling saveCasePlanUsingPOST.');
             }
             if (requestParameters.paymentPlanTypeId === null || requestParameters.paymentPlanTypeId === undefined) {
-                throw new runtime.RequiredError('paymentPlanTypeId', 'Required parameter requestParameters.paymentPlanTypeId was null or undefined when calling saveCasePaymentPlanUsingPOST.');
+                throw new runtime.RequiredError('paymentPlanTypeId', 'Required parameter requestParameters.paymentPlanTypeId was null or undefined when calling saveCasePlanUsingPOST.');
             }
             if (requestParameters.request === null || requestParameters.request === undefined) {
-                throw new runtime.RequiredError('request', 'Required parameter requestParameters.request was null or undefined when calling saveCasePaymentPlanUsingPOST.');
+                throw new runtime.RequiredError('request', 'Required parameter requestParameters.request was null or undefined when calling saveCasePlanUsingPOST.');
             }
             const queryParameters = {};
             const headerParameters = {};
@@ -385,17 +385,17 @@ export class CasePaymentControllerApi extends runtime.BaseAPI {
                 method: 'POST',
                 headers: headerParameters,
                 query: queryParameters,
-                body: SaveCasePaymentPlanRequestToJSON(requestParameters.request),
+                body: SaveCasePlanRequestToJSON(requestParameters.request),
             });
             return new runtime.VoidApiResponse(response);
         });
     }
     /**
-     * saveCasePaymentPlan
+     * saveCasePlan
      */
-    saveCasePaymentPlanUsingPOST(requestParameters) {
+    saveCasePlanUsingPOST(requestParameters) {
         return __awaiter(this, void 0, void 0, function* () {
-            yield this.saveCasePaymentPlanUsingPOSTRaw(requestParameters);
+            yield this.saveCasePlanUsingPOSTRaw(requestParameters);
         });
     }
     /**

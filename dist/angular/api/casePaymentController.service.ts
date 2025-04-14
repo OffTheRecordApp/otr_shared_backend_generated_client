@@ -35,7 +35,7 @@ import { GetStripeChargesResponse } from '../model/getStripeChargesResponse';
 // @ts-ignore
 import { ListCostItemsForCustomerResponse } from '../model/listCostItemsForCustomerResponse';
 // @ts-ignore
-import { SaveCasePaymentPlanRequest } from '../model/saveCasePaymentPlanRequest';
+import { SaveCasePlanRequest } from '../model/saveCasePlanRequest';
 // @ts-ignore
 import { ScheduleNewPaymentRequest } from '../model/scheduleNewPaymentRequest';
 // @ts-ignore
@@ -806,25 +806,25 @@ export class CasePaymentControllerService {
     }
 
     /**
-     * saveCasePaymentPlan
+     * saveCasePlan
      * @param caseId caseId
      * @param paymentPlanTypeId paymentPlanTypeId
      * @param request request
      * @param observe set whether or not to return the data Observable as the body, response or events. defaults to returning the body.
      * @param reportProgress flag to report request and response progress.
      */
-    public saveCasePaymentPlanUsingPOST(caseId: string, paymentPlanTypeId: string, request: SaveCasePaymentPlanRequest, observe?: 'body', reportProgress?: boolean, options?: {httpHeaderAccept?: undefined, context?: HttpContext}): Observable<any>;
-    public saveCasePaymentPlanUsingPOST(caseId: string, paymentPlanTypeId: string, request: SaveCasePaymentPlanRequest, observe?: 'response', reportProgress?: boolean, options?: {httpHeaderAccept?: undefined, context?: HttpContext}): Observable<HttpResponse<any>>;
-    public saveCasePaymentPlanUsingPOST(caseId: string, paymentPlanTypeId: string, request: SaveCasePaymentPlanRequest, observe?: 'events', reportProgress?: boolean, options?: {httpHeaderAccept?: undefined, context?: HttpContext}): Observable<HttpEvent<any>>;
-    public saveCasePaymentPlanUsingPOST(caseId: string, paymentPlanTypeId: string, request: SaveCasePaymentPlanRequest, observe: any = 'body', reportProgress: boolean = false, options?: {httpHeaderAccept?: undefined, context?: HttpContext}): Observable<any> {
+    public saveCasePlanUsingPOST(caseId: string, paymentPlanTypeId: string, request: SaveCasePlanRequest, observe?: 'body', reportProgress?: boolean, options?: {httpHeaderAccept?: undefined, context?: HttpContext}): Observable<any>;
+    public saveCasePlanUsingPOST(caseId: string, paymentPlanTypeId: string, request: SaveCasePlanRequest, observe?: 'response', reportProgress?: boolean, options?: {httpHeaderAccept?: undefined, context?: HttpContext}): Observable<HttpResponse<any>>;
+    public saveCasePlanUsingPOST(caseId: string, paymentPlanTypeId: string, request: SaveCasePlanRequest, observe?: 'events', reportProgress?: boolean, options?: {httpHeaderAccept?: undefined, context?: HttpContext}): Observable<HttpEvent<any>>;
+    public saveCasePlanUsingPOST(caseId: string, paymentPlanTypeId: string, request: SaveCasePlanRequest, observe: any = 'body', reportProgress: boolean = false, options?: {httpHeaderAccept?: undefined, context?: HttpContext}): Observable<any> {
         if (caseId === null || caseId === undefined) {
-            throw new Error('Required parameter caseId was null or undefined when calling saveCasePaymentPlanUsingPOST.');
+            throw new Error('Required parameter caseId was null or undefined when calling saveCasePlanUsingPOST.');
         }
         if (paymentPlanTypeId === null || paymentPlanTypeId === undefined) {
-            throw new Error('Required parameter paymentPlanTypeId was null or undefined when calling saveCasePaymentPlanUsingPOST.');
+            throw new Error('Required parameter paymentPlanTypeId was null or undefined when calling saveCasePlanUsingPOST.');
         }
         if (request === null || request === undefined) {
-            throw new Error('Required parameter request was null or undefined when calling saveCasePaymentPlanUsingPOST.');
+            throw new Error('Required parameter request was null or undefined when calling saveCasePlanUsingPOST.');
         }
 
         let localVarHeaders = this.defaultHeaders;

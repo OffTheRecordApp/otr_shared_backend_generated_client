@@ -3136,15 +3136,15 @@ angular.module('otrBackendService', [])
                 return deferred.promise;
             };
             /**
-             * saveCasePaymentPlan
+             * saveCasePlan
              * @method
-             * @name OtrService#saveCasePaymentPlanUsingPOST
+             * @name OtrService#saveCasePlanUsingPOST
              * @param {object} parameters - method options and parameters
              * @param {string} parameters.caseId - caseId
              * @param {string} parameters.paymentPlanTypeId - paymentPlanTypeId
              * @param {} parameters.request - request
              */
-            OtrService.prototype.saveCasePaymentPlanUsingPOST = function(parameters) {
+            OtrService.prototype.saveCasePlanUsingPOST = function(parameters) {
                 if (parameters === undefined) {
                     parameters = {};
                 }
