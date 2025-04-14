@@ -10,7 +10,7 @@
  * Do not edit the class manually.
  */
 import * as runtime from '../runtime';
-import { AuthorizeChargeForCasePaymentRequest, AuthorizeChargeForCasePaymentResponse, CaptureChargeFromCasePaymentRequest, GetAvailablePaymentPlansResponse, GetCasePaymentsResponse, GetStripeChargeResponse, GetStripeChargesResponse, ListCostItemsForCustomerResponse, SaveCasePlanRequest, ScheduleNewPaymentRequest, UpdateCasePaymentRequest, UpdatePaymentDueDateRequest } from '../models';
+import { AuthorizeChargeForCasePaymentRequest, AuthorizeChargeForCasePaymentResponse, CaptureChargeFromCasePaymentRequest, GetAvailablePaymentPlansResponse, GetCasePaymentsResponse, GetStripeChargeResponse, GetStripeChargesResponse, ListCostItemsForCustomerResponse, ScheduleNewPaymentRequest, UpdateCasePaymentRequest, UpdatePaymentDueDateRequest } from '../models';
 export interface AuthorizeChargeForCasePaymentUsingPOSTRequest {
     caseId: string;
     casePaymentId: string;
@@ -57,10 +57,10 @@ export interface ListCostItemsForCustomerUsingGETRequest {
     period?: ListCostItemsForCustomerUsingGETPeriodEnum;
     productId?: string;
 }
-export interface SaveCasePlanUsingPOSTRequest {
+export interface SaveCasePaymentPlanUsingPOSTRequest {
     caseId: string;
     paymentPlanTypeId: string;
-    request: SaveCasePlanRequest;
+    request?: object;
 }
 export interface ScheduleNewPaymentUsingPOSTRequest {
     caseId: string;
@@ -163,13 +163,13 @@ export declare class CasePaymentControllerApi extends runtime.BaseAPI {
      */
     listCostItemsForCustomerUsingGET(requestParameters: ListCostItemsForCustomerUsingGETRequest): Promise<ListCostItemsForCustomerResponse>;
     /**
-     * saveCasePlan
+     * saveCasePaymentPlan
      */
-    saveCasePlanUsingPOSTRaw(requestParameters: SaveCasePlanUsingPOSTRequest): Promise<runtime.ApiResponse<void>>;
+    saveCasePaymentPlanUsingPOSTRaw(requestParameters: SaveCasePaymentPlanUsingPOSTRequest): Promise<runtime.ApiResponse<void>>;
     /**
-     * saveCasePlan
+     * saveCasePaymentPlan
      */
-    saveCasePlanUsingPOST(requestParameters: SaveCasePlanUsingPOSTRequest): Promise<void>;
+    saveCasePaymentPlanUsingPOST(requestParameters: SaveCasePaymentPlanUsingPOSTRequest): Promise<void>;
     /**
      * scheduleNewPayment
      */

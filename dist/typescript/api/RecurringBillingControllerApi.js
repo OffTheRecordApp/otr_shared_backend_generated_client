@@ -185,5 +185,42 @@ export class RecurringBillingControllerApi {
         }
         return this.$http(httpRequestParams);
     }
+    /**
+     *
+     * @summary saveBillingProductOption
+     * @param caseId caseId
+     * @param productId productId
+     * @param request request
+     */
+    saveBillingProductOptionUsingPOST(caseId, productId, request, extraHttpRequestParams) {
+        const localVarPath = this.basePath + '/api/v1/billing/cases/{caseId}/products/{productId}'
+            .replace('{' + 'caseId' + '}', encodeURIComponent(String(caseId)))
+            .replace('{' + 'productId' + '}', encodeURIComponent(String(productId)));
+        let queryParameters = {};
+        let headerParams = Object.assign({}, this.defaultHeaders);
+        // verify required parameter 'caseId' is not null or undefined
+        if (caseId === null || caseId === undefined) {
+            throw new Error('Required parameter caseId was null or undefined when calling saveBillingProductOptionUsingPOST.');
+        }
+        // verify required parameter 'productId' is not null or undefined
+        if (productId === null || productId === undefined) {
+            throw new Error('Required parameter productId was null or undefined when calling saveBillingProductOptionUsingPOST.');
+        }
+        // verify required parameter 'request' is not null or undefined
+        if (request === null || request === undefined) {
+            throw new Error('Required parameter request was null or undefined when calling saveBillingProductOptionUsingPOST.');
+        }
+        let httpRequestParams = {
+            method: 'POST',
+            url: localVarPath,
+            data: request,
+            params: queryParameters,
+            headers: headerParams
+        };
+        if (extraHttpRequestParams) {
+            httpRequestParams = Object.assign(httpRequestParams, extraHttpRequestParams);
+        }
+        return this.$http(httpRequestParams);
+    }
 }
 RecurringBillingControllerApi.$inject = ['$http', '$httpParamSerializer', 'basePath'];

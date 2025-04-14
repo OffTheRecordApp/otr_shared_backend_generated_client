@@ -569,6 +569,59 @@ angular.module('otrBackendService', [])
                 return deferred.promise;
             };
             /**
+             * saveBillingProductOption
+             * @method
+             * @name OtrService#saveBillingProductOptionUsingPOST
+             * @param {object} parameters - method options and parameters
+             * @param {string} parameters.caseId - caseId
+             * @param {string} parameters.productId - productId
+             * @param {} parameters.request - request
+             */
+            OtrService.prototype.saveBillingProductOptionUsingPOST = function(parameters) {
+                if (parameters === undefined) {
+                    parameters = {};
+                }
+                var deferred = $q.defer();
+                var domain = this.domain,
+                    path = '/api/v1/billing/cases/{caseId}/products/{productId}';
+                var body = {},
+                    queryParameters = {},
+                    headers = {},
+                    form = {};
+
+                headers['Accept'] = ['*/*'];
+                headers['Content-Type'] = ['application/json'];
+
+                path = path.replace('{caseId}', parameters['caseId']);
+
+                if (parameters['caseId'] === undefined) {
+                    deferred.reject(new Error('Missing required  parameter: caseId'));
+                    return deferred.promise;
+                }
+
+                path = path.replace('{productId}', parameters['productId']);
+
+                if (parameters['productId'] === undefined) {
+                    deferred.reject(new Error('Missing required  parameter: productId'));
+                    return deferred.promise;
+                }
+
+                if (parameters['request'] !== undefined) {
+                    body = parameters['request'];
+                }
+
+                if (parameters['request'] === undefined) {
+                    deferred.reject(new Error('Missing required  parameter: request'));
+                    return deferred.promise;
+                }
+
+                queryParameters = mergeQueryParams(parameters, queryParameters);
+
+                this.request('POST', domain + path, parameters, body, headers, queryParameters, form, deferred);
+
+                return deferred.promise;
+            };
+            /**
              * listBillingProducts
              * @method
              * @name OtrService#listBillingProductsUsingGET
@@ -3136,15 +3189,15 @@ angular.module('otrBackendService', [])
                 return deferred.promise;
             };
             /**
-             * saveCasePlan
+             * saveCasePaymentPlan
              * @method
-             * @name OtrService#saveCasePlanUsingPOST
+             * @name OtrService#saveCasePaymentPlanUsingPOST
              * @param {object} parameters - method options and parameters
              * @param {string} parameters.caseId - caseId
              * @param {string} parameters.paymentPlanTypeId - paymentPlanTypeId
              * @param {} parameters.request - request
              */
-            OtrService.prototype.saveCasePlanUsingPOST = function(parameters) {
+            OtrService.prototype.saveCasePaymentPlanUsingPOST = function(parameters) {
                 if (parameters === undefined) {
                     parameters = {};
                 }
@@ -3175,11 +3228,6 @@ angular.module('otrBackendService', [])
 
                 if (parameters['request'] !== undefined) {
                     body = parameters['request'];
-                }
-
-                if (parameters['request'] === undefined) {
-                    deferred.reject(new Error('Missing required  parameter: request'));
-                    return deferred.promise;
                 }
 
                 queryParameters = mergeQueryParams(parameters, queryParameters);

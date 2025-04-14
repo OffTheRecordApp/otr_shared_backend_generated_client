@@ -30,6 +30,8 @@ import { ListBillingProductsResponse } from '../model/listBillingProductsRespons
 import { ListBillingSubscriptionsResponse } from '../model/listBillingSubscriptionsResponse';
 // @ts-ignore
 import { ListSubscriptionInvoicesResponse } from '../model/listSubscriptionInvoicesResponse';
+// @ts-ignore
+import { SaveBillingProductOptionRequest } from '../model/saveBillingProductOptionRequest';
 
 // @ts-ignore
 import { BASE_PATH, COLLECTION_FORMATS }                     from '../variables';
@@ -447,6 +449,81 @@ export class RecurringBillingControllerService {
             {
                 context: localVarHttpContext,
                 params: localVarQueryParameters,
+                responseType: <any>responseType_,
+                withCredentials: this.configuration.withCredentials,
+                headers: localVarHeaders,
+                observe: observe,
+                reportProgress: reportProgress
+            }
+        );
+    }
+
+    /**
+     * saveBillingProductOption
+     * @param caseId caseId
+     * @param productId productId
+     * @param request request
+     * @param observe set whether or not to return the data Observable as the body, response or events. defaults to returning the body.
+     * @param reportProgress flag to report request and response progress.
+     */
+    public saveBillingProductOptionUsingPOST(caseId: string, productId: string, request: SaveBillingProductOptionRequest, observe?: 'body', reportProgress?: boolean, options?: {httpHeaderAccept?: undefined, context?: HttpContext}): Observable<any>;
+    public saveBillingProductOptionUsingPOST(caseId: string, productId: string, request: SaveBillingProductOptionRequest, observe?: 'response', reportProgress?: boolean, options?: {httpHeaderAccept?: undefined, context?: HttpContext}): Observable<HttpResponse<any>>;
+    public saveBillingProductOptionUsingPOST(caseId: string, productId: string, request: SaveBillingProductOptionRequest, observe?: 'events', reportProgress?: boolean, options?: {httpHeaderAccept?: undefined, context?: HttpContext}): Observable<HttpEvent<any>>;
+    public saveBillingProductOptionUsingPOST(caseId: string, productId: string, request: SaveBillingProductOptionRequest, observe: any = 'body', reportProgress: boolean = false, options?: {httpHeaderAccept?: undefined, context?: HttpContext}): Observable<any> {
+        if (caseId === null || caseId === undefined) {
+            throw new Error('Required parameter caseId was null or undefined when calling saveBillingProductOptionUsingPOST.');
+        }
+        if (productId === null || productId === undefined) {
+            throw new Error('Required parameter productId was null or undefined when calling saveBillingProductOptionUsingPOST.');
+        }
+        if (request === null || request === undefined) {
+            throw new Error('Required parameter request was null or undefined when calling saveBillingProductOptionUsingPOST.');
+        }
+
+        let localVarHeaders = this.defaultHeaders;
+
+        let localVarHttpHeaderAcceptSelected: string | undefined = options && options.httpHeaderAccept;
+        if (localVarHttpHeaderAcceptSelected === undefined) {
+            // to determine the Accept header
+            const httpHeaderAccepts: string[] = [
+            ];
+            localVarHttpHeaderAcceptSelected = this.configuration.selectHeaderAccept(httpHeaderAccepts);
+        }
+        if (localVarHttpHeaderAcceptSelected !== undefined) {
+            localVarHeaders = localVarHeaders.set('Accept', localVarHttpHeaderAcceptSelected);
+        }
+
+        let localVarHttpContext: HttpContext | undefined = options && options.context;
+        if (localVarHttpContext === undefined) {
+            localVarHttpContext = new HttpContext();
+        }
+
+
+        // to determine the Content-Type header
+        const consumes: string[] = [
+            'application/json'
+        ];
+        const httpContentTypeSelected: string | undefined = this.configuration.selectHeaderContentType(consumes);
+        if (httpContentTypeSelected !== undefined) {
+            localVarHeaders = localVarHeaders.set('Content-Type', httpContentTypeSelected);
+        }
+
+        let responseType_: 'text' | 'json' | 'blob' = 'json';
+        if (localVarHttpHeaderAcceptSelected) {
+            if (localVarHttpHeaderAcceptSelected.startsWith('text')) {
+                responseType_ = 'text';
+            } else if (this.configuration.isJsonMime(localVarHttpHeaderAcceptSelected)) {
+                responseType_ = 'json';
+            } else {
+                responseType_ = 'blob';
+            }
+        }
+
+        let localVarPath = `/api/v1/billing/cases/${this.configuration.encodeParam({name: "caseId", value: caseId, in: "path", style: "simple", explode: false, dataType: "string", dataFormat: undefined})}/products/${this.configuration.encodeParam({name: "productId", value: productId, in: "path", style: "simple", explode: false, dataType: "string", dataFormat: undefined})}`;
+        return this.httpClient.request<any>('post', `${this.configuration.basePath}${localVarPath}`,
+            {
+                context: localVarHttpContext,
+                body: request,
                 responseType: <any>responseType_,
                 withCredentials: this.configuration.withCredentials,
                 headers: localVarHeaders,

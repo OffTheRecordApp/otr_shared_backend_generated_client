@@ -10,7 +10,7 @@
  * Do not edit the class manually.
  */
 import * as runtime from '../runtime';
-import { CancelBillingSubscriptionResponse, CreateBillingSubscriptionRequest, CreateBillingSubscriptionResponse, ListBillingProductsResponse, ListBillingSubscriptionsResponse, ListSubscriptionInvoicesResponse } from '../models';
+import { CancelBillingSubscriptionResponse, CreateBillingSubscriptionRequest, CreateBillingSubscriptionResponse, ListBillingProductsResponse, ListBillingSubscriptionsResponse, ListSubscriptionInvoicesResponse, SaveBillingProductOptionRequest } from '../models';
 export interface CancelBillingSubscriptionUsingDELETERequest {
     id: string;
     userId: string;
@@ -34,6 +34,11 @@ export interface ListSubscriptionInvoicesUsingGETRequest {
     id: string;
     userId: number;
     limit?: number;
+}
+export interface SaveBillingProductOptionUsingPOSTRequest {
+    caseId: string;
+    productId: string;
+    request: SaveBillingProductOptionRequest;
 }
 /**
  *
@@ -79,4 +84,12 @@ export declare class RecurringBillingControllerApi extends runtime.BaseAPI {
      * listSubscriptionInvoices
      */
     listSubscriptionInvoicesUsingGET(requestParameters: ListSubscriptionInvoicesUsingGETRequest): Promise<ListSubscriptionInvoicesResponse>;
+    /**
+     * saveBillingProductOption
+     */
+    saveBillingProductOptionUsingPOSTRaw(requestParameters: SaveBillingProductOptionUsingPOSTRequest): Promise<runtime.ApiResponse<void>>;
+    /**
+     * saveBillingProductOption
+     */
+    saveBillingProductOptionUsingPOST(requestParameters: SaveBillingProductOptionUsingPOSTRequest): Promise<void>;
 }

@@ -57,4 +57,12 @@ export declare class RecurringBillingControllerApi {
      * @param limit limit
      */
     listSubscriptionInvoicesUsingGET(id: string, userId: number, limit?: number, extraHttpRequestParams?: any): ng.IHttpPromise<models.ListSubscriptionInvoicesResponse>;
+    /**
+     *
+     * @summary saveBillingProductOption
+     * @param caseId caseId
+     * @param productId productId
+     * @param request request
+     */
+    saveBillingProductOptionUsingPOST(caseId: string, productId: string, request: models.SaveBillingProductOptionRequest, extraHttpRequestParams?: any): ng.IHttpPromise<{}>;
 }

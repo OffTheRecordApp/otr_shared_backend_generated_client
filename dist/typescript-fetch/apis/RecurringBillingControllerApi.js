@@ -21,7 +21,7 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
     });
 };
 import * as runtime from '../runtime';
-import { CancelBillingSubscriptionResponseFromJSON, CreateBillingSubscriptionRequestToJSON, CreateBillingSubscriptionResponseFromJSON, ListBillingProductsResponseFromJSON, ListBillingSubscriptionsResponseFromJSON, ListSubscriptionInvoicesResponseFromJSON, } from '../models';
+import { CancelBillingSubscriptionResponseFromJSON, CreateBillingSubscriptionRequestToJSON, CreateBillingSubscriptionResponseFromJSON, ListBillingProductsResponseFromJSON, ListBillingSubscriptionsResponseFromJSON, ListSubscriptionInvoicesResponseFromJSON, SaveBillingProductOptionRequestToJSON, } from '../models';
 /**
  *
  */
@@ -193,6 +193,41 @@ export class RecurringBillingControllerApi extends runtime.BaseAPI {
         return __awaiter(this, void 0, void 0, function* () {
             const response = yield this.listSubscriptionInvoicesUsingGETRaw(requestParameters);
             return yield response.value();
+        });
+    }
+    /**
+     * saveBillingProductOption
+     */
+    saveBillingProductOptionUsingPOSTRaw(requestParameters) {
+        return __awaiter(this, void 0, void 0, function* () {
+            if (requestParameters.caseId === null || requestParameters.caseId === undefined) {
+                throw new runtime.RequiredError('caseId', 'Required parameter requestParameters.caseId was null or undefined when calling saveBillingProductOptionUsingPOST.');
+            }
+            if (requestParameters.productId === null || requestParameters.productId === undefined) {
+                throw new runtime.RequiredError('productId', 'Required parameter requestParameters.productId was null or undefined when calling saveBillingProductOptionUsingPOST.');
+            }
+            if (requestParameters.request === null || requestParameters.request === undefined) {
+                throw new runtime.RequiredError('request', 'Required parameter requestParameters.request was null or undefined when calling saveBillingProductOptionUsingPOST.');
+            }
+            const queryParameters = {};
+            const headerParameters = {};
+            headerParameters['Content-Type'] = 'application/json';
+            const response = yield this.request({
+                path: `/api/v1/billing/cases/{caseId}/products/{productId}`.replace(`{${"caseId"}}`, encodeURIComponent(String(requestParameters.caseId))).replace(`{${"productId"}}`, encodeURIComponent(String(requestParameters.productId))),
+                method: 'POST',
+                headers: headerParameters,
+                query: queryParameters,
+                body: SaveBillingProductOptionRequestToJSON(requestParameters.request),
+            });
+            return new runtime.VoidApiResponse(response);
+        });
+    }
+    /**
+     * saveBillingProductOption
+     */
+    saveBillingProductOptionUsingPOST(requestParameters) {
+        return __awaiter(this, void 0, void 0, function* () {
+            yield this.saveBillingProductOptionUsingPOSTRaw(requestParameters);
         });
     }
 }
