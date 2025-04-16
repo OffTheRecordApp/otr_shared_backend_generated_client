@@ -533,21 +533,18 @@ export class CasePaymentControllerService {
     /**
      * getPaymentPlanOptions
      * @param caseId caseId
-     * @param feeInCents feeInCents
      * @param lawfirmId lawfirmId
+     * @param feeInCents feeInCents
      * @param userId userId
      * @param observe set whether or not to return the data Observable as the body, response or events. defaults to returning the body.
      * @param reportProgress flag to report request and response progress.
      */
-    public getPaymentPlanOptionsUsingGET(caseId: string, feeInCents: number, lawfirmId: number, userId?: number, observe?: 'body', reportProgress?: boolean, options?: {httpHeaderAccept?: '*/*', context?: HttpContext}): Observable<GetAvailablePaymentPlansResponse>;
-    public getPaymentPlanOptionsUsingGET(caseId: string, feeInCents: number, lawfirmId: number, userId?: number, observe?: 'response', reportProgress?: boolean, options?: {httpHeaderAccept?: '*/*', context?: HttpContext}): Observable<HttpResponse<GetAvailablePaymentPlansResponse>>;
-    public getPaymentPlanOptionsUsingGET(caseId: string, feeInCents: number, lawfirmId: number, userId?: number, observe?: 'events', reportProgress?: boolean, options?: {httpHeaderAccept?: '*/*', context?: HttpContext}): Observable<HttpEvent<GetAvailablePaymentPlansResponse>>;
-    public getPaymentPlanOptionsUsingGET(caseId: string, feeInCents: number, lawfirmId: number, userId?: number, observe: any = 'body', reportProgress: boolean = false, options?: {httpHeaderAccept?: '*/*', context?: HttpContext}): Observable<any> {
+    public getPaymentPlanOptionsUsingGET(caseId: string, lawfirmId: number, feeInCents?: number, userId?: number, observe?: 'body', reportProgress?: boolean, options?: {httpHeaderAccept?: '*/*', context?: HttpContext}): Observable<GetAvailablePaymentPlansResponse>;
+    public getPaymentPlanOptionsUsingGET(caseId: string, lawfirmId: number, feeInCents?: number, userId?: number, observe?: 'response', reportProgress?: boolean, options?: {httpHeaderAccept?: '*/*', context?: HttpContext}): Observable<HttpResponse<GetAvailablePaymentPlansResponse>>;
+    public getPaymentPlanOptionsUsingGET(caseId: string, lawfirmId: number, feeInCents?: number, userId?: number, observe?: 'events', reportProgress?: boolean, options?: {httpHeaderAccept?: '*/*', context?: HttpContext}): Observable<HttpEvent<GetAvailablePaymentPlansResponse>>;
+    public getPaymentPlanOptionsUsingGET(caseId: string, lawfirmId: number, feeInCents?: number, userId?: number, observe: any = 'body', reportProgress: boolean = false, options?: {httpHeaderAccept?: '*/*', context?: HttpContext}): Observable<any> {
         if (caseId === null || caseId === undefined) {
             throw new Error('Required parameter caseId was null or undefined when calling getPaymentPlanOptionsUsingGET.');
-        }
-        if (feeInCents === null || feeInCents === undefined) {
-            throw new Error('Required parameter feeInCents was null or undefined when calling getPaymentPlanOptionsUsingGET.');
         }
         if (lawfirmId === null || lawfirmId === undefined) {
             throw new Error('Required parameter lawfirmId was null or undefined when calling getPaymentPlanOptionsUsingGET.');

@@ -3112,11 +3112,6 @@ angular.module('otrBackendService', [])
                     queryParameters['feeInCents'] = parameters['feeInCents'];
                 }
 
-                if (parameters['feeInCents'] === undefined) {
-                    deferred.reject(new Error('Missing required  parameter: feeInCents'));
-                    return deferred.promise;
-                }
-
                 if (parameters['lawfirmId'] !== undefined) {
                     queryParameters['lawfirmId'] = parameters['lawfirmId'];
                 }

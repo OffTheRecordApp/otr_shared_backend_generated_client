@@ -41,8 +41,8 @@ export interface GetCasePaymentsUsingGETRequest {
 }
 export interface GetPaymentPlanOptionsUsingGETRequest {
     caseId: string;
-    feeInCents: number;
     lawfirmId: number;
+    feeInCents?: number;
     userId?: number;
 }
 export interface GetStripeChargeUsingGETRequest {

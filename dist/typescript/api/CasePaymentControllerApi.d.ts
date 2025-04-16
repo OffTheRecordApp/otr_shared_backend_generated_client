@@ -68,11 +68,11 @@ export declare class CasePaymentControllerApi {
      *
      * @summary getPaymentPlanOptions
      * @param caseId caseId
-     * @param feeInCents feeInCents
      * @param lawfirmId lawfirmId
+     * @param feeInCents feeInCents
      * @param userId userId
      */
-    getPaymentPlanOptionsUsingGET(caseId: string, feeInCents: number, lawfirmId: number, userId?: number, extraHttpRequestParams?: any): ng.IHttpPromise<models.GetAvailablePaymentPlansResponse>;
+    getPaymentPlanOptionsUsingGET(caseId: string, lawfirmId: number, feeInCents?: number, userId?: number, extraHttpRequestParams?: any): ng.IHttpPromise<models.GetAvailablePaymentPlansResponse>;
     /**
      *
      * @summary getStripeCharge

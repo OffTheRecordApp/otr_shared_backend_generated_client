@@ -226,11 +226,11 @@ export class CasePaymentControllerApi {
      *
      * @summary getPaymentPlanOptions
      * @param caseId caseId
-     * @param feeInCents feeInCents
      * @param lawfirmId lawfirmId
+     * @param feeInCents feeInCents
      * @param userId userId
      */
-    getPaymentPlanOptionsUsingGET(caseId, feeInCents, lawfirmId, userId, extraHttpRequestParams) {
+    getPaymentPlanOptionsUsingGET(caseId, lawfirmId, feeInCents, userId, extraHttpRequestParams) {
         const localVarPath = this.basePath + '/api/v1/cases/{caseId}/payment-plans'
             .replace('{' + 'caseId' + '}', encodeURIComponent(String(caseId)));
         let queryParameters = {};
@@ -238,10 +238,6 @@ export class CasePaymentControllerApi {
         // verify required parameter 'caseId' is not null or undefined
         if (caseId === null || caseId === undefined) {
             throw new Error('Required parameter caseId was null or undefined when calling getPaymentPlanOptionsUsingGET.');
-        }
-        // verify required parameter 'feeInCents' is not null or undefined
-        if (feeInCents === null || feeInCents === undefined) {
-            throw new Error('Required parameter feeInCents was null or undefined when calling getPaymentPlanOptionsUsingGET.');
         }
         // verify required parameter 'lawfirmId' is not null or undefined
         if (lawfirmId === null || lawfirmId === undefined) {

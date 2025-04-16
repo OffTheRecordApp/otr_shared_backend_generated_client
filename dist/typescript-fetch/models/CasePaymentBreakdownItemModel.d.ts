@@ -9,6 +9,7 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
+import { InvoiceLineItemModel } from './';
 /**
  *
  * @export
@@ -29,35 +30,11 @@ export interface CasePaymentBreakdownItemModel {
     friendlyTitle?: string;
     /**
      *
-     * @type {string}
+     * @type {InvoiceLineItemModel}
      * @memberof CasePaymentBreakdownItemModel
      */
-    type?: CasePaymentBreakdownItemModelTypeEnum;
+    type?: InvoiceLineItemModel;
 }
 export declare function CasePaymentBreakdownItemModelFromJSON(json: any): CasePaymentBreakdownItemModel;
 export declare function CasePaymentBreakdownItemModelFromJSONTyped(json: any, ignoreDiscriminator: boolean): CasePaymentBreakdownItemModel;
 export declare function CasePaymentBreakdownItemModelToJSON(value?: CasePaymentBreakdownItemModel | null): any;
-/**
-* @export
-* @enum {string}
-*/
-export declare enum CasePaymentBreakdownItemModelTypeEnum {
-    ACCIDENTFEE = "ACCIDENT_FEE",
-    BASELEGALFEE = "BASE_LEGAL_FEE",
-    BONDFEE = "BOND_FEE",
-    BOOKINGFEE = "BOOKING_FEE",
-    CDLFEE = "CDL_FEE",
-    COURTFEE = "COURT_FEE",
-    DISPUTEFEE = "DISPUTE_FEE",
-    FINEPAYMENT = "FINE_PAYMENT",
-    FTAFEE = "FTA_FEE",
-    INITIALSUBSCRIPTIONFEE = "INITIAL_SUBSCRIPTION_FEE",
-    LATEFEE = "LATE_FEE",
-    MBGREFUND = "MBG_REFUND",
-    MVSFEE = "MVS_FEE",
-    OTHER = "OTHER",
-    OTRCREDIT = "OTR_CREDIT",
-    OTRSUBSCRIPTIONCREDIT = "OTR_SUBSCRIPTION_CREDIT",
-    PAYMENTPLANSERVICEFEE = "PAYMENT_PLAN_SERVICE_FEE",
-    WARRANTFEE = "WARRANT_FEE"
-}

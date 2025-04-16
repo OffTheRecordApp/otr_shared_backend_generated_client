@@ -235,9 +235,6 @@ export class CasePaymentControllerApi extends runtime.BaseAPI {
             if (requestParameters.caseId === null || requestParameters.caseId === undefined) {
                 throw new runtime.RequiredError('caseId', 'Required parameter requestParameters.caseId was null or undefined when calling getPaymentPlanOptionsUsingGET.');
             }
-            if (requestParameters.feeInCents === null || requestParameters.feeInCents === undefined) {
-                throw new runtime.RequiredError('feeInCents', 'Required parameter requestParameters.feeInCents was null or undefined when calling getPaymentPlanOptionsUsingGET.');
-            }
             if (requestParameters.lawfirmId === null || requestParameters.lawfirmId === undefined) {
                 throw new runtime.RequiredError('lawfirmId', 'Required parameter requestParameters.lawfirmId was null or undefined when calling getPaymentPlanOptionsUsingGET.');
             }
