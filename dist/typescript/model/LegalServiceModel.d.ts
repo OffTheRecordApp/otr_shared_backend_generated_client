@@ -11,6 +11,7 @@
  */
 import * as models from './models';
 export interface LegalServiceModel {
+    "algoName"?: string;
     "chanceOfSuccess"?: number;
     "financials"?: models.WorkflowFinancials;
     "isSelected"?: boolean;
@@ -24,6 +25,7 @@ export interface LegalServiceModel {
     "lineItems"?: Array<models.WorkflowLineItemModel>;
     "matchExpirationDateUtc"?: string;
     "obfuscatedPictureUrl"?: string;
+    "predeterminedLawfirmName"?: string;
     "profilePictureUrl"?: string;
     "refundEligibility"?: LegalServiceModel.RefundEligibilityEnum;
     "refundMessage"?: string;

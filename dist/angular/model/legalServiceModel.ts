@@ -14,6 +14,7 @@ import { WorkflowLineItemModel } from './workflowLineItemModel';
 
 
 export interface LegalServiceModel { 
+    algoName?: string;
     chanceOfSuccess?: number;
     financials?: WorkflowFinancials;
     isSelected?: boolean;
@@ -27,6 +28,7 @@ export interface LegalServiceModel {
     lineItems?: Array<WorkflowLineItemModel>;
     matchExpirationDateUtc?: string;
     obfuscatedPictureUrl?: string;
+    predeterminedLawfirmName?: string;
     profilePictureUrl?: string;
     refundEligibility?: LegalServiceModel.RefundEligibilityEnum;
     refundMessage?: string;

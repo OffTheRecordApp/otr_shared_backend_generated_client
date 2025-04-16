@@ -18,6 +18,12 @@ import { WorkflowFinancials, WorkflowLineItemModel } from './';
 export interface LegalServiceModel {
     /**
      *
+     * @type {string}
+     * @memberof LegalServiceModel
+     */
+    algoName?: string;
+    /**
+     *
      * @type {number}
      * @memberof LegalServiceModel
      */
@@ -94,6 +100,12 @@ export interface LegalServiceModel {
      * @memberof LegalServiceModel
      */
     obfuscatedPictureUrl?: string;
+    /**
+     *
+     * @type {string}
+     * @memberof LegalServiceModel
+     */
+    predeterminedLawfirmName?: string;
     /**
      *
      * @type {string}

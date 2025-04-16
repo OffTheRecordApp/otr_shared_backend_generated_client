@@ -21,6 +21,7 @@ export function LegalServiceModelFromJSONTyped(json, ignoreDiscriminator) {
         return json;
     }
     return {
+        'algoName': !exists(json, 'algoName') ? undefined : json['algoName'],
         'chanceOfSuccess': !exists(json, 'chanceOfSuccess') ? undefined : json['chanceOfSuccess'],
         'financials': !exists(json, 'financials') ? undefined : WorkflowFinancialsFromJSON(json['financials']),
         'isSelected': !exists(json, 'isSelected') ? undefined : json['isSelected'],
@@ -34,6 +35,7 @@ export function LegalServiceModelFromJSONTyped(json, ignoreDiscriminator) {
         'lineItems': !exists(json, 'lineItems') ? undefined : (json['lineItems'].map(WorkflowLineItemModelFromJSON)),
         'matchExpirationDateUtc': !exists(json, 'matchExpirationDateUtc') ? undefined : (new Date(json['matchExpirationDateUtc'])),
         'obfuscatedPictureUrl': !exists(json, 'obfuscatedPictureUrl') ? undefined : json['obfuscatedPictureUrl'],
+        'predeterminedLawfirmName': !exists(json, 'predeterminedLawfirmName') ? undefined : json['predeterminedLawfirmName'],
         'profilePictureUrl': !exists(json, 'profilePictureUrl') ? undefined : json['profilePictureUrl'],
         'refundEligibility': !exists(json, 'refundEligibility') ? undefined : json['refundEligibility'],
         'refundMessage': !exists(json, 'refundMessage') ? undefined : json['refundMessage'],
@@ -49,6 +51,7 @@ export function LegalServiceModelToJSON(value) {
         return null;
     }
     return {
+        'algoName': value.algoName,
         'chanceOfSuccess': value.chanceOfSuccess,
         'financials': WorkflowFinancialsToJSON(value.financials),
         'isSelected': value.isSelected,
@@ -62,6 +65,7 @@ export function LegalServiceModelToJSON(value) {
         'lineItems': value.lineItems === undefined ? undefined : (value.lineItems.map(WorkflowLineItemModelToJSON)),
         'matchExpirationDateUtc': value.matchExpirationDateUtc === undefined ? undefined : (value.matchExpirationDateUtc.toISOString()),
         'obfuscatedPictureUrl': value.obfuscatedPictureUrl,
+        'predeterminedLawfirmName': value.predeterminedLawfirmName,
         'profilePictureUrl': value.profilePictureUrl,
         'refundEligibility': value.refundEligibility,
         'refundMessage': value.refundMessage,
