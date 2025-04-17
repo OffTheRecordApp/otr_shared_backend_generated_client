@@ -569,6 +569,40 @@ angular.module('otrBackendService', [])
                 return deferred.promise;
             };
             /**
+             * clearBillingProductOptions
+             * @method
+             * @name OtrService#clearBillingProductOptionsUsingDELETE
+             * @param {object} parameters - method options and parameters
+             * @param {string} parameters.caseId - caseId
+             */
+            OtrService.prototype.clearBillingProductOptionsUsingDELETE = function(parameters) {
+                if (parameters === undefined) {
+                    parameters = {};
+                }
+                var deferred = $q.defer();
+                var domain = this.domain,
+                    path = '/api/v1/billing/cases/{caseId}/products';
+                var body = {},
+                    queryParameters = {},
+                    headers = {},
+                    form = {};
+
+                headers['Accept'] = ['*/*'];
+
+                path = path.replace('{caseId}', parameters['caseId']);
+
+                if (parameters['caseId'] === undefined) {
+                    deferred.reject(new Error('Missing required  parameter: caseId'));
+                    return deferred.promise;
+                }
+
+                queryParameters = mergeQueryParams(parameters, queryParameters);
+
+                this.request('DELETE', domain + path, parameters, body, headers, queryParameters, form, deferred);
+
+                return deferred.promise;
+            };
+            /**
              * saveBillingProductOption
              * @method
              * @name OtrService#saveBillingProductOptionUsingPOST

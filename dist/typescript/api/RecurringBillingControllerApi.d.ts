@@ -28,6 +28,12 @@ export declare class RecurringBillingControllerApi {
     cancelBillingSubscriptionUsingDELETE(id: string, userId: string, isProrated?: boolean, extraHttpRequestParams?: any): ng.IHttpPromise<models.CancelBillingSubscriptionResponse>;
     /**
      *
+     * @summary clearBillingProductOptions
+     * @param caseId caseId
+     */
+    clearBillingProductOptionsUsingDELETE(caseId: string, extraHttpRequestParams?: any): ng.IHttpPromise<{}>;
+    /**
+     *
      * @summary createBillingSubscription
      * @param userId userId
      * @param request request

@@ -16,6 +16,9 @@ export interface CancelBillingSubscriptionUsingDELETERequest {
     userId: string;
     isProrated?: boolean;
 }
+export interface ClearBillingProductOptionsUsingDELETERequest {
+    caseId: string;
+}
 export interface CreateBillingSubscriptionUsingPOSTRequest {
     userId: number;
     request: CreateBillingSubscriptionRequest;
@@ -52,6 +55,14 @@ export declare class RecurringBillingControllerApi extends runtime.BaseAPI {
      * cancelBillingSubscription
      */
     cancelBillingSubscriptionUsingDELETE(requestParameters: CancelBillingSubscriptionUsingDELETERequest): Promise<CancelBillingSubscriptionResponse>;
+    /**
+     * clearBillingProductOptions
+     */
+    clearBillingProductOptionsUsingDELETERaw(requestParameters: ClearBillingProductOptionsUsingDELETERequest): Promise<runtime.ApiResponse<void>>;
+    /**
+     * clearBillingProductOptions
+     */
+    clearBillingProductOptionsUsingDELETE(requestParameters: ClearBillingProductOptionsUsingDELETERequest): Promise<void>;
     /**
      * createBillingSubscription
      */

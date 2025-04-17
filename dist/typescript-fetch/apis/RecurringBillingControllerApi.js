@@ -61,6 +61,33 @@ export class RecurringBillingControllerApi extends runtime.BaseAPI {
         });
     }
     /**
+     * clearBillingProductOptions
+     */
+    clearBillingProductOptionsUsingDELETERaw(requestParameters) {
+        return __awaiter(this, void 0, void 0, function* () {
+            if (requestParameters.caseId === null || requestParameters.caseId === undefined) {
+                throw new runtime.RequiredError('caseId', 'Required parameter requestParameters.caseId was null or undefined when calling clearBillingProductOptionsUsingDELETE.');
+            }
+            const queryParameters = {};
+            const headerParameters = {};
+            const response = yield this.request({
+                path: `/api/v1/billing/cases/{caseId}/products`.replace(`{${"caseId"}}`, encodeURIComponent(String(requestParameters.caseId))),
+                method: 'DELETE',
+                headers: headerParameters,
+                query: queryParameters,
+            });
+            return new runtime.VoidApiResponse(response);
+        });
+    }
+    /**
+     * clearBillingProductOptions
+     */
+    clearBillingProductOptionsUsingDELETE(requestParameters) {
+        return __awaiter(this, void 0, void 0, function* () {
+            yield this.clearBillingProductOptionsUsingDELETERaw(requestParameters);
+        });
+    }
+    /**
      * createBillingSubscription
      */
     createBillingSubscriptionUsingPOSTRaw(requestParameters) {
