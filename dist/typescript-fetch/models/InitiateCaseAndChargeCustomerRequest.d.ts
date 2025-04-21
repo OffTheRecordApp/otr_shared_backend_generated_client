@@ -27,6 +27,18 @@ export interface InitiateCaseAndChargeCustomerRequest {
      * @memberof InitiateCaseAndChargeCustomerRequest
      */
     paymentPlanType?: InitiateCaseAndChargeCustomerRequestPaymentPlanTypeEnum;
+    /**
+     *
+     * @type {Array<string>}
+     * @memberof InitiateCaseAndChargeCustomerRequest
+     */
+    priceIds?: Array<string>;
+    /**
+     *
+     * @type {string}
+     * @memberof InitiateCaseAndChargeCustomerRequest
+     */
+    productId?: string;
 }
 export declare function InitiateCaseAndChargeCustomerRequestFromJSON(json: any): InitiateCaseAndChargeCustomerRequest;
 export declare function InitiateCaseAndChargeCustomerRequestFromJSONTyped(json: any, ignoreDiscriminator: boolean): InitiateCaseAndChargeCustomerRequest;

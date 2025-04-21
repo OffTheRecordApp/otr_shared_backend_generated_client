@@ -12,6 +12,8 @@
 export interface InitiateCaseAndChargeCustomerRequest {
     "cardId"?: string;
     "paymentPlanType"?: InitiateCaseAndChargeCustomerRequest.PaymentPlanTypeEnum;
+    "priceIds"?: Array<string>;
+    "productId"?: string;
 }
 export declare namespace InitiateCaseAndChargeCustomerRequest {
     enum PaymentPlanTypeEnum {

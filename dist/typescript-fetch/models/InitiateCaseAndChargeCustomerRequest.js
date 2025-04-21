@@ -22,6 +22,8 @@ export function InitiateCaseAndChargeCustomerRequestFromJSONTyped(json, ignoreDi
     return {
         'cardId': !exists(json, 'cardId') ? undefined : json['cardId'],
         'paymentPlanType': !exists(json, 'paymentPlanType') ? undefined : json['paymentPlanType'],
+        'priceIds': !exists(json, 'priceIds') ? undefined : json['priceIds'],
+        'productId': !exists(json, 'productId') ? undefined : json['productId'],
     };
 }
 export function InitiateCaseAndChargeCustomerRequestToJSON(value) {
@@ -34,6 +36,8 @@ export function InitiateCaseAndChargeCustomerRequestToJSON(value) {
     return {
         'cardId': value.cardId,
         'paymentPlanType': value.paymentPlanType,
+        'priceIds': value.priceIds,
+        'productId': value.productId,
     };
 }
 /**

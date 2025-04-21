@@ -14,6 +14,8 @@
 export interface InitiateCaseAndChargeCustomerRequest { 
     cardId?: string;
     paymentPlanType?: InitiateCaseAndChargeCustomerRequest.PaymentPlanTypeEnum;
+    priceIds?: Array<string>;
+    productId?: string;
 }
 export namespace InitiateCaseAndChargeCustomerRequest {
     export type PaymentPlanTypeEnum = 'ALL_UPFRONT' | 'THREE_PAYMENTS_HALF_FIRST' | 'TWO_PAYMENTS_MONTHLY';
