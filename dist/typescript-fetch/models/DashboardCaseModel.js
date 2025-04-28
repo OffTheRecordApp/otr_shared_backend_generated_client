@@ -12,7 +12,7 @@
  * Do not edit the class manually.
  */
 import { exists } from '../runtime';
-import { CaseUserDetailsModelFromJSON, CaseUserDetailsModelToJSON, DashboardAuthorModelFromJSON, DashboardAuthorModelToJSON, DashboardCitationModelFromJSON, DashboardCitationModelToJSON, DashboardCourtModelFromJSON, DashboardCourtModelToJSON, DashboardStatusModelFromJSON, DashboardStatusModelToJSON, } from './';
+import { CaseCounterOfferModelFromJSON, CaseCounterOfferModelToJSON, CaseUserDetailsModelFromJSON, CaseUserDetailsModelToJSON, DashboardAuthorModelFromJSON, DashboardAuthorModelToJSON, DashboardCitationModelFromJSON, DashboardCitationModelToJSON, DashboardCourtModelFromJSON, DashboardCourtModelToJSON, DashboardStatusModelFromJSON, DashboardStatusModelToJSON, EngagementLetterModelFromJSON, EngagementLetterModelToJSON, OverduePaymentModelFromJSON, OverduePaymentModelToJSON, ViolationModel0FromJSON, ViolationModel0ToJSON, } from './';
 export function DashboardCaseModelFromJSON(json) {
     return DashboardCaseModelFromJSONTyped(json, false);
 }
@@ -23,10 +23,12 @@ export function DashboardCaseModelFromJSONTyped(json, ignoreDiscriminator) {
     return {
         'authorModel': !exists(json, 'authorModel') ? undefined : DashboardAuthorModelFromJSON(json['authorModel']),
         'bookingConfirmedDate': !exists(json, 'bookingConfirmedDate') ? undefined : (new Date(json['bookingConfirmedDate'])),
+        'caseCounterOffer': !exists(json, 'caseCounterOffer') ? undefined : CaseCounterOfferModelFromJSON(json['caseCounterOffer']),
         'caseId': !exists(json, 'caseId') ? undefined : json['caseId'],
         'caseUserDetails': !exists(json, 'caseUserDetails') ? undefined : CaseUserDetailsModelFromJSON(json['caseUserDetails']),
         'citation': !exists(json, 'citation') ? undefined : DashboardCitationModelFromJSON(json['citation']),
         'court': !exists(json, 'court') ? undefined : DashboardCourtModelFromJSON(json['court']),
+        'engagementLetter': !exists(json, 'engagementLetter') ? undefined : EngagementLetterModelFromJSON(json['engagementLetter']),
         'hasLeftLawyerReview': !exists(json, 'hasLeftLawyerReview') ? undefined : json['hasLeftLawyerReview'],
         'lawfirmId': !exists(json, 'lawfirmId') ? undefined : json['lawfirmId'],
         'lawfirmName': !exists(json, 'lawfirmName') ? undefined : json['lawfirmName'],
@@ -35,8 +37,10 @@ export function DashboardCaseModelFromJSONTyped(json, ignoreDiscriminator) {
         'legalFeeInCents': !exists(json, 'legalFeeInCents') ? undefined : json['legalFeeInCents'],
         'matchExpirationDateUtc': !exists(json, 'matchExpirationDateUtc') ? undefined : (new Date(json['matchExpirationDateUtc'])),
         'messageBody': !exists(json, 'messageBody') ? undefined : json['messageBody'],
+        'overduePayment': !exists(json, 'overduePayment') ? undefined : OverduePaymentModelFromJSON(json['overduePayment']),
         'status': !exists(json, 'status') ? undefined : DashboardStatusModelFromJSON(json['status']),
         'userId': !exists(json, 'userId') ? undefined : json['userId'],
+        'violations': !exists(json, 'violations') ? undefined : (json['violations'].map(ViolationModel0FromJSON)),
     };
 }
 export function DashboardCaseModelToJSON(value) {
@@ -49,10 +53,12 @@ export function DashboardCaseModelToJSON(value) {
     return {
         'authorModel': DashboardAuthorModelToJSON(value.authorModel),
         'bookingConfirmedDate': value.bookingConfirmedDate === undefined ? undefined : (value.bookingConfirmedDate.toISOString()),
+        'caseCounterOffer': CaseCounterOfferModelToJSON(value.caseCounterOffer),
         'caseId': value.caseId,
         'caseUserDetails': CaseUserDetailsModelToJSON(value.caseUserDetails),
         'citation': DashboardCitationModelToJSON(value.citation),
         'court': DashboardCourtModelToJSON(value.court),
+        'engagementLetter': EngagementLetterModelToJSON(value.engagementLetter),
         'hasLeftLawyerReview': value.hasLeftLawyerReview,
         'lawfirmId': value.lawfirmId,
         'lawfirmName': value.lawfirmName,
@@ -61,7 +67,9 @@ export function DashboardCaseModelToJSON(value) {
         'legalFeeInCents': value.legalFeeInCents,
         'matchExpirationDateUtc': value.matchExpirationDateUtc === undefined ? undefined : (value.matchExpirationDateUtc.toISOString()),
         'messageBody': value.messageBody,
+        'overduePayment': OverduePaymentModelToJSON(value.overduePayment),
         'status': DashboardStatusModelToJSON(value.status),
         'userId': value.userId,
+        'violations': value.violations === undefined ? undefined : (value.violations.map(ViolationModel0ToJSON)),
     };
 }

@@ -9,4 +9,13 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-export {};
+export var CaseCounterOfferModel;
+(function (CaseCounterOfferModel) {
+    let CounterOfferStatusEnum;
+    (function (CounterOfferStatusEnum) {
+        CounterOfferStatusEnum[CounterOfferStatusEnum["ACCEPTED"] = 'ACCEPTED'] = "ACCEPTED";
+        CounterOfferStatusEnum[CounterOfferStatusEnum["DECLINED"] = 'DECLINED'] = "DECLINED";
+        CounterOfferStatusEnum[CounterOfferStatusEnum["PENDING"] = 'PENDING'] = "PENDING";
+        CounterOfferStatusEnum[CounterOfferStatusEnum["WITHDRAWN"] = 'WITHDRAWN'] = "WITHDRAWN";
+    })(CounterOfferStatusEnum = CaseCounterOfferModel.CounterOfferStatusEnum || (CaseCounterOfferModel.CounterOfferStatusEnum = {}));
+})(CaseCounterOfferModel || (CaseCounterOfferModel = {}));

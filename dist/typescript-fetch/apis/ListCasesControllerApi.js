@@ -182,6 +182,7 @@ export var ListDashboardCasesUsingGETSortByEnum;
     ListDashboardCasesUsingGETSortByEnum["BOOKINGCONFIRMEDDATE"] = "BOOKING_CONFIRMED_DATE";
     ListDashboardCasesUsingGETSortByEnum["CITATIONCREATIONDATE"] = "CITATION_CREATION_DATE";
     ListDashboardCasesUsingGETSortByEnum["CITATIONISSUEDATE"] = "CITATION_ISSUE_DATE";
+    ListDashboardCasesUsingGETSortByEnum["COURTDATE"] = "COURT_DATE";
     ListDashboardCasesUsingGETSortByEnum["LASTCITATIONUPDATEDATE"] = "LAST_CITATION_UPDATE_DATE";
 })(ListDashboardCasesUsingGETSortByEnum || (ListDashboardCasesUsingGETSortByEnum = {}));
 /**

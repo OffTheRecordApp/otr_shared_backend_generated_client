@@ -9,7 +9,7 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-import { CaseUserDetailsModel, DashboardAuthorModel, DashboardCitationModel, DashboardCourtModel, DashboardStatusModel } from './';
+import { CaseCounterOfferModel, CaseUserDetailsModel, DashboardAuthorModel, DashboardCitationModel, DashboardCourtModel, DashboardStatusModel, EngagementLetterModel, OverduePaymentModel, ViolationModel0 } from './';
 /**
  *
  * @export
@@ -28,6 +28,12 @@ export interface DashboardCaseModel {
      * @memberof DashboardCaseModel
      */
     bookingConfirmedDate?: Date;
+    /**
+     *
+     * @type {CaseCounterOfferModel}
+     * @memberof DashboardCaseModel
+     */
+    caseCounterOffer?: CaseCounterOfferModel;
     /**
      *
      * @type {string}
@@ -52,6 +58,12 @@ export interface DashboardCaseModel {
      * @memberof DashboardCaseModel
      */
     court?: DashboardCourtModel;
+    /**
+     *
+     * @type {EngagementLetterModel}
+     * @memberof DashboardCaseModel
+     */
+    engagementLetter?: EngagementLetterModel;
     /**
      *
      * @type {boolean}
@@ -102,6 +114,12 @@ export interface DashboardCaseModel {
     messageBody?: string;
     /**
      *
+     * @type {OverduePaymentModel}
+     * @memberof DashboardCaseModel
+     */
+    overduePayment?: OverduePaymentModel;
+    /**
+     *
      * @type {DashboardStatusModel}
      * @memberof DashboardCaseModel
      */
@@ -112,6 +130,12 @@ export interface DashboardCaseModel {
      * @memberof DashboardCaseModel
      */
     userId?: number;
+    /**
+     *
+     * @type {Array<ViolationModel0>}
+     * @memberof DashboardCaseModel
+     */
+    violations?: Array<ViolationModel0>;
 }
 export declare function DashboardCaseModelFromJSON(json: any): DashboardCaseModel;
 export declare function DashboardCaseModelFromJSONTyped(json: any, ignoreDiscriminator: boolean): DashboardCaseModel;

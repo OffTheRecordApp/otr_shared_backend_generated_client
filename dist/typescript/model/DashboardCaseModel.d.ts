@@ -13,10 +13,12 @@ import * as models from './models';
 export interface DashboardCaseModel {
     "authorModel"?: models.DashboardAuthorModel;
     "bookingConfirmedDate"?: string;
+    "caseCounterOffer"?: models.CaseCounterOfferModel;
     "caseId"?: string;
     "caseUserDetails"?: models.CaseUserDetailsModel;
     "citation"?: models.DashboardCitationModel;
     "court"?: models.DashboardCourtModel;
+    "engagementLetter"?: models.EngagementLetterModel;
     "hasLeftLawyerReview"?: boolean;
     "lawfirmId"?: number;
     "lawfirmName"?: string;
@@ -25,6 +27,8 @@ export interface DashboardCaseModel {
     "legalFeeInCents"?: number;
     "matchExpirationDateUtc"?: string;
     "messageBody"?: string;
+    "overduePayment"?: models.OverduePaymentModel;
     "status"?: models.DashboardStatusModel;
     "userId"?: number;
+    "violations"?: Array<models.ViolationModel0>;
 }

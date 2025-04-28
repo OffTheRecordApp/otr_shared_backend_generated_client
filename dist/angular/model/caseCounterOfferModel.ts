@@ -9,21 +9,20 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-import { Timestamp } from './timestamp';
 
 
 export interface CaseCounterOfferModel { 
     counterOfferAmountInCents?: number;
-    counterOfferDateUtc?: Timestamp;
-    counterOfferId?: number;
-    counterOfferStatus?: string;
-    createdByUserId?: number;
-    createdByUserRoleId?: number;
-    initialLegalFeeInCents?: number;
-    initialRefundPercentage?: number;
-    lawfirmCaseId?: number;
-    noteToClient?: string;
-    noteToOtr?: string;
-    refundPercentage?: number;
+    counterOfferStatus?: CaseCounterOfferModel.CounterOfferStatusEnum;
 }
+export namespace CaseCounterOfferModel {
+    export type CounterOfferStatusEnum = 'ACCEPTED' | 'DECLINED' | 'PENDING' | 'WITHDRAWN';
+    export const CounterOfferStatusEnum = {
+        Accepted: 'ACCEPTED' as CounterOfferStatusEnum,
+        Declined: 'DECLINED' as CounterOfferStatusEnum,
+        Pending: 'PENDING' as CounterOfferStatusEnum,
+        Withdrawn: 'WITHDRAWN' as CounterOfferStatusEnum
+    };
+}
+
 

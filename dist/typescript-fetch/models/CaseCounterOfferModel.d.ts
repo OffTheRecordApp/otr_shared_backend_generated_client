@@ -9,7 +9,6 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-import { Timestamp } from './';
 /**
  *
  * @export
@@ -24,71 +23,21 @@ export interface CaseCounterOfferModel {
     counterOfferAmountInCents?: number;
     /**
      *
-     * @type {Timestamp}
-     * @memberof CaseCounterOfferModel
-     */
-    counterOfferDateUtc?: Timestamp;
-    /**
-     *
-     * @type {number}
-     * @memberof CaseCounterOfferModel
-     */
-    counterOfferId?: number;
-    /**
-     *
      * @type {string}
      * @memberof CaseCounterOfferModel
      */
-    counterOfferStatus?: string;
-    /**
-     *
-     * @type {number}
-     * @memberof CaseCounterOfferModel
-     */
-    createdByUserId?: number;
-    /**
-     *
-     * @type {number}
-     * @memberof CaseCounterOfferModel
-     */
-    createdByUserRoleId?: number;
-    /**
-     *
-     * @type {number}
-     * @memberof CaseCounterOfferModel
-     */
-    initialLegalFeeInCents?: number;
-    /**
-     *
-     * @type {number}
-     * @memberof CaseCounterOfferModel
-     */
-    initialRefundPercentage?: number;
-    /**
-     *
-     * @type {number}
-     * @memberof CaseCounterOfferModel
-     */
-    lawfirmCaseId?: number;
-    /**
-     *
-     * @type {string}
-     * @memberof CaseCounterOfferModel
-     */
-    noteToClient?: string;
-    /**
-     *
-     * @type {string}
-     * @memberof CaseCounterOfferModel
-     */
-    noteToOtr?: string;
-    /**
-     *
-     * @type {number}
-     * @memberof CaseCounterOfferModel
-     */
-    refundPercentage?: number;
+    counterOfferStatus?: CaseCounterOfferModelCounterOfferStatusEnum;
 }
 export declare function CaseCounterOfferModelFromJSON(json: any): CaseCounterOfferModel;
 export declare function CaseCounterOfferModelFromJSONTyped(json: any, ignoreDiscriminator: boolean): CaseCounterOfferModel;
 export declare function CaseCounterOfferModelToJSON(value?: CaseCounterOfferModel | null): any;
+/**
+* @export
+* @enum {string}
+*/
+export declare enum CaseCounterOfferModelCounterOfferStatusEnum {
+    ACCEPTED = "ACCEPTED",
+    DECLINED = "DECLINED",
+    PENDING = "PENDING",
+    WITHDRAWN = "WITHDRAWN"
+}

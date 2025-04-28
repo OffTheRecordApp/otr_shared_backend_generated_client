@@ -11,18 +11,24 @@
  */
 import { DashboardStatusModel } from './dashboardStatusModel';
 import { DashboardCourtModel } from './dashboardCourtModel';
+import { ViolationModel0 } from './violationModel0';
+import { CaseCounterOfferModel } from './caseCounterOfferModel';
 import { CaseUserDetailsModel } from './caseUserDetailsModel';
 import { DashboardCitationModel } from './dashboardCitationModel';
 import { DashboardAuthorModel } from './dashboardAuthorModel';
+import { EngagementLetterModel } from './engagementLetterModel';
+import { OverduePaymentModel } from './overduePaymentModel';
 
 
 export interface DashboardCaseModel { 
     authorModel?: DashboardAuthorModel;
     bookingConfirmedDate?: string;
+    caseCounterOffer?: CaseCounterOfferModel;
     caseId?: string;
     caseUserDetails?: CaseUserDetailsModel;
     citation?: DashboardCitationModel;
     court?: DashboardCourtModel;
+    engagementLetter?: EngagementLetterModel;
     hasLeftLawyerReview?: boolean;
     lawfirmId?: number;
     lawfirmName?: string;
@@ -31,7 +37,9 @@ export interface DashboardCaseModel {
     legalFeeInCents?: number;
     matchExpirationDateUtc?: string;
     messageBody?: string;
+    overduePayment?: OverduePaymentModel;
     status?: DashboardStatusModel;
     userId?: number;
+    violations?: Array<ViolationModel0>;
 }
 

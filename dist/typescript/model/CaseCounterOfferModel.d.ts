@@ -9,18 +9,15 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-import * as models from './models';
 export interface CaseCounterOfferModel {
     "counterOfferAmountInCents"?: number;
-    "counterOfferDateUtc"?: models.Timestamp;
-    "counterOfferId"?: number;
-    "counterOfferStatus"?: string;
-    "createdByUserId"?: number;
-    "createdByUserRoleId"?: number;
-    "initialLegalFeeInCents"?: number;
-    "initialRefundPercentage"?: number;
-    "lawfirmCaseId"?: number;
-    "noteToClient"?: string;
-    "noteToOtr"?: string;
-    "refundPercentage"?: number;
+    "counterOfferStatus"?: CaseCounterOfferModel.CounterOfferStatusEnum;
+}
+export declare namespace CaseCounterOfferModel {
+    enum CounterOfferStatusEnum {
+        ACCEPTED,
+        DECLINED,
+        PENDING,
+        WITHDRAWN
+    }
 }
