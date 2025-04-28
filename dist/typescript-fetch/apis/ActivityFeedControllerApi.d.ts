@@ -13,6 +13,9 @@ import * as runtime from '../runtime';
 import { GetActivityFeedResponse, ListCaseOutcomesResponse } from '../models';
 export interface ListActivityFeedUsingGETRequest {
     limit: number;
+    activityType?: ListActivityFeedUsingGETActivityTypeEnum;
+    courtId?: number;
+    hasProfilePicture?: boolean;
     nextPageToken?: string;
     previousPageToken?: string;
     regionCode?: string;
@@ -44,6 +47,17 @@ export declare class ActivityFeedControllerApi extends runtime.BaseAPI {
      * listCaseOutcomes
      */
     listCaseOutcomesUsingGET(requestParameters: ListCaseOutcomesUsingGETRequest): Promise<ListCaseOutcomesResponse>;
+}
+/**
+    * @export
+    * @enum {string}
+    */
+export declare enum ListActivityFeedUsingGETActivityTypeEnum {
+    PURCHASE = "PURCHASE",
+    REFERRAL = "REFERRAL",
+    REFUND = "REFUND",
+    RESOLUTION = "RESOLUTION",
+    TICKETREVIEW = "TICKET_REVIEW"
 }
 /**
     * @export

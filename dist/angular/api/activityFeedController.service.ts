@@ -96,21 +96,36 @@ export class ActivityFeedControllerService {
     /**
      * listActivityFeed
      * @param limit limit
+     * @param activityType activityType
+     * @param courtId courtId
+     * @param hasProfilePicture hasProfilePicture
      * @param nextPageToken nextPageToken
      * @param previousPageToken previousPageToken
      * @param regionCode regionCode
      * @param observe set whether or not to return the data Observable as the body, response or events. defaults to returning the body.
      * @param reportProgress flag to report request and response progress.
      */
-    public listActivityFeedUsingGET(limit: number, nextPageToken?: string, previousPageToken?: string, regionCode?: string, observe?: 'body', reportProgress?: boolean, options?: {httpHeaderAccept?: '*/*', context?: HttpContext}): Observable<GetActivityFeedResponse>;
-    public listActivityFeedUsingGET(limit: number, nextPageToken?: string, previousPageToken?: string, regionCode?: string, observe?: 'response', reportProgress?: boolean, options?: {httpHeaderAccept?: '*/*', context?: HttpContext}): Observable<HttpResponse<GetActivityFeedResponse>>;
-    public listActivityFeedUsingGET(limit: number, nextPageToken?: string, previousPageToken?: string, regionCode?: string, observe?: 'events', reportProgress?: boolean, options?: {httpHeaderAccept?: '*/*', context?: HttpContext}): Observable<HttpEvent<GetActivityFeedResponse>>;
-    public listActivityFeedUsingGET(limit: number, nextPageToken?: string, previousPageToken?: string, regionCode?: string, observe: any = 'body', reportProgress: boolean = false, options?: {httpHeaderAccept?: '*/*', context?: HttpContext}): Observable<any> {
+    public listActivityFeedUsingGET(limit: number, activityType?: 'PURCHASE' | 'REFERRAL' | 'REFUND' | 'RESOLUTION' | 'TICKET_REVIEW', courtId?: number, hasProfilePicture?: boolean, nextPageToken?: string, previousPageToken?: string, regionCode?: string, observe?: 'body', reportProgress?: boolean, options?: {httpHeaderAccept?: '*/*', context?: HttpContext}): Observable<GetActivityFeedResponse>;
+    public listActivityFeedUsingGET(limit: number, activityType?: 'PURCHASE' | 'REFERRAL' | 'REFUND' | 'RESOLUTION' | 'TICKET_REVIEW', courtId?: number, hasProfilePicture?: boolean, nextPageToken?: string, previousPageToken?: string, regionCode?: string, observe?: 'response', reportProgress?: boolean, options?: {httpHeaderAccept?: '*/*', context?: HttpContext}): Observable<HttpResponse<GetActivityFeedResponse>>;
+    public listActivityFeedUsingGET(limit: number, activityType?: 'PURCHASE' | 'REFERRAL' | 'REFUND' | 'RESOLUTION' | 'TICKET_REVIEW', courtId?: number, hasProfilePicture?: boolean, nextPageToken?: string, previousPageToken?: string, regionCode?: string, observe?: 'events', reportProgress?: boolean, options?: {httpHeaderAccept?: '*/*', context?: HttpContext}): Observable<HttpEvent<GetActivityFeedResponse>>;
+    public listActivityFeedUsingGET(limit: number, activityType?: 'PURCHASE' | 'REFERRAL' | 'REFUND' | 'RESOLUTION' | 'TICKET_REVIEW', courtId?: number, hasProfilePicture?: boolean, nextPageToken?: string, previousPageToken?: string, regionCode?: string, observe: any = 'body', reportProgress: boolean = false, options?: {httpHeaderAccept?: '*/*', context?: HttpContext}): Observable<any> {
         if (limit === null || limit === undefined) {
             throw new Error('Required parameter limit was null or undefined when calling listActivityFeedUsingGET.');
         }
 
         let localVarQueryParameters = new HttpParams({encoder: this.encoder});
+        if (activityType !== undefined && activityType !== null) {
+          localVarQueryParameters = this.addToHttpParams(localVarQueryParameters,
+            <any>activityType, 'activityType');
+        }
+        if (courtId !== undefined && courtId !== null) {
+          localVarQueryParameters = this.addToHttpParams(localVarQueryParameters,
+            <any>courtId, 'courtId');
+        }
+        if (hasProfilePicture !== undefined && hasProfilePicture !== null) {
+          localVarQueryParameters = this.addToHttpParams(localVarQueryParameters,
+            <any>hasProfilePicture, 'hasProfilePicture');
+        }
         if (limit !== undefined && limit !== null) {
           localVarQueryParameters = this.addToHttpParams(localVarQueryParameters,
             <any>limit, 'limit');

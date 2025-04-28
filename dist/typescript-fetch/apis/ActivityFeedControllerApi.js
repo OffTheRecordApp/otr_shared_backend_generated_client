@@ -35,6 +35,15 @@ export class ActivityFeedControllerApi extends runtime.BaseAPI {
                 throw new runtime.RequiredError('limit', 'Required parameter requestParameters.limit was null or undefined when calling listActivityFeedUsingGET.');
             }
             const queryParameters = {};
+            if (requestParameters.activityType !== undefined) {
+                queryParameters['activityType'] = requestParameters.activityType;
+            }
+            if (requestParameters.courtId !== undefined) {
+                queryParameters['courtId'] = requestParameters.courtId;
+            }
+            if (requestParameters.hasProfilePicture !== undefined) {
+                queryParameters['hasProfilePicture'] = requestParameters.hasProfilePicture;
+            }
             if (requestParameters.limit !== undefined) {
                 queryParameters['limit'] = requestParameters.limit;
             }
@@ -107,6 +116,18 @@ export class ActivityFeedControllerApi extends runtime.BaseAPI {
         });
     }
 }
+/**
+    * @export
+    * @enum {string}
+    */
+export var ListActivityFeedUsingGETActivityTypeEnum;
+(function (ListActivityFeedUsingGETActivityTypeEnum) {
+    ListActivityFeedUsingGETActivityTypeEnum["PURCHASE"] = "PURCHASE";
+    ListActivityFeedUsingGETActivityTypeEnum["REFERRAL"] = "REFERRAL";
+    ListActivityFeedUsingGETActivityTypeEnum["REFUND"] = "REFUND";
+    ListActivityFeedUsingGETActivityTypeEnum["RESOLUTION"] = "RESOLUTION";
+    ListActivityFeedUsingGETActivityTypeEnum["TICKETREVIEW"] = "TICKET_REVIEW";
+})(ListActivityFeedUsingGETActivityTypeEnum || (ListActivityFeedUsingGETActivityTypeEnum = {}));
 /**
     * @export
     * @enum {string}

@@ -231,6 +231,9 @@ angular.module('otrBackendService', [])
              * @method
              * @name OtrService#listActivityFeedUsingGET
              * @param {object} parameters - method options and parameters
+             * @param {string} parameters.activityType - activityType
+             * @param {integer} parameters.courtId - courtId
+             * @param {boolean} parameters.hasProfilePicture - hasProfilePicture
              * @param {integer} parameters.limit - limit
              * @param {string} parameters.nextPageToken - nextPageToken
              * @param {string} parameters.previousPageToken - previousPageToken
@@ -249,6 +252,18 @@ angular.module('otrBackendService', [])
                     form = {};
 
                 headers['Accept'] = ['*/*'];
+
+                if (parameters['activityType'] !== undefined) {
+                    queryParameters['activityType'] = parameters['activityType'];
+                }
+
+                if (parameters['courtId'] !== undefined) {
+                    queryParameters['courtId'] = parameters['courtId'];
+                }
+
+                if (parameters['hasProfilePicture'] !== undefined) {
+                    queryParameters['hasProfilePicture'] = parameters['hasProfilePicture'];
+                }
 
                 if (parameters['limit'] !== undefined) {
                     queryParameters['limit'] = parameters['limit'];

@@ -24,17 +24,29 @@ export class ActivityFeedControllerApi {
      *
      * @summary listActivityFeed
      * @param limit limit
+     * @param activityType activityType
+     * @param courtId courtId
+     * @param hasProfilePicture hasProfilePicture
      * @param nextPageToken nextPageToken
      * @param previousPageToken previousPageToken
      * @param regionCode regionCode
      */
-    listActivityFeedUsingGET(limit, nextPageToken, previousPageToken, regionCode, extraHttpRequestParams) {
+    listActivityFeedUsingGET(limit, activityType, courtId, hasProfilePicture, nextPageToken, previousPageToken, regionCode, extraHttpRequestParams) {
         const localVarPath = this.basePath + '/api/v1/activity-feed';
         let queryParameters = {};
         let headerParams = Object.assign({}, this.defaultHeaders);
         // verify required parameter 'limit' is not null or undefined
         if (limit === null || limit === undefined) {
             throw new Error('Required parameter limit was null or undefined when calling listActivityFeedUsingGET.');
+        }
+        if (activityType !== undefined) {
+            queryParameters['activityType'] = activityType;
+        }
+        if (courtId !== undefined) {
+            queryParameters['courtId'] = courtId;
+        }
+        if (hasProfilePicture !== undefined) {
+            queryParameters['hasProfilePicture'] = hasProfilePicture;
         }
         if (limit !== undefined) {
             queryParameters['limit'] = limit;

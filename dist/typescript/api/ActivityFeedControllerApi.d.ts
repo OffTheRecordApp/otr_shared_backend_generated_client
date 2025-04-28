@@ -22,11 +22,14 @@ export declare class ActivityFeedControllerApi {
      *
      * @summary listActivityFeed
      * @param limit limit
+     * @param activityType activityType
+     * @param courtId courtId
+     * @param hasProfilePicture hasProfilePicture
      * @param nextPageToken nextPageToken
      * @param previousPageToken previousPageToken
      * @param regionCode regionCode
      */
-    listActivityFeedUsingGET(limit: number, nextPageToken?: string, previousPageToken?: string, regionCode?: string, extraHttpRequestParams?: any): ng.IHttpPromise<models.GetActivityFeedResponse>;
+    listActivityFeedUsingGET(limit: number, activityType?: 'PURCHASE' | 'REFERRAL' | 'REFUND' | 'RESOLUTION' | 'TICKET_REVIEW', courtId?: number, hasProfilePicture?: boolean, nextPageToken?: string, previousPageToken?: string, regionCode?: string, extraHttpRequestParams?: any): ng.IHttpPromise<models.GetActivityFeedResponse>;
     /**
      *
      * @summary listCaseOutcomes
