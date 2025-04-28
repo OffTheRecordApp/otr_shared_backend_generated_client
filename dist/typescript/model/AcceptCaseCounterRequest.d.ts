@@ -11,4 +11,12 @@
  */
 export interface AcceptCaseCounterRequest {
     "cardId": string;
+    "paymentPlanType"?: AcceptCaseCounterRequest.PaymentPlanTypeEnum;
+}
+export declare namespace AcceptCaseCounterRequest {
+    enum PaymentPlanTypeEnum {
+        ALLUPFRONT,
+        THREEPAYMENTSHALFFIRST,
+        TWOPAYMENTSMONTHLY
+    }
 }

@@ -11,7 +11,6 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-import { exists } from '../runtime';
 export function GenerateCounterOfferCasePaymentsRequestFromJSON(json) {
     return GenerateCounterOfferCasePaymentsRequestFromJSONTyped(json, false);
 }
@@ -20,7 +19,7 @@ export function GenerateCounterOfferCasePaymentsRequestFromJSONTyped(json, ignor
         return json;
     }
     return {
-        'paymentPlanTypeId': !exists(json, 'paymentPlanTypeId') ? undefined : json['paymentPlanTypeId'],
+        'paymentPlanType': json['paymentPlanType'],
     };
 }
 export function GenerateCounterOfferCasePaymentsRequestToJSON(value) {
@@ -31,6 +30,16 @@ export function GenerateCounterOfferCasePaymentsRequestToJSON(value) {
         return null;
     }
     return {
-        'paymentPlanTypeId': value.paymentPlanTypeId,
+        'paymentPlanType': value.paymentPlanType,
     };
 }
+/**
+* @export
+* @enum {string}
+*/
+export var GenerateCounterOfferCasePaymentsRequestPaymentPlanTypeEnum;
+(function (GenerateCounterOfferCasePaymentsRequestPaymentPlanTypeEnum) {
+    GenerateCounterOfferCasePaymentsRequestPaymentPlanTypeEnum["ALLUPFRONT"] = "ALL_UPFRONT";
+    GenerateCounterOfferCasePaymentsRequestPaymentPlanTypeEnum["THREEPAYMENTSHALFFIRST"] = "THREE_PAYMENTS_HALF_FIRST";
+    GenerateCounterOfferCasePaymentsRequestPaymentPlanTypeEnum["TWOPAYMENTSMONTHLY"] = "TWO_PAYMENTS_MONTHLY";
+})(GenerateCounterOfferCasePaymentsRequestPaymentPlanTypeEnum || (GenerateCounterOfferCasePaymentsRequestPaymentPlanTypeEnum = {}));

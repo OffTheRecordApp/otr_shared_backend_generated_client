@@ -21,7 +21,22 @@ export interface AcceptCaseCounterRequest {
      * @memberof AcceptCaseCounterRequest
      */
     cardId: string;
+    /**
+     *
+     * @type {string}
+     * @memberof AcceptCaseCounterRequest
+     */
+    paymentPlanType?: AcceptCaseCounterRequestPaymentPlanTypeEnum;
 }
 export declare function AcceptCaseCounterRequestFromJSON(json: any): AcceptCaseCounterRequest;
 export declare function AcceptCaseCounterRequestFromJSONTyped(json: any, ignoreDiscriminator: boolean): AcceptCaseCounterRequest;
 export declare function AcceptCaseCounterRequestToJSON(value?: AcceptCaseCounterRequest | null): any;
+/**
+* @export
+* @enum {string}
+*/
+export declare enum AcceptCaseCounterRequestPaymentPlanTypeEnum {
+    ALLUPFRONT = "ALL_UPFRONT",
+    THREEPAYMENTSHALFFIRST = "THREE_PAYMENTS_HALF_FIRST",
+    TWOPAYMENTSMONTHLY = "TWO_PAYMENTS_MONTHLY"
+}

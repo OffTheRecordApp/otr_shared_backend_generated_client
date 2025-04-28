@@ -18,6 +18,12 @@ import { CasePaymentModel, LineItemModel } from './';
 export interface GenerateCounterOfferCasePaymentsResponse {
     /**
      *
+     * @type {Array<CasePaymentModel>}
+     * @memberof GenerateCounterOfferCasePaymentsResponse
+     */
+    authorizedPayments?: Array<CasePaymentModel>;
+    /**
+     *
      * @type {number}
      * @memberof GenerateCounterOfferCasePaymentsResponse
      */
@@ -28,6 +34,18 @@ export interface GenerateCounterOfferCasePaymentsResponse {
      * @memberof GenerateCounterOfferCasePaymentsResponse
      */
     clientTotalCostInCents?: number;
+    /**
+     *
+     * @type {number}
+     * @memberof GenerateCounterOfferCasePaymentsResponse
+     */
+    counterOfferRefundInCents?: number;
+    /**
+     *
+     * @type {Array<CasePaymentModel>}
+     * @memberof GenerateCounterOfferCasePaymentsResponse
+     */
+    expiredPayments?: Array<CasePaymentModel>;
     /**
      *
      * @type {Array<CasePaymentModel>}

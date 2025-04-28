@@ -20,8 +20,17 @@ export interface GenerateCounterOfferCasePaymentsRequest {
      * @type {string}
      * @memberof GenerateCounterOfferCasePaymentsRequest
      */
-    paymentPlanTypeId?: string;
+    paymentPlanType: GenerateCounterOfferCasePaymentsRequestPaymentPlanTypeEnum;
 }
 export declare function GenerateCounterOfferCasePaymentsRequestFromJSON(json: any): GenerateCounterOfferCasePaymentsRequest;
 export declare function GenerateCounterOfferCasePaymentsRequestFromJSONTyped(json: any, ignoreDiscriminator: boolean): GenerateCounterOfferCasePaymentsRequest;
 export declare function GenerateCounterOfferCasePaymentsRequestToJSON(value?: GenerateCounterOfferCasePaymentsRequest | null): any;
+/**
+* @export
+* @enum {string}
+*/
+export declare enum GenerateCounterOfferCasePaymentsRequestPaymentPlanTypeEnum {
+    ALLUPFRONT = "ALL_UPFRONT",
+    THREEPAYMENTSHALFFIRST = "THREE_PAYMENTS_HALF_FIRST",
+    TWOPAYMENTSMONTHLY = "TWO_PAYMENTS_MONTHLY"
+}

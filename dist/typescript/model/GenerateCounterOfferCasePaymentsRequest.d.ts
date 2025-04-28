@@ -10,5 +10,12 @@
  * Do not edit the class manually.
  */
 export interface GenerateCounterOfferCasePaymentsRequest {
-    "paymentPlanTypeId"?: string;
+    "paymentPlanType": GenerateCounterOfferCasePaymentsRequest.PaymentPlanTypeEnum;
+}
+export declare namespace GenerateCounterOfferCasePaymentsRequest {
+    enum PaymentPlanTypeEnum {
+        ALLUPFRONT,
+        THREEPAYMENTSHALFFIRST,
+        TWOPAYMENTSMONTHLY
+    }
 }

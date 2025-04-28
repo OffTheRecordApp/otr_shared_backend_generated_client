@@ -11,8 +11,11 @@
  */
 import * as models from './models';
 export interface GenerateCounterOfferCasePaymentsResponse {
+    "authorizedPayments"?: Array<models.CasePaymentModel>;
     "clientBaseCostInCents"?: number;
     "clientTotalCostInCents"?: number;
+    "counterOfferRefundInCents"?: number;
+    "expiredPayments"?: Array<models.CasePaymentModel>;
     "futurePayments"?: Array<models.CasePaymentModel>;
     "lineItems"?: Array<models.LineItemModel>;
     "totalRefCodeAdjustmentInCents"?: number;

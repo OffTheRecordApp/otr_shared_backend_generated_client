@@ -13,5 +13,15 @@
 
 export interface AcceptCaseCounterRequest { 
     cardId: string;
+    paymentPlanType?: AcceptCaseCounterRequest.PaymentPlanTypeEnum;
 }
+export namespace AcceptCaseCounterRequest {
+    export type PaymentPlanTypeEnum = 'ALL_UPFRONT' | 'THREE_PAYMENTS_HALF_FIRST' | 'TWO_PAYMENTS_MONTHLY';
+    export const PaymentPlanTypeEnum = {
+        AllUpfront: 'ALL_UPFRONT' as PaymentPlanTypeEnum,
+        ThreePaymentsHalfFirst: 'THREE_PAYMENTS_HALF_FIRST' as PaymentPlanTypeEnum,
+        TwoPaymentsMonthly: 'TWO_PAYMENTS_MONTHLY' as PaymentPlanTypeEnum
+    };
+}
+
 

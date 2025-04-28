@@ -11,6 +11,7 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
+import { exists } from '../runtime';
 export function AcceptCaseCounterRequestFromJSON(json) {
     return AcceptCaseCounterRequestFromJSONTyped(json, false);
 }
@@ -20,6 +21,7 @@ export function AcceptCaseCounterRequestFromJSONTyped(json, ignoreDiscriminator)
     }
     return {
         'cardId': json['cardId'],
+        'paymentPlanType': !exists(json, 'paymentPlanType') ? undefined : json['paymentPlanType'],
     };
 }
 export function AcceptCaseCounterRequestToJSON(value) {
@@ -31,5 +33,16 @@ export function AcceptCaseCounterRequestToJSON(value) {
     }
     return {
         'cardId': value.cardId,
+        'paymentPlanType': value.paymentPlanType,
     };
 }
+/**
+* @export
+* @enum {string}
+*/
+export var AcceptCaseCounterRequestPaymentPlanTypeEnum;
+(function (AcceptCaseCounterRequestPaymentPlanTypeEnum) {
+    AcceptCaseCounterRequestPaymentPlanTypeEnum["ALLUPFRONT"] = "ALL_UPFRONT";
+    AcceptCaseCounterRequestPaymentPlanTypeEnum["THREEPAYMENTSHALFFIRST"] = "THREE_PAYMENTS_HALF_FIRST";
+    AcceptCaseCounterRequestPaymentPlanTypeEnum["TWOPAYMENTSMONTHLY"] = "TWO_PAYMENTS_MONTHLY";
+})(AcceptCaseCounterRequestPaymentPlanTypeEnum || (AcceptCaseCounterRequestPaymentPlanTypeEnum = {}));

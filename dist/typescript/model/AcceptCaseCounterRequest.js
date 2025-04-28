@@ -9,4 +9,12 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-export {};
+export var AcceptCaseCounterRequest;
+(function (AcceptCaseCounterRequest) {
+    let PaymentPlanTypeEnum;
+    (function (PaymentPlanTypeEnum) {
+        PaymentPlanTypeEnum[PaymentPlanTypeEnum["ALLUPFRONT"] = 'ALL_UPFRONT'] = "ALLUPFRONT";
+        PaymentPlanTypeEnum[PaymentPlanTypeEnum["THREEPAYMENTSHALFFIRST"] = 'THREE_PAYMENTS_HALF_FIRST'] = "THREEPAYMENTSHALFFIRST";
+        PaymentPlanTypeEnum[PaymentPlanTypeEnum["TWOPAYMENTSMONTHLY"] = 'TWO_PAYMENTS_MONTHLY'] = "TWOPAYMENTSMONTHLY";
+    })(PaymentPlanTypeEnum = AcceptCaseCounterRequest.PaymentPlanTypeEnum || (AcceptCaseCounterRequest.PaymentPlanTypeEnum = {}));
+})(AcceptCaseCounterRequest || (AcceptCaseCounterRequest = {}));

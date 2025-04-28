@@ -21,8 +21,11 @@ export function ListCostItemsForCustomerResponseFromJSONTyped(json, ignoreDiscri
         return json;
     }
     return {
+        'authorizedPayments': !exists(json, 'authorizedPayments') ? undefined : (json['authorizedPayments'].map(CasePaymentModelFromJSON)),
         'clientBaseCostInCents': !exists(json, 'clientBaseCostInCents') ? undefined : json['clientBaseCostInCents'],
         'clientTotalCostInCents': !exists(json, 'clientTotalCostInCents') ? undefined : json['clientTotalCostInCents'],
+        'counterOfferRefundInCents': !exists(json, 'counterOfferRefundInCents') ? undefined : json['counterOfferRefundInCents'],
+        'expiredPayments': !exists(json, 'expiredPayments') ? undefined : (json['expiredPayments'].map(CasePaymentModelFromJSON)),
         'futurePayments': !exists(json, 'futurePayments') ? undefined : (json['futurePayments'].map(CasePaymentModelFromJSON)),
         'lineItems': !exists(json, 'lineItems') ? undefined : (json['lineItems'].map(LineItemModelFromJSON)),
         'totalRefCodeAdjustmentInCents': !exists(json, 'totalRefCodeAdjustmentInCents') ? undefined : json['totalRefCodeAdjustmentInCents'],
@@ -36,8 +39,11 @@ export function ListCostItemsForCustomerResponseToJSON(value) {
         return null;
     }
     return {
+        'authorizedPayments': value.authorizedPayments === undefined ? undefined : (value.authorizedPayments.map(CasePaymentModelToJSON)),
         'clientBaseCostInCents': value.clientBaseCostInCents,
         'clientTotalCostInCents': value.clientTotalCostInCents,
+        'counterOfferRefundInCents': value.counterOfferRefundInCents,
+        'expiredPayments': value.expiredPayments === undefined ? undefined : (value.expiredPayments.map(CasePaymentModelToJSON)),
         'futurePayments': value.futurePayments === undefined ? undefined : (value.futurePayments.map(CasePaymentModelToJSON)),
         'lineItems': value.lineItems === undefined ? undefined : (value.lineItems.map(LineItemModelToJSON)),
         'totalRefCodeAdjustmentInCents': value.totalRefCodeAdjustmentInCents,

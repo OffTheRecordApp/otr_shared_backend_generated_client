@@ -14,8 +14,11 @@ import { CasePaymentModel } from './casePaymentModel';
 
 
 export interface ListCostItemsForCustomerResponse { 
+    authorizedPayments?: Array<CasePaymentModel>;
     clientBaseCostInCents?: number;
     clientTotalCostInCents?: number;
+    counterOfferRefundInCents?: number;
+    expiredPayments?: Array<CasePaymentModel>;
     futurePayments?: Array<CasePaymentModel>;
     lineItems?: Array<LineItemModel>;
     totalRefCodeAdjustmentInCents?: number;
