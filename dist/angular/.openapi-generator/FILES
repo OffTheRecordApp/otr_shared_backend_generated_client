@@ -316,6 +316,7 @@ model/customerServiceAgentBookingDomain.ts
 model/customerServiceAgentDomain.ts
 model/dashboardAddressModel.ts
 model/dashboardAuthorModel.ts
+model/dashboardCaseCounterOfferModel.ts
 model/dashboardCaseModel.ts
 model/dashboardCitationModel.ts
 model/dashboardCourtModel.ts

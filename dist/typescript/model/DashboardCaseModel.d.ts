@@ -13,7 +13,7 @@ import * as models from './models';
 export interface DashboardCaseModel {
     "authorModel"?: models.DashboardAuthorModel;
     "bookingConfirmedDate"?: string;
-    "caseCounterOffer"?: models.CaseCounterOfferModel;
+    "caseCounterOffer"?: models.DashboardCaseCounterOfferModel;
     "caseId"?: string;
     "caseUserDetails"?: models.CaseUserDetailsModel;
     "citation"?: models.DashboardCitationModel;

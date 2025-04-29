@@ -12,6 +12,7 @@
  * Do not edit the class manually.
  */
 import { exists } from '../runtime';
+import { TimestampFromJSON, TimestampToJSON, } from './';
 export function CaseCounterOfferModelFromJSON(json) {
     return CaseCounterOfferModelFromJSONTyped(json, false);
 }
@@ -21,7 +22,17 @@ export function CaseCounterOfferModelFromJSONTyped(json, ignoreDiscriminator) {
     }
     return {
         'counterOfferAmountInCents': !exists(json, 'counterOfferAmountInCents') ? undefined : json['counterOfferAmountInCents'],
+        'counterOfferDateUtc': !exists(json, 'counterOfferDateUtc') ? undefined : TimestampFromJSON(json['counterOfferDateUtc']),
+        'counterOfferId': !exists(json, 'counterOfferId') ? undefined : json['counterOfferId'],
         'counterOfferStatus': !exists(json, 'counterOfferStatus') ? undefined : json['counterOfferStatus'],
+        'createdByUserId': !exists(json, 'createdByUserId') ? undefined : json['createdByUserId'],
+        'createdByUserRoleId': !exists(json, 'createdByUserRoleId') ? undefined : json['createdByUserRoleId'],
+        'initialLegalFeeInCents': !exists(json, 'initialLegalFeeInCents') ? undefined : json['initialLegalFeeInCents'],
+        'initialRefundPercentage': !exists(json, 'initialRefundPercentage') ? undefined : json['initialRefundPercentage'],
+        'lawfirmCaseId': !exists(json, 'lawfirmCaseId') ? undefined : json['lawfirmCaseId'],
+        'noteToClient': !exists(json, 'noteToClient') ? undefined : json['noteToClient'],
+        'noteToOtr': !exists(json, 'noteToOtr') ? undefined : json['noteToOtr'],
+        'refundPercentage': !exists(json, 'refundPercentage') ? undefined : json['refundPercentage'],
     };
 }
 export function CaseCounterOfferModelToJSON(value) {
@@ -33,17 +44,16 @@ export function CaseCounterOfferModelToJSON(value) {
     }
     return {
         'counterOfferAmountInCents': value.counterOfferAmountInCents,
+        'counterOfferDateUtc': TimestampToJSON(value.counterOfferDateUtc),
+        'counterOfferId': value.counterOfferId,
         'counterOfferStatus': value.counterOfferStatus,
+        'createdByUserId': value.createdByUserId,
+        'createdByUserRoleId': value.createdByUserRoleId,
+        'initialLegalFeeInCents': value.initialLegalFeeInCents,
+        'initialRefundPercentage': value.initialRefundPercentage,
+        'lawfirmCaseId': value.lawfirmCaseId,
+        'noteToClient': value.noteToClient,
+        'noteToOtr': value.noteToOtr,
+        'refundPercentage': value.refundPercentage,
     };
 }
-/**
-* @export
-* @enum {string}
-*/
-export var CaseCounterOfferModelCounterOfferStatusEnum;
-(function (CaseCounterOfferModelCounterOfferStatusEnum) {
-    CaseCounterOfferModelCounterOfferStatusEnum["ACCEPTED"] = "ACCEPTED";
-    CaseCounterOfferModelCounterOfferStatusEnum["DECLINED"] = "DECLINED";
-    CaseCounterOfferModelCounterOfferStatusEnum["PENDING"] = "PENDING";
-    CaseCounterOfferModelCounterOfferStatusEnum["WITHDRAWN"] = "WITHDRAWN";
-})(CaseCounterOfferModelCounterOfferStatusEnum || (CaseCounterOfferModelCounterOfferStatusEnum = {}));

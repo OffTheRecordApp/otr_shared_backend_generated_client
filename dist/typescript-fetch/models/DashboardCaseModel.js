@@ -12,7 +12,7 @@
  * Do not edit the class manually.
  */
 import { exists } from '../runtime';
-import { CaseCounterOfferModelFromJSON, CaseCounterOfferModelToJSON, CaseUserDetailsModelFromJSON, CaseUserDetailsModelToJSON, DashboardAuthorModelFromJSON, DashboardAuthorModelToJSON, DashboardCitationModelFromJSON, DashboardCitationModelToJSON, DashboardCourtModelFromJSON, DashboardCourtModelToJSON, DashboardStatusModelFromJSON, DashboardStatusModelToJSON, EngagementLetterModelFromJSON, EngagementLetterModelToJSON, OverduePaymentModelFromJSON, OverduePaymentModelToJSON, ViolationModel0FromJSON, ViolationModel0ToJSON, } from './';
+import { CaseUserDetailsModelFromJSON, CaseUserDetailsModelToJSON, DashboardAuthorModelFromJSON, DashboardAuthorModelToJSON, DashboardCaseCounterOfferModelFromJSON, DashboardCaseCounterOfferModelToJSON, DashboardCitationModelFromJSON, DashboardCitationModelToJSON, DashboardCourtModelFromJSON, DashboardCourtModelToJSON, DashboardStatusModelFromJSON, DashboardStatusModelToJSON, EngagementLetterModelFromJSON, EngagementLetterModelToJSON, OverduePaymentModelFromJSON, OverduePaymentModelToJSON, ViolationModel0FromJSON, ViolationModel0ToJSON, } from './';
 export function DashboardCaseModelFromJSON(json) {
     return DashboardCaseModelFromJSONTyped(json, false);
 }
@@ -23,7 +23,7 @@ export function DashboardCaseModelFromJSONTyped(json, ignoreDiscriminator) {
     return {
         'authorModel': !exists(json, 'authorModel') ? undefined : DashboardAuthorModelFromJSON(json['authorModel']),
         'bookingConfirmedDate': !exists(json, 'bookingConfirmedDate') ? undefined : (new Date(json['bookingConfirmedDate'])),
-        'caseCounterOffer': !exists(json, 'caseCounterOffer') ? undefined : CaseCounterOfferModelFromJSON(json['caseCounterOffer']),
+        'caseCounterOffer': !exists(json, 'caseCounterOffer') ? undefined : DashboardCaseCounterOfferModelFromJSON(json['caseCounterOffer']),
         'caseId': !exists(json, 'caseId') ? undefined : json['caseId'],
         'caseUserDetails': !exists(json, 'caseUserDetails') ? undefined : CaseUserDetailsModelFromJSON(json['caseUserDetails']),
         'citation': !exists(json, 'citation') ? undefined : DashboardCitationModelFromJSON(json['citation']),
@@ -53,7 +53,7 @@ export function DashboardCaseModelToJSON(value) {
     return {
         'authorModel': DashboardAuthorModelToJSON(value.authorModel),
         'bookingConfirmedDate': value.bookingConfirmedDate === undefined ? undefined : (value.bookingConfirmedDate.toISOString()),
-        'caseCounterOffer': CaseCounterOfferModelToJSON(value.caseCounterOffer),
+        'caseCounterOffer': DashboardCaseCounterOfferModelToJSON(value.caseCounterOffer),
         'caseId': value.caseId,
         'caseUserDetails': CaseUserDetailsModelToJSON(value.caseUserDetails),
         'citation': DashboardCitationModelToJSON(value.citation),

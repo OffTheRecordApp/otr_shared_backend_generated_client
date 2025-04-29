@@ -12,7 +12,7 @@
 import { DashboardStatusModel } from './dashboardStatusModel';
 import { DashboardCourtModel } from './dashboardCourtModel';
 import { ViolationModel0 } from './violationModel0';
-import { CaseCounterOfferModel } from './caseCounterOfferModel';
+import { DashboardCaseCounterOfferModel } from './dashboardCaseCounterOfferModel';
 import { CaseUserDetailsModel } from './caseUserDetailsModel';
 import { DashboardCitationModel } from './dashboardCitationModel';
 import { DashboardAuthorModel } from './dashboardAuthorModel';
@@ -23,7 +23,7 @@ import { OverduePaymentModel } from './overduePaymentModel';
 export interface DashboardCaseModel { 
     authorModel?: DashboardAuthorModel;
     bookingConfirmedDate?: string;
-    caseCounterOffer?: CaseCounterOfferModel;
+    caseCounterOffer?: DashboardCaseCounterOfferModel;
     caseId?: string;
     caseUserDetails?: CaseUserDetailsModel;
     citation?: DashboardCitationModel;

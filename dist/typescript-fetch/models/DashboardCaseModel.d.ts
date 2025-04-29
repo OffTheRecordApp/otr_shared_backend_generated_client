@@ -9,7 +9,7 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-import { CaseCounterOfferModel, CaseUserDetailsModel, DashboardAuthorModel, DashboardCitationModel, DashboardCourtModel, DashboardStatusModel, EngagementLetterModel, OverduePaymentModel, ViolationModel0 } from './';
+import { CaseUserDetailsModel, DashboardAuthorModel, DashboardCaseCounterOfferModel, DashboardCitationModel, DashboardCourtModel, DashboardStatusModel, EngagementLetterModel, OverduePaymentModel, ViolationModel0 } from './';
 /**
  *
  * @export
@@ -30,10 +30,10 @@ export interface DashboardCaseModel {
     bookingConfirmedDate?: Date;
     /**
      *
-     * @type {CaseCounterOfferModel}
+     * @type {DashboardCaseCounterOfferModel}
      * @memberof DashboardCaseModel
      */
-    caseCounterOffer?: CaseCounterOfferModel;
+    caseCounterOffer?: DashboardCaseCounterOfferModel;
     /**
      *
      * @type {string}
