@@ -18,12 +18,6 @@ import { CasePaymentModel, LineItemModel } from './';
 export interface ListCostItemsForCustomerResponse {
     /**
      *
-     * @type {Array<CasePaymentModel>}
-     * @memberof ListCostItemsForCustomerResponse
-     */
-    authorizedPayments?: Array<CasePaymentModel>;
-    /**
-     *
      * @type {number}
      * @memberof ListCostItemsForCustomerResponse
      */
@@ -34,18 +28,6 @@ export interface ListCostItemsForCustomerResponse {
      * @memberof ListCostItemsForCustomerResponse
      */
     clientTotalCostInCents?: number;
-    /**
-     *
-     * @type {number}
-     * @memberof ListCostItemsForCustomerResponse
-     */
-    counterOfferRefundInCents?: number;
-    /**
-     *
-     * @type {Array<CasePaymentModel>}
-     * @memberof ListCostItemsForCustomerResponse
-     */
-    expiredPayments?: Array<CasePaymentModel>;
     /**
      *
      * @type {Array<CasePaymentModel>}
