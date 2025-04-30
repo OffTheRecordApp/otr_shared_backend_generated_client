@@ -1,6 +1,6 @@
 {
   "name": "@otr-app/shared-backend-generated-client",
-  "version": "2.4.95",
+  "version": "3.0.0-experimental",
   "main": "dist/otrBackendService.min.js",
   "files": [
     "/dist"
@@ -26,6 +26,7 @@
     "generate:devo-angular-ci": "npm run download:devo && gulp codegen && java -jar /opt/openapi-generator-630/modules/openapi-generator-cli/target/openapi-generator-cli.jar generate -i api/otr-service.json -o dist/angular -g typescript-angular",
     "generate:devo-angular": "npm run download:devo && gulp codegen &&  openapi-generator-cli version-manager set 6.3.0 && openapi-generator-cli generate -i api/otr-service.json -o dist/angular -g typescript-angular",
     "generate:devo-typescript-fetch": "rm -r dist/typescript-fetch || npm run download:devo &&  openapi-generator-cli version-manager set 4.3.1 && openapi-generator-cli generate -i api/otr-service.json -o myclient/typescript-fetch -g typescript-fetch --additional-properties=typescriptThreePlus=true && tsc --project tsconfig.fetch.json  --outDir dist/typescript-fetch",
+    "generate:backend-types-experimental": "npx openapi-typescript https://otr-backend-service-us-devo.offtherecord.com/v3/api-docs -o dist/otr-backend.d.ts --enum=true --dedupe-enums",
     "generate:devo-angularjs": "rm -r dist/typescript || npm run download:devo && gulp codegen &&  openapi-generator-cli version-manager set 4.3.1 && openapi-generator-cli generate -i api/otr-service.json -o myclient/typescript -g typescript-angularjs && tsc --project tsconfig.json  --outDir dist/typescript",
     "generate:local": "curl http://localhost:8080/v2/api-docs -o api/otr-service.json && gulp codegen && openapi-generator-cli generate -i api/otr-service.json -o dist/typescript -g typescript-angular && tsc && npm run clean-source",
     "bootstrap": "npm i @openapitools/openapi-generator-cli -g && openapi-generator-cli version-manager set 6.3.0"
@@ -44,11 +45,12 @@
     "gulp-uglify": "1.5.2",
     "gulp-util": "3.0.7",
     "jquery": "^3.6.3",
+    "openapi-typescript": "^7.6.1",
     "run-sequence": "1.1.5",
     "swagger-js-codegen": "1.12.0",
     "swagger-js-react-native-codegen": "0.1.4",
     "swagger-typescript-codegen": "^1.11.0",
-    "typescript": "^4.4.4"
+    "typescript": "^5.8.3"
   },
   "peerDependencies": {
     "axios": "^0.27.2"

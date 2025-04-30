@@ -9,7 +9,6 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-/// <reference types="angular" />
 import * as models from '../model/models';
 export declare class FreshdeskTicketControllerApi {
     protected $http: ng.IHttpService;
