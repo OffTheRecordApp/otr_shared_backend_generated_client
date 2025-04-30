@@ -9,7 +9,6 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-/// <reference types="angular" />
 export declare class HubspotWebhookControllerApi {
     protected $http: ng.IHttpService;
     protected $httpParamSerializer?: (d: any) => any;
