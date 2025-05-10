@@ -63,6 +63,12 @@ export interface GenerateCounterOfferCasePaymentsResponse {
      * @type {number}
      * @memberof GenerateCounterOfferCasePaymentsResponse
      */
+    paymentPlanFeeReallocated?: number;
+    /**
+     *
+     * @type {number}
+     * @memberof GenerateCounterOfferCasePaymentsResponse
+     */
     totalRefCodeAdjustmentInCents?: number;
 }
 export declare function GenerateCounterOfferCasePaymentsResponseFromJSON(json: any): GenerateCounterOfferCasePaymentsResponse;

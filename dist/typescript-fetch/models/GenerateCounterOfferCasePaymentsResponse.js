@@ -28,6 +28,7 @@ export function GenerateCounterOfferCasePaymentsResponseFromJSONTyped(json, igno
         'expiredPayments': !exists(json, 'expiredPayments') ? undefined : (json['expiredPayments'].map(CasePaymentModelFromJSON)),
         'futurePayments': !exists(json, 'futurePayments') ? undefined : (json['futurePayments'].map(CasePaymentModelFromJSON)),
         'lineItems': !exists(json, 'lineItems') ? undefined : (json['lineItems'].map(LineItemModelFromJSON)),
+        'paymentPlanFeeReallocated': !exists(json, 'paymentPlanFeeReallocated') ? undefined : json['paymentPlanFeeReallocated'],
         'totalRefCodeAdjustmentInCents': !exists(json, 'totalRefCodeAdjustmentInCents') ? undefined : json['totalRefCodeAdjustmentInCents'],
     };
 }
@@ -46,6 +47,7 @@ export function GenerateCounterOfferCasePaymentsResponseToJSON(value) {
         'expiredPayments': value.expiredPayments === undefined ? undefined : (value.expiredPayments.map(CasePaymentModelToJSON)),
         'futurePayments': value.futurePayments === undefined ? undefined : (value.futurePayments.map(CasePaymentModelToJSON)),
         'lineItems': value.lineItems === undefined ? undefined : (value.lineItems.map(LineItemModelToJSON)),
+        'paymentPlanFeeReallocated': value.paymentPlanFeeReallocated,
         'totalRefCodeAdjustmentInCents': value.totalRefCodeAdjustmentInCents,
     };
 }

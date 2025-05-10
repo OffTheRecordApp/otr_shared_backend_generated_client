@@ -21,6 +21,7 @@ export interface GenerateCounterOfferCasePaymentsResponse {
     expiredPayments?: Array<CasePaymentModel>;
     futurePayments?: Array<CasePaymentModel>;
     lineItems?: Array<LineItemModel>;
+    paymentPlanFeeReallocated?: number;
     totalRefCodeAdjustmentInCents?: number;
 }
 
