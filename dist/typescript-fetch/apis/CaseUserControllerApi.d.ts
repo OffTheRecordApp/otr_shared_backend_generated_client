@@ -10,10 +10,15 @@
  * Do not edit the class manually.
  */
 import * as runtime from '../runtime';
-import { GetCaseUsersResponse, SaveCaseUserRequest } from '../models';
+import { GetCaseUsersResponse, ListDashboardCaseUsersResponse, SaveCaseUserRequest } from '../models';
 export interface GetCaseUsersByCaseUsingGETRequest {
     caseId: string;
     getRemovedUsers?: boolean;
+}
+export interface ListDashboardCaseUsersUsingGETRequest {
+    userId: number;
+    isDefendant?: boolean;
+    limit?: number;
 }
 export interface SaveCaseUserUsingPOSTRequest {
     caseId: string;
@@ -31,6 +36,14 @@ export declare class CaseUserControllerApi extends runtime.BaseAPI {
      * getCaseUsersByCase
      */
     getCaseUsersByCaseUsingGET(requestParameters: GetCaseUsersByCaseUsingGETRequest): Promise<GetCaseUsersResponse>;
+    /**
+     * listDashboardCaseUsers
+     */
+    listDashboardCaseUsersUsingGETRaw(requestParameters: ListDashboardCaseUsersUsingGETRequest): Promise<runtime.ApiResponse<ListDashboardCaseUsersResponse>>;
+    /**
+     * listDashboardCaseUsers
+     */
+    listDashboardCaseUsersUsingGET(requestParameters: ListDashboardCaseUsersUsingGETRequest): Promise<ListDashboardCaseUsersResponse>;
     /**
      * saveCaseUser
      */

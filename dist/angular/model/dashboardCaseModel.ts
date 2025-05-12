@@ -33,6 +33,7 @@ export interface DashboardCaseModel {
     lawfirmId?: number;
     lawfirmName?: string;
     lawfirmProfilePictureUrl?: string;
+    lawfirmRating?: number;
     lawyerRating?: number;
     legalFeeInCents?: number;
     matchExpirationDateUtc?: string;

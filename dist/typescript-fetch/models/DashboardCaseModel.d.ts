@@ -93,6 +93,12 @@ export interface DashboardCaseModel {
      * @type {number}
      * @memberof DashboardCaseModel
      */
+    lawfirmRating?: number;
+    /**
+     *
+     * @type {number}
+     * @memberof DashboardCaseModel
+     */
     lawyerRating?: number;
     /**
      *

@@ -16531,6 +16531,53 @@ angular.module('otrBackendService', [])
                 return deferred.promise;
             };
             /**
+             * listDashboardCaseUsers
+             * @method
+             * @name OtrService#listDashboardCaseUsersUsingGET
+             * @param {object} parameters - method options and parameters
+             * @param {boolean} parameters.isDefendant - isDefendant
+             * @param {integer} parameters.limit - limit
+             * @param {integer} parameters.userId - userId
+             */
+            OtrService.prototype.listDashboardCaseUsersUsingGET = function(parameters) {
+                if (parameters === undefined) {
+                    parameters = {};
+                }
+                var deferred = $q.defer();
+                var domain = this.domain,
+                    path = '/api/v1/users/{userId}/case_users';
+                var body = {},
+                    queryParameters = {},
+                    headers = {},
+                    form = {};
+
+                headers['Accept'] = ['*/*'];
+
+                if (parameters['isDefendant'] !== undefined) {
+                    queryParameters['isDefendant'] = parameters['isDefendant'];
+                }
+
+                /** set default value **/
+                queryParameters['limit'] = 5;
+
+                if (parameters['limit'] !== undefined) {
+                    queryParameters['limit'] = parameters['limit'];
+                }
+
+                path = path.replace('{userId}', parameters['userId']);
+
+                if (parameters['userId'] === undefined) {
+                    deferred.reject(new Error('Missing required  parameter: userId'));
+                    return deferred.promise;
+                }
+
+                queryParameters = mergeQueryParams(parameters, queryParameters);
+
+                this.request('GET', domain + path, parameters, body, headers, queryParameters, form, deferred);
+
+                return deferred.promise;
+            };
+            /**
              * getCasesForUser
              * @method
              * @name OtrService#getCasesForUserUsingGET
@@ -17333,6 +17380,51 @@ angular.module('otrBackendService', [])
 
                 if (parameters['request'] === undefined) {
                     deferred.reject(new Error('Missing required  parameter: request'));
+                    return deferred.promise;
+                }
+
+                path = path.replace('{userId}', parameters['userId']);
+
+                if (parameters['userId'] === undefined) {
+                    deferred.reject(new Error('Missing required  parameter: userId'));
+                    return deferred.promise;
+                }
+
+                queryParameters = mergeQueryParams(parameters, queryParameters);
+
+                this.request('POST', domain + path, parameters, body, headers, queryParameters, form, deferred);
+
+                return deferred.promise;
+            };
+            /**
+             * sendTextAlert
+             * @method
+             * @name OtrService#sendTextAlertUsingPOST
+             * @param {object} parameters - method options and parameters
+             * @param {} parameters.sendTextAlertToUserRequest - sendTextAlertToUserRequest
+             * @param {integer} parameters.userId - userId
+             */
+            OtrService.prototype.sendTextAlertUsingPOST = function(parameters) {
+                if (parameters === undefined) {
+                    parameters = {};
+                }
+                var deferred = $q.defer();
+                var domain = this.domain,
+                    path = '/api/v1/users/{userId}/text-alerts';
+                var body = {},
+                    queryParameters = {},
+                    headers = {},
+                    form = {};
+
+                headers['Accept'] = ['*/*'];
+                headers['Content-Type'] = ['application/json'];
+
+                if (parameters['sendTextAlertToUserRequest'] !== undefined) {
+                    body = parameters['sendTextAlertToUserRequest'];
+                }
+
+                if (parameters['sendTextAlertToUserRequest'] === undefined) {
+                    deferred.reject(new Error('Missing required  parameter: sendTextAlertToUserRequest'));
                     return deferred.promise;
                 }
 
@@ -19026,8 +19118,10 @@ angular.module('otrBackendService', [])
              * @name OtrService#listDashboardCasesUsingGET
              * @param {object} parameters - method options and parameters
              * @param {string} parameters.caseStatuses - caseStatuses
+             * @param {integer} parameters.defendantId - defendantId
              * @param {boolean} parameters.includeDeleted - includeDeleted
              * @param {integer} parameters.limit - limit
+             * @param {boolean} parameters.needsAttention - needsAttention
              * @param {string} parameters.previousPageToken - previousPageToken
              * @param {string} parameters.sortBy - sortBy
              * @param {string} parameters.statusCategories - statusCategories
@@ -19051,6 +19145,10 @@ angular.module('otrBackendService', [])
                     queryParameters['caseStatuses'] = parameters['caseStatuses'];
                 }
 
+                if (parameters['defendantId'] !== undefined) {
+                    queryParameters['defendantId'] = parameters['defendantId'];
+                }
+
                 if (parameters['includeDeleted'] !== undefined) {
                     queryParameters['includeDeleted'] = parameters['includeDeleted'];
                 }
@@ -19060,6 +19158,10 @@ angular.module('otrBackendService', [])
 
                 if (parameters['limit'] !== undefined) {
                     queryParameters['limit'] = parameters['limit'];
+                }
+
+                if (parameters['needsAttention'] !== undefined) {
+                    queryParameters['needsAttention'] = parameters['needsAttention'];
                 }
 
                 if (parameters['previousPageToken'] !== undefined) {

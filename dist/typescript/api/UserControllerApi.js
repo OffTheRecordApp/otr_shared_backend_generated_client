@@ -272,6 +272,37 @@ export class UserControllerApi {
     }
     /**
      *
+     * @summary sendTextAlert
+     * @param userId userId
+     * @param sendTextAlertToUserRequest sendTextAlertToUserRequest
+     */
+    sendTextAlertUsingPOST(userId, sendTextAlertToUserRequest, extraHttpRequestParams) {
+        const localVarPath = this.basePath + '/api/v1/users/{userId}/text-alerts'
+            .replace('{' + 'userId' + '}', encodeURIComponent(String(userId)));
+        let queryParameters = {};
+        let headerParams = Object.assign({}, this.defaultHeaders);
+        // verify required parameter 'userId' is not null or undefined
+        if (userId === null || userId === undefined) {
+            throw new Error('Required parameter userId was null or undefined when calling sendTextAlertUsingPOST.');
+        }
+        // verify required parameter 'sendTextAlertToUserRequest' is not null or undefined
+        if (sendTextAlertToUserRequest === null || sendTextAlertToUserRequest === undefined) {
+            throw new Error('Required parameter sendTextAlertToUserRequest was null or undefined when calling sendTextAlertUsingPOST.');
+        }
+        let httpRequestParams = {
+            method: 'POST',
+            url: localVarPath,
+            data: sendTextAlertToUserRequest,
+            params: queryParameters,
+            headers: headerParams
+        };
+        if (extraHttpRequestParams) {
+            httpRequestParams = Object.assign(httpRequestParams, extraHttpRequestParams);
+        }
+        return this.$http(httpRequestParams);
+    }
+    /**
+     *
      * @summary updateUserProfile
      * @param userId userId
      * @param request request

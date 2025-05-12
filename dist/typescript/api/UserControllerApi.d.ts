@@ -81,6 +81,13 @@ export declare class UserControllerApi {
     reviveUserUsingPUT(userId: number, extraHttpRequestParams?: any): ng.IHttpPromise<models.UpdateUserDetailsResponse>;
     /**
      *
+     * @summary sendTextAlert
+     * @param userId userId
+     * @param sendTextAlertToUserRequest sendTextAlertToUserRequest
+     */
+    sendTextAlertUsingPOST(userId: number, sendTextAlertToUserRequest: models.SendTextAlertToUserRequest, extraHttpRequestParams?: any): ng.IHttpPromise<{}>;
+    /**
+     *
      * @summary updateUserProfile
      * @param userId userId
      * @param request request

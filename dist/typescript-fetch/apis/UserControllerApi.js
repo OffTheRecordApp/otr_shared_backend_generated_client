@@ -21,7 +21,7 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
     });
 };
 import * as runtime from '../runtime';
-import { FindChargeDisputesResponseFromJSON, GetCurrentUserResponseFromJSON, GetOverduePaymentsResponseFromJSON, GetSupportTicketsResponseFromJSON, GetUserDetailsResponseFromJSON, GetUserStripeAccountResponseFromJSON, IsUserLoggedInResponseFromJSON, UpdateUserDetailsResponseFromJSON, UpdateUserProfileRequestToJSON, UpdateUserRolesRequestToJSON, ValidateUserEmailResponseFromJSON, } from '../models';
+import { FindChargeDisputesResponseFromJSON, GetCurrentUserResponseFromJSON, GetOverduePaymentsResponseFromJSON, GetSupportTicketsResponseFromJSON, GetUserDetailsResponseFromJSON, GetUserStripeAccountResponseFromJSON, IsUserLoggedInResponseFromJSON, SendTextAlertToUserRequestToJSON, UpdateUserDetailsResponseFromJSON, UpdateUserProfileRequestToJSON, UpdateUserRolesRequestToJSON, ValidateUserEmailResponseFromJSON, } from '../models';
 /**
  *
  */
@@ -306,6 +306,38 @@ export class UserControllerApi extends runtime.BaseAPI {
         return __awaiter(this, void 0, void 0, function* () {
             const response = yield this.reviveUserUsingPUTRaw(requestParameters);
             return yield response.value();
+        });
+    }
+    /**
+     * sendTextAlert
+     */
+    sendTextAlertUsingPOSTRaw(requestParameters) {
+        return __awaiter(this, void 0, void 0, function* () {
+            if (requestParameters.userId === null || requestParameters.userId === undefined) {
+                throw new runtime.RequiredError('userId', 'Required parameter requestParameters.userId was null or undefined when calling sendTextAlertUsingPOST.');
+            }
+            if (requestParameters.sendTextAlertToUserRequest === null || requestParameters.sendTextAlertToUserRequest === undefined) {
+                throw new runtime.RequiredError('sendTextAlertToUserRequest', 'Required parameter requestParameters.sendTextAlertToUserRequest was null or undefined when calling sendTextAlertUsingPOST.');
+            }
+            const queryParameters = {};
+            const headerParameters = {};
+            headerParameters['Content-Type'] = 'application/json';
+            const response = yield this.request({
+                path: `/api/v1/users/{userId}/text-alerts`.replace(`{${"userId"}}`, encodeURIComponent(String(requestParameters.userId))),
+                method: 'POST',
+                headers: headerParameters,
+                query: queryParameters,
+                body: SendTextAlertToUserRequestToJSON(requestParameters.sendTextAlertToUserRequest),
+            });
+            return new runtime.VoidApiResponse(response);
+        });
+    }
+    /**
+     * sendTextAlert
+     */
+    sendTextAlertUsingPOST(requestParameters) {
+        return __awaiter(this, void 0, void 0, function* () {
+            yield this.sendTextAlertUsingPOSTRaw(requestParameters);
         });
     }
     /**

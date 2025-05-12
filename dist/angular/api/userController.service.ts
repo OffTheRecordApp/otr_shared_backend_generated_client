@@ -33,6 +33,8 @@ import { GetUserStripeAccountResponse } from '../model/getUserStripeAccountRespo
 // @ts-ignore
 import { IsUserLoggedInResponse } from '../model/isUserLoggedInResponse';
 // @ts-ignore
+import { SendTextAlertToUserRequest } from '../model/sendTextAlertToUserRequest';
+// @ts-ignore
 import { UpdateUserDetailsResponse } from '../model/updateUserDetailsResponse';
 // @ts-ignore
 import { UpdateUserProfileRequest } from '../model/updateUserProfileRequest';
@@ -694,6 +696,77 @@ export class UserControllerService {
         return this.httpClient.request<UpdateUserDetailsResponse>('put', `${this.configuration.basePath}${localVarPath}`,
             {
                 context: localVarHttpContext,
+                responseType: <any>responseType_,
+                withCredentials: this.configuration.withCredentials,
+                headers: localVarHeaders,
+                observe: observe,
+                reportProgress: reportProgress
+            }
+        );
+    }
+
+    /**
+     * sendTextAlert
+     * @param userId userId
+     * @param sendTextAlertToUserRequest sendTextAlertToUserRequest
+     * @param observe set whether or not to return the data Observable as the body, response or events. defaults to returning the body.
+     * @param reportProgress flag to report request and response progress.
+     */
+    public sendTextAlertUsingPOST(userId: number, sendTextAlertToUserRequest: SendTextAlertToUserRequest, observe?: 'body', reportProgress?: boolean, options?: {httpHeaderAccept?: undefined, context?: HttpContext}): Observable<any>;
+    public sendTextAlertUsingPOST(userId: number, sendTextAlertToUserRequest: SendTextAlertToUserRequest, observe?: 'response', reportProgress?: boolean, options?: {httpHeaderAccept?: undefined, context?: HttpContext}): Observable<HttpResponse<any>>;
+    public sendTextAlertUsingPOST(userId: number, sendTextAlertToUserRequest: SendTextAlertToUserRequest, observe?: 'events', reportProgress?: boolean, options?: {httpHeaderAccept?: undefined, context?: HttpContext}): Observable<HttpEvent<any>>;
+    public sendTextAlertUsingPOST(userId: number, sendTextAlertToUserRequest: SendTextAlertToUserRequest, observe: any = 'body', reportProgress: boolean = false, options?: {httpHeaderAccept?: undefined, context?: HttpContext}): Observable<any> {
+        if (userId === null || userId === undefined) {
+            throw new Error('Required parameter userId was null or undefined when calling sendTextAlertUsingPOST.');
+        }
+        if (sendTextAlertToUserRequest === null || sendTextAlertToUserRequest === undefined) {
+            throw new Error('Required parameter sendTextAlertToUserRequest was null or undefined when calling sendTextAlertUsingPOST.');
+        }
+
+        let localVarHeaders = this.defaultHeaders;
+
+        let localVarHttpHeaderAcceptSelected: string | undefined = options && options.httpHeaderAccept;
+        if (localVarHttpHeaderAcceptSelected === undefined) {
+            // to determine the Accept header
+            const httpHeaderAccepts: string[] = [
+            ];
+            localVarHttpHeaderAcceptSelected = this.configuration.selectHeaderAccept(httpHeaderAccepts);
+        }
+        if (localVarHttpHeaderAcceptSelected !== undefined) {
+            localVarHeaders = localVarHeaders.set('Accept', localVarHttpHeaderAcceptSelected);
+        }
+
+        let localVarHttpContext: HttpContext | undefined = options && options.context;
+        if (localVarHttpContext === undefined) {
+            localVarHttpContext = new HttpContext();
+        }
+
+
+        // to determine the Content-Type header
+        const consumes: string[] = [
+            'application/json'
+        ];
+        const httpContentTypeSelected: string | undefined = this.configuration.selectHeaderContentType(consumes);
+        if (httpContentTypeSelected !== undefined) {
+            localVarHeaders = localVarHeaders.set('Content-Type', httpContentTypeSelected);
+        }
+
+        let responseType_: 'text' | 'json' | 'blob' = 'json';
+        if (localVarHttpHeaderAcceptSelected) {
+            if (localVarHttpHeaderAcceptSelected.startsWith('text')) {
+                responseType_ = 'text';
+            } else if (this.configuration.isJsonMime(localVarHttpHeaderAcceptSelected)) {
+                responseType_ = 'json';
+            } else {
+                responseType_ = 'blob';
+            }
+        }
+
+        let localVarPath = `/api/v1/users/${this.configuration.encodeParam({name: "userId", value: userId, in: "path", style: "simple", explode: false, dataType: "number", dataFormat: "int64"})}/text-alerts`;
+        return this.httpClient.request<any>('post', `${this.configuration.basePath}${localVarPath}`,
+            {
+                context: localVarHttpContext,
+                body: sendTextAlertToUserRequest,
                 responseType: <any>responseType_,
                 withCredentials: this.configuration.withCredentials,
                 headers: localVarHeaders,

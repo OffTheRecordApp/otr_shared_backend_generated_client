@@ -318,6 +318,7 @@ model/dashboardAddressModel.ts
 model/dashboardAuthorModel.ts
 model/dashboardCaseCounterOfferModel.ts
 model/dashboardCaseModel.ts
+model/dashboardCaseUserModel.ts
 model/dashboardCitationModel.ts
 model/dashboardCourtModel.ts
 model/dashboardStatusModel.ts
@@ -602,6 +603,7 @@ model/listCitationsRequest.ts
 model/listCitationsResponse.ts
 model/listContactTimelineResponse.ts
 model/listCostItemsForCustomerResponse.ts
+model/listDashboardCaseUsersResponse.ts
 model/listDashboardCasesResponse.ts
 model/listEligibleStatusResponse.ts
 model/listEmployeesResponse.ts
@@ -769,6 +771,7 @@ model/sendEmailToUsersRequest.ts
 model/sendOneTimePasswordRequest.ts
 model/sendPayoutToLawfirmRequest.ts
 model/sendPayoutToLawfirmResponse.ts
+model/sendTextAlertToUserRequest.ts
 model/serviceLevelAgreement.ts
 model/setArchiveCaseModel.ts
 model/setArchiveOnCasesRequest.ts

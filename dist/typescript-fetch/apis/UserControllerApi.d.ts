@@ -10,7 +10,7 @@
  * Do not edit the class manually.
  */
 import * as runtime from '../runtime';
-import { FindChargeDisputesResponse, GetCurrentUserResponse, GetOverduePaymentsResponse, GetSupportTicketsResponse, GetUserDetailsResponse, GetUserStripeAccountResponse, IsUserLoggedInResponse, UpdateUserDetailsResponse, UpdateUserProfileRequest, UpdateUserRolesRequest, ValidateUserEmailResponse } from '../models';
+import { FindChargeDisputesResponse, GetCurrentUserResponse, GetOverduePaymentsResponse, GetSupportTicketsResponse, GetUserDetailsResponse, GetUserStripeAccountResponse, IsUserLoggedInResponse, SendTextAlertToUserRequest, UpdateUserDetailsResponse, UpdateUserProfileRequest, UpdateUserRolesRequest, ValidateUserEmailResponse } from '../models';
 export interface FindChargeDisputesByUserIdUsingGETRequest {
     userId: string;
 }
@@ -39,6 +39,10 @@ export interface RemoveUserUsingDELETERequest {
 }
 export interface ReviveUserUsingPUTRequest {
     userId: number;
+}
+export interface SendTextAlertUsingPOSTRequest {
+    userId: number;
+    sendTextAlertToUserRequest: SendTextAlertToUserRequest;
 }
 export interface UpdateUserProfileUsingPUTRequest {
     userId: number;
@@ -134,6 +138,14 @@ export declare class UserControllerApi extends runtime.BaseAPI {
      * reviveUser
      */
     reviveUserUsingPUT(requestParameters: ReviveUserUsingPUTRequest): Promise<UpdateUserDetailsResponse>;
+    /**
+     * sendTextAlert
+     */
+    sendTextAlertUsingPOSTRaw(requestParameters: SendTextAlertUsingPOSTRequest): Promise<runtime.ApiResponse<void>>;
+    /**
+     * sendTextAlert
+     */
+    sendTextAlertUsingPOST(requestParameters: SendTextAlertUsingPOSTRequest): Promise<void>;
     /**
      * updateUserProfile
      */

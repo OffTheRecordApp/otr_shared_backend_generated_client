@@ -21,7 +21,7 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
     });
 };
 import * as runtime from '../runtime';
-import { GetCaseUsersResponseFromJSON, SaveCaseUserRequestToJSON, } from '../models';
+import { GetCaseUsersResponseFromJSON, ListDashboardCaseUsersResponseFromJSON, SaveCaseUserRequestToJSON, } from '../models';
 /**
  *
  */
@@ -54,6 +54,40 @@ export class CaseUserControllerApi extends runtime.BaseAPI {
     getCaseUsersByCaseUsingGET(requestParameters) {
         return __awaiter(this, void 0, void 0, function* () {
             const response = yield this.getCaseUsersByCaseUsingGETRaw(requestParameters);
+            return yield response.value();
+        });
+    }
+    /**
+     * listDashboardCaseUsers
+     */
+    listDashboardCaseUsersUsingGETRaw(requestParameters) {
+        return __awaiter(this, void 0, void 0, function* () {
+            if (requestParameters.userId === null || requestParameters.userId === undefined) {
+                throw new runtime.RequiredError('userId', 'Required parameter requestParameters.userId was null or undefined when calling listDashboardCaseUsersUsingGET.');
+            }
+            const queryParameters = {};
+            if (requestParameters.isDefendant !== undefined) {
+                queryParameters['isDefendant'] = requestParameters.isDefendant;
+            }
+            if (requestParameters.limit !== undefined) {
+                queryParameters['limit'] = requestParameters.limit;
+            }
+            const headerParameters = {};
+            const response = yield this.request({
+                path: `/api/v1/users/{userId}/case_users`.replace(`{${"userId"}}`, encodeURIComponent(String(requestParameters.userId))),
+                method: 'GET',
+                headers: headerParameters,
+                query: queryParameters,
+            });
+            return new runtime.JSONApiResponse(response, (jsonValue) => ListDashboardCaseUsersResponseFromJSON(jsonValue));
+        });
+    }
+    /**
+     * listDashboardCaseUsers
+     */
+    listDashboardCaseUsersUsingGET(requestParameters) {
+        return __awaiter(this, void 0, void 0, function* () {
+            const response = yield this.listDashboardCaseUsersUsingGETRaw(requestParameters);
             return yield response.value();
         });
     }

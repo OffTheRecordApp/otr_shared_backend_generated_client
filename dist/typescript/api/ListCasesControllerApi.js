@@ -75,13 +75,15 @@ export class ListCasesControllerApi {
      * @summary listDashboardCases
      * @param userId userId
      * @param caseStatuses caseStatuses
+     * @param defendantId defendantId
      * @param includeDeleted includeDeleted
      * @param limit limit
+     * @param needsAttention needsAttention
      * @param previousPageToken previousPageToken
      * @param sortBy sortBy
      * @param statusCategories statusCategories
      */
-    listDashboardCasesUsingGET(userId, caseStatuses, includeDeleted, limit, previousPageToken, sortBy, statusCategories, extraHttpRequestParams) {
+    listDashboardCasesUsingGET(userId, caseStatuses, defendantId, includeDeleted, limit, needsAttention, previousPageToken, sortBy, statusCategories, extraHttpRequestParams) {
         const localVarPath = this.basePath + '/api/v3/users/{userId}/cases'
             .replace('{' + 'userId' + '}', encodeURIComponent(String(userId)));
         let queryParameters = {};
@@ -93,11 +95,17 @@ export class ListCasesControllerApi {
         if (caseStatuses !== undefined) {
             queryParameters['caseStatuses'] = caseStatuses;
         }
+        if (defendantId !== undefined) {
+            queryParameters['defendantId'] = defendantId;
+        }
         if (includeDeleted !== undefined) {
             queryParameters['includeDeleted'] = includeDeleted;
         }
         if (limit !== undefined) {
             queryParameters['limit'] = limit;
+        }
+        if (needsAttention !== undefined) {
+            queryParameters['needsAttention'] = needsAttention;
         }
         if (previousPageToken !== undefined) {
             queryParameters['previousPageToken'] = previousPageToken;

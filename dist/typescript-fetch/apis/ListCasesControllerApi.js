@@ -94,11 +94,17 @@ export class ListCasesControllerApi extends runtime.BaseAPI {
             if (requestParameters.caseStatuses !== undefined) {
                 queryParameters['caseStatuses'] = requestParameters.caseStatuses;
             }
+            if (requestParameters.defendantId !== undefined) {
+                queryParameters['defendantId'] = requestParameters.defendantId;
+            }
             if (requestParameters.includeDeleted !== undefined) {
                 queryParameters['includeDeleted'] = requestParameters.includeDeleted;
             }
             if (requestParameters.limit !== undefined) {
                 queryParameters['limit'] = requestParameters.limit;
+            }
+            if (requestParameters.needsAttention !== undefined) {
+                queryParameters['needsAttention'] = requestParameters.needsAttention;
             }
             if (requestParameters.previousPageToken !== undefined) {
                 queryParameters['previousPageToken'] = requestParameters.previousPageToken;

@@ -27,6 +27,14 @@ export declare class CaseUserControllerApi {
     getCaseUsersByCaseUsingGET(caseId: string, getRemovedUsers?: boolean, extraHttpRequestParams?: any): ng.IHttpPromise<models.GetCaseUsersResponse>;
     /**
      *
+     * @summary listDashboardCaseUsers
+     * @param userId userId
+     * @param isDefendant isDefendant
+     * @param limit limit
+     */
+    listDashboardCaseUsersUsingGET(userId: number, isDefendant?: boolean, limit?: number, extraHttpRequestParams?: any): ng.IHttpPromise<models.ListDashboardCaseUsersResponse>;
+    /**
+     *
      * @summary saveCaseUser
      * @param caseId caseId
      * @param request request

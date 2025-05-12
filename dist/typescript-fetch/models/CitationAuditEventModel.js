@@ -111,6 +111,7 @@ export var CitationAuditEventModelEventEnum;
     CitationAuditEventModelEventEnum["COURTCOVERAGEADDED"] = "COURT_COVERAGE_ADDED";
     CitationAuditEventModelEventEnum["COURTCOVERAGEREMOVED"] = "COURT_COVERAGE_REMOVED";
     CitationAuditEventModelEventEnum["COURTFEECHANGED"] = "COURT_FEE_CHANGED";
+    CitationAuditEventModelEventEnum["CUSTOMERREVIEWADDED"] = "CUSTOMER_REVIEW_ADDED";
     CitationAuditEventModelEventEnum["CUSTOMFEESRESETTODEFAULTFORVIOLATION"] = "CUSTOM_FEES_RESET_TO_DEFAULT_FOR_VIOLATION";
     CitationAuditEventModelEventEnum["DECIDEEXPERIMENTGROUPCOMMAND"] = "DECIDE_EXPERIMENT_GROUP_COMMAND";
     CitationAuditEventModelEventEnum["DEFAULTFEEADDED"] = "DEFAULT_FEE_ADDED";
