@@ -12,7 +12,7 @@
  * Do not edit the class manually.
  */
 import { exists } from '../runtime';
-import { CaseUserDetailsModelFromJSON, CaseUserDetailsModelToJSON, DashboardAuthorModelFromJSON, DashboardAuthorModelToJSON, DashboardCaseCounterOfferModelFromJSON, DashboardCaseCounterOfferModelToJSON, DashboardCitationModelFromJSON, DashboardCitationModelToJSON, DashboardCourtModelFromJSON, DashboardCourtModelToJSON, DashboardStatusModelFromJSON, DashboardStatusModelToJSON, EngagementLetterModelFromJSON, EngagementLetterModelToJSON, OverduePaymentModelFromJSON, OverduePaymentModelToJSON, ViolationModel0FromJSON, ViolationModel0ToJSON, } from './';
+import { CaseUserDetailsModelFromJSON, CaseUserDetailsModelToJSON, DashboardAuthorModelFromJSON, DashboardAuthorModelToJSON, DashboardCaseCounterOfferModelFromJSON, DashboardCaseCounterOfferModelToJSON, DashboardCitationModelFromJSON, DashboardCitationModelToJSON, DashboardCourtModelFromJSON, DashboardCourtModelToJSON, DashboardDisputeModelFromJSON, DashboardDisputeModelToJSON, DashboardStatusModelFromJSON, DashboardStatusModelToJSON, EngagementLetterModelFromJSON, EngagementLetterModelToJSON, OverduePaymentModelFromJSON, OverduePaymentModelToJSON, ViolationModel0FromJSON, ViolationModel0ToJSON, } from './';
 export function DashboardCaseModelFromJSON(json) {
     return DashboardCaseModelFromJSONTyped(json, false);
 }
@@ -28,6 +28,7 @@ export function DashboardCaseModelFromJSONTyped(json, ignoreDiscriminator) {
         'caseUserDetails': !exists(json, 'caseUserDetails') ? undefined : CaseUserDetailsModelFromJSON(json['caseUserDetails']),
         'citation': !exists(json, 'citation') ? undefined : DashboardCitationModelFromJSON(json['citation']),
         'court': !exists(json, 'court') ? undefined : DashboardCourtModelFromJSON(json['court']),
+        'dispute': !exists(json, 'dispute') ? undefined : DashboardDisputeModelFromJSON(json['dispute']),
         'engagementLetter': !exists(json, 'engagementLetter') ? undefined : EngagementLetterModelFromJSON(json['engagementLetter']),
         'hasLeftLawyerReview': !exists(json, 'hasLeftLawyerReview') ? undefined : json['hasLeftLawyerReview'],
         'lawfirmId': !exists(json, 'lawfirmId') ? undefined : json['lawfirmId'],
@@ -59,6 +60,7 @@ export function DashboardCaseModelToJSON(value) {
         'caseUserDetails': CaseUserDetailsModelToJSON(value.caseUserDetails),
         'citation': DashboardCitationModelToJSON(value.citation),
         'court': DashboardCourtModelToJSON(value.court),
+        'dispute': DashboardDisputeModelToJSON(value.dispute),
         'engagementLetter': EngagementLetterModelToJSON(value.engagementLetter),
         'hasLeftLawyerReview': value.hasLeftLawyerReview,
         'lawfirmId': value.lawfirmId,

@@ -9,7 +9,7 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-import { CaseUserDetailsModel, DashboardAuthorModel, DashboardCaseCounterOfferModel, DashboardCitationModel, DashboardCourtModel, DashboardStatusModel, EngagementLetterModel, OverduePaymentModel, ViolationModel0 } from './';
+import { CaseUserDetailsModel, DashboardAuthorModel, DashboardCaseCounterOfferModel, DashboardCitationModel, DashboardCourtModel, DashboardDisputeModel, DashboardStatusModel, EngagementLetterModel, OverduePaymentModel, ViolationModel0 } from './';
 /**
  *
  * @export
@@ -58,6 +58,12 @@ export interface DashboardCaseModel {
      * @memberof DashboardCaseModel
      */
     court?: DashboardCourtModel;
+    /**
+     *
+     * @type {DashboardDisputeModel}
+     * @memberof DashboardCaseModel
+     */
+    dispute?: DashboardDisputeModel;
     /**
      *
      * @type {EngagementLetterModel}

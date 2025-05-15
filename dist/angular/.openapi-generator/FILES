@@ -321,6 +321,7 @@ model/dashboardCaseModel.ts
 model/dashboardCaseUserModel.ts
 model/dashboardCitationModel.ts
 model/dashboardCourtModel.ts
+model/dashboardDisputeModel.ts
 model/dashboardStatusModel.ts
 model/declineCaseCounterRequest.ts
 model/declineCategory.ts

@@ -197,6 +197,7 @@ export * from './DashboardCaseModel';
 export * from './DashboardCaseUserModel';
 export * from './DashboardCitationModel';
 export * from './DashboardCourtModel';
+export * from './DashboardDisputeModel';
 export * from './DashboardStatusModel';
 export * from './DeclineCaseCounterRequest';
 export * from './DeclineCategory';

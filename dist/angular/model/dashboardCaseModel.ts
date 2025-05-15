@@ -12,6 +12,7 @@
 import { DashboardStatusModel } from './dashboardStatusModel';
 import { DashboardCourtModel } from './dashboardCourtModel';
 import { ViolationModel0 } from './violationModel0';
+import { DashboardDisputeModel } from './dashboardDisputeModel';
 import { DashboardCaseCounterOfferModel } from './dashboardCaseCounterOfferModel';
 import { CaseUserDetailsModel } from './caseUserDetailsModel';
 import { DashboardCitationModel } from './dashboardCitationModel';
@@ -28,6 +29,7 @@ export interface DashboardCaseModel {
     caseUserDetails?: CaseUserDetailsModel;
     citation?: DashboardCitationModel;
     court?: DashboardCourtModel;
+    dispute?: DashboardDisputeModel;
     engagementLetter?: EngagementLetterModel;
     hasLeftLawyerReview?: boolean;
     lawfirmId?: number;
