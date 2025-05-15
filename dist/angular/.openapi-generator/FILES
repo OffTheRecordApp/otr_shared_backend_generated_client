@@ -833,6 +833,7 @@ model/subscriptionDiscountEligibility.ts
 model/subscriptionDiscountEligibilityReq.ts
 model/subscriptionDiscountEligibilityRes.ts
 model/subscriptionGuardianModel.ts
+model/supportedStateModel.ts
 model/syncStripeChargesRequest.ts
 model/syncStripeChargesResponse.ts
 model/syncStripeDisputeResponse.ts

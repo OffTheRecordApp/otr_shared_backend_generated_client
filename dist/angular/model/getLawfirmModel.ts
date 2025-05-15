@@ -10,6 +10,7 @@
  * Do not edit the class manually.
  */
 import { AddressDomain } from './addressDomain';
+import { SupportedStateModel } from './supportedStateModel';
 import { LawfirmSettingsDomainRes } from './lawfirmSettingsDomainRes';
 import { LawfirmRedirectModel } from './lawfirmRedirectModel';
 
@@ -39,6 +40,7 @@ export interface GetLawfirmModel {
     redirects?: Array<LawfirmRedirectModel>;
     seoUrl?: string;
     settings?: LawfirmSettingsDomainRes;
+    supportedStateModels?: Array<SupportedStateModel>;
     supportedStates?: Array<GetLawfirmModel.SupportedStatesEnum>;
     tagLine?: string;
     website?: string;

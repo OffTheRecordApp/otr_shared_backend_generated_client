@@ -708,6 +708,7 @@ export * from './SubscriptionDiscountEligibility';
 export * from './SubscriptionDiscountEligibilityReq';
 export * from './SubscriptionDiscountEligibilityRes';
 export * from './SubscriptionGuardianModel';
+export * from './SupportedStateModel';
 export * from './SyncStripeChargesRequest';
 export * from './SyncStripeChargesResponse';
 export * from './SyncStripeDisputeResponse';

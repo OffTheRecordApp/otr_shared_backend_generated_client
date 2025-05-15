@@ -35,6 +35,7 @@ export interface GetLawfirmModel {
     "redirects"?: Array<models.LawfirmRedirectModel>;
     "seoUrl"?: string;
     "settings"?: models.LawfirmSettingsDomainRes;
+    "supportedStateModels"?: Array<models.SupportedStateModel>;
     "supportedStates"?: Array<GetLawfirmModel.SupportedStatesEnum>;
     "tagLine"?: string;
     "website"?: string;

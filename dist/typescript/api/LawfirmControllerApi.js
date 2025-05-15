@@ -391,9 +391,8 @@ export class LawfirmControllerApi {
      *
      * @summary getLawfirm
      * @param lawfirmIdString lawfirmIdString
-     * @param isDetailsRequired isDetailsRequired
      */
-    getLawfirmUsingGET(lawfirmIdString, isDetailsRequired, extraHttpRequestParams) {
+    getLawfirmUsingGET(lawfirmIdString, extraHttpRequestParams) {
         const localVarPath = this.basePath + '/api/v1/lawfirms/{lawfirmIdString}'
             .replace('{' + 'lawfirmIdString' + '}', encodeURIComponent(String(lawfirmIdString)));
         let queryParameters = {};
@@ -401,9 +400,6 @@ export class LawfirmControllerApi {
         // verify required parameter 'lawfirmIdString' is not null or undefined
         if (lawfirmIdString === null || lawfirmIdString === undefined) {
             throw new Error('Required parameter lawfirmIdString was null or undefined when calling getLawfirmUsingGET.');
-        }
-        if (isDetailsRequired !== undefined) {
-            queryParameters['isDetailsRequired'] = isDetailsRequired;
         }
         let httpRequestParams = {
             method: 'GET',

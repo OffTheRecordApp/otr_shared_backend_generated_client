@@ -434,9 +434,6 @@ export class LawfirmControllerApi extends runtime.BaseAPI {
                 throw new runtime.RequiredError('lawfirmIdString', 'Required parameter requestParameters.lawfirmIdString was null or undefined when calling getLawfirmUsingGET.');
             }
             const queryParameters = {};
-            if (requestParameters.isDetailsRequired !== undefined) {
-                queryParameters['isDetailsRequired'] = requestParameters.isDetailsRequired;
-            }
             const headerParameters = {};
             const response = yield this.request({
                 path: `/api/v1/lawfirms/{lawfirmIdString}`.replace(`{${"lawfirmIdString"}}`, encodeURIComponent(String(requestParameters.lawfirmIdString))),

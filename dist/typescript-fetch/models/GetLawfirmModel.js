@@ -12,7 +12,7 @@
  * Do not edit the class manually.
  */
 import { exists } from '../runtime';
-import { AddressDomainFromJSON, AddressDomainToJSON, LawfirmRedirectModelFromJSON, LawfirmRedirectModelToJSON, LawfirmSettingsDomainResFromJSON, LawfirmSettingsDomainResToJSON, } from './';
+import { AddressDomainFromJSON, AddressDomainToJSON, LawfirmRedirectModelFromJSON, LawfirmRedirectModelToJSON, LawfirmSettingsDomainResFromJSON, LawfirmSettingsDomainResToJSON, SupportedStateModelFromJSON, SupportedStateModelToJSON, } from './';
 export function GetLawfirmModelFromJSON(json) {
     return GetLawfirmModelFromJSONTyped(json, false);
 }
@@ -45,6 +45,7 @@ export function GetLawfirmModelFromJSONTyped(json, ignoreDiscriminator) {
         'redirects': !exists(json, 'redirects') ? undefined : (json['redirects'].map(LawfirmRedirectModelFromJSON)),
         'seoUrl': !exists(json, 'seoUrl') ? undefined : json['seoUrl'],
         'settings': !exists(json, 'settings') ? undefined : LawfirmSettingsDomainResFromJSON(json['settings']),
+        'supportedStateModels': !exists(json, 'supportedStateModels') ? undefined : (json['supportedStateModels'].map(SupportedStateModelFromJSON)),
         'supportedStates': !exists(json, 'supportedStates') ? undefined : json['supportedStates'],
         'tagLine': !exists(json, 'tagLine') ? undefined : json['tagLine'],
         'website': !exists(json, 'website') ? undefined : json['website'],
@@ -82,6 +83,7 @@ export function GetLawfirmModelToJSON(value) {
         'redirects': value.redirects === undefined ? undefined : (value.redirects.map(LawfirmRedirectModelToJSON)),
         'seoUrl': value.seoUrl,
         'settings': LawfirmSettingsDomainResToJSON(value.settings),
+        'supportedStateModels': value.supportedStateModels === undefined ? undefined : (value.supportedStateModels.map(SupportedStateModelToJSON)),
         'supportedStates': value.supportedStates,
         'tagLine': value.tagLine,
         'website': value.website,

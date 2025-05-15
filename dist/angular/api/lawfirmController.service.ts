@@ -968,22 +968,15 @@ export class LawfirmControllerService {
     /**
      * getLawfirm
      * @param lawfirmIdString lawfirmIdString
-     * @param isDetailsRequired isDetailsRequired
      * @param observe set whether or not to return the data Observable as the body, response or events. defaults to returning the body.
      * @param reportProgress flag to report request and response progress.
      */
-    public getLawfirmUsingGET(lawfirmIdString: string, isDetailsRequired?: boolean, observe?: 'body', reportProgress?: boolean, options?: {httpHeaderAccept?: '*/*', context?: HttpContext}): Observable<GetLawfirmResponse>;
-    public getLawfirmUsingGET(lawfirmIdString: string, isDetailsRequired?: boolean, observe?: 'response', reportProgress?: boolean, options?: {httpHeaderAccept?: '*/*', context?: HttpContext}): Observable<HttpResponse<GetLawfirmResponse>>;
-    public getLawfirmUsingGET(lawfirmIdString: string, isDetailsRequired?: boolean, observe?: 'events', reportProgress?: boolean, options?: {httpHeaderAccept?: '*/*', context?: HttpContext}): Observable<HttpEvent<GetLawfirmResponse>>;
-    public getLawfirmUsingGET(lawfirmIdString: string, isDetailsRequired?: boolean, observe: any = 'body', reportProgress: boolean = false, options?: {httpHeaderAccept?: '*/*', context?: HttpContext}): Observable<any> {
+    public getLawfirmUsingGET(lawfirmIdString: string, observe?: 'body', reportProgress?: boolean, options?: {httpHeaderAccept?: '*/*', context?: HttpContext}): Observable<GetLawfirmResponse>;
+    public getLawfirmUsingGET(lawfirmIdString: string, observe?: 'response', reportProgress?: boolean, options?: {httpHeaderAccept?: '*/*', context?: HttpContext}): Observable<HttpResponse<GetLawfirmResponse>>;
+    public getLawfirmUsingGET(lawfirmIdString: string, observe?: 'events', reportProgress?: boolean, options?: {httpHeaderAccept?: '*/*', context?: HttpContext}): Observable<HttpEvent<GetLawfirmResponse>>;
+    public getLawfirmUsingGET(lawfirmIdString: string, observe: any = 'body', reportProgress: boolean = false, options?: {httpHeaderAccept?: '*/*', context?: HttpContext}): Observable<any> {
         if (lawfirmIdString === null || lawfirmIdString === undefined) {
             throw new Error('Required parameter lawfirmIdString was null or undefined when calling getLawfirmUsingGET.');
-        }
-
-        let localVarQueryParameters = new HttpParams({encoder: this.encoder});
-        if (isDetailsRequired !== undefined && isDetailsRequired !== null) {
-          localVarQueryParameters = this.addToHttpParams(localVarQueryParameters,
-            <any>isDetailsRequired, 'isDetailsRequired');
         }
 
         let localVarHeaders = this.defaultHeaders;
@@ -1021,7 +1014,6 @@ export class LawfirmControllerService {
         return this.httpClient.request<GetLawfirmResponse>('get', `${this.configuration.basePath}${localVarPath}`,
             {
                 context: localVarHttpContext,
-                params: localVarQueryParameters,
                 responseType: <any>responseType_,
                 withCredentials: this.configuration.withCredentials,
                 headers: localVarHeaders,

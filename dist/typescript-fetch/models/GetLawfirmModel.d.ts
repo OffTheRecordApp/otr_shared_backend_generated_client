@@ -9,7 +9,7 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-import { AddressDomain, LawfirmRedirectModel, LawfirmSettingsDomainRes } from './';
+import { AddressDomain, LawfirmRedirectModel, LawfirmSettingsDomainRes, SupportedStateModel } from './';
 /**
  *
  * @export
@@ -160,6 +160,12 @@ export interface GetLawfirmModel {
      * @memberof GetLawfirmModel
      */
     settings?: LawfirmSettingsDomainRes;
+    /**
+     *
+     * @type {Array<SupportedStateModel>}
+     * @memberof GetLawfirmModel
+     */
+    supportedStateModels?: Array<SupportedStateModel>;
     /**
      *
      * @type {Array<string>}

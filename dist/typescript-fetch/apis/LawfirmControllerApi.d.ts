@@ -58,7 +58,6 @@ export interface GetLawfirmSupportTicketsUsingGETRequest {
 }
 export interface GetLawfirmUsingGETRequest {
     lawfirmIdString: string;
-    isDetailsRequired?: boolean;
 }
 export interface GetLawfirmsUsingGETRequest {
     acceptsAccidentTickets?: boolean;

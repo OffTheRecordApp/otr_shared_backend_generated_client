@@ -9661,7 +9661,6 @@ angular.module('otrBackendService', [])
              * @method
              * @name OtrService#getLawfirmUsingGET
              * @param {object} parameters - method options and parameters
-             * @param {boolean} parameters.isDetailsRequired - isDetailsRequired
              * @param {string} parameters.lawfirmIdString - lawfirmIdString
              */
             OtrService.prototype.getLawfirmUsingGET = function(parameters) {
@@ -9677,10 +9676,6 @@ angular.module('otrBackendService', [])
                     form = {};
 
                 headers['Accept'] = ['*/*'];
-
-                if (parameters['isDetailsRequired'] !== undefined) {
-                    queryParameters['isDetailsRequired'] = parameters['isDetailsRequired'];
-                }
 
                 path = path.replace('{lawfirmIdString}', parameters['lawfirmIdString']);
 
