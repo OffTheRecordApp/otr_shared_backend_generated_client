@@ -63,7 +63,7 @@ export interface DashboardCaseModel {
      * @type {DashboardDisputeModel}
      * @memberof DashboardCaseModel
      */
-    dispute?: DashboardDisputeModel;
+    disputeModel?: DashboardDisputeModel;
     /**
      *
      * @type {EngagementLetterModel}

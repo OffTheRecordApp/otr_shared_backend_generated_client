@@ -29,7 +29,7 @@ export interface DashboardCaseModel {
     caseUserDetails?: CaseUserDetailsModel;
     citation?: DashboardCitationModel;
     court?: DashboardCourtModel;
-    dispute?: DashboardDisputeModel;
+    disputeModel?: DashboardDisputeModel;
     engagementLetter?: EngagementLetterModel;
     hasLeftLawyerReview?: boolean;
     lawfirmId?: number;
