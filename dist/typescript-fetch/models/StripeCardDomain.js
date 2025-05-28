@@ -32,6 +32,7 @@ export function StripeCardDomainFromJSONTyped(json, ignoreDiscriminator) {
         'cvcCheck': !exists(json, 'cvcCheck') ? undefined : json['cvcCheck'],
         'expMonth': !exists(json, 'expMonth') ? undefined : json['expMonth'],
         'expYear': !exists(json, 'expYear') ? undefined : json['expYear'],
+        'funding': !exists(json, 'funding') ? undefined : json['funding'],
         'id': !exists(json, 'id') ? undefined : json['id'],
         'isDefault': !exists(json, 'isDefault') ? undefined : json['isDefault'],
         'isExpired': !exists(json, 'isExpired') ? undefined : json['isExpired'],
@@ -59,6 +60,7 @@ export function StripeCardDomainToJSON(value) {
         'cvcCheck': value.cvcCheck,
         'expMonth': value.expMonth,
         'expYear': value.expYear,
+        'funding': value.funding,
         'id': value.id,
         'isDefault': value.isDefault,
         'isExpired': value.isExpired,
@@ -67,3 +69,13 @@ export function StripeCardDomainToJSON(value) {
         'ownerFullName': value.ownerFullName,
     };
 }
+/**
+* @export
+* @enum {string}
+*/
+export var StripeCardDomainFundingEnum;
+(function (StripeCardDomainFundingEnum) {
+    StripeCardDomainFundingEnum["CREDIT"] = "CREDIT";
+    StripeCardDomainFundingEnum["DEBIT"] = "DEBIT";
+    StripeCardDomainFundingEnum["PREPAID"] = "PREPAID";
+})(StripeCardDomainFundingEnum || (StripeCardDomainFundingEnum = {}));

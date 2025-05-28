@@ -24,6 +24,7 @@ export interface StripeCardDomain {
     cvcCheck?: string;
     expMonth?: number;
     expYear?: number;
+    funding?: StripeCardDomain.FundingEnum;
     id?: string;
     isDefault?: boolean;
     isExpired?: boolean;
@@ -31,4 +32,13 @@ export interface StripeCardDomain {
     object?: string;
     ownerFullName?: string;
 }
+export namespace StripeCardDomain {
+    export type FundingEnum = 'CREDIT' | 'DEBIT' | 'PREPAID';
+    export const FundingEnum = {
+        Credit: 'CREDIT' as FundingEnum,
+        Debit: 'DEBIT' as FundingEnum,
+        Prepaid: 'PREPAID' as FundingEnum
+    };
+}
+
 

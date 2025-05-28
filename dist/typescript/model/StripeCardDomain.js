@@ -9,4 +9,12 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-export {};
+export var StripeCardDomain;
+(function (StripeCardDomain) {
+    let FundingEnum;
+    (function (FundingEnum) {
+        FundingEnum[FundingEnum["CREDIT"] = 'CREDIT'] = "CREDIT";
+        FundingEnum[FundingEnum["DEBIT"] = 'DEBIT'] = "DEBIT";
+        FundingEnum[FundingEnum["PREPAID"] = 'PREPAID'] = "PREPAID";
+    })(FundingEnum = StripeCardDomain.FundingEnum || (StripeCardDomain.FundingEnum = {}));
+})(StripeCardDomain || (StripeCardDomain = {}));

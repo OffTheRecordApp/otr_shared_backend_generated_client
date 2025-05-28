@@ -87,6 +87,12 @@ export interface StripeCardDomain {
      * @type {string}
      * @memberof StripeCardDomain
      */
+    funding?: StripeCardDomainFundingEnum;
+    /**
+     *
+     * @type {string}
+     * @memberof StripeCardDomain
+     */
     id?: string;
     /**
      *
@@ -122,3 +128,12 @@ export interface StripeCardDomain {
 export declare function StripeCardDomainFromJSON(json: any): StripeCardDomain;
 export declare function StripeCardDomainFromJSONTyped(json: any, ignoreDiscriminator: boolean): StripeCardDomain;
 export declare function StripeCardDomainToJSON(value?: StripeCardDomain | null): any;
+/**
+* @export
+* @enum {string}
+*/
+export declare enum StripeCardDomainFundingEnum {
+    CREDIT = "CREDIT",
+    DEBIT = "DEBIT",
+    PREPAID = "PREPAID"
+}

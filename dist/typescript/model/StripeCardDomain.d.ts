@@ -22,10 +22,18 @@ export interface StripeCardDomain {
     "cvcCheck"?: string;
     "expMonth"?: number;
     "expYear"?: number;
+    "funding"?: StripeCardDomain.FundingEnum;
     "id"?: string;
     "isDefault"?: boolean;
     "isExpired"?: boolean;
     "last4"?: string;
     "object"?: string;
     "ownerFullName"?: string;
+}
+export declare namespace StripeCardDomain {
+    enum FundingEnum {
+        CREDIT,
+        DEBIT,
+        PREPAID
+    }
 }
