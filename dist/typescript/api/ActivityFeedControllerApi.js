@@ -28,10 +28,11 @@ export class ActivityFeedControllerApi {
      * @param courtId courtId
      * @param hasProfilePicture hasProfilePicture
      * @param nextPageToken nextPageToken
+     * @param preferredRegionCode preferredRegionCode
      * @param previousPageToken previousPageToken
      * @param regionCode regionCode
      */
-    listActivityFeedUsingGET(limit, activityType, courtId, hasProfilePicture, nextPageToken, previousPageToken, regionCode, extraHttpRequestParams) {
+    listActivityFeedUsingGET(limit, activityType, courtId, hasProfilePicture, nextPageToken, preferredRegionCode, previousPageToken, regionCode, extraHttpRequestParams) {
         const localVarPath = this.basePath + '/api/v1/activity-feed';
         let queryParameters = {};
         let headerParams = Object.assign({}, this.defaultHeaders);
@@ -53,6 +54,9 @@ export class ActivityFeedControllerApi {
         }
         if (nextPageToken !== undefined) {
             queryParameters['nextPageToken'] = nextPageToken;
+        }
+        if (preferredRegionCode !== undefined) {
+            queryParameters['preferredRegionCode'] = preferredRegionCode;
         }
         if (previousPageToken !== undefined) {
             queryParameters['previousPageToken'] = previousPageToken;

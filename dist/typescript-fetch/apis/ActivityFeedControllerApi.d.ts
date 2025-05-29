@@ -17,6 +17,7 @@ export interface ListActivityFeedUsingGETRequest {
     courtId?: number;
     hasProfilePicture?: boolean;
     nextPageToken?: string;
+    preferredRegionCode?: boolean;
     previousPageToken?: string;
     regionCode?: string;
 }

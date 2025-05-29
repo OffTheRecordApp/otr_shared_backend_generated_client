@@ -9,6 +9,7 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
+/// <reference types="angular" />
 import * as models from '../model/models';
 export declare class ActivityFeedControllerApi {
     protected $http: ng.IHttpService;
@@ -25,10 +26,11 @@ export declare class ActivityFeedControllerApi {
      * @param courtId courtId
      * @param hasProfilePicture hasProfilePicture
      * @param nextPageToken nextPageToken
+     * @param preferredRegionCode preferredRegionCode
      * @param previousPageToken previousPageToken
      * @param regionCode regionCode
      */
-    listActivityFeedUsingGET(limit: number, activityType?: 'PURCHASE' | 'REFERRAL' | 'REFUND' | 'RESOLUTION' | 'TICKET_REVIEW', courtId?: number, hasProfilePicture?: boolean, nextPageToken?: string, previousPageToken?: string, regionCode?: string, extraHttpRequestParams?: any): ng.IHttpPromise<models.GetActivityFeedResponse>;
+    listActivityFeedUsingGET(limit: number, activityType?: 'PURCHASE' | 'REFERRAL' | 'REFUND' | 'RESOLUTION' | 'TICKET_REVIEW', courtId?: number, hasProfilePicture?: boolean, nextPageToken?: string, preferredRegionCode?: boolean, previousPageToken?: string, regionCode?: string, extraHttpRequestParams?: any): ng.IHttpPromise<models.GetActivityFeedResponse>;
     /**
      *
      * @summary listCaseOutcomes

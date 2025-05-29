@@ -100,15 +100,16 @@ export class ActivityFeedControllerService {
      * @param courtId courtId
      * @param hasProfilePicture hasProfilePicture
      * @param nextPageToken nextPageToken
+     * @param preferredRegionCode preferredRegionCode
      * @param previousPageToken previousPageToken
      * @param regionCode regionCode
      * @param observe set whether or not to return the data Observable as the body, response or events. defaults to returning the body.
      * @param reportProgress flag to report request and response progress.
      */
-    public listActivityFeedUsingGET(limit: number, activityType?: 'PURCHASE' | 'REFERRAL' | 'REFUND' | 'RESOLUTION' | 'TICKET_REVIEW', courtId?: number, hasProfilePicture?: boolean, nextPageToken?: string, previousPageToken?: string, regionCode?: string, observe?: 'body', reportProgress?: boolean, options?: {httpHeaderAccept?: '*/*', context?: HttpContext}): Observable<GetActivityFeedResponse>;
-    public listActivityFeedUsingGET(limit: number, activityType?: 'PURCHASE' | 'REFERRAL' | 'REFUND' | 'RESOLUTION' | 'TICKET_REVIEW', courtId?: number, hasProfilePicture?: boolean, nextPageToken?: string, previousPageToken?: string, regionCode?: string, observe?: 'response', reportProgress?: boolean, options?: {httpHeaderAccept?: '*/*', context?: HttpContext}): Observable<HttpResponse<GetActivityFeedResponse>>;
-    public listActivityFeedUsingGET(limit: number, activityType?: 'PURCHASE' | 'REFERRAL' | 'REFUND' | 'RESOLUTION' | 'TICKET_REVIEW', courtId?: number, hasProfilePicture?: boolean, nextPageToken?: string, previousPageToken?: string, regionCode?: string, observe?: 'events', reportProgress?: boolean, options?: {httpHeaderAccept?: '*/*', context?: HttpContext}): Observable<HttpEvent<GetActivityFeedResponse>>;
-    public listActivityFeedUsingGET(limit: number, activityType?: 'PURCHASE' | 'REFERRAL' | 'REFUND' | 'RESOLUTION' | 'TICKET_REVIEW', courtId?: number, hasProfilePicture?: boolean, nextPageToken?: string, previousPageToken?: string, regionCode?: string, observe: any = 'body', reportProgress: boolean = false, options?: {httpHeaderAccept?: '*/*', context?: HttpContext}): Observable<any> {
+    public listActivityFeedUsingGET(limit: number, activityType?: 'PURCHASE' | 'REFERRAL' | 'REFUND' | 'RESOLUTION' | 'TICKET_REVIEW', courtId?: number, hasProfilePicture?: boolean, nextPageToken?: string, preferredRegionCode?: boolean, previousPageToken?: string, regionCode?: string, observe?: 'body', reportProgress?: boolean, options?: {httpHeaderAccept?: '*/*', context?: HttpContext}): Observable<GetActivityFeedResponse>;
+    public listActivityFeedUsingGET(limit: number, activityType?: 'PURCHASE' | 'REFERRAL' | 'REFUND' | 'RESOLUTION' | 'TICKET_REVIEW', courtId?: number, hasProfilePicture?: boolean, nextPageToken?: string, preferredRegionCode?: boolean, previousPageToken?: string, regionCode?: string, observe?: 'response', reportProgress?: boolean, options?: {httpHeaderAccept?: '*/*', context?: HttpContext}): Observable<HttpResponse<GetActivityFeedResponse>>;
+    public listActivityFeedUsingGET(limit: number, activityType?: 'PURCHASE' | 'REFERRAL' | 'REFUND' | 'RESOLUTION' | 'TICKET_REVIEW', courtId?: number, hasProfilePicture?: boolean, nextPageToken?: string, preferredRegionCode?: boolean, previousPageToken?: string, regionCode?: string, observe?: 'events', reportProgress?: boolean, options?: {httpHeaderAccept?: '*/*', context?: HttpContext}): Observable<HttpEvent<GetActivityFeedResponse>>;
+    public listActivityFeedUsingGET(limit: number, activityType?: 'PURCHASE' | 'REFERRAL' | 'REFUND' | 'RESOLUTION' | 'TICKET_REVIEW', courtId?: number, hasProfilePicture?: boolean, nextPageToken?: string, preferredRegionCode?: boolean, previousPageToken?: string, regionCode?: string, observe: any = 'body', reportProgress: boolean = false, options?: {httpHeaderAccept?: '*/*', context?: HttpContext}): Observable<any> {
         if (limit === null || limit === undefined) {
             throw new Error('Required parameter limit was null or undefined when calling listActivityFeedUsingGET.');
         }
@@ -133,6 +134,10 @@ export class ActivityFeedControllerService {
         if (nextPageToken !== undefined && nextPageToken !== null) {
           localVarQueryParameters = this.addToHttpParams(localVarQueryParameters,
             <any>nextPageToken, 'nextPageToken');
+        }
+        if (preferredRegionCode !== undefined && preferredRegionCode !== null) {
+          localVarQueryParameters = this.addToHttpParams(localVarQueryParameters,
+            <any>preferredRegionCode, 'preferredRegionCode');
         }
         if (previousPageToken !== undefined && previousPageToken !== null) {
           localVarQueryParameters = this.addToHttpParams(localVarQueryParameters,

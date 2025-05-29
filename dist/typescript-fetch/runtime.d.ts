@@ -40,7 +40,7 @@ export declare const COLLECTION_FORMATS: {
     tsv: string;
     pipes: string;
 };
-export type FetchAPI = WindowOrWorkerGlobalScope['fetch'];
+export declare type FetchAPI = WindowOrWorkerGlobalScope['fetch'];
 export interface ConfigurationParameters {
     basePath?: string;
     fetchApi?: FetchAPI;
@@ -67,16 +67,16 @@ export declare class Configuration {
     get headers(): HTTPHeaders | undefined;
     get credentials(): RequestCredentials | undefined;
 }
-export type Json = any;
-export type HTTPMethod = 'GET' | 'POST' | 'PUT' | 'PATCH' | 'DELETE' | 'OPTIONS' | 'HEAD';
-export type HTTPHeaders = {
+export declare type Json = any;
+export declare type HTTPMethod = 'GET' | 'POST' | 'PUT' | 'PATCH' | 'DELETE' | 'OPTIONS' | 'HEAD';
+export declare type HTTPHeaders = {
     [key: string]: string;
 };
-export type HTTPQuery = {
+export declare type HTTPQuery = {
     [key: string]: string | number | null | boolean | Array<string | number | null | boolean> | HTTPQuery;
 };
-export type HTTPBody = Json | FormData | URLSearchParams;
-export type ModelPropertyNaming = 'camelCase' | 'snake_case' | 'PascalCase' | 'original';
+export declare type HTTPBody = Json | FormData | URLSearchParams;
+export declare type ModelPropertyNaming = 'camelCase' | 'snake_case' | 'PascalCase' | 'original';
 export interface FetchParams {
     url: string;
     init: RequestInit;

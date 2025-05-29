@@ -236,6 +236,7 @@ angular.module('otrBackendService', [])
              * @param {boolean} parameters.hasProfilePicture - hasProfilePicture
              * @param {integer} parameters.limit - limit
              * @param {string} parameters.nextPageToken - nextPageToken
+             * @param {boolean} parameters.preferredRegionCode - preferredRegionCode
              * @param {string} parameters.previousPageToken - previousPageToken
              * @param {string} parameters.regionCode - regionCode
              */
@@ -276,6 +277,10 @@ angular.module('otrBackendService', [])
 
                 if (parameters['nextPageToken'] !== undefined) {
                     queryParameters['nextPageToken'] = parameters['nextPageToken'];
+                }
+
+                if (parameters['preferredRegionCode'] !== undefined) {
+                    queryParameters['preferredRegionCode'] = parameters['preferredRegionCode'];
                 }
 
                 if (parameters['previousPageToken'] !== undefined) {

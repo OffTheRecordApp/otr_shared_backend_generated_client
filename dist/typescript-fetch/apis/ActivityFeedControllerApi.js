@@ -50,6 +50,9 @@ export class ActivityFeedControllerApi extends runtime.BaseAPI {
             if (requestParameters.nextPageToken !== undefined) {
                 queryParameters['nextPageToken'] = requestParameters.nextPageToken;
             }
+            if (requestParameters.preferredRegionCode !== undefined) {
+                queryParameters['preferredRegionCode'] = requestParameters.preferredRegionCode;
+            }
             if (requestParameters.previousPageToken !== undefined) {
                 queryParameters['previousPageToken'] = requestParameters.previousPageToken;
             }
