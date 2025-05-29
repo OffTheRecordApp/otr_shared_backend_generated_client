@@ -1251,6 +1251,23 @@ export interface paths {
         patch?: never;
         trace?: never;
     };
+    "/api/v1/users/{userId}/case_users": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        /** listDashboardCaseUsers */
+        get: operations["listDashboardCaseUsersUsingGET"];
+        put?: never;
+        post?: never;
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
     "/api/v1/certificates/ssl": {
         parameters: {
             query?: never;
@@ -6404,6 +6421,23 @@ export interface paths {
         patch?: never;
         trace?: never;
     };
+    "/api/v1/users/{userId}/text-alerts": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        get?: never;
+        put?: never;
+        /** sendTextAlert */
+        post: operations["sendTextAlertUsingPOST"];
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
     "/api/v1/user/p": {
         parameters: {
             query?: never;
@@ -9643,12 +9677,15 @@ export interface components {
             caseUserDetails?: components["schemas"]["CaseUserDetailsModel"];
             citation?: components["schemas"]["DashboardCitationModel"];
             court?: components["schemas"]["DashboardCourtModel"];
+            disputeModel?: components["schemas"]["DashboardDisputeModel"];
             engagementLetter?: components["schemas"]["EngagementLetterModel"];
             hasLeftLawyerReview?: boolean;
             /** Format: int64 */
             lawfirmId?: number;
             lawfirmName?: string;
             lawfirmProfilePictureUrl?: string;
+            /** Format: float */
+            lawfirmRating?: number;
             /** Format: double */
             lawyerRating?: number;
             /** Format: int32 */
@@ -9661,6 +9698,15 @@ export interface components {
             /** Format: int64 */
             userId?: number;
             violations?: components["schemas"]["ViolationModel0"][];
+        };
+        /** DashboardCaseUserModel */
+        DashboardCaseUserModel: {
+            emailAddress?: string;
+            firstName?: string;
+            fullName?: string;
+            lastName?: string;
+            /** Format: int64 */
+            userId?: number;
         };
         /** DashboardCitationModel */
         DashboardCitationModel: {
@@ -9685,6 +9731,13 @@ export interface components {
         DashboardCourtModel: {
             address?: components["schemas"]["DashboardAddressModel"];
             courtName?: string;
+        };
+        /** DashboardDisputeModel */
+        DashboardDisputeModel: {
+            /** Format: int64 */
+            amountDisputedInCents?: number;
+            disputeReason?: string;
+            hasDispute?: boolean;
         };
         /** DashboardStatusModel */
         DashboardStatusModel: {
@@ -10347,6 +10400,8 @@ export interface components {
             futurePayments?: components["schemas"]["CasePaymentModel"][];
             lineItems?: components["schemas"]["LineItemModel"][];
             /** Format: int32 */
+            paymentPlanFeeReallocated?: number;
+            /** Format: int32 */
             totalRefCodeAdjustmentInCents?: number;
         };
         /** GenerateTemplateRequest */
@@ -10960,6 +11015,7 @@ export interface components {
             redirects?: components["schemas"]["LawfirmRedirectModel"][];
             seoUrl?: string;
             settings?: components["schemas"]["LawfirmSettingsDomainRes"];
+            supportedStateModels?: components["schemas"]["SupportedStateModel"][];
             supportedStates?: PathsApiV1CitationsCitationIdCourtMissingPostParametersQueryState[];
             tagLine?: string;
             website?: string;
@@ -12508,6 +12564,10 @@ export interface components {
             lineItems?: components["schemas"]["LineItemModel"][];
             /** Format: int32 */
             totalRefCodeAdjustmentInCents?: number;
+        };
+        /** ListDashboardCaseUsersResponse */
+        ListDashboardCaseUsersResponse: {
+            users?: components["schemas"]["DashboardCaseUserModel"][];
         };
         /** ListDashboardCasesResponse */
         ListDashboardCasesResponse: {
@@ -14209,6 +14269,12 @@ export interface components {
         SendPayoutToLawfirmResponse: {
             isSuccess?: boolean;
         };
+        /** SendTextAlertToUserRequest */
+        SendTextAlertToUserRequest: {
+            rawPhoneNumber?: string;
+            /** @enum {string} */
+            textAlertType?: SendTextAlertToUserRequestTextAlertType;
+        };
         /** ServiceLevelAgreement */
         ServiceLevelAgreement: {
             sla_name?: string;
@@ -14538,6 +14604,8 @@ export interface components {
             expMonth?: number;
             /** Format: int64 */
             expYear?: number;
+            /** @enum {string} */
+            funding?: StripeCardDomainFunding;
             id?: string;
             isDefault?: boolean;
             isExpired?: boolean;
@@ -14837,6 +14905,12 @@ export interface components {
             emailAddress: string;
             firstName: string;
             lastName: string;
+        };
+        /** SupportedStateModel */
+        SupportedStateModel: {
+            newAlgoEnabled?: boolean;
+            /** @enum {string} */
+            state?: PathsApiV1CitationsCitationIdCourtMissingPostParametersQueryState;
         };
         /** SyncStripeChargesRequest */
         SyncStripeChargesRequest: {
@@ -20213,6 +20287,55 @@ export interface operations {
                     [name: string]: unknown;
                 };
                 content?: never;
+            };
+            /** @description Unauthorized */
+            401: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content?: never;
+            };
+            /** @description Forbidden */
+            403: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content?: never;
+            };
+            /** @description Not Found */
+            404: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content?: never;
+            };
+        };
+    };
+    listDashboardCaseUsersUsingGET: {
+        parameters: {
+            query?: {
+                /** @description isDefendant */
+                isDefendant?: boolean;
+                /** @description limit */
+                limit?: number;
+            };
+            header?: never;
+            path: {
+                /** @description userId */
+                userId: number;
+            };
+            cookie?: never;
+        };
+        requestBody?: never;
+        responses: {
+            /** @description OK */
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "*/*": components["schemas"]["ListDashboardCaseUsersResponse"];
+                };
             };
             /** @description Unauthorized */
             401: {
@@ -27264,10 +27387,7 @@ export interface operations {
     };
     getLawfirmUsingGET: {
         parameters: {
-            query?: {
-                /** @description isDetailsRequired */
-                isDetailsRequired?: boolean;
-            };
+            query?: never;
             header?: never;
             path: {
                 /** @description lawfirmIdString */
@@ -31079,6 +31199,8 @@ export interface operations {
     listDashboardCasesUsingGET: {
         parameters: {
             query?: {
+                /** @description defendantId */
+                defendantId?: number;
                 /** @description limit */
                 limit?: number;
                 /** @description previousPageToken */
@@ -31091,6 +31213,8 @@ export interface operations {
                 caseStatuses?: PathsApiV1LawfirmsLawfirmIdInboxMessagesGetParametersQueryCaseStatuses;
                 /** @description includeDeleted */
                 includeDeleted?: boolean;
+                /** @description needsAttention */
+                needsAttention?: boolean;
             };
             header?: never;
             path: {
@@ -36907,6 +37031,59 @@ export interface operations {
             };
         };
     };
+    sendTextAlertUsingPOST: {
+        parameters: {
+            query?: never;
+            header?: never;
+            path: {
+                /** @description userId */
+                userId: number;
+            };
+            cookie?: never;
+        };
+        requestBody?: {
+            content: {
+                "application/json": components["schemas"]["SendTextAlertToUserRequest"];
+            };
+        };
+        responses: {
+            /** @description OK */
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content?: never;
+            };
+            /** @description Created */
+            201: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content?: never;
+            };
+            /** @description Unauthorized */
+            401: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content?: never;
+            };
+            /** @description Forbidden */
+            403: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content?: never;
+            };
+            /** @description Not Found */
+            404: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content?: never;
+            };
+        };
+    };
     changeUserPasswordUsingPUT: {
         parameters: {
             query?: never;
@@ -39318,6 +39495,7 @@ export declare enum PathsApiV1LawfirmsLawfirmIdAuditEventsGetParametersQueryIncl
     COURT_COVERAGE_ADDED = "COURT_COVERAGE_ADDED",
     COURT_COVERAGE_REMOVED = "COURT_COVERAGE_REMOVED",
     COURT_FEE_CHANGED = "COURT_FEE_CHANGED",
+    CUSTOMER_REVIEW_ADDED = "CUSTOMER_REVIEW_ADDED",
     CUSTOM_FEES_RESET_TO_DEFAULT_FOR_VIOLATION = "CUSTOM_FEES_RESET_TO_DEFAULT_FOR_VIOLATION",
     DECIDE_EXPERIMENT_GROUP_COMMAND = "DECIDE_EXPERIMENT_GROUP_COMMAND",
     DEFAULT_FEE_ADDED = "DEFAULT_FEE_ADDED",
@@ -40401,6 +40579,9 @@ export declare enum SendEmailToUserRequestReviewPlatform {
     REVIEWS_IO = "REVIEWS_IO",
     TRUST_PILOT = "TRUST_PILOT"
 }
+export declare enum SendTextAlertToUserRequestTextAlertType {
+    DOWNLOAD_APP = "DOWNLOAD_APP"
+}
 export declare enum SetCustomerReviewStatusRequestStatus {
     APPROVED = "APPROVED",
     REJECTED = "REJECTED"
@@ -40415,6 +40596,11 @@ export declare enum SourceDelivered_as {
     ADMIN_INITIATED = "ADMIN_INITIATED",
     INBOUND = "INBOUND",
     OUTBOUND = "OUTBOUND"
+}
+export declare enum StripeCardDomainFunding {
+    CREDIT = "CREDIT",
+    DEBIT = "DEBIT",
+    PREPAID = "PREPAID"
 }
 export declare enum SubscriberDomainSubscriptionType {
     WEB_BROCHURE_LAUNCH_NOTIFICATION = "WEB_BROCHURE_LAUNCH_NOTIFICATION"
@@ -40572,6 +40758,7 @@ export declare enum ValidateDirectMailResponseOtrError {
     INVALID_STRIPE_TRANSACTION_ID = "INVALID_STRIPE_TRANSACTION_ID",
     INVALID_SUBSCRIPTION_TYPE = "INVALID_SUBSCRIPTION_TYPE",
     INVALID_TASK_ID = "INVALID_TASK_ID",
+    INVALID_TEXT_ALERT_TYPE = "INVALID_TEXT_ALERT_TYPE",
     INVALID_TICKET_ID = "INVALID_TICKET_ID",
     INVALID_TICKET_REVIEW_ID = "INVALID_TICKET_REVIEW_ID",
     INVALID_TRAFFIC_VIOLATION = "INVALID_TRAFFIC_VIOLATION",
@@ -40714,6 +40901,7 @@ export declare enum ValidateDirectMailResponseOtrError {
     UNEXPECTED_NUMBER_OF_CHARGES = "UNEXPECTED_NUMBER_OF_CHARGES",
     UNKNOWN = "UNKNOWN",
     UNKNOWN_CRM_ERROR = "UNKNOWN_CRM_ERROR",
+    UNVERIFIED_PHONE_NUMBER = "UNVERIFIED_PHONE_NUMBER",
     URL_ENTITY_MISMATCH = "URL_ENTITY_MISMATCH",
     USER_ALREADY_HAS_SECONDARY_ACCOUNT = "USER_ALREADY_HAS_SECONDARY_ACCOUNT",
     USER_ALREADY_LOGGED_IN = "USER_ALREADY_LOGGED_IN",

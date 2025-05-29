@@ -43,6 +43,7 @@ export var PathsApiV1LawfirmsLawfirmIdAuditEventsGetParametersQueryIncludeTypes;
     PathsApiV1LawfirmsLawfirmIdAuditEventsGetParametersQueryIncludeTypes["COURT_COVERAGE_ADDED"] = "COURT_COVERAGE_ADDED";
     PathsApiV1LawfirmsLawfirmIdAuditEventsGetParametersQueryIncludeTypes["COURT_COVERAGE_REMOVED"] = "COURT_COVERAGE_REMOVED";
     PathsApiV1LawfirmsLawfirmIdAuditEventsGetParametersQueryIncludeTypes["COURT_FEE_CHANGED"] = "COURT_FEE_CHANGED";
+    PathsApiV1LawfirmsLawfirmIdAuditEventsGetParametersQueryIncludeTypes["CUSTOMER_REVIEW_ADDED"] = "CUSTOMER_REVIEW_ADDED";
     PathsApiV1LawfirmsLawfirmIdAuditEventsGetParametersQueryIncludeTypes["CUSTOM_FEES_RESET_TO_DEFAULT_FOR_VIOLATION"] = "CUSTOM_FEES_RESET_TO_DEFAULT_FOR_VIOLATION";
     PathsApiV1LawfirmsLawfirmIdAuditEventsGetParametersQueryIncludeTypes["DECIDE_EXPERIMENT_GROUP_COMMAND"] = "DECIDE_EXPERIMENT_GROUP_COMMAND";
     PathsApiV1LawfirmsLawfirmIdAuditEventsGetParametersQueryIncludeTypes["DEFAULT_FEE_ADDED"] = "DEFAULT_FEE_ADDED";
@@ -1247,6 +1248,10 @@ export var SendEmailToUserRequestReviewPlatform;
     SendEmailToUserRequestReviewPlatform["REVIEWS_IO"] = "REVIEWS_IO";
     SendEmailToUserRequestReviewPlatform["TRUST_PILOT"] = "TRUST_PILOT";
 })(SendEmailToUserRequestReviewPlatform || (SendEmailToUserRequestReviewPlatform = {}));
+export var SendTextAlertToUserRequestTextAlertType;
+(function (SendTextAlertToUserRequestTextAlertType) {
+    SendTextAlertToUserRequestTextAlertType["DOWNLOAD_APP"] = "DOWNLOAD_APP";
+})(SendTextAlertToUserRequestTextAlertType || (SendTextAlertToUserRequestTextAlertType = {}));
 export var SetCustomerReviewStatusRequestStatus;
 (function (SetCustomerReviewStatusRequestStatus) {
     SetCustomerReviewStatusRequestStatus["APPROVED"] = "APPROVED";
@@ -1265,6 +1270,12 @@ export var SourceDelivered_as;
     SourceDelivered_as["INBOUND"] = "INBOUND";
     SourceDelivered_as["OUTBOUND"] = "OUTBOUND";
 })(SourceDelivered_as || (SourceDelivered_as = {}));
+export var StripeCardDomainFunding;
+(function (StripeCardDomainFunding) {
+    StripeCardDomainFunding["CREDIT"] = "CREDIT";
+    StripeCardDomainFunding["DEBIT"] = "DEBIT";
+    StripeCardDomainFunding["PREPAID"] = "PREPAID";
+})(StripeCardDomainFunding || (StripeCardDomainFunding = {}));
 export var SubscriberDomainSubscriptionType;
 (function (SubscriberDomainSubscriptionType) {
     SubscriberDomainSubscriptionType["WEB_BROCHURE_LAUNCH_NOTIFICATION"] = "WEB_BROCHURE_LAUNCH_NOTIFICATION";
@@ -1426,6 +1437,7 @@ export var ValidateDirectMailResponseOtrError;
     ValidateDirectMailResponseOtrError["INVALID_STRIPE_TRANSACTION_ID"] = "INVALID_STRIPE_TRANSACTION_ID";
     ValidateDirectMailResponseOtrError["INVALID_SUBSCRIPTION_TYPE"] = "INVALID_SUBSCRIPTION_TYPE";
     ValidateDirectMailResponseOtrError["INVALID_TASK_ID"] = "INVALID_TASK_ID";
+    ValidateDirectMailResponseOtrError["INVALID_TEXT_ALERT_TYPE"] = "INVALID_TEXT_ALERT_TYPE";
     ValidateDirectMailResponseOtrError["INVALID_TICKET_ID"] = "INVALID_TICKET_ID";
     ValidateDirectMailResponseOtrError["INVALID_TICKET_REVIEW_ID"] = "INVALID_TICKET_REVIEW_ID";
     ValidateDirectMailResponseOtrError["INVALID_TRAFFIC_VIOLATION"] = "INVALID_TRAFFIC_VIOLATION";
@@ -1568,6 +1580,7 @@ export var ValidateDirectMailResponseOtrError;
     ValidateDirectMailResponseOtrError["UNEXPECTED_NUMBER_OF_CHARGES"] = "UNEXPECTED_NUMBER_OF_CHARGES";
     ValidateDirectMailResponseOtrError["UNKNOWN"] = "UNKNOWN";
     ValidateDirectMailResponseOtrError["UNKNOWN_CRM_ERROR"] = "UNKNOWN_CRM_ERROR";
+    ValidateDirectMailResponseOtrError["UNVERIFIED_PHONE_NUMBER"] = "UNVERIFIED_PHONE_NUMBER";
     ValidateDirectMailResponseOtrError["URL_ENTITY_MISMATCH"] = "URL_ENTITY_MISMATCH";
     ValidateDirectMailResponseOtrError["USER_ALREADY_HAS_SECONDARY_ACCOUNT"] = "USER_ALREADY_HAS_SECONDARY_ACCOUNT";
     ValidateDirectMailResponseOtrError["USER_ALREADY_LOGGED_IN"] = "USER_ALREADY_LOGGED_IN";
