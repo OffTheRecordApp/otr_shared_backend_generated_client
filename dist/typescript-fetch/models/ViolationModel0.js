@@ -21,6 +21,9 @@ export function ViolationModel0FromJSONTyped(json, ignoreDiscriminator) {
     }
     return {
         'userFriendlyName': !exists(json, 'userFriendlyName') ? undefined : json['userFriendlyName'],
+        'violationClassification': !exists(json, 'violationClassification') ? undefined : json['violationClassification'],
+        'violationClassificationDescription': !exists(json, 'violationClassificationDescription') ? undefined : json['violationClassificationDescription'],
+        'violationClassificationFriendlyName': !exists(json, 'violationClassificationFriendlyName') ? undefined : json['violationClassificationFriendlyName'],
     };
 }
 export function ViolationModel0ToJSON(value) {
@@ -32,5 +35,72 @@ export function ViolationModel0ToJSON(value) {
     }
     return {
         'userFriendlyName': value.userFriendlyName,
+        'violationClassification': value.violationClassification,
+        'violationClassificationDescription': value.violationClassificationDescription,
+        'violationClassificationFriendlyName': value.violationClassificationFriendlyName,
     };
 }
+/**
+* @export
+* @enum {string}
+*/
+export var ViolationModel0ViolationClassificationEnum;
+(function (ViolationModel0ViolationClassificationEnum) {
+    ViolationModel0ViolationClassificationEnum["CLASS1FELONY"] = "CLASS_1_FELONY";
+    ViolationModel0ViolationClassificationEnum["CLASS1MISDEMEANOR"] = "CLASS_1_MISDEMEANOR";
+    ViolationModel0ViolationClassificationEnum["CLASS2FELONY"] = "CLASS_2_FELONY";
+    ViolationModel0ViolationClassificationEnum["CLASS2MISDEMEANOR"] = "CLASS_2_MISDEMEANOR";
+    ViolationModel0ViolationClassificationEnum["CLASS3FELONY"] = "CLASS_3_FELONY";
+    ViolationModel0ViolationClassificationEnum["CLASS3MISDEMEANOR"] = "CLASS_3_MISDEMEANOR";
+    ViolationModel0ViolationClassificationEnum["CLASS4FELONY"] = "CLASS_4_FELONY";
+    ViolationModel0ViolationClassificationEnum["CLASS4MISDEMEANOR"] = "CLASS_4_MISDEMEANOR";
+    ViolationModel0ViolationClassificationEnum["CLASS5FELONY"] = "CLASS_5_FELONY";
+    ViolationModel0ViolationClassificationEnum["CLASS6FELONY"] = "CLASS_6_FELONY";
+    ViolationModel0ViolationClassificationEnum["CLASSA1MISDEMEANOR"] = "CLASS_A1_MISDEMEANOR";
+    ViolationModel0ViolationClassificationEnum["CLASSAFELONY"] = "CLASS_A_FELONY";
+    ViolationModel0ViolationClassificationEnum["CLASSAINFRACTION"] = "CLASS_A_INFRACTION";
+    ViolationModel0ViolationClassificationEnum["CLASSAMISDEMEANOR"] = "CLASS_A_MISDEMEANOR";
+    ViolationModel0ViolationClassificationEnum["CLASSAVIOLATION"] = "CLASS_A_VIOLATION";
+    ViolationModel0ViolationClassificationEnum["CLASSBFELONY"] = "CLASS_B_FELONY";
+    ViolationModel0ViolationClassificationEnum["CLASSBINFRACTION"] = "CLASS_B_INFRACTION";
+    ViolationModel0ViolationClassificationEnum["CLASSBMISDEMEANOR"] = "CLASS_B_MISDEMEANOR";
+    ViolationModel0ViolationClassificationEnum["CLASSBVIOLATION"] = "CLASS_B_VIOLATION";
+    ViolationModel0ViolationClassificationEnum["CLASSCFELONY"] = "CLASS_C_FELONY";
+    ViolationModel0ViolationClassificationEnum["CLASSCINFRACTION"] = "CLASS_C_INFRACTION";
+    ViolationModel0ViolationClassificationEnum["CLASSCMISDEMEANOR"] = "CLASS_C_MISDEMEANOR";
+    ViolationModel0ViolationClassificationEnum["CLASSCVIOLATION"] = "CLASS_C_VIOLATION";
+    ViolationModel0ViolationClassificationEnum["CLASSDFELONY"] = "CLASS_D_FELONY";
+    ViolationModel0ViolationClassificationEnum["CLASSDMISDEMEANOR"] = "CLASS_D_MISDEMEANOR";
+    ViolationModel0ViolationClassificationEnum["CLASSDVIOLATION"] = "CLASS_D_VIOLATION";
+    ViolationModel0ViolationClassificationEnum["CLASSEFELONY"] = "CLASS_E_FELONY";
+    ViolationModel0ViolationClassificationEnum["CLASSFFELONY"] = "CLASS_F_FELONY";
+    ViolationModel0ViolationClassificationEnum["CLASSHFELONY"] = "CLASS_H_FELONY";
+    ViolationModel0ViolationClassificationEnum["DISORDERLYPERSONSOFFENSE"] = "DISORDERLY_PERSONS_OFFENSE";
+    ViolationModel0ViolationClassificationEnum["FELONY"] = "FELONY";
+    ViolationModel0ViolationClassificationEnum["FELONY1STDEGREE"] = "FELONY_1ST_DEGREE";
+    ViolationModel0ViolationClassificationEnum["FELONY2NDDEGREE"] = "FELONY_2ND_DEGREE";
+    ViolationModel0ViolationClassificationEnum["FELONY3RDDEGREE"] = "FELONY_3RD_DEGREE";
+    ViolationModel0ViolationClassificationEnum["FELONY4THDEGREE"] = "FELONY_4TH_DEGREE";
+    ViolationModel0ViolationClassificationEnum["FELONY5THDEGREE"] = "FELONY_5TH_DEGREE";
+    ViolationModel0ViolationClassificationEnum["GROSSMISDEMEANOR"] = "GROSS_MISDEMEANOR";
+    ViolationModel0ViolationClassificationEnum["HIGHANDAGGRAVATEDMISDEMEANOR"] = "HIGH_AND_AGGRAVATED_MISDEMEANOR";
+    ViolationModel0ViolationClassificationEnum["INFRACTION"] = "INFRACTION";
+    ViolationModel0ViolationClassificationEnum["LEVEL4FELONY"] = "LEVEL_4_FELONY";
+    ViolationModel0ViolationClassificationEnum["LEVEL5FELONY"] = "LEVEL_5_FELONY";
+    ViolationModel0ViolationClassificationEnum["LEVEL6FELONY"] = "LEVEL_6_FELONY";
+    ViolationModel0ViolationClassificationEnum["MINORMISDEMEANOR"] = "MINOR_MISDEMEANOR";
+    ViolationModel0ViolationClassificationEnum["MISDEMEANOR"] = "MISDEMEANOR";
+    ViolationModel0ViolationClassificationEnum["MISDEMEANOR1STDEGREE"] = "MISDEMEANOR_1ST_DEGREE";
+    ViolationModel0ViolationClassificationEnum["MISDEMEANOR2NDDEGREE"] = "MISDEMEANOR_2ND_DEGREE";
+    ViolationModel0ViolationClassificationEnum["MISDEMEANOR3RDDEGREE"] = "MISDEMEANOR_3RD_DEGREE";
+    ViolationModel0ViolationClassificationEnum["MISDEMEANOR4THDEGREE"] = "MISDEMEANOR_4TH_DEGREE";
+    ViolationModel0ViolationClassificationEnum["MISDEMEANORWITHREFUND"] = "MISDEMEANOR_WITH_REFUND";
+    ViolationModel0ViolationClassificationEnum["NONMOVING"] = "NON_MOVING";
+    ViolationModel0ViolationClassificationEnum["NONREPORTABLE"] = "NON_REPORTABLE";
+    ViolationModel0ViolationClassificationEnum["PETTYMISDEMEANOR"] = "PETTY_MISDEMEANOR";
+    ViolationModel0ViolationClassificationEnum["QUASICRIMINAL"] = "QUASI_CRIMINAL";
+    ViolationModel0ViolationClassificationEnum["SUMMARYOFFENSE"] = "SUMMARY_OFFENSE";
+    ViolationModel0ViolationClassificationEnum["SUMMARYOFFENSENOREFUND"] = "SUMMARY_OFFENSE_NO_REFUND";
+    ViolationModel0ViolationClassificationEnum["WOBBLERTOFELONY"] = "WOBBLER_TO_FELONY";
+    ViolationModel0ViolationClassificationEnum["WOBBLERTOMISDEMEANOR"] = "WOBBLER_TO_MISDEMEANOR";
+})(ViolationModel0ViolationClassificationEnum || (ViolationModel0ViolationClassificationEnum = {}));
