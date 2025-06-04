@@ -12,13 +12,13 @@
 import * as models from './models';
 export interface WorkflowViolationModel {
     "classDescription"?: string;
-    "isCriminal"?: boolean;
-    "isWobblerToCriminal"?: boolean;
+    "criminal"?: boolean;
     "penalties"?: Array<models.WorkflowViolationPenaltyModel>;
     "trafficViolationDesc"?: string;
     "trafficViolationTypeId"?: number;
     "violationClassification"?: WorkflowViolationModel.ViolationClassificationEnum;
     "violationCode"?: string;
+    "wobblerToCriminal"?: boolean;
 }
 export declare namespace WorkflowViolationModel {
     enum ViolationClassificationEnum {

@@ -27,13 +27,7 @@ export interface WorkflowViolationModel {
      * @type {boolean}
      * @memberof WorkflowViolationModel
      */
-    isCriminal?: boolean;
-    /**
-     *
-     * @type {boolean}
-     * @memberof WorkflowViolationModel
-     */
-    isWobblerToCriminal?: boolean;
+    criminal?: boolean;
     /**
      *
      * @type {Array<WorkflowViolationPenaltyModel>}
@@ -64,6 +58,12 @@ export interface WorkflowViolationModel {
      * @memberof WorkflowViolationModel
      */
     violationCode?: string;
+    /**
+     *
+     * @type {boolean}
+     * @memberof WorkflowViolationModel
+     */
+    wobblerToCriminal?: boolean;
 }
 export declare function WorkflowViolationModelFromJSON(json: any): WorkflowViolationModel;
 export declare function WorkflowViolationModelFromJSONTyped(json: any, ignoreDiscriminator: boolean): WorkflowViolationModel;

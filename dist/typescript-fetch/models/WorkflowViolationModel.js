@@ -22,13 +22,13 @@ export function WorkflowViolationModelFromJSONTyped(json, ignoreDiscriminator) {
     }
     return {
         'classDescription': !exists(json, 'classDescription') ? undefined : json['classDescription'],
-        'isCriminal': !exists(json, 'isCriminal') ? undefined : json['isCriminal'],
-        'isWobblerToCriminal': !exists(json, 'isWobblerToCriminal') ? undefined : json['isWobblerToCriminal'],
+        'criminal': !exists(json, 'criminal') ? undefined : json['criminal'],
         'penalties': !exists(json, 'penalties') ? undefined : (json['penalties'].map(WorkflowViolationPenaltyModelFromJSON)),
         'trafficViolationDesc': !exists(json, 'trafficViolationDesc') ? undefined : json['trafficViolationDesc'],
         'trafficViolationTypeId': !exists(json, 'trafficViolationTypeId') ? undefined : json['trafficViolationTypeId'],
         'violationClassification': !exists(json, 'violationClassification') ? undefined : json['violationClassification'],
         'violationCode': !exists(json, 'violationCode') ? undefined : json['violationCode'],
+        'wobblerToCriminal': !exists(json, 'wobblerToCriminal') ? undefined : json['wobblerToCriminal'],
     };
 }
 export function WorkflowViolationModelToJSON(value) {
@@ -40,13 +40,13 @@ export function WorkflowViolationModelToJSON(value) {
     }
     return {
         'classDescription': value.classDescription,
-        'isCriminal': value.isCriminal,
-        'isWobblerToCriminal': value.isWobblerToCriminal,
+        'criminal': value.criminal,
         'penalties': value.penalties === undefined ? undefined : (value.penalties.map(WorkflowViolationPenaltyModelToJSON)),
         'trafficViolationDesc': value.trafficViolationDesc,
         'trafficViolationTypeId': value.trafficViolationTypeId,
         'violationClassification': value.violationClassification,
         'violationCode': value.violationCode,
+        'wobblerToCriminal': value.wobblerToCriminal,
     };
 }
 /**
