@@ -17,6 +17,18 @@
 export interface ViolationModel0 {
     /**
      *
+     * @type {boolean}
+     * @memberof ViolationModel0
+     */
+    isCriminal?: boolean;
+    /**
+     *
+     * @type {boolean}
+     * @memberof ViolationModel0
+     */
+    isMoving?: boolean;
+    /**
+     *
      * @type {string}
      * @memberof ViolationModel0
      */

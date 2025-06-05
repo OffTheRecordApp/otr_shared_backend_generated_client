@@ -10,6 +10,8 @@
  * Do not edit the class manually.
  */
 export interface ViolationModel0 {
+    "isCriminal"?: boolean;
+    "isMoving"?: boolean;
     "userFriendlyName"?: string;
     "violationClassification"?: ViolationModel0.ViolationClassificationEnum;
     "violationClassificationDescription"?: string;

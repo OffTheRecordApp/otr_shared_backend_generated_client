@@ -20,6 +20,8 @@ export function ViolationModel0FromJSONTyped(json, ignoreDiscriminator) {
         return json;
     }
     return {
+        'isCriminal': !exists(json, 'isCriminal') ? undefined : json['isCriminal'],
+        'isMoving': !exists(json, 'isMoving') ? undefined : json['isMoving'],
         'userFriendlyName': !exists(json, 'userFriendlyName') ? undefined : json['userFriendlyName'],
         'violationClassification': !exists(json, 'violationClassification') ? undefined : json['violationClassification'],
         'violationClassificationDescription': !exists(json, 'violationClassificationDescription') ? undefined : json['violationClassificationDescription'],
@@ -34,6 +36,8 @@ export function ViolationModel0ToJSON(value) {
         return null;
     }
     return {
+        'isCriminal': value.isCriminal,
+        'isMoving': value.isMoving,
         'userFriendlyName': value.userFriendlyName,
         'violationClassification': value.violationClassification,
         'violationClassificationDescription': value.violationClassificationDescription,
