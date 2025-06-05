@@ -16065,7 +16065,13 @@ export interface components {
         };
         /** ViolationModel0 */
         ViolationModel0: {
+            isCriminal?: boolean;
+            isMoving?: boolean;
             userFriendlyName?: string;
+            /** @enum {string} */
+            violationClassification?: PathsApiV1LawfirmsLawfirmIdAccountFeesDeleteParametersQueryClassification;
+            violationClassificationDescription?: string;
+            violationClassificationFriendlyName?: string;
         };
         /** ViolationNames */
         ViolationNames: {
@@ -16204,8 +16210,7 @@ export interface components {
         /** WorkflowViolationModel */
         WorkflowViolationModel: {
             classDescription?: string;
-            isCriminal?: boolean;
-            isWobblerToCriminal?: boolean;
+            criminal?: boolean;
             penalties?: components["schemas"]["WorkflowViolationPenaltyModel"][];
             trafficViolationDesc?: string;
             /** Format: int64 */
@@ -16213,6 +16218,7 @@ export interface components {
             /** @enum {string} */
             violationClassification?: PathsApiV1LawfirmsLawfirmIdAccountFeesDeleteParametersQueryClassification;
             violationCode?: string;
+            wobblerToCriminal?: boolean;
         };
         /** WorkflowViolationPenaltyModel */
         WorkflowViolationPenaltyModel: {
@@ -16335,6 +16341,8 @@ export interface operations {
                 limit: number;
                 /** @description regionCode */
                 regionCode?: string;
+                /** @description preferredRegionCode */
+                preferredRegionCode?: boolean;
                 /** @description previousPageToken */
                 previousPageToken?: string;
                 /** @description nextPageToken */
