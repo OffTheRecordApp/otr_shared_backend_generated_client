@@ -60,6 +60,12 @@ export interface DashboardCaseModel {
     court?: DashboardCourtModel;
     /**
      *
+     * @type {Date}
+     * @memberof DashboardCaseModel
+     */
+    courtDate?: Date;
+    /**
+     *
      * @type {DashboardDisputeModel}
      * @memberof DashboardCaseModel
      */
