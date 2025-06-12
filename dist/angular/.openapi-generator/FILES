@@ -317,6 +317,7 @@ model/customerServiceAgentDomain.ts
 model/dashboardAddressModel.ts
 model/dashboardAuthorModel.ts
 model/dashboardCaseCounterOfferModel.ts
+model/dashboardCaseCountsDto.ts
 model/dashboardCaseModel.ts
 model/dashboardCaseUserModel.ts
 model/dashboardCitationModel.ts

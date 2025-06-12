@@ -193,6 +193,7 @@ export * from './customerServiceAgentDomain';
 export * from './dashboardAddressModel';
 export * from './dashboardAuthorModel';
 export * from './dashboardCaseCounterOfferModel';
+export * from './dashboardCaseCountsDto';
 export * from './dashboardCaseModel';
 export * from './dashboardCaseUserModel';
 export * from './dashboardCitationModel';

@@ -12,7 +12,7 @@
  * Do not edit the class manually.
  */
 import { exists } from '../runtime';
-import { DashboardCaseModelFromJSON, DashboardCaseModelToJSON, } from './';
+import { DashboardCaseCountsDtoFromJSON, DashboardCaseCountsDtoToJSON, DashboardCaseModelFromJSON, DashboardCaseModelToJSON, } from './';
 export function ListDashboardCasesResponseFromJSON(json) {
     return ListDashboardCasesResponseFromJSONTyped(json, false);
 }
@@ -22,6 +22,7 @@ export function ListDashboardCasesResponseFromJSONTyped(json, ignoreDiscriminato
     }
     return {
         'cases': !exists(json, 'cases') ? undefined : (json['cases'].map(DashboardCaseModelFromJSON)),
+        'counts': !exists(json, 'counts') ? undefined : DashboardCaseCountsDtoFromJSON(json['counts']),
         'previousPageToken': !exists(json, 'previousPageToken') ? undefined : json['previousPageToken'],
     };
 }
@@ -34,6 +35,7 @@ export function ListDashboardCasesResponseToJSON(value) {
     }
     return {
         'cases': value.cases === undefined ? undefined : (value.cases.map(DashboardCaseModelToJSON)),
+        'counts': DashboardCaseCountsDtoToJSON(value.counts),
         'previousPageToken': value.previousPageToken,
     };
 }

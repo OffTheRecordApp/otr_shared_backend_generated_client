@@ -10,10 +10,12 @@
  * Do not edit the class manually.
  */
 import { DashboardCaseModel } from './dashboardCaseModel';
+import { DashboardCaseCountsDto } from './dashboardCaseCountsDto';
 
 
 export interface ListDashboardCasesResponse { 
     cases?: Array<DashboardCaseModel>;
+    counts?: DashboardCaseCountsDto;
     previousPageToken?: string;
 }
 

@@ -9,9 +9,4 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-import * as models from './models';
-export interface ListDashboardCasesResponse {
-    "cases"?: Array<models.DashboardCaseModel>;
-    "counts"?: models.DashboardCaseCountsDto;
-    "previousPageToken"?: string;
-}
+export {};

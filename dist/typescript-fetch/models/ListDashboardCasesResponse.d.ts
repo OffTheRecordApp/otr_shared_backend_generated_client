@@ -9,7 +9,7 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-import { DashboardCaseModel } from './';
+import { DashboardCaseCountsDto, DashboardCaseModel } from './';
 /**
  *
  * @export
@@ -22,6 +22,12 @@ export interface ListDashboardCasesResponse {
      * @memberof ListDashboardCasesResponse
      */
     cases?: Array<DashboardCaseModel>;
+    /**
+     *
+     * @type {DashboardCaseCountsDto}
+     * @memberof ListDashboardCasesResponse
+     */
+    counts?: DashboardCaseCountsDto;
     /**
      *
      * @type {string}
