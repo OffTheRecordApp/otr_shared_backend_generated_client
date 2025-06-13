@@ -20,13 +20,14 @@
   ],
   "scripts": {
     "download:devo": "curl https://otr-backend-service-us-devo.offtherecord.com/v2/api-docs -o api/otr-service.json",
+    "download:devo:v3": "curl https://otr-backend-service-us-devo.offtherecord.com/v3/api-docs -o api/otr-service-v3.json",
     "clean-source": "find dist/typescript* -type f | grep -v  \"\\.d\\.ts\\|\\.js\" | xargs rm",
     "generate:devo": "npm run generate:devo-angularjs",
     "generate:devo-angularjs-ci": "npm run download:devo && gulp codegen && java -jar /opt/openapi-generator/modules/openapi-generator-cli/target/openapi-generator-cli.jar generate -i api/otr-service.json -o myclient/typescript -g typescript-angularjs && tsc --project tsconfig.json --outDir dist/typescript",
     "generate:devo-angular-ci": "npm run download:devo && gulp codegen && java -jar /opt/openapi-generator-630/modules/openapi-generator-cli/target/openapi-generator-cli.jar generate -i api/otr-service.json -o dist/angular -g typescript-angular",
     "generate:devo-angular": "npm run download:devo && gulp codegen &&  opnapi-generator-cli version-manager set 6.3.0 && openapi-generator-cli generate -i api/otr-service.json -o dist/angular -g typescript-angular",
     "generate:devo-typescript-fetch": "rm -r dist/typescript-fetch || npm run download:devo &&  openapi-generator-cli version-manager set 4.3.1 && openapi-generator-cli generate -i api/otr-service.json -o myclient/typescript-fetch -g typescript-fetch --additional-properties=typescriptThreePlus=true && tsc --project tsconfig.fetch.json  --outDir dist/typescript-fetch",
-    "generate:devo-typescript-open-api": "npx openapi-typescript https://otr-backend-service-us-devo.offtherecord.com/v3/api-docs -o dist/typescript-open-api/otr-backend.ts --enum=true --dedupe-enums && tsc --project tsconfig-open-api.json  --outDir dist/typescript-open-api && npm run clean-source",
+    "generate:devo-typescript-open-api": "npm run download:devo:v3 && npx openapi-typescript api/otr-service-v3.json -o dist/typescript-open-api/otr-backend.ts --enum=true --dedupe-enums && tsc --project tsconfig-open-api.json  --outDir dist/typescript-open-api && npm run clean-source",
     "generate:devo-angularjs": "rm -r dist/typescript || npm run download:devo && gulp codegen &&  openapi-generator-cli version-manager set 4.3.1 && openapi-generator-cli generate -i api/otr-service.json -o myclient/typescript -g typescript-angularjs && tsc --project tsconfig.json  --outDir dist/typescript",
     "generate:local": "curl http://localhost:8080/v2/api-docs -o api/otr-service.json && gulp codegen && openapi-generator-cli generate -i api/otr-service.json -o dist/typescript -g typescript-angular && tsc && npm run clean-source",
     "bootstrap": "npm i @openapitools/openapi-generator-cli -g && openapi-generator-cli version-manager set 6.3.0"
