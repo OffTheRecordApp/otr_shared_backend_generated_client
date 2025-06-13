@@ -10,6 +10,7 @@
  * Do not edit the class manually.
  */
 import { SubscriptionDiscountEligibility } from './subscriptionDiscountEligibility';
+import { UnavailableMatchAttributesModel } from './unavailableMatchAttributesModel';
 import { WorkflowViolationPenaltyModel } from './workflowViolationPenaltyModel';
 import { WorkflowCitationModel } from './workflowCitationModel';
 import { LetterOfEngagement } from './letterOfEngagement';
@@ -25,6 +26,7 @@ export interface WorkflowCaseModel {
     citation?: WorkflowCitationModel;
     courtAppointmentDate?: Timestamp;
     isLawfirmCodeApplied?: boolean;
+    latestUnavailableMatchAttributes?: UnavailableMatchAttributesModel;
     legalServices?: Array<LegalServiceModel>;
     letterOfEngagement?: LetterOfEngagement;
     maxPenalties?: Array<WorkflowViolationPenaltyModel>;

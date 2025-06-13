@@ -743,6 +743,7 @@ export * from './topics';
 export * from './trafficViolationInputRequest';
 export * from './transferCaseRequest';
 export * from './uSStateDomain';
+export * from './unavailableMatchAttributesModel';
 export * from './updateAddress';
 export * from './updateCaseActionRequest';
 export * from './updateCaseActionResponse';

@@ -17,6 +17,7 @@ export interface WorkflowCaseModel {
     "citation"?: models.WorkflowCitationModel;
     "courtAppointmentDate"?: models.Timestamp;
     "isLawfirmCodeApplied"?: boolean;
+    "latestUnavailableMatchAttributes"?: models.UnavailableMatchAttributesModel;
     "legalServices"?: Array<models.LegalServiceModel>;
     "letterOfEngagement"?: models.LetterOfEngagement;
     "maxPenalties"?: Array<models.WorkflowViolationPenaltyModel>;

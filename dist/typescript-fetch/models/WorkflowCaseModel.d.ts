@@ -9,7 +9,7 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-import { LegalServiceModel, LetterOfEngagement, PaymentPlanTypeModel, SubscriptionDiscountEligibility, Timestamp, WorkflowCitationModel, WorkflowViolationPenaltyModel } from './';
+import { LegalServiceModel, LetterOfEngagement, PaymentPlanTypeModel, SubscriptionDiscountEligibility, Timestamp, UnavailableMatchAttributesModel, WorkflowCitationModel, WorkflowViolationPenaltyModel } from './';
 /**
  *
  * @export
@@ -52,6 +52,12 @@ export interface WorkflowCaseModel {
      * @memberof WorkflowCaseModel
      */
     isLawfirmCodeApplied?: boolean;
+    /**
+     *
+     * @type {UnavailableMatchAttributesModel}
+     * @memberof WorkflowCaseModel
+     */
+    latestUnavailableMatchAttributes?: UnavailableMatchAttributesModel;
     /**
      *
      * @type {Array<LegalServiceModel>}

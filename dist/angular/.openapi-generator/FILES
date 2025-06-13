@@ -868,6 +868,7 @@ model/topics.ts
 model/trafficViolationInputRequest.ts
 model/transferCaseRequest.ts
 model/uSStateDomain.ts
+model/unavailableMatchAttributesModel.ts
 model/updateAddress.ts
 model/updateCaseActionRequest.ts
 model/updateCaseActionResponse.ts
