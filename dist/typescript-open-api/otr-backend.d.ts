@@ -9667,6 +9667,17 @@ export interface components {
             /** @enum {string} */
             counterOfferStatus?: DashboardCaseCounterOfferModelCounterOfferStatus;
         };
+        /** DashboardCaseCountsDto */
+        DashboardCaseCountsDto: {
+            /** Format: int32 */
+            active?: number;
+            /** Format: int32 */
+            canceled?: number;
+            /** Format: int32 */
+            resolved?: number;
+            /** Format: int32 */
+            unconfirmed?: number;
+        };
         /** DashboardCaseModel */
         DashboardCaseModel: {
             authorModel?: components["schemas"]["DashboardAuthorModel"];
@@ -9677,6 +9688,8 @@ export interface components {
             caseUserDetails?: components["schemas"]["CaseUserDetailsModel"];
             citation?: components["schemas"]["DashboardCitationModel"];
             court?: components["schemas"]["DashboardCourtModel"];
+            /** Format: date-time */
+            courtDate?: string;
             disputeModel?: components["schemas"]["DashboardDisputeModel"];
             engagementLetter?: components["schemas"]["EngagementLetterModel"];
             hasLeftLawyerReview?: boolean;
@@ -12572,6 +12585,7 @@ export interface components {
         /** ListDashboardCasesResponse */
         ListDashboardCasesResponse: {
             cases?: components["schemas"]["DashboardCaseModel"][];
+            counts?: components["schemas"]["DashboardCaseCountsDto"];
             previousPageToken?: string;
         };
         /** ListEligibleStatusResponse */
@@ -15225,6 +15239,12 @@ export interface components {
             stateCode?: string;
             stateName?: string;
         };
+        /** UnavailableMatchAttributesModel */
+        UnavailableMatchAttributesModel: {
+            algorithmName?: string;
+            lawfirmId?: string;
+            reasonNotAvailable?: string;
+        };
         /** UpdateAddress */
         UpdateAddress: {
             addressLine1?: string;
@@ -16138,6 +16158,7 @@ export interface components {
             citation?: components["schemas"]["WorkflowCitationModel"];
             courtAppointmentDate?: components["schemas"]["Timestamp"];
             isLawfirmCodeApplied?: boolean;
+            latestUnavailableMatchAttributes?: components["schemas"]["UnavailableMatchAttributesModel"];
             legalServices?: components["schemas"]["LegalServiceModel"][];
             letterOfEngagement?: components["schemas"]["LetterOfEngagement"];
             maxPenalties?: components["schemas"]["WorkflowViolationPenaltyModel"][];
@@ -31213,16 +31234,16 @@ export interface operations {
                 limit?: number;
                 /** @description previousPageToken */
                 previousPageToken?: string;
-                /** @description statusCategories */
-                statusCategories?: PathsApiV1CaseStatusesGetParametersQueryCategories;
                 /** @description sortBy */
                 sortBy?: PathsApiV3UsersUserIdCasesGetParametersQuerySortBy;
-                /** @description caseStatuses */
-                caseStatuses?: PathsApiV1LawfirmsLawfirmIdInboxMessagesGetParametersQueryCaseStatuses;
                 /** @description includeDeleted */
                 includeDeleted?: boolean;
                 /** @description needsAttention */
                 needsAttention?: boolean;
+                /** @description statusCategories */
+                statusCategories?: PathsApiV1CaseStatusesGetParametersQueryCategories;
+                /** @description caseStatuses */
+                caseStatuses?: PathsApiV1LawfirmsLawfirmIdInboxMessagesGetParametersQueryCaseStatuses;
             };
             header?: never;
             path: {
