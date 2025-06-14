@@ -56,6 +56,7 @@ export * from './HouseholdMateControllerApi';
 export * from './HubspotWebhookControllerApi';
 export * from './InsuranceCalculatorControllerApi';
 export * from './IntercomTicketControllerApi';
+export * from './IntercomWebhookControllerApi';
 export * from './LawfirmCaseDecisionControllerApi';
 export * from './LawfirmCasesControllerApi';
 export * from './LawfirmControllerApi';

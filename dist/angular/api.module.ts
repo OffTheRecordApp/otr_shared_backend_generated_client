@@ -60,6 +60,7 @@ import { HouseholdMateControllerService } from './api/householdMateController.se
 import { HubspotWebhookControllerService } from './api/hubspotWebhookController.service';
 import { InsuranceCalculatorControllerService } from './api/insuranceCalculatorController.service';
 import { IntercomTicketControllerService } from './api/intercomTicketController.service';
+import { IntercomWebhookControllerService } from './api/intercomWebhookController.service';
 import { LawfirmCaseDecisionControllerService } from './api/lawfirmCaseDecisionController.service';
 import { LawfirmCasesControllerService } from './api/lawfirmCasesController.service';
 import { LawfirmControllerService } from './api/lawfirmController.service';
