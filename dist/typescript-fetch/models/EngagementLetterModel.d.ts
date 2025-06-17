@@ -23,6 +23,12 @@ export interface EngagementLetterModel {
     acknowledged?: boolean;
     /**
      *
+     * @type {number}
+     * @memberof EngagementLetterModel
+     */
+    docId?: number;
+    /**
+     *
      * @type {string}
      * @memberof EngagementLetterModel
      */

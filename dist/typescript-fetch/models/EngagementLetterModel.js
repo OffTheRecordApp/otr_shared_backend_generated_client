@@ -21,6 +21,7 @@ export function EngagementLetterModelFromJSONTyped(json, ignoreDiscriminator) {
     }
     return {
         'acknowledged': !exists(json, 'acknowledged') ? undefined : json['acknowledged'],
+        'docId': !exists(json, 'docId') ? undefined : json['docId'],
         'engagementLetterUrl': !exists(json, 'engagementLetterUrl') ? undefined : json['engagementLetterUrl'],
     };
 }
@@ -33,6 +34,7 @@ export function EngagementLetterModelToJSON(value) {
     }
     return {
         'acknowledged': value.acknowledged,
+        'docId': value.docId,
         'engagementLetterUrl': value.engagementLetterUrl,
     };
 }

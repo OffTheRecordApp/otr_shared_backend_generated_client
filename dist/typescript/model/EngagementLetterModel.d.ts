@@ -11,5 +11,6 @@
  */
 export interface EngagementLetterModel {
     "acknowledged"?: boolean;
+    "docId"?: number;
     "engagementLetterUrl"?: string;
 }
