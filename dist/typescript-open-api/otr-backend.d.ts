@@ -3264,6 +3264,23 @@ export interface paths {
         patch?: never;
         trace?: never;
     };
+    "/api/v1/intercom/webhook/conversation-notification": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        get?: never;
+        put?: never;
+        /** onConversationNotification */
+        post: operations["onConversationNotificationUsingPOST"];
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
     "/api/v1/lawfirm/cases/{caseId}/decision": {
         parameters: {
             query?: never;
@@ -9979,6 +9996,8 @@ export interface components {
         /** EngagementLetterModel */
         EngagementLetterModel: {
             acknowledged?: boolean;
+            /** Format: int64 */
+            docId?: number;
             engagementLetterUrl?: string;
         };
         /** EstimateInsuranceSavingsRequest */
@@ -26888,6 +26907,56 @@ export interface operations {
                 content: {
                     "application/json": components["schemas"]["IntercomSearchTicketsResponse"];
                 };
+            };
+            /** @description Unauthorized */
+            401: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content?: never;
+            };
+            /** @description Forbidden */
+            403: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content?: never;
+            };
+            /** @description Not Found */
+            404: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content?: never;
+            };
+        };
+    };
+    onConversationNotificationUsingPOST: {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        requestBody?: {
+            content: {
+                "application/json": string;
+            };
+        };
+        responses: {
+            /** @description OK */
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content?: never;
+            };
+            /** @description Created */
+            201: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content?: never;
             };
             /** @description Unauthorized */
             401: {
