@@ -82,8 +82,9 @@ export class ListCasesControllerApi {
      * @param previousPageToken previousPageToken
      * @param sortBy sortBy
      * @param statusCategories statusCategories
+     * @param unreadMessagesOnly unreadMessagesOnly
      */
-    listDashboardCasesUsingGET(userId, caseStatuses, defendantId, includeDeleted, limit, needsAttention, previousPageToken, sortBy, statusCategories, extraHttpRequestParams) {
+    listDashboardCasesUsingGET(userId, caseStatuses, defendantId, includeDeleted, limit, needsAttention, previousPageToken, sortBy, statusCategories, unreadMessagesOnly, extraHttpRequestParams) {
         const localVarPath = this.basePath + '/api/v3/users/{userId}/cases'
             .replace('{' + 'userId' + '}', encodeURIComponent(String(userId)));
         let queryParameters = {};
@@ -115,6 +116,9 @@ export class ListCasesControllerApi {
         }
         if (statusCategories !== undefined) {
             queryParameters['statusCategories'] = statusCategories;
+        }
+        if (unreadMessagesOnly !== undefined) {
+            queryParameters['unreadMessagesOnly'] = unreadMessagesOnly;
         }
         let httpRequestParams = {
             method: 'GET',

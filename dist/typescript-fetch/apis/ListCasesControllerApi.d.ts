@@ -27,6 +27,7 @@ export interface ListDashboardCasesUsingGETRequest {
     previousPageToken?: string;
     sortBy?: ListDashboardCasesUsingGETSortByEnum;
     statusCategories?: ListDashboardCasesUsingGETStatusCategoriesEnum;
+    unreadMessagesOnly?: boolean;
 }
 /**
  *

@@ -115,6 +115,9 @@ export class ListCasesControllerApi extends runtime.BaseAPI {
             if (requestParameters.statusCategories !== undefined) {
                 queryParameters['statusCategories'] = requestParameters.statusCategories;
             }
+            if (requestParameters.unreadMessagesOnly !== undefined) {
+                queryParameters['unreadMessagesOnly'] = requestParameters.unreadMessagesOnly;
+            }
             const headerParameters = {};
             const response = yield this.request({
                 path: `/api/v3/users/{userId}/cases`.replace(`{${"userId"}}`, encodeURIComponent(String(requestParameters.userId))),

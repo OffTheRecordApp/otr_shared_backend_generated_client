@@ -19162,6 +19162,7 @@ angular.module('otrBackendService', [])
              * @param {string} parameters.previousPageToken - previousPageToken
              * @param {string} parameters.sortBy - sortBy
              * @param {string} parameters.statusCategories - statusCategories
+             * @param {boolean} parameters.unreadMessagesOnly - unreadMessagesOnly
              * @param {integer} parameters.userId - userId
              */
             OtrService.prototype.listDashboardCasesUsingGET = function(parameters) {
@@ -19211,6 +19212,10 @@ angular.module('otrBackendService', [])
 
                 if (parameters['statusCategories'] !== undefined) {
                     queryParameters['statusCategories'] = parameters['statusCategories'];
+                }
+
+                if (parameters['unreadMessagesOnly'] !== undefined) {
+                    queryParameters['unreadMessagesOnly'] = parameters['unreadMessagesOnly'];
                 }
 
                 path = path.replace('{userId}', parameters['userId']);
