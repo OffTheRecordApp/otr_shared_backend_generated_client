@@ -42,6 +42,7 @@ export var ValidateDirectMailResponseOtrErrorEnum;
 (function (ValidateDirectMailResponseOtrErrorEnum) {
     ValidateDirectMailResponseOtrErrorEnum["ACCESSDENIED"] = "ACCESS_DENIED";
     ValidateDirectMailResponseOtrErrorEnum["ACCOUNTDISABLED"] = "ACCOUNT_DISABLED";
+    ValidateDirectMailResponseOtrErrorEnum["ACTIVECASECOUNTERSBLOCKACCEPT"] = "ACTIVE_CASE_COUNTERS_BLOCK_ACCEPT";
     ValidateDirectMailResponseOtrErrorEnum["ARAGNOTCAPTURED"] = "ARAG_NOT_CAPTURED";
     ValidateDirectMailResponseOtrErrorEnum["AUTHENTICATIONCREDENTIALSNOTFOUND"] = "AUTHENTICATION_CREDENTIALS_NOT_FOUND";
     ValidateDirectMailResponseOtrErrorEnum["AUTHENTICATIONFAILED"] = "AUTHENTICATION_FAILED";

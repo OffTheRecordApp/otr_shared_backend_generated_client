@@ -16,6 +16,7 @@ export declare namespace ValidateDirectMailResponse {
     enum OtrErrorEnum {
         ACCESSDENIED,
         ACCOUNTDISABLED,
+        ACTIVECASECOUNTERSBLOCKACCEPT,
         ARAGNOTCAPTURED,
         AUTHENTICATIONCREDENTIALSNOTFOUND,
         AUTHENTICATIONFAILED,
