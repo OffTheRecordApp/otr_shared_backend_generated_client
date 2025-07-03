@@ -9,7 +9,7 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-import { AddressDomain, LawfirmRedirectModel, LawfirmSettingsDomainRes, SupportedStateModel } from './';
+import { AddressDomain, LawfirmRedirectModel, LawfirmSettingsDomainRes, LawfirmStatusModel, SupportedStateModel } from './';
 /**
  *
  * @export
@@ -108,10 +108,10 @@ export interface GetLawfirmModel {
     lawfirmPaymentModel?: GetLawfirmModelLawfirmPaymentModelEnum;
     /**
      *
-     * @type {string}
+     * @type {LawfirmStatusModel}
      * @memberof GetLawfirmModel
      */
-    lawfirmState?: GetLawfirmModelLawfirmStateEnum;
+    lawfirmState?: LawfirmStatusModel;
     /**
      *
      * @type {Date}
@@ -196,32 +196,6 @@ export declare enum GetLawfirmModelLawfirmPaymentModelEnum {
     DESTINATIONACCOUNT = "DESTINATION_ACCOUNT",
     SEPARATECHARGE = "SEPARATE_CHARGE",
     TRANSFERDEDUCTION = "TRANSFER_DEDUCTION"
-}
-/**
-* @export
-* @enum {string}
-*/
-export declare enum GetLawfirmModelLawfirmStateEnum {
-    ACCOUNTCLOSED = "ACCOUNT_CLOSED",
-    ACTIVE = "ACTIVE",
-    BLACKLISTED = "BLACKLISTED",
-    DEMOCOMPLETED = "DEMO_COMPLETED",
-    DUPLICATE = "DUPLICATE",
-    FUTURELEAD = "FUTURE_LEAD",
-    LEAD = "LEAD",
-    NEWPARTNER = "NEW_PARTNER",
-    NOTAGOODFIT = "NOT_A_GOOD_FIT",
-    NOTINTERESTEDDONOTCONTACT = "NOT_INTERESTED_DO_NOT_CONTACT",
-    NOTINTERESTEDFEESPLITTING = "NOT_INTERESTED_FEE_SPLITTING",
-    NOTINTERESTEDMARKETINGFEE = "NOT_INTERESTED_MARKETING_FEE",
-    NOTINTERESTEDMONEYBACKGUARANTEE = "NOT_INTERESTED_MONEY_BACK_GUARANTEE",
-    NOTINTERESTEDPLATFORMRESISTANCE = "NOT_INTERESTED_PLATFORM_RESISTANCE",
-    PASTINTEREST = "PAST_INTEREST",
-    SUPERVISED = "SUPERVISED",
-    TEMPORARILYTURNEDOFF = "TEMPORARILY_TURNED_OFF",
-    TERMINATEDFRAUD = "TERMINATED_FRAUD",
-    TERMINATEDPOORSERVICE = "TERMINATED_POOR_SERVICE",
-    TERMINATEDPOORSUCCESS = "TERMINATED_POOR_SUCCESS"
 }
 /**
 * @export

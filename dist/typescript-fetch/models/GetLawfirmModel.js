@@ -12,7 +12,7 @@
  * Do not edit the class manually.
  */
 import { exists } from '../runtime';
-import { AddressDomainFromJSON, AddressDomainToJSON, LawfirmRedirectModelFromJSON, LawfirmRedirectModelToJSON, LawfirmSettingsDomainResFromJSON, LawfirmSettingsDomainResToJSON, SupportedStateModelFromJSON, SupportedStateModelToJSON, } from './';
+import { AddressDomainFromJSON, AddressDomainToJSON, LawfirmRedirectModelFromJSON, LawfirmRedirectModelToJSON, LawfirmSettingsDomainResFromJSON, LawfirmSettingsDomainResToJSON, LawfirmStatusModelFromJSON, LawfirmStatusModelToJSON, SupportedStateModelFromJSON, SupportedStateModelToJSON, } from './';
 export function GetLawfirmModelFromJSON(json) {
     return GetLawfirmModelFromJSONTyped(json, false);
 }
@@ -36,7 +36,7 @@ export function GetLawfirmModelFromJSONTyped(json, ignoreDiscriminator) {
         'lawfirmId': !exists(json, 'lawfirmId') ? undefined : json['lawfirmId'],
         'lawfirmName': !exists(json, 'lawfirmName') ? undefined : json['lawfirmName'],
         'lawfirmPaymentModel': !exists(json, 'lawfirmPaymentModel') ? undefined : json['lawfirmPaymentModel'],
-        'lawfirmState': !exists(json, 'lawfirmState') ? undefined : json['lawfirmState'],
+        'lawfirmState': !exists(json, 'lawfirmState') ? undefined : LawfirmStatusModelFromJSON(json['lawfirmState']),
         'membershipStartDateUtc': !exists(json, 'membershipStartDateUtc') ? undefined : (new Date(json['membershipStartDateUtc'])),
         'otrNotes': !exists(json, 'otrNotes') ? undefined : json['otrNotes'],
         'primaryEmailAddress': !exists(json, 'primaryEmailAddress') ? undefined : json['primaryEmailAddress'],
@@ -74,7 +74,7 @@ export function GetLawfirmModelToJSON(value) {
         'lawfirmId': value.lawfirmId,
         'lawfirmName': value.lawfirmName,
         'lawfirmPaymentModel': value.lawfirmPaymentModel,
-        'lawfirmState': value.lawfirmState,
+        'lawfirmState': LawfirmStatusModelToJSON(value.lawfirmState),
         'membershipStartDateUtc': value.membershipStartDateUtc === undefined ? undefined : (value.membershipStartDateUtc.toISOString()),
         'otrNotes': value.otrNotes,
         'primaryEmailAddress': value.primaryEmailAddress,
@@ -99,33 +99,6 @@ export var GetLawfirmModelLawfirmPaymentModelEnum;
     GetLawfirmModelLawfirmPaymentModelEnum["SEPARATECHARGE"] = "SEPARATE_CHARGE";
     GetLawfirmModelLawfirmPaymentModelEnum["TRANSFERDEDUCTION"] = "TRANSFER_DEDUCTION";
 })(GetLawfirmModelLawfirmPaymentModelEnum || (GetLawfirmModelLawfirmPaymentModelEnum = {}));
-/**
-* @export
-* @enum {string}
-*/
-export var GetLawfirmModelLawfirmStateEnum;
-(function (GetLawfirmModelLawfirmStateEnum) {
-    GetLawfirmModelLawfirmStateEnum["ACCOUNTCLOSED"] = "ACCOUNT_CLOSED";
-    GetLawfirmModelLawfirmStateEnum["ACTIVE"] = "ACTIVE";
-    GetLawfirmModelLawfirmStateEnum["BLACKLISTED"] = "BLACKLISTED";
-    GetLawfirmModelLawfirmStateEnum["DEMOCOMPLETED"] = "DEMO_COMPLETED";
-    GetLawfirmModelLawfirmStateEnum["DUPLICATE"] = "DUPLICATE";
-    GetLawfirmModelLawfirmStateEnum["FUTURELEAD"] = "FUTURE_LEAD";
-    GetLawfirmModelLawfirmStateEnum["LEAD"] = "LEAD";
-    GetLawfirmModelLawfirmStateEnum["NEWPARTNER"] = "NEW_PARTNER";
-    GetLawfirmModelLawfirmStateEnum["NOTAGOODFIT"] = "NOT_A_GOOD_FIT";
-    GetLawfirmModelLawfirmStateEnum["NOTINTERESTEDDONOTCONTACT"] = "NOT_INTERESTED_DO_NOT_CONTACT";
-    GetLawfirmModelLawfirmStateEnum["NOTINTERESTEDFEESPLITTING"] = "NOT_INTERESTED_FEE_SPLITTING";
-    GetLawfirmModelLawfirmStateEnum["NOTINTERESTEDMARKETINGFEE"] = "NOT_INTERESTED_MARKETING_FEE";
-    GetLawfirmModelLawfirmStateEnum["NOTINTERESTEDMONEYBACKGUARANTEE"] = "NOT_INTERESTED_MONEY_BACK_GUARANTEE";
-    GetLawfirmModelLawfirmStateEnum["NOTINTERESTEDPLATFORMRESISTANCE"] = "NOT_INTERESTED_PLATFORM_RESISTANCE";
-    GetLawfirmModelLawfirmStateEnum["PASTINTEREST"] = "PAST_INTEREST";
-    GetLawfirmModelLawfirmStateEnum["SUPERVISED"] = "SUPERVISED";
-    GetLawfirmModelLawfirmStateEnum["TEMPORARILYTURNEDOFF"] = "TEMPORARILY_TURNED_OFF";
-    GetLawfirmModelLawfirmStateEnum["TERMINATEDFRAUD"] = "TERMINATED_FRAUD";
-    GetLawfirmModelLawfirmStateEnum["TERMINATEDPOORSERVICE"] = "TERMINATED_POOR_SERVICE";
-    GetLawfirmModelLawfirmStateEnum["TERMINATEDPOORSUCCESS"] = "TERMINATED_POOR_SUCCESS";
-})(GetLawfirmModelLawfirmStateEnum || (GetLawfirmModelLawfirmStateEnum = {}));
 /**
 * @export
 * @enum {string}

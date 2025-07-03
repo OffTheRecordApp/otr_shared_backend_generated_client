@@ -9,6 +9,7 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
+import { LawfirmStatusModel } from './lawfirmStatusModel';
 import { AddressDomain } from './addressDomain';
 import { SupportedStateModel } from './supportedStateModel';
 import { LawfirmSettingsDomainRes } from './lawfirmSettingsDomainRes';
@@ -31,7 +32,7 @@ export interface GetLawfirmModel {
     lawfirmId?: number;
     lawfirmName?: string;
     lawfirmPaymentModel?: GetLawfirmModel.LawfirmPaymentModelEnum;
-    lawfirmState?: GetLawfirmModel.LawfirmStateEnum;
+    lawfirmState?: LawfirmStatusModel;
     membershipStartDateUtc?: string;
     otrNotes?: string;
     primaryEmailAddress?: string;
@@ -51,29 +52,6 @@ export namespace GetLawfirmModel {
         DestinationAccount: 'DESTINATION_ACCOUNT' as LawfirmPaymentModelEnum,
         SeparateCharge: 'SEPARATE_CHARGE' as LawfirmPaymentModelEnum,
         TransferDeduction: 'TRANSFER_DEDUCTION' as LawfirmPaymentModelEnum
-    };
-    export type LawfirmStateEnum = 'ACCOUNT_CLOSED' | 'ACTIVE' | 'BLACKLISTED' | 'DEMO_COMPLETED' | 'DUPLICATE' | 'FUTURE_LEAD' | 'LEAD' | 'NEW_PARTNER' | 'NOT_A_GOOD_FIT' | 'NOT_INTERESTED_DO_NOT_CONTACT' | 'NOT_INTERESTED_FEE_SPLITTING' | 'NOT_INTERESTED_MARKETING_FEE' | 'NOT_INTERESTED_MONEY_BACK_GUARANTEE' | 'NOT_INTERESTED_PLATFORM_RESISTANCE' | 'PAST_INTEREST' | 'SUPERVISED' | 'TEMPORARILY_TURNED_OFF' | 'TERMINATED_FRAUD' | 'TERMINATED_POOR_SERVICE' | 'TERMINATED_POOR_SUCCESS';
-    export const LawfirmStateEnum = {
-        AccountClosed: 'ACCOUNT_CLOSED' as LawfirmStateEnum,
-        Active: 'ACTIVE' as LawfirmStateEnum,
-        Blacklisted: 'BLACKLISTED' as LawfirmStateEnum,
-        DemoCompleted: 'DEMO_COMPLETED' as LawfirmStateEnum,
-        Duplicate: 'DUPLICATE' as LawfirmStateEnum,
-        FutureLead: 'FUTURE_LEAD' as LawfirmStateEnum,
-        Lead: 'LEAD' as LawfirmStateEnum,
-        NewPartner: 'NEW_PARTNER' as LawfirmStateEnum,
-        NotAGoodFit: 'NOT_A_GOOD_FIT' as LawfirmStateEnum,
-        NotInterestedDoNotContact: 'NOT_INTERESTED_DO_NOT_CONTACT' as LawfirmStateEnum,
-        NotInterestedFeeSplitting: 'NOT_INTERESTED_FEE_SPLITTING' as LawfirmStateEnum,
-        NotInterestedMarketingFee: 'NOT_INTERESTED_MARKETING_FEE' as LawfirmStateEnum,
-        NotInterestedMoneyBackGuarantee: 'NOT_INTERESTED_MONEY_BACK_GUARANTEE' as LawfirmStateEnum,
-        NotInterestedPlatformResistance: 'NOT_INTERESTED_PLATFORM_RESISTANCE' as LawfirmStateEnum,
-        PastInterest: 'PAST_INTEREST' as LawfirmStateEnum,
-        Supervised: 'SUPERVISED' as LawfirmStateEnum,
-        TemporarilyTurnedOff: 'TEMPORARILY_TURNED_OFF' as LawfirmStateEnum,
-        TerminatedFraud: 'TERMINATED_FRAUD' as LawfirmStateEnum,
-        TerminatedPoorService: 'TERMINATED_POOR_SERVICE' as LawfirmStateEnum,
-        TerminatedPoorSuccess: 'TERMINATED_POOR_SUCCESS' as LawfirmStateEnum
     };
     export type SupportedStatesEnum = 'AK' | 'AL' | 'AR' | 'AZ' | 'CA' | 'CO' | 'CT' | 'DC' | 'DE' | 'FL' | 'GA' | 'HI' | 'IA' | 'ID' | 'IL' | 'IN' | 'KS' | 'KY' | 'LA' | 'MA' | 'MD' | 'ME' | 'MI' | 'MN' | 'MO' | 'MS' | 'MT' | 'NC' | 'ND' | 'NE' | 'NH' | 'NJ' | 'NM' | 'NV' | 'NY' | 'OH' | 'OK' | 'OR' | 'PA' | 'RI' | 'SC' | 'SD' | 'TN' | 'TX' | 'UT' | 'VA' | 'VT' | 'WA' | 'WI' | 'WV' | 'WY';
     export const SupportedStatesEnum = {

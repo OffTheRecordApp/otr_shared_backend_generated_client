@@ -26,7 +26,7 @@ export interface GetLawfirmModel {
     "lawfirmId"?: number;
     "lawfirmName"?: string;
     "lawfirmPaymentModel"?: GetLawfirmModel.LawfirmPaymentModelEnum;
-    "lawfirmState"?: GetLawfirmModel.LawfirmStateEnum;
+    "lawfirmState"?: models.LawfirmStatusModel;
     "membershipStartDateUtc"?: string;
     "otrNotes"?: string;
     "primaryEmailAddress"?: string;
@@ -45,28 +45,6 @@ export declare namespace GetLawfirmModel {
         DESTINATIONACCOUNT,
         SEPARATECHARGE,
         TRANSFERDEDUCTION
-    }
-    enum LawfirmStateEnum {
-        ACCOUNTCLOSED,
-        ACTIVE,
-        BLACKLISTED,
-        DEMOCOMPLETED,
-        DUPLICATE,
-        FUTURELEAD,
-        LEAD,
-        NEWPARTNER,
-        NOTAGOODFIT,
-        NOTINTERESTEDDONOTCONTACT,
-        NOTINTERESTEDFEESPLITTING,
-        NOTINTERESTEDMARKETINGFEE,
-        NOTINTERESTEDMONEYBACKGUARANTEE,
-        NOTINTERESTEDPLATFORMRESISTANCE,
-        PASTINTEREST,
-        SUPERVISED,
-        TEMPORARILYTURNEDOFF,
-        TERMINATEDFRAUD,
-        TERMINATEDPOORSERVICE,
-        TERMINATEDPOORSUCCESS
     }
     enum SupportedStatesEnum {
         AK,

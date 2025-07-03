@@ -578,6 +578,7 @@ model/lawfirmRedirectModel.ts
 model/lawfirmSettingsDomain.ts
 model/lawfirmSettingsDomainReq.ts
 model/lawfirmSettingsDomainRes.ts
+model/lawfirmStatusModel.ts
 model/lawfirmStorefrontModel.ts
 model/lawfirmVacationRequest.ts
 model/lawfirmsRatesResponse.ts

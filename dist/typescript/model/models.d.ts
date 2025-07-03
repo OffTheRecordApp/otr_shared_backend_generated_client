@@ -453,6 +453,7 @@ export * from './LawfirmRedirectModel';
 export * from './LawfirmSettingsDomain';
 export * from './LawfirmSettingsDomainReq';
 export * from './LawfirmSettingsDomainRes';
+export * from './LawfirmStatusModel';
 export * from './LawfirmStorefrontModel';
 export * from './LawfirmVacationRequest';
 export * from './LawfirmsRatesResponse';
