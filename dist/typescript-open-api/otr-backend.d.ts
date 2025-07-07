@@ -8681,6 +8681,7 @@ export interface components {
         CaseUserDetailsModel: {
             additionalNote?: string;
             defendantAttributes?: components["schemas"]["CaseUserDefendantAttributes"];
+            defendantProfilePictureUrl?: string;
             isBookingAgent?: boolean;
             isDefendant?: boolean;
             isOwner?: boolean;
@@ -11036,8 +11037,7 @@ export interface components {
             lawfirmName?: string;
             /** @enum {string} */
             lawfirmPaymentModel?: CreateLawfirmModelLawfirmPaymentModel;
-            /** @enum {string} */
-            lawfirmState?: PathsApiV1LawfirmsGetParametersQueryStatuses;
+            lawfirmState?: components["schemas"]["LawfirmStatusModel"];
             /** Format: date-time */
             membershipStartDateUtc?: string;
             otrNotes?: string;
@@ -12274,6 +12274,13 @@ export interface components {
             /** Format: date-time */
             vacationModeEndDateUtc?: string;
             vacationModeReason?: string;
+        };
+        /** LawfirmStatusModel */
+        LawfirmStatusModel: {
+            /** Format: int32 */
+            id?: number;
+            /** @enum {string} */
+            name?: PathsApiV1LawfirmsGetParametersQueryStatuses;
         };
         /** LawfirmStorefrontModel */
         LawfirmStorefrontModel: {
@@ -31303,12 +31310,16 @@ export interface operations {
                 limit?: number;
                 /** @description previousPageToken */
                 previousPageToken?: string;
+                /** @description query */
+                query?: string;
                 /** @description sortBy */
                 sortBy?: PathsApiV3UsersUserIdCasesGetParametersQuerySortBy;
                 /** @description includeDeleted */
                 includeDeleted?: boolean;
                 /** @description needsAttention */
                 needsAttention?: boolean;
+                /** @description unreadMessagesOnly */
+                unreadMessagesOnly?: boolean;
                 /** @description statusCategories */
                 statusCategories?: PathsApiV1CaseStatusesGetParametersQueryCategories;
                 /** @description caseStatuses */
@@ -40720,6 +40731,7 @@ export declare enum UserSubscriptionPlanModelProductName {
 export declare enum ValidateDirectMailResponseOtrError {
     ACCESS_DENIED = "ACCESS_DENIED",
     ACCOUNT_DISABLED = "ACCOUNT_DISABLED",
+    ACTIVE_CASE_COUNTERS_BLOCK_ACCEPT = "ACTIVE_CASE_COUNTERS_BLOCK_ACCEPT",
     ARAG_NOT_CAPTURED = "ARAG_NOT_CAPTURED",
     AUTHENTICATION_CREDENTIALS_NOT_FOUND = "AUTHENTICATION_CREDENTIALS_NOT_FOUND",
     AUTHENTICATION_FAILED = "AUTHENTICATION_FAILED",

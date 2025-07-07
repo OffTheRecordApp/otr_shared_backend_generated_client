@@ -1301,6 +1301,7 @@ export var ValidateDirectMailResponseOtrError;
 (function (ValidateDirectMailResponseOtrError) {
     ValidateDirectMailResponseOtrError["ACCESS_DENIED"] = "ACCESS_DENIED";
     ValidateDirectMailResponseOtrError["ACCOUNT_DISABLED"] = "ACCOUNT_DISABLED";
+    ValidateDirectMailResponseOtrError["ACTIVE_CASE_COUNTERS_BLOCK_ACCEPT"] = "ACTIVE_CASE_COUNTERS_BLOCK_ACCEPT";
     ValidateDirectMailResponseOtrError["ARAG_NOT_CAPTURED"] = "ARAG_NOT_CAPTURED";
     ValidateDirectMailResponseOtrError["AUTHENTICATION_CREDENTIALS_NOT_FOUND"] = "AUTHENTICATION_CREDENTIALS_NOT_FOUND";
     ValidateDirectMailResponseOtrError["AUTHENTICATION_FAILED"] = "AUTHENTICATION_FAILED";
