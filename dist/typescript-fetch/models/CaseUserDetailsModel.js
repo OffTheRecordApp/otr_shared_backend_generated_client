@@ -23,6 +23,7 @@ export function CaseUserDetailsModelFromJSONTyped(json, ignoreDiscriminator) {
     return {
         'additionalNote': !exists(json, 'additionalNote') ? undefined : json['additionalNote'],
         'defendantAttributes': !exists(json, 'defendantAttributes') ? undefined : CaseUserDefendantAttributesFromJSON(json['defendantAttributes']),
+        'defendantProfilePictureUrl': !exists(json, 'defendantProfilePictureUrl') ? undefined : json['defendantProfilePictureUrl'],
         'isBookingAgent': !exists(json, 'isBookingAgent') ? undefined : json['isBookingAgent'],
         'isDefendant': !exists(json, 'isDefendant') ? undefined : json['isDefendant'],
         'isOwner': !exists(json, 'isOwner') ? undefined : json['isOwner'],
@@ -41,6 +42,7 @@ export function CaseUserDetailsModelToJSON(value) {
     return {
         'additionalNote': value.additionalNote,
         'defendantAttributes': CaseUserDefendantAttributesToJSON(value.defendantAttributes),
+        'defendantProfilePictureUrl': value.defendantProfilePictureUrl,
         'isBookingAgent': value.isBookingAgent,
         'isDefendant': value.isDefendant,
         'isOwner': value.isOwner,

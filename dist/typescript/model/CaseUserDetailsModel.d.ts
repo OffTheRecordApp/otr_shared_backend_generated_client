@@ -13,6 +13,7 @@ import * as models from './models';
 export interface CaseUserDetailsModel {
     "additionalNote"?: string;
     "defendantAttributes"?: models.CaseUserDefendantAttributes;
+    "defendantProfilePictureUrl"?: string;
     "isBookingAgent"?: boolean;
     "isDefendant"?: boolean;
     "isOwner"?: boolean;

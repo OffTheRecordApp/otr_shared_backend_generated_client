@@ -16,6 +16,7 @@ import { CaseUserPermissionAttributes } from './caseUserPermissionAttributes';
 export interface CaseUserDetailsModel { 
     additionalNote?: string;
     defendantAttributes?: CaseUserDefendantAttributes;
+    defendantProfilePictureUrl?: string;
     isBookingAgent?: boolean;
     isDefendant?: boolean;
     isOwner?: boolean;

@@ -30,6 +30,12 @@ export interface CaseUserDetailsModel {
     defendantAttributes?: CaseUserDefendantAttributes;
     /**
      *
+     * @type {string}
+     * @memberof CaseUserDetailsModel
+     */
+    defendantProfilePictureUrl?: string;
+    /**
+     *
      * @type {boolean}
      * @memberof CaseUserDetailsModel
      */
