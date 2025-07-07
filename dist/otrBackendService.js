@@ -19160,6 +19160,7 @@ angular.module('otrBackendService', [])
              * @param {integer} parameters.limit - limit
              * @param {boolean} parameters.needsAttention - needsAttention
              * @param {string} parameters.previousPageToken - previousPageToken
+             * @param {string} parameters.query - query
              * @param {string} parameters.sortBy - sortBy
              * @param {string} parameters.statusCategories - statusCategories
              * @param {boolean} parameters.unreadMessagesOnly - unreadMessagesOnly
@@ -19204,6 +19205,10 @@ angular.module('otrBackendService', [])
 
                 if (parameters['previousPageToken'] !== undefined) {
                     queryParameters['previousPageToken'] = parameters['previousPageToken'];
+                }
+
+                if (parameters['query'] !== undefined) {
+                    queryParameters['query'] = parameters['query'];
                 }
 
                 if (parameters['sortBy'] !== undefined) {

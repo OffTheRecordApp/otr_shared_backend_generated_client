@@ -80,11 +80,12 @@ export class ListCasesControllerApi {
      * @param limit limit
      * @param needsAttention needsAttention
      * @param previousPageToken previousPageToken
+     * @param query query
      * @param sortBy sortBy
      * @param statusCategories statusCategories
      * @param unreadMessagesOnly unreadMessagesOnly
      */
-    listDashboardCasesUsingGET(userId, caseStatuses, defendantId, includeDeleted, limit, needsAttention, previousPageToken, sortBy, statusCategories, unreadMessagesOnly, extraHttpRequestParams) {
+    listDashboardCasesUsingGET(userId, caseStatuses, defendantId, includeDeleted, limit, needsAttention, previousPageToken, query, sortBy, statusCategories, unreadMessagesOnly, extraHttpRequestParams) {
         const localVarPath = this.basePath + '/api/v3/users/{userId}/cases'
             .replace('{' + 'userId' + '}', encodeURIComponent(String(userId)));
         let queryParameters = {};
@@ -110,6 +111,9 @@ export class ListCasesControllerApi {
         }
         if (previousPageToken !== undefined) {
             queryParameters['previousPageToken'] = previousPageToken;
+        }
+        if (query !== undefined) {
+            queryParameters['query'] = query;
         }
         if (sortBy !== undefined) {
             queryParameters['sortBy'] = sortBy;

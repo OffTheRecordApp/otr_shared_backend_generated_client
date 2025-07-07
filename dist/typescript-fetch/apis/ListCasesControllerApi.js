@@ -109,6 +109,9 @@ export class ListCasesControllerApi extends runtime.BaseAPI {
             if (requestParameters.previousPageToken !== undefined) {
                 queryParameters['previousPageToken'] = requestParameters.previousPageToken;
             }
+            if (requestParameters.query !== undefined) {
+                queryParameters['query'] = requestParameters.query;
+            }
             if (requestParameters.sortBy !== undefined) {
                 queryParameters['sortBy'] = requestParameters.sortBy;
             }
