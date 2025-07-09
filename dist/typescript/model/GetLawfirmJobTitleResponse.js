@@ -9,22 +9,4 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-export var GetLawfirmJobTitleResponse;
-(function (GetLawfirmJobTitleResponse) {
-    let JobTitlesEnum;
-    (function (JobTitlesEnum) {
-        JobTitlesEnum[JobTitlesEnum["ACCOUNTANT"] = 'ACCOUNTANT'] = "ACCOUNTANT";
-        JobTitlesEnum[JobTitlesEnum["ATTORNEY"] = 'ATTORNEY'] = "ATTORNEY";
-        JobTitlesEnum[JobTitlesEnum["ATTORNEYASSOCIATE"] = 'ATTORNEY_ASSOCIATE'] = "ATTORNEYASSOCIATE";
-        JobTitlesEnum[JobTitlesEnum["ATTORNEYCOUNSEL"] = 'ATTORNEY_COUNSEL'] = "ATTORNEYCOUNSEL";
-        JobTitlesEnum[JobTitlesEnum["ATTORNEYMANAGINGPARTNER"] = 'ATTORNEY_MANAGING_PARTNER'] = "ATTORNEYMANAGINGPARTNER";
-        JobTitlesEnum[JobTitlesEnum["ATTORNEYPARTNER"] = 'ATTORNEY_PARTNER'] = "ATTORNEYPARTNER";
-        JobTitlesEnum[JobTitlesEnum["ATTORNEYSTAFF"] = 'ATTORNEY_STAFF'] = "ATTORNEYSTAFF";
-        JobTitlesEnum[JobTitlesEnum["CUSTOMERSERVICEREP"] = 'CUSTOMER_SERVICE_REP'] = "CUSTOMERSERVICEREP";
-        JobTitlesEnum[JobTitlesEnum["LEGALASSISTANT"] = 'LEGAL_ASSISTANT'] = "LEGALASSISTANT";
-        JobTitlesEnum[JobTitlesEnum["LEGALINTERN"] = 'LEGAL_INTERN'] = "LEGALINTERN";
-        JobTitlesEnum[JobTitlesEnum["LEGALSECRETARY"] = 'LEGAL_SECRETARY'] = "LEGALSECRETARY";
-        JobTitlesEnum[JobTitlesEnum["OTHER"] = 'OTHER'] = "OTHER";
-        JobTitlesEnum[JobTitlesEnum["PARALEGAL"] = 'PARALEGAL'] = "PARALEGAL";
-    })(JobTitlesEnum = GetLawfirmJobTitleResponse.JobTitlesEnum || (GetLawfirmJobTitleResponse.JobTitlesEnum = {}));
-})(GetLawfirmJobTitleResponse || (GetLawfirmJobTitleResponse = {}));
+export {};

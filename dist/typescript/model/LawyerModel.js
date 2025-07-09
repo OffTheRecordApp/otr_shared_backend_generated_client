@@ -11,22 +11,6 @@
  */
 export var LawyerModel;
 (function (LawyerModel) {
-    let JobTitleEnum;
-    (function (JobTitleEnum) {
-        JobTitleEnum[JobTitleEnum["ACCOUNTANT"] = 'ACCOUNTANT'] = "ACCOUNTANT";
-        JobTitleEnum[JobTitleEnum["ATTORNEY"] = 'ATTORNEY'] = "ATTORNEY";
-        JobTitleEnum[JobTitleEnum["ATTORNEYASSOCIATE"] = 'ATTORNEY_ASSOCIATE'] = "ATTORNEYASSOCIATE";
-        JobTitleEnum[JobTitleEnum["ATTORNEYCOUNSEL"] = 'ATTORNEY_COUNSEL'] = "ATTORNEYCOUNSEL";
-        JobTitleEnum[JobTitleEnum["ATTORNEYMANAGINGPARTNER"] = 'ATTORNEY_MANAGING_PARTNER'] = "ATTORNEYMANAGINGPARTNER";
-        JobTitleEnum[JobTitleEnum["ATTORNEYPARTNER"] = 'ATTORNEY_PARTNER'] = "ATTORNEYPARTNER";
-        JobTitleEnum[JobTitleEnum["ATTORNEYSTAFF"] = 'ATTORNEY_STAFF'] = "ATTORNEYSTAFF";
-        JobTitleEnum[JobTitleEnum["CUSTOMERSERVICEREP"] = 'CUSTOMER_SERVICE_REP'] = "CUSTOMERSERVICEREP";
-        JobTitleEnum[JobTitleEnum["LEGALASSISTANT"] = 'LEGAL_ASSISTANT'] = "LEGALASSISTANT";
-        JobTitleEnum[JobTitleEnum["LEGALINTERN"] = 'LEGAL_INTERN'] = "LEGALINTERN";
-        JobTitleEnum[JobTitleEnum["LEGALSECRETARY"] = 'LEGAL_SECRETARY'] = "LEGALSECRETARY";
-        JobTitleEnum[JobTitleEnum["OTHER"] = 'OTHER'] = "OTHER";
-        JobTitleEnum[JobTitleEnum["PARALEGAL"] = 'PARALEGAL'] = "PARALEGAL";
-    })(JobTitleEnum = LawyerModel.JobTitleEnum || (LawyerModel.JobTitleEnum = {}));
     let RoleTypesEnum;
     (function (RoleTypesEnum) {
         RoleTypesEnum[RoleTypesEnum["ADMIN"] = 'ADMIN'] = "ADMIN";

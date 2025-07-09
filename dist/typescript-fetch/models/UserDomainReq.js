@@ -12,7 +12,7 @@
  * Do not edit the class manually.
  */
 import { exists } from '../runtime';
-import { AddressDomainReqFromJSON, AddressDomainReqToJSON, PhoneNumberDomainReqFromJSON, PhoneNumberDomainReqToJSON, TimestampReqFromJSON, TimestampReqToJSON, UserAccountModelFromJSON, UserAccountModelToJSON, UserReferralLinkModelReqFromJSON, UserReferralLinkModelReqToJSON, UserRoleDomainFromJSON, UserRoleDomainToJSON, UserSocialProfileModelReqFromJSON, UserSocialProfileModelReqToJSON, UserSubscriptionPlanModelReqFromJSON, UserSubscriptionPlanModelReqToJSON, } from './';
+import { AddressDomainReqFromJSON, AddressDomainReqToJSON, LawfirmJobTitleModelReqFromJSON, LawfirmJobTitleModelReqToJSON, PhoneNumberDomainReqFromJSON, PhoneNumberDomainReqToJSON, TimestampReqFromJSON, TimestampReqToJSON, UserAccountModelFromJSON, UserAccountModelToJSON, UserReferralLinkModelReqFromJSON, UserReferralLinkModelReqToJSON, UserRoleDomainFromJSON, UserRoleDomainToJSON, UserSocialProfileModelReqFromJSON, UserSocialProfileModelReqToJSON, UserSubscriptionPlanModelReqFromJSON, UserSubscriptionPlanModelReqToJSON, } from './';
 export function UserDomainReqFromJSON(json) {
     return UserDomainReqFromJSONTyped(json, false);
 }
@@ -44,7 +44,7 @@ export function UserDomainReqFromJSONTyped(json, ignoreDiscriminator) {
         'lastLoginDateUtc': !exists(json, 'lastLoginDateUtc') ? undefined : (new Date(json['lastLoginDateUtc'])),
         'lastname': !exists(json, 'lastname') ? undefined : json['lastname'],
         'lawfirmId': !exists(json, 'lawfirmId') ? undefined : json['lawfirmId'],
-        'lawyerJobTitle': !exists(json, 'lawyerJobTitle') ? undefined : json['lawyerJobTitle'],
+        'lawyerJobTitle': !exists(json, 'lawyerJobTitle') ? undefined : LawfirmJobTitleModelReqFromJSON(json['lawyerJobTitle']),
         'loginProvider': !exists(json, 'loginProvider') ? undefined : json['loginProvider'],
         'numBookingCancelations': !exists(json, 'numBookingCancelations') ? undefined : json['numBookingCancelations'],
         'paidCaseCount': !exists(json, 'paidCaseCount') ? undefined : json['paidCaseCount'],
@@ -101,7 +101,7 @@ export function UserDomainReqToJSON(value) {
         'lastLoginDateUtc': value.lastLoginDateUtc === undefined ? undefined : (value.lastLoginDateUtc.toISOString()),
         'lastname': value.lastname,
         'lawfirmId': value.lawfirmId,
-        'lawyerJobTitle': value.lawyerJobTitle,
+        'lawyerJobTitle': LawfirmJobTitleModelReqToJSON(value.lawyerJobTitle),
         'loginProvider': value.loginProvider,
         'numBookingCancelations': value.numBookingCancelations,
         'paidCaseCount': value.paidCaseCount,
@@ -140,26 +140,6 @@ export var UserDomainReqGenderTypeEnum;
     UserDomainReqGenderTypeEnum["UNVERIFIED"] = "UNVERIFIED";
     UserDomainReqGenderTypeEnum["X"] = "X";
 })(UserDomainReqGenderTypeEnum || (UserDomainReqGenderTypeEnum = {}));
-/**
-* @export
-* @enum {string}
-*/
-export var UserDomainReqLawyerJobTitleEnum;
-(function (UserDomainReqLawyerJobTitleEnum) {
-    UserDomainReqLawyerJobTitleEnum["ACCOUNTANT"] = "ACCOUNTANT";
-    UserDomainReqLawyerJobTitleEnum["ATTORNEY"] = "ATTORNEY";
-    UserDomainReqLawyerJobTitleEnum["ATTORNEYASSOCIATE"] = "ATTORNEY_ASSOCIATE";
-    UserDomainReqLawyerJobTitleEnum["ATTORNEYCOUNSEL"] = "ATTORNEY_COUNSEL";
-    UserDomainReqLawyerJobTitleEnum["ATTORNEYMANAGINGPARTNER"] = "ATTORNEY_MANAGING_PARTNER";
-    UserDomainReqLawyerJobTitleEnum["ATTORNEYPARTNER"] = "ATTORNEY_PARTNER";
-    UserDomainReqLawyerJobTitleEnum["ATTORNEYSTAFF"] = "ATTORNEY_STAFF";
-    UserDomainReqLawyerJobTitleEnum["CUSTOMERSERVICEREP"] = "CUSTOMER_SERVICE_REP";
-    UserDomainReqLawyerJobTitleEnum["LEGALASSISTANT"] = "LEGAL_ASSISTANT";
-    UserDomainReqLawyerJobTitleEnum["LEGALINTERN"] = "LEGAL_INTERN";
-    UserDomainReqLawyerJobTitleEnum["LEGALSECRETARY"] = "LEGAL_SECRETARY";
-    UserDomainReqLawyerJobTitleEnum["OTHER"] = "OTHER";
-    UserDomainReqLawyerJobTitleEnum["PARALEGAL"] = "PARALEGAL";
-})(UserDomainReqLawyerJobTitleEnum || (UserDomainReqLawyerJobTitleEnum = {}));
 /**
 * @export
 * @enum {string}

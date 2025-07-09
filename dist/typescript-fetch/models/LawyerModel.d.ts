@@ -9,7 +9,7 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-import { LawyerLicenseModel, PhoneNumberDomain, Timestamp } from './';
+import { LawfirmJobTitleModel, LawyerLicenseModel, PhoneNumberDomain, Timestamp } from './';
 /**
  *
  * @export
@@ -54,10 +54,10 @@ export interface LawyerModel {
     isUserAccountEnabled?: boolean;
     /**
      *
-     * @type {string}
+     * @type {LawfirmJobTitleModel}
      * @memberof LawyerModel
      */
-    jobTitle?: LawyerModelJobTitleEnum;
+    jobTitle?: LawfirmJobTitleModel;
     /**
      *
      * @type {string}
@@ -128,25 +128,6 @@ export interface LawyerModel {
 export declare function LawyerModelFromJSON(json: any): LawyerModel;
 export declare function LawyerModelFromJSONTyped(json: any, ignoreDiscriminator: boolean): LawyerModel;
 export declare function LawyerModelToJSON(value?: LawyerModel | null): any;
-/**
-* @export
-* @enum {string}
-*/
-export declare enum LawyerModelJobTitleEnum {
-    ACCOUNTANT = "ACCOUNTANT",
-    ATTORNEY = "ATTORNEY",
-    ATTORNEYASSOCIATE = "ATTORNEY_ASSOCIATE",
-    ATTORNEYCOUNSEL = "ATTORNEY_COUNSEL",
-    ATTORNEYMANAGINGPARTNER = "ATTORNEY_MANAGING_PARTNER",
-    ATTORNEYPARTNER = "ATTORNEY_PARTNER",
-    ATTORNEYSTAFF = "ATTORNEY_STAFF",
-    CUSTOMERSERVICEREP = "CUSTOMER_SERVICE_REP",
-    LEGALASSISTANT = "LEGAL_ASSISTANT",
-    LEGALINTERN = "LEGAL_INTERN",
-    LEGALSECRETARY = "LEGAL_SECRETARY",
-    OTHER = "OTHER",
-    PARALEGAL = "PARALEGAL"
-}
 /**
 * @export
 * @enum {string}

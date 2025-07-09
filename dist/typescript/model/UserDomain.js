@@ -20,22 +20,6 @@ export var UserDomain;
         GenderTypeEnum[GenderTypeEnum["UNVERIFIED"] = 'UNVERIFIED'] = "UNVERIFIED";
         GenderTypeEnum[GenderTypeEnum["X"] = 'X'] = "X";
     })(GenderTypeEnum = UserDomain.GenderTypeEnum || (UserDomain.GenderTypeEnum = {}));
-    let LawyerJobTitleEnum;
-    (function (LawyerJobTitleEnum) {
-        LawyerJobTitleEnum[LawyerJobTitleEnum["ACCOUNTANT"] = 'ACCOUNTANT'] = "ACCOUNTANT";
-        LawyerJobTitleEnum[LawyerJobTitleEnum["ATTORNEY"] = 'ATTORNEY'] = "ATTORNEY";
-        LawyerJobTitleEnum[LawyerJobTitleEnum["ATTORNEYASSOCIATE"] = 'ATTORNEY_ASSOCIATE'] = "ATTORNEYASSOCIATE";
-        LawyerJobTitleEnum[LawyerJobTitleEnum["ATTORNEYCOUNSEL"] = 'ATTORNEY_COUNSEL'] = "ATTORNEYCOUNSEL";
-        LawyerJobTitleEnum[LawyerJobTitleEnum["ATTORNEYMANAGINGPARTNER"] = 'ATTORNEY_MANAGING_PARTNER'] = "ATTORNEYMANAGINGPARTNER";
-        LawyerJobTitleEnum[LawyerJobTitleEnum["ATTORNEYPARTNER"] = 'ATTORNEY_PARTNER'] = "ATTORNEYPARTNER";
-        LawyerJobTitleEnum[LawyerJobTitleEnum["ATTORNEYSTAFF"] = 'ATTORNEY_STAFF'] = "ATTORNEYSTAFF";
-        LawyerJobTitleEnum[LawyerJobTitleEnum["CUSTOMERSERVICEREP"] = 'CUSTOMER_SERVICE_REP'] = "CUSTOMERSERVICEREP";
-        LawyerJobTitleEnum[LawyerJobTitleEnum["LEGALASSISTANT"] = 'LEGAL_ASSISTANT'] = "LEGALASSISTANT";
-        LawyerJobTitleEnum[LawyerJobTitleEnum["LEGALINTERN"] = 'LEGAL_INTERN'] = "LEGALINTERN";
-        LawyerJobTitleEnum[LawyerJobTitleEnum["LEGALSECRETARY"] = 'LEGAL_SECRETARY'] = "LEGALSECRETARY";
-        LawyerJobTitleEnum[LawyerJobTitleEnum["OTHER"] = 'OTHER'] = "OTHER";
-        LawyerJobTitleEnum[LawyerJobTitleEnum["PARALEGAL"] = 'PARALEGAL'] = "PARALEGAL";
-    })(LawyerJobTitleEnum = UserDomain.LawyerJobTitleEnum || (UserDomain.LawyerJobTitleEnum = {}));
     let LoginProviderEnum;
     (function (LoginProviderEnum) {
         LoginProviderEnum[LoginProviderEnum["APPLE"] = 'APPLE'] = "APPLE";

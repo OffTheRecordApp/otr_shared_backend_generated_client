@@ -10,6 +10,7 @@
  * Do not edit the class manually.
  */
 import { UserSocialProfileModelRes } from './userSocialProfileModelRes';
+import { LawfirmJobTitleModelRes } from './lawfirmJobTitleModelRes';
 import { UserAccountModel } from './userAccountModel';
 import { UserSubscriptionPlanModelRes } from './userSubscriptionPlanModelRes';
 import { UserRoleDomain } from './userRoleDomain';
@@ -44,7 +45,7 @@ export interface UserDomainRes {
     lastLoginDateUtc?: string;
     lastname?: string;
     lawfirmId?: number;
-    lawyerJobTitle?: UserDomainRes.LawyerJobTitleEnum;
+    lawyerJobTitle?: LawfirmJobTitleModelRes;
     loginProvider?: UserDomainRes.LoginProviderEnum;
     numBookingCancelations?: number;
     paidCaseCount?: number;
@@ -78,22 +79,6 @@ export namespace UserDomainRes {
         NotListed: 'NOT_LISTED' as GenderTypeEnum,
         Unverified: 'UNVERIFIED' as GenderTypeEnum,
         X: 'X' as GenderTypeEnum
-    };
-    export type LawyerJobTitleEnum = 'ACCOUNTANT' | 'ATTORNEY' | 'ATTORNEY_ASSOCIATE' | 'ATTORNEY_COUNSEL' | 'ATTORNEY_MANAGING_PARTNER' | 'ATTORNEY_PARTNER' | 'ATTORNEY_STAFF' | 'CUSTOMER_SERVICE_REP' | 'LEGAL_ASSISTANT' | 'LEGAL_INTERN' | 'LEGAL_SECRETARY' | 'OTHER' | 'PARALEGAL';
-    export const LawyerJobTitleEnum = {
-        Accountant: 'ACCOUNTANT' as LawyerJobTitleEnum,
-        Attorney: 'ATTORNEY' as LawyerJobTitleEnum,
-        AttorneyAssociate: 'ATTORNEY_ASSOCIATE' as LawyerJobTitleEnum,
-        AttorneyCounsel: 'ATTORNEY_COUNSEL' as LawyerJobTitleEnum,
-        AttorneyManagingPartner: 'ATTORNEY_MANAGING_PARTNER' as LawyerJobTitleEnum,
-        AttorneyPartner: 'ATTORNEY_PARTNER' as LawyerJobTitleEnum,
-        AttorneyStaff: 'ATTORNEY_STAFF' as LawyerJobTitleEnum,
-        CustomerServiceRep: 'CUSTOMER_SERVICE_REP' as LawyerJobTitleEnum,
-        LegalAssistant: 'LEGAL_ASSISTANT' as LawyerJobTitleEnum,
-        LegalIntern: 'LEGAL_INTERN' as LawyerJobTitleEnum,
-        LegalSecretary: 'LEGAL_SECRETARY' as LawyerJobTitleEnum,
-        Other: 'OTHER' as LawyerJobTitleEnum,
-        Paralegal: 'PARALEGAL' as LawyerJobTitleEnum
     };
     export type LoginProviderEnum = 'APPLE' | 'EMAIL' | 'FACEBOOK' | 'GOOGLE' | 'PHONE' | 'TWITTER' | 'UNKNOWN';
     export const LoginProviderEnum = {

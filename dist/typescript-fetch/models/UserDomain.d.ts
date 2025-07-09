@@ -9,7 +9,7 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-import { AddressDomain, PhoneNumberDomain, Timestamp, UserAccountModel, UserReferralLinkModel, UserRoleDomain, UserSocialProfileModel, UserSubscriptionPlanModel } from './';
+import { AddressDomain, LawfirmJobTitleModel, PhoneNumberDomain, Timestamp, UserAccountModel, UserReferralLinkModel, UserRoleDomain, UserSocialProfileModel, UserSubscriptionPlanModel } from './';
 /**
  *
  * @export
@@ -162,10 +162,10 @@ export interface UserDomain {
     lawfirmId?: number;
     /**
      *
-     * @type {string}
+     * @type {LawfirmJobTitleModel}
      * @memberof UserDomain
      */
-    lawyerJobTitle?: UserDomainLawyerJobTitleEnum;
+    lawyerJobTitle?: LawfirmJobTitleModel;
     /**
      *
      * @type {string}
@@ -319,25 +319,6 @@ export declare enum UserDomainGenderTypeEnum {
     NOTLISTED = "NOT_LISTED",
     UNVERIFIED = "UNVERIFIED",
     X = "X"
-}
-/**
-* @export
-* @enum {string}
-*/
-export declare enum UserDomainLawyerJobTitleEnum {
-    ACCOUNTANT = "ACCOUNTANT",
-    ATTORNEY = "ATTORNEY",
-    ATTORNEYASSOCIATE = "ATTORNEY_ASSOCIATE",
-    ATTORNEYCOUNSEL = "ATTORNEY_COUNSEL",
-    ATTORNEYMANAGINGPARTNER = "ATTORNEY_MANAGING_PARTNER",
-    ATTORNEYPARTNER = "ATTORNEY_PARTNER",
-    ATTORNEYSTAFF = "ATTORNEY_STAFF",
-    CUSTOMERSERVICEREP = "CUSTOMER_SERVICE_REP",
-    LEGALASSISTANT = "LEGAL_ASSISTANT",
-    LEGALINTERN = "LEGAL_INTERN",
-    LEGALSECRETARY = "LEGAL_SECRETARY",
-    OTHER = "OTHER",
-    PARALEGAL = "PARALEGAL"
 }
 /**
 * @export

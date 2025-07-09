@@ -17,7 +17,7 @@ export interface LawyerModel {
     "isEmailConfirmed"?: boolean;
     "isLawfirmAccessGranted"?: boolean;
     "isUserAccountEnabled"?: boolean;
-    "jobTitle"?: LawyerModel.JobTitleEnum;
+    "jobTitle"?: models.LawfirmJobTitleModel;
     "lastname"?: string;
     "lawSchool"?: string;
     "lawfirmId"?: number;
@@ -31,21 +31,6 @@ export interface LawyerModel {
     "visibleOnStorefront"?: boolean;
 }
 export declare namespace LawyerModel {
-    enum JobTitleEnum {
-        ACCOUNTANT,
-        ATTORNEY,
-        ATTORNEYASSOCIATE,
-        ATTORNEYCOUNSEL,
-        ATTORNEYMANAGINGPARTNER,
-        ATTORNEYPARTNER,
-        ATTORNEYSTAFF,
-        CUSTOMERSERVICEREP,
-        LEGALASSISTANT,
-        LEGALINTERN,
-        LEGALSECRETARY,
-        OTHER,
-        PARALEGAL
-    }
     enum RoleTypesEnum {
         ADMIN,
         DEFENDANT,

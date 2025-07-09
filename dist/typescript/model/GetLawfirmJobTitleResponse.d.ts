@@ -9,23 +9,7 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
+import * as models from './models';
 export interface GetLawfirmJobTitleResponse {
-    "jobTitles"?: Array<GetLawfirmJobTitleResponse.JobTitlesEnum>;
-}
-export declare namespace GetLawfirmJobTitleResponse {
-    enum JobTitlesEnum {
-        ACCOUNTANT,
-        ATTORNEY,
-        ATTORNEYASSOCIATE,
-        ATTORNEYCOUNSEL,
-        ATTORNEYMANAGINGPARTNER,
-        ATTORNEYPARTNER,
-        ATTORNEYSTAFF,
-        CUSTOMERSERVICEREP,
-        LEGALASSISTANT,
-        LEGALINTERN,
-        LEGALSECRETARY,
-        OTHER,
-        PARALEGAL
-    }
+    "jobTitles"?: Array<models.LawfirmJobTitleModel>;
 }

@@ -570,6 +570,9 @@ model/lawfirmDocumentTemplateResponse.ts
 model/lawfirmFeeDomain.ts
 model/lawfirmInboxMessageDomain.ts
 model/lawfirmItem.ts
+model/lawfirmJobTitleModel.ts
+model/lawfirmJobTitleModelReq.ts
+model/lawfirmJobTitleModelRes.ts
 model/lawfirmLeadDomain.ts
 model/lawfirmPayoutDomain.ts
 model/lawfirmPictureRequest.ts

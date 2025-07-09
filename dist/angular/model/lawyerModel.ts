@@ -10,6 +10,7 @@
  * Do not edit the class manually.
  */
 import { PhoneNumberDomain } from './phoneNumberDomain';
+import { LawfirmJobTitleModel } from './lawfirmJobTitleModel';
 import { Timestamp } from './timestamp';
 import { LawyerLicenseModel } from './lawyerLicenseModel';
 
@@ -21,7 +22,7 @@ export interface LawyerModel {
     isEmailConfirmed?: boolean;
     isLawfirmAccessGranted?: boolean;
     isUserAccountEnabled?: boolean;
-    jobTitle?: LawyerModel.JobTitleEnum;
+    jobTitle?: LawfirmJobTitleModel;
     lastname?: string;
     lawSchool?: string;
     lawfirmId?: number;
@@ -35,22 +36,6 @@ export interface LawyerModel {
     visibleOnStorefront?: boolean;
 }
 export namespace LawyerModel {
-    export type JobTitleEnum = 'ACCOUNTANT' | 'ATTORNEY' | 'ATTORNEY_ASSOCIATE' | 'ATTORNEY_COUNSEL' | 'ATTORNEY_MANAGING_PARTNER' | 'ATTORNEY_PARTNER' | 'ATTORNEY_STAFF' | 'CUSTOMER_SERVICE_REP' | 'LEGAL_ASSISTANT' | 'LEGAL_INTERN' | 'LEGAL_SECRETARY' | 'OTHER' | 'PARALEGAL';
-    export const JobTitleEnum = {
-        Accountant: 'ACCOUNTANT' as JobTitleEnum,
-        Attorney: 'ATTORNEY' as JobTitleEnum,
-        AttorneyAssociate: 'ATTORNEY_ASSOCIATE' as JobTitleEnum,
-        AttorneyCounsel: 'ATTORNEY_COUNSEL' as JobTitleEnum,
-        AttorneyManagingPartner: 'ATTORNEY_MANAGING_PARTNER' as JobTitleEnum,
-        AttorneyPartner: 'ATTORNEY_PARTNER' as JobTitleEnum,
-        AttorneyStaff: 'ATTORNEY_STAFF' as JobTitleEnum,
-        CustomerServiceRep: 'CUSTOMER_SERVICE_REP' as JobTitleEnum,
-        LegalAssistant: 'LEGAL_ASSISTANT' as JobTitleEnum,
-        LegalIntern: 'LEGAL_INTERN' as JobTitleEnum,
-        LegalSecretary: 'LEGAL_SECRETARY' as JobTitleEnum,
-        Other: 'OTHER' as JobTitleEnum,
-        Paralegal: 'PARALEGAL' as JobTitleEnum
-    };
     export type RoleTypesEnum = 'ADMIN' | 'DEFENDANT' | 'LAWFIRM_ADMIN' | 'LAWYER' | 'PARTNER' | 'UNKNOWN';
     export const RoleTypesEnum = {
         Admin: 'ADMIN' as RoleTypesEnum,

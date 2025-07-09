@@ -12,7 +12,7 @@
  * Do not edit the class manually.
  */
 import { exists } from '../runtime';
-import { AddressDomainFromJSON, AddressDomainToJSON, PhoneNumberDomainFromJSON, PhoneNumberDomainToJSON, TimestampFromJSON, TimestampToJSON, UserAccountModelFromJSON, UserAccountModelToJSON, UserReferralLinkModelFromJSON, UserReferralLinkModelToJSON, UserRoleDomainFromJSON, UserRoleDomainToJSON, UserSocialProfileModelFromJSON, UserSocialProfileModelToJSON, UserSubscriptionPlanModelFromJSON, UserSubscriptionPlanModelToJSON, } from './';
+import { AddressDomainFromJSON, AddressDomainToJSON, LawfirmJobTitleModelFromJSON, LawfirmJobTitleModelToJSON, PhoneNumberDomainFromJSON, PhoneNumberDomainToJSON, TimestampFromJSON, TimestampToJSON, UserAccountModelFromJSON, UserAccountModelToJSON, UserReferralLinkModelFromJSON, UserReferralLinkModelToJSON, UserRoleDomainFromJSON, UserRoleDomainToJSON, UserSocialProfileModelFromJSON, UserSocialProfileModelToJSON, UserSubscriptionPlanModelFromJSON, UserSubscriptionPlanModelToJSON, } from './';
 export function UserDomainFromJSON(json) {
     return UserDomainFromJSONTyped(json, false);
 }
@@ -45,7 +45,7 @@ export function UserDomainFromJSONTyped(json, ignoreDiscriminator) {
         'lastLoginDateUtc': !exists(json, 'lastLoginDateUtc') ? undefined : (new Date(json['lastLoginDateUtc'])),
         'lastname': !exists(json, 'lastname') ? undefined : json['lastname'],
         'lawfirmId': !exists(json, 'lawfirmId') ? undefined : json['lawfirmId'],
-        'lawyerJobTitle': !exists(json, 'lawyerJobTitle') ? undefined : json['lawyerJobTitle'],
+        'lawyerJobTitle': !exists(json, 'lawyerJobTitle') ? undefined : LawfirmJobTitleModelFromJSON(json['lawyerJobTitle']),
         'loginProvider': !exists(json, 'loginProvider') ? undefined : json['loginProvider'],
         'numBookingCancelations': !exists(json, 'numBookingCancelations') ? undefined : json['numBookingCancelations'],
         'paidCaseCount': !exists(json, 'paidCaseCount') ? undefined : json['paidCaseCount'],
@@ -103,7 +103,7 @@ export function UserDomainToJSON(value) {
         'lastLoginDateUtc': value.lastLoginDateUtc === undefined ? undefined : (value.lastLoginDateUtc.toISOString()),
         'lastname': value.lastname,
         'lawfirmId': value.lawfirmId,
-        'lawyerJobTitle': value.lawyerJobTitle,
+        'lawyerJobTitle': LawfirmJobTitleModelToJSON(value.lawyerJobTitle),
         'loginProvider': value.loginProvider,
         'numBookingCancelations': value.numBookingCancelations,
         'paidCaseCount': value.paidCaseCount,
@@ -142,26 +142,6 @@ export var UserDomainGenderTypeEnum;
     UserDomainGenderTypeEnum["UNVERIFIED"] = "UNVERIFIED";
     UserDomainGenderTypeEnum["X"] = "X";
 })(UserDomainGenderTypeEnum || (UserDomainGenderTypeEnum = {}));
-/**
-* @export
-* @enum {string}
-*/
-export var UserDomainLawyerJobTitleEnum;
-(function (UserDomainLawyerJobTitleEnum) {
-    UserDomainLawyerJobTitleEnum["ACCOUNTANT"] = "ACCOUNTANT";
-    UserDomainLawyerJobTitleEnum["ATTORNEY"] = "ATTORNEY";
-    UserDomainLawyerJobTitleEnum["ATTORNEYASSOCIATE"] = "ATTORNEY_ASSOCIATE";
-    UserDomainLawyerJobTitleEnum["ATTORNEYCOUNSEL"] = "ATTORNEY_COUNSEL";
-    UserDomainLawyerJobTitleEnum["ATTORNEYMANAGINGPARTNER"] = "ATTORNEY_MANAGING_PARTNER";
-    UserDomainLawyerJobTitleEnum["ATTORNEYPARTNER"] = "ATTORNEY_PARTNER";
-    UserDomainLawyerJobTitleEnum["ATTORNEYSTAFF"] = "ATTORNEY_STAFF";
-    UserDomainLawyerJobTitleEnum["CUSTOMERSERVICEREP"] = "CUSTOMER_SERVICE_REP";
-    UserDomainLawyerJobTitleEnum["LEGALASSISTANT"] = "LEGAL_ASSISTANT";
-    UserDomainLawyerJobTitleEnum["LEGALINTERN"] = "LEGAL_INTERN";
-    UserDomainLawyerJobTitleEnum["LEGALSECRETARY"] = "LEGAL_SECRETARY";
-    UserDomainLawyerJobTitleEnum["OTHER"] = "OTHER";
-    UserDomainLawyerJobTitleEnum["PARALEGAL"] = "PARALEGAL";
-})(UserDomainLawyerJobTitleEnum || (UserDomainLawyerJobTitleEnum = {}));
 /**
 * @export
 * @enum {string}

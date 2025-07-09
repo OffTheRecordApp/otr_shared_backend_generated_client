@@ -34,7 +34,7 @@ export interface UserDomainReq {
     "lastLoginDateUtc"?: string;
     "lastname"?: string;
     "lawfirmId"?: number;
-    "lawyerJobTitle"?: UserDomainReq.LawyerJobTitleEnum;
+    "lawyerJobTitle"?: models.LawfirmJobTitleModelReq;
     "loginProvider"?: UserDomainReq.LoginProviderEnum;
     "numBookingCancelations"?: number;
     "paidCaseCount"?: number;
@@ -67,21 +67,6 @@ export declare namespace UserDomainReq {
         NOTLISTED,
         UNVERIFIED,
         X
-    }
-    enum LawyerJobTitleEnum {
-        ACCOUNTANT,
-        ATTORNEY,
-        ATTORNEYASSOCIATE,
-        ATTORNEYCOUNSEL,
-        ATTORNEYMANAGINGPARTNER,
-        ATTORNEYPARTNER,
-        ATTORNEYSTAFF,
-        CUSTOMERSERVICEREP,
-        LEGALASSISTANT,
-        LEGALINTERN,
-        LEGALSECRETARY,
-        OTHER,
-        PARALEGAL
     }
     enum LoginProviderEnum {
         APPLE,

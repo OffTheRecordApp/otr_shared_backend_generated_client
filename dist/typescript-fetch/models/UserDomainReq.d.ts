@@ -9,7 +9,7 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-import { AddressDomainReq, PhoneNumberDomainReq, TimestampReq, UserAccountModel, UserReferralLinkModelReq, UserRoleDomain, UserSocialProfileModelReq, UserSubscriptionPlanModelReq } from './';
+import { AddressDomainReq, LawfirmJobTitleModelReq, PhoneNumberDomainReq, TimestampReq, UserAccountModel, UserReferralLinkModelReq, UserRoleDomain, UserSocialProfileModelReq, UserSubscriptionPlanModelReq } from './';
 /**
  *
  * @export
@@ -156,10 +156,10 @@ export interface UserDomainReq {
     lawfirmId?: number;
     /**
      *
-     * @type {string}
+     * @type {LawfirmJobTitleModelReq}
      * @memberof UserDomainReq
      */
-    lawyerJobTitle?: UserDomainReqLawyerJobTitleEnum;
+    lawyerJobTitle?: LawfirmJobTitleModelReq;
     /**
      *
      * @type {string}
@@ -313,25 +313,6 @@ export declare enum UserDomainReqGenderTypeEnum {
     NOTLISTED = "NOT_LISTED",
     UNVERIFIED = "UNVERIFIED",
     X = "X"
-}
-/**
-* @export
-* @enum {string}
-*/
-export declare enum UserDomainReqLawyerJobTitleEnum {
-    ACCOUNTANT = "ACCOUNTANT",
-    ATTORNEY = "ATTORNEY",
-    ATTORNEYASSOCIATE = "ATTORNEY_ASSOCIATE",
-    ATTORNEYCOUNSEL = "ATTORNEY_COUNSEL",
-    ATTORNEYMANAGINGPARTNER = "ATTORNEY_MANAGING_PARTNER",
-    ATTORNEYPARTNER = "ATTORNEY_PARTNER",
-    ATTORNEYSTAFF = "ATTORNEY_STAFF",
-    CUSTOMERSERVICEREP = "CUSTOMER_SERVICE_REP",
-    LEGALASSISTANT = "LEGAL_ASSISTANT",
-    LEGALINTERN = "LEGAL_INTERN",
-    LEGALSECRETARY = "LEGAL_SECRETARY",
-    OTHER = "OTHER",
-    PARALEGAL = "PARALEGAL"
 }
 /**
 * @export

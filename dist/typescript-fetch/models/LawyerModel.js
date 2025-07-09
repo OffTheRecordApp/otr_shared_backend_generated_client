@@ -12,7 +12,7 @@
  * Do not edit the class manually.
  */
 import { exists } from '../runtime';
-import { LawyerLicenseModelFromJSON, LawyerLicenseModelToJSON, PhoneNumberDomainFromJSON, PhoneNumberDomainToJSON, TimestampFromJSON, TimestampToJSON, } from './';
+import { LawfirmJobTitleModelFromJSON, LawfirmJobTitleModelToJSON, LawyerLicenseModelFromJSON, LawyerLicenseModelToJSON, PhoneNumberDomainFromJSON, PhoneNumberDomainToJSON, TimestampFromJSON, TimestampToJSON, } from './';
 export function LawyerModelFromJSON(json) {
     return LawyerModelFromJSONTyped(json, false);
 }
@@ -27,7 +27,7 @@ export function LawyerModelFromJSONTyped(json, ignoreDiscriminator) {
         'isEmailConfirmed': !exists(json, 'isEmailConfirmed') ? undefined : json['isEmailConfirmed'],
         'isLawfirmAccessGranted': !exists(json, 'isLawfirmAccessGranted') ? undefined : json['isLawfirmAccessGranted'],
         'isUserAccountEnabled': !exists(json, 'isUserAccountEnabled') ? undefined : json['isUserAccountEnabled'],
-        'jobTitle': !exists(json, 'jobTitle') ? undefined : json['jobTitle'],
+        'jobTitle': !exists(json, 'jobTitle') ? undefined : LawfirmJobTitleModelFromJSON(json['jobTitle']),
         'lastname': !exists(json, 'lastname') ? undefined : json['lastname'],
         'lawSchool': !exists(json, 'lawSchool') ? undefined : json['lawSchool'],
         'lawfirmId': !exists(json, 'lawfirmId') ? undefined : json['lawfirmId'],
@@ -55,7 +55,7 @@ export function LawyerModelToJSON(value) {
         'isEmailConfirmed': value.isEmailConfirmed,
         'isLawfirmAccessGranted': value.isLawfirmAccessGranted,
         'isUserAccountEnabled': value.isUserAccountEnabled,
-        'jobTitle': value.jobTitle,
+        'jobTitle': LawfirmJobTitleModelToJSON(value.jobTitle),
         'lastname': value.lastname,
         'lawSchool': value.lawSchool,
         'lawfirmId': value.lawfirmId,
@@ -69,26 +69,6 @@ export function LawyerModelToJSON(value) {
         'visibleOnStorefront': value.visibleOnStorefront,
     };
 }
-/**
-* @export
-* @enum {string}
-*/
-export var LawyerModelJobTitleEnum;
-(function (LawyerModelJobTitleEnum) {
-    LawyerModelJobTitleEnum["ACCOUNTANT"] = "ACCOUNTANT";
-    LawyerModelJobTitleEnum["ATTORNEY"] = "ATTORNEY";
-    LawyerModelJobTitleEnum["ATTORNEYASSOCIATE"] = "ATTORNEY_ASSOCIATE";
-    LawyerModelJobTitleEnum["ATTORNEYCOUNSEL"] = "ATTORNEY_COUNSEL";
-    LawyerModelJobTitleEnum["ATTORNEYMANAGINGPARTNER"] = "ATTORNEY_MANAGING_PARTNER";
-    LawyerModelJobTitleEnum["ATTORNEYPARTNER"] = "ATTORNEY_PARTNER";
-    LawyerModelJobTitleEnum["ATTORNEYSTAFF"] = "ATTORNEY_STAFF";
-    LawyerModelJobTitleEnum["CUSTOMERSERVICEREP"] = "CUSTOMER_SERVICE_REP";
-    LawyerModelJobTitleEnum["LEGALASSISTANT"] = "LEGAL_ASSISTANT";
-    LawyerModelJobTitleEnum["LEGALINTERN"] = "LEGAL_INTERN";
-    LawyerModelJobTitleEnum["LEGALSECRETARY"] = "LEGAL_SECRETARY";
-    LawyerModelJobTitleEnum["OTHER"] = "OTHER";
-    LawyerModelJobTitleEnum["PARALEGAL"] = "PARALEGAL";
-})(LawyerModelJobTitleEnum || (LawyerModelJobTitleEnum = {}));
 /**
 * @export
 * @enum {string}

@@ -12,6 +12,7 @@
  * Do not edit the class manually.
  */
 import { exists } from '../runtime';
+import { LawfirmJobTitleModelFromJSON, LawfirmJobTitleModelToJSON, } from './';
 export function GetLawfirmJobTitleResponseFromJSON(json) {
     return GetLawfirmJobTitleResponseFromJSONTyped(json, false);
 }
@@ -20,7 +21,7 @@ export function GetLawfirmJobTitleResponseFromJSONTyped(json, ignoreDiscriminato
         return json;
     }
     return {
-        'jobTitles': !exists(json, 'jobTitles') ? undefined : json['jobTitles'],
+        'jobTitles': !exists(json, 'jobTitles') ? undefined : (json['jobTitles'].map(LawfirmJobTitleModelFromJSON)),
     };
 }
 export function GetLawfirmJobTitleResponseToJSON(value) {
@@ -31,26 +32,6 @@ export function GetLawfirmJobTitleResponseToJSON(value) {
         return null;
     }
     return {
-        'jobTitles': value.jobTitles,
+        'jobTitles': value.jobTitles === undefined ? undefined : (value.jobTitles.map(LawfirmJobTitleModelToJSON)),
     };
 }
-/**
-* @export
-* @enum {string}
-*/
-export var GetLawfirmJobTitleResponseJobTitlesEnum;
-(function (GetLawfirmJobTitleResponseJobTitlesEnum) {
-    GetLawfirmJobTitleResponseJobTitlesEnum["ACCOUNTANT"] = "ACCOUNTANT";
-    GetLawfirmJobTitleResponseJobTitlesEnum["ATTORNEY"] = "ATTORNEY";
-    GetLawfirmJobTitleResponseJobTitlesEnum["ATTORNEYASSOCIATE"] = "ATTORNEY_ASSOCIATE";
-    GetLawfirmJobTitleResponseJobTitlesEnum["ATTORNEYCOUNSEL"] = "ATTORNEY_COUNSEL";
-    GetLawfirmJobTitleResponseJobTitlesEnum["ATTORNEYMANAGINGPARTNER"] = "ATTORNEY_MANAGING_PARTNER";
-    GetLawfirmJobTitleResponseJobTitlesEnum["ATTORNEYPARTNER"] = "ATTORNEY_PARTNER";
-    GetLawfirmJobTitleResponseJobTitlesEnum["ATTORNEYSTAFF"] = "ATTORNEY_STAFF";
-    GetLawfirmJobTitleResponseJobTitlesEnum["CUSTOMERSERVICEREP"] = "CUSTOMER_SERVICE_REP";
-    GetLawfirmJobTitleResponseJobTitlesEnum["LEGALASSISTANT"] = "LEGAL_ASSISTANT";
-    GetLawfirmJobTitleResponseJobTitlesEnum["LEGALINTERN"] = "LEGAL_INTERN";
-    GetLawfirmJobTitleResponseJobTitlesEnum["LEGALSECRETARY"] = "LEGAL_SECRETARY";
-    GetLawfirmJobTitleResponseJobTitlesEnum["OTHER"] = "OTHER";
-    GetLawfirmJobTitleResponseJobTitlesEnum["PARALEGAL"] = "PARALEGAL";
-})(GetLawfirmJobTitleResponseJobTitlesEnum || (GetLawfirmJobTitleResponseJobTitlesEnum = {}));
