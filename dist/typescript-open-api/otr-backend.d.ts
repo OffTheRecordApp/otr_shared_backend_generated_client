@@ -10996,7 +10996,7 @@ export interface components {
         };
         /** GetLawfirmJobTitleResponse */
         GetLawfirmJobTitleResponse: {
-            jobTitles?: GetLawfirmJobTitleResponseJobTitles[];
+            jobTitles?: components["schemas"]["LawfirmJobTitleModel"][];
         };
         /** GetLawfirmLawyersResponse */
         GetLawfirmLawyersResponse: {
@@ -12101,6 +12101,24 @@ export interface components {
             statesServed?: PathsApiV1CitationsCitationIdCourtMissingPostParametersQueryState[];
             vacationMode?: boolean;
         };
+        /** LawfirmJobTitleModel */
+        LawfirmJobTitleModel: {
+            jobTitle?: string;
+            /** @enum {string} */
+            name?: LawfirmJobTitleModelName;
+        };
+        /** LawfirmJobTitleModelReq */
+        LawfirmJobTitleModelReq: {
+            jobTitle?: string;
+            /** @enum {string} */
+            name?: LawfirmJobTitleModelName;
+        };
+        /** LawfirmJobTitleModelRes */
+        LawfirmJobTitleModelRes: {
+            jobTitle?: string;
+            /** @enum {string} */
+            name?: LawfirmJobTitleModelName;
+        };
         /** LawfirmLeadDomain */
         LawfirmLeadDomain: {
             isLawyerEmailConfirmed?: boolean;
@@ -12357,8 +12375,7 @@ export interface components {
             isEmailConfirmed?: boolean;
             isLawfirmAccessGranted?: boolean;
             isUserAccountEnabled?: boolean;
-            /** @enum {string} */
-            jobTitle?: GetLawfirmJobTitleResponseJobTitles;
+            jobTitle?: components["schemas"]["LawfirmJobTitleModel"];
             lastname?: string;
             lawSchool?: string;
             /** Format: int64 */
@@ -14141,7 +14158,7 @@ export interface components {
         /** SaveLawyerRequest */
         SaveLawyerRequest: {
             /** @enum {string} */
-            jobTitle?: GetLawfirmJobTitleResponseJobTitles;
+            jobTitle?: LawfirmJobTitleModelName;
             lawSchool?: string;
             /** Format: int64 */
             lawfirmId?: number;
@@ -15678,8 +15695,7 @@ export interface components {
             lastname?: string;
             /** Format: int64 */
             lawfirmId?: number;
-            /** @enum {string} */
-            lawyerJobTitle?: GetLawfirmJobTitleResponseJobTitles;
+            lawyerJobTitle?: components["schemas"]["LawfirmJobTitleModel"];
             /** @enum {string} */
             loginProvider?: PathsApiV1UsersVerifyAccountPutParametersQueryLoginProvider;
             /** Format: int32 */
@@ -15744,8 +15760,7 @@ export interface components {
             lastname?: string;
             /** Format: int64 */
             lawfirmId?: number;
-            /** @enum {string} */
-            lawyerJobTitle?: GetLawfirmJobTitleResponseJobTitles;
+            lawyerJobTitle?: components["schemas"]["LawfirmJobTitleModelReq"];
             /** @enum {string} */
             loginProvider?: PathsApiV1UsersVerifyAccountPutParametersQueryLoginProvider;
             /** Format: int32 */
@@ -15811,8 +15826,7 @@ export interface components {
             lastname?: string;
             /** Format: int64 */
             lawfirmId?: number;
-            /** @enum {string} */
-            lawyerJobTitle?: GetLawfirmJobTitleResponseJobTitles;
+            lawyerJobTitle?: components["schemas"]["LawfirmJobTitleModelRes"];
             /** @enum {string} */
             loginProvider?: PathsApiV1UsersVerifyAccountPutParametersQueryLoginProvider;
             /** Format: int32 */
@@ -40434,21 +40448,6 @@ export declare enum GetHouseHoldMateModelRelationshipType {
     TEENAGER = "TEENAGER",
     UNKNOWN = "UNKNOWN"
 }
-export declare enum GetLawfirmJobTitleResponseJobTitles {
-    ACCOUNTANT = "ACCOUNTANT",
-    ATTORNEY = "ATTORNEY",
-    ATTORNEY_ASSOCIATE = "ATTORNEY_ASSOCIATE",
-    ATTORNEY_COUNSEL = "ATTORNEY_COUNSEL",
-    ATTORNEY_MANAGING_PARTNER = "ATTORNEY_MANAGING_PARTNER",
-    ATTORNEY_PARTNER = "ATTORNEY_PARTNER",
-    ATTORNEY_STAFF = "ATTORNEY_STAFF",
-    CUSTOMER_SERVICE_REP = "CUSTOMER_SERVICE_REP",
-    LEGAL_ASSISTANT = "LEGAL_ASSISTANT",
-    LEGAL_INTERN = "LEGAL_INTERN",
-    LEGAL_SECRETARY = "LEGAL_SECRETARY",
-    OTHER = "OTHER",
-    PARALEGAL = "PARALEGAL"
-}
 export declare enum GetReferralCodeResponseOwnerType {
     LAWFIRM = "LAWFIRM",
     OTR = "OTR"
@@ -40482,6 +40481,21 @@ export declare enum LawfirmCaseDocumentClientDocRequirement {
     NONE = "NONE",
     NOTARY = "NOTARY",
     SIGNATURE = "SIGNATURE"
+}
+export declare enum LawfirmJobTitleModelName {
+    ACCOUNTANT = "ACCOUNTANT",
+    ATTORNEY = "ATTORNEY",
+    ATTORNEY_ASSOCIATE = "ATTORNEY_ASSOCIATE",
+    ATTORNEY_COUNSEL = "ATTORNEY_COUNSEL",
+    ATTORNEY_MANAGING_PARTNER = "ATTORNEY_MANAGING_PARTNER",
+    ATTORNEY_PARTNER = "ATTORNEY_PARTNER",
+    ATTORNEY_STAFF = "ATTORNEY_STAFF",
+    CUSTOMER_SERVICE_REP = "CUSTOMER_SERVICE_REP",
+    LEGAL_ASSISTANT = "LEGAL_ASSISTANT",
+    LEGAL_INTERN = "LEGAL_INTERN",
+    LEGAL_SECRETARY = "LEGAL_SECRETARY",
+    OTHER = "OTHER",
+    PARALEGAL = "PARALEGAL"
 }
 export declare enum LawfirmRatesResponseFeeLevel {
     ACCOUNT_CLASS_FEE = "ACCOUNT_CLASS_FEE",

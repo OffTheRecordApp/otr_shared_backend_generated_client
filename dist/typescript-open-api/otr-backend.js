@@ -958,22 +958,6 @@ export var GetHouseHoldMateModelRelationshipType;
     GetHouseHoldMateModelRelationshipType["TEENAGER"] = "TEENAGER";
     GetHouseHoldMateModelRelationshipType["UNKNOWN"] = "UNKNOWN";
 })(GetHouseHoldMateModelRelationshipType || (GetHouseHoldMateModelRelationshipType = {}));
-export var GetLawfirmJobTitleResponseJobTitles;
-(function (GetLawfirmJobTitleResponseJobTitles) {
-    GetLawfirmJobTitleResponseJobTitles["ACCOUNTANT"] = "ACCOUNTANT";
-    GetLawfirmJobTitleResponseJobTitles["ATTORNEY"] = "ATTORNEY";
-    GetLawfirmJobTitleResponseJobTitles["ATTORNEY_ASSOCIATE"] = "ATTORNEY_ASSOCIATE";
-    GetLawfirmJobTitleResponseJobTitles["ATTORNEY_COUNSEL"] = "ATTORNEY_COUNSEL";
-    GetLawfirmJobTitleResponseJobTitles["ATTORNEY_MANAGING_PARTNER"] = "ATTORNEY_MANAGING_PARTNER";
-    GetLawfirmJobTitleResponseJobTitles["ATTORNEY_PARTNER"] = "ATTORNEY_PARTNER";
-    GetLawfirmJobTitleResponseJobTitles["ATTORNEY_STAFF"] = "ATTORNEY_STAFF";
-    GetLawfirmJobTitleResponseJobTitles["CUSTOMER_SERVICE_REP"] = "CUSTOMER_SERVICE_REP";
-    GetLawfirmJobTitleResponseJobTitles["LEGAL_ASSISTANT"] = "LEGAL_ASSISTANT";
-    GetLawfirmJobTitleResponseJobTitles["LEGAL_INTERN"] = "LEGAL_INTERN";
-    GetLawfirmJobTitleResponseJobTitles["LEGAL_SECRETARY"] = "LEGAL_SECRETARY";
-    GetLawfirmJobTitleResponseJobTitles["OTHER"] = "OTHER";
-    GetLawfirmJobTitleResponseJobTitles["PARALEGAL"] = "PARALEGAL";
-})(GetLawfirmJobTitleResponseJobTitles || (GetLawfirmJobTitleResponseJobTitles = {}));
 export var GetReferralCodeResponseOwnerType;
 (function (GetReferralCodeResponseOwnerType) {
     GetReferralCodeResponseOwnerType["LAWFIRM"] = "LAWFIRM";
@@ -1015,6 +999,22 @@ export var LawfirmCaseDocumentClientDocRequirement;
     LawfirmCaseDocumentClientDocRequirement["NOTARY"] = "NOTARY";
     LawfirmCaseDocumentClientDocRequirement["SIGNATURE"] = "SIGNATURE";
 })(LawfirmCaseDocumentClientDocRequirement || (LawfirmCaseDocumentClientDocRequirement = {}));
+export var LawfirmJobTitleModelName;
+(function (LawfirmJobTitleModelName) {
+    LawfirmJobTitleModelName["ACCOUNTANT"] = "ACCOUNTANT";
+    LawfirmJobTitleModelName["ATTORNEY"] = "ATTORNEY";
+    LawfirmJobTitleModelName["ATTORNEY_ASSOCIATE"] = "ATTORNEY_ASSOCIATE";
+    LawfirmJobTitleModelName["ATTORNEY_COUNSEL"] = "ATTORNEY_COUNSEL";
+    LawfirmJobTitleModelName["ATTORNEY_MANAGING_PARTNER"] = "ATTORNEY_MANAGING_PARTNER";
+    LawfirmJobTitleModelName["ATTORNEY_PARTNER"] = "ATTORNEY_PARTNER";
+    LawfirmJobTitleModelName["ATTORNEY_STAFF"] = "ATTORNEY_STAFF";
+    LawfirmJobTitleModelName["CUSTOMER_SERVICE_REP"] = "CUSTOMER_SERVICE_REP";
+    LawfirmJobTitleModelName["LEGAL_ASSISTANT"] = "LEGAL_ASSISTANT";
+    LawfirmJobTitleModelName["LEGAL_INTERN"] = "LEGAL_INTERN";
+    LawfirmJobTitleModelName["LEGAL_SECRETARY"] = "LEGAL_SECRETARY";
+    LawfirmJobTitleModelName["OTHER"] = "OTHER";
+    LawfirmJobTitleModelName["PARALEGAL"] = "PARALEGAL";
+})(LawfirmJobTitleModelName || (LawfirmJobTitleModelName = {}));
 export var LawfirmRatesResponseFeeLevel;
 (function (LawfirmRatesResponseFeeLevel) {
     LawfirmRatesResponseFeeLevel["ACCOUNT_CLASS_FEE"] = "ACCOUNT_CLASS_FEE";
