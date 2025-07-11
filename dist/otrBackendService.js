@@ -3054,6 +3054,48 @@ angular.module('otrBackendService', [])
                 return deferred.promise;
             };
             /**
+             * getOverdueCasePayments
+             * @method
+             * @name OtrService#getOverdueCasePaymentsUsingGET
+             * @param {object} parameters - method options and parameters
+             * @param {string} parameters.caseId - caseId
+             * @param {boolean} parameters.includeUpcoming - includeUpcoming
+             */
+            OtrService.prototype.getOverdueCasePaymentsUsingGET = function(parameters) {
+                if (parameters === undefined) {
+                    parameters = {};
+                }
+                var deferred = $q.defer();
+                var domain = this.domain,
+                    path = '/api/v1/cases/{caseId}/overdue-payments';
+                var body = {},
+                    queryParameters = {},
+                    headers = {},
+                    form = {};
+
+                headers['Accept'] = ['*/*'];
+
+                path = path.replace('{caseId}', parameters['caseId']);
+
+                if (parameters['caseId'] === undefined) {
+                    deferred.reject(new Error('Missing required  parameter: caseId'));
+                    return deferred.promise;
+                }
+
+                /** set default value **/
+                queryParameters['includeUpcoming'] = true;
+
+                if (parameters['includeUpcoming'] !== undefined) {
+                    queryParameters['includeUpcoming'] = parameters['includeUpcoming'];
+                }
+
+                queryParameters = mergeQueryParams(parameters, queryParameters);
+
+                this.request('GET', domain + path, parameters, body, headers, queryParameters, form, deferred);
+
+                return deferred.promise;
+            };
+            /**
              * assignOwner
              * @method
              * @name OtrService#assignOwnerUsingPOST

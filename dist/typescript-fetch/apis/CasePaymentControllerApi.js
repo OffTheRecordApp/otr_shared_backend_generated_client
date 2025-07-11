@@ -21,7 +21,7 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
     });
 };
 import * as runtime from '../runtime';
-import { AuthorizeChargeForCasePaymentRequestToJSON, AuthorizeChargeForCasePaymentResponseFromJSON, CaptureChargeFromCasePaymentRequestToJSON, GetAvailablePaymentPlansResponseFromJSON, GetCasePaymentsResponseFromJSON, GetStripeChargeResponseFromJSON, GetStripeChargesResponseFromJSON, ListCostItemsForCustomerResponseFromJSON, ScheduleNewPaymentRequestToJSON, UpdateCasePaymentRequestToJSON, UpdatePaymentDueDateRequestToJSON, } from '../models';
+import { AuthorizeChargeForCasePaymentRequestToJSON, AuthorizeChargeForCasePaymentResponseFromJSON, CaptureChargeFromCasePaymentRequestToJSON, GetAvailablePaymentPlansResponseFromJSON, GetCasePaymentsResponseFromJSON, GetOverdueCasePaymentsResponseFromJSON, GetStripeChargeResponseFromJSON, GetStripeChargesResponseFromJSON, ListCostItemsForCustomerResponseFromJSON, ScheduleNewPaymentRequestToJSON, UpdateCasePaymentRequestToJSON, UpdatePaymentDueDateRequestToJSON, } from '../models';
 /**
  *
  */
@@ -224,6 +224,37 @@ export class CasePaymentControllerApi extends runtime.BaseAPI {
     getCasePaymentsUsingGET(requestParameters) {
         return __awaiter(this, void 0, void 0, function* () {
             const response = yield this.getCasePaymentsUsingGETRaw(requestParameters);
+            return yield response.value();
+        });
+    }
+    /**
+     * getOverdueCasePayments
+     */
+    getOverdueCasePaymentsUsingGETRaw(requestParameters) {
+        return __awaiter(this, void 0, void 0, function* () {
+            if (requestParameters.caseId === null || requestParameters.caseId === undefined) {
+                throw new runtime.RequiredError('caseId', 'Required parameter requestParameters.caseId was null or undefined when calling getOverdueCasePaymentsUsingGET.');
+            }
+            const queryParameters = {};
+            if (requestParameters.includeUpcoming !== undefined) {
+                queryParameters['includeUpcoming'] = requestParameters.includeUpcoming;
+            }
+            const headerParameters = {};
+            const response = yield this.request({
+                path: `/api/v1/cases/{caseId}/overdue-payments`.replace(`{${"caseId"}}`, encodeURIComponent(String(requestParameters.caseId))),
+                method: 'GET',
+                headers: headerParameters,
+                query: queryParameters,
+            });
+            return new runtime.JSONApiResponse(response, (jsonValue) => GetOverdueCasePaymentsResponseFromJSON(jsonValue));
+        });
+    }
+    /**
+     * getOverdueCasePayments
+     */
+    getOverdueCasePaymentsUsingGET(requestParameters) {
+        return __awaiter(this, void 0, void 0, function* () {
+            const response = yield this.getOverdueCasePaymentsUsingGETRaw(requestParameters);
             return yield response.value();
         });
     }

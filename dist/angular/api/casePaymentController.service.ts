@@ -29,6 +29,8 @@ import { GetAvailablePaymentPlansResponse } from '../model/getAvailablePaymentPl
 // @ts-ignore
 import { GetCasePaymentsResponse } from '../model/getCasePaymentsResponse';
 // @ts-ignore
+import { GetOverdueCasePaymentsResponse } from '../model/getOverdueCasePaymentsResponse';
+// @ts-ignore
 import { GetStripeChargeResponse } from '../model/getStripeChargeResponse';
 // @ts-ignore
 import { GetStripeChargesResponse } from '../model/getStripeChargesResponse';
@@ -521,6 +523,72 @@ export class CasePaymentControllerService {
         return this.httpClient.request<GetCasePaymentsResponse>('get', `${this.configuration.basePath}${localVarPath}`,
             {
                 context: localVarHttpContext,
+                responseType: <any>responseType_,
+                withCredentials: this.configuration.withCredentials,
+                headers: localVarHeaders,
+                observe: observe,
+                reportProgress: reportProgress
+            }
+        );
+    }
+
+    /**
+     * getOverdueCasePayments
+     * @param caseId caseId
+     * @param includeUpcoming includeUpcoming
+     * @param observe set whether or not to return the data Observable as the body, response or events. defaults to returning the body.
+     * @param reportProgress flag to report request and response progress.
+     */
+    public getOverdueCasePaymentsUsingGET(caseId: string, includeUpcoming?: boolean, observe?: 'body', reportProgress?: boolean, options?: {httpHeaderAccept?: '*/*', context?: HttpContext}): Observable<GetOverdueCasePaymentsResponse>;
+    public getOverdueCasePaymentsUsingGET(caseId: string, includeUpcoming?: boolean, observe?: 'response', reportProgress?: boolean, options?: {httpHeaderAccept?: '*/*', context?: HttpContext}): Observable<HttpResponse<GetOverdueCasePaymentsResponse>>;
+    public getOverdueCasePaymentsUsingGET(caseId: string, includeUpcoming?: boolean, observe?: 'events', reportProgress?: boolean, options?: {httpHeaderAccept?: '*/*', context?: HttpContext}): Observable<HttpEvent<GetOverdueCasePaymentsResponse>>;
+    public getOverdueCasePaymentsUsingGET(caseId: string, includeUpcoming?: boolean, observe: any = 'body', reportProgress: boolean = false, options?: {httpHeaderAccept?: '*/*', context?: HttpContext}): Observable<any> {
+        if (caseId === null || caseId === undefined) {
+            throw new Error('Required parameter caseId was null or undefined when calling getOverdueCasePaymentsUsingGET.');
+        }
+
+        let localVarQueryParameters = new HttpParams({encoder: this.encoder});
+        if (includeUpcoming !== undefined && includeUpcoming !== null) {
+          localVarQueryParameters = this.addToHttpParams(localVarQueryParameters,
+            <any>includeUpcoming, 'includeUpcoming');
+        }
+
+        let localVarHeaders = this.defaultHeaders;
+
+        let localVarHttpHeaderAcceptSelected: string | undefined = options && options.httpHeaderAccept;
+        if (localVarHttpHeaderAcceptSelected === undefined) {
+            // to determine the Accept header
+            const httpHeaderAccepts: string[] = [
+                '*/*'
+            ];
+            localVarHttpHeaderAcceptSelected = this.configuration.selectHeaderAccept(httpHeaderAccepts);
+        }
+        if (localVarHttpHeaderAcceptSelected !== undefined) {
+            localVarHeaders = localVarHeaders.set('Accept', localVarHttpHeaderAcceptSelected);
+        }
+
+        let localVarHttpContext: HttpContext | undefined = options && options.context;
+        if (localVarHttpContext === undefined) {
+            localVarHttpContext = new HttpContext();
+        }
+
+
+        let responseType_: 'text' | 'json' | 'blob' = 'json';
+        if (localVarHttpHeaderAcceptSelected) {
+            if (localVarHttpHeaderAcceptSelected.startsWith('text')) {
+                responseType_ = 'text';
+            } else if (this.configuration.isJsonMime(localVarHttpHeaderAcceptSelected)) {
+                responseType_ = 'json';
+            } else {
+                responseType_ = 'blob';
+            }
+        }
+
+        let localVarPath = `/api/v1/cases/${this.configuration.encodeParam({name: "caseId", value: caseId, in: "path", style: "simple", explode: false, dataType: "string", dataFormat: undefined})}/overdue-payments`;
+        return this.httpClient.request<GetOverdueCasePaymentsResponse>('get', `${this.configuration.basePath}${localVarPath}`,
+            {
+                context: localVarHttpContext,
+                params: localVarQueryParameters,
                 responseType: <any>responseType_,
                 withCredentials: this.configuration.withCredentials,
                 headers: localVarHeaders,

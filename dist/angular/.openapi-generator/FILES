@@ -312,6 +312,7 @@ model/cursor.ts
 model/cursorModel.ts
 model/customerLead.ts
 model/customerOverduePayment.ts
+model/customerPaymentDto.ts
 model/customerReview.ts
 model/customerServiceAgentBookingDomain.ts
 model/customerServiceAgentDomain.ts
@@ -484,6 +485,7 @@ model/getLostCasesWithTransferNotReversedResponse.ts
 model/getMessagesByEntityResponse.ts
 model/getNoViolationCitationsResponse.ts
 model/getOutgoingContactsResponse.ts
+model/getOverdueCasePaymentsResponse.ts
 model/getOverduePaymentsResponse.ts
 model/getPaymentMethodsForUserResponse.ts
 model/getPaymentModelTypesResponse.ts

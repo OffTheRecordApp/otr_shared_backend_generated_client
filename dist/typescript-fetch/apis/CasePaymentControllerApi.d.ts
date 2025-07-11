@@ -10,7 +10,7 @@
  * Do not edit the class manually.
  */
 import * as runtime from '../runtime';
-import { AuthorizeChargeForCasePaymentRequest, AuthorizeChargeForCasePaymentResponse, CaptureChargeFromCasePaymentRequest, GetAvailablePaymentPlansResponse, GetCasePaymentsResponse, GetStripeChargeResponse, GetStripeChargesResponse, ListCostItemsForCustomerResponse, ScheduleNewPaymentRequest, UpdateCasePaymentRequest, UpdatePaymentDueDateRequest } from '../models';
+import { AuthorizeChargeForCasePaymentRequest, AuthorizeChargeForCasePaymentResponse, CaptureChargeFromCasePaymentRequest, GetAvailablePaymentPlansResponse, GetCasePaymentsResponse, GetOverdueCasePaymentsResponse, GetStripeChargeResponse, GetStripeChargesResponse, ListCostItemsForCustomerResponse, ScheduleNewPaymentRequest, UpdateCasePaymentRequest, UpdatePaymentDueDateRequest } from '../models';
 export interface AuthorizeChargeForCasePaymentUsingPOSTRequest {
     caseId: string;
     casePaymentId: string;
@@ -38,6 +38,10 @@ export interface GetAvailablePaymentPlansUsingPOSTRequest {
 }
 export interface GetCasePaymentsUsingGETRequest {
     caseId: string;
+}
+export interface GetOverdueCasePaymentsUsingGETRequest {
+    caseId: string;
+    includeUpcoming?: boolean;
 }
 export interface GetPaymentPlanOptionsUsingGETRequest {
     caseId: string;
@@ -130,6 +134,14 @@ export declare class CasePaymentControllerApi extends runtime.BaseAPI {
      * getCasePayments
      */
     getCasePaymentsUsingGET(requestParameters: GetCasePaymentsUsingGETRequest): Promise<GetCasePaymentsResponse>;
+    /**
+     * getOverdueCasePayments
+     */
+    getOverdueCasePaymentsUsingGETRaw(requestParameters: GetOverdueCasePaymentsUsingGETRequest): Promise<runtime.ApiResponse<GetOverdueCasePaymentsResponse>>;
+    /**
+     * getOverdueCasePayments
+     */
+    getOverdueCasePaymentsUsingGET(requestParameters: GetOverdueCasePaymentsUsingGETRequest): Promise<GetOverdueCasePaymentsResponse>;
     /**
      * getPaymentPlanOptions
      */

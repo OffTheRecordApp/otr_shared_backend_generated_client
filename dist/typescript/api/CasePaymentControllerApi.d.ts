@@ -66,6 +66,13 @@ export declare class CasePaymentControllerApi {
     getCasePaymentsUsingGET(caseId: string, extraHttpRequestParams?: any): ng.IHttpPromise<models.GetCasePaymentsResponse>;
     /**
      *
+     * @summary getOverdueCasePayments
+     * @param caseId caseId
+     * @param includeUpcoming includeUpcoming
+     */
+    getOverdueCasePaymentsUsingGET(caseId: string, includeUpcoming?: boolean, extraHttpRequestParams?: any): ng.IHttpPromise<models.GetOverdueCasePaymentsResponse>;
+    /**
+     *
      * @summary getPaymentPlanOptions
      * @param caseId caseId
      * @param lawfirmId lawfirmId

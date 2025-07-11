@@ -224,6 +224,35 @@ export class CasePaymentControllerApi {
     }
     /**
      *
+     * @summary getOverdueCasePayments
+     * @param caseId caseId
+     * @param includeUpcoming includeUpcoming
+     */
+    getOverdueCasePaymentsUsingGET(caseId, includeUpcoming, extraHttpRequestParams) {
+        const localVarPath = this.basePath + '/api/v1/cases/{caseId}/overdue-payments'
+            .replace('{' + 'caseId' + '}', encodeURIComponent(String(caseId)));
+        let queryParameters = {};
+        let headerParams = Object.assign({}, this.defaultHeaders);
+        // verify required parameter 'caseId' is not null or undefined
+        if (caseId === null || caseId === undefined) {
+            throw new Error('Required parameter caseId was null or undefined when calling getOverdueCasePaymentsUsingGET.');
+        }
+        if (includeUpcoming !== undefined) {
+            queryParameters['includeUpcoming'] = includeUpcoming;
+        }
+        let httpRequestParams = {
+            method: 'GET',
+            url: localVarPath,
+            params: queryParameters,
+            headers: headerParams
+        };
+        if (extraHttpRequestParams) {
+            httpRequestParams = Object.assign(httpRequestParams, extraHttpRequestParams);
+        }
+        return this.$http(httpRequestParams);
+    }
+    /**
+     *
      * @summary getPaymentPlanOptions
      * @param caseId caseId
      * @param lawfirmId lawfirmId
