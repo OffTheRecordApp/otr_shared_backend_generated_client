@@ -42,10 +42,10 @@ export interface IntercomConversationResponse {
     contacts?: ContactList;
     /**
      *
-     * @type {string}
+     * @type {object}
      * @memberof IntercomConversationResponse
      */
-    conversationRating?: string;
+    conversationRating?: object;
     /**
      *
      * @type {number}

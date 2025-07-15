@@ -15,7 +15,7 @@ export interface IntercomConversationResponse {
     "ai_agent"?: string;
     "ai_agent_participated"?: boolean;
     "contacts"?: models.ContactList;
-    "conversation_rating"?: string;
+    "conversation_rating"?: object;
     "created_at"?: number;
     "custom_attributes"?: object;
     "first_contact_reply"?: models.FirstContactReply;
