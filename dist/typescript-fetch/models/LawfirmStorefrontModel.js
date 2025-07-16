@@ -88,6 +88,7 @@ export var LawfirmStorefrontModelLawfirmStateEnum;
     LawfirmStorefrontModelLawfirmStateEnum["SUPERVISED"] = "SUPERVISED";
     LawfirmStorefrontModelLawfirmStateEnum["TEMPORARILYTURNEDOFF"] = "TEMPORARILY_TURNED_OFF";
     LawfirmStorefrontModelLawfirmStateEnum["TERMINATEDFRAUD"] = "TERMINATED_FRAUD";
+    LawfirmStorefrontModelLawfirmStateEnum["TERMINATEDGENERIC"] = "TERMINATED_GENERIC";
     LawfirmStorefrontModelLawfirmStateEnum["TERMINATEDPOORSERVICE"] = "TERMINATED_POOR_SERVICE";
     LawfirmStorefrontModelLawfirmStateEnum["TERMINATEDPOORSUCCESS"] = "TERMINATED_POOR_SUCCESS";
 })(LawfirmStorefrontModelLawfirmStateEnum || (LawfirmStorefrontModelLawfirmStateEnum = {}));

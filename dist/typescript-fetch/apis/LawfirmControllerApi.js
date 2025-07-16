@@ -1000,6 +1000,7 @@ export var GetLawfirmsUsingGETStatusesEnum;
     GetLawfirmsUsingGETStatusesEnum["SUPERVISED"] = "SUPERVISED";
     GetLawfirmsUsingGETStatusesEnum["TEMPORARILYTURNEDOFF"] = "TEMPORARILY_TURNED_OFF";
     GetLawfirmsUsingGETStatusesEnum["TERMINATEDFRAUD"] = "TERMINATED_FRAUD";
+    GetLawfirmsUsingGETStatusesEnum["TERMINATEDGENERIC"] = "TERMINATED_GENERIC";
     GetLawfirmsUsingGETStatusesEnum["TERMINATEDPOORSERVICE"] = "TERMINATED_POOR_SERVICE";
     GetLawfirmsUsingGETStatusesEnum["TERMINATEDPOORSUCCESS"] = "TERMINATED_POOR_SUCCESS";
 })(GetLawfirmsUsingGETStatusesEnum || (GetLawfirmsUsingGETStatusesEnum = {}));

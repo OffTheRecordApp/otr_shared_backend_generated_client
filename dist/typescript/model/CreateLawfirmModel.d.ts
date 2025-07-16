@@ -53,6 +53,7 @@ export declare namespace CreateLawfirmModel {
         SUPERVISED,
         TEMPORARILYTURNEDOFF,
         TERMINATEDFRAUD,
+        TERMINATEDGENERIC,
         TERMINATEDPOORSERVICE,
         TERMINATEDPOORSUCCESS
     }

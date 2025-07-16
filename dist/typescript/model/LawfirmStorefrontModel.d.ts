@@ -47,6 +47,7 @@ export declare namespace LawfirmStorefrontModel {
         SUPERVISED,
         TEMPORARILYTURNEDOFF,
         TERMINATEDFRAUD,
+        TERMINATEDGENERIC,
         TERMINATEDPOORSERVICE,
         TERMINATEDPOORSUCCESS
     }

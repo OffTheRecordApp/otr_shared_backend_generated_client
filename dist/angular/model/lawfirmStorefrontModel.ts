@@ -30,7 +30,7 @@ export interface LawfirmStorefrontModel {
     website?: string;
 }
 export namespace LawfirmStorefrontModel {
-    export type LawfirmStateEnum = 'ACCOUNT_CLOSED' | 'ACTIVE' | 'BLACKLISTED' | 'DEMO_COMPLETED' | 'DUPLICATE' | 'FUTURE_LEAD' | 'LEAD' | 'NEW_PARTNER' | 'NOT_A_GOOD_FIT' | 'NOT_INTERESTED_DO_NOT_CONTACT' | 'NOT_INTERESTED_FEE_SPLITTING' | 'NOT_INTERESTED_MARKETING_FEE' | 'NOT_INTERESTED_MONEY_BACK_GUARANTEE' | 'NOT_INTERESTED_PLATFORM_RESISTANCE' | 'PAST_INTEREST' | 'SUPERVISED' | 'TEMPORARILY_TURNED_OFF' | 'TERMINATED_FRAUD' | 'TERMINATED_POOR_SERVICE' | 'TERMINATED_POOR_SUCCESS';
+    export type LawfirmStateEnum = 'ACCOUNT_CLOSED' | 'ACTIVE' | 'BLACKLISTED' | 'DEMO_COMPLETED' | 'DUPLICATE' | 'FUTURE_LEAD' | 'LEAD' | 'NEW_PARTNER' | 'NOT_A_GOOD_FIT' | 'NOT_INTERESTED_DO_NOT_CONTACT' | 'NOT_INTERESTED_FEE_SPLITTING' | 'NOT_INTERESTED_MARKETING_FEE' | 'NOT_INTERESTED_MONEY_BACK_GUARANTEE' | 'NOT_INTERESTED_PLATFORM_RESISTANCE' | 'PAST_INTEREST' | 'SUPERVISED' | 'TEMPORARILY_TURNED_OFF' | 'TERMINATED_FRAUD' | 'TERMINATED_GENERIC' | 'TERMINATED_POOR_SERVICE' | 'TERMINATED_POOR_SUCCESS';
     export const LawfirmStateEnum = {
         AccountClosed: 'ACCOUNT_CLOSED' as LawfirmStateEnum,
         Active: 'ACTIVE' as LawfirmStateEnum,
@@ -50,6 +50,7 @@ export namespace LawfirmStorefrontModel {
         Supervised: 'SUPERVISED' as LawfirmStateEnum,
         TemporarilyTurnedOff: 'TEMPORARILY_TURNED_OFF' as LawfirmStateEnum,
         TerminatedFraud: 'TERMINATED_FRAUD' as LawfirmStateEnum,
+        TerminatedGeneric: 'TERMINATED_GENERIC' as LawfirmStateEnum,
         TerminatedPoorService: 'TERMINATED_POOR_SERVICE' as LawfirmStateEnum,
         TerminatedPoorSuccess: 'TERMINATED_POOR_SUCCESS' as LawfirmStateEnum
     };

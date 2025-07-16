@@ -60,6 +60,7 @@ export var LawfirmStatusModelNameEnum;
     LawfirmStatusModelNameEnum["SUPERVISED"] = "SUPERVISED";
     LawfirmStatusModelNameEnum["TEMPORARILYTURNEDOFF"] = "TEMPORARILY_TURNED_OFF";
     LawfirmStatusModelNameEnum["TERMINATEDFRAUD"] = "TERMINATED_FRAUD";
+    LawfirmStatusModelNameEnum["TERMINATEDGENERIC"] = "TERMINATED_GENERIC";
     LawfirmStatusModelNameEnum["TERMINATEDPOORSERVICE"] = "TERMINATED_POOR_SERVICE";
     LawfirmStatusModelNameEnum["TERMINATEDPOORSUCCESS"] = "TERMINATED_POOR_SUCCESS";
 })(LawfirmStatusModelNameEnum || (LawfirmStatusModelNameEnum = {}));

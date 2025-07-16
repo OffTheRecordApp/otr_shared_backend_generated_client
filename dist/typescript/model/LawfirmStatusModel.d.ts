@@ -33,6 +33,7 @@ export declare namespace LawfirmStatusModel {
         SUPERVISED,
         TEMPORARILYTURNEDOFF,
         TERMINATEDFRAUD,
+        TERMINATEDGENERIC,
         TERMINATEDPOORSERVICE,
         TERMINATEDPOORSUCCESS
     }

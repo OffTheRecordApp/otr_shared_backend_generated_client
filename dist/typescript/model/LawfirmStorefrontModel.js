@@ -31,6 +31,7 @@ export var LawfirmStorefrontModel;
         LawfirmStateEnum[LawfirmStateEnum["SUPERVISED"] = 'SUPERVISED'] = "SUPERVISED";
         LawfirmStateEnum[LawfirmStateEnum["TEMPORARILYTURNEDOFF"] = 'TEMPORARILY_TURNED_OFF'] = "TEMPORARILYTURNEDOFF";
         LawfirmStateEnum[LawfirmStateEnum["TERMINATEDFRAUD"] = 'TERMINATED_FRAUD'] = "TERMINATEDFRAUD";
+        LawfirmStateEnum[LawfirmStateEnum["TERMINATEDGENERIC"] = 'TERMINATED_GENERIC'] = "TERMINATEDGENERIC";
         LawfirmStateEnum[LawfirmStateEnum["TERMINATEDPOORSERVICE"] = 'TERMINATED_POOR_SERVICE'] = "TERMINATEDPOORSERVICE";
         LawfirmStateEnum[LawfirmStateEnum["TERMINATEDPOORSUCCESS"] = 'TERMINATED_POOR_SUCCESS'] = "TERMINATEDPOORSUCCESS";
     })(LawfirmStateEnum = LawfirmStorefrontModel.LawfirmStateEnum || (LawfirmStorefrontModel.LawfirmStateEnum = {}));

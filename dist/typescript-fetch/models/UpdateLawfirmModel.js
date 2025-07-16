@@ -104,6 +104,7 @@ export var UpdateLawfirmModelLawfirmStateEnum;
     UpdateLawfirmModelLawfirmStateEnum["SUPERVISED"] = "SUPERVISED";
     UpdateLawfirmModelLawfirmStateEnum["TEMPORARILYTURNEDOFF"] = "TEMPORARILY_TURNED_OFF";
     UpdateLawfirmModelLawfirmStateEnum["TERMINATEDFRAUD"] = "TERMINATED_FRAUD";
+    UpdateLawfirmModelLawfirmStateEnum["TERMINATEDGENERIC"] = "TERMINATED_GENERIC";
     UpdateLawfirmModelLawfirmStateEnum["TERMINATEDPOORSERVICE"] = "TERMINATED_POOR_SERVICE";
     UpdateLawfirmModelLawfirmStateEnum["TERMINATEDPOORSUCCESS"] = "TERMINATED_POOR_SUCCESS";
 })(UpdateLawfirmModelLawfirmStateEnum || (UpdateLawfirmModelLawfirmStateEnum = {}));

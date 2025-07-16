@@ -31,6 +31,7 @@ export var LawfirmStatusModel;
         NameEnum[NameEnum["SUPERVISED"] = 'SUPERVISED'] = "SUPERVISED";
         NameEnum[NameEnum["TEMPORARILYTURNEDOFF"] = 'TEMPORARILY_TURNED_OFF'] = "TEMPORARILYTURNEDOFF";
         NameEnum[NameEnum["TERMINATEDFRAUD"] = 'TERMINATED_FRAUD'] = "TERMINATEDFRAUD";
+        NameEnum[NameEnum["TERMINATEDGENERIC"] = 'TERMINATED_GENERIC'] = "TERMINATEDGENERIC";
         NameEnum[NameEnum["TERMINATEDPOORSERVICE"] = 'TERMINATED_POOR_SERVICE'] = "TERMINATEDPOORSERVICE";
         NameEnum[NameEnum["TERMINATEDPOORSUCCESS"] = 'TERMINATED_POOR_SUCCESS'] = "TERMINATEDPOORSUCCESS";
     })(NameEnum = LawfirmStatusModel.NameEnum || (LawfirmStatusModel.NameEnum = {}));

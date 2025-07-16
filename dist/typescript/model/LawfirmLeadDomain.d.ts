@@ -105,6 +105,7 @@ export declare namespace LawfirmLeadDomain {
         SUPERVISED,
         TEMPORARILYTURNEDOFF,
         TERMINATEDFRAUD,
+        TERMINATEDGENERIC,
         TERMINATEDPOORSERVICE,
         TERMINATEDPOORSUCCESS
     }

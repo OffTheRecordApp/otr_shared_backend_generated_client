@@ -55,6 +55,7 @@ export declare namespace UpdateLawfirmModel {
         SUPERVISED,
         TEMPORARILYTURNEDOFF,
         TERMINATEDFRAUD,
+        TERMINATEDGENERIC,
         TERMINATEDPOORSERVICE,
         TERMINATEDPOORSUCCESS
     }

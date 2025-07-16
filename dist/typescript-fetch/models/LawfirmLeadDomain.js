@@ -155,6 +155,7 @@ export var LawfirmLeadDomainLawfirmStateEnum;
     LawfirmLeadDomainLawfirmStateEnum["SUPERVISED"] = "SUPERVISED";
     LawfirmLeadDomainLawfirmStateEnum["TEMPORARILYTURNEDOFF"] = "TEMPORARILY_TURNED_OFF";
     LawfirmLeadDomainLawfirmStateEnum["TERMINATEDFRAUD"] = "TERMINATED_FRAUD";
+    LawfirmLeadDomainLawfirmStateEnum["TERMINATEDGENERIC"] = "TERMINATED_GENERIC";
     LawfirmLeadDomainLawfirmStateEnum["TERMINATEDPOORSERVICE"] = "TERMINATED_POOR_SERVICE";
     LawfirmLeadDomainLawfirmStateEnum["TERMINATEDPOORSUCCESS"] = "TERMINATED_POOR_SUCCESS";
 })(LawfirmLeadDomainLawfirmStateEnum || (LawfirmLeadDomainLawfirmStateEnum = {}));
