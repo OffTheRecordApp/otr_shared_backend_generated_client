@@ -261,6 +261,7 @@ export var PathsApiV1LawfirmsGetParametersQueryStatuses;
     PathsApiV1LawfirmsGetParametersQueryStatuses["SUPERVISED"] = "SUPERVISED";
     PathsApiV1LawfirmsGetParametersQueryStatuses["TEMPORARILY_TURNED_OFF"] = "TEMPORARILY_TURNED_OFF";
     PathsApiV1LawfirmsGetParametersQueryStatuses["TERMINATED_FRAUD"] = "TERMINATED_FRAUD";
+    PathsApiV1LawfirmsGetParametersQueryStatuses["TERMINATED_GENERIC"] = "TERMINATED_GENERIC";
     PathsApiV1LawfirmsGetParametersQueryStatuses["TERMINATED_POOR_SERVICE"] = "TERMINATED_POOR_SERVICE";
     PathsApiV1LawfirmsGetParametersQueryStatuses["TERMINATED_POOR_SUCCESS"] = "TERMINATED_POOR_SUCCESS";
 })(PathsApiV1LawfirmsGetParametersQueryStatuses || (PathsApiV1LawfirmsGetParametersQueryStatuses = {}));

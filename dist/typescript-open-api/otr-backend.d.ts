@@ -863,6 +863,23 @@ export interface paths {
         patch?: never;
         trace?: never;
     };
+    "/api/v1/cases/{caseId}/overdue-payments": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        /** getOverdueCasePayments */
+        get: operations["getOverdueCasePaymentsUsingGET"];
+        put?: never;
+        post?: never;
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
     "/api/v1/cases/{caseId}/payment-plans": {
         parameters: {
             query?: never;
@@ -9611,6 +9628,16 @@ export interface components {
             overdueAmount?: number;
             regionCode?: string;
         };
+        /** CustomerPaymentDto */
+        CustomerPaymentDto: {
+            /** Format: int32 */
+            amountDueInCents?: number;
+            casePaymentId?: string;
+            /** Format: date-time */
+            dueDateUtc?: string;
+            hasFinancialAccess?: boolean;
+            overdue?: boolean;
+        };
         /** CustomerReview */
         CustomerReview: {
             comments?: components["schemas"]["ReviewCommentModel"][];
@@ -11181,6 +11208,14 @@ export interface components {
         GetOutgoingContactsResponse: {
             contacts?: components["schemas"]["OutgoingContactDomain"][];
         };
+        /** GetOverdueCasePaymentsResponse */
+        GetOverdueCasePaymentsResponse: {
+            /** Format: int64 */
+            overdueBalanceInCents?: number;
+            payments?: components["schemas"]["CustomerPaymentDto"][];
+            /** Format: int64 */
+            upcomingBalanceInCents?: number;
+        };
         /** GetOverduePaymentsResponse */
         GetOverduePaymentsResponse: {
             /** Format: int64 */
@@ -11616,7 +11651,7 @@ export interface components {
             ai_agent?: string;
             ai_agent_participated?: boolean;
             contacts?: components["schemas"]["ContactList"];
-            conversation_rating?: string;
+            conversation_rating?: Record<string, never>;
             /** Format: int32 */
             created_at?: number;
             custom_attributes?: Record<string, never>;
@@ -19002,6 +19037,53 @@ export interface operations {
                 };
                 content: {
                     "*/*": components["schemas"]["ListCostItemsForCustomerResponse"];
+                };
+            };
+            /** @description Unauthorized */
+            401: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content?: never;
+            };
+            /** @description Forbidden */
+            403: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content?: never;
+            };
+            /** @description Not Found */
+            404: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content?: never;
+            };
+        };
+    };
+    getOverdueCasePaymentsUsingGET: {
+        parameters: {
+            query?: {
+                /** @description includeUpcoming */
+                includeUpcoming?: boolean;
+            };
+            header?: never;
+            path: {
+                /** @description caseId */
+                caseId: string;
+            };
+            cookie?: never;
+        };
+        requestBody?: never;
+        responses: {
+            /** @description OK */
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "*/*": components["schemas"]["GetOverdueCasePaymentsResponse"];
                 };
             };
             /** @description Unauthorized */
@@ -39823,6 +39905,7 @@ export declare enum PathsApiV1LawfirmsGetParametersQueryStatuses {
     SUPERVISED = "SUPERVISED",
     TEMPORARILY_TURNED_OFF = "TEMPORARILY_TURNED_OFF",
     TERMINATED_FRAUD = "TERMINATED_FRAUD",
+    TERMINATED_GENERIC = "TERMINATED_GENERIC",
     TERMINATED_POOR_SERVICE = "TERMINATED_POOR_SERVICE",
     TERMINATED_POOR_SUCCESS = "TERMINATED_POOR_SUCCESS"
 }
