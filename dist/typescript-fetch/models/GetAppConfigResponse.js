@@ -21,6 +21,7 @@ export function GetAppConfigResponseFromJSONTyped(json, ignoreDiscriminator) {
     }
     return {
         'androidAppVersion': !exists(json, 'androidAppVersion') ? undefined : json['androidAppVersion'],
+        'fieldToBeRemoved': !exists(json, 'fieldToBeRemoved') ? undefined : json['fieldToBeRemoved'],
         'iosAppVersion': !exists(json, 'iosAppVersion') ? undefined : json['iosAppVersion'],
     };
 }
@@ -33,6 +34,7 @@ export function GetAppConfigResponseToJSON(value) {
     }
     return {
         'androidAppVersion': value.androidAppVersion,
+        'fieldToBeRemoved': value.fieldToBeRemoved,
         'iosAppVersion': value.iosAppVersion,
     };
 }

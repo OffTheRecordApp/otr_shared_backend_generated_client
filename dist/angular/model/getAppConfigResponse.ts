@@ -13,6 +13,7 @@
 
 export interface GetAppConfigResponse { 
     androidAppVersion?: string;
+    fieldToBeRemoved?: string;
     iosAppVersion?: string;
 }
 

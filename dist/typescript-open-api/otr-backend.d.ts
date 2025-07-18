@@ -7128,7 +7128,7 @@ export interface paths {
         trace?: never;
     };
 }
-export declare type webhooks = Record<string, never>;
+export type webhooks = Record<string, never>;
 export interface components {
     schemas: {
         /** AcceptCaseCounterRequest */
@@ -10517,6 +10517,7 @@ export interface components {
         /** GetAppConfigResponse */
         GetAppConfigResponse: {
             androidAppVersion?: string;
+            fieldToBeRemoved?: string;
             iosAppVersion?: string;
         };
         /** GetAppearanceAttorneysResponse */
@@ -16378,7 +16379,7 @@ export interface components {
     headers: never;
     pathItems: never;
 }
-export declare type $defs = Record<string, never>;
+export type $defs = Record<string, never>;
 export interface operations {
     notifyClientActionRequirementUsingPOST: {
         parameters: {

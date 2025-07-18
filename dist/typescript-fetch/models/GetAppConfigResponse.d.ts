@@ -26,6 +26,12 @@ export interface GetAppConfigResponse {
      * @type {string}
      * @memberof GetAppConfigResponse
      */
+    fieldToBeRemoved?: string;
+    /**
+     *
+     * @type {string}
+     * @memberof GetAppConfigResponse
+     */
     iosAppVersion?: string;
 }
 export declare function GetAppConfigResponseFromJSON(json: any): GetAppConfigResponse;
