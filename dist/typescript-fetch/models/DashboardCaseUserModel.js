@@ -24,6 +24,7 @@ export function DashboardCaseUserModelFromJSONTyped(json, ignoreDiscriminator) {
         'firstName': !exists(json, 'firstName') ? undefined : json['firstName'],
         'fullName': !exists(json, 'fullName') ? undefined : json['fullName'],
         'lastName': !exists(json, 'lastName') ? undefined : json['lastName'],
+        'profileImageUrl': !exists(json, 'profileImageUrl') ? undefined : json['profileImageUrl'],
         'userId': !exists(json, 'userId') ? undefined : json['userId'],
     };
 }
@@ -39,6 +40,7 @@ export function DashboardCaseUserModelToJSON(value) {
         'firstName': value.firstName,
         'fullName': value.fullName,
         'lastName': value.lastName,
+        'profileImageUrl': value.profileImageUrl,
         'userId': value.userId,
     };
 }

@@ -16,6 +16,7 @@ export interface DashboardCaseUserModel {
     firstName?: string;
     fullName?: string;
     lastName?: string;
+    profileImageUrl?: string;
     userId?: number;
 }
 

@@ -41,6 +41,12 @@ export interface DashboardCaseUserModel {
     lastName?: string;
     /**
      *
+     * @type {string}
+     * @memberof DashboardCaseUserModel
+     */
+    profileImageUrl?: string;
+    /**
+     *
      * @type {number}
      * @memberof DashboardCaseUserModel
      */

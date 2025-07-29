@@ -9763,6 +9763,7 @@ export interface components {
             firstName?: string;
             fullName?: string;
             lastName?: string;
+            profileImageUrl?: string;
             /** Format: int64 */
             userId?: number;
         };
