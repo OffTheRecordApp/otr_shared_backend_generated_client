@@ -1530,6 +1530,7 @@ export var ValidateDirectMailResponseOtrError;
     ValidateDirectMailResponseOtrError["PAYMENT_PLAN_LEGAL_FEE_HAS_CENTS"] = "PAYMENT_PLAN_LEGAL_FEE_HAS_CENTS";
     ValidateDirectMailResponseOtrError["PAYMENT_PLAN_NOT_SUPPORTED_WITH_PREPAID_CARD"] = "PAYMENT_PLAN_NOT_SUPPORTED_WITH_PREPAID_CARD";
     ValidateDirectMailResponseOtrError["PDF_PASSWORD_PROTECTED"] = "PDF_PASSWORD_PROTECTED";
+    ValidateDirectMailResponseOtrError["PHONE_NUMBER_NOT_CELLULAR"] = "PHONE_NUMBER_NOT_CELLULAR";
     ValidateDirectMailResponseOtrError["PLAID_ERROR"] = "PLAID_ERROR";
     ValidateDirectMailResponseOtrError["QBO_BILL_CREATION_FAILURE"] = "QBO_BILL_CREATION_FAILURE";
     ValidateDirectMailResponseOtrError["QBO_VENDOR_CREATION_FAILURE"] = "QBO_VENDOR_CREATION_FAILURE";

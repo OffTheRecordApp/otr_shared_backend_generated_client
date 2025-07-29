@@ -270,6 +270,7 @@ export var ValidateDirectMailResponseOtrErrorEnum;
     ValidateDirectMailResponseOtrErrorEnum["PAYMENTPLANLEGALFEEHASCENTS"] = "PAYMENT_PLAN_LEGAL_FEE_HAS_CENTS";
     ValidateDirectMailResponseOtrErrorEnum["PAYMENTPLANNOTSUPPORTEDWITHPREPAIDCARD"] = "PAYMENT_PLAN_NOT_SUPPORTED_WITH_PREPAID_CARD";
     ValidateDirectMailResponseOtrErrorEnum["PDFPASSWORDPROTECTED"] = "PDF_PASSWORD_PROTECTED";
+    ValidateDirectMailResponseOtrErrorEnum["PHONENUMBERNOTCELLULAR"] = "PHONE_NUMBER_NOT_CELLULAR";
     ValidateDirectMailResponseOtrErrorEnum["PLAIDERROR"] = "PLAID_ERROR";
     ValidateDirectMailResponseOtrErrorEnum["QBOBILLCREATIONFAILURE"] = "QBO_BILL_CREATION_FAILURE";
     ValidateDirectMailResponseOtrErrorEnum["QBOVENDORCREATIONFAILURE"] = "QBO_VENDOR_CREATION_FAILURE";
