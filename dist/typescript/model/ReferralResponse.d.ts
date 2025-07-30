@@ -63,6 +63,7 @@ export declare namespace ReferralResponse {
         FRIENDORFAMILY,
         GOOGLESEARCH,
         INFLUENCERAFFILIATE,
+        INSTAGRAM,
         KICKBACKAPP,
         OTHER,
         RADIO,

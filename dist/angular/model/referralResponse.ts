@@ -58,7 +58,7 @@ export namespace ReferralResponse {
         PendingAccountVerification: 'PENDING_ACCOUNT_VERIFICATION' as ReferralPaymentStatusEnum,
         PendingCaseResolution: 'PENDING_CASE_RESOLUTION' as ReferralPaymentStatusEnum
     };
-    export type ReferralSourceTypeEnum = 'ADMIN' | 'BILLBOARDS' | 'CHECKOUT_CODE' | 'DMV_COM' | 'DMV_ORG' | 'DWA' | 'FACEBOOK' | 'FRIEND_OR_FAMILY' | 'GOOGLE_SEARCH' | 'INFLUENCER_AFFILIATE' | 'KICKBACK_APP' | 'OTHER' | 'RADIO' | 'REDDIT' | 'THE_SMOKING_TIRE' | 'UNKNOWN' | 'VINWIKI' | 'YOUTUBE_AD';
+    export type ReferralSourceTypeEnum = 'ADMIN' | 'BILLBOARDS' | 'CHECKOUT_CODE' | 'DMV_COM' | 'DMV_ORG' | 'DWA' | 'FACEBOOK' | 'FRIEND_OR_FAMILY' | 'GOOGLE_SEARCH' | 'INFLUENCER_AFFILIATE' | 'INSTAGRAM' | 'KICKBACK_APP' | 'OTHER' | 'RADIO' | 'REDDIT' | 'THE_SMOKING_TIRE' | 'UNKNOWN' | 'VINWIKI' | 'YOUTUBE_AD';
     export const ReferralSourceTypeEnum = {
         Admin: 'ADMIN' as ReferralSourceTypeEnum,
         Billboards: 'BILLBOARDS' as ReferralSourceTypeEnum,
@@ -70,6 +70,7 @@ export namespace ReferralResponse {
         FriendOrFamily: 'FRIEND_OR_FAMILY' as ReferralSourceTypeEnum,
         GoogleSearch: 'GOOGLE_SEARCH' as ReferralSourceTypeEnum,
         InfluencerAffiliate: 'INFLUENCER_AFFILIATE' as ReferralSourceTypeEnum,
+        Instagram: 'INSTAGRAM' as ReferralSourceTypeEnum,
         KickbackApp: 'KICKBACK_APP' as ReferralSourceTypeEnum,
         Other: 'OTHER' as ReferralSourceTypeEnum,
         Radio: 'RADIO' as ReferralSourceTypeEnum,

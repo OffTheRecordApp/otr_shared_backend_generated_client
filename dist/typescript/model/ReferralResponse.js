@@ -53,6 +53,7 @@ export var ReferralResponse;
         ReferralSourceTypeEnum[ReferralSourceTypeEnum["FRIENDORFAMILY"] = 'FRIEND_OR_FAMILY'] = "FRIENDORFAMILY";
         ReferralSourceTypeEnum[ReferralSourceTypeEnum["GOOGLESEARCH"] = 'GOOGLE_SEARCH'] = "GOOGLESEARCH";
         ReferralSourceTypeEnum[ReferralSourceTypeEnum["INFLUENCERAFFILIATE"] = 'INFLUENCER_AFFILIATE'] = "INFLUENCERAFFILIATE";
+        ReferralSourceTypeEnum[ReferralSourceTypeEnum["INSTAGRAM"] = 'INSTAGRAM'] = "INSTAGRAM";
         ReferralSourceTypeEnum[ReferralSourceTypeEnum["KICKBACKAPP"] = 'KICKBACK_APP'] = "KICKBACKAPP";
         ReferralSourceTypeEnum[ReferralSourceTypeEnum["OTHER"] = 'OTHER'] = "OTHER";
         ReferralSourceTypeEnum[ReferralSourceTypeEnum["RADIO"] = 'RADIO'] = "RADIO";

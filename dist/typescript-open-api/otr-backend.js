@@ -1192,6 +1192,7 @@ export var ReferralResponseReferralSourceType;
     ReferralResponseReferralSourceType["FRIEND_OR_FAMILY"] = "FRIEND_OR_FAMILY";
     ReferralResponseReferralSourceType["GOOGLE_SEARCH"] = "GOOGLE_SEARCH";
     ReferralResponseReferralSourceType["INFLUENCER_AFFILIATE"] = "INFLUENCER_AFFILIATE";
+    ReferralResponseReferralSourceType["INSTAGRAM"] = "INSTAGRAM";
     ReferralResponseReferralSourceType["KICKBACK_APP"] = "KICKBACK_APP";
     ReferralResponseReferralSourceType["OTHER"] = "OTHER";
     ReferralResponseReferralSourceType["RADIO"] = "RADIO";

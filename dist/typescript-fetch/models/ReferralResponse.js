@@ -121,6 +121,7 @@ export var ReferralResponseReferralSourceTypeEnum;
     ReferralResponseReferralSourceTypeEnum["FRIENDORFAMILY"] = "FRIEND_OR_FAMILY";
     ReferralResponseReferralSourceTypeEnum["GOOGLESEARCH"] = "GOOGLE_SEARCH";
     ReferralResponseReferralSourceTypeEnum["INFLUENCERAFFILIATE"] = "INFLUENCER_AFFILIATE";
+    ReferralResponseReferralSourceTypeEnum["INSTAGRAM"] = "INSTAGRAM";
     ReferralResponseReferralSourceTypeEnum["KICKBACKAPP"] = "KICKBACK_APP";
     ReferralResponseReferralSourceTypeEnum["OTHER"] = "OTHER";
     ReferralResponseReferralSourceTypeEnum["RADIO"] = "RADIO";
