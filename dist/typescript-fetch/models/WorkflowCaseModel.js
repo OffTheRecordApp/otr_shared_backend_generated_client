@@ -12,7 +12,7 @@
  * Do not edit the class manually.
  */
 import { exists } from '../runtime';
-import { LegalServiceModelFromJSON, LegalServiceModelToJSON, LetterOfEngagementFromJSON, LetterOfEngagementToJSON, PaymentPlanTypeModelFromJSON, PaymentPlanTypeModelToJSON, SubscriptionDiscountEligibilityFromJSON, SubscriptionDiscountEligibilityToJSON, TimestampFromJSON, TimestampToJSON, UnavailableMatchAttributesModelFromJSON, UnavailableMatchAttributesModelToJSON, WorkflowCitationModelFromJSON, WorkflowCitationModelToJSON, WorkflowViolationPenaltyModelFromJSON, WorkflowViolationPenaltyModelToJSON, } from './';
+import { DefendantDetailsModelFromJSON, DefendantDetailsModelToJSON, LegalServiceModelFromJSON, LegalServiceModelToJSON, LetterOfEngagementFromJSON, LetterOfEngagementToJSON, PaymentPlanTypeModelFromJSON, PaymentPlanTypeModelToJSON, SubscriptionDiscountEligibilityFromJSON, SubscriptionDiscountEligibilityToJSON, TimestampFromJSON, TimestampToJSON, UnavailableMatchAttributesModelFromJSON, UnavailableMatchAttributesModelToJSON, WorkflowCitationModelFromJSON, WorkflowCitationModelToJSON, WorkflowViolationPenaltyModelFromJSON, WorkflowViolationPenaltyModelToJSON, } from './';
 export function WorkflowCaseModelFromJSON(json) {
     return WorkflowCaseModelFromJSONTyped(json, false);
 }
@@ -26,6 +26,7 @@ export function WorkflowCaseModelFromJSONTyped(json, ignoreDiscriminator) {
         'caseStatusCategory': !exists(json, 'caseStatusCategory') ? undefined : json['caseStatusCategory'],
         'citation': !exists(json, 'citation') ? undefined : WorkflowCitationModelFromJSON(json['citation']),
         'courtAppointmentDate': !exists(json, 'courtAppointmentDate') ? undefined : TimestampFromJSON(json['courtAppointmentDate']),
+        'defendantDetails': !exists(json, 'defendantDetails') ? undefined : DefendantDetailsModelFromJSON(json['defendantDetails']),
         'isLawfirmCodeApplied': !exists(json, 'isLawfirmCodeApplied') ? undefined : json['isLawfirmCodeApplied'],
         'latestUnavailableMatchAttributes': !exists(json, 'latestUnavailableMatchAttributes') ? undefined : UnavailableMatchAttributesModelFromJSON(json['latestUnavailableMatchAttributes']),
         'legalServices': !exists(json, 'legalServices') ? undefined : (json['legalServices'].map(LegalServiceModelFromJSON)),
@@ -51,6 +52,7 @@ export function WorkflowCaseModelToJSON(value) {
         'caseStatusCategory': value.caseStatusCategory,
         'citation': WorkflowCitationModelToJSON(value.citation),
         'courtAppointmentDate': TimestampToJSON(value.courtAppointmentDate),
+        'defendantDetails': DefendantDetailsModelToJSON(value.defendantDetails),
         'isLawfirmCodeApplied': value.isLawfirmCodeApplied,
         'latestUnavailableMatchAttributes': UnavailableMatchAttributesModelToJSON(value.latestUnavailableMatchAttributes),
         'legalServices': value.legalServices === undefined ? undefined : (value.legalServices.map(LegalServiceModelToJSON)),

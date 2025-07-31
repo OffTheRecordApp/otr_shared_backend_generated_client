@@ -205,6 +205,7 @@ export * from './DeclineCaseCounterRequest';
 export * from './DeclineCategory';
 export * from './DeclineReason';
 export * from './DefaultClassModel';
+export * from './DefendantDetailsModel';
 export * from './DeleteCitationResponse';
 export * from './DeleteLawyerLicenseRequest';
 export * from './DeleteNotificationByPagesRequest';

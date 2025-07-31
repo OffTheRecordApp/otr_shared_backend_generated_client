@@ -9,6 +9,7 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
+import { DefendantDetailsModel } from './defendantDetailsModel';
 import { SubscriptionDiscountEligibility } from './subscriptionDiscountEligibility';
 import { UnavailableMatchAttributesModel } from './unavailableMatchAttributesModel';
 import { WorkflowViolationPenaltyModel } from './workflowViolationPenaltyModel';
@@ -25,6 +26,7 @@ export interface WorkflowCaseModel {
     caseStatusCategory?: WorkflowCaseModel.CaseStatusCategoryEnum;
     citation?: WorkflowCitationModel;
     courtAppointmentDate?: Timestamp;
+    defendantDetails?: DefendantDetailsModel;
     isLawfirmCodeApplied?: boolean;
     latestUnavailableMatchAttributes?: UnavailableMatchAttributesModel;
     legalServices?: Array<LegalServiceModel>;

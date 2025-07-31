@@ -9832,6 +9832,17 @@ export interface components {
             classification?: PathsApiV1LawfirmsLawfirmIdAccountFeesDeleteParametersQueryClassification;
             regionCode?: string;
         };
+        /** DefendantDetailsModel */
+        DefendantDetailsModel: {
+            additionalNote?: string;
+            emailAddress?: string;
+            firstName?: string;
+            lastName?: string;
+            /** @enum {string} */
+            relationshipToClientType?: CaseUserDetailsModelRelationshipToClientType;
+            /** Format: int64 */
+            userId?: number;
+        };
         /** DeleteCitationResponse */
         DeleteCitationResponse: {
             citation?: components["schemas"]["CitationModel"];
@@ -16234,6 +16245,7 @@ export interface components {
             caseStatusCategory?: PathsApiV1CaseStatusesGetParametersQueryCategories;
             citation?: components["schemas"]["WorkflowCitationModel"];
             courtAppointmentDate?: components["schemas"]["Timestamp"];
+            defendantDetails?: components["schemas"]["DefendantDetailsModel"];
             isLawfirmCodeApplied?: boolean;
             latestUnavailableMatchAttributes?: components["schemas"]["UnavailableMatchAttributesModel"];
             legalServices?: components["schemas"]["LegalServiceModel"][];

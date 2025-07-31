@@ -16,6 +16,7 @@ export interface WorkflowCaseModel {
     "caseStatusCategory"?: WorkflowCaseModel.CaseStatusCategoryEnum;
     "citation"?: models.WorkflowCitationModel;
     "courtAppointmentDate"?: models.Timestamp;
+    "defendantDetails"?: models.DefendantDetailsModel;
     "isLawfirmCodeApplied"?: boolean;
     "latestUnavailableMatchAttributes"?: models.UnavailableMatchAttributesModel;
     "legalServices"?: Array<models.LegalServiceModel>;

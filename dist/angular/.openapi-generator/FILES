@@ -330,6 +330,7 @@ model/declineCaseCounterRequest.ts
 model/declineCategory.ts
 model/declineReason.ts
 model/defaultClassModel.ts
+model/defendantDetailsModel.ts
 model/deleteCitationResponse.ts
 model/deleteLawyerLicenseRequest.ts
 model/deleteNotificationByPagesRequest.ts
