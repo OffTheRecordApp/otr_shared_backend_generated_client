@@ -26,7 +26,7 @@ export class CaseTransferControllerApi {
      * @param caseId caseId
      * @param lawfirmId lawfirmId
      */
-    calculateTransferFeeDifferenceUsingGET(caseId, lawfirmId, extraHttpRequestParams) {
+    calculateTransferFeeDifferenceUsingPOST(caseId, lawfirmId, extraHttpRequestParams) {
         const localVarPath = this.basePath + '/api/v1/cases/{caseId}/transfer/{lawfirmId}/calculate-fee-difference'
             .replace('{' + 'caseId' + '}', encodeURIComponent(String(caseId)))
             .replace('{' + 'lawfirmId' + '}', encodeURIComponent(String(lawfirmId)));
@@ -34,14 +34,14 @@ export class CaseTransferControllerApi {
         let headerParams = Object.assign({}, this.defaultHeaders);
         // verify required parameter 'caseId' is not null or undefined
         if (caseId === null || caseId === undefined) {
-            throw new Error('Required parameter caseId was null or undefined when calling calculateTransferFeeDifferenceUsingGET.');
+            throw new Error('Required parameter caseId was null or undefined when calling calculateTransferFeeDifferenceUsingPOST.');
         }
         // verify required parameter 'lawfirmId' is not null or undefined
         if (lawfirmId === null || lawfirmId === undefined) {
-            throw new Error('Required parameter lawfirmId was null or undefined when calling calculateTransferFeeDifferenceUsingGET.');
+            throw new Error('Required parameter lawfirmId was null or undefined when calling calculateTransferFeeDifferenceUsingPOST.');
         }
         let httpRequestParams = {
-            method: 'GET',
+            method: 'POST',
             url: localVarPath,
             params: queryParameters,
             headers: headerParams

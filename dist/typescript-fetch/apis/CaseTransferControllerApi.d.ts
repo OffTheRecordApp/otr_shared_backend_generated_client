@@ -11,7 +11,7 @@
  */
 import * as runtime from '../runtime';
 import { CalculateTransferFeeDifferenceResponse, CaseTransferResponse, TransferCaseRequest } from '../models';
-export interface CalculateTransferFeeDifferenceUsingGETRequest {
+export interface CalculateTransferFeeDifferenceUsingPOSTRequest {
     caseId: string;
     lawfirmId: number;
 }
@@ -29,11 +29,11 @@ export declare class CaseTransferControllerApi extends runtime.BaseAPI {
     /**
      * calculateTransferFeeDifference
      */
-    calculateTransferFeeDifferenceUsingGETRaw(requestParameters: CalculateTransferFeeDifferenceUsingGETRequest): Promise<runtime.ApiResponse<CalculateTransferFeeDifferenceResponse>>;
+    calculateTransferFeeDifferenceUsingPOSTRaw(requestParameters: CalculateTransferFeeDifferenceUsingPOSTRequest): Promise<runtime.ApiResponse<CalculateTransferFeeDifferenceResponse>>;
     /**
      * calculateTransferFeeDifference
      */
-    calculateTransferFeeDifferenceUsingGET(requestParameters: CalculateTransferFeeDifferenceUsingGETRequest): Promise<CalculateTransferFeeDifferenceResponse>;
+    calculateTransferFeeDifferenceUsingPOST(requestParameters: CalculateTransferFeeDifferenceUsingPOSTRequest): Promise<CalculateTransferFeeDifferenceResponse>;
     /**
      * getTransferHistory
      */

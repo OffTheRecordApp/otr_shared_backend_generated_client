@@ -29,19 +29,19 @@ export class CaseTransferControllerApi extends runtime.BaseAPI {
     /**
      * calculateTransferFeeDifference
      */
-    calculateTransferFeeDifferenceUsingGETRaw(requestParameters) {
+    calculateTransferFeeDifferenceUsingPOSTRaw(requestParameters) {
         return __awaiter(this, void 0, void 0, function* () {
             if (requestParameters.caseId === null || requestParameters.caseId === undefined) {
-                throw new runtime.RequiredError('caseId', 'Required parameter requestParameters.caseId was null or undefined when calling calculateTransferFeeDifferenceUsingGET.');
+                throw new runtime.RequiredError('caseId', 'Required parameter requestParameters.caseId was null or undefined when calling calculateTransferFeeDifferenceUsingPOST.');
             }
             if (requestParameters.lawfirmId === null || requestParameters.lawfirmId === undefined) {
-                throw new runtime.RequiredError('lawfirmId', 'Required parameter requestParameters.lawfirmId was null or undefined when calling calculateTransferFeeDifferenceUsingGET.');
+                throw new runtime.RequiredError('lawfirmId', 'Required parameter requestParameters.lawfirmId was null or undefined when calling calculateTransferFeeDifferenceUsingPOST.');
             }
             const queryParameters = {};
             const headerParameters = {};
             const response = yield this.request({
                 path: `/api/v1/cases/{caseId}/transfer/{lawfirmId}/calculate-fee-difference`.replace(`{${"caseId"}}`, encodeURIComponent(String(requestParameters.caseId))).replace(`{${"lawfirmId"}}`, encodeURIComponent(String(requestParameters.lawfirmId))),
-                method: 'GET',
+                method: 'POST',
                 headers: headerParameters,
                 query: queryParameters,
             });
@@ -51,9 +51,9 @@ export class CaseTransferControllerApi extends runtime.BaseAPI {
     /**
      * calculateTransferFeeDifference
      */
-    calculateTransferFeeDifferenceUsingGET(requestParameters) {
+    calculateTransferFeeDifferenceUsingPOST(requestParameters) {
         return __awaiter(this, void 0, void 0, function* () {
-            const response = yield this.calculateTransferFeeDifferenceUsingGETRaw(requestParameters);
+            const response = yield this.calculateTransferFeeDifferenceUsingPOSTRaw(requestParameters);
             return yield response.value();
         });
     }

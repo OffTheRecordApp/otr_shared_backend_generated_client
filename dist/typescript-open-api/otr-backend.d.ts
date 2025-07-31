@@ -1257,10 +1257,10 @@ export interface paths {
             path?: never;
             cookie?: never;
         };
-        /** calculateTransferFeeDifference */
-        get: operations["calculateTransferFeeDifferenceUsingGET"];
+        get?: never;
         put?: never;
-        post?: never;
+        /** calculateTransferFeeDifference */
+        post: operations["calculateTransferFeeDifferenceUsingPOST"];
         delete?: never;
         options?: never;
         head?: never;
@@ -20400,7 +20400,7 @@ export interface operations {
             };
         };
     };
-    calculateTransferFeeDifferenceUsingGET: {
+    calculateTransferFeeDifferenceUsingPOST: {
         parameters: {
             query?: never;
             header?: never;
@@ -20422,6 +20422,13 @@ export interface operations {
                 content: {
                     "*/*": components["schemas"]["CalculateTransferFeeDifferenceResponse"];
                 };
+            };
+            /** @description Created */
+            201: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content?: never;
             };
             /** @description Unauthorized */
             401: {

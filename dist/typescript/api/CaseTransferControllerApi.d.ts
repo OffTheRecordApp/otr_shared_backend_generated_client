@@ -23,7 +23,7 @@ export declare class CaseTransferControllerApi {
      * @param caseId caseId
      * @param lawfirmId lawfirmId
      */
-    calculateTransferFeeDifferenceUsingGET(caseId: string, lawfirmId: number, extraHttpRequestParams?: any): ng.IHttpPromise<models.CalculateTransferFeeDifferenceResponse>;
+    calculateTransferFeeDifferenceUsingPOST(caseId: string, lawfirmId: number, extraHttpRequestParams?: any): ng.IHttpPromise<models.CalculateTransferFeeDifferenceResponse>;
     /**
      *
      * @summary getTransferHistory

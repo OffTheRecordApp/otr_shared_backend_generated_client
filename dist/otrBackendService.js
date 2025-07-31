@@ -4235,12 +4235,12 @@ angular.module('otrBackendService', [])
             /**
              * calculateTransferFeeDifference
              * @method
-             * @name OtrService#calculateTransferFeeDifferenceUsingGET
+             * @name OtrService#calculateTransferFeeDifferenceUsingPOST
              * @param {object} parameters - method options and parameters
              * @param {string} parameters.caseId - caseId
              * @param {integer} parameters.lawfirmId - lawfirmId
              */
-            OtrService.prototype.calculateTransferFeeDifferenceUsingGET = function(parameters) {
+            OtrService.prototype.calculateTransferFeeDifferenceUsingPOST = function(parameters) {
                 if (parameters === undefined) {
                     parameters = {};
                 }
@@ -4253,6 +4253,7 @@ angular.module('otrBackendService', [])
                     form = {};
 
                 headers['Accept'] = ['*/*'];
+                headers['Content-Type'] = ['application/json'];
 
                 path = path.replace('{caseId}', parameters['caseId']);
 
@@ -4270,7 +4271,7 @@ angular.module('otrBackendService', [])
 
                 queryParameters = mergeQueryParams(parameters, queryParameters);
 
-                this.request('GET', domain + path, parameters, body, headers, queryParameters, form, deferred);
+                this.request('POST', domain + path, parameters, body, headers, queryParameters, form, deferred);
 
                 return deferred.promise;
             };
