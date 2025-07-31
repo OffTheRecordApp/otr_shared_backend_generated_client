@@ -198,6 +198,7 @@ model/blogEvent.ts
 model/blogMetadata.ts
 model/booking.ts
 model/bookingCancelation.ts
+model/calculateTransferFeeDifferenceResponse.ts
 model/callContact.ts
 model/cancelBillingSubscriptionResponse.ts
 model/cancelCaseRequest.ts

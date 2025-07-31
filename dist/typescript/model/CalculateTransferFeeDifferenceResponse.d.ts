@@ -9,9 +9,6 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-export interface TransferCaseRequest {
-    "forceTransfer"?: boolean;
-    "ignoreCapturedCharges"?: boolean;
-    "maxOtrCreditInCents"?: number;
-    "receivingLawfirmId"?: number;
+export interface CalculateTransferFeeDifferenceResponse {
+    "totalClientCostDifferenceInCents"?: number;
 }

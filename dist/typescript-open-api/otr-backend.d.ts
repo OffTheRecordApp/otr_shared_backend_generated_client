@@ -1250,6 +1250,23 @@ export interface paths {
         patch?: never;
         trace?: never;
     };
+    "/api/v1/cases/{caseId}/transfer/{lawfirmId}/calculate-fee-difference": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        /** calculateTransferFeeDifference */
+        get: operations["calculateTransferFeeDifferenceUsingGET"];
+        put?: never;
+        post?: never;
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
     "/api/v1/cases/{caseId}/users": {
         parameters: {
             query?: never;
@@ -7964,6 +7981,11 @@ export interface components {
             otrRevenue?: number;
             /** @enum {string} */
             state?: PathsApiV1CitationsCitationIdCourtMissingPostParametersQueryState;
+        };
+        /** CalculateTransferFeeDifferenceResponse */
+        CalculateTransferFeeDifferenceResponse: {
+            /** Format: int32 */
+            totalClientCostDifferenceInCents?: number;
         };
         /** CallContact */
         CallContact: {
@@ -15322,6 +15344,8 @@ export interface components {
         TransferCaseRequest: {
             forceTransfer?: boolean;
             ignoreCapturedCharges?: boolean;
+            /** Format: int32 */
+            maxOtrCreditInCents?: number;
             /** Format: int64 */
             receivingLawfirmId?: number;
         };
@@ -20352,6 +20376,52 @@ export interface operations {
                     [name: string]: unknown;
                 };
                 content?: never;
+            };
+            /** @description Unauthorized */
+            401: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content?: never;
+            };
+            /** @description Forbidden */
+            403: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content?: never;
+            };
+            /** @description Not Found */
+            404: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content?: never;
+            };
+        };
+    };
+    calculateTransferFeeDifferenceUsingGET: {
+        parameters: {
+            query?: never;
+            header?: never;
+            path: {
+                /** @description caseId */
+                caseId: string;
+                /** @description lawfirmId */
+                lawfirmId: number;
+            };
+            cookie?: never;
+        };
+        requestBody?: never;
+        responses: {
+            /** @description OK */
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "*/*": components["schemas"]["CalculateTransferFeeDifferenceResponse"];
+                };
             };
             /** @description Unauthorized */
             401: {

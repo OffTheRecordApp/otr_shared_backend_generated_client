@@ -19,6 +19,8 @@ import { CustomHttpParameterCodec }                          from '../encoder';
 import { Observable }                                        from 'rxjs';
 
 // @ts-ignore
+import { CalculateTransferFeeDifferenceResponse } from '../model/calculateTransferFeeDifferenceResponse';
+// @ts-ignore
 import { CaseTransferResponse } from '../model/caseTransferResponse';
 // @ts-ignore
 import { TransferCaseRequest } from '../model/transferCaseRequest';
@@ -91,6 +93,68 @@ export class CaseTransferControllerService {
             throw Error("key may not be null if value is not object or array");
         }
         return httpParams;
+    }
+
+    /**
+     * calculateTransferFeeDifference
+     * @param caseId caseId
+     * @param lawfirmId lawfirmId
+     * @param observe set whether or not to return the data Observable as the body, response or events. defaults to returning the body.
+     * @param reportProgress flag to report request and response progress.
+     */
+    public calculateTransferFeeDifferenceUsingGET(caseId: string, lawfirmId: number, observe?: 'body', reportProgress?: boolean, options?: {httpHeaderAccept?: '*/*', context?: HttpContext}): Observable<CalculateTransferFeeDifferenceResponse>;
+    public calculateTransferFeeDifferenceUsingGET(caseId: string, lawfirmId: number, observe?: 'response', reportProgress?: boolean, options?: {httpHeaderAccept?: '*/*', context?: HttpContext}): Observable<HttpResponse<CalculateTransferFeeDifferenceResponse>>;
+    public calculateTransferFeeDifferenceUsingGET(caseId: string, lawfirmId: number, observe?: 'events', reportProgress?: boolean, options?: {httpHeaderAccept?: '*/*', context?: HttpContext}): Observable<HttpEvent<CalculateTransferFeeDifferenceResponse>>;
+    public calculateTransferFeeDifferenceUsingGET(caseId: string, lawfirmId: number, observe: any = 'body', reportProgress: boolean = false, options?: {httpHeaderAccept?: '*/*', context?: HttpContext}): Observable<any> {
+        if (caseId === null || caseId === undefined) {
+            throw new Error('Required parameter caseId was null or undefined when calling calculateTransferFeeDifferenceUsingGET.');
+        }
+        if (lawfirmId === null || lawfirmId === undefined) {
+            throw new Error('Required parameter lawfirmId was null or undefined when calling calculateTransferFeeDifferenceUsingGET.');
+        }
+
+        let localVarHeaders = this.defaultHeaders;
+
+        let localVarHttpHeaderAcceptSelected: string | undefined = options && options.httpHeaderAccept;
+        if (localVarHttpHeaderAcceptSelected === undefined) {
+            // to determine the Accept header
+            const httpHeaderAccepts: string[] = [
+                '*/*'
+            ];
+            localVarHttpHeaderAcceptSelected = this.configuration.selectHeaderAccept(httpHeaderAccepts);
+        }
+        if (localVarHttpHeaderAcceptSelected !== undefined) {
+            localVarHeaders = localVarHeaders.set('Accept', localVarHttpHeaderAcceptSelected);
+        }
+
+        let localVarHttpContext: HttpContext | undefined = options && options.context;
+        if (localVarHttpContext === undefined) {
+            localVarHttpContext = new HttpContext();
+        }
+
+
+        let responseType_: 'text' | 'json' | 'blob' = 'json';
+        if (localVarHttpHeaderAcceptSelected) {
+            if (localVarHttpHeaderAcceptSelected.startsWith('text')) {
+                responseType_ = 'text';
+            } else if (this.configuration.isJsonMime(localVarHttpHeaderAcceptSelected)) {
+                responseType_ = 'json';
+            } else {
+                responseType_ = 'blob';
+            }
+        }
+
+        let localVarPath = `/api/v1/cases/${this.configuration.encodeParam({name: "caseId", value: caseId, in: "path", style: "simple", explode: false, dataType: "string", dataFormat: undefined})}/transfer/${this.configuration.encodeParam({name: "lawfirmId", value: lawfirmId, in: "path", style: "simple", explode: false, dataType: "number", dataFormat: "int64"})}/calculate-fee-difference`;
+        return this.httpClient.request<CalculateTransferFeeDifferenceResponse>('get', `${this.configuration.basePath}${localVarPath}`,
+            {
+                context: localVarHttpContext,
+                responseType: <any>responseType_,
+                withCredentials: this.configuration.withCredentials,
+                headers: localVarHeaders,
+                observe: observe,
+                reportProgress: reportProgress
+            }
+        );
     }
 
     /**

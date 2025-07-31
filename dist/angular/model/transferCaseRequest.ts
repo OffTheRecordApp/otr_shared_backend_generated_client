@@ -14,6 +14,7 @@
 export interface TransferCaseRequest { 
     forceTransfer?: boolean;
     ignoreCapturedCharges?: boolean;
+    maxOtrCreditInCents?: number;
     receivingLawfirmId?: number;
 }
 

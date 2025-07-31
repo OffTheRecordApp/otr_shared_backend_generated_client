@@ -21,11 +21,42 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
     });
 };
 import * as runtime from '../runtime';
-import { CaseTransferResponseFromJSON, TransferCaseRequestToJSON, } from '../models';
+import { CalculateTransferFeeDifferenceResponseFromJSON, CaseTransferResponseFromJSON, TransferCaseRequestToJSON, } from '../models';
 /**
  *
  */
 export class CaseTransferControllerApi extends runtime.BaseAPI {
+    /**
+     * calculateTransferFeeDifference
+     */
+    calculateTransferFeeDifferenceUsingGETRaw(requestParameters) {
+        return __awaiter(this, void 0, void 0, function* () {
+            if (requestParameters.caseId === null || requestParameters.caseId === undefined) {
+                throw new runtime.RequiredError('caseId', 'Required parameter requestParameters.caseId was null or undefined when calling calculateTransferFeeDifferenceUsingGET.');
+            }
+            if (requestParameters.lawfirmId === null || requestParameters.lawfirmId === undefined) {
+                throw new runtime.RequiredError('lawfirmId', 'Required parameter requestParameters.lawfirmId was null or undefined when calling calculateTransferFeeDifferenceUsingGET.');
+            }
+            const queryParameters = {};
+            const headerParameters = {};
+            const response = yield this.request({
+                path: `/api/v1/cases/{caseId}/transfer/{lawfirmId}/calculate-fee-difference`.replace(`{${"caseId"}}`, encodeURIComponent(String(requestParameters.caseId))).replace(`{${"lawfirmId"}}`, encodeURIComponent(String(requestParameters.lawfirmId))),
+                method: 'GET',
+                headers: headerParameters,
+                query: queryParameters,
+            });
+            return new runtime.JSONApiResponse(response, (jsonValue) => CalculateTransferFeeDifferenceResponseFromJSON(jsonValue));
+        });
+    }
+    /**
+     * calculateTransferFeeDifference
+     */
+    calculateTransferFeeDifferenceUsingGET(requestParameters) {
+        return __awaiter(this, void 0, void 0, function* () {
+            const response = yield this.calculateTransferFeeDifferenceUsingGETRaw(requestParameters);
+            return yield response.value();
+        });
+    }
     /**
      * getTransferHistory
      */

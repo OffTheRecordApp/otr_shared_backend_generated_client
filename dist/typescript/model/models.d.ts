@@ -73,6 +73,7 @@ export * from './BlogEvent';
 export * from './BlogMetadata';
 export * from './Booking';
 export * from './BookingCancelation';
+export * from './CalculateTransferFeeDifferenceResponse';
 export * from './CallContact';
 export * from './CancelBillingSubscriptionResponse';
 export * from './CancelCaseRequest';

@@ -19,6 +19,13 @@ export declare class CaseTransferControllerApi {
     constructor($http: ng.IHttpService, $httpParamSerializer?: (d: any) => any, basePath?: string);
     /**
      *
+     * @summary calculateTransferFeeDifference
+     * @param caseId caseId
+     * @param lawfirmId lawfirmId
+     */
+    calculateTransferFeeDifferenceUsingGET(caseId: string, lawfirmId: number, extraHttpRequestParams?: any): ng.IHttpPromise<models.CalculateTransferFeeDifferenceResponse>;
+    /**
+     *
      * @summary getTransferHistory
      * @param caseId caseId
      */

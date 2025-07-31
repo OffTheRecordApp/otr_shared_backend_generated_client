@@ -22,6 +22,7 @@ export function TransferCaseRequestFromJSONTyped(json, ignoreDiscriminator) {
     return {
         'forceTransfer': !exists(json, 'forceTransfer') ? undefined : json['forceTransfer'],
         'ignoreCapturedCharges': !exists(json, 'ignoreCapturedCharges') ? undefined : json['ignoreCapturedCharges'],
+        'maxOtrCreditInCents': !exists(json, 'maxOtrCreditInCents') ? undefined : json['maxOtrCreditInCents'],
         'receivingLawfirmId': !exists(json, 'receivingLawfirmId') ? undefined : json['receivingLawfirmId'],
     };
 }
@@ -35,6 +36,7 @@ export function TransferCaseRequestToJSON(value) {
     return {
         'forceTransfer': value.forceTransfer,
         'ignoreCapturedCharges': value.ignoreCapturedCharges,
+        'maxOtrCreditInCents': value.maxOtrCreditInCents,
         'receivingLawfirmId': value.receivingLawfirmId,
     };
 }

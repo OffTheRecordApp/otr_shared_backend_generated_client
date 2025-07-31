@@ -32,6 +32,12 @@ export interface TransferCaseRequest {
      * @type {number}
      * @memberof TransferCaseRequest
      */
+    maxOtrCreditInCents?: number;
+    /**
+     *
+     * @type {number}
+     * @memberof TransferCaseRequest
+     */
     receivingLawfirmId?: number;
 }
 export declare function TransferCaseRequestFromJSON(json: any): TransferCaseRequest;

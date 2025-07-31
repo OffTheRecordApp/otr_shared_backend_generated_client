@@ -10,7 +10,11 @@
  * Do not edit the class manually.
  */
 import * as runtime from '../runtime';
-import { CaseTransferResponse, TransferCaseRequest } from '../models';
+import { CalculateTransferFeeDifferenceResponse, CaseTransferResponse, TransferCaseRequest } from '../models';
+export interface CalculateTransferFeeDifferenceUsingGETRequest {
+    caseId: string;
+    lawfirmId: number;
+}
 export interface GetTransferHistoryUsingGETRequest {
     caseId: string;
 }
@@ -22,6 +26,14 @@ export interface TransferCaseUsingPUTRequest {
  *
  */
 export declare class CaseTransferControllerApi extends runtime.BaseAPI {
+    /**
+     * calculateTransferFeeDifference
+     */
+    calculateTransferFeeDifferenceUsingGETRaw(requestParameters: CalculateTransferFeeDifferenceUsingGETRequest): Promise<runtime.ApiResponse<CalculateTransferFeeDifferenceResponse>>;
+    /**
+     * calculateTransferFeeDifference
+     */
+    calculateTransferFeeDifferenceUsingGET(requestParameters: CalculateTransferFeeDifferenceUsingGETRequest): Promise<CalculateTransferFeeDifferenceResponse>;
     /**
      * getTransferHistory
      */
