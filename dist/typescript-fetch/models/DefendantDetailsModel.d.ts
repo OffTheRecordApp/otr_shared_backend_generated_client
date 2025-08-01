@@ -60,11 +60,15 @@ export declare function DefendantDetailsModelToJSON(value?: DefendantDetailsMode
 * @enum {string}
 */
 export declare enum DefendantDetailsModelRelationshipToClientTypeEnum {
+    CHILD = "CHILD",
     EMPLOYER = "EMPLOYER",
     FAMILYMEMBER = "FAMILY_MEMBER",
     FRIEND = "FRIEND",
     LAWYER = "LAWYER",
     OTHER = "OTHER",
+    PARENT = "PARENT",
     SELF = "SELF",
+    SERVICEPROVIDER = "SERVICE_PROVIDER",
+    SIGNIFICANTOTHER = "SIGNIFICANT_OTHER",
     UNKNOWN = "UNKNOWN"
 }

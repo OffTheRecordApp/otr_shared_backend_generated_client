@@ -719,12 +719,16 @@ export var CaseTransferHistoryRefundOwner;
 })(CaseTransferHistoryRefundOwner || (CaseTransferHistoryRefundOwner = {}));
 export var CaseUserDetailsModelRelationshipToClientType;
 (function (CaseUserDetailsModelRelationshipToClientType) {
+    CaseUserDetailsModelRelationshipToClientType["CHILD"] = "CHILD";
     CaseUserDetailsModelRelationshipToClientType["EMPLOYER"] = "EMPLOYER";
     CaseUserDetailsModelRelationshipToClientType["FAMILY_MEMBER"] = "FAMILY_MEMBER";
     CaseUserDetailsModelRelationshipToClientType["FRIEND"] = "FRIEND";
     CaseUserDetailsModelRelationshipToClientType["LAWYER"] = "LAWYER";
     CaseUserDetailsModelRelationshipToClientType["OTHER"] = "OTHER";
+    CaseUserDetailsModelRelationshipToClientType["PARENT"] = "PARENT";
     CaseUserDetailsModelRelationshipToClientType["SELF"] = "SELF";
+    CaseUserDetailsModelRelationshipToClientType["SERVICE_PROVIDER"] = "SERVICE_PROVIDER";
+    CaseUserDetailsModelRelationshipToClientType["SIGNIFICANT_OTHER"] = "SIGNIFICANT_OTHER";
     CaseUserDetailsModelRelationshipToClientType["UNKNOWN"] = "UNKNOWN";
 })(CaseUserDetailsModelRelationshipToClientType || (CaseUserDetailsModelRelationshipToClientType = {}));
 export var CaseViolationPenaltyPenaltyType;

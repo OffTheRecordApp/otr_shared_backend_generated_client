@@ -13,12 +13,16 @@ export var SaveCaseUserRequest;
 (function (SaveCaseUserRequest) {
     let RelationshipToClientEnum;
     (function (RelationshipToClientEnum) {
+        RelationshipToClientEnum[RelationshipToClientEnum["CHILD"] = 'CHILD'] = "CHILD";
         RelationshipToClientEnum[RelationshipToClientEnum["EMPLOYER"] = 'EMPLOYER'] = "EMPLOYER";
         RelationshipToClientEnum[RelationshipToClientEnum["FAMILYMEMBER"] = 'FAMILY_MEMBER'] = "FAMILYMEMBER";
         RelationshipToClientEnum[RelationshipToClientEnum["FRIEND"] = 'FRIEND'] = "FRIEND";
         RelationshipToClientEnum[RelationshipToClientEnum["LAWYER"] = 'LAWYER'] = "LAWYER";
         RelationshipToClientEnum[RelationshipToClientEnum["OTHER"] = 'OTHER'] = "OTHER";
+        RelationshipToClientEnum[RelationshipToClientEnum["PARENT"] = 'PARENT'] = "PARENT";
         RelationshipToClientEnum[RelationshipToClientEnum["SELF"] = 'SELF'] = "SELF";
+        RelationshipToClientEnum[RelationshipToClientEnum["SERVICEPROVIDER"] = 'SERVICE_PROVIDER'] = "SERVICEPROVIDER";
+        RelationshipToClientEnum[RelationshipToClientEnum["SIGNIFICANTOTHER"] = 'SIGNIFICANT_OTHER'] = "SIGNIFICANTOTHER";
         RelationshipToClientEnum[RelationshipToClientEnum["UNKNOWN"] = 'UNKNOWN'] = "UNKNOWN";
     })(RelationshipToClientEnum = SaveCaseUserRequest.RelationshipToClientEnum || (SaveCaseUserRequest.RelationshipToClientEnum = {}));
 })(SaveCaseUserRequest || (SaveCaseUserRequest = {}));

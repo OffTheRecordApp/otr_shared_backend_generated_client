@@ -77,11 +77,15 @@ export function GetCaseUserModelToJSON(value) {
 */
 export var GetCaseUserModelRelationshipToClientEnum;
 (function (GetCaseUserModelRelationshipToClientEnum) {
+    GetCaseUserModelRelationshipToClientEnum["CHILD"] = "CHILD";
     GetCaseUserModelRelationshipToClientEnum["EMPLOYER"] = "EMPLOYER";
     GetCaseUserModelRelationshipToClientEnum["FAMILYMEMBER"] = "FAMILY_MEMBER";
     GetCaseUserModelRelationshipToClientEnum["FRIEND"] = "FRIEND";
     GetCaseUserModelRelationshipToClientEnum["LAWYER"] = "LAWYER";
     GetCaseUserModelRelationshipToClientEnum["OTHER"] = "OTHER";
+    GetCaseUserModelRelationshipToClientEnum["PARENT"] = "PARENT";
     GetCaseUserModelRelationshipToClientEnum["SELF"] = "SELF";
+    GetCaseUserModelRelationshipToClientEnum["SERVICEPROVIDER"] = "SERVICE_PROVIDER";
+    GetCaseUserModelRelationshipToClientEnum["SIGNIFICANTOTHER"] = "SIGNIFICANT_OTHER";
     GetCaseUserModelRelationshipToClientEnum["UNKNOWN"] = "UNKNOWN";
 })(GetCaseUserModelRelationshipToClientEnum || (GetCaseUserModelRelationshipToClientEnum = {}));

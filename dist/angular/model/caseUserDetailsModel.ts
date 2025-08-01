@@ -25,14 +25,18 @@ export interface CaseUserDetailsModel {
     relationshipToClientType?: CaseUserDetailsModel.RelationshipToClientTypeEnum;
 }
 export namespace CaseUserDetailsModel {
-    export type RelationshipToClientTypeEnum = 'EMPLOYER' | 'FAMILY_MEMBER' | 'FRIEND' | 'LAWYER' | 'OTHER' | 'SELF' | 'UNKNOWN';
+    export type RelationshipToClientTypeEnum = 'CHILD' | 'EMPLOYER' | 'FAMILY_MEMBER' | 'FRIEND' | 'LAWYER' | 'OTHER' | 'PARENT' | 'SELF' | 'SERVICE_PROVIDER' | 'SIGNIFICANT_OTHER' | 'UNKNOWN';
     export const RelationshipToClientTypeEnum = {
+        Child: 'CHILD' as RelationshipToClientTypeEnum,
         Employer: 'EMPLOYER' as RelationshipToClientTypeEnum,
         FamilyMember: 'FAMILY_MEMBER' as RelationshipToClientTypeEnum,
         Friend: 'FRIEND' as RelationshipToClientTypeEnum,
         Lawyer: 'LAWYER' as RelationshipToClientTypeEnum,
         Other: 'OTHER' as RelationshipToClientTypeEnum,
+        Parent: 'PARENT' as RelationshipToClientTypeEnum,
         Self: 'SELF' as RelationshipToClientTypeEnum,
+        ServiceProvider: 'SERVICE_PROVIDER' as RelationshipToClientTypeEnum,
+        SignificantOther: 'SIGNIFICANT_OTHER' as RelationshipToClientTypeEnum,
         Unknown: 'UNKNOWN' as RelationshipToClientTypeEnum
     };
 }

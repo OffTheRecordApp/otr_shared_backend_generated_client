@@ -40409,12 +40409,16 @@ export declare enum CaseTransferHistoryRefundOwner {
     OTR = "OTR"
 }
 export declare enum CaseUserDetailsModelRelationshipToClientType {
+    CHILD = "CHILD",
     EMPLOYER = "EMPLOYER",
     FAMILY_MEMBER = "FAMILY_MEMBER",
     FRIEND = "FRIEND",
     LAWYER = "LAWYER",
     OTHER = "OTHER",
+    PARENT = "PARENT",
     SELF = "SELF",
+    SERVICE_PROVIDER = "SERVICE_PROVIDER",
+    SIGNIFICANT_OTHER = "SIGNIFICANT_OTHER",
     UNKNOWN = "UNKNOWN"
 }
 export declare enum CaseViolationPenaltyPenaltyType {

@@ -24,12 +24,16 @@ export interface SaveCaseUserRequest {
 }
 export declare namespace SaveCaseUserRequest {
     enum RelationshipToClientEnum {
+        CHILD,
         EMPLOYER,
         FAMILYMEMBER,
         FRIEND,
         LAWYER,
         OTHER,
+        PARENT,
         SELF,
+        SERVICEPROVIDER,
+        SIGNIFICANTOTHER,
         UNKNOWN
     }
 }

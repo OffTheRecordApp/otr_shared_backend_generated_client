@@ -50,11 +50,15 @@ export function DefendantDetailsModelToJSON(value) {
 */
 export var DefendantDetailsModelRelationshipToClientTypeEnum;
 (function (DefendantDetailsModelRelationshipToClientTypeEnum) {
+    DefendantDetailsModelRelationshipToClientTypeEnum["CHILD"] = "CHILD";
     DefendantDetailsModelRelationshipToClientTypeEnum["EMPLOYER"] = "EMPLOYER";
     DefendantDetailsModelRelationshipToClientTypeEnum["FAMILYMEMBER"] = "FAMILY_MEMBER";
     DefendantDetailsModelRelationshipToClientTypeEnum["FRIEND"] = "FRIEND";
     DefendantDetailsModelRelationshipToClientTypeEnum["LAWYER"] = "LAWYER";
     DefendantDetailsModelRelationshipToClientTypeEnum["OTHER"] = "OTHER";
+    DefendantDetailsModelRelationshipToClientTypeEnum["PARENT"] = "PARENT";
     DefendantDetailsModelRelationshipToClientTypeEnum["SELF"] = "SELF";
+    DefendantDetailsModelRelationshipToClientTypeEnum["SERVICEPROVIDER"] = "SERVICE_PROVIDER";
+    DefendantDetailsModelRelationshipToClientTypeEnum["SIGNIFICANTOTHER"] = "SIGNIFICANT_OTHER";
     DefendantDetailsModelRelationshipToClientTypeEnum["UNKNOWN"] = "UNKNOWN";
 })(DefendantDetailsModelRelationshipToClientTypeEnum || (DefendantDetailsModelRelationshipToClientTypeEnum = {}));

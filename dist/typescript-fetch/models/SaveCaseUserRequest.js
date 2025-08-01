@@ -59,11 +59,15 @@ export function SaveCaseUserRequestToJSON(value) {
 */
 export var SaveCaseUserRequestRelationshipToClientEnum;
 (function (SaveCaseUserRequestRelationshipToClientEnum) {
+    SaveCaseUserRequestRelationshipToClientEnum["CHILD"] = "CHILD";
     SaveCaseUserRequestRelationshipToClientEnum["EMPLOYER"] = "EMPLOYER";
     SaveCaseUserRequestRelationshipToClientEnum["FAMILYMEMBER"] = "FAMILY_MEMBER";
     SaveCaseUserRequestRelationshipToClientEnum["FRIEND"] = "FRIEND";
     SaveCaseUserRequestRelationshipToClientEnum["LAWYER"] = "LAWYER";
     SaveCaseUserRequestRelationshipToClientEnum["OTHER"] = "OTHER";
+    SaveCaseUserRequestRelationshipToClientEnum["PARENT"] = "PARENT";
     SaveCaseUserRequestRelationshipToClientEnum["SELF"] = "SELF";
+    SaveCaseUserRequestRelationshipToClientEnum["SERVICEPROVIDER"] = "SERVICE_PROVIDER";
+    SaveCaseUserRequestRelationshipToClientEnum["SIGNIFICANTOTHER"] = "SIGNIFICANT_OTHER";
     SaveCaseUserRequestRelationshipToClientEnum["UNKNOWN"] = "UNKNOWN";
 })(SaveCaseUserRequestRelationshipToClientEnum || (SaveCaseUserRequestRelationshipToClientEnum = {}));

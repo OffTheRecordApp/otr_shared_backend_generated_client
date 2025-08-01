@@ -34,14 +34,18 @@ export interface GetCaseUserModel {
     userId?: number;
 }
 export namespace GetCaseUserModel {
-    export type RelationshipToClientEnum = 'EMPLOYER' | 'FAMILY_MEMBER' | 'FRIEND' | 'LAWYER' | 'OTHER' | 'SELF' | 'UNKNOWN';
+    export type RelationshipToClientEnum = 'CHILD' | 'EMPLOYER' | 'FAMILY_MEMBER' | 'FRIEND' | 'LAWYER' | 'OTHER' | 'PARENT' | 'SELF' | 'SERVICE_PROVIDER' | 'SIGNIFICANT_OTHER' | 'UNKNOWN';
     export const RelationshipToClientEnum = {
+        Child: 'CHILD' as RelationshipToClientEnum,
         Employer: 'EMPLOYER' as RelationshipToClientEnum,
         FamilyMember: 'FAMILY_MEMBER' as RelationshipToClientEnum,
         Friend: 'FRIEND' as RelationshipToClientEnum,
         Lawyer: 'LAWYER' as RelationshipToClientEnum,
         Other: 'OTHER' as RelationshipToClientEnum,
+        Parent: 'PARENT' as RelationshipToClientEnum,
         Self: 'SELF' as RelationshipToClientEnum,
+        ServiceProvider: 'SERVICE_PROVIDER' as RelationshipToClientEnum,
+        SignificantOther: 'SIGNIFICANT_OTHER' as RelationshipToClientEnum,
         Unknown: 'UNKNOWN' as RelationshipToClientEnum
     };
 }
