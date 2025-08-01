@@ -19,6 +19,13 @@ export declare class CaseUserControllerApi {
     constructor($http: ng.IHttpService, $httpParamSerializer?: (d: any) => any, basePath?: string);
     /**
      *
+     * @summary deleteCaseUser
+     * @param caseId caseId
+     * @param caseUsersId caseUsersId
+     */
+    deleteCaseUserUsingDELETE(caseId: string, caseUsersId: number, extraHttpRequestParams?: any): ng.IHttpPromise<{}>;
+    /**
+     *
      * @summary getCaseUsersByCase
      * @param caseId caseId
      * @param getRemovedUsers getRemovedUsers

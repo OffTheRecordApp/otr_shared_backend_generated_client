@@ -23,6 +23,12 @@ export interface DefendantDetailsModel {
     additionalNote?: string;
     /**
      *
+     * @type {number}
+     * @memberof DefendantDetailsModel
+     */
+    caseUsersId?: number;
+    /**
+     *
      * @type {string}
      * @memberof DefendantDetailsModel
      */
@@ -33,6 +39,12 @@ export interface DefendantDetailsModel {
      * @memberof DefendantDetailsModel
      */
     firstName?: string;
+    /**
+     *
+     * @type {boolean}
+     * @memberof DefendantDetailsModel
+     */
+    hasFinancialAccess?: boolean;
     /**
      *
      * @type {string}

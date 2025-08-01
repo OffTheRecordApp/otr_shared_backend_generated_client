@@ -1267,6 +1267,23 @@ export interface paths {
         patch?: never;
         trace?: never;
     };
+    "/api/v1/case-users/{caseUsersId}/cases/{caseId}": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        get?: never;
+        put?: never;
+        post?: never;
+        /** deleteCaseUser */
+        delete: operations["deleteCaseUserUsingDELETE"];
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
     "/api/v1/cases/{caseId}/users": {
         parameters: {
             query?: never;
@@ -9857,8 +9874,11 @@ export interface components {
         /** DefendantDetailsModel */
         DefendantDetailsModel: {
             additionalNote?: string;
+            /** Format: int32 */
+            caseUsersId?: number;
             emailAddress?: string;
             firstName?: string;
+            hasFinancialAccess?: boolean;
             lastName?: string;
             /** @enum {string} */
             relationshipToClientType?: CaseUserDetailsModelRelationshipToClientType;
@@ -20446,6 +20466,50 @@ export interface operations {
             };
             /** @description Not Found */
             404: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content?: never;
+            };
+        };
+    };
+    deleteCaseUserUsingDELETE: {
+        parameters: {
+            query?: never;
+            header?: never;
+            path: {
+                /** @description caseUsersId */
+                caseUsersId: number;
+                /** @description caseId */
+                caseId: string;
+            };
+            cookie?: never;
+        };
+        requestBody?: never;
+        responses: {
+            /** @description OK */
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content?: never;
+            };
+            /** @description No Content */
+            204: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content?: never;
+            };
+            /** @description Unauthorized */
+            401: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content?: never;
+            };
+            /** @description Forbidden */
+            403: {
                 headers: {
                     [name: string]: unknown;
                 };
@@ -40950,6 +41014,7 @@ export declare enum ValidateDirectMailResponseOtrError {
     CASE_PAYMENT_HAS_STRIPE_CHARGE = "CASE_PAYMENT_HAS_STRIPE_CHARGE",
     CASE_STATUS_NOT_ALLOWED = "CASE_STATUS_NOT_ALLOWED",
     CASE_USER_MISMATCH = "CASE_USER_MISMATCH",
+    CASE_USER_NOT_FOUND = "CASE_USER_NOT_FOUND",
     CC_WILL_EXPIRE_BEFORE_PAYMENT_PLAN = "CC_WILL_EXPIRE_BEFORE_PAYMENT_PLAN",
     CHARGE_ALREADY_CAPTURED = "CHARGE_ALREADY_CAPTURED",
     CHARGE_EXPIRED = "CHARGE_EXPIRED",

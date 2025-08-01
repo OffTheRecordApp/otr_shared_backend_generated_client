@@ -22,6 +22,37 @@ export class CaseUserControllerApi {
     }
     /**
      *
+     * @summary deleteCaseUser
+     * @param caseId caseId
+     * @param caseUsersId caseUsersId
+     */
+    deleteCaseUserUsingDELETE(caseId, caseUsersId, extraHttpRequestParams) {
+        const localVarPath = this.basePath + '/api/v1/case-users/{caseUsersId}/cases/{caseId}'
+            .replace('{' + 'caseId' + '}', encodeURIComponent(String(caseId)))
+            .replace('{' + 'caseUsersId' + '}', encodeURIComponent(String(caseUsersId)));
+        let queryParameters = {};
+        let headerParams = Object.assign({}, this.defaultHeaders);
+        // verify required parameter 'caseId' is not null or undefined
+        if (caseId === null || caseId === undefined) {
+            throw new Error('Required parameter caseId was null or undefined when calling deleteCaseUserUsingDELETE.');
+        }
+        // verify required parameter 'caseUsersId' is not null or undefined
+        if (caseUsersId === null || caseUsersId === undefined) {
+            throw new Error('Required parameter caseUsersId was null or undefined when calling deleteCaseUserUsingDELETE.');
+        }
+        let httpRequestParams = {
+            method: 'DELETE',
+            url: localVarPath,
+            params: queryParameters,
+            headers: headerParams
+        };
+        if (extraHttpRequestParams) {
+            httpRequestParams = Object.assign(httpRequestParams, extraHttpRequestParams);
+        }
+        return this.$http(httpRequestParams);
+    }
+    /**
+     *
      * @summary getCaseUsersByCase
      * @param caseId caseId
      * @param getRemovedUsers getRemovedUsers

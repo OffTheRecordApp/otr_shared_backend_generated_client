@@ -27,6 +27,36 @@ import { GetCaseUsersResponseFromJSON, ListDashboardCaseUsersResponseFromJSON, S
  */
 export class CaseUserControllerApi extends runtime.BaseAPI {
     /**
+     * deleteCaseUser
+     */
+    deleteCaseUserUsingDELETERaw(requestParameters) {
+        return __awaiter(this, void 0, void 0, function* () {
+            if (requestParameters.caseId === null || requestParameters.caseId === undefined) {
+                throw new runtime.RequiredError('caseId', 'Required parameter requestParameters.caseId was null or undefined when calling deleteCaseUserUsingDELETE.');
+            }
+            if (requestParameters.caseUsersId === null || requestParameters.caseUsersId === undefined) {
+                throw new runtime.RequiredError('caseUsersId', 'Required parameter requestParameters.caseUsersId was null or undefined when calling deleteCaseUserUsingDELETE.');
+            }
+            const queryParameters = {};
+            const headerParameters = {};
+            const response = yield this.request({
+                path: `/api/v1/case-users/{caseUsersId}/cases/{caseId}`.replace(`{${"caseId"}}`, encodeURIComponent(String(requestParameters.caseId))).replace(`{${"caseUsersId"}}`, encodeURIComponent(String(requestParameters.caseUsersId))),
+                method: 'DELETE',
+                headers: headerParameters,
+                query: queryParameters,
+            });
+            return new runtime.VoidApiResponse(response);
+        });
+    }
+    /**
+     * deleteCaseUser
+     */
+    deleteCaseUserUsingDELETE(requestParameters) {
+        return __awaiter(this, void 0, void 0, function* () {
+            yield this.deleteCaseUserUsingDELETERaw(requestParameters);
+        });
+    }
+    /**
      * getCaseUsersByCase
      */
     getCaseUsersByCaseUsingGETRaw(requestParameters) {

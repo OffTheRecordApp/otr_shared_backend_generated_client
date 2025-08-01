@@ -13,8 +13,10 @@
 
 export interface DefendantDetailsModel { 
     additionalNote?: string;
+    caseUsersId?: number;
     emailAddress?: string;
     firstName?: string;
+    hasFinancialAccess?: boolean;
     lastName?: string;
     relationshipToClientType?: DefendantDetailsModel.RelationshipToClientTypeEnum;
     userId?: number;

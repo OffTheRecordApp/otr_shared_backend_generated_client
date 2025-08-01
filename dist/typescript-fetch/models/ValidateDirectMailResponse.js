@@ -68,6 +68,7 @@ export var ValidateDirectMailResponseOtrErrorEnum;
     ValidateDirectMailResponseOtrErrorEnum["CASEPAYMENTHASSTRIPECHARGE"] = "CASE_PAYMENT_HAS_STRIPE_CHARGE";
     ValidateDirectMailResponseOtrErrorEnum["CASESTATUSNOTALLOWED"] = "CASE_STATUS_NOT_ALLOWED";
     ValidateDirectMailResponseOtrErrorEnum["CASEUSERMISMATCH"] = "CASE_USER_MISMATCH";
+    ValidateDirectMailResponseOtrErrorEnum["CASEUSERNOTFOUND"] = "CASE_USER_NOT_FOUND";
     ValidateDirectMailResponseOtrErrorEnum["CCWILLEXPIREBEFOREPAYMENTPLAN"] = "CC_WILL_EXPIRE_BEFORE_PAYMENT_PLAN";
     ValidateDirectMailResponseOtrErrorEnum["CHARGEALREADYCAPTURED"] = "CHARGE_ALREADY_CAPTURED";
     ValidateDirectMailResponseOtrErrorEnum["CHARGEEXPIRED"] = "CHARGE_EXPIRED";

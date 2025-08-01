@@ -11,6 +11,10 @@
  */
 import * as runtime from '../runtime';
 import { GetCaseUsersResponse, ListDashboardCaseUsersResponse, SaveCaseUserRequest } from '../models';
+export interface DeleteCaseUserUsingDELETERequest {
+    caseId: string;
+    caseUsersId: number;
+}
 export interface GetCaseUsersByCaseUsingGETRequest {
     caseId: string;
     getRemovedUsers?: boolean;
@@ -28,6 +32,14 @@ export interface SaveCaseUserUsingPOSTRequest {
  *
  */
 export declare class CaseUserControllerApi extends runtime.BaseAPI {
+    /**
+     * deleteCaseUser
+     */
+    deleteCaseUserUsingDELETERaw(requestParameters: DeleteCaseUserUsingDELETERequest): Promise<runtime.ApiResponse<void>>;
+    /**
+     * deleteCaseUser
+     */
+    deleteCaseUserUsingDELETE(requestParameters: DeleteCaseUserUsingDELETERequest): Promise<void>;
     /**
      * getCaseUsersByCase
      */

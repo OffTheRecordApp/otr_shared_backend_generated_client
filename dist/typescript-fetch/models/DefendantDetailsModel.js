@@ -21,8 +21,10 @@ export function DefendantDetailsModelFromJSONTyped(json, ignoreDiscriminator) {
     }
     return {
         'additionalNote': !exists(json, 'additionalNote') ? undefined : json['additionalNote'],
+        'caseUsersId': !exists(json, 'caseUsersId') ? undefined : json['caseUsersId'],
         'emailAddress': !exists(json, 'emailAddress') ? undefined : json['emailAddress'],
         'firstName': !exists(json, 'firstName') ? undefined : json['firstName'],
+        'hasFinancialAccess': !exists(json, 'hasFinancialAccess') ? undefined : json['hasFinancialAccess'],
         'lastName': !exists(json, 'lastName') ? undefined : json['lastName'],
         'relationshipToClientType': !exists(json, 'relationshipToClientType') ? undefined : json['relationshipToClientType'],
         'userId': !exists(json, 'userId') ? undefined : json['userId'],
@@ -37,8 +39,10 @@ export function DefendantDetailsModelToJSON(value) {
     }
     return {
         'additionalNote': value.additionalNote,
+        'caseUsersId': value.caseUsersId,
         'emailAddress': value.emailAddress,
         'firstName': value.firstName,
+        'hasFinancialAccess': value.hasFinancialAccess,
         'lastName': value.lastName,
         'relationshipToClientType': value.relationshipToClientType,
         'userId': value.userId,
