@@ -234,6 +234,7 @@ export declare enum ListBillingSubscribersUsingGETBillingIntervalEnum {
 export declare enum ListBillingSubscribersUsingGETBillingSubscriptionStatusEnum {
     ACTIVE = "ACTIVE",
     CANCELED = "CANCELED",
+    COMPLETE = "COMPLETE",
     INCOMPLETE = "INCOMPLETE",
     INCOMPLETEEXPIRED = "INCOMPLETE_EXPIRED",
     INTRIALPERIOD = "IN_TRIAL_PERIOD",

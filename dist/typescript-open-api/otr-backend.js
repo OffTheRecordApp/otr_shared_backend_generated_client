@@ -203,6 +203,7 @@ export var PathsApiV1BillingSubscribersGetParametersQueryBillingSubscriptionStat
 (function (PathsApiV1BillingSubscribersGetParametersQueryBillingSubscriptionStatus) {
     PathsApiV1BillingSubscribersGetParametersQueryBillingSubscriptionStatus["ACTIVE"] = "ACTIVE";
     PathsApiV1BillingSubscribersGetParametersQueryBillingSubscriptionStatus["CANCELED"] = "CANCELED";
+    PathsApiV1BillingSubscribersGetParametersQueryBillingSubscriptionStatus["COMPLETE"] = "COMPLETE";
     PathsApiV1BillingSubscribersGetParametersQueryBillingSubscriptionStatus["INCOMPLETE"] = "INCOMPLETE";
     PathsApiV1BillingSubscribersGetParametersQueryBillingSubscriptionStatus["INCOMPLETE_EXPIRED"] = "INCOMPLETE_EXPIRED";
     PathsApiV1BillingSubscribersGetParametersQueryBillingSubscriptionStatus["IN_TRIAL_PERIOD"] = "IN_TRIAL_PERIOD";

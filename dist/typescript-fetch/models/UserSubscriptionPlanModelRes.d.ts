@@ -71,6 +71,7 @@ export declare enum UserSubscriptionPlanModelResProductNameEnum {
 export declare enum UserSubscriptionPlanModelResSubscriptionStatusEnum {
     ACTIVE = "ACTIVE",
     CANCELED = "CANCELED",
+    COMPLETE = "COMPLETE",
     INCOMPLETE = "INCOMPLETE",
     INCOMPLETEEXPIRED = "INCOMPLETE_EXPIRED",
     INTRIALPERIOD = "IN_TRIAL_PERIOD",

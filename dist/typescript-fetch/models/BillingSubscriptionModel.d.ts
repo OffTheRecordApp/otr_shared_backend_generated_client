@@ -87,6 +87,7 @@ export declare function BillingSubscriptionModelToJSON(value?: BillingSubscripti
 export declare enum BillingSubscriptionModelStatusEnum {
     ACTIVE = "ACTIVE",
     CANCELED = "CANCELED",
+    COMPLETE = "COMPLETE",
     INCOMPLETE = "INCOMPLETE",
     INCOMPLETEEXPIRED = "INCOMPLETE_EXPIRED",
     INTRIALPERIOD = "IN_TRIAL_PERIOD",

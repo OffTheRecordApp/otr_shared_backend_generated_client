@@ -79,6 +79,7 @@ export declare enum ListBillingSubscriptionModelBillingIntervalEnum {
 export declare enum ListBillingSubscriptionModelSubscriptionStatusEnum {
     ACTIVE = "ACTIVE",
     CANCELED = "CANCELED",
+    COMPLETE = "COMPLETE",
     INCOMPLETE = "INCOMPLETE",
     INCOMPLETEEXPIRED = "INCOMPLETE_EXPIRED",
     INTRIALPERIOD = "IN_TRIAL_PERIOD",

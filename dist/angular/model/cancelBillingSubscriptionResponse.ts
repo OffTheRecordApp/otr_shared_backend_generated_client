@@ -19,10 +19,11 @@ export interface CancelBillingSubscriptionResponse {
     stripeCustomerId?: string;
 }
 export namespace CancelBillingSubscriptionResponse {
-    export type StatusEnum = 'ACTIVE' | 'CANCELED' | 'INCOMPLETE' | 'INCOMPLETE_EXPIRED' | 'IN_TRIAL_PERIOD' | 'PAST_DUE' | 'UNKNOWN' | 'UNPAID';
+    export type StatusEnum = 'ACTIVE' | 'CANCELED' | 'COMPLETE' | 'INCOMPLETE' | 'INCOMPLETE_EXPIRED' | 'IN_TRIAL_PERIOD' | 'PAST_DUE' | 'UNKNOWN' | 'UNPAID';
     export const StatusEnum = {
         Active: 'ACTIVE' as StatusEnum,
         Canceled: 'CANCELED' as StatusEnum,
+        Complete: 'COMPLETE' as StatusEnum,
         Incomplete: 'INCOMPLETE' as StatusEnum,
         IncompleteExpired: 'INCOMPLETE_EXPIRED' as StatusEnum,
         InTrialPeriod: 'IN_TRIAL_PERIOD' as StatusEnum,

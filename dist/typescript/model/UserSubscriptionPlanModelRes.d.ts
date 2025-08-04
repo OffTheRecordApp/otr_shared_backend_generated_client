@@ -26,6 +26,7 @@ export declare namespace UserSubscriptionPlanModelRes {
     enum SubscriptionStatusEnum {
         ACTIVE,
         CANCELED,
+        COMPLETE,
         INCOMPLETE,
         INCOMPLETEEXPIRED,
         INTRIALPERIOD,

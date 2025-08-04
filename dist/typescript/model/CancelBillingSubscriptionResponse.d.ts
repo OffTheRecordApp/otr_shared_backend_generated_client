@@ -20,6 +20,7 @@ export declare namespace CancelBillingSubscriptionResponse {
     enum StatusEnum {
         ACTIVE,
         CANCELED,
+        COMPLETE,
         INCOMPLETE,
         INCOMPLETEEXPIRED,
         INTRIALPERIOD,

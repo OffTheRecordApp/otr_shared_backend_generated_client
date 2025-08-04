@@ -40008,6 +40008,7 @@ export declare enum PathsApiV1CoachingCardsUserIdCardsGetParametersQueryCoaching
 export declare enum PathsApiV1BillingSubscribersGetParametersQueryBillingSubscriptionStatus {
     ACTIVE = "ACTIVE",
     CANCELED = "CANCELED",
+    COMPLETE = "COMPLETE",
     INCOMPLETE = "INCOMPLETE",
     INCOMPLETE_EXPIRED = "INCOMPLETE_EXPIRED",
     IN_TRIAL_PERIOD = "IN_TRIAL_PERIOD",

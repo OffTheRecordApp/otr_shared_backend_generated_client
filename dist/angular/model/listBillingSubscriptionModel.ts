@@ -29,10 +29,11 @@ export namespace ListBillingSubscriptionModel {
         Weekly: 'WEEKLY' as BillingIntervalEnum,
         Yearly: 'YEARLY' as BillingIntervalEnum
     };
-    export type SubscriptionStatusEnum = 'ACTIVE' | 'CANCELED' | 'INCOMPLETE' | 'INCOMPLETE_EXPIRED' | 'IN_TRIAL_PERIOD' | 'PAST_DUE' | 'UNKNOWN' | 'UNPAID';
+    export type SubscriptionStatusEnum = 'ACTIVE' | 'CANCELED' | 'COMPLETE' | 'INCOMPLETE' | 'INCOMPLETE_EXPIRED' | 'IN_TRIAL_PERIOD' | 'PAST_DUE' | 'UNKNOWN' | 'UNPAID';
     export const SubscriptionStatusEnum = {
         Active: 'ACTIVE' as SubscriptionStatusEnum,
         Canceled: 'CANCELED' as SubscriptionStatusEnum,
+        Complete: 'COMPLETE' as SubscriptionStatusEnum,
         Incomplete: 'INCOMPLETE' as SubscriptionStatusEnum,
         IncompleteExpired: 'INCOMPLETE_EXPIRED' as SubscriptionStatusEnum,
         InTrialPeriod: 'IN_TRIAL_PERIOD' as SubscriptionStatusEnum,

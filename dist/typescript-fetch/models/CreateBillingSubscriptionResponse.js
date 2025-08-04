@@ -49,6 +49,7 @@ export var CreateBillingSubscriptionResponseStatusEnum;
 (function (CreateBillingSubscriptionResponseStatusEnum) {
     CreateBillingSubscriptionResponseStatusEnum["ACTIVE"] = "ACTIVE";
     CreateBillingSubscriptionResponseStatusEnum["CANCELED"] = "CANCELED";
+    CreateBillingSubscriptionResponseStatusEnum["COMPLETE"] = "COMPLETE";
     CreateBillingSubscriptionResponseStatusEnum["INCOMPLETE"] = "INCOMPLETE";
     CreateBillingSubscriptionResponseStatusEnum["INCOMPLETEEXPIRED"] = "INCOMPLETE_EXPIRED";
     CreateBillingSubscriptionResponseStatusEnum["INTRIALPERIOD"] = "IN_TRIAL_PERIOD";

@@ -592,6 +592,7 @@ export var ListBillingSubscribersUsingGETBillingSubscriptionStatusEnum;
 (function (ListBillingSubscribersUsingGETBillingSubscriptionStatusEnum) {
     ListBillingSubscribersUsingGETBillingSubscriptionStatusEnum["ACTIVE"] = "ACTIVE";
     ListBillingSubscribersUsingGETBillingSubscriptionStatusEnum["CANCELED"] = "CANCELED";
+    ListBillingSubscribersUsingGETBillingSubscriptionStatusEnum["COMPLETE"] = "COMPLETE";
     ListBillingSubscribersUsingGETBillingSubscriptionStatusEnum["INCOMPLETE"] = "INCOMPLETE";
     ListBillingSubscribersUsingGETBillingSubscriptionStatusEnum["INCOMPLETEEXPIRED"] = "INCOMPLETE_EXPIRED";
     ListBillingSubscribersUsingGETBillingSubscriptionStatusEnum["INTRIALPERIOD"] = "IN_TRIAL_PERIOD";

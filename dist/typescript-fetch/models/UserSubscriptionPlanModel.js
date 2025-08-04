@@ -62,6 +62,7 @@ export var UserSubscriptionPlanModelSubscriptionStatusEnum;
 (function (UserSubscriptionPlanModelSubscriptionStatusEnum) {
     UserSubscriptionPlanModelSubscriptionStatusEnum["ACTIVE"] = "ACTIVE";
     UserSubscriptionPlanModelSubscriptionStatusEnum["CANCELED"] = "CANCELED";
+    UserSubscriptionPlanModelSubscriptionStatusEnum["COMPLETE"] = "COMPLETE";
     UserSubscriptionPlanModelSubscriptionStatusEnum["INCOMPLETE"] = "INCOMPLETE";
     UserSubscriptionPlanModelSubscriptionStatusEnum["INCOMPLETEEXPIRED"] = "INCOMPLETE_EXPIRED";
     UserSubscriptionPlanModelSubscriptionStatusEnum["INTRIALPERIOD"] = "IN_TRIAL_PERIOD";

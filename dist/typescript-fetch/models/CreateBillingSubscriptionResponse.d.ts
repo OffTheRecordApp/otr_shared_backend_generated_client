@@ -51,6 +51,7 @@ export declare function CreateBillingSubscriptionResponseToJSON(value?: CreateBi
 export declare enum CreateBillingSubscriptionResponseStatusEnum {
     ACTIVE = "ACTIVE",
     CANCELED = "CANCELED",
+    COMPLETE = "COMPLETE",
     INCOMPLETE = "INCOMPLETE",
     INCOMPLETEEXPIRED = "INCOMPLETE_EXPIRED",
     INTRIALPERIOD = "IN_TRIAL_PERIOD",

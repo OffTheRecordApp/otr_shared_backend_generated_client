@@ -29,6 +29,7 @@ export declare namespace ListBillingSubscriptionModel {
     enum SubscriptionStatusEnum {
         ACTIVE,
         CANCELED,
+        COMPLETE,
         INCOMPLETE,
         INCOMPLETEEXPIRED,
         INTRIALPERIOD,
