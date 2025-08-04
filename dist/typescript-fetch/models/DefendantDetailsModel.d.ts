@@ -56,13 +56,13 @@ export interface DefendantDetailsModel {
      * @type {string}
      * @memberof DefendantDetailsModel
      */
-    ownerRelationshipToClientType?: DefendantDetailsModelOwnerRelationshipToClientTypeEnum;
+    ownerRelationshipToClientNote?: string;
     /**
      *
      * @type {string}
      * @memberof DefendantDetailsModel
      */
-    relationshipToClientType?: DefendantDetailsModelRelationshipToClientTypeEnum;
+    ownerRelationshipToClientType?: DefendantDetailsModelOwnerRelationshipToClientTypeEnum;
     /**
      *
      * @type {number}
@@ -78,23 +78,6 @@ export declare function DefendantDetailsModelToJSON(value?: DefendantDetailsMode
 * @enum {string}
 */
 export declare enum DefendantDetailsModelOwnerRelationshipToClientTypeEnum {
-    CHILD = "CHILD",
-    EMPLOYER = "EMPLOYER",
-    FAMILYMEMBER = "FAMILY_MEMBER",
-    FRIEND = "FRIEND",
-    LAWYER = "LAWYER",
-    OTHER = "OTHER",
-    PARENT = "PARENT",
-    SELF = "SELF",
-    SERVICEPROVIDER = "SERVICE_PROVIDER",
-    SIGNIFICANTOTHER = "SIGNIFICANT_OTHER",
-    UNKNOWN = "UNKNOWN"
-}
-/**
-* @export
-* @enum {string}
-*/
-export declare enum DefendantDetailsModelRelationshipToClientTypeEnum {
     CHILD = "CHILD",
     EMPLOYER = "EMPLOYER",
     FAMILYMEMBER = "FAMILY_MEMBER",

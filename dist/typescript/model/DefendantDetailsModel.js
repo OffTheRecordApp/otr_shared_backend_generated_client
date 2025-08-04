@@ -25,18 +25,4 @@ export var DefendantDetailsModel;
         OwnerRelationshipToClientTypeEnum[OwnerRelationshipToClientTypeEnum["SIGNIFICANTOTHER"] = 'SIGNIFICANT_OTHER'] = "SIGNIFICANTOTHER";
         OwnerRelationshipToClientTypeEnum[OwnerRelationshipToClientTypeEnum["UNKNOWN"] = 'UNKNOWN'] = "UNKNOWN";
     })(OwnerRelationshipToClientTypeEnum = DefendantDetailsModel.OwnerRelationshipToClientTypeEnum || (DefendantDetailsModel.OwnerRelationshipToClientTypeEnum = {}));
-    let RelationshipToClientTypeEnum;
-    (function (RelationshipToClientTypeEnum) {
-        RelationshipToClientTypeEnum[RelationshipToClientTypeEnum["CHILD"] = 'CHILD'] = "CHILD";
-        RelationshipToClientTypeEnum[RelationshipToClientTypeEnum["EMPLOYER"] = 'EMPLOYER'] = "EMPLOYER";
-        RelationshipToClientTypeEnum[RelationshipToClientTypeEnum["FAMILYMEMBER"] = 'FAMILY_MEMBER'] = "FAMILYMEMBER";
-        RelationshipToClientTypeEnum[RelationshipToClientTypeEnum["FRIEND"] = 'FRIEND'] = "FRIEND";
-        RelationshipToClientTypeEnum[RelationshipToClientTypeEnum["LAWYER"] = 'LAWYER'] = "LAWYER";
-        RelationshipToClientTypeEnum[RelationshipToClientTypeEnum["OTHER"] = 'OTHER'] = "OTHER";
-        RelationshipToClientTypeEnum[RelationshipToClientTypeEnum["PARENT"] = 'PARENT'] = "PARENT";
-        RelationshipToClientTypeEnum[RelationshipToClientTypeEnum["SELF"] = 'SELF'] = "SELF";
-        RelationshipToClientTypeEnum[RelationshipToClientTypeEnum["SERVICEPROVIDER"] = 'SERVICE_PROVIDER'] = "SERVICEPROVIDER";
-        RelationshipToClientTypeEnum[RelationshipToClientTypeEnum["SIGNIFICANTOTHER"] = 'SIGNIFICANT_OTHER'] = "SIGNIFICANTOTHER";
-        RelationshipToClientTypeEnum[RelationshipToClientTypeEnum["UNKNOWN"] = 'UNKNOWN'] = "UNKNOWN";
-    })(RelationshipToClientTypeEnum = DefendantDetailsModel.RelationshipToClientTypeEnum || (DefendantDetailsModel.RelationshipToClientTypeEnum = {}));
 })(DefendantDetailsModel || (DefendantDetailsModel = {}));

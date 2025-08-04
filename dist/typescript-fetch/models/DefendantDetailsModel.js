@@ -26,8 +26,8 @@ export function DefendantDetailsModelFromJSONTyped(json, ignoreDiscriminator) {
         'firstName': !exists(json, 'firstName') ? undefined : json['firstName'],
         'hasFinancialAccess': !exists(json, 'hasFinancialAccess') ? undefined : json['hasFinancialAccess'],
         'lastName': !exists(json, 'lastName') ? undefined : json['lastName'],
+        'ownerRelationshipToClientNote': !exists(json, 'ownerRelationshipToClientNote') ? undefined : json['ownerRelationshipToClientNote'],
         'ownerRelationshipToClientType': !exists(json, 'ownerRelationshipToClientType') ? undefined : json['ownerRelationshipToClientType'],
-        'relationshipToClientType': !exists(json, 'relationshipToClientType') ? undefined : json['relationshipToClientType'],
         'userId': !exists(json, 'userId') ? undefined : json['userId'],
     };
 }
@@ -45,8 +45,8 @@ export function DefendantDetailsModelToJSON(value) {
         'firstName': value.firstName,
         'hasFinancialAccess': value.hasFinancialAccess,
         'lastName': value.lastName,
+        'ownerRelationshipToClientNote': value.ownerRelationshipToClientNote,
         'ownerRelationshipToClientType': value.ownerRelationshipToClientType,
-        'relationshipToClientType': value.relationshipToClientType,
         'userId': value.userId,
     };
 }
@@ -68,21 +68,3 @@ export var DefendantDetailsModelOwnerRelationshipToClientTypeEnum;
     DefendantDetailsModelOwnerRelationshipToClientTypeEnum["SIGNIFICANTOTHER"] = "SIGNIFICANT_OTHER";
     DefendantDetailsModelOwnerRelationshipToClientTypeEnum["UNKNOWN"] = "UNKNOWN";
 })(DefendantDetailsModelOwnerRelationshipToClientTypeEnum || (DefendantDetailsModelOwnerRelationshipToClientTypeEnum = {}));
-/**
-* @export
-* @enum {string}
-*/
-export var DefendantDetailsModelRelationshipToClientTypeEnum;
-(function (DefendantDetailsModelRelationshipToClientTypeEnum) {
-    DefendantDetailsModelRelationshipToClientTypeEnum["CHILD"] = "CHILD";
-    DefendantDetailsModelRelationshipToClientTypeEnum["EMPLOYER"] = "EMPLOYER";
-    DefendantDetailsModelRelationshipToClientTypeEnum["FAMILYMEMBER"] = "FAMILY_MEMBER";
-    DefendantDetailsModelRelationshipToClientTypeEnum["FRIEND"] = "FRIEND";
-    DefendantDetailsModelRelationshipToClientTypeEnum["LAWYER"] = "LAWYER";
-    DefendantDetailsModelRelationshipToClientTypeEnum["OTHER"] = "OTHER";
-    DefendantDetailsModelRelationshipToClientTypeEnum["PARENT"] = "PARENT";
-    DefendantDetailsModelRelationshipToClientTypeEnum["SELF"] = "SELF";
-    DefendantDetailsModelRelationshipToClientTypeEnum["SERVICEPROVIDER"] = "SERVICE_PROVIDER";
-    DefendantDetailsModelRelationshipToClientTypeEnum["SIGNIFICANTOTHER"] = "SIGNIFICANT_OTHER";
-    DefendantDetailsModelRelationshipToClientTypeEnum["UNKNOWN"] = "UNKNOWN";
-})(DefendantDetailsModelRelationshipToClientTypeEnum || (DefendantDetailsModelRelationshipToClientTypeEnum = {}));

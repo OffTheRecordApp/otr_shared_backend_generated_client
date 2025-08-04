@@ -9880,10 +9880,9 @@ export interface components {
             firstName?: string;
             hasFinancialAccess?: boolean;
             lastName?: string;
+            ownerRelationshipToClientNote?: string;
             /** @enum {string} */
             ownerRelationshipToClientType?: CaseUserDetailsModelRelationshipToClientType;
-            /** @enum {string} */
-            relationshipToClientType?: CaseUserDetailsModelRelationshipToClientType;
             /** Format: int64 */
             userId?: number;
         };
