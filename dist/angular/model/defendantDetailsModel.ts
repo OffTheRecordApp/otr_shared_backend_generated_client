@@ -18,10 +18,25 @@ export interface DefendantDetailsModel {
     firstName?: string;
     hasFinancialAccess?: boolean;
     lastName?: string;
+    ownerRelationshipToClientType?: DefendantDetailsModel.OwnerRelationshipToClientTypeEnum;
     relationshipToClientType?: DefendantDetailsModel.RelationshipToClientTypeEnum;
     userId?: number;
 }
 export namespace DefendantDetailsModel {
+    export type OwnerRelationshipToClientTypeEnum = 'CHILD' | 'EMPLOYER' | 'FAMILY_MEMBER' | 'FRIEND' | 'LAWYER' | 'OTHER' | 'PARENT' | 'SELF' | 'SERVICE_PROVIDER' | 'SIGNIFICANT_OTHER' | 'UNKNOWN';
+    export const OwnerRelationshipToClientTypeEnum = {
+        Child: 'CHILD' as OwnerRelationshipToClientTypeEnum,
+        Employer: 'EMPLOYER' as OwnerRelationshipToClientTypeEnum,
+        FamilyMember: 'FAMILY_MEMBER' as OwnerRelationshipToClientTypeEnum,
+        Friend: 'FRIEND' as OwnerRelationshipToClientTypeEnum,
+        Lawyer: 'LAWYER' as OwnerRelationshipToClientTypeEnum,
+        Other: 'OTHER' as OwnerRelationshipToClientTypeEnum,
+        Parent: 'PARENT' as OwnerRelationshipToClientTypeEnum,
+        Self: 'SELF' as OwnerRelationshipToClientTypeEnum,
+        ServiceProvider: 'SERVICE_PROVIDER' as OwnerRelationshipToClientTypeEnum,
+        SignificantOther: 'SIGNIFICANT_OTHER' as OwnerRelationshipToClientTypeEnum,
+        Unknown: 'UNKNOWN' as OwnerRelationshipToClientTypeEnum
+    };
     export type RelationshipToClientTypeEnum = 'CHILD' | 'EMPLOYER' | 'FAMILY_MEMBER' | 'FRIEND' | 'LAWYER' | 'OTHER' | 'PARENT' | 'SELF' | 'SERVICE_PROVIDER' | 'SIGNIFICANT_OTHER' | 'UNKNOWN';
     export const RelationshipToClientTypeEnum = {
         Child: 'CHILD' as RelationshipToClientTypeEnum,

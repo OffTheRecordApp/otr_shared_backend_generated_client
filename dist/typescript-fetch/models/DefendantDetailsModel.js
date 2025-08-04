@@ -26,6 +26,7 @@ export function DefendantDetailsModelFromJSONTyped(json, ignoreDiscriminator) {
         'firstName': !exists(json, 'firstName') ? undefined : json['firstName'],
         'hasFinancialAccess': !exists(json, 'hasFinancialAccess') ? undefined : json['hasFinancialAccess'],
         'lastName': !exists(json, 'lastName') ? undefined : json['lastName'],
+        'ownerRelationshipToClientType': !exists(json, 'ownerRelationshipToClientType') ? undefined : json['ownerRelationshipToClientType'],
         'relationshipToClientType': !exists(json, 'relationshipToClientType') ? undefined : json['relationshipToClientType'],
         'userId': !exists(json, 'userId') ? undefined : json['userId'],
     };
@@ -44,10 +45,29 @@ export function DefendantDetailsModelToJSON(value) {
         'firstName': value.firstName,
         'hasFinancialAccess': value.hasFinancialAccess,
         'lastName': value.lastName,
+        'ownerRelationshipToClientType': value.ownerRelationshipToClientType,
         'relationshipToClientType': value.relationshipToClientType,
         'userId': value.userId,
     };
 }
+/**
+* @export
+* @enum {string}
+*/
+export var DefendantDetailsModelOwnerRelationshipToClientTypeEnum;
+(function (DefendantDetailsModelOwnerRelationshipToClientTypeEnum) {
+    DefendantDetailsModelOwnerRelationshipToClientTypeEnum["CHILD"] = "CHILD";
+    DefendantDetailsModelOwnerRelationshipToClientTypeEnum["EMPLOYER"] = "EMPLOYER";
+    DefendantDetailsModelOwnerRelationshipToClientTypeEnum["FAMILYMEMBER"] = "FAMILY_MEMBER";
+    DefendantDetailsModelOwnerRelationshipToClientTypeEnum["FRIEND"] = "FRIEND";
+    DefendantDetailsModelOwnerRelationshipToClientTypeEnum["LAWYER"] = "LAWYER";
+    DefendantDetailsModelOwnerRelationshipToClientTypeEnum["OTHER"] = "OTHER";
+    DefendantDetailsModelOwnerRelationshipToClientTypeEnum["PARENT"] = "PARENT";
+    DefendantDetailsModelOwnerRelationshipToClientTypeEnum["SELF"] = "SELF";
+    DefendantDetailsModelOwnerRelationshipToClientTypeEnum["SERVICEPROVIDER"] = "SERVICE_PROVIDER";
+    DefendantDetailsModelOwnerRelationshipToClientTypeEnum["SIGNIFICANTOTHER"] = "SIGNIFICANT_OTHER";
+    DefendantDetailsModelOwnerRelationshipToClientTypeEnum["UNKNOWN"] = "UNKNOWN";
+})(DefendantDetailsModelOwnerRelationshipToClientTypeEnum || (DefendantDetailsModelOwnerRelationshipToClientTypeEnum = {}));
 /**
 * @export
 * @enum {string}

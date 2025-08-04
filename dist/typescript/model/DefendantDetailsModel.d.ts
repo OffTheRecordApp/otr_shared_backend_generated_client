@@ -16,10 +16,24 @@ export interface DefendantDetailsModel {
     "firstName"?: string;
     "hasFinancialAccess"?: boolean;
     "lastName"?: string;
+    "ownerRelationshipToClientType"?: DefendantDetailsModel.OwnerRelationshipToClientTypeEnum;
     "relationshipToClientType"?: DefendantDetailsModel.RelationshipToClientTypeEnum;
     "userId"?: number;
 }
 export declare namespace DefendantDetailsModel {
+    enum OwnerRelationshipToClientTypeEnum {
+        CHILD,
+        EMPLOYER,
+        FAMILYMEMBER,
+        FRIEND,
+        LAWYER,
+        OTHER,
+        PARENT,
+        SELF,
+        SERVICEPROVIDER,
+        SIGNIFICANTOTHER,
+        UNKNOWN
+    }
     enum RelationshipToClientTypeEnum {
         CHILD,
         EMPLOYER,

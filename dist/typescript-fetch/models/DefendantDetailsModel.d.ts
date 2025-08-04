@@ -56,6 +56,12 @@ export interface DefendantDetailsModel {
      * @type {string}
      * @memberof DefendantDetailsModel
      */
+    ownerRelationshipToClientType?: DefendantDetailsModelOwnerRelationshipToClientTypeEnum;
+    /**
+     *
+     * @type {string}
+     * @memberof DefendantDetailsModel
+     */
     relationshipToClientType?: DefendantDetailsModelRelationshipToClientTypeEnum;
     /**
      *
@@ -67,6 +73,23 @@ export interface DefendantDetailsModel {
 export declare function DefendantDetailsModelFromJSON(json: any): DefendantDetailsModel;
 export declare function DefendantDetailsModelFromJSONTyped(json: any, ignoreDiscriminator: boolean): DefendantDetailsModel;
 export declare function DefendantDetailsModelToJSON(value?: DefendantDetailsModel | null): any;
+/**
+* @export
+* @enum {string}
+*/
+export declare enum DefendantDetailsModelOwnerRelationshipToClientTypeEnum {
+    CHILD = "CHILD",
+    EMPLOYER = "EMPLOYER",
+    FAMILYMEMBER = "FAMILY_MEMBER",
+    FRIEND = "FRIEND",
+    LAWYER = "LAWYER",
+    OTHER = "OTHER",
+    PARENT = "PARENT",
+    SELF = "SELF",
+    SERVICEPROVIDER = "SERVICE_PROVIDER",
+    SIGNIFICANTOTHER = "SIGNIFICANT_OTHER",
+    UNKNOWN = "UNKNOWN"
+}
 /**
 * @export
 * @enum {string}

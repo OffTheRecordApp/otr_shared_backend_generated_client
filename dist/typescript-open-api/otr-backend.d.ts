@@ -9881,6 +9881,8 @@ export interface components {
             hasFinancialAccess?: boolean;
             lastName?: string;
             /** @enum {string} */
+            ownerRelationshipToClientType?: CaseUserDetailsModelRelationshipToClientType;
+            /** @enum {string} */
             relationshipToClientType?: CaseUserDetailsModelRelationshipToClientType;
             /** Format: int64 */
             userId?: number;
