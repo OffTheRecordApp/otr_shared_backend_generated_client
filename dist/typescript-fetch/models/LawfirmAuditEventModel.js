@@ -141,6 +141,7 @@ export var LawfirmAuditEventModelEventEnum;
     LawfirmAuditEventModelEventEnum["PASSWORDRESETREQUESTED"] = "PASSWORD_RESET_REQUESTED";
     LawfirmAuditEventModelEventEnum["PAYMENTAUTHORIZED"] = "PAYMENT_AUTHORIZED";
     LawfirmAuditEventModelEventEnum["PAYMENTCAPTURED"] = "PAYMENT_CAPTURED";
+    LawfirmAuditEventModelEventEnum["PAYMENTFAILED"] = "PAYMENT_FAILED";
     LawfirmAuditEventModelEventEnum["PAYMENTMETHODADD"] = "PAYMENT_METHOD_ADD";
     LawfirmAuditEventModelEventEnum["PAYMENTMETHODDELETE"] = "PAYMENT_METHOD_DELETE";
     LawfirmAuditEventModelEventEnum["PAYMENTPLANOPTIONCHANGED"] = "PAYMENT_PLAN_OPTION_CHANGED";

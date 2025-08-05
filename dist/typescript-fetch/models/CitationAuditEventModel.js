@@ -141,6 +141,7 @@ export var CitationAuditEventModelEventEnum;
     CitationAuditEventModelEventEnum["PASSWORDRESETREQUESTED"] = "PASSWORD_RESET_REQUESTED";
     CitationAuditEventModelEventEnum["PAYMENTAUTHORIZED"] = "PAYMENT_AUTHORIZED";
     CitationAuditEventModelEventEnum["PAYMENTCAPTURED"] = "PAYMENT_CAPTURED";
+    CitationAuditEventModelEventEnum["PAYMENTFAILED"] = "PAYMENT_FAILED";
     CitationAuditEventModelEventEnum["PAYMENTMETHODADD"] = "PAYMENT_METHOD_ADD";
     CitationAuditEventModelEventEnum["PAYMENTMETHODDELETE"] = "PAYMENT_METHOD_DELETE";
     CitationAuditEventModelEventEnum["PAYMENTPLANOPTIONCHANGED"] = "PAYMENT_PLAN_OPTION_CHANGED";

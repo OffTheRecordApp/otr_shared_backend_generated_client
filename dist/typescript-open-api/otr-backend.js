@@ -73,6 +73,7 @@ export var PathsApiV1LawfirmsLawfirmIdAuditEventsGetParametersQueryIncludeTypes;
     PathsApiV1LawfirmsLawfirmIdAuditEventsGetParametersQueryIncludeTypes["PASSWORD_RESET_REQUESTED"] = "PASSWORD_RESET_REQUESTED";
     PathsApiV1LawfirmsLawfirmIdAuditEventsGetParametersQueryIncludeTypes["PAYMENT_AUTHORIZED"] = "PAYMENT_AUTHORIZED";
     PathsApiV1LawfirmsLawfirmIdAuditEventsGetParametersQueryIncludeTypes["PAYMENT_CAPTURED"] = "PAYMENT_CAPTURED";
+    PathsApiV1LawfirmsLawfirmIdAuditEventsGetParametersQueryIncludeTypes["PAYMENT_FAILED"] = "PAYMENT_FAILED";
     PathsApiV1LawfirmsLawfirmIdAuditEventsGetParametersQueryIncludeTypes["PAYMENT_METHOD_ADD"] = "PAYMENT_METHOD_ADD";
     PathsApiV1LawfirmsLawfirmIdAuditEventsGetParametersQueryIncludeTypes["PAYMENT_METHOD_DELETE"] = "PAYMENT_METHOD_DELETE";
     PathsApiV1LawfirmsLawfirmIdAuditEventsGetParametersQueryIncludeTypes["PAYMENT_PLAN_OPTION_CHANGED"] = "PAYMENT_PLAN_OPTION_CHANGED";
