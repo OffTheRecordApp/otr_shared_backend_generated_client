@@ -11,6 +11,7 @@
  */
 import * as models from './models';
 export interface CreateBillingSubscriptionRequest {
+    "accountIdempotencyKey"?: string;
     "cardId"?: string;
     "guardian"?: models.SubscriptionGuardianModel;
     "priceIds"?: Array<string>;

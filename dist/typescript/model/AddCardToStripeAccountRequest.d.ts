@@ -10,6 +10,8 @@
  * Do not edit the class manually.
  */
 export interface AddCardToStripeAccountRequest {
+    "accountIdempotencyKey"?: string;
+    "cardIdempotencyKey"?: string;
     "caseId"?: string;
     "makeDefault"?: boolean;
     "sourceToken"?: string;

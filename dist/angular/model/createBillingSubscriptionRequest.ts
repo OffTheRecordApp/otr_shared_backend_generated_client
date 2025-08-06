@@ -13,6 +13,7 @@ import { SubscriptionGuardianModel } from './subscriptionGuardianModel';
 
 
 export interface CreateBillingSubscriptionRequest { 
+    accountIdempotencyKey?: string;
     cardId?: string;
     guardian?: SubscriptionGuardianModel;
     priceIds?: Array<string>;

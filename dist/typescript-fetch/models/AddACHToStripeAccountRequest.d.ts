@@ -17,6 +17,18 @@
 export interface AddACHToStripeAccountRequest {
     /**
      *
+     * @type {string}
+     * @memberof AddACHToStripeAccountRequest
+     */
+    accountIdempotencyKey?: string;
+    /**
+     *
+     * @type {string}
+     * @memberof AddACHToStripeAccountRequest
+     */
+    achIdempotencyKey?: string;
+    /**
+     *
      * @type {boolean}
      * @memberof AddACHToStripeAccountRequest
      */

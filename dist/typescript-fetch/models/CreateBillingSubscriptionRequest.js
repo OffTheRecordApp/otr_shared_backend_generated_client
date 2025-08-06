@@ -21,6 +21,7 @@ export function CreateBillingSubscriptionRequestFromJSONTyped(json, ignoreDiscri
         return json;
     }
     return {
+        'accountIdempotencyKey': !exists(json, 'accountIdempotencyKey') ? undefined : json['accountIdempotencyKey'],
         'cardId': !exists(json, 'cardId') ? undefined : json['cardId'],
         'guardian': !exists(json, 'guardian') ? undefined : SubscriptionGuardianModelFromJSON(json['guardian']),
         'priceIds': !exists(json, 'priceIds') ? undefined : json['priceIds'],
@@ -36,6 +37,7 @@ export function CreateBillingSubscriptionRequestToJSON(value) {
         return null;
     }
     return {
+        'accountIdempotencyKey': value.accountIdempotencyKey,
         'cardId': value.cardId,
         'guardian': SubscriptionGuardianModelToJSON(value.guardian),
         'priceIds': value.priceIds,

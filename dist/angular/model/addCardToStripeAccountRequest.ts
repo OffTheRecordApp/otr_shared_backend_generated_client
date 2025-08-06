@@ -12,6 +12,8 @@
 
 
 export interface AddCardToStripeAccountRequest { 
+    accountIdempotencyKey?: string;
+    cardIdempotencyKey?: string;
     caseId?: string;
     makeDefault?: boolean;
     sourceToken?: string;

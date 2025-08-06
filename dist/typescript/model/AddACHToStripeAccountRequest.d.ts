@@ -10,6 +10,8 @@
  * Do not edit the class manually.
  */
 export interface AddACHToStripeAccountRequest {
+    "accountIdempotencyKey"?: string;
+    "achIdempotencyKey"?: string;
     "makeDefault"?: boolean;
     "plaidBankAccountId"?: string;
     "plaidPublicToken"?: string;

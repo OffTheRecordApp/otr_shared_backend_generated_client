@@ -12,6 +12,8 @@
 
 
 export interface AddACHToStripeAccountRequest { 
+    accountIdempotencyKey?: string;
+    achIdempotencyKey?: string;
     makeDefault?: boolean;
     plaidBankAccountId?: string;
     plaidPublicToken?: string;

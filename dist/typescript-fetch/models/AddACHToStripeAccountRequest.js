@@ -20,6 +20,8 @@ export function AddACHToStripeAccountRequestFromJSONTyped(json, ignoreDiscrimina
         return json;
     }
     return {
+        'accountIdempotencyKey': !exists(json, 'accountIdempotencyKey') ? undefined : json['accountIdempotencyKey'],
+        'achIdempotencyKey': !exists(json, 'achIdempotencyKey') ? undefined : json['achIdempotencyKey'],
         'makeDefault': !exists(json, 'makeDefault') ? undefined : json['makeDefault'],
         'plaidBankAccountId': !exists(json, 'plaidBankAccountId') ? undefined : json['plaidBankAccountId'],
         'plaidPublicToken': !exists(json, 'plaidPublicToken') ? undefined : json['plaidPublicToken'],
@@ -33,6 +35,8 @@ export function AddACHToStripeAccountRequestToJSON(value) {
         return null;
     }
     return {
+        'accountIdempotencyKey': value.accountIdempotencyKey,
+        'achIdempotencyKey': value.achIdempotencyKey,
         'makeDefault': value.makeDefault,
         'plaidBankAccountId': value.plaidBankAccountId,
         'plaidPublicToken': value.plaidPublicToken,

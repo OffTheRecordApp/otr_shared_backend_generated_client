@@ -20,6 +20,8 @@ export function AddCardToStripeAccountRequestFromJSONTyped(json, ignoreDiscrimin
         return json;
     }
     return {
+        'accountIdempotencyKey': !exists(json, 'accountIdempotencyKey') ? undefined : json['accountIdempotencyKey'],
+        'cardIdempotencyKey': !exists(json, 'cardIdempotencyKey') ? undefined : json['cardIdempotencyKey'],
         'caseId': !exists(json, 'caseId') ? undefined : json['caseId'],
         'makeDefault': !exists(json, 'makeDefault') ? undefined : json['makeDefault'],
         'sourceToken': !exists(json, 'sourceToken') ? undefined : json['sourceToken'],
@@ -34,6 +36,8 @@ export function AddCardToStripeAccountRequestToJSON(value) {
         return null;
     }
     return {
+        'accountIdempotencyKey': value.accountIdempotencyKey,
+        'cardIdempotencyKey': value.cardIdempotencyKey,
         'caseId': value.caseId,
         'makeDefault': value.makeDefault,
         'sourceToken': value.sourceToken,

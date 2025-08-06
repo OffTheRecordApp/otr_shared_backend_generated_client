@@ -7266,6 +7266,8 @@ export interface components {
         };
         /** AddACHToStripeAccountRequest */
         AddACHToStripeAccountRequest: {
+            accountIdempotencyKey?: string;
+            achIdempotencyKey?: string;
             makeDefault?: boolean;
             plaidBankAccountId?: string;
             plaidPublicToken?: string;
@@ -7280,6 +7282,8 @@ export interface components {
         };
         /** AddCardToStripeAccountRequest */
         AddCardToStripeAccountRequest: {
+            accountIdempotencyKey?: string;
+            cardIdempotencyKey?: string;
             caseId?: string;
             makeDefault?: boolean;
             sourceToken?: string;
@@ -9472,6 +9476,7 @@ export interface components {
         };
         /** CreateBillingSubscriptionRequest */
         CreateBillingSubscriptionRequest: {
+            accountIdempotencyKey?: string;
             cardId?: string;
             guardian?: components["schemas"]["SubscriptionGuardianModel"];
             priceIds?: string[];

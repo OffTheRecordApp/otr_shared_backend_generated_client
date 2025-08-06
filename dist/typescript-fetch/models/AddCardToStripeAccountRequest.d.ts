@@ -20,6 +20,18 @@ export interface AddCardToStripeAccountRequest {
      * @type {string}
      * @memberof AddCardToStripeAccountRequest
      */
+    accountIdempotencyKey?: string;
+    /**
+     *
+     * @type {string}
+     * @memberof AddCardToStripeAccountRequest
+     */
+    cardIdempotencyKey?: string;
+    /**
+     *
+     * @type {string}
+     * @memberof AddCardToStripeAccountRequest
+     */
     caseId?: string;
     /**
      *

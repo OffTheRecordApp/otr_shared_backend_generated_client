@@ -21,6 +21,12 @@ export interface CreateBillingSubscriptionRequest {
      * @type {string}
      * @memberof CreateBillingSubscriptionRequest
      */
+    accountIdempotencyKey?: string;
+    /**
+     *
+     * @type {string}
+     * @memberof CreateBillingSubscriptionRequest
+     */
     cardId?: string;
     /**
      *
