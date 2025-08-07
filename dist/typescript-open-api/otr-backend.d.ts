@@ -12726,6 +12726,8 @@ export interface components {
             cases?: components["schemas"]["DashboardCaseModel"][];
             counts?: components["schemas"]["DashboardCaseCountsDto"];
             previousPageToken?: string;
+            /** Format: int32 */
+            totalCaseCount?: number;
         };
         /** ListEligibleStatusResponse */
         ListEligibleStatusResponse: {

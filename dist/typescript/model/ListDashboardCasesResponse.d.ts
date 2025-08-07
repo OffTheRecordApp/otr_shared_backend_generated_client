@@ -14,4 +14,5 @@ export interface ListDashboardCasesResponse {
     "cases"?: Array<models.DashboardCaseModel>;
     "counts"?: models.DashboardCaseCountsDto;
     "previousPageToken"?: string;
+    "totalCaseCount"?: number;
 }
