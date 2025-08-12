@@ -15821,6 +15821,8 @@ export interface components {
             signUpCodeUseCount?: number;
             signedProfilePictureUrl?: string;
             socialProfiles?: components["schemas"]["UserSocialProfileModel"][];
+            /** Format: int64 */
+            spooferUserId?: number;
             subscriptionPlans?: components["schemas"]["UserSubscriptionPlanModel"][];
             userAlias?: string;
             /** Format: date-time */
@@ -15886,6 +15888,8 @@ export interface components {
             signUpCodeUseCount?: number;
             signedProfilePictureUrl?: string;
             socialProfiles?: components["schemas"]["UserSocialProfileModelReq"][];
+            /** Format: int64 */
+            spooferUserId?: number;
             subscriptionPlans?: components["schemas"]["UserSubscriptionPlanModelReq"][];
             userAlias?: string;
             /** Format: date-time */
@@ -15952,6 +15956,8 @@ export interface components {
             signUpCodeUseCount?: number;
             signedProfilePictureUrl?: string;
             socialProfiles?: components["schemas"]["UserSocialProfileModelRes"][];
+            /** Format: int64 */
+            spooferUserId?: number;
             subscriptionPlans?: components["schemas"]["UserSubscriptionPlanModelRes"][];
             userAlias?: string;
             /** Format: date-time */

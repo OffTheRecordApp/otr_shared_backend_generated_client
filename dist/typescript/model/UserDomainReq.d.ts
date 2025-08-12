@@ -53,6 +53,7 @@ export interface UserDomainReq {
     "signUpCodeUseCount"?: number;
     "signedProfilePictureUrl"?: string;
     "socialProfiles"?: Array<models.UserSocialProfileModelReq>;
+    "spooferUserId"?: number;
     "subscriptionPlans"?: Array<models.UserSubscriptionPlanModelReq>;
     "userAlias"?: string;
     "userDeletedDateUtc"?: string;

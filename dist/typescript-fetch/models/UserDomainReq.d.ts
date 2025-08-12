@@ -270,6 +270,12 @@ export interface UserDomainReq {
     socialProfiles?: Array<UserSocialProfileModelReq>;
     /**
      *
+     * @type {number}
+     * @memberof UserDomainReq
+     */
+    spooferUserId?: number;
+    /**
+     *
      * @type {Array<UserSubscriptionPlanModelReq>}
      * @memberof UserDomainReq
      */

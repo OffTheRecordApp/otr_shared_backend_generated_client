@@ -276,6 +276,12 @@ export interface UserDomain {
     socialProfiles?: Array<UserSocialProfileModel>;
     /**
      *
+     * @type {number}
+     * @memberof UserDomain
+     */
+    spooferUserId?: number;
+    /**
+     *
      * @type {Array<UserSubscriptionPlanModel>}
      * @memberof UserDomain
      */

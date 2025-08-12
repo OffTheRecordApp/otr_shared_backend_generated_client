@@ -64,6 +64,7 @@ export interface UserDomainRes {
     signUpCodeUseCount?: number;
     signedProfilePictureUrl?: string;
     socialProfiles?: Array<UserSocialProfileModelRes>;
+    spooferUserId?: number;
     subscriptionPlans?: Array<UserSubscriptionPlanModelRes>;
     userAlias?: string;
     userDeletedDateUtc?: string;

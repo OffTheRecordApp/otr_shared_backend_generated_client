@@ -63,6 +63,7 @@ export interface UserDomainReq {
     signUpCodeUseCount?: number;
     signedProfilePictureUrl?: string;
     socialProfiles?: Array<UserSocialProfileModelReq>;
+    spooferUserId?: number;
     subscriptionPlans?: Array<UserSubscriptionPlanModelReq>;
     userAlias?: string;
     userDeletedDateUtc?: string;
