@@ -13,6 +13,7 @@ import * as models from './models';
 export interface ListDashboardCasesResponse {
     "cases"?: Array<models.DashboardCaseModel>;
     "counts"?: models.DashboardCaseCountsDto;
+    "filteredCaseCount"?: number;
     "previousPageToken"?: string;
     "totalCaseCount"?: number;
 }

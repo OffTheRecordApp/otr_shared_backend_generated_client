@@ -16,6 +16,7 @@ import { DashboardCaseCountsDto } from './dashboardCaseCountsDto';
 export interface ListDashboardCasesResponse { 
     cases?: Array<DashboardCaseModel>;
     counts?: DashboardCaseCountsDto;
+    filteredCaseCount?: number;
     previousPageToken?: string;
     totalCaseCount?: number;
 }

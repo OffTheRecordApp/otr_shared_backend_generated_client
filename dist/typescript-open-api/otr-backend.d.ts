@@ -12725,6 +12725,8 @@ export interface components {
         ListDashboardCasesResponse: {
             cases?: components["schemas"]["DashboardCaseModel"][];
             counts?: components["schemas"]["DashboardCaseCountsDto"];
+            /** Format: int32 */
+            filteredCaseCount?: number;
             previousPageToken?: string;
             /** Format: int32 */
             totalCaseCount?: number;

@@ -30,6 +30,12 @@ export interface ListDashboardCasesResponse {
     counts?: DashboardCaseCountsDto;
     /**
      *
+     * @type {number}
+     * @memberof ListDashboardCasesResponse
+     */
+    filteredCaseCount?: number;
+    /**
+     *
      * @type {string}
      * @memberof ListDashboardCasesResponse
      */
