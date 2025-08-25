@@ -19363,6 +19363,93 @@ angular.module('otrBackendService', [])
 
                 return deferred.promise;
             };
+            /**
+             * listDashbaordCasesByPage
+             * @method
+             * @name OtrService#listDashbaordCasesByPageUsingGET
+             * @param {object} parameters - method options and parameters
+             * @param {string} parameters.caseStatuses - caseStatuses
+             * @param {integer} parameters.defendantId - defendantId
+             * @param {boolean} parameters.includeDeleted - includeDeleted
+             * @param {integer} parameters.limit - limit
+             * @param {boolean} parameters.needsAttention - needsAttention
+             * @param {integer} parameters.page - page
+             * @param {string} parameters.query - query
+             * @param {string} parameters.sortBy - sortBy
+             * @param {string} parameters.statusCategories - statusCategories
+             * @param {boolean} parameters.unreadMessagesOnly - unreadMessagesOnly
+             * @param {integer} parameters.userId - userId
+             */
+            OtrService.prototype.listDashbaordCasesByPageUsingGET = function(parameters) {
+                if (parameters === undefined) {
+                    parameters = {};
+                }
+                var deferred = $q.defer();
+                var domain = this.domain,
+                    path = '/api/v4/users/{userId}/cases';
+                var body = {},
+                    queryParameters = {},
+                    headers = {},
+                    form = {};
+
+                headers['Accept'] = ['*/*'];
+
+                if (parameters['caseStatuses'] !== undefined) {
+                    queryParameters['caseStatuses'] = parameters['caseStatuses'];
+                }
+
+                if (parameters['defendantId'] !== undefined) {
+                    queryParameters['defendantId'] = parameters['defendantId'];
+                }
+
+                if (parameters['includeDeleted'] !== undefined) {
+                    queryParameters['includeDeleted'] = parameters['includeDeleted'];
+                }
+
+                /** set default value **/
+                queryParameters['limit'] = 50;
+
+                if (parameters['limit'] !== undefined) {
+                    queryParameters['limit'] = parameters['limit'];
+                }
+
+                if (parameters['needsAttention'] !== undefined) {
+                    queryParameters['needsAttention'] = parameters['needsAttention'];
+                }
+
+                if (parameters['page'] !== undefined) {
+                    queryParameters['page'] = parameters['page'];
+                }
+
+                if (parameters['query'] !== undefined) {
+                    queryParameters['query'] = parameters['query'];
+                }
+
+                if (parameters['sortBy'] !== undefined) {
+                    queryParameters['sortBy'] = parameters['sortBy'];
+                }
+
+                if (parameters['statusCategories'] !== undefined) {
+                    queryParameters['statusCategories'] = parameters['statusCategories'];
+                }
+
+                if (parameters['unreadMessagesOnly'] !== undefined) {
+                    queryParameters['unreadMessagesOnly'] = parameters['unreadMessagesOnly'];
+                }
+
+                path = path.replace('{userId}', parameters['userId']);
+
+                if (parameters['userId'] === undefined) {
+                    deferred.reject(new Error('Missing required  parameter: userId'));
+                    return deferred.promise;
+                }
+
+                queryParameters = mergeQueryParams(parameters, queryParameters);
+
+                this.request('GET', domain + path, parameters, body, headers, queryParameters, form, deferred);
+
+                return deferred.promise;
+            };
 
             return OtrService;
         })();

@@ -72,6 +72,71 @@ export class ListCasesControllerApi {
     }
     /**
      *
+     * @summary listDashbaordCasesByPage
+     * @param userId userId
+     * @param caseStatuses caseStatuses
+     * @param defendantId defendantId
+     * @param includeDeleted includeDeleted
+     * @param limit limit
+     * @param needsAttention needsAttention
+     * @param page page
+     * @param query query
+     * @param sortBy sortBy
+     * @param statusCategories statusCategories
+     * @param unreadMessagesOnly unreadMessagesOnly
+     */
+    listDashbaordCasesByPageUsingGET(userId, caseStatuses, defendantId, includeDeleted, limit, needsAttention, page, query, sortBy, statusCategories, unreadMessagesOnly, extraHttpRequestParams) {
+        const localVarPath = this.basePath + '/api/v4/users/{userId}/cases'
+            .replace('{' + 'userId' + '}', encodeURIComponent(String(userId)));
+        let queryParameters = {};
+        let headerParams = Object.assign({}, this.defaultHeaders);
+        // verify required parameter 'userId' is not null or undefined
+        if (userId === null || userId === undefined) {
+            throw new Error('Required parameter userId was null or undefined when calling listDashbaordCasesByPageUsingGET.');
+        }
+        if (caseStatuses !== undefined) {
+            queryParameters['caseStatuses'] = caseStatuses;
+        }
+        if (defendantId !== undefined) {
+            queryParameters['defendantId'] = defendantId;
+        }
+        if (includeDeleted !== undefined) {
+            queryParameters['includeDeleted'] = includeDeleted;
+        }
+        if (limit !== undefined) {
+            queryParameters['limit'] = limit;
+        }
+        if (needsAttention !== undefined) {
+            queryParameters['needsAttention'] = needsAttention;
+        }
+        if (page !== undefined) {
+            queryParameters['page'] = page;
+        }
+        if (query !== undefined) {
+            queryParameters['query'] = query;
+        }
+        if (sortBy !== undefined) {
+            queryParameters['sortBy'] = sortBy;
+        }
+        if (statusCategories !== undefined) {
+            queryParameters['statusCategories'] = statusCategories;
+        }
+        if (unreadMessagesOnly !== undefined) {
+            queryParameters['unreadMessagesOnly'] = unreadMessagesOnly;
+        }
+        let httpRequestParams = {
+            method: 'GET',
+            url: localVarPath,
+            params: queryParameters,
+            headers: headerParams
+        };
+        if (extraHttpRequestParams) {
+            httpRequestParams = Object.assign(httpRequestParams, extraHttpRequestParams);
+        }
+        return this.$http(httpRequestParams);
+    }
+    /**
+     *
      * @summary listDashboardCases
      * @param userId userId
      * @param caseStatuses caseStatuses

@@ -83,6 +83,64 @@ export class ListCasesControllerApi extends runtime.BaseAPI {
         });
     }
     /**
+     * listDashbaordCasesByPage
+     */
+    listDashbaordCasesByPageUsingGETRaw(requestParameters) {
+        return __awaiter(this, void 0, void 0, function* () {
+            if (requestParameters.userId === null || requestParameters.userId === undefined) {
+                throw new runtime.RequiredError('userId', 'Required parameter requestParameters.userId was null or undefined when calling listDashbaordCasesByPageUsingGET.');
+            }
+            const queryParameters = {};
+            if (requestParameters.caseStatuses !== undefined) {
+                queryParameters['caseStatuses'] = requestParameters.caseStatuses;
+            }
+            if (requestParameters.defendantId !== undefined) {
+                queryParameters['defendantId'] = requestParameters.defendantId;
+            }
+            if (requestParameters.includeDeleted !== undefined) {
+                queryParameters['includeDeleted'] = requestParameters.includeDeleted;
+            }
+            if (requestParameters.limit !== undefined) {
+                queryParameters['limit'] = requestParameters.limit;
+            }
+            if (requestParameters.needsAttention !== undefined) {
+                queryParameters['needsAttention'] = requestParameters.needsAttention;
+            }
+            if (requestParameters.page !== undefined) {
+                queryParameters['page'] = requestParameters.page;
+            }
+            if (requestParameters.query !== undefined) {
+                queryParameters['query'] = requestParameters.query;
+            }
+            if (requestParameters.sortBy !== undefined) {
+                queryParameters['sortBy'] = requestParameters.sortBy;
+            }
+            if (requestParameters.statusCategories !== undefined) {
+                queryParameters['statusCategories'] = requestParameters.statusCategories;
+            }
+            if (requestParameters.unreadMessagesOnly !== undefined) {
+                queryParameters['unreadMessagesOnly'] = requestParameters.unreadMessagesOnly;
+            }
+            const headerParameters = {};
+            const response = yield this.request({
+                path: `/api/v4/users/{userId}/cases`.replace(`{${"userId"}}`, encodeURIComponent(String(requestParameters.userId))),
+                method: 'GET',
+                headers: headerParameters,
+                query: queryParameters,
+            });
+            return new runtime.JSONApiResponse(response, (jsonValue) => ListDashboardCasesResponseFromJSON(jsonValue));
+        });
+    }
+    /**
+     * listDashbaordCasesByPage
+     */
+    listDashbaordCasesByPageUsingGET(requestParameters) {
+        return __awaiter(this, void 0, void 0, function* () {
+            const response = yield this.listDashbaordCasesByPageUsingGETRaw(requestParameters);
+            return yield response.value();
+        });
+    }
+    /**
      * listDashboardCases
      */
     listDashboardCasesUsingGETRaw(requestParameters) {
@@ -141,6 +199,73 @@ export class ListCasesControllerApi extends runtime.BaseAPI {
         });
     }
 }
+/**
+    * @export
+    * @enum {string}
+    */
+export var ListDashbaordCasesByPageUsingGETCaseStatusesEnum;
+(function (ListDashbaordCasesByPageUsingGETCaseStatusesEnum) {
+    ListDashbaordCasesByPageUsingGETCaseStatusesEnum["AMENDEDDOWNWITHINCLASS"] = "AMENDED_DOWN_WITHIN_CLASS";
+    ListDashbaordCasesByPageUsingGETCaseStatusesEnum["AMENDEDFULLFINE"] = "AMENDED_FULL_FINE";
+    ListDashbaordCasesByPageUsingGETCaseStatusesEnum["AMENDEDINCREASEDFINE"] = "AMENDED_INCREASED_FINE";
+    ListDashbaordCasesByPageUsingGETCaseStatusesEnum["AMENDEDNOFINE"] = "AMENDED_NO_FINE";
+    ListDashbaordCasesByPageUsingGETCaseStatusesEnum["AMENDEDREDUCEDFINE"] = "AMENDED_REDUCED_FINE";
+    ListDashbaordCasesByPageUsingGETCaseStatusesEnum["AMENDEDTOINFRACTION"] = "AMENDED_TO_INFRACTION";
+    ListDashbaordCasesByPageUsingGETCaseStatusesEnum["AMENDEDTONMV"] = "AMENDED_TO_NMV";
+    ListDashbaordCasesByPageUsingGETCaseStatusesEnum["CANCELLEDATTORNEYATFAULT"] = "CANCELLED_ATTORNEY_AT_FAULT";
+    ListDashbaordCasesByPageUsingGETCaseStatusesEnum["CANCELLEDBYLAWFIRM"] = "CANCELLED_BY_LAWFIRM";
+    ListDashbaordCasesByPageUsingGETCaseStatusesEnum["CANCELLEDBYUSER"] = "CANCELLED_BY_USER";
+    ListDashbaordCasesByPageUsingGETCaseStatusesEnum["CANCELLEDDUPLICATE"] = "CANCELLED_DUPLICATE";
+    ListDashbaordCasesByPageUsingGETCaseStatusesEnum["CANCELLEDNMV"] = "CANCELLED_NMV";
+    ListDashbaordCasesByPageUsingGETCaseStatusesEnum["CANCELLEDNONPAYMENT"] = "CANCELLED_NON_PAYMENT";
+    ListDashbaordCasesByPageUsingGETCaseStatusesEnum["CANCELLEDNOLAWFIRM"] = "CANCELLED_NO_LAWFIRM";
+    ListDashbaordCasesByPageUsingGETCaseStatusesEnum["CANCELLEDOVERDUE"] = "CANCELLED_OVERDUE";
+    ListDashbaordCasesByPageUsingGETCaseStatusesEnum["CANCELLEDTOOSHORTNOTICE"] = "CANCELLED_TOO_SHORT_NOTICE";
+    ListDashbaordCasesByPageUsingGETCaseStatusesEnum["CASEINPROGRESS"] = "CASE_IN_PROGRESS";
+    ListDashbaordCasesByPageUsingGETCaseStatusesEnum["CLIENTCONFIRMED"] = "CLIENT_CONFIRMED";
+    ListDashbaordCasesByPageUsingGETCaseStatusesEnum["CLIENTCONFIRMEDUNPAID"] = "CLIENT_CONFIRMED_UNPAID";
+    ListDashbaordCasesByPageUsingGETCaseStatusesEnum["CLIENTFIREDLAWFIRM"] = "CLIENT_FIRED_LAWFIRM";
+    ListDashbaordCasesByPageUsingGETCaseStatusesEnum["CLIENTFORCEDLOSS"] = "CLIENT_FORCED_LOSS";
+    ListDashbaordCasesByPageUsingGETCaseStatusesEnum["CLIENTPAIDFINE"] = "CLIENT_PAID_FINE";
+    ListDashbaordCasesByPageUsingGETCaseStatusesEnum["CLIENTUNRESPONSIVE"] = "CLIENT_UNRESPONSIVE";
+    ListDashbaordCasesByPageUsingGETCaseStatusesEnum["DEFERRED"] = "DEFERRED";
+    ListDashbaordCasesByPageUsingGETCaseStatusesEnum["DISMISSED"] = "DISMISSED";
+    ListDashbaordCasesByPageUsingGETCaseStatusesEnum["DIVERSION"] = "DIVERSION";
+    ListDashbaordCasesByPageUsingGETCaseStatusesEnum["FEESDISPUTED"] = "FEES_DISPUTED";
+    ListDashbaordCasesByPageUsingGETCaseStatusesEnum["FINEREDUCTIONONLY"] = "FINE_REDUCTION_ONLY";
+    ListDashbaordCasesByPageUsingGETCaseStatusesEnum["LAWFIRMWITHDRAWN"] = "LAWFIRM_WITHDRAWN";
+    ListDashbaordCasesByPageUsingGETCaseStatusesEnum["LOST"] = "LOST";
+    ListDashbaordCasesByPageUsingGETCaseStatusesEnum["NOLAWFIRMAVAILABLE"] = "NO_LAWFIRM_AVAILABLE";
+    ListDashbaordCasesByPageUsingGETCaseStatusesEnum["POINTREDUCTION"] = "POINT_REDUCTION";
+    ListDashbaordCasesByPageUsingGETCaseStatusesEnum["REFUSEDBYLAWFIRM"] = "REFUSED_BY_LAWFIRM";
+    ListDashbaordCasesByPageUsingGETCaseStatusesEnum["RESOLVEDNONPAYMENT"] = "RESOLVED_NON_PAYMENT";
+    ListDashbaordCasesByPageUsingGETCaseStatusesEnum["STALE"] = "STALE";
+    ListDashbaordCasesByPageUsingGETCaseStatusesEnum["TRAFFICSCHOOL"] = "TRAFFIC_SCHOOL";
+    ListDashbaordCasesByPageUsingGETCaseStatusesEnum["UNCONFIRMED"] = "UNCONFIRMED";
+})(ListDashbaordCasesByPageUsingGETCaseStatusesEnum || (ListDashbaordCasesByPageUsingGETCaseStatusesEnum = {}));
+/**
+    * @export
+    * @enum {string}
+    */
+export var ListDashbaordCasesByPageUsingGETSortByEnum;
+(function (ListDashbaordCasesByPageUsingGETSortByEnum) {
+    ListDashbaordCasesByPageUsingGETSortByEnum["BOOKINGCONFIRMEDDATE"] = "BOOKING_CONFIRMED_DATE";
+    ListDashbaordCasesByPageUsingGETSortByEnum["CITATIONCREATIONDATE"] = "CITATION_CREATION_DATE";
+    ListDashbaordCasesByPageUsingGETSortByEnum["CITATIONISSUEDATE"] = "CITATION_ISSUE_DATE";
+    ListDashbaordCasesByPageUsingGETSortByEnum["COURTDATE"] = "COURT_DATE";
+    ListDashbaordCasesByPageUsingGETSortByEnum["LASTCITATIONUPDATEDATE"] = "LAST_CITATION_UPDATE_DATE";
+})(ListDashbaordCasesByPageUsingGETSortByEnum || (ListDashbaordCasesByPageUsingGETSortByEnum = {}));
+/**
+    * @export
+    * @enum {string}
+    */
+export var ListDashbaordCasesByPageUsingGETStatusCategoriesEnum;
+(function (ListDashbaordCasesByPageUsingGETStatusCategoriesEnum) {
+    ListDashbaordCasesByPageUsingGETStatusCategoriesEnum["ACTIVE"] = "ACTIVE";
+    ListDashbaordCasesByPageUsingGETStatusCategoriesEnum["CANCELLED"] = "CANCELLED";
+    ListDashbaordCasesByPageUsingGETStatusCategoriesEnum["RESOLVED"] = "RESOLVED";
+    ListDashbaordCasesByPageUsingGETStatusCategoriesEnum["UNCONFIRMED"] = "UNCONFIRMED";
+})(ListDashbaordCasesByPageUsingGETStatusCategoriesEnum || (ListDashbaordCasesByPageUsingGETStatusCategoriesEnum = {}));
 /**
     * @export
     * @enum {string}

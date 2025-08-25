@@ -4628,8 +4628,28 @@ export interface paths {
             path?: never;
             cookie?: never;
         };
-        /** listDashboardCases */
+        /**
+         * listDashboardCases
+         * @deprecated
+         */
         get: operations["listDashboardCasesUsingGET"];
+        put?: never;
+        post?: never;
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
+    "/api/v4/users/{userId}/cases": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        /** listDashbaordCasesByPage */
+        get: operations["listDashbaordCasesByPageUsingGET"];
         put?: never;
         post?: never;
         delete?: never;
@@ -31577,6 +31597,71 @@ export interface operations {
                 limit?: number;
                 /** @description previousPageToken */
                 previousPageToken?: string;
+                /** @description query */
+                query?: string;
+                /** @description sortBy */
+                sortBy?: PathsApiV3UsersUserIdCasesGetParametersQuerySortBy;
+                /** @description includeDeleted */
+                includeDeleted?: boolean;
+                /** @description needsAttention */
+                needsAttention?: boolean;
+                /** @description unreadMessagesOnly */
+                unreadMessagesOnly?: boolean;
+                /** @description statusCategories */
+                statusCategories?: PathsApiV1CaseStatusesGetParametersQueryCategories;
+                /** @description caseStatuses */
+                caseStatuses?: PathsApiV1LawfirmsLawfirmIdInboxMessagesGetParametersQueryCaseStatuses;
+            };
+            header?: never;
+            path: {
+                /** @description userId */
+                userId: number;
+            };
+            cookie?: never;
+        };
+        requestBody?: never;
+        responses: {
+            /** @description OK */
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "*/*": components["schemas"]["ListDashboardCasesResponse"];
+                };
+            };
+            /** @description Unauthorized */
+            401: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content?: never;
+            };
+            /** @description Forbidden */
+            403: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content?: never;
+            };
+            /** @description Not Found */
+            404: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content?: never;
+            };
+        };
+    };
+    listDashbaordCasesByPageUsingGET: {
+        parameters: {
+            query?: {
+                /** @description defendantId */
+                defendantId?: number;
+                /** @description limit */
+                limit?: number;
+                /** @description page */
+                page?: number;
                 /** @description query */
                 query?: string;
                 /** @description sortBy */

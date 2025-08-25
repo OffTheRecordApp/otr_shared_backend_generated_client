@@ -17,6 +17,19 @@ export interface GetCasesForUserUsingGETRequest {
 export interface GetUserCasesUsingGETRequest {
     userId: number;
 }
+export interface ListDashbaordCasesByPageUsingGETRequest {
+    userId: number;
+    caseStatuses?: ListDashbaordCasesByPageUsingGETCaseStatusesEnum;
+    defendantId?: number;
+    includeDeleted?: boolean;
+    limit?: number;
+    needsAttention?: boolean;
+    page?: number;
+    query?: string;
+    sortBy?: ListDashbaordCasesByPageUsingGETSortByEnum;
+    statusCategories?: ListDashbaordCasesByPageUsingGETStatusCategoriesEnum;
+    unreadMessagesOnly?: boolean;
+}
 export interface ListDashboardCasesUsingGETRequest {
     userId: number;
     caseStatuses?: ListDashboardCasesUsingGETCaseStatusesEnum;
@@ -51,6 +64,14 @@ export declare class ListCasesControllerApi extends runtime.BaseAPI {
      */
     getUserCasesUsingGET(requestParameters: GetUserCasesUsingGETRequest): Promise<GetUserCasesResponse>;
     /**
+     * listDashbaordCasesByPage
+     */
+    listDashbaordCasesByPageUsingGETRaw(requestParameters: ListDashbaordCasesByPageUsingGETRequest): Promise<runtime.ApiResponse<ListDashboardCasesResponse>>;
+    /**
+     * listDashbaordCasesByPage
+     */
+    listDashbaordCasesByPageUsingGET(requestParameters: ListDashbaordCasesByPageUsingGETRequest): Promise<ListDashboardCasesResponse>;
+    /**
      * listDashboardCases
      */
     listDashboardCasesUsingGETRaw(requestParameters: ListDashboardCasesUsingGETRequest): Promise<runtime.ApiResponse<ListDashboardCasesResponse>>;
@@ -58,6 +79,70 @@ export declare class ListCasesControllerApi extends runtime.BaseAPI {
      * listDashboardCases
      */
     listDashboardCasesUsingGET(requestParameters: ListDashboardCasesUsingGETRequest): Promise<ListDashboardCasesResponse>;
+}
+/**
+    * @export
+    * @enum {string}
+    */
+export declare enum ListDashbaordCasesByPageUsingGETCaseStatusesEnum {
+    AMENDEDDOWNWITHINCLASS = "AMENDED_DOWN_WITHIN_CLASS",
+    AMENDEDFULLFINE = "AMENDED_FULL_FINE",
+    AMENDEDINCREASEDFINE = "AMENDED_INCREASED_FINE",
+    AMENDEDNOFINE = "AMENDED_NO_FINE",
+    AMENDEDREDUCEDFINE = "AMENDED_REDUCED_FINE",
+    AMENDEDTOINFRACTION = "AMENDED_TO_INFRACTION",
+    AMENDEDTONMV = "AMENDED_TO_NMV",
+    CANCELLEDATTORNEYATFAULT = "CANCELLED_ATTORNEY_AT_FAULT",
+    CANCELLEDBYLAWFIRM = "CANCELLED_BY_LAWFIRM",
+    CANCELLEDBYUSER = "CANCELLED_BY_USER",
+    CANCELLEDDUPLICATE = "CANCELLED_DUPLICATE",
+    CANCELLEDNMV = "CANCELLED_NMV",
+    CANCELLEDNONPAYMENT = "CANCELLED_NON_PAYMENT",
+    CANCELLEDNOLAWFIRM = "CANCELLED_NO_LAWFIRM",
+    CANCELLEDOVERDUE = "CANCELLED_OVERDUE",
+    CANCELLEDTOOSHORTNOTICE = "CANCELLED_TOO_SHORT_NOTICE",
+    CASEINPROGRESS = "CASE_IN_PROGRESS",
+    CLIENTCONFIRMED = "CLIENT_CONFIRMED",
+    CLIENTCONFIRMEDUNPAID = "CLIENT_CONFIRMED_UNPAID",
+    CLIENTFIREDLAWFIRM = "CLIENT_FIRED_LAWFIRM",
+    CLIENTFORCEDLOSS = "CLIENT_FORCED_LOSS",
+    CLIENTPAIDFINE = "CLIENT_PAID_FINE",
+    CLIENTUNRESPONSIVE = "CLIENT_UNRESPONSIVE",
+    DEFERRED = "DEFERRED",
+    DISMISSED = "DISMISSED",
+    DIVERSION = "DIVERSION",
+    FEESDISPUTED = "FEES_DISPUTED",
+    FINEREDUCTIONONLY = "FINE_REDUCTION_ONLY",
+    LAWFIRMWITHDRAWN = "LAWFIRM_WITHDRAWN",
+    LOST = "LOST",
+    NOLAWFIRMAVAILABLE = "NO_LAWFIRM_AVAILABLE",
+    POINTREDUCTION = "POINT_REDUCTION",
+    REFUSEDBYLAWFIRM = "REFUSED_BY_LAWFIRM",
+    RESOLVEDNONPAYMENT = "RESOLVED_NON_PAYMENT",
+    STALE = "STALE",
+    TRAFFICSCHOOL = "TRAFFIC_SCHOOL",
+    UNCONFIRMED = "UNCONFIRMED"
+}
+/**
+    * @export
+    * @enum {string}
+    */
+export declare enum ListDashbaordCasesByPageUsingGETSortByEnum {
+    BOOKINGCONFIRMEDDATE = "BOOKING_CONFIRMED_DATE",
+    CITATIONCREATIONDATE = "CITATION_CREATION_DATE",
+    CITATIONISSUEDATE = "CITATION_ISSUE_DATE",
+    COURTDATE = "COURT_DATE",
+    LASTCITATIONUPDATEDATE = "LAST_CITATION_UPDATE_DATE"
+}
+/**
+    * @export
+    * @enum {string}
+    */
+export declare enum ListDashbaordCasesByPageUsingGETStatusCategoriesEnum {
+    ACTIVE = "ACTIVE",
+    CANCELLED = "CANCELLED",
+    RESOLVED = "RESOLVED",
+    UNCONFIRMED = "UNCONFIRMED"
 }
 /**
     * @export
