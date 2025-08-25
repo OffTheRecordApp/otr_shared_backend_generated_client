@@ -39,6 +39,12 @@ export interface TransferCaseRequest {
      * @memberof TransferCaseRequest
      */
     receivingLawfirmId?: number;
+    /**
+     *
+     * @type {boolean}
+     * @memberof TransferCaseRequest
+     */
+    shouldHandlePaymentsManually?: boolean;
 }
 export declare function TransferCaseRequestFromJSON(json: any): TransferCaseRequest;
 export declare function TransferCaseRequestFromJSONTyped(json: any, ignoreDiscriminator: boolean): TransferCaseRequest;

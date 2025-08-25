@@ -15398,6 +15398,7 @@ export interface components {
             maxOtrCreditInCents?: number;
             /** Format: int64 */
             receivingLawfirmId?: number;
+            shouldHandlePaymentsManually?: boolean;
         };
         /** USStateDomain */
         USStateDomain: {
