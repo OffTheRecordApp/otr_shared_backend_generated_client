@@ -24,6 +24,7 @@ export function ListDashboardCasesResponseFromJSONTyped(json, ignoreDiscriminato
         'cases': !exists(json, 'cases') ? undefined : (json['cases'].map(DashboardCaseModelFromJSON)),
         'counts': !exists(json, 'counts') ? undefined : DashboardCaseCountsDtoFromJSON(json['counts']),
         'filteredCaseCount': !exists(json, 'filteredCaseCount') ? undefined : json['filteredCaseCount'],
+        'needsAttentionCaseCount': !exists(json, 'needsAttentionCaseCount') ? undefined : json['needsAttentionCaseCount'],
         'previousPageToken': !exists(json, 'previousPageToken') ? undefined : json['previousPageToken'],
         'totalCaseCount': !exists(json, 'totalCaseCount') ? undefined : json['totalCaseCount'],
     };
@@ -39,6 +40,7 @@ export function ListDashboardCasesResponseToJSON(value) {
         'cases': value.cases === undefined ? undefined : (value.cases.map(DashboardCaseModelToJSON)),
         'counts': DashboardCaseCountsDtoToJSON(value.counts),
         'filteredCaseCount': value.filteredCaseCount,
+        'needsAttentionCaseCount': value.needsAttentionCaseCount,
         'previousPageToken': value.previousPageToken,
         'totalCaseCount': value.totalCaseCount,
     };

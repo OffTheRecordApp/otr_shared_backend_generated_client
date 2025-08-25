@@ -12747,6 +12747,8 @@ export interface components {
             counts?: components["schemas"]["DashboardCaseCountsDto"];
             /** Format: int32 */
             filteredCaseCount?: number;
+            /** Format: int32 */
+            needsAttentionCaseCount?: number;
             previousPageToken?: string;
             /** Format: int32 */
             totalCaseCount?: number;

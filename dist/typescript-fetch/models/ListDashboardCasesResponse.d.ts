@@ -36,6 +36,12 @@ export interface ListDashboardCasesResponse {
     filteredCaseCount?: number;
     /**
      *
+     * @type {number}
+     * @memberof ListDashboardCasesResponse
+     */
+    needsAttentionCaseCount?: number;
+    /**
+     *
      * @type {string}
      * @memberof ListDashboardCasesResponse
      */
