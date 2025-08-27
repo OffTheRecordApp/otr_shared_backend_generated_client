@@ -81,6 +81,7 @@ export var PathsApiV1LawfirmsLawfirmIdAuditEventsGetParametersQueryIncludeTypes;
     PathsApiV1LawfirmsLawfirmIdAuditEventsGetParametersQueryIncludeTypes["PAYMENT_SCHEDULED"] = "PAYMENT_SCHEDULED";
     PathsApiV1LawfirmsLawfirmIdAuditEventsGetParametersQueryIncludeTypes["PHONE_NUMBER_ADDED"] = "PHONE_NUMBER_ADDED";
     PathsApiV1LawfirmsLawfirmIdAuditEventsGetParametersQueryIncludeTypes["PHONE_NUMBER_DELETED"] = "PHONE_NUMBER_DELETED";
+    PathsApiV1LawfirmsLawfirmIdAuditEventsGetParametersQueryIncludeTypes["PROFILE_PICTURE_UPDATED"] = "PROFILE_PICTURE_UPDATED";
     PathsApiV1LawfirmsLawfirmIdAuditEventsGetParametersQueryIncludeTypes["REFERRAL_CODE_APPLIED"] = "REFERRAL_CODE_APPLIED";
     PathsApiV1LawfirmsLawfirmIdAuditEventsGetParametersQueryIncludeTypes["REFERRAL_CODE_ATTEMPT_FAILED"] = "REFERRAL_CODE_ATTEMPT_FAILED";
     PathsApiV1LawfirmsLawfirmIdAuditEventsGetParametersQueryIncludeTypes["REFERRAL_CODE_REMOVED"] = "REFERRAL_CODE_REMOVED";

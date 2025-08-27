@@ -19,6 +19,7 @@ export interface CitationModelReq {
     "citationLockedForClient"?: boolean;
     "clientEmailAddress"?: string;
     "clientFirstName"?: string;
+    "clientProfilePictureUrl"?: string;
     "clientType"?: CitationModelReq.ClientTypeEnum;
     "court"?: models.CourtDomainReq;
     "creationDateUTC"?: models.TimestampReq;

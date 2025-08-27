@@ -69,6 +69,12 @@ export interface CitationModelReq {
      * @type {string}
      * @memberof CitationModelReq
      */
+    clientProfilePictureUrl?: string;
+    /**
+     *
+     * @type {string}
+     * @memberof CitationModelReq
+     */
     clientType?: CitationModelReqClientTypeEnum;
     /**
      *

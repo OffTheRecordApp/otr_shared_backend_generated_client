@@ -149,6 +149,7 @@ export var LawfirmAuditEventModelEventEnum;
     LawfirmAuditEventModelEventEnum["PAYMENTSCHEDULED"] = "PAYMENT_SCHEDULED";
     LawfirmAuditEventModelEventEnum["PHONENUMBERADDED"] = "PHONE_NUMBER_ADDED";
     LawfirmAuditEventModelEventEnum["PHONENUMBERDELETED"] = "PHONE_NUMBER_DELETED";
+    LawfirmAuditEventModelEventEnum["PROFILEPICTUREUPDATED"] = "PROFILE_PICTURE_UPDATED";
     LawfirmAuditEventModelEventEnum["REFERRALCODEAPPLIED"] = "REFERRAL_CODE_APPLIED";
     LawfirmAuditEventModelEventEnum["REFERRALCODEATTEMPTFAILED"] = "REFERRAL_CODE_ATTEMPT_FAILED";
     LawfirmAuditEventModelEventEnum["REFERRALCODEREMOVED"] = "REFERRAL_CODE_REMOVED";

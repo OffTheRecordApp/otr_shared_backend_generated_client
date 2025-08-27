@@ -149,6 +149,7 @@ export var CitationAuditEventModelEventEnum;
     CitationAuditEventModelEventEnum["PAYMENTSCHEDULED"] = "PAYMENT_SCHEDULED";
     CitationAuditEventModelEventEnum["PHONENUMBERADDED"] = "PHONE_NUMBER_ADDED";
     CitationAuditEventModelEventEnum["PHONENUMBERDELETED"] = "PHONE_NUMBER_DELETED";
+    CitationAuditEventModelEventEnum["PROFILEPICTUREUPDATED"] = "PROFILE_PICTURE_UPDATED";
     CitationAuditEventModelEventEnum["REFERRALCODEAPPLIED"] = "REFERRAL_CODE_APPLIED";
     CitationAuditEventModelEventEnum["REFERRALCODEATTEMPTFAILED"] = "REFERRAL_CODE_ATTEMPT_FAILED";
     CitationAuditEventModelEventEnum["REFERRALCODEREMOVED"] = "REFERRAL_CODE_REMOVED";

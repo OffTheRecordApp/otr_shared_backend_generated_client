@@ -8904,6 +8904,7 @@ export interface components {
             citationLockedForClient?: boolean;
             clientEmailAddress?: string;
             clientFirstName?: string;
+            clientProfilePictureUrl?: string;
             /** @enum {string} */
             clientType?: PathsApiV1ApiV1UsersUserIdLastLoginGetParametersQueryClients;
             court?: components["schemas"]["CourtDomain"];
@@ -8945,6 +8946,7 @@ export interface components {
             citationLockedForClient?: boolean;
             clientEmailAddress?: string;
             clientFirstName?: string;
+            clientProfilePictureUrl?: string;
             /** @enum {string} */
             clientType?: PathsApiV1ApiV1UsersUserIdLastLoginGetParametersQueryClients;
             court?: components["schemas"]["CourtDomainReq"];
@@ -8985,6 +8987,7 @@ export interface components {
             citationLockedForClient?: boolean;
             clientEmailAddress?: string;
             clientFirstName?: string;
+            clientProfilePictureUrl?: string;
             /** @enum {string} */
             clientType?: PathsApiV1ApiV1UsersUserIdLastLoginGetParametersQueryClients;
             court?: components["schemas"]["CourtDomainRes"];
@@ -39999,6 +40002,7 @@ export declare enum PathsApiV1LawfirmsLawfirmIdAuditEventsGetParametersQueryIncl
     PAYMENT_SCHEDULED = "PAYMENT_SCHEDULED",
     PHONE_NUMBER_ADDED = "PHONE_NUMBER_ADDED",
     PHONE_NUMBER_DELETED = "PHONE_NUMBER_DELETED",
+    PROFILE_PICTURE_UPDATED = "PROFILE_PICTURE_UPDATED",
     REFERRAL_CODE_APPLIED = "REFERRAL_CODE_APPLIED",
     REFERRAL_CODE_ATTEMPT_FAILED = "REFERRAL_CODE_ATTEMPT_FAILED",
     REFERRAL_CODE_REMOVED = "REFERRAL_CODE_REMOVED",
