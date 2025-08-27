@@ -13400,14 +13400,16 @@ export interface components {
         /** NoteModel */
         NoteModel: {
             author?: components["schemas"]["NoteAuthor"];
-            deletedDateUtc?: components["schemas"]["Timestamp"];
+            /** Format: date-time */
+            deletedDateUtc?: string;
             isDeleted?: boolean;
             note?: string;
             /** Format: int64 */
             noteId?: number;
             /** @enum {string} */
             noteType?: PathsApiV2NotesSearchGetParametersQueryNoteType;
-            postedDateUtc?: components["schemas"]["Timestamp"];
+            /** Format: date-time */
+            postedDateUtc?: string;
             referenceId?: string;
         };
         /** NotificationEvent */

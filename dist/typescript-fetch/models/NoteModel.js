@@ -12,7 +12,7 @@
  * Do not edit the class manually.
  */
 import { exists } from '../runtime';
-import { NoteAuthorFromJSON, NoteAuthorToJSON, TimestampFromJSON, TimestampToJSON, } from './';
+import { NoteAuthorFromJSON, NoteAuthorToJSON, } from './';
 export function NoteModelFromJSON(json) {
     return NoteModelFromJSONTyped(json, false);
 }
@@ -22,12 +22,12 @@ export function NoteModelFromJSONTyped(json, ignoreDiscriminator) {
     }
     return {
         'author': !exists(json, 'author') ? undefined : NoteAuthorFromJSON(json['author']),
-        'deletedDateUtc': !exists(json, 'deletedDateUtc') ? undefined : TimestampFromJSON(json['deletedDateUtc']),
+        'deletedDateUtc': !exists(json, 'deletedDateUtc') ? undefined : (new Date(json['deletedDateUtc'])),
         'isDeleted': !exists(json, 'isDeleted') ? undefined : json['isDeleted'],
         'note': !exists(json, 'note') ? undefined : json['note'],
         'noteId': !exists(json, 'noteId') ? undefined : json['noteId'],
         'noteType': !exists(json, 'noteType') ? undefined : json['noteType'],
-        'postedDateUtc': !exists(json, 'postedDateUtc') ? undefined : TimestampFromJSON(json['postedDateUtc']),
+        'postedDateUtc': !exists(json, 'postedDateUtc') ? undefined : (new Date(json['postedDateUtc'])),
         'referenceId': !exists(json, 'referenceId') ? undefined : json['referenceId'],
     };
 }
@@ -40,12 +40,12 @@ export function NoteModelToJSON(value) {
     }
     return {
         'author': NoteAuthorToJSON(value.author),
-        'deletedDateUtc': TimestampToJSON(value.deletedDateUtc),
+        'deletedDateUtc': value.deletedDateUtc === undefined ? undefined : (value.deletedDateUtc.toISOString()),
         'isDeleted': value.isDeleted,
         'note': value.note,
         'noteId': value.noteId,
         'noteType': value.noteType,
-        'postedDateUtc': TimestampToJSON(value.postedDateUtc),
+        'postedDateUtc': value.postedDateUtc === undefined ? undefined : (value.postedDateUtc.toISOString()),
         'referenceId': value.referenceId,
     };
 }

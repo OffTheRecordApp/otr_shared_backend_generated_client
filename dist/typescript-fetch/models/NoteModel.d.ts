@@ -9,7 +9,7 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-import { NoteAuthor, Timestamp } from './';
+import { NoteAuthor } from './';
 /**
  *
  * @export
@@ -24,10 +24,10 @@ export interface NoteModel {
     author?: NoteAuthor;
     /**
      *
-     * @type {Timestamp}
+     * @type {Date}
      * @memberof NoteModel
      */
-    deletedDateUtc?: Timestamp;
+    deletedDateUtc?: Date;
     /**
      *
      * @type {boolean}
@@ -54,10 +54,10 @@ export interface NoteModel {
     noteType?: NoteModelNoteTypeEnum;
     /**
      *
-     * @type {Timestamp}
+     * @type {Date}
      * @memberof NoteModel
      */
-    postedDateUtc?: Timestamp;
+    postedDateUtc?: Date;
     /**
      *
      * @type {string}

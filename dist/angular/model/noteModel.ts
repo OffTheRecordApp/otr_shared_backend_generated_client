@@ -10,17 +10,16 @@
  * Do not edit the class manually.
  */
 import { NoteAuthor } from './noteAuthor';
-import { Timestamp } from './timestamp';
 
 
 export interface NoteModel { 
     author?: NoteAuthor;
-    deletedDateUtc?: Timestamp;
+    deletedDateUtc?: string;
     isDeleted?: boolean;
     note?: string;
     noteId?: number;
     noteType?: NoteModel.NoteTypeEnum;
-    postedDateUtc?: Timestamp;
+    postedDateUtc?: string;
     referenceId?: string;
 }
 export namespace NoteModel {
