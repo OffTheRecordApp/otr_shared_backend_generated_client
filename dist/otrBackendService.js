@@ -19364,9 +19364,9 @@ angular.module('otrBackendService', [])
                 return deferred.promise;
             };
             /**
-             * listDashbaordCasesByPage
+             * listDashboardCasesByPage
              * @method
-             * @name OtrService#listDashbaordCasesByPageUsingGET
+             * @name OtrService#listDashboardCasesByPageUsingGET
              * @param {object} parameters - method options and parameters
              * @param {string} parameters.caseStatuses - caseStatuses
              * @param {integer} parameters.defendantId - defendantId
@@ -19380,7 +19380,7 @@ angular.module('otrBackendService', [])
              * @param {boolean} parameters.unreadMessagesOnly - unreadMessagesOnly
              * @param {integer} parameters.userId - userId
              */
-            OtrService.prototype.listDashbaordCasesByPageUsingGET = function(parameters) {
+            OtrService.prototype.listDashboardCasesByPageUsingGET = function(parameters) {
                 if (parameters === undefined) {
                     parameters = {};
                 }

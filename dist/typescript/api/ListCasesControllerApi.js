@@ -72,7 +72,7 @@ export class ListCasesControllerApi {
     }
     /**
      *
-     * @summary listDashbaordCasesByPage
+     * @summary listDashboardCasesByPage
      * @param userId userId
      * @param caseStatuses caseStatuses
      * @param defendantId defendantId
@@ -85,14 +85,14 @@ export class ListCasesControllerApi {
      * @param statusCategories statusCategories
      * @param unreadMessagesOnly unreadMessagesOnly
      */
-    listDashbaordCasesByPageUsingGET(userId, caseStatuses, defendantId, includeDeleted, limit, needsAttention, page, query, sortBy, statusCategories, unreadMessagesOnly, extraHttpRequestParams) {
+    listDashboardCasesByPageUsingGET(userId, caseStatuses, defendantId, includeDeleted, limit, needsAttention, page, query, sortBy, statusCategories, unreadMessagesOnly, extraHttpRequestParams) {
         const localVarPath = this.basePath + '/api/v4/users/{userId}/cases'
             .replace('{' + 'userId' + '}', encodeURIComponent(String(userId)));
         let queryParameters = {};
         let headerParams = Object.assign({}, this.defaultHeaders);
         // verify required parameter 'userId' is not null or undefined
         if (userId === null || userId === undefined) {
-            throw new Error('Required parameter userId was null or undefined when calling listDashbaordCasesByPageUsingGET.');
+            throw new Error('Required parameter userId was null or undefined when calling listDashboardCasesByPageUsingGET.');
         }
         if (caseStatuses !== undefined) {
             queryParameters['caseStatuses'] = caseStatuses;

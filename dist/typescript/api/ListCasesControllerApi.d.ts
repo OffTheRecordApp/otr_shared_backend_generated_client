@@ -31,7 +31,7 @@ export declare class ListCasesControllerApi {
     getUserCasesUsingGET(userId: number, extraHttpRequestParams?: any): ng.IHttpPromise<models.GetUserCasesResponse>;
     /**
      *
-     * @summary listDashbaordCasesByPage
+     * @summary listDashboardCasesByPage
      * @param userId userId
      * @param caseStatuses caseStatuses
      * @param defendantId defendantId
@@ -44,7 +44,7 @@ export declare class ListCasesControllerApi {
      * @param statusCategories statusCategories
      * @param unreadMessagesOnly unreadMessagesOnly
      */
-    listDashbaordCasesByPageUsingGET(userId: number, caseStatuses?: 'AMENDED_DOWN_WITHIN_CLASS' | 'AMENDED_FULL_FINE' | 'AMENDED_INCREASED_FINE' | 'AMENDED_NO_FINE' | 'AMENDED_REDUCED_FINE' | 'AMENDED_TO_INFRACTION' | 'AMENDED_TO_NMV' | 'CANCELLED_ATTORNEY_AT_FAULT' | 'CANCELLED_BY_LAWFIRM' | 'CANCELLED_BY_USER' | 'CANCELLED_DUPLICATE' | 'CANCELLED_NMV' | 'CANCELLED_NON_PAYMENT' | 'CANCELLED_NO_LAWFIRM' | 'CANCELLED_OVERDUE' | 'CANCELLED_TOO_SHORT_NOTICE' | 'CASE_IN_PROGRESS' | 'CLIENT_CONFIRMED' | 'CLIENT_CONFIRMED_UNPAID' | 'CLIENT_FIRED_LAWFIRM' | 'CLIENT_FORCED_LOSS' | 'CLIENT_PAID_FINE' | 'CLIENT_UNRESPONSIVE' | 'DEFERRED' | 'DISMISSED' | 'DIVERSION' | 'FEES_DISPUTED' | 'FINE_REDUCTION_ONLY' | 'LAWFIRM_WITHDRAWN' | 'LOST' | 'NO_LAWFIRM_AVAILABLE' | 'POINT_REDUCTION' | 'REFUSED_BY_LAWFIRM' | 'RESOLVED_NON_PAYMENT' | 'STALE' | 'TRAFFIC_SCHOOL' | 'UNCONFIRMED', defendantId?: number, includeDeleted?: boolean, limit?: number, needsAttention?: boolean, page?: number, query?: string, sortBy?: 'BOOKING_CONFIRMED_DATE' | 'CITATION_CREATION_DATE' | 'CITATION_ISSUE_DATE' | 'COURT_DATE' | 'LAST_CITATION_UPDATE_DATE', statusCategories?: 'ACTIVE' | 'CANCELLED' | 'RESOLVED' | 'UNCONFIRMED', unreadMessagesOnly?: boolean, extraHttpRequestParams?: any): ng.IHttpPromise<models.ListDashboardCasesResponse>;
+    listDashboardCasesByPageUsingGET(userId: number, caseStatuses?: 'AMENDED_DOWN_WITHIN_CLASS' | 'AMENDED_FULL_FINE' | 'AMENDED_INCREASED_FINE' | 'AMENDED_NO_FINE' | 'AMENDED_REDUCED_FINE' | 'AMENDED_TO_INFRACTION' | 'AMENDED_TO_NMV' | 'CANCELLED_ATTORNEY_AT_FAULT' | 'CANCELLED_BY_LAWFIRM' | 'CANCELLED_BY_USER' | 'CANCELLED_DUPLICATE' | 'CANCELLED_NMV' | 'CANCELLED_NON_PAYMENT' | 'CANCELLED_NO_LAWFIRM' | 'CANCELLED_OVERDUE' | 'CANCELLED_TOO_SHORT_NOTICE' | 'CASE_IN_PROGRESS' | 'CLIENT_CONFIRMED' | 'CLIENT_CONFIRMED_UNPAID' | 'CLIENT_FIRED_LAWFIRM' | 'CLIENT_FORCED_LOSS' | 'CLIENT_PAID_FINE' | 'CLIENT_UNRESPONSIVE' | 'DEFERRED' | 'DISMISSED' | 'DIVERSION' | 'FEES_DISPUTED' | 'FINE_REDUCTION_ONLY' | 'LAWFIRM_WITHDRAWN' | 'LOST' | 'NO_LAWFIRM_AVAILABLE' | 'POINT_REDUCTION' | 'REFUSED_BY_LAWFIRM' | 'RESOLVED_NON_PAYMENT' | 'STALE' | 'TRAFFIC_SCHOOL' | 'UNCONFIRMED', defendantId?: number, includeDeleted?: boolean, limit?: number, needsAttention?: boolean, page?: number, query?: string, sortBy?: 'BOOKING_CONFIRMED_DATE' | 'CITATION_CREATION_DATE' | 'CITATION_ISSUE_DATE' | 'COURT_DATE' | 'LAST_CITATION_UPDATE_DATE', statusCategories?: 'ACTIVE' | 'CANCELLED' | 'RESOLVED' | 'UNCONFIRMED', unreadMessagesOnly?: boolean, extraHttpRequestParams?: any): ng.IHttpPromise<models.ListDashboardCasesResponse>;
     /**
      *
      * @summary listDashboardCases

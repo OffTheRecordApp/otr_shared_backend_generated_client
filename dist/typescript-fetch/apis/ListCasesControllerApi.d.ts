@@ -17,17 +17,17 @@ export interface GetCasesForUserUsingGETRequest {
 export interface GetUserCasesUsingGETRequest {
     userId: number;
 }
-export interface ListDashbaordCasesByPageUsingGETRequest {
+export interface ListDashboardCasesByPageUsingGETRequest {
     userId: number;
-    caseStatuses?: ListDashbaordCasesByPageUsingGETCaseStatusesEnum;
+    caseStatuses?: ListDashboardCasesByPageUsingGETCaseStatusesEnum;
     defendantId?: number;
     includeDeleted?: boolean;
     limit?: number;
     needsAttention?: boolean;
     page?: number;
     query?: string;
-    sortBy?: ListDashbaordCasesByPageUsingGETSortByEnum;
-    statusCategories?: ListDashbaordCasesByPageUsingGETStatusCategoriesEnum;
+    sortBy?: ListDashboardCasesByPageUsingGETSortByEnum;
+    statusCategories?: ListDashboardCasesByPageUsingGETStatusCategoriesEnum;
     unreadMessagesOnly?: boolean;
 }
 export interface ListDashboardCasesUsingGETRequest {
@@ -64,13 +64,13 @@ export declare class ListCasesControllerApi extends runtime.BaseAPI {
      */
     getUserCasesUsingGET(requestParameters: GetUserCasesUsingGETRequest): Promise<GetUserCasesResponse>;
     /**
-     * listDashbaordCasesByPage
+     * listDashboardCasesByPage
      */
-    listDashbaordCasesByPageUsingGETRaw(requestParameters: ListDashbaordCasesByPageUsingGETRequest): Promise<runtime.ApiResponse<ListDashboardCasesResponse>>;
+    listDashboardCasesByPageUsingGETRaw(requestParameters: ListDashboardCasesByPageUsingGETRequest): Promise<runtime.ApiResponse<ListDashboardCasesResponse>>;
     /**
-     * listDashbaordCasesByPage
+     * listDashboardCasesByPage
      */
-    listDashbaordCasesByPageUsingGET(requestParameters: ListDashbaordCasesByPageUsingGETRequest): Promise<ListDashboardCasesResponse>;
+    listDashboardCasesByPageUsingGET(requestParameters: ListDashboardCasesByPageUsingGETRequest): Promise<ListDashboardCasesResponse>;
     /**
      * listDashboardCases
      */
@@ -84,7 +84,7 @@ export declare class ListCasesControllerApi extends runtime.BaseAPI {
     * @export
     * @enum {string}
     */
-export declare enum ListDashbaordCasesByPageUsingGETCaseStatusesEnum {
+export declare enum ListDashboardCasesByPageUsingGETCaseStatusesEnum {
     AMENDEDDOWNWITHINCLASS = "AMENDED_DOWN_WITHIN_CLASS",
     AMENDEDFULLFINE = "AMENDED_FULL_FINE",
     AMENDEDINCREASEDFINE = "AMENDED_INCREASED_FINE",
@@ -127,7 +127,7 @@ export declare enum ListDashbaordCasesByPageUsingGETCaseStatusesEnum {
     * @export
     * @enum {string}
     */
-export declare enum ListDashbaordCasesByPageUsingGETSortByEnum {
+export declare enum ListDashboardCasesByPageUsingGETSortByEnum {
     BOOKINGCONFIRMEDDATE = "BOOKING_CONFIRMED_DATE",
     CITATIONCREATIONDATE = "CITATION_CREATION_DATE",
     CITATIONISSUEDATE = "CITATION_ISSUE_DATE",
@@ -138,7 +138,7 @@ export declare enum ListDashbaordCasesByPageUsingGETSortByEnum {
     * @export
     * @enum {string}
     */
-export declare enum ListDashbaordCasesByPageUsingGETStatusCategoriesEnum {
+export declare enum ListDashboardCasesByPageUsingGETStatusCategoriesEnum {
     ACTIVE = "ACTIVE",
     CANCELLED = "CANCELLED",
     RESOLVED = "RESOLVED",

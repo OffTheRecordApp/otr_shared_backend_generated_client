@@ -4648,8 +4648,8 @@ export interface paths {
             path?: never;
             cookie?: never;
         };
-        /** listDashbaordCasesByPage */
-        get: operations["listDashbaordCasesByPageUsingGET"];
+        /** listDashboardCasesByPage */
+        get: operations["listDashboardCasesByPageUsingGET"];
         put?: never;
         post?: never;
         delete?: never;
@@ -31661,7 +31661,7 @@ export interface operations {
             };
         };
     };
-    listDashbaordCasesByPageUsingGET: {
+    listDashboardCasesByPageUsingGET: {
         parameters: {
             query?: {
                 /** @description defendantId */
