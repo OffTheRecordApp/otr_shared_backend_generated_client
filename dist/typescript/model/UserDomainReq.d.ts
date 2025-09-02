@@ -13,6 +13,7 @@ import * as models from './models';
 export interface UserDomainReq {
     "accounts"?: Array<models.UserAccountModel>;
     "address"?: models.AddressDomainReq;
+    "copilots"?: Array<models.UserHouseholdBeneficiaryModelReq>;
     "creationDateUtc"?: models.TimestampReq;
     "dob"?: string;
     "driverLicenseNumber"?: string;

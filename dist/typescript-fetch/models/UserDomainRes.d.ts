@@ -9,7 +9,7 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-import { AddressDomainRes, LawfirmJobTitleModelRes, PhoneNumberDomainRes, TimestampRes, UserAccountModel, UserReferralLinkModelRes, UserRoleDomain, UserSocialProfileModelRes, UserSubscriptionPlanModelRes } from './';
+import { AddressDomainRes, LawfirmJobTitleModelRes, PhoneNumberDomainRes, TimestampRes, UserAccountModel, UserHouseholdBeneficiaryModelRes, UserReferralLinkModelRes, UserRoleDomain, UserSocialProfileModelRes, UserSubscriptionPlanModelRes } from './';
 /**
  *
  * @export
@@ -28,6 +28,12 @@ export interface UserDomainRes {
      * @memberof UserDomainRes
      */
     address?: AddressDomainRes;
+    /**
+     *
+     * @type {Array<UserHouseholdBeneficiaryModelRes>}
+     * @memberof UserDomainRes
+     */
+    copilots?: Array<UserHouseholdBeneficiaryModelRes>;
     /**
      *
      * @type {TimestampRes}

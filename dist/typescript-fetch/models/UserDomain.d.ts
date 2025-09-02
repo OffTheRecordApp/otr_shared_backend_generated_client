@@ -9,7 +9,7 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-import { AddressDomain, LawfirmJobTitleModel, PhoneNumberDomain, Timestamp, UserAccountModel, UserReferralLinkModel, UserRoleDomain, UserSocialProfileModel, UserSubscriptionPlanModel } from './';
+import { AddressDomain, LawfirmJobTitleModel, PhoneNumberDomain, Timestamp, UserAccountModel, UserHouseholdBeneficiaryModel, UserReferralLinkModel, UserRoleDomain, UserSocialProfileModel, UserSubscriptionPlanModel } from './';
 /**
  *
  * @export
@@ -28,6 +28,12 @@ export interface UserDomain {
      * @memberof UserDomain
      */
     address?: AddressDomain;
+    /**
+     *
+     * @type {Array<UserHouseholdBeneficiaryModel>}
+     * @memberof UserDomain
+     */
+    copilots?: Array<UserHouseholdBeneficiaryModel>;
     /**
      *
      * @type {Timestamp}

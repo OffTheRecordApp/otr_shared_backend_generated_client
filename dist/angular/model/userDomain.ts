@@ -10,6 +10,7 @@
  * Do not edit the class manually.
  */
 import { UserReferralLinkModel } from './userReferralLinkModel';
+import { UserHouseholdBeneficiaryModel } from './userHouseholdBeneficiaryModel';
 import { UserAccountModel } from './userAccountModel';
 import { AddressDomain } from './addressDomain';
 import { PhoneNumberDomain } from './phoneNumberDomain';
@@ -23,6 +24,7 @@ import { Timestamp } from './timestamp';
 export interface UserDomain { 
     accounts?: Array<UserAccountModel>;
     address?: AddressDomain;
+    copilots?: Array<UserHouseholdBeneficiaryModel>;
     creationDateUtc?: Timestamp;
     dob?: string;
     driverLicenseNumber?: string;

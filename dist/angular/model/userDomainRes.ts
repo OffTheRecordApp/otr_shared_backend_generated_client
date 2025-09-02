@@ -10,6 +10,7 @@
  * Do not edit the class manually.
  */
 import { UserSocialProfileModelRes } from './userSocialProfileModelRes';
+import { UserHouseholdBeneficiaryModelRes } from './userHouseholdBeneficiaryModelRes';
 import { LawfirmJobTitleModelRes } from './lawfirmJobTitleModelRes';
 import { UserAccountModel } from './userAccountModel';
 import { UserSubscriptionPlanModelRes } from './userSubscriptionPlanModelRes';
@@ -23,6 +24,7 @@ import { UserReferralLinkModelRes } from './userReferralLinkModelRes';
 export interface UserDomainRes { 
     accounts?: Array<UserAccountModel>;
     address?: AddressDomainRes;
+    copilots?: Array<UserHouseholdBeneficiaryModelRes>;
     creationDateUtc?: TimestampRes;
     dob?: string;
     driverLicenseNumber?: string;

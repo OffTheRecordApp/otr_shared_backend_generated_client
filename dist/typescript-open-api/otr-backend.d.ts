@@ -15798,6 +15798,7 @@ export interface components {
         UserDomain: {
             accounts?: components["schemas"]["UserAccountModel"][];
             address?: components["schemas"]["AddressDomain"];
+            copilots?: components["schemas"]["UserHouseholdBeneficiaryModel"][];
             creationDateUtc?: components["schemas"]["Timestamp"];
             /** Format: date-time */
             dob?: string;
@@ -15866,6 +15867,7 @@ export interface components {
         UserDomainReq: {
             accounts?: components["schemas"]["UserAccountModel"][];
             address?: components["schemas"]["AddressDomainReq"];
+            copilots?: components["schemas"]["UserHouseholdBeneficiaryModelReq"][];
             creationDateUtc?: components["schemas"]["TimestampReq"];
             /** Format: date-time */
             dob?: string;
@@ -15933,6 +15935,7 @@ export interface components {
         UserDomainRes: {
             accounts?: components["schemas"]["UserAccountModel"][];
             address?: components["schemas"]["AddressDomainRes"];
+            copilots?: components["schemas"]["UserHouseholdBeneficiaryModelRes"][];
             creationDateUtc?: components["schemas"]["TimestampRes"];
             /** Format: date-time */
             dob?: string;
@@ -15996,6 +15999,42 @@ export interface components {
             userId?: number;
             /** Format: date-time */
             userRegistrationDateUtc?: string;
+        };
+        /** UserHouseholdBeneficiaryModel */
+        UserHouseholdBeneficiaryModel: {
+            firstName?: string;
+            /** Format: date-time */
+            joinDateUtc?: string;
+            lastName?: string;
+            profilePictureUrl?: string;
+            /** @enum {string} */
+            relationType?: GetHouseHoldMateModelRelationshipType;
+            /** Format: int64 */
+            userId?: number;
+        };
+        /** UserHouseholdBeneficiaryModelReq */
+        UserHouseholdBeneficiaryModelReq: {
+            firstName?: string;
+            /** Format: date-time */
+            joinDateUtc?: string;
+            lastName?: string;
+            profilePictureUrl?: string;
+            /** @enum {string} */
+            relationType?: GetHouseHoldMateModelRelationshipType;
+            /** Format: int64 */
+            userId?: number;
+        };
+        /** UserHouseholdBeneficiaryModelRes */
+        UserHouseholdBeneficiaryModelRes: {
+            firstName?: string;
+            /** Format: date-time */
+            joinDateUtc?: string;
+            lastName?: string;
+            profilePictureUrl?: string;
+            /** @enum {string} */
+            relationType?: GetHouseHoldMateModelRelationshipType;
+            /** Format: int64 */
+            userId?: number;
         };
         /** UserItem */
         UserItem: {

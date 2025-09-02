@@ -17,12 +17,14 @@ import { TimestampReq } from './timestampReq';
 import { UserRoleDomain } from './userRoleDomain';
 import { UserSubscriptionPlanModelReq } from './userSubscriptionPlanModelReq';
 import { PhoneNumberDomainReq } from './phoneNumberDomainReq';
+import { UserHouseholdBeneficiaryModelReq } from './userHouseholdBeneficiaryModelReq';
 import { UserSocialProfileModelReq } from './userSocialProfileModelReq';
 
 
 export interface UserDomainReq { 
     accounts?: Array<UserAccountModel>;
     address?: AddressDomainReq;
+    copilots?: Array<UserHouseholdBeneficiaryModelReq>;
     creationDateUtc?: TimestampReq;
     dob?: string;
     driverLicenseNumber?: string;

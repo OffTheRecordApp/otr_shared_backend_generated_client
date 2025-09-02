@@ -12,7 +12,7 @@
  * Do not edit the class manually.
  */
 import { exists } from '../runtime';
-import { AddressDomainFromJSON, AddressDomainToJSON, LawfirmJobTitleModelFromJSON, LawfirmJobTitleModelToJSON, PhoneNumberDomainFromJSON, PhoneNumberDomainToJSON, TimestampFromJSON, TimestampToJSON, UserAccountModelFromJSON, UserAccountModelToJSON, UserReferralLinkModelFromJSON, UserReferralLinkModelToJSON, UserRoleDomainFromJSON, UserRoleDomainToJSON, UserSocialProfileModelFromJSON, UserSocialProfileModelToJSON, UserSubscriptionPlanModelFromJSON, UserSubscriptionPlanModelToJSON, } from './';
+import { AddressDomainFromJSON, AddressDomainToJSON, LawfirmJobTitleModelFromJSON, LawfirmJobTitleModelToJSON, PhoneNumberDomainFromJSON, PhoneNumberDomainToJSON, TimestampFromJSON, TimestampToJSON, UserAccountModelFromJSON, UserAccountModelToJSON, UserHouseholdBeneficiaryModelFromJSON, UserHouseholdBeneficiaryModelToJSON, UserReferralLinkModelFromJSON, UserReferralLinkModelToJSON, UserRoleDomainFromJSON, UserRoleDomainToJSON, UserSocialProfileModelFromJSON, UserSocialProfileModelToJSON, UserSubscriptionPlanModelFromJSON, UserSubscriptionPlanModelToJSON, } from './';
 export function UserDomainFromJSON(json) {
     return UserDomainFromJSONTyped(json, false);
 }
@@ -23,6 +23,7 @@ export function UserDomainFromJSONTyped(json, ignoreDiscriminator) {
     return {
         'accounts': !exists(json, 'accounts') ? undefined : (json['accounts'].map(UserAccountModelFromJSON)),
         'address': !exists(json, 'address') ? undefined : AddressDomainFromJSON(json['address']),
+        'copilots': !exists(json, 'copilots') ? undefined : (json['copilots'].map(UserHouseholdBeneficiaryModelFromJSON)),
         'creationDateUtc': !exists(json, 'creationDateUtc') ? undefined : TimestampFromJSON(json['creationDateUtc']),
         'dob': !exists(json, 'dob') ? undefined : (new Date(json['dob'])),
         'driverLicenseNumber': !exists(json, 'driverLicenseNumber') ? undefined : json['driverLicenseNumber'],
@@ -82,6 +83,7 @@ export function UserDomainToJSON(value) {
     return {
         'accounts': value.accounts === undefined ? undefined : (value.accounts.map(UserAccountModelToJSON)),
         'address': AddressDomainToJSON(value.address),
+        'copilots': value.copilots === undefined ? undefined : (value.copilots.map(UserHouseholdBeneficiaryModelToJSON)),
         'creationDateUtc': TimestampToJSON(value.creationDateUtc),
         'dob': value.dob === undefined ? undefined : (value.dob.toISOString()),
         'driverLicenseNumber': value.driverLicenseNumber,

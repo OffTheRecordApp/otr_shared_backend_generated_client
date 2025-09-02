@@ -928,6 +928,9 @@ model/userDetails.ts
 model/userDomain.ts
 model/userDomainReq.ts
 model/userDomainRes.ts
+model/userHouseholdBeneficiaryModel.ts
+model/userHouseholdBeneficiaryModelReq.ts
+model/userHouseholdBeneficiaryModelRes.ts
 model/userItem.ts
 model/userRefLinkDomain.ts
 model/userReferralLinkModel.ts
