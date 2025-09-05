@@ -12,7 +12,7 @@
  * Do not edit the class manually.
  */
 import { exists } from '../runtime';
-import { CancelationDetailsFromJSON, CancelationDetailsToJSON, CaseActionDomainFromJSON, CaseActionDomainToJSON, CaseStatusDomainFromJSON, CaseStatusDomainToJSON, CaseViolationPenaltyFromJSON, CaseViolationPenaltyToJSON, CitationModelFromJSON, CitationModelToJSON, LawfirmCaseModelFromJSON, LawfirmCaseModelToJSON, LetterOfEngagementFromJSON, LetterOfEngagementToJSON, PaymentCardInputFromJSON, PaymentCardInputToJSON, PaymentPlanTypeModelFromJSON, PaymentPlanTypeModelToJSON, SubscriptionDiscountEligibilityFromJSON, SubscriptionDiscountEligibilityToJSON, TimestampFromJSON, TimestampToJSON, UserDomainFromJSON, UserDomainToJSON, } from './';
+import { CancelationDetailsFromJSON, CancelationDetailsToJSON, CaseActionDomainFromJSON, CaseActionDomainToJSON, CaseStatusDomainFromJSON, CaseStatusDomainToJSON, CaseViolationPenaltyFromJSON, CaseViolationPenaltyToJSON, CitationModelFromJSON, CitationModelToJSON, LawfirmCaseModelFromJSON, LawfirmCaseModelToJSON, LetterOfEngagementFromJSON, LetterOfEngagementToJSON, PaymentCardInputFromJSON, PaymentCardInputToJSON, PaymentPlanTypeModelFromJSON, PaymentPlanTypeModelToJSON, SubscriptionPlanEligibilityFromJSON, SubscriptionPlanEligibilityToJSON, TimestampFromJSON, TimestampToJSON, UserDomainFromJSON, UserDomainToJSON, } from './';
 export function CaseModelFromJSON(json) {
     return CaseModelFromJSONTyped(json, false);
 }
@@ -48,7 +48,7 @@ export function CaseModelFromJSONTyped(json, ignoreDiscriminator) {
         'referralCode': !exists(json, 'referralCode') ? undefined : json['referralCode'],
         'refundEligibility': !exists(json, 'refundEligibility') ? undefined : json['refundEligibility'],
         'resolutionSummary': !exists(json, 'resolutionSummary') ? undefined : json['resolutionSummary'],
-        'subscriptionDiscountEligibility': !exists(json, 'subscriptionDiscountEligibility') ? undefined : SubscriptionDiscountEligibilityFromJSON(json['subscriptionDiscountEligibility']),
+        'subscriptionDiscountEligibility': !exists(json, 'subscriptionDiscountEligibility') ? undefined : SubscriptionPlanEligibilityFromJSON(json['subscriptionDiscountEligibility']),
         'uiRefundMsg': !exists(json, 'uiRefundMsg') ? undefined : json['uiRefundMsg'],
         'user': !exists(json, 'user') ? undefined : UserDomainFromJSON(json['user']),
         'userId': !exists(json, 'userId') ? undefined : json['userId'],
@@ -89,7 +89,7 @@ export function CaseModelToJSON(value) {
         'referralCode': value.referralCode,
         'refundEligibility': value.refundEligibility,
         'resolutionSummary': value.resolutionSummary,
-        'subscriptionDiscountEligibility': SubscriptionDiscountEligibilityToJSON(value.subscriptionDiscountEligibility),
+        'subscriptionDiscountEligibility': SubscriptionPlanEligibilityToJSON(value.subscriptionDiscountEligibility),
         'uiRefundMsg': value.uiRefundMsg,
         'user': UserDomainToJSON(value.user),
         'userId': value.userId,

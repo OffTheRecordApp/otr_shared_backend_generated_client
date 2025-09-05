@@ -12,7 +12,7 @@
  * Do not edit the class manually.
  */
 import { exists } from '../runtime';
-import { DefendantDetailsModelFromJSON, DefendantDetailsModelToJSON, LegalServiceModelFromJSON, LegalServiceModelToJSON, LetterOfEngagementFromJSON, LetterOfEngagementToJSON, PaymentPlanTypeModelFromJSON, PaymentPlanTypeModelToJSON, SubscriptionDiscountEligibilityFromJSON, SubscriptionDiscountEligibilityToJSON, TimestampFromJSON, TimestampToJSON, UnavailableMatchAttributesModelFromJSON, UnavailableMatchAttributesModelToJSON, WorkflowCitationModelFromJSON, WorkflowCitationModelToJSON, WorkflowViolationPenaltyModelFromJSON, WorkflowViolationPenaltyModelToJSON, } from './';
+import { DefendantDetailsModelFromJSON, DefendantDetailsModelToJSON, LegalServiceModelFromJSON, LegalServiceModelToJSON, LetterOfEngagementFromJSON, LetterOfEngagementToJSON, PaymentPlanTypeModelFromJSON, PaymentPlanTypeModelToJSON, SubscriptionPlanEligibilityFromJSON, SubscriptionPlanEligibilityToJSON, TimestampFromJSON, TimestampToJSON, UnavailableMatchAttributesModelFromJSON, UnavailableMatchAttributesModelToJSON, WorkflowCitationModelFromJSON, WorkflowCitationModelToJSON, WorkflowViolationPenaltyModelFromJSON, WorkflowViolationPenaltyModelToJSON, } from './';
 export function WorkflowCaseModelFromJSON(json) {
     return WorkflowCaseModelFromJSONTyped(json, false);
 }
@@ -35,7 +35,7 @@ export function WorkflowCaseModelFromJSONTyped(json, ignoreDiscriminator) {
         'paymentPlanTypeModel': !exists(json, 'paymentPlanTypeModel') ? undefined : PaymentPlanTypeModelFromJSON(json['paymentPlanTypeModel']),
         'referralCode': !exists(json, 'referralCode') ? undefined : json['referralCode'],
         'referralCodeOwner': !exists(json, 'referralCodeOwner') ? undefined : json['referralCodeOwner'],
-        'subscriptionDiscountEligibility': !exists(json, 'subscriptionDiscountEligibility') ? undefined : SubscriptionDiscountEligibilityFromJSON(json['subscriptionDiscountEligibility']),
+        'subscriptionDiscountEligibility': !exists(json, 'subscriptionDiscountEligibility') ? undefined : SubscriptionPlanEligibilityFromJSON(json['subscriptionDiscountEligibility']),
         'userId': !exists(json, 'userId') ? undefined : json['userId'],
     };
 }
@@ -61,7 +61,7 @@ export function WorkflowCaseModelToJSON(value) {
         'paymentPlanTypeModel': PaymentPlanTypeModelToJSON(value.paymentPlanTypeModel),
         'referralCode': value.referralCode,
         'referralCodeOwner': value.referralCodeOwner,
-        'subscriptionDiscountEligibility': SubscriptionDiscountEligibilityToJSON(value.subscriptionDiscountEligibility),
+        'subscriptionDiscountEligibility': SubscriptionPlanEligibilityToJSON(value.subscriptionDiscountEligibility),
         'userId': value.userId,
     };
 }

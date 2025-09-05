@@ -9,7 +9,7 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-import { MatchCaseViolationPenaltyModel, MatchCitationModel, MatchLegalServiceModel, PaymentPlanTypeModel, SubscriptionDiscountEligibility, Timestamp } from './';
+import { MatchCaseViolationPenaltyModel, MatchCitationModel, MatchLegalServiceModel, PaymentPlanTypeModel, SubscriptionPlanEligibility, Timestamp } from './';
 /**
  *
  * @export
@@ -84,10 +84,10 @@ export interface MatchInnerCaseModel {
     referralCodeOwner?: MatchInnerCaseModelReferralCodeOwnerEnum;
     /**
      *
-     * @type {SubscriptionDiscountEligibility}
+     * @type {SubscriptionPlanEligibility}
      * @memberof MatchInnerCaseModel
      */
-    subscriptionDiscountEligibility?: SubscriptionDiscountEligibility;
+    subscriptionDiscountEligibility?: SubscriptionPlanEligibility;
     /**
      *
      * @type {number}

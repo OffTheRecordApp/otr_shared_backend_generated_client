@@ -971,6 +971,18 @@ export var GetReferralCodeResponseOwnerType;
     GetReferralCodeResponseOwnerType["LAWFIRM"] = "LAWFIRM";
     GetReferralCodeResponseOwnerType["OTR"] = "OTR";
 })(GetReferralCodeResponseOwnerType || (GetReferralCodeResponseOwnerType = {}));
+export var HypotheticalPlanEligibilityModelHypotheticalEligibility;
+(function (HypotheticalPlanEligibilityModelHypotheticalEligibility) {
+    HypotheticalPlanEligibilityModelHypotheticalEligibility["FULLY_ELIGIBLE"] = "FULLY_ELIGIBLE";
+    HypotheticalPlanEligibilityModelHypotheticalEligibility["NOT_ELIGIBLE"] = "NOT_ELIGIBLE";
+    HypotheticalPlanEligibilityModelHypotheticalEligibility["PARTIALLY_ELIGIBLE"] = "PARTIALLY_ELIGIBLE";
+})(HypotheticalPlanEligibilityModelHypotheticalEligibility || (HypotheticalPlanEligibilityModelHypotheticalEligibility = {}));
+export var HypotheticalPlanEligibilityModelProductName;
+(function (HypotheticalPlanEligibilityModelProductName) {
+    HypotheticalPlanEligibilityModelProductName["CONVOY_PRO"] = "CONVOY_PRO";
+    HypotheticalPlanEligibilityModelProductName["OTR_FASTLANE"] = "OTR_FASTLANE";
+    HypotheticalPlanEligibilityModelProductName["OTR_FASTLANE_TEEN"] = "OTR_FASTLANE_TEEN";
+})(HypotheticalPlanEligibilityModelProductName || (HypotheticalPlanEligibilityModelProductName = {}));
 export var InviteLawyerToLawfirmRequestRole;
 (function (InviteLawyerToLawfirmRequestRole) {
     InviteLawyerToLawfirmRequestRole["LAWFIRM_ADMIN"] = "LAWFIRM_ADMIN";
@@ -1289,23 +1301,17 @@ export var SubscriberDomainSubscriptionType;
 (function (SubscriberDomainSubscriptionType) {
     SubscriberDomainSubscriptionType["WEB_BROCHURE_LAUNCH_NOTIFICATION"] = "WEB_BROCHURE_LAUNCH_NOTIFICATION";
 })(SubscriberDomainSubscriptionType || (SubscriberDomainSubscriptionType = {}));
-export var SubscriptionDiscountEligibilitySubscriptionDiscountEligibilityType;
-(function (SubscriptionDiscountEligibilitySubscriptionDiscountEligibilityType) {
-    SubscriptionDiscountEligibilitySubscriptionDiscountEligibilityType["IS_ELIGIBLE"] = "IS_ELIGIBLE";
-    SubscriptionDiscountEligibilitySubscriptionDiscountEligibilityType["IS_NOT_ELIGIBLE"] = "IS_NOT_ELIGIBLE";
-    SubscriptionDiscountEligibilitySubscriptionDiscountEligibilityType["NOT_APPLICABLE"] = "NOT_APPLICABLE";
-})(SubscriptionDiscountEligibilitySubscriptionDiscountEligibilityType || (SubscriptionDiscountEligibilitySubscriptionDiscountEligibilityType = {}));
+export var SubscriptionPlanEligibilitySubscriptionDiscountEligibilityType;
+(function (SubscriptionPlanEligibilitySubscriptionDiscountEligibilityType) {
+    SubscriptionPlanEligibilitySubscriptionDiscountEligibilityType["IS_ELIGIBLE"] = "IS_ELIGIBLE";
+    SubscriptionPlanEligibilitySubscriptionDiscountEligibilityType["IS_NOT_ELIGIBLE"] = "IS_NOT_ELIGIBLE";
+    SubscriptionPlanEligibilitySubscriptionDiscountEligibilityType["NOT_APPLICABLE"] = "NOT_APPLICABLE";
+})(SubscriptionPlanEligibilitySubscriptionDiscountEligibilityType || (SubscriptionPlanEligibilitySubscriptionDiscountEligibilityType = {}));
 export var UserReferralLinkModelReferralLinkType;
 (function (UserReferralLinkModelReferralLinkType) {
     UserReferralLinkModelReferralLinkType["FASTLANE_TEEN"] = "FASTLANE_TEEN";
     UserReferralLinkModelReferralLinkType["PRIMARY"] = "PRIMARY";
 })(UserReferralLinkModelReferralLinkType || (UserReferralLinkModelReferralLinkType = {}));
-export var UserSubscriptionPlanModelProductName;
-(function (UserSubscriptionPlanModelProductName) {
-    UserSubscriptionPlanModelProductName["CONVOY_PRO"] = "CONVOY_PRO";
-    UserSubscriptionPlanModelProductName["OTR_FASTLANE"] = "OTR_FASTLANE";
-    UserSubscriptionPlanModelProductName["OTR_FASTLANE_TEEN"] = "OTR_FASTLANE_TEEN";
-})(UserSubscriptionPlanModelProductName || (UserSubscriptionPlanModelProductName = {}));
 export var ValidateDirectMailResponseOtrError;
 (function (ValidateDirectMailResponseOtrError) {
     ValidateDirectMailResponseOtrError["ACCESS_DENIED"] = "ACCESS_DENIED";

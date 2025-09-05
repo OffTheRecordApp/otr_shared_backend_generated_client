@@ -12,7 +12,7 @@
  * Do not edit the class manually.
  */
 import { exists } from '../runtime';
-import { MatchCaseViolationPenaltyModelFromJSON, MatchCaseViolationPenaltyModelToJSON, MatchCitationModelFromJSON, MatchCitationModelToJSON, MatchLegalServiceModelFromJSON, MatchLegalServiceModelToJSON, PaymentPlanTypeModelFromJSON, PaymentPlanTypeModelToJSON, SubscriptionDiscountEligibilityFromJSON, SubscriptionDiscountEligibilityToJSON, TimestampFromJSON, TimestampToJSON, } from './';
+import { MatchCaseViolationPenaltyModelFromJSON, MatchCaseViolationPenaltyModelToJSON, MatchCitationModelFromJSON, MatchCitationModelToJSON, MatchLegalServiceModelFromJSON, MatchLegalServiceModelToJSON, PaymentPlanTypeModelFromJSON, PaymentPlanTypeModelToJSON, SubscriptionPlanEligibilityFromJSON, SubscriptionPlanEligibilityToJSON, TimestampFromJSON, TimestampToJSON, } from './';
 export function MatchInnerCaseModelFromJSON(json) {
     return MatchInnerCaseModelFromJSONTyped(json, false);
 }
@@ -32,7 +32,7 @@ export function MatchInnerCaseModelFromJSONTyped(json, ignoreDiscriminator) {
         'paymentPlanTypeModel': !exists(json, 'paymentPlanTypeModel') ? undefined : PaymentPlanTypeModelFromJSON(json['paymentPlanTypeModel']),
         'referralCode': !exists(json, 'referralCode') ? undefined : json['referralCode'],
         'referralCodeOwner': !exists(json, 'referralCodeOwner') ? undefined : json['referralCodeOwner'],
-        'subscriptionDiscountEligibility': !exists(json, 'subscriptionDiscountEligibility') ? undefined : SubscriptionDiscountEligibilityFromJSON(json['subscriptionDiscountEligibility']),
+        'subscriptionDiscountEligibility': !exists(json, 'subscriptionDiscountEligibility') ? undefined : SubscriptionPlanEligibilityFromJSON(json['subscriptionDiscountEligibility']),
         'userId': !exists(json, 'userId') ? undefined : json['userId'],
     };
 }
@@ -55,7 +55,7 @@ export function MatchInnerCaseModelToJSON(value) {
         'paymentPlanTypeModel': PaymentPlanTypeModelToJSON(value.paymentPlanTypeModel),
         'referralCode': value.referralCode,
         'referralCodeOwner': value.referralCodeOwner,
-        'subscriptionDiscountEligibility': SubscriptionDiscountEligibilityToJSON(value.subscriptionDiscountEligibility),
+        'subscriptionDiscountEligibility': SubscriptionPlanEligibilityToJSON(value.subscriptionDiscountEligibility),
         'userId': value.userId,
     };
 }

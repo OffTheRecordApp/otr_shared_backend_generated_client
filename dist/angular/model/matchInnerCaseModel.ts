@@ -12,7 +12,7 @@
 import { MatchCitationModel } from './matchCitationModel';
 import { MatchLegalServiceModel } from './matchLegalServiceModel';
 import { MatchCaseViolationPenaltyModel } from './matchCaseViolationPenaltyModel';
-import { SubscriptionDiscountEligibility } from './subscriptionDiscountEligibility';
+import { SubscriptionPlanEligibility } from './subscriptionPlanEligibility';
 import { Timestamp } from './timestamp';
 import { PaymentPlanTypeModel } from './paymentPlanTypeModel';
 
@@ -29,7 +29,7 @@ export interface MatchInnerCaseModel {
     paymentPlanTypeModel?: PaymentPlanTypeModel;
     referralCode?: string;
     referralCodeOwner?: MatchInnerCaseModel.ReferralCodeOwnerEnum;
-    subscriptionDiscountEligibility?: SubscriptionDiscountEligibility;
+    subscriptionDiscountEligibility?: SubscriptionPlanEligibility;
     userId?: number;
 }
 export namespace MatchInnerCaseModel {

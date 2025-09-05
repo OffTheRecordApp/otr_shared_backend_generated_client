@@ -12,7 +12,7 @@
  * Do not edit the class manually.
  */
 import { exists } from '../runtime';
-import { CaseViolationPenaltyFromJSON, CaseViolationPenaltyToJSON, MatchCitationResponseFromJSON, MatchCitationResponseToJSON, MatchLawfirmCaseResponseFromJSON, MatchLawfirmCaseResponseToJSON, SubscriptionDiscountEligibilityFromJSON, SubscriptionDiscountEligibilityToJSON, } from './';
+import { CaseViolationPenaltyFromJSON, CaseViolationPenaltyToJSON, MatchCitationResponseFromJSON, MatchCitationResponseToJSON, MatchLawfirmCaseResponseFromJSON, MatchLawfirmCaseResponseToJSON, SubscriptionPlanEligibilityFromJSON, SubscriptionPlanEligibilityToJSON, } from './';
 export function MatchInnerCaseResponseFromJSON(json) {
     return MatchInnerCaseResponseFromJSONTyped(json, false);
 }
@@ -28,7 +28,7 @@ export function MatchInnerCaseResponseFromJSONTyped(json, ignoreDiscriminator) {
         'maxPenalties': !exists(json, 'maxPenalties') ? undefined : (json['maxPenalties'].map(CaseViolationPenaltyFromJSON)),
         'referralCodeOwner': !exists(json, 'referralCodeOwner') ? undefined : json['referralCodeOwner'],
         'refundEligibility': !exists(json, 'refundEligibility') ? undefined : json['refundEligibility'],
-        'subscriptionDiscountEligibility': !exists(json, 'subscriptionDiscountEligibility') ? undefined : SubscriptionDiscountEligibilityFromJSON(json['subscriptionDiscountEligibility']),
+        'subscriptionDiscountEligibility': !exists(json, 'subscriptionDiscountEligibility') ? undefined : SubscriptionPlanEligibilityFromJSON(json['subscriptionDiscountEligibility']),
         'uiReasonMsg': !exists(json, 'uiReasonMsg') ? undefined : json['uiReasonMsg'],
         'userId': !exists(json, 'userId') ? undefined : json['userId'],
     };
@@ -48,7 +48,7 @@ export function MatchInnerCaseResponseToJSON(value) {
         'maxPenalties': value.maxPenalties === undefined ? undefined : (value.maxPenalties.map(CaseViolationPenaltyToJSON)),
         'referralCodeOwner': value.referralCodeOwner,
         'refundEligibility': value.refundEligibility,
-        'subscriptionDiscountEligibility': SubscriptionDiscountEligibilityToJSON(value.subscriptionDiscountEligibility),
+        'subscriptionDiscountEligibility': SubscriptionPlanEligibilityToJSON(value.subscriptionDiscountEligibility),
         'uiReasonMsg': value.uiReasonMsg,
         'userId': value.userId,
     };

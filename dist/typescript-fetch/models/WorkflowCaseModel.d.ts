@@ -9,7 +9,7 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-import { DefendantDetailsModel, LegalServiceModel, LetterOfEngagement, PaymentPlanTypeModel, SubscriptionDiscountEligibility, Timestamp, UnavailableMatchAttributesModel, WorkflowCitationModel, WorkflowViolationPenaltyModel } from './';
+import { DefendantDetailsModel, LegalServiceModel, LetterOfEngagement, PaymentPlanTypeModel, SubscriptionPlanEligibility, Timestamp, UnavailableMatchAttributesModel, WorkflowCitationModel, WorkflowViolationPenaltyModel } from './';
 /**
  *
  * @export
@@ -102,10 +102,10 @@ export interface WorkflowCaseModel {
     referralCodeOwner?: WorkflowCaseModelReferralCodeOwnerEnum;
     /**
      *
-     * @type {SubscriptionDiscountEligibility}
+     * @type {SubscriptionPlanEligibility}
      * @memberof WorkflowCaseModel
      */
-    subscriptionDiscountEligibility?: SubscriptionDiscountEligibility;
+    subscriptionDiscountEligibility?: SubscriptionPlanEligibility;
     /**
      *
      * @type {number}

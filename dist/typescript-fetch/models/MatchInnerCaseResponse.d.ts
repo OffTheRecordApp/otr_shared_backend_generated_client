@@ -9,7 +9,7 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-import { CaseViolationPenalty, MatchCitationResponse, MatchLawfirmCaseResponse, SubscriptionDiscountEligibility } from './';
+import { CaseViolationPenalty, MatchCitationResponse, MatchLawfirmCaseResponse, SubscriptionPlanEligibility } from './';
 /**
  *
  * @export
@@ -60,10 +60,10 @@ export interface MatchInnerCaseResponse {
     refundEligibility?: MatchInnerCaseResponseRefundEligibilityEnum;
     /**
      *
-     * @type {SubscriptionDiscountEligibility}
+     * @type {SubscriptionPlanEligibility}
      * @memberof MatchInnerCaseResponse
      */
-    subscriptionDiscountEligibility?: SubscriptionDiscountEligibility;
+    subscriptionDiscountEligibility?: SubscriptionPlanEligibility;
     /**
      *
      * @type {string}

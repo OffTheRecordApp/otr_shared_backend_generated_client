@@ -8480,7 +8480,7 @@ export interface components {
             /** @enum {string} */
             refundEligibility?: AccountLevelFeeRefundEligibility;
             resolutionSummary?: string;
-            subscriptionDiscountEligibility?: components["schemas"]["SubscriptionDiscountEligibility"];
+            subscriptionDiscountEligibility?: components["schemas"]["SubscriptionPlanEligibility"];
             uiRefundMsg?: string;
             user?: components["schemas"]["UserDomain"];
             /** Format: int64 */
@@ -8520,7 +8520,7 @@ export interface components {
             /** @enum {string} */
             refundEligibility?: AccountLevelFeeRefundEligibility;
             resolutionSummary?: string;
-            subscriptionDiscountEligibility?: components["schemas"]["SubscriptionDiscountEligibilityReq"];
+            subscriptionDiscountEligibility?: components["schemas"]["SubscriptionPlanEligibilityReq"];
             uiRefundMsg?: string;
             user?: components["schemas"]["UserDomainReq"];
             /** Format: int64 */
@@ -8560,7 +8560,7 @@ export interface components {
             /** @enum {string} */
             refundEligibility?: AccountLevelFeeRefundEligibility;
             resolutionSummary?: string;
-            subscriptionDiscountEligibility?: components["schemas"]["SubscriptionDiscountEligibilityRes"];
+            subscriptionDiscountEligibility?: components["schemas"]["SubscriptionPlanEligibilityRes"];
             uiRefundMsg?: string;
             user?: components["schemas"]["UserDomainRes"];
             /** Format: int64 */
@@ -11644,6 +11644,27 @@ export interface components {
                 [key: string]: string;
             };
         };
+        /** HypotheticalPlanEligibilityModel */
+        HypotheticalPlanEligibilityModel: {
+            /** @enum {string} */
+            hypotheticalEligibility?: HypotheticalPlanEligibilityModelHypotheticalEligibility;
+            /** @enum {string} */
+            productName?: HypotheticalPlanEligibilityModelProductName;
+        };
+        /** HypotheticalPlanEligibilityModelReq */
+        HypotheticalPlanEligibilityModelReq: {
+            /** @enum {string} */
+            hypotheticalEligibility?: HypotheticalPlanEligibilityModelHypotheticalEligibility;
+            /** @enum {string} */
+            productName?: HypotheticalPlanEligibilityModelProductName;
+        };
+        /** HypotheticalPlanEligibilityModelRes */
+        HypotheticalPlanEligibilityModelRes: {
+            /** @enum {string} */
+            hypotheticalEligibility?: HypotheticalPlanEligibilityModelHypotheticalEligibility;
+            /** @enum {string} */
+            productName?: HypotheticalPlanEligibilityModelProductName;
+        };
         /** IncomingEmail */
         IncomingEmail: {
             commonHeaders?: components["schemas"]["CommonHeader"];
@@ -13112,7 +13133,7 @@ export interface components {
             referralCode?: string;
             /** @enum {string} */
             referralCodeOwner?: GetReferralCodeResponseOwnerType;
-            subscriptionDiscountEligibility?: components["schemas"]["SubscriptionDiscountEligibility"];
+            subscriptionDiscountEligibility?: components["schemas"]["SubscriptionPlanEligibility"];
             /** Format: int64 */
             userId?: number;
         };
@@ -13127,7 +13148,7 @@ export interface components {
             referralCodeOwner?: GetReferralCodeResponseOwnerType;
             /** @enum {string} */
             refundEligibility?: AccountLevelFeeRefundEligibility;
-            subscriptionDiscountEligibility?: components["schemas"]["SubscriptionDiscountEligibility"];
+            subscriptionDiscountEligibility?: components["schemas"]["SubscriptionPlanEligibility"];
             uiReasonMsg?: string;
             /** Format: int64 */
             userId?: number;
@@ -15063,32 +15084,35 @@ export interface components {
             /** @enum {string} */
             subscriptionType?: SubscriberDomainSubscriptionType;
         };
-        /** SubscriptionDiscountEligibility */
-        SubscriptionDiscountEligibility: {
-            productName?: string;
-            /** @enum {string} */
-            subscriptionDiscountEligibilityType?: SubscriptionDiscountEligibilitySubscriptionDiscountEligibilityType;
-            uiSubscriptionEligibilityMsg?: string;
-        };
-        /** SubscriptionDiscountEligibilityReq */
-        SubscriptionDiscountEligibilityReq: {
-            productName?: string;
-            /** @enum {string} */
-            subscriptionDiscountEligibilityType?: SubscriptionDiscountEligibilitySubscriptionDiscountEligibilityType;
-            uiSubscriptionEligibilityMsg?: string;
-        };
-        /** SubscriptionDiscountEligibilityRes */
-        SubscriptionDiscountEligibilityRes: {
-            productName?: string;
-            /** @enum {string} */
-            subscriptionDiscountEligibilityType?: SubscriptionDiscountEligibilitySubscriptionDiscountEligibilityType;
-            uiSubscriptionEligibilityMsg?: string;
-        };
         /** SubscriptionGuardianModel */
         SubscriptionGuardianModel: {
             emailAddress: string;
             firstName: string;
             lastName: string;
+        };
+        /** SubscriptionPlanEligibility */
+        SubscriptionPlanEligibility: {
+            hypotheticalEligibility?: components["schemas"]["HypotheticalPlanEligibilityModel"];
+            productName?: string;
+            /** @enum {string} */
+            subscriptionDiscountEligibilityType?: SubscriptionPlanEligibilitySubscriptionDiscountEligibilityType;
+            uiSubscriptionEligibilityMsg?: string;
+        };
+        /** SubscriptionPlanEligibilityReq */
+        SubscriptionPlanEligibilityReq: {
+            hypotheticalEligibility?: components["schemas"]["HypotheticalPlanEligibilityModelReq"];
+            productName?: string;
+            /** @enum {string} */
+            subscriptionDiscountEligibilityType?: SubscriptionPlanEligibilitySubscriptionDiscountEligibilityType;
+            uiSubscriptionEligibilityMsg?: string;
+        };
+        /** SubscriptionPlanEligibilityRes */
+        SubscriptionPlanEligibilityRes: {
+            hypotheticalEligibility?: components["schemas"]["HypotheticalPlanEligibilityModelRes"];
+            productName?: string;
+            /** @enum {string} */
+            subscriptionDiscountEligibilityType?: SubscriptionPlanEligibilitySubscriptionDiscountEligibilityType;
+            uiSubscriptionEligibilityMsg?: string;
         };
         /** SupportedStateModel */
         SupportedStateModel: {
@@ -16129,7 +16153,7 @@ export interface components {
             expirationDateUtc?: string;
             id?: string;
             /** @enum {string} */
-            productName?: UserSubscriptionPlanModelProductName;
+            productName?: HypotheticalPlanEligibilityModelProductName;
             /** Format: date-time */
             startDateUtc?: string;
             subscriptionCovered?: boolean;
@@ -16142,7 +16166,7 @@ export interface components {
             expirationDateUtc?: string;
             id?: string;
             /** @enum {string} */
-            productName?: UserSubscriptionPlanModelProductName;
+            productName?: HypotheticalPlanEligibilityModelProductName;
             /** Format: date-time */
             startDateUtc?: string;
             /** @enum {string} */
@@ -16154,7 +16178,7 @@ export interface components {
             expirationDateUtc?: string;
             id?: string;
             /** @enum {string} */
-            productName?: UserSubscriptionPlanModelProductName;
+            productName?: HypotheticalPlanEligibilityModelProductName;
             /** Format: date-time */
             startDateUtc?: string;
             subscriptionCovered?: boolean;
@@ -16382,7 +16406,7 @@ export interface components {
             referralCode?: string;
             /** @enum {string} */
             referralCodeOwner?: GetReferralCodeResponseOwnerType;
-            subscriptionDiscountEligibility?: components["schemas"]["SubscriptionDiscountEligibility"];
+            subscriptionDiscountEligibility?: components["schemas"]["SubscriptionPlanEligibility"];
             /** Format: int64 */
             userId?: number;
         };
@@ -40845,6 +40869,16 @@ export declare enum GetReferralCodeResponseOwnerType {
     LAWFIRM = "LAWFIRM",
     OTR = "OTR"
 }
+export declare enum HypotheticalPlanEligibilityModelHypotheticalEligibility {
+    FULLY_ELIGIBLE = "FULLY_ELIGIBLE",
+    NOT_ELIGIBLE = "NOT_ELIGIBLE",
+    PARTIALLY_ELIGIBLE = "PARTIALLY_ELIGIBLE"
+}
+export declare enum HypotheticalPlanEligibilityModelProductName {
+    CONVOY_PRO = "CONVOY_PRO",
+    OTR_FASTLANE = "OTR_FASTLANE",
+    OTR_FASTLANE_TEEN = "OTR_FASTLANE_TEEN"
+}
 export declare enum InviteLawyerToLawfirmRequestRole {
     LAWFIRM_ADMIN = "LAWFIRM_ADMIN",
     LAWYER = "LAWYER"
@@ -41122,7 +41156,7 @@ export declare enum StripeCardDomainFunding {
 export declare enum SubscriberDomainSubscriptionType {
     WEB_BROCHURE_LAUNCH_NOTIFICATION = "WEB_BROCHURE_LAUNCH_NOTIFICATION"
 }
-export declare enum SubscriptionDiscountEligibilitySubscriptionDiscountEligibilityType {
+export declare enum SubscriptionPlanEligibilitySubscriptionDiscountEligibilityType {
     IS_ELIGIBLE = "IS_ELIGIBLE",
     IS_NOT_ELIGIBLE = "IS_NOT_ELIGIBLE",
     NOT_APPLICABLE = "NOT_APPLICABLE"
@@ -41130,11 +41164,6 @@ export declare enum SubscriptionDiscountEligibilitySubscriptionDiscountEligibili
 export declare enum UserReferralLinkModelReferralLinkType {
     FASTLANE_TEEN = "FASTLANE_TEEN",
     PRIMARY = "PRIMARY"
-}
-export declare enum UserSubscriptionPlanModelProductName {
-    CONVOY_PRO = "CONVOY_PRO",
-    OTR_FASTLANE = "OTR_FASTLANE",
-    OTR_FASTLANE_TEEN = "OTR_FASTLANE_TEEN"
 }
 export declare enum ValidateDirectMailResponseOtrError {
     ACCESS_DENIED = "ACCESS_DENIED",

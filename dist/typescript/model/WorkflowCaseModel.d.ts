@@ -25,7 +25,7 @@ export interface WorkflowCaseModel {
     "paymentPlanTypeModel"?: models.PaymentPlanTypeModel;
     "referralCode"?: string;
     "referralCodeOwner"?: WorkflowCaseModel.ReferralCodeOwnerEnum;
-    "subscriptionDiscountEligibility"?: models.SubscriptionDiscountEligibility;
+    "subscriptionDiscountEligibility"?: models.SubscriptionPlanEligibility;
     "userId"?: number;
 }
 export declare namespace WorkflowCaseModel {

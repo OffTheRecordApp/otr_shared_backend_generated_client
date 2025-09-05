@@ -531,6 +531,9 @@ model/gptFunctionModel.ts
 model/graphRequest.ts
 model/handleOrphanedStripeChargeRequest.ts
 model/handleOrphanedStripeChargeResponse.ts
+model/hypotheticalPlanEligibilityModel.ts
+model/hypotheticalPlanEligibilityModelReq.ts
+model/hypotheticalPlanEligibilityModelRes.ts
 model/incomingEmail.ts
 model/incomingEmailModels.ts
 model/incomingEmailRequest.ts
@@ -840,10 +843,10 @@ model/stripeTransferSyncResults.ts
 model/subscribeRequest.ts
 model/subscriber.ts
 model/subscriberDomain.ts
-model/subscriptionDiscountEligibility.ts
-model/subscriptionDiscountEligibilityReq.ts
-model/subscriptionDiscountEligibilityRes.ts
 model/subscriptionGuardianModel.ts
+model/subscriptionPlanEligibility.ts
+model/subscriptionPlanEligibilityReq.ts
+model/subscriptionPlanEligibilityRes.ts
 model/supportedStateModel.ts
 model/syncStripeChargesRequest.ts
 model/syncStripeChargesResponse.ts

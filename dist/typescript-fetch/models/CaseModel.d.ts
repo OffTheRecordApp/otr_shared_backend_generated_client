@@ -9,7 +9,7 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-import { CancelationDetails, CaseActionDomain, CaseStatusDomain, CaseViolationPenalty, CitationModel, LawfirmCaseModel, LetterOfEngagement, PaymentCardInput, PaymentPlanTypeModel, SubscriptionDiscountEligibility, Timestamp, UserDomain } from './';
+import { CancelationDetails, CaseActionDomain, CaseStatusDomain, CaseViolationPenalty, CitationModel, LawfirmCaseModel, LetterOfEngagement, PaymentCardInput, PaymentPlanTypeModel, SubscriptionPlanEligibility, Timestamp, UserDomain } from './';
 /**
  *
  * @export
@@ -180,10 +180,10 @@ export interface CaseModel {
     resolutionSummary?: string;
     /**
      *
-     * @type {SubscriptionDiscountEligibility}
+     * @type {SubscriptionPlanEligibility}
      * @memberof CaseModel
      */
-    subscriptionDiscountEligibility?: SubscriptionDiscountEligibility;
+    subscriptionDiscountEligibility?: SubscriptionPlanEligibility;
     /**
      *
      * @type {string}

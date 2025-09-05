@@ -10,10 +10,10 @@
  * Do not edit the class manually.
  */
 import { DefendantDetailsModel } from './defendantDetailsModel';
-import { SubscriptionDiscountEligibility } from './subscriptionDiscountEligibility';
 import { UnavailableMatchAttributesModel } from './unavailableMatchAttributesModel';
 import { WorkflowViolationPenaltyModel } from './workflowViolationPenaltyModel';
 import { WorkflowCitationModel } from './workflowCitationModel';
+import { SubscriptionPlanEligibility } from './subscriptionPlanEligibility';
 import { LetterOfEngagement } from './letterOfEngagement';
 import { Timestamp } from './timestamp';
 import { LegalServiceModel } from './legalServiceModel';
@@ -35,7 +35,7 @@ export interface WorkflowCaseModel {
     paymentPlanTypeModel?: PaymentPlanTypeModel;
     referralCode?: string;
     referralCodeOwner?: WorkflowCaseModel.ReferralCodeOwnerEnum;
-    subscriptionDiscountEligibility?: SubscriptionDiscountEligibility;
+    subscriptionDiscountEligibility?: SubscriptionPlanEligibility;
     userId?: number;
 }
 export namespace WorkflowCaseModel {

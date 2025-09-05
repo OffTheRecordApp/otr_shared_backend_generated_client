@@ -10,7 +10,6 @@
  * Do not edit the class manually.
  */
 import { LawfirmCaseModelReq } from './lawfirmCaseModelReq';
-import { SubscriptionDiscountEligibilityReq } from './subscriptionDiscountEligibilityReq';
 import { PaymentCardInput } from './paymentCardInput';
 import { CaseStatusDomain } from './caseStatusDomain';
 import { CancelationDetailsReq } from './cancelationDetailsReq';
@@ -20,6 +19,7 @@ import { UserDomainReq } from './userDomainReq';
 import { CaseActionDomain } from './caseActionDomain';
 import { PaymentPlanTypeModelReq } from './paymentPlanTypeModelReq';
 import { CitationModelReq } from './citationModelReq';
+import { SubscriptionPlanEligibilityReq } from './subscriptionPlanEligibilityReq';
 import { LetterOfEngagement } from './letterOfEngagement';
 
 
@@ -51,7 +51,7 @@ export interface CaseModelReq {
     referralCode?: string;
     refundEligibility?: CaseModelReq.RefundEligibilityEnum;
     resolutionSummary?: string;
-    subscriptionDiscountEligibility?: SubscriptionDiscountEligibilityReq;
+    subscriptionDiscountEligibility?: SubscriptionPlanEligibilityReq;
     uiRefundMsg?: string;
     user?: UserDomainReq;
     userId?: number;
