@@ -20,6 +20,7 @@ export function SocialLoginRequestFromJSONTyped(json, ignoreDiscriminator) {
         return json;
     }
     return {
+        'accessType': !exists(json, 'accessType') ? undefined : json['accessType'],
         'citationId': !exists(json, 'citationId') ? undefined : json['citationId'],
         'clientType': !exists(json, 'clientType') ? undefined : json['clientType'],
         'fingerPrintId': !exists(json, 'fingerPrintId') ? undefined : json['fingerPrintId'],
@@ -41,6 +42,7 @@ export function SocialLoginRequestToJSON(value) {
         return null;
     }
     return {
+        'accessType': value.accessType,
         'citationId': value.citationId,
         'clientType': value.clientType,
         'fingerPrintId': value.fingerPrintId,
@@ -54,6 +56,15 @@ export function SocialLoginRequestToJSON(value) {
         'userReferralSourceTypeId': value.userReferralSourceTypeId,
     };
 }
+/**
+* @export
+* @enum {string}
+*/
+export var SocialLoginRequestAccessTypeEnum;
+(function (SocialLoginRequestAccessTypeEnum) {
+    SocialLoginRequestAccessTypeEnum["Classic"] = "classic";
+    SocialLoginRequestAccessTypeEnum["Limited"] = "limited";
+})(SocialLoginRequestAccessTypeEnum || (SocialLoginRequestAccessTypeEnum = {}));
 /**
 * @export
 * @enum {string}

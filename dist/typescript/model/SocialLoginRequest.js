@@ -11,6 +11,11 @@
  */
 export var SocialLoginRequest;
 (function (SocialLoginRequest) {
+    let AccessTypeEnum;
+    (function (AccessTypeEnum) {
+        AccessTypeEnum[AccessTypeEnum["Classic"] = 'classic'] = "Classic";
+        AccessTypeEnum[AccessTypeEnum["Limited"] = 'limited'] = "Limited";
+    })(AccessTypeEnum = SocialLoginRequest.AccessTypeEnum || (SocialLoginRequest.AccessTypeEnum = {}));
     let ClientTypeEnum;
     (function (ClientTypeEnum) {
         ClientTypeEnum[ClientTypeEnum["ANDROID"] = 'ANDROID'] = "ANDROID";

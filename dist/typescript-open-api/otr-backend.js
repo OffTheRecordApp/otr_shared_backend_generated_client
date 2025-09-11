@@ -1285,6 +1285,11 @@ export var SettingResponseType;
     SettingResponseType["List"] = "List";
     SettingResponseType["String"] = "String";
 })(SettingResponseType || (SettingResponseType = {}));
+export var SocialLoginRequestAccessType;
+(function (SocialLoginRequestAccessType) {
+    SocialLoginRequestAccessType["classic"] = "classic";
+    SocialLoginRequestAccessType["limited"] = "limited";
+})(SocialLoginRequestAccessType || (SocialLoginRequestAccessType = {}));
 export var SourceDelivered_as;
 (function (SourceDelivered_as) {
     SourceDelivered_as["ADMIN_INITIATED"] = "ADMIN_INITIATED";

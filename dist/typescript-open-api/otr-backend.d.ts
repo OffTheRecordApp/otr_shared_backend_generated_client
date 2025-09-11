@@ -14630,6 +14630,8 @@ export interface components {
         };
         /** SocialLoginRequest */
         SocialLoginRequest: {
+            /** @enum {string} */
+            accessType?: SocialLoginRequestAccessType;
             /** Format: int64 */
             citationId?: number;
             /** @enum {string} */
@@ -41142,6 +41144,10 @@ export declare enum SettingResponseType {
     Integer = "Integer",
     List = "List",
     String = "String"
+}
+export declare enum SocialLoginRequestAccessType {
+    classic = "classic",
+    limited = "limited"
 }
 export declare enum SourceDelivered_as {
     ADMIN_INITIATED = "ADMIN_INITIATED",

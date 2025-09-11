@@ -10,6 +10,7 @@
  * Do not edit the class manually.
  */
 export interface SocialLoginRequest {
+    "accessType"?: SocialLoginRequest.AccessTypeEnum;
     "citationId"?: number;
     "clientType"?: SocialLoginRequest.ClientTypeEnum;
     "fingerPrintId"?: string;
@@ -25,6 +26,10 @@ export interface SocialLoginRequest {
     "userReferralSourceTypeId"?: number;
 }
 export declare namespace SocialLoginRequest {
+    enum AccessTypeEnum {
+        Classic,
+        Limited
+    }
     enum ClientTypeEnum {
         ANDROID,
         DESKTOPWEBAPP,

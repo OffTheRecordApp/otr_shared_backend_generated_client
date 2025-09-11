@@ -17,6 +17,12 @@
 export interface SocialLoginRequest {
     /**
      *
+     * @type {string}
+     * @memberof SocialLoginRequest
+     */
+    accessType?: SocialLoginRequestAccessTypeEnum;
+    /**
+     *
      * @type {number}
      * @memberof SocialLoginRequest
      */
@@ -87,6 +93,14 @@ export interface SocialLoginRequest {
 export declare function SocialLoginRequestFromJSON(json: any): SocialLoginRequest;
 export declare function SocialLoginRequestFromJSONTyped(json: any, ignoreDiscriminator: boolean): SocialLoginRequest;
 export declare function SocialLoginRequestToJSON(value?: SocialLoginRequest | null): any;
+/**
+* @export
+* @enum {string}
+*/
+export declare enum SocialLoginRequestAccessTypeEnum {
+    Classic = "classic",
+    Limited = "limited"
+}
 /**
 * @export
 * @enum {string}
