@@ -20,6 +20,7 @@ export function UserHouseholdBeneficiaryModelReqFromJSONTyped(json, ignoreDiscri
         return json;
     }
     return {
+        'emailAddress': !exists(json, 'emailAddress') ? undefined : json['emailAddress'],
         'firstName': !exists(json, 'firstName') ? undefined : json['firstName'],
         'joinDateUtc': !exists(json, 'joinDateUtc') ? undefined : (new Date(json['joinDateUtc'])),
         'lastName': !exists(json, 'lastName') ? undefined : json['lastName'],
@@ -36,6 +37,7 @@ export function UserHouseholdBeneficiaryModelReqToJSON(value) {
         return null;
     }
     return {
+        'emailAddress': value.emailAddress,
         'firstName': value.firstName,
         'joinDateUtc': value.joinDateUtc === undefined ? undefined : (value.joinDateUtc.toISOString()),
         'lastName': value.lastName,

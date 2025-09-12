@@ -20,6 +20,12 @@ export interface UserHouseholdBeneficiaryModelReq {
      * @type {string}
      * @memberof UserHouseholdBeneficiaryModelReq
      */
+    emailAddress?: string;
+    /**
+     *
+     * @type {string}
+     * @memberof UserHouseholdBeneficiaryModelReq
+     */
     firstName?: string;
     /**
      *

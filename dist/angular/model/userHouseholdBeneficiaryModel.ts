@@ -12,6 +12,7 @@
 
 
 export interface UserHouseholdBeneficiaryModel { 
+    emailAddress?: string;
     firstName?: string;
     joinDateUtc?: string;
     lastName?: string;

@@ -10,6 +10,7 @@
  * Do not edit the class manually.
  */
 export interface UserHouseholdBeneficiaryModelReq {
+    "emailAddress"?: string;
     "firstName"?: string;
     "joinDateUtc"?: string;
     "lastName"?: string;

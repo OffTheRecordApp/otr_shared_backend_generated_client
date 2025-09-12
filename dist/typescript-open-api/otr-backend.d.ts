@@ -16028,6 +16028,7 @@ export interface components {
         };
         /** UserHouseholdBeneficiaryModel */
         UserHouseholdBeneficiaryModel: {
+            emailAddress?: string;
             firstName?: string;
             /** Format: date-time */
             joinDateUtc?: string;
@@ -16040,6 +16041,7 @@ export interface components {
         };
         /** UserHouseholdBeneficiaryModelReq */
         UserHouseholdBeneficiaryModelReq: {
+            emailAddress?: string;
             firstName?: string;
             /** Format: date-time */
             joinDateUtc?: string;
@@ -16052,6 +16054,7 @@ export interface components {
         };
         /** UserHouseholdBeneficiaryModelRes */
         UserHouseholdBeneficiaryModelRes: {
+            emailAddress?: string;
             firstName?: string;
             /** Format: date-time */
             joinDateUtc?: string;
