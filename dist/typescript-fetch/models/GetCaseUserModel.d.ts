@@ -140,6 +140,7 @@ export declare function GetCaseUserModelToJSON(value?: GetCaseUserModel | null):
 */
 export declare enum GetCaseUserModelRelationshipToClientEnum {
     CHILD = "CHILD",
+    COPILOT = "COPILOT",
     EMPLOYER = "EMPLOYER",
     FAMILYMEMBER = "FAMILY_MEMBER",
     FRIEND = "FRIEND",

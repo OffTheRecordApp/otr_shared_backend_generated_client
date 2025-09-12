@@ -23,9 +23,10 @@ export interface DefendantDetailsModel {
     userId?: number;
 }
 export namespace DefendantDetailsModel {
-    export type OwnerRelationshipToClientTypeEnum = 'CHILD' | 'EMPLOYER' | 'FAMILY_MEMBER' | 'FRIEND' | 'LAWYER' | 'OTHER' | 'PARENT' | 'SELF' | 'SERVICE_PROVIDER' | 'SIGNIFICANT_OTHER' | 'UNKNOWN';
+    export type OwnerRelationshipToClientTypeEnum = 'CHILD' | 'COPILOT' | 'EMPLOYER' | 'FAMILY_MEMBER' | 'FRIEND' | 'LAWYER' | 'OTHER' | 'PARENT' | 'SELF' | 'SERVICE_PROVIDER' | 'SIGNIFICANT_OTHER' | 'UNKNOWN';
     export const OwnerRelationshipToClientTypeEnum = {
         Child: 'CHILD' as OwnerRelationshipToClientTypeEnum,
+        Copilot: 'COPILOT' as OwnerRelationshipToClientTypeEnum,
         Employer: 'EMPLOYER' as OwnerRelationshipToClientTypeEnum,
         FamilyMember: 'FAMILY_MEMBER' as OwnerRelationshipToClientTypeEnum,
         Friend: 'FRIEND' as OwnerRelationshipToClientTypeEnum,

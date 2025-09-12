@@ -23,6 +23,7 @@ export interface DefendantDetailsModel {
 export declare namespace DefendantDetailsModel {
     enum OwnerRelationshipToClientTypeEnum {
         CHILD,
+        COPILOT,
         EMPLOYER,
         FAMILYMEMBER,
         FRIEND,

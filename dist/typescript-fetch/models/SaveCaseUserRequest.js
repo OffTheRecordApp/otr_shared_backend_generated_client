@@ -60,6 +60,7 @@ export function SaveCaseUserRequestToJSON(value) {
 export var SaveCaseUserRequestRelationshipToClientEnum;
 (function (SaveCaseUserRequestRelationshipToClientEnum) {
     SaveCaseUserRequestRelationshipToClientEnum["CHILD"] = "CHILD";
+    SaveCaseUserRequestRelationshipToClientEnum["COPILOT"] = "COPILOT";
     SaveCaseUserRequestRelationshipToClientEnum["EMPLOYER"] = "EMPLOYER";
     SaveCaseUserRequestRelationshipToClientEnum["FAMILYMEMBER"] = "FAMILY_MEMBER";
     SaveCaseUserRequestRelationshipToClientEnum["FRIEND"] = "FRIEND";

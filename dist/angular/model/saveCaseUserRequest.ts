@@ -26,9 +26,10 @@ export interface SaveCaseUserRequest {
     userId?: number;
 }
 export namespace SaveCaseUserRequest {
-    export type RelationshipToClientEnum = 'CHILD' | 'EMPLOYER' | 'FAMILY_MEMBER' | 'FRIEND' | 'LAWYER' | 'OTHER' | 'PARENT' | 'SELF' | 'SERVICE_PROVIDER' | 'SIGNIFICANT_OTHER' | 'UNKNOWN';
+    export type RelationshipToClientEnum = 'CHILD' | 'COPILOT' | 'EMPLOYER' | 'FAMILY_MEMBER' | 'FRIEND' | 'LAWYER' | 'OTHER' | 'PARENT' | 'SELF' | 'SERVICE_PROVIDER' | 'SIGNIFICANT_OTHER' | 'UNKNOWN';
     export const RelationshipToClientEnum = {
         Child: 'CHILD' as RelationshipToClientEnum,
+        Copilot: 'COPILOT' as RelationshipToClientEnum,
         Employer: 'EMPLOYER' as RelationshipToClientEnum,
         FamilyMember: 'FAMILY_MEMBER' as RelationshipToClientEnum,
         Friend: 'FRIEND' as RelationshipToClientEnum,

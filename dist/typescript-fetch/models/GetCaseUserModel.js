@@ -78,6 +78,7 @@ export function GetCaseUserModelToJSON(value) {
 export var GetCaseUserModelRelationshipToClientEnum;
 (function (GetCaseUserModelRelationshipToClientEnum) {
     GetCaseUserModelRelationshipToClientEnum["CHILD"] = "CHILD";
+    GetCaseUserModelRelationshipToClientEnum["COPILOT"] = "COPILOT";
     GetCaseUserModelRelationshipToClientEnum["EMPLOYER"] = "EMPLOYER";
     GetCaseUserModelRelationshipToClientEnum["FAMILYMEMBER"] = "FAMILY_MEMBER";
     GetCaseUserModelRelationshipToClientEnum["FRIEND"] = "FRIEND";

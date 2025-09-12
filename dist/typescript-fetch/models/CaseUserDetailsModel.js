@@ -58,6 +58,7 @@ export function CaseUserDetailsModelToJSON(value) {
 export var CaseUserDetailsModelRelationshipToClientTypeEnum;
 (function (CaseUserDetailsModelRelationshipToClientTypeEnum) {
     CaseUserDetailsModelRelationshipToClientTypeEnum["CHILD"] = "CHILD";
+    CaseUserDetailsModelRelationshipToClientTypeEnum["COPILOT"] = "COPILOT";
     CaseUserDetailsModelRelationshipToClientTypeEnum["EMPLOYER"] = "EMPLOYER";
     CaseUserDetailsModelRelationshipToClientTypeEnum["FAMILYMEMBER"] = "FAMILY_MEMBER";
     CaseUserDetailsModelRelationshipToClientTypeEnum["FRIEND"] = "FRIEND";

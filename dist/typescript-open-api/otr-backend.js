@@ -723,6 +723,7 @@ export var CaseTransferHistoryRefundOwner;
 export var CaseUserDetailsModelRelationshipToClientType;
 (function (CaseUserDetailsModelRelationshipToClientType) {
     CaseUserDetailsModelRelationshipToClientType["CHILD"] = "CHILD";
+    CaseUserDetailsModelRelationshipToClientType["COPILOT"] = "COPILOT";
     CaseUserDetailsModelRelationshipToClientType["EMPLOYER"] = "EMPLOYER";
     CaseUserDetailsModelRelationshipToClientType["FAMILY_MEMBER"] = "FAMILY_MEMBER";
     CaseUserDetailsModelRelationshipToClientType["FRIEND"] = "FRIEND";

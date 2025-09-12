@@ -57,6 +57,7 @@ export function DefendantDetailsModelToJSON(value) {
 export var DefendantDetailsModelOwnerRelationshipToClientTypeEnum;
 (function (DefendantDetailsModelOwnerRelationshipToClientTypeEnum) {
     DefendantDetailsModelOwnerRelationshipToClientTypeEnum["CHILD"] = "CHILD";
+    DefendantDetailsModelOwnerRelationshipToClientTypeEnum["COPILOT"] = "COPILOT";
     DefendantDetailsModelOwnerRelationshipToClientTypeEnum["EMPLOYER"] = "EMPLOYER";
     DefendantDetailsModelOwnerRelationshipToClientTypeEnum["FAMILYMEMBER"] = "FAMILY_MEMBER";
     DefendantDetailsModelOwnerRelationshipToClientTypeEnum["FRIEND"] = "FRIEND";

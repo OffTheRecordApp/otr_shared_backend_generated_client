@@ -86,6 +86,7 @@ export declare function SaveCaseUserRequestToJSON(value?: SaveCaseUserRequest | 
 */
 export declare enum SaveCaseUserRequestRelationshipToClientEnum {
     CHILD = "CHILD",
+    COPILOT = "COPILOT",
     EMPLOYER = "EMPLOYER",
     FAMILYMEMBER = "FAMILY_MEMBER",
     FRIEND = "FRIEND",

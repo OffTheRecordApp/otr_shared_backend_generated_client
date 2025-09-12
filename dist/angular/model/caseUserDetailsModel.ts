@@ -25,9 +25,10 @@ export interface CaseUserDetailsModel {
     relationshipToClientType?: CaseUserDetailsModel.RelationshipToClientTypeEnum;
 }
 export namespace CaseUserDetailsModel {
-    export type RelationshipToClientTypeEnum = 'CHILD' | 'EMPLOYER' | 'FAMILY_MEMBER' | 'FRIEND' | 'LAWYER' | 'OTHER' | 'PARENT' | 'SELF' | 'SERVICE_PROVIDER' | 'SIGNIFICANT_OTHER' | 'UNKNOWN';
+    export type RelationshipToClientTypeEnum = 'CHILD' | 'COPILOT' | 'EMPLOYER' | 'FAMILY_MEMBER' | 'FRIEND' | 'LAWYER' | 'OTHER' | 'PARENT' | 'SELF' | 'SERVICE_PROVIDER' | 'SIGNIFICANT_OTHER' | 'UNKNOWN';
     export const RelationshipToClientTypeEnum = {
         Child: 'CHILD' as RelationshipToClientTypeEnum,
+        Copilot: 'COPILOT' as RelationshipToClientTypeEnum,
         Employer: 'EMPLOYER' as RelationshipToClientTypeEnum,
         FamilyMember: 'FAMILY_MEMBER' as RelationshipToClientTypeEnum,
         Friend: 'FRIEND' as RelationshipToClientTypeEnum,

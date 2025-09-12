@@ -14,6 +14,7 @@ export var DefendantDetailsModel;
     let OwnerRelationshipToClientTypeEnum;
     (function (OwnerRelationshipToClientTypeEnum) {
         OwnerRelationshipToClientTypeEnum[OwnerRelationshipToClientTypeEnum["CHILD"] = 'CHILD'] = "CHILD";
+        OwnerRelationshipToClientTypeEnum[OwnerRelationshipToClientTypeEnum["COPILOT"] = 'COPILOT'] = "COPILOT";
         OwnerRelationshipToClientTypeEnum[OwnerRelationshipToClientTypeEnum["EMPLOYER"] = 'EMPLOYER'] = "EMPLOYER";
         OwnerRelationshipToClientTypeEnum[OwnerRelationshipToClientTypeEnum["FAMILYMEMBER"] = 'FAMILY_MEMBER'] = "FAMILYMEMBER";
         OwnerRelationshipToClientTypeEnum[OwnerRelationshipToClientTypeEnum["FRIEND"] = 'FRIEND'] = "FRIEND";

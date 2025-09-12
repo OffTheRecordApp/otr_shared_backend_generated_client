@@ -14,6 +14,7 @@ export var CaseUserDetailsModel;
     let RelationshipToClientTypeEnum;
     (function (RelationshipToClientTypeEnum) {
         RelationshipToClientTypeEnum[RelationshipToClientTypeEnum["CHILD"] = 'CHILD'] = "CHILD";
+        RelationshipToClientTypeEnum[RelationshipToClientTypeEnum["COPILOT"] = 'COPILOT'] = "COPILOT";
         RelationshipToClientTypeEnum[RelationshipToClientTypeEnum["EMPLOYER"] = 'EMPLOYER'] = "EMPLOYER";
         RelationshipToClientTypeEnum[RelationshipToClientTypeEnum["FAMILYMEMBER"] = 'FAMILY_MEMBER'] = "FAMILYMEMBER";
         RelationshipToClientTypeEnum[RelationshipToClientTypeEnum["FRIEND"] = 'FRIEND'] = "FRIEND";

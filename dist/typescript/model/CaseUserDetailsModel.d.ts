@@ -24,6 +24,7 @@ export interface CaseUserDetailsModel {
 export declare namespace CaseUserDetailsModel {
     enum RelationshipToClientTypeEnum {
         CHILD,
+        COPILOT,
         EMPLOYER,
         FAMILYMEMBER,
         FRIEND,

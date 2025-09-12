@@ -40651,6 +40651,7 @@ export declare enum CaseTransferHistoryRefundOwner {
 }
 export declare enum CaseUserDetailsModelRelationshipToClientType {
     CHILD = "CHILD",
+    COPILOT = "COPILOT",
     EMPLOYER = "EMPLOYER",
     FAMILY_MEMBER = "FAMILY_MEMBER",
     FRIEND = "FRIEND",

@@ -34,6 +34,7 @@ export interface GetCaseUserModel {
 export declare namespace GetCaseUserModel {
     enum RelationshipToClientEnum {
         CHILD,
+        COPILOT,
         EMPLOYER,
         FAMILYMEMBER,
         FRIEND,

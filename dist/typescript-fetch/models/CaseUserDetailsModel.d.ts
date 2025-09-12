@@ -80,6 +80,7 @@ export declare function CaseUserDetailsModelToJSON(value?: CaseUserDetailsModel 
 */
 export declare enum CaseUserDetailsModelRelationshipToClientTypeEnum {
     CHILD = "CHILD",
+    COPILOT = "COPILOT",
     EMPLOYER = "EMPLOYER",
     FAMILYMEMBER = "FAMILY_MEMBER",
     FRIEND = "FRIEND",

@@ -79,6 +79,7 @@ export declare function DefendantDetailsModelToJSON(value?: DefendantDetailsMode
 */
 export declare enum DefendantDetailsModelOwnerRelationshipToClientTypeEnum {
     CHILD = "CHILD",
+    COPILOT = "COPILOT",
     EMPLOYER = "EMPLOYER",
     FAMILYMEMBER = "FAMILY_MEMBER",
     FRIEND = "FRIEND",
