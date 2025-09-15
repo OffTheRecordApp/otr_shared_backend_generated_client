@@ -75,6 +75,7 @@ export var ListLawfirmAuditEventsByCursorUsingGETExcludeTypesEnum;
 (function (ListLawfirmAuditEventsByCursorUsingGETExcludeTypesEnum) {
     ListLawfirmAuditEventsByCursorUsingGETExcludeTypesEnum["ACCOUNTCOVERAGEADDED"] = "ACCOUNT_COVERAGE_ADDED";
     ListLawfirmAuditEventsByCursorUsingGETExcludeTypesEnum["ACCOUNTCOVERAGEREMOVED"] = "ACCOUNT_COVERAGE_REMOVED";
+    ListLawfirmAuditEventsByCursorUsingGETExcludeTypesEnum["ACCOUNTMANAGERCHANGED"] = "ACCOUNT_MANAGER_CHANGED";
     ListLawfirmAuditEventsByCursorUsingGETExcludeTypesEnum["ACCOUNTNOTIFICATIONSTATUSCHANGED"] = "ACCOUNT_NOTIFICATION_STATUS_CHANGED";
     ListLawfirmAuditEventsByCursorUsingGETExcludeTypesEnum["ACCOUNTSTATUSCHANGED"] = "ACCOUNT_STATUS_CHANGED";
     ListLawfirmAuditEventsByCursorUsingGETExcludeTypesEnum["CASEACCEPT"] = "CASE_ACCEPT";
@@ -164,6 +165,7 @@ export var ListLawfirmAuditEventsByCursorUsingGETIncludeTypesEnum;
 (function (ListLawfirmAuditEventsByCursorUsingGETIncludeTypesEnum) {
     ListLawfirmAuditEventsByCursorUsingGETIncludeTypesEnum["ACCOUNTCOVERAGEADDED"] = "ACCOUNT_COVERAGE_ADDED";
     ListLawfirmAuditEventsByCursorUsingGETIncludeTypesEnum["ACCOUNTCOVERAGEREMOVED"] = "ACCOUNT_COVERAGE_REMOVED";
+    ListLawfirmAuditEventsByCursorUsingGETIncludeTypesEnum["ACCOUNTMANAGERCHANGED"] = "ACCOUNT_MANAGER_CHANGED";
     ListLawfirmAuditEventsByCursorUsingGETIncludeTypesEnum["ACCOUNTNOTIFICATIONSTATUSCHANGED"] = "ACCOUNT_NOTIFICATION_STATUS_CHANGED";
     ListLawfirmAuditEventsByCursorUsingGETIncludeTypesEnum["ACCOUNTSTATUSCHANGED"] = "ACCOUNT_STATUS_CHANGED";
     ListLawfirmAuditEventsByCursorUsingGETIncludeTypesEnum["CASEACCEPT"] = "CASE_ACCEPT";

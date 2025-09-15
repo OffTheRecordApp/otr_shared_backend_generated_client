@@ -75,6 +75,7 @@ export var ListCitationAuditEventsUsingGETExcludeTypesEnum;
 (function (ListCitationAuditEventsUsingGETExcludeTypesEnum) {
     ListCitationAuditEventsUsingGETExcludeTypesEnum["ACCOUNTCOVERAGEADDED"] = "ACCOUNT_COVERAGE_ADDED";
     ListCitationAuditEventsUsingGETExcludeTypesEnum["ACCOUNTCOVERAGEREMOVED"] = "ACCOUNT_COVERAGE_REMOVED";
+    ListCitationAuditEventsUsingGETExcludeTypesEnum["ACCOUNTMANAGERCHANGED"] = "ACCOUNT_MANAGER_CHANGED";
     ListCitationAuditEventsUsingGETExcludeTypesEnum["ACCOUNTNOTIFICATIONSTATUSCHANGED"] = "ACCOUNT_NOTIFICATION_STATUS_CHANGED";
     ListCitationAuditEventsUsingGETExcludeTypesEnum["ACCOUNTSTATUSCHANGED"] = "ACCOUNT_STATUS_CHANGED";
     ListCitationAuditEventsUsingGETExcludeTypesEnum["CASEACCEPT"] = "CASE_ACCEPT";
@@ -164,6 +165,7 @@ export var ListCitationAuditEventsUsingGETIncludeTypesEnum;
 (function (ListCitationAuditEventsUsingGETIncludeTypesEnum) {
     ListCitationAuditEventsUsingGETIncludeTypesEnum["ACCOUNTCOVERAGEADDED"] = "ACCOUNT_COVERAGE_ADDED";
     ListCitationAuditEventsUsingGETIncludeTypesEnum["ACCOUNTCOVERAGEREMOVED"] = "ACCOUNT_COVERAGE_REMOVED";
+    ListCitationAuditEventsUsingGETIncludeTypesEnum["ACCOUNTMANAGERCHANGED"] = "ACCOUNT_MANAGER_CHANGED";
     ListCitationAuditEventsUsingGETIncludeTypesEnum["ACCOUNTNOTIFICATIONSTATUSCHANGED"] = "ACCOUNT_NOTIFICATION_STATUS_CHANGED";
     ListCitationAuditEventsUsingGETIncludeTypesEnum["ACCOUNTSTATUSCHANGED"] = "ACCOUNT_STATUS_CHANGED";
     ListCitationAuditEventsUsingGETIncludeTypesEnum["CASEACCEPT"] = "CASE_ACCEPT";

@@ -761,6 +761,7 @@ model/saveDriverLicensePictureResponse.ts
 model/saveDriverLicenseRequest.ts
 model/saveExternalContentVoteRequest.ts
 model/saveItemToWatchlistRequest.ts
+model/saveLawfirmAccountManagerRequest.ts
 model/saveLawfirmSurchargeModel.ts
 model/saveLawfirmSurchargesRequest.ts
 model/saveLawyerLeadRequest.ts

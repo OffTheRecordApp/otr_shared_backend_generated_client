@@ -52,6 +52,7 @@ export declare namespace UserAuditEventModel {
     enum EventEnum {
         ACCOUNTCOVERAGEADDED,
         ACCOUNTCOVERAGEREMOVED,
+        ACCOUNTMANAGERCHANGED,
         ACCOUNTNOTIFICATIONSTATUSCHANGED,
         ACCOUNTSTATUSCHANGED,
         CASEACCEPT,
@@ -136,6 +137,7 @@ export declare namespace UserAuditEventModel {
     enum EventTypeEnum {
         ACCOUNTCOVERAGEADDED,
         ACCOUNTCOVERAGEREMOVED,
+        ACCOUNTMANAGERCHANGED,
         ACCOUNTNOTIFICATIONSTATUSCHANGED,
         ACCOUNTSTATUSCHANGED,
         CASEACCEPT,

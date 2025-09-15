@@ -89,6 +89,7 @@ export var LawfirmAuditEventModelEventEnum;
 (function (LawfirmAuditEventModelEventEnum) {
     LawfirmAuditEventModelEventEnum["ACCOUNTCOVERAGEADDED"] = "ACCOUNT_COVERAGE_ADDED";
     LawfirmAuditEventModelEventEnum["ACCOUNTCOVERAGEREMOVED"] = "ACCOUNT_COVERAGE_REMOVED";
+    LawfirmAuditEventModelEventEnum["ACCOUNTMANAGERCHANGED"] = "ACCOUNT_MANAGER_CHANGED";
     LawfirmAuditEventModelEventEnum["ACCOUNTNOTIFICATIONSTATUSCHANGED"] = "ACCOUNT_NOTIFICATION_STATUS_CHANGED";
     LawfirmAuditEventModelEventEnum["ACCOUNTSTATUSCHANGED"] = "ACCOUNT_STATUS_CHANGED";
     LawfirmAuditEventModelEventEnum["CASEACCEPT"] = "CASE_ACCEPT";

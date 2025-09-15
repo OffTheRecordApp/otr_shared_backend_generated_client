@@ -49,6 +49,7 @@ export declare namespace CitationAuditEventModel {
     enum EventEnum {
         ACCOUNTCOVERAGEADDED,
         ACCOUNTCOVERAGEREMOVED,
+        ACCOUNTMANAGERCHANGED,
         ACCOUNTNOTIFICATIONSTATUSCHANGED,
         ACCOUNTSTATUSCHANGED,
         CASEACCEPT,

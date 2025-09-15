@@ -95,6 +95,7 @@ export var UserAuditEventModelEventEnum;
 (function (UserAuditEventModelEventEnum) {
     UserAuditEventModelEventEnum["ACCOUNTCOVERAGEADDED"] = "ACCOUNT_COVERAGE_ADDED";
     UserAuditEventModelEventEnum["ACCOUNTCOVERAGEREMOVED"] = "ACCOUNT_COVERAGE_REMOVED";
+    UserAuditEventModelEventEnum["ACCOUNTMANAGERCHANGED"] = "ACCOUNT_MANAGER_CHANGED";
     UserAuditEventModelEventEnum["ACCOUNTNOTIFICATIONSTATUSCHANGED"] = "ACCOUNT_NOTIFICATION_STATUS_CHANGED";
     UserAuditEventModelEventEnum["ACCOUNTSTATUSCHANGED"] = "ACCOUNT_STATUS_CHANGED";
     UserAuditEventModelEventEnum["CASEACCEPT"] = "CASE_ACCEPT";
@@ -184,6 +185,7 @@ export var UserAuditEventModelEventTypeEnum;
 (function (UserAuditEventModelEventTypeEnum) {
     UserAuditEventModelEventTypeEnum["ACCOUNTCOVERAGEADDED"] = "ACCOUNT_COVERAGE_ADDED";
     UserAuditEventModelEventTypeEnum["ACCOUNTCOVERAGEREMOVED"] = "ACCOUNT_COVERAGE_REMOVED";
+    UserAuditEventModelEventTypeEnum["ACCOUNTMANAGERCHANGED"] = "ACCOUNT_MANAGER_CHANGED";
     UserAuditEventModelEventTypeEnum["ACCOUNTNOTIFICATIONSTATUSCHANGED"] = "ACCOUNT_NOTIFICATION_STATUS_CHANGED";
     UserAuditEventModelEventTypeEnum["ACCOUNTSTATUSCHANGED"] = "ACCOUNT_STATUS_CHANGED";
     UserAuditEventModelEventTypeEnum["CASEACCEPT"] = "CASE_ACCEPT";

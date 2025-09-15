@@ -21,7 +21,7 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
     });
 };
 import * as runtime from '../runtime';
-import { CreateNewLawfirmRequestToJSON, GetLawfirmAddressesResponseFromJSON, GetLawfirmCaseStatsResponseFromJSON, GetLawfirmInboxMessagesResponseFromJSON, GetLawfirmJobTitleResponseFromJSON, GetLawfirmLawyersResponseFromJSON, GetLawfirmResponseFromJSON, GetLawfirmSupportedStatesResponseFromJSON, GetLawfirmsResponseFromJSON, GetStripeConnectedAccountsResponseFromJSON, IntercomSearchTicketsResponseFromJSON, LawfirmPictureRequestToJSON, LawfirmVacationRequestToJSON, UpdateLawfirmPaymentModelRequestToJSON, UpdateLawfirmRequestToJSON, UpdateLawyerRoleRequestToJSON, UploadLawfirmsRequestToJSON, UploadLawfirmsResponseFromJSON, UpsertAddressRequestToJSON, } from '../models';
+import { CreateNewLawfirmRequestToJSON, GetLawfirmAddressesResponseFromJSON, GetLawfirmCaseStatsResponseFromJSON, GetLawfirmInboxMessagesResponseFromJSON, GetLawfirmJobTitleResponseFromJSON, GetLawfirmLawyersResponseFromJSON, GetLawfirmResponseFromJSON, GetLawfirmSupportedStatesResponseFromJSON, GetLawfirmsResponseFromJSON, GetStripeConnectedAccountsResponseFromJSON, IntercomSearchTicketsResponseFromJSON, LawfirmPictureRequestToJSON, LawfirmVacationRequestToJSON, SaveLawfirmAccountManagerRequestToJSON, UpdateLawfirmPaymentModelRequestToJSON, UpdateLawfirmRequestToJSON, UpdateLawyerRoleRequestToJSON, UploadLawfirmsRequestToJSON, UploadLawfirmsResponseFromJSON, UpsertAddressRequestToJSON, } from '../models';
 /**
  *
  */
@@ -584,6 +584,38 @@ export class LawfirmControllerApi extends runtime.BaseAPI {
         return __awaiter(this, void 0, void 0, function* () {
             const response = yield this.getSupportedStatesForLawfirmUsingGETRaw(requestParameters);
             return yield response.value();
+        });
+    }
+    /**
+     * saveLawfirmAccountManager
+     */
+    saveLawfirmAccountManagerUsingPOSTRaw(requestParameters) {
+        return __awaiter(this, void 0, void 0, function* () {
+            if (requestParameters.lawfirmId === null || requestParameters.lawfirmId === undefined) {
+                throw new runtime.RequiredError('lawfirmId', 'Required parameter requestParameters.lawfirmId was null or undefined when calling saveLawfirmAccountManagerUsingPOST.');
+            }
+            if (requestParameters.request === null || requestParameters.request === undefined) {
+                throw new runtime.RequiredError('request', 'Required parameter requestParameters.request was null or undefined when calling saveLawfirmAccountManagerUsingPOST.');
+            }
+            const queryParameters = {};
+            const headerParameters = {};
+            headerParameters['Content-Type'] = 'application/json';
+            const response = yield this.request({
+                path: `/api/v1/lawfirms/{lawfirmId}/account-manager`.replace(`{${"lawfirmId"}}`, encodeURIComponent(String(requestParameters.lawfirmId))),
+                method: 'POST',
+                headers: headerParameters,
+                query: queryParameters,
+                body: SaveLawfirmAccountManagerRequestToJSON(requestParameters.request),
+            });
+            return new runtime.VoidApiResponse(response);
+        });
+    }
+    /**
+     * saveLawfirmAccountManager
+     */
+    saveLawfirmAccountManagerUsingPOST(requestParameters) {
+        return __awaiter(this, void 0, void 0, function* () {
+            yield this.saveLawfirmAccountManagerUsingPOSTRaw(requestParameters);
         });
     }
     /**

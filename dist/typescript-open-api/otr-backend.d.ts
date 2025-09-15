@@ -3504,6 +3504,23 @@ export interface paths {
         patch?: never;
         trace?: never;
     };
+    "/api/v1/lawfirms/{lawfirmId}/account-manager": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        get?: never;
+        put?: never;
+        /** saveLawfirmAccountManager */
+        post: operations["saveLawfirmAccountManagerUsingPOST"];
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
     "/api/v1/lawfirms/{lawfirmId}/addresses": {
         parameters: {
             query?: never;
@@ -14255,6 +14272,11 @@ export interface components {
             note?: string;
             /** @enum {string} */
             priority?: SaveItemToWatchlistRequestPriority;
+        };
+        /** SaveLawfirmAccountManagerRequest */
+        SaveLawfirmAccountManagerRequest: {
+            /** Format: int64 */
+            userId: number;
         };
         /** SaveLawfirmSurchargeModel */
         SaveLawfirmSurchargeModel: {
@@ -27952,6 +27974,59 @@ export interface operations {
             };
         };
     };
+    saveLawfirmAccountManagerUsingPOST: {
+        parameters: {
+            query?: never;
+            header?: never;
+            path: {
+                /** @description lawfirmId */
+                lawfirmId: number;
+            };
+            cookie?: never;
+        };
+        requestBody?: {
+            content: {
+                "application/json": components["schemas"]["SaveLawfirmAccountManagerRequest"];
+            };
+        };
+        responses: {
+            /** @description OK */
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content?: never;
+            };
+            /** @description Created */
+            201: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content?: never;
+            };
+            /** @description Unauthorized */
+            401: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content?: never;
+            };
+            /** @description Forbidden */
+            403: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content?: never;
+            };
+            /** @description Not Found */
+            404: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content?: never;
+            };
+        };
+    };
     getLawfirmAddressesUsingGET: {
         parameters: {
             query?: never;
@@ -40010,6 +40085,7 @@ export declare enum PathsApiV1ActivityFeedCaseOutcomesGetParametersQueryResoluti
 export declare enum PathsApiV1LawfirmsLawfirmIdAuditEventsGetParametersQueryIncludeTypes {
     ACCOUNT_COVERAGE_ADDED = "ACCOUNT_COVERAGE_ADDED",
     ACCOUNT_COVERAGE_REMOVED = "ACCOUNT_COVERAGE_REMOVED",
+    ACCOUNT_MANAGER_CHANGED = "ACCOUNT_MANAGER_CHANGED",
     ACCOUNT_NOTIFICATION_STATUS_CHANGED = "ACCOUNT_NOTIFICATION_STATUS_CHANGED",
     ACCOUNT_STATUS_CHANGED = "ACCOUNT_STATUS_CHANGED",
     CASE_ACCEPT = "CASE_ACCEPT",

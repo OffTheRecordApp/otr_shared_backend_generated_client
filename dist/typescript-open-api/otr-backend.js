@@ -21,6 +21,7 @@ export var PathsApiV1LawfirmsLawfirmIdAuditEventsGetParametersQueryIncludeTypes;
 (function (PathsApiV1LawfirmsLawfirmIdAuditEventsGetParametersQueryIncludeTypes) {
     PathsApiV1LawfirmsLawfirmIdAuditEventsGetParametersQueryIncludeTypes["ACCOUNT_COVERAGE_ADDED"] = "ACCOUNT_COVERAGE_ADDED";
     PathsApiV1LawfirmsLawfirmIdAuditEventsGetParametersQueryIncludeTypes["ACCOUNT_COVERAGE_REMOVED"] = "ACCOUNT_COVERAGE_REMOVED";
+    PathsApiV1LawfirmsLawfirmIdAuditEventsGetParametersQueryIncludeTypes["ACCOUNT_MANAGER_CHANGED"] = "ACCOUNT_MANAGER_CHANGED";
     PathsApiV1LawfirmsLawfirmIdAuditEventsGetParametersQueryIncludeTypes["ACCOUNT_NOTIFICATION_STATUS_CHANGED"] = "ACCOUNT_NOTIFICATION_STATUS_CHANGED";
     PathsApiV1LawfirmsLawfirmIdAuditEventsGetParametersQueryIncludeTypes["ACCOUNT_STATUS_CHANGED"] = "ACCOUNT_STATUS_CHANGED";
     PathsApiV1LawfirmsLawfirmIdAuditEventsGetParametersQueryIncludeTypes["CASE_ACCEPT"] = "CASE_ACCEPT";

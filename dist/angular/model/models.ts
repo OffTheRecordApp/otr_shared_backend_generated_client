@@ -635,6 +635,7 @@ export * from './saveDriverLicensePictureResponse';
 export * from './saveDriverLicenseRequest';
 export * from './saveExternalContentVoteRequest';
 export * from './saveItemToWatchlistRequest';
+export * from './saveLawfirmAccountManagerRequest';
 export * from './saveLawfirmSurchargeModel';
 export * from './saveLawfirmSurchargesRequest';
 export * from './saveLawyerLeadRequest';

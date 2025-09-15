@@ -89,6 +89,7 @@ export var CitationAuditEventModelEventEnum;
 (function (CitationAuditEventModelEventEnum) {
     CitationAuditEventModelEventEnum["ACCOUNTCOVERAGEADDED"] = "ACCOUNT_COVERAGE_ADDED";
     CitationAuditEventModelEventEnum["ACCOUNTCOVERAGEREMOVED"] = "ACCOUNT_COVERAGE_REMOVED";
+    CitationAuditEventModelEventEnum["ACCOUNTMANAGERCHANGED"] = "ACCOUNT_MANAGER_CHANGED";
     CitationAuditEventModelEventEnum["ACCOUNTNOTIFICATIONSTATUSCHANGED"] = "ACCOUNT_NOTIFICATION_STATUS_CHANGED";
     CitationAuditEventModelEventEnum["ACCOUNTSTATUSCHANGED"] = "ACCOUNT_STATUS_CHANGED";
     CitationAuditEventModelEventEnum["CASEACCEPT"] = "CASE_ACCEPT";

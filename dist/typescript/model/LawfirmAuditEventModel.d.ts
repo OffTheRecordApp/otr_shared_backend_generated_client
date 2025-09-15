@@ -49,6 +49,7 @@ export declare namespace LawfirmAuditEventModel {
     enum EventEnum {
         ACCOUNTCOVERAGEADDED,
         ACCOUNTCOVERAGEREMOVED,
+        ACCOUNTMANAGERCHANGED,
         ACCOUNTNOTIFICATIONSTATUSCHANGED,
         ACCOUNTSTATUSCHANGED,
         CASEACCEPT,

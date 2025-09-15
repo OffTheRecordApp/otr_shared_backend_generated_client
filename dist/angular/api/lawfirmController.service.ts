@@ -45,6 +45,8 @@ import { LawfirmPictureRequest } from '../model/lawfirmPictureRequest';
 // @ts-ignore
 import { LawfirmVacationRequest } from '../model/lawfirmVacationRequest';
 // @ts-ignore
+import { SaveLawfirmAccountManagerRequest } from '../model/saveLawfirmAccountManagerRequest';
+// @ts-ignore
 import { UpdateLawfirmPaymentModelRequest } from '../model/updateLawfirmPaymentModelRequest';
 // @ts-ignore
 import { UpdateLawfirmRequest } from '../model/updateLawfirmRequest';
@@ -1285,6 +1287,77 @@ export class LawfirmControllerService {
         return this.httpClient.request<GetLawfirmSupportedStatesResponse>('get', `${this.configuration.basePath}${localVarPath}`,
             {
                 context: localVarHttpContext,
+                responseType: <any>responseType_,
+                withCredentials: this.configuration.withCredentials,
+                headers: localVarHeaders,
+                observe: observe,
+                reportProgress: reportProgress
+            }
+        );
+    }
+
+    /**
+     * saveLawfirmAccountManager
+     * @param lawfirmId lawfirmId
+     * @param request request
+     * @param observe set whether or not to return the data Observable as the body, response or events. defaults to returning the body.
+     * @param reportProgress flag to report request and response progress.
+     */
+    public saveLawfirmAccountManagerUsingPOST(lawfirmId: number, request: SaveLawfirmAccountManagerRequest, observe?: 'body', reportProgress?: boolean, options?: {httpHeaderAccept?: undefined, context?: HttpContext}): Observable<any>;
+    public saveLawfirmAccountManagerUsingPOST(lawfirmId: number, request: SaveLawfirmAccountManagerRequest, observe?: 'response', reportProgress?: boolean, options?: {httpHeaderAccept?: undefined, context?: HttpContext}): Observable<HttpResponse<any>>;
+    public saveLawfirmAccountManagerUsingPOST(lawfirmId: number, request: SaveLawfirmAccountManagerRequest, observe?: 'events', reportProgress?: boolean, options?: {httpHeaderAccept?: undefined, context?: HttpContext}): Observable<HttpEvent<any>>;
+    public saveLawfirmAccountManagerUsingPOST(lawfirmId: number, request: SaveLawfirmAccountManagerRequest, observe: any = 'body', reportProgress: boolean = false, options?: {httpHeaderAccept?: undefined, context?: HttpContext}): Observable<any> {
+        if (lawfirmId === null || lawfirmId === undefined) {
+            throw new Error('Required parameter lawfirmId was null or undefined when calling saveLawfirmAccountManagerUsingPOST.');
+        }
+        if (request === null || request === undefined) {
+            throw new Error('Required parameter request was null or undefined when calling saveLawfirmAccountManagerUsingPOST.');
+        }
+
+        let localVarHeaders = this.defaultHeaders;
+
+        let localVarHttpHeaderAcceptSelected: string | undefined = options && options.httpHeaderAccept;
+        if (localVarHttpHeaderAcceptSelected === undefined) {
+            // to determine the Accept header
+            const httpHeaderAccepts: string[] = [
+            ];
+            localVarHttpHeaderAcceptSelected = this.configuration.selectHeaderAccept(httpHeaderAccepts);
+        }
+        if (localVarHttpHeaderAcceptSelected !== undefined) {
+            localVarHeaders = localVarHeaders.set('Accept', localVarHttpHeaderAcceptSelected);
+        }
+
+        let localVarHttpContext: HttpContext | undefined = options && options.context;
+        if (localVarHttpContext === undefined) {
+            localVarHttpContext = new HttpContext();
+        }
+
+
+        // to determine the Content-Type header
+        const consumes: string[] = [
+            'application/json'
+        ];
+        const httpContentTypeSelected: string | undefined = this.configuration.selectHeaderContentType(consumes);
+        if (httpContentTypeSelected !== undefined) {
+            localVarHeaders = localVarHeaders.set('Content-Type', httpContentTypeSelected);
+        }
+
+        let responseType_: 'text' | 'json' | 'blob' = 'json';
+        if (localVarHttpHeaderAcceptSelected) {
+            if (localVarHttpHeaderAcceptSelected.startsWith('text')) {
+                responseType_ = 'text';
+            } else if (this.configuration.isJsonMime(localVarHttpHeaderAcceptSelected)) {
+                responseType_ = 'json';
+            } else {
+                responseType_ = 'blob';
+            }
+        }
+
+        let localVarPath = `/api/v1/lawfirms/${this.configuration.encodeParam({name: "lawfirmId", value: lawfirmId, in: "path", style: "simple", explode: false, dataType: "number", dataFormat: "int64"})}/account-manager`;
+        return this.httpClient.request<any>('post', `${this.configuration.basePath}${localVarPath}`,
+            {
+                context: localVarHttpContext,
+                body: request,
                 responseType: <any>responseType_,
                 withCredentials: this.configuration.withCredentials,
                 headers: localVarHeaders,
