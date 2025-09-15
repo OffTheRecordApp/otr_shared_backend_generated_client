@@ -21,6 +21,7 @@ export function SupportedStateModelFromJSONTyped(json, ignoreDiscriminator) {
     }
     return {
         'newAlgoEnabled': !exists(json, 'newAlgoEnabled') ? undefined : json['newAlgoEnabled'],
+        'primaryState': !exists(json, 'primaryState') ? undefined : json['primaryState'],
         'state': !exists(json, 'state') ? undefined : json['state'],
     };
 }
@@ -33,6 +34,7 @@ export function SupportedStateModelToJSON(value) {
     }
     return {
         'newAlgoEnabled': value.newAlgoEnabled,
+        'primaryState': value.primaryState,
         'state': value.state,
     };
 }

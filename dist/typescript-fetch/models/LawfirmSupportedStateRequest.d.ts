@@ -12,36 +12,30 @@
 /**
  *
  * @export
- * @interface SupportedStateModel
+ * @interface LawfirmSupportedStateRequest
  */
-export interface SupportedStateModel {
+export interface LawfirmSupportedStateRequest {
     /**
      *
      * @type {boolean}
-     * @memberof SupportedStateModel
+     * @memberof LawfirmSupportedStateRequest
      */
-    newAlgoEnabled?: boolean;
-    /**
-     *
-     * @type {boolean}
-     * @memberof SupportedStateModel
-     */
-    primaryState?: boolean;
+    primary?: boolean;
     /**
      *
      * @type {string}
-     * @memberof SupportedStateModel
+     * @memberof LawfirmSupportedStateRequest
      */
-    state?: SupportedStateModelStateEnum;
+    regionCode: LawfirmSupportedStateRequestRegionCodeEnum;
 }
-export declare function SupportedStateModelFromJSON(json: any): SupportedStateModel;
-export declare function SupportedStateModelFromJSONTyped(json: any, ignoreDiscriminator: boolean): SupportedStateModel;
-export declare function SupportedStateModelToJSON(value?: SupportedStateModel | null): any;
+export declare function LawfirmSupportedStateRequestFromJSON(json: any): LawfirmSupportedStateRequest;
+export declare function LawfirmSupportedStateRequestFromJSONTyped(json: any, ignoreDiscriminator: boolean): LawfirmSupportedStateRequest;
+export declare function LawfirmSupportedStateRequestToJSON(value?: LawfirmSupportedStateRequest | null): any;
 /**
 * @export
 * @enum {string}
 */
-export declare enum SupportedStateModelStateEnum {
+export declare enum LawfirmSupportedStateRequestRegionCodeEnum {
     AK = "AK",
     AL = "AL",
     AR = "AR",

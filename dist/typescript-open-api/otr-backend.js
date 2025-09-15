@@ -62,6 +62,7 @@ export var PathsApiV1LawfirmsLawfirmIdAuditEventsGetParametersQueryIncludeTypes;
     PathsApiV1LawfirmsLawfirmIdAuditEventsGetParametersQueryIncludeTypes["LAWFIRM_PERSONNEL_ADDED"] = "LAWFIRM_PERSONNEL_ADDED";
     PathsApiV1LawfirmsLawfirmIdAuditEventsGetParametersQueryIncludeTypes["LAWFIRM_PROFILE_UPDATED"] = "LAWFIRM_PROFILE_UPDATED";
     PathsApiV1LawfirmsLawfirmIdAuditEventsGetParametersQueryIncludeTypes["LAWFIRM_SETTING_UPDATED"] = "LAWFIRM_SETTING_UPDATED";
+    PathsApiV1LawfirmsLawfirmIdAuditEventsGetParametersQueryIncludeTypes["LAWFIRM_SUPPORTED_STATE_UPDATED"] = "LAWFIRM_SUPPORTED_STATE_UPDATED";
     PathsApiV1LawfirmsLawfirmIdAuditEventsGetParametersQueryIncludeTypes["LAWFIRM_TOTAL_CAPACITY"] = "LAWFIRM_TOTAL_CAPACITY";
     PathsApiV1LawfirmsLawfirmIdAuditEventsGetParametersQueryIncludeTypes["LAWFIRM_TRANSFER_REVERSED"] = "LAWFIRM_TRANSFER_REVERSED";
     PathsApiV1LawfirmsLawfirmIdAuditEventsGetParametersQueryIncludeTypes["LINE_ITEM_ADDED"] = "LINE_ITEM_ADDED";

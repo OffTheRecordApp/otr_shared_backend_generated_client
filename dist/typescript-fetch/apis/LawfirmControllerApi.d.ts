@@ -10,7 +10,7 @@
  * Do not edit the class manually.
  */
 import * as runtime from '../runtime';
-import { CreateNewLawfirmRequest, GetLawfirmAddressesResponse, GetLawfirmCaseStatsResponse, GetLawfirmInboxMessagesResponse, GetLawfirmJobTitleResponse, GetLawfirmLawyersResponse, GetLawfirmResponse, GetLawfirmSupportedStatesResponse, GetLawfirmsResponse, GetStripeConnectedAccountsResponse, IntercomSearchTicketsResponse, LawfirmPictureRequest, LawfirmVacationRequest, SaveLawfirmAccountManagerRequest, UpdateLawfirmPaymentModelRequest, UpdateLawfirmRequest, UpdateLawyerRoleRequest, UploadLawfirmsRequest, UploadLawfirmsResponse, UpsertAddressRequest } from '../models';
+import { CreateNewLawfirmRequest, GetLawfirmAddressesResponse, GetLawfirmCaseStatsResponse, GetLawfirmInboxMessagesResponse, GetLawfirmJobTitleResponse, GetLawfirmLawyersResponse, GetLawfirmResponse, GetLawfirmSupportedStatesResponse, GetLawfirmsResponse, GetStripeConnectedAccountsResponse, IntercomSearchTicketsResponse, LawfirmPictureRequest, LawfirmSupportedStateRequest, LawfirmVacationRequest, SaveLawfirmAccountManagerRequest, UpdateLawfirmPaymentModelRequest, UpdateLawfirmRequest, UpdateLawyerRoleRequest, UploadLawfirmsRequest, UploadLawfirmsResponse, UpsertAddressRequest } from '../models';
 export interface AddLawfirmAddressUsingPOSTRequest {
     lawfirmId: number;
     request: UpsertAddressRequest;
@@ -81,6 +81,10 @@ export interface GetSupportedStatesForLawfirmUsingGETRequest {
 export interface SaveLawfirmAccountManagerUsingPOSTRequest {
     lawfirmId: number;
     request: SaveLawfirmAccountManagerRequest;
+}
+export interface SaveLawfirmSupportedStateUsingPOSTRequest {
+    lawfirmId: number;
+    request: LawfirmSupportedStateRequest;
 }
 export interface SetVacationModeUsingPOSTRequest {
     lawfirmId: number;
@@ -267,6 +271,14 @@ export declare class LawfirmControllerApi extends runtime.BaseAPI {
      * saveLawfirmAccountManager
      */
     saveLawfirmAccountManagerUsingPOST(requestParameters: SaveLawfirmAccountManagerUsingPOSTRequest): Promise<void>;
+    /**
+     * saveLawfirmSupportedState
+     */
+    saveLawfirmSupportedStateUsingPOSTRaw(requestParameters: SaveLawfirmSupportedStateUsingPOSTRequest): Promise<runtime.ApiResponse<void>>;
+    /**
+     * saveLawfirmSupportedState
+     */
+    saveLawfirmSupportedStateUsingPOST(requestParameters: SaveLawfirmSupportedStateUsingPOSTRequest): Promise<void>;
     /**
      * setVacationMode
      */

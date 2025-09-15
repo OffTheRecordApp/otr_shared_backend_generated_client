@@ -3736,7 +3736,8 @@ export interface paths {
         /** getSupportedStatesForLawfirm */
         get: operations["getSupportedStatesForLawfirmUsingGET"];
         put?: never;
-        post?: never;
+        /** saveLawfirmSupportedState */
+        post: operations["saveLawfirmSupportedStateUsingPOST"];
         delete?: never;
         options?: never;
         head?: never;
@@ -11156,6 +11157,7 @@ export interface components {
             establishedDateUtc?: string;
             /** Format: int32 */
             establishedYear?: number;
+            hubspotRecordId?: string;
             isLawfirmDisabled?: boolean;
             isLawfirmNotWithCompany?: boolean;
             isTestLawfirm?: boolean;
@@ -12481,6 +12483,12 @@ export interface components {
             tagLine?: string;
             vacationModeOn?: boolean;
             website?: string;
+        };
+        /** LawfirmSupportedStateRequest */
+        LawfirmSupportedStateRequest: {
+            primary?: boolean;
+            /** @enum {string} */
+            regionCode: PathsApiV1CitationsCitationIdCourtMissingPostParametersQueryState;
         };
         /** LawfirmVacationRequest */
         LawfirmVacationRequest: {
@@ -15141,6 +15149,7 @@ export interface components {
         /** SupportedStateModel */
         SupportedStateModel: {
             newAlgoEnabled?: boolean;
+            primaryState?: boolean;
             /** @enum {string} */
             state?: PathsApiV1CitationsCitationIdCourtMissingPostParametersQueryState;
         };
@@ -28714,6 +28723,59 @@ export interface operations {
             };
         };
     };
+    saveLawfirmSupportedStateUsingPOST: {
+        parameters: {
+            query?: never;
+            header?: never;
+            path: {
+                /** @description lawfirmId */
+                lawfirmId: number;
+            };
+            cookie?: never;
+        };
+        requestBody?: {
+            content: {
+                "application/json": components["schemas"]["LawfirmSupportedStateRequest"];
+            };
+        };
+        responses: {
+            /** @description OK */
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content?: never;
+            };
+            /** @description Created */
+            201: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content?: never;
+            };
+            /** @description Unauthorized */
+            401: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content?: never;
+            };
+            /** @description Forbidden */
+            403: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content?: never;
+            };
+            /** @description Not Found */
+            404: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content?: never;
+            };
+        };
+    };
     setVacationModeUsingPOST: {
         parameters: {
             query?: never;
@@ -40126,6 +40188,7 @@ export declare enum PathsApiV1LawfirmsLawfirmIdAuditEventsGetParametersQueryIncl
     LAWFIRM_PERSONNEL_ADDED = "LAWFIRM_PERSONNEL_ADDED",
     LAWFIRM_PROFILE_UPDATED = "LAWFIRM_PROFILE_UPDATED",
     LAWFIRM_SETTING_UPDATED = "LAWFIRM_SETTING_UPDATED",
+    LAWFIRM_SUPPORTED_STATE_UPDATED = "LAWFIRM_SUPPORTED_STATE_UPDATED",
     LAWFIRM_TOTAL_CAPACITY = "LAWFIRM_TOTAL_CAPACITY",
     LAWFIRM_TRANSFER_REVERSED = "LAWFIRM_TRANSFER_REVERSED",
     LINE_ITEM_ADDED = "LINE_ITEM_ADDED",

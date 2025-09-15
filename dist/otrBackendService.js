@@ -11605,6 +11605,51 @@ angular.module('otrBackendService', [])
                 return deferred.promise;
             };
             /**
+             * saveLawfirmSupportedState
+             * @method
+             * @name OtrService#saveLawfirmSupportedStateUsingPOST
+             * @param {object} parameters - method options and parameters
+             * @param {integer} parameters.lawfirmId - lawfirmId
+             * @param {} parameters.request - request
+             */
+            OtrService.prototype.saveLawfirmSupportedStateUsingPOST = function(parameters) {
+                if (parameters === undefined) {
+                    parameters = {};
+                }
+                var deferred = $q.defer();
+                var domain = this.domain,
+                    path = '/api/v1/lawfirms/{lawfirmId}/supported-states';
+                var body = {},
+                    queryParameters = {},
+                    headers = {},
+                    form = {};
+
+                headers['Accept'] = ['*/*'];
+                headers['Content-Type'] = ['application/json'];
+
+                path = path.replace('{lawfirmId}', parameters['lawfirmId']);
+
+                if (parameters['lawfirmId'] === undefined) {
+                    deferred.reject(new Error('Missing required  parameter: lawfirmId'));
+                    return deferred.promise;
+                }
+
+                if (parameters['request'] !== undefined) {
+                    body = parameters['request'];
+                }
+
+                if (parameters['request'] === undefined) {
+                    deferred.reject(new Error('Missing required  parameter: request'));
+                    return deferred.promise;
+                }
+
+                queryParameters = mergeQueryParams(parameters, queryParameters);
+
+                this.request('POST', domain + path, parameters, body, headers, queryParameters, form, deferred);
+
+                return deferred.promise;
+            };
+            /**
              * listLawfirmSurcharges
              * @method
              * @name OtrService#listLawfirmSurchargesUsingGET

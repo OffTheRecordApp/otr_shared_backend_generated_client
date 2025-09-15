@@ -590,6 +590,7 @@ model/lawfirmSettingsDomainReq.ts
 model/lawfirmSettingsDomainRes.ts
 model/lawfirmStatusModel.ts
 model/lawfirmStorefrontModel.ts
+model/lawfirmSupportedStateRequest.ts
 model/lawfirmVacationRequest.ts
 model/lawfirmsRatesResponse.ts
 model/lawyerInviteByTokenModel.ts

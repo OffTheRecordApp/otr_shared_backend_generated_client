@@ -19,6 +19,7 @@ export interface GetLawfirmModel {
     "customerServiceScore"?: number;
     "establishedDateUtc"?: string;
     "establishedYear"?: number;
+    "hubspotRecordId"?: string;
     "isLawfirmDisabled"?: boolean;
     "isLawfirmNotWithCompany"?: boolean;
     "isTestLawfirm"?: boolean;

@@ -465,6 +465,7 @@ export * from './LawfirmSettingsDomainReq';
 export * from './LawfirmSettingsDomainRes';
 export * from './LawfirmStatusModel';
 export * from './LawfirmStorefrontModel';
+export * from './LawfirmSupportedStateRequest';
 export * from './LawfirmVacationRequest';
 export * from './LawfirmsRatesResponse';
 export * from './LawyerInviteByTokenModel';

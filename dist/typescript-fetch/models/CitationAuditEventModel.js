@@ -130,6 +130,7 @@ export var CitationAuditEventModelEventEnum;
     CitationAuditEventModelEventEnum["LAWFIRMPERSONNELADDED"] = "LAWFIRM_PERSONNEL_ADDED";
     CitationAuditEventModelEventEnum["LAWFIRMPROFILEUPDATED"] = "LAWFIRM_PROFILE_UPDATED";
     CitationAuditEventModelEventEnum["LAWFIRMSETTINGUPDATED"] = "LAWFIRM_SETTING_UPDATED";
+    CitationAuditEventModelEventEnum["LAWFIRMSUPPORTEDSTATEUPDATED"] = "LAWFIRM_SUPPORTED_STATE_UPDATED";
     CitationAuditEventModelEventEnum["LAWFIRMTOTALCAPACITY"] = "LAWFIRM_TOTAL_CAPACITY";
     CitationAuditEventModelEventEnum["LAWFIRMTRANSFERREVERSED"] = "LAWFIRM_TRANSFER_REVERSED";
     CitationAuditEventModelEventEnum["LINEITEMADDED"] = "LINE_ITEM_ADDED";

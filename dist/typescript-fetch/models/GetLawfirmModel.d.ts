@@ -66,6 +66,12 @@ export interface GetLawfirmModel {
     establishedYear?: number;
     /**
      *
+     * @type {string}
+     * @memberof GetLawfirmModel
+     */
+    hubspotRecordId?: string;
+    /**
+     *
      * @type {boolean}
      * @memberof GetLawfirmModel
      */

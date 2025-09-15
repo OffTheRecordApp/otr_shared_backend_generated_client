@@ -151,6 +151,13 @@ export declare class LawfirmControllerApi {
     saveLawfirmAccountManagerUsingPOST(lawfirmId: number, request: models.SaveLawfirmAccountManagerRequest, extraHttpRequestParams?: any): ng.IHttpPromise<{}>;
     /**
      *
+     * @summary saveLawfirmSupportedState
+     * @param lawfirmId lawfirmId
+     * @param request request
+     */
+    saveLawfirmSupportedStateUsingPOST(lawfirmId: number, request: models.LawfirmSupportedStateRequest, extraHttpRequestParams?: any): ng.IHttpPromise<{}>;
+    /**
+     *
      * @summary setVacationMode
      * @param lawfirmId lawfirmId
      * @param request request

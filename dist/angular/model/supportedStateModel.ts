@@ -13,6 +13,7 @@
 
 export interface SupportedStateModel { 
     newAlgoEnabled?: boolean;
+    primaryState?: boolean;
     state?: SupportedStateModel.StateEnum;
 }
 export namespace SupportedStateModel {

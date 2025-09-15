@@ -571,6 +571,37 @@ export class LawfirmControllerApi {
     }
     /**
      *
+     * @summary saveLawfirmSupportedState
+     * @param lawfirmId lawfirmId
+     * @param request request
+     */
+    saveLawfirmSupportedStateUsingPOST(lawfirmId, request, extraHttpRequestParams) {
+        const localVarPath = this.basePath + '/api/v1/lawfirms/{lawfirmId}/supported-states'
+            .replace('{' + 'lawfirmId' + '}', encodeURIComponent(String(lawfirmId)));
+        let queryParameters = {};
+        let headerParams = Object.assign({}, this.defaultHeaders);
+        // verify required parameter 'lawfirmId' is not null or undefined
+        if (lawfirmId === null || lawfirmId === undefined) {
+            throw new Error('Required parameter lawfirmId was null or undefined when calling saveLawfirmSupportedStateUsingPOST.');
+        }
+        // verify required parameter 'request' is not null or undefined
+        if (request === null || request === undefined) {
+            throw new Error('Required parameter request was null or undefined when calling saveLawfirmSupportedStateUsingPOST.');
+        }
+        let httpRequestParams = {
+            method: 'POST',
+            url: localVarPath,
+            data: request,
+            params: queryParameters,
+            headers: headerParams
+        };
+        if (extraHttpRequestParams) {
+            httpRequestParams = Object.assign(httpRequestParams, extraHttpRequestParams);
+        }
+        return this.$http(httpRequestParams);
+    }
+    /**
+     *
      * @summary setVacationMode
      * @param lawfirmId lawfirmId
      * @param request request

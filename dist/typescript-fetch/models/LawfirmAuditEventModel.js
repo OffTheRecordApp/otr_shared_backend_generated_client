@@ -130,6 +130,7 @@ export var LawfirmAuditEventModelEventEnum;
     LawfirmAuditEventModelEventEnum["LAWFIRMPERSONNELADDED"] = "LAWFIRM_PERSONNEL_ADDED";
     LawfirmAuditEventModelEventEnum["LAWFIRMPROFILEUPDATED"] = "LAWFIRM_PROFILE_UPDATED";
     LawfirmAuditEventModelEventEnum["LAWFIRMSETTINGUPDATED"] = "LAWFIRM_SETTING_UPDATED";
+    LawfirmAuditEventModelEventEnum["LAWFIRMSUPPORTEDSTATEUPDATED"] = "LAWFIRM_SUPPORTED_STATE_UPDATED";
     LawfirmAuditEventModelEventEnum["LAWFIRMTOTALCAPACITY"] = "LAWFIRM_TOTAL_CAPACITY";
     LawfirmAuditEventModelEventEnum["LAWFIRMTRANSFERREVERSED"] = "LAWFIRM_TRANSFER_REVERSED";
     LawfirmAuditEventModelEventEnum["LINEITEMADDED"] = "LINE_ITEM_ADDED";

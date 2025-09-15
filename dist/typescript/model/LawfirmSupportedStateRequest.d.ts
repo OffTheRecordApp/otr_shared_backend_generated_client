@@ -9,13 +9,12 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-export interface SupportedStateModel {
-    "newAlgoEnabled"?: boolean;
-    "primaryState"?: boolean;
-    "state"?: SupportedStateModel.StateEnum;
+export interface LawfirmSupportedStateRequest {
+    "primary"?: boolean;
+    "regionCode": LawfirmSupportedStateRequest.RegionCodeEnum;
 }
-export declare namespace SupportedStateModel {
-    enum StateEnum {
+export declare namespace LawfirmSupportedStateRequest {
+    enum RegionCodeEnum {
         AK,
         AL,
         AR,
