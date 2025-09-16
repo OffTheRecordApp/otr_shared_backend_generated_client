@@ -54,6 +54,7 @@ export interface UserDomain {
     password?: string;
     passwordEncrypted?: string;
     phoneNumbers?: Set<PhoneNumberDomain>;
+    primaryHouseholdMate?: UserHouseholdBeneficiaryModel;
     privacyMode?: UserDomain.PrivacyModeEnum;
     profilePicture?: string;
     race?: UserDomain.RaceEnum;

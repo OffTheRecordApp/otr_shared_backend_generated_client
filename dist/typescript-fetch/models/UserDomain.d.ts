@@ -210,6 +210,12 @@ export interface UserDomain {
     phoneNumbers?: Array<PhoneNumberDomain>;
     /**
      *
+     * @type {UserHouseholdBeneficiaryModel}
+     * @memberof UserDomain
+     */
+    primaryHouseholdMate?: UserHouseholdBeneficiaryModel;
+    /**
+     *
      * @type {string}
      * @memberof UserDomain
      */

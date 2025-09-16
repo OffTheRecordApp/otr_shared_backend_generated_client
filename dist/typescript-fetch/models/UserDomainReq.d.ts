@@ -204,6 +204,12 @@ export interface UserDomainReq {
     phoneNumbers?: Array<PhoneNumberDomainReq>;
     /**
      *
+     * @type {UserHouseholdBeneficiaryModelReq}
+     * @memberof UserDomainReq
+     */
+    primaryHouseholdMate?: UserHouseholdBeneficiaryModelReq;
+    /**
+     *
      * @type {string}
      * @memberof UserDomainReq
      */

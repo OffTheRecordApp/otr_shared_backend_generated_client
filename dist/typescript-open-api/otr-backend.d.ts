@@ -15893,6 +15893,7 @@ export interface components {
             password?: string;
             passwordEncrypted?: string;
             phoneNumbers?: components["schemas"]["PhoneNumberDomain"][];
+            primaryHouseholdMate?: components["schemas"]["UserHouseholdBeneficiaryModel"];
             /** @enum {string} */
             privacyMode?: ActivityFeedModelPrivacyMode;
             profilePicture?: string;
@@ -15961,6 +15962,7 @@ export interface components {
             password?: string;
             passwordEncrypted?: string;
             phoneNumbers?: components["schemas"]["PhoneNumberDomainReq"][];
+            primaryHouseholdMate?: components["schemas"]["UserHouseholdBeneficiaryModelReq"];
             /** @enum {string} */
             privacyMode?: ActivityFeedModelPrivacyMode;
             profilePicture?: string;
@@ -16030,6 +16032,7 @@ export interface components {
             password?: string;
             passwordEncrypted?: string;
             phoneNumbers?: components["schemas"]["PhoneNumberDomainRes"][];
+            primaryHouseholdMate?: components["schemas"]["UserHouseholdBeneficiaryModelRes"];
             /** @enum {string} */
             privacyMode?: ActivityFeedModelPrivacyMode;
             profilePicture?: string;

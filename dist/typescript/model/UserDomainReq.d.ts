@@ -42,6 +42,7 @@ export interface UserDomainReq {
     "password"?: string;
     "passwordEncrypted"?: string;
     "phoneNumbers"?: Array<models.PhoneNumberDomainReq>;
+    "primaryHouseholdMate"?: models.UserHouseholdBeneficiaryModelReq;
     "privacyMode"?: UserDomainReq.PrivacyModeEnum;
     "profilePicture"?: string;
     "race"?: UserDomainReq.RaceEnum;

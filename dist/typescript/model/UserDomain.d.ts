@@ -43,6 +43,7 @@ export interface UserDomain {
     "password"?: string;
     "passwordEncrypted"?: string;
     "phoneNumbers"?: Array<models.PhoneNumberDomain>;
+    "primaryHouseholdMate"?: models.UserHouseholdBeneficiaryModel;
     "privacyMode"?: UserDomain.PrivacyModeEnum;
     "profilePicture"?: string;
     "race"?: UserDomain.RaceEnum;

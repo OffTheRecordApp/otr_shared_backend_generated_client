@@ -53,6 +53,7 @@ export interface UserDomainReq {
     password?: string;
     passwordEncrypted?: string;
     phoneNumbers?: Set<PhoneNumberDomainReq>;
+    primaryHouseholdMate?: UserHouseholdBeneficiaryModelReq;
     privacyMode?: UserDomainReq.PrivacyModeEnum;
     profilePicture?: string;
     race?: UserDomainReq.RaceEnum;
