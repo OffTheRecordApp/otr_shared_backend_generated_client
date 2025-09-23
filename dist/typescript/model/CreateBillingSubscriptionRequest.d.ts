@@ -13,8 +13,17 @@ import * as models from './models';
 export interface CreateBillingSubscriptionRequest {
     "accountIdempotencyKey"?: string;
     "cardId"?: string;
+    "caseId"?: string;
     "guardian"?: models.SubscriptionGuardianModel;
+    "initialSubscriptionFlow"?: CreateBillingSubscriptionRequest.InitialSubscriptionFlowEnum;
     "priceIds"?: Array<string>;
     "productId"?: string;
     "trialEndDate"?: string;
+}
+export declare namespace CreateBillingSubscriptionRequest {
+    enum InitialSubscriptionFlowEnum {
+        BOOKINGUPSELL,
+        FASTLANETEENFLOW,
+        HOMEPAGEBANNER
+    }
 }

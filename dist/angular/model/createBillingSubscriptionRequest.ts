@@ -15,9 +15,20 @@ import { SubscriptionGuardianModel } from './subscriptionGuardianModel';
 export interface CreateBillingSubscriptionRequest { 
     accountIdempotencyKey?: string;
     cardId?: string;
+    caseId?: string;
     guardian?: SubscriptionGuardianModel;
+    initialSubscriptionFlow?: CreateBillingSubscriptionRequest.InitialSubscriptionFlowEnum;
     priceIds?: Array<string>;
     productId?: string;
     trialEndDate?: string;
 }
+export namespace CreateBillingSubscriptionRequest {
+    export type InitialSubscriptionFlowEnum = 'BOOKING_UPSELL' | 'FASTLANE_TEEN_FLOW' | 'HOME_PAGE_BANNER';
+    export const InitialSubscriptionFlowEnum = {
+        BookingUpsell: 'BOOKING_UPSELL' as InitialSubscriptionFlowEnum,
+        FastlaneTeenFlow: 'FASTLANE_TEEN_FLOW' as InitialSubscriptionFlowEnum,
+        HomePageBanner: 'HOME_PAGE_BANNER' as InitialSubscriptionFlowEnum
+    };
+}
+
 

@@ -778,6 +778,12 @@ export var CoachingCardUsersModelPermissionType;
     CoachingCardUsersModelPermissionType["PARTICIPANT"] = "PARTICIPANT";
     CoachingCardUsersModelPermissionType["RECIPIENT"] = "RECIPIENT";
 })(CoachingCardUsersModelPermissionType || (CoachingCardUsersModelPermissionType = {}));
+export var CreateBillingSubscriptionRequestInitialSubscriptionFlow;
+(function (CreateBillingSubscriptionRequestInitialSubscriptionFlow) {
+    CreateBillingSubscriptionRequestInitialSubscriptionFlow["BOOKING_UPSELL"] = "BOOKING_UPSELL";
+    CreateBillingSubscriptionRequestInitialSubscriptionFlow["FASTLANE_TEEN_FLOW"] = "FASTLANE_TEEN_FLOW";
+    CreateBillingSubscriptionRequestInitialSubscriptionFlow["HOME_PAGE_BANNER"] = "HOME_PAGE_BANNER";
+})(CreateBillingSubscriptionRequestInitialSubscriptionFlow || (CreateBillingSubscriptionRequestInitialSubscriptionFlow = {}));
 export var CreateLawfirmModelLawfirmPaymentModel;
 (function (CreateLawfirmModelLawfirmPaymentModel) {
     CreateLawfirmModelLawfirmPaymentModel["DESTINATION_ACCOUNT"] = "DESTINATION_ACCOUNT";

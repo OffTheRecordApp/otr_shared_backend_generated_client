@@ -23,7 +23,9 @@ export function CreateBillingSubscriptionRequestFromJSONTyped(json, ignoreDiscri
     return {
         'accountIdempotencyKey': !exists(json, 'accountIdempotencyKey') ? undefined : json['accountIdempotencyKey'],
         'cardId': !exists(json, 'cardId') ? undefined : json['cardId'],
+        'caseId': !exists(json, 'caseId') ? undefined : json['caseId'],
         'guardian': !exists(json, 'guardian') ? undefined : SubscriptionGuardianModelFromJSON(json['guardian']),
+        'initialSubscriptionFlow': !exists(json, 'initialSubscriptionFlow') ? undefined : json['initialSubscriptionFlow'],
         'priceIds': !exists(json, 'priceIds') ? undefined : json['priceIds'],
         'productId': !exists(json, 'productId') ? undefined : json['productId'],
         'trialEndDate': !exists(json, 'trialEndDate') ? undefined : (new Date(json['trialEndDate'])),
@@ -39,9 +41,21 @@ export function CreateBillingSubscriptionRequestToJSON(value) {
     return {
         'accountIdempotencyKey': value.accountIdempotencyKey,
         'cardId': value.cardId,
+        'caseId': value.caseId,
         'guardian': SubscriptionGuardianModelToJSON(value.guardian),
+        'initialSubscriptionFlow': value.initialSubscriptionFlow,
         'priceIds': value.priceIds,
         'productId': value.productId,
         'trialEndDate': value.trialEndDate === undefined ? undefined : (value.trialEndDate.toISOString().substr(0, 10)),
     };
 }
+/**
+* @export
+* @enum {string}
+*/
+export var CreateBillingSubscriptionRequestInitialSubscriptionFlowEnum;
+(function (CreateBillingSubscriptionRequestInitialSubscriptionFlowEnum) {
+    CreateBillingSubscriptionRequestInitialSubscriptionFlowEnum["BOOKINGUPSELL"] = "BOOKING_UPSELL";
+    CreateBillingSubscriptionRequestInitialSubscriptionFlowEnum["FASTLANETEENFLOW"] = "FASTLANE_TEEN_FLOW";
+    CreateBillingSubscriptionRequestInitialSubscriptionFlowEnum["HOMEPAGEBANNER"] = "HOME_PAGE_BANNER";
+})(CreateBillingSubscriptionRequestInitialSubscriptionFlowEnum || (CreateBillingSubscriptionRequestInitialSubscriptionFlowEnum = {}));

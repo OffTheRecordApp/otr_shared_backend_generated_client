@@ -9519,7 +9519,10 @@ export interface components {
         CreateBillingSubscriptionRequest: {
             accountIdempotencyKey?: string;
             cardId?: string;
+            caseId?: string;
             guardian?: components["schemas"]["SubscriptionGuardianModel"];
+            /** @enum {string} */
+            initialSubscriptionFlow?: CreateBillingSubscriptionRequestInitialSubscriptionFlow;
             priceIds?: string[];
             productId?: string;
             /** Format: date */
@@ -40843,6 +40846,11 @@ export declare enum CoachingCardUsersModelPermissionType {
     MANAGER = "MANAGER",
     PARTICIPANT = "PARTICIPANT",
     RECIPIENT = "RECIPIENT"
+}
+export declare enum CreateBillingSubscriptionRequestInitialSubscriptionFlow {
+    BOOKING_UPSELL = "BOOKING_UPSELL",
+    FASTLANE_TEEN_FLOW = "FASTLANE_TEEN_FLOW",
+    HOME_PAGE_BANNER = "HOME_PAGE_BANNER"
 }
 export declare enum CreateLawfirmModelLawfirmPaymentModel {
     DESTINATION_ACCOUNT = "DESTINATION_ACCOUNT",

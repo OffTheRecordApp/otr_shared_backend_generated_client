@@ -9,4 +9,12 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-export {};
+export var CreateBillingSubscriptionRequest;
+(function (CreateBillingSubscriptionRequest) {
+    let InitialSubscriptionFlowEnum;
+    (function (InitialSubscriptionFlowEnum) {
+        InitialSubscriptionFlowEnum[InitialSubscriptionFlowEnum["BOOKINGUPSELL"] = 'BOOKING_UPSELL'] = "BOOKINGUPSELL";
+        InitialSubscriptionFlowEnum[InitialSubscriptionFlowEnum["FASTLANETEENFLOW"] = 'FASTLANE_TEEN_FLOW'] = "FASTLANETEENFLOW";
+        InitialSubscriptionFlowEnum[InitialSubscriptionFlowEnum["HOMEPAGEBANNER"] = 'HOME_PAGE_BANNER'] = "HOMEPAGEBANNER";
+    })(InitialSubscriptionFlowEnum = CreateBillingSubscriptionRequest.InitialSubscriptionFlowEnum || (CreateBillingSubscriptionRequest.InitialSubscriptionFlowEnum = {}));
+})(CreateBillingSubscriptionRequest || (CreateBillingSubscriptionRequest = {}));

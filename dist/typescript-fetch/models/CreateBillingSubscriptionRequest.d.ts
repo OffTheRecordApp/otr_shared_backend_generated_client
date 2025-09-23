@@ -30,10 +30,22 @@ export interface CreateBillingSubscriptionRequest {
     cardId?: string;
     /**
      *
+     * @type {string}
+     * @memberof CreateBillingSubscriptionRequest
+     */
+    caseId?: string;
+    /**
+     *
      * @type {SubscriptionGuardianModel}
      * @memberof CreateBillingSubscriptionRequest
      */
     guardian?: SubscriptionGuardianModel;
+    /**
+     *
+     * @type {string}
+     * @memberof CreateBillingSubscriptionRequest
+     */
+    initialSubscriptionFlow?: CreateBillingSubscriptionRequestInitialSubscriptionFlowEnum;
     /**
      *
      * @type {Array<string>}
@@ -56,3 +68,12 @@ export interface CreateBillingSubscriptionRequest {
 export declare function CreateBillingSubscriptionRequestFromJSON(json: any): CreateBillingSubscriptionRequest;
 export declare function CreateBillingSubscriptionRequestFromJSONTyped(json: any, ignoreDiscriminator: boolean): CreateBillingSubscriptionRequest;
 export declare function CreateBillingSubscriptionRequestToJSON(value?: CreateBillingSubscriptionRequest | null): any;
+/**
+* @export
+* @enum {string}
+*/
+export declare enum CreateBillingSubscriptionRequestInitialSubscriptionFlowEnum {
+    BOOKINGUPSELL = "BOOKING_UPSELL",
+    FASTLANETEENFLOW = "FASTLANE_TEEN_FLOW",
+    HOMEPAGEBANNER = "HOME_PAGE_BANNER"
+}
