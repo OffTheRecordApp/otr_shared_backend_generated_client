@@ -9,6 +9,7 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
+import { AccountManagerModel } from './accountManagerModel';
 import { LawfirmStatusModel } from './lawfirmStatusModel';
 import { AddressDomain } from './addressDomain';
 import { SupportedStateModel } from './supportedStateModel';
@@ -18,6 +19,7 @@ import { LawfirmRedirectModel } from './lawfirmRedirectModel';
 
 export interface GetLawfirmModel { 
     aboutUsBlurb?: string;
+    accountManager?: AccountManagerModel;
     address?: AddressDomain;
     caseAssignmentPriority?: number;
     coverPhotoUrl?: string;

@@ -12,6 +12,7 @@
 import * as models from './models';
 export interface GetLawfirmModel {
     "aboutUsBlurb"?: string;
+    "accountManager"?: models.AccountManagerModel;
     "address"?: models.AddressDomain;
     "caseAssignmentPriority"?: number;
     "coverPhotoUrl"?: string;

@@ -128,6 +128,7 @@ model/accountLevelFee.ts
 model/accountLevelFeeRequest.ts
 model/accountLevelFeeResponse.ts
 model/accountLevelFeeToSave.ts
+model/accountManagerModel.ts
 model/action.ts
 model/actionByEntityModel.ts
 model/activityFeedModel.ts
@@ -391,6 +392,8 @@ model/generateCounterOfferCasePaymentsResponse.ts
 model/generateTemplateRequest.ts
 model/genericAdminListRequest.ts
 model/geoRatesRequest.ts
+model/getAccountManagerModel.ts
+model/getAccountManagersResponse.ts
 model/getActivityFeedResponse.ts
 model/getAddressInnerResponse.ts
 model/getAnonymousTicketUploads.ts

@@ -134,6 +134,25 @@ export class LawfirmControllerApi {
     }
     /**
      *
+     * @summary getAccountManagers
+     */
+    getAccountManagersUsingGET(extraHttpRequestParams) {
+        const localVarPath = this.basePath + '/api/v1/lawfirms/account-managers';
+        let queryParameters = {};
+        let headerParams = Object.assign({}, this.defaultHeaders);
+        let httpRequestParams = {
+            method: 'GET',
+            url: localVarPath,
+            params: queryParameters,
+            headers: headerParams
+        };
+        if (extraHttpRequestParams) {
+            httpRequestParams = Object.assign(httpRequestParams, extraHttpRequestParams);
+        }
+        return this.$http(httpRequestParams);
+    }
+    /**
+     *
      * @summary getInboxMessages
      * @param lawfirmId lawfirmId
      * @param caseStatuses caseStatuses

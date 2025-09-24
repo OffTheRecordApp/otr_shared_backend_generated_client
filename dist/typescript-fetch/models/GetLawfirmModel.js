@@ -12,7 +12,7 @@
  * Do not edit the class manually.
  */
 import { exists } from '../runtime';
-import { AddressDomainFromJSON, AddressDomainToJSON, LawfirmRedirectModelFromJSON, LawfirmRedirectModelToJSON, LawfirmSettingsDomainResFromJSON, LawfirmSettingsDomainResToJSON, LawfirmStatusModelFromJSON, LawfirmStatusModelToJSON, SupportedStateModelFromJSON, SupportedStateModelToJSON, } from './';
+import { AccountManagerModelFromJSON, AccountManagerModelToJSON, AddressDomainFromJSON, AddressDomainToJSON, LawfirmRedirectModelFromJSON, LawfirmRedirectModelToJSON, LawfirmSettingsDomainResFromJSON, LawfirmSettingsDomainResToJSON, LawfirmStatusModelFromJSON, LawfirmStatusModelToJSON, SupportedStateModelFromJSON, SupportedStateModelToJSON, } from './';
 export function GetLawfirmModelFromJSON(json) {
     return GetLawfirmModelFromJSONTyped(json, false);
 }
@@ -22,6 +22,7 @@ export function GetLawfirmModelFromJSONTyped(json, ignoreDiscriminator) {
     }
     return {
         'aboutUsBlurb': !exists(json, 'aboutUsBlurb') ? undefined : json['aboutUsBlurb'],
+        'accountManager': !exists(json, 'accountManager') ? undefined : AccountManagerModelFromJSON(json['accountManager']),
         'address': !exists(json, 'address') ? undefined : AddressDomainFromJSON(json['address']),
         'caseAssignmentPriority': !exists(json, 'caseAssignmentPriority') ? undefined : json['caseAssignmentPriority'],
         'coverPhotoUrl': !exists(json, 'coverPhotoUrl') ? undefined : json['coverPhotoUrl'],
@@ -61,6 +62,7 @@ export function GetLawfirmModelToJSON(value) {
     }
     return {
         'aboutUsBlurb': value.aboutUsBlurb,
+        'accountManager': AccountManagerModelToJSON(value.accountManager),
         'address': AddressDomainToJSON(value.address),
         'caseAssignmentPriority': value.caseAssignmentPriority,
         'coverPhotoUrl': value.coverPhotoUrl,

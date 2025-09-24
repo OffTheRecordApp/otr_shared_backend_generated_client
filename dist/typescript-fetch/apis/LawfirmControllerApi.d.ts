@@ -10,7 +10,7 @@
  * Do not edit the class manually.
  */
 import * as runtime from '../runtime';
-import { CreateNewLawfirmRequest, GetLawfirmAddressesResponse, GetLawfirmCaseStatsResponse, GetLawfirmInboxMessagesResponse, GetLawfirmJobTitleResponse, GetLawfirmLawyersResponse, GetLawfirmResponse, GetLawfirmSupportedStatesResponse, GetLawfirmsResponse, GetStripeConnectedAccountsResponse, IntercomSearchTicketsResponse, LawfirmPictureRequest, LawfirmSupportedStateRequest, LawfirmVacationRequest, SaveLawfirmAccountManagerRequest, UpdateLawfirmPaymentModelRequest, UpdateLawfirmRequest, UpdateLawyerRoleRequest, UploadLawfirmsRequest, UploadLawfirmsResponse, UpsertAddressRequest } from '../models';
+import { CreateNewLawfirmRequest, GetAccountManagersResponse, GetLawfirmAddressesResponse, GetLawfirmCaseStatsResponse, GetLawfirmInboxMessagesResponse, GetLawfirmJobTitleResponse, GetLawfirmLawyersResponse, GetLawfirmResponse, GetLawfirmSupportedStatesResponse, GetLawfirmsResponse, GetStripeConnectedAccountsResponse, IntercomSearchTicketsResponse, LawfirmPictureRequest, LawfirmSupportedStateRequest, LawfirmVacationRequest, SaveLawfirmAccountManagerRequest, UpdateLawfirmPaymentModelRequest, UpdateLawfirmRequest, UpdateLawyerRoleRequest, UploadLawfirmsRequest, UploadLawfirmsResponse, UpsertAddressRequest } from '../models';
 export interface AddLawfirmAddressUsingPOSTRequest {
     lawfirmId: number;
     request: UpsertAddressRequest;
@@ -151,6 +151,14 @@ export declare class LawfirmControllerApi extends runtime.BaseAPI {
      * deleteLawfirmCoverPhoto
      */
     deleteLawfirmCoverPhotoUsingDELETE(requestParameters: DeleteLawfirmCoverPhotoUsingDELETERequest): Promise<object>;
+    /**
+     * getAccountManagers
+     */
+    getAccountManagersUsingGETRaw(): Promise<runtime.ApiResponse<GetAccountManagersResponse>>;
+    /**
+     * getAccountManagers
+     */
+    getAccountManagersUsingGET(): Promise<GetAccountManagersResponse>;
     /**
      * getInboxMessages
      */

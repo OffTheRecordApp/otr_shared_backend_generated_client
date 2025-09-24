@@ -9,7 +9,7 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-import { AddressDomain, LawfirmRedirectModel, LawfirmSettingsDomainRes, LawfirmStatusModel, SupportedStateModel } from './';
+import { AccountManagerModel, AddressDomain, LawfirmRedirectModel, LawfirmSettingsDomainRes, LawfirmStatusModel, SupportedStateModel } from './';
 /**
  *
  * @export
@@ -22,6 +22,12 @@ export interface GetLawfirmModel {
      * @memberof GetLawfirmModel
      */
     aboutUsBlurb?: string;
+    /**
+     *
+     * @type {AccountManagerModel}
+     * @memberof GetLawfirmModel
+     */
+    accountManager?: AccountManagerModel;
     /**
      *
      * @type {AddressDomain}
