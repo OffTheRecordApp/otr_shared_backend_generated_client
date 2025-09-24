@@ -392,7 +392,6 @@ model/generateCounterOfferCasePaymentsResponse.ts
 model/generateTemplateRequest.ts
 model/genericAdminListRequest.ts
 model/geoRatesRequest.ts
-model/getAccountManagerModel.ts
 model/getAccountManagersResponse.ts
 model/getActivityFeedResponse.ts
 model/getAddressInnerResponse.ts

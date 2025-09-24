@@ -10623,16 +10623,9 @@ export interface components {
             violationCount?: number;
             violations?: components["schemas"]["ViolationInputRequest"][];
         };
-        /** GetAccountManagerModel */
-        GetAccountManagerModel: {
-            firstName?: string;
-            lastName?: string;
-            /** Format: int64 */
-            userId?: number;
-        };
         /** GetAccountManagersResponse */
         GetAccountManagersResponse: {
-            accountManagers?: components["schemas"]["GetAccountManagerModel"][];
+            accountManagers?: components["schemas"]["AccountManagerModel"][];
         };
         /** GetActivityFeedResponse */
         GetActivityFeedResponse: {

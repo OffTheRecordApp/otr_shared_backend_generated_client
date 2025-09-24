@@ -267,7 +267,6 @@ export * from './GenerateCounterOfferCasePaymentsResponse';
 export * from './GenerateTemplateRequest';
 export * from './GenericAdminListRequest';
 export * from './GeoRatesRequest';
-export * from './GetAccountManagerModel';
 export * from './GetAccountManagersResponse';
 export * from './GetActivityFeedResponse';
 export * from './GetAddressInnerResponse';

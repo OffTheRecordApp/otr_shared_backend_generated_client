@@ -9,7 +9,7 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-import { GetAccountManagerModel } from './';
+import { AccountManagerModel } from './';
 /**
  *
  * @export
@@ -18,10 +18,10 @@ import { GetAccountManagerModel } from './';
 export interface GetAccountManagersResponse {
     /**
      *
-     * @type {Array<GetAccountManagerModel>}
+     * @type {Array<AccountManagerModel>}
      * @memberof GetAccountManagersResponse
      */
-    accountManagers?: Array<GetAccountManagerModel>;
+    accountManagers?: Array<AccountManagerModel>;
 }
 export declare function GetAccountManagersResponseFromJSON(json: any): GetAccountManagersResponse;
 export declare function GetAccountManagersResponseFromJSONTyped(json: any, ignoreDiscriminator: boolean): GetAccountManagersResponse;

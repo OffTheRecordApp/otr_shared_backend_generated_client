@@ -12,7 +12,7 @@
  * Do not edit the class manually.
  */
 import { exists } from '../runtime';
-import { GetAccountManagerModelFromJSON, GetAccountManagerModelToJSON, } from './';
+import { AccountManagerModelFromJSON, AccountManagerModelToJSON, } from './';
 export function GetAccountManagersResponseFromJSON(json) {
     return GetAccountManagersResponseFromJSONTyped(json, false);
 }
@@ -21,7 +21,7 @@ export function GetAccountManagersResponseFromJSONTyped(json, ignoreDiscriminato
         return json;
     }
     return {
-        'accountManagers': !exists(json, 'accountManagers') ? undefined : (json['accountManagers'].map(GetAccountManagerModelFromJSON)),
+        'accountManagers': !exists(json, 'accountManagers') ? undefined : (json['accountManagers'].map(AccountManagerModelFromJSON)),
     };
 }
 export function GetAccountManagersResponseToJSON(value) {
@@ -32,6 +32,6 @@ export function GetAccountManagersResponseToJSON(value) {
         return null;
     }
     return {
-        'accountManagers': value.accountManagers === undefined ? undefined : (value.accountManagers.map(GetAccountManagerModelToJSON)),
+        'accountManagers': value.accountManagers === undefined ? undefined : (value.accountManagers.map(AccountManagerModelToJSON)),
     };
 }

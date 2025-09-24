@@ -9,10 +9,10 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-import { GetAccountManagerModel } from './getAccountManagerModel';
+import { AccountManagerModel } from './accountManagerModel';
 
 
 export interface GetAccountManagersResponse { 
-    accountManagers?: Array<GetAccountManagerModel>;
+    accountManagers?: Array<AccountManagerModel>;
 }
 

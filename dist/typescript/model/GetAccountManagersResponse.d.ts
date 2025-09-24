@@ -11,5 +11,5 @@
  */
 import * as models from './models';
 export interface GetAccountManagersResponse {
-    "accountManagers"?: Array<models.GetAccountManagerModel>;
+    "accountManagers"?: Array<models.AccountManagerModel>;
 }
