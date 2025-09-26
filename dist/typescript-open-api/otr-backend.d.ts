@@ -13481,16 +13481,16 @@ export interface components {
         /** NoteModel */
         NoteModel: {
             author?: components["schemas"]["NoteAuthor"];
-            /** Format: date-time */
-            deletedDateUtc?: string;
+            /** Format: int64 */
+            deletedDateUtc?: number;
             isDeleted?: boolean;
             note?: string;
             /** Format: int64 */
             noteId?: number;
             /** @enum {string} */
             noteType?: PathsApiV2NotesSearchGetParametersQueryNoteType;
-            /** Format: date-time */
-            postedDateUtc?: string;
+            /** Format: int64 */
+            postedDateUtc?: number;
             referenceId?: string;
         };
         /** NotificationEvent */

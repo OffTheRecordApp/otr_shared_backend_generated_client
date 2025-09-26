@@ -12,12 +12,12 @@
 import * as models from './models';
 export interface NoteModel {
     "author"?: models.NoteAuthor;
-    "deletedDateUtc"?: string;
+    "deletedDateUtc"?: number;
     "isDeleted"?: boolean;
     "note"?: string;
     "noteId"?: number;
     "noteType"?: NoteModel.NoteTypeEnum;
-    "postedDateUtc"?: string;
+    "postedDateUtc"?: number;
     "referenceId"?: string;
 }
 export declare namespace NoteModel {

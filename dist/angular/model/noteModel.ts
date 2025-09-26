@@ -14,12 +14,12 @@ import { NoteAuthor } from './noteAuthor';
 
 export interface NoteModel { 
     author?: NoteAuthor;
-    deletedDateUtc?: string;
+    deletedDateUtc?: number;
     isDeleted?: boolean;
     note?: string;
     noteId?: number;
     noteType?: NoteModel.NoteTypeEnum;
-    postedDateUtc?: string;
+    postedDateUtc?: number;
     referenceId?: string;
 }
 export namespace NoteModel {

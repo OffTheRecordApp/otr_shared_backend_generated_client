@@ -24,10 +24,10 @@ export interface NoteModel {
     author?: NoteAuthor;
     /**
      *
-     * @type {Date}
+     * @type {number}
      * @memberof NoteModel
      */
-    deletedDateUtc?: Date;
+    deletedDateUtc?: number;
     /**
      *
      * @type {boolean}
@@ -54,10 +54,10 @@ export interface NoteModel {
     noteType?: NoteModelNoteTypeEnum;
     /**
      *
-     * @type {Date}
+     * @type {number}
      * @memberof NoteModel
      */
-    postedDateUtc?: Date;
+    postedDateUtc?: number;
     /**
      *
      * @type {string}

@@ -22,12 +22,12 @@ export function NoteModelFromJSONTyped(json, ignoreDiscriminator) {
     }
     return {
         'author': !exists(json, 'author') ? undefined : NoteAuthorFromJSON(json['author']),
-        'deletedDateUtc': !exists(json, 'deletedDateUtc') ? undefined : (new Date(json['deletedDateUtc'])),
+        'deletedDateUtc': !exists(json, 'deletedDateUtc') ? undefined : json['deletedDateUtc'],
         'isDeleted': !exists(json, 'isDeleted') ? undefined : json['isDeleted'],
         'note': !exists(json, 'note') ? undefined : json['note'],
         'noteId': !exists(json, 'noteId') ? undefined : json['noteId'],
         'noteType': !exists(json, 'noteType') ? undefined : json['noteType'],
-        'postedDateUtc': !exists(json, 'postedDateUtc') ? undefined : (new Date(json['postedDateUtc'])),
+        'postedDateUtc': !exists(json, 'postedDateUtc') ? undefined : json['postedDateUtc'],
         'referenceId': !exists(json, 'referenceId') ? undefined : json['referenceId'],
     };
 }
@@ -40,12 +40,12 @@ export function NoteModelToJSON(value) {
     }
     return {
         'author': NoteAuthorToJSON(value.author),
-        'deletedDateUtc': value.deletedDateUtc === undefined ? undefined : (value.deletedDateUtc.toISOString()),
+        'deletedDateUtc': value.deletedDateUtc,
         'isDeleted': value.isDeleted,
         'note': value.note,
         'noteId': value.noteId,
         'noteType': value.noteType,
-        'postedDateUtc': value.postedDateUtc === undefined ? undefined : (value.postedDateUtc.toISOString()),
+        'postedDateUtc': value.postedDateUtc,
         'referenceId': value.referenceId,
     };
 }
