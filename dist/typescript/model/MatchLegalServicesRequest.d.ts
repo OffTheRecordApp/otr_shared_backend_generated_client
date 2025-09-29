@@ -12,6 +12,7 @@
 import * as models from './models';
 export interface MatchLegalServicesRequest {
     "courtDate"?: string;
+    "defendantEmail"?: string;
     "forcePredeterminedLawfirmId"?: boolean;
     "isMatchInternal"?: boolean;
     "legalServiceType"?: MatchLegalServicesRequest.LegalServiceTypeEnum;

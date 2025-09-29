@@ -24,6 +24,12 @@ export interface MatchLegalServicesRequest {
     courtDate?: Date;
     /**
      *
+     * @type {string}
+     * @memberof MatchLegalServicesRequest
+     */
+    defendantEmail?: string;
+    /**
+     *
      * @type {boolean}
      * @memberof MatchLegalServicesRequest
      */

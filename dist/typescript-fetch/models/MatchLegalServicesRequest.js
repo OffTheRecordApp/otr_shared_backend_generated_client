@@ -22,6 +22,7 @@ export function MatchLegalServicesRequestFromJSONTyped(json, ignoreDiscriminator
     }
     return {
         'courtDate': !exists(json, 'courtDate') ? undefined : (new Date(json['courtDate'])),
+        'defendantEmail': !exists(json, 'defendantEmail') ? undefined : json['defendantEmail'],
         'forcePredeterminedLawfirmId': !exists(json, 'forcePredeterminedLawfirmId') ? undefined : json['forcePredeterminedLawfirmId'],
         'isMatchInternal': !exists(json, 'isMatchInternal') ? undefined : json['isMatchInternal'],
         'legalServiceType': !exists(json, 'legalServiceType') ? undefined : json['legalServiceType'],
@@ -41,6 +42,7 @@ export function MatchLegalServicesRequestToJSON(value) {
     }
     return {
         'courtDate': value.courtDate === undefined ? undefined : (value.courtDate.toISOString()),
+        'defendantEmail': value.defendantEmail,
         'forcePredeterminedLawfirmId': value.forcePredeterminedLawfirmId,
         'isMatchInternal': value.isMatchInternal,
         'legalServiceType': value.legalServiceType,

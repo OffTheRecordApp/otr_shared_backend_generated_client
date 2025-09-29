@@ -13254,6 +13254,7 @@ export interface components {
         MatchLegalServicesRequest: {
             /** Format: date-time */
             courtDate?: string;
+            defendantEmail?: string;
             forcePredeterminedLawfirmId?: boolean;
             isMatchInternal?: boolean;
             /** @enum {string} */

@@ -14,6 +14,7 @@ import { MatchingFieldValue } from './matchingFieldValue';
 
 export interface MatchLegalServicesRequest { 
     courtDate?: string;
+    defendantEmail?: string;
     forcePredeterminedLawfirmId?: boolean;
     isMatchInternal?: boolean;
     legalServiceType?: MatchLegalServicesRequest.LegalServiceTypeEnum;
