@@ -27,4 +27,9 @@ export var LawfirmRatesResponse;
         IneligibleMatchReasonsEnum[IneligibleMatchReasonsEnum["OUTPRICED"] = 'OUT_PRICED'] = "OUTPRICED";
         IneligibleMatchReasonsEnum[IneligibleMatchReasonsEnum["OUTRANKED"] = 'OUT_RANKED'] = "OUTRANKED";
     })(IneligibleMatchReasonsEnum = LawfirmRatesResponse.IneligibleMatchReasonsEnum || (LawfirmRatesResponse.IneligibleMatchReasonsEnum = {}));
+    let TierEnum;
+    (function (TierEnum) {
+        TierEnum[TierEnum["ONE"] = 'TIER_ONE'] = "ONE";
+        TierEnum[TierEnum["TWO"] = 'TIER_TWO'] = "TWO";
+    })(TierEnum = LawfirmRatesResponse.TierEnum || (LawfirmRatesResponse.TierEnum = {}));
 })(LawfirmRatesResponse || (LawfirmRatesResponse = {}));

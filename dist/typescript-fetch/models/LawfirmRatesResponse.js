@@ -37,6 +37,7 @@ export function LawfirmRatesResponseFromJSONTyped(json, ignoreDiscriminator) {
         'rank': !exists(json, 'rank') ? undefined : json['rank'],
         'refundEligible': !exists(json, 'refundEligible') ? undefined : json['refundEligible'],
         'successRate': !exists(json, 'successRate') ? undefined : json['successRate'],
+        'tier': !exists(json, 'tier') ? undefined : json['tier'],
         'totalLegalFee': !exists(json, 'totalLegalFee') ? undefined : json['totalLegalFee'],
         'vacationModeOn': !exists(json, 'vacationModeOn') ? undefined : json['vacationModeOn'],
     };
@@ -65,6 +66,7 @@ export function LawfirmRatesResponseToJSON(value) {
         'rank': value.rank,
         'refundEligible': value.refundEligible,
         'successRate': value.successRate,
+        'tier': value.tier,
         'totalLegalFee': value.totalLegalFee,
         'vacationModeOn': value.vacationModeOn,
     };
@@ -93,3 +95,12 @@ export var LawfirmRatesResponseIneligibleMatchReasonsEnum;
     LawfirmRatesResponseIneligibleMatchReasonsEnum["OUTPRICED"] = "OUT_PRICED";
     LawfirmRatesResponseIneligibleMatchReasonsEnum["OUTRANKED"] = "OUT_RANKED";
 })(LawfirmRatesResponseIneligibleMatchReasonsEnum || (LawfirmRatesResponseIneligibleMatchReasonsEnum = {}));
+/**
+* @export
+* @enum {string}
+*/
+export var LawfirmRatesResponseTierEnum;
+(function (LawfirmRatesResponseTierEnum) {
+    LawfirmRatesResponseTierEnum["ONE"] = "TIER_ONE";
+    LawfirmRatesResponseTierEnum["TWO"] = "TIER_TWO";
+})(LawfirmRatesResponseTierEnum || (LawfirmRatesResponseTierEnum = {}));

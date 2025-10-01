@@ -29,6 +29,7 @@ export interface LawfirmRatesResponse {
     rank?: number;
     refundEligible?: boolean;
     successRate?: number;
+    tier?: LawfirmRatesResponse.TierEnum;
     totalLegalFee?: number;
     vacationModeOn?: boolean;
 }
@@ -48,6 +49,11 @@ export namespace LawfirmRatesResponse {
         OutOfCapacity: 'OUT_OF_CAPACITY' as IneligibleMatchReasonsEnum,
         OutPriced: 'OUT_PRICED' as IneligibleMatchReasonsEnum,
         OutRanked: 'OUT_RANKED' as IneligibleMatchReasonsEnum
+    };
+    export type TierEnum = 'TIER_ONE' | 'TIER_TWO';
+    export const TierEnum = {
+        One: 'TIER_ONE' as TierEnum,
+        Two: 'TIER_TWO' as TierEnum
     };
 }
 

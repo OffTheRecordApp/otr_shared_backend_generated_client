@@ -1060,6 +1060,11 @@ export var LawfirmRatesResponseIneligibleMatchReasons;
     LawfirmRatesResponseIneligibleMatchReasons["OUT_PRICED"] = "OUT_PRICED";
     LawfirmRatesResponseIneligibleMatchReasons["OUT_RANKED"] = "OUT_RANKED";
 })(LawfirmRatesResponseIneligibleMatchReasons || (LawfirmRatesResponseIneligibleMatchReasons = {}));
+export var LawfirmRatesResponseTier;
+(function (LawfirmRatesResponseTier) {
+    LawfirmRatesResponseTier["TIER_ONE"] = "TIER_ONE";
+    LawfirmRatesResponseTier["TIER_TWO"] = "TIER_TWO";
+})(LawfirmRatesResponseTier || (LawfirmRatesResponseTier = {}));
 export var LawfirmSettingsDomainReferralFeeType;
 (function (LawfirmSettingsDomainReferralFeeType) {
     LawfirmSettingsDomainReferralFeeType["FLAT_FEE_IN_CENTS"] = "FLAT_FEE_IN_CENTS";

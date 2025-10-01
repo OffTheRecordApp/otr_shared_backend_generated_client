@@ -27,6 +27,7 @@ export interface LawfirmRatesResponse {
     "rank"?: number;
     "refundEligible"?: boolean;
     "successRate"?: number;
+    "tier"?: LawfirmRatesResponse.TierEnum;
     "totalLegalFee"?: number;
     "vacationModeOn"?: boolean;
 }
@@ -44,5 +45,9 @@ export declare namespace LawfirmRatesResponse {
         OUTOFCAPACITY,
         OUTPRICED,
         OUTRANKED
+    }
+    enum TierEnum {
+        ONE,
+        TWO
     }
 }

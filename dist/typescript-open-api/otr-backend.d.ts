@@ -12395,6 +12395,8 @@ export interface components {
             refundEligible?: boolean;
             /** Format: int32 */
             successRate?: number;
+            /** @enum {string} */
+            tier?: LawfirmRatesResponseTier;
             /** Format: int32 */
             totalLegalFee?: number;
             vacationModeOn?: boolean;
@@ -41166,6 +41168,10 @@ export declare enum LawfirmRatesResponseIneligibleMatchReasons {
     OUT_OF_CAPACITY = "OUT_OF_CAPACITY",
     OUT_PRICED = "OUT_PRICED",
     OUT_RANKED = "OUT_RANKED"
+}
+export declare enum LawfirmRatesResponseTier {
+    TIER_ONE = "TIER_ONE",
+    TIER_TWO = "TIER_TWO"
 }
 export declare enum LawfirmSettingsDomainReferralFeeType {
     FLAT_FEE_IN_CENTS = "FLAT_FEE_IN_CENTS",

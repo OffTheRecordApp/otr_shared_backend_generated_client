@@ -114,6 +114,12 @@ export interface LawfirmRatesResponse {
     successRate?: number;
     /**
      *
+     * @type {string}
+     * @memberof LawfirmRatesResponse
+     */
+    tier?: LawfirmRatesResponseTierEnum;
+    /**
+     *
      * @type {number}
      * @memberof LawfirmRatesResponse
      */
@@ -149,4 +155,12 @@ export declare enum LawfirmRatesResponseIneligibleMatchReasonsEnum {
     OUTOFCAPACITY = "OUT_OF_CAPACITY",
     OUTPRICED = "OUT_PRICED",
     OUTRANKED = "OUT_RANKED"
+}
+/**
+* @export
+* @enum {string}
+*/
+export declare enum LawfirmRatesResponseTierEnum {
+    ONE = "TIER_ONE",
+    TWO = "TIER_TWO"
 }
