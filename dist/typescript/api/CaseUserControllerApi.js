@@ -85,9 +85,8 @@ export class CaseUserControllerApi {
      * @summary listDashboardCaseUsers
      * @param userId userId
      * @param isDefendant isDefendant
-     * @param limit limit
      */
-    listDashboardCaseUsersUsingGET(userId, isDefendant, limit, extraHttpRequestParams) {
+    listDashboardCaseUsersUsingGET(userId, isDefendant, extraHttpRequestParams) {
         const localVarPath = this.basePath + '/api/v1/users/{userId}/case_users'
             .replace('{' + 'userId' + '}', encodeURIComponent(String(userId)));
         let queryParameters = {};
@@ -98,9 +97,6 @@ export class CaseUserControllerApi {
         }
         if (isDefendant !== undefined) {
             queryParameters['isDefendant'] = isDefendant;
-        }
-        if (limit !== undefined) {
-            queryParameters['limit'] = limit;
         }
         let httpRequestParams = {
             method: 'GET',

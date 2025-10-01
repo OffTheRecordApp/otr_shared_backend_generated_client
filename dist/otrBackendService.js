@@ -16816,7 +16816,6 @@ angular.module('otrBackendService', [])
              * @name OtrService#listDashboardCaseUsersUsingGET
              * @param {object} parameters - method options and parameters
              * @param {boolean} parameters.isDefendant - isDefendant
-             * @param {integer} parameters.limit - limit
              * @param {integer} parameters.userId - userId
              */
             OtrService.prototype.listDashboardCaseUsersUsingGET = function(parameters) {
@@ -16835,13 +16834,6 @@ angular.module('otrBackendService', [])
 
                 if (parameters['isDefendant'] !== undefined) {
                     queryParameters['isDefendant'] = parameters['isDefendant'];
-                }
-
-                /** set default value **/
-                queryParameters['limit'] = 5;
-
-                if (parameters['limit'] !== undefined) {
-                    queryParameters['limit'] = parameters['limit'];
                 }
 
                 path = path.replace('{userId}', parameters['userId']);
@@ -19485,7 +19477,9 @@ angular.module('otrBackendService', [])
              * @name OtrService#listDashboardCasesByPageUsingGET
              * @param {object} parameters - method options and parameters
              * @param {string} parameters.caseStatuses - caseStatuses
+             * @param {string} parameters.defendantFirstName - defendantFirstName
              * @param {integer} parameters.defendantId - defendantId
+             * @param {string} parameters.defendantLastName - defendantLastName
              * @param {boolean} parameters.includeDeleted - includeDeleted
              * @param {integer} parameters.limit - limit
              * @param {boolean} parameters.needsAttention - needsAttention
@@ -19514,8 +19508,16 @@ angular.module('otrBackendService', [])
                     queryParameters['caseStatuses'] = parameters['caseStatuses'];
                 }
 
+                if (parameters['defendantFirstName'] !== undefined) {
+                    queryParameters['defendantFirstName'] = parameters['defendantFirstName'];
+                }
+
                 if (parameters['defendantId'] !== undefined) {
                     queryParameters['defendantId'] = parameters['defendantId'];
+                }
+
+                if (parameters['defendantLastName'] !== undefined) {
+                    queryParameters['defendantLastName'] = parameters['defendantLastName'];
                 }
 
                 if (parameters['includeDeleted'] !== undefined) {

@@ -20801,8 +20801,6 @@ export interface operations {
             query?: {
                 /** @description isDefendant */
                 isDefendant?: boolean;
-                /** @description limit */
-                limit?: number;
             };
             header?: never;
             path: {
@@ -31948,6 +31946,10 @@ export interface operations {
             query?: {
                 /** @description defendantId */
                 defendantId?: number;
+                /** @description defendantFirstName */
+                defendantFirstName?: string;
+                /** @description defendantLastName */
+                defendantLastName?: string;
                 /** @description limit */
                 limit?: number;
                 /** @description page */

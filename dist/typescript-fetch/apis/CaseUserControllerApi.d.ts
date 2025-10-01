@@ -22,7 +22,6 @@ export interface GetCaseUsersByCaseUsingGETRequest {
 export interface ListDashboardCaseUsersUsingGETRequest {
     userId: number;
     isDefendant?: boolean;
-    limit?: number;
 }
 export interface SaveCaseUserUsingPOSTRequest {
     caseId: string;

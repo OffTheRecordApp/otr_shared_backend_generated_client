@@ -99,9 +99,6 @@ export class CaseUserControllerApi extends runtime.BaseAPI {
             if (requestParameters.isDefendant !== undefined) {
                 queryParameters['isDefendant'] = requestParameters.isDefendant;
             }
-            if (requestParameters.limit !== undefined) {
-                queryParameters['limit'] = requestParameters.limit;
-            }
             const headerParameters = {};
             const response = yield this.request({
                 path: `/api/v1/users/{userId}/case_users`.replace(`{${"userId"}}`, encodeURIComponent(String(requestParameters.userId))),

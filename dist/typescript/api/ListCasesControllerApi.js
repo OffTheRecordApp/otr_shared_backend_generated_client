@@ -75,7 +75,9 @@ export class ListCasesControllerApi {
      * @summary listDashboardCasesByPage
      * @param userId userId
      * @param caseStatuses caseStatuses
+     * @param defendantFirstName defendantFirstName
      * @param defendantId defendantId
+     * @param defendantLastName defendantLastName
      * @param includeDeleted includeDeleted
      * @param limit limit
      * @param needsAttention needsAttention
@@ -85,7 +87,7 @@ export class ListCasesControllerApi {
      * @param statusCategories statusCategories
      * @param unreadMessagesOnly unreadMessagesOnly
      */
-    listDashboardCasesByPageUsingGET(userId, caseStatuses, defendantId, includeDeleted, limit, needsAttention, page, query, sortBy, statusCategories, unreadMessagesOnly, extraHttpRequestParams) {
+    listDashboardCasesByPageUsingGET(userId, caseStatuses, defendantFirstName, defendantId, defendantLastName, includeDeleted, limit, needsAttention, page, query, sortBy, statusCategories, unreadMessagesOnly, extraHttpRequestParams) {
         const localVarPath = this.basePath + '/api/v4/users/{userId}/cases'
             .replace('{' + 'userId' + '}', encodeURIComponent(String(userId)));
         let queryParameters = {};
@@ -97,8 +99,14 @@ export class ListCasesControllerApi {
         if (caseStatuses !== undefined) {
             queryParameters['caseStatuses'] = caseStatuses;
         }
+        if (defendantFirstName !== undefined) {
+            queryParameters['defendantFirstName'] = defendantFirstName;
+        }
         if (defendantId !== undefined) {
             queryParameters['defendantId'] = defendantId;
+        }
+        if (defendantLastName !== undefined) {
+            queryParameters['defendantLastName'] = defendantLastName;
         }
         if (includeDeleted !== undefined) {
             queryParameters['includeDeleted'] = includeDeleted;

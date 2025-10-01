@@ -226,14 +226,13 @@ export class CaseUserControllerService {
      * listDashboardCaseUsers
      * @param userId userId
      * @param isDefendant isDefendant
-     * @param limit limit
      * @param observe set whether or not to return the data Observable as the body, response or events. defaults to returning the body.
      * @param reportProgress flag to report request and response progress.
      */
-    public listDashboardCaseUsersUsingGET(userId: number, isDefendant?: boolean, limit?: number, observe?: 'body', reportProgress?: boolean, options?: {httpHeaderAccept?: '*/*', context?: HttpContext}): Observable<ListDashboardCaseUsersResponse>;
-    public listDashboardCaseUsersUsingGET(userId: number, isDefendant?: boolean, limit?: number, observe?: 'response', reportProgress?: boolean, options?: {httpHeaderAccept?: '*/*', context?: HttpContext}): Observable<HttpResponse<ListDashboardCaseUsersResponse>>;
-    public listDashboardCaseUsersUsingGET(userId: number, isDefendant?: boolean, limit?: number, observe?: 'events', reportProgress?: boolean, options?: {httpHeaderAccept?: '*/*', context?: HttpContext}): Observable<HttpEvent<ListDashboardCaseUsersResponse>>;
-    public listDashboardCaseUsersUsingGET(userId: number, isDefendant?: boolean, limit?: number, observe: any = 'body', reportProgress: boolean = false, options?: {httpHeaderAccept?: '*/*', context?: HttpContext}): Observable<any> {
+    public listDashboardCaseUsersUsingGET(userId: number, isDefendant?: boolean, observe?: 'body', reportProgress?: boolean, options?: {httpHeaderAccept?: '*/*', context?: HttpContext}): Observable<ListDashboardCaseUsersResponse>;
+    public listDashboardCaseUsersUsingGET(userId: number, isDefendant?: boolean, observe?: 'response', reportProgress?: boolean, options?: {httpHeaderAccept?: '*/*', context?: HttpContext}): Observable<HttpResponse<ListDashboardCaseUsersResponse>>;
+    public listDashboardCaseUsersUsingGET(userId: number, isDefendant?: boolean, observe?: 'events', reportProgress?: boolean, options?: {httpHeaderAccept?: '*/*', context?: HttpContext}): Observable<HttpEvent<ListDashboardCaseUsersResponse>>;
+    public listDashboardCaseUsersUsingGET(userId: number, isDefendant?: boolean, observe: any = 'body', reportProgress: boolean = false, options?: {httpHeaderAccept?: '*/*', context?: HttpContext}): Observable<any> {
         if (userId === null || userId === undefined) {
             throw new Error('Required parameter userId was null or undefined when calling listDashboardCaseUsersUsingGET.');
         }
@@ -242,10 +241,6 @@ export class CaseUserControllerService {
         if (isDefendant !== undefined && isDefendant !== null) {
           localVarQueryParameters = this.addToHttpParams(localVarQueryParameters,
             <any>isDefendant, 'isDefendant');
-        }
-        if (limit !== undefined && limit !== null) {
-          localVarQueryParameters = this.addToHttpParams(localVarQueryParameters,
-            <any>limit, 'limit');
         }
 
         let localVarHeaders = this.defaultHeaders;
