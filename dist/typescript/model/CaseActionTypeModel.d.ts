@@ -23,6 +23,7 @@ export declare namespace CaseActionTypeModel {
         CASECOUNTERINITIATED,
         CASECOUNTERWITHDRAWN,
         CASEDECLINE,
+        CASERESOLVED,
         CITATIONDATAEXTRACTED,
         COURTDATEREMOVED,
         COURTDATESCHEDULED,

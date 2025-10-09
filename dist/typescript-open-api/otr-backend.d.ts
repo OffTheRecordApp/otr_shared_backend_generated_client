@@ -9549,6 +9549,8 @@ export interface components {
             initialSubscriptionFlow?: CreateBillingSubscriptionRequestInitialSubscriptionFlow;
             priceIds?: string[];
             productId?: string;
+            /** @enum {string} */
+            promoOfferType?: CreateBillingSubscriptionRequestPromoOfferType;
             /** Format: date */
             trialEndDate?: string;
         };
@@ -40601,6 +40603,7 @@ export declare enum PathsApiV3UsersUserIdCasesGetParametersQuerySortBy {
     CITATION_CREATION_DATE = "CITATION_CREATION_DATE",
     CITATION_ISSUE_DATE = "CITATION_ISSUE_DATE",
     COURT_DATE = "COURT_DATE",
+    LAST_ACTIVITY_DATE = "LAST_ACTIVITY_DATE",
     LAST_CITATION_UPDATE_DATE = "LAST_CITATION_UPDATE_DATE"
 }
 export declare enum PathsApiV2NotesSearchGetParametersQueryNoteType {
@@ -40800,6 +40803,7 @@ export declare enum CaseActionRequestModelActionType {
     CASE_COUNTER_INITIATED = "CASE_COUNTER_INITIATED",
     CASE_COUNTER_WITHDRAWN = "CASE_COUNTER_WITHDRAWN",
     CASE_DECLINE = "CASE_DECLINE",
+    CASE_RESOLVED = "CASE_RESOLVED",
     CITATION_DATA_EXTRACTED = "CITATION_DATA_EXTRACTED",
     COURT_DATE_REMOVED = "COURT_DATE_REMOVED",
     COURT_DATE_SCHEDULED = "COURT_DATE_SCHEDULED",
@@ -40926,6 +40930,10 @@ export declare enum CreateBillingSubscriptionRequestInitialSubscriptionFlow {
     BOOKING_UPSELL = "BOOKING_UPSELL",
     FASTLANE_TEEN_FLOW = "FASTLANE_TEEN_FLOW",
     HOME_PAGE_BANNER = "HOME_PAGE_BANNER"
+}
+export declare enum CreateBillingSubscriptionRequestPromoOfferType {
+    TRIAL_1M_MONTHLY = "TRIAL_1M_MONTHLY",
+    TRIAL_2M_YEARLY_UPFRONT = "TRIAL_2M_YEARLY_UPFRONT"
 }
 export declare enum CreateLawfirmModelLawfirmPaymentModel {
     DESTINATION_ACCOUNT = "DESTINATION_ACCOUNT",

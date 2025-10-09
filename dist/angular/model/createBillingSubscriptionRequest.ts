@@ -20,6 +20,7 @@ export interface CreateBillingSubscriptionRequest {
     initialSubscriptionFlow?: CreateBillingSubscriptionRequest.InitialSubscriptionFlowEnum;
     priceIds?: Array<string>;
     productId?: string;
+    promoOfferType?: CreateBillingSubscriptionRequest.PromoOfferTypeEnum;
     trialEndDate?: string;
 }
 export namespace CreateBillingSubscriptionRequest {
@@ -28,6 +29,11 @@ export namespace CreateBillingSubscriptionRequest {
         BookingUpsell: 'BOOKING_UPSELL' as InitialSubscriptionFlowEnum,
         FastlaneTeenFlow: 'FASTLANE_TEEN_FLOW' as InitialSubscriptionFlowEnum,
         HomePageBanner: 'HOME_PAGE_BANNER' as InitialSubscriptionFlowEnum
+    };
+    export type PromoOfferTypeEnum = 'TRIAL_1M_MONTHLY' | 'TRIAL_2M_YEARLY_UPFRONT';
+    export const PromoOfferTypeEnum = {
+        _1MMonthly: 'TRIAL_1M_MONTHLY' as PromoOfferTypeEnum,
+        _2MYearlyUpfront: 'TRIAL_2M_YEARLY_UPFRONT' as PromoOfferTypeEnum
     };
 }
 

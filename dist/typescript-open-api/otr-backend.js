@@ -416,6 +416,7 @@ export var PathsApiV3UsersUserIdCasesGetParametersQuerySortBy;
     PathsApiV3UsersUserIdCasesGetParametersQuerySortBy["CITATION_CREATION_DATE"] = "CITATION_CREATION_DATE";
     PathsApiV3UsersUserIdCasesGetParametersQuerySortBy["CITATION_ISSUE_DATE"] = "CITATION_ISSUE_DATE";
     PathsApiV3UsersUserIdCasesGetParametersQuerySortBy["COURT_DATE"] = "COURT_DATE";
+    PathsApiV3UsersUserIdCasesGetParametersQuerySortBy["LAST_ACTIVITY_DATE"] = "LAST_ACTIVITY_DATE";
     PathsApiV3UsersUserIdCasesGetParametersQuerySortBy["LAST_CITATION_UPDATE_DATE"] = "LAST_CITATION_UPDATE_DATE";
 })(PathsApiV3UsersUserIdCasesGetParametersQuerySortBy || (PathsApiV3UsersUserIdCasesGetParametersQuerySortBy = {}));
 export var PathsApiV2NotesSearchGetParametersQueryNoteType;
@@ -644,6 +645,7 @@ export var CaseActionRequestModelActionType;
     CaseActionRequestModelActionType["CASE_COUNTER_INITIATED"] = "CASE_COUNTER_INITIATED";
     CaseActionRequestModelActionType["CASE_COUNTER_WITHDRAWN"] = "CASE_COUNTER_WITHDRAWN";
     CaseActionRequestModelActionType["CASE_DECLINE"] = "CASE_DECLINE";
+    CaseActionRequestModelActionType["CASE_RESOLVED"] = "CASE_RESOLVED";
     CaseActionRequestModelActionType["CITATION_DATA_EXTRACTED"] = "CITATION_DATA_EXTRACTED";
     CaseActionRequestModelActionType["COURT_DATE_REMOVED"] = "COURT_DATE_REMOVED";
     CaseActionRequestModelActionType["COURT_DATE_SCHEDULED"] = "COURT_DATE_SCHEDULED";
@@ -784,6 +786,11 @@ export var CreateBillingSubscriptionRequestInitialSubscriptionFlow;
     CreateBillingSubscriptionRequestInitialSubscriptionFlow["FASTLANE_TEEN_FLOW"] = "FASTLANE_TEEN_FLOW";
     CreateBillingSubscriptionRequestInitialSubscriptionFlow["HOME_PAGE_BANNER"] = "HOME_PAGE_BANNER";
 })(CreateBillingSubscriptionRequestInitialSubscriptionFlow || (CreateBillingSubscriptionRequestInitialSubscriptionFlow = {}));
+export var CreateBillingSubscriptionRequestPromoOfferType;
+(function (CreateBillingSubscriptionRequestPromoOfferType) {
+    CreateBillingSubscriptionRequestPromoOfferType["TRIAL_1M_MONTHLY"] = "TRIAL_1M_MONTHLY";
+    CreateBillingSubscriptionRequestPromoOfferType["TRIAL_2M_YEARLY_UPFRONT"] = "TRIAL_2M_YEARLY_UPFRONT";
+})(CreateBillingSubscriptionRequestPromoOfferType || (CreateBillingSubscriptionRequestPromoOfferType = {}));
 export var CreateLawfirmModelLawfirmPaymentModel;
 (function (CreateLawfirmModelLawfirmPaymentModel) {
     CreateLawfirmModelLawfirmPaymentModel["DESTINATION_ACCOUNT"] = "DESTINATION_ACCOUNT";

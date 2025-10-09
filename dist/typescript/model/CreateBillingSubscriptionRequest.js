@@ -17,4 +17,9 @@ export var CreateBillingSubscriptionRequest;
         InitialSubscriptionFlowEnum[InitialSubscriptionFlowEnum["FASTLANETEENFLOW"] = 'FASTLANE_TEEN_FLOW'] = "FASTLANETEENFLOW";
         InitialSubscriptionFlowEnum[InitialSubscriptionFlowEnum["HOMEPAGEBANNER"] = 'HOME_PAGE_BANNER'] = "HOMEPAGEBANNER";
     })(InitialSubscriptionFlowEnum = CreateBillingSubscriptionRequest.InitialSubscriptionFlowEnum || (CreateBillingSubscriptionRequest.InitialSubscriptionFlowEnum = {}));
+    let PromoOfferTypeEnum;
+    (function (PromoOfferTypeEnum) {
+        PromoOfferTypeEnum[PromoOfferTypeEnum["_1MMONTHLY"] = 'TRIAL_1M_MONTHLY'] = "_1MMONTHLY";
+        PromoOfferTypeEnum[PromoOfferTypeEnum["_2MYEARLYUPFRONT"] = 'TRIAL_2M_YEARLY_UPFRONT'] = "_2MYEARLYUPFRONT";
+    })(PromoOfferTypeEnum = CreateBillingSubscriptionRequest.PromoOfferTypeEnum || (CreateBillingSubscriptionRequest.PromoOfferTypeEnum = {}));
 })(CreateBillingSubscriptionRequest || (CreateBillingSubscriptionRequest = {}));

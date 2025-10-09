@@ -18,6 +18,7 @@ export interface CreateBillingSubscriptionRequest {
     "initialSubscriptionFlow"?: CreateBillingSubscriptionRequest.InitialSubscriptionFlowEnum;
     "priceIds"?: Array<string>;
     "productId"?: string;
+    "promoOfferType"?: CreateBillingSubscriptionRequest.PromoOfferTypeEnum;
     "trialEndDate"?: string;
 }
 export declare namespace CreateBillingSubscriptionRequest {
@@ -25,5 +26,9 @@ export declare namespace CreateBillingSubscriptionRequest {
         BOOKINGUPSELL,
         FASTLANETEENFLOW,
         HOMEPAGEBANNER
+    }
+    enum PromoOfferTypeEnum {
+        _1MMONTHLY,
+        _2MYEARLYUPFRONT
     }
 }
