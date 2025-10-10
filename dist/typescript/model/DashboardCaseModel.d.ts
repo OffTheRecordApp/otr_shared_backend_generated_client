@@ -32,6 +32,8 @@ export interface DashboardCaseModel {
     "messageBody"?: string;
     "overduePayment"?: models.OverduePaymentModel;
     "status"?: models.DashboardStatusModel;
+    "unread"?: boolean;
+    "unreadNotificationCount"?: number;
     "userId"?: number;
     "violations"?: Array<models.ViolationModel0>;
 }

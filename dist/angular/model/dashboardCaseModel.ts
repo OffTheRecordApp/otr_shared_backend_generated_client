@@ -43,6 +43,8 @@ export interface DashboardCaseModel {
     messageBody?: string;
     overduePayment?: OverduePaymentModel;
     status?: DashboardStatusModel;
+    unread?: boolean;
+    unreadNotificationCount?: number;
     userId?: number;
     violations?: Array<ViolationModel0>;
 }

@@ -42,6 +42,8 @@ export function DashboardCaseModelFromJSONTyped(json, ignoreDiscriminator) {
         'messageBody': !exists(json, 'messageBody') ? undefined : json['messageBody'],
         'overduePayment': !exists(json, 'overduePayment') ? undefined : OverduePaymentModelFromJSON(json['overduePayment']),
         'status': !exists(json, 'status') ? undefined : DashboardStatusModelFromJSON(json['status']),
+        'unread': !exists(json, 'unread') ? undefined : json['unread'],
+        'unreadNotificationCount': !exists(json, 'unreadNotificationCount') ? undefined : json['unreadNotificationCount'],
         'userId': !exists(json, 'userId') ? undefined : json['userId'],
         'violations': !exists(json, 'violations') ? undefined : (json['violations'].map(ViolationModel0FromJSON)),
     };
@@ -75,6 +77,8 @@ export function DashboardCaseModelToJSON(value) {
         'messageBody': value.messageBody,
         'overduePayment': OverduePaymentModelToJSON(value.overduePayment),
         'status': DashboardStatusModelToJSON(value.status),
+        'unread': value.unread,
+        'unreadNotificationCount': value.unreadNotificationCount,
         'userId': value.userId,
         'violations': value.violations === undefined ? undefined : (value.violations.map(ViolationModel0ToJSON)),
     };

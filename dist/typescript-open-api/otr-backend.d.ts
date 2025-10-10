@@ -9867,6 +9867,9 @@ export interface components {
             messageBody?: string;
             overduePayment?: components["schemas"]["OverduePaymentModel"];
             status?: components["schemas"]["DashboardStatusModel"];
+            unread?: boolean;
+            /** Format: int32 */
+            unreadNotificationCount?: number;
             /** Format: int64 */
             userId?: number;
             violations?: components["schemas"]["ViolationModel0"][];

@@ -144,6 +144,18 @@ export interface DashboardCaseModel {
     status?: DashboardStatusModel;
     /**
      *
+     * @type {boolean}
+     * @memberof DashboardCaseModel
+     */
+    unread?: boolean;
+    /**
+     *
+     * @type {number}
+     * @memberof DashboardCaseModel
+     */
+    unreadNotificationCount?: number;
+    /**
+     *
      * @type {number}
      * @memberof DashboardCaseModel
      */
