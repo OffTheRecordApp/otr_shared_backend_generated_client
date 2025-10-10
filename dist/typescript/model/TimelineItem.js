@@ -14,6 +14,7 @@ export var TimelineItem;
     let ItemTypeEnum;
     (function (ItemTypeEnum) {
         ItemTypeEnum[ItemTypeEnum["ACTION"] = 'ACTION'] = "ACTION";
+        ItemTypeEnum[ItemTypeEnum["ATTACHMENT"] = 'ATTACHMENT'] = "ATTACHMENT";
         ItemTypeEnum[ItemTypeEnum["MESSAGE"] = 'MESSAGE'] = "MESSAGE";
     })(ItemTypeEnum = TimelineItem.ItemTypeEnum || (TimelineItem.ItemTypeEnum = {}));
 })(TimelineItem || (TimelineItem = {}));

@@ -19,6 +19,7 @@ export interface TimelineItem {
 export declare namespace TimelineItem {
     enum ItemTypeEnum {
         ACTION,
+        ATTACHMENT,
         MESSAGE
     }
 }

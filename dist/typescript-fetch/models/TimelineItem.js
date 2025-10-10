@@ -48,5 +48,6 @@ export function TimelineItemToJSON(value) {
 export var TimelineItemItemTypeEnum;
 (function (TimelineItemItemTypeEnum) {
     TimelineItemItemTypeEnum["ACTION"] = "ACTION";
+    TimelineItemItemTypeEnum["ATTACHMENT"] = "ATTACHMENT";
     TimelineItemItemTypeEnum["MESSAGE"] = "MESSAGE";
 })(TimelineItemItemTypeEnum || (TimelineItemItemTypeEnum = {}));

@@ -17,12 +17,14 @@ export interface CaseMessageDomain {
     authorProfilePicUrl?: string;
     authorRoleType?: CaseMessageDomain.AuthorRoleTypeEnum;
     authorUserId?: number;
+    filename?: string;
     isDeleted?: boolean;
     mediaType?: CaseMessageDomain.MediaTypeEnum;
     mediaUrl?: string;
     messageBody?: string;
     messageId?: number;
     messageSentDateUtc?: string;
+    signedMediaUrl?: string;
 }
 export namespace CaseMessageDomain {
     export type AuthorRoleTypeEnum = 'ADMIN' | 'DEFENDANT' | 'LAWFIRM_ADMIN' | 'LAWYER' | 'PARTNER' | 'UNKNOWN';

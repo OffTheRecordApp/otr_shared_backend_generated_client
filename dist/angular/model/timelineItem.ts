@@ -20,9 +20,10 @@ export interface TimelineItem {
     timestamp?: string;
 }
 export namespace TimelineItem {
-    export type ItemTypeEnum = 'ACTION' | 'MESSAGE';
+    export type ItemTypeEnum = 'ACTION' | 'ATTACHMENT' | 'MESSAGE';
     export const ItemTypeEnum = {
         Action: 'ACTION' as ItemTypeEnum,
+        Attachment: 'ATTACHMENT' as ItemTypeEnum,
         Message: 'MESSAGE' as ItemTypeEnum
     };
 }

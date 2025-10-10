@@ -8478,6 +8478,7 @@ export interface components {
             authorRoleType?: AuthorModelUserRole;
             /** Format: int64 */
             authorUserId?: number;
+            filename?: string;
             isDeleted?: boolean;
             /** @enum {string} */
             mediaType?: CaseMessageDomainMediaType;
@@ -8487,6 +8488,7 @@ export interface components {
             messageId?: number;
             /** Format: date-time */
             messageSentDateUtc?: string;
+            signedMediaUrl?: string;
         };
         /** CaseModel */
         CaseModel: {
@@ -10718,6 +10720,8 @@ export interface components {
         };
         /** GetCaseMessagesResponse */
         GetCaseMessagesResponse: {
+            /** Format: date-time */
+            courtDateUtc?: string;
             messages?: components["schemas"]["CaseMessageDomain"][];
             timeline?: components["schemas"]["TimelineItem"][];
             /** Format: int32 */
@@ -41421,6 +41425,7 @@ export declare enum SubscriptionPlanEligibilitySubscriptionDiscountEligibilityTy
 }
 export declare enum TimelineItemItemType {
     ACTION = "ACTION",
+    ATTACHMENT = "ATTACHMENT",
     MESSAGE = "MESSAGE"
 }
 export declare enum UserReferralLinkModelReferralLinkType {

@@ -11,6 +11,7 @@
  */
 import * as models from './models';
 export interface GetCaseMessagesResponse {
+    "courtDateUtc"?: string;
     "messages"?: Array<models.CaseMessageDomain>;
     "timeline"?: Array<models.TimelineItem>;
     "totalRecords"?: number;

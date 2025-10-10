@@ -47,6 +47,12 @@ export interface CaseMessageDomain {
     authorUserId?: number;
     /**
      *
+     * @type {string}
+     * @memberof CaseMessageDomain
+     */
+    filename?: string;
+    /**
+     *
      * @type {boolean}
      * @memberof CaseMessageDomain
      */
@@ -81,6 +87,12 @@ export interface CaseMessageDomain {
      * @memberof CaseMessageDomain
      */
     messageSentDateUtc?: Date;
+    /**
+     *
+     * @type {string}
+     * @memberof CaseMessageDomain
+     */
+    signedMediaUrl?: string;
 }
 export declare function CaseMessageDomainFromJSON(json: any): CaseMessageDomain;
 export declare function CaseMessageDomainFromJSONTyped(json: any, ignoreDiscriminator: boolean): CaseMessageDomain;

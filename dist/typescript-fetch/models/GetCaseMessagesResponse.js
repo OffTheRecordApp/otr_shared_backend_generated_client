@@ -21,6 +21,7 @@ export function GetCaseMessagesResponseFromJSONTyped(json, ignoreDiscriminator) 
         return json;
     }
     return {
+        'courtDateUtc': !exists(json, 'courtDateUtc') ? undefined : (new Date(json['courtDateUtc'])),
         'messages': !exists(json, 'messages') ? undefined : (json['messages'].map(CaseMessageDomainFromJSON)),
         'timeline': !exists(json, 'timeline') ? undefined : (json['timeline'].map(TimelineItemFromJSON)),
         'totalRecords': !exists(json, 'totalRecords') ? undefined : json['totalRecords'],
@@ -34,6 +35,7 @@ export function GetCaseMessagesResponseToJSON(value) {
         return null;
     }
     return {
+        'courtDateUtc': value.courtDateUtc === undefined ? undefined : (value.courtDateUtc.toISOString()),
         'messages': value.messages === undefined ? undefined : (value.messages.map(CaseMessageDomainToJSON)),
         'timeline': value.timeline === undefined ? undefined : (value.timeline.map(TimelineItemToJSON)),
         'totalRecords': value.totalRecords,

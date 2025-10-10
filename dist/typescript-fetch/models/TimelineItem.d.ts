@@ -50,5 +50,6 @@ export declare function TimelineItemToJSON(value?: TimelineItem | null): any;
 */
 export declare enum TimelineItemItemTypeEnum {
     ACTION = "ACTION",
+    ATTACHMENT = "ATTACHMENT",
     MESSAGE = "MESSAGE"
 }

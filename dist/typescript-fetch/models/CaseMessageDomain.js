@@ -25,12 +25,14 @@ export function CaseMessageDomainFromJSONTyped(json, ignoreDiscriminator) {
         'authorProfilePicUrl': !exists(json, 'authorProfilePicUrl') ? undefined : json['authorProfilePicUrl'],
         'authorRoleType': !exists(json, 'authorRoleType') ? undefined : json['authorRoleType'],
         'authorUserId': !exists(json, 'authorUserId') ? undefined : json['authorUserId'],
+        'filename': !exists(json, 'filename') ? undefined : json['filename'],
         'isDeleted': !exists(json, 'isDeleted') ? undefined : json['isDeleted'],
         'mediaType': !exists(json, 'mediaType') ? undefined : json['mediaType'],
         'mediaUrl': !exists(json, 'mediaUrl') ? undefined : json['mediaUrl'],
         'messageBody': !exists(json, 'messageBody') ? undefined : json['messageBody'],
         'messageId': !exists(json, 'messageId') ? undefined : json['messageId'],
         'messageSentDateUtc': !exists(json, 'messageSentDateUtc') ? undefined : (new Date(json['messageSentDateUtc'])),
+        'signedMediaUrl': !exists(json, 'signedMediaUrl') ? undefined : json['signedMediaUrl'],
     };
 }
 export function CaseMessageDomainToJSON(value) {
@@ -46,12 +48,14 @@ export function CaseMessageDomainToJSON(value) {
         'authorProfilePicUrl': value.authorProfilePicUrl,
         'authorRoleType': value.authorRoleType,
         'authorUserId': value.authorUserId,
+        'filename': value.filename,
         'isDeleted': value.isDeleted,
         'mediaType': value.mediaType,
         'mediaUrl': value.mediaUrl,
         'messageBody': value.messageBody,
         'messageId': value.messageId,
         'messageSentDateUtc': value.messageSentDateUtc === undefined ? undefined : (value.messageSentDateUtc.toISOString()),
+        'signedMediaUrl': value.signedMediaUrl,
     };
 }
 /**

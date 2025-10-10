@@ -1336,6 +1336,7 @@ export var SubscriptionPlanEligibilitySubscriptionDiscountEligibilityType;
 export var TimelineItemItemType;
 (function (TimelineItemItemType) {
     TimelineItemItemType["ACTION"] = "ACTION";
+    TimelineItemItemType["ATTACHMENT"] = "ATTACHMENT";
     TimelineItemItemType["MESSAGE"] = "MESSAGE";
 })(TimelineItemItemType || (TimelineItemItemType = {}));
 export var UserReferralLinkModelReferralLinkType;

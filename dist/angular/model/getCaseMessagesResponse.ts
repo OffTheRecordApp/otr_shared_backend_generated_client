@@ -14,6 +14,7 @@ import { TimelineItem } from './timelineItem';
 
 
 export interface GetCaseMessagesResponse { 
+    courtDateUtc?: string;
     messages?: Array<CaseMessageDomain>;
     timeline?: Array<TimelineItem>;
     totalRecords?: number;

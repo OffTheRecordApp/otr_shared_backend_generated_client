@@ -18,6 +18,12 @@ import { CaseMessageDomain, TimelineItem } from './';
 export interface GetCaseMessagesResponse {
     /**
      *
+     * @type {Date}
+     * @memberof GetCaseMessagesResponse
+     */
+    courtDateUtc?: Date;
+    /**
+     *
      * @type {Array<CaseMessageDomain>}
      * @memberof GetCaseMessagesResponse
      */
