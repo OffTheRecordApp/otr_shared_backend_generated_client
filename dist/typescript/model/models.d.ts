@@ -750,6 +750,7 @@ export * from './TicketTypeAttributesWrapper';
 export * from './TimeZone';
 export * from './TimeZoneReq';
 export * from './TimeZoneRes';
+export * from './TimelineItem';
 export * from './Timestamp';
 export * from './TimestampReq';
 export * from './TimestampRes';

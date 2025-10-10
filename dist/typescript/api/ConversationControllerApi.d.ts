@@ -36,10 +36,9 @@ export declare class ConversationControllerApi {
      *
      * @summary getConversation
      * @param caseId caseId
-     * @param length length
-     * @param page page
+     * @param includeActions includeActions
      */
-    getConversationUsingGET(caseId: string, length?: number, page?: number, extraHttpRequestParams?: any): ng.IHttpPromise<models.GetCaseMessagesResponse>;
+    getConversationUsingGET(caseId: string, includeActions?: boolean, extraHttpRequestParams?: any): ng.IHttpPromise<models.GetCaseMessagesResponse>;
     /**
      *
      * @summary getMessage

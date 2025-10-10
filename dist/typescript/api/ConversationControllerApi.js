@@ -92,10 +92,9 @@ export class ConversationControllerApi {
      *
      * @summary getConversation
      * @param caseId caseId
-     * @param length length
-     * @param page page
+     * @param includeActions includeActions
      */
-    getConversationUsingGET(caseId, length, page, extraHttpRequestParams) {
+    getConversationUsingGET(caseId, includeActions, extraHttpRequestParams) {
         const localVarPath = this.basePath + '/api/v1/cases/{caseId}/conversation'
             .replace('{' + 'caseId' + '}', encodeURIComponent(String(caseId)));
         let queryParameters = {};
@@ -104,11 +103,8 @@ export class ConversationControllerApi {
         if (caseId === null || caseId === undefined) {
             throw new Error('Required parameter caseId was null or undefined when calling getConversationUsingGET.');
         }
-        if (length !== undefined) {
-            queryParameters['length'] = length;
-        }
-        if (page !== undefined) {
-            queryParameters['page'] = page;
+        if (includeActions !== undefined) {
+            queryParameters['includeActions'] = includeActions;
         }
         let httpRequestParams = {
             method: 'GET',
