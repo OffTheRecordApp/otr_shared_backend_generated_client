@@ -10719,6 +10719,7 @@ export interface components {
         /** GetCaseMessagesResponse */
         GetCaseMessagesResponse: {
             messages?: components["schemas"]["CaseMessageDomain"][];
+            timeline?: components["schemas"]["TimelineItem"][];
             /** Format: int32 */
             totalRecords?: number;
         };
@@ -15410,6 +15411,15 @@ export interface components {
             id?: string;
             /** Format: int32 */
             rawOffset?: number;
+        };
+        /** TimelineItem */
+        TimelineItem: {
+            action?: components["schemas"]["CaseActionDomain"];
+            /** @enum {string} */
+            itemType?: TimelineItemItemType;
+            message?: components["schemas"]["CaseMessageDomain"];
+            /** Format: date-time */
+            timestamp?: string;
         };
         /** Timestamp */
         Timestamp: {
@@ -23207,10 +23217,8 @@ export interface operations {
     getConversationUsingGET: {
         parameters: {
             query?: {
-                /** @description page */
-                page?: number;
-                /** @description length */
-                length?: number;
+                /** @description includeActions */
+                includeActions?: boolean;
             };
             header?: never;
             path: {
@@ -41410,6 +41418,10 @@ export declare enum SubscriptionPlanEligibilitySubscriptionDiscountEligibilityTy
     IS_ELIGIBLE = "IS_ELIGIBLE",
     IS_NOT_ELIGIBLE = "IS_NOT_ELIGIBLE",
     NOT_APPLICABLE = "NOT_APPLICABLE"
+}
+export declare enum TimelineItemItemType {
+    ACTION = "ACTION",
+    MESSAGE = "MESSAGE"
 }
 export declare enum UserReferralLinkModelReferralLinkType {
     FASTLANE_TEEN = "FASTLANE_TEEN",

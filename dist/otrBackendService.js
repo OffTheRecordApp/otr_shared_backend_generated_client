@@ -1988,8 +1988,7 @@ angular.module('otrBackendService', [])
              * @name OtrService#getConversationUsingGET
              * @param {object} parameters - method options and parameters
              * @param {string} parameters.caseId - caseId
-             * @param {integer} parameters.length - length
-             * @param {integer} parameters.page - page
+             * @param {boolean} parameters.includeActions - includeActions
              */
             OtrService.prototype.getConversationUsingGET = function(parameters) {
                 if (parameters === undefined) {
@@ -2012,15 +2011,8 @@ angular.module('otrBackendService', [])
                     return deferred.promise;
                 }
 
-                /** set default value **/
-                queryParameters['length'] = 9999;
-
-                if (parameters['length'] !== undefined) {
-                    queryParameters['length'] = parameters['length'];
-                }
-
-                if (parameters['page'] !== undefined) {
-                    queryParameters['page'] = parameters['page'];
+                if (parameters['includeActions'] !== undefined) {
+                    queryParameters['includeActions'] = parameters['includeActions'];
                 }
 
                 queryParameters = mergeQueryParams(parameters, queryParameters);

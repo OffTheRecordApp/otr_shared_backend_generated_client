@@ -22,8 +22,7 @@ export interface EditMessageUsingPUTRequest {
 }
 export interface GetConversationUsingGETRequest {
     caseId: string;
-    length?: number;
-    page?: number;
+    includeActions?: boolean;
 }
 export interface GetMessageUsingGETRequest {
     caseId: string;

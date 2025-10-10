@@ -876,6 +876,7 @@ model/ticketTypeAttributesWrapper.ts
 model/timeZone.ts
 model/timeZoneReq.ts
 model/timeZoneRes.ts
+model/timelineItem.ts
 model/timestamp.ts
 model/timestampReq.ts
 model/timestampRes.ts

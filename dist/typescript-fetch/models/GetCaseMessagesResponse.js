@@ -12,7 +12,7 @@
  * Do not edit the class manually.
  */
 import { exists } from '../runtime';
-import { CaseMessageDomainFromJSON, CaseMessageDomainToJSON, } from './';
+import { CaseMessageDomainFromJSON, CaseMessageDomainToJSON, TimelineItemFromJSON, TimelineItemToJSON, } from './';
 export function GetCaseMessagesResponseFromJSON(json) {
     return GetCaseMessagesResponseFromJSONTyped(json, false);
 }
@@ -22,6 +22,7 @@ export function GetCaseMessagesResponseFromJSONTyped(json, ignoreDiscriminator) 
     }
     return {
         'messages': !exists(json, 'messages') ? undefined : (json['messages'].map(CaseMessageDomainFromJSON)),
+        'timeline': !exists(json, 'timeline') ? undefined : (json['timeline'].map(TimelineItemFromJSON)),
         'totalRecords': !exists(json, 'totalRecords') ? undefined : json['totalRecords'],
     };
 }
@@ -34,6 +35,7 @@ export function GetCaseMessagesResponseToJSON(value) {
     }
     return {
         'messages': value.messages === undefined ? undefined : (value.messages.map(CaseMessageDomainToJSON)),
+        'timeline': value.timeline === undefined ? undefined : (value.timeline.map(TimelineItemToJSON)),
         'totalRecords': value.totalRecords,
     };
 }

@@ -104,11 +104,8 @@ export class ConversationControllerApi extends runtime.BaseAPI {
                 throw new runtime.RequiredError('caseId', 'Required parameter requestParameters.caseId was null or undefined when calling getConversationUsingGET.');
             }
             const queryParameters = {};
-            if (requestParameters.length !== undefined) {
-                queryParameters['length'] = requestParameters.length;
-            }
-            if (requestParameters.page !== undefined) {
-                queryParameters['page'] = requestParameters.page;
+            if (requestParameters.includeActions !== undefined) {
+                queryParameters['includeActions'] = requestParameters.includeActions;
             }
             const headerParameters = {};
             const response = yield this.request({

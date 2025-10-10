@@ -252,27 +252,22 @@ export class ConversationControllerService {
     /**
      * getConversation
      * @param caseId caseId
-     * @param length length
-     * @param page page
+     * @param includeActions includeActions
      * @param observe set whether or not to return the data Observable as the body, response or events. defaults to returning the body.
      * @param reportProgress flag to report request and response progress.
      */
-    public getConversationUsingGET(caseId: string, length?: number, page?: number, observe?: 'body', reportProgress?: boolean, options?: {httpHeaderAccept?: '*/*', context?: HttpContext}): Observable<GetCaseMessagesResponse>;
-    public getConversationUsingGET(caseId: string, length?: number, page?: number, observe?: 'response', reportProgress?: boolean, options?: {httpHeaderAccept?: '*/*', context?: HttpContext}): Observable<HttpResponse<GetCaseMessagesResponse>>;
-    public getConversationUsingGET(caseId: string, length?: number, page?: number, observe?: 'events', reportProgress?: boolean, options?: {httpHeaderAccept?: '*/*', context?: HttpContext}): Observable<HttpEvent<GetCaseMessagesResponse>>;
-    public getConversationUsingGET(caseId: string, length?: number, page?: number, observe: any = 'body', reportProgress: boolean = false, options?: {httpHeaderAccept?: '*/*', context?: HttpContext}): Observable<any> {
+    public getConversationUsingGET(caseId: string, includeActions?: boolean, observe?: 'body', reportProgress?: boolean, options?: {httpHeaderAccept?: '*/*', context?: HttpContext}): Observable<GetCaseMessagesResponse>;
+    public getConversationUsingGET(caseId: string, includeActions?: boolean, observe?: 'response', reportProgress?: boolean, options?: {httpHeaderAccept?: '*/*', context?: HttpContext}): Observable<HttpResponse<GetCaseMessagesResponse>>;
+    public getConversationUsingGET(caseId: string, includeActions?: boolean, observe?: 'events', reportProgress?: boolean, options?: {httpHeaderAccept?: '*/*', context?: HttpContext}): Observable<HttpEvent<GetCaseMessagesResponse>>;
+    public getConversationUsingGET(caseId: string, includeActions?: boolean, observe: any = 'body', reportProgress: boolean = false, options?: {httpHeaderAccept?: '*/*', context?: HttpContext}): Observable<any> {
         if (caseId === null || caseId === undefined) {
             throw new Error('Required parameter caseId was null or undefined when calling getConversationUsingGET.');
         }
 
         let localVarQueryParameters = new HttpParams({encoder: this.encoder});
-        if (length !== undefined && length !== null) {
+        if (includeActions !== undefined && includeActions !== null) {
           localVarQueryParameters = this.addToHttpParams(localVarQueryParameters,
-            <any>length, 'length');
-        }
-        if (page !== undefined && page !== null) {
-          localVarQueryParameters = this.addToHttpParams(localVarQueryParameters,
-            <any>page, 'page');
+            <any>includeActions, 'includeActions');
         }
 
         let localVarHeaders = this.defaultHeaders;

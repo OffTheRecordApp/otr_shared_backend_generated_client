@@ -10,10 +10,12 @@
  * Do not edit the class manually.
  */
 import { CaseMessageDomain } from './caseMessageDomain';
+import { TimelineItem } from './timelineItem';
 
 
 export interface GetCaseMessagesResponse { 
     messages?: Array<CaseMessageDomain>;
+    timeline?: Array<TimelineItem>;
     totalRecords?: number;
 }
 

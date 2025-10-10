@@ -750,6 +750,7 @@ export * from './ticketTypeAttributesWrapper';
 export * from './timeZone';
 export * from './timeZoneReq';
 export * from './timeZoneRes';
+export * from './timelineItem';
 export * from './timestamp';
 export * from './timestampReq';
 export * from './timestampRes';

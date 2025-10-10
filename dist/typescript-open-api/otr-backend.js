@@ -1333,6 +1333,11 @@ export var SubscriptionPlanEligibilitySubscriptionDiscountEligibilityType;
     SubscriptionPlanEligibilitySubscriptionDiscountEligibilityType["IS_NOT_ELIGIBLE"] = "IS_NOT_ELIGIBLE";
     SubscriptionPlanEligibilitySubscriptionDiscountEligibilityType["NOT_APPLICABLE"] = "NOT_APPLICABLE";
 })(SubscriptionPlanEligibilitySubscriptionDiscountEligibilityType || (SubscriptionPlanEligibilitySubscriptionDiscountEligibilityType = {}));
+export var TimelineItemItemType;
+(function (TimelineItemItemType) {
+    TimelineItemItemType["ACTION"] = "ACTION";
+    TimelineItemItemType["MESSAGE"] = "MESSAGE";
+})(TimelineItemItemType || (TimelineItemItemType = {}));
 export var UserReferralLinkModelReferralLinkType;
 (function (UserReferralLinkModelReferralLinkType) {
     UserReferralLinkModelReferralLinkType["FASTLANE_TEEN"] = "FASTLANE_TEEN";

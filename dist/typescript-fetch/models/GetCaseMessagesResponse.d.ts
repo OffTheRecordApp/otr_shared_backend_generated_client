@@ -9,7 +9,7 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-import { CaseMessageDomain } from './';
+import { CaseMessageDomain, TimelineItem } from './';
 /**
  *
  * @export
@@ -22,6 +22,12 @@ export interface GetCaseMessagesResponse {
      * @memberof GetCaseMessagesResponse
      */
     messages?: Array<CaseMessageDomain>;
+    /**
+     *
+     * @type {Array<TimelineItem>}
+     * @memberof GetCaseMessagesResponse
+     */
+    timeline?: Array<TimelineItem>;
     /**
      *
      * @type {number}
