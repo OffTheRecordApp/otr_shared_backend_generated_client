@@ -22,6 +22,7 @@ export interface DashboardCaseModel {
     "disputeModel"?: models.DashboardDisputeModel;
     "engagementLetter"?: models.EngagementLetterModel;
     "hasLeftLawyerReview"?: boolean;
+    "lastActivityDateUtc"?: string;
     "lawfirmId"?: number;
     "lawfirmName"?: string;
     "lawfirmProfilePictureUrl"?: string;

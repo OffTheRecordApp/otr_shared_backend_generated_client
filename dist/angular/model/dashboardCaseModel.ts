@@ -33,6 +33,7 @@ export interface DashboardCaseModel {
     disputeModel?: DashboardDisputeModel;
     engagementLetter?: EngagementLetterModel;
     hasLeftLawyerReview?: boolean;
+    lastActivityDateUtc?: string;
     lawfirmId?: number;
     lawfirmName?: string;
     lawfirmProfilePictureUrl?: string;

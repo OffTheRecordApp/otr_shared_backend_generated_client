@@ -84,6 +84,12 @@ export interface DashboardCaseModel {
     hasLeftLawyerReview?: boolean;
     /**
      *
+     * @type {Date}
+     * @memberof DashboardCaseModel
+     */
+    lastActivityDateUtc?: Date;
+    /**
+     *
      * @type {number}
      * @memberof DashboardCaseModel
      */

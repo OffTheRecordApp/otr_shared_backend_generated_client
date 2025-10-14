@@ -9854,6 +9854,8 @@ export interface components {
             disputeModel?: components["schemas"]["DashboardDisputeModel"];
             engagementLetter?: components["schemas"]["EngagementLetterModel"];
             hasLeftLawyerReview?: boolean;
+            /** Format: date-time */
+            lastActivityDateUtc?: string;
             /** Format: int64 */
             lawfirmId?: number;
             lawfirmName?: string;
