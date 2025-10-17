@@ -23,10 +23,4 @@ export declare class DripWebhooksControllerApi {
      * @param request request
      */
     handleBounceOrComplaintEventUsingPOST(request: models.DripWebhookEvent, extraHttpRequestParams?: any): ng.IHttpPromise<object>;
-    /**
-     *
-     * @summary handleDripWebhook
-     * @param request request
-     */
-    handleDripWebhookUsingPOST(request: models.DripWebhookEvent, extraHttpRequestParams?: any): ng.IHttpPromise<object>;
 }

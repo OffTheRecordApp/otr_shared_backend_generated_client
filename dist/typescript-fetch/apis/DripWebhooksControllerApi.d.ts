@@ -14,9 +14,6 @@ import { DripWebhookEvent } from '../models';
 export interface HandleBounceOrComplaintEventUsingPOSTRequest {
     request: DripWebhookEvent;
 }
-export interface HandleDripWebhookUsingPOSTRequest {
-    request: DripWebhookEvent;
-}
 /**
  *
  */
@@ -29,12 +26,4 @@ export declare class DripWebhooksControllerApi extends runtime.BaseAPI {
      * handleBounceOrComplaintEvent
      */
     handleBounceOrComplaintEventUsingPOST(requestParameters: HandleBounceOrComplaintEventUsingPOSTRequest): Promise<object>;
-    /**
-     * handleDripWebhook
-     */
-    handleDripWebhookUsingPOSTRaw(requestParameters: HandleDripWebhookUsingPOSTRequest): Promise<runtime.ApiResponse<object>>;
-    /**
-     * handleDripWebhook
-     */
-    handleDripWebhookUsingPOST(requestParameters: HandleDripWebhookUsingPOSTRequest): Promise<object>;
 }

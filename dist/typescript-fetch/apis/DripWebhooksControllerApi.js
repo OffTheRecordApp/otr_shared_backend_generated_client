@@ -56,34 +56,4 @@ export class DripWebhooksControllerApi extends runtime.BaseAPI {
             return yield response.value();
         });
     }
-    /**
-     * handleDripWebhook
-     */
-    handleDripWebhookUsingPOSTRaw(requestParameters) {
-        return __awaiter(this, void 0, void 0, function* () {
-            if (requestParameters.request === null || requestParameters.request === undefined) {
-                throw new runtime.RequiredError('request', 'Required parameter requestParameters.request was null or undefined when calling handleDripWebhookUsingPOST.');
-            }
-            const queryParameters = {};
-            const headerParameters = {};
-            headerParameters['Content-Type'] = 'application/json';
-            const response = yield this.request({
-                path: `/api/v1/drip/webhooks`,
-                method: 'POST',
-                headers: headerParameters,
-                query: queryParameters,
-                body: DripWebhookEventToJSON(requestParameters.request),
-            });
-            return new runtime.JSONApiResponse(response);
-        });
-    }
-    /**
-     * handleDripWebhook
-     */
-    handleDripWebhookUsingPOST(requestParameters) {
-        return __awaiter(this, void 0, void 0, function* () {
-            const response = yield this.handleDripWebhookUsingPOSTRaw(requestParameters);
-            return yield response.value();
-        });
-    }
 }

@@ -45,30 +45,5 @@ export class DripWebhooksControllerApi {
         }
         return this.$http(httpRequestParams);
     }
-    /**
-     *
-     * @summary handleDripWebhook
-     * @param request request
-     */
-    handleDripWebhookUsingPOST(request, extraHttpRequestParams) {
-        const localVarPath = this.basePath + '/api/v1/drip/webhooks';
-        let queryParameters = {};
-        let headerParams = Object.assign({}, this.defaultHeaders);
-        // verify required parameter 'request' is not null or undefined
-        if (request === null || request === undefined) {
-            throw new Error('Required parameter request was null or undefined when calling handleDripWebhookUsingPOST.');
-        }
-        let httpRequestParams = {
-            method: 'POST',
-            url: localVarPath,
-            data: request,
-            params: queryParameters,
-            headers: headerParams
-        };
-        if (extraHttpRequestParams) {
-            httpRequestParams = Object.assign(httpRequestParams, extraHttpRequestParams);
-        }
-        return this.$http(httpRequestParams);
-    }
 }
 DripWebhooksControllerApi.$inject = ['$http', '$httpParamSerializer', 'basePath'];
