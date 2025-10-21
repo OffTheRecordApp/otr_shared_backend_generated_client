@@ -205,6 +205,7 @@ export var ValidateDirectMailResponseOtrErrorEnum;
     ValidateDirectMailResponseOtrErrorEnum["LAWFIRMNEEDSADDRESS"] = "LAW_FIRM_NEEDS_ADDRESS";
     ValidateDirectMailResponseOtrErrorEnum["LEGALSERVICENOTSUPPORTED"] = "LEGAL_SERVICE_NOT_SUPPORTED";
     ValidateDirectMailResponseOtrErrorEnum["LEGALSERVICEQUOTEEXPIRED"] = "LEGAL_SERVICE_QUOTE_EXPIRED";
+    ValidateDirectMailResponseOtrErrorEnum["LETTEROFENGAGEMENTFAILURE"] = "LETTER_OF_ENGAGEMENT_FAILURE";
     ValidateDirectMailResponseOtrErrorEnum["LINEITEMMISSINGRECIPIENT"] = "LINE_ITEM_MISSING_RECIPIENT";
     ValidateDirectMailResponseOtrErrorEnum["LINKSNOTALLOWED"] = "LINKS_NOT_ALLOWED";
     ValidateDirectMailResponseOtrErrorEnum["LOBADDRESSCREATIONFAILURE"] = "LOB_ADDRESS_CREATION_FAILURE";

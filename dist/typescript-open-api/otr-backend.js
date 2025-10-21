@@ -1511,6 +1511,7 @@ export var ValidateDirectMailResponseOtrError;
     ValidateDirectMailResponseOtrError["LAW_FIRM_NEEDS_ADDRESS"] = "LAW_FIRM_NEEDS_ADDRESS";
     ValidateDirectMailResponseOtrError["LEGAL_SERVICE_NOT_SUPPORTED"] = "LEGAL_SERVICE_NOT_SUPPORTED";
     ValidateDirectMailResponseOtrError["LEGAL_SERVICE_QUOTE_EXPIRED"] = "LEGAL_SERVICE_QUOTE_EXPIRED";
+    ValidateDirectMailResponseOtrError["LETTER_OF_ENGAGEMENT_FAILURE"] = "LETTER_OF_ENGAGEMENT_FAILURE";
     ValidateDirectMailResponseOtrError["LINE_ITEM_MISSING_RECIPIENT"] = "LINE_ITEM_MISSING_RECIPIENT";
     ValidateDirectMailResponseOtrError["LINKS_NOT_ALLOWED"] = "LINKS_NOT_ALLOWED";
     ValidateDirectMailResponseOtrError["LOB_ADDRESS_CREATION_FAILURE"] = "LOB_ADDRESS_CREATION_FAILURE";
