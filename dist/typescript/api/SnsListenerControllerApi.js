@@ -26,7 +26,7 @@ export class SnsListenerControllerApi {
      * @param request request
      */
     handleBounceComplaintEmailsUsingPOST(request, extraHttpRequestParams) {
-        const localVarPath = this.basePath + '/api/v1/blacklists/ses/emails/';
+        const localVarPath = this.basePath + '/api/v1/blacklists/ses/emails';
         let queryParameters = {};
         let headerParams = Object.assign({}, this.defaultHeaders);
         // verify required parameter 'request' is not null or undefined

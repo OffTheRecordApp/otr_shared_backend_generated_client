@@ -1024,7 +1024,7 @@ angular.module('otrBackendService', [])
                 }
                 var deferred = $q.defer();
                 var domain = this.domain,
-                    path = '/api/v1/blacklists/ses/emails/';
+                    path = '/api/v1/blacklists/ses/emails';
                 var body = {},
                     queryParameters = {},
                     headers = {},

@@ -150,7 +150,7 @@ export class SnsListenerControllerService {
             }
         }
 
-        let localVarPath = `/api/v1/blacklists/ses/emails/`;
+        let localVarPath = `/api/v1/blacklists/ses/emails`;
         return this.httpClient.request<object>('post', `${this.configuration.basePath}${localVarPath}`,
             {
                 context: localVarHttpContext,

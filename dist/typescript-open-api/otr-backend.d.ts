@@ -5535,7 +5535,7 @@ export interface paths {
         patch?: never;
         trace?: never;
     };
-    "/api/v1/blacklists/ses/emails/": {
+    "/api/v1/blacklists/ses/emails": {
         parameters: {
             query?: never;
             header?: never;

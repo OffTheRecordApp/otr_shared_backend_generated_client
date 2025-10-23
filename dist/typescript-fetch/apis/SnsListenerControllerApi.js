@@ -38,7 +38,7 @@ export class SnsListenerControllerApi extends runtime.BaseAPI {
             const headerParameters = {};
             headerParameters['Content-Type'] = 'application/json';
             const response = yield this.request({
-                path: `/api/v1/blacklists/ses/emails/`,
+                path: `/api/v1/blacklists/ses/emails`,
                 method: 'POST',
                 headers: headerParameters,
                 query: queryParameters,
