@@ -53,37 +53,6 @@ export class CaseReferralCodeControllerApi {
     }
     /**
      *
-     * @summary removeReferralCodeFromCase
-     * @param caseId caseId
-     * @param codeId codeId
-     */
-    removeReferralCodeFromCaseUsingDELETE(caseId, codeId, extraHttpRequestParams) {
-        const localVarPath = this.basePath + '/api/v1/cases/{caseId}/referralcode/{codeId}'
-            .replace('{' + 'caseId' + '}', encodeURIComponent(String(caseId)))
-            .replace('{' + 'codeId' + '}', encodeURIComponent(String(codeId)));
-        let queryParameters = {};
-        let headerParams = Object.assign({}, this.defaultHeaders);
-        // verify required parameter 'caseId' is not null or undefined
-        if (caseId === null || caseId === undefined) {
-            throw new Error('Required parameter caseId was null or undefined when calling removeReferralCodeFromCaseUsingDELETE.');
-        }
-        // verify required parameter 'codeId' is not null or undefined
-        if (codeId === null || codeId === undefined) {
-            throw new Error('Required parameter codeId was null or undefined when calling removeReferralCodeFromCaseUsingDELETE.');
-        }
-        let httpRequestParams = {
-            method: 'DELETE',
-            url: localVarPath,
-            params: queryParameters,
-            headers: headerParams
-        };
-        if (extraHttpRequestParams) {
-            httpRequestParams = Object.assign(httpRequestParams, extraHttpRequestParams);
-        }
-        return this.$http(httpRequestParams);
-    }
-    /**
-     *
      * @summary removeReferralCodeFromCaseV2
      * @param caseId caseId
      * @param codeId codeId

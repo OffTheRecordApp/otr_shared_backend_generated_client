@@ -15,10 +15,6 @@ export interface ApplyReferralCodeUsingPOSTRequest {
     caseId: string;
     codeId: string;
 }
-export interface RemoveReferralCodeFromCaseUsingDELETERequest {
-    caseId: string;
-    codeId: string;
-}
 export interface RemoveReferralCodeFromCaseV2UsingDELETERequest {
     caseId: string;
     codeId: string;
@@ -37,14 +33,6 @@ export declare class CaseReferralCodeControllerApi extends runtime.BaseAPI {
      * applyReferralCode
      */
     applyReferralCodeUsingPOST(requestParameters: ApplyReferralCodeUsingPOSTRequest): Promise<MatchCaseResponse>;
-    /**
-     * removeReferralCodeFromCase
-     */
-    removeReferralCodeFromCaseUsingDELETERaw(requestParameters: RemoveReferralCodeFromCaseUsingDELETERequest): Promise<runtime.ApiResponse<void>>;
-    /**
-     * removeReferralCodeFromCase
-     */
-    removeReferralCodeFromCaseUsingDELETE(requestParameters: RemoveReferralCodeFromCaseUsingDELETERequest): Promise<void>;
     /**
      * removeReferralCodeFromCaseV2
      */

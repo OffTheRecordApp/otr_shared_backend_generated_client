@@ -60,36 +60,6 @@ export class CaseReferralCodeControllerApi extends runtime.BaseAPI {
         });
     }
     /**
-     * removeReferralCodeFromCase
-     */
-    removeReferralCodeFromCaseUsingDELETERaw(requestParameters) {
-        return __awaiter(this, void 0, void 0, function* () {
-            if (requestParameters.caseId === null || requestParameters.caseId === undefined) {
-                throw new runtime.RequiredError('caseId', 'Required parameter requestParameters.caseId was null or undefined when calling removeReferralCodeFromCaseUsingDELETE.');
-            }
-            if (requestParameters.codeId === null || requestParameters.codeId === undefined) {
-                throw new runtime.RequiredError('codeId', 'Required parameter requestParameters.codeId was null or undefined when calling removeReferralCodeFromCaseUsingDELETE.');
-            }
-            const queryParameters = {};
-            const headerParameters = {};
-            const response = yield this.request({
-                path: `/api/v1/cases/{caseId}/referralcode/{codeId}`.replace(`{${"caseId"}}`, encodeURIComponent(String(requestParameters.caseId))).replace(`{${"codeId"}}`, encodeURIComponent(String(requestParameters.codeId))),
-                method: 'DELETE',
-                headers: headerParameters,
-                query: queryParameters,
-            });
-            return new runtime.VoidApiResponse(response);
-        });
-    }
-    /**
-     * removeReferralCodeFromCase
-     */
-    removeReferralCodeFromCaseUsingDELETE(requestParameters) {
-        return __awaiter(this, void 0, void 0, function* () {
-            yield this.removeReferralCodeFromCaseUsingDELETERaw(requestParameters);
-        });
-    }
-    /**
      * removeReferralCodeFromCaseV2
      */
     removeReferralCodeFromCaseV2UsingDELETERaw(requestParameters) {

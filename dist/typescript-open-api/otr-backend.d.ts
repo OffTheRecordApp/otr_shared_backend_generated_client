@@ -1089,8 +1089,7 @@ export interface paths {
          * @description Apply referral code to a case to adjust the estimated cost and/or to assign the rightful lawfirm. This operation is idempotent
          */
         post: operations["applyReferralCodeUsingPOST"];
-        /** removeReferralCodeFromCase */
-        delete: operations["removeReferralCodeFromCaseUsingDELETE"];
+        delete?: never;
         options?: never;
         head?: never;
         patch?: never;
@@ -20068,50 +20067,6 @@ export interface operations {
             };
             /** @description Not Found */
             404: {
-                headers: {
-                    [name: string]: unknown;
-                };
-                content?: never;
-            };
-        };
-    };
-    removeReferralCodeFromCaseUsingDELETE: {
-        parameters: {
-            query?: never;
-            header?: never;
-            path: {
-                /** @description caseId */
-                caseId: string;
-                /** @description codeId */
-                codeId: string;
-            };
-            cookie?: never;
-        };
-        requestBody?: never;
-        responses: {
-            /** @description OK */
-            200: {
-                headers: {
-                    [name: string]: unknown;
-                };
-                content?: never;
-            };
-            /** @description No Content */
-            204: {
-                headers: {
-                    [name: string]: unknown;
-                };
-                content?: never;
-            };
-            /** @description Unauthorized */
-            401: {
-                headers: {
-                    [name: string]: unknown;
-                };
-                content?: never;
-            };
-            /** @description Forbidden */
-            403: {
                 headers: {
                     [name: string]: unknown;
                 };
