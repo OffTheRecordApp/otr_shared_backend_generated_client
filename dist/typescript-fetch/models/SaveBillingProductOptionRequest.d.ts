@@ -21,6 +21,12 @@ export interface SaveBillingProductOptionRequest {
      * @memberof SaveBillingProductOptionRequest
      */
     interval?: SaveBillingProductOptionRequestIntervalEnum;
+    /**
+     *
+     * @type {string}
+     * @memberof SaveBillingProductOptionRequest
+     */
+    offerType?: SaveBillingProductOptionRequestOfferTypeEnum;
 }
 export declare function SaveBillingProductOptionRequestFromJSON(json: any): SaveBillingProductOptionRequest;
 export declare function SaveBillingProductOptionRequestFromJSONTyped(json: any, ignoreDiscriminator: boolean): SaveBillingProductOptionRequest;
@@ -35,4 +41,12 @@ export declare enum SaveBillingProductOptionRequestIntervalEnum {
     QUARTERLY = "QUARTERLY",
     WEEKLY = "WEEKLY",
     YEARLY = "YEARLY"
+}
+/**
+* @export
+* @enum {string}
+*/
+export declare enum SaveBillingProductOptionRequestOfferTypeEnum {
+    _1MMONTHLY = "TRIAL_1M_MONTHLY",
+    _2MYEARLYUPFRONT = "TRIAL_2M_YEARLY_UPFRONT"
 }

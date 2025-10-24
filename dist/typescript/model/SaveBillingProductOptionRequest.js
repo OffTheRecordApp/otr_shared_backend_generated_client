@@ -19,4 +19,9 @@ export var SaveBillingProductOptionRequest;
         IntervalEnum[IntervalEnum["WEEKLY"] = 'WEEKLY'] = "WEEKLY";
         IntervalEnum[IntervalEnum["YEARLY"] = 'YEARLY'] = "YEARLY";
     })(IntervalEnum = SaveBillingProductOptionRequest.IntervalEnum || (SaveBillingProductOptionRequest.IntervalEnum = {}));
+    let OfferTypeEnum;
+    (function (OfferTypeEnum) {
+        OfferTypeEnum[OfferTypeEnum["_1MMONTHLY"] = 'TRIAL_1M_MONTHLY'] = "_1MMONTHLY";
+        OfferTypeEnum[OfferTypeEnum["_2MYEARLYUPFRONT"] = 'TRIAL_2M_YEARLY_UPFRONT'] = "_2MYEARLYUPFRONT";
+    })(OfferTypeEnum = SaveBillingProductOptionRequest.OfferTypeEnum || (SaveBillingProductOptionRequest.OfferTypeEnum = {}));
 })(SaveBillingProductOptionRequest || (SaveBillingProductOptionRequest = {}));

@@ -14195,6 +14195,8 @@ export interface components {
         SaveBillingProductOptionRequest: {
             /** @enum {string} */
             interval?: PathsApiV1CasesCaseIdCustomerCostGetParametersQueryPeriod;
+            /** @enum {string} */
+            offerType?: CreateBillingSubscriptionRequestPromoOfferType;
         };
         /** SaveCaseNotesRequest */
         SaveCaseNotesRequest: {

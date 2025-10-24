@@ -13,6 +13,7 @@
 
 export interface SaveBillingProductOptionRequest { 
     interval?: SaveBillingProductOptionRequest.IntervalEnum;
+    offerType?: SaveBillingProductOptionRequest.OfferTypeEnum;
 }
 export namespace SaveBillingProductOptionRequest {
     export type IntervalEnum = 'DAILY' | 'MONTHLY' | 'QUARTERLY' | 'WEEKLY' | 'YEARLY';
@@ -22,6 +23,11 @@ export namespace SaveBillingProductOptionRequest {
         Quarterly: 'QUARTERLY' as IntervalEnum,
         Weekly: 'WEEKLY' as IntervalEnum,
         Yearly: 'YEARLY' as IntervalEnum
+    };
+    export type OfferTypeEnum = 'TRIAL_1M_MONTHLY' | 'TRIAL_2M_YEARLY_UPFRONT';
+    export const OfferTypeEnum = {
+        _1MMonthly: 'TRIAL_1M_MONTHLY' as OfferTypeEnum,
+        _2MYearlyUpfront: 'TRIAL_2M_YEARLY_UPFRONT' as OfferTypeEnum
     };
 }
 

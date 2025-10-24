@@ -11,6 +11,7 @@
  */
 export interface SaveBillingProductOptionRequest {
     "interval"?: SaveBillingProductOptionRequest.IntervalEnum;
+    "offerType"?: SaveBillingProductOptionRequest.OfferTypeEnum;
 }
 export declare namespace SaveBillingProductOptionRequest {
     enum IntervalEnum {
@@ -19,5 +20,9 @@ export declare namespace SaveBillingProductOptionRequest {
         QUARTERLY,
         WEEKLY,
         YEARLY
+    }
+    enum OfferTypeEnum {
+        _1MMONTHLY,
+        _2MYEARLYUPFRONT
     }
 }

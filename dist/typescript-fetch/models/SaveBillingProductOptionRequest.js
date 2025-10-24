@@ -21,6 +21,7 @@ export function SaveBillingProductOptionRequestFromJSONTyped(json, ignoreDiscrim
     }
     return {
         'interval': !exists(json, 'interval') ? undefined : json['interval'],
+        'offerType': !exists(json, 'offerType') ? undefined : json['offerType'],
     };
 }
 export function SaveBillingProductOptionRequestToJSON(value) {
@@ -32,6 +33,7 @@ export function SaveBillingProductOptionRequestToJSON(value) {
     }
     return {
         'interval': value.interval,
+        'offerType': value.offerType,
     };
 }
 /**
@@ -46,3 +48,12 @@ export var SaveBillingProductOptionRequestIntervalEnum;
     SaveBillingProductOptionRequestIntervalEnum["WEEKLY"] = "WEEKLY";
     SaveBillingProductOptionRequestIntervalEnum["YEARLY"] = "YEARLY";
 })(SaveBillingProductOptionRequestIntervalEnum || (SaveBillingProductOptionRequestIntervalEnum = {}));
+/**
+* @export
+* @enum {string}
+*/
+export var SaveBillingProductOptionRequestOfferTypeEnum;
+(function (SaveBillingProductOptionRequestOfferTypeEnum) {
+    SaveBillingProductOptionRequestOfferTypeEnum["_1MMONTHLY"] = "TRIAL_1M_MONTHLY";
+    SaveBillingProductOptionRequestOfferTypeEnum["_2MYEARLYUPFRONT"] = "TRIAL_2M_YEARLY_UPFRONT";
+})(SaveBillingProductOptionRequestOfferTypeEnum || (SaveBillingProductOptionRequestOfferTypeEnum = {}));
