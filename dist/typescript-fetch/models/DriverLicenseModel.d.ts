@@ -138,6 +138,12 @@ export interface DriverLicenseModel {
     stateName?: string;
     /**
      *
+     * @type {string}
+     * @memberof DriverLicenseModel
+     */
+    unsignedImageUrl?: string;
+    /**
+     *
      * @type {number}
      * @memberof DriverLicenseModel
      */

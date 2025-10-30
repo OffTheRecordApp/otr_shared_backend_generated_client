@@ -41,6 +41,7 @@ export function DriverLicenseModelFromJSONTyped(json, ignoreDiscriminator) {
         'licenseRestrictions': !exists(json, 'licenseRestrictions') ? undefined : json['licenseRestrictions'],
         'sex': !exists(json, 'sex') ? undefined : json['sex'],
         'stateName': !exists(json, 'stateName') ? undefined : json['stateName'],
+        'unsignedImageUrl': !exists(json, 'unsignedImageUrl') ? undefined : json['unsignedImageUrl'],
         'userId': !exists(json, 'userId') ? undefined : json['userId'],
         'weight': !exists(json, 'weight') ? undefined : json['weight'],
     };
@@ -73,6 +74,7 @@ export function DriverLicenseModelToJSON(value) {
         'licenseRestrictions': value.licenseRestrictions,
         'sex': value.sex,
         'stateName': value.stateName,
+        'unsignedImageUrl': value.unsignedImageUrl,
         'userId': value.userId,
         'weight': value.weight,
     };

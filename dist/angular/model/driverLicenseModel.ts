@@ -34,6 +34,7 @@ export interface DriverLicenseModel {
     licenseRestrictions?: string;
     sex?: string;
     stateName?: string;
+    unsignedImageUrl?: string;
     userId?: number;
     weight?: string;
 }

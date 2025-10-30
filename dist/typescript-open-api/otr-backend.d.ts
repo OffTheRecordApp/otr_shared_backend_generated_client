@@ -10093,6 +10093,7 @@ export interface components {
             licenseRestrictions?: string;
             sex?: string;
             stateName?: string;
+            unsignedImageUrl?: string;
             /** Format: int64 */
             userId?: number;
             weight?: string;
