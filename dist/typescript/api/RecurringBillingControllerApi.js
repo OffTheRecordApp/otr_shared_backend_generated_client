@@ -117,9 +117,10 @@ export class RecurringBillingControllerApi {
      * @param active active
      * @param audience audience
      * @param limit limit
+     * @param promoOfferType promoOfferType
      * @param userId userId
      */
-    listBillingProductsUsingGET(active, audience, limit, userId, extraHttpRequestParams) {
+    listBillingProductsUsingGET(active, audience, limit, promoOfferType, userId, extraHttpRequestParams) {
         const localVarPath = this.basePath + '/api/v1/billing/products';
         let queryParameters = {};
         let headerParams = Object.assign({}, this.defaultHeaders);
@@ -131,6 +132,9 @@ export class RecurringBillingControllerApi {
         }
         if (limit !== undefined) {
             queryParameters['limit'] = limit;
+        }
+        if (promoOfferType !== undefined) {
+            queryParameters['promoOfferType'] = promoOfferType;
         }
         if (userId !== undefined) {
             queryParameters['userId'] = userId;

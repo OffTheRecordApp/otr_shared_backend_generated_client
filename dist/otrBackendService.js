@@ -683,6 +683,7 @@ angular.module('otrBackendService', [])
              * @param {boolean} parameters.active - active
              * @param {string} parameters.audience - audience
              * @param {integer} parameters.limit - limit
+             * @param {string} parameters.promoOfferType - promoOfferType
              * @param {string} parameters.userId - userId
              */
             OtrService.prototype.listBillingProductsUsingGET = function(parameters) {
@@ -715,6 +716,10 @@ angular.module('otrBackendService', [])
 
                 if (parameters['limit'] !== undefined) {
                     queryParameters['limit'] = parameters['limit'];
+                }
+
+                if (parameters['promoOfferType'] !== undefined) {
+                    queryParameters['promoOfferType'] = parameters['promoOfferType'];
                 }
 
                 if (parameters['userId'] !== undefined) {

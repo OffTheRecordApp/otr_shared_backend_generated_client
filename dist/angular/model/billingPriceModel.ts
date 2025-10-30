@@ -15,6 +15,7 @@ export interface BillingPriceModel {
     active?: boolean;
     billingScheme?: BillingPriceModel.BillingSchemeEnum;
     createdAt?: string;
+    finalUnitAmountInCents?: number;
     id?: string;
     interval?: BillingPriceModel.IntervalEnum;
     intervalCount?: number;

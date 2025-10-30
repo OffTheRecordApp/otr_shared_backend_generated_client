@@ -7876,6 +7876,8 @@ export interface components {
             billingScheme?: BillingPriceModelBillingScheme;
             /** Format: date-time */
             createdAt?: string;
+            /** Format: int64 */
+            finalUnitAmountInCents?: number;
             id?: string;
             /** @enum {string} */
             interval?: PathsApiV1CasesCaseIdCustomerCostGetParametersQueryPeriod;
@@ -9534,7 +9536,7 @@ export interface components {
             priceIds?: string[];
             productId?: string;
             /** @enum {string} */
-            promoOfferType?: CreateBillingSubscriptionRequestPromoOfferType;
+            promoOfferType?: PathsApiV1BillingProductsGetParametersQueryPromoOfferType;
             /** Format: date */
             trialEndDate?: string;
         };
@@ -14197,7 +14199,7 @@ export interface components {
             /** @enum {string} */
             interval?: PathsApiV1CasesCaseIdCustomerCostGetParametersQueryPeriod;
             /** @enum {string} */
-            offerType?: CreateBillingSubscriptionRequestPromoOfferType;
+            offerType?: PathsApiV1BillingProductsGetParametersQueryPromoOfferType;
         };
         /** SaveCaseNotesRequest */
         SaveCaseNotesRequest: {
@@ -33294,6 +33296,8 @@ export interface operations {
                 audience?: string;
                 /** @description userId */
                 userId?: string;
+                /** @description promoOfferType */
+                promoOfferType?: PathsApiV1BillingProductsGetParametersQueryPromoOfferType;
             };
             header?: never;
             path?: never;
@@ -40519,6 +40523,10 @@ export declare enum PathsApiV2NotesSearchGetParametersQueryNoteType {
     PHONE_LEAD = "PHONE_LEAD",
     USER = "USER"
 }
+export declare enum PathsApiV1BillingProductsGetParametersQueryPromoOfferType {
+    TRIAL_1M_MONTHLY = "TRIAL_1M_MONTHLY",
+    TRIAL_2M_YEARLY_UPFRONT = "TRIAL_2M_YEARLY_UPFRONT"
+}
 export declare enum PathsApiV1ReferralsSourcesGetParametersQueryFlavor {
     ALL = "ALL",
     ENABLED = "ENABLED"
@@ -40837,10 +40845,6 @@ export declare enum CreateBillingSubscriptionRequestInitialSubscriptionFlow {
     BOOKING_UPSELL = "BOOKING_UPSELL",
     FASTLANE_TEEN_FLOW = "FASTLANE_TEEN_FLOW",
     HOME_PAGE_BANNER = "HOME_PAGE_BANNER"
-}
-export declare enum CreateBillingSubscriptionRequestPromoOfferType {
-    TRIAL_1M_MONTHLY = "TRIAL_1M_MONTHLY",
-    TRIAL_2M_YEARLY_UPFRONT = "TRIAL_2M_YEARLY_UPFRONT"
 }
 export declare enum CreateLawfirmModelLawfirmPaymentModel {
     DESTINATION_ACCOUNT = "DESTINATION_ACCOUNT",

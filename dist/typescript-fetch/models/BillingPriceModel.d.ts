@@ -35,6 +35,12 @@ export interface BillingPriceModel {
     createdAt?: Date;
     /**
      *
+     * @type {number}
+     * @memberof BillingPriceModel
+     */
+    finalUnitAmountInCents?: number;
+    /**
+     *
      * @type {string}
      * @memberof BillingPriceModel
      */
