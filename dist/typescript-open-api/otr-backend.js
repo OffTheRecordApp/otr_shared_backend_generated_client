@@ -50,6 +50,7 @@ export var PathsApiV1LawfirmsLawfirmIdAuditEventsGetParametersQueryIncludeTypes;
     PathsApiV1LawfirmsLawfirmIdAuditEventsGetParametersQueryIncludeTypes["DEFAULT_FEE_ADDED"] = "DEFAULT_FEE_ADDED";
     PathsApiV1LawfirmsLawfirmIdAuditEventsGetParametersQueryIncludeTypes["DEFAULT_FEE_CHANGED"] = "DEFAULT_FEE_CHANGED";
     PathsApiV1LawfirmsLawfirmIdAuditEventsGetParametersQueryIncludeTypes["DEFAULT_FEE_REMOVED"] = "DEFAULT_FEE_REMOVED";
+    PathsApiV1LawfirmsLawfirmIdAuditEventsGetParametersQueryIncludeTypes["DRIVER_LICENSE_UPLOADED"] = "DRIVER_LICENSE_UPLOADED";
     PathsApiV1LawfirmsLawfirmIdAuditEventsGetParametersQueryIncludeTypes["EMAIL_SENT"] = "EMAIL_SENT";
     PathsApiV1LawfirmsLawfirmIdAuditEventsGetParametersQueryIncludeTypes["EXTERNAL_TICKET_REQUEST"] = "EXTERNAL_TICKET_REQUEST";
     PathsApiV1LawfirmsLawfirmIdAuditEventsGetParametersQueryIncludeTypes["GHOST_ACCOUNT_CREATED"] = "GHOST_ACCOUNT_CREATED";

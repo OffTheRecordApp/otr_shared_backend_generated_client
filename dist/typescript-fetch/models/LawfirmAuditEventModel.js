@@ -118,6 +118,7 @@ export var LawfirmAuditEventModelEventEnum;
     LawfirmAuditEventModelEventEnum["DEFAULTFEEADDED"] = "DEFAULT_FEE_ADDED";
     LawfirmAuditEventModelEventEnum["DEFAULTFEECHANGED"] = "DEFAULT_FEE_CHANGED";
     LawfirmAuditEventModelEventEnum["DEFAULTFEEREMOVED"] = "DEFAULT_FEE_REMOVED";
+    LawfirmAuditEventModelEventEnum["DRIVERLICENSEUPLOADED"] = "DRIVER_LICENSE_UPLOADED";
     LawfirmAuditEventModelEventEnum["EMAILSENT"] = "EMAIL_SENT";
     LawfirmAuditEventModelEventEnum["EXTERNALTICKETREQUEST"] = "EXTERNAL_TICKET_REQUEST";
     LawfirmAuditEventModelEventEnum["GHOSTACCOUNTCREATED"] = "GHOST_ACCOUNT_CREATED";

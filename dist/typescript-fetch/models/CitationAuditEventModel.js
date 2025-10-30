@@ -118,6 +118,7 @@ export var CitationAuditEventModelEventEnum;
     CitationAuditEventModelEventEnum["DEFAULTFEEADDED"] = "DEFAULT_FEE_ADDED";
     CitationAuditEventModelEventEnum["DEFAULTFEECHANGED"] = "DEFAULT_FEE_CHANGED";
     CitationAuditEventModelEventEnum["DEFAULTFEEREMOVED"] = "DEFAULT_FEE_REMOVED";
+    CitationAuditEventModelEventEnum["DRIVERLICENSEUPLOADED"] = "DRIVER_LICENSE_UPLOADED";
     CitationAuditEventModelEventEnum["EMAILSENT"] = "EMAIL_SENT";
     CitationAuditEventModelEventEnum["EXTERNALTICKETREQUEST"] = "EXTERNAL_TICKET_REQUEST";
     CitationAuditEventModelEventEnum["GHOSTACCOUNTCREATED"] = "GHOST_ACCOUNT_CREATED";

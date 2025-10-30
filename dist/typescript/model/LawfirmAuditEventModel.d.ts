@@ -78,6 +78,7 @@ export declare namespace LawfirmAuditEventModel {
         DEFAULTFEEADDED,
         DEFAULTFEECHANGED,
         DEFAULTFEEREMOVED,
+        DRIVERLICENSEUPLOADED,
         EMAILSENT,
         EXTERNALTICKETREQUEST,
         GHOSTACCOUNTCREATED,
