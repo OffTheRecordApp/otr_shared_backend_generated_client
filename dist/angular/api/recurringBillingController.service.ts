@@ -307,15 +307,15 @@ export class RecurringBillingControllerService {
      * @param active active
      * @param audience audience
      * @param limit limit
-     * @param promoOfferType promoOfferType
+     * @param promoOfferCampaign promoOfferCampaign
      * @param userId userId
      * @param observe set whether or not to return the data Observable as the body, response or events. defaults to returning the body.
      * @param reportProgress flag to report request and response progress.
      */
-    public listBillingProductsUsingGET(active?: boolean, audience?: string, limit?: number, promoOfferType?: 'TRIAL_1M_MONTHLY' | 'TRIAL_2M_YEARLY_UPFRONT', userId?: string, observe?: 'body', reportProgress?: boolean, options?: {httpHeaderAccept?: '*/*', context?: HttpContext}): Observable<ListBillingProductsResponse>;
-    public listBillingProductsUsingGET(active?: boolean, audience?: string, limit?: number, promoOfferType?: 'TRIAL_1M_MONTHLY' | 'TRIAL_2M_YEARLY_UPFRONT', userId?: string, observe?: 'response', reportProgress?: boolean, options?: {httpHeaderAccept?: '*/*', context?: HttpContext}): Observable<HttpResponse<ListBillingProductsResponse>>;
-    public listBillingProductsUsingGET(active?: boolean, audience?: string, limit?: number, promoOfferType?: 'TRIAL_1M_MONTHLY' | 'TRIAL_2M_YEARLY_UPFRONT', userId?: string, observe?: 'events', reportProgress?: boolean, options?: {httpHeaderAccept?: '*/*', context?: HttpContext}): Observable<HttpEvent<ListBillingProductsResponse>>;
-    public listBillingProductsUsingGET(active?: boolean, audience?: string, limit?: number, promoOfferType?: 'TRIAL_1M_MONTHLY' | 'TRIAL_2M_YEARLY_UPFRONT', userId?: string, observe: any = 'body', reportProgress: boolean = false, options?: {httpHeaderAccept?: '*/*', context?: HttpContext}): Observable<any> {
+    public listBillingProductsUsingGET(active?: boolean, audience?: string, limit?: number, promoOfferCampaign?: 'FALL_2025_OFFER', userId?: string, observe?: 'body', reportProgress?: boolean, options?: {httpHeaderAccept?: '*/*', context?: HttpContext}): Observable<ListBillingProductsResponse>;
+    public listBillingProductsUsingGET(active?: boolean, audience?: string, limit?: number, promoOfferCampaign?: 'FALL_2025_OFFER', userId?: string, observe?: 'response', reportProgress?: boolean, options?: {httpHeaderAccept?: '*/*', context?: HttpContext}): Observable<HttpResponse<ListBillingProductsResponse>>;
+    public listBillingProductsUsingGET(active?: boolean, audience?: string, limit?: number, promoOfferCampaign?: 'FALL_2025_OFFER', userId?: string, observe?: 'events', reportProgress?: boolean, options?: {httpHeaderAccept?: '*/*', context?: HttpContext}): Observable<HttpEvent<ListBillingProductsResponse>>;
+    public listBillingProductsUsingGET(active?: boolean, audience?: string, limit?: number, promoOfferCampaign?: 'FALL_2025_OFFER', userId?: string, observe: any = 'body', reportProgress: boolean = false, options?: {httpHeaderAccept?: '*/*', context?: HttpContext}): Observable<any> {
 
         let localVarQueryParameters = new HttpParams({encoder: this.encoder});
         if (active !== undefined && active !== null) {
@@ -330,9 +330,9 @@ export class RecurringBillingControllerService {
           localVarQueryParameters = this.addToHttpParams(localVarQueryParameters,
             <any>limit, 'limit');
         }
-        if (promoOfferType !== undefined && promoOfferType !== null) {
+        if (promoOfferCampaign !== undefined && promoOfferCampaign !== null) {
           localVarQueryParameters = this.addToHttpParams(localVarQueryParameters,
-            <any>promoOfferType, 'promoOfferType');
+            <any>promoOfferCampaign, 'promoOfferCampaign');
         }
         if (userId !== undefined && userId !== null) {
           localVarQueryParameters = this.addToHttpParams(localVarQueryParameters,

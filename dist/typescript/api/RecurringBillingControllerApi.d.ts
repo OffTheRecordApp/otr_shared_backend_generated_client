@@ -44,10 +44,10 @@ export declare class RecurringBillingControllerApi {
      * @param active active
      * @param audience audience
      * @param limit limit
-     * @param promoOfferType promoOfferType
+     * @param promoOfferCampaign promoOfferCampaign
      * @param userId userId
      */
-    listBillingProductsUsingGET(active?: boolean, audience?: string, limit?: number, promoOfferType?: 'TRIAL_1M_MONTHLY' | 'TRIAL_2M_YEARLY_UPFRONT', userId?: string, extraHttpRequestParams?: any): ng.IHttpPromise<models.ListBillingProductsResponse>;
+    listBillingProductsUsingGET(active?: boolean, audience?: string, limit?: number, promoOfferCampaign?: 'FALL_2025_OFFER', userId?: string, extraHttpRequestParams?: any): ng.IHttpPromise<models.ListBillingProductsResponse>;
     /**
      *
      * @summary listBillingSubscriptions

@@ -27,7 +27,7 @@ export interface ListBillingProductsUsingGETRequest {
     active?: boolean;
     audience?: string;
     limit?: number;
-    promoOfferType?: ListBillingProductsUsingGETPromoOfferTypeEnum;
+    promoOfferCampaign?: ListBillingProductsUsingGETPromoOfferCampaignEnum;
     userId?: string;
 }
 export interface ListBillingSubscriptionsUsingGETRequest {
@@ -109,7 +109,6 @@ export declare class RecurringBillingControllerApi extends runtime.BaseAPI {
     * @export
     * @enum {string}
     */
-export declare enum ListBillingProductsUsingGETPromoOfferTypeEnum {
-    _1MMONTHLY = "TRIAL_1M_MONTHLY",
-    _2MYEARLYUPFRONT = "TRIAL_2M_YEARLY_UPFRONT"
+export declare enum ListBillingProductsUsingGETPromoOfferCampaignEnum {
+    FALL2025OFFER = "FALL_2025_OFFER"
 }

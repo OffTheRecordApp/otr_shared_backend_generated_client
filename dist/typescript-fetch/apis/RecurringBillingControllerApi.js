@@ -135,8 +135,8 @@ export class RecurringBillingControllerApi extends runtime.BaseAPI {
             if (requestParameters.limit !== undefined) {
                 queryParameters['limit'] = requestParameters.limit;
             }
-            if (requestParameters.promoOfferType !== undefined) {
-                queryParameters['promoOfferType'] = requestParameters.promoOfferType;
+            if (requestParameters.promoOfferCampaign !== undefined) {
+                queryParameters['promoOfferCampaign'] = requestParameters.promoOfferCampaign;
             }
             if (requestParameters.userId !== undefined) {
                 queryParameters['userId'] = requestParameters.userId;
@@ -265,8 +265,7 @@ export class RecurringBillingControllerApi extends runtime.BaseAPI {
     * @export
     * @enum {string}
     */
-export var ListBillingProductsUsingGETPromoOfferTypeEnum;
-(function (ListBillingProductsUsingGETPromoOfferTypeEnum) {
-    ListBillingProductsUsingGETPromoOfferTypeEnum["_1MMONTHLY"] = "TRIAL_1M_MONTHLY";
-    ListBillingProductsUsingGETPromoOfferTypeEnum["_2MYEARLYUPFRONT"] = "TRIAL_2M_YEARLY_UPFRONT";
-})(ListBillingProductsUsingGETPromoOfferTypeEnum || (ListBillingProductsUsingGETPromoOfferTypeEnum = {}));
+export var ListBillingProductsUsingGETPromoOfferCampaignEnum;
+(function (ListBillingProductsUsingGETPromoOfferCampaignEnum) {
+    ListBillingProductsUsingGETPromoOfferCampaignEnum["FALL2025OFFER"] = "FALL_2025_OFFER";
+})(ListBillingProductsUsingGETPromoOfferCampaignEnum || (ListBillingProductsUsingGETPromoOfferCampaignEnum = {}));

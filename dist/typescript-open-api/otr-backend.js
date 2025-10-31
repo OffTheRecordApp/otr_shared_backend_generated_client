@@ -428,11 +428,10 @@ export var PathsApiV2NotesSearchGetParametersQueryNoteType;
     PathsApiV2NotesSearchGetParametersQueryNoteType["PHONE_LEAD"] = "PHONE_LEAD";
     PathsApiV2NotesSearchGetParametersQueryNoteType["USER"] = "USER";
 })(PathsApiV2NotesSearchGetParametersQueryNoteType || (PathsApiV2NotesSearchGetParametersQueryNoteType = {}));
-export var PathsApiV1BillingProductsGetParametersQueryPromoOfferType;
-(function (PathsApiV1BillingProductsGetParametersQueryPromoOfferType) {
-    PathsApiV1BillingProductsGetParametersQueryPromoOfferType["TRIAL_1M_MONTHLY"] = "TRIAL_1M_MONTHLY";
-    PathsApiV1BillingProductsGetParametersQueryPromoOfferType["TRIAL_2M_YEARLY_UPFRONT"] = "TRIAL_2M_YEARLY_UPFRONT";
-})(PathsApiV1BillingProductsGetParametersQueryPromoOfferType || (PathsApiV1BillingProductsGetParametersQueryPromoOfferType = {}));
+export var PathsApiV1BillingProductsGetParametersQueryPromoOfferCampaign;
+(function (PathsApiV1BillingProductsGetParametersQueryPromoOfferCampaign) {
+    PathsApiV1BillingProductsGetParametersQueryPromoOfferCampaign["FALL_2025_OFFER"] = "FALL_2025_OFFER";
+})(PathsApiV1BillingProductsGetParametersQueryPromoOfferCampaign || (PathsApiV1BillingProductsGetParametersQueryPromoOfferCampaign = {}));
 export var PathsApiV1ReferralsSourcesGetParametersQueryFlavor;
 (function (PathsApiV1ReferralsSourcesGetParametersQueryFlavor) {
     PathsApiV1ReferralsSourcesGetParametersQueryFlavor["ALL"] = "ALL";
@@ -793,6 +792,11 @@ export var CreateBillingSubscriptionRequestInitialSubscriptionFlow;
     CreateBillingSubscriptionRequestInitialSubscriptionFlow["FASTLANE_TEEN_FLOW"] = "FASTLANE_TEEN_FLOW";
     CreateBillingSubscriptionRequestInitialSubscriptionFlow["HOME_PAGE_BANNER"] = "HOME_PAGE_BANNER";
 })(CreateBillingSubscriptionRequestInitialSubscriptionFlow || (CreateBillingSubscriptionRequestInitialSubscriptionFlow = {}));
+export var CreateBillingSubscriptionRequestPromoOfferType;
+(function (CreateBillingSubscriptionRequestPromoOfferType) {
+    CreateBillingSubscriptionRequestPromoOfferType["TRIAL_1M_MONTHLY"] = "TRIAL_1M_MONTHLY";
+    CreateBillingSubscriptionRequestPromoOfferType["TRIAL_2M_YEARLY_UPFRONT"] = "TRIAL_2M_YEARLY_UPFRONT";
+})(CreateBillingSubscriptionRequestPromoOfferType || (CreateBillingSubscriptionRequestPromoOfferType = {}));
 export var CreateLawfirmModelLawfirmPaymentModel;
 (function (CreateLawfirmModelLawfirmPaymentModel) {
     CreateLawfirmModelLawfirmPaymentModel["DESTINATION_ACCOUNT"] = "DESTINATION_ACCOUNT";
