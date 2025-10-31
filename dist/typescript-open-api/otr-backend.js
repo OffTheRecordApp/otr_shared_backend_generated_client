@@ -26,6 +26,7 @@ export var PathsApiV1LawfirmsLawfirmIdAuditEventsGetParametersQueryIncludeTypes;
     PathsApiV1LawfirmsLawfirmIdAuditEventsGetParametersQueryIncludeTypes["ACCOUNT_STATUS_CHANGED"] = "ACCOUNT_STATUS_CHANGED";
     PathsApiV1LawfirmsLawfirmIdAuditEventsGetParametersQueryIncludeTypes["CASE_ACCEPT"] = "CASE_ACCEPT";
     PathsApiV1LawfirmsLawfirmIdAuditEventsGetParametersQueryIncludeTypes["CASE_BOOKING"] = "CASE_BOOKING";
+    PathsApiV1LawfirmsLawfirmIdAuditEventsGetParametersQueryIncludeTypes["CASE_BOOKING_FAILED"] = "CASE_BOOKING_FAILED";
     PathsApiV1LawfirmsLawfirmIdAuditEventsGetParametersQueryIncludeTypes["CASE_CANCEL"] = "CASE_CANCEL";
     PathsApiV1LawfirmsLawfirmIdAuditEventsGetParametersQueryIncludeTypes["CASE_COUNTER_ACCEPTED"] = "CASE_COUNTER_ACCEPTED";
     PathsApiV1LawfirmsLawfirmIdAuditEventsGetParametersQueryIncludeTypes["CASE_COUNTER_DECLINED"] = "CASE_COUNTER_DECLINED";

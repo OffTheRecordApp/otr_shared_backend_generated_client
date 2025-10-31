@@ -94,6 +94,7 @@ export var LawfirmAuditEventModelEventEnum;
     LawfirmAuditEventModelEventEnum["ACCOUNTSTATUSCHANGED"] = "ACCOUNT_STATUS_CHANGED";
     LawfirmAuditEventModelEventEnum["CASEACCEPT"] = "CASE_ACCEPT";
     LawfirmAuditEventModelEventEnum["CASEBOOKING"] = "CASE_BOOKING";
+    LawfirmAuditEventModelEventEnum["CASEBOOKINGFAILED"] = "CASE_BOOKING_FAILED";
     LawfirmAuditEventModelEventEnum["CASECANCEL"] = "CASE_CANCEL";
     LawfirmAuditEventModelEventEnum["CASECOUNTERACCEPTED"] = "CASE_COUNTER_ACCEPTED";
     LawfirmAuditEventModelEventEnum["CASECOUNTERDECLINED"] = "CASE_COUNTER_DECLINED";
