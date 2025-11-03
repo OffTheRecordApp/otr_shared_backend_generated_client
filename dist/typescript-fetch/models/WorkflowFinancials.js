@@ -25,6 +25,7 @@ export function WorkflowFinancialsFromJSONTyped(json, ignoreDiscriminator) {
         'payments': !exists(json, 'payments') ? undefined : (json['payments'].map(WorkflowCasePaymentModelFromJSON)),
         'totalClientBaseCostInCents': !exists(json, 'totalClientBaseCostInCents') ? undefined : json['totalClientBaseCostInCents'],
         'totalClientCostInCents': !exists(json, 'totalClientCostInCents') ? undefined : json['totalClientCostInCents'],
+        'totalLegalFeeInCents': !exists(json, 'totalLegalFeeInCents') ? undefined : json['totalLegalFeeInCents'],
         'totalRefCodeAdjustmentInCents': !exists(json, 'totalRefCodeAdjustmentInCents') ? undefined : json['totalRefCodeAdjustmentInCents'],
     };
 }
@@ -40,6 +41,7 @@ export function WorkflowFinancialsToJSON(value) {
         'payments': value.payments === undefined ? undefined : (value.payments.map(WorkflowCasePaymentModelToJSON)),
         'totalClientBaseCostInCents': value.totalClientBaseCostInCents,
         'totalClientCostInCents': value.totalClientCostInCents,
+        'totalLegalFeeInCents': value.totalLegalFeeInCents,
         'totalRefCodeAdjustmentInCents': value.totalRefCodeAdjustmentInCents,
     };
 }

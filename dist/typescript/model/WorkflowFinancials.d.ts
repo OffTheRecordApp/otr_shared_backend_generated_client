@@ -15,5 +15,6 @@ export interface WorkflowFinancials {
     "payments"?: Array<models.WorkflowCasePaymentModel>;
     "totalClientBaseCostInCents"?: number;
     "totalClientCostInCents"?: number;
+    "totalLegalFeeInCents"?: number;
     "totalRefCodeAdjustmentInCents"?: number;
 }

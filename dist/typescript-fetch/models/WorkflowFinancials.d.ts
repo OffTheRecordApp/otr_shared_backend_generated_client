@@ -45,6 +45,12 @@ export interface WorkflowFinancials {
      * @type {number}
      * @memberof WorkflowFinancials
      */
+    totalLegalFeeInCents?: number;
+    /**
+     *
+     * @type {number}
+     * @memberof WorkflowFinancials
+     */
     totalRefCodeAdjustmentInCents?: number;
 }
 export declare function WorkflowFinancialsFromJSON(json: any): WorkflowFinancials;

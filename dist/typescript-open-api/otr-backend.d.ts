@@ -16537,6 +16537,8 @@ export interface components {
             /** Format: int32 */
             totalClientCostInCents?: number;
             /** Format: int32 */
+            totalLegalFeeInCents?: number;
+            /** Format: int32 */
             totalRefCodeAdjustmentInCents?: number;
         };
         /** WorkflowLineItemModel */
