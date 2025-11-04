@@ -1399,6 +1399,7 @@ export var ValidateDirectMailResponseOtrError;
     ValidateDirectMailResponseOtrError["CODE_IS_ALREADY_TAKEN"] = "CODE_IS_ALREADY_TAKEN";
     ValidateDirectMailResponseOtrError["CODE_IS_NOT_ACTIVE"] = "CODE_IS_NOT_ACTIVE";
     ValidateDirectMailResponseOtrError["CODE_NOT_ALLOWED_DUE_TO_CREDIT"] = "CODE_NOT_ALLOWED_DUE_TO_CREDIT";
+    ValidateDirectMailResponseOtrError["CODE_NOT_ALLOWED_DUE_TO_PROMO_OFFER"] = "CODE_NOT_ALLOWED_DUE_TO_PROMO_OFFER";
     ValidateDirectMailResponseOtrError["CODE_NOT_SUPPORTED_BY_LAWFIRM"] = "CODE_NOT_SUPPORTED_BY_LAWFIRM";
     ValidateDirectMailResponseOtrError["CODE_NOT_VALID_FOR_LEGAL_SERVICE"] = "CODE_NOT_VALID_FOR_LEGAL_SERVICE";
     ValidateDirectMailResponseOtrError["CODE_NOT_YET_APPROVED"] = "CODE_NOT_YET_APPROVED";

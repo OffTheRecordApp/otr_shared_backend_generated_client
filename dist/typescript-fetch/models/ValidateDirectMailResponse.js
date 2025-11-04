@@ -87,6 +87,7 @@ export var ValidateDirectMailResponseOtrErrorEnum;
     ValidateDirectMailResponseOtrErrorEnum["CODEISALREADYTAKEN"] = "CODE_IS_ALREADY_TAKEN";
     ValidateDirectMailResponseOtrErrorEnum["CODEISNOTACTIVE"] = "CODE_IS_NOT_ACTIVE";
     ValidateDirectMailResponseOtrErrorEnum["CODENOTALLOWEDDUETOCREDIT"] = "CODE_NOT_ALLOWED_DUE_TO_CREDIT";
+    ValidateDirectMailResponseOtrErrorEnum["CODENOTALLOWEDDUETOPROMOOFFER"] = "CODE_NOT_ALLOWED_DUE_TO_PROMO_OFFER";
     ValidateDirectMailResponseOtrErrorEnum["CODENOTSUPPORTEDBYLAWFIRM"] = "CODE_NOT_SUPPORTED_BY_LAWFIRM";
     ValidateDirectMailResponseOtrErrorEnum["CODENOTVALIDFORLEGALSERVICE"] = "CODE_NOT_VALID_FOR_LEGAL_SERVICE";
     ValidateDirectMailResponseOtrErrorEnum["CODENOTYETAPPROVED"] = "CODE_NOT_YET_APPROVED";
