@@ -26,6 +26,7 @@ export var CaseLineItemDomainRes;
         LineItemTypeEnum[LineItemTypeEnum["CDLFEE"] = 'CDL_FEE'] = "CDLFEE";
         LineItemTypeEnum[LineItemTypeEnum["COURTFEE"] = 'COURT_FEE'] = "COURTFEE";
         LineItemTypeEnum[LineItemTypeEnum["DISPUTEFEE"] = 'DISPUTE_FEE'] = "DISPUTEFEE";
+        LineItemTypeEnum[LineItemTypeEnum["FASTLANEPROMOCREDIT"] = 'FASTLANE_PROMO_CREDIT'] = "FASTLANEPROMOCREDIT";
         LineItemTypeEnum[LineItemTypeEnum["FINEPAYMENT"] = 'FINE_PAYMENT'] = "FINEPAYMENT";
         LineItemTypeEnum[LineItemTypeEnum["FTAFEE"] = 'FTA_FEE'] = "FTAFEE";
         LineItemTypeEnum[LineItemTypeEnum["INITIALSUBSCRIPTIONFEE"] = 'INITIAL_SUBSCRIPTION_FEE'] = "INITIALSUBSCRIPTIONFEE";

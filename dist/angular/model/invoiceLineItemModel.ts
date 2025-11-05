@@ -18,7 +18,7 @@ export interface InvoiceLineItemModel {
     name?: string;
 }
 export namespace InvoiceLineItemModel {
-    export type InvoiceTypeEnum = 'ACCIDENT_FEE' | 'BASE_LEGAL_FEE' | 'BOND_FEE' | 'BOOKING_FEE' | 'CDL_FEE' | 'COURT_FEE' | 'DISPUTE_FEE' | 'FINE_PAYMENT' | 'FTA_FEE' | 'INITIAL_SUBSCRIPTION_FEE' | 'LATE_FEE' | 'MBG_REFUND' | 'MVS_FEE' | 'OTHER' | 'OTR_CREDIT' | 'OTR_SUBSCRIPTION_CREDIT' | 'PAYMENT_PLAN_SERVICE_FEE' | 'WARRANT_FEE';
+    export type InvoiceTypeEnum = 'ACCIDENT_FEE' | 'BASE_LEGAL_FEE' | 'BOND_FEE' | 'BOOKING_FEE' | 'CDL_FEE' | 'COURT_FEE' | 'DISPUTE_FEE' | 'FASTLANE_PROMO_CREDIT' | 'FINE_PAYMENT' | 'FTA_FEE' | 'INITIAL_SUBSCRIPTION_FEE' | 'LATE_FEE' | 'MBG_REFUND' | 'MVS_FEE' | 'OTHER' | 'OTR_CREDIT' | 'OTR_SUBSCRIPTION_CREDIT' | 'PAYMENT_PLAN_SERVICE_FEE' | 'WARRANT_FEE';
     export const InvoiceTypeEnum = {
         AccidentFee: 'ACCIDENT_FEE' as InvoiceTypeEnum,
         BaseLegalFee: 'BASE_LEGAL_FEE' as InvoiceTypeEnum,
@@ -27,6 +27,7 @@ export namespace InvoiceLineItemModel {
         CdlFee: 'CDL_FEE' as InvoiceTypeEnum,
         CourtFee: 'COURT_FEE' as InvoiceTypeEnum,
         DisputeFee: 'DISPUTE_FEE' as InvoiceTypeEnum,
+        FastlanePromoCredit: 'FASTLANE_PROMO_CREDIT' as InvoiceTypeEnum,
         FinePayment: 'FINE_PAYMENT' as InvoiceTypeEnum,
         FtaFee: 'FTA_FEE' as InvoiceTypeEnum,
         InitialSubscriptionFee: 'INITIAL_SUBSCRIPTION_FEE' as InvoiceTypeEnum,

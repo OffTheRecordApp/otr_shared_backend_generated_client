@@ -24,6 +24,7 @@ export declare namespace InvoiceLineItemModel {
         CDLFEE,
         COURTFEE,
         DISPUTEFEE,
+        FASTLANEPROMOCREDIT,
         FINEPAYMENT,
         FTAFEE,
         INITIALSUBSCRIPTIONFEE,

@@ -53,6 +53,7 @@ export var InvoiceLineItemModelInvoiceTypeEnum;
     InvoiceLineItemModelInvoiceTypeEnum["CDLFEE"] = "CDL_FEE";
     InvoiceLineItemModelInvoiceTypeEnum["COURTFEE"] = "COURT_FEE";
     InvoiceLineItemModelInvoiceTypeEnum["DISPUTEFEE"] = "DISPUTE_FEE";
+    InvoiceLineItemModelInvoiceTypeEnum["FASTLANEPROMOCREDIT"] = "FASTLANE_PROMO_CREDIT";
     InvoiceLineItemModelInvoiceTypeEnum["FINEPAYMENT"] = "FINE_PAYMENT";
     InvoiceLineItemModelInvoiceTypeEnum["FTAFEE"] = "FTA_FEE";
     InvoiceLineItemModelInvoiceTypeEnum["INITIALSUBSCRIPTIONFEE"] = "INITIAL_SUBSCRIPTION_FEE";

@@ -51,6 +51,7 @@ export var LineItemLineItemEnum;
     LineItemLineItemEnum["CDLFEE"] = "CDL_FEE";
     LineItemLineItemEnum["COURTFEE"] = "COURT_FEE";
     LineItemLineItemEnum["DISPUTEFEE"] = "DISPUTE_FEE";
+    LineItemLineItemEnum["FASTLANEPROMOCREDIT"] = "FASTLANE_PROMO_CREDIT";
     LineItemLineItemEnum["FINEPAYMENT"] = "FINE_PAYMENT";
     LineItemLineItemEnum["FTAFEE"] = "FTA_FEE";
     LineItemLineItemEnum["INITIALSUBSCRIPTIONFEE"] = "INITIAL_SUBSCRIPTION_FEE";

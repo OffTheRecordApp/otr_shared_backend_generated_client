@@ -20,6 +20,7 @@ export var InvoiceLineItemModel;
         InvoiceTypeEnum[InvoiceTypeEnum["CDLFEE"] = 'CDL_FEE'] = "CDLFEE";
         InvoiceTypeEnum[InvoiceTypeEnum["COURTFEE"] = 'COURT_FEE'] = "COURTFEE";
         InvoiceTypeEnum[InvoiceTypeEnum["DISPUTEFEE"] = 'DISPUTE_FEE'] = "DISPUTEFEE";
+        InvoiceTypeEnum[InvoiceTypeEnum["FASTLANEPROMOCREDIT"] = 'FASTLANE_PROMO_CREDIT'] = "FASTLANEPROMOCREDIT";
         InvoiceTypeEnum[InvoiceTypeEnum["FINEPAYMENT"] = 'FINE_PAYMENT'] = "FINEPAYMENT";
         InvoiceTypeEnum[InvoiceTypeEnum["FTAFEE"] = 'FTA_FEE'] = "FTAFEE";
         InvoiceTypeEnum[InvoiceTypeEnum["INITIALSUBSCRIPTIONFEE"] = 'INITIAL_SUBSCRIPTION_FEE'] = "INITIALSUBSCRIPTIONFEE";

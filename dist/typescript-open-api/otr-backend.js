@@ -681,6 +681,7 @@ export var CaseLineItemDomainReqLineItemType;
     CaseLineItemDomainReqLineItemType["CDL_FEE"] = "CDL_FEE";
     CaseLineItemDomainReqLineItemType["COURT_FEE"] = "COURT_FEE";
     CaseLineItemDomainReqLineItemType["DISPUTE_FEE"] = "DISPUTE_FEE";
+    CaseLineItemDomainReqLineItemType["FASTLANE_PROMO_CREDIT"] = "FASTLANE_PROMO_CREDIT";
     CaseLineItemDomainReqLineItemType["FINE_PAYMENT"] = "FINE_PAYMENT";
     CaseLineItemDomainReqLineItemType["FTA_FEE"] = "FTA_FEE";
     CaseLineItemDomainReqLineItemType["INITIAL_SUBSCRIPTION_FEE"] = "INITIAL_SUBSCRIPTION_FEE";

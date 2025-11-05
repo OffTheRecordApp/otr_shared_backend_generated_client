@@ -23,6 +23,7 @@ export declare namespace LineItem {
         CDLFEE,
         COURTFEE,
         DISPUTEFEE,
+        FASTLANEPROMOCREDIT,
         FINEPAYMENT,
         FTAFEE,
         INITIALSUBSCRIPTIONFEE,

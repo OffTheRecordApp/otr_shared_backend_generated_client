@@ -20,6 +20,7 @@ export var LineItem;
         LineItemEnum[LineItemEnum["CDLFEE"] = 'CDL_FEE'] = "CDLFEE";
         LineItemEnum[LineItemEnum["COURTFEE"] = 'COURT_FEE'] = "COURTFEE";
         LineItemEnum[LineItemEnum["DISPUTEFEE"] = 'DISPUTE_FEE'] = "DISPUTEFEE";
+        LineItemEnum[LineItemEnum["FASTLANEPROMOCREDIT"] = 'FASTLANE_PROMO_CREDIT'] = "FASTLANEPROMOCREDIT";
         LineItemEnum[LineItemEnum["FINEPAYMENT"] = 'FINE_PAYMENT'] = "FINEPAYMENT";
         LineItemEnum[LineItemEnum["FTAFEE"] = 'FTA_FEE'] = "FTAFEE";
         LineItemEnum[LineItemEnum["INITIALSUBSCRIPTIONFEE"] = 'INITIAL_SUBSCRIPTION_FEE'] = "INITIALSUBSCRIPTIONFEE";

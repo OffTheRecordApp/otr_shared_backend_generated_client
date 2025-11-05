@@ -96,6 +96,7 @@ export var CaseLineItemDomainReqLineItemTypeEnum;
     CaseLineItemDomainReqLineItemTypeEnum["CDLFEE"] = "CDL_FEE";
     CaseLineItemDomainReqLineItemTypeEnum["COURTFEE"] = "COURT_FEE";
     CaseLineItemDomainReqLineItemTypeEnum["DISPUTEFEE"] = "DISPUTE_FEE";
+    CaseLineItemDomainReqLineItemTypeEnum["FASTLANEPROMOCREDIT"] = "FASTLANE_PROMO_CREDIT";
     CaseLineItemDomainReqLineItemTypeEnum["FINEPAYMENT"] = "FINE_PAYMENT";
     CaseLineItemDomainReqLineItemTypeEnum["FTAFEE"] = "FTA_FEE";
     CaseLineItemDomainReqLineItemTypeEnum["INITIALSUBSCRIPTIONFEE"] = "INITIAL_SUBSCRIPTION_FEE";
