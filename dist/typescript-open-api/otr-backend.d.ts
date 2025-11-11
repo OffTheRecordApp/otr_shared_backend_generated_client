@@ -2425,6 +2425,23 @@ export interface paths {
         patch?: never;
         trace?: never;
     };
+    "/api/v1/reviews/aggregates": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        /** getCustomerReviewAggregates */
+        get: operations["getCustomerReviewAggregatesUsingGET"];
+        put?: never;
+        post?: never;
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
     "/api/v1/reviews/api/v1/reviews/{reviewId}": {
         parameters: {
             query?: never;
@@ -10962,6 +10979,14 @@ export interface components {
             redirectUrl?: string;
             user?: components["schemas"]["UserDomain"];
         };
+        /** GetCustomerReviewAggregatesResponse */
+        GetCustomerReviewAggregatesResponse: {
+            items?: components["schemas"]["Item"][];
+            /** Format: int64 */
+            totalCount?: number;
+            /** Format: double */
+            totalRatingScore?: number;
+        };
         /** GetCustomerServiceAgentsResponse */
         GetCustomerServiceAgentsResponse: {
             agents?: components["schemas"]["CustomerServiceAgentDomain"][];
@@ -11925,6 +11950,15 @@ export interface components {
             isUserLoggedIn?: boolean;
             /** Format: int64 */
             userId?: number;
+        };
+        /** Item */
+        Item: {
+            /** Format: double */
+            ratingScore?: number;
+            /** @enum {string} */
+            reviewSource?: AddReviewRequestSource;
+            /** Format: int64 */
+            totalCount?: number;
         };
         /** LastLoginAttributes */
         LastLoginAttributes: {
@@ -24382,6 +24416,47 @@ export interface operations {
                     [name: string]: unknown;
                 };
                 content?: never;
+            };
+            /** @description Unauthorized */
+            401: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content?: never;
+            };
+            /** @description Forbidden */
+            403: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content?: never;
+            };
+            /** @description Not Found */
+            404: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content?: never;
+            };
+        };
+    };
+    getCustomerReviewAggregatesUsingGET: {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        requestBody?: never;
+        responses: {
+            /** @description OK */
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "*/*": components["schemas"]["GetCustomerReviewAggregatesResponse"];
+                };
             };
             /** @description Unauthorized */
             401: {

@@ -10,7 +10,7 @@
  * Do not edit the class manually.
  */
 import * as runtime from '../runtime';
-import { AddReviewRequest, EditCustomerReviewRequest, ListEligibleStatusResponse, ListReviewsResponse, ReplyToReviewRequest, SetCustomerReviewStatusRequest, UpdateReplyForCustomerReview } from '../models';
+import { AddReviewRequest, EditCustomerReviewRequest, GetCustomerReviewAggregatesResponse, ListEligibleStatusResponse, ListReviewsResponse, ReplyToReviewRequest, SetCustomerReviewStatusRequest, UpdateReplyForCustomerReview } from '../models';
 export interface AddCustomerReviewUsingPOSTRequest {
     addReviewRequest: AddReviewRequest;
 }
@@ -73,6 +73,14 @@ export declare class CustomerReviewControllerApi extends runtime.BaseAPI {
      * editCustomerReview
      */
     editCustomerReviewUsingPUT(requestParameters: EditCustomerReviewUsingPUTRequest): Promise<void>;
+    /**
+     * getCustomerReviewAggregates
+     */
+    getCustomerReviewAggregatesUsingGETRaw(): Promise<runtime.ApiResponse<GetCustomerReviewAggregatesResponse>>;
+    /**
+     * getCustomerReviewAggregates
+     */
+    getCustomerReviewAggregatesUsingGET(): Promise<GetCustomerReviewAggregatesResponse>;
     /**
      * listCustomerReviews
      */

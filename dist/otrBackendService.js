@@ -14084,6 +14084,32 @@ angular.module('otrBackendService', [])
                 return deferred.promise;
             };
             /**
+             * getCustomerReviewAggregates
+             * @method
+             * @name OtrService#getCustomerReviewAggregatesUsingGET
+             * @param {object} parameters - method options and parameters
+             */
+            OtrService.prototype.getCustomerReviewAggregatesUsingGET = function(parameters) {
+                if (parameters === undefined) {
+                    parameters = {};
+                }
+                var deferred = $q.defer();
+                var domain = this.domain,
+                    path = '/api/v1/reviews/aggregates';
+                var body = {},
+                    queryParameters = {},
+                    headers = {},
+                    form = {};
+
+                headers['Accept'] = ['*/*'];
+
+                queryParameters = mergeQueryParams(parameters, queryParameters);
+
+                this.request('GET', domain + path, parameters, body, headers, queryParameters, form, deferred);
+
+                return deferred.promise;
+            };
+            /**
              * editCustomerReview
              * @method
              * @name OtrService#editCustomerReviewUsingPUT

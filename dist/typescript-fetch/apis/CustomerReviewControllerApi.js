@@ -21,7 +21,7 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
     });
 };
 import * as runtime from '../runtime';
-import { AddReviewRequestToJSON, EditCustomerReviewRequestToJSON, ListEligibleStatusResponseFromJSON, ListReviewsResponseFromJSON, ReplyToReviewRequestToJSON, SetCustomerReviewStatusRequestToJSON, UpdateReplyForCustomerReviewToJSON, } from '../models';
+import { AddReviewRequestToJSON, EditCustomerReviewRequestToJSON, GetCustomerReviewAggregatesResponseFromJSON, ListEligibleStatusResponseFromJSON, ListReviewsResponseFromJSON, ReplyToReviewRequestToJSON, SetCustomerReviewStatusRequestToJSON, UpdateReplyForCustomerReviewToJSON, } from '../models';
 /**
  *
  */
@@ -85,6 +85,31 @@ export class CustomerReviewControllerApi extends runtime.BaseAPI {
     editCustomerReviewUsingPUT(requestParameters) {
         return __awaiter(this, void 0, void 0, function* () {
             yield this.editCustomerReviewUsingPUTRaw(requestParameters);
+        });
+    }
+    /**
+     * getCustomerReviewAggregates
+     */
+    getCustomerReviewAggregatesUsingGETRaw() {
+        return __awaiter(this, void 0, void 0, function* () {
+            const queryParameters = {};
+            const headerParameters = {};
+            const response = yield this.request({
+                path: `/api/v1/reviews/aggregates`,
+                method: 'GET',
+                headers: headerParameters,
+                query: queryParameters,
+            });
+            return new runtime.JSONApiResponse(response, (jsonValue) => GetCustomerReviewAggregatesResponseFromJSON(jsonValue));
+        });
+    }
+    /**
+     * getCustomerReviewAggregates
+     */
+    getCustomerReviewAggregatesUsingGET() {
+        return __awaiter(this, void 0, void 0, function* () {
+            const response = yield this.getCustomerReviewAggregatesUsingGETRaw();
+            return yield response.value();
         });
     }
     /**

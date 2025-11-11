@@ -78,6 +78,25 @@ export class CustomerReviewControllerApi {
     }
     /**
      *
+     * @summary getCustomerReviewAggregates
+     */
+    getCustomerReviewAggregatesUsingGET(extraHttpRequestParams) {
+        const localVarPath = this.basePath + '/api/v1/reviews/aggregates';
+        let queryParameters = {};
+        let headerParams = Object.assign({}, this.defaultHeaders);
+        let httpRequestParams = {
+            method: 'GET',
+            url: localVarPath,
+            params: queryParameters,
+            headers: headerParams
+        };
+        if (extraHttpRequestParams) {
+            httpRequestParams = Object.assign(httpRequestParams, extraHttpRequestParams);
+        }
+        return this.$http(httpRequestParams);
+    }
+    /**
+     *
      * @summary listCustomerReviews
      * @param includeAnonymous includeAnonymous
      * @param includeDeleted includeDeleted

@@ -441,6 +441,7 @@ model/getCourtResponse.ts
 model/getCourtsByQueryResponse.ts
 model/getCourtsInnerResponse.ts
 model/getCurrentUserResponse.ts
+model/getCustomerReviewAggregatesResponse.ts
 model/getCustomerServiceAgentsResponse.ts
 model/getDeclinedCasesRequest.ts
 model/getDeclinedCasesResponse.ts
@@ -558,6 +559,7 @@ model/inviteLawyerToLawfirmRequest.ts
 model/invoiceLineItemModel.ts
 model/isRefundEligibleResponse.ts
 model/isUserLoggedInResponse.ts
+model/item.ts
 model/lastLoginAttributes.ts
 model/lastLoginDateByUserAccount.ts
 model/lastLoginDateModel.ts

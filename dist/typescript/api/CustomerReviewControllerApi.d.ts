@@ -32,6 +32,11 @@ export declare class CustomerReviewControllerApi {
     editCustomerReviewUsingPUT(reviewId: number, editCustomerReviewRequest: models.EditCustomerReviewRequest, extraHttpRequestParams?: any): ng.IHttpPromise<{}>;
     /**
      *
+     * @summary getCustomerReviewAggregates
+     */
+    getCustomerReviewAggregatesUsingGET(extraHttpRequestParams?: any): ng.IHttpPromise<models.GetCustomerReviewAggregatesResponse>;
+    /**
+     *
      * @summary listCustomerReviews
      * @param includeAnonymous includeAnonymous
      * @param includeDeleted includeDeleted
