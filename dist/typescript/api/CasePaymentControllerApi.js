@@ -201,8 +201,9 @@ export class CasePaymentControllerApi {
      *
      * @summary getCasePayments
      * @param caseId caseId
+     * @param includeInactiveLawfirmCases includeInactiveLawfirmCases
      */
-    getCasePaymentsUsingGET(caseId, extraHttpRequestParams) {
+    getCasePaymentsUsingGET(caseId, includeInactiveLawfirmCases, extraHttpRequestParams) {
         const localVarPath = this.basePath + '/api/v1/cases/{caseId}/payments'
             .replace('{' + 'caseId' + '}', encodeURIComponent(String(caseId)));
         let queryParameters = {};
@@ -210,6 +211,9 @@ export class CasePaymentControllerApi {
         // verify required parameter 'caseId' is not null or undefined
         if (caseId === null || caseId === undefined) {
             throw new Error('Required parameter caseId was null or undefined when calling getCasePaymentsUsingGET.');
+        }
+        if (includeInactiveLawfirmCases !== undefined) {
+            queryParameters['includeInactiveLawfirmCases'] = includeInactiveLawfirmCases;
         }
         let httpRequestParams = {
             method: 'GET',

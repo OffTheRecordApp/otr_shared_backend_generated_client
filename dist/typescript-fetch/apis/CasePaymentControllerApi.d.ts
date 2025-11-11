@@ -38,6 +38,7 @@ export interface GetAvailablePaymentPlansUsingPOSTRequest {
 }
 export interface GetCasePaymentsUsingGETRequest {
     caseId: string;
+    includeInactiveLawfirmCases?: boolean;
 }
 export interface GetOverdueCasePaymentsUsingGETRequest {
     caseId: string;

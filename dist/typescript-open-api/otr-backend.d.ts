@@ -19517,7 +19517,10 @@ export interface operations {
     };
     getCasePaymentsUsingGET: {
         parameters: {
-            query?: never;
+            query?: {
+                /** @description includeInactiveLawfirmCases */
+                includeInactiveLawfirmCases?: boolean;
+            };
             header?: never;
             path: {
                 /** @description caseId */

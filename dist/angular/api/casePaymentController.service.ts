@@ -477,15 +477,22 @@ export class CasePaymentControllerService {
     /**
      * getCasePayments
      * @param caseId caseId
+     * @param includeInactiveLawfirmCases includeInactiveLawfirmCases
      * @param observe set whether or not to return the data Observable as the body, response or events. defaults to returning the body.
      * @param reportProgress flag to report request and response progress.
      */
-    public getCasePaymentsUsingGET(caseId: string, observe?: 'body', reportProgress?: boolean, options?: {httpHeaderAccept?: '*/*', context?: HttpContext}): Observable<GetCasePaymentsResponse>;
-    public getCasePaymentsUsingGET(caseId: string, observe?: 'response', reportProgress?: boolean, options?: {httpHeaderAccept?: '*/*', context?: HttpContext}): Observable<HttpResponse<GetCasePaymentsResponse>>;
-    public getCasePaymentsUsingGET(caseId: string, observe?: 'events', reportProgress?: boolean, options?: {httpHeaderAccept?: '*/*', context?: HttpContext}): Observable<HttpEvent<GetCasePaymentsResponse>>;
-    public getCasePaymentsUsingGET(caseId: string, observe: any = 'body', reportProgress: boolean = false, options?: {httpHeaderAccept?: '*/*', context?: HttpContext}): Observable<any> {
+    public getCasePaymentsUsingGET(caseId: string, includeInactiveLawfirmCases?: boolean, observe?: 'body', reportProgress?: boolean, options?: {httpHeaderAccept?: '*/*', context?: HttpContext}): Observable<GetCasePaymentsResponse>;
+    public getCasePaymentsUsingGET(caseId: string, includeInactiveLawfirmCases?: boolean, observe?: 'response', reportProgress?: boolean, options?: {httpHeaderAccept?: '*/*', context?: HttpContext}): Observable<HttpResponse<GetCasePaymentsResponse>>;
+    public getCasePaymentsUsingGET(caseId: string, includeInactiveLawfirmCases?: boolean, observe?: 'events', reportProgress?: boolean, options?: {httpHeaderAccept?: '*/*', context?: HttpContext}): Observable<HttpEvent<GetCasePaymentsResponse>>;
+    public getCasePaymentsUsingGET(caseId: string, includeInactiveLawfirmCases?: boolean, observe: any = 'body', reportProgress: boolean = false, options?: {httpHeaderAccept?: '*/*', context?: HttpContext}): Observable<any> {
         if (caseId === null || caseId === undefined) {
             throw new Error('Required parameter caseId was null or undefined when calling getCasePaymentsUsingGET.');
+        }
+
+        let localVarQueryParameters = new HttpParams({encoder: this.encoder});
+        if (includeInactiveLawfirmCases !== undefined && includeInactiveLawfirmCases !== null) {
+          localVarQueryParameters = this.addToHttpParams(localVarQueryParameters,
+            <any>includeInactiveLawfirmCases, 'includeInactiveLawfirmCases');
         }
 
         let localVarHeaders = this.defaultHeaders;
@@ -523,6 +530,7 @@ export class CasePaymentControllerService {
         return this.httpClient.request<GetCasePaymentsResponse>('get', `${this.configuration.basePath}${localVarPath}`,
             {
                 context: localVarHttpContext,
+                params: localVarQueryParameters,
                 responseType: <any>responseType_,
                 withCredentials: this.configuration.withCredentials,
                 headers: localVarHeaders,

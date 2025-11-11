@@ -208,6 +208,9 @@ export class CasePaymentControllerApi extends runtime.BaseAPI {
                 throw new runtime.RequiredError('caseId', 'Required parameter requestParameters.caseId was null or undefined when calling getCasePaymentsUsingGET.');
             }
             const queryParameters = {};
+            if (requestParameters.includeInactiveLawfirmCases !== undefined) {
+                queryParameters['includeInactiveLawfirmCases'] = requestParameters.includeInactiveLawfirmCases;
+            }
             const headerParameters = {};
             const response = yield this.request({
                 path: `/api/v1/cases/{caseId}/payments`.replace(`{${"caseId"}}`, encodeURIComponent(String(requestParameters.caseId))),

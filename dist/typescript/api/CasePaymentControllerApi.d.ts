@@ -61,8 +61,9 @@ export declare class CasePaymentControllerApi {
      *
      * @summary getCasePayments
      * @param caseId caseId
+     * @param includeInactiveLawfirmCases includeInactiveLawfirmCases
      */
-    getCasePaymentsUsingGET(caseId: string, extraHttpRequestParams?: any): ng.IHttpPromise<models.GetCasePaymentsResponse>;
+    getCasePaymentsUsingGET(caseId: string, includeInactiveLawfirmCases?: boolean, extraHttpRequestParams?: any): ng.IHttpPromise<models.GetCasePaymentsResponse>;
     /**
      *
      * @summary getOverdueCasePayments

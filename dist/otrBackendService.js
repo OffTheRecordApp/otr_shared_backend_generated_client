@@ -3370,6 +3370,7 @@ angular.module('otrBackendService', [])
              * @name OtrService#getCasePaymentsUsingGET
              * @param {object} parameters - method options and parameters
              * @param {string} parameters.caseId - caseId
+             * @param {boolean} parameters.includeInactiveLawfirmCases - includeInactiveLawfirmCases
              */
             OtrService.prototype.getCasePaymentsUsingGET = function(parameters) {
                 if (parameters === undefined) {
@@ -3390,6 +3391,10 @@ angular.module('otrBackendService', [])
                 if (parameters['caseId'] === undefined) {
                     deferred.reject(new Error('Missing required  parameter: caseId'));
                     return deferred.promise;
+                }
+
+                if (parameters['includeInactiveLawfirmCases'] !== undefined) {
+                    queryParameters['includeInactiveLawfirmCases'] = parameters['includeInactiveLawfirmCases'];
                 }
 
                 queryParameters = mergeQueryParams(parameters, queryParameters);
