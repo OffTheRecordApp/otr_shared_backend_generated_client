@@ -50,6 +50,7 @@ api/dripWebhooksController.service.ts
 api/driverLicenseController.service.ts
 api/emailSubscriptionController.service.ts
 api/employeeController.service.ts
+api/eventBridgeEmailNotificationController.service.ts
 api/externalContentVoteController.service.ts
 api/externalTicketLookupController.service.ts
 api/feedbackController.service.ts
@@ -361,6 +362,7 @@ model/enableViolationsForLawfirmResponse.ts
 model/engagementLetterModel.ts
 model/estimateInsuranceSavingsRequest.ts
 model/estimateInsuranceSavingsResponse.ts
+model/eventBridgeRequest.ts
 model/existingAccountDetails.ts
 model/externalContentVote.ts
 model/externalTicketCourt.ts
@@ -752,7 +754,6 @@ model/reviewCommentModel.ts
 model/reviewRatingModel.ts
 model/reviewVoteAggregateModel.ts
 model/richCitationInferenceResponse.ts
-model/sNSNotificationRequest.ts
 model/sSLCertificateResponse.ts
 model/saveAgentBookingRequest.ts
 model/saveAgentBookingResponse.ts
@@ -793,6 +794,10 @@ model/sendPayoutToLawfirmRequest.ts
 model/sendPayoutToLawfirmResponse.ts
 model/sendTextAlertToUserRequest.ts
 model/serviceLevelAgreement.ts
+model/sesBounceObject.ts
+model/sesComplaintObject.ts
+model/sesEventDetail.ts
+model/sesMailObject.ts
 model/setArchiveCaseModel.ts
 model/setArchiveOnCasesRequest.ts
 model/setCourtDateForCaseRequest.ts

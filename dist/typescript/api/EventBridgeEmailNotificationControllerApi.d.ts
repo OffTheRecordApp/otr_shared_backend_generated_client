@@ -10,7 +10,7 @@
  * Do not edit the class manually.
  */
 import * as models from '../model/models';
-export declare class SnsListenerControllerApi {
+export declare class EventBridgeEmailNotificationControllerApi {
     protected $http: ng.IHttpService;
     protected $httpParamSerializer?: (d: any) => any;
     protected basePath: string;
@@ -19,14 +19,9 @@ export declare class SnsListenerControllerApi {
     constructor($http: ng.IHttpService, $httpParamSerializer?: (d: any) => any, basePath?: string);
     /**
      *
-     * @summary handleIncomingEmails
+     * @summary handleHardBounceComplainEvents
      * @param request request
+     * @param xApiToken X-Api-Token
      */
-    handleIncomingEmailsUsingPOST(request: models.IncomingEmailRequest, extraHttpRequestParams?: any): ng.IHttpPromise<{}>;
-    /**
-     *
-     * @summary handleIncomingHelloEmails
-     * @param request request
-     */
-    handleIncomingHelloEmailsUsingPOST(request: models.IncomingEmailModels, extraHttpRequestParams?: any): ng.IHttpPromise<{}>;
+    handleHardBounceComplainEventsUsingPOST(request: models.EventBridgeRequest, xApiToken?: string, extraHttpRequestParams?: any): ng.IHttpPromise<object>;
 }

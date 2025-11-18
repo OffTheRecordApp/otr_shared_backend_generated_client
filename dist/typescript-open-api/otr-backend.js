@@ -1301,6 +1301,12 @@ export var SendTextAlertToUserRequestTextAlertType;
 (function (SendTextAlertToUserRequestTextAlertType) {
     SendTextAlertToUserRequestTextAlertType["DOWNLOAD_APP"] = "DOWNLOAD_APP";
 })(SendTextAlertToUserRequestTextAlertType || (SendTextAlertToUserRequestTextAlertType = {}));
+export var SesBounceObjectBounceType;
+(function (SesBounceObjectBounceType) {
+    SesBounceObjectBounceType["PERMANENT"] = "PERMANENT";
+    SesBounceObjectBounceType["TRANSIENT"] = "TRANSIENT";
+    SesBounceObjectBounceType["UNDETERMINED"] = "UNDETERMINED";
+})(SesBounceObjectBounceType || (SesBounceObjectBounceType = {}));
 export var SetCustomerReviewStatusRequestStatus;
 (function (SetCustomerReviewStatusRequestStatus) {
     SetCustomerReviewStatusRequestStatus["APPROVED"] = "APPROVED";

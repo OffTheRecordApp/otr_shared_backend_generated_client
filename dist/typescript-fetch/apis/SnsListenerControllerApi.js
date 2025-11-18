@@ -21,41 +21,11 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
     });
 };
 import * as runtime from '../runtime';
-import { IncomingEmailModelsToJSON, IncomingEmailRequestToJSON, SNSNotificationRequestToJSON, } from '../models';
+import { IncomingEmailModelsToJSON, IncomingEmailRequestToJSON, } from '../models';
 /**
  *
  */
 export class SnsListenerControllerApi extends runtime.BaseAPI {
-    /**
-     * handleBounceComplaintEmails
-     */
-    handleBounceComplaintEmailsUsingPOSTRaw(requestParameters) {
-        return __awaiter(this, void 0, void 0, function* () {
-            if (requestParameters.request === null || requestParameters.request === undefined) {
-                throw new runtime.RequiredError('request', 'Required parameter requestParameters.request was null or undefined when calling handleBounceComplaintEmailsUsingPOST.');
-            }
-            const queryParameters = {};
-            const headerParameters = {};
-            headerParameters['Content-Type'] = 'application/json';
-            const response = yield this.request({
-                path: `/api/v1/blacklists/ses/emails`,
-                method: 'POST',
-                headers: headerParameters,
-                query: queryParameters,
-                body: SNSNotificationRequestToJSON(requestParameters.request),
-            });
-            return new runtime.JSONApiResponse(response);
-        });
-    }
-    /**
-     * handleBounceComplaintEmails
-     */
-    handleBounceComplaintEmailsUsingPOST(requestParameters) {
-        return __awaiter(this, void 0, void 0, function* () {
-            const response = yield this.handleBounceComplaintEmailsUsingPOSTRaw(requestParameters);
-            return yield response.value();
-        });
-    }
     /**
      * handleIncomingEmails
      */

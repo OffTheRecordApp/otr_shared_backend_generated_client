@@ -10,10 +10,7 @@
  * Do not edit the class manually.
  */
 import * as runtime from '../runtime';
-import { IncomingEmailModels, IncomingEmailRequest, SNSNotificationRequest } from '../models';
-export interface HandleBounceComplaintEmailsUsingPOSTRequest {
-    request: SNSNotificationRequest;
-}
+import { IncomingEmailModels, IncomingEmailRequest } from '../models';
 export interface HandleIncomingEmailsUsingPOSTRequest {
     request: IncomingEmailRequest;
 }
@@ -24,14 +21,6 @@ export interface HandleIncomingHelloEmailsUsingPOSTRequest {
  *
  */
 export declare class SnsListenerControllerApi extends runtime.BaseAPI {
-    /**
-     * handleBounceComplaintEmails
-     */
-    handleBounceComplaintEmailsUsingPOSTRaw(requestParameters: HandleBounceComplaintEmailsUsingPOSTRequest): Promise<runtime.ApiResponse<object>>;
-    /**
-     * handleBounceComplaintEmails
-     */
-    handleBounceComplaintEmailsUsingPOST(requestParameters: HandleBounceComplaintEmailsUsingPOSTRequest): Promise<object>;
     /**
      * handleIncomingEmails
      */

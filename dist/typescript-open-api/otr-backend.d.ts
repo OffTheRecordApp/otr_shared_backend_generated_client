@@ -3023,6 +3023,23 @@ export interface paths {
         patch?: never;
         trace?: never;
     };
+    "/api/v1/event-bridge/bounce-complaint-notifications": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        get?: never;
+        put?: never;
+        /** handleHardBounceComplainEvents */
+        post: operations["handleHardBounceComplainEventsUsingPOST"];
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
     "/api/v1/external-content-votes": {
         parameters: {
             query?: never;
@@ -5545,23 +5562,6 @@ export interface paths {
         put?: never;
         /** loginWithSSO */
         post: operations["loginWithSSOUsingPOST"];
-        delete?: never;
-        options?: never;
-        head?: never;
-        patch?: never;
-        trace?: never;
-    };
-    "/api/v1/blacklists/ses/emails": {
-        parameters: {
-            query?: never;
-            header?: never;
-            path?: never;
-            cookie?: never;
-        };
-        get?: never;
-        put?: never;
-        /** handleBounceComplaintEmails */
-        post: operations["handleBounceComplaintEmailsUsingPOST"];
         delete?: never;
         options?: never;
         head?: never;
@@ -10187,6 +10187,18 @@ export interface components {
             /** Format: int32 */
             totalExtraInsuranceCostInCents?: number;
         };
+        /** EventBridgeRequest */
+        EventBridgeRequest: {
+            account?: string;
+            detail?: components["schemas"]["SesEventDetail"];
+            "detail-type"?: string;
+            id?: string;
+            region?: string;
+            resources?: string[];
+            source?: string;
+            time?: string;
+            version?: string;
+        };
         /** ExistingAccountDetails */
         ExistingAccountDetails: {
             firstName?: string;
@@ -14201,13 +14213,6 @@ export interface components {
             vehicle_year?: string;
             violation_names?: string[];
         };
-        /** SNSNotificationRequest */
-        SNSNotificationRequest: {
-            Message?: string;
-            SubscribeURL?: string;
-            Type?: string;
-            UnsubscribeURL?: string;
-        };
         /** SSLCertificateResponse */
         SSLCertificateResponse: {
             /** Format: byte */
@@ -14583,6 +14588,35 @@ export interface components {
             sla_name?: string;
             sla_status?: string;
             type?: string;
+        };
+        /** SesBounceObject */
+        SesBounceObject: {
+            bounceSubType?: string;
+            /** @enum {string} */
+            bounceType?: SesBounceObjectBounceType;
+            feedbackId?: string;
+            timestamp?: string;
+        };
+        /** SesComplaintObject */
+        SesComplaintObject: {
+            complaintFeedbackType?: string;
+            feedbackId?: string;
+            timestamp?: string;
+        };
+        /** SesEventDetail */
+        SesEventDetail: {
+            bounce?: components["schemas"]["SesBounceObject"];
+            complaint?: components["schemas"]["SesComplaintObject"];
+            eventType?: string;
+            mail?: components["schemas"]["SesMailObject"];
+        };
+        /** SesMailObject */
+        SesMailObject: {
+            destination?: string[];
+            messageId?: string;
+            source?: string;
+            sourceArn?: string;
+            timestamp?: string;
         };
         /** SetArchiveCaseModel */
         SetArchiveCaseModel: {
@@ -26410,6 +26444,61 @@ export interface operations {
             };
         };
     };
+    handleHardBounceComplainEventsUsingPOST: {
+        parameters: {
+            query?: never;
+            header?: {
+                /** @description X-Api-Token */
+                "X-Api-Token"?: string;
+            };
+            path?: never;
+            cookie?: never;
+        };
+        requestBody?: {
+            content: {
+                "application/json": components["schemas"]["EventBridgeRequest"];
+            };
+        };
+        responses: {
+            /** @description OK */
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "*/*": Record<string, never>;
+                };
+            };
+            /** @description Created */
+            201: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content?: never;
+            };
+            /** @description Unauthorized */
+            401: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content?: never;
+            };
+            /** @description Forbidden */
+            403: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content?: never;
+            };
+            /** @description Not Found */
+            404: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content?: never;
+            };
+        };
+    };
     saveExternalContentVoteUsingPOST: {
         parameters: {
             query?: never;
@@ -34753,59 +34842,6 @@ export interface operations {
             };
         };
     };
-    handleBounceComplaintEmailsUsingPOST: {
-        parameters: {
-            query?: never;
-            header?: never;
-            path?: never;
-            cookie?: never;
-        };
-        requestBody?: {
-            content: {
-                "application/json": components["schemas"]["SNSNotificationRequest"];
-                "text/plain": components["schemas"]["SNSNotificationRequest"];
-            };
-        };
-        responses: {
-            /** @description OK */
-            200: {
-                headers: {
-                    [name: string]: unknown;
-                };
-                content: {
-                    "*/*": Record<string, never>;
-                };
-            };
-            /** @description Created */
-            201: {
-                headers: {
-                    [name: string]: unknown;
-                };
-                content?: never;
-            };
-            /** @description Unauthorized */
-            401: {
-                headers: {
-                    [name: string]: unknown;
-                };
-                content?: never;
-            };
-            /** @description Forbidden */
-            403: {
-                headers: {
-                    [name: string]: unknown;
-                };
-                content?: never;
-            };
-            /** @description Not Found */
-            404: {
-                headers: {
-                    [name: string]: unknown;
-                };
-                content?: never;
-            };
-        };
-    };
     handleIncomingEmailsUsingPOST: {
         parameters: {
             query?: never;
@@ -41371,6 +41407,11 @@ export declare enum SendEmailToUserRequestReviewPlatform {
 }
 export declare enum SendTextAlertToUserRequestTextAlertType {
     DOWNLOAD_APP = "DOWNLOAD_APP"
+}
+export declare enum SesBounceObjectBounceType {
+    PERMANENT = "PERMANENT",
+    TRANSIENT = "TRANSIENT",
+    UNDETERMINED = "UNDETERMINED"
 }
 export declare enum SetCustomerReviewStatusRequestStatus {
     APPROVED = "APPROVED",

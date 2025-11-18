@@ -50,6 +50,7 @@ import { DripWebhooksControllerService } from './api/dripWebhooksController.serv
 import { DriverLicenseControllerService } from './api/driverLicenseController.service';
 import { EmailSubscriptionControllerService } from './api/emailSubscriptionController.service';
 import { EmployeeControllerService } from './api/employeeController.service';
+import { EventBridgeEmailNotificationControllerService } from './api/eventBridgeEmailNotificationController.service';
 import { ExternalContentVoteControllerService } from './api/externalContentVoteController.service';
 import { ExternalTicketLookupControllerService } from './api/externalTicketLookupController.service';
 import { FeedbackControllerService } from './api/feedbackController.service';

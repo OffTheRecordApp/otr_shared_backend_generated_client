@@ -46,6 +46,7 @@ export * from './DripWebhooksControllerApi';
 export * from './DriverLicenseControllerApi';
 export * from './EmailSubscriptionControllerApi';
 export * from './EmployeeControllerApi';
+export * from './EventBridgeEmailNotificationControllerApi';
 export * from './ExternalContentVoteControllerApi';
 export * from './ExternalTicketLookupControllerApi';
 export * from './FeedbackControllerApi';

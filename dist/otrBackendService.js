@@ -1015,43 +1015,6 @@ angular.module('otrBackendService', [])
                 return deferred.promise;
             };
             /**
-             * handleBounceComplaintEmails
-             * @method
-             * @name OtrService#handleBounceComplaintEmailsUsingPOST
-             * @param {object} parameters - method options and parameters
-             * @param {} parameters.request - request
-             */
-            OtrService.prototype.handleBounceComplaintEmailsUsingPOST = function(parameters) {
-                if (parameters === undefined) {
-                    parameters = {};
-                }
-                var deferred = $q.defer();
-                var domain = this.domain,
-                    path = '/api/v1/blacklists/ses/emails';
-                var body = {},
-                    queryParameters = {},
-                    headers = {},
-                    form = {};
-
-                headers['Accept'] = ['*/*'];
-                headers['Content-Type'] = ['application/json,text/plain'];
-
-                if (parameters['request'] !== undefined) {
-                    body = parameters['request'];
-                }
-
-                if (parameters['request'] === undefined) {
-                    deferred.reject(new Error('Missing required  parameter: request'));
-                    return deferred.promise;
-                }
-
-                queryParameters = mergeQueryParams(parameters, queryParameters);
-
-                this.request('POST', domain + path, parameters, body, headers, queryParameters, form, deferred);
-
-                return deferred.promise;
-            };
-            /**
              * createBranchLink
              * @method
              * @name OtrService#createBranchLinkUsingPOST
@@ -8139,6 +8102,48 @@ angular.module('otrBackendService', [])
                 queryParameters = mergeQueryParams(parameters, queryParameters);
 
                 this.request('GET', domain + path, parameters, body, headers, queryParameters, form, deferred);
+
+                return deferred.promise;
+            };
+            /**
+             * handleHardBounceComplainEvents
+             * @method
+             * @name OtrService#handleHardBounceComplainEventsUsingPOST
+             * @param {object} parameters - method options and parameters
+             * @param {} parameters.request - request
+             * @param {string} parameters.xApiToken - X-Api-Token
+             */
+            OtrService.prototype.handleHardBounceComplainEventsUsingPOST = function(parameters) {
+                if (parameters === undefined) {
+                    parameters = {};
+                }
+                var deferred = $q.defer();
+                var domain = this.domain,
+                    path = '/api/v1/event-bridge/bounce-complaint-notifications';
+                var body = {},
+                    queryParameters = {},
+                    headers = {},
+                    form = {};
+
+                headers['Accept'] = ['*/*'];
+                headers['Content-Type'] = ['application/json'];
+
+                if (parameters['request'] !== undefined) {
+                    body = parameters['request'];
+                }
+
+                if (parameters['request'] === undefined) {
+                    deferred.reject(new Error('Missing required  parameter: request'));
+                    return deferred.promise;
+                }
+
+                if (parameters['xApiToken'] !== undefined) {
+                    headers['X-Api-Token'] = parameters['xApiToken'];
+                }
+
+                queryParameters = mergeQueryParams(parameters, queryParameters);
+
+                this.request('POST', domain + path, parameters, body, headers, queryParameters, form, deferred);
 
                 return deferred.promise;
             };
