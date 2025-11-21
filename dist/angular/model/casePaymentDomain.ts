@@ -11,7 +11,6 @@
  */
 import { FreshdeskTicketReferenceDomain } from './freshdeskTicketReferenceDomain';
 import { StripeChargeDomain } from './stripeChargeDomain';
-import { Timestamp } from './timestamp';
 
 
 export interface CasePaymentDomain { 
@@ -19,13 +18,13 @@ export interface CasePaymentDomain {
     casePaymentId?: string;
     chargeAttempts?: number;
     clientTotalCost?: number;
-    creationDateUTC?: Timestamp;
+    creationDateUTC?: string;
     dueDate?: string;
     hasPredictedOrAdjustedFee?: boolean;
     isLocked?: boolean;
     isPaymentActive?: boolean;
     lastAttemptDate?: string;
-    lastUpdatedDateUTC?: Timestamp;
+    lastUpdatedDateUTC?: string;
     lawfirmAssumedCost?: number;
     lawfirmCaseId?: number;
     lawfirmEarnings?: number;

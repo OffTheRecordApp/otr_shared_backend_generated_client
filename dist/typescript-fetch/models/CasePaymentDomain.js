@@ -12,7 +12,7 @@
  * Do not edit the class manually.
  */
 import { exists } from '../runtime';
-import { FreshdeskTicketReferenceDomainFromJSON, FreshdeskTicketReferenceDomainToJSON, StripeChargeDomainFromJSON, StripeChargeDomainToJSON, TimestampFromJSON, TimestampToJSON, } from './';
+import { FreshdeskTicketReferenceDomainFromJSON, FreshdeskTicketReferenceDomainToJSON, StripeChargeDomainFromJSON, StripeChargeDomainToJSON, } from './';
 export function CasePaymentDomainFromJSON(json) {
     return CasePaymentDomainFromJSONTyped(json, false);
 }
@@ -25,13 +25,13 @@ export function CasePaymentDomainFromJSONTyped(json, ignoreDiscriminator) {
         'casePaymentId': !exists(json, 'casePaymentId') ? undefined : json['casePaymentId'],
         'chargeAttempts': !exists(json, 'chargeAttempts') ? undefined : json['chargeAttempts'],
         'clientTotalCost': !exists(json, 'clientTotalCost') ? undefined : json['clientTotalCost'],
-        'creationDateUTC': !exists(json, 'creationDateUTC') ? undefined : TimestampFromJSON(json['creationDateUTC']),
+        'creationDateUTC': !exists(json, 'creationDateUTC') ? undefined : (new Date(json['creationDateUTC'])),
         'dueDate': !exists(json, 'dueDate') ? undefined : (new Date(json['dueDate'])),
         'hasPredictedOrAdjustedFee': !exists(json, 'hasPredictedOrAdjustedFee') ? undefined : json['hasPredictedOrAdjustedFee'],
         'isLocked': !exists(json, 'isLocked') ? undefined : json['isLocked'],
         'isPaymentActive': !exists(json, 'isPaymentActive') ? undefined : json['isPaymentActive'],
         'lastAttemptDate': !exists(json, 'lastAttemptDate') ? undefined : (new Date(json['lastAttemptDate'])),
-        'lastUpdatedDateUTC': !exists(json, 'lastUpdatedDateUTC') ? undefined : TimestampFromJSON(json['lastUpdatedDateUTC']),
+        'lastUpdatedDateUTC': !exists(json, 'lastUpdatedDateUTC') ? undefined : (new Date(json['lastUpdatedDateUTC'])),
         'lawfirmAssumedCost': !exists(json, 'lawfirmAssumedCost') ? undefined : json['lawfirmAssumedCost'],
         'lawfirmCaseId': !exists(json, 'lawfirmCaseId') ? undefined : json['lawfirmCaseId'],
         'lawfirmEarnings': !exists(json, 'lawfirmEarnings') ? undefined : json['lawfirmEarnings'],
@@ -64,13 +64,13 @@ export function CasePaymentDomainToJSON(value) {
         'casePaymentId': value.casePaymentId,
         'chargeAttempts': value.chargeAttempts,
         'clientTotalCost': value.clientTotalCost,
-        'creationDateUTC': TimestampToJSON(value.creationDateUTC),
+        'creationDateUTC': value.creationDateUTC === undefined ? undefined : (value.creationDateUTC.toISOString()),
         'dueDate': value.dueDate === undefined ? undefined : (value.dueDate.toISOString()),
         'hasPredictedOrAdjustedFee': value.hasPredictedOrAdjustedFee,
         'isLocked': value.isLocked,
         'isPaymentActive': value.isPaymentActive,
         'lastAttemptDate': value.lastAttemptDate === undefined ? undefined : (value.lastAttemptDate.toISOString()),
-        'lastUpdatedDateUTC': TimestampToJSON(value.lastUpdatedDateUTC),
+        'lastUpdatedDateUTC': value.lastUpdatedDateUTC === undefined ? undefined : (value.lastUpdatedDateUTC.toISOString()),
         'lawfirmAssumedCost': value.lawfirmAssumedCost,
         'lawfirmCaseId': value.lawfirmCaseId,
         'lawfirmEarnings': value.lawfirmEarnings,

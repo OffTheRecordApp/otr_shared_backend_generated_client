@@ -9,7 +9,7 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-import { FreshdeskTicketReferenceDomain, StripeChargeDomain, Timestamp } from './';
+import { FreshdeskTicketReferenceDomain, StripeChargeDomain } from './';
 /**
  *
  * @export
@@ -42,10 +42,10 @@ export interface CasePaymentDomain {
     clientTotalCost?: number;
     /**
      *
-     * @type {Timestamp}
+     * @type {Date}
      * @memberof CasePaymentDomain
      */
-    creationDateUTC?: Timestamp;
+    creationDateUTC?: Date;
     /**
      *
      * @type {Date}
@@ -78,10 +78,10 @@ export interface CasePaymentDomain {
     lastAttemptDate?: Date;
     /**
      *
-     * @type {Timestamp}
+     * @type {Date}
      * @memberof CasePaymentDomain
      */
-    lastUpdatedDateUTC?: Timestamp;
+    lastUpdatedDateUTC?: Date;
     /**
      *
      * @type {number}

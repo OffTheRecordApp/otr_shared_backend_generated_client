@@ -15,13 +15,13 @@ export interface CasePaymentDomain {
     "casePaymentId"?: string;
     "chargeAttempts"?: number;
     "clientTotalCost"?: number;
-    "creationDateUTC"?: models.Timestamp;
+    "creationDateUTC"?: string;
     "dueDate"?: string;
     "hasPredictedOrAdjustedFee"?: boolean;
     "isLocked"?: boolean;
     "isPaymentActive"?: boolean;
     "lastAttemptDate"?: string;
-    "lastUpdatedDateUTC"?: models.Timestamp;
+    "lastUpdatedDateUTC"?: string;
     "lawfirmAssumedCost"?: number;
     "lawfirmCaseId"?: number;
     "lawfirmEarnings"?: number;

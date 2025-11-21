@@ -8648,7 +8648,8 @@ export interface components {
             chargeAttempts?: number;
             /** Format: int32 */
             clientTotalCost?: number;
-            creationDateUTC?: components["schemas"]["Timestamp"];
+            /** Format: date-time */
+            creationDateUTC?: string;
             /** Format: date-time */
             dueDate?: string;
             hasPredictedOrAdjustedFee?: boolean;
@@ -8656,7 +8657,8 @@ export interface components {
             isPaymentActive?: boolean;
             /** Format: date-time */
             lastAttemptDate?: string;
-            lastUpdatedDateUTC?: components["schemas"]["Timestamp"];
+            /** Format: date-time */
+            lastUpdatedDateUTC?: string;
             /** Format: int32 */
             lawfirmAssumedCost?: number;
             /** Format: int64 */
