@@ -18,8 +18,6 @@ export interface CreateBillingSubscriptionItemModel {
     "priceDescription"?: string;
     "productId"?: string;
     "quantity"?: number;
-    "tiersMode"?: CreateBillingSubscriptionItemModel.TiersModeEnum;
-    "usageType"?: CreateBillingSubscriptionItemModel.UsageTypeEnum;
 }
 export declare namespace CreateBillingSubscriptionItemModel {
     enum BillingSchemeEnum {
@@ -33,13 +31,5 @@ export declare namespace CreateBillingSubscriptionItemModel {
         QUARTERLY,
         WEEKLY,
         YEARLY
-    }
-    enum TiersModeEnum {
-        GRADUATED,
-        VOLUME
-    }
-    enum UsageTypeEnum {
-        LICENSED,
-        METERED
     }
 }

@@ -605,16 +605,6 @@ export var BillingPriceModelBillingScheme;
     BillingPriceModelBillingScheme["TIERED"] = "TIERED";
     BillingPriceModelBillingScheme["UNKNOWN"] = "UNKNOWN";
 })(BillingPriceModelBillingScheme || (BillingPriceModelBillingScheme = {}));
-export var BillingSubscriptionItemModelTiersMode;
-(function (BillingSubscriptionItemModelTiersMode) {
-    BillingSubscriptionItemModelTiersMode["GRADUATED"] = "GRADUATED";
-    BillingSubscriptionItemModelTiersMode["VOLUME"] = "VOLUME";
-})(BillingSubscriptionItemModelTiersMode || (BillingSubscriptionItemModelTiersMode = {}));
-export var BillingSubscriptionItemModelUsageType;
-(function (BillingSubscriptionItemModelUsageType) {
-    BillingSubscriptionItemModelUsageType["LICENSED"] = "LICENSED";
-    BillingSubscriptionItemModelUsageType["METERED"] = "METERED";
-})(BillingSubscriptionItemModelUsageType || (BillingSubscriptionItemModelUsageType = {}));
 export var CallContactIntegratedResourceType;
 (function (CallContactIntegratedResourceType) {
     CallContactIntegratedResourceType["FRESHDESK"] = "FRESHDESK";

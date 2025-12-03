@@ -28,8 +28,6 @@ export function CreateBillingSubscriptionItemModelFromJSONTyped(json, ignoreDisc
         'priceDescription': !exists(json, 'priceDescription') ? undefined : json['priceDescription'],
         'productId': !exists(json, 'productId') ? undefined : json['productId'],
         'quantity': !exists(json, 'quantity') ? undefined : json['quantity'],
-        'tiersMode': !exists(json, 'tiersMode') ? undefined : json['tiersMode'],
-        'usageType': !exists(json, 'usageType') ? undefined : json['usageType'],
     };
 }
 export function CreateBillingSubscriptionItemModelToJSON(value) {
@@ -48,8 +46,6 @@ export function CreateBillingSubscriptionItemModelToJSON(value) {
         'priceDescription': value.priceDescription,
         'productId': value.productId,
         'quantity': value.quantity,
-        'tiersMode': value.tiersMode,
-        'usageType': value.usageType,
     };
 }
 /**
@@ -74,21 +70,3 @@ export var CreateBillingSubscriptionItemModelIntervalEnum;
     CreateBillingSubscriptionItemModelIntervalEnum["WEEKLY"] = "WEEKLY";
     CreateBillingSubscriptionItemModelIntervalEnum["YEARLY"] = "YEARLY";
 })(CreateBillingSubscriptionItemModelIntervalEnum || (CreateBillingSubscriptionItemModelIntervalEnum = {}));
-/**
-* @export
-* @enum {string}
-*/
-export var CreateBillingSubscriptionItemModelTiersModeEnum;
-(function (CreateBillingSubscriptionItemModelTiersModeEnum) {
-    CreateBillingSubscriptionItemModelTiersModeEnum["GRADUATED"] = "GRADUATED";
-    CreateBillingSubscriptionItemModelTiersModeEnum["VOLUME"] = "VOLUME";
-})(CreateBillingSubscriptionItemModelTiersModeEnum || (CreateBillingSubscriptionItemModelTiersModeEnum = {}));
-/**
-* @export
-* @enum {string}
-*/
-export var CreateBillingSubscriptionItemModelUsageTypeEnum;
-(function (CreateBillingSubscriptionItemModelUsageTypeEnum) {
-    CreateBillingSubscriptionItemModelUsageTypeEnum["LICENSED"] = "LICENSED";
-    CreateBillingSubscriptionItemModelUsageTypeEnum["METERED"] = "METERED";
-})(CreateBillingSubscriptionItemModelUsageTypeEnum || (CreateBillingSubscriptionItemModelUsageTypeEnum = {}));

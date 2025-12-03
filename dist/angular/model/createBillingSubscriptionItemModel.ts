@@ -20,8 +20,6 @@ export interface CreateBillingSubscriptionItemModel {
     priceDescription?: string;
     productId?: string;
     quantity?: number;
-    tiersMode?: CreateBillingSubscriptionItemModel.TiersModeEnum;
-    usageType?: CreateBillingSubscriptionItemModel.UsageTypeEnum;
 }
 export namespace CreateBillingSubscriptionItemModel {
     export type BillingSchemeEnum = 'PER_UNIT' | 'TIERED' | 'UNKNOWN';
@@ -37,16 +35,6 @@ export namespace CreateBillingSubscriptionItemModel {
         Quarterly: 'QUARTERLY' as IntervalEnum,
         Weekly: 'WEEKLY' as IntervalEnum,
         Yearly: 'YEARLY' as IntervalEnum
-    };
-    export type TiersModeEnum = 'GRADUATED' | 'VOLUME';
-    export const TiersModeEnum = {
-        Graduated: 'GRADUATED' as TiersModeEnum,
-        Volume: 'VOLUME' as TiersModeEnum
-    };
-    export type UsageTypeEnum = 'LICENSED' | 'METERED';
-    export const UsageTypeEnum = {
-        Licensed: 'LICENSED' as UsageTypeEnum,
-        Metered: 'METERED' as UsageTypeEnum
     };
 }
 

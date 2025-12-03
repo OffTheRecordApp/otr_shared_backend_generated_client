@@ -28,8 +28,6 @@ export function BillingSubscriptionItemModelFromJSONTyped(json, ignoreDiscrimina
         'priceDescription': !exists(json, 'priceDescription') ? undefined : json['priceDescription'],
         'productId': !exists(json, 'productId') ? undefined : json['productId'],
         'quantity': !exists(json, 'quantity') ? undefined : json['quantity'],
-        'tiersMode': !exists(json, 'tiersMode') ? undefined : json['tiersMode'],
-        'usageType': !exists(json, 'usageType') ? undefined : json['usageType'],
     };
 }
 export function BillingSubscriptionItemModelToJSON(value) {
@@ -48,8 +46,6 @@ export function BillingSubscriptionItemModelToJSON(value) {
         'priceDescription': value.priceDescription,
         'productId': value.productId,
         'quantity': value.quantity,
-        'tiersMode': value.tiersMode,
-        'usageType': value.usageType,
     };
 }
 /**
@@ -74,21 +70,3 @@ export var BillingSubscriptionItemModelIntervalEnum;
     BillingSubscriptionItemModelIntervalEnum["WEEKLY"] = "WEEKLY";
     BillingSubscriptionItemModelIntervalEnum["YEARLY"] = "YEARLY";
 })(BillingSubscriptionItemModelIntervalEnum || (BillingSubscriptionItemModelIntervalEnum = {}));
-/**
-* @export
-* @enum {string}
-*/
-export var BillingSubscriptionItemModelTiersModeEnum;
-(function (BillingSubscriptionItemModelTiersModeEnum) {
-    BillingSubscriptionItemModelTiersModeEnum["GRADUATED"] = "GRADUATED";
-    BillingSubscriptionItemModelTiersModeEnum["VOLUME"] = "VOLUME";
-})(BillingSubscriptionItemModelTiersModeEnum || (BillingSubscriptionItemModelTiersModeEnum = {}));
-/**
-* @export
-* @enum {string}
-*/
-export var BillingSubscriptionItemModelUsageTypeEnum;
-(function (BillingSubscriptionItemModelUsageTypeEnum) {
-    BillingSubscriptionItemModelUsageTypeEnum["LICENSED"] = "LICENSED";
-    BillingSubscriptionItemModelUsageTypeEnum["METERED"] = "METERED";
-})(BillingSubscriptionItemModelUsageTypeEnum || (BillingSubscriptionItemModelUsageTypeEnum = {}));

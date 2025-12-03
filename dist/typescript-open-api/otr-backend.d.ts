@@ -7960,10 +7960,6 @@ export interface components {
             productId?: string;
             /** Format: int64 */
             quantity?: number;
-            /** @enum {string} */
-            tiersMode?: BillingSubscriptionItemModelTiersMode;
-            /** @enum {string} */
-            usageType?: BillingSubscriptionItemModelUsageType;
         };
         /** BillingSubscriptionModel */
         BillingSubscriptionModel: {
@@ -9539,10 +9535,6 @@ export interface components {
             productId?: string;
             /** Format: int64 */
             quantity?: number;
-            /** @enum {string} */
-            tiersMode?: BillingSubscriptionItemModelTiersMode;
-            /** @enum {string} */
-            usageType?: BillingSubscriptionItemModelUsageType;
         };
         /** CreateBillingSubscriptionRequest */
         CreateBillingSubscriptionRequest: {
@@ -40795,14 +40787,6 @@ export declare enum BillingPriceModelBillingScheme {
     PER_UNIT = "PER_UNIT",
     TIERED = "TIERED",
     UNKNOWN = "UNKNOWN"
-}
-export declare enum BillingSubscriptionItemModelTiersMode {
-    GRADUATED = "GRADUATED",
-    VOLUME = "VOLUME"
-}
-export declare enum BillingSubscriptionItemModelUsageType {
-    LICENSED = "LICENSED",
-    METERED = "METERED"
 }
 export declare enum CallContactIntegratedResourceType {
     FRESHDESK = "FRESHDESK",

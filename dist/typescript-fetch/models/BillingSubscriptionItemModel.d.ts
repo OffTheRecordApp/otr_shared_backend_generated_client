@@ -63,18 +63,6 @@ export interface BillingSubscriptionItemModel {
      * @memberof BillingSubscriptionItemModel
      */
     quantity?: number;
-    /**
-     *
-     * @type {string}
-     * @memberof BillingSubscriptionItemModel
-     */
-    tiersMode?: BillingSubscriptionItemModelTiersModeEnum;
-    /**
-     *
-     * @type {string}
-     * @memberof BillingSubscriptionItemModel
-     */
-    usageType?: BillingSubscriptionItemModelUsageTypeEnum;
 }
 export declare function BillingSubscriptionItemModelFromJSON(json: any): BillingSubscriptionItemModel;
 export declare function BillingSubscriptionItemModelFromJSONTyped(json: any, ignoreDiscriminator: boolean): BillingSubscriptionItemModel;
@@ -98,20 +86,4 @@ export declare enum BillingSubscriptionItemModelIntervalEnum {
     QUARTERLY = "QUARTERLY",
     WEEKLY = "WEEKLY",
     YEARLY = "YEARLY"
-}
-/**
-* @export
-* @enum {string}
-*/
-export declare enum BillingSubscriptionItemModelTiersModeEnum {
-    GRADUATED = "GRADUATED",
-    VOLUME = "VOLUME"
-}
-/**
-* @export
-* @enum {string}
-*/
-export declare enum BillingSubscriptionItemModelUsageTypeEnum {
-    LICENSED = "LICENSED",
-    METERED = "METERED"
 }

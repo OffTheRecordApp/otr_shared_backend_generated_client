@@ -25,14 +25,4 @@ export var BillingSubscriptionItemModel;
         IntervalEnum[IntervalEnum["WEEKLY"] = 'WEEKLY'] = "WEEKLY";
         IntervalEnum[IntervalEnum["YEARLY"] = 'YEARLY'] = "YEARLY";
     })(IntervalEnum = BillingSubscriptionItemModel.IntervalEnum || (BillingSubscriptionItemModel.IntervalEnum = {}));
-    let TiersModeEnum;
-    (function (TiersModeEnum) {
-        TiersModeEnum[TiersModeEnum["GRADUATED"] = 'GRADUATED'] = "GRADUATED";
-        TiersModeEnum[TiersModeEnum["VOLUME"] = 'VOLUME'] = "VOLUME";
-    })(TiersModeEnum = BillingSubscriptionItemModel.TiersModeEnum || (BillingSubscriptionItemModel.TiersModeEnum = {}));
-    let UsageTypeEnum;
-    (function (UsageTypeEnum) {
-        UsageTypeEnum[UsageTypeEnum["LICENSED"] = 'LICENSED'] = "LICENSED";
-        UsageTypeEnum[UsageTypeEnum["METERED"] = 'METERED'] = "METERED";
-    })(UsageTypeEnum = BillingSubscriptionItemModel.UsageTypeEnum || (BillingSubscriptionItemModel.UsageTypeEnum = {}));
 })(BillingSubscriptionItemModel || (BillingSubscriptionItemModel = {}));
