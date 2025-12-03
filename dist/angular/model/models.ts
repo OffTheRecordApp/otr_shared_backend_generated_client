@@ -74,6 +74,8 @@ export * from './blogEvent';
 export * from './blogMetadata';
 export * from './booking';
 export * from './bookingCancelation';
+export * from './calculateTransferFeeDifferenceCaseLineItemModel';
+export * from './calculateTransferFeeDifferenceCaseModel';
 export * from './calculateTransferFeeDifferenceResponse';
 export * from './callContact';
 export * from './cancelBillingSubscriptionResponse';

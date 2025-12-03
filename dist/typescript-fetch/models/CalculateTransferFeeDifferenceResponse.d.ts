@@ -9,12 +9,25 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
+import { CalculateTransferFeeDifferenceCaseModel } from './';
 /**
  *
  * @export
  * @interface CalculateTransferFeeDifferenceResponse
  */
 export interface CalculateTransferFeeDifferenceResponse {
+    /**
+     *
+     * @type {CalculateTransferFeeDifferenceCaseModel}
+     * @memberof CalculateTransferFeeDifferenceResponse
+     */
+    newCase?: CalculateTransferFeeDifferenceCaseModel;
+    /**
+     *
+     * @type {CalculateTransferFeeDifferenceCaseModel}
+     * @memberof CalculateTransferFeeDifferenceResponse
+     */
+    previousCase?: CalculateTransferFeeDifferenceCaseModel;
     /**
      *
      * @type {number}

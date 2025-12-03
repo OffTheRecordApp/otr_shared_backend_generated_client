@@ -9,9 +9,8 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-import * as models from './models';
-export interface CalculateTransferFeeDifferenceResponse {
-    "newCase"?: models.CalculateTransferFeeDifferenceCaseModel;
-    "previousCase"?: models.CalculateTransferFeeDifferenceCaseModel;
-    "totalClientCostDifferenceInCents"?: number;
+export interface CalculateTransferFeeDifferenceCaseLineItemModel {
+    "additionalDescription"?: string;
+    "lineItemTypeDisplayString"?: string;
+    "totalClientCostInCents"?: number;
 }

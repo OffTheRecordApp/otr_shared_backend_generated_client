@@ -10,8 +10,7 @@
  * Do not edit the class manually.
  */
 import * as models from './models';
-export interface CalculateTransferFeeDifferenceResponse {
-    "newCase"?: models.CalculateTransferFeeDifferenceCaseModel;
-    "previousCase"?: models.CalculateTransferFeeDifferenceCaseModel;
-    "totalClientCostDifferenceInCents"?: number;
+export interface CalculateTransferFeeDifferenceCaseModel {
+    "lineItems"?: Array<models.CalculateTransferFeeDifferenceCaseLineItemModel>;
+    "totalClientCostInCents"?: number;
 }

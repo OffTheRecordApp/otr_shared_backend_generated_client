@@ -12,6 +12,7 @@
  * Do not edit the class manually.
  */
 import { exists } from '../runtime';
+import { CalculateTransferFeeDifferenceCaseModelFromJSON, CalculateTransferFeeDifferenceCaseModelToJSON, } from './';
 export function CalculateTransferFeeDifferenceResponseFromJSON(json) {
     return CalculateTransferFeeDifferenceResponseFromJSONTyped(json, false);
 }
@@ -20,6 +21,8 @@ export function CalculateTransferFeeDifferenceResponseFromJSONTyped(json, ignore
         return json;
     }
     return {
+        'newCase': !exists(json, 'newCase') ? undefined : CalculateTransferFeeDifferenceCaseModelFromJSON(json['newCase']),
+        'previousCase': !exists(json, 'previousCase') ? undefined : CalculateTransferFeeDifferenceCaseModelFromJSON(json['previousCase']),
         'totalClientCostDifferenceInCents': !exists(json, 'totalClientCostDifferenceInCents') ? undefined : json['totalClientCostDifferenceInCents'],
     };
 }
@@ -31,6 +34,8 @@ export function CalculateTransferFeeDifferenceResponseToJSON(value) {
         return null;
     }
     return {
+        'newCase': CalculateTransferFeeDifferenceCaseModelToJSON(value.newCase),
+        'previousCase': CalculateTransferFeeDifferenceCaseModelToJSON(value.previousCase),
         'totalClientCostDifferenceInCents': value.totalClientCostDifferenceInCents,
     };
 }

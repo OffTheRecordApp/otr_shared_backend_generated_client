@@ -8062,8 +8062,23 @@ export interface components {
             /** @enum {string} */
             state?: PathsApiV1CitationsCitationIdCourtMissingPostParametersQueryState;
         };
+        /** CalculateTransferFeeDifferenceCaseLineItemModel */
+        CalculateTransferFeeDifferenceCaseLineItemModel: {
+            additionalDescription?: string;
+            lineItemTypeDisplayString?: string;
+            /** Format: int32 */
+            totalClientCostInCents?: number;
+        };
+        /** CalculateTransferFeeDifferenceCaseModel */
+        CalculateTransferFeeDifferenceCaseModel: {
+            lineItems?: components["schemas"]["CalculateTransferFeeDifferenceCaseLineItemModel"][];
+            /** Format: int32 */
+            totalClientCostInCents?: number;
+        };
         /** CalculateTransferFeeDifferenceResponse */
         CalculateTransferFeeDifferenceResponse: {
+            newCase?: components["schemas"]["CalculateTransferFeeDifferenceCaseModel"];
+            previousCase?: components["schemas"]["CalculateTransferFeeDifferenceCaseModel"];
             /** Format: int32 */
             totalClientCostDifferenceInCents?: number;
         };
