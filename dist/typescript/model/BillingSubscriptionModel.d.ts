@@ -31,6 +31,7 @@ export declare namespace BillingSubscriptionModel {
         INCOMPLETEEXPIRED,
         INTRIALPERIOD,
         PASTDUE,
+        UNCONFIRMED,
         UNKNOWN,
         UNPAID
     }

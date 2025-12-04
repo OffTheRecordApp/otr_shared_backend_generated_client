@@ -40449,6 +40449,7 @@ export declare enum PathsApiV1BillingSubscribersGetParametersQueryBillingSubscri
     INCOMPLETE_EXPIRED = "INCOMPLETE_EXPIRED",
     IN_TRIAL_PERIOD = "IN_TRIAL_PERIOD",
     PAST_DUE = "PAST_DUE",
+    UNCONFIRMED = "UNCONFIRMED",
     UNKNOWN = "UNKNOWN",
     UNPAID = "UNPAID"
 }

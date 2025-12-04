@@ -20,6 +20,7 @@ export var BillingSubscriptionModel;
         StatusEnum[StatusEnum["INCOMPLETEEXPIRED"] = 'INCOMPLETE_EXPIRED'] = "INCOMPLETEEXPIRED";
         StatusEnum[StatusEnum["INTRIALPERIOD"] = 'IN_TRIAL_PERIOD'] = "INTRIALPERIOD";
         StatusEnum[StatusEnum["PASTDUE"] = 'PAST_DUE'] = "PASTDUE";
+        StatusEnum[StatusEnum["UNCONFIRMED"] = 'UNCONFIRMED'] = "UNCONFIRMED";
         StatusEnum[StatusEnum["UNKNOWN"] = 'UNKNOWN'] = "UNKNOWN";
         StatusEnum[StatusEnum["UNPAID"] = 'UNPAID'] = "UNPAID";
     })(StatusEnum = BillingSubscriptionModel.StatusEnum || (BillingSubscriptionModel.StatusEnum = {}));

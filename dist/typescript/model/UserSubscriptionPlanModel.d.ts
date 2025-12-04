@@ -31,6 +31,7 @@ export declare namespace UserSubscriptionPlanModel {
         INCOMPLETEEXPIRED,
         INTRIALPERIOD,
         PASTDUE,
+        UNCONFIRMED,
         UNKNOWN,
         UNPAID
     }

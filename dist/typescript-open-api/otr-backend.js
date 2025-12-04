@@ -214,6 +214,7 @@ export var PathsApiV1BillingSubscribersGetParametersQueryBillingSubscriptionStat
     PathsApiV1BillingSubscribersGetParametersQueryBillingSubscriptionStatus["INCOMPLETE_EXPIRED"] = "INCOMPLETE_EXPIRED";
     PathsApiV1BillingSubscribersGetParametersQueryBillingSubscriptionStatus["IN_TRIAL_PERIOD"] = "IN_TRIAL_PERIOD";
     PathsApiV1BillingSubscribersGetParametersQueryBillingSubscriptionStatus["PAST_DUE"] = "PAST_DUE";
+    PathsApiV1BillingSubscribersGetParametersQueryBillingSubscriptionStatus["UNCONFIRMED"] = "UNCONFIRMED";
     PathsApiV1BillingSubscribersGetParametersQueryBillingSubscriptionStatus["UNKNOWN"] = "UNKNOWN";
     PathsApiV1BillingSubscribersGetParametersQueryBillingSubscriptionStatus["UNPAID"] = "UNPAID";
 })(PathsApiV1BillingSubscribersGetParametersQueryBillingSubscriptionStatus || (PathsApiV1BillingSubscribersGetParametersQueryBillingSubscriptionStatus = {}));

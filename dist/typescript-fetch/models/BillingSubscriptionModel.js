@@ -66,6 +66,7 @@ export var BillingSubscriptionModelStatusEnum;
     BillingSubscriptionModelStatusEnum["INCOMPLETEEXPIRED"] = "INCOMPLETE_EXPIRED";
     BillingSubscriptionModelStatusEnum["INTRIALPERIOD"] = "IN_TRIAL_PERIOD";
     BillingSubscriptionModelStatusEnum["PASTDUE"] = "PAST_DUE";
+    BillingSubscriptionModelStatusEnum["UNCONFIRMED"] = "UNCONFIRMED";
     BillingSubscriptionModelStatusEnum["UNKNOWN"] = "UNKNOWN";
     BillingSubscriptionModelStatusEnum["UNPAID"] = "UNPAID";
 })(BillingSubscriptionModelStatusEnum || (BillingSubscriptionModelStatusEnum = {}));

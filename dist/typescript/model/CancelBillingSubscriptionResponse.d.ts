@@ -25,6 +25,7 @@ export declare namespace CancelBillingSubscriptionResponse {
         INCOMPLETEEXPIRED,
         INTRIALPERIOD,
         PASTDUE,
+        UNCONFIRMED,
         UNKNOWN,
         UNPAID
     }

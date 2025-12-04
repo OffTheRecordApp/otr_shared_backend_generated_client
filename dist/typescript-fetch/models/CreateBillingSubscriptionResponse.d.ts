@@ -56,6 +56,7 @@ export declare enum CreateBillingSubscriptionResponseStatusEnum {
     INCOMPLETEEXPIRED = "INCOMPLETE_EXPIRED",
     INTRIALPERIOD = "IN_TRIAL_PERIOD",
     PASTDUE = "PAST_DUE",
+    UNCONFIRMED = "UNCONFIRMED",
     UNKNOWN = "UNKNOWN",
     UNPAID = "UNPAID"
 }

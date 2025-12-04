@@ -26,6 +26,7 @@ export var UserSubscriptionPlanModelReq;
         SubscriptionStatusEnum[SubscriptionStatusEnum["INCOMPLETEEXPIRED"] = 'INCOMPLETE_EXPIRED'] = "INCOMPLETEEXPIRED";
         SubscriptionStatusEnum[SubscriptionStatusEnum["INTRIALPERIOD"] = 'IN_TRIAL_PERIOD'] = "INTRIALPERIOD";
         SubscriptionStatusEnum[SubscriptionStatusEnum["PASTDUE"] = 'PAST_DUE'] = "PASTDUE";
+        SubscriptionStatusEnum[SubscriptionStatusEnum["UNCONFIRMED"] = 'UNCONFIRMED'] = "UNCONFIRMED";
         SubscriptionStatusEnum[SubscriptionStatusEnum["UNKNOWN"] = 'UNKNOWN'] = "UNKNOWN";
         SubscriptionStatusEnum[SubscriptionStatusEnum["UNPAID"] = 'UNPAID'] = "UNPAID";
     })(SubscriptionStatusEnum = UserSubscriptionPlanModelReq.SubscriptionStatusEnum || (UserSubscriptionPlanModelReq.SubscriptionStatusEnum = {}));

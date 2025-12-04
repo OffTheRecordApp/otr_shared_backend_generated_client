@@ -65,6 +65,7 @@ export var UserSubscriptionPlanModelReqSubscriptionStatusEnum;
     UserSubscriptionPlanModelReqSubscriptionStatusEnum["INCOMPLETEEXPIRED"] = "INCOMPLETE_EXPIRED";
     UserSubscriptionPlanModelReqSubscriptionStatusEnum["INTRIALPERIOD"] = "IN_TRIAL_PERIOD";
     UserSubscriptionPlanModelReqSubscriptionStatusEnum["PASTDUE"] = "PAST_DUE";
+    UserSubscriptionPlanModelReqSubscriptionStatusEnum["UNCONFIRMED"] = "UNCONFIRMED";
     UserSubscriptionPlanModelReqSubscriptionStatusEnum["UNKNOWN"] = "UNKNOWN";
     UserSubscriptionPlanModelReqSubscriptionStatusEnum["UNPAID"] = "UNPAID";
 })(UserSubscriptionPlanModelReqSubscriptionStatusEnum || (UserSubscriptionPlanModelReqSubscriptionStatusEnum = {}));

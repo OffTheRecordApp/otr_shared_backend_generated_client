@@ -76,6 +76,7 @@ export declare enum UserSubscriptionPlanModelResSubscriptionStatusEnum {
     INCOMPLETEEXPIRED = "INCOMPLETE_EXPIRED",
     INTRIALPERIOD = "IN_TRIAL_PERIOD",
     PASTDUE = "PAST_DUE",
+    UNCONFIRMED = "UNCONFIRMED",
     UNKNOWN = "UNKNOWN",
     UNPAID = "UNPAID"
 }

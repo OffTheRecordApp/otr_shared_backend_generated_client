@@ -597,6 +597,7 @@ export var ListBillingSubscribersUsingGETBillingSubscriptionStatusEnum;
     ListBillingSubscribersUsingGETBillingSubscriptionStatusEnum["INCOMPLETEEXPIRED"] = "INCOMPLETE_EXPIRED";
     ListBillingSubscribersUsingGETBillingSubscriptionStatusEnum["INTRIALPERIOD"] = "IN_TRIAL_PERIOD";
     ListBillingSubscribersUsingGETBillingSubscriptionStatusEnum["PASTDUE"] = "PAST_DUE";
+    ListBillingSubscribersUsingGETBillingSubscriptionStatusEnum["UNCONFIRMED"] = "UNCONFIRMED";
     ListBillingSubscribersUsingGETBillingSubscriptionStatusEnum["UNKNOWN"] = "UNKNOWN";
     ListBillingSubscribersUsingGETBillingSubscriptionStatusEnum["UNPAID"] = "UNPAID";
 })(ListBillingSubscribersUsingGETBillingSubscriptionStatusEnum || (ListBillingSubscribersUsingGETBillingSubscriptionStatusEnum = {}));

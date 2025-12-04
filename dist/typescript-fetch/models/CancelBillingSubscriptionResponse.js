@@ -55,6 +55,7 @@ export var CancelBillingSubscriptionResponseStatusEnum;
     CancelBillingSubscriptionResponseStatusEnum["INCOMPLETEEXPIRED"] = "INCOMPLETE_EXPIRED";
     CancelBillingSubscriptionResponseStatusEnum["INTRIALPERIOD"] = "IN_TRIAL_PERIOD";
     CancelBillingSubscriptionResponseStatusEnum["PASTDUE"] = "PAST_DUE";
+    CancelBillingSubscriptionResponseStatusEnum["UNCONFIRMED"] = "UNCONFIRMED";
     CancelBillingSubscriptionResponseStatusEnum["UNKNOWN"] = "UNKNOWN";
     CancelBillingSubscriptionResponseStatusEnum["UNPAID"] = "UNPAID";
 })(CancelBillingSubscriptionResponseStatusEnum || (CancelBillingSubscriptionResponseStatusEnum = {}));

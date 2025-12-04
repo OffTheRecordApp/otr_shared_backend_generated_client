@@ -25,6 +25,7 @@ export declare namespace CreateBillingSubscriptionResponse {
         INCOMPLETEEXPIRED,
         INTRIALPERIOD,
         PASTDUE,
+        UNCONFIRMED,
         UNKNOWN,
         UNPAID
     }
