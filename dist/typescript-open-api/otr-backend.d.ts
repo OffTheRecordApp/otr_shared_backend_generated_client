@@ -9315,6 +9315,8 @@ export interface components {
             /** Format: int32 */
             errorCode?: number;
             errorMessage?: string;
+            /** Format: int32 */
+            httpStatus?: number;
             isSuccess?: boolean;
             mediaItems?: components["schemas"]["MediaItemModel"][];
         };

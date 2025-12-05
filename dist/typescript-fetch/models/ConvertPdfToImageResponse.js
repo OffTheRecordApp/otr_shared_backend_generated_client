@@ -23,6 +23,7 @@ export function ConvertPdfToImageResponseFromJSONTyped(json, ignoreDiscriminator
     return {
         'errorCode': !exists(json, 'errorCode') ? undefined : json['errorCode'],
         'errorMessage': !exists(json, 'errorMessage') ? undefined : json['errorMessage'],
+        'httpStatus': !exists(json, 'httpStatus') ? undefined : json['httpStatus'],
         'isSuccess': !exists(json, 'isSuccess') ? undefined : json['isSuccess'],
         'mediaItems': !exists(json, 'mediaItems') ? undefined : (json['mediaItems'].map(MediaItemModelFromJSON)),
     };
@@ -37,6 +38,7 @@ export function ConvertPdfToImageResponseToJSON(value) {
     return {
         'errorCode': value.errorCode,
         'errorMessage': value.errorMessage,
+        'httpStatus': value.httpStatus,
         'isSuccess': value.isSuccess,
         'mediaItems': value.mediaItems === undefined ? undefined : (value.mediaItems.map(MediaItemModelToJSON)),
     };

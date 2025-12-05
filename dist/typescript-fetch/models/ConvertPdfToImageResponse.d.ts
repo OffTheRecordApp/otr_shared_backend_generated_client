@@ -30,6 +30,12 @@ export interface ConvertPdfToImageResponse {
     errorMessage?: string;
     /**
      *
+     * @type {number}
+     * @memberof ConvertPdfToImageResponse
+     */
+    httpStatus?: number;
+    /**
+     *
      * @type {boolean}
      * @memberof ConvertPdfToImageResponse
      */
