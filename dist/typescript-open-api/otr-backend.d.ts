@@ -14823,6 +14823,8 @@ export interface components {
             phoneNumber?: string;
             /** @enum {string} */
             type?: PhoneNumberDomainType;
+            /** Format: date-time */
+            verificationDateUtc?: string;
         };
         /** Source */
         Source: {

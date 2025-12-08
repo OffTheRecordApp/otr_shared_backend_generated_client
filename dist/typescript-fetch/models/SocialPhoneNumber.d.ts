@@ -40,6 +40,12 @@ export interface SocialPhoneNumber {
      * @memberof SocialPhoneNumber
      */
     type?: SocialPhoneNumberTypeEnum;
+    /**
+     *
+     * @type {Date}
+     * @memberof SocialPhoneNumber
+     */
+    verificationDateUtc?: Date;
 }
 export declare function SocialPhoneNumberFromJSON(json: any): SocialPhoneNumber;
 export declare function SocialPhoneNumberFromJSONTyped(json: any, ignoreDiscriminator: boolean): SocialPhoneNumber;

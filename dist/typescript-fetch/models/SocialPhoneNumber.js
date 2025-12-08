@@ -25,6 +25,7 @@ export function SocialPhoneNumberFromJSONTyped(json, ignoreDiscriminator) {
         'lastUpdatedDateUtc': !exists(json, 'lastUpdatedDateUtc') ? undefined : TimestampFromJSON(json['lastUpdatedDateUtc']),
         'phoneNumber': !exists(json, 'phoneNumber') ? undefined : json['phoneNumber'],
         'type': !exists(json, 'type') ? undefined : json['type'],
+        'verificationDateUtc': !exists(json, 'verificationDateUtc') ? undefined : (new Date(json['verificationDateUtc'])),
     };
 }
 export function SocialPhoneNumberToJSON(value) {
@@ -39,6 +40,7 @@ export function SocialPhoneNumberToJSON(value) {
         'lastUpdatedDateUtc': TimestampToJSON(value.lastUpdatedDateUtc),
         'phoneNumber': value.phoneNumber,
         'type': value.type,
+        'verificationDateUtc': value.verificationDateUtc === undefined ? undefined : (value.verificationDateUtc.toISOString()),
     };
 }
 /**

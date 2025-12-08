@@ -17,6 +17,7 @@ export interface SocialPhoneNumber {
     lastUpdatedDateUtc?: Timestamp;
     phoneNumber?: string;
     type?: SocialPhoneNumber.TypeEnum;
+    verificationDateUtc?: string;
 }
 export namespace SocialPhoneNumber {
     export type TypeEnum = 'HOME' | 'MOBILE' | 'NOT_SPECIFIED' | 'OFFICE';

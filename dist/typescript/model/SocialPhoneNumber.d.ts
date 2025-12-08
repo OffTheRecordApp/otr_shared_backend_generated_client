@@ -15,6 +15,7 @@ export interface SocialPhoneNumber {
     "lastUpdatedDateUtc"?: models.Timestamp;
     "phoneNumber"?: string;
     "type"?: SocialPhoneNumber.TypeEnum;
+    "verificationDateUtc"?: string;
 }
 export declare namespace SocialPhoneNumber {
     enum TypeEnum {
