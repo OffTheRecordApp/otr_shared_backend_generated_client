@@ -10,9 +10,11 @@
  * Do not edit the class manually.
  */
 import { BillingSubscriptionModel } from './billingSubscriptionModel';
+import { BillingSubscriptionPrimaryHolderModel } from './billingSubscriptionPrimaryHolderModel';
 
 
 export interface ListBillingSubscriptionsResponse { 
+    primaryHolder?: BillingSubscriptionPrimaryHolderModel;
     subscriptions?: Array<BillingSubscriptionModel>;
     subscriptionsAsBeneficiary?: Array<BillingSubscriptionModel>;
 }

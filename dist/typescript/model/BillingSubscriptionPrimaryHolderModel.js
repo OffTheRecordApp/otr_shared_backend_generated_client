@@ -9,9 +9,4 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-import * as models from './models';
-export interface ListBillingSubscriptionsResponse {
-    "primaryHolder"?: models.BillingSubscriptionPrimaryHolderModel;
-    "subscriptions"?: Array<models.BillingSubscriptionModel>;
-    "subscriptionsAsBeneficiary"?: Array<models.BillingSubscriptionModel>;
-}
+export {};

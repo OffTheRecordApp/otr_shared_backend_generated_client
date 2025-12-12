@@ -68,6 +68,7 @@ export * from './billingSubscriberAggregateModel';
 export * from './billingSubscriberModel';
 export * from './billingSubscriptionItemModel';
 export * from './billingSubscriptionModel';
+export * from './billingSubscriptionPrimaryHolderModel';
 export * from './billingUpcomingInvoiceModel';
 export * from './blogDocument';
 export * from './blogEvent';

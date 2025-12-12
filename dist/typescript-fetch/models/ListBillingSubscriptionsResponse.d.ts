@@ -9,13 +9,19 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-import { BillingSubscriptionModel } from './';
+import { BillingSubscriptionModel, BillingSubscriptionPrimaryHolderModel } from './';
 /**
  *
  * @export
  * @interface ListBillingSubscriptionsResponse
  */
 export interface ListBillingSubscriptionsResponse {
+    /**
+     *
+     * @type {BillingSubscriptionPrimaryHolderModel}
+     * @memberof ListBillingSubscriptionsResponse
+     */
+    primaryHolder?: BillingSubscriptionPrimaryHolderModel;
     /**
      *
      * @type {Array<BillingSubscriptionModel>}

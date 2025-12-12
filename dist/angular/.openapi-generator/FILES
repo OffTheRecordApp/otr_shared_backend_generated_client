@@ -194,6 +194,7 @@ model/billingSubscriberAggregateModel.ts
 model/billingSubscriberModel.ts
 model/billingSubscriptionItemModel.ts
 model/billingSubscriptionModel.ts
+model/billingSubscriptionPrimaryHolderModel.ts
 model/billingUpcomingInvoiceModel.ts
 model/blogDocument.ts
 model/blogEvent.ts

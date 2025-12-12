@@ -12,7 +12,7 @@
  * Do not edit the class manually.
  */
 import { exists } from '../runtime';
-import { BillingSubscriptionModelFromJSON, BillingSubscriptionModelToJSON, } from './';
+import { BillingSubscriptionModelFromJSON, BillingSubscriptionModelToJSON, BillingSubscriptionPrimaryHolderModelFromJSON, BillingSubscriptionPrimaryHolderModelToJSON, } from './';
 export function ListBillingSubscriptionsResponseFromJSON(json) {
     return ListBillingSubscriptionsResponseFromJSONTyped(json, false);
 }
@@ -21,6 +21,7 @@ export function ListBillingSubscriptionsResponseFromJSONTyped(json, ignoreDiscri
         return json;
     }
     return {
+        'primaryHolder': !exists(json, 'primaryHolder') ? undefined : BillingSubscriptionPrimaryHolderModelFromJSON(json['primaryHolder']),
         'subscriptions': !exists(json, 'subscriptions') ? undefined : (json['subscriptions'].map(BillingSubscriptionModelFromJSON)),
         'subscriptionsAsBeneficiary': !exists(json, 'subscriptionsAsBeneficiary') ? undefined : (json['subscriptionsAsBeneficiary'].map(BillingSubscriptionModelFromJSON)),
     };
@@ -33,6 +34,7 @@ export function ListBillingSubscriptionsResponseToJSON(value) {
         return null;
     }
     return {
+        'primaryHolder': BillingSubscriptionPrimaryHolderModelToJSON(value.primaryHolder),
         'subscriptions': value.subscriptions === undefined ? undefined : (value.subscriptions.map(BillingSubscriptionModelToJSON)),
         'subscriptionsAsBeneficiary': value.subscriptionsAsBeneficiary === undefined ? undefined : (value.subscriptionsAsBeneficiary.map(BillingSubscriptionModelToJSON)),
     };

@@ -7979,6 +7979,13 @@ export interface components {
             trialEndAt?: string;
             upcomingInvoicePreview?: components["schemas"]["BillingUpcomingInvoiceModel"];
         };
+        /** BillingSubscriptionPrimaryHolderModel */
+        BillingSubscriptionPrimaryHolderModel: {
+            emailAddress?: string;
+            fullName?: string;
+            /** Format: int64 */
+            userId?: number;
+        };
         /** BillingUpcomingInvoiceModel */
         BillingUpcomingInvoiceModel: {
             /** Format: date-time */
@@ -12757,6 +12764,7 @@ export interface components {
         };
         /** ListBillingSubscriptionsResponse */
         ListBillingSubscriptionsResponse: {
+            primaryHolder?: components["schemas"]["BillingSubscriptionPrimaryHolderModel"];
             subscriptions?: components["schemas"]["BillingSubscriptionModel"][];
             subscriptionsAsBeneficiary?: components["schemas"]["BillingSubscriptionModel"][];
         };
