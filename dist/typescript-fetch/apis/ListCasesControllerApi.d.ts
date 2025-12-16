@@ -23,6 +23,7 @@ export interface ListDashboardCasesByPageUsingGETRequest {
     defendantFirstName?: string;
     defendantId?: number;
     defendantLastName?: string;
+    includeAbandoned?: boolean;
     includeDeleted?: boolean;
     limit?: number;
     needsAttention?: boolean;
@@ -36,6 +37,7 @@ export interface ListDashboardCasesUsingGETRequest {
     userId: number;
     caseStatuses?: ListDashboardCasesUsingGETCaseStatusesEnum;
     defendantId?: number;
+    includeAbandoned?: boolean;
     includeDeleted?: boolean;
     limit?: number;
     needsAttention?: boolean;

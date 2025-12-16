@@ -19343,6 +19343,7 @@ angular.module('otrBackendService', [])
              * @param {object} parameters - method options and parameters
              * @param {string} parameters.caseStatuses - caseStatuses
              * @param {integer} parameters.defendantId - defendantId
+             * @param {boolean} parameters.includeAbandoned - includeAbandoned
              * @param {boolean} parameters.includeDeleted - includeDeleted
              * @param {integer} parameters.limit - limit
              * @param {boolean} parameters.needsAttention - needsAttention
@@ -19373,6 +19374,10 @@ angular.module('otrBackendService', [])
 
                 if (parameters['defendantId'] !== undefined) {
                     queryParameters['defendantId'] = parameters['defendantId'];
+                }
+
+                if (parameters['includeAbandoned'] !== undefined) {
+                    queryParameters['includeAbandoned'] = parameters['includeAbandoned'];
                 }
 
                 if (parameters['includeDeleted'] !== undefined) {
@@ -19432,6 +19437,7 @@ angular.module('otrBackendService', [])
              * @param {string} parameters.defendantFirstName - defendantFirstName
              * @param {integer} parameters.defendantId - defendantId
              * @param {string} parameters.defendantLastName - defendantLastName
+             * @param {boolean} parameters.includeAbandoned - includeAbandoned
              * @param {boolean} parameters.includeDeleted - includeDeleted
              * @param {integer} parameters.limit - limit
              * @param {boolean} parameters.needsAttention - needsAttention
@@ -19470,6 +19476,10 @@ angular.module('otrBackendService', [])
 
                 if (parameters['defendantLastName'] !== undefined) {
                     queryParameters['defendantLastName'] = parameters['defendantLastName'];
+                }
+
+                if (parameters['includeAbandoned'] !== undefined) {
+                    queryParameters['includeAbandoned'] = parameters['includeAbandoned'];
                 }
 
                 if (parameters['includeDeleted'] !== undefined) {

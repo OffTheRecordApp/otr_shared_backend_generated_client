@@ -103,6 +103,9 @@ export class ListCasesControllerApi extends runtime.BaseAPI {
             if (requestParameters.defendantLastName !== undefined) {
                 queryParameters['defendantLastName'] = requestParameters.defendantLastName;
             }
+            if (requestParameters.includeAbandoned !== undefined) {
+                queryParameters['includeAbandoned'] = requestParameters.includeAbandoned;
+            }
             if (requestParameters.includeDeleted !== undefined) {
                 queryParameters['includeDeleted'] = requestParameters.includeDeleted;
             }
@@ -160,6 +163,9 @@ export class ListCasesControllerApi extends runtime.BaseAPI {
             }
             if (requestParameters.defendantId !== undefined) {
                 queryParameters['defendantId'] = requestParameters.defendantId;
+            }
+            if (requestParameters.includeAbandoned !== undefined) {
+                queryParameters['includeAbandoned'] = requestParameters.includeAbandoned;
             }
             if (requestParameters.includeDeleted !== undefined) {
                 queryParameters['includeDeleted'] = requestParameters.includeDeleted;

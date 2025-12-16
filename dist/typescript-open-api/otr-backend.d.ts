@@ -32001,6 +32001,8 @@ export interface operations {
                 statusCategories?: PathsApiV1CaseStatusesGetParametersQueryCategories;
                 /** @description caseStatuses */
                 caseStatuses?: PathsApiV1LawfirmsLawfirmIdInboxMessagesGetParametersQueryCaseStatuses;
+                /** @description includeAbandoned */
+                includeAbandoned?: boolean;
             };
             header?: never;
             path: {
@@ -32070,6 +32072,8 @@ export interface operations {
                 statusCategories?: PathsApiV1CaseStatusesGetParametersQueryCategories;
                 /** @description caseStatuses */
                 caseStatuses?: PathsApiV1LawfirmsLawfirmIdInboxMessagesGetParametersQueryCaseStatuses;
+                /** @description includeAbandoned */
+                includeAbandoned?: boolean;
             };
             header?: never;
             path: {
