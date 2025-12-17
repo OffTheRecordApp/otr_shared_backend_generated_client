@@ -118,6 +118,7 @@ export var CitationAuditEventModelEventEnum;
     CitationAuditEventModelEventEnum["DECIDEEXPERIMENTGROUPCOMMAND"] = "DECIDE_EXPERIMENT_GROUP_COMMAND";
     CitationAuditEventModelEventEnum["DEFAULTFEEADDED"] = "DEFAULT_FEE_ADDED";
     CitationAuditEventModelEventEnum["DEFAULTFEECHANGED"] = "DEFAULT_FEE_CHANGED";
+    CitationAuditEventModelEventEnum["DEFAULTFEEREFUNDELIGIBILITYCHANGED"] = "DEFAULT_FEE_REFUND_ELIGIBILITY_CHANGED";
     CitationAuditEventModelEventEnum["DEFAULTFEEREMOVED"] = "DEFAULT_FEE_REMOVED";
     CitationAuditEventModelEventEnum["DRIVERLICENSEUPLOADED"] = "DRIVER_LICENSE_UPLOADED";
     CitationAuditEventModelEventEnum["EMAILSENT"] = "EMAIL_SENT";

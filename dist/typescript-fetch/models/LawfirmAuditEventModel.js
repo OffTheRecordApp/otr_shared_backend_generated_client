@@ -118,6 +118,7 @@ export var LawfirmAuditEventModelEventEnum;
     LawfirmAuditEventModelEventEnum["DECIDEEXPERIMENTGROUPCOMMAND"] = "DECIDE_EXPERIMENT_GROUP_COMMAND";
     LawfirmAuditEventModelEventEnum["DEFAULTFEEADDED"] = "DEFAULT_FEE_ADDED";
     LawfirmAuditEventModelEventEnum["DEFAULTFEECHANGED"] = "DEFAULT_FEE_CHANGED";
+    LawfirmAuditEventModelEventEnum["DEFAULTFEEREFUNDELIGIBILITYCHANGED"] = "DEFAULT_FEE_REFUND_ELIGIBILITY_CHANGED";
     LawfirmAuditEventModelEventEnum["DEFAULTFEEREMOVED"] = "DEFAULT_FEE_REMOVED";
     LawfirmAuditEventModelEventEnum["DRIVERLICENSEUPLOADED"] = "DRIVER_LICENSE_UPLOADED";
     LawfirmAuditEventModelEventEnum["EMAILSENT"] = "EMAIL_SENT";

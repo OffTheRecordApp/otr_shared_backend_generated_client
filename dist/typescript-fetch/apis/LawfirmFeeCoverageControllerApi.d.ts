@@ -10,7 +10,7 @@
  * Do not edit the class manually.
  */
 import * as runtime from '../runtime';
-import { AccountLevelFeeRequest, AccountLevelFeeResponse, EnableViolationsForLawfirmRequest, EnableViolationsForLawfirmResponse, GetLawfirmCoverageResponse, GetLawfirmFeeCoverageResponse, PostCourtCoverageRequest, RemoveCoverageRequest, ResetFeesForLawfirmRequest, ResetFeesForLawfirmResponse } from '../models';
+import { AccountLevelFeeRequest, AccountLevelFeeResponse, EnableViolationsForLawfirmRequest, EnableViolationsForLawfirmResponse, GetLawfirmCoverageResponse, GetLawfirmFeeCoverageResponse, PostCourtCoverageRequest, RemoveCoverageRequest, ResetFeesForLawfirmRequest, ResetFeesForLawfirmResponse, SaveDefaultFeeRefundEligibilityRequest } from '../models';
 export interface AddCourtToCoverageUsingPOSTRequest {
     lawfirmIdString: string;
     request: PostCourtCoverageRequest;
@@ -52,6 +52,10 @@ export interface ResetFeesForLawfirmUsingPOSTRequest {
 export interface SaveAccountFeesUsingPOSTRequest {
     lawfirmId: string;
     request: AccountLevelFeeRequest;
+}
+export interface SaveDefaultFeeRefundEligibilityUsingPOSTRequest {
+    lawfirmId: number;
+    request: SaveDefaultFeeRefundEligibilityRequest;
 }
 /**
  *
@@ -137,6 +141,14 @@ export declare class LawfirmFeeCoverageControllerApi extends runtime.BaseAPI {
      * saveAccountFees
      */
     saveAccountFeesUsingPOST(requestParameters: SaveAccountFeesUsingPOSTRequest): Promise<object>;
+    /**
+     * saveDefaultFeeRefundEligibility
+     */
+    saveDefaultFeeRefundEligibilityUsingPOSTRaw(requestParameters: SaveDefaultFeeRefundEligibilityUsingPOSTRequest): Promise<runtime.ApiResponse<object>>;
+    /**
+     * saveDefaultFeeRefundEligibility
+     */
+    saveDefaultFeeRefundEligibilityUsingPOST(requestParameters: SaveDefaultFeeRefundEligibilityUsingPOSTRequest): Promise<object>;
 }
 /**
     * @export

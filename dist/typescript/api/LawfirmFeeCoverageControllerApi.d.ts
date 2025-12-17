@@ -89,4 +89,11 @@ export declare class LawfirmFeeCoverageControllerApi {
      * @param request request
      */
     saveAccountFeesUsingPOST(lawfirmId: string, request: models.AccountLevelFeeRequest, extraHttpRequestParams?: any): ng.IHttpPromise<object>;
+    /**
+     *
+     * @summary saveDefaultFeeRefundEligibility
+     * @param lawfirmId lawfirmId
+     * @param request request
+     */
+    saveDefaultFeeRefundEligibilityUsingPOST(lawfirmId: number, request: models.SaveDefaultFeeRefundEligibilityRequest, extraHttpRequestParams?: any): ng.IHttpPromise<object>;
 }

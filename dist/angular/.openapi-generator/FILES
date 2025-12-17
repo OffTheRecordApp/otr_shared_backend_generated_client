@@ -765,6 +765,7 @@ model/saveCaseNotesRequest.ts
 model/saveCaseUserRequest.ts
 model/saveCoachingCardRequest.ts
 model/saveCoachingCardUserRequest.ts
+model/saveDefaultFeeRefundEligibilityRequest.ts
 model/saveDriverLicensePictureRequest.ts
 model/saveDriverLicensePictureResponse.ts
 model/saveDriverLicenseRequest.ts

@@ -50,6 +50,7 @@ export var PathsApiV1LawfirmsLawfirmIdAuditEventsGetParametersQueryIncludeTypes;
     PathsApiV1LawfirmsLawfirmIdAuditEventsGetParametersQueryIncludeTypes["DECIDE_EXPERIMENT_GROUP_COMMAND"] = "DECIDE_EXPERIMENT_GROUP_COMMAND";
     PathsApiV1LawfirmsLawfirmIdAuditEventsGetParametersQueryIncludeTypes["DEFAULT_FEE_ADDED"] = "DEFAULT_FEE_ADDED";
     PathsApiV1LawfirmsLawfirmIdAuditEventsGetParametersQueryIncludeTypes["DEFAULT_FEE_CHANGED"] = "DEFAULT_FEE_CHANGED";
+    PathsApiV1LawfirmsLawfirmIdAuditEventsGetParametersQueryIncludeTypes["DEFAULT_FEE_REFUND_ELIGIBILITY_CHANGED"] = "DEFAULT_FEE_REFUND_ELIGIBILITY_CHANGED";
     PathsApiV1LawfirmsLawfirmIdAuditEventsGetParametersQueryIncludeTypes["DEFAULT_FEE_REMOVED"] = "DEFAULT_FEE_REMOVED";
     PathsApiV1LawfirmsLawfirmIdAuditEventsGetParametersQueryIncludeTypes["DRIVER_LICENSE_UPLOADED"] = "DRIVER_LICENSE_UPLOADED";
     PathsApiV1LawfirmsLawfirmIdAuditEventsGetParametersQueryIncludeTypes["EMAIL_SENT"] = "EMAIL_SENT";

@@ -638,6 +638,7 @@ export * from './saveCaseNotesRequest';
 export * from './saveCaseUserRequest';
 export * from './saveCoachingCardRequest';
 export * from './saveCoachingCardUserRequest';
+export * from './saveDefaultFeeRefundEligibilityRequest';
 export * from './saveDriverLicensePictureRequest';
 export * from './saveDriverLicensePictureResponse';
 export * from './saveDriverLicenseRequest';

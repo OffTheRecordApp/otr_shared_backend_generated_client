@@ -3977,6 +3977,23 @@ export interface paths {
         patch?: never;
         trace?: never;
     };
+    "/api/v1/lawfirms/{lawfirmId}/coverage/refund-eligibility": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        get?: never;
+        put?: never;
+        /** saveDefaultFeeRefundEligibility */
+        post: operations["saveDefaultFeeRefundEligibilityUsingPOST"];
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
     "/api/v2/lawfirms/{lawfirmId}/courts": {
         parameters: {
             query?: never;
@@ -14313,6 +14330,16 @@ export interface components {
             resolutionDateUtc?: string;
             /** Format: int64 */
             userId?: number;
+        };
+        /** SaveDefaultFeeRefundEligibilityRequest */
+        SaveDefaultFeeRefundEligibilityRequest: {
+            /** @enum {string} */
+            classification?: PathsApiV1LawfirmsLawfirmIdAccountFeesDeleteParametersQueryClassification;
+            /** @enum {string} */
+            refundEligibility?: AccountLevelFeeRefundEligibility;
+            regionCode?: string;
+            /** Format: int64 */
+            violationId?: number;
         };
         /** SaveDriverLicensePictureRequest */
         SaveDriverLicensePictureRequest: {
@@ -29728,6 +29755,61 @@ export interface operations {
             };
         };
     };
+    saveDefaultFeeRefundEligibilityUsingPOST: {
+        parameters: {
+            query?: never;
+            header?: never;
+            path: {
+                /** @description lawfirmId */
+                lawfirmId: number;
+            };
+            cookie?: never;
+        };
+        requestBody?: {
+            content: {
+                "application/json": components["schemas"]["SaveDefaultFeeRefundEligibilityRequest"];
+            };
+        };
+        responses: {
+            /** @description OK */
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "*/*": Record<string, never>;
+                };
+            };
+            /** @description Created */
+            201: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content?: never;
+            };
+            /** @description Unauthorized */
+            401: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content?: never;
+            };
+            /** @description Forbidden */
+            403: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content?: never;
+            };
+            /** @description Not Found */
+            404: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content?: never;
+            };
+        };
+    };
     removeCoverageUsingDELETE: {
         parameters: {
             query?: never;
@@ -40310,6 +40392,7 @@ export declare enum PathsApiV1LawfirmsLawfirmIdAuditEventsGetParametersQueryIncl
     DECIDE_EXPERIMENT_GROUP_COMMAND = "DECIDE_EXPERIMENT_GROUP_COMMAND",
     DEFAULT_FEE_ADDED = "DEFAULT_FEE_ADDED",
     DEFAULT_FEE_CHANGED = "DEFAULT_FEE_CHANGED",
+    DEFAULT_FEE_REFUND_ELIGIBILITY_CHANGED = "DEFAULT_FEE_REFUND_ELIGIBILITY_CHANGED",
     DEFAULT_FEE_REMOVED = "DEFAULT_FEE_REMOVED",
     DRIVER_LICENSE_UPLOADED = "DRIVER_LICENSE_UPLOADED",
     EMAIL_SENT = "EMAIL_SENT",

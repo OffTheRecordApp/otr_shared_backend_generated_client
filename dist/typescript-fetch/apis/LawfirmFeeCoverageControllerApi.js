@@ -21,7 +21,7 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
     });
 };
 import * as runtime from '../runtime';
-import { AccountLevelFeeRequestToJSON, AccountLevelFeeResponseFromJSON, EnableViolationsForLawfirmRequestToJSON, EnableViolationsForLawfirmResponseFromJSON, GetLawfirmCoverageResponseFromJSON, GetLawfirmFeeCoverageResponseFromJSON, PostCourtCoverageRequestToJSON, RemoveCoverageRequestToJSON, ResetFeesForLawfirmRequestToJSON, ResetFeesForLawfirmResponseFromJSON, } from '../models';
+import { AccountLevelFeeRequestToJSON, AccountLevelFeeResponseFromJSON, EnableViolationsForLawfirmRequestToJSON, EnableViolationsForLawfirmResponseFromJSON, GetLawfirmCoverageResponseFromJSON, GetLawfirmFeeCoverageResponseFromJSON, PostCourtCoverageRequestToJSON, RemoveCoverageRequestToJSON, ResetFeesForLawfirmRequestToJSON, ResetFeesForLawfirmResponseFromJSON, SaveDefaultFeeRefundEligibilityRequestToJSON, } from '../models';
 /**
  *
  */
@@ -349,6 +349,39 @@ export class LawfirmFeeCoverageControllerApi extends runtime.BaseAPI {
     saveAccountFeesUsingPOST(requestParameters) {
         return __awaiter(this, void 0, void 0, function* () {
             const response = yield this.saveAccountFeesUsingPOSTRaw(requestParameters);
+            return yield response.value();
+        });
+    }
+    /**
+     * saveDefaultFeeRefundEligibility
+     */
+    saveDefaultFeeRefundEligibilityUsingPOSTRaw(requestParameters) {
+        return __awaiter(this, void 0, void 0, function* () {
+            if (requestParameters.lawfirmId === null || requestParameters.lawfirmId === undefined) {
+                throw new runtime.RequiredError('lawfirmId', 'Required parameter requestParameters.lawfirmId was null or undefined when calling saveDefaultFeeRefundEligibilityUsingPOST.');
+            }
+            if (requestParameters.request === null || requestParameters.request === undefined) {
+                throw new runtime.RequiredError('request', 'Required parameter requestParameters.request was null or undefined when calling saveDefaultFeeRefundEligibilityUsingPOST.');
+            }
+            const queryParameters = {};
+            const headerParameters = {};
+            headerParameters['Content-Type'] = 'application/json';
+            const response = yield this.request({
+                path: `/api/v1/lawfirms/{lawfirmId}/coverage/refund-eligibility`.replace(`{${"lawfirmId"}}`, encodeURIComponent(String(requestParameters.lawfirmId))),
+                method: 'POST',
+                headers: headerParameters,
+                query: queryParameters,
+                body: SaveDefaultFeeRefundEligibilityRequestToJSON(requestParameters.request),
+            });
+            return new runtime.JSONApiResponse(response);
+        });
+    }
+    /**
+     * saveDefaultFeeRefundEligibility
+     */
+    saveDefaultFeeRefundEligibilityUsingPOST(requestParameters) {
+        return __awaiter(this, void 0, void 0, function* () {
+            const response = yield this.saveDefaultFeeRefundEligibilityUsingPOSTRaw(requestParameters);
             return yield response.value();
         });
     }
