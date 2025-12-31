@@ -433,6 +433,7 @@ export * from './IntercomPages';
 export * from './IntercomSearchConversationsResponse';
 export * from './IntercomSearchTicketsResponse';
 export * from './IntercomTicketAttributes';
+export * from './InviteCaseParticipantRequest';
 export * from './InviteHouseholdMateRequest';
 export * from './InviteLawyerToLawfirmRequest';
 export * from './InvoiceLineItemModel';

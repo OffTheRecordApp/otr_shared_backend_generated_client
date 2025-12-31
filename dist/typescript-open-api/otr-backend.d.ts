@@ -1283,6 +1283,23 @@ export interface paths {
         patch?: never;
         trace?: never;
     };
+    "/api/v1/cases/{caseId}/participants/invite": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        get?: never;
+        put?: never;
+        /** inviteCaseParticipant */
+        post: operations["inviteCaseParticipantUsingPOST"];
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
     "/api/v1/cases/{caseId}/users": {
         parameters: {
             query?: never;
@@ -11963,6 +11980,16 @@ export interface components {
             _default_description_?: string;
             _default_title_?: string;
         };
+        /** InviteCaseParticipantRequest */
+        InviteCaseParticipantRequest: {
+            emailAddress: string;
+            firstName: string;
+            hasFinancialAccess: boolean;
+            isDefendant: boolean;
+            lastName: string;
+            /** @enum {string} */
+            relationshipToClient: CaseUserDetailsModelRelationshipToClientType;
+        };
         /** InviteHouseholdMateRequest */
         InviteHouseholdMateRequest: {
             emailAddress?: string;
@@ -20776,6 +20803,59 @@ export interface operations {
             };
             /** @description Forbidden */
             403: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content?: never;
+            };
+        };
+    };
+    inviteCaseParticipantUsingPOST: {
+        parameters: {
+            query?: never;
+            header?: never;
+            path: {
+                /** @description caseId */
+                caseId: string;
+            };
+            cookie?: never;
+        };
+        requestBody?: {
+            content: {
+                "application/json": components["schemas"]["InviteCaseParticipantRequest"];
+            };
+        };
+        responses: {
+            /** @description OK */
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content?: never;
+            };
+            /** @description Created */
+            201: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content?: never;
+            };
+            /** @description Unauthorized */
+            401: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content?: never;
+            };
+            /** @description Forbidden */
+            403: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content?: never;
+            };
+            /** @description Not Found */
+            404: {
                 headers: {
                     [name: string]: unknown;
                 };
