@@ -19,6 +19,12 @@ export declare class CaseUserControllerApi {
     constructor($http: ng.IHttpService, $httpParamSerializer?: (d: any) => any, basePath?: string);
     /**
      *
+     * @summary acceptParticipantInvite
+     * @param request request
+     */
+    acceptParticipantInviteUsingPUT(request: models.AcceptParticipantInviteRequest, extraHttpRequestParams?: any): ng.IHttpPromise<{}>;
+    /**
+     *
      * @summary deleteCaseUser
      * @param caseId caseId
      * @param caseUsersId caseUsersId

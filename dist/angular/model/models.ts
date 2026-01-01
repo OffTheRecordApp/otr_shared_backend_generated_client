@@ -1,4 +1,5 @@
 export * from './acceptCaseCounterRequest';
+export * from './acceptParticipantInviteRequest';
 export * from './accountLevelFee';
 export * from './accountLevelFeeRequest';
 export * from './accountLevelFeeResponse';

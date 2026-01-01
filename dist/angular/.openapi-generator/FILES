@@ -125,6 +125,7 @@ encoder.ts
 git_push.sh
 index.ts
 model/acceptCaseCounterRequest.ts
+model/acceptParticipantInviteRequest.ts
 model/accountLevelFee.ts
 model/accountLevelFeeRequest.ts
 model/accountLevelFeeResponse.ts

@@ -22,6 +22,31 @@ export class CaseUserControllerApi {
     }
     /**
      *
+     * @summary acceptParticipantInvite
+     * @param request request
+     */
+    acceptParticipantInviteUsingPUT(request, extraHttpRequestParams) {
+        const localVarPath = this.basePath + '/api/v1/cases/participants/accept-invite';
+        let queryParameters = {};
+        let headerParams = Object.assign({}, this.defaultHeaders);
+        // verify required parameter 'request' is not null or undefined
+        if (request === null || request === undefined) {
+            throw new Error('Required parameter request was null or undefined when calling acceptParticipantInviteUsingPUT.');
+        }
+        let httpRequestParams = {
+            method: 'PUT',
+            url: localVarPath,
+            data: request,
+            params: queryParameters,
+            headers: headerParams
+        };
+        if (extraHttpRequestParams) {
+            httpRequestParams = Object.assign(httpRequestParams, extraHttpRequestParams);
+        }
+        return this.$http(httpRequestParams);
+    }
+    /**
+     *
      * @summary deleteCaseUser
      * @param caseId caseId
      * @param caseUsersId caseUsersId

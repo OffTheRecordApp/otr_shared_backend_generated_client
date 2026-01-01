@@ -1419,6 +1419,43 @@ angular.module('otrBackendService', [])
                 return deferred.promise;
             };
             /**
+             * acceptParticipantInvite
+             * @method
+             * @name OtrService#acceptParticipantInviteUsingPUT
+             * @param {object} parameters - method options and parameters
+             * @param {} parameters.request - request
+             */
+            OtrService.prototype.acceptParticipantInviteUsingPUT = function(parameters) {
+                if (parameters === undefined) {
+                    parameters = {};
+                }
+                var deferred = $q.defer();
+                var domain = this.domain,
+                    path = '/api/v1/cases/participants/accept-invite';
+                var body = {},
+                    queryParameters = {},
+                    headers = {},
+                    form = {};
+
+                headers['Accept'] = ['*/*'];
+                headers['Content-Type'] = ['application/json'];
+
+                if (parameters['request'] !== undefined) {
+                    body = parameters['request'];
+                }
+
+                if (parameters['request'] === undefined) {
+                    deferred.reject(new Error('Missing required  parameter: request'));
+                    return deferred.promise;
+                }
+
+                queryParameters = mergeQueryParams(parameters, queryParameters);
+
+                this.request('PUT', domain + path, parameters, body, headers, queryParameters, form, deferred);
+
+                return deferred.promise;
+            };
+            /**
              * getPendingCases
              * @method
              * @name OtrService#getPendingCasesUsingGET

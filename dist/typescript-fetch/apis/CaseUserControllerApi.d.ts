@@ -10,7 +10,10 @@
  * Do not edit the class manually.
  */
 import * as runtime from '../runtime';
-import { GetCaseUsersResponse, InviteCaseParticipantRequest, ListDashboardCaseUsersResponse, SaveCaseUserRequest } from '../models';
+import { AcceptParticipantInviteRequest, GetCaseUsersResponse, InviteCaseParticipantRequest, ListDashboardCaseUsersResponse, SaveCaseUserRequest } from '../models';
+export interface AcceptParticipantInviteUsingPUTRequest {
+    request: AcceptParticipantInviteRequest;
+}
 export interface DeleteCaseUserUsingDELETERequest {
     caseId: string;
     caseUsersId: number;
@@ -35,6 +38,14 @@ export interface SaveCaseUserUsingPOSTRequest {
  *
  */
 export declare class CaseUserControllerApi extends runtime.BaseAPI {
+    /**
+     * acceptParticipantInvite
+     */
+    acceptParticipantInviteUsingPUTRaw(requestParameters: AcceptParticipantInviteUsingPUTRequest): Promise<runtime.ApiResponse<void>>;
+    /**
+     * acceptParticipantInvite
+     */
+    acceptParticipantInviteUsingPUT(requestParameters: AcceptParticipantInviteUsingPUTRequest): Promise<void>;
     /**
      * deleteCaseUser
      */
