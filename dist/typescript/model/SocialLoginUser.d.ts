@@ -12,8 +12,10 @@
 import * as models from './models';
 export interface SocialLoginUser {
     "emailAddress"?: string;
+    "emailConfirmed"?: boolean;
     "firstname"?: string;
     "intercomUserHash"?: string;
+    "isEmailConfirmed"?: boolean;
     "isEmailPrivate"?: boolean;
     "isTestUser"?: boolean;
     "lastname"?: string;

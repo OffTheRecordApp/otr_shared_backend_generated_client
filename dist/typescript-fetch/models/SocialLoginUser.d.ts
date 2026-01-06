@@ -24,6 +24,12 @@ export interface SocialLoginUser {
     emailAddress?: string;
     /**
      *
+     * @type {boolean}
+     * @memberof SocialLoginUser
+     */
+    emailConfirmed?: boolean;
+    /**
+     *
      * @type {string}
      * @memberof SocialLoginUser
      */
@@ -34,6 +40,12 @@ export interface SocialLoginUser {
      * @memberof SocialLoginUser
      */
     intercomUserHash?: string;
+    /**
+     *
+     * @type {boolean}
+     * @memberof SocialLoginUser
+     */
+    isEmailConfirmed?: boolean;
     /**
      *
      * @type {boolean}

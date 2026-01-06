@@ -512,6 +512,8 @@ model/getReferralCodeResponse.ts
 model/getReferralCodesResponse.ts
 model/getReferralsHistoryResponse.ts
 model/getRegionsWithViolationsResponse.ts
+model/getSocialProfileRequest.ts
+model/getSocialProfileResponse.ts
 model/getStripeChargeResponse.ts
 model/getStripeChargesResponse.ts
 model/getStripeConnectedAccountsResponse.ts

@@ -122,6 +122,37 @@ export class SocialLoginControllerApi {
     }
     /**
      *
+     * @summary getProfile
+     * @param loginProvider loginProvider
+     * @param request request
+     */
+    getProfileUsingPOST(loginProvider, request, extraHttpRequestParams) {
+        const localVarPath = this.basePath + '/api/v1/connect/{loginProvider}/get-profile'
+            .replace('{' + 'loginProvider' + '}', encodeURIComponent(String(loginProvider)));
+        let queryParameters = {};
+        let headerParams = Object.assign({}, this.defaultHeaders);
+        // verify required parameter 'loginProvider' is not null or undefined
+        if (loginProvider === null || loginProvider === undefined) {
+            throw new Error('Required parameter loginProvider was null or undefined when calling getProfileUsingPOST.');
+        }
+        // verify required parameter 'request' is not null or undefined
+        if (request === null || request === undefined) {
+            throw new Error('Required parameter request was null or undefined when calling getProfileUsingPOST.');
+        }
+        let httpRequestParams = {
+            method: 'POST',
+            url: localVarPath,
+            data: request,
+            params: queryParameters,
+            headers: headerParams
+        };
+        if (extraHttpRequestParams) {
+            httpRequestParams = Object.assign(httpRequestParams, extraHttpRequestParams);
+        }
+        return this.$http(httpRequestParams);
+    }
+    /**
+     *
      * @summary googleConnect
      * @param request request
      */

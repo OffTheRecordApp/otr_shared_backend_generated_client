@@ -5822,6 +5822,51 @@ angular.module('otrBackendService', [])
                 return deferred.promise;
             };
             /**
+             * getProfile
+             * @method
+             * @name OtrService#getProfileUsingPOST
+             * @param {object} parameters - method options and parameters
+             * @param {string} parameters.loginProvider - loginProvider
+             * @param {} parameters.request - request
+             */
+            OtrService.prototype.getProfileUsingPOST = function(parameters) {
+                if (parameters === undefined) {
+                    parameters = {};
+                }
+                var deferred = $q.defer();
+                var domain = this.domain,
+                    path = '/api/v1/connect/{loginProvider}/get-profile';
+                var body = {},
+                    queryParameters = {},
+                    headers = {},
+                    form = {};
+
+                headers['Accept'] = ['*/*'];
+                headers['Content-Type'] = ['application/json'];
+
+                path = path.replace('{loginProvider}', parameters['loginProvider']);
+
+                if (parameters['loginProvider'] === undefined) {
+                    deferred.reject(new Error('Missing required  parameter: loginProvider'));
+                    return deferred.promise;
+                }
+
+                if (parameters['request'] !== undefined) {
+                    body = parameters['request'];
+                }
+
+                if (parameters['request'] === undefined) {
+                    deferred.reject(new Error('Missing required  parameter: request'));
+                    return deferred.promise;
+                }
+
+                queryParameters = mergeQueryParams(parameters, queryParameters);
+
+                this.request('POST', domain + path, parameters, body, headers, queryParameters, form, deferred);
+
+                return deferred.promise;
+            };
+            /**
              * getBookings
              * @method
              * @name OtrService#getBookingsUsingPOST

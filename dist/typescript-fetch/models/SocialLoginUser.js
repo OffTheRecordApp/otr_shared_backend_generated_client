@@ -22,8 +22,10 @@ export function SocialLoginUserFromJSONTyped(json, ignoreDiscriminator) {
     }
     return {
         'emailAddress': !exists(json, 'emailAddress') ? undefined : json['emailAddress'],
+        'emailConfirmed': !exists(json, 'emailConfirmed') ? undefined : json['emailConfirmed'],
         'firstname': !exists(json, 'firstname') ? undefined : json['firstname'],
         'intercomUserHash': !exists(json, 'intercomUserHash') ? undefined : json['intercomUserHash'],
+        'isEmailConfirmed': !exists(json, 'isEmailConfirmed') ? undefined : json['isEmailConfirmed'],
         'isEmailPrivate': !exists(json, 'isEmailPrivate') ? undefined : json['isEmailPrivate'],
         'isTestUser': !exists(json, 'isTestUser') ? undefined : json['isTestUser'],
         'lastname': !exists(json, 'lastname') ? undefined : json['lastname'],
@@ -44,8 +46,10 @@ export function SocialLoginUserToJSON(value) {
     }
     return {
         'emailAddress': value.emailAddress,
+        'emailConfirmed': value.emailConfirmed,
         'firstname': value.firstname,
         'intercomUserHash': value.intercomUserHash,
+        'isEmailConfirmed': value.isEmailConfirmed,
         'isEmailPrivate': value.isEmailPrivate,
         'isTestUser': value.isTestUser,
         'lastname': value.lastname,

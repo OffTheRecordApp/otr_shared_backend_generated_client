@@ -21,7 +21,7 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
     });
 };
 import * as runtime from '../runtime';
-import { AppleLoginRequestToJSON, GoogleLoginRequestToJSON, SocialLoginRequestToJSON, SocialLoginResponseFromJSON, } from '../models';
+import { AppleLoginRequestToJSON, GetSocialProfileRequestToJSON, GetSocialProfileResponseFromJSON, GoogleLoginRequestToJSON, SocialLoginRequestToJSON, SocialLoginResponseFromJSON, } from '../models';
 /**
  *
  */
@@ -147,6 +147,39 @@ export class SocialLoginControllerApi extends runtime.BaseAPI {
         });
     }
     /**
+     * getProfile
+     */
+    getProfileUsingPOSTRaw(requestParameters) {
+        return __awaiter(this, void 0, void 0, function* () {
+            if (requestParameters.loginProvider === null || requestParameters.loginProvider === undefined) {
+                throw new runtime.RequiredError('loginProvider', 'Required parameter requestParameters.loginProvider was null or undefined when calling getProfileUsingPOST.');
+            }
+            if (requestParameters.request === null || requestParameters.request === undefined) {
+                throw new runtime.RequiredError('request', 'Required parameter requestParameters.request was null or undefined when calling getProfileUsingPOST.');
+            }
+            const queryParameters = {};
+            const headerParameters = {};
+            headerParameters['Content-Type'] = 'application/json';
+            const response = yield this.request({
+                path: `/api/v1/connect/{loginProvider}/get-profile`.replace(`{${"loginProvider"}}`, encodeURIComponent(String(requestParameters.loginProvider))),
+                method: 'POST',
+                headers: headerParameters,
+                query: queryParameters,
+                body: GetSocialProfileRequestToJSON(requestParameters.request),
+            });
+            return new runtime.JSONApiResponse(response, (jsonValue) => GetSocialProfileResponseFromJSON(jsonValue));
+        });
+    }
+    /**
+     * getProfile
+     */
+    getProfileUsingPOST(requestParameters) {
+        return __awaiter(this, void 0, void 0, function* () {
+            const response = yield this.getProfileUsingPOSTRaw(requestParameters);
+            return yield response.value();
+        });
+    }
+    /**
      * googleConnect
      */
     googleConnectUsingPOSTRaw(requestParameters) {
@@ -207,3 +240,17 @@ export class SocialLoginControllerApi extends runtime.BaseAPI {
         });
     }
 }
+/**
+    * @export
+    * @enum {string}
+    */
+export var GetProfileUsingPOSTLoginProviderEnum;
+(function (GetProfileUsingPOSTLoginProviderEnum) {
+    GetProfileUsingPOSTLoginProviderEnum["APPLE"] = "APPLE";
+    GetProfileUsingPOSTLoginProviderEnum["EMAIL"] = "EMAIL";
+    GetProfileUsingPOSTLoginProviderEnum["FACEBOOK"] = "FACEBOOK";
+    GetProfileUsingPOSTLoginProviderEnum["GOOGLE"] = "GOOGLE";
+    GetProfileUsingPOSTLoginProviderEnum["PHONE"] = "PHONE";
+    GetProfileUsingPOSTLoginProviderEnum["TWITTER"] = "TWITTER";
+    GetProfileUsingPOSTLoginProviderEnum["UNKNOWN"] = "UNKNOWN";
+})(GetProfileUsingPOSTLoginProviderEnum || (GetProfileUsingPOSTLoginProviderEnum = {}));

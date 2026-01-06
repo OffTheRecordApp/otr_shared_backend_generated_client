@@ -10,7 +10,7 @@
  * Do not edit the class manually.
  */
 import * as runtime from '../runtime';
-import { AppleLoginRequest, GoogleLoginRequest, SocialLoginRequest, SocialLoginResponse } from '../models';
+import { AppleLoginRequest, GetSocialProfileRequest, GetSocialProfileResponse, GoogleLoginRequest, SocialLoginRequest, SocialLoginResponse } from '../models';
 export interface AppleConnectUsingPOSTRequest {
     request: AppleLoginRequest;
 }
@@ -22,6 +22,10 @@ export interface FacebookConnectUsingPOSTRequest {
 }
 export interface FacebookConnectUsingPOST1Request {
     request: SocialLoginRequest;
+}
+export interface GetProfileUsingPOSTRequest {
+    loginProvider: GetProfileUsingPOSTLoginProviderEnum;
+    request: GetSocialProfileRequest;
 }
 export interface GoogleConnectUsingPOSTRequest {
     request: GoogleLoginRequest;
@@ -66,6 +70,14 @@ export declare class SocialLoginControllerApi extends runtime.BaseAPI {
      */
     facebookConnectUsingPOST1(requestParameters: FacebookConnectUsingPOST1Request): Promise<SocialLoginResponse>;
     /**
+     * getProfile
+     */
+    getProfileUsingPOSTRaw(requestParameters: GetProfileUsingPOSTRequest): Promise<runtime.ApiResponse<GetSocialProfileResponse>>;
+    /**
+     * getProfile
+     */
+    getProfileUsingPOST(requestParameters: GetProfileUsingPOSTRequest): Promise<GetSocialProfileResponse>;
+    /**
      * googleConnect
      */
     googleConnectUsingPOSTRaw(requestParameters: GoogleConnectUsingPOSTRequest): Promise<runtime.ApiResponse<SocialLoginResponse>>;
@@ -81,4 +93,17 @@ export declare class SocialLoginControllerApi extends runtime.BaseAPI {
      * googleConnect
      */
     googleConnectUsingPOST1(requestParameters: GoogleConnectUsingPOST1Request): Promise<SocialLoginResponse>;
+}
+/**
+    * @export
+    * @enum {string}
+    */
+export declare enum GetProfileUsingPOSTLoginProviderEnum {
+    APPLE = "APPLE",
+    EMAIL = "EMAIL",
+    FACEBOOK = "FACEBOOK",
+    GOOGLE = "GOOGLE",
+    PHONE = "PHONE",
+    TWITTER = "TWITTER",
+    UNKNOWN = "UNKNOWN"
 }

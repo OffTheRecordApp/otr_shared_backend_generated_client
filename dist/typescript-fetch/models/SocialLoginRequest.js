@@ -32,6 +32,7 @@ export function SocialLoginRequestFromJSONTyped(json, ignoreDiscriminator) {
         'referralSourceData': !exists(json, 'referralSourceData') ? undefined : json['referralSourceData'],
         'userAccessToken': !exists(json, 'userAccessToken') ? undefined : json['userAccessToken'],
         'userReferralSourceTypeId': !exists(json, 'userReferralSourceTypeId') ? undefined : json['userReferralSourceTypeId'],
+        'verifyEmailCode': !exists(json, 'verifyEmailCode') ? undefined : json['verifyEmailCode'],
     };
 }
 export function SocialLoginRequestToJSON(value) {
@@ -54,6 +55,7 @@ export function SocialLoginRequestToJSON(value) {
         'referralSourceData': value.referralSourceData,
         'userAccessToken': value.userAccessToken,
         'userReferralSourceTypeId': value.userReferralSourceTypeId,
+        'verifyEmailCode': value.verifyEmailCode,
     };
 }
 /**

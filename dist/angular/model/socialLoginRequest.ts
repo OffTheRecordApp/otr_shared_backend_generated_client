@@ -24,6 +24,7 @@ export interface SocialLoginRequest {
     referralSourceData?: { [key: string]: object; };
     userAccessToken?: string;
     userReferralSourceTypeId?: number;
+    verifyEmailCode?: string;
 }
 export namespace SocialLoginRequest {
     export type AccessTypeEnum = 'classic' | 'limited';

@@ -24,6 +24,7 @@ export interface SocialLoginRequest {
     };
     "userAccessToken"?: string;
     "userReferralSourceTypeId"?: number;
+    "verifyEmailCode"?: string;
 }
 export declare namespace SocialLoginRequest {
     enum AccessTypeEnum {

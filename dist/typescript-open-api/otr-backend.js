@@ -439,6 +439,16 @@ export var PathsApiV1ReferralsSourcesGetParametersQueryFlavor;
     PathsApiV1ReferralsSourcesGetParametersQueryFlavor["ALL"] = "ALL";
     PathsApiV1ReferralsSourcesGetParametersQueryFlavor["ENABLED"] = "ENABLED";
 })(PathsApiV1ReferralsSourcesGetParametersQueryFlavor || (PathsApiV1ReferralsSourcesGetParametersQueryFlavor = {}));
+export var PathsApiV1ConnectLoginProviderGetProfilePostParametersPathLoginProvider;
+(function (PathsApiV1ConnectLoginProviderGetProfilePostParametersPathLoginProvider) {
+    PathsApiV1ConnectLoginProviderGetProfilePostParametersPathLoginProvider["APPLE"] = "APPLE";
+    PathsApiV1ConnectLoginProviderGetProfilePostParametersPathLoginProvider["EMAIL"] = "EMAIL";
+    PathsApiV1ConnectLoginProviderGetProfilePostParametersPathLoginProvider["FACEBOOK"] = "FACEBOOK";
+    PathsApiV1ConnectLoginProviderGetProfilePostParametersPathLoginProvider["GOOGLE"] = "GOOGLE";
+    PathsApiV1ConnectLoginProviderGetProfilePostParametersPathLoginProvider["PHONE"] = "PHONE";
+    PathsApiV1ConnectLoginProviderGetProfilePostParametersPathLoginProvider["TWITTER"] = "TWITTER";
+    PathsApiV1ConnectLoginProviderGetProfilePostParametersPathLoginProvider["UNKNOWN"] = "UNKNOWN";
+})(PathsApiV1ConnectLoginProviderGetProfilePostParametersPathLoginProvider || (PathsApiV1ConnectLoginProviderGetProfilePostParametersPathLoginProvider = {}));
 export var PathsApiV1RedirectsGetParametersQueryPageType;
 (function (PathsApiV1RedirectsGetParametersQueryPageType) {
     PathsApiV1RedirectsGetParametersQueryPageType["DEBUG"] = "DEBUG";
@@ -475,16 +485,6 @@ export var PathsApiV1UsersSendVerificationCodePostParametersQueryVerificationMet
     PathsApiV1UsersSendVerificationCodePostParametersQueryVerificationMethod["CODE_ONLY"] = "CODE_ONLY";
     PathsApiV1UsersSendVerificationCodePostParametersQueryVerificationMethod["WEB_LINK"] = "WEB_LINK";
 })(PathsApiV1UsersSendVerificationCodePostParametersQueryVerificationMethod || (PathsApiV1UsersSendVerificationCodePostParametersQueryVerificationMethod = {}));
-export var PathsApiV1UsersVerifyAccountPutParametersQueryLoginProvider;
-(function (PathsApiV1UsersVerifyAccountPutParametersQueryLoginProvider) {
-    PathsApiV1UsersVerifyAccountPutParametersQueryLoginProvider["APPLE"] = "APPLE";
-    PathsApiV1UsersVerifyAccountPutParametersQueryLoginProvider["EMAIL"] = "EMAIL";
-    PathsApiV1UsersVerifyAccountPutParametersQueryLoginProvider["FACEBOOK"] = "FACEBOOK";
-    PathsApiV1UsersVerifyAccountPutParametersQueryLoginProvider["GOOGLE"] = "GOOGLE";
-    PathsApiV1UsersVerifyAccountPutParametersQueryLoginProvider["PHONE"] = "PHONE";
-    PathsApiV1UsersVerifyAccountPutParametersQueryLoginProvider["TWITTER"] = "TWITTER";
-    PathsApiV1UsersVerifyAccountPutParametersQueryLoginProvider["UNKNOWN"] = "UNKNOWN";
-})(PathsApiV1UsersVerifyAccountPutParametersQueryLoginProvider || (PathsApiV1UsersVerifyAccountPutParametersQueryLoginProvider = {}));
 export var PathsApiV1UsersUserIdSocialProfilesDeleteParametersQueryPlatform;
 (function (PathsApiV1UsersUserIdSocialProfilesDeleteParametersQueryPlatform) {
     PathsApiV1UsersUserIdSocialProfilesDeleteParametersQueryPlatform["INSTAGRAM"] = "INSTAGRAM";
@@ -986,6 +986,11 @@ export var GetReferralCodeResponseOwnerType;
     GetReferralCodeResponseOwnerType["LAWFIRM"] = "LAWFIRM";
     GetReferralCodeResponseOwnerType["OTR"] = "OTR";
 })(GetReferralCodeResponseOwnerType || (GetReferralCodeResponseOwnerType = {}));
+export var GetSocialProfileRequestAccessType;
+(function (GetSocialProfileRequestAccessType) {
+    GetSocialProfileRequestAccessType["classic"] = "classic";
+    GetSocialProfileRequestAccessType["limited"] = "limited";
+})(GetSocialProfileRequestAccessType || (GetSocialProfileRequestAccessType = {}));
 export var HypotheticalPlanEligibilityModelHypotheticalEligibility;
 (function (HypotheticalPlanEligibilityModelHypotheticalEligibility) {
     HypotheticalPlanEligibilityModelHypotheticalEligibility["FULLY_ELIGIBLE"] = "FULLY_ELIGIBLE";
@@ -1311,11 +1316,6 @@ export var SettingResponseType;
     SettingResponseType["List"] = "List";
     SettingResponseType["String"] = "String";
 })(SettingResponseType || (SettingResponseType = {}));
-export var SocialLoginRequestAccessType;
-(function (SocialLoginRequestAccessType) {
-    SocialLoginRequestAccessType["classic"] = "classic";
-    SocialLoginRequestAccessType["limited"] = "limited";
-})(SocialLoginRequestAccessType || (SocialLoginRequestAccessType = {}));
 export var SourceDelivered_as;
 (function (SourceDelivered_as) {
     SourceDelivered_as["ADMIN_INITIATED"] = "ADMIN_INITIATED";

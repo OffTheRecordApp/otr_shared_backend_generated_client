@@ -89,6 +89,12 @@ export interface SocialLoginRequest {
      * @memberof SocialLoginRequest
      */
     userReferralSourceTypeId?: number;
+    /**
+     *
+     * @type {string}
+     * @memberof SocialLoginRequest
+     */
+    verifyEmailCode?: string;
 }
 export declare function SocialLoginRequestFromJSON(json: any): SocialLoginRequest;
 export declare function SocialLoginRequestFromJSONTyped(json: any, ignoreDiscriminator: boolean): SocialLoginRequest;

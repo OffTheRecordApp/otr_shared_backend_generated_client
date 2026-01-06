@@ -43,6 +43,13 @@ export declare class SocialLoginControllerApi {
     facebookConnectUsingPOST1(request: models.SocialLoginRequest, extraHttpRequestParams?: any): ng.IHttpPromise<models.SocialLoginResponse>;
     /**
      *
+     * @summary getProfile
+     * @param loginProvider loginProvider
+     * @param request request
+     */
+    getProfileUsingPOST(loginProvider: 'APPLE' | 'EMAIL' | 'FACEBOOK' | 'GOOGLE' | 'PHONE' | 'TWITTER' | 'UNKNOWN', request: models.GetSocialProfileRequest, extraHttpRequestParams?: any): ng.IHttpPromise<models.GetSocialProfileResponse>;
+    /**
+     *
      * @summary googleConnect
      * @param request request
      */

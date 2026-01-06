@@ -386,6 +386,8 @@ export * from './GetReferralCodeResponse';
 export * from './GetReferralCodesResponse';
 export * from './GetReferralsHistoryResponse';
 export * from './GetRegionsWithViolationsResponse';
+export * from './GetSocialProfileRequest';
+export * from './GetSocialProfileResponse';
 export * from './GetStripeChargeResponse';
 export * from './GetStripeChargesResponse';
 export * from './GetStripeConnectedAccountsResponse';

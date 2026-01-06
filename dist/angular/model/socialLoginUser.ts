@@ -15,8 +15,10 @@ import { UserRoleDomain } from './userRoleDomain';
 
 export interface SocialLoginUser { 
     emailAddress?: string;
+    emailConfirmed?: boolean;
     firstname?: string;
     intercomUserHash?: string;
+    isEmailConfirmed?: boolean;
     isEmailPrivate?: boolean;
     isTestUser?: boolean;
     lastname?: string;

@@ -5755,6 +5755,23 @@ export interface paths {
         patch?: never;
         trace?: never;
     };
+    "/api/v1/connect/{loginProvider}/get-profile": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        get?: never;
+        put?: never;
+        /** getProfile */
+        post: operations["getProfileUsingPOST"];
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
     "/api/v1/lawfirms/{lawfirmId}/paymentmethods": {
         parameters: {
             query?: never;
@@ -7828,7 +7845,7 @@ export interface components {
             firstName?: string;
             lastName?: string;
             /** @enum {string} */
-            loginProvider: PathsApiV1UsersVerifyAccountPutParametersQueryLoginProvider;
+            loginProvider: PathsApiV1ConnectLoginProviderGetProfilePostParametersPathLoginProvider;
             providerToken: string;
         };
         /** AssociateOAuthAccountResponse */
@@ -10368,7 +10385,7 @@ export interface components {
             isTestUser?: boolean;
             lastname?: string;
             /** @enum {string} */
-            loginProvider?: PathsApiV1UsersVerifyAccountPutParametersQueryLoginProvider;
+            loginProvider?: PathsApiV1ConnectLoginProviderGetProfilePostParametersPathLoginProvider;
             profilePictureUrl?: string;
             roles?: components["schemas"]["UserRoleDomain"][];
             unsubscribed?: boolean;
@@ -11564,6 +11581,17 @@ export interface components {
         GetRegionsWithViolationsResponse: {
             regions?: components["schemas"]["AvailableRegion"][];
         };
+        /** GetSocialProfileRequest */
+        GetSocialProfileRequest: {
+            /** @enum {string} */
+            accessType?: GetSocialProfileRequestAccessType;
+            userAccessToken: string;
+        };
+        /** GetSocialProfileResponse */
+        GetSocialProfileResponse: {
+            emailAddress?: string;
+            newAccount?: boolean;
+        };
         /** GetStripeChargeResponse */
         GetStripeChargeResponse: {
             stripeCharge?: components["schemas"]["StripeChargeDomain"];
@@ -12066,7 +12094,7 @@ export interface components {
             /** Format: date-time */
             loginDateUtc?: string;
             /** @enum {string} */
-            socialLoginProvider?: PathsApiV1UsersVerifyAccountPutParametersQueryLoginProvider;
+            socialLoginProvider?: PathsApiV1ConnectLoginProviderGetProfilePostParametersPathLoginProvider;
             userHandle?: string;
         };
         /** LastLoginDateModel */
@@ -13552,7 +13580,7 @@ export interface components {
             isEmailConfirmed?: boolean;
             lastname?: string;
             /** @enum {string} */
-            loginProvider?: PathsApiV1UsersVerifyAccountPutParametersQueryLoginProvider;
+            loginProvider?: PathsApiV1ConnectLoginProviderGetProfilePostParametersPathLoginProvider;
             password?: string;
             phoneNumbers?: components["schemas"]["PhoneNumberDomain"][];
             shouldOptInForMarketingNotifications?: boolean;
@@ -14155,7 +14183,7 @@ export interface components {
             genderType?: CaseGender;
             lastname?: string;
             /** @enum {string} */
-            loginProvider?: PathsApiV1UsersVerifyAccountPutParametersQueryLoginProvider;
+            loginProvider?: PathsApiV1ConnectLoginProviderGetProfilePostParametersPathLoginProvider;
             /** Format: int32 */
             numBookingCancelations?: number;
             /** Format: int32 */
@@ -14172,7 +14200,7 @@ export interface components {
         /** RemoveAdditionalUserHandleRequest */
         RemoveAdditionalUserHandleRequest: {
             /** @enum {string} */
-            loginProvider?: PathsApiV1UsersVerifyAccountPutParametersQueryLoginProvider;
+            loginProvider?: PathsApiV1ConnectLoginProviderGetProfilePostParametersPathLoginProvider;
         };
         /** RemoveCoverageRequest */
         RemoveCoverageRequest: {
@@ -14762,7 +14790,7 @@ export interface components {
         /** SetPrimaryUserHandleRequest */
         SetPrimaryUserHandleRequest: {
             /** @enum {string} */
-            loginProvider?: PathsApiV1UsersVerifyAccountPutParametersQueryLoginProvider;
+            loginProvider?: PathsApiV1ConnectLoginProviderGetProfilePostParametersPathLoginProvider;
         };
         /** SetReferralSourceRequest */
         SetReferralSourceRequest: {
@@ -14857,7 +14885,7 @@ export interface components {
         /** SocialLoginRequest */
         SocialLoginRequest: {
             /** @enum {string} */
-            accessType?: SocialLoginRequestAccessType;
+            accessType?: GetSocialProfileRequestAccessType;
             /** Format: int64 */
             citationId?: number;
             /** @enum {string} */
@@ -14874,6 +14902,7 @@ export interface components {
             userAccessToken?: string;
             /** Format: int32 */
             userReferralSourceTypeId?: number;
+            verifyEmailCode?: string;
         };
         /** SocialLoginResponse */
         SocialLoginResponse: {
@@ -14885,8 +14914,10 @@ export interface components {
         /** SocialLoginUser */
         SocialLoginUser: {
             emailAddress?: string;
+            emailConfirmed?: boolean;
             firstname?: string;
             intercomUserHash?: string;
+            isEmailConfirmed?: boolean;
             isEmailPrivate?: boolean;
             isTestUser?: boolean;
             lastname?: string;
@@ -15917,7 +15948,7 @@ export interface components {
             isUserAccountEnabled?: boolean;
             lastname?: string;
             /** @enum {string} */
-            loginProvider?: PathsApiV1UsersVerifyAccountPutParametersQueryLoginProvider;
+            loginProvider?: PathsApiV1ConnectLoginProviderGetProfilePostParametersPathLoginProvider;
             /** @enum {string} */
             privacyMode?: ActivityFeedModelPrivacyMode;
             profilePicture?: string;
@@ -16000,7 +16031,7 @@ export interface components {
             formerUserId?: number;
             lastLoginAttributes?: components["schemas"]["LastLoginAttributes"];
             /** @enum {string} */
-            loginProvider?: PathsApiV1UsersVerifyAccountPutParametersQueryLoginProvider;
+            loginProvider?: PathsApiV1ConnectLoginProviderGetProfilePostParametersPathLoginProvider;
             merged?: boolean;
             primary?: boolean;
             profilePictureUrl?: string;
@@ -16092,7 +16123,7 @@ export interface components {
             lawfirmId?: number;
             lawyerJobTitle?: components["schemas"]["LawfirmJobTitleModel"];
             /** @enum {string} */
-            loginProvider?: PathsApiV1UsersVerifyAccountPutParametersQueryLoginProvider;
+            loginProvider?: PathsApiV1ConnectLoginProviderGetProfilePostParametersPathLoginProvider;
             /** Format: int32 */
             numBookingCancelations?: number;
             /** Format: int32 */
@@ -16161,7 +16192,7 @@ export interface components {
             lawfirmId?: number;
             lawyerJobTitle?: components["schemas"]["LawfirmJobTitleModelReq"];
             /** @enum {string} */
-            loginProvider?: PathsApiV1UsersVerifyAccountPutParametersQueryLoginProvider;
+            loginProvider?: PathsApiV1ConnectLoginProviderGetProfilePostParametersPathLoginProvider;
             /** Format: int32 */
             numBookingCancelations?: number;
             /** Format: int32 */
@@ -16231,7 +16262,7 @@ export interface components {
             lawfirmId?: number;
             lawyerJobTitle?: components["schemas"]["LawfirmJobTitleModelRes"];
             /** @enum {string} */
-            loginProvider?: PathsApiV1UsersVerifyAccountPutParametersQueryLoginProvider;
+            loginProvider?: PathsApiV1ConnectLoginProviderGetProfilePostParametersPathLoginProvider;
             /** Format: int32 */
             numBookingCancelations?: number;
             /** Format: int32 */
@@ -35514,6 +35545,61 @@ export interface operations {
             };
         };
     };
+    getProfileUsingPOST: {
+        parameters: {
+            query?: never;
+            header?: never;
+            path: {
+                /** @description loginProvider */
+                loginProvider: PathsApiV1ConnectLoginProviderGetProfilePostParametersPathLoginProvider;
+            };
+            cookie?: never;
+        };
+        requestBody?: {
+            content: {
+                "application/json": components["schemas"]["GetSocialProfileRequest"];
+            };
+        };
+        responses: {
+            /** @description OK */
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "*/*": components["schemas"]["GetSocialProfileResponse"];
+                };
+            };
+            /** @description Created */
+            201: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content?: never;
+            };
+            /** @description Unauthorized */
+            401: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content?: never;
+            };
+            /** @description Forbidden */
+            403: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content?: never;
+            };
+            /** @description Not Found */
+            404: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content?: never;
+            };
+        };
+    };
     getLawfirmPaymentMethodsUsingGET: {
         parameters: {
             query?: never;
@@ -38391,7 +38477,7 @@ export interface operations {
                 /** @description email */
                 email?: string;
                 /** @description loginProvider */
-                loginProvider?: PathsApiV1UsersVerifyAccountPutParametersQueryLoginProvider;
+                loginProvider?: PathsApiV1ConnectLoginProviderGetProfilePostParametersPathLoginProvider;
             };
             header?: never;
             path?: never;
@@ -40907,6 +40993,15 @@ export declare enum PathsApiV1ReferralsSourcesGetParametersQueryFlavor {
     ALL = "ALL",
     ENABLED = "ENABLED"
 }
+export declare enum PathsApiV1ConnectLoginProviderGetProfilePostParametersPathLoginProvider {
+    APPLE = "APPLE",
+    EMAIL = "EMAIL",
+    FACEBOOK = "FACEBOOK",
+    GOOGLE = "GOOGLE",
+    PHONE = "PHONE",
+    TWITTER = "TWITTER",
+    UNKNOWN = "UNKNOWN"
+}
 export declare enum PathsApiV1RedirectsGetParametersQueryPageType {
     DEBUG = "DEBUG",
     SEO = "SEO",
@@ -40939,15 +41034,6 @@ export declare enum PathsApiV1ApiV1UsersUserIdLastLoginGetParametersQueryClients
 export declare enum PathsApiV1UsersSendVerificationCodePostParametersQueryVerificationMethod {
     CODE_ONLY = "CODE_ONLY",
     WEB_LINK = "WEB_LINK"
-}
-export declare enum PathsApiV1UsersVerifyAccountPutParametersQueryLoginProvider {
-    APPLE = "APPLE",
-    EMAIL = "EMAIL",
-    FACEBOOK = "FACEBOOK",
-    GOOGLE = "GOOGLE",
-    PHONE = "PHONE",
-    TWITTER = "TWITTER",
-    UNKNOWN = "UNKNOWN"
 }
 export declare enum PathsApiV1UsersUserIdSocialProfilesDeleteParametersQueryPlatform {
     INSTAGRAM = "INSTAGRAM",
@@ -41392,6 +41478,10 @@ export declare enum GetReferralCodeResponseOwnerType {
     LAWFIRM = "LAWFIRM",
     OTR = "OTR"
 }
+export declare enum GetSocialProfileRequestAccessType {
+    classic = "classic",
+    limited = "limited"
+}
 export declare enum HypotheticalPlanEligibilityModelHypotheticalEligibility {
     FULLY_ELIGIBLE = "FULLY_ELIGIBLE",
     NOT_ELIGIBLE = "NOT_ELIGIBLE",
@@ -41674,10 +41764,6 @@ export declare enum SettingResponseType {
     Integer = "Integer",
     List = "List",
     String = "String"
-}
-export declare enum SocialLoginRequestAccessType {
-    classic = "classic",
-    limited = "limited"
 }
 export declare enum SourceDelivered_as {
     ADMIN_INITIATED = "ADMIN_INITIATED",
