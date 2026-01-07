@@ -3256,6 +3256,51 @@ angular.module('otrBackendService', [])
                 return deferred.promise;
             };
             /**
+             * resendCaseParticipantInvite
+             * @method
+             * @name OtrService#resendCaseParticipantInviteUsingPOST
+             * @param {object} parameters - method options and parameters
+             * @param {string} parameters.caseId - caseId
+             * @param {string} parameters.emailAddress - emailAddress
+             */
+            OtrService.prototype.resendCaseParticipantInviteUsingPOST = function(parameters) {
+                if (parameters === undefined) {
+                    parameters = {};
+                }
+                var deferred = $q.defer();
+                var domain = this.domain,
+                    path = '/api/v1/cases/{caseId}/participants/resend-invite';
+                var body = {},
+                    queryParameters = {},
+                    headers = {},
+                    form = {};
+
+                headers['Accept'] = ['*/*'];
+                headers['Content-Type'] = ['application/json'];
+
+                path = path.replace('{caseId}', parameters['caseId']);
+
+                if (parameters['caseId'] === undefined) {
+                    deferred.reject(new Error('Missing required  parameter: caseId'));
+                    return deferred.promise;
+                }
+
+                if (parameters['emailAddress'] !== undefined) {
+                    queryParameters['emailAddress'] = parameters['emailAddress'];
+                }
+
+                if (parameters['emailAddress'] === undefined) {
+                    deferred.reject(new Error('Missing required  parameter: emailAddress'));
+                    return deferred.promise;
+                }
+
+                queryParameters = mergeQueryParams(parameters, queryParameters);
+
+                this.request('POST', domain + path, parameters, body, headers, queryParameters, form, deferred);
+
+                return deferred.promise;
+            };
+            /**
              * getPaymentPlanOptions
              * @method
              * @name OtrService#getPaymentPlanOptionsUsingGET

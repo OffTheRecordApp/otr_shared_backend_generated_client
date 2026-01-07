@@ -53,6 +53,13 @@ export declare class CaseUserControllerApi {
     listDashboardCaseUsersUsingGET(userId: number, isDefendant?: boolean, extraHttpRequestParams?: any): ng.IHttpPromise<models.ListDashboardCaseUsersResponse>;
     /**
      *
+     * @summary resendCaseParticipantInvite
+     * @param caseId caseId
+     * @param emailAddress emailAddress
+     */
+    resendCaseParticipantInviteUsingPOST(caseId: string, emailAddress: string, extraHttpRequestParams?: any): ng.IHttpPromise<{}>;
+    /**
+     *
      * @summary saveCaseUser
      * @param caseId caseId
      * @param request request

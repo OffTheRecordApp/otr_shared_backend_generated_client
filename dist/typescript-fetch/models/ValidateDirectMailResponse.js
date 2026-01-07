@@ -189,6 +189,7 @@ export var ValidateDirectMailResponseOtrErrorEnum;
     ValidateDirectMailResponseOtrErrorEnum["INVALIDUSERNAME"] = "INVALID_USER_NAME";
     ValidateDirectMailResponseOtrErrorEnum["INVITATIONALREADYSENT"] = "INVITATION_ALREADY_SENT";
     ValidateDirectMailResponseOtrErrorEnum["INVITATIONALREADYVERIFIED"] = "INVITATION_ALREADY_VERIFIED";
+    ValidateDirectMailResponseOtrErrorEnum["INVITATIONALREADYVERIFIEDBYRECIPIENT"] = "INVITATION_ALREADY_VERIFIED_BY_RECIPIENT";
     ValidateDirectMailResponseOtrErrorEnum["INVITATIONCANCELLED"] = "INVITATION_CANCELLED";
     ValidateDirectMailResponseOtrErrorEnum["INVITATIONHASEXPIRED"] = "INVITATION_HAS_EXPIRED";
     ValidateDirectMailResponseOtrErrorEnum["INVITATIONRECIPIENTNOACCOUNT"] = "INVITATION_RECIPIENT_NO_ACCOUNT";

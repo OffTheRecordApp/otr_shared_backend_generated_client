@@ -180,6 +180,39 @@ export class CaseUserControllerApi extends runtime.BaseAPI {
         });
     }
     /**
+     * resendCaseParticipantInvite
+     */
+    resendCaseParticipantInviteUsingPOSTRaw(requestParameters) {
+        return __awaiter(this, void 0, void 0, function* () {
+            if (requestParameters.caseId === null || requestParameters.caseId === undefined) {
+                throw new runtime.RequiredError('caseId', 'Required parameter requestParameters.caseId was null or undefined when calling resendCaseParticipantInviteUsingPOST.');
+            }
+            if (requestParameters.emailAddress === null || requestParameters.emailAddress === undefined) {
+                throw new runtime.RequiredError('emailAddress', 'Required parameter requestParameters.emailAddress was null or undefined when calling resendCaseParticipantInviteUsingPOST.');
+            }
+            const queryParameters = {};
+            if (requestParameters.emailAddress !== undefined) {
+                queryParameters['emailAddress'] = requestParameters.emailAddress;
+            }
+            const headerParameters = {};
+            const response = yield this.request({
+                path: `/api/v1/cases/{caseId}/participants/resend-invite`.replace(`{${"caseId"}}`, encodeURIComponent(String(requestParameters.caseId))),
+                method: 'POST',
+                headers: headerParameters,
+                query: queryParameters,
+            });
+            return new runtime.VoidApiResponse(response);
+        });
+    }
+    /**
+     * resendCaseParticipantInvite
+     */
+    resendCaseParticipantInviteUsingPOST(requestParameters) {
+        return __awaiter(this, void 0, void 0, function* () {
+            yield this.resendCaseParticipantInviteUsingPOSTRaw(requestParameters);
+        });
+    }
+    /**
      * saveCaseUser
      */
     saveCaseUserUsingPOSTRaw(requestParameters) {

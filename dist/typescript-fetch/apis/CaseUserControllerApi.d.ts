@@ -30,6 +30,10 @@ export interface ListDashboardCaseUsersUsingGETRequest {
     userId: number;
     isDefendant?: boolean;
 }
+export interface ResendCaseParticipantInviteUsingPOSTRequest {
+    caseId: string;
+    emailAddress: string;
+}
 export interface SaveCaseUserUsingPOSTRequest {
     caseId: string;
     request: SaveCaseUserRequest;
@@ -78,6 +82,14 @@ export declare class CaseUserControllerApi extends runtime.BaseAPI {
      * listDashboardCaseUsers
      */
     listDashboardCaseUsersUsingGET(requestParameters: ListDashboardCaseUsersUsingGETRequest): Promise<ListDashboardCaseUsersResponse>;
+    /**
+     * resendCaseParticipantInvite
+     */
+    resendCaseParticipantInviteUsingPOSTRaw(requestParameters: ResendCaseParticipantInviteUsingPOSTRequest): Promise<runtime.ApiResponse<void>>;
+    /**
+     * resendCaseParticipantInvite
+     */
+    resendCaseParticipantInviteUsingPOST(requestParameters: ResendCaseParticipantInviteUsingPOSTRequest): Promise<void>;
     /**
      * saveCaseUser
      */

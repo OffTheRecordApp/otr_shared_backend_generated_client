@@ -167,6 +167,39 @@ export class CaseUserControllerApi {
     }
     /**
      *
+     * @summary resendCaseParticipantInvite
+     * @param caseId caseId
+     * @param emailAddress emailAddress
+     */
+    resendCaseParticipantInviteUsingPOST(caseId, emailAddress, extraHttpRequestParams) {
+        const localVarPath = this.basePath + '/api/v1/cases/{caseId}/participants/resend-invite'
+            .replace('{' + 'caseId' + '}', encodeURIComponent(String(caseId)));
+        let queryParameters = {};
+        let headerParams = Object.assign({}, this.defaultHeaders);
+        // verify required parameter 'caseId' is not null or undefined
+        if (caseId === null || caseId === undefined) {
+            throw new Error('Required parameter caseId was null or undefined when calling resendCaseParticipantInviteUsingPOST.');
+        }
+        // verify required parameter 'emailAddress' is not null or undefined
+        if (emailAddress === null || emailAddress === undefined) {
+            throw new Error('Required parameter emailAddress was null or undefined when calling resendCaseParticipantInviteUsingPOST.');
+        }
+        if (emailAddress !== undefined) {
+            queryParameters['emailAddress'] = emailAddress;
+        }
+        let httpRequestParams = {
+            method: 'POST',
+            url: localVarPath,
+            params: queryParameters,
+            headers: headerParams
+        };
+        if (extraHttpRequestParams) {
+            httpRequestParams = Object.assign(httpRequestParams, extraHttpRequestParams);
+        }
+        return this.$http(httpRequestParams);
+    }
+    /**
+     *
      * @summary saveCaseUser
      * @param caseId caseId
      * @param request request

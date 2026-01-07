@@ -1500,6 +1500,7 @@ export var ValidateDirectMailResponseOtrError;
     ValidateDirectMailResponseOtrError["INVALID_USER_NAME"] = "INVALID_USER_NAME";
     ValidateDirectMailResponseOtrError["INVITATION_ALREADY_SENT"] = "INVITATION_ALREADY_SENT";
     ValidateDirectMailResponseOtrError["INVITATION_ALREADY_VERIFIED"] = "INVITATION_ALREADY_VERIFIED";
+    ValidateDirectMailResponseOtrError["INVITATION_ALREADY_VERIFIED_BY_RECIPIENT"] = "INVITATION_ALREADY_VERIFIED_BY_RECIPIENT";
     ValidateDirectMailResponseOtrError["INVITATION_CANCELLED"] = "INVITATION_CANCELLED";
     ValidateDirectMailResponseOtrError["INVITATION_HAS_EXPIRED"] = "INVITATION_HAS_EXPIRED";
     ValidateDirectMailResponseOtrError["INVITATION_RECIPIENT_NO_ACCOUNT"] = "INVITATION_RECIPIENT_NO_ACCOUNT";

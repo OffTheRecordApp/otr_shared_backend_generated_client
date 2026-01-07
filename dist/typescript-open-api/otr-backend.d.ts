@@ -1317,6 +1317,23 @@ export interface paths {
         patch?: never;
         trace?: never;
     };
+    "/api/v1/cases/{caseId}/participants/resend-invite": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        get?: never;
+        put?: never;
+        /** resendCaseParticipantInvite */
+        post: operations["resendCaseParticipantInviteUsingPOST"];
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
     "/api/v1/cases/{caseId}/users": {
         parameters: {
             query?: never;
@@ -20927,6 +20944,58 @@ export interface operations {
                 "application/json": components["schemas"]["InviteCaseParticipantRequest"];
             };
         };
+        responses: {
+            /** @description OK */
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content?: never;
+            };
+            /** @description Created */
+            201: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content?: never;
+            };
+            /** @description Unauthorized */
+            401: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content?: never;
+            };
+            /** @description Forbidden */
+            403: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content?: never;
+            };
+            /** @description Not Found */
+            404: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content?: never;
+            };
+        };
+    };
+    resendCaseParticipantInviteUsingPOST: {
+        parameters: {
+            query: {
+                /** @description emailAddress */
+                emailAddress: string;
+            };
+            header?: never;
+            path: {
+                /** @description caseId */
+                caseId: string;
+            };
+            cookie?: never;
+        };
+        requestBody?: never;
         responses: {
             /** @description OK */
             200: {
@@ -41942,6 +42011,7 @@ export declare enum ValidateDirectMailResponseOtrError {
     INVALID_USER_NAME = "INVALID_USER_NAME",
     INVITATION_ALREADY_SENT = "INVITATION_ALREADY_SENT",
     INVITATION_ALREADY_VERIFIED = "INVITATION_ALREADY_VERIFIED",
+    INVITATION_ALREADY_VERIFIED_BY_RECIPIENT = "INVITATION_ALREADY_VERIFIED_BY_RECIPIENT",
     INVITATION_CANCELLED = "INVITATION_CANCELLED",
     INVITATION_HAS_EXPIRED = "INVITATION_HAS_EXPIRED",
     INVITATION_RECIPIENT_NO_ACCOUNT = "INVITATION_RECIPIENT_NO_ACCOUNT",
