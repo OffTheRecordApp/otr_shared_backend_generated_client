@@ -223,6 +223,7 @@ export var ValidateDirectMailResponseOtrErrorEnum;
     ValidateDirectMailResponseOtrErrorEnum["MISSINGBIRTHDAY"] = "MISSING_BIRTHDAY";
     ValidateDirectMailResponseOtrErrorEnum["MISSINGCASE"] = "MISSING_CASE";
     ValidateDirectMailResponseOtrErrorEnum["MISSINGCITATIONID"] = "MISSING_CITATION_ID";
+    ValidateDirectMailResponseOtrErrorEnum["MISSINGCITATIONISSUEDATE"] = "MISSING_CITATION_ISSUE_DATE";
     ValidateDirectMailResponseOtrErrorEnum["MISSINGCOURTFEE"] = "MISSING_COURT_FEE";
     ValidateDirectMailResponseOtrErrorEnum["MISSINGCOURTID"] = "MISSING_COURT_ID";
     ValidateDirectMailResponseOtrErrorEnum["MISSINGDECLINECATEGORY"] = "MISSING_DECLINE_CATEGORY";

@@ -1534,6 +1534,7 @@ export var ValidateDirectMailResponseOtrError;
     ValidateDirectMailResponseOtrError["MISSING_BIRTHDAY"] = "MISSING_BIRTHDAY";
     ValidateDirectMailResponseOtrError["MISSING_CASE"] = "MISSING_CASE";
     ValidateDirectMailResponseOtrError["MISSING_CITATION_ID"] = "MISSING_CITATION_ID";
+    ValidateDirectMailResponseOtrError["MISSING_CITATION_ISSUE_DATE"] = "MISSING_CITATION_ISSUE_DATE";
     ValidateDirectMailResponseOtrError["MISSING_COURT_FEE"] = "MISSING_COURT_FEE";
     ValidateDirectMailResponseOtrError["MISSING_COURT_ID"] = "MISSING_COURT_ID";
     ValidateDirectMailResponseOtrError["MISSING_DECLINE_CATEGORY"] = "MISSING_DECLINE_CATEGORY";

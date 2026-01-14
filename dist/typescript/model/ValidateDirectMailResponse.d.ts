@@ -197,6 +197,7 @@ export declare namespace ValidateDirectMailResponse {
         MISSINGBIRTHDAY,
         MISSINGCASE,
         MISSINGCITATIONID,
+        MISSINGCITATIONISSUEDATE,
         MISSINGCOURTFEE,
         MISSINGCOURTID,
         MISSINGDECLINECATEGORY,
