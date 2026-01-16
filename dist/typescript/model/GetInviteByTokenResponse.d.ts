@@ -14,6 +14,7 @@ export interface GetInviteByTokenResponse {
     "emailAddress"?: string;
     "fullName"?: string;
     "hasAccount"?: boolean;
+    "inviteeEmailAddress"?: string;
     "inviteeFirstName"?: string;
     "inviteeLastName"?: string;
     "inviteeRoleType"?: GetInviteByTokenResponse.InviteeRoleTypeEnum;

@@ -39,6 +39,12 @@ export interface GetInviteByTokenResponse {
      * @type {string}
      * @memberof GetInviteByTokenResponse
      */
+    inviteeEmailAddress?: string;
+    /**
+     *
+     * @type {string}
+     * @memberof GetInviteByTokenResponse
+     */
     inviteeFirstName?: string;
     /**
      *

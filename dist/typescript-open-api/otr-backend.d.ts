@@ -11181,6 +11181,7 @@ export interface components {
             emailAddress?: string;
             fullName?: string;
             hasAccount?: boolean;
+            inviteeEmailAddress?: string;
             inviteeFirstName?: string;
             inviteeLastName?: string;
             /** @enum {string} */
