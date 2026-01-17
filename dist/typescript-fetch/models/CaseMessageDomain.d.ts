@@ -92,6 +92,12 @@ export interface CaseMessageDomain {
      * @type {string}
      * @memberof CaseMessageDomain
      */
+    signedAssetUrl?: string;
+    /**
+     *
+     * @type {string}
+     * @memberof CaseMessageDomain
+     */
     signedMediaUrl?: string;
 }
 export declare function CaseMessageDomainFromJSON(json: any): CaseMessageDomain;

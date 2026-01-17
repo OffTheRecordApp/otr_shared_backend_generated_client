@@ -8596,6 +8596,7 @@ export interface components {
             messageId?: number;
             /** Format: date-time */
             messageSentDateUtc?: string;
+            signedAssetUrl?: string;
             signedMediaUrl?: string;
         };
         /** CaseModel */

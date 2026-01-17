@@ -22,6 +22,7 @@ export interface CaseMessageDomain {
     "messageBody"?: string;
     "messageId"?: number;
     "messageSentDateUtc"?: string;
+    "signedAssetUrl"?: string;
     "signedMediaUrl"?: string;
 }
 export declare namespace CaseMessageDomain {

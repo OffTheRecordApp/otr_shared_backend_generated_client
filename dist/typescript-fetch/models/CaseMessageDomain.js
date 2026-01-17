@@ -32,6 +32,7 @@ export function CaseMessageDomainFromJSONTyped(json, ignoreDiscriminator) {
         'messageBody': !exists(json, 'messageBody') ? undefined : json['messageBody'],
         'messageId': !exists(json, 'messageId') ? undefined : json['messageId'],
         'messageSentDateUtc': !exists(json, 'messageSentDateUtc') ? undefined : (new Date(json['messageSentDateUtc'])),
+        'signedAssetUrl': !exists(json, 'signedAssetUrl') ? undefined : json['signedAssetUrl'],
         'signedMediaUrl': !exists(json, 'signedMediaUrl') ? undefined : json['signedMediaUrl'],
     };
 }
@@ -55,6 +56,7 @@ export function CaseMessageDomainToJSON(value) {
         'messageBody': value.messageBody,
         'messageId': value.messageId,
         'messageSentDateUtc': value.messageSentDateUtc === undefined ? undefined : (value.messageSentDateUtc.toISOString()),
+        'signedAssetUrl': value.signedAssetUrl,
         'signedMediaUrl': value.signedMediaUrl,
     };
 }
