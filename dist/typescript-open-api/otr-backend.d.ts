@@ -32408,6 +32408,8 @@ export interface operations {
                 caseStatuses?: PathsApiV1LawfirmsLawfirmIdInboxMessagesGetParametersQueryCaseStatuses;
                 /** @description includeAbandoned */
                 includeAbandoned?: boolean;
+                /** @description includeCitationsWithoutCase */
+                includeCitationsWithoutCase?: boolean;
             };
             header?: never;
             path: {

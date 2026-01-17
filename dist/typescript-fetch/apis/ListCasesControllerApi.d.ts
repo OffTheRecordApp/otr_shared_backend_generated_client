@@ -24,6 +24,7 @@ export interface ListDashboardCasesByPageUsingGETRequest {
     defendantId?: number;
     defendantLastName?: string;
     includeAbandoned?: boolean;
+    includeCitationsWithoutCase?: boolean;
     includeDeleted?: boolean;
     limit?: number;
     needsAttention?: boolean;

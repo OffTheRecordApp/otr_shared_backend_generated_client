@@ -79,6 +79,7 @@ export class ListCasesControllerApi {
      * @param defendantId defendantId
      * @param defendantLastName defendantLastName
      * @param includeAbandoned includeAbandoned
+     * @param includeCitationsWithoutCase includeCitationsWithoutCase
      * @param includeDeleted includeDeleted
      * @param limit limit
      * @param needsAttention needsAttention
@@ -88,7 +89,7 @@ export class ListCasesControllerApi {
      * @param statusCategories statusCategories
      * @param unreadMessagesOnly unreadMessagesOnly
      */
-    listDashboardCasesByPageUsingGET(userId, caseStatuses, defendantFirstName, defendantId, defendantLastName, includeAbandoned, includeDeleted, limit, needsAttention, page, query, sortBy, statusCategories, unreadMessagesOnly, extraHttpRequestParams) {
+    listDashboardCasesByPageUsingGET(userId, caseStatuses, defendantFirstName, defendantId, defendantLastName, includeAbandoned, includeCitationsWithoutCase, includeDeleted, limit, needsAttention, page, query, sortBy, statusCategories, unreadMessagesOnly, extraHttpRequestParams) {
         const localVarPath = this.basePath + '/api/v4/users/{userId}/cases'
             .replace('{' + 'userId' + '}', encodeURIComponent(String(userId)));
         let queryParameters = {};
@@ -111,6 +112,9 @@ export class ListCasesControllerApi {
         }
         if (includeAbandoned !== undefined) {
             queryParameters['includeAbandoned'] = includeAbandoned;
+        }
+        if (includeCitationsWithoutCase !== undefined) {
+            queryParameters['includeCitationsWithoutCase'] = includeCitationsWithoutCase;
         }
         if (includeDeleted !== undefined) {
             queryParameters['includeDeleted'] = includeDeleted;
