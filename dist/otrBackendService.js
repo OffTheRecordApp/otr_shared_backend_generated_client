@@ -19655,7 +19655,6 @@ angular.module('otrBackendService', [])
              * @param {integer} parameters.defendantId - defendantId
              * @param {string} parameters.defendantLastName - defendantLastName
              * @param {boolean} parameters.includeAbandoned - includeAbandoned
-             * @param {boolean} parameters.includeCitationsWithoutCase - includeCitationsWithoutCase
              * @param {boolean} parameters.includeDeleted - includeDeleted
              * @param {integer} parameters.limit - limit
              * @param {boolean} parameters.needsAttention - needsAttention
@@ -19698,13 +19697,6 @@ angular.module('otrBackendService', [])
 
                 if (parameters['includeAbandoned'] !== undefined) {
                     queryParameters['includeAbandoned'] = parameters['includeAbandoned'];
-                }
-
-                /** set default value **/
-                queryParameters['includeCitationsWithoutCase'] = true;
-
-                if (parameters['includeCitationsWithoutCase'] !== undefined) {
-                    queryParameters['includeCitationsWithoutCase'] = parameters['includeCitationsWithoutCase'];
                 }
 
                 if (parameters['includeDeleted'] !== undefined) {

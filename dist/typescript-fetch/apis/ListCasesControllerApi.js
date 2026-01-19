@@ -106,9 +106,6 @@ export class ListCasesControllerApi extends runtime.BaseAPI {
             if (requestParameters.includeAbandoned !== undefined) {
                 queryParameters['includeAbandoned'] = requestParameters.includeAbandoned;
             }
-            if (requestParameters.includeCitationsWithoutCase !== undefined) {
-                queryParameters['includeCitationsWithoutCase'] = requestParameters.includeCitationsWithoutCase;
-            }
             if (requestParameters.includeDeleted !== undefined) {
                 queryParameters['includeDeleted'] = requestParameters.includeDeleted;
             }
