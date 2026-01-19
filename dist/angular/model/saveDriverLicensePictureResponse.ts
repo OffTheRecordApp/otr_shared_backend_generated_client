@@ -9,10 +9,12 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
+import { UserAssetModel } from './userAssetModel';
 import { DriverLicenseModel } from './driverLicenseModel';
 
 
 export interface SaveDriverLicensePictureResponse { 
     driverLicenseModel?: DriverLicenseModel;
+    userAssetModel?: UserAssetModel;
 }
 

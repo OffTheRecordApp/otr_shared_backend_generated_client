@@ -17209,6 +17209,7 @@ angular.module('otrBackendService', [])
              * @method
              * @name OtrService#saveDriverLicensePictureUsingPOST
              * @param {object} parameters - method options and parameters
+             * @param {boolean} parameters.performPrediction - performPrediction
              * @param {} parameters.request - request
              * @param {string} parameters.userId - userId
              */
@@ -17227,6 +17228,13 @@ angular.module('otrBackendService', [])
                 headers['Accept'] = ['*/*'];
                 headers['Content-Type'] = ['application/json'];
 
+                /** set default value **/
+                queryParameters['performPrediction'] = true;
+
+                if (parameters['performPrediction'] !== undefined) {
+                    queryParameters['performPrediction'] = parameters['performPrediction'];
+                }
+
                 if (parameters['request'] !== undefined) {
                     body = parameters['request'];
                 }
@@ -17235,6 +17243,41 @@ angular.module('otrBackendService', [])
                     deferred.reject(new Error('Missing required  parameter: request'));
                     return deferred.promise;
                 }
+
+                path = path.replace('{userId}', parameters['userId']);
+
+                if (parameters['userId'] === undefined) {
+                    deferred.reject(new Error('Missing required  parameter: userId'));
+                    return deferred.promise;
+                }
+
+                queryParameters = mergeQueryParams(parameters, queryParameters);
+
+                this.request('POST', domain + path, parameters, body, headers, queryParameters, form, deferred);
+
+                return deferred.promise;
+            };
+            /**
+             * predictDriverLicense
+             * @method
+             * @name OtrService#predictDriverLicenseUsingPOST
+             * @param {object} parameters - method options and parameters
+             * @param {string} parameters.userId - userId
+             */
+            OtrService.prototype.predictDriverLicenseUsingPOST = function(parameters) {
+                if (parameters === undefined) {
+                    parameters = {};
+                }
+                var deferred = $q.defer();
+                var domain = this.domain,
+                    path = '/api/v1/users/{userId}/driver-license/predict-picture';
+                var body = {},
+                    queryParameters = {},
+                    headers = {},
+                    form = {};
+
+                headers['Accept'] = ['*/*'];
+                headers['Content-Type'] = ['application/json'];
 
                 path = path.replace('{userId}', parameters['userId']);
 

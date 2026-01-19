@@ -58,6 +58,34 @@ export class DriverLicenseControllerApi extends runtime.BaseAPI {
         });
     }
     /**
+     * predictDriverLicense
+     */
+    predictDriverLicenseUsingPOSTRaw(requestParameters) {
+        return __awaiter(this, void 0, void 0, function* () {
+            if (requestParameters.userId === null || requestParameters.userId === undefined) {
+                throw new runtime.RequiredError('userId', 'Required parameter requestParameters.userId was null or undefined when calling predictDriverLicenseUsingPOST.');
+            }
+            const queryParameters = {};
+            const headerParameters = {};
+            const response = yield this.request({
+                path: `/api/v1/users/{userId}/driver-license/predict-picture`.replace(`{${"userId"}}`, encodeURIComponent(String(requestParameters.userId))),
+                method: 'POST',
+                headers: headerParameters,
+                query: queryParameters,
+            });
+            return new runtime.JSONApiResponse(response, (jsonValue) => DriverLicenseModelFromJSON(jsonValue));
+        });
+    }
+    /**
+     * predictDriverLicense
+     */
+    predictDriverLicenseUsingPOST(requestParameters) {
+        return __awaiter(this, void 0, void 0, function* () {
+            const response = yield this.predictDriverLicenseUsingPOSTRaw(requestParameters);
+            return yield response.value();
+        });
+    }
+    /**
      * saveDriverLicensePicture
      */
     saveDriverLicensePictureUsingPOSTRaw(requestParameters) {
@@ -69,6 +97,9 @@ export class DriverLicenseControllerApi extends runtime.BaseAPI {
                 throw new runtime.RequiredError('request', 'Required parameter requestParameters.request was null or undefined when calling saveDriverLicensePictureUsingPOST.');
             }
             const queryParameters = {};
+            if (requestParameters.performPrediction !== undefined) {
+                queryParameters['performPrediction'] = requestParameters.performPrediction;
+            }
             const headerParameters = {};
             headerParameters['Content-Type'] = 'application/json';
             const response = yield this.request({

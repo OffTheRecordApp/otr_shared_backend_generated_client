@@ -12,4 +12,5 @@
 import * as models from './models';
 export interface SaveDriverLicensePictureResponse {
     "driverLicenseModel"?: models.DriverLicenseModel;
+    "userAssetModel"?: models.UserAssetModel;
 }

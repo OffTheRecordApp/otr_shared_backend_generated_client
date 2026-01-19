@@ -26,11 +26,18 @@ export declare class DriverLicenseControllerApi {
     getDriverLicensesUsingGET(userId: string, includeDeleted?: boolean, extraHttpRequestParams?: any): ng.IHttpPromise<models.GetDriverLicensesResponse>;
     /**
      *
+     * @summary predictDriverLicense
+     * @param userId userId
+     */
+    predictDriverLicenseUsingPOST(userId: string, extraHttpRequestParams?: any): ng.IHttpPromise<models.DriverLicenseModel>;
+    /**
+     *
      * @summary saveDriverLicensePicture
      * @param userId userId
      * @param request request
+     * @param performPrediction performPrediction
      */
-    saveDriverLicensePictureUsingPOST(userId: string, request: models.SaveDriverLicensePictureRequest, extraHttpRequestParams?: any): ng.IHttpPromise<models.SaveDriverLicensePictureResponse>;
+    saveDriverLicensePictureUsingPOST(userId: string, request: models.SaveDriverLicensePictureRequest, performPrediction?: boolean, extraHttpRequestParams?: any): ng.IHttpPromise<models.SaveDriverLicensePictureResponse>;
     /**
      *
      * @summary saveDriverLicense

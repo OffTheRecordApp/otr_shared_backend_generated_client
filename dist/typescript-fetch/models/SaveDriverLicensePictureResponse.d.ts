@@ -9,7 +9,7 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-import { DriverLicenseModel } from './';
+import { DriverLicenseModel, UserAssetModel } from './';
 /**
  *
  * @export
@@ -22,6 +22,12 @@ export interface SaveDriverLicensePictureResponse {
      * @memberof SaveDriverLicensePictureResponse
      */
     driverLicenseModel?: DriverLicenseModel;
+    /**
+     *
+     * @type {UserAssetModel}
+     * @memberof SaveDriverLicensePictureResponse
+     */
+    userAssetModel?: UserAssetModel;
 }
 export declare function SaveDriverLicensePictureResponseFromJSON(json: any): SaveDriverLicensePictureResponse;
 export declare function SaveDriverLicensePictureResponseFromJSONTyped(json: any, ignoreDiscriminator: boolean): SaveDriverLicensePictureResponse;

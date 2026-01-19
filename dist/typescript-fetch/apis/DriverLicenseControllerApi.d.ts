@@ -15,9 +15,13 @@ export interface GetDriverLicensesUsingGETRequest {
     userId: string;
     includeDeleted?: boolean;
 }
+export interface PredictDriverLicenseUsingPOSTRequest {
+    userId: string;
+}
 export interface SaveDriverLicensePictureUsingPOSTRequest {
     userId: string;
     request: SaveDriverLicensePictureRequest;
+    performPrediction?: boolean;
 }
 export interface SaveDriverLicenseUsingPOSTRequest {
     userId: string;
@@ -35,6 +39,14 @@ export declare class DriverLicenseControllerApi extends runtime.BaseAPI {
      * getDriverLicenses
      */
     getDriverLicensesUsingGET(requestParameters: GetDriverLicensesUsingGETRequest): Promise<GetDriverLicensesResponse>;
+    /**
+     * predictDriverLicense
+     */
+    predictDriverLicenseUsingPOSTRaw(requestParameters: PredictDriverLicenseUsingPOSTRequest): Promise<runtime.ApiResponse<DriverLicenseModel>>;
+    /**
+     * predictDriverLicense
+     */
+    predictDriverLicenseUsingPOST(requestParameters: PredictDriverLicenseUsingPOSTRequest): Promise<DriverLicenseModel>;
     /**
      * saveDriverLicensePicture
      */

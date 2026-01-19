@@ -12,7 +12,7 @@
  * Do not edit the class manually.
  */
 import { exists } from '../runtime';
-import { DriverLicenseModelFromJSON, DriverLicenseModelToJSON, } from './';
+import { DriverLicenseModelFromJSON, DriverLicenseModelToJSON, UserAssetModelFromJSON, UserAssetModelToJSON, } from './';
 export function SaveDriverLicensePictureResponseFromJSON(json) {
     return SaveDriverLicensePictureResponseFromJSONTyped(json, false);
 }
@@ -22,6 +22,7 @@ export function SaveDriverLicensePictureResponseFromJSONTyped(json, ignoreDiscri
     }
     return {
         'driverLicenseModel': !exists(json, 'driverLicenseModel') ? undefined : DriverLicenseModelFromJSON(json['driverLicenseModel']),
+        'userAssetModel': !exists(json, 'userAssetModel') ? undefined : UserAssetModelFromJSON(json['userAssetModel']),
     };
 }
 export function SaveDriverLicensePictureResponseToJSON(value) {
@@ -33,5 +34,6 @@ export function SaveDriverLicensePictureResponseToJSON(value) {
     }
     return {
         'driverLicenseModel': DriverLicenseModelToJSON(value.driverLicenseModel),
+        'userAssetModel': UserAssetModelToJSON(value.userAssetModel),
     };
 }

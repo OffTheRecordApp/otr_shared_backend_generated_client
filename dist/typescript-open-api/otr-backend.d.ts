@@ -3040,6 +3040,23 @@ export interface paths {
         patch?: never;
         trace?: never;
     };
+    "/api/v1/users/{userId}/driver-license/predict-picture": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        get?: never;
+        put?: never;
+        /** predictDriverLicense */
+        post: operations["predictDriverLicenseUsingPOST"];
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
     "/api/v1/subscribe": {
         parameters: {
             query?: never;
@@ -14446,6 +14463,7 @@ export interface components {
         /** SaveDriverLicensePictureResponse */
         SaveDriverLicensePictureResponse: {
             driverLicenseModel?: components["schemas"]["DriverLicenseModel"];
+            userAssetModel?: components["schemas"]["UserAssetModel"];
         };
         /** SaveDriverLicenseRequest */
         SaveDriverLicenseRequest: {
@@ -26590,7 +26608,10 @@ export interface operations {
     };
     saveDriverLicensePictureUsingPOST: {
         parameters: {
-            query?: never;
+            query?: {
+                /** @description performPrediction */
+                performPrediction?: boolean;
+            };
             header?: never;
             path: {
                 /** @description userId */
@@ -26611,6 +26632,57 @@ export interface operations {
                 };
                 content: {
                     "*/*": components["schemas"]["SaveDriverLicensePictureResponse"];
+                };
+            };
+            /** @description Created */
+            201: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content?: never;
+            };
+            /** @description Unauthorized */
+            401: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content?: never;
+            };
+            /** @description Forbidden */
+            403: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content?: never;
+            };
+            /** @description Not Found */
+            404: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content?: never;
+            };
+        };
+    };
+    predictDriverLicenseUsingPOST: {
+        parameters: {
+            query?: never;
+            header?: never;
+            path: {
+                /** @description userId */
+                userId: string;
+            };
+            cookie?: never;
+        };
+        requestBody?: never;
+        responses: {
+            /** @description OK */
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "*/*": components["schemas"]["DriverLicenseModel"];
                 };
             };
             /** @description Created */
