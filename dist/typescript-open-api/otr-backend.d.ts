@@ -10917,6 +10917,8 @@ export interface components {
             signedProfilePictureUrl?: string;
             /** Format: int64 */
             userId?: number;
+            /** @enum {string} */
+            verificationStatus?: DashboardCaseUserModelVerificationStatus;
         };
         /** GetCaseUsersResponse */
         GetCaseUsersResponse: {

@@ -40,6 +40,7 @@ export function GetCaseUserModelFromJSONTyped(json, ignoreDiscriminator) {
         'relationshipToClient': !exists(json, 'relationshipToClient') ? undefined : json['relationshipToClient'],
         'signedProfilePictureUrl': !exists(json, 'signedProfilePictureUrl') ? undefined : json['signedProfilePictureUrl'],
         'userId': !exists(json, 'userId') ? undefined : json['userId'],
+        'verificationStatus': !exists(json, 'verificationStatus') ? undefined : json['verificationStatus'],
     };
 }
 export function GetCaseUserModelToJSON(value) {
@@ -69,6 +70,7 @@ export function GetCaseUserModelToJSON(value) {
         'relationshipToClient': value.relationshipToClient,
         'signedProfilePictureUrl': value.signedProfilePictureUrl,
         'userId': value.userId,
+        'verificationStatus': value.verificationStatus,
     };
 }
 /**
@@ -90,3 +92,13 @@ export var GetCaseUserModelRelationshipToClientEnum;
     GetCaseUserModelRelationshipToClientEnum["SIGNIFICANTOTHER"] = "SIGNIFICANT_OTHER";
     GetCaseUserModelRelationshipToClientEnum["UNKNOWN"] = "UNKNOWN";
 })(GetCaseUserModelRelationshipToClientEnum || (GetCaseUserModelRelationshipToClientEnum = {}));
+/**
+* @export
+* @enum {string}
+*/
+export var GetCaseUserModelVerificationStatusEnum;
+(function (GetCaseUserModelVerificationStatusEnum) {
+    GetCaseUserModelVerificationStatusEnum["CANCELLED"] = "CANCELLED";
+    GetCaseUserModelVerificationStatusEnum["PENDING"] = "PENDING";
+    GetCaseUserModelVerificationStatusEnum["VERIFIED"] = "VERIFIED";
+})(GetCaseUserModelVerificationStatusEnum || (GetCaseUserModelVerificationStatusEnum = {}));

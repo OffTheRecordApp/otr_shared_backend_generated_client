@@ -32,6 +32,7 @@ export interface GetCaseUserModel {
     relationshipToClient?: GetCaseUserModel.RelationshipToClientEnum;
     signedProfilePictureUrl?: string;
     userId?: number;
+    verificationStatus?: GetCaseUserModel.VerificationStatusEnum;
 }
 export namespace GetCaseUserModel {
     export type RelationshipToClientEnum = 'CHILD' | 'COPILOT' | 'EMPLOYER' | 'FAMILY_MEMBER' | 'FRIEND' | 'LAWYER' | 'OTHER' | 'PARENT' | 'SELF' | 'SERVICE_PROVIDER' | 'SIGNIFICANT_OTHER' | 'UNKNOWN';
@@ -48,6 +49,12 @@ export namespace GetCaseUserModel {
         ServiceProvider: 'SERVICE_PROVIDER' as RelationshipToClientEnum,
         SignificantOther: 'SIGNIFICANT_OTHER' as RelationshipToClientEnum,
         Unknown: 'UNKNOWN' as RelationshipToClientEnum
+    };
+    export type VerificationStatusEnum = 'CANCELLED' | 'PENDING' | 'VERIFIED';
+    export const VerificationStatusEnum = {
+        Cancelled: 'CANCELLED' as VerificationStatusEnum,
+        Pending: 'PENDING' as VerificationStatusEnum,
+        Verified: 'VERIFIED' as VerificationStatusEnum
     };
 }
 

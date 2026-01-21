@@ -30,6 +30,7 @@ export interface GetCaseUserModel {
     "relationshipToClient"?: GetCaseUserModel.RelationshipToClientEnum;
     "signedProfilePictureUrl"?: string;
     "userId"?: number;
+    "verificationStatus"?: GetCaseUserModel.VerificationStatusEnum;
 }
 export declare namespace GetCaseUserModel {
     enum RelationshipToClientEnum {
@@ -45,5 +46,10 @@ export declare namespace GetCaseUserModel {
         SERVICEPROVIDER,
         SIGNIFICANTOTHER,
         UNKNOWN
+    }
+    enum VerificationStatusEnum {
+        CANCELLED,
+        PENDING,
+        VERIFIED
     }
 }

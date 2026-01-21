@@ -26,4 +26,10 @@ export var GetCaseUserModel;
         RelationshipToClientEnum[RelationshipToClientEnum["SIGNIFICANTOTHER"] = 'SIGNIFICANT_OTHER'] = "SIGNIFICANTOTHER";
         RelationshipToClientEnum[RelationshipToClientEnum["UNKNOWN"] = 'UNKNOWN'] = "UNKNOWN";
     })(RelationshipToClientEnum = GetCaseUserModel.RelationshipToClientEnum || (GetCaseUserModel.RelationshipToClientEnum = {}));
+    let VerificationStatusEnum;
+    (function (VerificationStatusEnum) {
+        VerificationStatusEnum[VerificationStatusEnum["CANCELLED"] = 'CANCELLED'] = "CANCELLED";
+        VerificationStatusEnum[VerificationStatusEnum["PENDING"] = 'PENDING'] = "PENDING";
+        VerificationStatusEnum[VerificationStatusEnum["VERIFIED"] = 'VERIFIED'] = "VERIFIED";
+    })(VerificationStatusEnum = GetCaseUserModel.VerificationStatusEnum || (GetCaseUserModel.VerificationStatusEnum = {}));
 })(GetCaseUserModel || (GetCaseUserModel = {}));

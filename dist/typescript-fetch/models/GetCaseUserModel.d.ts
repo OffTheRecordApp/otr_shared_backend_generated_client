@@ -130,6 +130,12 @@ export interface GetCaseUserModel {
      * @memberof GetCaseUserModel
      */
     userId?: number;
+    /**
+     *
+     * @type {string}
+     * @memberof GetCaseUserModel
+     */
+    verificationStatus?: GetCaseUserModelVerificationStatusEnum;
 }
 export declare function GetCaseUserModelFromJSON(json: any): GetCaseUserModel;
 export declare function GetCaseUserModelFromJSONTyped(json: any, ignoreDiscriminator: boolean): GetCaseUserModel;
@@ -151,4 +157,13 @@ export declare enum GetCaseUserModelRelationshipToClientEnum {
     SERVICEPROVIDER = "SERVICE_PROVIDER",
     SIGNIFICANTOTHER = "SIGNIFICANT_OTHER",
     UNKNOWN = "UNKNOWN"
+}
+/**
+* @export
+* @enum {string}
+*/
+export declare enum GetCaseUserModelVerificationStatusEnum {
+    CANCELLED = "CANCELLED",
+    PENDING = "PENDING",
+    VERIFIED = "VERIFIED"
 }
