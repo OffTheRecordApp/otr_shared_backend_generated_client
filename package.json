@@ -1,6 +1,6 @@
 {
   "name": "@otr-app/shared-backend-generated-client",
-  "version": "2.5.115",
+  "version": "2.5.116",
   "main": "dist/otrBackendService.min.js",
   "files": [
     "/dist"
