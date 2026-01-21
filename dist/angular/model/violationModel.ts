@@ -21,6 +21,7 @@ export interface ViolationModel {
     penalties?: Array<ViolationPenaltyModel>;
     trafficViolationDesc?: string;
     trafficViolationTypeId?: number;
+    uniqueId?: string;
     userFriendlyName?: string;
     userFriendlyShortForm?: string;
     violationClassification?: ViolationModel.ViolationClassificationEnum;

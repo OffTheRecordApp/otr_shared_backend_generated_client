@@ -69,6 +69,12 @@ export interface ViolationModel {
      * @type {string}
      * @memberof ViolationModel
      */
+    uniqueId?: string;
+    /**
+     *
+     * @type {string}
+     * @memberof ViolationModel
+     */
     userFriendlyName?: string;
     /**
      *
