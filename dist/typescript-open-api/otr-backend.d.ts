@@ -16634,7 +16634,6 @@ export interface components {
             trafficViolationDesc?: string;
             /** Format: int64 */
             trafficViolationTypeId?: number;
-            /** Format: uuid */
             uniqueId?: string;
             userFriendlyName?: string;
             userFriendlyShortForm?: string;
