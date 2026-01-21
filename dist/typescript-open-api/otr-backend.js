@@ -837,6 +837,12 @@ export var DashboardCaseCounterOfferModelCounterOfferStatus;
     DashboardCaseCounterOfferModelCounterOfferStatus["PENDING"] = "PENDING";
     DashboardCaseCounterOfferModelCounterOfferStatus["WITHDRAWN"] = "WITHDRAWN";
 })(DashboardCaseCounterOfferModelCounterOfferStatus || (DashboardCaseCounterOfferModelCounterOfferStatus = {}));
+export var DashboardCaseUserModelVerificationStatus;
+(function (DashboardCaseUserModelVerificationStatus) {
+    DashboardCaseUserModelVerificationStatus["CANCELLED"] = "CANCELLED";
+    DashboardCaseUserModelVerificationStatus["PENDING"] = "PENDING";
+    DashboardCaseUserModelVerificationStatus["VERIFIED"] = "VERIFIED";
+})(DashboardCaseUserModelVerificationStatus || (DashboardCaseUserModelVerificationStatus = {}));
 export var DeleteNotificationByPagesRequestPageTypes;
 (function (DeleteNotificationByPagesRequestPageTypes) {
     DeleteNotificationByPagesRequestPageTypes["CASE_ACTION"] = "CASE_ACTION";
@@ -967,12 +973,6 @@ export var GenerateTemplateRequestEmailTemplateId;
     GenerateTemplateRequestEmailTemplateId["TICKET_EVAL_WITH_CITATION_2ND_FOLLOW_UP"] = "TICKET_EVAL_WITH_CITATION_2ND_FOLLOW_UP";
     GenerateTemplateRequestEmailTemplateId["TICKET_EVAL_WITH_CITATION_CLOSE_OUT"] = "TICKET_EVAL_WITH_CITATION_CLOSE_OUT";
 })(GenerateTemplateRequestEmailTemplateId || (GenerateTemplateRequestEmailTemplateId = {}));
-export var GetHouseHoldMateModelInviteStatus;
-(function (GetHouseHoldMateModelInviteStatus) {
-    GetHouseHoldMateModelInviteStatus["CANCELLED"] = "CANCELLED";
-    GetHouseHoldMateModelInviteStatus["PENDING"] = "PENDING";
-    GetHouseHoldMateModelInviteStatus["VERIFIED"] = "VERIFIED";
-})(GetHouseHoldMateModelInviteStatus || (GetHouseHoldMateModelInviteStatus = {}));
 export var GetHouseHoldMateModelRelationshipType;
 (function (GetHouseHoldMateModelRelationshipType) {
     GetHouseHoldMateModelRelationshipType["OWNER"] = "OWNER";

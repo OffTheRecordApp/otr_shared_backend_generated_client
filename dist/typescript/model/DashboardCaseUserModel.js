@@ -9,4 +9,12 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-export {};
+export var DashboardCaseUserModel;
+(function (DashboardCaseUserModel) {
+    let VerificationStatusEnum;
+    (function (VerificationStatusEnum) {
+        VerificationStatusEnum[VerificationStatusEnum["CANCELLED"] = 'CANCELLED'] = "CANCELLED";
+        VerificationStatusEnum[VerificationStatusEnum["PENDING"] = 'PENDING'] = "PENDING";
+        VerificationStatusEnum[VerificationStatusEnum["VERIFIED"] = 'VERIFIED'] = "VERIFIED";
+    })(VerificationStatusEnum = DashboardCaseUserModel.VerificationStatusEnum || (DashboardCaseUserModel.VerificationStatusEnum = {}));
+})(DashboardCaseUserModel || (DashboardCaseUserModel = {}));

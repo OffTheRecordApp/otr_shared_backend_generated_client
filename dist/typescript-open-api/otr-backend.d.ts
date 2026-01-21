@@ -10013,6 +10013,8 @@ export interface components {
             profileImageUrl?: string;
             /** Format: int64 */
             userId?: number;
+            /** @enum {string} */
+            verificationStatus?: DashboardCaseUserModelVerificationStatus;
         };
         /** DashboardCitationModel */
         DashboardCitationModel: {
@@ -11177,7 +11179,7 @@ export interface components {
             expiryDateUtc?: string;
             fullName?: string;
             /** @enum {string} */
-            inviteStatus?: GetHouseHoldMateModelInviteStatus;
+            inviteStatus?: DashboardCaseUserModelVerificationStatus;
             profilePictureUrl?: string;
             /** @enum {string} */
             relationshipType?: GetHouseHoldMateModelRelationshipType;
@@ -11211,7 +11213,7 @@ export interface components {
             /** Format: int64 */
             userId?: number;
             /** @enum {string} */
-            verificationStatus?: GetHouseHoldMateModelInviteStatus;
+            verificationStatus?: DashboardCaseUserModelVerificationStatus;
         };
         /** GetLastLoginResponse */
         GetLastLoginResponse: {
@@ -12743,7 +12745,7 @@ export interface components {
             lastname?: string;
             roleTypes?: AuthorModelUserRole[];
             /** @enum {string} */
-            verificationStatus?: GetHouseHoldMateModelInviteStatus;
+            verificationStatus?: DashboardCaseUserModelVerificationStatus;
         };
         /** LawyerLicenseModel */
         LawyerLicenseModel: {
@@ -41490,6 +41492,11 @@ export declare enum DashboardCaseCounterOfferModelCounterOfferStatus {
     PENDING = "PENDING",
     WITHDRAWN = "WITHDRAWN"
 }
+export declare enum DashboardCaseUserModelVerificationStatus {
+    CANCELLED = "CANCELLED",
+    PENDING = "PENDING",
+    VERIFIED = "VERIFIED"
+}
 export declare enum DeleteNotificationByPagesRequestPageTypes {
     CASE_ACTION = "CASE_ACTION",
     CASE_MESSAGES = "CASE_MESSAGES",
@@ -41606,11 +41613,6 @@ export declare enum GenerateTemplateRequestEmailTemplateId {
     TICKET_EVAL_WITH_CITATION = "TICKET_EVAL_WITH_CITATION",
     TICKET_EVAL_WITH_CITATION_2ND_FOLLOW_UP = "TICKET_EVAL_WITH_CITATION_2ND_FOLLOW_UP",
     TICKET_EVAL_WITH_CITATION_CLOSE_OUT = "TICKET_EVAL_WITH_CITATION_CLOSE_OUT"
-}
-export declare enum GetHouseHoldMateModelInviteStatus {
-    CANCELLED = "CANCELLED",
-    PENDING = "PENDING",
-    VERIFIED = "VERIFIED"
 }
 export declare enum GetHouseHoldMateModelRelationshipType {
     OWNER = "OWNER",

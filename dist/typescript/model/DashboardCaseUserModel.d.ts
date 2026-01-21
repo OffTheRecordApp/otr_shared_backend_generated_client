@@ -16,4 +16,12 @@ export interface DashboardCaseUserModel {
     "lastName"?: string;
     "profileImageUrl"?: string;
     "userId"?: number;
+    "verificationStatus"?: DashboardCaseUserModel.VerificationStatusEnum;
+}
+export declare namespace DashboardCaseUserModel {
+    enum VerificationStatusEnum {
+        CANCELLED,
+        PENDING,
+        VERIFIED
+    }
 }

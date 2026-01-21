@@ -18,5 +18,15 @@ export interface DashboardCaseUserModel {
     lastName?: string;
     profileImageUrl?: string;
     userId?: number;
+    verificationStatus?: DashboardCaseUserModel.VerificationStatusEnum;
 }
+export namespace DashboardCaseUserModel {
+    export type VerificationStatusEnum = 'CANCELLED' | 'PENDING' | 'VERIFIED';
+    export const VerificationStatusEnum = {
+        Cancelled: 'CANCELLED' as VerificationStatusEnum,
+        Pending: 'PENDING' as VerificationStatusEnum,
+        Verified: 'VERIFIED' as VerificationStatusEnum
+    };
+}
+
 

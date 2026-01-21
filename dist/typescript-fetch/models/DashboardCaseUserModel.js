@@ -26,6 +26,7 @@ export function DashboardCaseUserModelFromJSONTyped(json, ignoreDiscriminator) {
         'lastName': !exists(json, 'lastName') ? undefined : json['lastName'],
         'profileImageUrl': !exists(json, 'profileImageUrl') ? undefined : json['profileImageUrl'],
         'userId': !exists(json, 'userId') ? undefined : json['userId'],
+        'verificationStatus': !exists(json, 'verificationStatus') ? undefined : json['verificationStatus'],
     };
 }
 export function DashboardCaseUserModelToJSON(value) {
@@ -42,5 +43,16 @@ export function DashboardCaseUserModelToJSON(value) {
         'lastName': value.lastName,
         'profileImageUrl': value.profileImageUrl,
         'userId': value.userId,
+        'verificationStatus': value.verificationStatus,
     };
 }
+/**
+* @export
+* @enum {string}
+*/
+export var DashboardCaseUserModelVerificationStatusEnum;
+(function (DashboardCaseUserModelVerificationStatusEnum) {
+    DashboardCaseUserModelVerificationStatusEnum["CANCELLED"] = "CANCELLED";
+    DashboardCaseUserModelVerificationStatusEnum["PENDING"] = "PENDING";
+    DashboardCaseUserModelVerificationStatusEnum["VERIFIED"] = "VERIFIED";
+})(DashboardCaseUserModelVerificationStatusEnum || (DashboardCaseUserModelVerificationStatusEnum = {}));

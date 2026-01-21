@@ -51,7 +51,22 @@ export interface DashboardCaseUserModel {
      * @memberof DashboardCaseUserModel
      */
     userId?: number;
+    /**
+     *
+     * @type {string}
+     * @memberof DashboardCaseUserModel
+     */
+    verificationStatus?: DashboardCaseUserModelVerificationStatusEnum;
 }
 export declare function DashboardCaseUserModelFromJSON(json: any): DashboardCaseUserModel;
 export declare function DashboardCaseUserModelFromJSONTyped(json: any, ignoreDiscriminator: boolean): DashboardCaseUserModel;
 export declare function DashboardCaseUserModelToJSON(value?: DashboardCaseUserModel | null): any;
+/**
+* @export
+* @enum {string}
+*/
+export declare enum DashboardCaseUserModelVerificationStatusEnum {
+    CANCELLED = "CANCELLED",
+    PENDING = "PENDING",
+    VERIFIED = "VERIFIED"
+}
