@@ -13,6 +13,7 @@ import * as models from './models';
 export interface WorkflowFinancials {
     "lineItems"?: Array<models.WorkflowLineItemModel>;
     "payments"?: Array<models.WorkflowCasePaymentModel>;
+    "totalCaseCostInCents"?: number;
     "totalClientBaseCostInCents"?: number;
     "totalClientCostInCents"?: number;
     "totalLegalFeeInCents"?: number;

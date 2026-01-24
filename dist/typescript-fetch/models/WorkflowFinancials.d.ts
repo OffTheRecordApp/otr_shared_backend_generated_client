@@ -33,6 +33,12 @@ export interface WorkflowFinancials {
      * @type {number}
      * @memberof WorkflowFinancials
      */
+    totalCaseCostInCents?: number;
+    /**
+     *
+     * @type {number}
+     * @memberof WorkflowFinancials
+     */
     totalClientBaseCostInCents?: number;
     /**
      *

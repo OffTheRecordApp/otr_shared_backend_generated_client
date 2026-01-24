@@ -23,6 +23,7 @@ export function WorkflowFinancialsFromJSONTyped(json, ignoreDiscriminator) {
     return {
         'lineItems': !exists(json, 'lineItems') ? undefined : (json['lineItems'].map(WorkflowLineItemModelFromJSON)),
         'payments': !exists(json, 'payments') ? undefined : (json['payments'].map(WorkflowCasePaymentModelFromJSON)),
+        'totalCaseCostInCents': !exists(json, 'totalCaseCostInCents') ? undefined : json['totalCaseCostInCents'],
         'totalClientBaseCostInCents': !exists(json, 'totalClientBaseCostInCents') ? undefined : json['totalClientBaseCostInCents'],
         'totalClientCostInCents': !exists(json, 'totalClientCostInCents') ? undefined : json['totalClientCostInCents'],
         'totalLegalFeeInCents': !exists(json, 'totalLegalFeeInCents') ? undefined : json['totalLegalFeeInCents'],
@@ -39,6 +40,7 @@ export function WorkflowFinancialsToJSON(value) {
     return {
         'lineItems': value.lineItems === undefined ? undefined : (value.lineItems.map(WorkflowLineItemModelToJSON)),
         'payments': value.payments === undefined ? undefined : (value.payments.map(WorkflowCasePaymentModelToJSON)),
+        'totalCaseCostInCents': value.totalCaseCostInCents,
         'totalClientBaseCostInCents': value.totalClientBaseCostInCents,
         'totalClientCostInCents': value.totalClientCostInCents,
         'totalLegalFeeInCents': value.totalLegalFeeInCents,

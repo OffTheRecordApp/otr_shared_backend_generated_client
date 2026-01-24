@@ -16,6 +16,7 @@ import { WorkflowLineItemModel } from './workflowLineItemModel';
 export interface WorkflowFinancials { 
     lineItems?: Array<WorkflowLineItemModel>;
     payments?: Array<WorkflowCasePaymentModel>;
+    totalCaseCostInCents?: number;
     totalClientBaseCostInCents?: number;
     totalClientCostInCents?: number;
     totalLegalFeeInCents?: number;

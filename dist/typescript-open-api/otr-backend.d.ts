@@ -16770,6 +16770,8 @@ export interface components {
             lineItems?: components["schemas"]["WorkflowLineItemModel"][];
             payments?: components["schemas"]["WorkflowCasePaymentModel"][];
             /** Format: int32 */
+            totalCaseCostInCents?: number;
+            /** Format: int32 */
             totalClientBaseCostInCents?: number;
             /** Format: int32 */
             totalClientCostInCents?: number;
