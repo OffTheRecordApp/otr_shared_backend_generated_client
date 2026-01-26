@@ -10002,7 +10002,7 @@ export interface components {
             unreadNotificationCount?: number;
             /** Format: int64 */
             userId?: number;
-            violations?: components["schemas"]["ViolationModel0"][];
+            violations?: components["schemas"]["ListDashboardCasesViolationModel"][];
         };
         /** DashboardCaseUserModel */
         DashboardCaseUserModel: {
@@ -11659,12 +11659,15 @@ export interface components {
             criminal?: boolean;
             enabledForCustomers?: boolean;
             enabledForLawfirms?: boolean;
-            penalties?: components["schemas"]["PenaltyModel"][];
+            isCriminal?: boolean;
+            isWobblerToCriminal?: boolean;
+            penalties?: components["schemas"]["ViolationPenaltyModel"][];
             /** @enum {string} */
             refundEligibilityType?: AccountLevelFeeRefundEligibility;
             trafficViolationDesc?: string;
             /** Format: int64 */
             trafficViolationTypeId?: number;
+            uniqueId?: string;
             userFriendlyName?: string;
             userFriendlyShortForm?: string;
             /** @enum {string} */
@@ -13031,6 +13034,16 @@ export interface components {
             /** Format: int32 */
             totalCaseCount?: number;
         };
+        /** ListDashboardCasesViolationModel */
+        ListDashboardCasesViolationModel: {
+            isCriminal?: boolean;
+            isMoving?: boolean;
+            userFriendlyName?: string;
+            /** @enum {string} */
+            violationClassification?: PathsApiV1LawfirmsLawfirmIdAccountFeesDeleteParametersQueryClassification;
+            violationClassificationDescription?: string;
+            violationClassificationFriendlyName?: string;
+        };
         /** ListEligibleStatusResponse */
         ListEligibleStatusResponse: {
             statuses?: PathsApiV1LawfirmsLawfirmIdInboxMessagesGetParametersQueryCaseStatuses[];
@@ -13875,17 +13888,6 @@ export interface components {
             penaltyTypeId?: number;
             penaltyValue?: string;
             vectorImageUrl?: string;
-        };
-        /** PenaltyModel */
-        PenaltyModel: {
-            additionalTip?: string;
-            penaltyDataType?: string;
-            penaltyFriendlyDescription?: string;
-            /** @enum {string} */
-            penaltyType?: CaseViolationPenaltyPenaltyType;
-            /** Format: int32 */
-            penaltyTypeId?: number;
-            penaltyValue?: string;
         };
         /** PenaltyRequest */
         PenaltyRequest: {
@@ -16625,6 +16627,7 @@ export interface components {
         /** ViolationModel */
         ViolationModel: {
             classDescription?: string;
+            criminal?: boolean;
             /** Format: double */
             insuranceIncreasePercent?: number;
             isCriminal?: boolean;
@@ -16641,16 +16644,6 @@ export interface components {
             violationClassification?: PathsApiV1LawfirmsLawfirmIdAccountFeesDeleteParametersQueryClassification;
             violationCode?: string;
         };
-        /** ViolationModel0 */
-        ViolationModel0: {
-            isCriminal?: boolean;
-            isMoving?: boolean;
-            userFriendlyName?: string;
-            /** @enum {string} */
-            violationClassification?: PathsApiV1LawfirmsLawfirmIdAccountFeesDeleteParametersQueryClassification;
-            violationClassificationDescription?: string;
-            violationClassificationFriendlyName?: string;
-        };
         /** ViolationNames */
         ViolationNames: {
             llm_prediction?: string[];
@@ -16661,6 +16654,7 @@ export interface components {
         /** ViolationPenaltyModel */
         ViolationPenaltyModel: {
             additionalTip?: string;
+            penaltyDataType?: string;
             penaltyFriendlyDescription?: string;
             penaltyMerged?: boolean;
             /** @enum {string} */
@@ -16720,7 +16714,7 @@ export interface components {
             latestUnavailableMatchAttributes?: components["schemas"]["UnavailableMatchAttributesModel"];
             legalServices?: components["schemas"]["LegalServiceModel"][];
             letterOfEngagement?: components["schemas"]["LetterOfEngagement"];
-            maxPenalties?: components["schemas"]["WorkflowViolationPenaltyModel"][];
+            maxPenalties?: components["schemas"]["ViolationPenaltyModel"][];
             paymentPlanTypeModel?: components["schemas"]["PaymentPlanTypeModel"];
             referralCode?: string;
             /** @enum {string} */
@@ -16795,7 +16789,9 @@ export interface components {
         WorkflowViolationModel: {
             classDescription?: string;
             criminal?: boolean;
-            penalties?: components["schemas"]["WorkflowViolationPenaltyModel"][];
+            isCriminal?: boolean;
+            isWobblerToCriminal?: boolean;
+            penalties?: components["schemas"]["ViolationPenaltyModel"][];
             trafficViolationDesc?: string;
             /** Format: int64 */
             trafficViolationTypeId?: number;
@@ -16803,13 +16799,6 @@ export interface components {
             violationClassification?: PathsApiV1LawfirmsLawfirmIdAccountFeesDeleteParametersQueryClassification;
             violationCode?: string;
             wobblerToCriminal?: boolean;
-        };
-        /** WorkflowViolationPenaltyModel */
-        WorkflowViolationPenaltyModel: {
-            penaltyFriendlyDescription?: string;
-            /** @enum {string} */
-            penaltyType?: CaseViolationPenaltyPenaltyType;
-            penaltyValue?: string;
         };
         /** ZoneId */
         ZoneId: {

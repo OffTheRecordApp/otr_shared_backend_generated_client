@@ -633,6 +633,7 @@ model/listContactTimelineResponse.ts
 model/listCostItemsForCustomerResponse.ts
 model/listDashboardCaseUsersResponse.ts
 model/listDashboardCasesResponse.ts
+model/listDashboardCasesViolationModel.ts
 model/listEligibleStatusResponse.ts
 model/listEmployeesResponse.ts
 model/listLawfirmAuditEventsByCursorResponse.ts
@@ -709,7 +710,6 @@ model/paymentPlanTypeModel.ts
 model/paymentPlanTypeModelReq.ts
 model/paymentPlanTypeModelRes.ts
 model/penalty.ts
-model/penaltyModel.ts
 model/penaltyRequest.ts
 model/persistTicketEvaluationRequest.ts
 model/phoneNumberDomain.ts
@@ -987,7 +987,6 @@ model/violationClassificationModel.ts
 model/violationInput.ts
 model/violationInputRequest.ts
 model/violationModel.ts
-model/violationModel0.ts
 model/violationNames.ts
 model/violationPenaltyModel.ts
 model/violationPenaltyResponse.ts
@@ -999,7 +998,6 @@ model/workflowCitationModel.ts
 model/workflowFinancials.ts
 model/workflowLineItemModel.ts
 model/workflowViolationModel.ts
-model/workflowViolationPenaltyModel.ts
 model/zoneId.ts
 model/zoneOffset.ts
 model/zoneOffsetTransition.ts

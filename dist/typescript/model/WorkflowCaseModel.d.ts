@@ -21,7 +21,7 @@ export interface WorkflowCaseModel {
     "latestUnavailableMatchAttributes"?: models.UnavailableMatchAttributesModel;
     "legalServices"?: Array<models.LegalServiceModel>;
     "letterOfEngagement"?: models.LetterOfEngagement;
-    "maxPenalties"?: Array<models.WorkflowViolationPenaltyModel>;
+    "maxPenalties"?: Array<models.ViolationPenaltyModel>;
     "paymentPlanTypeModel"?: models.PaymentPlanTypeModel;
     "referralCode"?: string;
     "referralCodeOwner"?: WorkflowCaseModel.ReferralCodeOwnerEnum;

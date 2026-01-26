@@ -9,30 +9,15 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-import * as models from './models';
-export interface GetTrafficViolationModel {
-    "classDescription"?: string;
-    "criminal"?: boolean;
-    "enabledForCustomers"?: boolean;
-    "enabledForLawfirms"?: boolean;
+export interface ListDashboardCasesViolationModel {
     "isCriminal"?: boolean;
-    "isWobblerToCriminal"?: boolean;
-    "penalties"?: Array<models.ViolationPenaltyModel>;
-    "refundEligibilityType"?: GetTrafficViolationModel.RefundEligibilityTypeEnum;
-    "trafficViolationDesc"?: string;
-    "trafficViolationTypeId"?: number;
-    "uniqueId"?: string;
+    "isMoving"?: boolean;
     "userFriendlyName"?: string;
-    "userFriendlyShortForm"?: string;
-    "violationClassification"?: GetTrafficViolationModel.ViolationClassificationEnum;
-    "violationCode"?: string;
-    "wobblerToCriminal"?: boolean;
+    "violationClassification"?: ListDashboardCasesViolationModel.ViolationClassificationEnum;
+    "violationClassificationDescription"?: string;
+    "violationClassificationFriendlyName"?: string;
 }
-export declare namespace GetTrafficViolationModel {
-    enum RefundEligibilityTypeEnum {
-        FULLREFUND,
-        NOREFUND
-    }
+export declare namespace ListDashboardCasesViolationModel {
     enum ViolationClassificationEnum {
         CLASS1FELONY,
         CLASS1MISDEMEANOR,

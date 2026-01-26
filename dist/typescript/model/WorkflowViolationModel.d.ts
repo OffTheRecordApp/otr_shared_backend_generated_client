@@ -13,7 +13,9 @@ import * as models from './models';
 export interface WorkflowViolationModel {
     "classDescription"?: string;
     "criminal"?: boolean;
-    "penalties"?: Array<models.WorkflowViolationPenaltyModel>;
+    "isCriminal"?: boolean;
+    "isWobblerToCriminal"?: boolean;
+    "penalties"?: Array<models.ViolationPenaltyModel>;
     "trafficViolationDesc"?: string;
     "trafficViolationTypeId"?: number;
     "violationClassification"?: WorkflowViolationModel.ViolationClassificationEnum;

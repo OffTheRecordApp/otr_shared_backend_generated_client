@@ -9,7 +9,7 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-import { CaseUserDetailsModel, DashboardAuthorModel, DashboardCaseCounterOfferModel, DashboardCitationModel, DashboardCourtModel, DashboardDisputeModel, DashboardStatusModel, EngagementLetterModel, OverduePaymentModel, ViolationModel0 } from './';
+import { CaseUserDetailsModel, DashboardAuthorModel, DashboardCaseCounterOfferModel, DashboardCitationModel, DashboardCourtModel, DashboardDisputeModel, DashboardStatusModel, EngagementLetterModel, ListDashboardCasesViolationModel, OverduePaymentModel } from './';
 /**
  *
  * @export
@@ -168,10 +168,10 @@ export interface DashboardCaseModel {
     userId?: number;
     /**
      *
-     * @type {Array<ViolationModel0>}
+     * @type {Array<ListDashboardCasesViolationModel>}
      * @memberof DashboardCaseModel
      */
-    violations?: Array<ViolationModel0>;
+    violations?: Array<ListDashboardCasesViolationModel>;
 }
 export declare function DashboardCaseModelFromJSON(json: any): DashboardCaseModel;
 export declare function DashboardCaseModelFromJSONTyped(json: any, ignoreDiscriminator: boolean): DashboardCaseModel;

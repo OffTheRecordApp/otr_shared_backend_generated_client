@@ -12,54 +12,54 @@
 /**
  *
  * @export
- * @interface ViolationModel0
+ * @interface ListDashboardCasesViolationModel
  */
-export interface ViolationModel0 {
+export interface ListDashboardCasesViolationModel {
     /**
      *
      * @type {boolean}
-     * @memberof ViolationModel0
+     * @memberof ListDashboardCasesViolationModel
      */
     isCriminal?: boolean;
     /**
      *
      * @type {boolean}
-     * @memberof ViolationModel0
+     * @memberof ListDashboardCasesViolationModel
      */
     isMoving?: boolean;
     /**
      *
      * @type {string}
-     * @memberof ViolationModel0
+     * @memberof ListDashboardCasesViolationModel
      */
     userFriendlyName?: string;
     /**
      *
      * @type {string}
-     * @memberof ViolationModel0
+     * @memberof ListDashboardCasesViolationModel
      */
-    violationClassification?: ViolationModel0ViolationClassificationEnum;
+    violationClassification?: ListDashboardCasesViolationModelViolationClassificationEnum;
     /**
      *
      * @type {string}
-     * @memberof ViolationModel0
+     * @memberof ListDashboardCasesViolationModel
      */
     violationClassificationDescription?: string;
     /**
      *
      * @type {string}
-     * @memberof ViolationModel0
+     * @memberof ListDashboardCasesViolationModel
      */
     violationClassificationFriendlyName?: string;
 }
-export declare function ViolationModel0FromJSON(json: any): ViolationModel0;
-export declare function ViolationModel0FromJSONTyped(json: any, ignoreDiscriminator: boolean): ViolationModel0;
-export declare function ViolationModel0ToJSON(value?: ViolationModel0 | null): any;
+export declare function ListDashboardCasesViolationModelFromJSON(json: any): ListDashboardCasesViolationModel;
+export declare function ListDashboardCasesViolationModelFromJSONTyped(json: any, ignoreDiscriminator: boolean): ListDashboardCasesViolationModel;
+export declare function ListDashboardCasesViolationModelToJSON(value?: ListDashboardCasesViolationModel | null): any;
 /**
 * @export
 * @enum {string}
 */
-export declare enum ViolationModel0ViolationClassificationEnum {
+export declare enum ListDashboardCasesViolationModelViolationClassificationEnum {
     CLASS1FELONY = "CLASS_1_FELONY",
     CLASS1MISDEMEANOR = "CLASS_1_MISDEMEANOR",
     CLASS2FELONY = "CLASS_2_FELONY",

@@ -9,7 +9,7 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-import { PenaltyModel } from './penaltyModel';
+import { ViolationPenaltyModel } from './violationPenaltyModel';
 
 
 export interface GetTrafficViolationModel { 
@@ -17,10 +17,13 @@ export interface GetTrafficViolationModel {
     criminal?: boolean;
     enabledForCustomers?: boolean;
     enabledForLawfirms?: boolean;
-    penalties?: Array<PenaltyModel>;
+    isCriminal?: boolean;
+    isWobblerToCriminal?: boolean;
+    penalties?: Array<ViolationPenaltyModel>;
     refundEligibilityType?: GetTrafficViolationModel.RefundEligibilityTypeEnum;
     trafficViolationDesc?: string;
     trafficViolationTypeId?: number;
+    uniqueId?: string;
     userFriendlyName?: string;
     userFriendlyShortForm?: string;
     violationClassification?: GetTrafficViolationModel.ViolationClassificationEnum;

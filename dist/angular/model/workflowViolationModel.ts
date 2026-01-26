@@ -9,13 +9,15 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-import { WorkflowViolationPenaltyModel } from './workflowViolationPenaltyModel';
+import { ViolationPenaltyModel } from './violationPenaltyModel';
 
 
 export interface WorkflowViolationModel { 
     classDescription?: string;
     criminal?: boolean;
-    penalties?: Array<WorkflowViolationPenaltyModel>;
+    isCriminal?: boolean;
+    isWobblerToCriminal?: boolean;
+    penalties?: Array<ViolationPenaltyModel>;
     trafficViolationDesc?: string;
     trafficViolationTypeId?: number;
     violationClassification?: WorkflowViolationModel.ViolationClassificationEnum;

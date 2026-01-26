@@ -12,7 +12,7 @@
  * Do not edit the class manually.
  */
 import { exists } from '../runtime';
-import { CaseUserDetailsModelFromJSON, CaseUserDetailsModelToJSON, DashboardAuthorModelFromJSON, DashboardAuthorModelToJSON, DashboardCaseCounterOfferModelFromJSON, DashboardCaseCounterOfferModelToJSON, DashboardCitationModelFromJSON, DashboardCitationModelToJSON, DashboardCourtModelFromJSON, DashboardCourtModelToJSON, DashboardDisputeModelFromJSON, DashboardDisputeModelToJSON, DashboardStatusModelFromJSON, DashboardStatusModelToJSON, EngagementLetterModelFromJSON, EngagementLetterModelToJSON, OverduePaymentModelFromJSON, OverduePaymentModelToJSON, ViolationModel0FromJSON, ViolationModel0ToJSON, } from './';
+import { CaseUserDetailsModelFromJSON, CaseUserDetailsModelToJSON, DashboardAuthorModelFromJSON, DashboardAuthorModelToJSON, DashboardCaseCounterOfferModelFromJSON, DashboardCaseCounterOfferModelToJSON, DashboardCitationModelFromJSON, DashboardCitationModelToJSON, DashboardCourtModelFromJSON, DashboardCourtModelToJSON, DashboardDisputeModelFromJSON, DashboardDisputeModelToJSON, DashboardStatusModelFromJSON, DashboardStatusModelToJSON, EngagementLetterModelFromJSON, EngagementLetterModelToJSON, ListDashboardCasesViolationModelFromJSON, ListDashboardCasesViolationModelToJSON, OverduePaymentModelFromJSON, OverduePaymentModelToJSON, } from './';
 export function DashboardCaseModelFromJSON(json) {
     return DashboardCaseModelFromJSONTyped(json, false);
 }
@@ -46,7 +46,7 @@ export function DashboardCaseModelFromJSONTyped(json, ignoreDiscriminator) {
         'unread': !exists(json, 'unread') ? undefined : json['unread'],
         'unreadNotificationCount': !exists(json, 'unreadNotificationCount') ? undefined : json['unreadNotificationCount'],
         'userId': !exists(json, 'userId') ? undefined : json['userId'],
-        'violations': !exists(json, 'violations') ? undefined : (json['violations'].map(ViolationModel0FromJSON)),
+        'violations': !exists(json, 'violations') ? undefined : (json['violations'].map(ListDashboardCasesViolationModelFromJSON)),
     };
 }
 export function DashboardCaseModelToJSON(value) {
@@ -82,6 +82,6 @@ export function DashboardCaseModelToJSON(value) {
         'unread': value.unread,
         'unreadNotificationCount': value.unreadNotificationCount,
         'userId': value.userId,
-        'violations': value.violations === undefined ? undefined : (value.violations.map(ViolationModel0ToJSON)),
+        'violations': value.violations === undefined ? undefined : (value.violations.map(ListDashboardCasesViolationModelToJSON)),
     };
 }

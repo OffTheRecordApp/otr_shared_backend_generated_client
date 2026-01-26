@@ -21,6 +21,7 @@ export function ViolationPenaltyModelFromJSONTyped(json, ignoreDiscriminator) {
     }
     return {
         'additionalTip': !exists(json, 'additionalTip') ? undefined : json['additionalTip'],
+        'penaltyDataType': !exists(json, 'penaltyDataType') ? undefined : json['penaltyDataType'],
         'penaltyFriendlyDescription': !exists(json, 'penaltyFriendlyDescription') ? undefined : json['penaltyFriendlyDescription'],
         'penaltyMerged': !exists(json, 'penaltyMerged') ? undefined : json['penaltyMerged'],
         'penaltyType': !exists(json, 'penaltyType') ? undefined : json['penaltyType'],
@@ -38,6 +39,7 @@ export function ViolationPenaltyModelToJSON(value) {
     }
     return {
         'additionalTip': value.additionalTip,
+        'penaltyDataType': value.penaltyDataType,
         'penaltyFriendlyDescription': value.penaltyFriendlyDescription,
         'penaltyMerged': value.penaltyMerged,
         'penaltyType': value.penaltyType,

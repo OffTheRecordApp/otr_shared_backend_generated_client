@@ -12,7 +12,7 @@
  * Do not edit the class manually.
  */
 import { exists } from '../runtime';
-import { WorkflowViolationPenaltyModelFromJSON, WorkflowViolationPenaltyModelToJSON, } from './';
+import { ViolationPenaltyModelFromJSON, ViolationPenaltyModelToJSON, } from './';
 export function WorkflowViolationModelFromJSON(json) {
     return WorkflowViolationModelFromJSONTyped(json, false);
 }
@@ -23,7 +23,9 @@ export function WorkflowViolationModelFromJSONTyped(json, ignoreDiscriminator) {
     return {
         'classDescription': !exists(json, 'classDescription') ? undefined : json['classDescription'],
         'criminal': !exists(json, 'criminal') ? undefined : json['criminal'],
-        'penalties': !exists(json, 'penalties') ? undefined : (json['penalties'].map(WorkflowViolationPenaltyModelFromJSON)),
+        'isCriminal': !exists(json, 'isCriminal') ? undefined : json['isCriminal'],
+        'isWobblerToCriminal': !exists(json, 'isWobblerToCriminal') ? undefined : json['isWobblerToCriminal'],
+        'penalties': !exists(json, 'penalties') ? undefined : (json['penalties'].map(ViolationPenaltyModelFromJSON)),
         'trafficViolationDesc': !exists(json, 'trafficViolationDesc') ? undefined : json['trafficViolationDesc'],
         'trafficViolationTypeId': !exists(json, 'trafficViolationTypeId') ? undefined : json['trafficViolationTypeId'],
         'violationClassification': !exists(json, 'violationClassification') ? undefined : json['violationClassification'],
@@ -41,7 +43,9 @@ export function WorkflowViolationModelToJSON(value) {
     return {
         'classDescription': value.classDescription,
         'criminal': value.criminal,
-        'penalties': value.penalties === undefined ? undefined : (value.penalties.map(WorkflowViolationPenaltyModelToJSON)),
+        'isCriminal': value.isCriminal,
+        'isWobblerToCriminal': value.isWobblerToCriminal,
+        'penalties': value.penalties === undefined ? undefined : (value.penalties.map(ViolationPenaltyModelToJSON)),
         'trafficViolationDesc': value.trafficViolationDesc,
         'trafficViolationTypeId': value.trafficViolationTypeId,
         'violationClassification': value.violationClassification,

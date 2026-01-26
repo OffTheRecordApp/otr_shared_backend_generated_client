@@ -9,7 +9,7 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-import { DefendantDetailsModel, LegalServiceModel, LetterOfEngagement, PaymentPlanTypeModel, SubscriptionPlanEligibility, Timestamp, UnavailableMatchAttributesModel, WorkflowCitationModel, WorkflowViolationPenaltyModel } from './';
+import { DefendantDetailsModel, LegalServiceModel, LetterOfEngagement, PaymentPlanTypeModel, SubscriptionPlanEligibility, Timestamp, UnavailableMatchAttributesModel, ViolationPenaltyModel, WorkflowCitationModel } from './';
 /**
  *
  * @export
@@ -78,10 +78,10 @@ export interface WorkflowCaseModel {
     letterOfEngagement?: LetterOfEngagement;
     /**
      *
-     * @type {Array<WorkflowViolationPenaltyModel>}
+     * @type {Array<ViolationPenaltyModel>}
      * @memberof WorkflowCaseModel
      */
-    maxPenalties?: Array<WorkflowViolationPenaltyModel>;
+    maxPenalties?: Array<ViolationPenaltyModel>;
     /**
      *
      * @type {PaymentPlanTypeModel}

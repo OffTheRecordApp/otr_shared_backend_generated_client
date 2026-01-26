@@ -12,7 +12,7 @@
  * Do not edit the class manually.
  */
 import { exists } from '../runtime';
-import { DefendantDetailsModelFromJSON, DefendantDetailsModelToJSON, LegalServiceModelFromJSON, LegalServiceModelToJSON, LetterOfEngagementFromJSON, LetterOfEngagementToJSON, PaymentPlanTypeModelFromJSON, PaymentPlanTypeModelToJSON, SubscriptionPlanEligibilityFromJSON, SubscriptionPlanEligibilityToJSON, TimestampFromJSON, TimestampToJSON, UnavailableMatchAttributesModelFromJSON, UnavailableMatchAttributesModelToJSON, WorkflowCitationModelFromJSON, WorkflowCitationModelToJSON, WorkflowViolationPenaltyModelFromJSON, WorkflowViolationPenaltyModelToJSON, } from './';
+import { DefendantDetailsModelFromJSON, DefendantDetailsModelToJSON, LegalServiceModelFromJSON, LegalServiceModelToJSON, LetterOfEngagementFromJSON, LetterOfEngagementToJSON, PaymentPlanTypeModelFromJSON, PaymentPlanTypeModelToJSON, SubscriptionPlanEligibilityFromJSON, SubscriptionPlanEligibilityToJSON, TimestampFromJSON, TimestampToJSON, UnavailableMatchAttributesModelFromJSON, UnavailableMatchAttributesModelToJSON, ViolationPenaltyModelFromJSON, ViolationPenaltyModelToJSON, WorkflowCitationModelFromJSON, WorkflowCitationModelToJSON, } from './';
 export function WorkflowCaseModelFromJSON(json) {
     return WorkflowCaseModelFromJSONTyped(json, false);
 }
@@ -31,7 +31,7 @@ export function WorkflowCaseModelFromJSONTyped(json, ignoreDiscriminator) {
         'latestUnavailableMatchAttributes': !exists(json, 'latestUnavailableMatchAttributes') ? undefined : UnavailableMatchAttributesModelFromJSON(json['latestUnavailableMatchAttributes']),
         'legalServices': !exists(json, 'legalServices') ? undefined : (json['legalServices'].map(LegalServiceModelFromJSON)),
         'letterOfEngagement': !exists(json, 'letterOfEngagement') ? undefined : LetterOfEngagementFromJSON(json['letterOfEngagement']),
-        'maxPenalties': !exists(json, 'maxPenalties') ? undefined : (json['maxPenalties'].map(WorkflowViolationPenaltyModelFromJSON)),
+        'maxPenalties': !exists(json, 'maxPenalties') ? undefined : (json['maxPenalties'].map(ViolationPenaltyModelFromJSON)),
         'paymentPlanTypeModel': !exists(json, 'paymentPlanTypeModel') ? undefined : PaymentPlanTypeModelFromJSON(json['paymentPlanTypeModel']),
         'referralCode': !exists(json, 'referralCode') ? undefined : json['referralCode'],
         'referralCodeOwner': !exists(json, 'referralCodeOwner') ? undefined : json['referralCodeOwner'],
@@ -57,7 +57,7 @@ export function WorkflowCaseModelToJSON(value) {
         'latestUnavailableMatchAttributes': UnavailableMatchAttributesModelToJSON(value.latestUnavailableMatchAttributes),
         'legalServices': value.legalServices === undefined ? undefined : (value.legalServices.map(LegalServiceModelToJSON)),
         'letterOfEngagement': LetterOfEngagementToJSON(value.letterOfEngagement),
-        'maxPenalties': value.maxPenalties === undefined ? undefined : (value.maxPenalties.map(WorkflowViolationPenaltyModelToJSON)),
+        'maxPenalties': value.maxPenalties === undefined ? undefined : (value.maxPenalties.map(ViolationPenaltyModelToJSON)),
         'paymentPlanTypeModel': PaymentPlanTypeModelToJSON(value.paymentPlanTypeModel),
         'referralCode': value.referralCode,
         'referralCodeOwner': value.referralCodeOwner,

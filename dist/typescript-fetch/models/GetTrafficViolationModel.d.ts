@@ -9,7 +9,7 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-import { PenaltyModel } from './';
+import { ViolationPenaltyModel } from './';
 /**
  *
  * @export
@@ -42,10 +42,22 @@ export interface GetTrafficViolationModel {
     enabledForLawfirms?: boolean;
     /**
      *
-     * @type {Array<PenaltyModel>}
+     * @type {boolean}
      * @memberof GetTrafficViolationModel
      */
-    penalties?: Array<PenaltyModel>;
+    isCriminal?: boolean;
+    /**
+     *
+     * @type {boolean}
+     * @memberof GetTrafficViolationModel
+     */
+    isWobblerToCriminal?: boolean;
+    /**
+     *
+     * @type {Array<ViolationPenaltyModel>}
+     * @memberof GetTrafficViolationModel
+     */
+    penalties?: Array<ViolationPenaltyModel>;
     /**
      *
      * @type {string}
@@ -64,6 +76,12 @@ export interface GetTrafficViolationModel {
      * @memberof GetTrafficViolationModel
      */
     trafficViolationTypeId?: number;
+    /**
+     *
+     * @type {string}
+     * @memberof GetTrafficViolationModel
+     */
+    uniqueId?: string;
     /**
      *
      * @type {string}

@@ -9,7 +9,7 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-import { WorkflowViolationPenaltyModel } from './';
+import { ViolationPenaltyModel } from './';
 /**
  *
  * @export
@@ -30,10 +30,22 @@ export interface WorkflowViolationModel {
     criminal?: boolean;
     /**
      *
-     * @type {Array<WorkflowViolationPenaltyModel>}
+     * @type {boolean}
      * @memberof WorkflowViolationModel
      */
-    penalties?: Array<WorkflowViolationPenaltyModel>;
+    isCriminal?: boolean;
+    /**
+     *
+     * @type {boolean}
+     * @memberof WorkflowViolationModel
+     */
+    isWobblerToCriminal?: boolean;
+    /**
+     *
+     * @type {Array<ViolationPenaltyModel>}
+     * @memberof WorkflowViolationModel
+     */
+    penalties?: Array<ViolationPenaltyModel>;
     /**
      *
      * @type {string}

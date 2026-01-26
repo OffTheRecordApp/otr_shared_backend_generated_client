@@ -36,5 +36,5 @@ export interface DashboardCaseModel {
     "unread"?: boolean;
     "unreadNotificationCount"?: number;
     "userId"?: number;
-    "violations"?: Array<models.ViolationModel0>;
+    "violations"?: Array<models.ListDashboardCasesViolationModel>;
 }

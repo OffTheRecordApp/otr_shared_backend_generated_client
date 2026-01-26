@@ -10,8 +10,8 @@
  * Do not edit the class manually.
  */
 import { DefendantDetailsModel } from './defendantDetailsModel';
+import { ViolationPenaltyModel } from './violationPenaltyModel';
 import { UnavailableMatchAttributesModel } from './unavailableMatchAttributesModel';
-import { WorkflowViolationPenaltyModel } from './workflowViolationPenaltyModel';
 import { WorkflowCitationModel } from './workflowCitationModel';
 import { SubscriptionPlanEligibility } from './subscriptionPlanEligibility';
 import { LetterOfEngagement } from './letterOfEngagement';
@@ -31,7 +31,7 @@ export interface WorkflowCaseModel {
     latestUnavailableMatchAttributes?: UnavailableMatchAttributesModel;
     legalServices?: Array<LegalServiceModel>;
     letterOfEngagement?: LetterOfEngagement;
-    maxPenalties?: Array<WorkflowViolationPenaltyModel>;
+    maxPenalties?: Array<ViolationPenaltyModel>;
     paymentPlanTypeModel?: PaymentPlanTypeModel;
     referralCode?: string;
     referralCodeOwner?: WorkflowCaseModel.ReferralCodeOwnerEnum;

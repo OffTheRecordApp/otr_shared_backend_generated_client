@@ -26,6 +26,12 @@ export interface ViolationPenaltyModel {
      * @type {string}
      * @memberof ViolationPenaltyModel
      */
+    penaltyDataType?: string;
+    /**
+     *
+     * @type {string}
+     * @memberof ViolationPenaltyModel
+     */
     penaltyFriendlyDescription?: string;
     /**
      *

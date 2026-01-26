@@ -10,8 +10,8 @@
  * Do not edit the class manually.
  */
 import { DashboardStatusModel } from './dashboardStatusModel';
+import { ListDashboardCasesViolationModel } from './listDashboardCasesViolationModel';
 import { DashboardCourtModel } from './dashboardCourtModel';
-import { ViolationModel0 } from './violationModel0';
 import { DashboardDisputeModel } from './dashboardDisputeModel';
 import { DashboardCaseCounterOfferModel } from './dashboardCaseCounterOfferModel';
 import { CaseUserDetailsModel } from './caseUserDetailsModel';
@@ -47,6 +47,6 @@ export interface DashboardCaseModel {
     unread?: boolean;
     unreadNotificationCount?: number;
     userId?: number;
-    violations?: Array<ViolationModel0>;
+    violations?: Array<ListDashboardCasesViolationModel>;
 }
 

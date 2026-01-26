@@ -12,7 +12,7 @@
  * Do not edit the class manually.
  */
 import { exists } from '../runtime';
-import { PenaltyModelFromJSON, PenaltyModelToJSON, } from './';
+import { ViolationPenaltyModelFromJSON, ViolationPenaltyModelToJSON, } from './';
 export function GetTrafficViolationModelFromJSON(json) {
     return GetTrafficViolationModelFromJSONTyped(json, false);
 }
@@ -25,10 +25,13 @@ export function GetTrafficViolationModelFromJSONTyped(json, ignoreDiscriminator)
         'criminal': !exists(json, 'criminal') ? undefined : json['criminal'],
         'enabledForCustomers': !exists(json, 'enabledForCustomers') ? undefined : json['enabledForCustomers'],
         'enabledForLawfirms': !exists(json, 'enabledForLawfirms') ? undefined : json['enabledForLawfirms'],
-        'penalties': !exists(json, 'penalties') ? undefined : (json['penalties'].map(PenaltyModelFromJSON)),
+        'isCriminal': !exists(json, 'isCriminal') ? undefined : json['isCriminal'],
+        'isWobblerToCriminal': !exists(json, 'isWobblerToCriminal') ? undefined : json['isWobblerToCriminal'],
+        'penalties': !exists(json, 'penalties') ? undefined : (json['penalties'].map(ViolationPenaltyModelFromJSON)),
         'refundEligibilityType': !exists(json, 'refundEligibilityType') ? undefined : json['refundEligibilityType'],
         'trafficViolationDesc': !exists(json, 'trafficViolationDesc') ? undefined : json['trafficViolationDesc'],
         'trafficViolationTypeId': !exists(json, 'trafficViolationTypeId') ? undefined : json['trafficViolationTypeId'],
+        'uniqueId': !exists(json, 'uniqueId') ? undefined : json['uniqueId'],
         'userFriendlyName': !exists(json, 'userFriendlyName') ? undefined : json['userFriendlyName'],
         'userFriendlyShortForm': !exists(json, 'userFriendlyShortForm') ? undefined : json['userFriendlyShortForm'],
         'violationClassification': !exists(json, 'violationClassification') ? undefined : json['violationClassification'],
@@ -48,10 +51,13 @@ export function GetTrafficViolationModelToJSON(value) {
         'criminal': value.criminal,
         'enabledForCustomers': value.enabledForCustomers,
         'enabledForLawfirms': value.enabledForLawfirms,
-        'penalties': value.penalties === undefined ? undefined : (value.penalties.map(PenaltyModelToJSON)),
+        'isCriminal': value.isCriminal,
+        'isWobblerToCriminal': value.isWobblerToCriminal,
+        'penalties': value.penalties === undefined ? undefined : (value.penalties.map(ViolationPenaltyModelToJSON)),
         'refundEligibilityType': value.refundEligibilityType,
         'trafficViolationDesc': value.trafficViolationDesc,
         'trafficViolationTypeId': value.trafficViolationTypeId,
+        'uniqueId': value.uniqueId,
         'userFriendlyName': value.userFriendlyName,
         'userFriendlyShortForm': value.userFriendlyShortForm,
         'violationClassification': value.violationClassification,

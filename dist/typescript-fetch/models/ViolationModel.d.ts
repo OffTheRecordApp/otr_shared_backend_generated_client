@@ -24,6 +24,12 @@ export interface ViolationModel {
     classDescription?: string;
     /**
      *
+     * @type {boolean}
+     * @memberof ViolationModel
+     */
+    criminal?: boolean;
+    /**
+     *
      * @type {number}
      * @memberof ViolationModel
      */

@@ -13,6 +13,7 @@
 
 export interface ViolationPenaltyModel { 
     additionalTip?: string;
+    penaltyDataType?: string;
     penaltyFriendlyDescription?: string;
     penaltyMerged?: boolean;
     penaltyType?: ViolationPenaltyModel.PenaltyTypeEnum;
