@@ -63,6 +63,12 @@ export interface WorkflowViolationModel {
      * @type {string}
      * @memberof WorkflowViolationModel
      */
+    uniqueId?: string;
+    /**
+     *
+     * @type {string}
+     * @memberof WorkflowViolationModel
+     */
     violationClassification?: WorkflowViolationModelViolationClassificationEnum;
     /**
      *

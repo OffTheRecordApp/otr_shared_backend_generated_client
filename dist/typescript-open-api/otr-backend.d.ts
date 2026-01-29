@@ -16795,6 +16795,7 @@ export interface components {
             trafficViolationDesc?: string;
             /** Format: int64 */
             trafficViolationTypeId?: number;
+            uniqueId?: string;
             /** @enum {string} */
             violationClassification?: PathsApiV1LawfirmsLawfirmIdAccountFeesDeleteParametersQueryClassification;
             violationCode?: string;

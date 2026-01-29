@@ -20,6 +20,7 @@ export interface WorkflowViolationModel {
     penalties?: Array<ViolationPenaltyModel>;
     trafficViolationDesc?: string;
     trafficViolationTypeId?: number;
+    uniqueId?: string;
     violationClassification?: WorkflowViolationModel.ViolationClassificationEnum;
     violationCode?: string;
     wobblerToCriminal?: boolean;

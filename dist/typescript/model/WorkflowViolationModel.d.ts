@@ -18,6 +18,7 @@ export interface WorkflowViolationModel {
     "penalties"?: Array<models.ViolationPenaltyModel>;
     "trafficViolationDesc"?: string;
     "trafficViolationTypeId"?: number;
+    "uniqueId"?: string;
     "violationClassification"?: WorkflowViolationModel.ViolationClassificationEnum;
     "violationCode"?: string;
     "wobblerToCriminal"?: boolean;
