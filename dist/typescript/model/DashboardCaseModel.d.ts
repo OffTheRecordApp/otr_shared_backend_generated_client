@@ -23,6 +23,7 @@ export interface DashboardCaseModel {
     "engagementLetter"?: models.EngagementLetterModel;
     "hasLeftLawyerReview"?: boolean;
     "lastActivityDateUtc"?: string;
+    "lastMessageType"?: DashboardCaseModel.LastMessageTypeEnum;
     "lawfirmId"?: number;
     "lawfirmName"?: string;
     "lawfirmProfilePictureUrl"?: string;
@@ -37,4 +38,10 @@ export interface DashboardCaseModel {
     "unreadNotificationCount"?: number;
     "userId"?: number;
     "violations"?: Array<models.ListDashboardCasesViolationModel>;
+}
+export declare namespace DashboardCaseModel {
+    enum LastMessageTypeEnum {
+        Attachment,
+        Message
+    }
 }

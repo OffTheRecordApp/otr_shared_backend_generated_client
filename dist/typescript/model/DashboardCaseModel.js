@@ -9,4 +9,11 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-export {};
+export var DashboardCaseModel;
+(function (DashboardCaseModel) {
+    let LastMessageTypeEnum;
+    (function (LastMessageTypeEnum) {
+        LastMessageTypeEnum[LastMessageTypeEnum["Attachment"] = 'attachment'] = "Attachment";
+        LastMessageTypeEnum[LastMessageTypeEnum["Message"] = 'message'] = "Message";
+    })(LastMessageTypeEnum = DashboardCaseModel.LastMessageTypeEnum || (DashboardCaseModel.LastMessageTypeEnum = {}));
+})(DashboardCaseModel || (DashboardCaseModel = {}));

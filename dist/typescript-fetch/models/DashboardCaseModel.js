@@ -33,6 +33,7 @@ export function DashboardCaseModelFromJSONTyped(json, ignoreDiscriminator) {
         'engagementLetter': !exists(json, 'engagementLetter') ? undefined : EngagementLetterModelFromJSON(json['engagementLetter']),
         'hasLeftLawyerReview': !exists(json, 'hasLeftLawyerReview') ? undefined : json['hasLeftLawyerReview'],
         'lastActivityDateUtc': !exists(json, 'lastActivityDateUtc') ? undefined : (new Date(json['lastActivityDateUtc'])),
+        'lastMessageType': !exists(json, 'lastMessageType') ? undefined : json['lastMessageType'],
         'lawfirmId': !exists(json, 'lawfirmId') ? undefined : json['lawfirmId'],
         'lawfirmName': !exists(json, 'lawfirmName') ? undefined : json['lawfirmName'],
         'lawfirmProfilePictureUrl': !exists(json, 'lawfirmProfilePictureUrl') ? undefined : json['lawfirmProfilePictureUrl'],
@@ -69,6 +70,7 @@ export function DashboardCaseModelToJSON(value) {
         'engagementLetter': EngagementLetterModelToJSON(value.engagementLetter),
         'hasLeftLawyerReview': value.hasLeftLawyerReview,
         'lastActivityDateUtc': value.lastActivityDateUtc === undefined ? undefined : (value.lastActivityDateUtc.toISOString()),
+        'lastMessageType': value.lastMessageType,
         'lawfirmId': value.lawfirmId,
         'lawfirmName': value.lawfirmName,
         'lawfirmProfilePictureUrl': value.lawfirmProfilePictureUrl,
@@ -85,3 +87,12 @@ export function DashboardCaseModelToJSON(value) {
         'violations': value.violations === undefined ? undefined : (value.violations.map(ListDashboardCasesViolationModelToJSON)),
     };
 }
+/**
+* @export
+* @enum {string}
+*/
+export var DashboardCaseModelLastMessageTypeEnum;
+(function (DashboardCaseModelLastMessageTypeEnum) {
+    DashboardCaseModelLastMessageTypeEnum["Attachment"] = "attachment";
+    DashboardCaseModelLastMessageTypeEnum["Message"] = "message";
+})(DashboardCaseModelLastMessageTypeEnum || (DashboardCaseModelLastMessageTypeEnum = {}));

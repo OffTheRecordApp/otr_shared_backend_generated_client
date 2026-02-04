@@ -840,6 +840,11 @@ export var DashboardCaseCounterOfferModelCounterOfferStatus;
     DashboardCaseCounterOfferModelCounterOfferStatus["PENDING"] = "PENDING";
     DashboardCaseCounterOfferModelCounterOfferStatus["WITHDRAWN"] = "WITHDRAWN";
 })(DashboardCaseCounterOfferModelCounterOfferStatus || (DashboardCaseCounterOfferModelCounterOfferStatus = {}));
+export var DashboardCaseModelLastMessageType;
+(function (DashboardCaseModelLastMessageType) {
+    DashboardCaseModelLastMessageType["attachment"] = "attachment";
+    DashboardCaseModelLastMessageType["message"] = "message";
+})(DashboardCaseModelLastMessageType || (DashboardCaseModelLastMessageType = {}));
 export var DashboardCaseUserModelVerificationStatus;
 (function (DashboardCaseUserModelVerificationStatus) {
     DashboardCaseUserModelVerificationStatus["CANCELLED"] = "CANCELLED";

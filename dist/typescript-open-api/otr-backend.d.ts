@@ -9942,6 +9942,8 @@ export interface components {
             hasLeftLawyerReview?: boolean;
             /** Format: date-time */
             lastActivityDateUtc?: string;
+            /** @enum {string} */
+            lastMessageType?: DashboardCaseModelLastMessageType;
             /** Format: int64 */
             lawfirmId?: number;
             lawfirmName?: string;
@@ -41333,6 +41335,10 @@ export declare enum DashboardCaseCounterOfferModelCounterOfferStatus {
     DECLINED = "DECLINED",
     PENDING = "PENDING",
     WITHDRAWN = "WITHDRAWN"
+}
+export declare enum DashboardCaseModelLastMessageType {
+    attachment = "attachment",
+    message = "message"
 }
 export declare enum DashboardCaseUserModelVerificationStatus {
     CANCELLED = "CANCELLED",

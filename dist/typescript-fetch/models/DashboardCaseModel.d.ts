@@ -90,6 +90,12 @@ export interface DashboardCaseModel {
     lastActivityDateUtc?: Date;
     /**
      *
+     * @type {string}
+     * @memberof DashboardCaseModel
+     */
+    lastMessageType?: DashboardCaseModelLastMessageTypeEnum;
+    /**
+     *
      * @type {number}
      * @memberof DashboardCaseModel
      */
@@ -176,3 +182,11 @@ export interface DashboardCaseModel {
 export declare function DashboardCaseModelFromJSON(json: any): DashboardCaseModel;
 export declare function DashboardCaseModelFromJSONTyped(json: any, ignoreDiscriminator: boolean): DashboardCaseModel;
 export declare function DashboardCaseModelToJSON(value?: DashboardCaseModel | null): any;
+/**
+* @export
+* @enum {string}
+*/
+export declare enum DashboardCaseModelLastMessageTypeEnum {
+    Attachment = "attachment",
+    Message = "message"
+}

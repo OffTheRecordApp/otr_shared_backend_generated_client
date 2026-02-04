@@ -34,6 +34,7 @@ export interface DashboardCaseModel {
     engagementLetter?: EngagementLetterModel;
     hasLeftLawyerReview?: boolean;
     lastActivityDateUtc?: string;
+    lastMessageType?: DashboardCaseModel.LastMessageTypeEnum;
     lawfirmId?: number;
     lawfirmName?: string;
     lawfirmProfilePictureUrl?: string;
@@ -49,4 +50,12 @@ export interface DashboardCaseModel {
     userId?: number;
     violations?: Array<ListDashboardCasesViolationModel>;
 }
+export namespace DashboardCaseModel {
+    export type LastMessageTypeEnum = 'attachment' | 'message';
+    export const LastMessageTypeEnum = {
+        Attachment: 'attachment' as LastMessageTypeEnum,
+        Message: 'message' as LastMessageTypeEnum
+    };
+}
+
 
