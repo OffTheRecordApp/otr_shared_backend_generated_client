@@ -9,22 +9,15 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-import { ViolationPenaltyModel } from './violationPenaltyModel';
+import { MatchCaseViolationPenaltyModel } from './matchCaseViolationPenaltyModel';
 
 
 export interface ViolationModel { 
-    classDescription?: string;
-    criminal?: boolean;
-    insuranceIncreasePercent?: number;
     isCriminal?: boolean;
-    isMovingViolation?: boolean;
     isWobblerToCriminal?: boolean;
-    penalties?: Array<ViolationPenaltyModel>;
+    penalties?: Array<MatchCaseViolationPenaltyModel>;
     trafficViolationDesc?: string;
     trafficViolationTypeId?: number;
-    uniqueId?: string;
-    userFriendlyName?: string;
-    userFriendlyShortForm?: string;
     violationClassification?: ViolationModel.ViolationClassificationEnum;
     violationCode?: string;
 }

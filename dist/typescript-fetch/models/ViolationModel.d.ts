@@ -9,31 +9,13 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-import { ViolationPenaltyModel } from './';
+import { MatchCaseViolationPenaltyModel } from './';
 /**
  *
  * @export
  * @interface ViolationModel
  */
 export interface ViolationModel {
-    /**
-     *
-     * @type {string}
-     * @memberof ViolationModel
-     */
-    classDescription?: string;
-    /**
-     *
-     * @type {boolean}
-     * @memberof ViolationModel
-     */
-    criminal?: boolean;
-    /**
-     *
-     * @type {number}
-     * @memberof ViolationModel
-     */
-    insuranceIncreasePercent?: number;
     /**
      *
      * @type {boolean}
@@ -45,19 +27,13 @@ export interface ViolationModel {
      * @type {boolean}
      * @memberof ViolationModel
      */
-    isMovingViolation?: boolean;
-    /**
-     *
-     * @type {boolean}
-     * @memberof ViolationModel
-     */
     isWobblerToCriminal?: boolean;
     /**
      *
-     * @type {Array<ViolationPenaltyModel>}
+     * @type {Array<MatchCaseViolationPenaltyModel>}
      * @memberof ViolationModel
      */
-    penalties?: Array<ViolationPenaltyModel>;
+    penalties?: Array<MatchCaseViolationPenaltyModel>;
     /**
      *
      * @type {string}
@@ -70,24 +46,6 @@ export interface ViolationModel {
      * @memberof ViolationModel
      */
     trafficViolationTypeId?: number;
-    /**
-     *
-     * @type {string}
-     * @memberof ViolationModel
-     */
-    uniqueId?: string;
-    /**
-     *
-     * @type {string}
-     * @memberof ViolationModel
-     */
-    userFriendlyName?: string;
-    /**
-     *
-     * @type {string}
-     * @memberof ViolationModel
-     */
-    userFriendlyShortForm?: string;
     /**
      *
      * @type {string}

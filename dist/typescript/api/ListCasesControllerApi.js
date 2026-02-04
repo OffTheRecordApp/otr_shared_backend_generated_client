@@ -22,56 +22,6 @@ export class ListCasesControllerApi {
     }
     /**
      *
-     * @summary getCasesForUser
-     * @param userId userId
-     */
-    getCasesForUserUsingGET(userId, extraHttpRequestParams) {
-        const localVarPath = this.basePath + '/api/v1/users/{userId}/cases'
-            .replace('{' + 'userId' + '}', encodeURIComponent(String(userId)));
-        let queryParameters = {};
-        let headerParams = Object.assign({}, this.defaultHeaders);
-        // verify required parameter 'userId' is not null or undefined
-        if (userId === null || userId === undefined) {
-            throw new Error('Required parameter userId was null or undefined when calling getCasesForUserUsingGET.');
-        }
-        let httpRequestParams = {
-            method: 'GET',
-            url: localVarPath,
-            params: queryParameters,
-            headers: headerParams
-        };
-        if (extraHttpRequestParams) {
-            httpRequestParams = Object.assign(httpRequestParams, extraHttpRequestParams);
-        }
-        return this.$http(httpRequestParams);
-    }
-    /**
-     *
-     * @summary getUserCases
-     * @param userId userId
-     */
-    getUserCasesUsingGET(userId, extraHttpRequestParams) {
-        const localVarPath = this.basePath + '/api/v2/users/{userId}/cases'
-            .replace('{' + 'userId' + '}', encodeURIComponent(String(userId)));
-        let queryParameters = {};
-        let headerParams = Object.assign({}, this.defaultHeaders);
-        // verify required parameter 'userId' is not null or undefined
-        if (userId === null || userId === undefined) {
-            throw new Error('Required parameter userId was null or undefined when calling getUserCasesUsingGET.');
-        }
-        let httpRequestParams = {
-            method: 'GET',
-            url: localVarPath,
-            params: queryParameters,
-            headers: headerParams
-        };
-        if (extraHttpRequestParams) {
-            httpRequestParams = Object.assign(httpRequestParams, extraHttpRequestParams);
-        }
-        return this.$http(httpRequestParams);
-    }
-    /**
-     *
      * @summary listDashboardCasesByPage
      * @param userId userId
      * @param caseStatuses caseStatuses

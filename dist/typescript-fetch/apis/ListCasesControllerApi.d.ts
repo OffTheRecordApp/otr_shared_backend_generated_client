@@ -10,13 +10,7 @@
  * Do not edit the class manually.
  */
 import * as runtime from '../runtime';
-import { GetClientCasesResponse, GetUserCasesResponse, ListDashboardCasesResponse } from '../models';
-export interface GetCasesForUserUsingGETRequest {
-    userId: string;
-}
-export interface GetUserCasesUsingGETRequest {
-    userId: number;
-}
+import { ListDashboardCasesResponse } from '../models';
 export interface ListDashboardCasesByPageUsingGETRequest {
     userId: number;
     caseStatuses?: ListDashboardCasesByPageUsingGETCaseStatusesEnum;
@@ -52,22 +46,6 @@ export interface ListDashboardCasesUsingGETRequest {
  *
  */
 export declare class ListCasesControllerApi extends runtime.BaseAPI {
-    /**
-     * getCasesForUser
-     */
-    getCasesForUserUsingGETRaw(requestParameters: GetCasesForUserUsingGETRequest): Promise<runtime.ApiResponse<GetClientCasesResponse>>;
-    /**
-     * getCasesForUser
-     */
-    getCasesForUserUsingGET(requestParameters: GetCasesForUserUsingGETRequest): Promise<GetClientCasesResponse>;
-    /**
-     * getUserCases
-     */
-    getUserCasesUsingGETRaw(requestParameters: GetUserCasesUsingGETRequest): Promise<runtime.ApiResponse<GetUserCasesResponse>>;
-    /**
-     * getUserCases
-     */
-    getUserCasesUsingGET(requestParameters: GetUserCasesUsingGETRequest): Promise<GetUserCasesResponse>;
     /**
      * listDashboardCasesByPage
      */

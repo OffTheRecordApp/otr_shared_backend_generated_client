@@ -432,7 +432,6 @@ model/getCitationPhoneLeadsResponse.ts
 model/getCitationResponse.ts
 model/getCitationsWithMissingFieldsRequest.ts
 model/getCitationsWithMissingFieldsResponse.ts
-model/getClientCasesResponse.ts
 model/getClientConfirmedUnpaidCasesResponse.ts
 model/getCoachingCardCategoriesResponse.ts
 model/getCompetitionResponseModel.ts
@@ -524,7 +523,6 @@ model/getTrafficViolationTypesResponse.ts
 model/getUserAddressesResponse.ts
 model/getUserByEmailRequest.ts
 model/getUserByEmailResponse.ts
-model/getUserCasesResponse.ts
 model/getUserDetailsResponse.ts
 model/getUserRefLinksResponse.ts
 model/getUserReferralSourceTypesResponse.ts

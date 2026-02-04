@@ -12,7 +12,7 @@
  * Do not edit the class manually.
  */
 import { exists } from '../runtime';
-import { ViolationPenaltyModelFromJSON, ViolationPenaltyModelToJSON, } from './';
+import { MatchCaseViolationPenaltyModelFromJSON, MatchCaseViolationPenaltyModelToJSON, } from './';
 export function ViolationModelFromJSON(json) {
     return ViolationModelFromJSONTyped(json, false);
 }
@@ -21,18 +21,11 @@ export function ViolationModelFromJSONTyped(json, ignoreDiscriminator) {
         return json;
     }
     return {
-        'classDescription': !exists(json, 'classDescription') ? undefined : json['classDescription'],
-        'criminal': !exists(json, 'criminal') ? undefined : json['criminal'],
-        'insuranceIncreasePercent': !exists(json, 'insuranceIncreasePercent') ? undefined : json['insuranceIncreasePercent'],
         'isCriminal': !exists(json, 'isCriminal') ? undefined : json['isCriminal'],
-        'isMovingViolation': !exists(json, 'isMovingViolation') ? undefined : json['isMovingViolation'],
         'isWobblerToCriminal': !exists(json, 'isWobblerToCriminal') ? undefined : json['isWobblerToCriminal'],
-        'penalties': !exists(json, 'penalties') ? undefined : (json['penalties'].map(ViolationPenaltyModelFromJSON)),
+        'penalties': !exists(json, 'penalties') ? undefined : (json['penalties'].map(MatchCaseViolationPenaltyModelFromJSON)),
         'trafficViolationDesc': !exists(json, 'trafficViolationDesc') ? undefined : json['trafficViolationDesc'],
         'trafficViolationTypeId': !exists(json, 'trafficViolationTypeId') ? undefined : json['trafficViolationTypeId'],
-        'uniqueId': !exists(json, 'uniqueId') ? undefined : json['uniqueId'],
-        'userFriendlyName': !exists(json, 'userFriendlyName') ? undefined : json['userFriendlyName'],
-        'userFriendlyShortForm': !exists(json, 'userFriendlyShortForm') ? undefined : json['userFriendlyShortForm'],
         'violationClassification': !exists(json, 'violationClassification') ? undefined : json['violationClassification'],
         'violationCode': !exists(json, 'violationCode') ? undefined : json['violationCode'],
     };
@@ -45,18 +38,11 @@ export function ViolationModelToJSON(value) {
         return null;
     }
     return {
-        'classDescription': value.classDescription,
-        'criminal': value.criminal,
-        'insuranceIncreasePercent': value.insuranceIncreasePercent,
         'isCriminal': value.isCriminal,
-        'isMovingViolation': value.isMovingViolation,
         'isWobblerToCriminal': value.isWobblerToCriminal,
-        'penalties': value.penalties === undefined ? undefined : (value.penalties.map(ViolationPenaltyModelToJSON)),
+        'penalties': value.penalties === undefined ? undefined : (value.penalties.map(MatchCaseViolationPenaltyModelToJSON)),
         'trafficViolationDesc': value.trafficViolationDesc,
         'trafficViolationTypeId': value.trafficViolationTypeId,
-        'uniqueId': value.uniqueId,
-        'userFriendlyName': value.userFriendlyName,
-        'userFriendlyShortForm': value.userFriendlyShortForm,
         'violationClassification': value.violationClassification,
         'violationCode': value.violationCode,
     };

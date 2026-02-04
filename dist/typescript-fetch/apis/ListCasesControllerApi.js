@@ -21,67 +21,11 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
     });
 };
 import * as runtime from '../runtime';
-import { GetClientCasesResponseFromJSON, GetUserCasesResponseFromJSON, ListDashboardCasesResponseFromJSON, } from '../models';
+import { ListDashboardCasesResponseFromJSON, } from '../models';
 /**
  *
  */
 export class ListCasesControllerApi extends runtime.BaseAPI {
-    /**
-     * getCasesForUser
-     */
-    getCasesForUserUsingGETRaw(requestParameters) {
-        return __awaiter(this, void 0, void 0, function* () {
-            if (requestParameters.userId === null || requestParameters.userId === undefined) {
-                throw new runtime.RequiredError('userId', 'Required parameter requestParameters.userId was null or undefined when calling getCasesForUserUsingGET.');
-            }
-            const queryParameters = {};
-            const headerParameters = {};
-            const response = yield this.request({
-                path: `/api/v1/users/{userId}/cases`.replace(`{${"userId"}}`, encodeURIComponent(String(requestParameters.userId))),
-                method: 'GET',
-                headers: headerParameters,
-                query: queryParameters,
-            });
-            return new runtime.JSONApiResponse(response, (jsonValue) => GetClientCasesResponseFromJSON(jsonValue));
-        });
-    }
-    /**
-     * getCasesForUser
-     */
-    getCasesForUserUsingGET(requestParameters) {
-        return __awaiter(this, void 0, void 0, function* () {
-            const response = yield this.getCasesForUserUsingGETRaw(requestParameters);
-            return yield response.value();
-        });
-    }
-    /**
-     * getUserCases
-     */
-    getUserCasesUsingGETRaw(requestParameters) {
-        return __awaiter(this, void 0, void 0, function* () {
-            if (requestParameters.userId === null || requestParameters.userId === undefined) {
-                throw new runtime.RequiredError('userId', 'Required parameter requestParameters.userId was null or undefined when calling getUserCasesUsingGET.');
-            }
-            const queryParameters = {};
-            const headerParameters = {};
-            const response = yield this.request({
-                path: `/api/v2/users/{userId}/cases`.replace(`{${"userId"}}`, encodeURIComponent(String(requestParameters.userId))),
-                method: 'GET',
-                headers: headerParameters,
-                query: queryParameters,
-            });
-            return new runtime.JSONApiResponse(response, (jsonValue) => GetUserCasesResponseFromJSON(jsonValue));
-        });
-    }
-    /**
-     * getUserCases
-     */
-    getUserCasesUsingGET(requestParameters) {
-        return __awaiter(this, void 0, void 0, function* () {
-            const response = yield this.getUserCasesUsingGETRaw(requestParameters);
-            return yield response.value();
-        });
-    }
     /**
      * listDashboardCasesByPage
      */

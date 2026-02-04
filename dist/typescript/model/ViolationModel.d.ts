@@ -11,18 +11,11 @@
  */
 import * as models from './models';
 export interface ViolationModel {
-    "classDescription"?: string;
-    "criminal"?: boolean;
-    "insuranceIncreasePercent"?: number;
     "isCriminal"?: boolean;
-    "isMovingViolation"?: boolean;
     "isWobblerToCriminal"?: boolean;
-    "penalties"?: Array<models.ViolationPenaltyModel>;
+    "penalties"?: Array<models.MatchCaseViolationPenaltyModel>;
     "trafficViolationDesc"?: string;
     "trafficViolationTypeId"?: number;
-    "uniqueId"?: string;
-    "userFriendlyName"?: string;
-    "userFriendlyShortForm"?: string;
     "violationClassification"?: ViolationModel.ViolationClassificationEnum;
     "violationCode"?: string;
 }

@@ -19,18 +19,6 @@ export declare class ListCasesControllerApi {
     constructor($http: ng.IHttpService, $httpParamSerializer?: (d: any) => any, basePath?: string);
     /**
      *
-     * @summary getCasesForUser
-     * @param userId userId
-     */
-    getCasesForUserUsingGET(userId: string, extraHttpRequestParams?: any): ng.IHttpPromise<models.GetClientCasesResponse>;
-    /**
-     *
-     * @summary getUserCases
-     * @param userId userId
-     */
-    getUserCasesUsingGET(userId: number, extraHttpRequestParams?: any): ng.IHttpPromise<models.GetUserCasesResponse>;
-    /**
-     *
      * @summary listDashboardCasesByPage
      * @param userId userId
      * @param caseStatuses caseStatuses

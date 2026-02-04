@@ -4717,46 +4717,6 @@ export interface paths {
         patch?: never;
         trace?: never;
     };
-    "/api/v1/users/{userId}/cases": {
-        parameters: {
-            query?: never;
-            header?: never;
-            path?: never;
-            cookie?: never;
-        };
-        /**
-         * getCasesForUser
-         * @deprecated
-         */
-        get: operations["getCasesForUserUsingGET"];
-        put?: never;
-        post?: never;
-        delete?: never;
-        options?: never;
-        head?: never;
-        patch?: never;
-        trace?: never;
-    };
-    "/api/v2/users/{userId}/cases": {
-        parameters: {
-            query?: never;
-            header?: never;
-            path?: never;
-            cookie?: never;
-        };
-        /**
-         * getUserCases
-         * @deprecated
-         */
-        get: operations["getUserCasesUsingGET"];
-        put?: never;
-        post?: never;
-        delete?: never;
-        options?: never;
-        head?: never;
-        patch?: never;
-        trace?: never;
-    };
     "/api/v3/users/{userId}/cases": {
         parameters: {
             query?: never;
@@ -11003,17 +10963,6 @@ export interface components {
             /** Format: int64 */
             missingFieldsCount?: number;
         };
-        /** GetClientCasesResponse */
-        GetClientCasesResponse: {
-            cases?: components["schemas"]["CaseModel"][];
-            citations?: components["schemas"]["CitationModel"][];
-            /** Format: int64 */
-            numBookings?: number;
-            /** Format: int32 */
-            numCases?: number;
-            /** Format: int64 */
-            numCitationUploads?: number;
-        };
         /** GetClientConfirmedUnpaidCasesRequest */
         GetClientConfirmedUnpaidCasesRequest: Record<string, never>;
         /** GetClientConfirmedUnpaidCasesResponse */
@@ -11693,15 +11642,6 @@ export interface components {
             firstName?: string;
             /** Format: int32 */
             numMatchingUsers?: number;
-        };
-        /** GetUserCasesResponse */
-        GetUserCasesResponse: {
-            cases?: components["schemas"]["CaseModel"][];
-            citations?: components["schemas"]["CitationModel"][];
-            /** Format: int64 */
-            numBookings?: number;
-            /** Format: int64 */
-            numCitationUploads?: number;
         };
         /** GetUserDetailsResponse */
         GetUserDetailsResponse: {
@@ -16626,20 +16566,12 @@ export interface components {
         };
         /** ViolationModel */
         ViolationModel: {
-            classDescription?: string;
-            criminal?: boolean;
-            /** Format: double */
-            insuranceIncreasePercent?: number;
             isCriminal?: boolean;
-            isMovingViolation?: boolean;
             isWobblerToCriminal?: boolean;
-            penalties?: components["schemas"]["ViolationPenaltyModel"][];
+            penalties?: components["schemas"]["MatchCaseViolationPenaltyModel"][];
             trafficViolationDesc?: string;
             /** Format: int64 */
             trafficViolationTypeId?: number;
-            uniqueId?: string;
-            userFriendlyName?: string;
-            userFriendlyShortForm?: string;
             /** @enum {string} */
             violationClassification?: PathsApiV1LawfirmsLawfirmIdAccountFeesDeleteParametersQueryClassification;
             violationCode?: string;
@@ -32269,94 +32201,6 @@ export interface operations {
                 };
                 content: {
                     "application/json": components["schemas"]["GetLineItemTypesResponse"];
-                };
-            };
-            /** @description Unauthorized */
-            401: {
-                headers: {
-                    [name: string]: unknown;
-                };
-                content?: never;
-            };
-            /** @description Forbidden */
-            403: {
-                headers: {
-                    [name: string]: unknown;
-                };
-                content?: never;
-            };
-            /** @description Not Found */
-            404: {
-                headers: {
-                    [name: string]: unknown;
-                };
-                content?: never;
-            };
-        };
-    };
-    getCasesForUserUsingGET: {
-        parameters: {
-            query?: never;
-            header?: never;
-            path: {
-                /** @description userId */
-                userId: string;
-            };
-            cookie?: never;
-        };
-        requestBody?: never;
-        responses: {
-            /** @description OK */
-            200: {
-                headers: {
-                    [name: string]: unknown;
-                };
-                content: {
-                    "*/*": components["schemas"]["GetClientCasesResponse"];
-                };
-            };
-            /** @description Unauthorized */
-            401: {
-                headers: {
-                    [name: string]: unknown;
-                };
-                content?: never;
-            };
-            /** @description Forbidden */
-            403: {
-                headers: {
-                    [name: string]: unknown;
-                };
-                content?: never;
-            };
-            /** @description Not Found */
-            404: {
-                headers: {
-                    [name: string]: unknown;
-                };
-                content?: never;
-            };
-        };
-    };
-    getUserCasesUsingGET: {
-        parameters: {
-            query?: never;
-            header?: never;
-            path: {
-                /** @description userId */
-                userId: number;
-            };
-            cookie?: never;
-        };
-        requestBody?: never;
-        responses: {
-            /** @description OK */
-            200: {
-                headers: {
-                    [name: string]: unknown;
-                };
-                content: {
-                    "*/*": components["schemas"]["GetUserCasesResponse"];
                 };
             };
             /** @description Unauthorized */
