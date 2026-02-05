@@ -674,6 +674,7 @@ model/matchLawfirmCaseResponse.ts
 model/matchLegalServiceModel.ts
 model/matchLegalServicesRequest.ts
 model/matchLegalServicesResponse.ts
+model/matchLegalServicesViolationModel.ts
 model/matchingFieldValue.ts
 model/mediaItemModel.ts
 model/mergeStatusReport.ts

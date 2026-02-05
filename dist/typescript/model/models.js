@@ -548,6 +548,7 @@ export * from './MatchLawfirmCaseResponse';
 export * from './MatchLegalServiceModel';
 export * from './MatchLegalServicesRequest';
 export * from './MatchLegalServicesResponse';
+export * from './MatchLegalServicesViolationModel';
 export * from './MatchingFieldValue';
 export * from './MediaItemModel';
 export * from './MergeStatusReport';

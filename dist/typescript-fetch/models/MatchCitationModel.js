@@ -12,7 +12,7 @@
  * Do not edit the class manually.
  */
 import { exists } from '../runtime';
-import { AddressDomainFromJSON, AddressDomainToJSON, CourtDomainFromJSON, CourtDomainToJSON, PureDateFromJSON, PureDateToJSON, TimestampFromJSON, TimestampToJSON, ViolationModelFromJSON, ViolationModelToJSON, } from './';
+import { AddressDomainFromJSON, AddressDomainToJSON, CourtDomainFromJSON, CourtDomainToJSON, MatchLegalServicesViolationModelFromJSON, MatchLegalServicesViolationModelToJSON, PureDateFromJSON, PureDateToJSON, TimestampFromJSON, TimestampToJSON, } from './';
 export function MatchCitationModelFromJSON(json) {
     return MatchCitationModelFromJSONTyped(json, false);
 }
@@ -40,7 +40,7 @@ export function MatchCitationModelFromJSONTyped(json, ignoreDiscriminator) {
         'ticketImageUrl': !exists(json, 'ticketImageUrl') ? undefined : json['ticketImageUrl'],
         'ticketNumber': !exists(json, 'ticketNumber') ? undefined : json['ticketNumber'],
         'violationCount': !exists(json, 'violationCount') ? undefined : json['violationCount'],
-        'violations': !exists(json, 'violations') ? undefined : (json['violations'].map(ViolationModelFromJSON)),
+        'violations': !exists(json, 'violations') ? undefined : (json['violations'].map(MatchLegalServicesViolationModelFromJSON)),
     };
 }
 export function MatchCitationModelToJSON(value) {
@@ -70,7 +70,7 @@ export function MatchCitationModelToJSON(value) {
         'ticketImageUrl': value.ticketImageUrl,
         'ticketNumber': value.ticketNumber,
         'violationCount': value.violationCount,
-        'violations': value.violations === undefined ? undefined : (value.violations.map(ViolationModelToJSON)),
+        'violations': value.violations === undefined ? undefined : (value.violations.map(MatchLegalServicesViolationModelToJSON)),
     };
 }
 /**

@@ -9,7 +9,7 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-import { AddressDomain, CourtDomain, PureDate, Timestamp, ViolationModel } from './';
+import { AddressDomain, CourtDomain, MatchLegalServicesViolationModel, PureDate, Timestamp } from './';
 /**
  *
  * @export
@@ -132,10 +132,10 @@ export interface MatchCitationModel {
     violationCount?: number;
     /**
      *
-     * @type {Array<ViolationModel>}
+     * @type {Array<MatchLegalServicesViolationModel>}
      * @memberof MatchCitationModel
      */
-    violations?: Array<ViolationModel>;
+    violations?: Array<MatchLegalServicesViolationModel>;
 }
 export declare function MatchCitationModelFromJSON(json: any): MatchCitationModel;
 export declare function MatchCitationModelFromJSONTyped(json: any, ignoreDiscriminator: boolean): MatchCitationModel;

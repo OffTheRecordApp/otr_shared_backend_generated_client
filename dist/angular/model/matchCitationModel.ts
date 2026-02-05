@@ -9,9 +9,9 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
+import { MatchLegalServicesViolationModel } from './matchLegalServicesViolationModel';
 import { CourtDomain } from './courtDomain';
 import { AddressDomain } from './addressDomain';
-import { ViolationModel } from './violationModel';
 import { PureDate } from './pureDate';
 import { Timestamp } from './timestamp';
 
@@ -36,7 +36,7 @@ export interface MatchCitationModel {
     ticketImageUrl?: string;
     ticketNumber?: string;
     violationCount?: number;
-    violations?: Array<ViolationModel>;
+    violations?: Array<MatchLegalServicesViolationModel>;
 }
 export namespace MatchCitationModel {
     export type CdlStatusEnum = 'CDL_IN_COMMERCIAL_VEHICLE' | 'CDL_IN_PERSONAL_VEHICLE' | 'NO_CDL';

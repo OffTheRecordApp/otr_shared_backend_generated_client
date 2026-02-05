@@ -10,23 +10,16 @@
  * Do not edit the class manually.
  */
 import * as models from './models';
-export interface ViolationModel {
-    "classDescription"?: string;
-    "criminal"?: boolean;
-    "insuranceIncreasePercent"?: number;
+export interface MatchLegalServicesViolationModel {
     "isCriminal"?: boolean;
-    "isMovingViolation"?: boolean;
     "isWobblerToCriminal"?: boolean;
-    "penalties"?: Array<models.ViolationPenaltyModel>;
+    "penalties"?: Array<models.MatchCaseViolationPenaltyModel>;
     "trafficViolationDesc"?: string;
     "trafficViolationTypeId"?: number;
-    "uniqueId"?: string;
-    "userFriendlyName"?: string;
-    "userFriendlyShortForm"?: string;
-    "violationClassification"?: ViolationModel.ViolationClassificationEnum;
+    "violationClassification"?: MatchLegalServicesViolationModel.ViolationClassificationEnum;
     "violationCode"?: string;
 }
-export declare namespace ViolationModel {
+export declare namespace MatchLegalServicesViolationModel {
     enum ViolationClassificationEnum {
         CLASS1FELONY,
         CLASS1MISDEMEANOR,

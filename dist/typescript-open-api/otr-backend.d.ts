@@ -13308,7 +13308,7 @@ export interface components {
             ticketNumber?: string;
             /** Format: int32 */
             violationCount?: number;
-            violations?: components["schemas"]["ViolationModel"][];
+            violations?: components["schemas"]["MatchLegalServicesViolationModel"][];
         };
         /** MatchCitationResponse */
         MatchCitationResponse: {
@@ -13425,6 +13425,18 @@ export interface components {
             /** Format: int32 */
             projectedInsuranceCostInCents?: number;
             theCase?: components["schemas"]["MatchInnerCaseModel"];
+        };
+        /** MatchLegalServicesViolationModel */
+        MatchLegalServicesViolationModel: {
+            isCriminal?: boolean;
+            isWobblerToCriminal?: boolean;
+            penalties?: components["schemas"]["MatchCaseViolationPenaltyModel"][];
+            trafficViolationDesc?: string;
+            /** Format: int64 */
+            trafficViolationTypeId?: number;
+            /** @enum {string} */
+            violationClassification?: PathsApiV1LawfirmsLawfirmIdAccountFeesDeleteParametersQueryClassification;
+            violationCode?: string;
         };
         /** MatchingFieldValue */
         MatchingFieldValue: {
@@ -16570,12 +16582,20 @@ export interface components {
         };
         /** ViolationModel */
         ViolationModel: {
+            classDescription?: string;
+            criminal?: boolean;
+            /** Format: double */
+            insuranceIncreasePercent?: number;
             isCriminal?: boolean;
+            isMovingViolation?: boolean;
             isWobblerToCriminal?: boolean;
-            penalties?: components["schemas"]["MatchCaseViolationPenaltyModel"][];
+            penalties?: components["schemas"]["ViolationPenaltyModel"][];
             trafficViolationDesc?: string;
             /** Format: int64 */
             trafficViolationTypeId?: number;
+            uniqueId?: string;
+            userFriendlyName?: string;
+            userFriendlyShortForm?: string;
             /** @enum {string} */
             violationClassification?: PathsApiV1LawfirmsLawfirmIdAccountFeesDeleteParametersQueryClassification;
             violationCode?: string;

@@ -30,7 +30,7 @@ export interface MatchCitationModel {
     "ticketImageUrl"?: string;
     "ticketNumber"?: string;
     "violationCount"?: number;
-    "violations"?: Array<models.ViolationModel>;
+    "violations"?: Array<models.MatchLegalServicesViolationModel>;
 }
 export declare namespace MatchCitationModel {
     enum CdlStatusEnum {

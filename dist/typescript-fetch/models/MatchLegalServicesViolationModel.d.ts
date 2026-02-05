@@ -9,106 +9,64 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-import { ViolationPenaltyModel } from './';
+import { MatchCaseViolationPenaltyModel } from './';
 /**
  *
  * @export
- * @interface ViolationModel
+ * @interface MatchLegalServicesViolationModel
  */
-export interface ViolationModel {
-    /**
-     *
-     * @type {string}
-     * @memberof ViolationModel
-     */
-    classDescription?: string;
+export interface MatchLegalServicesViolationModel {
     /**
      *
      * @type {boolean}
-     * @memberof ViolationModel
-     */
-    criminal?: boolean;
-    /**
-     *
-     * @type {number}
-     * @memberof ViolationModel
-     */
-    insuranceIncreasePercent?: number;
-    /**
-     *
-     * @type {boolean}
-     * @memberof ViolationModel
+     * @memberof MatchLegalServicesViolationModel
      */
     isCriminal?: boolean;
     /**
      *
      * @type {boolean}
-     * @memberof ViolationModel
-     */
-    isMovingViolation?: boolean;
-    /**
-     *
-     * @type {boolean}
-     * @memberof ViolationModel
+     * @memberof MatchLegalServicesViolationModel
      */
     isWobblerToCriminal?: boolean;
     /**
      *
-     * @type {Array<ViolationPenaltyModel>}
-     * @memberof ViolationModel
+     * @type {Array<MatchCaseViolationPenaltyModel>}
+     * @memberof MatchLegalServicesViolationModel
      */
-    penalties?: Array<ViolationPenaltyModel>;
+    penalties?: Array<MatchCaseViolationPenaltyModel>;
     /**
      *
      * @type {string}
-     * @memberof ViolationModel
+     * @memberof MatchLegalServicesViolationModel
      */
     trafficViolationDesc?: string;
     /**
      *
      * @type {number}
-     * @memberof ViolationModel
+     * @memberof MatchLegalServicesViolationModel
      */
     trafficViolationTypeId?: number;
     /**
      *
      * @type {string}
-     * @memberof ViolationModel
+     * @memberof MatchLegalServicesViolationModel
      */
-    uniqueId?: string;
+    violationClassification?: MatchLegalServicesViolationModelViolationClassificationEnum;
     /**
      *
      * @type {string}
-     * @memberof ViolationModel
-     */
-    userFriendlyName?: string;
-    /**
-     *
-     * @type {string}
-     * @memberof ViolationModel
-     */
-    userFriendlyShortForm?: string;
-    /**
-     *
-     * @type {string}
-     * @memberof ViolationModel
-     */
-    violationClassification?: ViolationModelViolationClassificationEnum;
-    /**
-     *
-     * @type {string}
-     * @memberof ViolationModel
+     * @memberof MatchLegalServicesViolationModel
      */
     violationCode?: string;
 }
-export declare function ViolationModelFromJSON(json: any): ViolationModel;
-export declare function ViolationModelFromJSONTyped(json: any, ignoreDiscriminator: boolean): ViolationModel;
-export declare function ViolationModelToJSON(value?: ViolationModel | null): any;
+export declare function MatchLegalServicesViolationModelFromJSON(json: any): MatchLegalServicesViolationModel;
+export declare function MatchLegalServicesViolationModelFromJSONTyped(json: any, ignoreDiscriminator: boolean): MatchLegalServicesViolationModel;
+export declare function MatchLegalServicesViolationModelToJSON(value?: MatchLegalServicesViolationModel | null): any;
 /**
 * @export
 * @enum {string}
 */
-export declare enum ViolationModelViolationClassificationEnum {
+export declare enum MatchLegalServicesViolationModelViolationClassificationEnum {
     CLASS1FELONY = "CLASS_1_FELONY",
     CLASS1MISDEMEANOR = "CLASS_1_MISDEMEANOR",
     CLASS2FELONY = "CLASS_2_FELONY",
