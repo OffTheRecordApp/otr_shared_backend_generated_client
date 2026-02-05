@@ -86,6 +86,7 @@ export declare function GhostUserToJSON(value?: GhostUser | null): any;
 */
 export declare enum GhostUserClientTypeEnum {
     ANDROID = "ANDROID",
+    BACKFILLSCRIPT = "BACKFILL_SCRIPT",
     DESKTOPWEBAPP = "DESKTOP_WEBAPP",
     DMVGO = "DMV_GO",
     DMVORG = "DMV_ORG",

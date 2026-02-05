@@ -124,6 +124,7 @@ export declare enum CreateCitationRequestCitationStateEnum {
 */
 export declare enum CreateCitationRequestClientTypeEnum {
     ANDROID = "ANDROID",
+    BACKFILLSCRIPT = "BACKFILL_SCRIPT",
     DESKTOPWEBAPP = "DESKTOP_WEBAPP",
     DMVGO = "DMV_GO",
     DMVORG = "DMV_ORG",

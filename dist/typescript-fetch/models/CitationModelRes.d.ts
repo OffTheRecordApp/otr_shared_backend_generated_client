@@ -221,6 +221,7 @@ export declare enum CitationModelResCdlStatusEnum {
 */
 export declare enum CitationModelResClientTypeEnum {
     ANDROID = "ANDROID",
+    BACKFILLSCRIPT = "BACKFILL_SCRIPT",
     DESKTOPWEBAPP = "DESKTOP_WEBAPP",
     DMVGO = "DMV_GO",
     DMVORG = "DMV_ORG",

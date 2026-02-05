@@ -59,6 +59,7 @@ export function CitationAuditEventModelToJSON(value) {
 export var CitationAuditEventModelClientTypeEnum;
 (function (CitationAuditEventModelClientTypeEnum) {
     CitationAuditEventModelClientTypeEnum["ANDROID"] = "ANDROID";
+    CitationAuditEventModelClientTypeEnum["BACKFILLSCRIPT"] = "BACKFILL_SCRIPT";
     CitationAuditEventModelClientTypeEnum["DESKTOPWEBAPP"] = "DESKTOP_WEBAPP";
     CitationAuditEventModelClientTypeEnum["DMVGO"] = "DMV_GO";
     CitationAuditEventModelClientTypeEnum["DMVORG"] = "DMV_ORG";

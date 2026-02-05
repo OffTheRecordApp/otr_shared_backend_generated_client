@@ -27,6 +27,7 @@ export interface UserAuditEventModel {
 export declare namespace UserAuditEventModel {
     enum ClientTypeEnum {
         ANDROID,
+        BACKFILLSCRIPT,
         DESKTOPWEBAPP,
         DMVGO,
         DMVORG,

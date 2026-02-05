@@ -74,6 +74,7 @@ export declare namespace CreateCitationRequest {
     }
     enum ClientTypeEnum {
         ANDROID,
+        BACKFILLSCRIPT,
         DESKTOPWEBAPP,
         DMVGO,
         DMVORG,

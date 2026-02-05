@@ -47,6 +47,7 @@ export function LastLoginDateByUserAccountToJSON(value) {
 export var LastLoginDateByUserAccountClientTypeEnum;
 (function (LastLoginDateByUserAccountClientTypeEnum) {
     LastLoginDateByUserAccountClientTypeEnum["ANDROID"] = "ANDROID";
+    LastLoginDateByUserAccountClientTypeEnum["BACKFILLSCRIPT"] = "BACKFILL_SCRIPT";
     LastLoginDateByUserAccountClientTypeEnum["DESKTOPWEBAPP"] = "DESKTOP_WEBAPP";
     LastLoginDateByUserAccountClientTypeEnum["DMVGO"] = "DMV_GO";
     LastLoginDateByUserAccountClientTypeEnum["DMVORG"] = "DMV_ORG";

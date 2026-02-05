@@ -16,6 +16,7 @@ export interface LastLoginItem {
 export declare namespace LastLoginItem {
     enum ClientTypeEnum {
         ANDROID,
+        BACKFILLSCRIPT,
         DESKTOPWEBAPP,
         DMVGO,
         DMVORG,

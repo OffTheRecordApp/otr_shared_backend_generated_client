@@ -50,6 +50,7 @@ export declare namespace CitationModelReq {
     }
     enum ClientTypeEnum {
         ANDROID,
+        BACKFILLSCRIPT,
         DESKTOPWEBAPP,
         DMVGO,
         DMVORG,

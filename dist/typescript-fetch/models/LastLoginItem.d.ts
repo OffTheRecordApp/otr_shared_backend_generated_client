@@ -37,6 +37,7 @@ export declare function LastLoginItemToJSON(value?: LastLoginItem | null): any;
 */
 export declare enum LastLoginItemClientTypeEnum {
     ANDROID = "ANDROID",
+    BACKFILLSCRIPT = "BACKFILL_SCRIPT",
     DESKTOPWEBAPP = "DESKTOP_WEBAPP",
     DMVGO = "DMV_GO",
     DMVORG = "DMV_ORG",

@@ -461,6 +461,7 @@ export var PathsApiV1RedirectsGetParametersQueryPageType;
 export var PathsApiV1ApiV1UsersUserIdLastLoginGetParametersQueryClients;
 (function (PathsApiV1ApiV1UsersUserIdLastLoginGetParametersQueryClients) {
     PathsApiV1ApiV1UsersUserIdLastLoginGetParametersQueryClients["ANDROID"] = "ANDROID";
+    PathsApiV1ApiV1UsersUserIdLastLoginGetParametersQueryClients["BACKFILL_SCRIPT"] = "BACKFILL_SCRIPT";
     PathsApiV1ApiV1UsersUserIdLastLoginGetParametersQueryClients["DESKTOP_WEBAPP"] = "DESKTOP_WEBAPP";
     PathsApiV1ApiV1UsersUserIdLastLoginGetParametersQueryClients["DMV_GO"] = "DMV_GO";
     PathsApiV1ApiV1UsersUserIdLastLoginGetParametersQueryClients["DMV_ORG"] = "DMV_ORG";

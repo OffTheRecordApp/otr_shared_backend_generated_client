@@ -24,6 +24,7 @@ export interface CitationAuditEventModel {
 export declare namespace CitationAuditEventModel {
     enum ClientTypeEnum {
         ANDROID,
+        BACKFILLSCRIPT,
         DESKTOPWEBAPP,
         DMVGO,
         DMVORG,

@@ -59,6 +59,7 @@ export function LawfirmAuditEventModelToJSON(value) {
 export var LawfirmAuditEventModelClientTypeEnum;
 (function (LawfirmAuditEventModelClientTypeEnum) {
     LawfirmAuditEventModelClientTypeEnum["ANDROID"] = "ANDROID";
+    LawfirmAuditEventModelClientTypeEnum["BACKFILLSCRIPT"] = "BACKFILL_SCRIPT";
     LawfirmAuditEventModelClientTypeEnum["DESKTOPWEBAPP"] = "DESKTOP_WEBAPP";
     LawfirmAuditEventModelClientTypeEnum["DMVGO"] = "DMV_GO";
     LawfirmAuditEventModelClientTypeEnum["DMVORG"] = "DMV_ORG";

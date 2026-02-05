@@ -85,6 +85,7 @@ export declare function LawfirmAuditEventModelToJSON(value?: LawfirmAuditEventMo
 */
 export declare enum LawfirmAuditEventModelClientTypeEnum {
     ANDROID = "ANDROID",
+    BACKFILLSCRIPT = "BACKFILL_SCRIPT",
     DESKTOPWEBAPP = "DESKTOP_WEBAPP",
     DMVGO = "DMV_GO",
     DMVORG = "DMV_ORG",

@@ -37,6 +37,7 @@ export declare function LastLoginDateModelToJSON(value?: LastLoginDateModel | nu
 */
 export declare enum LastLoginDateModelClientTypeEnum {
     ANDROID = "ANDROID",
+    BACKFILLSCRIPT = "BACKFILL_SCRIPT",
     DESKTOPWEBAPP = "DESKTOP_WEBAPP",
     DMVGO = "DMV_GO",
     DMVORG = "DMV_ORG",

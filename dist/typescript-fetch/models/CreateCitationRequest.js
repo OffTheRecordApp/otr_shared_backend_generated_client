@@ -111,6 +111,7 @@ export var CreateCitationRequestCitationStateEnum;
 export var CreateCitationRequestClientTypeEnum;
 (function (CreateCitationRequestClientTypeEnum) {
     CreateCitationRequestClientTypeEnum["ANDROID"] = "ANDROID";
+    CreateCitationRequestClientTypeEnum["BACKFILLSCRIPT"] = "BACKFILL_SCRIPT";
     CreateCitationRequestClientTypeEnum["DESKTOPWEBAPP"] = "DESKTOP_WEBAPP";
     CreateCitationRequestClientTypeEnum["DMVGO"] = "DMV_GO";
     CreateCitationRequestClientTypeEnum["DMVORG"] = "DMV_ORG";

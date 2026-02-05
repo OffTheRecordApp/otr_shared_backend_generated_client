@@ -85,6 +85,7 @@ export declare function CitationAuditEventModelToJSON(value?: CitationAuditEvent
 */
 export declare enum CitationAuditEventModelClientTypeEnum {
     ANDROID = "ANDROID",
+    BACKFILLSCRIPT = "BACKFILL_SCRIPT",
     DESKTOPWEBAPP = "DESKTOP_WEBAPP",
     DMVGO = "DMV_GO",
     DMVORG = "DMV_ORG",

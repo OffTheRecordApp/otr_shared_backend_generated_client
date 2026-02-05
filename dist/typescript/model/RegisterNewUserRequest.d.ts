@@ -30,6 +30,7 @@ export interface RegisterNewUserRequest {
 export declare namespace RegisterNewUserRequest {
     enum ClientTypeEnum {
         ANDROID,
+        BACKFILLSCRIPT,
         DESKTOPWEBAPP,
         DMVGO,
         DMVORG,

@@ -103,6 +103,7 @@ export declare function UserAuditEventModelToJSON(value?: UserAuditEventModel | 
 */
 export declare enum UserAuditEventModelClientTypeEnum {
     ANDROID = "ANDROID",
+    BACKFILLSCRIPT = "BACKFILL_SCRIPT",
     DESKTOPWEBAPP = "DESKTOP_WEBAPP",
     DMVGO = "DMV_GO",
     DMVORG = "DMV_ORG",

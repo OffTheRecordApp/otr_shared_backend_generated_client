@@ -30,6 +30,7 @@ export interface RegisteredUserDomain {
 export declare namespace RegisteredUserDomain {
     enum ClientTypeEnum {
         ANDROID,
+        BACKFILLSCRIPT,
         DESKTOPWEBAPP,
         DMVGO,
         DMVORG,

@@ -81,6 +81,7 @@ export declare function SetReferralSourceRequestToJSON(value?: SetReferralSource
 */
 export declare enum SetReferralSourceRequestClientTypeEnum {
     ANDROID = "ANDROID",
+    BACKFILLSCRIPT = "BACKFILL_SCRIPT",
     DESKTOPWEBAPP = "DESKTOP_WEBAPP",
     DMVGO = "DMV_GO",
     DMVORG = "DMV_ORG",

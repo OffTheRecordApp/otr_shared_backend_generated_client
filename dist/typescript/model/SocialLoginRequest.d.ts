@@ -33,6 +33,7 @@ export declare namespace SocialLoginRequest {
     }
     enum ClientTypeEnum {
         ANDROID,
+        BACKFILLSCRIPT,
         DESKTOPWEBAPP,
         DMVGO,
         DMVORG,

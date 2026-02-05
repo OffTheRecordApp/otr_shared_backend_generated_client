@@ -24,6 +24,7 @@ export interface LawfirmAuditEventModel {
 export declare namespace LawfirmAuditEventModel {
     enum ClientTypeEnum {
         ANDROID,
+        BACKFILLSCRIPT,
         DESKTOPWEBAPP,
         DMVGO,
         DMVORG,

@@ -105,6 +105,7 @@ export class UserAuditControllerApi extends runtime.BaseAPI {
 export var GetLastLoginUsingGETClientsEnum;
 (function (GetLastLoginUsingGETClientsEnum) {
     GetLastLoginUsingGETClientsEnum["ANDROID"] = "ANDROID";
+    GetLastLoginUsingGETClientsEnum["BACKFILLSCRIPT"] = "BACKFILL_SCRIPT";
     GetLastLoginUsingGETClientsEnum["DESKTOPWEBAPP"] = "DESKTOP_WEBAPP";
     GetLastLoginUsingGETClientsEnum["DMVGO"] = "DMV_GO";
     GetLastLoginUsingGETClientsEnum["DMVORG"] = "DMV_ORG";

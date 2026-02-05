@@ -57,6 +57,7 @@ export function SetReferralSourceRequestToJSON(value) {
 export var SetReferralSourceRequestClientTypeEnum;
 (function (SetReferralSourceRequestClientTypeEnum) {
     SetReferralSourceRequestClientTypeEnum["ANDROID"] = "ANDROID";
+    SetReferralSourceRequestClientTypeEnum["BACKFILLSCRIPT"] = "BACKFILL_SCRIPT";
     SetReferralSourceRequestClientTypeEnum["DESKTOPWEBAPP"] = "DESKTOP_WEBAPP";
     SetReferralSourceRequestClientTypeEnum["DMVGO"] = "DMV_GO";
     SetReferralSourceRequestClientTypeEnum["DMVORG"] = "DMV_ORG";

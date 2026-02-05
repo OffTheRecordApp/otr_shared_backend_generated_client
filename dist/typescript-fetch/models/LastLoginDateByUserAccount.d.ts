@@ -49,6 +49,7 @@ export declare function LastLoginDateByUserAccountToJSON(value?: LastLoginDateBy
 */
 export declare enum LastLoginDateByUserAccountClientTypeEnum {
     ANDROID = "ANDROID",
+    BACKFILLSCRIPT = "BACKFILL_SCRIPT",
     DESKTOPWEBAPP = "DESKTOP_WEBAPP",
     DMVGO = "DMV_GO",
     DMVORG = "DMV_ORG",

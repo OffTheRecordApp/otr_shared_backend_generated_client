@@ -60,6 +60,7 @@ export function GhostUserToJSON(value) {
 export var GhostUserClientTypeEnum;
 (function (GhostUserClientTypeEnum) {
     GhostUserClientTypeEnum["ANDROID"] = "ANDROID";
+    GhostUserClientTypeEnum["BACKFILLSCRIPT"] = "BACKFILL_SCRIPT";
     GhostUserClientTypeEnum["DESKTOPWEBAPP"] = "DESKTOP_WEBAPP";
     GhostUserClientTypeEnum["DMVGO"] = "DMV_GO";
     GhostUserClientTypeEnum["DMVORG"] = "DMV_ORG";

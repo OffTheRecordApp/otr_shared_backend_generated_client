@@ -112,6 +112,7 @@ export var CitationModelCdlStatusEnum;
 export var CitationModelClientTypeEnum;
 (function (CitationModelClientTypeEnum) {
     CitationModelClientTypeEnum["ANDROID"] = "ANDROID";
+    CitationModelClientTypeEnum["BACKFILLSCRIPT"] = "BACKFILL_SCRIPT";
     CitationModelClientTypeEnum["DESKTOPWEBAPP"] = "DESKTOP_WEBAPP";
     CitationModelClientTypeEnum["DMVGO"] = "DMV_GO";
     CitationModelClientTypeEnum["DMVORG"] = "DMV_ORG";

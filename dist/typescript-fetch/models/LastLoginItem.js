@@ -43,6 +43,7 @@ export function LastLoginItemToJSON(value) {
 export var LastLoginItemClientTypeEnum;
 (function (LastLoginItemClientTypeEnum) {
     LastLoginItemClientTypeEnum["ANDROID"] = "ANDROID";
+    LastLoginItemClientTypeEnum["BACKFILLSCRIPT"] = "BACKFILL_SCRIPT";
     LastLoginItemClientTypeEnum["DESKTOPWEBAPP"] = "DESKTOP_WEBAPP";
     LastLoginItemClientTypeEnum["DMVGO"] = "DMV_GO";
     LastLoginItemClientTypeEnum["DMVORG"] = "DMV_ORG";

@@ -66,6 +66,7 @@ export function RegisterNewUserRequestToJSON(value) {
 export var RegisterNewUserRequestClientTypeEnum;
 (function (RegisterNewUserRequestClientTypeEnum) {
     RegisterNewUserRequestClientTypeEnum["ANDROID"] = "ANDROID";
+    RegisterNewUserRequestClientTypeEnum["BACKFILLSCRIPT"] = "BACKFILL_SCRIPT";
     RegisterNewUserRequestClientTypeEnum["DESKTOPWEBAPP"] = "DESKTOP_WEBAPP";
     RegisterNewUserRequestClientTypeEnum["DMVGO"] = "DMV_GO";
     RegisterNewUserRequestClientTypeEnum["DMVORG"] = "DMV_ORG";

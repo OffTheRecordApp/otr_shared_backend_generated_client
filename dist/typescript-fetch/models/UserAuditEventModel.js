@@ -65,6 +65,7 @@ export function UserAuditEventModelToJSON(value) {
 export var UserAuditEventModelClientTypeEnum;
 (function (UserAuditEventModelClientTypeEnum) {
     UserAuditEventModelClientTypeEnum["ANDROID"] = "ANDROID";
+    UserAuditEventModelClientTypeEnum["BACKFILLSCRIPT"] = "BACKFILL_SCRIPT";
     UserAuditEventModelClientTypeEnum["DESKTOPWEBAPP"] = "DESKTOP_WEBAPP";
     UserAuditEventModelClientTypeEnum["DMVGO"] = "DMV_GO";
     UserAuditEventModelClientTypeEnum["DMVORG"] = "DMV_ORG";

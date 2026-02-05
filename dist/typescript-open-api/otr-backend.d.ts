@@ -41000,6 +41000,7 @@ export declare enum PathsApiV1RedirectsGetParametersQueryPageType {
 }
 export declare enum PathsApiV1ApiV1UsersUserIdLastLoginGetParametersQueryClients {
     ANDROID = "ANDROID",
+    BACKFILL_SCRIPT = "BACKFILL_SCRIPT",
     DESKTOP_WEBAPP = "DESKTOP_WEBAPP",
     DMV_GO = "DMV_GO",
     DMV_ORG = "DMV_ORG",

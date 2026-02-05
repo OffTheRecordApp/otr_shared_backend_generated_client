@@ -51,6 +51,7 @@ export declare namespace CitationModelRes {
     }
     enum ClientTypeEnum {
         ANDROID,
+        BACKFILLSCRIPT,
         DESKTOPWEBAPP,
         DMVGO,
         DMVORG,

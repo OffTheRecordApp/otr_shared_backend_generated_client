@@ -25,6 +25,7 @@ export interface SetReferralSourceRequest {
 export declare namespace SetReferralSourceRequest {
     enum ClientTypeEnum {
         ANDROID,
+        BACKFILLSCRIPT,
         DESKTOPWEBAPP,
         DMVGO,
         DMVORG,

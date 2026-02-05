@@ -74,6 +74,7 @@ export var SocialLoginRequestAccessTypeEnum;
 export var SocialLoginRequestClientTypeEnum;
 (function (SocialLoginRequestClientTypeEnum) {
     SocialLoginRequestClientTypeEnum["ANDROID"] = "ANDROID";
+    SocialLoginRequestClientTypeEnum["BACKFILLSCRIPT"] = "BACKFILL_SCRIPT";
     SocialLoginRequestClientTypeEnum["DESKTOPWEBAPP"] = "DESKTOP_WEBAPP";
     SocialLoginRequestClientTypeEnum["DMVGO"] = "DMV_GO";
     SocialLoginRequestClientTypeEnum["DMVORG"] = "DMV_ORG";

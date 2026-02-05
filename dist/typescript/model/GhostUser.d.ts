@@ -25,6 +25,7 @@ export interface GhostUser {
 export declare namespace GhostUser {
     enum ClientTypeEnum {
         ANDROID,
+        BACKFILLSCRIPT,
         DESKTOPWEBAPP,
         DMVGO,
         DMVORG,

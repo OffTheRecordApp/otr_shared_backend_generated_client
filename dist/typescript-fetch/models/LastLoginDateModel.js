@@ -43,6 +43,7 @@ export function LastLoginDateModelToJSON(value) {
 export var LastLoginDateModelClientTypeEnum;
 (function (LastLoginDateModelClientTypeEnum) {
     LastLoginDateModelClientTypeEnum["ANDROID"] = "ANDROID";
+    LastLoginDateModelClientTypeEnum["BACKFILLSCRIPT"] = "BACKFILL_SCRIPT";
     LastLoginDateModelClientTypeEnum["DESKTOPWEBAPP"] = "DESKTOP_WEBAPP";
     LastLoginDateModelClientTypeEnum["DMVGO"] = "DMV_GO";
     LastLoginDateModelClientTypeEnum["DMVORG"] = "DMV_ORG";

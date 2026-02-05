@@ -71,6 +71,7 @@ export function RegisteredUserDomainToJSON(value) {
 export var RegisteredUserDomainClientTypeEnum;
 (function (RegisteredUserDomainClientTypeEnum) {
     RegisteredUserDomainClientTypeEnum["ANDROID"] = "ANDROID";
+    RegisteredUserDomainClientTypeEnum["BACKFILLSCRIPT"] = "BACKFILL_SCRIPT";
     RegisteredUserDomainClientTypeEnum["DESKTOPWEBAPP"] = "DESKTOP_WEBAPP";
     RegisteredUserDomainClientTypeEnum["DMVGO"] = "DMV_GO";
     RegisteredUserDomainClientTypeEnum["DMVORG"] = "DMV_ORG";

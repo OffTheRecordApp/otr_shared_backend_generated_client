@@ -106,6 +106,7 @@ export declare function RegisterNewUserRequestToJSON(value?: RegisterNewUserRequ
 */
 export declare enum RegisterNewUserRequestClientTypeEnum {
     ANDROID = "ANDROID",
+    BACKFILLSCRIPT = "BACKFILL_SCRIPT",
     DESKTOPWEBAPP = "DESKTOP_WEBAPP",
     DMVGO = "DMV_GO",
     DMVORG = "DMV_ORG",
