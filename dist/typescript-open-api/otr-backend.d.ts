@@ -14345,6 +14345,8 @@ export interface components {
         /** SaveCaseUserRequest */
         SaveCaseUserRequest: {
             additionalNote?: string;
+            /** Format: int32 */
+            caseUserId?: number;
             defendantAttributes?: components["schemas"]["CaseUserDefendantAttributesRequest"];
             emailAddress?: string;
             isBookingAgent?: boolean;

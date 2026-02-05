@@ -24,6 +24,12 @@ export interface SaveCaseUserRequest {
     additionalNote?: string;
     /**
      *
+     * @type {number}
+     * @memberof SaveCaseUserRequest
+     */
+    caseUserId?: number;
+    /**
+     *
      * @type {CaseUserDefendantAttributesRequest}
      * @memberof SaveCaseUserRequest
      */

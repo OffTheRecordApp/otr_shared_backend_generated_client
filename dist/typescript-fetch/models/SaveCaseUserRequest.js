@@ -22,6 +22,7 @@ export function SaveCaseUserRequestFromJSONTyped(json, ignoreDiscriminator) {
     }
     return {
         'additionalNote': !exists(json, 'additionalNote') ? undefined : json['additionalNote'],
+        'caseUserId': !exists(json, 'caseUserId') ? undefined : json['caseUserId'],
         'defendantAttributes': !exists(json, 'defendantAttributes') ? undefined : CaseUserDefendantAttributesRequestFromJSON(json['defendantAttributes']),
         'emailAddress': !exists(json, 'emailAddress') ? undefined : json['emailAddress'],
         'isBookingAgent': !exists(json, 'isBookingAgent') ? undefined : json['isBookingAgent'],
@@ -42,6 +43,7 @@ export function SaveCaseUserRequestToJSON(value) {
     }
     return {
         'additionalNote': value.additionalNote,
+        'caseUserId': value.caseUserId,
         'defendantAttributes': CaseUserDefendantAttributesRequestToJSON(value.defendantAttributes),
         'emailAddress': value.emailAddress,
         'isBookingAgent': value.isBookingAgent,

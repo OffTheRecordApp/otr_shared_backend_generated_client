@@ -15,6 +15,7 @@ import { CaseUserPermissionAttributes } from './caseUserPermissionAttributes';
 
 export interface SaveCaseUserRequest { 
     additionalNote?: string;
+    caseUserId?: number;
     defendantAttributes?: CaseUserDefendantAttributesRequest;
     emailAddress?: string;
     isBookingAgent?: boolean;

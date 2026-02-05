@@ -12,6 +12,7 @@
 import * as models from './models';
 export interface SaveCaseUserRequest {
     "additionalNote"?: string;
+    "caseUserId"?: number;
     "defendantAttributes"?: models.CaseUserDefendantAttributesRequest;
     "emailAddress"?: string;
     "isBookingAgent"?: boolean;
