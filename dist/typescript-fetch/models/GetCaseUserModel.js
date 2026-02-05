@@ -23,6 +23,7 @@ export function GetCaseUserModelFromJSONTyped(json, ignoreDiscriminator) {
     return {
         'additionalNote': !exists(json, 'additionalNote') ? undefined : json['additionalNote'],
         'caseId': !exists(json, 'caseId') ? undefined : json['caseId'],
+        'caseUserId': !exists(json, 'caseUserId') ? undefined : json['caseUserId'],
         'creationDateUtc': !exists(json, 'creationDateUtc') ? undefined : (new Date(json['creationDateUtc'])),
         'dateOfBirth': !exists(json, 'dateOfBirth') ? undefined : (new Date(json['dateOfBirth'])),
         'emailAddress': !exists(json, 'emailAddress') ? undefined : json['emailAddress'],
@@ -53,6 +54,7 @@ export function GetCaseUserModelToJSON(value) {
     return {
         'additionalNote': value.additionalNote,
         'caseId': value.caseId,
+        'caseUserId': value.caseUserId,
         'creationDateUtc': value.creationDateUtc === undefined ? undefined : (value.creationDateUtc.toISOString()),
         'dateOfBirth': value.dateOfBirth === undefined ? undefined : (value.dateOfBirth.toISOString()),
         'emailAddress': value.emailAddress,

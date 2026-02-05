@@ -13,6 +13,7 @@ import * as models from './models';
 export interface GetCaseUserModel {
     "additionalNote"?: string;
     "caseId"?: string;
+    "caseUserId"?: number;
     "creationDateUtc"?: string;
     "dateOfBirth"?: string;
     "emailAddress"?: string;

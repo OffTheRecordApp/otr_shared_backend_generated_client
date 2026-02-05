@@ -10857,6 +10857,8 @@ export interface components {
         GetCaseUserModel: {
             additionalNote?: string;
             caseId?: string;
+            /** Format: int32 */
+            caseUserId?: number;
             /** Format: date-time */
             creationDateUtc?: string;
             /** Format: date-time */

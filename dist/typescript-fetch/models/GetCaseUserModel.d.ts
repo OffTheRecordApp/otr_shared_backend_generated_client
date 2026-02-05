@@ -30,6 +30,12 @@ export interface GetCaseUserModel {
     caseId?: string;
     /**
      *
+     * @type {number}
+     * @memberof GetCaseUserModel
+     */
+    caseUserId?: number;
+    /**
+     *
      * @type {Date}
      * @memberof GetCaseUserModel
      */
