@@ -11,7 +11,6 @@ api/auditLawfirmEventsController.service.ts
 api/auditLogController.service.ts
 api/authenticationController.service.ts
 api/awsCredentialsController.service.ts
-api/blogWebhookController.service.ts
 api/branchLinkController.service.ts
 api/captchaController.service.ts
 api/caseActionsController.service.ts
@@ -27,7 +26,6 @@ api/caseResolutionController.service.ts
 api/caseStatusController.service.ts
 api/caseTransferController.service.ts
 api/caseUserController.service.ts
-api/certificateController.service.ts
 api/citationAuditController.service.ts
 api/citationController.service.ts
 api/coachingCardsController.service.ts
@@ -48,7 +46,6 @@ api/directMailController.service.ts
 api/dripController.service.ts
 api/dripWebhooksController.service.ts
 api/driverLicenseController.service.ts
-api/emailSubscriptionController.service.ts
 api/employeeController.service.ts
 api/eventBridgeEmailNotificationController.service.ts
 api/externalContentVoteController.service.ts
@@ -197,9 +194,6 @@ model/billingSubscriptionItemModel.ts
 model/billingSubscriptionModel.ts
 model/billingSubscriptionPrimaryHolderModel.ts
 model/billingUpcomingInvoiceModel.ts
-model/blogDocument.ts
-model/blogEvent.ts
-model/blogMetadata.ts
 model/booking.ts
 model/bookingCancelation.ts
 model/calculateTransferFeeDifferenceCaseLineItemModel.ts
@@ -760,7 +754,6 @@ model/reviewCommentModel.ts
 model/reviewRatingModel.ts
 model/reviewVoteAggregateModel.ts
 model/richCitationInferenceResponse.ts
-model/sSLCertificateResponse.ts
 model/saveAgentBookingRequest.ts
 model/saveAgentBookingResponse.ts
 model/saveBillingProductOptionRequest.ts
@@ -858,9 +851,7 @@ model/stripeReversalSyncResults.ts
 model/stripeTransferDomain.ts
 model/stripeTransferReversalDomain.ts
 model/stripeTransferSyncResults.ts
-model/subscribeRequest.ts
 model/subscriber.ts
-model/subscriberDomain.ts
 model/subscriptionGuardianModel.ts
 model/subscriptionPlanEligibility.ts
 model/subscriptionPlanEligibilityReq.ts

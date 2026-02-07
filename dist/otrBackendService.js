@@ -4450,42 +4450,6 @@ angular.module('otrBackendService', [])
                 return deferred.promise;
             };
             /**
-             * getSSLPublicCertFile
-             * @method
-             * @name OtrService#getSSLPublicCertFileUsingGET
-             * @param {object} parameters - method options and parameters
-             * @param {string} parameters.encoding - encoding
-             */
-            OtrService.prototype.getSSLPublicCertFileUsingGET = function(parameters) {
-                if (parameters === undefined) {
-                    parameters = {};
-                }
-                var deferred = $q.defer();
-                var domain = this.domain,
-                    path = '/api/v1/certificates/ssl';
-                var body = {},
-                    queryParameters = {},
-                    headers = {},
-                    form = {};
-
-                headers['Accept'] = ['*/*'];
-
-                if (parameters['encoding'] !== undefined) {
-                    queryParameters['encoding'] = parameters['encoding'];
-                }
-
-                if (parameters['encoding'] === undefined) {
-                    deferred.reject(new Error('Missing required  parameter: encoding'));
-                    return deferred.promise;
-                }
-
-                queryParameters = mergeQueryParams(parameters, queryParameters);
-
-                this.request('GET', domain + path, parameters, body, headers, queryParameters, form, deferred);
-
-                return deferred.promise;
-            };
-            /**
              * createNewCitation
              * @method
              * @name OtrService#createNewCitationUsingPOST
@@ -15421,43 +15385,6 @@ angular.module('otrBackendService', [])
                 return deferred.promise;
             };
             /**
-             * subscribe
-             * @method
-             * @name OtrService#subscribeUsingPOST
-             * @param {object} parameters - method options and parameters
-             * @param {} parameters.request - request
-             */
-            OtrService.prototype.subscribeUsingPOST = function(parameters) {
-                if (parameters === undefined) {
-                    parameters = {};
-                }
-                var deferred = $q.defer();
-                var domain = this.domain,
-                    path = '/api/v1/subscribe';
-                var body = {},
-                    queryParameters = {},
-                    headers = {},
-                    form = {};
-
-                headers['Accept'] = ['*/*'];
-                headers['Content-Type'] = ['application/json'];
-
-                if (parameters['request'] !== undefined) {
-                    body = parameters['request'];
-                }
-
-                if (parameters['request'] === undefined) {
-                    deferred.reject(new Error('Missing required  parameter: request'));
-                    return deferred.promise;
-                }
-
-                queryParameters = mergeQueryParams(parameters, queryParameters);
-
-                this.request('POST', domain + path, parameters, body, headers, queryParameters, form, deferred);
-
-                return deferred.promise;
-            };
-            /**
              * persistTicketEvaluation
              * @method
              * @name OtrService#persistTicketEvaluationUsingPOST
@@ -18698,43 +18625,6 @@ angular.module('otrBackendService', [])
 
                 if (parameters['request'] === undefined) {
                     deferred.reject(new Error('Missing required  parameter: request'));
-                    return deferred.promise;
-                }
-
-                queryParameters = mergeQueryParams(parameters, queryParameters);
-
-                this.request('POST', domain + path, parameters, body, headers, queryParameters, form, deferred);
-
-                return deferred.promise;
-            };
-            /**
-             * handleEvent
-             * @method
-             * @name OtrService#handleEventUsingPOST
-             * @param {object} parameters - method options and parameters
-             * @param {} parameters.event - event
-             */
-            OtrService.prototype.handleEventUsingPOST = function(parameters) {
-                if (parameters === undefined) {
-                    parameters = {};
-                }
-                var deferred = $q.defer();
-                var domain = this.domain,
-                    path = '/api/v1/webhooks/prismic';
-                var body = {},
-                    queryParameters = {},
-                    headers = {},
-                    form = {};
-
-                headers['Accept'] = ['*/*'];
-                headers['Content-Type'] = ['application/json'];
-
-                if (parameters['event'] !== undefined) {
-                    body = parameters['event'];
-                }
-
-                if (parameters['event'] === undefined) {
-                    deferred.reject(new Error('Missing required  parameter: event'));
                     return deferred.promise;
                 }
 

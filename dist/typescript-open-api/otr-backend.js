@@ -145,11 +145,6 @@ export var PathsApiV1CaseStatusesGetParametersQueryCategories;
     PathsApiV1CaseStatusesGetParametersQueryCategories["RESOLVED"] = "RESOLVED";
     PathsApiV1CaseStatusesGetParametersQueryCategories["UNCONFIRMED"] = "UNCONFIRMED";
 })(PathsApiV1CaseStatusesGetParametersQueryCategories || (PathsApiV1CaseStatusesGetParametersQueryCategories = {}));
-export var PathsApiV1CertificatesSslGetParametersQueryEncoding;
-(function (PathsApiV1CertificatesSslGetParametersQueryEncoding) {
-    PathsApiV1CertificatesSslGetParametersQueryEncoding["DER"] = "DER";
-    PathsApiV1CertificatesSslGetParametersQueryEncoding["PEM"] = "PEM";
-})(PathsApiV1CertificatesSslGetParametersQueryEncoding || (PathsApiV1CertificatesSslGetParametersQueryEncoding = {}));
 export var PathsApiV1CitationsCitationIdCourtMissingPostParametersQueryState;
 (function (PathsApiV1CitationsCitationIdCourtMissingPostParametersQueryState) {
     PathsApiV1CitationsCitationIdCourtMissingPostParametersQueryState["AK"] = "AK";
@@ -1337,10 +1332,6 @@ export var StripeCardDomainFunding;
     StripeCardDomainFunding["DEBIT"] = "DEBIT";
     StripeCardDomainFunding["PREPAID"] = "PREPAID";
 })(StripeCardDomainFunding || (StripeCardDomainFunding = {}));
-export var SubscriberDomainSubscriptionType;
-(function (SubscriberDomainSubscriptionType) {
-    SubscriberDomainSubscriptionType["WEB_BROCHURE_LAUNCH_NOTIFICATION"] = "WEB_BROCHURE_LAUNCH_NOTIFICATION";
-})(SubscriberDomainSubscriptionType || (SubscriberDomainSubscriptionType = {}));
 export var SubscriptionPlanEligibilitySubscriptionDiscountEligibilityType;
 (function (SubscriptionPlanEligibilitySubscriptionDiscountEligibilityType) {
     SubscriptionPlanEligibilitySubscriptionDiscountEligibilityType["IS_ELIGIBLE"] = "IS_ELIGIBLE";

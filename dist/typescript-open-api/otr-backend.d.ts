@@ -224,23 +224,6 @@ export interface paths {
         patch?: never;
         trace?: never;
     };
-    "/api/v1/webhooks/prismic": {
-        parameters: {
-            query?: never;
-            header?: never;
-            path?: never;
-            cookie?: never;
-        };
-        get?: never;
-        put?: never;
-        /** handleEvent */
-        post: operations["handleEventUsingPOST"];
-        delete?: never;
-        options?: never;
-        head?: never;
-        patch?: never;
-        trace?: never;
-    };
     "/api/v1/branch/link": {
         parameters: {
             query?: never;
@@ -1361,23 +1344,6 @@ export interface paths {
         };
         /** listDashboardCaseUsers */
         get: operations["listDashboardCaseUsersUsingGET"];
-        put?: never;
-        post?: never;
-        delete?: never;
-        options?: never;
-        head?: never;
-        patch?: never;
-        trace?: never;
-    };
-    "/api/v1/certificates/ssl": {
-        parameters: {
-            query?: never;
-            header?: never;
-            path?: never;
-            cookie?: never;
-        };
-        /** getSSLPublicCertFile */
-        get: operations["getSSLPublicCertFileUsingGET"];
         put?: never;
         post?: never;
         delete?: never;
@@ -3051,23 +3017,6 @@ export interface paths {
         put?: never;
         /** predictDriverLicense */
         post: operations["predictDriverLicenseUsingPOST"];
-        delete?: never;
-        options?: never;
-        head?: never;
-        patch?: never;
-        trace?: never;
-    };
-    "/api/v1/subscribe": {
-        parameters: {
-            query?: never;
-            header?: never;
-            path?: never;
-            cookie?: never;
-        };
-        get?: never;
-        put?: never;
-        /** subscribe */
-        post: operations["subscribeUsingPOST"];
         delete?: never;
         options?: never;
         head?: never;
@@ -8062,25 +8011,6 @@ export interface components {
             periodEndDate?: string;
             /** Format: date-time */
             periodStartDate?: string;
-        };
-        /** BlogDocument */
-        BlogDocument: {
-            addition?: components["schemas"]["BlogMetadata"][];
-            deletion?: components["schemas"]["BlogMetadata"][];
-            update?: components["schemas"]["BlogMetadata"][];
-        };
-        /** BlogEvent */
-        BlogEvent: {
-            apiUrl?: string;
-            release?: components["schemas"]["BlogDocument"];
-            secret?: string;
-            type?: string;
-        };
-        /** BlogMetadata */
-        BlogMetadata: {
-            id?: string;
-            label?: string;
-            ref?: string;
         };
         /** Booking */
         Booking: {
@@ -14323,11 +14253,6 @@ export interface components {
             vehicle_year?: string;
             violation_names?: string[];
         };
-        /** SSLCertificateResponse */
-        SSLCertificateResponse: {
-            /** Format: byte */
-            rawPublicCert?: string;
-        };
         /** SaveAgentBookingRequest */
         SaveAgentBookingRequest: {
             /** Format: int64 */
@@ -15317,10 +15242,6 @@ export interface components {
             reversals?: components["schemas"]["StripeReversalSyncResults"][];
             verificationMessage?: string;
         };
-        /** SubscribeRequest */
-        SubscribeRequest: {
-            subscriber?: components["schemas"]["SubscriberDomain"];
-        };
         /** Subscriber */
         Subscriber: {
             created_at?: string;
@@ -15336,15 +15257,6 @@ export interface components {
             user_id?: string;
             /** Format: int32 */
             utc_offset?: number;
-        };
-        /** SubscriberDomain */
-        SubscriberDomain: {
-            email?: string;
-            fullName?: string;
-            postalCode?: string;
-            roleType?: string;
-            /** @enum {string} */
-            subscriptionType?: SubscriberDomainSubscriptionType;
         };
         /** SubscriptionGuardianModel */
         SubscriptionGuardianModel: {
@@ -17413,56 +17325,6 @@ export interface operations {
                 content: {
                     "*/*": components["schemas"]["SimpleCredentialsResponse"];
                 };
-            };
-            /** @description Created */
-            201: {
-                headers: {
-                    [name: string]: unknown;
-                };
-                content?: never;
-            };
-            /** @description Unauthorized */
-            401: {
-                headers: {
-                    [name: string]: unknown;
-                };
-                content?: never;
-            };
-            /** @description Forbidden */
-            403: {
-                headers: {
-                    [name: string]: unknown;
-                };
-                content?: never;
-            };
-            /** @description Not Found */
-            404: {
-                headers: {
-                    [name: string]: unknown;
-                };
-                content?: never;
-            };
-        };
-    };
-    handleEventUsingPOST: {
-        parameters: {
-            query?: never;
-            header?: never;
-            path?: never;
-            cookie?: never;
-        };
-        requestBody?: {
-            content: {
-                "application/json": components["schemas"]["BlogEvent"];
-            };
-        };
-        responses: {
-            /** @description OK */
-            200: {
-                headers: {
-                    [name: string]: unknown;
-                };
-                content?: never;
             };
             /** @description Created */
             201: {
@@ -21131,50 +20993,6 @@ export interface operations {
                 };
                 content: {
                     "*/*": components["schemas"]["ListDashboardCaseUsersResponse"];
-                };
-            };
-            /** @description Unauthorized */
-            401: {
-                headers: {
-                    [name: string]: unknown;
-                };
-                content?: never;
-            };
-            /** @description Forbidden */
-            403: {
-                headers: {
-                    [name: string]: unknown;
-                };
-                content?: never;
-            };
-            /** @description Not Found */
-            404: {
-                headers: {
-                    [name: string]: unknown;
-                };
-                content?: never;
-            };
-        };
-    };
-    getSSLPublicCertFileUsingGET: {
-        parameters: {
-            query: {
-                /** @description encoding */
-                encoding: PathsApiV1CertificatesSslGetParametersQueryEncoding;
-            };
-            header?: never;
-            path?: never;
-            cookie?: never;
-        };
-        requestBody?: never;
-        responses: {
-            /** @description OK */
-            200: {
-                headers: {
-                    [name: string]: unknown;
-                };
-                content: {
-                    "*/*": components["schemas"]["SSLCertificateResponse"];
                 };
             };
             /** @description Unauthorized */
@@ -26638,58 +26456,6 @@ export interface operations {
                 };
                 content: {
                     "*/*": components["schemas"]["DriverLicenseModel"];
-                };
-            };
-            /** @description Created */
-            201: {
-                headers: {
-                    [name: string]: unknown;
-                };
-                content?: never;
-            };
-            /** @description Unauthorized */
-            401: {
-                headers: {
-                    [name: string]: unknown;
-                };
-                content?: never;
-            };
-            /** @description Forbidden */
-            403: {
-                headers: {
-                    [name: string]: unknown;
-                };
-                content?: never;
-            };
-            /** @description Not Found */
-            404: {
-                headers: {
-                    [name: string]: unknown;
-                };
-                content?: never;
-            };
-        };
-    };
-    subscribeUsingPOST: {
-        parameters: {
-            query?: never;
-            header?: never;
-            path?: never;
-            cookie?: never;
-        };
-        requestBody?: {
-            content: {
-                "application/json": components["schemas"]["SubscribeRequest"];
-            };
-        };
-        responses: {
-            /** @description OK */
-            200: {
-                headers: {
-                    [name: string]: unknown;
-                };
-                content: {
-                    "*/*": Record<string, never>;
                 };
             };
             /** @description Created */
@@ -40731,10 +40497,6 @@ export declare enum PathsApiV1CaseStatusesGetParametersQueryCategories {
     RESOLVED = "RESOLVED",
     UNCONFIRMED = "UNCONFIRMED"
 }
-export declare enum PathsApiV1CertificatesSslGetParametersQueryEncoding {
-    DER = "DER",
-    PEM = "PEM"
-}
 export declare enum PathsApiV1CitationsCitationIdCourtMissingPostParametersQueryState {
     AK = "AK",
     AL = "AL",
@@ -41794,9 +41556,6 @@ export declare enum StripeCardDomainFunding {
     CREDIT = "CREDIT",
     DEBIT = "DEBIT",
     PREPAID = "PREPAID"
-}
-export declare enum SubscriberDomainSubscriptionType {
-    WEB_BROCHURE_LAUNCH_NOTIFICATION = "WEB_BROCHURE_LAUNCH_NOTIFICATION"
 }
 export declare enum SubscriptionPlanEligibilitySubscriptionDiscountEligibilityType {
     IS_ELIGIBLE = "IS_ELIGIBLE",
