@@ -9496,6 +9496,8 @@ export interface components {
             /** @enum {string} */
             courtType?: AddInnerCourtCourtType;
             lookupCaseInfoLink?: string;
+            /** Format: int64 */
+            offenseCategoryId?: number;
             /** Format: int32 */
             otrTargetFee?: number;
             /** Format: double */

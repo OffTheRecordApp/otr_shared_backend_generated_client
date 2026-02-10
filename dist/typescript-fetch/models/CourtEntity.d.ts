@@ -69,6 +69,12 @@ export interface CourtEntity {
      * @type {number}
      * @memberof CourtEntity
      */
+    offenseCategoryId?: number;
+    /**
+     *
+     * @type {number}
+     * @memberof CourtEntity
+     */
     otrTargetFee?: number;
     /**
      *

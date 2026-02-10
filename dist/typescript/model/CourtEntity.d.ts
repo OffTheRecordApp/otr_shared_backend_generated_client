@@ -19,6 +19,7 @@ export interface CourtEntity {
     "courtNameAdditional"?: string;
     "courtType"?: CourtEntity.CourtTypeEnum;
     "lookupCaseInfoLink"?: string;
+    "offenseCategoryId"?: number;
     "otrTargetFee"?: number;
     "similarityScore"?: number;
     "website"?: string;
