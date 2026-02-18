@@ -23,6 +23,8 @@ export function DashboardCaseModelFromJSONTyped(json, ignoreDiscriminator) {
     return {
         'authorModel': !exists(json, 'authorModel') ? undefined : DashboardAuthorModelFromJSON(json['authorModel']),
         'bookingConfirmedDate': !exists(json, 'bookingConfirmedDate') ? undefined : (new Date(json['bookingConfirmedDate'])),
+        'caseActionDescription': !exists(json, 'caseActionDescription') ? undefined : json['caseActionDescription'],
+        'caseActionType': !exists(json, 'caseActionType') ? undefined : json['caseActionType'],
         'caseCounterOffer': !exists(json, 'caseCounterOffer') ? undefined : DashboardCaseCounterOfferModelFromJSON(json['caseCounterOffer']),
         'caseId': !exists(json, 'caseId') ? undefined : json['caseId'],
         'caseUserDetails': !exists(json, 'caseUserDetails') ? undefined : CaseUserDetailsModelFromJSON(json['caseUserDetails']),
@@ -60,6 +62,8 @@ export function DashboardCaseModelToJSON(value) {
     return {
         'authorModel': DashboardAuthorModelToJSON(value.authorModel),
         'bookingConfirmedDate': value.bookingConfirmedDate === undefined ? undefined : (value.bookingConfirmedDate.toISOString()),
+        'caseActionDescription': value.caseActionDescription,
+        'caseActionType': value.caseActionType,
         'caseCounterOffer': DashboardCaseCounterOfferModelToJSON(value.caseCounterOffer),
         'caseId': value.caseId,
         'caseUserDetails': CaseUserDetailsModelToJSON(value.caseUserDetails),
@@ -91,8 +95,37 @@ export function DashboardCaseModelToJSON(value) {
 * @export
 * @enum {string}
 */
+export var DashboardCaseModelCaseActionTypeEnum;
+(function (DashboardCaseModelCaseActionTypeEnum) {
+    DashboardCaseModelCaseActionTypeEnum["CASEACCEPT"] = "CASE_ACCEPT";
+    DashboardCaseModelCaseActionTypeEnum["CASECOUNTERACCEPTED"] = "CASE_COUNTER_ACCEPTED";
+    DashboardCaseModelCaseActionTypeEnum["CASECOUNTERDECLINED"] = "CASE_COUNTER_DECLINED";
+    DashboardCaseModelCaseActionTypeEnum["CASECOUNTERINITIATED"] = "CASE_COUNTER_INITIATED";
+    DashboardCaseModelCaseActionTypeEnum["CASECOUNTERWITHDRAWN"] = "CASE_COUNTER_WITHDRAWN";
+    DashboardCaseModelCaseActionTypeEnum["CASEDECLINE"] = "CASE_DECLINE";
+    DashboardCaseModelCaseActionTypeEnum["CASERESOLVED"] = "CASE_RESOLVED";
+    DashboardCaseModelCaseActionTypeEnum["CITATIONDATAEXTRACTED"] = "CITATION_DATA_EXTRACTED";
+    DashboardCaseModelCaseActionTypeEnum["COURTDATEREMOVED"] = "COURT_DATE_REMOVED";
+    DashboardCaseModelCaseActionTypeEnum["COURTDATESCHEDULED"] = "COURT_DATE_SCHEDULED";
+    DashboardCaseModelCaseActionTypeEnum["DISCOVERYRECEIVED"] = "DISCOVERY_RECEIVED";
+    DashboardCaseModelCaseActionTypeEnum["DISCOVERYREQUESTED"] = "DISCOVERY_REQUESTED";
+    DashboardCaseModelCaseActionTypeEnum["DISPUTEFILED"] = "DISPUTE_FILED";
+    DashboardCaseModelCaseActionTypeEnum["DRIVERLICENSEREQUESTED"] = "DRIVER_LICENSE_REQUESTED";
+    DashboardCaseModelCaseActionTypeEnum["FAILEDPAYMENTATTEMPT"] = "FAILED_PAYMENT_ATTEMPT";
+    DashboardCaseModelCaseActionTypeEnum["NOTICEOFAPPEARANCEFILED"] = "NOTICE_OF_APPEARANCE_FILED";
+    DashboardCaseModelCaseActionTypeEnum["OTHER"] = "OTHER";
+    DashboardCaseModelCaseActionTypeEnum["OVERDUEBALANCEPAID"] = "OVERDUE_BALANCE_PAID";
+    DashboardCaseModelCaseActionTypeEnum["REVIEWEDBYLAWFIRM"] = "REVIEWED_BY_LAWFIRM";
+    DashboardCaseModelCaseActionTypeEnum["SOCIALMEDIAASK"] = "SOCIAL_MEDIA_ASK";
+    DashboardCaseModelCaseActionTypeEnum["TICKETMAILEDTOCOURT"] = "TICKET_MAILED_TO_COURT";
+})(DashboardCaseModelCaseActionTypeEnum || (DashboardCaseModelCaseActionTypeEnum = {}));
+/**
+* @export
+* @enum {string}
+*/
 export var DashboardCaseModelLastMessageTypeEnum;
 (function (DashboardCaseModelLastMessageTypeEnum) {
+    DashboardCaseModelLastMessageTypeEnum["Action"] = "action";
     DashboardCaseModelLastMessageTypeEnum["Attachment"] = "attachment";
     DashboardCaseModelLastMessageTypeEnum["Message"] = "message";
 })(DashboardCaseModelLastMessageTypeEnum || (DashboardCaseModelLastMessageTypeEnum = {}));

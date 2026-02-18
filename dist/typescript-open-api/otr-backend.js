@@ -838,6 +838,7 @@ export var DashboardCaseCounterOfferModelCounterOfferStatus;
 })(DashboardCaseCounterOfferModelCounterOfferStatus || (DashboardCaseCounterOfferModelCounterOfferStatus = {}));
 export var DashboardCaseModelLastMessageType;
 (function (DashboardCaseModelLastMessageType) {
+    DashboardCaseModelLastMessageType["action"] = "action";
     DashboardCaseModelLastMessageType["attachment"] = "attachment";
     DashboardCaseModelLastMessageType["message"] = "message";
 })(DashboardCaseModelLastMessageType || (DashboardCaseModelLastMessageType = {}));

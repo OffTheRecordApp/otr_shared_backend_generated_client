@@ -13,6 +13,8 @@ import * as models from './models';
 export interface DashboardCaseModel {
     "authorModel"?: models.DashboardAuthorModel;
     "bookingConfirmedDate"?: string;
+    "caseActionDescription"?: string;
+    "caseActionType"?: DashboardCaseModel.CaseActionTypeEnum;
     "caseCounterOffer"?: models.DashboardCaseCounterOfferModel;
     "caseId"?: string;
     "caseUserDetails"?: models.CaseUserDetailsModel;
@@ -40,7 +42,31 @@ export interface DashboardCaseModel {
     "violations"?: Array<models.ListDashboardCasesViolationModel>;
 }
 export declare namespace DashboardCaseModel {
+    enum CaseActionTypeEnum {
+        CASEACCEPT,
+        CASECOUNTERACCEPTED,
+        CASECOUNTERDECLINED,
+        CASECOUNTERINITIATED,
+        CASECOUNTERWITHDRAWN,
+        CASEDECLINE,
+        CASERESOLVED,
+        CITATIONDATAEXTRACTED,
+        COURTDATEREMOVED,
+        COURTDATESCHEDULED,
+        DISCOVERYRECEIVED,
+        DISCOVERYREQUESTED,
+        DISPUTEFILED,
+        DRIVERLICENSEREQUESTED,
+        FAILEDPAYMENTATTEMPT,
+        NOTICEOFAPPEARANCEFILED,
+        OTHER,
+        OVERDUEBALANCEPAID,
+        REVIEWEDBYLAWFIRM,
+        SOCIALMEDIAASK,
+        TICKETMAILEDTOCOURT
+    }
     enum LastMessageTypeEnum {
+        Action,
         Attachment,
         Message
     }

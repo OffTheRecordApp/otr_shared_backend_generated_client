@@ -9862,6 +9862,9 @@ export interface components {
             authorModel?: components["schemas"]["DashboardAuthorModel"];
             /** Format: date-time */
             bookingConfirmedDate?: string;
+            caseActionDescription?: string;
+            /** @enum {string} */
+            caseActionType?: CaseActionRequestModelActionType;
             caseCounterOffer?: components["schemas"]["DashboardCaseCounterOfferModel"];
             caseId?: string;
             caseUserDetails?: components["schemas"]["CaseUserDetailsModel"];
@@ -41126,6 +41129,7 @@ export declare enum DashboardCaseCounterOfferModelCounterOfferStatus {
     WITHDRAWN = "WITHDRAWN"
 }
 export declare enum DashboardCaseModelLastMessageType {
+    action = "action",
     attachment = "attachment",
     message = "message"
 }

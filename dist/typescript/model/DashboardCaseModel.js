@@ -11,8 +11,33 @@
  */
 export var DashboardCaseModel;
 (function (DashboardCaseModel) {
+    let CaseActionTypeEnum;
+    (function (CaseActionTypeEnum) {
+        CaseActionTypeEnum[CaseActionTypeEnum["CASEACCEPT"] = 'CASE_ACCEPT'] = "CASEACCEPT";
+        CaseActionTypeEnum[CaseActionTypeEnum["CASECOUNTERACCEPTED"] = 'CASE_COUNTER_ACCEPTED'] = "CASECOUNTERACCEPTED";
+        CaseActionTypeEnum[CaseActionTypeEnum["CASECOUNTERDECLINED"] = 'CASE_COUNTER_DECLINED'] = "CASECOUNTERDECLINED";
+        CaseActionTypeEnum[CaseActionTypeEnum["CASECOUNTERINITIATED"] = 'CASE_COUNTER_INITIATED'] = "CASECOUNTERINITIATED";
+        CaseActionTypeEnum[CaseActionTypeEnum["CASECOUNTERWITHDRAWN"] = 'CASE_COUNTER_WITHDRAWN'] = "CASECOUNTERWITHDRAWN";
+        CaseActionTypeEnum[CaseActionTypeEnum["CASEDECLINE"] = 'CASE_DECLINE'] = "CASEDECLINE";
+        CaseActionTypeEnum[CaseActionTypeEnum["CASERESOLVED"] = 'CASE_RESOLVED'] = "CASERESOLVED";
+        CaseActionTypeEnum[CaseActionTypeEnum["CITATIONDATAEXTRACTED"] = 'CITATION_DATA_EXTRACTED'] = "CITATIONDATAEXTRACTED";
+        CaseActionTypeEnum[CaseActionTypeEnum["COURTDATEREMOVED"] = 'COURT_DATE_REMOVED'] = "COURTDATEREMOVED";
+        CaseActionTypeEnum[CaseActionTypeEnum["COURTDATESCHEDULED"] = 'COURT_DATE_SCHEDULED'] = "COURTDATESCHEDULED";
+        CaseActionTypeEnum[CaseActionTypeEnum["DISCOVERYRECEIVED"] = 'DISCOVERY_RECEIVED'] = "DISCOVERYRECEIVED";
+        CaseActionTypeEnum[CaseActionTypeEnum["DISCOVERYREQUESTED"] = 'DISCOVERY_REQUESTED'] = "DISCOVERYREQUESTED";
+        CaseActionTypeEnum[CaseActionTypeEnum["DISPUTEFILED"] = 'DISPUTE_FILED'] = "DISPUTEFILED";
+        CaseActionTypeEnum[CaseActionTypeEnum["DRIVERLICENSEREQUESTED"] = 'DRIVER_LICENSE_REQUESTED'] = "DRIVERLICENSEREQUESTED";
+        CaseActionTypeEnum[CaseActionTypeEnum["FAILEDPAYMENTATTEMPT"] = 'FAILED_PAYMENT_ATTEMPT'] = "FAILEDPAYMENTATTEMPT";
+        CaseActionTypeEnum[CaseActionTypeEnum["NOTICEOFAPPEARANCEFILED"] = 'NOTICE_OF_APPEARANCE_FILED'] = "NOTICEOFAPPEARANCEFILED";
+        CaseActionTypeEnum[CaseActionTypeEnum["OTHER"] = 'OTHER'] = "OTHER";
+        CaseActionTypeEnum[CaseActionTypeEnum["OVERDUEBALANCEPAID"] = 'OVERDUE_BALANCE_PAID'] = "OVERDUEBALANCEPAID";
+        CaseActionTypeEnum[CaseActionTypeEnum["REVIEWEDBYLAWFIRM"] = 'REVIEWED_BY_LAWFIRM'] = "REVIEWEDBYLAWFIRM";
+        CaseActionTypeEnum[CaseActionTypeEnum["SOCIALMEDIAASK"] = 'SOCIAL_MEDIA_ASK'] = "SOCIALMEDIAASK";
+        CaseActionTypeEnum[CaseActionTypeEnum["TICKETMAILEDTOCOURT"] = 'TICKET_MAILED_TO_COURT'] = "TICKETMAILEDTOCOURT";
+    })(CaseActionTypeEnum = DashboardCaseModel.CaseActionTypeEnum || (DashboardCaseModel.CaseActionTypeEnum = {}));
     let LastMessageTypeEnum;
     (function (LastMessageTypeEnum) {
+        LastMessageTypeEnum[LastMessageTypeEnum["Action"] = 'action'] = "Action";
         LastMessageTypeEnum[LastMessageTypeEnum["Attachment"] = 'attachment'] = "Attachment";
         LastMessageTypeEnum[LastMessageTypeEnum["Message"] = 'message'] = "Message";
     })(LastMessageTypeEnum = DashboardCaseModel.LastMessageTypeEnum || (DashboardCaseModel.LastMessageTypeEnum = {}));

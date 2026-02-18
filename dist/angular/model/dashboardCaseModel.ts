@@ -24,6 +24,8 @@ import { OverduePaymentModel } from './overduePaymentModel';
 export interface DashboardCaseModel { 
     authorModel?: DashboardAuthorModel;
     bookingConfirmedDate?: string;
+    caseActionDescription?: string;
+    caseActionType?: DashboardCaseModel.CaseActionTypeEnum;
     caseCounterOffer?: DashboardCaseCounterOfferModel;
     caseId?: string;
     caseUserDetails?: CaseUserDetailsModel;
@@ -51,8 +53,33 @@ export interface DashboardCaseModel {
     violations?: Array<ListDashboardCasesViolationModel>;
 }
 export namespace DashboardCaseModel {
-    export type LastMessageTypeEnum = 'attachment' | 'message';
+    export type CaseActionTypeEnum = 'CASE_ACCEPT' | 'CASE_COUNTER_ACCEPTED' | 'CASE_COUNTER_DECLINED' | 'CASE_COUNTER_INITIATED' | 'CASE_COUNTER_WITHDRAWN' | 'CASE_DECLINE' | 'CASE_RESOLVED' | 'CITATION_DATA_EXTRACTED' | 'COURT_DATE_REMOVED' | 'COURT_DATE_SCHEDULED' | 'DISCOVERY_RECEIVED' | 'DISCOVERY_REQUESTED' | 'DISPUTE_FILED' | 'DRIVER_LICENSE_REQUESTED' | 'FAILED_PAYMENT_ATTEMPT' | 'NOTICE_OF_APPEARANCE_FILED' | 'OTHER' | 'OVERDUE_BALANCE_PAID' | 'REVIEWED_BY_LAWFIRM' | 'SOCIAL_MEDIA_ASK' | 'TICKET_MAILED_TO_COURT';
+    export const CaseActionTypeEnum = {
+        CaseAccept: 'CASE_ACCEPT' as CaseActionTypeEnum,
+        CaseCounterAccepted: 'CASE_COUNTER_ACCEPTED' as CaseActionTypeEnum,
+        CaseCounterDeclined: 'CASE_COUNTER_DECLINED' as CaseActionTypeEnum,
+        CaseCounterInitiated: 'CASE_COUNTER_INITIATED' as CaseActionTypeEnum,
+        CaseCounterWithdrawn: 'CASE_COUNTER_WITHDRAWN' as CaseActionTypeEnum,
+        CaseDecline: 'CASE_DECLINE' as CaseActionTypeEnum,
+        CaseResolved: 'CASE_RESOLVED' as CaseActionTypeEnum,
+        CitationDataExtracted: 'CITATION_DATA_EXTRACTED' as CaseActionTypeEnum,
+        CourtDateRemoved: 'COURT_DATE_REMOVED' as CaseActionTypeEnum,
+        CourtDateScheduled: 'COURT_DATE_SCHEDULED' as CaseActionTypeEnum,
+        DiscoveryReceived: 'DISCOVERY_RECEIVED' as CaseActionTypeEnum,
+        DiscoveryRequested: 'DISCOVERY_REQUESTED' as CaseActionTypeEnum,
+        DisputeFiled: 'DISPUTE_FILED' as CaseActionTypeEnum,
+        DriverLicenseRequested: 'DRIVER_LICENSE_REQUESTED' as CaseActionTypeEnum,
+        FailedPaymentAttempt: 'FAILED_PAYMENT_ATTEMPT' as CaseActionTypeEnum,
+        NoticeOfAppearanceFiled: 'NOTICE_OF_APPEARANCE_FILED' as CaseActionTypeEnum,
+        Other: 'OTHER' as CaseActionTypeEnum,
+        OverdueBalancePaid: 'OVERDUE_BALANCE_PAID' as CaseActionTypeEnum,
+        ReviewedByLawfirm: 'REVIEWED_BY_LAWFIRM' as CaseActionTypeEnum,
+        SocialMediaAsk: 'SOCIAL_MEDIA_ASK' as CaseActionTypeEnum,
+        TicketMailedToCourt: 'TICKET_MAILED_TO_COURT' as CaseActionTypeEnum
+    };
+    export type LastMessageTypeEnum = 'action' | 'attachment' | 'message';
     export const LastMessageTypeEnum = {
+        Action: 'action' as LastMessageTypeEnum,
         Attachment: 'attachment' as LastMessageTypeEnum,
         Message: 'message' as LastMessageTypeEnum
     };

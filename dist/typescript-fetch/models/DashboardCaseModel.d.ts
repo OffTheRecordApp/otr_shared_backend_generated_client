@@ -30,6 +30,18 @@ export interface DashboardCaseModel {
     bookingConfirmedDate?: Date;
     /**
      *
+     * @type {string}
+     * @memberof DashboardCaseModel
+     */
+    caseActionDescription?: string;
+    /**
+     *
+     * @type {string}
+     * @memberof DashboardCaseModel
+     */
+    caseActionType?: DashboardCaseModelCaseActionTypeEnum;
+    /**
+     *
      * @type {DashboardCaseCounterOfferModel}
      * @memberof DashboardCaseModel
      */
@@ -186,7 +198,35 @@ export declare function DashboardCaseModelToJSON(value?: DashboardCaseModel | nu
 * @export
 * @enum {string}
 */
+export declare enum DashboardCaseModelCaseActionTypeEnum {
+    CASEACCEPT = "CASE_ACCEPT",
+    CASECOUNTERACCEPTED = "CASE_COUNTER_ACCEPTED",
+    CASECOUNTERDECLINED = "CASE_COUNTER_DECLINED",
+    CASECOUNTERINITIATED = "CASE_COUNTER_INITIATED",
+    CASECOUNTERWITHDRAWN = "CASE_COUNTER_WITHDRAWN",
+    CASEDECLINE = "CASE_DECLINE",
+    CASERESOLVED = "CASE_RESOLVED",
+    CITATIONDATAEXTRACTED = "CITATION_DATA_EXTRACTED",
+    COURTDATEREMOVED = "COURT_DATE_REMOVED",
+    COURTDATESCHEDULED = "COURT_DATE_SCHEDULED",
+    DISCOVERYRECEIVED = "DISCOVERY_RECEIVED",
+    DISCOVERYREQUESTED = "DISCOVERY_REQUESTED",
+    DISPUTEFILED = "DISPUTE_FILED",
+    DRIVERLICENSEREQUESTED = "DRIVER_LICENSE_REQUESTED",
+    FAILEDPAYMENTATTEMPT = "FAILED_PAYMENT_ATTEMPT",
+    NOTICEOFAPPEARANCEFILED = "NOTICE_OF_APPEARANCE_FILED",
+    OTHER = "OTHER",
+    OVERDUEBALANCEPAID = "OVERDUE_BALANCE_PAID",
+    REVIEWEDBYLAWFIRM = "REVIEWED_BY_LAWFIRM",
+    SOCIALMEDIAASK = "SOCIAL_MEDIA_ASK",
+    TICKETMAILEDTOCOURT = "TICKET_MAILED_TO_COURT"
+}
+/**
+* @export
+* @enum {string}
+*/
 export declare enum DashboardCaseModelLastMessageTypeEnum {
+    Action = "action",
     Attachment = "attachment",
     Message = "message"
 }
