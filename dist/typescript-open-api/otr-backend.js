@@ -334,6 +334,13 @@ export var PathsApiV1LawfirmsLawfirmIdInboxMessagesGetParametersQueryLatestMessa
     PathsApiV1LawfirmsLawfirmIdInboxMessagesGetParametersQueryLatestMessageBy["CLIENT"] = "CLIENT";
     PathsApiV1LawfirmsLawfirmIdInboxMessagesGetParametersQueryLatestMessageBy["LAWYER"] = "LAWYER";
 })(PathsApiV1LawfirmsLawfirmIdInboxMessagesGetParametersQueryLatestMessageBy || (PathsApiV1LawfirmsLawfirmIdInboxMessagesGetParametersQueryLatestMessageBy = {}));
+export var PathsApiV1LawfirmsLawfirmIdDashboardGrossEarningsGetParametersQueryPeriod;
+(function (PathsApiV1LawfirmsLawfirmIdDashboardGrossEarningsGetParametersQueryPeriod) {
+    PathsApiV1LawfirmsLawfirmIdDashboardGrossEarningsGetParametersQueryPeriod["DAILY"] = "DAILY";
+    PathsApiV1LawfirmsLawfirmIdDashboardGrossEarningsGetParametersQueryPeriod["HOURLY"] = "HOURLY";
+    PathsApiV1LawfirmsLawfirmIdDashboardGrossEarningsGetParametersQueryPeriod["MONTHLY"] = "MONTHLY";
+    PathsApiV1LawfirmsLawfirmIdDashboardGrossEarningsGetParametersQueryPeriod["WEEKLY"] = "WEEKLY";
+})(PathsApiV1LawfirmsLawfirmIdDashboardGrossEarningsGetParametersQueryPeriod || (PathsApiV1LawfirmsLawfirmIdDashboardGrossEarningsGetParametersQueryPeriod = {}));
 export var PathsApiV1LawfirmsLawfirmIdDocumentsGetParametersQueryDoc_type;
 (function (PathsApiV1LawfirmsLawfirmIdDocumentsGetParametersQueryDoc_type) {
     PathsApiV1LawfirmsLawfirmIdDocumentsGetParametersQueryDoc_type["ENGAGEMENT_LETTER"] = "ENGAGEMENT_LETTER";

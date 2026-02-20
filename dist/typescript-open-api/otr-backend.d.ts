@@ -3811,6 +3811,23 @@ export interface paths {
         patch?: never;
         trace?: never;
     };
+    "/api/v1/lawfirms/{lawfirmId}/dashboard/gross-earnings": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        /** getLawfirmGrossEarnings */
+        get: operations["getLawfirmGrossEarningsUsingGET"];
+        put?: never;
+        post?: never;
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
     "/api/v1/cases/{caseId}/documents": {
         parameters: {
             query?: never;
@@ -10151,6 +10168,13 @@ export interface components {
             units?: components["schemas"]["TemporalUnit"][];
             zero?: boolean;
         };
+        /** EarningsByPeriodDto */
+        EarningsByPeriodDto: {
+            /** Format: date-time */
+            periodDate?: string;
+            /** Format: int64 */
+            totalAmountInCents?: number;
+        };
         /** EditConversationMessageRequest */
         EditConversationMessageRequest: {
             messageBody?: string;
@@ -11201,6 +11225,10 @@ export interface components {
             /** Format: int64 */
             numTransactions?: number;
             transactions?: components["schemas"]["FinancialTransaction"][];
+        };
+        /** GetLawfirmGrossEarningsResponse */
+        GetLawfirmGrossEarningsResponse: {
+            earnings?: components["schemas"]["EarningsByPeriodDto"][];
         };
         /** GetLawfirmInboxMessagesResponse */
         GetLawfirmInboxMessagesResponse: {
@@ -29086,6 +29114,57 @@ export interface operations {
             };
         };
     };
+    getLawfirmGrossEarningsUsingGET: {
+        parameters: {
+            query: {
+                /** @description period */
+                period: PathsApiV1LawfirmsLawfirmIdDashboardGrossEarningsGetParametersQueryPeriod;
+                /** @description startDate */
+                startDate?: string;
+                /** @description endDate */
+                endDate?: string;
+            };
+            header?: never;
+            path: {
+                /** @description lawfirmId */
+                lawfirmId: number;
+            };
+            cookie?: never;
+        };
+        requestBody?: never;
+        responses: {
+            /** @description OK */
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "*/*": components["schemas"]["GetLawfirmGrossEarningsResponse"];
+                };
+            };
+            /** @description Unauthorized */
+            401: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content?: never;
+            };
+            /** @description Forbidden */
+            403: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content?: never;
+            };
+            /** @description Not Found */
+            404: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content?: never;
+            };
+        };
+    };
     getLawfirmCaseDocumentsUsingGET: {
         parameters: {
             query?: never;
@@ -40679,6 +40758,12 @@ export declare enum PathsApiV1LawfirmsLawfirmIdInboxMessagesGetParametersQueryLa
     ADMIN = "ADMIN",
     CLIENT = "CLIENT",
     LAWYER = "LAWYER"
+}
+export declare enum PathsApiV1LawfirmsLawfirmIdDashboardGrossEarningsGetParametersQueryPeriod {
+    DAILY = "DAILY",
+    HOURLY = "HOURLY",
+    MONTHLY = "MONTHLY",
+    WEEKLY = "WEEKLY"
 }
 export declare enum PathsApiV1LawfirmsLawfirmIdDocumentsGetParametersQueryDoc_type {
     ENGAGEMENT_LETTER = "ENGAGEMENT_LETTER",

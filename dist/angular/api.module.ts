@@ -62,6 +62,7 @@ import { IntercomWebhookControllerService } from './api/intercomWebhookControlle
 import { LawfirmCaseDecisionControllerService } from './api/lawfirmCaseDecisionController.service';
 import { LawfirmCasesControllerService } from './api/lawfirmCasesController.service';
 import { LawfirmControllerService } from './api/lawfirmController.service';
+import { LawfirmDashboardControllerService } from './api/lawfirmDashboardController.service';
 import { LawfirmDocumentControllerService } from './api/lawfirmDocumentController.service';
 import { LawfirmFeeCoverageControllerService } from './api/lawfirmFeeCoverageController.service';
 import { LawfirmPaymentModelControllerService } from './api/lawfirmPaymentModelController.service';

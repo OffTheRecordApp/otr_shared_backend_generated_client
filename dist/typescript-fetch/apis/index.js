@@ -58,6 +58,7 @@ export * from './IntercomWebhookControllerApi';
 export * from './LawfirmCaseDecisionControllerApi';
 export * from './LawfirmCasesControllerApi';
 export * from './LawfirmControllerApi';
+export * from './LawfirmDashboardControllerApi';
 export * from './LawfirmDocumentControllerApi';
 export * from './LawfirmFeeCoverageControllerApi';
 export * from './LawfirmPaymentModelControllerApi';

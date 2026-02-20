@@ -62,6 +62,7 @@ api/intercomWebhookController.service.ts
 api/lawfirmCaseDecisionController.service.ts
 api/lawfirmCasesController.service.ts
 api/lawfirmController.service.ts
+api/lawfirmDashboardController.service.ts
 api/lawfirmDocumentController.service.ts
 api/lawfirmFeeCoverageController.service.ts
 api/lawfirmPaymentModelController.service.ts
@@ -351,6 +352,7 @@ model/dripWebhookData.ts
 model/dripWebhookEvent.ts
 model/driverLicenseModel.ts
 model/duration.ts
+model/earningsByPeriodDto.ts
 model/editConversationMessageRequest.ts
 model/editCustomerReviewRequest.ts
 model/enableViolationModel.ts
@@ -463,6 +465,7 @@ model/getLawfirmFeeCoverageResponse.ts
 model/getLawfirmFeeModel.ts
 model/getLawfirmFeesResponse.ts
 model/getLawfirmFinancialTransactionsResponse.ts
+model/getLawfirmGrossEarningsResponse.ts
 model/getLawfirmInboxMessagesResponse.ts
 model/getLawfirmJobTitleResponse.ts
 model/getLawfirmLawyersResponse.ts
