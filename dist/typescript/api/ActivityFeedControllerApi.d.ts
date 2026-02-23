@@ -39,5 +39,5 @@ export declare class ActivityFeedControllerApi {
      * @param resolutionStatuses resolutionStatuses
      * @param startDate startDate
      */
-    listCaseOutcomesUsingGET(includeCriminal?: boolean, limit?: number, regionCode?: string, resolutionStatuses?: 'LOST' | 'POINTS_REDUCED' | 'REDUCED_TO_NON_MOVER' | 'TICKET_DISMISSED', startDate?: string, extraHttpRequestParams?: any): ng.IHttpPromise<models.ListCaseOutcomesResponse>;
+    listCaseOutcomesUsingGET(includeCriminal?: boolean, limit?: number, regionCode?: string, resolutionStatuses?: 'AMENDED_DOWN_WITHIN_CLASS' | 'AMENDED_TO_INFRACTION' | 'CLIENT_FIRED_LAWFIRM' | 'CLIENT_FORCED_LOSS' | 'CLIENT_PAID_FINE' | 'CLIENT_UNRESPONSIVE' | 'DEFERRED' | 'DIVERTED' | 'FEES_DISPUTED' | 'FINE_REDUCTION_ONLY' | 'LAWFIRM_WITHDRAWN' | 'LOST' | 'POINTS_REDUCED' | 'REDUCED_TO_NON_MOVER' | 'RESOLVED_NON_PAYMENT' | 'TICKET_DISMISSED' | 'TRAFFIC_SCHOOL', startDate?: string, extraHttpRequestParams?: any): ng.IHttpPromise<models.ListCaseOutcomesResponse>;
 }

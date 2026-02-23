@@ -7450,6 +7450,7 @@ export interface components {
         /** AddNewCaseMessageRequest */
         AddNewCaseMessageRequest: {
             messageDomain?: components["schemas"]["MessageInputModel"];
+            suppressSms?: boolean;
         };
         /** AddNoteToPhoneLeadRequest */
         AddNoteToPhoneLeadRequest: {
@@ -40454,10 +40455,23 @@ export declare enum PathsApiV1ActivityFeedGetParametersQueryActivityType {
     TICKET_REVIEW = "TICKET_REVIEW"
 }
 export declare enum PathsApiV1ActivityFeedCaseOutcomesGetParametersQueryResolutionStatuses {
+    AMENDED_DOWN_WITHIN_CLASS = "AMENDED_DOWN_WITHIN_CLASS",
+    AMENDED_TO_INFRACTION = "AMENDED_TO_INFRACTION",
+    CLIENT_FIRED_LAWFIRM = "CLIENT_FIRED_LAWFIRM",
+    CLIENT_FORCED_LOSS = "CLIENT_FORCED_LOSS",
+    CLIENT_PAID_FINE = "CLIENT_PAID_FINE",
+    CLIENT_UNRESPONSIVE = "CLIENT_UNRESPONSIVE",
+    DEFERRED = "DEFERRED",
+    DIVERTED = "DIVERTED",
+    FEES_DISPUTED = "FEES_DISPUTED",
+    FINE_REDUCTION_ONLY = "FINE_REDUCTION_ONLY",
+    LAWFIRM_WITHDRAWN = "LAWFIRM_WITHDRAWN",
     LOST = "LOST",
     POINTS_REDUCED = "POINTS_REDUCED",
     REDUCED_TO_NON_MOVER = "REDUCED_TO_NON_MOVER",
-    TICKET_DISMISSED = "TICKET_DISMISSED"
+    RESOLVED_NON_PAYMENT = "RESOLVED_NON_PAYMENT",
+    TICKET_DISMISSED = "TICKET_DISMISSED",
+    TRAFFIC_SCHOOL = "TRAFFIC_SCHOOL"
 }
 export declare enum PathsApiV1LawfirmsLawfirmIdAuditEventsGetParametersQueryIncludeTypes {
     ACCOUNT_COVERAGE_ADDED = "ACCOUNT_COVERAGE_ADDED",

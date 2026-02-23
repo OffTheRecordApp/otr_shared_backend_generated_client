@@ -24,12 +24,25 @@ export interface CaseOutcomeModel {
     shortViolationName?: string;
 }
 export namespace CaseOutcomeModel {
-    export type ResolutionStatusEnum = 'LOST' | 'POINTS_REDUCED' | 'REDUCED_TO_NON_MOVER' | 'TICKET_DISMISSED';
+    export type ResolutionStatusEnum = 'AMENDED_DOWN_WITHIN_CLASS' | 'AMENDED_TO_INFRACTION' | 'CLIENT_FIRED_LAWFIRM' | 'CLIENT_FORCED_LOSS' | 'CLIENT_PAID_FINE' | 'CLIENT_UNRESPONSIVE' | 'DEFERRED' | 'DIVERTED' | 'FEES_DISPUTED' | 'FINE_REDUCTION_ONLY' | 'LAWFIRM_WITHDRAWN' | 'LOST' | 'POINTS_REDUCED' | 'REDUCED_TO_NON_MOVER' | 'RESOLVED_NON_PAYMENT' | 'TICKET_DISMISSED' | 'TRAFFIC_SCHOOL';
     export const ResolutionStatusEnum = {
+        AmendedDownWithinClass: 'AMENDED_DOWN_WITHIN_CLASS' as ResolutionStatusEnum,
+        AmendedToInfraction: 'AMENDED_TO_INFRACTION' as ResolutionStatusEnum,
+        ClientFiredLawfirm: 'CLIENT_FIRED_LAWFIRM' as ResolutionStatusEnum,
+        ClientForcedLoss: 'CLIENT_FORCED_LOSS' as ResolutionStatusEnum,
+        ClientPaidFine: 'CLIENT_PAID_FINE' as ResolutionStatusEnum,
+        ClientUnresponsive: 'CLIENT_UNRESPONSIVE' as ResolutionStatusEnum,
+        Deferred: 'DEFERRED' as ResolutionStatusEnum,
+        Diverted: 'DIVERTED' as ResolutionStatusEnum,
+        FeesDisputed: 'FEES_DISPUTED' as ResolutionStatusEnum,
+        FineReductionOnly: 'FINE_REDUCTION_ONLY' as ResolutionStatusEnum,
+        LawfirmWithdrawn: 'LAWFIRM_WITHDRAWN' as ResolutionStatusEnum,
         Lost: 'LOST' as ResolutionStatusEnum,
         PointsReduced: 'POINTS_REDUCED' as ResolutionStatusEnum,
         ReducedToNonMover: 'REDUCED_TO_NON_MOVER' as ResolutionStatusEnum,
-        TicketDismissed: 'TICKET_DISMISSED' as ResolutionStatusEnum
+        ResolvedNonPayment: 'RESOLVED_NON_PAYMENT' as ResolutionStatusEnum,
+        TicketDismissed: 'TICKET_DISMISSED' as ResolutionStatusEnum,
+        TrafficSchool: 'TRAFFIC_SCHOOL' as ResolutionStatusEnum
     };
 }
 

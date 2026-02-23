@@ -12,4 +12,5 @@
 import * as models from './models';
 export interface AddNewCaseMessageRequest {
     "messageDomain"?: models.MessageInputModel;
+    "suppressSms"?: boolean;
 }

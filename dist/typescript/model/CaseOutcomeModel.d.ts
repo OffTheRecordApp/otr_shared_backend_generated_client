@@ -23,9 +23,22 @@ export interface CaseOutcomeModel {
 }
 export declare namespace CaseOutcomeModel {
     enum ResolutionStatusEnum {
+        AMENDEDDOWNWITHINCLASS,
+        AMENDEDTOINFRACTION,
+        CLIENTFIREDLAWFIRM,
+        CLIENTFORCEDLOSS,
+        CLIENTPAIDFINE,
+        CLIENTUNRESPONSIVE,
+        DEFERRED,
+        DIVERTED,
+        FEESDISPUTED,
+        FINEREDUCTIONONLY,
+        LAWFIRMWITHDRAWN,
         LOST,
         POINTSREDUCED,
         REDUCEDTONONMOVER,
-        TICKETDISMISSED
+        RESOLVEDNONPAYMENT,
+        TICKETDISMISSED,
+        TRAFFICSCHOOL
     }
 }

@@ -58,8 +58,21 @@ export function CaseOutcomeModelToJSON(value) {
 */
 export var CaseOutcomeModelResolutionStatusEnum;
 (function (CaseOutcomeModelResolutionStatusEnum) {
+    CaseOutcomeModelResolutionStatusEnum["AMENDEDDOWNWITHINCLASS"] = "AMENDED_DOWN_WITHIN_CLASS";
+    CaseOutcomeModelResolutionStatusEnum["AMENDEDTOINFRACTION"] = "AMENDED_TO_INFRACTION";
+    CaseOutcomeModelResolutionStatusEnum["CLIENTFIREDLAWFIRM"] = "CLIENT_FIRED_LAWFIRM";
+    CaseOutcomeModelResolutionStatusEnum["CLIENTFORCEDLOSS"] = "CLIENT_FORCED_LOSS";
+    CaseOutcomeModelResolutionStatusEnum["CLIENTPAIDFINE"] = "CLIENT_PAID_FINE";
+    CaseOutcomeModelResolutionStatusEnum["CLIENTUNRESPONSIVE"] = "CLIENT_UNRESPONSIVE";
+    CaseOutcomeModelResolutionStatusEnum["DEFERRED"] = "DEFERRED";
+    CaseOutcomeModelResolutionStatusEnum["DIVERTED"] = "DIVERTED";
+    CaseOutcomeModelResolutionStatusEnum["FEESDISPUTED"] = "FEES_DISPUTED";
+    CaseOutcomeModelResolutionStatusEnum["FINEREDUCTIONONLY"] = "FINE_REDUCTION_ONLY";
+    CaseOutcomeModelResolutionStatusEnum["LAWFIRMWITHDRAWN"] = "LAWFIRM_WITHDRAWN";
     CaseOutcomeModelResolutionStatusEnum["LOST"] = "LOST";
     CaseOutcomeModelResolutionStatusEnum["POINTSREDUCED"] = "POINTS_REDUCED";
     CaseOutcomeModelResolutionStatusEnum["REDUCEDTONONMOVER"] = "REDUCED_TO_NON_MOVER";
+    CaseOutcomeModelResolutionStatusEnum["RESOLVEDNONPAYMENT"] = "RESOLVED_NON_PAYMENT";
     CaseOutcomeModelResolutionStatusEnum["TICKETDISMISSED"] = "TICKET_DISMISSED";
+    CaseOutcomeModelResolutionStatusEnum["TRAFFICSCHOOL"] = "TRAFFIC_SCHOOL";
 })(CaseOutcomeModelResolutionStatusEnum || (CaseOutcomeModelResolutionStatusEnum = {}));

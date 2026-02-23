@@ -22,6 +22,7 @@ export function AddNewCaseMessageRequestFromJSONTyped(json, ignoreDiscriminator)
     }
     return {
         'messageDomain': !exists(json, 'messageDomain') ? undefined : MessageInputModelFromJSON(json['messageDomain']),
+        'suppressSms': !exists(json, 'suppressSms') ? undefined : json['suppressSms'],
     };
 }
 export function AddNewCaseMessageRequestToJSON(value) {
@@ -33,5 +34,6 @@ export function AddNewCaseMessageRequestToJSON(value) {
     }
     return {
         'messageDomain': MessageInputModelToJSON(value.messageDomain),
+        'suppressSms': value.suppressSms,
     };
 }

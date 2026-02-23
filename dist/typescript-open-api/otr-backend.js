@@ -12,10 +12,23 @@ export var PathsApiV1ActivityFeedGetParametersQueryActivityType;
 })(PathsApiV1ActivityFeedGetParametersQueryActivityType || (PathsApiV1ActivityFeedGetParametersQueryActivityType = {}));
 export var PathsApiV1ActivityFeedCaseOutcomesGetParametersQueryResolutionStatuses;
 (function (PathsApiV1ActivityFeedCaseOutcomesGetParametersQueryResolutionStatuses) {
+    PathsApiV1ActivityFeedCaseOutcomesGetParametersQueryResolutionStatuses["AMENDED_DOWN_WITHIN_CLASS"] = "AMENDED_DOWN_WITHIN_CLASS";
+    PathsApiV1ActivityFeedCaseOutcomesGetParametersQueryResolutionStatuses["AMENDED_TO_INFRACTION"] = "AMENDED_TO_INFRACTION";
+    PathsApiV1ActivityFeedCaseOutcomesGetParametersQueryResolutionStatuses["CLIENT_FIRED_LAWFIRM"] = "CLIENT_FIRED_LAWFIRM";
+    PathsApiV1ActivityFeedCaseOutcomesGetParametersQueryResolutionStatuses["CLIENT_FORCED_LOSS"] = "CLIENT_FORCED_LOSS";
+    PathsApiV1ActivityFeedCaseOutcomesGetParametersQueryResolutionStatuses["CLIENT_PAID_FINE"] = "CLIENT_PAID_FINE";
+    PathsApiV1ActivityFeedCaseOutcomesGetParametersQueryResolutionStatuses["CLIENT_UNRESPONSIVE"] = "CLIENT_UNRESPONSIVE";
+    PathsApiV1ActivityFeedCaseOutcomesGetParametersQueryResolutionStatuses["DEFERRED"] = "DEFERRED";
+    PathsApiV1ActivityFeedCaseOutcomesGetParametersQueryResolutionStatuses["DIVERTED"] = "DIVERTED";
+    PathsApiV1ActivityFeedCaseOutcomesGetParametersQueryResolutionStatuses["FEES_DISPUTED"] = "FEES_DISPUTED";
+    PathsApiV1ActivityFeedCaseOutcomesGetParametersQueryResolutionStatuses["FINE_REDUCTION_ONLY"] = "FINE_REDUCTION_ONLY";
+    PathsApiV1ActivityFeedCaseOutcomesGetParametersQueryResolutionStatuses["LAWFIRM_WITHDRAWN"] = "LAWFIRM_WITHDRAWN";
     PathsApiV1ActivityFeedCaseOutcomesGetParametersQueryResolutionStatuses["LOST"] = "LOST";
     PathsApiV1ActivityFeedCaseOutcomesGetParametersQueryResolutionStatuses["POINTS_REDUCED"] = "POINTS_REDUCED";
     PathsApiV1ActivityFeedCaseOutcomesGetParametersQueryResolutionStatuses["REDUCED_TO_NON_MOVER"] = "REDUCED_TO_NON_MOVER";
+    PathsApiV1ActivityFeedCaseOutcomesGetParametersQueryResolutionStatuses["RESOLVED_NON_PAYMENT"] = "RESOLVED_NON_PAYMENT";
     PathsApiV1ActivityFeedCaseOutcomesGetParametersQueryResolutionStatuses["TICKET_DISMISSED"] = "TICKET_DISMISSED";
+    PathsApiV1ActivityFeedCaseOutcomesGetParametersQueryResolutionStatuses["TRAFFIC_SCHOOL"] = "TRAFFIC_SCHOOL";
 })(PathsApiV1ActivityFeedCaseOutcomesGetParametersQueryResolutionStatuses || (PathsApiV1ActivityFeedCaseOutcomesGetParametersQueryResolutionStatuses = {}));
 export var PathsApiV1LawfirmsLawfirmIdAuditEventsGetParametersQueryIncludeTypes;
 (function (PathsApiV1LawfirmsLawfirmIdAuditEventsGetParametersQueryIncludeTypes) {

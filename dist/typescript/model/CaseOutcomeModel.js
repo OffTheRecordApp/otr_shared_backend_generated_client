@@ -13,9 +13,22 @@ export var CaseOutcomeModel;
 (function (CaseOutcomeModel) {
     let ResolutionStatusEnum;
     (function (ResolutionStatusEnum) {
+        ResolutionStatusEnum[ResolutionStatusEnum["AMENDEDDOWNWITHINCLASS"] = 'AMENDED_DOWN_WITHIN_CLASS'] = "AMENDEDDOWNWITHINCLASS";
+        ResolutionStatusEnum[ResolutionStatusEnum["AMENDEDTOINFRACTION"] = 'AMENDED_TO_INFRACTION'] = "AMENDEDTOINFRACTION";
+        ResolutionStatusEnum[ResolutionStatusEnum["CLIENTFIREDLAWFIRM"] = 'CLIENT_FIRED_LAWFIRM'] = "CLIENTFIREDLAWFIRM";
+        ResolutionStatusEnum[ResolutionStatusEnum["CLIENTFORCEDLOSS"] = 'CLIENT_FORCED_LOSS'] = "CLIENTFORCEDLOSS";
+        ResolutionStatusEnum[ResolutionStatusEnum["CLIENTPAIDFINE"] = 'CLIENT_PAID_FINE'] = "CLIENTPAIDFINE";
+        ResolutionStatusEnum[ResolutionStatusEnum["CLIENTUNRESPONSIVE"] = 'CLIENT_UNRESPONSIVE'] = "CLIENTUNRESPONSIVE";
+        ResolutionStatusEnum[ResolutionStatusEnum["DEFERRED"] = 'DEFERRED'] = "DEFERRED";
+        ResolutionStatusEnum[ResolutionStatusEnum["DIVERTED"] = 'DIVERTED'] = "DIVERTED";
+        ResolutionStatusEnum[ResolutionStatusEnum["FEESDISPUTED"] = 'FEES_DISPUTED'] = "FEESDISPUTED";
+        ResolutionStatusEnum[ResolutionStatusEnum["FINEREDUCTIONONLY"] = 'FINE_REDUCTION_ONLY'] = "FINEREDUCTIONONLY";
+        ResolutionStatusEnum[ResolutionStatusEnum["LAWFIRMWITHDRAWN"] = 'LAWFIRM_WITHDRAWN'] = "LAWFIRMWITHDRAWN";
         ResolutionStatusEnum[ResolutionStatusEnum["LOST"] = 'LOST'] = "LOST";
         ResolutionStatusEnum[ResolutionStatusEnum["POINTSREDUCED"] = 'POINTS_REDUCED'] = "POINTSREDUCED";
         ResolutionStatusEnum[ResolutionStatusEnum["REDUCEDTONONMOVER"] = 'REDUCED_TO_NON_MOVER'] = "REDUCEDTONONMOVER";
+        ResolutionStatusEnum[ResolutionStatusEnum["RESOLVEDNONPAYMENT"] = 'RESOLVED_NON_PAYMENT'] = "RESOLVEDNONPAYMENT";
         ResolutionStatusEnum[ResolutionStatusEnum["TICKETDISMISSED"] = 'TICKET_DISMISSED'] = "TICKETDISMISSED";
+        ResolutionStatusEnum[ResolutionStatusEnum["TRAFFICSCHOOL"] = 'TRAFFIC_SCHOOL'] = "TRAFFICSCHOOL";
     })(ResolutionStatusEnum = CaseOutcomeModel.ResolutionStatusEnum || (CaseOutcomeModel.ResolutionStatusEnum = {}));
 })(CaseOutcomeModel || (CaseOutcomeModel = {}));

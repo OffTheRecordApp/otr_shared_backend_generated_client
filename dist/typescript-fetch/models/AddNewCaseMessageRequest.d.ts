@@ -22,6 +22,12 @@ export interface AddNewCaseMessageRequest {
      * @memberof AddNewCaseMessageRequest
      */
     messageDomain?: MessageInputModel;
+    /**
+     *
+     * @type {boolean}
+     * @memberof AddNewCaseMessageRequest
+     */
+    suppressSms?: boolean;
 }
 export declare function AddNewCaseMessageRequestFromJSON(json: any): AddNewCaseMessageRequest;
 export declare function AddNewCaseMessageRequestFromJSONTyped(json: any, ignoreDiscriminator: boolean): AddNewCaseMessageRequest;

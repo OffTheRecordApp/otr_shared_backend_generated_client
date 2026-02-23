@@ -137,8 +137,21 @@ export var ListActivityFeedUsingGETActivityTypeEnum;
     */
 export var ListCaseOutcomesUsingGETResolutionStatusesEnum;
 (function (ListCaseOutcomesUsingGETResolutionStatusesEnum) {
+    ListCaseOutcomesUsingGETResolutionStatusesEnum["AMENDEDDOWNWITHINCLASS"] = "AMENDED_DOWN_WITHIN_CLASS";
+    ListCaseOutcomesUsingGETResolutionStatusesEnum["AMENDEDTOINFRACTION"] = "AMENDED_TO_INFRACTION";
+    ListCaseOutcomesUsingGETResolutionStatusesEnum["CLIENTFIREDLAWFIRM"] = "CLIENT_FIRED_LAWFIRM";
+    ListCaseOutcomesUsingGETResolutionStatusesEnum["CLIENTFORCEDLOSS"] = "CLIENT_FORCED_LOSS";
+    ListCaseOutcomesUsingGETResolutionStatusesEnum["CLIENTPAIDFINE"] = "CLIENT_PAID_FINE";
+    ListCaseOutcomesUsingGETResolutionStatusesEnum["CLIENTUNRESPONSIVE"] = "CLIENT_UNRESPONSIVE";
+    ListCaseOutcomesUsingGETResolutionStatusesEnum["DEFERRED"] = "DEFERRED";
+    ListCaseOutcomesUsingGETResolutionStatusesEnum["DIVERTED"] = "DIVERTED";
+    ListCaseOutcomesUsingGETResolutionStatusesEnum["FEESDISPUTED"] = "FEES_DISPUTED";
+    ListCaseOutcomesUsingGETResolutionStatusesEnum["FINEREDUCTIONONLY"] = "FINE_REDUCTION_ONLY";
+    ListCaseOutcomesUsingGETResolutionStatusesEnum["LAWFIRMWITHDRAWN"] = "LAWFIRM_WITHDRAWN";
     ListCaseOutcomesUsingGETResolutionStatusesEnum["LOST"] = "LOST";
     ListCaseOutcomesUsingGETResolutionStatusesEnum["POINTSREDUCED"] = "POINTS_REDUCED";
     ListCaseOutcomesUsingGETResolutionStatusesEnum["REDUCEDTONONMOVER"] = "REDUCED_TO_NON_MOVER";
+    ListCaseOutcomesUsingGETResolutionStatusesEnum["RESOLVEDNONPAYMENT"] = "RESOLVED_NON_PAYMENT";
     ListCaseOutcomesUsingGETResolutionStatusesEnum["TICKETDISMISSED"] = "TICKET_DISMISSED";
+    ListCaseOutcomesUsingGETResolutionStatusesEnum["TRAFFICSCHOOL"] = "TRAFFIC_SCHOOL";
 })(ListCaseOutcomesUsingGETResolutionStatusesEnum || (ListCaseOutcomesUsingGETResolutionStatusesEnum = {}));

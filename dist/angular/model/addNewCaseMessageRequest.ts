@@ -14,5 +14,6 @@ import { MessageInputModel } from './messageInputModel';
 
 export interface AddNewCaseMessageRequest { 
     messageDomain?: MessageInputModel;
+    suppressSms?: boolean;
 }
 
