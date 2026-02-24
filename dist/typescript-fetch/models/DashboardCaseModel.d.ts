@@ -105,6 +105,12 @@ export interface DashboardCaseModel {
      * @type {string}
      * @memberof DashboardCaseModel
      */
+    lastMessageProfilePictureUrl?: string;
+    /**
+     *
+     * @type {string}
+     * @memberof DashboardCaseModel
+     */
     lastMessageType?: DashboardCaseModelLastMessageTypeEnum;
     /**
      *

@@ -9895,6 +9895,7 @@ export interface components {
             hasLeftLawyerReview?: boolean;
             /** Format: date-time */
             lastActivityDateUtc?: string;
+            lastMessageProfilePictureUrl?: string;
             /** @enum {string} */
             lastMessageType?: DashboardCaseModelLastMessageType;
             /** Format: int64 */

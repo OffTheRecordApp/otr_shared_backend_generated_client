@@ -25,6 +25,7 @@ export interface DashboardCaseModel {
     "engagementLetter"?: models.EngagementLetterModel;
     "hasLeftLawyerReview"?: boolean;
     "lastActivityDateUtc"?: string;
+    "lastMessageProfilePictureUrl"?: string;
     "lastMessageType"?: DashboardCaseModel.LastMessageTypeEnum;
     "lawfirmId"?: number;
     "lawfirmName"?: string;
