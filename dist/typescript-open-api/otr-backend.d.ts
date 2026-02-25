@@ -10810,6 +10810,7 @@ export interface components {
             caseCounter?: components["schemas"]["CaseCounterOfferModel"];
             /** Format: int32 */
             chanceOfSuccess?: number;
+            hasUnreadNotifications?: boolean;
             /** Format: int32 */
             projectedInsuranceCostInCents?: number;
             theCase?: components["schemas"]["CaseModel"];

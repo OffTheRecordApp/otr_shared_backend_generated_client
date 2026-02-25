@@ -30,6 +30,12 @@ export interface GetCaseResponse {
     chanceOfSuccess?: number;
     /**
      *
+     * @type {boolean}
+     * @memberof GetCaseResponse
+     */
+    hasUnreadNotifications?: boolean;
+    /**
+     *
      * @type {number}
      * @memberof GetCaseResponse
      */
