@@ -121,6 +121,7 @@ export declare namespace ValidateDirectMailResponse {
         INVALIDDISPUTEID,
         INVALIDDOCUMENTID,
         INVALIDEMAILADDRESS,
+        INVALIDEMAILDOMAIN,
         INVALIDEMAILTEMPLATE,
         INVALIDENDDATE,
         INVALIDENUMVALUE,

@@ -147,6 +147,7 @@ export var ValidateDirectMailResponseOtrErrorEnum;
     ValidateDirectMailResponseOtrErrorEnum["INVALIDDISPUTEID"] = "INVALID_DISPUTE_ID";
     ValidateDirectMailResponseOtrErrorEnum["INVALIDDOCUMENTID"] = "INVALID_DOCUMENT_ID";
     ValidateDirectMailResponseOtrErrorEnum["INVALIDEMAILADDRESS"] = "INVALID_EMAIL_ADDRESS";
+    ValidateDirectMailResponseOtrErrorEnum["INVALIDEMAILDOMAIN"] = "INVALID_EMAIL_DOMAIN";
     ValidateDirectMailResponseOtrErrorEnum["INVALIDEMAILTEMPLATE"] = "INVALID_EMAIL_TEMPLATE";
     ValidateDirectMailResponseOtrErrorEnum["INVALIDENDDATE"] = "INVALID_END_DATE";
     ValidateDirectMailResponseOtrErrorEnum["INVALIDENUMVALUE"] = "INVALID_ENUM_VALUE";

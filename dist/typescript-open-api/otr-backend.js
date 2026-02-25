@@ -1479,6 +1479,7 @@ export var ValidateDirectMailResponseOtrError;
     ValidateDirectMailResponseOtrError["INVALID_DISPUTE_ID"] = "INVALID_DISPUTE_ID";
     ValidateDirectMailResponseOtrError["INVALID_DOCUMENT_ID"] = "INVALID_DOCUMENT_ID";
     ValidateDirectMailResponseOtrError["INVALID_EMAIL_ADDRESS"] = "INVALID_EMAIL_ADDRESS";
+    ValidateDirectMailResponseOtrError["INVALID_EMAIL_DOMAIN"] = "INVALID_EMAIL_DOMAIN";
     ValidateDirectMailResponseOtrError["INVALID_EMAIL_TEMPLATE"] = "INVALID_EMAIL_TEMPLATE";
     ValidateDirectMailResponseOtrError["INVALID_END_DATE"] = "INVALID_END_DATE";
     ValidateDirectMailResponseOtrError["INVALID_ENUM_VALUE"] = "INVALID_ENUM_VALUE";
