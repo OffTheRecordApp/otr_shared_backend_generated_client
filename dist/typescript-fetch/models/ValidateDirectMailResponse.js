@@ -78,6 +78,7 @@ export var ValidateDirectMailResponseOtrErrorEnum;
     ValidateDirectMailResponseOtrErrorEnum["CHARGEREFUNDED"] = "CHARGE_REFUNDED";
     ValidateDirectMailResponseOtrErrorEnum["CITATIONALREADYDELETED"] = "CITATION_ALREADY_DELETED";
     ValidateDirectMailResponseOtrErrorEnum["CITATIONDOESNOTMATCHUSER"] = "CITATION_DOES_NOT_MATCH_USER";
+    ValidateDirectMailResponseOtrErrorEnum["CITATIONIMAGEUPDATENOTALLOWED"] = "CITATION_IMAGE_UPDATE_NOT_ALLOWED";
     ValidateDirectMailResponseOtrErrorEnum["CITATIONNOTOWNEDBYUSER"] = "CITATION_NOT_OWNED_BY_USER";
     ValidateDirectMailResponseOtrErrorEnum["CODEALREADYEXISTSFORDRIVER"] = "CODE_ALREADY_EXISTS_FOR_DRIVER";
     ValidateDirectMailResponseOtrErrorEnum["CODEBENEFITTYPENOTSUPPORTED"] = "CODE_BENEFIT_TYPE_NOT_SUPPORTED";

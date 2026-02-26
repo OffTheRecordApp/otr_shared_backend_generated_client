@@ -1410,6 +1410,7 @@ export var ValidateDirectMailResponseOtrError;
     ValidateDirectMailResponseOtrError["CHARGE_REFUNDED"] = "CHARGE_REFUNDED";
     ValidateDirectMailResponseOtrError["CITATION_ALREADY_DELETED"] = "CITATION_ALREADY_DELETED";
     ValidateDirectMailResponseOtrError["CITATION_DOES_NOT_MATCH_USER"] = "CITATION_DOES_NOT_MATCH_USER";
+    ValidateDirectMailResponseOtrError["CITATION_IMAGE_UPDATE_NOT_ALLOWED"] = "CITATION_IMAGE_UPDATE_NOT_ALLOWED";
     ValidateDirectMailResponseOtrError["CITATION_NOT_OWNED_BY_USER"] = "CITATION_NOT_OWNED_BY_USER";
     ValidateDirectMailResponseOtrError["CODE_ALREADY_EXISTS_FOR_DRIVER"] = "CODE_ALREADY_EXISTS_FOR_DRIVER";
     ValidateDirectMailResponseOtrError["CODE_BENEFIT_TYPE_NOT_SUPPORTED"] = "CODE_BENEFIT_TYPE_NOT_SUPPORTED";
