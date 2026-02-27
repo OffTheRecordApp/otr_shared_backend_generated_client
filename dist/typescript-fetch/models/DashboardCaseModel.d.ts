@@ -102,6 +102,12 @@ export interface DashboardCaseModel {
     lastActivityDateUtc?: Date;
     /**
      *
+     * @type {boolean}
+     * @memberof DashboardCaseModel
+     */
+    lastMessageFromDefendant?: boolean;
+    /**
+     *
      * @type {string}
      * @memberof DashboardCaseModel
      */
@@ -112,6 +118,12 @@ export interface DashboardCaseModel {
      * @memberof DashboardCaseModel
      */
     lastMessageType?: DashboardCaseModelLastMessageTypeEnum;
+    /**
+     *
+     * @type {number}
+     * @memberof DashboardCaseModel
+     */
+    lastMessageUserId?: number;
     /**
      *
      * @type {number}

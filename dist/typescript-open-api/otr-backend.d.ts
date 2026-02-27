@@ -9895,9 +9895,12 @@ export interface components {
             hasLeftLawyerReview?: boolean;
             /** Format: date-time */
             lastActivityDateUtc?: string;
+            lastMessageFromDefendant?: boolean;
             lastMessageProfilePictureUrl?: string;
             /** @enum {string} */
             lastMessageType?: DashboardCaseModelLastMessageType;
+            /** Format: int64 */
+            lastMessageUserId?: number;
             /** Format: int64 */
             lawfirmId?: number;
             lawfirmName?: string;
