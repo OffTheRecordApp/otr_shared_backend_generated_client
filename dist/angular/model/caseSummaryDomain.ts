@@ -11,6 +11,7 @@
  */
 import { CaseStatusDomain } from './caseStatusDomain';
 import { PureDate } from './pureDate';
+import { CaseViolationDto } from './caseViolationDto';
 
 
 export interface CaseSummaryDomain { 
@@ -22,16 +23,21 @@ export interface CaseSummaryDomain {
     citationIssueDate?: PureDate;
     citationIssueDateUTC?: string;
     countyName?: string;
+    courtCity?: string;
     courtDate?: string;
     courtName?: string;
+    courtRegionCode?: string;
     firstName?: string;
+    hasCdl?: boolean;
     involvesAccident?: boolean;
     lastName?: string;
+    lawfirmReceiptDateUtc?: string;
     legalFeeInCents?: number;
     resolutionDateUtc?: string;
     ticketImageUrl?: string;
     userId?: number;
     violationCount?: number;
+    violations?: Array<CaseViolationDto>;
 }
 export namespace CaseSummaryDomain {
     export type CaseDecisionStatusEnum = 'ACCEPTED' | 'CREATED' | 'DECLINED' | 'EXPIRED' | 'PENDING' | 'REMATCHED' | 'REMATCHED_REFERRAL';

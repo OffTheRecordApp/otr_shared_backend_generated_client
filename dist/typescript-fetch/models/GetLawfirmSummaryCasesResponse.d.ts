@@ -39,6 +39,18 @@ export interface GetLawfirmSummaryCasesResponse {
      * @type {number}
      * @memberof GetLawfirmSummaryCasesResponse
      */
+    medianPendingTimeSeconds?: number;
+    /**
+     *
+     * @type {number}
+     * @memberof GetLawfirmSummaryCasesResponse
+     */
+    nationwideMedianPendingTimeSeconds?: number;
+    /**
+     *
+     * @type {number}
+     * @memberof GetLawfirmSummaryCasesResponse
+     */
     numMatchingCases?: number;
     /**
      *
@@ -64,6 +76,12 @@ export interface GetLawfirmSummaryCasesResponse {
      * @memberof GetLawfirmSummaryCasesResponse
      */
     percentCasesWithPaymentPlan?: number;
+    /**
+     *
+     * @type {number}
+     * @memberof GetLawfirmSummaryCasesResponse
+     */
+    stateMedianPendingTimeSeconds?: number;
 }
 export declare function GetLawfirmSummaryCasesResponseFromJSON(json: any): GetLawfirmSummaryCasesResponse;
 export declare function GetLawfirmSummaryCasesResponseFromJSONTyped(json: any, ignoreDiscriminator: boolean): GetLawfirmSummaryCasesResponse;

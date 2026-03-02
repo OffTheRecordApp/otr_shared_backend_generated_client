@@ -9,7 +9,7 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-import { CaseStatusDomain, PureDate } from './';
+import { CaseStatusDomain, CaseViolationDto, PureDate } from './';
 /**
  *
  * @export
@@ -66,6 +66,12 @@ export interface CaseSummaryDomain {
     countyName?: string;
     /**
      *
+     * @type {string}
+     * @memberof CaseSummaryDomain
+     */
+    courtCity?: string;
+    /**
+     *
      * @type {Date}
      * @memberof CaseSummaryDomain
      */
@@ -81,7 +87,19 @@ export interface CaseSummaryDomain {
      * @type {string}
      * @memberof CaseSummaryDomain
      */
+    courtRegionCode?: string;
+    /**
+     *
+     * @type {string}
+     * @memberof CaseSummaryDomain
+     */
     firstName?: string;
+    /**
+     *
+     * @type {boolean}
+     * @memberof CaseSummaryDomain
+     */
+    hasCdl?: boolean;
     /**
      *
      * @type {boolean}
@@ -94,6 +112,12 @@ export interface CaseSummaryDomain {
      * @memberof CaseSummaryDomain
      */
     lastName?: string;
+    /**
+     *
+     * @type {Date}
+     * @memberof CaseSummaryDomain
+     */
+    lawfirmReceiptDateUtc?: Date;
     /**
      *
      * @type {number}
@@ -124,6 +148,12 @@ export interface CaseSummaryDomain {
      * @memberof CaseSummaryDomain
      */
     violationCount?: number;
+    /**
+     *
+     * @type {Array<CaseViolationDto>}
+     * @memberof CaseSummaryDomain
+     */
+    violations?: Array<CaseViolationDto>;
 }
 export declare function CaseSummaryDomainFromJSON(json: any): CaseSummaryDomain;
 export declare function CaseSummaryDomainFromJSONTyped(json: any, ignoreDiscriminator: boolean): CaseSummaryDomain;

@@ -12,7 +12,7 @@
  * Do not edit the class manually.
  */
 import { exists } from '../runtime';
-import { CaseStatusDomainFromJSON, CaseStatusDomainToJSON, PureDateFromJSON, PureDateToJSON, } from './';
+import { CaseStatusDomainFromJSON, CaseStatusDomainToJSON, CaseViolationDtoFromJSON, CaseViolationDtoToJSON, PureDateFromJSON, PureDateToJSON, } from './';
 export function CaseSummaryDomainFromJSON(json) {
     return CaseSummaryDomainFromJSONTyped(json, false);
 }
@@ -29,16 +29,21 @@ export function CaseSummaryDomainFromJSONTyped(json, ignoreDiscriminator) {
         'citationIssueDate': !exists(json, 'citationIssueDate') ? undefined : PureDateFromJSON(json['citationIssueDate']),
         'citationIssueDateUTC': !exists(json, 'citationIssueDateUTC') ? undefined : (new Date(json['citationIssueDateUTC'])),
         'countyName': !exists(json, 'countyName') ? undefined : json['countyName'],
+        'courtCity': !exists(json, 'courtCity') ? undefined : json['courtCity'],
         'courtDate': !exists(json, 'courtDate') ? undefined : (new Date(json['courtDate'])),
         'courtName': !exists(json, 'courtName') ? undefined : json['courtName'],
+        'courtRegionCode': !exists(json, 'courtRegionCode') ? undefined : json['courtRegionCode'],
         'firstName': !exists(json, 'firstName') ? undefined : json['firstName'],
+        'hasCdl': !exists(json, 'hasCdl') ? undefined : json['hasCdl'],
         'involvesAccident': !exists(json, 'involvesAccident') ? undefined : json['involvesAccident'],
         'lastName': !exists(json, 'lastName') ? undefined : json['lastName'],
+        'lawfirmReceiptDateUtc': !exists(json, 'lawfirmReceiptDateUtc') ? undefined : (new Date(json['lawfirmReceiptDateUtc'])),
         'legalFeeInCents': !exists(json, 'legalFeeInCents') ? undefined : json['legalFeeInCents'],
         'resolutionDateUtc': !exists(json, 'resolutionDateUtc') ? undefined : (new Date(json['resolutionDateUtc'])),
         'ticketImageUrl': !exists(json, 'ticketImageUrl') ? undefined : json['ticketImageUrl'],
         'userId': !exists(json, 'userId') ? undefined : json['userId'],
         'violationCount': !exists(json, 'violationCount') ? undefined : json['violationCount'],
+        'violations': !exists(json, 'violations') ? undefined : (json['violations'].map(CaseViolationDtoFromJSON)),
     };
 }
 export function CaseSummaryDomainToJSON(value) {
@@ -57,16 +62,21 @@ export function CaseSummaryDomainToJSON(value) {
         'citationIssueDate': PureDateToJSON(value.citationIssueDate),
         'citationIssueDateUTC': value.citationIssueDateUTC === undefined ? undefined : (value.citationIssueDateUTC.toISOString()),
         'countyName': value.countyName,
+        'courtCity': value.courtCity,
         'courtDate': value.courtDate === undefined ? undefined : (value.courtDate.toISOString()),
         'courtName': value.courtName,
+        'courtRegionCode': value.courtRegionCode,
         'firstName': value.firstName,
+        'hasCdl': value.hasCdl,
         'involvesAccident': value.involvesAccident,
         'lastName': value.lastName,
+        'lawfirmReceiptDateUtc': value.lawfirmReceiptDateUtc === undefined ? undefined : (value.lawfirmReceiptDateUtc.toISOString()),
         'legalFeeInCents': value.legalFeeInCents,
         'resolutionDateUtc': value.resolutionDateUtc === undefined ? undefined : (value.resolutionDateUtc.toISOString()),
         'ticketImageUrl': value.ticketImageUrl,
         'userId': value.userId,
         'violationCount': value.violationCount,
+        'violations': value.violations === undefined ? undefined : (value.violations.map(CaseViolationDtoToJSON)),
     };
 }
 /**

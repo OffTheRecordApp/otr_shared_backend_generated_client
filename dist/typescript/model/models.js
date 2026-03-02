@@ -120,6 +120,7 @@ export * from './CaseUserDefendantAttributes';
 export * from './CaseUserDefendantAttributesRequest';
 export * from './CaseUserDetailsModel';
 export * from './CaseUserPermissionAttributes';
+export * from './CaseViolationDto';
 export * from './CaseViolationPenalty';
 export * from './CaseWithCoverageObtained';
 export * from './ChangeUserPasswordRequest';

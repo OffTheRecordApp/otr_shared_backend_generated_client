@@ -24,11 +24,14 @@ export function GetLawfirmSummaryCasesResponseFromJSONTyped(json, ignoreDiscrimi
         'activeCasesCount': !exists(json, 'activeCasesCount') ? undefined : json['activeCasesCount'],
         'bookedCasesCount': !exists(json, 'bookedCasesCount') ? undefined : json['bookedCasesCount'],
         'cases': !exists(json, 'cases') ? undefined : (json['cases'].map(CaseSummaryDomainFromJSON)),
+        'medianPendingTimeSeconds': !exists(json, 'medianPendingTimeSeconds') ? undefined : json['medianPendingTimeSeconds'],
+        'nationwideMedianPendingTimeSeconds': !exists(json, 'nationwideMedianPendingTimeSeconds') ? undefined : json['nationwideMedianPendingTimeSeconds'],
         'numMatchingCases': !exists(json, 'numMatchingCases') ? undefined : json['numMatchingCases'],
         'pastDueCasesCount': !exists(json, 'pastDueCasesCount') ? undefined : json['pastDueCasesCount'],
         'paymentPlanCasesCount': !exists(json, 'paymentPlanCasesCount') ? undefined : json['paymentPlanCasesCount'],
         'pendingCasesCount': !exists(json, 'pendingCasesCount') ? undefined : json['pendingCasesCount'],
         'percentCasesWithPaymentPlan': !exists(json, 'percentCasesWithPaymentPlan') ? undefined : json['percentCasesWithPaymentPlan'],
+        'stateMedianPendingTimeSeconds': !exists(json, 'stateMedianPendingTimeSeconds') ? undefined : json['stateMedianPendingTimeSeconds'],
     };
 }
 export function GetLawfirmSummaryCasesResponseToJSON(value) {
@@ -42,10 +45,13 @@ export function GetLawfirmSummaryCasesResponseToJSON(value) {
         'activeCasesCount': value.activeCasesCount,
         'bookedCasesCount': value.bookedCasesCount,
         'cases': value.cases === undefined ? undefined : (value.cases.map(CaseSummaryDomainToJSON)),
+        'medianPendingTimeSeconds': value.medianPendingTimeSeconds,
+        'nationwideMedianPendingTimeSeconds': value.nationwideMedianPendingTimeSeconds,
         'numMatchingCases': value.numMatchingCases,
         'pastDueCasesCount': value.pastDueCasesCount,
         'paymentPlanCasesCount': value.paymentPlanCasesCount,
         'pendingCasesCount': value.pendingCasesCount,
         'percentCasesWithPaymentPlan': value.percentCasesWithPaymentPlan,
+        'stateMedianPendingTimeSeconds': value.stateMedianPendingTimeSeconds,
     };
 }

@@ -244,6 +244,7 @@ model/caseUserDefendantAttributes.ts
 model/caseUserDefendantAttributesRequest.ts
 model/caseUserDetailsModel.ts
 model/caseUserPermissionAttributes.ts
+model/caseViolationDto.ts
 model/caseViolationPenalty.ts
 model/caseWithCoverageObtained.ts
 model/changeUserPasswordRequest.ts

@@ -8778,12 +8778,17 @@ export interface components {
             /** Format: date-time */
             citationIssueDateUTC?: string;
             countyName?: string;
+            courtCity?: string;
             /** Format: date-time */
             courtDate?: string;
             courtName?: string;
+            courtRegionCode?: string;
             firstName?: string;
+            hasCdl?: boolean;
             involvesAccident?: boolean;
             lastName?: string;
+            /** Format: date-time */
+            lawfirmReceiptDateUtc?: string;
             /** Format: int32 */
             legalFeeInCents?: number;
             /** Format: date-time */
@@ -8793,6 +8798,7 @@ export interface components {
             userId?: number;
             /** Format: int32 */
             violationCount?: number;
+            violations?: components["schemas"]["CaseViolationDto"][];
         };
         /** CaseTransferHistory */
         CaseTransferHistory: {
@@ -8854,6 +8860,14 @@ export interface components {
         /** CaseUserPermissionAttributes */
         CaseUserPermissionAttributes: {
             hasFinancialAccess?: boolean;
+        };
+        /** CaseViolationDto */
+        CaseViolationDto: {
+            isCriminal?: boolean;
+            isMoving?: boolean;
+            userFriendlyName?: string;
+            /** @enum {string} */
+            violationClassification?: PathsApiV1LawfirmsLawfirmIdAccountFeesDeleteParametersQueryClassification;
         };
         /** CaseViolationPenalty */
         CaseViolationPenalty: {
@@ -11341,6 +11355,10 @@ export interface components {
             /** Format: int32 */
             bookedCasesCount?: number;
             cases?: components["schemas"]["CaseSummaryDomain"][];
+            /** Format: int64 */
+            medianPendingTimeSeconds?: number;
+            /** Format: int64 */
+            nationwideMedianPendingTimeSeconds?: number;
             /** Format: int32 */
             numMatchingCases?: number;
             /** Format: int32 */
@@ -11351,6 +11369,8 @@ export interface components {
             pendingCasesCount?: number;
             /** Format: double */
             percentCasesWithPaymentPlan?: number;
+            /** Format: int64 */
+            stateMedianPendingTimeSeconds?: number;
         };
         /** GetLawfirmSupportedStatesResponse */
         GetLawfirmSupportedStatesResponse: {

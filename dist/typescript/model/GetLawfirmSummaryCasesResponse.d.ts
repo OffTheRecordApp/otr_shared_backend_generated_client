@@ -14,9 +14,12 @@ export interface GetLawfirmSummaryCasesResponse {
     "activeCasesCount"?: number;
     "bookedCasesCount"?: number;
     "cases"?: Array<models.CaseSummaryDomain>;
+    "medianPendingTimeSeconds"?: number;
+    "nationwideMedianPendingTimeSeconds"?: number;
     "numMatchingCases"?: number;
     "pastDueCasesCount"?: number;
     "paymentPlanCasesCount"?: number;
     "pendingCasesCount"?: number;
     "percentCasesWithPaymentPlan"?: number;
+    "stateMedianPendingTimeSeconds"?: number;
 }

@@ -19,16 +19,21 @@ export interface CaseSummaryDomain {
     "citationIssueDate"?: models.PureDate;
     "citationIssueDateUTC"?: string;
     "countyName"?: string;
+    "courtCity"?: string;
     "courtDate"?: string;
     "courtName"?: string;
+    "courtRegionCode"?: string;
     "firstName"?: string;
+    "hasCdl"?: boolean;
     "involvesAccident"?: boolean;
     "lastName"?: string;
+    "lawfirmReceiptDateUtc"?: string;
     "legalFeeInCents"?: number;
     "resolutionDateUtc"?: string;
     "ticketImageUrl"?: string;
     "userId"?: number;
     "violationCount"?: number;
+    "violations"?: Array<models.CaseViolationDto>;
 }
 export declare namespace CaseSummaryDomain {
     enum CaseDecisionStatusEnum {
