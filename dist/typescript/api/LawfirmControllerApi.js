@@ -155,16 +155,21 @@ export class LawfirmControllerApi {
      *
      * @summary getInboxMessages
      * @param lawfirmId lawfirmId
+     * @param caseCounterOfferStatuses caseCounterOfferStatuses
      * @param caseStatuses caseStatuses
+     * @param countyId countyId
      * @param courtDateFilter courtDateFilter
+     * @param courtId courtId
      * @param filter filter
      * @param latestMessageBy latestMessageBy
+     * @param lawfirmCaseDecisionStatus lawfirmCaseDecisionStatus
      * @param length length
      * @param page page
      * @param query query
+     * @param regionCode regionCode
      * @param statusCategories statusCategories
      */
-    getInboxMessagesUsingGET(lawfirmId, caseStatuses, courtDateFilter, filter, latestMessageBy, length, page, query, statusCategories, extraHttpRequestParams) {
+    getInboxMessagesUsingGET(lawfirmId, caseCounterOfferStatuses, caseStatuses, countyId, courtDateFilter, courtId, filter, latestMessageBy, lawfirmCaseDecisionStatus, length, page, query, regionCode, statusCategories, extraHttpRequestParams) {
         const localVarPath = this.basePath + '/api/v1/lawfirms/{lawfirmId}/inbox-messages'
             .replace('{' + 'lawfirmId' + '}', encodeURIComponent(String(lawfirmId)));
         let queryParameters = {};
@@ -173,17 +178,29 @@ export class LawfirmControllerApi {
         if (lawfirmId === null || lawfirmId === undefined) {
             throw new Error('Required parameter lawfirmId was null or undefined when calling getInboxMessagesUsingGET.');
         }
+        if (caseCounterOfferStatuses !== undefined) {
+            queryParameters['caseCounterOfferStatuses'] = caseCounterOfferStatuses;
+        }
         if (caseStatuses !== undefined) {
             queryParameters['caseStatuses'] = caseStatuses;
         }
+        if (countyId !== undefined) {
+            queryParameters['countyId'] = countyId;
+        }
         if (courtDateFilter !== undefined) {
             queryParameters['courtDateFilter'] = courtDateFilter;
+        }
+        if (courtId !== undefined) {
+            queryParameters['courtId'] = courtId;
         }
         if (filter !== undefined) {
             queryParameters['filter'] = filter;
         }
         if (latestMessageBy !== undefined) {
             queryParameters['latestMessageBy'] = latestMessageBy;
+        }
+        if (lawfirmCaseDecisionStatus !== undefined) {
+            queryParameters['lawfirmCaseDecisionStatus'] = lawfirmCaseDecisionStatus;
         }
         if (length !== undefined) {
             queryParameters['length'] = length;
@@ -193,6 +210,9 @@ export class LawfirmControllerApi {
         }
         if (query !== undefined) {
             queryParameters['query'] = query;
+        }
+        if (regionCode !== undefined) {
+            queryParameters['regionCode'] = regionCode;
         }
         if (statusCategories !== undefined) {
             queryParameters['statusCategories'] = statusCategories;

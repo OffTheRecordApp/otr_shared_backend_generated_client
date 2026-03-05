@@ -180,17 +180,29 @@ export class LawfirmControllerApi extends runtime.BaseAPI {
                 throw new runtime.RequiredError('lawfirmId', 'Required parameter requestParameters.lawfirmId was null or undefined when calling getInboxMessagesUsingGET.');
             }
             const queryParameters = {};
+            if (requestParameters.caseCounterOfferStatuses !== undefined) {
+                queryParameters['caseCounterOfferStatuses'] = requestParameters.caseCounterOfferStatuses;
+            }
             if (requestParameters.caseStatuses !== undefined) {
                 queryParameters['caseStatuses'] = requestParameters.caseStatuses;
             }
+            if (requestParameters.countyId !== undefined) {
+                queryParameters['countyId'] = requestParameters.countyId;
+            }
             if (requestParameters.courtDateFilter !== undefined) {
                 queryParameters['courtDateFilter'] = requestParameters.courtDateFilter;
+            }
+            if (requestParameters.courtId !== undefined) {
+                queryParameters['courtId'] = requestParameters.courtId;
             }
             if (requestParameters.filter !== undefined) {
                 queryParameters['filter'] = requestParameters.filter;
             }
             if (requestParameters.latestMessageBy !== undefined) {
                 queryParameters['latestMessageBy'] = requestParameters.latestMessageBy;
+            }
+            if (requestParameters.lawfirmCaseDecisionStatus !== undefined) {
+                queryParameters['lawfirmCaseDecisionStatus'] = requestParameters.lawfirmCaseDecisionStatus;
             }
             if (requestParameters.length !== undefined) {
                 queryParameters['length'] = requestParameters.length;
@@ -200,6 +212,9 @@ export class LawfirmControllerApi extends runtime.BaseAPI {
             }
             if (requestParameters.query !== undefined) {
                 queryParameters['query'] = requestParameters.query;
+            }
+            if (requestParameters.regionCode !== undefined) {
+                queryParameters['regionCode'] = requestParameters.regionCode;
             }
             if (requestParameters.statusCategories !== undefined) {
                 queryParameters['statusCategories'] = requestParameters.statusCategories;
@@ -911,6 +926,17 @@ export class LawfirmControllerApi extends runtime.BaseAPI {
     * @export
     * @enum {string}
     */
+export var GetInboxMessagesUsingGETCaseCounterOfferStatusesEnum;
+(function (GetInboxMessagesUsingGETCaseCounterOfferStatusesEnum) {
+    GetInboxMessagesUsingGETCaseCounterOfferStatusesEnum["ACCEPTED"] = "ACCEPTED";
+    GetInboxMessagesUsingGETCaseCounterOfferStatusesEnum["DECLINED"] = "DECLINED";
+    GetInboxMessagesUsingGETCaseCounterOfferStatusesEnum["PENDING"] = "PENDING";
+    GetInboxMessagesUsingGETCaseCounterOfferStatusesEnum["WITHDRAWN"] = "WITHDRAWN";
+})(GetInboxMessagesUsingGETCaseCounterOfferStatusesEnum || (GetInboxMessagesUsingGETCaseCounterOfferStatusesEnum = {}));
+/**
+    * @export
+    * @enum {string}
+    */
 export var GetInboxMessagesUsingGETCaseStatusesEnum;
 (function (GetInboxMessagesUsingGETCaseStatusesEnum) {
     GetInboxMessagesUsingGETCaseStatusesEnum["AMENDEDDOWNWITHINCLASS"] = "AMENDED_DOWN_WITHIN_CLASS";
@@ -983,6 +1009,78 @@ export var GetInboxMessagesUsingGETLatestMessageByEnum;
     GetInboxMessagesUsingGETLatestMessageByEnum["CLIENT"] = "CLIENT";
     GetInboxMessagesUsingGETLatestMessageByEnum["LAWYER"] = "LAWYER";
 })(GetInboxMessagesUsingGETLatestMessageByEnum || (GetInboxMessagesUsingGETLatestMessageByEnum = {}));
+/**
+    * @export
+    * @enum {string}
+    */
+export var GetInboxMessagesUsingGETLawfirmCaseDecisionStatusEnum;
+(function (GetInboxMessagesUsingGETLawfirmCaseDecisionStatusEnum) {
+    GetInboxMessagesUsingGETLawfirmCaseDecisionStatusEnum["ACCEPTED"] = "ACCEPTED";
+    GetInboxMessagesUsingGETLawfirmCaseDecisionStatusEnum["CREATED"] = "CREATED";
+    GetInboxMessagesUsingGETLawfirmCaseDecisionStatusEnum["DECLINED"] = "DECLINED";
+    GetInboxMessagesUsingGETLawfirmCaseDecisionStatusEnum["EXPIRED"] = "EXPIRED";
+    GetInboxMessagesUsingGETLawfirmCaseDecisionStatusEnum["PENDING"] = "PENDING";
+    GetInboxMessagesUsingGETLawfirmCaseDecisionStatusEnum["REMATCHED"] = "REMATCHED";
+    GetInboxMessagesUsingGETLawfirmCaseDecisionStatusEnum["REMATCHEDREFERRAL"] = "REMATCHED_REFERRAL";
+})(GetInboxMessagesUsingGETLawfirmCaseDecisionStatusEnum || (GetInboxMessagesUsingGETLawfirmCaseDecisionStatusEnum = {}));
+/**
+    * @export
+    * @enum {string}
+    */
+export var GetInboxMessagesUsingGETRegionCodeEnum;
+(function (GetInboxMessagesUsingGETRegionCodeEnum) {
+    GetInboxMessagesUsingGETRegionCodeEnum["AK"] = "AK";
+    GetInboxMessagesUsingGETRegionCodeEnum["AL"] = "AL";
+    GetInboxMessagesUsingGETRegionCodeEnum["AR"] = "AR";
+    GetInboxMessagesUsingGETRegionCodeEnum["AZ"] = "AZ";
+    GetInboxMessagesUsingGETRegionCodeEnum["CA"] = "CA";
+    GetInboxMessagesUsingGETRegionCodeEnum["CO"] = "CO";
+    GetInboxMessagesUsingGETRegionCodeEnum["CT"] = "CT";
+    GetInboxMessagesUsingGETRegionCodeEnum["DC"] = "DC";
+    GetInboxMessagesUsingGETRegionCodeEnum["DE"] = "DE";
+    GetInboxMessagesUsingGETRegionCodeEnum["FL"] = "FL";
+    GetInboxMessagesUsingGETRegionCodeEnum["GA"] = "GA";
+    GetInboxMessagesUsingGETRegionCodeEnum["HI"] = "HI";
+    GetInboxMessagesUsingGETRegionCodeEnum["IA"] = "IA";
+    GetInboxMessagesUsingGETRegionCodeEnum["ID"] = "ID";
+    GetInboxMessagesUsingGETRegionCodeEnum["IL"] = "IL";
+    GetInboxMessagesUsingGETRegionCodeEnum["IN"] = "IN";
+    GetInboxMessagesUsingGETRegionCodeEnum["KS"] = "KS";
+    GetInboxMessagesUsingGETRegionCodeEnum["KY"] = "KY";
+    GetInboxMessagesUsingGETRegionCodeEnum["LA"] = "LA";
+    GetInboxMessagesUsingGETRegionCodeEnum["MA"] = "MA";
+    GetInboxMessagesUsingGETRegionCodeEnum["MD"] = "MD";
+    GetInboxMessagesUsingGETRegionCodeEnum["ME"] = "ME";
+    GetInboxMessagesUsingGETRegionCodeEnum["MI"] = "MI";
+    GetInboxMessagesUsingGETRegionCodeEnum["MN"] = "MN";
+    GetInboxMessagesUsingGETRegionCodeEnum["MO"] = "MO";
+    GetInboxMessagesUsingGETRegionCodeEnum["MS"] = "MS";
+    GetInboxMessagesUsingGETRegionCodeEnum["MT"] = "MT";
+    GetInboxMessagesUsingGETRegionCodeEnum["NC"] = "NC";
+    GetInboxMessagesUsingGETRegionCodeEnum["ND"] = "ND";
+    GetInboxMessagesUsingGETRegionCodeEnum["NE"] = "NE";
+    GetInboxMessagesUsingGETRegionCodeEnum["NH"] = "NH";
+    GetInboxMessagesUsingGETRegionCodeEnum["NJ"] = "NJ";
+    GetInboxMessagesUsingGETRegionCodeEnum["NM"] = "NM";
+    GetInboxMessagesUsingGETRegionCodeEnum["NV"] = "NV";
+    GetInboxMessagesUsingGETRegionCodeEnum["NY"] = "NY";
+    GetInboxMessagesUsingGETRegionCodeEnum["OH"] = "OH";
+    GetInboxMessagesUsingGETRegionCodeEnum["OK"] = "OK";
+    GetInboxMessagesUsingGETRegionCodeEnum["OR"] = "OR";
+    GetInboxMessagesUsingGETRegionCodeEnum["PA"] = "PA";
+    GetInboxMessagesUsingGETRegionCodeEnum["RI"] = "RI";
+    GetInboxMessagesUsingGETRegionCodeEnum["SC"] = "SC";
+    GetInboxMessagesUsingGETRegionCodeEnum["SD"] = "SD";
+    GetInboxMessagesUsingGETRegionCodeEnum["TN"] = "TN";
+    GetInboxMessagesUsingGETRegionCodeEnum["TX"] = "TX";
+    GetInboxMessagesUsingGETRegionCodeEnum["UT"] = "UT";
+    GetInboxMessagesUsingGETRegionCodeEnum["VA"] = "VA";
+    GetInboxMessagesUsingGETRegionCodeEnum["VT"] = "VT";
+    GetInboxMessagesUsingGETRegionCodeEnum["WA"] = "WA";
+    GetInboxMessagesUsingGETRegionCodeEnum["WI"] = "WI";
+    GetInboxMessagesUsingGETRegionCodeEnum["WV"] = "WV";
+    GetInboxMessagesUsingGETRegionCodeEnum["WY"] = "WY";
+})(GetInboxMessagesUsingGETRegionCodeEnum || (GetInboxMessagesUsingGETRegionCodeEnum = {}));
 /**
     * @export
     * @enum {string}

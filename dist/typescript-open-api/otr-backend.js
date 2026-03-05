@@ -341,6 +341,23 @@ export var PathsApiV1LawfirmsLawfirmIdInboxMessagesGetParametersQueryCaseStatuse
     PathsApiV1LawfirmsLawfirmIdInboxMessagesGetParametersQueryCaseStatuses["TRAFFIC_SCHOOL"] = "TRAFFIC_SCHOOL";
     PathsApiV1LawfirmsLawfirmIdInboxMessagesGetParametersQueryCaseStatuses["UNCONFIRMED"] = "UNCONFIRMED";
 })(PathsApiV1LawfirmsLawfirmIdInboxMessagesGetParametersQueryCaseStatuses || (PathsApiV1LawfirmsLawfirmIdInboxMessagesGetParametersQueryCaseStatuses = {}));
+export var PathsApiV1LawfirmsLawfirmIdInboxMessagesGetParametersQueryLawfirmCaseDecisionStatus;
+(function (PathsApiV1LawfirmsLawfirmIdInboxMessagesGetParametersQueryLawfirmCaseDecisionStatus) {
+    PathsApiV1LawfirmsLawfirmIdInboxMessagesGetParametersQueryLawfirmCaseDecisionStatus["ACCEPTED"] = "ACCEPTED";
+    PathsApiV1LawfirmsLawfirmIdInboxMessagesGetParametersQueryLawfirmCaseDecisionStatus["CREATED"] = "CREATED";
+    PathsApiV1LawfirmsLawfirmIdInboxMessagesGetParametersQueryLawfirmCaseDecisionStatus["DECLINED"] = "DECLINED";
+    PathsApiV1LawfirmsLawfirmIdInboxMessagesGetParametersQueryLawfirmCaseDecisionStatus["EXPIRED"] = "EXPIRED";
+    PathsApiV1LawfirmsLawfirmIdInboxMessagesGetParametersQueryLawfirmCaseDecisionStatus["PENDING"] = "PENDING";
+    PathsApiV1LawfirmsLawfirmIdInboxMessagesGetParametersQueryLawfirmCaseDecisionStatus["REMATCHED"] = "REMATCHED";
+    PathsApiV1LawfirmsLawfirmIdInboxMessagesGetParametersQueryLawfirmCaseDecisionStatus["REMATCHED_REFERRAL"] = "REMATCHED_REFERRAL";
+})(PathsApiV1LawfirmsLawfirmIdInboxMessagesGetParametersQueryLawfirmCaseDecisionStatus || (PathsApiV1LawfirmsLawfirmIdInboxMessagesGetParametersQueryLawfirmCaseDecisionStatus = {}));
+export var PathsApiV1LawfirmsLawfirmIdInboxMessagesGetParametersQueryCaseCounterOfferStatuses;
+(function (PathsApiV1LawfirmsLawfirmIdInboxMessagesGetParametersQueryCaseCounterOfferStatuses) {
+    PathsApiV1LawfirmsLawfirmIdInboxMessagesGetParametersQueryCaseCounterOfferStatuses["ACCEPTED"] = "ACCEPTED";
+    PathsApiV1LawfirmsLawfirmIdInboxMessagesGetParametersQueryCaseCounterOfferStatuses["DECLINED"] = "DECLINED";
+    PathsApiV1LawfirmsLawfirmIdInboxMessagesGetParametersQueryCaseCounterOfferStatuses["PENDING"] = "PENDING";
+    PathsApiV1LawfirmsLawfirmIdInboxMessagesGetParametersQueryCaseCounterOfferStatuses["WITHDRAWN"] = "WITHDRAWN";
+})(PathsApiV1LawfirmsLawfirmIdInboxMessagesGetParametersQueryCaseCounterOfferStatuses || (PathsApiV1LawfirmsLawfirmIdInboxMessagesGetParametersQueryCaseCounterOfferStatuses = {}));
 export var PathsApiV1LawfirmsLawfirmIdInboxMessagesGetParametersQueryLatestMessageBy;
 (function (PathsApiV1LawfirmsLawfirmIdInboxMessagesGetParametersQueryLatestMessageBy) {
     PathsApiV1LawfirmsLawfirmIdInboxMessagesGetParametersQueryLatestMessageBy["ADMIN"] = "ADMIN";
@@ -726,16 +743,6 @@ export var CasePaymentDomainTransactionMethod;
     CasePaymentDomainTransactionMethod["WIRE_TRANSFER"] = "WIRE_TRANSFER";
     CasePaymentDomainTransactionMethod["ZELLE"] = "ZELLE";
 })(CasePaymentDomainTransactionMethod || (CasePaymentDomainTransactionMethod = {}));
-export var CaseSummaryDomainCaseDecisionStatus;
-(function (CaseSummaryDomainCaseDecisionStatus) {
-    CaseSummaryDomainCaseDecisionStatus["ACCEPTED"] = "ACCEPTED";
-    CaseSummaryDomainCaseDecisionStatus["CREATED"] = "CREATED";
-    CaseSummaryDomainCaseDecisionStatus["DECLINED"] = "DECLINED";
-    CaseSummaryDomainCaseDecisionStatus["EXPIRED"] = "EXPIRED";
-    CaseSummaryDomainCaseDecisionStatus["PENDING"] = "PENDING";
-    CaseSummaryDomainCaseDecisionStatus["REMATCHED"] = "REMATCHED";
-    CaseSummaryDomainCaseDecisionStatus["REMATCHED_REFERRAL"] = "REMATCHED_REFERRAL";
-})(CaseSummaryDomainCaseDecisionStatus || (CaseSummaryDomainCaseDecisionStatus = {}));
 export var CaseTransferHistoryRefundOwner;
 (function (CaseTransferHistoryRefundOwner) {
     CaseTransferHistoryRefundOwner["LAWFIRM"] = "LAWFIRM";
@@ -849,13 +856,6 @@ export var CustomerReviewNameSetting;
     CustomerReviewNameSetting["FIRST_NAME_LAST_INITIAL"] = "FIRST_NAME_LAST_INITIAL";
     CustomerReviewNameSetting["FULL_NAME"] = "FULL_NAME";
 })(CustomerReviewNameSetting || (CustomerReviewNameSetting = {}));
-export var DashboardCaseCounterOfferModelCounterOfferStatus;
-(function (DashboardCaseCounterOfferModelCounterOfferStatus) {
-    DashboardCaseCounterOfferModelCounterOfferStatus["ACCEPTED"] = "ACCEPTED";
-    DashboardCaseCounterOfferModelCounterOfferStatus["DECLINED"] = "DECLINED";
-    DashboardCaseCounterOfferModelCounterOfferStatus["PENDING"] = "PENDING";
-    DashboardCaseCounterOfferModelCounterOfferStatus["WITHDRAWN"] = "WITHDRAWN";
-})(DashboardCaseCounterOfferModelCounterOfferStatus || (DashboardCaseCounterOfferModelCounterOfferStatus = {}));
 export var DashboardCaseModelLastMessageType;
 (function (DashboardCaseModelLastMessageType) {
     DashboardCaseModelLastMessageType["action"] = "action";

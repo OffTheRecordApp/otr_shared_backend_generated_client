@@ -27,13 +27,18 @@ export interface DeleteLawfirmCoverPhotoUsingDELETERequest {
 }
 export interface GetInboxMessagesUsingGETRequest {
     lawfirmId: number;
+    caseCounterOfferStatuses?: GetInboxMessagesUsingGETCaseCounterOfferStatusesEnum;
     caseStatuses?: GetInboxMessagesUsingGETCaseStatusesEnum;
+    countyId?: number;
     courtDateFilter?: GetInboxMessagesUsingGETCourtDateFilterEnum;
+    courtId?: number;
     filter?: GetInboxMessagesUsingGETFilterEnum;
     latestMessageBy?: GetInboxMessagesUsingGETLatestMessageByEnum;
+    lawfirmCaseDecisionStatus?: GetInboxMessagesUsingGETLawfirmCaseDecisionStatusEnum;
     length?: number;
     page?: number;
     query?: string;
+    regionCode?: GetInboxMessagesUsingGETRegionCodeEnum;
     statusCategories?: GetInboxMessagesUsingGETStatusCategoriesEnum;
 }
 export interface GetLawfirmAddressesUsingGETRequest {
@@ -348,6 +353,16 @@ export declare class LawfirmControllerApi extends runtime.BaseAPI {
     * @export
     * @enum {string}
     */
+export declare enum GetInboxMessagesUsingGETCaseCounterOfferStatusesEnum {
+    ACCEPTED = "ACCEPTED",
+    DECLINED = "DECLINED",
+    PENDING = "PENDING",
+    WITHDRAWN = "WITHDRAWN"
+}
+/**
+    * @export
+    * @enum {string}
+    */
 export declare enum GetInboxMessagesUsingGETCaseStatusesEnum {
     AMENDEDDOWNWITHINCLASS = "AMENDED_DOWN_WITHIN_CLASS",
     AMENDEDFULLFINE = "AMENDED_FULL_FINE",
@@ -415,6 +430,76 @@ export declare enum GetInboxMessagesUsingGETLatestMessageByEnum {
     ADMIN = "ADMIN",
     CLIENT = "CLIENT",
     LAWYER = "LAWYER"
+}
+/**
+    * @export
+    * @enum {string}
+    */
+export declare enum GetInboxMessagesUsingGETLawfirmCaseDecisionStatusEnum {
+    ACCEPTED = "ACCEPTED",
+    CREATED = "CREATED",
+    DECLINED = "DECLINED",
+    EXPIRED = "EXPIRED",
+    PENDING = "PENDING",
+    REMATCHED = "REMATCHED",
+    REMATCHEDREFERRAL = "REMATCHED_REFERRAL"
+}
+/**
+    * @export
+    * @enum {string}
+    */
+export declare enum GetInboxMessagesUsingGETRegionCodeEnum {
+    AK = "AK",
+    AL = "AL",
+    AR = "AR",
+    AZ = "AZ",
+    CA = "CA",
+    CO = "CO",
+    CT = "CT",
+    DC = "DC",
+    DE = "DE",
+    FL = "FL",
+    GA = "GA",
+    HI = "HI",
+    IA = "IA",
+    ID = "ID",
+    IL = "IL",
+    IN = "IN",
+    KS = "KS",
+    KY = "KY",
+    LA = "LA",
+    MA = "MA",
+    MD = "MD",
+    ME = "ME",
+    MI = "MI",
+    MN = "MN",
+    MO = "MO",
+    MS = "MS",
+    MT = "MT",
+    NC = "NC",
+    ND = "ND",
+    NE = "NE",
+    NH = "NH",
+    NJ = "NJ",
+    NM = "NM",
+    NV = "NV",
+    NY = "NY",
+    OH = "OH",
+    OK = "OK",
+    OR = "OR",
+    PA = "PA",
+    RI = "RI",
+    SC = "SC",
+    SD = "SD",
+    TN = "TN",
+    TX = "TX",
+    UT = "UT",
+    VA = "VA",
+    VT = "VT",
+    WA = "WA",
+    WI = "WI",
+    WV = "WV",
+    WY = "WY"
 }
 /**
     * @export

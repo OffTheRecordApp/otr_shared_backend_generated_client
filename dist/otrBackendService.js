@@ -11095,14 +11095,19 @@ angular.module('otrBackendService', [])
              * @method
              * @name OtrService#getInboxMessagesUsingGET
              * @param {object} parameters - method options and parameters
+             * @param {string} parameters.caseCounterOfferStatuses - caseCounterOfferStatuses
              * @param {string} parameters.caseStatuses - caseStatuses
+             * @param {integer} parameters.countyId - countyId
              * @param {string} parameters.courtDateFilter - courtDateFilter
+             * @param {integer} parameters.courtId - courtId
              * @param {string} parameters.filter - filter
              * @param {string} parameters.latestMessageBy - latestMessageBy
+             * @param {string} parameters.lawfirmCaseDecisionStatus - lawfirmCaseDecisionStatus
              * @param {integer} parameters.lawfirmId - lawfirmId
              * @param {integer} parameters.length - length
              * @param {integer} parameters.page - page
              * @param {string} parameters.query - query
+             * @param {string} parameters.regionCode - regionCode
              * @param {string} parameters.statusCategories - statusCategories
              */
             OtrService.prototype.getInboxMessagesUsingGET = function(parameters) {
@@ -11119,12 +11124,24 @@ angular.module('otrBackendService', [])
 
                 headers['Accept'] = ['*/*'];
 
+                if (parameters['caseCounterOfferStatuses'] !== undefined) {
+                    queryParameters['caseCounterOfferStatuses'] = parameters['caseCounterOfferStatuses'];
+                }
+
                 if (parameters['caseStatuses'] !== undefined) {
                     queryParameters['caseStatuses'] = parameters['caseStatuses'];
                 }
 
+                if (parameters['countyId'] !== undefined) {
+                    queryParameters['countyId'] = parameters['countyId'];
+                }
+
                 if (parameters['courtDateFilter'] !== undefined) {
                     queryParameters['courtDateFilter'] = parameters['courtDateFilter'];
+                }
+
+                if (parameters['courtId'] !== undefined) {
+                    queryParameters['courtId'] = parameters['courtId'];
                 }
 
                 if (parameters['filter'] !== undefined) {
@@ -11133,6 +11150,10 @@ angular.module('otrBackendService', [])
 
                 if (parameters['latestMessageBy'] !== undefined) {
                     queryParameters['latestMessageBy'] = parameters['latestMessageBy'];
+                }
+
+                if (parameters['lawfirmCaseDecisionStatus'] !== undefined) {
+                    queryParameters['lawfirmCaseDecisionStatus'] = parameters['lawfirmCaseDecisionStatus'];
                 }
 
                 path = path.replace('{lawfirmId}', parameters['lawfirmId']);
@@ -11155,6 +11176,10 @@ angular.module('otrBackendService', [])
 
                 if (parameters['query'] !== undefined) {
                     queryParameters['query'] = parameters['query'];
+                }
+
+                if (parameters['regionCode'] !== undefined) {
+                    queryParameters['regionCode'] = parameters['regionCode'];
                 }
 
                 if (parameters['statusCategories'] !== undefined) {

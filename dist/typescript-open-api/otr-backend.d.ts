@@ -8769,7 +8769,7 @@ export interface components {
             /** Format: date-time */
             bookingConfirmedDate?: string;
             /** @enum {string} */
-            caseDecisionStatus?: CaseSummaryDomainCaseDecisionStatus;
+            caseDecisionStatus?: PathsApiV1LawfirmsLawfirmIdInboxMessagesGetParametersQueryLawfirmCaseDecisionStatus;
             caseId?: string;
             caseStatusDomain?: components["schemas"]["CaseStatusDomain"];
             /** Format: int64 */
@@ -8805,7 +8805,7 @@ export interface components {
             /** Format: date-time */
             decisionDate?: string;
             /** @enum {string} */
-            decisionStatus?: CaseSummaryDomainCaseDecisionStatus;
+            decisionStatus?: PathsApiV1LawfirmsLawfirmIdInboxMessagesGetParametersQueryLawfirmCaseDecisionStatus;
             declineCategory?: string;
             declineNote?: string;
             declineReasonType?: string;
@@ -9876,7 +9876,7 @@ export interface components {
             /** Format: int32 */
             counterOfferAmountInCents?: number;
             /** @enum {string} */
-            counterOfferStatus?: DashboardCaseCounterOfferModelCounterOfferStatus;
+            counterOfferStatus?: PathsApiV1LawfirmsLawfirmIdInboxMessagesGetParametersQueryCaseCounterOfferStatuses;
         };
         /** DashboardCaseCountsDto */
         DashboardCaseCountsDto: {
@@ -12186,7 +12186,7 @@ export interface components {
         LawfirmCaseModel: {
             caseArchivedByLawfirm?: boolean;
             /** @enum {string} */
-            caseDecisionStatus?: CaseSummaryDomainCaseDecisionStatus;
+            caseDecisionStatus?: PathsApiV1LawfirmsLawfirmIdInboxMessagesGetParametersQueryLawfirmCaseDecisionStatus;
             clientDeclineTicket?: components["schemas"]["FreshDeskTicket"];
             declineReason?: string;
             isMatchInternal?: boolean;
@@ -12214,7 +12214,7 @@ export interface components {
         LawfirmCaseModelReq: {
             caseArchivedByLawfirm?: boolean;
             /** @enum {string} */
-            caseDecisionStatus?: CaseSummaryDomainCaseDecisionStatus;
+            caseDecisionStatus?: PathsApiV1LawfirmsLawfirmIdInboxMessagesGetParametersQueryLawfirmCaseDecisionStatus;
             clientDeclineTicket?: components["schemas"]["FreshDeskTicketReq"];
             declineReason?: string;
             isMatchInternal?: boolean;
@@ -12242,7 +12242,7 @@ export interface components {
         LawfirmCaseModelRes: {
             caseArchivedByLawfirm?: boolean;
             /** @enum {string} */
-            caseDecisionStatus?: CaseSummaryDomainCaseDecisionStatus;
+            caseDecisionStatus?: PathsApiV1LawfirmsLawfirmIdInboxMessagesGetParametersQueryLawfirmCaseDecisionStatus;
             clientDeclineTicket?: components["schemas"]["FreshDeskTicketRes"];
             declineReason?: string;
             isMatchInternal?: boolean;
@@ -12404,7 +12404,7 @@ export interface components {
             hasFlagMessage?: boolean;
             hasStarMessage?: boolean;
             /** @enum {string} */
-            lawfirmCaseDecisionStatus?: CaseSummaryDomainCaseDecisionStatus;
+            lawfirmCaseDecisionStatus?: PathsApiV1LawfirmsLawfirmIdInboxMessagesGetParametersQueryLawfirmCaseDecisionStatus;
             /** Format: date-time */
             lawfirmReceiptDateUtc?: string;
             messageBody?: string;
@@ -14763,7 +14763,7 @@ export interface components {
         /** SetLawfirmCaseDecisionRequest */
         SetLawfirmCaseDecisionRequest: {
             /** @enum {string} */
-            caseDecisionStatus?: CaseSummaryDomainCaseDecisionStatus;
+            caseDecisionStatus?: PathsApiV1LawfirmsLawfirmIdInboxMessagesGetParametersQueryLawfirmCaseDecisionStatus;
             declineCategoryType?: components["schemas"]["DeclineCategory"];
             declineReasonType?: components["schemas"]["DeclineReason"];
             reason?: string;
@@ -28600,6 +28600,16 @@ export interface operations {
                 statusCategories?: PathsApiV1CaseStatusesGetParametersQueryCategories;
                 /** @description caseStatuses */
                 caseStatuses?: PathsApiV1LawfirmsLawfirmIdInboxMessagesGetParametersQueryCaseStatuses;
+                /** @description lawfirmCaseDecisionStatus */
+                lawfirmCaseDecisionStatus?: PathsApiV1LawfirmsLawfirmIdInboxMessagesGetParametersQueryLawfirmCaseDecisionStatus;
+                /** @description caseCounterOfferStatuses */
+                caseCounterOfferStatuses?: PathsApiV1LawfirmsLawfirmIdInboxMessagesGetParametersQueryCaseCounterOfferStatuses;
+                /** @description courtId */
+                courtId?: number;
+                /** @description countyId */
+                countyId?: number;
+                /** @description regionCode */
+                regionCode?: PathsApiV1CitationsCitationIdCourtMissingPostParametersQueryState;
                 /** @description courtDateFilter */
                 courtDateFilter?: PathsApiV2LawfirmLawfirmIdStringCasesPostParametersQueryCourtDateFilter;
                 /** @description latestMessageBy */
@@ -40793,6 +40803,21 @@ export declare enum PathsApiV1LawfirmsLawfirmIdInboxMessagesGetParametersQueryCa
     TRAFFIC_SCHOOL = "TRAFFIC_SCHOOL",
     UNCONFIRMED = "UNCONFIRMED"
 }
+export declare enum PathsApiV1LawfirmsLawfirmIdInboxMessagesGetParametersQueryLawfirmCaseDecisionStatus {
+    ACCEPTED = "ACCEPTED",
+    CREATED = "CREATED",
+    DECLINED = "DECLINED",
+    EXPIRED = "EXPIRED",
+    PENDING = "PENDING",
+    REMATCHED = "REMATCHED",
+    REMATCHED_REFERRAL = "REMATCHED_REFERRAL"
+}
+export declare enum PathsApiV1LawfirmsLawfirmIdInboxMessagesGetParametersQueryCaseCounterOfferStatuses {
+    ACCEPTED = "ACCEPTED",
+    DECLINED = "DECLINED",
+    PENDING = "PENDING",
+    WITHDRAWN = "WITHDRAWN"
+}
 export declare enum PathsApiV1LawfirmsLawfirmIdInboxMessagesGetParametersQueryLatestMessageBy {
     ADMIN = "ADMIN",
     CLIENT = "CLIENT",
@@ -41139,15 +41164,6 @@ export declare enum CasePaymentDomainTransactionMethod {
     WIRE_TRANSFER = "WIRE_TRANSFER",
     ZELLE = "ZELLE"
 }
-export declare enum CaseSummaryDomainCaseDecisionStatus {
-    ACCEPTED = "ACCEPTED",
-    CREATED = "CREATED",
-    DECLINED = "DECLINED",
-    EXPIRED = "EXPIRED",
-    PENDING = "PENDING",
-    REMATCHED = "REMATCHED",
-    REMATCHED_REFERRAL = "REMATCHED_REFERRAL"
-}
 export declare enum CaseTransferHistoryRefundOwner {
     LAWFIRM = "LAWFIRM",
     NONE = "NONE",
@@ -41245,12 +41261,6 @@ export declare enum CustomerReviewNameSetting {
     ANONYMOUS = "ANONYMOUS",
     FIRST_NAME_LAST_INITIAL = "FIRST_NAME_LAST_INITIAL",
     FULL_NAME = "FULL_NAME"
-}
-export declare enum DashboardCaseCounterOfferModelCounterOfferStatus {
-    ACCEPTED = "ACCEPTED",
-    DECLINED = "DECLINED",
-    PENDING = "PENDING",
-    WITHDRAWN = "WITHDRAWN"
 }
 export declare enum DashboardCaseModelLastMessageType {
     action = "action",
