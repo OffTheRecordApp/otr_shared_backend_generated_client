@@ -8838,7 +8838,7 @@ export interface components {
         CaseUserDefendantAttributesRequest: {
             /** Format: date */
             dateOfBirth?: string;
-            firstName?: string;
+            firstName: string;
             lastName?: string;
             licenseNumber?: string;
             licenseState?: string;

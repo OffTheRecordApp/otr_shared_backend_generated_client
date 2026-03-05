@@ -11,7 +11,7 @@
  */
 export interface CaseUserDefendantAttributesRequest {
     "dateOfBirth"?: string;
-    "firstName"?: string;
+    "firstName": string;
     "lastName"?: string;
     "licenseNumber"?: string;
     "licenseState"?: string;

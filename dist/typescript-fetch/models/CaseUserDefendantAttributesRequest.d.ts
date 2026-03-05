@@ -26,7 +26,7 @@ export interface CaseUserDefendantAttributesRequest {
      * @type {string}
      * @memberof CaseUserDefendantAttributesRequest
      */
-    firstName?: string;
+    firstName: string;
     /**
      *
      * @type {string}

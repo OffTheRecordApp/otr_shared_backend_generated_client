@@ -21,7 +21,7 @@ export function CaseUserDefendantAttributesRequestFromJSONTyped(json, ignoreDisc
     }
     return {
         'dateOfBirth': !exists(json, 'dateOfBirth') ? undefined : (new Date(json['dateOfBirth'])),
-        'firstName': !exists(json, 'firstName') ? undefined : json['firstName'],
+        'firstName': json['firstName'],
         'lastName': !exists(json, 'lastName') ? undefined : json['lastName'],
         'licenseNumber': !exists(json, 'licenseNumber') ? undefined : json['licenseNumber'],
         'licenseState': !exists(json, 'licenseState') ? undefined : json['licenseState'],
