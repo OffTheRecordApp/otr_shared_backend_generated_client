@@ -33,6 +33,7 @@ export interface GetInboxMessagesUsingGETRequest {
     courtDateFilter?: GetInboxMessagesUsingGETCourtDateFilterEnum;
     courtId?: number;
     filter?: GetInboxMessagesUsingGETFilterEnum;
+    isOverdue?: boolean;
     latestMessageBy?: GetInboxMessagesUsingGETLatestMessageByEnum;
     lawfirmCaseDecisionStatus?: GetInboxMessagesUsingGETLawfirmCaseDecisionStatusEnum;
     length?: number;

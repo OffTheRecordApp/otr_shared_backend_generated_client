@@ -161,6 +161,7 @@ export class LawfirmControllerApi {
      * @param courtDateFilter courtDateFilter
      * @param courtId courtId
      * @param filter filter
+     * @param isOverdue isOverdue
      * @param latestMessageBy latestMessageBy
      * @param lawfirmCaseDecisionStatus lawfirmCaseDecisionStatus
      * @param length length
@@ -169,7 +170,7 @@ export class LawfirmControllerApi {
      * @param regionCode regionCode
      * @param statusCategories statusCategories
      */
-    getInboxMessagesUsingGET(lawfirmId, caseCounterOfferStatuses, caseStatuses, countyId, courtDateFilter, courtId, filter, latestMessageBy, lawfirmCaseDecisionStatus, length, page, query, regionCode, statusCategories, extraHttpRequestParams) {
+    getInboxMessagesUsingGET(lawfirmId, caseCounterOfferStatuses, caseStatuses, countyId, courtDateFilter, courtId, filter, isOverdue, latestMessageBy, lawfirmCaseDecisionStatus, length, page, query, regionCode, statusCategories, extraHttpRequestParams) {
         const localVarPath = this.basePath + '/api/v1/lawfirms/{lawfirmId}/inbox-messages'
             .replace('{' + 'lawfirmId' + '}', encodeURIComponent(String(lawfirmId)));
         let queryParameters = {};
@@ -195,6 +196,9 @@ export class LawfirmControllerApi {
         }
         if (filter !== undefined) {
             queryParameters['filter'] = filter;
+        }
+        if (isOverdue !== undefined) {
+            queryParameters['isOverdue'] = isOverdue;
         }
         if (latestMessageBy !== undefined) {
             queryParameters['latestMessageBy'] = latestMessageBy;

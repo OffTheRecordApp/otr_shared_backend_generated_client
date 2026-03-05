@@ -198,6 +198,9 @@ export class LawfirmControllerApi extends runtime.BaseAPI {
             if (requestParameters.filter !== undefined) {
                 queryParameters['filter'] = requestParameters.filter;
             }
+            if (requestParameters.isOverdue !== undefined) {
+                queryParameters['isOverdue'] = requestParameters.isOverdue;
+            }
             if (requestParameters.latestMessageBy !== undefined) {
                 queryParameters['latestMessageBy'] = requestParameters.latestMessageBy;
             }

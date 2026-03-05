@@ -28610,6 +28610,8 @@ export interface operations {
                 countyId?: number;
                 /** @description regionCode */
                 regionCode?: PathsApiV1CitationsCitationIdCourtMissingPostParametersQueryState;
+                /** @description isOverdue */
+                isOverdue?: boolean;
                 /** @description courtDateFilter */
                 courtDateFilter?: PathsApiV2LawfirmLawfirmIdStringCasesPostParametersQueryCourtDateFilter;
                 /** @description latestMessageBy */
