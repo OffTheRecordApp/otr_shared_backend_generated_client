@@ -10,7 +10,7 @@
  * Do not edit the class manually.
  */
 import * as runtime from '../runtime';
-import { AcceptCaseCounterRequest, DeclineCaseCounterRequest, GenerateCounterOfferCasePaymentsRequest, GenerateCounterOfferCasePaymentsResponse, GetCaseCounterOptionsResponse, GetCounterOfferResponse, InitiateCaseCounterRequest, InitiateCaseCounterResponse } from '../models';
+import { AcceptCaseCounterRequest, DeclineCaseCounterRequest, GenerateCounterOfferCasePaymentsRequest, GenerateCounterOfferCasePaymentsResponse, GetCaseCounterOptionsResponse, GetCounterOfferResponse, InitiateCaseCounterRequest, InitiateCaseCounterResponse, ListCounterOffersResponse } from '../models';
 export interface AcceptCaseCounterUsingPUTRequest {
     caseId: string;
     counterId: number;
@@ -36,6 +36,11 @@ export interface GetCounterOfferUsingGETRequest {
 export interface InitiateCaseCounterUsingPOSTRequest {
     caseId: string;
     request: InitiateCaseCounterRequest;
+}
+export interface ListCounterOffersUsingGETRequest {
+    lawfirmId: number;
+    limit?: number;
+    page?: number;
 }
 export interface WithdrawCaseCounterUsingPUTRequest {
     caseId: string;
@@ -101,6 +106,14 @@ export declare class CaseCounterOfferControllerApi extends runtime.BaseAPI {
      * initiateCaseCounter
      */
     initiateCaseCounterUsingPOST(requestParameters: InitiateCaseCounterUsingPOSTRequest): Promise<InitiateCaseCounterResponse>;
+    /**
+     * listCounterOffers
+     */
+    listCounterOffersUsingGETRaw(requestParameters: ListCounterOffersUsingGETRequest): Promise<runtime.ApiResponse<ListCounterOffersResponse>>;
+    /**
+     * listCounterOffers
+     */
+    listCounterOffersUsingGET(requestParameters: ListCounterOffersUsingGETRequest): Promise<ListCounterOffersResponse>;
     /**
      * withdrawCaseCounter
      */

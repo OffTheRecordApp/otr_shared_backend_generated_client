@@ -503,6 +503,8 @@ export * from './ListCitationsRequest';
 export * from './ListCitationsResponse';
 export * from './ListContactTimelineResponse';
 export * from './ListCostItemsForCustomerResponse';
+export * from './ListCounterOffersModel';
+export * from './ListCounterOffersResponse';
 export * from './ListDashboardCaseUsersResponse';
 export * from './ListDashboardCasesResponse';
 export * from './ListDashboardCasesViolationModel';

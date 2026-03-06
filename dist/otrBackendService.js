@@ -10675,6 +10675,53 @@ angular.module('otrBackendService', [])
                 return deferred.promise;
             };
             /**
+             * listCounterOffers
+             * @method
+             * @name OtrService#listCounterOffersUsingGET
+             * @param {object} parameters - method options and parameters
+             * @param {integer} parameters.lawfirmId - lawfirmId
+             * @param {integer} parameters.limit - limit
+             * @param {integer} parameters.page - page
+             */
+            OtrService.prototype.listCounterOffersUsingGET = function(parameters) {
+                if (parameters === undefined) {
+                    parameters = {};
+                }
+                var deferred = $q.defer();
+                var domain = this.domain,
+                    path = '/api/v1/lawfirms/{lawfirmId}/counters';
+                var body = {},
+                    queryParameters = {},
+                    headers = {},
+                    form = {};
+
+                headers['Accept'] = ['*/*'];
+
+                path = path.replace('{lawfirmId}', parameters['lawfirmId']);
+
+                if (parameters['lawfirmId'] === undefined) {
+                    deferred.reject(new Error('Missing required  parameter: lawfirmId'));
+                    return deferred.promise;
+                }
+
+                /** set default value **/
+                queryParameters['limit'] = 10;
+
+                if (parameters['limit'] !== undefined) {
+                    queryParameters['limit'] = parameters['limit'];
+                }
+
+                if (parameters['page'] !== undefined) {
+                    queryParameters['page'] = parameters['page'];
+                }
+
+                queryParameters = mergeQueryParams(parameters, queryParameters);
+
+                this.request('GET', domain + path, parameters, body, headers, queryParameters, form, deferred);
+
+                return deferred.promise;
+            };
+            /**
              * removeCourts
              * @method
              * @name OtrService#removeCourtsUsingDELETE

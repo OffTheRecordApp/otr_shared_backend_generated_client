@@ -21,7 +21,7 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
     });
 };
 import * as runtime from '../runtime';
-import { AcceptCaseCounterRequestToJSON, DeclineCaseCounterRequestToJSON, GenerateCounterOfferCasePaymentsRequestToJSON, GenerateCounterOfferCasePaymentsResponseFromJSON, GetCaseCounterOptionsResponseFromJSON, GetCounterOfferResponseFromJSON, InitiateCaseCounterRequestToJSON, InitiateCaseCounterResponseFromJSON, } from '../models';
+import { AcceptCaseCounterRequestToJSON, DeclineCaseCounterRequestToJSON, GenerateCounterOfferCasePaymentsRequestToJSON, GenerateCounterOfferCasePaymentsResponseFromJSON, GetCaseCounterOptionsResponseFromJSON, GetCounterOfferResponseFromJSON, InitiateCaseCounterRequestToJSON, InitiateCaseCounterResponseFromJSON, ListCounterOffersResponseFromJSON, } from '../models';
 /**
  *
  */
@@ -243,6 +243,40 @@ export class CaseCounterOfferControllerApi extends runtime.BaseAPI {
     initiateCaseCounterUsingPOST(requestParameters) {
         return __awaiter(this, void 0, void 0, function* () {
             const response = yield this.initiateCaseCounterUsingPOSTRaw(requestParameters);
+            return yield response.value();
+        });
+    }
+    /**
+     * listCounterOffers
+     */
+    listCounterOffersUsingGETRaw(requestParameters) {
+        return __awaiter(this, void 0, void 0, function* () {
+            if (requestParameters.lawfirmId === null || requestParameters.lawfirmId === undefined) {
+                throw new runtime.RequiredError('lawfirmId', 'Required parameter requestParameters.lawfirmId was null or undefined when calling listCounterOffersUsingGET.');
+            }
+            const queryParameters = {};
+            if (requestParameters.limit !== undefined) {
+                queryParameters['limit'] = requestParameters.limit;
+            }
+            if (requestParameters.page !== undefined) {
+                queryParameters['page'] = requestParameters.page;
+            }
+            const headerParameters = {};
+            const response = yield this.request({
+                path: `/api/v1/lawfirms/{lawfirmId}/counters`.replace(`{${"lawfirmId"}}`, encodeURIComponent(String(requestParameters.lawfirmId))),
+                method: 'GET',
+                headers: headerParameters,
+                query: queryParameters,
+            });
+            return new runtime.JSONApiResponse(response, (jsonValue) => ListCounterOffersResponseFromJSON(jsonValue));
+        });
+    }
+    /**
+     * listCounterOffers
+     */
+    listCounterOffersUsingGET(requestParameters) {
+        return __awaiter(this, void 0, void 0, function* () {
+            const response = yield this.listCounterOffersUsingGETRaw(requestParameters);
             return yield response.value();
         });
     }

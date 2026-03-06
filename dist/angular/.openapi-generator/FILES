@@ -627,6 +627,8 @@ model/listCitationsRequest.ts
 model/listCitationsResponse.ts
 model/listContactTimelineResponse.ts
 model/listCostItemsForCustomerResponse.ts
+model/listCounterOffersModel.ts
+model/listCounterOffersResponse.ts
 model/listDashboardCaseUsersResponse.ts
 model/listDashboardCasesResponse.ts
 model/listDashboardCasesViolationModel.ts

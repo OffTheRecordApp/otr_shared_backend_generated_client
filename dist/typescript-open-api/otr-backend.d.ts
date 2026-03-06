@@ -740,6 +740,23 @@ export interface paths {
         patch?: never;
         trace?: never;
     };
+    "/api/v1/lawfirms/{lawfirmId}/counters": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        /** listCounterOffers */
+        get: operations["listCounterOffersUsingGET"];
+        put?: never;
+        post?: never;
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
     "/api/v1/citations/{citationIdString}/case": {
         parameters: {
             query?: never;
@@ -12951,6 +12968,23 @@ export interface components {
             /** Format: int32 */
             totalRefCodeAdjustmentInCents?: number;
         };
+        /** ListCounterOffersModel */
+        ListCounterOffersModel: {
+            caseId?: string;
+            /** @enum {string} */
+            counterOfferStatus?: PathsApiV1LawfirmsLawfirmIdInboxMessagesGetParametersQueryCaseCounterOfferStatuses;
+            counterOptionTypes?: CaseCounterOptionModelType[];
+            /** Format: date-time */
+            currentCounterOfferDateUtc?: string;
+            firstName?: string;
+            lastName?: string;
+        };
+        /** ListCounterOffersResponse */
+        ListCounterOffersResponse: {
+            counterOffers?: components["schemas"]["ListCounterOffersModel"][];
+            /** Format: int32 */
+            totalCounterOffers?: number;
+        };
         /** ListDashboardCaseUsersResponse */
         ListDashboardCaseUsersResponse: {
             users?: components["schemas"]["DashboardCaseUserModel"][];
@@ -19056,6 +19090,55 @@ export interface operations {
                     [name: string]: unknown;
                 };
                 content?: never;
+            };
+            /** @description Unauthorized */
+            401: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content?: never;
+            };
+            /** @description Forbidden */
+            403: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content?: never;
+            };
+            /** @description Not Found */
+            404: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content?: never;
+            };
+        };
+    };
+    listCounterOffersUsingGET: {
+        parameters: {
+            query?: {
+                /** @description limit */
+                limit?: number;
+                /** @description page */
+                page?: number;
+            };
+            header?: never;
+            path: {
+                /** @description lawfirmId */
+                lawfirmId: number;
+            };
+            cookie?: never;
+        };
+        requestBody?: never;
+        responses: {
+            /** @description OK */
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "*/*": components["schemas"]["ListCounterOffersResponse"];
+                };
             };
             /** @description Unauthorized */
             401: {
