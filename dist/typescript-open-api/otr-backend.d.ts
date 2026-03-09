@@ -8800,6 +8800,10 @@ export interface components {
             courtDate?: string;
             courtName?: string;
             courtRegionCode?: string;
+            defendantFirstName?: string;
+            defendantLastName?: string;
+            /** Format: int64 */
+            defendantUserId?: number;
             firstName?: string;
             hasCdl?: boolean;
             involvesAccident?: boolean;

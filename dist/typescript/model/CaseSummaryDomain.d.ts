@@ -23,6 +23,9 @@ export interface CaseSummaryDomain {
     "courtDate"?: string;
     "courtName"?: string;
     "courtRegionCode"?: string;
+    "defendantFirstName"?: string;
+    "defendantLastName"?: string;
+    "defendantUserId"?: number;
     "firstName"?: string;
     "hasCdl"?: boolean;
     "involvesAccident"?: boolean;

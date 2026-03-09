@@ -93,6 +93,24 @@ export interface CaseSummaryDomain {
      * @type {string}
      * @memberof CaseSummaryDomain
      */
+    defendantFirstName?: string;
+    /**
+     *
+     * @type {string}
+     * @memberof CaseSummaryDomain
+     */
+    defendantLastName?: string;
+    /**
+     *
+     * @type {number}
+     * @memberof CaseSummaryDomain
+     */
+    defendantUserId?: number;
+    /**
+     *
+     * @type {string}
+     * @memberof CaseSummaryDomain
+     */
     firstName?: string;
     /**
      *
