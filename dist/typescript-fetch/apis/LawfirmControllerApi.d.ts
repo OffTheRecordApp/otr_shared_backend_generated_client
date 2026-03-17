@@ -29,9 +29,9 @@ export interface GetInboxMessagesUsingGETRequest {
     lawfirmId: number;
     caseCounterOfferStatuses?: GetInboxMessagesUsingGETCaseCounterOfferStatusesEnum;
     caseStatuses?: GetInboxMessagesUsingGETCaseStatusesEnum;
-    countyId?: number;
+    countyIds?: number;
     courtDateFilter?: GetInboxMessagesUsingGETCourtDateFilterEnum;
-    courtId?: number;
+    courtIds?: number;
     filter?: GetInboxMessagesUsingGETFilterEnum;
     isOverdue?: boolean;
     latestMessageBy?: GetInboxMessagesUsingGETLatestMessageByEnum;
@@ -39,7 +39,7 @@ export interface GetInboxMessagesUsingGETRequest {
     length?: number;
     page?: number;
     query?: string;
-    regionCode?: GetInboxMessagesUsingGETRegionCodeEnum;
+    regionCodes?: GetInboxMessagesUsingGETRegionCodesEnum;
     statusCategories?: GetInboxMessagesUsingGETStatusCategoriesEnum;
 }
 export interface GetLawfirmAddressesUsingGETRequest {
@@ -449,7 +449,7 @@ export declare enum GetInboxMessagesUsingGETLawfirmCaseDecisionStatusEnum {
     * @export
     * @enum {string}
     */
-export declare enum GetInboxMessagesUsingGETRegionCodeEnum {
+export declare enum GetInboxMessagesUsingGETRegionCodesEnum {
     AK = "AK",
     AL = "AL",
     AR = "AR",

@@ -186,14 +186,14 @@ export class LawfirmControllerApi extends runtime.BaseAPI {
             if (requestParameters.caseStatuses !== undefined) {
                 queryParameters['caseStatuses'] = requestParameters.caseStatuses;
             }
-            if (requestParameters.countyId !== undefined) {
-                queryParameters['countyId'] = requestParameters.countyId;
+            if (requestParameters.countyIds !== undefined) {
+                queryParameters['countyIds'] = requestParameters.countyIds;
             }
             if (requestParameters.courtDateFilter !== undefined) {
                 queryParameters['courtDateFilter'] = requestParameters.courtDateFilter;
             }
-            if (requestParameters.courtId !== undefined) {
-                queryParameters['courtId'] = requestParameters.courtId;
+            if (requestParameters.courtIds !== undefined) {
+                queryParameters['courtIds'] = requestParameters.courtIds;
             }
             if (requestParameters.filter !== undefined) {
                 queryParameters['filter'] = requestParameters.filter;
@@ -216,8 +216,8 @@ export class LawfirmControllerApi extends runtime.BaseAPI {
             if (requestParameters.query !== undefined) {
                 queryParameters['query'] = requestParameters.query;
             }
-            if (requestParameters.regionCode !== undefined) {
-                queryParameters['regionCode'] = requestParameters.regionCode;
+            if (requestParameters.regionCodes !== undefined) {
+                queryParameters['regionCodes'] = requestParameters.regionCodes;
             }
             if (requestParameters.statusCategories !== undefined) {
                 queryParameters['statusCategories'] = requestParameters.statusCategories;
@@ -1030,60 +1030,60 @@ export var GetInboxMessagesUsingGETLawfirmCaseDecisionStatusEnum;
     * @export
     * @enum {string}
     */
-export var GetInboxMessagesUsingGETRegionCodeEnum;
-(function (GetInboxMessagesUsingGETRegionCodeEnum) {
-    GetInboxMessagesUsingGETRegionCodeEnum["AK"] = "AK";
-    GetInboxMessagesUsingGETRegionCodeEnum["AL"] = "AL";
-    GetInboxMessagesUsingGETRegionCodeEnum["AR"] = "AR";
-    GetInboxMessagesUsingGETRegionCodeEnum["AZ"] = "AZ";
-    GetInboxMessagesUsingGETRegionCodeEnum["CA"] = "CA";
-    GetInboxMessagesUsingGETRegionCodeEnum["CO"] = "CO";
-    GetInboxMessagesUsingGETRegionCodeEnum["CT"] = "CT";
-    GetInboxMessagesUsingGETRegionCodeEnum["DC"] = "DC";
-    GetInboxMessagesUsingGETRegionCodeEnum["DE"] = "DE";
-    GetInboxMessagesUsingGETRegionCodeEnum["FL"] = "FL";
-    GetInboxMessagesUsingGETRegionCodeEnum["GA"] = "GA";
-    GetInboxMessagesUsingGETRegionCodeEnum["HI"] = "HI";
-    GetInboxMessagesUsingGETRegionCodeEnum["IA"] = "IA";
-    GetInboxMessagesUsingGETRegionCodeEnum["ID"] = "ID";
-    GetInboxMessagesUsingGETRegionCodeEnum["IL"] = "IL";
-    GetInboxMessagesUsingGETRegionCodeEnum["IN"] = "IN";
-    GetInboxMessagesUsingGETRegionCodeEnum["KS"] = "KS";
-    GetInboxMessagesUsingGETRegionCodeEnum["KY"] = "KY";
-    GetInboxMessagesUsingGETRegionCodeEnum["LA"] = "LA";
-    GetInboxMessagesUsingGETRegionCodeEnum["MA"] = "MA";
-    GetInboxMessagesUsingGETRegionCodeEnum["MD"] = "MD";
-    GetInboxMessagesUsingGETRegionCodeEnum["ME"] = "ME";
-    GetInboxMessagesUsingGETRegionCodeEnum["MI"] = "MI";
-    GetInboxMessagesUsingGETRegionCodeEnum["MN"] = "MN";
-    GetInboxMessagesUsingGETRegionCodeEnum["MO"] = "MO";
-    GetInboxMessagesUsingGETRegionCodeEnum["MS"] = "MS";
-    GetInboxMessagesUsingGETRegionCodeEnum["MT"] = "MT";
-    GetInboxMessagesUsingGETRegionCodeEnum["NC"] = "NC";
-    GetInboxMessagesUsingGETRegionCodeEnum["ND"] = "ND";
-    GetInboxMessagesUsingGETRegionCodeEnum["NE"] = "NE";
-    GetInboxMessagesUsingGETRegionCodeEnum["NH"] = "NH";
-    GetInboxMessagesUsingGETRegionCodeEnum["NJ"] = "NJ";
-    GetInboxMessagesUsingGETRegionCodeEnum["NM"] = "NM";
-    GetInboxMessagesUsingGETRegionCodeEnum["NV"] = "NV";
-    GetInboxMessagesUsingGETRegionCodeEnum["NY"] = "NY";
-    GetInboxMessagesUsingGETRegionCodeEnum["OH"] = "OH";
-    GetInboxMessagesUsingGETRegionCodeEnum["OK"] = "OK";
-    GetInboxMessagesUsingGETRegionCodeEnum["OR"] = "OR";
-    GetInboxMessagesUsingGETRegionCodeEnum["PA"] = "PA";
-    GetInboxMessagesUsingGETRegionCodeEnum["RI"] = "RI";
-    GetInboxMessagesUsingGETRegionCodeEnum["SC"] = "SC";
-    GetInboxMessagesUsingGETRegionCodeEnum["SD"] = "SD";
-    GetInboxMessagesUsingGETRegionCodeEnum["TN"] = "TN";
-    GetInboxMessagesUsingGETRegionCodeEnum["TX"] = "TX";
-    GetInboxMessagesUsingGETRegionCodeEnum["UT"] = "UT";
-    GetInboxMessagesUsingGETRegionCodeEnum["VA"] = "VA";
-    GetInboxMessagesUsingGETRegionCodeEnum["VT"] = "VT";
-    GetInboxMessagesUsingGETRegionCodeEnum["WA"] = "WA";
-    GetInboxMessagesUsingGETRegionCodeEnum["WI"] = "WI";
-    GetInboxMessagesUsingGETRegionCodeEnum["WV"] = "WV";
-    GetInboxMessagesUsingGETRegionCodeEnum["WY"] = "WY";
-})(GetInboxMessagesUsingGETRegionCodeEnum || (GetInboxMessagesUsingGETRegionCodeEnum = {}));
+export var GetInboxMessagesUsingGETRegionCodesEnum;
+(function (GetInboxMessagesUsingGETRegionCodesEnum) {
+    GetInboxMessagesUsingGETRegionCodesEnum["AK"] = "AK";
+    GetInboxMessagesUsingGETRegionCodesEnum["AL"] = "AL";
+    GetInboxMessagesUsingGETRegionCodesEnum["AR"] = "AR";
+    GetInboxMessagesUsingGETRegionCodesEnum["AZ"] = "AZ";
+    GetInboxMessagesUsingGETRegionCodesEnum["CA"] = "CA";
+    GetInboxMessagesUsingGETRegionCodesEnum["CO"] = "CO";
+    GetInboxMessagesUsingGETRegionCodesEnum["CT"] = "CT";
+    GetInboxMessagesUsingGETRegionCodesEnum["DC"] = "DC";
+    GetInboxMessagesUsingGETRegionCodesEnum["DE"] = "DE";
+    GetInboxMessagesUsingGETRegionCodesEnum["FL"] = "FL";
+    GetInboxMessagesUsingGETRegionCodesEnum["GA"] = "GA";
+    GetInboxMessagesUsingGETRegionCodesEnum["HI"] = "HI";
+    GetInboxMessagesUsingGETRegionCodesEnum["IA"] = "IA";
+    GetInboxMessagesUsingGETRegionCodesEnum["ID"] = "ID";
+    GetInboxMessagesUsingGETRegionCodesEnum["IL"] = "IL";
+    GetInboxMessagesUsingGETRegionCodesEnum["IN"] = "IN";
+    GetInboxMessagesUsingGETRegionCodesEnum["KS"] = "KS";
+    GetInboxMessagesUsingGETRegionCodesEnum["KY"] = "KY";
+    GetInboxMessagesUsingGETRegionCodesEnum["LA"] = "LA";
+    GetInboxMessagesUsingGETRegionCodesEnum["MA"] = "MA";
+    GetInboxMessagesUsingGETRegionCodesEnum["MD"] = "MD";
+    GetInboxMessagesUsingGETRegionCodesEnum["ME"] = "ME";
+    GetInboxMessagesUsingGETRegionCodesEnum["MI"] = "MI";
+    GetInboxMessagesUsingGETRegionCodesEnum["MN"] = "MN";
+    GetInboxMessagesUsingGETRegionCodesEnum["MO"] = "MO";
+    GetInboxMessagesUsingGETRegionCodesEnum["MS"] = "MS";
+    GetInboxMessagesUsingGETRegionCodesEnum["MT"] = "MT";
+    GetInboxMessagesUsingGETRegionCodesEnum["NC"] = "NC";
+    GetInboxMessagesUsingGETRegionCodesEnum["ND"] = "ND";
+    GetInboxMessagesUsingGETRegionCodesEnum["NE"] = "NE";
+    GetInboxMessagesUsingGETRegionCodesEnum["NH"] = "NH";
+    GetInboxMessagesUsingGETRegionCodesEnum["NJ"] = "NJ";
+    GetInboxMessagesUsingGETRegionCodesEnum["NM"] = "NM";
+    GetInboxMessagesUsingGETRegionCodesEnum["NV"] = "NV";
+    GetInboxMessagesUsingGETRegionCodesEnum["NY"] = "NY";
+    GetInboxMessagesUsingGETRegionCodesEnum["OH"] = "OH";
+    GetInboxMessagesUsingGETRegionCodesEnum["OK"] = "OK";
+    GetInboxMessagesUsingGETRegionCodesEnum["OR"] = "OR";
+    GetInboxMessagesUsingGETRegionCodesEnum["PA"] = "PA";
+    GetInboxMessagesUsingGETRegionCodesEnum["RI"] = "RI";
+    GetInboxMessagesUsingGETRegionCodesEnum["SC"] = "SC";
+    GetInboxMessagesUsingGETRegionCodesEnum["SD"] = "SD";
+    GetInboxMessagesUsingGETRegionCodesEnum["TN"] = "TN";
+    GetInboxMessagesUsingGETRegionCodesEnum["TX"] = "TX";
+    GetInboxMessagesUsingGETRegionCodesEnum["UT"] = "UT";
+    GetInboxMessagesUsingGETRegionCodesEnum["VA"] = "VA";
+    GetInboxMessagesUsingGETRegionCodesEnum["VT"] = "VT";
+    GetInboxMessagesUsingGETRegionCodesEnum["WA"] = "WA";
+    GetInboxMessagesUsingGETRegionCodesEnum["WI"] = "WI";
+    GetInboxMessagesUsingGETRegionCodesEnum["WV"] = "WV";
+    GetInboxMessagesUsingGETRegionCodesEnum["WY"] = "WY";
+})(GetInboxMessagesUsingGETRegionCodesEnum || (GetInboxMessagesUsingGETRegionCodesEnum = {}));
 /**
     * @export
     * @enum {string}

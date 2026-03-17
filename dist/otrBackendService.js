@@ -11144,9 +11144,9 @@ angular.module('otrBackendService', [])
              * @param {object} parameters - method options and parameters
              * @param {string} parameters.caseCounterOfferStatuses - caseCounterOfferStatuses
              * @param {string} parameters.caseStatuses - caseStatuses
-             * @param {integer} parameters.countyId - countyId
+             * @param {integer} parameters.countyIds - countyIds
              * @param {string} parameters.courtDateFilter - courtDateFilter
-             * @param {integer} parameters.courtId - courtId
+             * @param {integer} parameters.courtIds - courtIds
              * @param {string} parameters.filter - filter
              * @param {boolean} parameters.isOverdue - isOverdue
              * @param {string} parameters.latestMessageBy - latestMessageBy
@@ -11155,7 +11155,7 @@ angular.module('otrBackendService', [])
              * @param {integer} parameters.length - length
              * @param {integer} parameters.page - page
              * @param {string} parameters.query - query
-             * @param {string} parameters.regionCode - regionCode
+             * @param {string} parameters.regionCodes - regionCodes
              * @param {string} parameters.statusCategories - statusCategories
              */
             OtrService.prototype.getInboxMessagesUsingGET = function(parameters) {
@@ -11180,16 +11180,16 @@ angular.module('otrBackendService', [])
                     queryParameters['caseStatuses'] = parameters['caseStatuses'];
                 }
 
-                if (parameters['countyId'] !== undefined) {
-                    queryParameters['countyId'] = parameters['countyId'];
+                if (parameters['countyIds'] !== undefined) {
+                    queryParameters['countyIds'] = parameters['countyIds'];
                 }
 
                 if (parameters['courtDateFilter'] !== undefined) {
                     queryParameters['courtDateFilter'] = parameters['courtDateFilter'];
                 }
 
-                if (parameters['courtId'] !== undefined) {
-                    queryParameters['courtId'] = parameters['courtId'];
+                if (parameters['courtIds'] !== undefined) {
+                    queryParameters['courtIds'] = parameters['courtIds'];
                 }
 
                 if (parameters['filter'] !== undefined) {
@@ -11230,8 +11230,8 @@ angular.module('otrBackendService', [])
                     queryParameters['query'] = parameters['query'];
                 }
 
-                if (parameters['regionCode'] !== undefined) {
-                    queryParameters['regionCode'] = parameters['regionCode'];
+                if (parameters['regionCodes'] !== undefined) {
+                    queryParameters['regionCodes'] = parameters['regionCodes'];
                 }
 
                 if (parameters['statusCategories'] !== undefined) {

@@ -157,9 +157,9 @@ export class LawfirmControllerApi {
      * @param lawfirmId lawfirmId
      * @param caseCounterOfferStatuses caseCounterOfferStatuses
      * @param caseStatuses caseStatuses
-     * @param countyId countyId
+     * @param countyIds countyIds
      * @param courtDateFilter courtDateFilter
-     * @param courtId courtId
+     * @param courtIds courtIds
      * @param filter filter
      * @param isOverdue isOverdue
      * @param latestMessageBy latestMessageBy
@@ -167,10 +167,10 @@ export class LawfirmControllerApi {
      * @param length length
      * @param page page
      * @param query query
-     * @param regionCode regionCode
+     * @param regionCodes regionCodes
      * @param statusCategories statusCategories
      */
-    getInboxMessagesUsingGET(lawfirmId, caseCounterOfferStatuses, caseStatuses, countyId, courtDateFilter, courtId, filter, isOverdue, latestMessageBy, lawfirmCaseDecisionStatus, length, page, query, regionCode, statusCategories, extraHttpRequestParams) {
+    getInboxMessagesUsingGET(lawfirmId, caseCounterOfferStatuses, caseStatuses, countyIds, courtDateFilter, courtIds, filter, isOverdue, latestMessageBy, lawfirmCaseDecisionStatus, length, page, query, regionCodes, statusCategories, extraHttpRequestParams) {
         const localVarPath = this.basePath + '/api/v1/lawfirms/{lawfirmId}/inbox-messages'
             .replace('{' + 'lawfirmId' + '}', encodeURIComponent(String(lawfirmId)));
         let queryParameters = {};
@@ -185,14 +185,14 @@ export class LawfirmControllerApi {
         if (caseStatuses !== undefined) {
             queryParameters['caseStatuses'] = caseStatuses;
         }
-        if (countyId !== undefined) {
-            queryParameters['countyId'] = countyId;
+        if (countyIds !== undefined) {
+            queryParameters['countyIds'] = countyIds;
         }
         if (courtDateFilter !== undefined) {
             queryParameters['courtDateFilter'] = courtDateFilter;
         }
-        if (courtId !== undefined) {
-            queryParameters['courtId'] = courtId;
+        if (courtIds !== undefined) {
+            queryParameters['courtIds'] = courtIds;
         }
         if (filter !== undefined) {
             queryParameters['filter'] = filter;
@@ -215,8 +215,8 @@ export class LawfirmControllerApi {
         if (query !== undefined) {
             queryParameters['query'] = query;
         }
-        if (regionCode !== undefined) {
-            queryParameters['regionCode'] = regionCode;
+        if (regionCodes !== undefined) {
+            queryParameters['regionCodes'] = regionCodes;
         }
         if (statusCategories !== undefined) {
             queryParameters['statusCategories'] = statusCategories;

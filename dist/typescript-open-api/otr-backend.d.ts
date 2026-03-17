@@ -28691,12 +28691,12 @@ export interface operations {
                 lawfirmCaseDecisionStatus?: PathsApiV1LawfirmsLawfirmIdInboxMessagesGetParametersQueryLawfirmCaseDecisionStatus;
                 /** @description caseCounterOfferStatuses */
                 caseCounterOfferStatuses?: PathsApiV1LawfirmsLawfirmIdInboxMessagesGetParametersQueryCaseCounterOfferStatuses;
-                /** @description courtId */
-                courtId?: number;
-                /** @description countyId */
-                countyId?: number;
-                /** @description regionCode */
-                regionCode?: PathsApiV1CitationsCitationIdCourtMissingPostParametersQueryState;
+                /** @description courtIds */
+                courtIds?: number;
+                /** @description countyIds */
+                countyIds?: number;
+                /** @description regionCodes */
+                regionCodes?: PathsApiV1CitationsCitationIdCourtMissingPostParametersQueryState;
                 /** @description isOverdue */
                 isOverdue?: boolean;
                 /** @description courtDateFilter */
