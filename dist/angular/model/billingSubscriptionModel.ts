@@ -19,6 +19,7 @@ export interface BillingSubscriptionModel {
     id?: string;
     items?: Array<BillingSubscriptionItemModel>;
     productDescription?: string;
+    productId?: string;
     productName?: string;
     startAt?: string;
     status?: BillingSubscriptionModel.StatusEnum;

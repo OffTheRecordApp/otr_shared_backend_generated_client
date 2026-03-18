@@ -51,6 +51,12 @@ export interface BillingSubscriptionModel {
      * @type {string}
      * @memberof BillingSubscriptionModel
      */
+    productId?: string;
+    /**
+     *
+     * @type {string}
+     * @memberof BillingSubscriptionModel
+     */
     productName?: string;
     /**
      *

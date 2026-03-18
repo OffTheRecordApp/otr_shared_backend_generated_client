@@ -8054,6 +8054,7 @@ export interface components {
             id?: string;
             items?: components["schemas"]["BillingSubscriptionItemModel"][];
             productDescription?: string;
+            productId?: string;
             productName?: string;
             /** Format: date-time */
             startAt?: string;
