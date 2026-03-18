@@ -10,7 +10,7 @@
  * Do not edit the class manually.
  */
 import * as runtime from '../runtime';
-import { CreateNewLawfirmRequest, GetAccountManagersResponse, GetLawfirmAddressesResponse, GetLawfirmCaseStatsResponse, GetLawfirmInboxMessagesResponse, GetLawfirmJobTitleResponse, GetLawfirmLawyersResponse, GetLawfirmResponse, GetLawfirmSupportedStatesResponse, GetLawfirmsResponse, GetStripeConnectedAccountsResponse, IntercomSearchTicketsResponse, LawfirmPictureRequest, LawfirmSupportedStateRequest, LawfirmVacationRequest, SaveLawfirmAccountManagerRequest, UpdateLawfirmPaymentModelRequest, UpdateLawfirmRequest, UpdateLawyerRoleRequest, UploadLawfirmsRequest, UploadLawfirmsResponse, UpsertAddressRequest } from '../models';
+import { CreateNewLawfirmRequest, GetAcceptedCaseBreakdownResponse, GetAccountManagersResponse, GetLawfirmAddressesResponse, GetLawfirmCaseStatsResponse, GetLawfirmInboxMessagesResponse, GetLawfirmJobTitleResponse, GetLawfirmLawyersResponse, GetLawfirmResponse, GetLawfirmSupportedStatesResponse, GetLawfirmsResponse, GetStripeConnectedAccountsResponse, IntercomSearchTicketsResponse, LawfirmPictureRequest, LawfirmSupportedStateRequest, LawfirmVacationRequest, SaveLawfirmAccountManagerRequest, UpdateLawfirmPaymentModelRequest, UpdateLawfirmRequest, UpdateLawyerRoleRequest, UploadLawfirmsRequest, UploadLawfirmsResponse, UpsertAddressRequest } from '../models';
 export interface AddLawfirmAddressUsingPOSTRequest {
     lawfirmId: number;
     request: UpsertAddressRequest;
@@ -24,6 +24,9 @@ export interface DeleteLawfirmConnectedAccountUsingDELETERequest {
 }
 export interface DeleteLawfirmCoverPhotoUsingDELETERequest {
     lawfirmId: string;
+}
+export interface GetAcceptedCaseBreakdownUsingGETRequest {
+    lawfirmId: number;
 }
 export interface GetInboxMessagesUsingGETRequest {
     lawfirmId: number;
@@ -157,6 +160,14 @@ export declare class LawfirmControllerApi extends runtime.BaseAPI {
      * deleteLawfirmCoverPhoto
      */
     deleteLawfirmCoverPhotoUsingDELETE(requestParameters: DeleteLawfirmCoverPhotoUsingDELETERequest): Promise<object>;
+    /**
+     * getAcceptedCaseBreakdown
+     */
+    getAcceptedCaseBreakdownUsingGETRaw(requestParameters: GetAcceptedCaseBreakdownUsingGETRequest): Promise<runtime.ApiResponse<GetAcceptedCaseBreakdownResponse>>;
+    /**
+     * getAcceptedCaseBreakdown
+     */
+    getAcceptedCaseBreakdownUsingGET(requestParameters: GetAcceptedCaseBreakdownUsingGETRequest): Promise<GetAcceptedCaseBreakdownResponse>;
     /**
      * getAccountManagers
      */

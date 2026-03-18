@@ -3623,6 +3623,23 @@ export interface paths {
         patch?: never;
         trace?: never;
     };
+    "/api/v1/lawfirms/{lawfirmId}/cases/accepted-breakdown": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        /** getAcceptedCaseBreakdown */
+        get: operations["getAcceptedCaseBreakdownUsingGET"];
+        put?: never;
+        post?: never;
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
     "/api/v1/lawfirms/{lawfirmId}/cases/stats": {
         parameters: {
             query?: never;
@@ -10734,6 +10751,16 @@ export interface components {
             violationCount?: number;
             violations?: components["schemas"]["ViolationInputRequest"][];
         };
+        /** GetAcceptedCaseBreakdownResponse */
+        GetAcceptedCaseBreakdownResponse: {
+            /** Format: bigdecimal */
+            networkMedianResolvedPercentage?: number;
+            /** Format: bigdecimal */
+            resolvedPercentage?: number;
+            statusBreakdown?: components["schemas"]["StatusCategoryBreakdownModel"][];
+            /** Format: int32 */
+            totalAcceptedCases?: number;
+        };
         /** GetAccountManagersResponse */
         GetAccountManagersResponse: {
             accountManagers?: components["schemas"]["AccountManagerModel"][];
@@ -15018,6 +15045,15 @@ export interface components {
             /** Format: int32 */
             time_to_last_close?: number;
             type?: string;
+        };
+        /** StatusCategoryBreakdownModel */
+        StatusCategoryBreakdownModel: {
+            /** Format: int32 */
+            count?: number;
+            /** Format: bigdecimal */
+            percentageOfTotal?: number;
+            /** @enum {string} */
+            statusCategory?: PathsApiV1CaseStatusesGetParametersQueryCategories;
         };
         /** StripeAccountLinkDomain */
         StripeAccountLinkDomain: {
@@ -28560,6 +28596,50 @@ export interface operations {
                     [name: string]: unknown;
                 };
                 content?: never;
+            };
+            /** @description Unauthorized */
+            401: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content?: never;
+            };
+            /** @description Forbidden */
+            403: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content?: never;
+            };
+            /** @description Not Found */
+            404: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content?: never;
+            };
+        };
+    };
+    getAcceptedCaseBreakdownUsingGET: {
+        parameters: {
+            query?: never;
+            header?: never;
+            path: {
+                /** @description lawfirmId */
+                lawfirmId: number;
+            };
+            cookie?: never;
+        };
+        requestBody?: never;
+        responses: {
+            /** @description OK */
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "*/*": components["schemas"]["GetAcceptedCaseBreakdownResponse"];
+                };
             };
             /** @description Unauthorized */
             401: {

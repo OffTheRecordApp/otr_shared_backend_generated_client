@@ -45,6 +45,12 @@ export declare class LawfirmControllerApi {
     deleteLawfirmCoverPhotoUsingDELETE(lawfirmId: string, extraHttpRequestParams?: any): ng.IHttpPromise<object>;
     /**
      *
+     * @summary getAcceptedCaseBreakdown
+     * @param lawfirmId lawfirmId
+     */
+    getAcceptedCaseBreakdownUsingGET(lawfirmId: number, extraHttpRequestParams?: any): ng.IHttpPromise<models.GetAcceptedCaseBreakdownResponse>;
+    /**
+     *
      * @summary getAccountManagers
      */
     getAccountManagersUsingGET(extraHttpRequestParams?: any): ng.IHttpPromise<models.GetAccountManagersResponse>;

@@ -21,7 +21,7 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
     });
 };
 import * as runtime from '../runtime';
-import { CreateNewLawfirmRequestToJSON, GetAccountManagersResponseFromJSON, GetLawfirmAddressesResponseFromJSON, GetLawfirmCaseStatsResponseFromJSON, GetLawfirmInboxMessagesResponseFromJSON, GetLawfirmJobTitleResponseFromJSON, GetLawfirmLawyersResponseFromJSON, GetLawfirmResponseFromJSON, GetLawfirmSupportedStatesResponseFromJSON, GetLawfirmsResponseFromJSON, GetStripeConnectedAccountsResponseFromJSON, IntercomSearchTicketsResponseFromJSON, LawfirmPictureRequestToJSON, LawfirmSupportedStateRequestToJSON, LawfirmVacationRequestToJSON, SaveLawfirmAccountManagerRequestToJSON, UpdateLawfirmPaymentModelRequestToJSON, UpdateLawfirmRequestToJSON, UpdateLawyerRoleRequestToJSON, UploadLawfirmsRequestToJSON, UploadLawfirmsResponseFromJSON, UpsertAddressRequestToJSON, } from '../models';
+import { CreateNewLawfirmRequestToJSON, GetAcceptedCaseBreakdownResponseFromJSON, GetAccountManagersResponseFromJSON, GetLawfirmAddressesResponseFromJSON, GetLawfirmCaseStatsResponseFromJSON, GetLawfirmInboxMessagesResponseFromJSON, GetLawfirmJobTitleResponseFromJSON, GetLawfirmLawyersResponseFromJSON, GetLawfirmResponseFromJSON, GetLawfirmSupportedStatesResponseFromJSON, GetLawfirmsResponseFromJSON, GetStripeConnectedAccountsResponseFromJSON, IntercomSearchTicketsResponseFromJSON, LawfirmPictureRequestToJSON, LawfirmSupportedStateRequestToJSON, LawfirmVacationRequestToJSON, SaveLawfirmAccountManagerRequestToJSON, UpdateLawfirmPaymentModelRequestToJSON, UpdateLawfirmRequestToJSON, UpdateLawyerRoleRequestToJSON, UploadLawfirmsRequestToJSON, UploadLawfirmsResponseFromJSON, UpsertAddressRequestToJSON, } from '../models';
 /**
  *
  */
@@ -143,6 +143,34 @@ export class LawfirmControllerApi extends runtime.BaseAPI {
     deleteLawfirmCoverPhotoUsingDELETE(requestParameters) {
         return __awaiter(this, void 0, void 0, function* () {
             const response = yield this.deleteLawfirmCoverPhotoUsingDELETERaw(requestParameters);
+            return yield response.value();
+        });
+    }
+    /**
+     * getAcceptedCaseBreakdown
+     */
+    getAcceptedCaseBreakdownUsingGETRaw(requestParameters) {
+        return __awaiter(this, void 0, void 0, function* () {
+            if (requestParameters.lawfirmId === null || requestParameters.lawfirmId === undefined) {
+                throw new runtime.RequiredError('lawfirmId', 'Required parameter requestParameters.lawfirmId was null or undefined when calling getAcceptedCaseBreakdownUsingGET.');
+            }
+            const queryParameters = {};
+            const headerParameters = {};
+            const response = yield this.request({
+                path: `/api/v1/lawfirms/{lawfirmId}/cases/accepted-breakdown`.replace(`{${"lawfirmId"}}`, encodeURIComponent(String(requestParameters.lawfirmId))),
+                method: 'GET',
+                headers: headerParameters,
+                query: queryParameters,
+            });
+            return new runtime.JSONApiResponse(response, (jsonValue) => GetAcceptedCaseBreakdownResponseFromJSON(jsonValue));
+        });
+    }
+    /**
+     * getAcceptedCaseBreakdown
+     */
+    getAcceptedCaseBreakdownUsingGET(requestParameters) {
+        return __awaiter(this, void 0, void 0, function* () {
+            const response = yield this.getAcceptedCaseBreakdownUsingGETRaw(requestParameters);
             return yield response.value();
         });
     }
