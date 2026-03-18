@@ -19,6 +19,7 @@ export interface EditCustomerReviewUsingPUTRequest {
     editCustomerReviewRequest: EditCustomerReviewRequest;
 }
 export interface ListCustomerReviewsUsingGETRequest {
+    endDate?: Date;
     includeAnonymous?: boolean;
     includeDeleted?: boolean;
     includeRatings?: boolean;
@@ -27,6 +28,7 @@ export interface ListCustomerReviewsUsingGETRequest {
     limit?: number;
     nextPageToken?: string;
     previousPageToken?: string;
+    startDate?: Date;
     state?: ListCustomerReviewsUsingGETStateEnum;
     tags?: string;
     version?: string;

@@ -14362,6 +14362,7 @@ angular.module('otrBackendService', [])
              * @method
              * @name OtrService#listCustomerReviewsUsingGET
              * @param {object} parameters - method options and parameters
+             * @param {string} parameters.endDate - endDate
              * @param {boolean} parameters.includeAnonymous - includeAnonymous
              * @param {boolean} parameters.includeDeleted - includeDeleted
              * @param {boolean} parameters.includeRatings - includeRatings
@@ -14370,6 +14371,7 @@ angular.module('otrBackendService', [])
              * @param {integer} parameters.limit - limit
              * @param {string} parameters.nextPageToken - nextPageToken
              * @param {string} parameters.previousPageToken - previousPageToken
+             * @param {string} parameters.startDate - startDate
              * @param {string} parameters.state - state
              * @param {string} parameters.tags - tags
              * @param {string} parameters.version - version
@@ -14387,6 +14389,10 @@ angular.module('otrBackendService', [])
                     form = {};
 
                 headers['Accept'] = ['*/*'];
+
+                if (parameters['endDate'] !== undefined) {
+                    queryParameters['endDate'] = parameters['endDate'];
+                }
 
                 if (parameters['includeAnonymous'] !== undefined) {
                     queryParameters['includeAnonymous'] = parameters['includeAnonymous'];
@@ -14421,6 +14427,10 @@ angular.module('otrBackendService', [])
 
                 if (parameters['previousPageToken'] !== undefined) {
                     queryParameters['previousPageToken'] = parameters['previousPageToken'];
+                }
+
+                if (parameters['startDate'] !== undefined) {
+                    queryParameters['startDate'] = parameters['startDate'];
                 }
 
                 if (parameters['state'] !== undefined) {

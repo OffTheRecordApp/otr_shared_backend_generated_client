@@ -98,6 +98,7 @@ export class CustomerReviewControllerApi {
     /**
      *
      * @summary listCustomerReviews
+     * @param endDate endDate
      * @param includeAnonymous includeAnonymous
      * @param includeDeleted includeDeleted
      * @param includeRatings includeRatings
@@ -106,14 +107,18 @@ export class CustomerReviewControllerApi {
      * @param limit limit
      * @param nextPageToken nextPageToken
      * @param previousPageToken previousPageToken
+     * @param startDate startDate
      * @param state state
      * @param tags tags
      * @param version version
      */
-    listCustomerReviewsUsingGET(includeAnonymous, includeDeleted, includeRatings, isFeatured, lawfirmId, limit, nextPageToken, previousPageToken, state, tags, version, extraHttpRequestParams) {
+    listCustomerReviewsUsingGET(endDate, includeAnonymous, includeDeleted, includeRatings, isFeatured, lawfirmId, limit, nextPageToken, previousPageToken, startDate, state, tags, version, extraHttpRequestParams) {
         const localVarPath = this.basePath + '/api/v1/reviews';
         let queryParameters = {};
         let headerParams = Object.assign({}, this.defaultHeaders);
+        if (endDate !== undefined) {
+            queryParameters['endDate'] = endDate;
+        }
         if (includeAnonymous !== undefined) {
             queryParameters['includeAnonymous'] = includeAnonymous;
         }
@@ -137,6 +142,9 @@ export class CustomerReviewControllerApi {
         }
         if (previousPageToken !== undefined) {
             queryParameters['previousPageToken'] = previousPageToken;
+        }
+        if (startDate !== undefined) {
+            queryParameters['startDate'] = startDate;
         }
         if (state !== undefined) {
             queryParameters['state'] = state;

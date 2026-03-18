@@ -299,6 +299,7 @@ export class CustomerReviewControllerService {
 
     /**
      * listCustomerReviews
+     * @param endDate endDate
      * @param includeAnonymous includeAnonymous
      * @param includeDeleted includeDeleted
      * @param includeRatings includeRatings
@@ -307,18 +308,23 @@ export class CustomerReviewControllerService {
      * @param limit limit
      * @param nextPageToken nextPageToken
      * @param previousPageToken previousPageToken
+     * @param startDate startDate
      * @param state state
      * @param tags tags
      * @param version version
      * @param observe set whether or not to return the data Observable as the body, response or events. defaults to returning the body.
      * @param reportProgress flag to report request and response progress.
      */
-    public listCustomerReviewsUsingGET(includeAnonymous?: boolean, includeDeleted?: boolean, includeRatings?: boolean, isFeatured?: boolean, lawfirmId?: number, limit?: number, nextPageToken?: string, previousPageToken?: string, state?: 'AK' | 'AL' | 'AR' | 'AZ' | 'CA' | 'CO' | 'CT' | 'DC' | 'DE' | 'FL' | 'GA' | 'HI' | 'IA' | 'ID' | 'IL' | 'IN' | 'KS' | 'KY' | 'LA' | 'MA' | 'MD' | 'ME' | 'MI' | 'MN' | 'MO' | 'MS' | 'MT' | 'NC' | 'ND' | 'NE' | 'NH' | 'NJ' | 'NM' | 'NV' | 'NY' | 'OH' | 'OK' | 'OR' | 'PA' | 'RI' | 'SC' | 'SD' | 'TN' | 'TX' | 'UT' | 'VA' | 'VT' | 'WA' | 'WI' | 'WV' | 'WY', tags?: string, version?: string, observe?: 'body', reportProgress?: boolean, options?: {httpHeaderAccept?: '*/*', context?: HttpContext}): Observable<ListReviewsResponse>;
-    public listCustomerReviewsUsingGET(includeAnonymous?: boolean, includeDeleted?: boolean, includeRatings?: boolean, isFeatured?: boolean, lawfirmId?: number, limit?: number, nextPageToken?: string, previousPageToken?: string, state?: 'AK' | 'AL' | 'AR' | 'AZ' | 'CA' | 'CO' | 'CT' | 'DC' | 'DE' | 'FL' | 'GA' | 'HI' | 'IA' | 'ID' | 'IL' | 'IN' | 'KS' | 'KY' | 'LA' | 'MA' | 'MD' | 'ME' | 'MI' | 'MN' | 'MO' | 'MS' | 'MT' | 'NC' | 'ND' | 'NE' | 'NH' | 'NJ' | 'NM' | 'NV' | 'NY' | 'OH' | 'OK' | 'OR' | 'PA' | 'RI' | 'SC' | 'SD' | 'TN' | 'TX' | 'UT' | 'VA' | 'VT' | 'WA' | 'WI' | 'WV' | 'WY', tags?: string, version?: string, observe?: 'response', reportProgress?: boolean, options?: {httpHeaderAccept?: '*/*', context?: HttpContext}): Observable<HttpResponse<ListReviewsResponse>>;
-    public listCustomerReviewsUsingGET(includeAnonymous?: boolean, includeDeleted?: boolean, includeRatings?: boolean, isFeatured?: boolean, lawfirmId?: number, limit?: number, nextPageToken?: string, previousPageToken?: string, state?: 'AK' | 'AL' | 'AR' | 'AZ' | 'CA' | 'CO' | 'CT' | 'DC' | 'DE' | 'FL' | 'GA' | 'HI' | 'IA' | 'ID' | 'IL' | 'IN' | 'KS' | 'KY' | 'LA' | 'MA' | 'MD' | 'ME' | 'MI' | 'MN' | 'MO' | 'MS' | 'MT' | 'NC' | 'ND' | 'NE' | 'NH' | 'NJ' | 'NM' | 'NV' | 'NY' | 'OH' | 'OK' | 'OR' | 'PA' | 'RI' | 'SC' | 'SD' | 'TN' | 'TX' | 'UT' | 'VA' | 'VT' | 'WA' | 'WI' | 'WV' | 'WY', tags?: string, version?: string, observe?: 'events', reportProgress?: boolean, options?: {httpHeaderAccept?: '*/*', context?: HttpContext}): Observable<HttpEvent<ListReviewsResponse>>;
-    public listCustomerReviewsUsingGET(includeAnonymous?: boolean, includeDeleted?: boolean, includeRatings?: boolean, isFeatured?: boolean, lawfirmId?: number, limit?: number, nextPageToken?: string, previousPageToken?: string, state?: 'AK' | 'AL' | 'AR' | 'AZ' | 'CA' | 'CO' | 'CT' | 'DC' | 'DE' | 'FL' | 'GA' | 'HI' | 'IA' | 'ID' | 'IL' | 'IN' | 'KS' | 'KY' | 'LA' | 'MA' | 'MD' | 'ME' | 'MI' | 'MN' | 'MO' | 'MS' | 'MT' | 'NC' | 'ND' | 'NE' | 'NH' | 'NJ' | 'NM' | 'NV' | 'NY' | 'OH' | 'OK' | 'OR' | 'PA' | 'RI' | 'SC' | 'SD' | 'TN' | 'TX' | 'UT' | 'VA' | 'VT' | 'WA' | 'WI' | 'WV' | 'WY', tags?: string, version?: string, observe: any = 'body', reportProgress: boolean = false, options?: {httpHeaderAccept?: '*/*', context?: HttpContext}): Observable<any> {
+    public listCustomerReviewsUsingGET(endDate?: string, includeAnonymous?: boolean, includeDeleted?: boolean, includeRatings?: boolean, isFeatured?: boolean, lawfirmId?: number, limit?: number, nextPageToken?: string, previousPageToken?: string, startDate?: string, state?: 'AK' | 'AL' | 'AR' | 'AZ' | 'CA' | 'CO' | 'CT' | 'DC' | 'DE' | 'FL' | 'GA' | 'HI' | 'IA' | 'ID' | 'IL' | 'IN' | 'KS' | 'KY' | 'LA' | 'MA' | 'MD' | 'ME' | 'MI' | 'MN' | 'MO' | 'MS' | 'MT' | 'NC' | 'ND' | 'NE' | 'NH' | 'NJ' | 'NM' | 'NV' | 'NY' | 'OH' | 'OK' | 'OR' | 'PA' | 'RI' | 'SC' | 'SD' | 'TN' | 'TX' | 'UT' | 'VA' | 'VT' | 'WA' | 'WI' | 'WV' | 'WY', tags?: string, version?: string, observe?: 'body', reportProgress?: boolean, options?: {httpHeaderAccept?: '*/*', context?: HttpContext}): Observable<ListReviewsResponse>;
+    public listCustomerReviewsUsingGET(endDate?: string, includeAnonymous?: boolean, includeDeleted?: boolean, includeRatings?: boolean, isFeatured?: boolean, lawfirmId?: number, limit?: number, nextPageToken?: string, previousPageToken?: string, startDate?: string, state?: 'AK' | 'AL' | 'AR' | 'AZ' | 'CA' | 'CO' | 'CT' | 'DC' | 'DE' | 'FL' | 'GA' | 'HI' | 'IA' | 'ID' | 'IL' | 'IN' | 'KS' | 'KY' | 'LA' | 'MA' | 'MD' | 'ME' | 'MI' | 'MN' | 'MO' | 'MS' | 'MT' | 'NC' | 'ND' | 'NE' | 'NH' | 'NJ' | 'NM' | 'NV' | 'NY' | 'OH' | 'OK' | 'OR' | 'PA' | 'RI' | 'SC' | 'SD' | 'TN' | 'TX' | 'UT' | 'VA' | 'VT' | 'WA' | 'WI' | 'WV' | 'WY', tags?: string, version?: string, observe?: 'response', reportProgress?: boolean, options?: {httpHeaderAccept?: '*/*', context?: HttpContext}): Observable<HttpResponse<ListReviewsResponse>>;
+    public listCustomerReviewsUsingGET(endDate?: string, includeAnonymous?: boolean, includeDeleted?: boolean, includeRatings?: boolean, isFeatured?: boolean, lawfirmId?: number, limit?: number, nextPageToken?: string, previousPageToken?: string, startDate?: string, state?: 'AK' | 'AL' | 'AR' | 'AZ' | 'CA' | 'CO' | 'CT' | 'DC' | 'DE' | 'FL' | 'GA' | 'HI' | 'IA' | 'ID' | 'IL' | 'IN' | 'KS' | 'KY' | 'LA' | 'MA' | 'MD' | 'ME' | 'MI' | 'MN' | 'MO' | 'MS' | 'MT' | 'NC' | 'ND' | 'NE' | 'NH' | 'NJ' | 'NM' | 'NV' | 'NY' | 'OH' | 'OK' | 'OR' | 'PA' | 'RI' | 'SC' | 'SD' | 'TN' | 'TX' | 'UT' | 'VA' | 'VT' | 'WA' | 'WI' | 'WV' | 'WY', tags?: string, version?: string, observe?: 'events', reportProgress?: boolean, options?: {httpHeaderAccept?: '*/*', context?: HttpContext}): Observable<HttpEvent<ListReviewsResponse>>;
+    public listCustomerReviewsUsingGET(endDate?: string, includeAnonymous?: boolean, includeDeleted?: boolean, includeRatings?: boolean, isFeatured?: boolean, lawfirmId?: number, limit?: number, nextPageToken?: string, previousPageToken?: string, startDate?: string, state?: 'AK' | 'AL' | 'AR' | 'AZ' | 'CA' | 'CO' | 'CT' | 'DC' | 'DE' | 'FL' | 'GA' | 'HI' | 'IA' | 'ID' | 'IL' | 'IN' | 'KS' | 'KY' | 'LA' | 'MA' | 'MD' | 'ME' | 'MI' | 'MN' | 'MO' | 'MS' | 'MT' | 'NC' | 'ND' | 'NE' | 'NH' | 'NJ' | 'NM' | 'NV' | 'NY' | 'OH' | 'OK' | 'OR' | 'PA' | 'RI' | 'SC' | 'SD' | 'TN' | 'TX' | 'UT' | 'VA' | 'VT' | 'WA' | 'WI' | 'WV' | 'WY', tags?: string, version?: string, observe: any = 'body', reportProgress: boolean = false, options?: {httpHeaderAccept?: '*/*', context?: HttpContext}): Observable<any> {
 
         let localVarQueryParameters = new HttpParams({encoder: this.encoder});
+        if (endDate !== undefined && endDate !== null) {
+          localVarQueryParameters = this.addToHttpParams(localVarQueryParameters,
+            <any>endDate, 'endDate');
+        }
         if (includeAnonymous !== undefined && includeAnonymous !== null) {
           localVarQueryParameters = this.addToHttpParams(localVarQueryParameters,
             <any>includeAnonymous, 'includeAnonymous');
@@ -350,6 +356,10 @@ export class CustomerReviewControllerService {
         if (previousPageToken !== undefined && previousPageToken !== null) {
           localVarQueryParameters = this.addToHttpParams(localVarQueryParameters,
             <any>previousPageToken, 'previousPageToken');
+        }
+        if (startDate !== undefined && startDate !== null) {
+          localVarQueryParameters = this.addToHttpParams(localVarQueryParameters,
+            <any>startDate, 'startDate');
         }
         if (state !== undefined && state !== null) {
           localVarQueryParameters = this.addToHttpParams(localVarQueryParameters,

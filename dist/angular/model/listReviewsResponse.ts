@@ -17,6 +17,7 @@ import { CustomerReview } from './customerReview';
 export interface ListReviewsResponse { 
     aggregates?: AggregateRatingMetrics;
     cursorModel?: CursorModel;
+    newReviewCount?: number;
     reviews?: Array<CustomerReview>;
 }
 

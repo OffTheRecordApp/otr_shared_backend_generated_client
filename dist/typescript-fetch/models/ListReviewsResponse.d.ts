@@ -30,6 +30,12 @@ export interface ListReviewsResponse {
     cursorModel?: CursorModel;
     /**
      *
+     * @type {number}
+     * @memberof ListReviewsResponse
+     */
+    newReviewCount?: number;
+    /**
+     *
      * @type {Array<CustomerReview>}
      * @memberof ListReviewsResponse
      */

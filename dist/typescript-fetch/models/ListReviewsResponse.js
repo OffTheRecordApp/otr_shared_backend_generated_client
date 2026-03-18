@@ -23,6 +23,7 @@ export function ListReviewsResponseFromJSONTyped(json, ignoreDiscriminator) {
     return {
         'aggregates': !exists(json, 'aggregates') ? undefined : AggregateRatingMetricsFromJSON(json['aggregates']),
         'cursorModel': !exists(json, 'cursorModel') ? undefined : CursorModelFromJSON(json['cursorModel']),
+        'newReviewCount': !exists(json, 'newReviewCount') ? undefined : json['newReviewCount'],
         'reviews': !exists(json, 'reviews') ? undefined : (json['reviews'].map(CustomerReviewFromJSON)),
     };
 }
@@ -36,6 +37,7 @@ export function ListReviewsResponseToJSON(value) {
     return {
         'aggregates': AggregateRatingMetricsToJSON(value.aggregates),
         'cursorModel': CursorModelToJSON(value.cursorModel),
+        'newReviewCount': value.newReviewCount,
         'reviews': value.reviews === undefined ? undefined : (value.reviews.map(CustomerReviewToJSON)),
     };
 }

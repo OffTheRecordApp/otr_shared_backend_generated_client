@@ -13198,6 +13198,8 @@ export interface components {
         ListReviewsResponse: {
             aggregates?: components["schemas"]["AggregateRatingMetrics"];
             cursorModel?: components["schemas"]["CursorModel"];
+            /** Format: int64 */
+            newReviewCount?: number;
             reviews?: components["schemas"]["CustomerReview"][];
         };
         /** ListSubscriptionInvoicesResponse */
@@ -24694,6 +24696,10 @@ export interface operations {
                 state?: PathsApiV1CitationsCitationIdCourtMissingPostParametersQueryState;
                 /** @description tags */
                 tags?: string;
+                /** @description startDate */
+                startDate?: string;
+                /** @description endDate */
+                endDate?: string;
                 /** @description version */
                 version?: string;
             };

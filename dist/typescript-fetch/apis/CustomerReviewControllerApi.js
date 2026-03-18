@@ -118,6 +118,9 @@ export class CustomerReviewControllerApi extends runtime.BaseAPI {
     listCustomerReviewsUsingGETRaw(requestParameters) {
         return __awaiter(this, void 0, void 0, function* () {
             const queryParameters = {};
+            if (requestParameters.endDate !== undefined) {
+                queryParameters['endDate'] = requestParameters.endDate.toISOString().substr(0, 10);
+            }
             if (requestParameters.includeAnonymous !== undefined) {
                 queryParameters['includeAnonymous'] = requestParameters.includeAnonymous;
             }
@@ -141,6 +144,9 @@ export class CustomerReviewControllerApi extends runtime.BaseAPI {
             }
             if (requestParameters.previousPageToken !== undefined) {
                 queryParameters['previousPageToken'] = requestParameters.previousPageToken;
+            }
+            if (requestParameters.startDate !== undefined) {
+                queryParameters['startDate'] = requestParameters.startDate.toISOString().substr(0, 10);
             }
             if (requestParameters.state !== undefined) {
                 queryParameters['state'] = requestParameters.state;

@@ -13,5 +13,6 @@ import * as models from './models';
 export interface ListReviewsResponse {
     "aggregates"?: models.AggregateRatingMetrics;
     "cursorModel"?: models.CursorModel;
+    "newReviewCount"?: number;
     "reviews"?: Array<models.CustomerReview>;
 }
