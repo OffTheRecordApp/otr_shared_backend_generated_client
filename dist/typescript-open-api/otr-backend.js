@@ -346,10 +346,7 @@ export var PathsApiV1LawfirmsLawfirmIdInboxMessagesGetParametersQueryLawfirmCase
     PathsApiV1LawfirmsLawfirmIdInboxMessagesGetParametersQueryLawfirmCaseDecisionStatus["ACCEPTED"] = "ACCEPTED";
     PathsApiV1LawfirmsLawfirmIdInboxMessagesGetParametersQueryLawfirmCaseDecisionStatus["CREATED"] = "CREATED";
     PathsApiV1LawfirmsLawfirmIdInboxMessagesGetParametersQueryLawfirmCaseDecisionStatus["DECLINED"] = "DECLINED";
-    PathsApiV1LawfirmsLawfirmIdInboxMessagesGetParametersQueryLawfirmCaseDecisionStatus["EXPIRED"] = "EXPIRED";
     PathsApiV1LawfirmsLawfirmIdInboxMessagesGetParametersQueryLawfirmCaseDecisionStatus["PENDING"] = "PENDING";
-    PathsApiV1LawfirmsLawfirmIdInboxMessagesGetParametersQueryLawfirmCaseDecisionStatus["REMATCHED"] = "REMATCHED";
-    PathsApiV1LawfirmsLawfirmIdInboxMessagesGetParametersQueryLawfirmCaseDecisionStatus["REMATCHED_REFERRAL"] = "REMATCHED_REFERRAL";
 })(PathsApiV1LawfirmsLawfirmIdInboxMessagesGetParametersQueryLawfirmCaseDecisionStatus || (PathsApiV1LawfirmsLawfirmIdInboxMessagesGetParametersQueryLawfirmCaseDecisionStatus = {}));
 export var PathsApiV1LawfirmsLawfirmIdInboxMessagesGetParametersQueryCaseCounterOfferStatuses;
 (function (PathsApiV1LawfirmsLawfirmIdInboxMessagesGetParametersQueryCaseCounterOfferStatuses) {

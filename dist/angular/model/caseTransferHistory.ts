@@ -26,15 +26,12 @@ export interface CaseTransferHistory {
     totalClientCostInCents?: number;
 }
 export namespace CaseTransferHistory {
-    export type DecisionStatusEnum = 'ACCEPTED' | 'CREATED' | 'DECLINED' | 'EXPIRED' | 'PENDING' | 'REMATCHED' | 'REMATCHED_REFERRAL';
+    export type DecisionStatusEnum = 'ACCEPTED' | 'CREATED' | 'DECLINED' | 'PENDING';
     export const DecisionStatusEnum = {
         Accepted: 'ACCEPTED' as DecisionStatusEnum,
         Created: 'CREATED' as DecisionStatusEnum,
         Declined: 'DECLINED' as DecisionStatusEnum,
-        Expired: 'EXPIRED' as DecisionStatusEnum,
-        Pending: 'PENDING' as DecisionStatusEnum,
-        Rematched: 'REMATCHED' as DecisionStatusEnum,
-        RematchedReferral: 'REMATCHED_REFERRAL' as DecisionStatusEnum
+        Pending: 'PENDING' as DecisionStatusEnum
     };
     export type RefundOwnerEnum = 'LAWFIRM' | 'NONE' | 'OTR';
     export const RefundOwnerEnum = {

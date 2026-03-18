@@ -34,15 +34,12 @@ export interface LawfirmCaseModel {
     refundOwner?: LawfirmCaseModel.RefundOwnerEnum;
 }
 export namespace LawfirmCaseModel {
-    export type CaseDecisionStatusEnum = 'ACCEPTED' | 'CREATED' | 'DECLINED' | 'EXPIRED' | 'PENDING' | 'REMATCHED' | 'REMATCHED_REFERRAL';
+    export type CaseDecisionStatusEnum = 'ACCEPTED' | 'CREATED' | 'DECLINED' | 'PENDING';
     export const CaseDecisionStatusEnum = {
         Accepted: 'ACCEPTED' as CaseDecisionStatusEnum,
         Created: 'CREATED' as CaseDecisionStatusEnum,
         Declined: 'DECLINED' as CaseDecisionStatusEnum,
-        Expired: 'EXPIRED' as CaseDecisionStatusEnum,
-        Pending: 'PENDING' as CaseDecisionStatusEnum,
-        Rematched: 'REMATCHED' as CaseDecisionStatusEnum,
-        RematchedReferral: 'REMATCHED_REFERRAL' as CaseDecisionStatusEnum
+        Pending: 'PENDING' as CaseDecisionStatusEnum
     };
     export type RefundOwnerEnum = 'LAWFIRM' | 'NONE' | 'OTR';
     export const RefundOwnerEnum = {

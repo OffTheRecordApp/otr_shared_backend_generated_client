@@ -65,10 +65,7 @@ export var CaseTransferHistoryDecisionStatusEnum;
     CaseTransferHistoryDecisionStatusEnum["ACCEPTED"] = "ACCEPTED";
     CaseTransferHistoryDecisionStatusEnum["CREATED"] = "CREATED";
     CaseTransferHistoryDecisionStatusEnum["DECLINED"] = "DECLINED";
-    CaseTransferHistoryDecisionStatusEnum["EXPIRED"] = "EXPIRED";
     CaseTransferHistoryDecisionStatusEnum["PENDING"] = "PENDING";
-    CaseTransferHistoryDecisionStatusEnum["REMATCHED"] = "REMATCHED";
-    CaseTransferHistoryDecisionStatusEnum["REMATCHEDREFERRAL"] = "REMATCHED_REFERRAL";
 })(CaseTransferHistoryDecisionStatusEnum || (CaseTransferHistoryDecisionStatusEnum = {}));
 /**
 * @export

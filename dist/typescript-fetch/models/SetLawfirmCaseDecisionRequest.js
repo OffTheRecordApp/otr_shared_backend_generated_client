@@ -50,8 +50,5 @@ export var SetLawfirmCaseDecisionRequestCaseDecisionStatusEnum;
     SetLawfirmCaseDecisionRequestCaseDecisionStatusEnum["ACCEPTED"] = "ACCEPTED";
     SetLawfirmCaseDecisionRequestCaseDecisionStatusEnum["CREATED"] = "CREATED";
     SetLawfirmCaseDecisionRequestCaseDecisionStatusEnum["DECLINED"] = "DECLINED";
-    SetLawfirmCaseDecisionRequestCaseDecisionStatusEnum["EXPIRED"] = "EXPIRED";
     SetLawfirmCaseDecisionRequestCaseDecisionStatusEnum["PENDING"] = "PENDING";
-    SetLawfirmCaseDecisionRequestCaseDecisionStatusEnum["REMATCHED"] = "REMATCHED";
-    SetLawfirmCaseDecisionRequestCaseDecisionStatusEnum["REMATCHEDREFERRAL"] = "REMATCHED_REFERRAL";
 })(SetLawfirmCaseDecisionRequestCaseDecisionStatusEnum || (SetLawfirmCaseDecisionRequestCaseDecisionStatusEnum = {}));

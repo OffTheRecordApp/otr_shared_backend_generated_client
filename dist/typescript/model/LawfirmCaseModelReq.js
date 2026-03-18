@@ -16,10 +16,7 @@ export var LawfirmCaseModelReq;
         CaseDecisionStatusEnum[CaseDecisionStatusEnum["ACCEPTED"] = 'ACCEPTED'] = "ACCEPTED";
         CaseDecisionStatusEnum[CaseDecisionStatusEnum["CREATED"] = 'CREATED'] = "CREATED";
         CaseDecisionStatusEnum[CaseDecisionStatusEnum["DECLINED"] = 'DECLINED'] = "DECLINED";
-        CaseDecisionStatusEnum[CaseDecisionStatusEnum["EXPIRED"] = 'EXPIRED'] = "EXPIRED";
         CaseDecisionStatusEnum[CaseDecisionStatusEnum["PENDING"] = 'PENDING'] = "PENDING";
-        CaseDecisionStatusEnum[CaseDecisionStatusEnum["REMATCHED"] = 'REMATCHED'] = "REMATCHED";
-        CaseDecisionStatusEnum[CaseDecisionStatusEnum["REMATCHEDREFERRAL"] = 'REMATCHED_REFERRAL'] = "REMATCHEDREFERRAL";
     })(CaseDecisionStatusEnum = LawfirmCaseModelReq.CaseDecisionStatusEnum || (LawfirmCaseModelReq.CaseDecisionStatusEnum = {}));
     let RefundOwnerEnum;
     (function (RefundOwnerEnum) {

@@ -485,6 +485,7 @@ model/getLawfirmSupportedStatesResponse.ts
 model/getLawfirmTransactionsForCaseResponse.ts
 model/getLawfirmsResponse.ts
 model/getLawyerResponse.ts
+model/getLeadSummaryResponse.ts
 model/getLineItemTypesResponse.ts
 model/getLineItemsResponse.ts
 model/getListOfCitationsWithMissingCourtResponse.ts
@@ -835,6 +836,7 @@ model/source.ts
 model/sqlResponse.ts
 model/statistics.ts
 model/statusCategoryBreakdownModel.ts
+model/statusCounts.ts
 model/stripeAccountLinkDomain.ts
 model/stripeApplicationFeeDomain.ts
 model/stripeApplicationFeeRefundDomain.ts

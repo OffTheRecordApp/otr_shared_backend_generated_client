@@ -16,10 +16,7 @@ export var CaseTransferHistory;
         DecisionStatusEnum[DecisionStatusEnum["ACCEPTED"] = 'ACCEPTED'] = "ACCEPTED";
         DecisionStatusEnum[DecisionStatusEnum["CREATED"] = 'CREATED'] = "CREATED";
         DecisionStatusEnum[DecisionStatusEnum["DECLINED"] = 'DECLINED'] = "DECLINED";
-        DecisionStatusEnum[DecisionStatusEnum["EXPIRED"] = 'EXPIRED'] = "EXPIRED";
         DecisionStatusEnum[DecisionStatusEnum["PENDING"] = 'PENDING'] = "PENDING";
-        DecisionStatusEnum[DecisionStatusEnum["REMATCHED"] = 'REMATCHED'] = "REMATCHED";
-        DecisionStatusEnum[DecisionStatusEnum["REMATCHEDREFERRAL"] = 'REMATCHED_REFERRAL'] = "REMATCHEDREFERRAL";
     })(DecisionStatusEnum = CaseTransferHistory.DecisionStatusEnum || (CaseTransferHistory.DecisionStatusEnum = {}));
     let RefundOwnerEnum;
     (function (RefundOwnerEnum) {

@@ -95,15 +95,12 @@ export namespace LawfirmInboxMessageDomain {
         Resolved: 'RESOLVED' as CaseStatusCategoryEnum,
         Unconfirmed: 'UNCONFIRMED' as CaseStatusCategoryEnum
     };
-    export type LawfirmCaseDecisionStatusEnum = 'ACCEPTED' | 'CREATED' | 'DECLINED' | 'EXPIRED' | 'PENDING' | 'REMATCHED' | 'REMATCHED_REFERRAL';
+    export type LawfirmCaseDecisionStatusEnum = 'ACCEPTED' | 'CREATED' | 'DECLINED' | 'PENDING';
     export const LawfirmCaseDecisionStatusEnum = {
         Accepted: 'ACCEPTED' as LawfirmCaseDecisionStatusEnum,
         Created: 'CREATED' as LawfirmCaseDecisionStatusEnum,
         Declined: 'DECLINED' as LawfirmCaseDecisionStatusEnum,
-        Expired: 'EXPIRED' as LawfirmCaseDecisionStatusEnum,
-        Pending: 'PENDING' as LawfirmCaseDecisionStatusEnum,
-        Rematched: 'REMATCHED' as LawfirmCaseDecisionStatusEnum,
-        RematchedReferral: 'REMATCHED_REFERRAL' as LawfirmCaseDecisionStatusEnum
+        Pending: 'PENDING' as LawfirmCaseDecisionStatusEnum
     };
 }
 

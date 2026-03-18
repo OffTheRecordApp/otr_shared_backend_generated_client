@@ -78,10 +78,7 @@ export var LawfirmCaseModelResCaseDecisionStatusEnum;
     LawfirmCaseModelResCaseDecisionStatusEnum["ACCEPTED"] = "ACCEPTED";
     LawfirmCaseModelResCaseDecisionStatusEnum["CREATED"] = "CREATED";
     LawfirmCaseModelResCaseDecisionStatusEnum["DECLINED"] = "DECLINED";
-    LawfirmCaseModelResCaseDecisionStatusEnum["EXPIRED"] = "EXPIRED";
     LawfirmCaseModelResCaseDecisionStatusEnum["PENDING"] = "PENDING";
-    LawfirmCaseModelResCaseDecisionStatusEnum["REMATCHED"] = "REMATCHED";
-    LawfirmCaseModelResCaseDecisionStatusEnum["REMATCHEDREFERRAL"] = "REMATCHED_REFERRAL";
 })(LawfirmCaseModelResCaseDecisionStatusEnum || (LawfirmCaseModelResCaseDecisionStatusEnum = {}));
 /**
 * @export

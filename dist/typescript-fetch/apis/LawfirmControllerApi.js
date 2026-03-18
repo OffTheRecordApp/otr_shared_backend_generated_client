@@ -21,7 +21,7 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
     });
 };
 import * as runtime from '../runtime';
-import { CreateNewLawfirmRequestToJSON, GetAcceptedCaseBreakdownResponseFromJSON, GetAccountManagersResponseFromJSON, GetLawfirmAddressesResponseFromJSON, GetLawfirmCaseStatsResponseFromJSON, GetLawfirmInboxMessagesResponseFromJSON, GetLawfirmJobTitleResponseFromJSON, GetLawfirmLawyersResponseFromJSON, GetLawfirmResponseFromJSON, GetLawfirmSupportedStatesResponseFromJSON, GetLawfirmsResponseFromJSON, GetStripeConnectedAccountsResponseFromJSON, IntercomSearchTicketsResponseFromJSON, LawfirmPictureRequestToJSON, LawfirmSupportedStateRequestToJSON, LawfirmVacationRequestToJSON, SaveLawfirmAccountManagerRequestToJSON, UpdateLawfirmPaymentModelRequestToJSON, UpdateLawfirmRequestToJSON, UpdateLawyerRoleRequestToJSON, UploadLawfirmsRequestToJSON, UploadLawfirmsResponseFromJSON, UpsertAddressRequestToJSON, } from '../models';
+import { CreateNewLawfirmRequestToJSON, GetAcceptedCaseBreakdownResponseFromJSON, GetAccountManagersResponseFromJSON, GetLawfirmAddressesResponseFromJSON, GetLawfirmCaseStatsResponseFromJSON, GetLawfirmInboxMessagesResponseFromJSON, GetLawfirmJobTitleResponseFromJSON, GetLawfirmLawyersResponseFromJSON, GetLawfirmResponseFromJSON, GetLawfirmSupportedStatesResponseFromJSON, GetLawfirmsResponseFromJSON, GetLeadSummaryResponseFromJSON, GetStripeConnectedAccountsResponseFromJSON, IntercomSearchTicketsResponseFromJSON, LawfirmPictureRequestToJSON, LawfirmSupportedStateRequestToJSON, LawfirmVacationRequestToJSON, SaveLawfirmAccountManagerRequestToJSON, UpdateLawfirmPaymentModelRequestToJSON, UpdateLawfirmRequestToJSON, UpdateLawyerRoleRequestToJSON, UploadLawfirmsRequestToJSON, UploadLawfirmsResponseFromJSON, UpsertAddressRequestToJSON, } from '../models';
 /**
  *
  */
@@ -574,6 +574,40 @@ export class LawfirmControllerApi extends runtime.BaseAPI {
         });
     }
     /**
+     * getLeadSummary
+     */
+    getLeadSummaryUsingGETRaw(requestParameters) {
+        return __awaiter(this, void 0, void 0, function* () {
+            if (requestParameters.lawfirmId === null || requestParameters.lawfirmId === undefined) {
+                throw new runtime.RequiredError('lawfirmId', 'Required parameter requestParameters.lawfirmId was null or undefined when calling getLeadSummaryUsingGET.');
+            }
+            const queryParameters = {};
+            if (requestParameters.endDate !== undefined) {
+                queryParameters['endDate'] = requestParameters.endDate.toISOString().substr(0, 10);
+            }
+            if (requestParameters.startDate !== undefined) {
+                queryParameters['startDate'] = requestParameters.startDate.toISOString().substr(0, 10);
+            }
+            const headerParameters = {};
+            const response = yield this.request({
+                path: `/api/v1/lawfirms/{lawfirmId}/cases/lead-summary`.replace(`{${"lawfirmId"}}`, encodeURIComponent(String(requestParameters.lawfirmId))),
+                method: 'GET',
+                headers: headerParameters,
+                query: queryParameters,
+            });
+            return new runtime.JSONApiResponse(response, (jsonValue) => GetLeadSummaryResponseFromJSON(jsonValue));
+        });
+    }
+    /**
+     * getLeadSummary
+     */
+    getLeadSummaryUsingGET(requestParameters) {
+        return __awaiter(this, void 0, void 0, function* () {
+            const response = yield this.getLeadSummaryUsingGETRaw(requestParameters);
+            return yield response.value();
+        });
+    }
+    /**
      * getOtrLawfirmNotes
      */
     getOtrLawfirmNotesUsingGETRaw(requestParameters) {
@@ -1049,10 +1083,7 @@ export var GetInboxMessagesUsingGETLawfirmCaseDecisionStatusEnum;
     GetInboxMessagesUsingGETLawfirmCaseDecisionStatusEnum["ACCEPTED"] = "ACCEPTED";
     GetInboxMessagesUsingGETLawfirmCaseDecisionStatusEnum["CREATED"] = "CREATED";
     GetInboxMessagesUsingGETLawfirmCaseDecisionStatusEnum["DECLINED"] = "DECLINED";
-    GetInboxMessagesUsingGETLawfirmCaseDecisionStatusEnum["EXPIRED"] = "EXPIRED";
     GetInboxMessagesUsingGETLawfirmCaseDecisionStatusEnum["PENDING"] = "PENDING";
-    GetInboxMessagesUsingGETLawfirmCaseDecisionStatusEnum["REMATCHED"] = "REMATCHED";
-    GetInboxMessagesUsingGETLawfirmCaseDecisionStatusEnum["REMATCHEDREFERRAL"] = "REMATCHED_REFERRAL";
 })(GetInboxMessagesUsingGETLawfirmCaseDecisionStatusEnum || (GetInboxMessagesUsingGETLawfirmCaseDecisionStatusEnum = {}));
 /**
     * @export

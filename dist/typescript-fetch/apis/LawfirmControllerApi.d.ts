@@ -10,7 +10,7 @@
  * Do not edit the class manually.
  */
 import * as runtime from '../runtime';
-import { CreateNewLawfirmRequest, GetAcceptedCaseBreakdownResponse, GetAccountManagersResponse, GetLawfirmAddressesResponse, GetLawfirmCaseStatsResponse, GetLawfirmInboxMessagesResponse, GetLawfirmJobTitleResponse, GetLawfirmLawyersResponse, GetLawfirmResponse, GetLawfirmSupportedStatesResponse, GetLawfirmsResponse, GetStripeConnectedAccountsResponse, IntercomSearchTicketsResponse, LawfirmPictureRequest, LawfirmSupportedStateRequest, LawfirmVacationRequest, SaveLawfirmAccountManagerRequest, UpdateLawfirmPaymentModelRequest, UpdateLawfirmRequest, UpdateLawyerRoleRequest, UploadLawfirmsRequest, UploadLawfirmsResponse, UpsertAddressRequest } from '../models';
+import { CreateNewLawfirmRequest, GetAcceptedCaseBreakdownResponse, GetAccountManagersResponse, GetLawfirmAddressesResponse, GetLawfirmCaseStatsResponse, GetLawfirmInboxMessagesResponse, GetLawfirmJobTitleResponse, GetLawfirmLawyersResponse, GetLawfirmResponse, GetLawfirmSupportedStatesResponse, GetLawfirmsResponse, GetLeadSummaryResponse, GetStripeConnectedAccountsResponse, IntercomSearchTicketsResponse, LawfirmPictureRequest, LawfirmSupportedStateRequest, LawfirmVacationRequest, SaveLawfirmAccountManagerRequest, UpdateLawfirmPaymentModelRequest, UpdateLawfirmRequest, UpdateLawyerRoleRequest, UploadLawfirmsRequest, UploadLawfirmsResponse, UpsertAddressRequest } from '../models';
 export interface AddLawfirmAddressUsingPOSTRequest {
     lawfirmId: number;
     request: UpsertAddressRequest;
@@ -77,6 +77,11 @@ export interface GetLawfirmsUsingGETRequest {
     states?: GetLawfirmsUsingGETStatesEnum;
     statusCategories?: GetLawfirmsUsingGETStatusCategoriesEnum;
     statuses?: GetLawfirmsUsingGETStatusesEnum;
+}
+export interface GetLeadSummaryUsingGETRequest {
+    lawfirmId: number;
+    endDate?: Date;
+    startDate?: Date;
 }
 export interface GetOtrLawfirmNotesUsingGETRequest {
     lawfirmId: string;
@@ -265,6 +270,14 @@ export declare class LawfirmControllerApi extends runtime.BaseAPI {
      */
     getLawfirmsUsingGET(requestParameters: GetLawfirmsUsingGETRequest): Promise<GetLawfirmsResponse>;
     /**
+     * getLeadSummary
+     */
+    getLeadSummaryUsingGETRaw(requestParameters: GetLeadSummaryUsingGETRequest): Promise<runtime.ApiResponse<GetLeadSummaryResponse>>;
+    /**
+     * getLeadSummary
+     */
+    getLeadSummaryUsingGET(requestParameters: GetLeadSummaryUsingGETRequest): Promise<GetLeadSummaryResponse>;
+    /**
      * getOtrLawfirmNotes
      */
     getOtrLawfirmNotesUsingGETRaw(requestParameters: GetOtrLawfirmNotesUsingGETRequest): Promise<runtime.ApiResponse<object>>;
@@ -451,10 +464,7 @@ export declare enum GetInboxMessagesUsingGETLawfirmCaseDecisionStatusEnum {
     ACCEPTED = "ACCEPTED",
     CREATED = "CREATED",
     DECLINED = "DECLINED",
-    EXPIRED = "EXPIRED",
-    PENDING = "PENDING",
-    REMATCHED = "REMATCHED",
-    REMATCHEDREFERRAL = "REMATCHED_REFERRAL"
+    PENDING = "PENDING"
 }
 /**
     * @export

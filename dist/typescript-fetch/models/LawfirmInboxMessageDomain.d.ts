@@ -237,8 +237,5 @@ export declare enum LawfirmInboxMessageDomainLawfirmCaseDecisionStatusEnum {
     ACCEPTED = "ACCEPTED",
     CREATED = "CREATED",
     DECLINED = "DECLINED",
-    EXPIRED = "EXPIRED",
-    PENDING = "PENDING",
-    REMATCHED = "REMATCHED",
-    REMATCHEDREFERRAL = "REMATCHED_REFERRAL"
+    PENDING = "PENDING"
 }

@@ -35,10 +35,7 @@ export declare namespace LawfirmCaseModel {
         ACCEPTED,
         CREATED,
         DECLINED,
-        EXPIRED,
-        PENDING,
-        REMATCHED,
-        REMATCHEDREFERRAL
+        PENDING
     }
     enum RefundOwnerEnum {
         LAWFIRM,

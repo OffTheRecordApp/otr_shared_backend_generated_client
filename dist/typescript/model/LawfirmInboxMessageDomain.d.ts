@@ -94,9 +94,6 @@ export declare namespace LawfirmInboxMessageDomain {
         ACCEPTED,
         CREATED,
         DECLINED,
-        EXPIRED,
-        PENDING,
-        REMATCHED,
-        REMATCHEDREFERRAL
+        PENDING
     }
 }

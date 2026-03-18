@@ -21,9 +21,6 @@ export declare namespace SetLawfirmCaseDecisionRequest {
         ACCEPTED,
         CREATED,
         DECLINED,
-        EXPIRED,
-        PENDING,
-        REMATCHED,
-        REMATCHEDREFERRAL
+        PENDING
     }
 }

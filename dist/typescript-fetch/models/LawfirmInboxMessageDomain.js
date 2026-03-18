@@ -158,8 +158,5 @@ export var LawfirmInboxMessageDomainLawfirmCaseDecisionStatusEnum;
     LawfirmInboxMessageDomainLawfirmCaseDecisionStatusEnum["ACCEPTED"] = "ACCEPTED";
     LawfirmInboxMessageDomainLawfirmCaseDecisionStatusEnum["CREATED"] = "CREATED";
     LawfirmInboxMessageDomainLawfirmCaseDecisionStatusEnum["DECLINED"] = "DECLINED";
-    LawfirmInboxMessageDomainLawfirmCaseDecisionStatusEnum["EXPIRED"] = "EXPIRED";
     LawfirmInboxMessageDomainLawfirmCaseDecisionStatusEnum["PENDING"] = "PENDING";
-    LawfirmInboxMessageDomainLawfirmCaseDecisionStatusEnum["REMATCHED"] = "REMATCHED";
-    LawfirmInboxMessageDomainLawfirmCaseDecisionStatusEnum["REMATCHEDREFERRAL"] = "REMATCHED_REFERRAL";
 })(LawfirmInboxMessageDomainLawfirmCaseDecisionStatusEnum || (LawfirmInboxMessageDomainLawfirmCaseDecisionStatusEnum = {}));

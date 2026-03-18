@@ -3640,6 +3640,23 @@ export interface paths {
         patch?: never;
         trace?: never;
     };
+    "/api/v1/lawfirms/{lawfirmId}/cases/lead-summary": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        /** getLeadSummary */
+        get: operations["getLeadSummaryUsingGET"];
+        put?: never;
+        post?: never;
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
     "/api/v1/lawfirms/{lawfirmId}/cases/stats": {
         parameters: {
             query?: never;
@@ -11448,6 +11465,14 @@ export interface components {
         GetLawyerResponse: {
             lawyer?: components["schemas"]["LawyerModel"];
         };
+        /** GetLeadSummaryResponse */
+        GetLeadSummaryResponse: {
+            /** Format: bigdecimal */
+            acceptancePercentage?: number;
+            statusCounts?: components["schemas"]["StatusCounts"];
+            /** Format: int32 */
+            totalLeads?: number;
+        };
         /** GetLineItemTypesResponse */
         GetLineItemTypesResponse: {
             lineItemTypes?: CaseLineItemDomainReqLineItemType[];
@@ -15054,6 +15079,17 @@ export interface components {
             percentageOfTotal?: number;
             /** @enum {string} */
             statusCategory?: PathsApiV1CaseStatusesGetParametersQueryCategories;
+        };
+        /** StatusCounts */
+        StatusCounts: {
+            /** Format: int32 */
+            accepted?: number;
+            /** Format: int32 */
+            cancelled?: number;
+            /** Format: int32 */
+            declined?: number;
+            /** Format: int32 */
+            pending?: number;
         };
         /** StripeAccountLinkDomain */
         StripeAccountLinkDomain: {
@@ -28664,6 +28700,55 @@ export interface operations {
             };
         };
     };
+    getLeadSummaryUsingGET: {
+        parameters: {
+            query?: {
+                /** @description startDate */
+                startDate?: string;
+                /** @description endDate */
+                endDate?: string;
+            };
+            header?: never;
+            path: {
+                /** @description lawfirmId */
+                lawfirmId: number;
+            };
+            cookie?: never;
+        };
+        requestBody?: never;
+        responses: {
+            /** @description OK */
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "*/*": components["schemas"]["GetLeadSummaryResponse"];
+                };
+            };
+            /** @description Unauthorized */
+            401: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content?: never;
+            };
+            /** @description Forbidden */
+            403: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content?: never;
+            };
+            /** @description Not Found */
+            404: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content?: never;
+            };
+        };
+    };
     getLawfirmCaseStatsUsingGET: {
         parameters: {
             query?: never;
@@ -40976,10 +41061,7 @@ export declare enum PathsApiV1LawfirmsLawfirmIdInboxMessagesGetParametersQueryLa
     ACCEPTED = "ACCEPTED",
     CREATED = "CREATED",
     DECLINED = "DECLINED",
-    EXPIRED = "EXPIRED",
-    PENDING = "PENDING",
-    REMATCHED = "REMATCHED",
-    REMATCHED_REFERRAL = "REMATCHED_REFERRAL"
+    PENDING = "PENDING"
 }
 export declare enum PathsApiV1LawfirmsLawfirmIdInboxMessagesGetParametersQueryCaseCounterOfferStatuses {
     ACCEPTED = "ACCEPTED",

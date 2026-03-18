@@ -28,10 +28,7 @@ export declare namespace CaseTransferHistory {
         ACCEPTED,
         CREATED,
         DECLINED,
-        EXPIRED,
-        PENDING,
-        REMATCHED,
-        REMATCHEDREFERRAL
+        PENDING
     }
     enum RefundOwnerEnum {
         LAWFIRM,

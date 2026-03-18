@@ -94,8 +94,5 @@ export var CaseSummaryDomainCaseDecisionStatusEnum;
     CaseSummaryDomainCaseDecisionStatusEnum["ACCEPTED"] = "ACCEPTED";
     CaseSummaryDomainCaseDecisionStatusEnum["CREATED"] = "CREATED";
     CaseSummaryDomainCaseDecisionStatusEnum["DECLINED"] = "DECLINED";
-    CaseSummaryDomainCaseDecisionStatusEnum["EXPIRED"] = "EXPIRED";
     CaseSummaryDomainCaseDecisionStatusEnum["PENDING"] = "PENDING";
-    CaseSummaryDomainCaseDecisionStatusEnum["REMATCHED"] = "REMATCHED";
-    CaseSummaryDomainCaseDecisionStatusEnum["REMATCHEDREFERRAL"] = "REMATCHED_REFERRAL";
 })(CaseSummaryDomainCaseDecisionStatusEnum || (CaseSummaryDomainCaseDecisionStatusEnum = {}));

@@ -43,9 +43,6 @@ export declare namespace CaseSummaryDomain {
         ACCEPTED,
         CREATED,
         DECLINED,
-        EXPIRED,
-        PENDING,
-        REMATCHED,
-        REMATCHEDREFERRAL
+        PENDING
     }
 }
