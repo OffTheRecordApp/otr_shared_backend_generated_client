@@ -28871,6 +28871,8 @@ export interface operations {
                 regionCodes?: PathsApiV1CitationsCitationIdCourtMissingPostParametersQueryState;
                 /** @description isOverdue */
                 isOverdue?: boolean;
+                /** @description hasUnread */
+                hasUnread?: boolean;
                 /** @description courtDateFilter */
                 courtDateFilter?: PathsApiV2LawfirmLawfirmIdStringCasesPostParametersQueryCourtDateFilter;
                 /** @description latestMessageBy */

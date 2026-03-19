@@ -11226,6 +11226,7 @@ angular.module('otrBackendService', [])
              * @param {string} parameters.courtDateFilter - courtDateFilter
              * @param {integer} parameters.courtIds - courtIds
              * @param {string} parameters.filter - filter
+             * @param {boolean} parameters.hasUnread - hasUnread
              * @param {boolean} parameters.isOverdue - isOverdue
              * @param {string} parameters.latestMessageBy - latestMessageBy
              * @param {string} parameters.lawfirmCaseDecisionStatus - lawfirmCaseDecisionStatus
@@ -11272,6 +11273,10 @@ angular.module('otrBackendService', [])
 
                 if (parameters['filter'] !== undefined) {
                     queryParameters['filter'] = parameters['filter'];
+                }
+
+                if (parameters['hasUnread'] !== undefined) {
+                    queryParameters['hasUnread'] = parameters['hasUnread'];
                 }
 
                 if (parameters['isOverdue'] !== undefined) {
