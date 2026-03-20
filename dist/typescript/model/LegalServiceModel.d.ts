@@ -11,7 +11,7 @@
  */
 import * as models from './models';
 export interface LegalServiceModel {
-    "algoName"?: string;
+    "algoName"?: LegalServiceModel.AlgoNameEnum;
     "chanceOfSuccess"?: number;
     "financials"?: models.WorkflowFinancials;
     "isSelected"?: boolean;
@@ -33,6 +33,12 @@ export interface LegalServiceModel {
     "totalClientCostInCents"?: number;
 }
 export declare namespace LegalServiceModel {
+    enum AlgoNameEnum {
+        DoubleBooking,
+        Predetermined,
+        ReferralCode,
+        RoundRobin
+    }
     enum LegalServiceTypeEnum {
         DEFER,
         FIGHT

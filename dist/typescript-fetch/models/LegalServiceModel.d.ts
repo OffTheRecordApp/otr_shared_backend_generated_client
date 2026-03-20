@@ -21,7 +21,7 @@ export interface LegalServiceModel {
      * @type {string}
      * @memberof LegalServiceModel
      */
-    algoName?: string;
+    algoName?: LegalServiceModelAlgoNameEnum;
     /**
      *
      * @type {number}
@@ -140,6 +140,16 @@ export interface LegalServiceModel {
 export declare function LegalServiceModelFromJSON(json: any): LegalServiceModel;
 export declare function LegalServiceModelFromJSONTyped(json: any, ignoreDiscriminator: boolean): LegalServiceModel;
 export declare function LegalServiceModelToJSON(value?: LegalServiceModel | null): any;
+/**
+* @export
+* @enum {string}
+*/
+export declare enum LegalServiceModelAlgoNameEnum {
+    DoubleBooking = "double_booking",
+    Predetermined = "predetermined",
+    ReferralCode = "referral_code",
+    RoundRobin = "round_robin"
+}
 /**
 * @export
 * @enum {string}

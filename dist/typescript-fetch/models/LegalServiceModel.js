@@ -77,6 +77,17 @@ export function LegalServiceModelToJSON(value) {
 * @export
 * @enum {string}
 */
+export var LegalServiceModelAlgoNameEnum;
+(function (LegalServiceModelAlgoNameEnum) {
+    LegalServiceModelAlgoNameEnum["DoubleBooking"] = "double_booking";
+    LegalServiceModelAlgoNameEnum["Predetermined"] = "predetermined";
+    LegalServiceModelAlgoNameEnum["ReferralCode"] = "referral_code";
+    LegalServiceModelAlgoNameEnum["RoundRobin"] = "round_robin";
+})(LegalServiceModelAlgoNameEnum || (LegalServiceModelAlgoNameEnum = {}));
+/**
+* @export
+* @enum {string}
+*/
 export var LegalServiceModelLegalServiceTypeEnum;
 (function (LegalServiceModelLegalServiceTypeEnum) {
     LegalServiceModelLegalServiceTypeEnum["DEFER"] = "DEFER";

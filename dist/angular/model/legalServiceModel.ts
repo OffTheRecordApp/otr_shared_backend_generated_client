@@ -14,7 +14,7 @@ import { WorkflowLineItemModel } from './workflowLineItemModel';
 
 
 export interface LegalServiceModel { 
-    algoName?: string;
+    algoName?: LegalServiceModel.AlgoNameEnum;
     chanceOfSuccess?: number;
     financials?: WorkflowFinancials;
     isSelected?: boolean;
@@ -36,6 +36,13 @@ export interface LegalServiceModel {
     totalClientCostInCents?: number;
 }
 export namespace LegalServiceModel {
+    export type AlgoNameEnum = 'double_booking' | 'predetermined' | 'referral_code' | 'round_robin';
+    export const AlgoNameEnum = {
+        DoubleBooking: 'double_booking' as AlgoNameEnum,
+        Predetermined: 'predetermined' as AlgoNameEnum,
+        ReferralCode: 'referral_code' as AlgoNameEnum,
+        RoundRobin: 'round_robin' as AlgoNameEnum
+    };
     export type LegalServiceTypeEnum = 'DEFER' | 'FIGHT';
     export const LegalServiceTypeEnum = {
         Defer: 'DEFER' as LegalServiceTypeEnum,

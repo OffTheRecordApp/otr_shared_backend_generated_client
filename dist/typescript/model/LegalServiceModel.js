@@ -11,6 +11,13 @@
  */
 export var LegalServiceModel;
 (function (LegalServiceModel) {
+    let AlgoNameEnum;
+    (function (AlgoNameEnum) {
+        AlgoNameEnum[AlgoNameEnum["DoubleBooking"] = 'double_booking'] = "DoubleBooking";
+        AlgoNameEnum[AlgoNameEnum["Predetermined"] = 'predetermined'] = "Predetermined";
+        AlgoNameEnum[AlgoNameEnum["ReferralCode"] = 'referral_code'] = "ReferralCode";
+        AlgoNameEnum[AlgoNameEnum["RoundRobin"] = 'round_robin'] = "RoundRobin";
+    })(AlgoNameEnum = LegalServiceModel.AlgoNameEnum || (LegalServiceModel.AlgoNameEnum = {}));
     let LegalServiceTypeEnum;
     (function (LegalServiceTypeEnum) {
         LegalServiceTypeEnum[LegalServiceTypeEnum["DEFER"] = 'DEFER'] = "DEFER";

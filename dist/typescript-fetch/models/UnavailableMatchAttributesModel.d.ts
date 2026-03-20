@@ -20,7 +20,7 @@ export interface UnavailableMatchAttributesModel {
      * @type {string}
      * @memberof UnavailableMatchAttributesModel
      */
-    algorithmName?: string;
+    algorithmName?: UnavailableMatchAttributesModelAlgorithmNameEnum;
     /**
      *
      * @type {string}
@@ -37,3 +37,13 @@ export interface UnavailableMatchAttributesModel {
 export declare function UnavailableMatchAttributesModelFromJSON(json: any): UnavailableMatchAttributesModel;
 export declare function UnavailableMatchAttributesModelFromJSONTyped(json: any, ignoreDiscriminator: boolean): UnavailableMatchAttributesModel;
 export declare function UnavailableMatchAttributesModelToJSON(value?: UnavailableMatchAttributesModel | null): any;
+/**
+* @export
+* @enum {string}
+*/
+export declare enum UnavailableMatchAttributesModelAlgorithmNameEnum {
+    DoubleBooking = "double_booking",
+    Predetermined = "predetermined",
+    ReferralCode = "referral_code",
+    RoundRobin = "round_robin"
+}

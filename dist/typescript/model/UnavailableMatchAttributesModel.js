@@ -9,4 +9,13 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-export {};
+export var UnavailableMatchAttributesModel;
+(function (UnavailableMatchAttributesModel) {
+    let AlgorithmNameEnum;
+    (function (AlgorithmNameEnum) {
+        AlgorithmNameEnum[AlgorithmNameEnum["DoubleBooking"] = 'double_booking'] = "DoubleBooking";
+        AlgorithmNameEnum[AlgorithmNameEnum["Predetermined"] = 'predetermined'] = "Predetermined";
+        AlgorithmNameEnum[AlgorithmNameEnum["ReferralCode"] = 'referral_code'] = "ReferralCode";
+        AlgorithmNameEnum[AlgorithmNameEnum["RoundRobin"] = 'round_robin'] = "RoundRobin";
+    })(AlgorithmNameEnum = UnavailableMatchAttributesModel.AlgorithmNameEnum || (UnavailableMatchAttributesModel.AlgorithmNameEnum = {}));
+})(UnavailableMatchAttributesModel || (UnavailableMatchAttributesModel = {}));

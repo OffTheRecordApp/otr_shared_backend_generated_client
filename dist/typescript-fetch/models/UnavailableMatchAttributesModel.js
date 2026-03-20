@@ -38,3 +38,14 @@ export function UnavailableMatchAttributesModelToJSON(value) {
         'reasonNotAvailable': value.reasonNotAvailable,
     };
 }
+/**
+* @export
+* @enum {string}
+*/
+export var UnavailableMatchAttributesModelAlgorithmNameEnum;
+(function (UnavailableMatchAttributesModelAlgorithmNameEnum) {
+    UnavailableMatchAttributesModelAlgorithmNameEnum["DoubleBooking"] = "double_booking";
+    UnavailableMatchAttributesModelAlgorithmNameEnum["Predetermined"] = "predetermined";
+    UnavailableMatchAttributesModelAlgorithmNameEnum["ReferralCode"] = "referral_code";
+    UnavailableMatchAttributesModelAlgorithmNameEnum["RoundRobin"] = "round_robin";
+})(UnavailableMatchAttributesModelAlgorithmNameEnum || (UnavailableMatchAttributesModelAlgorithmNameEnum = {}));

@@ -10,7 +10,15 @@
  * Do not edit the class manually.
  */
 export interface UnavailableMatchAttributesModel {
-    "algorithmName"?: string;
+    "algorithmName"?: UnavailableMatchAttributesModel.AlgorithmNameEnum;
     "lawfirmId"?: string;
     "reasonNotAvailable"?: string;
+}
+export declare namespace UnavailableMatchAttributesModel {
+    enum AlgorithmNameEnum {
+        DoubleBooking,
+        Predetermined,
+        ReferralCode,
+        RoundRobin
+    }
 }

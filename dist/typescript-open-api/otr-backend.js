@@ -1107,6 +1107,13 @@ export var LawyerLicenseModelLicenseType;
 (function (LawyerLicenseModelLicenseType) {
     LawyerLicenseModelLicenseType["BAR"] = "BAR";
 })(LawyerLicenseModelLicenseType || (LawyerLicenseModelLicenseType = {}));
+export var LegalServiceModelAlgoName;
+(function (LegalServiceModelAlgoName) {
+    LegalServiceModelAlgoName["double_booking"] = "double_booking";
+    LegalServiceModelAlgoName["predetermined"] = "predetermined";
+    LegalServiceModelAlgoName["referral_code"] = "referral_code";
+    LegalServiceModelAlgoName["round_robin"] = "round_robin";
+})(LegalServiceModelAlgoName || (LegalServiceModelAlgoName = {}));
 export var LegalServiceModelLegalVertical;
 (function (LegalServiceModelLegalVertical) {
     LegalServiceModelLegalVertical["TRAFFIC"] = "TRAFFIC";

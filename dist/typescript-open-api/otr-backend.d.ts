@@ -12796,7 +12796,8 @@ export interface components {
         };
         /** LegalServiceModel */
         LegalServiceModel: {
-            algoName?: string;
+            /** @enum {string} */
+            algoName?: LegalServiceModelAlgoName;
             /** Format: int32 */
             chanceOfSuccess?: number;
             financials?: components["schemas"]["WorkflowFinancials"];
@@ -15794,7 +15795,8 @@ export interface components {
         };
         /** UnavailableMatchAttributesModel */
         UnavailableMatchAttributesModel: {
-            algorithmName?: string;
+            /** @enum {string} */
+            algorithmName?: LegalServiceModelAlgoName;
             lawfirmId?: string;
             reasonNotAvailable?: string;
         };
@@ -41743,6 +41745,12 @@ export declare enum LawfirmSettingsDomainReferralFeeType {
 }
 export declare enum LawyerLicenseModelLicenseType {
     BAR = "BAR"
+}
+export declare enum LegalServiceModelAlgoName {
+    double_booking = "double_booking",
+    predetermined = "predetermined",
+    referral_code = "referral_code",
+    round_robin = "round_robin"
 }
 export declare enum LegalServiceModelLegalVertical {
     TRAFFIC = "TRAFFIC"

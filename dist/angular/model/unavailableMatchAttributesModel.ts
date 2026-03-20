@@ -12,8 +12,18 @@
 
 
 export interface UnavailableMatchAttributesModel { 
-    algorithmName?: string;
+    algorithmName?: UnavailableMatchAttributesModel.AlgorithmNameEnum;
     lawfirmId?: string;
     reasonNotAvailable?: string;
 }
+export namespace UnavailableMatchAttributesModel {
+    export type AlgorithmNameEnum = 'double_booking' | 'predetermined' | 'referral_code' | 'round_robin';
+    export const AlgorithmNameEnum = {
+        DoubleBooking: 'double_booking' as AlgorithmNameEnum,
+        Predetermined: 'predetermined' as AlgorithmNameEnum,
+        ReferralCode: 'referral_code' as AlgorithmNameEnum,
+        RoundRobin: 'round_robin' as AlgorithmNameEnum
+    };
+}
+
 
