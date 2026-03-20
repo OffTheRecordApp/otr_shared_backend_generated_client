@@ -29,6 +29,7 @@ export interface LawfirmInboxMessageDomain {
     "customerLastName"?: string;
     "hasFlagMessage"?: boolean;
     "hasStarMessage"?: boolean;
+    "hasUnreadMessages"?: boolean;
     "lawfirmCaseDecisionStatus"?: LawfirmInboxMessageDomain.LawfirmCaseDecisionStatusEnum;
     "lawfirmReceiptDateUtc"?: string;
     "messageBody"?: string;

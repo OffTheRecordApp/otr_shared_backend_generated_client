@@ -12477,6 +12477,7 @@ export interface components {
             customerLastName?: string;
             hasFlagMessage?: boolean;
             hasStarMessage?: boolean;
+            hasUnreadMessages?: boolean;
             /** @enum {string} */
             lawfirmCaseDecisionStatus?: PathsApiV1LawfirmsLawfirmIdInboxMessagesGetParametersQueryLawfirmCaseDecisionStatus;
             /** Format: date-time */

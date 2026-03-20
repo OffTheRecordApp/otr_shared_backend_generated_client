@@ -126,6 +126,12 @@ export interface LawfirmInboxMessageDomain {
     hasStarMessage?: boolean;
     /**
      *
+     * @type {boolean}
+     * @memberof LawfirmInboxMessageDomain
+     */
+    hasUnreadMessages?: boolean;
+    /**
+     *
      * @type {string}
      * @memberof LawfirmInboxMessageDomain
      */
