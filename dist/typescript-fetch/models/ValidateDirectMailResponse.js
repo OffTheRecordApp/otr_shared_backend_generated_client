@@ -340,6 +340,7 @@ export var ValidateDirectMailResponseOtrErrorEnum;
     ValidateDirectMailResponseOtrErrorEnum["USERISNOTTHEOWNER"] = "USER_IS_NOT_THE_OWNER";
     ValidateDirectMailResponseOtrErrorEnum["USERNOTFOUND"] = "USER_NOT_FOUND";
     ValidateDirectMailResponseOtrErrorEnum["USERNOTFOUNDINLAWFIRM"] = "USER_NOT_FOUND_IN_LAWFIRM";
+    ValidateDirectMailResponseOtrErrorEnum["VERIFICATIONCODENOTNUMERIC"] = "VERIFICATION_CODE_NOT_NUMERIC";
     ValidateDirectMailResponseOtrErrorEnum["VERIFICATIONCODENOTVALID"] = "VERIFICATION_CODE_NOT_VALID";
     ValidateDirectMailResponseOtrErrorEnum["VERIFICATIONLINKNOTVALID"] = "VERIFICATION_LINK_NOT_VALID";
 })(ValidateDirectMailResponseOtrErrorEnum || (ValidateDirectMailResponseOtrErrorEnum = {}));
