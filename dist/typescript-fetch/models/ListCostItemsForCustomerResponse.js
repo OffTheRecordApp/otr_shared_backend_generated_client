@@ -25,6 +25,7 @@ export function ListCostItemsForCustomerResponseFromJSONTyped(json, ignoreDiscri
         'clientTotalCostInCents': !exists(json, 'clientTotalCostInCents') ? undefined : json['clientTotalCostInCents'],
         'futurePayments': !exists(json, 'futurePayments') ? undefined : (json['futurePayments'].map(CasePaymentModelFromJSON)),
         'lineItems': !exists(json, 'lineItems') ? undefined : (json['lineItems'].map(LineItemModelFromJSON)),
+        'totalCaseCostInCents': !exists(json, 'totalCaseCostInCents') ? undefined : json['totalCaseCostInCents'],
         'totalRefCodeAdjustmentInCents': !exists(json, 'totalRefCodeAdjustmentInCents') ? undefined : json['totalRefCodeAdjustmentInCents'],
     };
 }
@@ -40,6 +41,7 @@ export function ListCostItemsForCustomerResponseToJSON(value) {
         'clientTotalCostInCents': value.clientTotalCostInCents,
         'futurePayments': value.futurePayments === undefined ? undefined : (value.futurePayments.map(CasePaymentModelToJSON)),
         'lineItems': value.lineItems === undefined ? undefined : (value.lineItems.map(LineItemModelToJSON)),
+        'totalCaseCostInCents': value.totalCaseCostInCents,
         'totalRefCodeAdjustmentInCents': value.totalRefCodeAdjustmentInCents,
     };
 }

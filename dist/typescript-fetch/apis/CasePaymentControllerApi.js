@@ -369,12 +369,6 @@ export class CasePaymentControllerApi extends runtime.BaseAPI {
                 throw new runtime.RequiredError('caseId', 'Required parameter requestParameters.caseId was null or undefined when calling listCostItemsForCustomerUsingGET.');
             }
             const queryParameters = {};
-            if (requestParameters.period !== undefined) {
-                queryParameters['period'] = requestParameters.period;
-            }
-            if (requestParameters.productId !== undefined) {
-                queryParameters['productId'] = requestParameters.productId;
-            }
             const headerParameters = {};
             const response = yield this.request({
                 path: `/api/v1/cases/{caseId}/customer/cost`.replace(`{${"caseId"}}`, encodeURIComponent(String(requestParameters.caseId))),
@@ -568,18 +562,6 @@ export var GenerateCasePaymentPlanUsingGETPeriodEnum;
     GenerateCasePaymentPlanUsingGETPeriodEnum["WEEKLY"] = "WEEKLY";
     GenerateCasePaymentPlanUsingGETPeriodEnum["YEARLY"] = "YEARLY";
 })(GenerateCasePaymentPlanUsingGETPeriodEnum || (GenerateCasePaymentPlanUsingGETPeriodEnum = {}));
-/**
-    * @export
-    * @enum {string}
-    */
-export var ListCostItemsForCustomerUsingGETPeriodEnum;
-(function (ListCostItemsForCustomerUsingGETPeriodEnum) {
-    ListCostItemsForCustomerUsingGETPeriodEnum["DAILY"] = "DAILY";
-    ListCostItemsForCustomerUsingGETPeriodEnum["MONTHLY"] = "MONTHLY";
-    ListCostItemsForCustomerUsingGETPeriodEnum["QUARTERLY"] = "QUARTERLY";
-    ListCostItemsForCustomerUsingGETPeriodEnum["WEEKLY"] = "WEEKLY";
-    ListCostItemsForCustomerUsingGETPeriodEnum["YEARLY"] = "YEARLY";
-})(ListCostItemsForCustomerUsingGETPeriodEnum || (ListCostItemsForCustomerUsingGETPeriodEnum = {}));
 /**
     * @export
     * @enum {string}

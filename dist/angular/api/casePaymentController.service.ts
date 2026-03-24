@@ -808,27 +808,15 @@ export class CasePaymentControllerService {
     /**
      * listCostItemsForCustomer
      * @param caseId caseId
-     * @param period period
-     * @param productId productId
      * @param observe set whether or not to return the data Observable as the body, response or events. defaults to returning the body.
      * @param reportProgress flag to report request and response progress.
      */
-    public listCostItemsForCustomerUsingGET(caseId: string, period?: 'DAILY' | 'MONTHLY' | 'QUARTERLY' | 'WEEKLY' | 'YEARLY', productId?: string, observe?: 'body', reportProgress?: boolean, options?: {httpHeaderAccept?: '*/*', context?: HttpContext}): Observable<ListCostItemsForCustomerResponse>;
-    public listCostItemsForCustomerUsingGET(caseId: string, period?: 'DAILY' | 'MONTHLY' | 'QUARTERLY' | 'WEEKLY' | 'YEARLY', productId?: string, observe?: 'response', reportProgress?: boolean, options?: {httpHeaderAccept?: '*/*', context?: HttpContext}): Observable<HttpResponse<ListCostItemsForCustomerResponse>>;
-    public listCostItemsForCustomerUsingGET(caseId: string, period?: 'DAILY' | 'MONTHLY' | 'QUARTERLY' | 'WEEKLY' | 'YEARLY', productId?: string, observe?: 'events', reportProgress?: boolean, options?: {httpHeaderAccept?: '*/*', context?: HttpContext}): Observable<HttpEvent<ListCostItemsForCustomerResponse>>;
-    public listCostItemsForCustomerUsingGET(caseId: string, period?: 'DAILY' | 'MONTHLY' | 'QUARTERLY' | 'WEEKLY' | 'YEARLY', productId?: string, observe: any = 'body', reportProgress: boolean = false, options?: {httpHeaderAccept?: '*/*', context?: HttpContext}): Observable<any> {
+    public listCostItemsForCustomerUsingGET(caseId: string, observe?: 'body', reportProgress?: boolean, options?: {httpHeaderAccept?: '*/*', context?: HttpContext}): Observable<ListCostItemsForCustomerResponse>;
+    public listCostItemsForCustomerUsingGET(caseId: string, observe?: 'response', reportProgress?: boolean, options?: {httpHeaderAccept?: '*/*', context?: HttpContext}): Observable<HttpResponse<ListCostItemsForCustomerResponse>>;
+    public listCostItemsForCustomerUsingGET(caseId: string, observe?: 'events', reportProgress?: boolean, options?: {httpHeaderAccept?: '*/*', context?: HttpContext}): Observable<HttpEvent<ListCostItemsForCustomerResponse>>;
+    public listCostItemsForCustomerUsingGET(caseId: string, observe: any = 'body', reportProgress: boolean = false, options?: {httpHeaderAccept?: '*/*', context?: HttpContext}): Observable<any> {
         if (caseId === null || caseId === undefined) {
             throw new Error('Required parameter caseId was null or undefined when calling listCostItemsForCustomerUsingGET.');
-        }
-
-        let localVarQueryParameters = new HttpParams({encoder: this.encoder});
-        if (period !== undefined && period !== null) {
-          localVarQueryParameters = this.addToHttpParams(localVarQueryParameters,
-            <any>period, 'period');
-        }
-        if (productId !== undefined && productId !== null) {
-          localVarQueryParameters = this.addToHttpParams(localVarQueryParameters,
-            <any>productId, 'productId');
         }
 
         let localVarHeaders = this.defaultHeaders;
@@ -866,7 +854,6 @@ export class CasePaymentControllerService {
         return this.httpClient.request<ListCostItemsForCustomerResponse>('get', `${this.configuration.basePath}${localVarPath}`,
             {
                 context: localVarHttpContext,
-                params: localVarQueryParameters,
                 responseType: <any>responseType_,
                 withCredentials: this.configuration.withCredentials,
                 headers: localVarHeaders,

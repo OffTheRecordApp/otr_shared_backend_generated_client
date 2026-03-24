@@ -97,10 +97,8 @@ export declare class CasePaymentControllerApi {
      *
      * @summary listCostItemsForCustomer
      * @param caseId caseId
-     * @param period period
-     * @param productId productId
      */
-    listCostItemsForCustomerUsingGET(caseId: string, period?: 'DAILY' | 'MONTHLY' | 'QUARTERLY' | 'WEEKLY' | 'YEARLY', productId?: string, extraHttpRequestParams?: any): ng.IHttpPromise<models.ListCostItemsForCustomerResponse>;
+    listCostItemsForCustomerUsingGET(caseId: string, extraHttpRequestParams?: any): ng.IHttpPromise<models.ListCostItemsForCustomerResponse>;
     /**
      *
      * @summary saveCasePaymentPlan

@@ -356,10 +356,8 @@ export class CasePaymentControllerApi {
      *
      * @summary listCostItemsForCustomer
      * @param caseId caseId
-     * @param period period
-     * @param productId productId
      */
-    listCostItemsForCustomerUsingGET(caseId, period, productId, extraHttpRequestParams) {
+    listCostItemsForCustomerUsingGET(caseId, extraHttpRequestParams) {
         const localVarPath = this.basePath + '/api/v1/cases/{caseId}/customer/cost'
             .replace('{' + 'caseId' + '}', encodeURIComponent(String(caseId)));
         let queryParameters = {};
@@ -367,12 +365,6 @@ export class CasePaymentControllerApi {
         // verify required parameter 'caseId' is not null or undefined
         if (caseId === null || caseId === undefined) {
             throw new Error('Required parameter caseId was null or undefined when calling listCostItemsForCustomerUsingGET.');
-        }
-        if (period !== undefined) {
-            queryParameters['period'] = period;
-        }
-        if (productId !== undefined) {
-            queryParameters['productId'] = productId;
         }
         let httpRequestParams = {
             method: 'GET',

@@ -45,6 +45,12 @@ export interface ListCostItemsForCustomerResponse {
      * @type {number}
      * @memberof ListCostItemsForCustomerResponse
      */
+    totalCaseCostInCents?: number;
+    /**
+     *
+     * @type {number}
+     * @memberof ListCostItemsForCustomerResponse
+     */
     totalRefCodeAdjustmentInCents?: number;
 }
 export declare function ListCostItemsForCustomerResponseFromJSON(json: any): ListCostItemsForCustomerResponse;

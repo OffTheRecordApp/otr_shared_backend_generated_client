@@ -59,8 +59,6 @@ export interface GetStripeChargesUsingGETRequest {
 }
 export interface ListCostItemsForCustomerUsingGETRequest {
     caseId: string;
-    period?: ListCostItemsForCustomerUsingGETPeriodEnum;
-    productId?: string;
 }
 export interface SaveCasePaymentPlanUsingPOSTRequest {
     caseId: string;
@@ -221,17 +219,6 @@ export declare class CasePaymentControllerApi extends runtime.BaseAPI {
     * @enum {string}
     */
 export declare enum GenerateCasePaymentPlanUsingGETPeriodEnum {
-    DAILY = "DAILY",
-    MONTHLY = "MONTHLY",
-    QUARTERLY = "QUARTERLY",
-    WEEKLY = "WEEKLY",
-    YEARLY = "YEARLY"
-}
-/**
-    * @export
-    * @enum {string}
-    */
-export declare enum ListCostItemsForCustomerUsingGETPeriodEnum {
     DAILY = "DAILY",
     MONTHLY = "MONTHLY",
     QUARTERLY = "QUARTERLY",

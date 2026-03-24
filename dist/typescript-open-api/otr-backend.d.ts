@@ -7981,7 +7981,7 @@ export interface components {
             finalUnitAmountInCents?: number;
             id?: string;
             /** @enum {string} */
-            interval?: PathsApiV1CasesCaseIdCustomerCostGetParametersQueryPeriod;
+            interval?: PathsApiV1CasesCaseIdPaymentPlansPaymentPlanTypeIdGetParametersQueryPeriod;
             /** Format: int64 */
             intervalCount?: number;
             /** Format: int64 */
@@ -8037,7 +8037,7 @@ export interface components {
             billingScheme?: BillingPriceModelBillingScheme;
             id?: string;
             /** @enum {string} */
-            interval?: PathsApiV1CasesCaseIdCustomerCostGetParametersQueryPeriod;
+            interval?: PathsApiV1CasesCaseIdPaymentPlansPaymentPlanTypeIdGetParametersQueryPeriod;
             /** Format: int64 */
             intervalCount?: number;
             priceDescription?: string;
@@ -9659,7 +9659,7 @@ export interface components {
             billingScheme?: BillingPriceModelBillingScheme;
             id?: string;
             /** @enum {string} */
-            interval?: PathsApiV1CasesCaseIdCustomerCostGetParametersQueryPeriod;
+            interval?: PathsApiV1CasesCaseIdPaymentPlansPaymentPlanTypeIdGetParametersQueryPeriod;
             /** Format: int64 */
             intervalCount?: number;
             priceDescription?: string;
@@ -12925,7 +12925,7 @@ export interface components {
         /** ListBillingSubscriptionModel */
         ListBillingSubscriptionModel: {
             /** @enum {string} */
-            billingInterval?: PathsApiV1CasesCaseIdCustomerCostGetParametersQueryPeriod;
+            billingInterval?: PathsApiV1CasesCaseIdPaymentPlansPaymentPlanTypeIdGetParametersQueryPeriod;
             /** Format: date-time */
             currentPeriodEndDate?: string;
             /** Format: date-time */
@@ -13054,6 +13054,8 @@ export interface components {
             clientTotalCostInCents?: number;
             futurePayments?: components["schemas"]["CasePaymentModel"][];
             lineItems?: components["schemas"]["LineItemModel"][];
+            /** Format: int32 */
+            totalCaseCostInCents?: number;
             /** Format: int32 */
             totalRefCodeAdjustmentInCents?: number;
         };
@@ -14455,7 +14457,7 @@ export interface components {
         /** SaveBillingProductOptionRequest */
         SaveBillingProductOptionRequest: {
             /** @enum {string} */
-            interval?: PathsApiV1CasesCaseIdCustomerCostGetParametersQueryPeriod;
+            interval?: PathsApiV1CasesCaseIdPaymentPlansPaymentPlanTypeIdGetParametersQueryPeriod;
             /** @enum {string} */
             offerType?: CreateBillingSubscriptionRequestPromoOfferType;
         };
@@ -19567,12 +19569,7 @@ export interface operations {
     };
     listCostItemsForCustomerUsingGET: {
         parameters: {
-            query?: {
-                /** @description productId */
-                productId?: string;
-                /** @description period */
-                period?: PathsApiV1CasesCaseIdCustomerCostGetParametersQueryPeriod;
-            };
+            query?: never;
             header?: never;
             path: {
                 /** @description caseId */
@@ -19718,7 +19715,7 @@ export interface operations {
                 /** @description productId */
                 productId?: string;
                 /** @description period */
-                period?: PathsApiV1CasesCaseIdCustomerCostGetParametersQueryPeriod;
+                period?: PathsApiV1CasesCaseIdPaymentPlansPaymentPlanTypeIdGetParametersQueryPeriod;
             };
             header?: never;
             path: {
@@ -22512,7 +22509,7 @@ export interface operations {
                 /** @description planName */
                 planName?: string;
                 /** @description billingInterval */
-                billingInterval?: PathsApiV1CasesCaseIdCustomerCostGetParametersQueryPeriod;
+                billingInterval?: PathsApiV1CasesCaseIdPaymentPlansPaymentPlanTypeIdGetParametersQueryPeriod;
                 /** @description billingSubscriptionStatus */
                 billingSubscriptionStatus?: PathsApiV1BillingSubscribersGetParametersQueryBillingSubscriptionStatus;
                 /** @description coveredSubscriptionsOnly */
@@ -40915,7 +40912,7 @@ export declare enum PathsApiV1CitationsCitationIdAuditLogsGetParametersQueryLogL
     NON_TECHNICAL = "NON_TECHNICAL",
     TECHNICAL = "TECHNICAL"
 }
-export declare enum PathsApiV1CasesCaseIdCustomerCostGetParametersQueryPeriod {
+export declare enum PathsApiV1CasesCaseIdPaymentPlansPaymentPlanTypeIdGetParametersQueryPeriod {
     DAILY = "DAILY",
     MONTHLY = "MONTHLY",
     QUARTERLY = "QUARTERLY",

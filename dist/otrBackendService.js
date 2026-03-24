@@ -2533,8 +2533,6 @@ angular.module('otrBackendService', [])
              * @name OtrService#listCostItemsForCustomerUsingGET
              * @param {object} parameters - method options and parameters
              * @param {string} parameters.caseId - caseId
-             * @param {string} parameters.period - period
-             * @param {string} parameters.productId - productId
              */
             OtrService.prototype.listCostItemsForCustomerUsingGET = function(parameters) {
                 if (parameters === undefined) {
@@ -2555,14 +2553,6 @@ angular.module('otrBackendService', [])
                 if (parameters['caseId'] === undefined) {
                     deferred.reject(new Error('Missing required  parameter: caseId'));
                     return deferred.promise;
-                }
-
-                if (parameters['period'] !== undefined) {
-                    queryParameters['period'] = parameters['period'];
-                }
-
-                if (parameters['productId'] !== undefined) {
-                    queryParameters['productId'] = parameters['productId'];
                 }
 
                 queryParameters = mergeQueryParams(parameters, queryParameters);

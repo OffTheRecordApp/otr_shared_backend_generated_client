@@ -18,6 +18,7 @@ export interface ListCostItemsForCustomerResponse {
     clientTotalCostInCents?: number;
     futurePayments?: Array<CasePaymentModel>;
     lineItems?: Array<LineItemModel>;
+    totalCaseCostInCents?: number;
     totalRefCodeAdjustmentInCents?: number;
 }
 

@@ -137,14 +137,14 @@ export var PathsApiV1CitationsCitationIdAuditLogsGetParametersQueryLogLevel;
     PathsApiV1CitationsCitationIdAuditLogsGetParametersQueryLogLevel["NON_TECHNICAL"] = "NON_TECHNICAL";
     PathsApiV1CitationsCitationIdAuditLogsGetParametersQueryLogLevel["TECHNICAL"] = "TECHNICAL";
 })(PathsApiV1CitationsCitationIdAuditLogsGetParametersQueryLogLevel || (PathsApiV1CitationsCitationIdAuditLogsGetParametersQueryLogLevel = {}));
-export var PathsApiV1CasesCaseIdCustomerCostGetParametersQueryPeriod;
-(function (PathsApiV1CasesCaseIdCustomerCostGetParametersQueryPeriod) {
-    PathsApiV1CasesCaseIdCustomerCostGetParametersQueryPeriod["DAILY"] = "DAILY";
-    PathsApiV1CasesCaseIdCustomerCostGetParametersQueryPeriod["MONTHLY"] = "MONTHLY";
-    PathsApiV1CasesCaseIdCustomerCostGetParametersQueryPeriod["QUARTERLY"] = "QUARTERLY";
-    PathsApiV1CasesCaseIdCustomerCostGetParametersQueryPeriod["WEEKLY"] = "WEEKLY";
-    PathsApiV1CasesCaseIdCustomerCostGetParametersQueryPeriod["YEARLY"] = "YEARLY";
-})(PathsApiV1CasesCaseIdCustomerCostGetParametersQueryPeriod || (PathsApiV1CasesCaseIdCustomerCostGetParametersQueryPeriod = {}));
+export var PathsApiV1CasesCaseIdPaymentPlansPaymentPlanTypeIdGetParametersQueryPeriod;
+(function (PathsApiV1CasesCaseIdPaymentPlansPaymentPlanTypeIdGetParametersQueryPeriod) {
+    PathsApiV1CasesCaseIdPaymentPlansPaymentPlanTypeIdGetParametersQueryPeriod["DAILY"] = "DAILY";
+    PathsApiV1CasesCaseIdPaymentPlansPaymentPlanTypeIdGetParametersQueryPeriod["MONTHLY"] = "MONTHLY";
+    PathsApiV1CasesCaseIdPaymentPlansPaymentPlanTypeIdGetParametersQueryPeriod["QUARTERLY"] = "QUARTERLY";
+    PathsApiV1CasesCaseIdPaymentPlansPaymentPlanTypeIdGetParametersQueryPeriod["WEEKLY"] = "WEEKLY";
+    PathsApiV1CasesCaseIdPaymentPlansPaymentPlanTypeIdGetParametersQueryPeriod["YEARLY"] = "YEARLY";
+})(PathsApiV1CasesCaseIdPaymentPlansPaymentPlanTypeIdGetParametersQueryPeriod || (PathsApiV1CasesCaseIdPaymentPlansPaymentPlanTypeIdGetParametersQueryPeriod = {}));
 export var PathsApiV1PaymentsCasePaymentIdOwnerPutParametersQueryRecipient;
 (function (PathsApiV1PaymentsCasePaymentIdOwnerPutParametersQueryRecipient) {
     PathsApiV1PaymentsCasePaymentIdOwnerPutParametersQueryRecipient["COURT"] = "COURT";
