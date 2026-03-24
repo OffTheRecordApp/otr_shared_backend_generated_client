@@ -9,6 +9,7 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
+import { CaseCounterStatusCounts, CaseStatusCounts } from './';
 /**
  *
  * @export
@@ -25,6 +26,18 @@ export interface GetLawfirmCaseStatsResponse {
     };
     /**
      *
+     * @type {CaseCounterStatusCounts}
+     * @memberof GetLawfirmCaseStatsResponse
+     */
+    caseCounterStatusCounts?: CaseCounterStatusCounts;
+    /**
+     *
+     * @type {CaseStatusCounts}
+     * @memberof GetLawfirmCaseStatsResponse
+     */
+    caseStatusCounts?: CaseStatusCounts;
+    /**
+     *
      * @type {number}
      * @memberof GetLawfirmCaseStatsResponse
      */
@@ -34,7 +47,31 @@ export interface GetLawfirmCaseStatsResponse {
      * @type {number}
      * @memberof GetLawfirmCaseStatsResponse
      */
+    numNoCourtDate?: number;
+    /**
+     *
+     * @type {number}
+     * @memberof GetLawfirmCaseStatsResponse
+     */
+    numPastCourtDate?: number;
+    /**
+     *
+     * @type {number}
+     * @memberof GetLawfirmCaseStatsResponse
+     */
     numResolvedCases?: number;
+    /**
+     *
+     * @type {number}
+     * @memberof GetLawfirmCaseStatsResponse
+     */
+    numSupportedState?: number;
+    /**
+     *
+     * @type {number}
+     * @memberof GetLawfirmCaseStatsResponse
+     */
+    numUnread?: number;
     /**
      *
      * @type {number}

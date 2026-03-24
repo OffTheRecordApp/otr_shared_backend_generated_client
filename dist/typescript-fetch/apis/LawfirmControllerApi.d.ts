@@ -57,6 +57,7 @@ export interface GetLawfirmByUrlUsingGETRequest {
 }
 export interface GetLawfirmCaseStatsUsingGETRequest {
     lawfirmId: number;
+    includeExtendedCounts?: boolean;
 }
 export interface GetLawfirmLawyersUsingGETRequest {
     lawfirmId: number;

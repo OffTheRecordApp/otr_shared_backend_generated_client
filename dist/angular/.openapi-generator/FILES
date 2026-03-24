@@ -218,6 +218,7 @@ model/caseChargeResponsePojo.ts
 model/caseCounterOfferModel.ts
 model/caseCounterOption.ts
 model/caseCounterOptionModel.ts
+model/caseCounterStatusCounts.ts
 model/caseCreationRequest.ts
 model/caseDeclineCategory.ts
 model/caseDeclineCategoryReasonsModel.ts
@@ -235,6 +236,7 @@ model/caseOutcomeModel.ts
 model/casePaymentBreakdownItemModel.ts
 model/casePaymentDomain.ts
 model/casePaymentModel.ts
+model/caseStatusCounts.ts
 model/caseStatusDetailsResponse.ts
 model/caseStatusDomain.ts
 model/caseSummaryDomain.ts

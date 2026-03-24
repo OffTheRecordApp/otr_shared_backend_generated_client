@@ -10723,6 +10723,7 @@ angular.module('otrBackendService', [])
              * @method
              * @name OtrService#getLawfirmCaseStatsUsingGET
              * @param {object} parameters - method options and parameters
+             * @param {boolean} parameters.includeExtendedCounts - includeExtendedCounts
              * @param {integer} parameters.lawfirmId - lawfirmId
              */
             OtrService.prototype.getLawfirmCaseStatsUsingGET = function(parameters) {
@@ -10738,6 +10739,10 @@ angular.module('otrBackendService', [])
                     form = {};
 
                 headers['Accept'] = ['*/*'];
+
+                if (parameters['includeExtendedCounts'] !== undefined) {
+                    queryParameters['includeExtendedCounts'] = parameters['includeExtendedCounts'];
+                }
 
                 path = path.replace('{lawfirmId}', parameters['lawfirmId']);
 

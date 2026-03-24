@@ -9,11 +9,18 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
+import * as models from './models';
 export interface GetLawfirmCaseStatsResponse {
     "caseCountByStatusMap"?: {
         [key: string]: number;
     };
+    "caseCounterStatusCounts"?: models.CaseCounterStatusCounts;
+    "caseStatusCounts"?: models.CaseStatusCounts;
     "numBookedCases"?: number;
+    "numNoCourtDate"?: number;
+    "numPastCourtDate"?: number;
     "numResolvedCases"?: number;
+    "numSupportedState"?: number;
+    "numUnread"?: number;
     "successRate"?: number;
 }

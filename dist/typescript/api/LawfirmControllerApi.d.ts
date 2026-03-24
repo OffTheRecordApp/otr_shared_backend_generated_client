@@ -97,8 +97,9 @@ export declare class LawfirmControllerApi {
      *
      * @summary getLawfirmCaseStats
      * @param lawfirmId lawfirmId
+     * @param includeExtendedCounts includeExtendedCounts
      */
-    getLawfirmCaseStatsUsingGET(lawfirmId: number, extraHttpRequestParams?: any): ng.IHttpPromise<models.GetLawfirmCaseStatsResponse>;
+    getLawfirmCaseStatsUsingGET(lawfirmId: number, includeExtendedCounts?: boolean, extraHttpRequestParams?: any): ng.IHttpPromise<models.GetLawfirmCaseStatsResponse>;
     /**
      *
      * @summary getLawfirmJobTitles

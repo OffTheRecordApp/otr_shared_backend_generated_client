@@ -8400,6 +8400,15 @@ export interface components {
             type?: CaseCounterOptionModelType;
             value?: string;
         };
+        /** CaseCounterStatusCounts */
+        CaseCounterStatusCounts: {
+            /** Format: int32 */
+            numAccepted?: number;
+            /** Format: int32 */
+            numDeclined?: number;
+            /** Format: int32 */
+            numPending?: number;
+        };
         /** CaseCreationRequest */
         CaseCreationRequest: {
             /** Format: date-time */
@@ -8791,6 +8800,17 @@ export interface components {
             /** Format: int32 */
             feeAmount?: number;
             items?: components["schemas"]["CasePaymentBreakdownItemModel"][];
+        };
+        /** CaseStatusCounts */
+        CaseStatusCounts: {
+            /** Format: int32 */
+            numActive?: number;
+            /** Format: int32 */
+            numCancelled?: number;
+            /** Format: int32 */
+            numCancelledByDate?: number;
+            /** Format: int32 */
+            numResolved?: number;
         };
         /** CaseStatusDetailsResponse */
         CaseStatusDetailsResponse: {
@@ -11231,10 +11251,20 @@ export interface components {
             caseCountByStatusMap?: {
                 [key: string]: number;
             };
+            caseCounterStatusCounts?: components["schemas"]["CaseCounterStatusCounts"];
+            caseStatusCounts?: components["schemas"]["CaseStatusCounts"];
             /** Format: int32 */
             numBookedCases?: number;
             /** Format: int32 */
+            numNoCourtDate?: number;
+            /** Format: int32 */
+            numPastCourtDate?: number;
+            /** Format: int32 */
             numResolvedCases?: number;
+            /** Format: int32 */
+            numSupportedState?: number;
+            /** Format: int32 */
+            numUnread?: number;
             /** Format: int32 */
             successRate?: number;
         };
@@ -28761,7 +28791,10 @@ export interface operations {
     };
     getLawfirmCaseStatsUsingGET: {
         parameters: {
-            query?: never;
+            query?: {
+                /** @description includeExtendedCounts */
+                includeExtendedCounts?: boolean;
+            };
             header?: never;
             path: {
                 /** @description lawfirmId */

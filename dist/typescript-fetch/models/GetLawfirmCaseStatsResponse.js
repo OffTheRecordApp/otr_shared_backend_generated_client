@@ -12,6 +12,7 @@
  * Do not edit the class manually.
  */
 import { exists } from '../runtime';
+import { CaseCounterStatusCountsFromJSON, CaseCounterStatusCountsToJSON, CaseStatusCountsFromJSON, CaseStatusCountsToJSON, } from './';
 export function GetLawfirmCaseStatsResponseFromJSON(json) {
     return GetLawfirmCaseStatsResponseFromJSONTyped(json, false);
 }
@@ -21,8 +22,14 @@ export function GetLawfirmCaseStatsResponseFromJSONTyped(json, ignoreDiscriminat
     }
     return {
         'caseCountByStatusMap': !exists(json, 'caseCountByStatusMap') ? undefined : json['caseCountByStatusMap'],
+        'caseCounterStatusCounts': !exists(json, 'caseCounterStatusCounts') ? undefined : CaseCounterStatusCountsFromJSON(json['caseCounterStatusCounts']),
+        'caseStatusCounts': !exists(json, 'caseStatusCounts') ? undefined : CaseStatusCountsFromJSON(json['caseStatusCounts']),
         'numBookedCases': !exists(json, 'numBookedCases') ? undefined : json['numBookedCases'],
+        'numNoCourtDate': !exists(json, 'numNoCourtDate') ? undefined : json['numNoCourtDate'],
+        'numPastCourtDate': !exists(json, 'numPastCourtDate') ? undefined : json['numPastCourtDate'],
         'numResolvedCases': !exists(json, 'numResolvedCases') ? undefined : json['numResolvedCases'],
+        'numSupportedState': !exists(json, 'numSupportedState') ? undefined : json['numSupportedState'],
+        'numUnread': !exists(json, 'numUnread') ? undefined : json['numUnread'],
         'successRate': !exists(json, 'successRate') ? undefined : json['successRate'],
     };
 }
@@ -35,8 +42,14 @@ export function GetLawfirmCaseStatsResponseToJSON(value) {
     }
     return {
         'caseCountByStatusMap': value.caseCountByStatusMap,
+        'caseCounterStatusCounts': CaseCounterStatusCountsToJSON(value.caseCounterStatusCounts),
+        'caseStatusCounts': CaseStatusCountsToJSON(value.caseStatusCounts),
         'numBookedCases': value.numBookedCases,
+        'numNoCourtDate': value.numNoCourtDate,
+        'numPastCourtDate': value.numPastCourtDate,
         'numResolvedCases': value.numResolvedCases,
+        'numSupportedState': value.numSupportedState,
+        'numUnread': value.numUnread,
         'successRate': value.successRate,
     };
 }

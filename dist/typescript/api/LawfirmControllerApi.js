@@ -342,8 +342,9 @@ export class LawfirmControllerApi {
      *
      * @summary getLawfirmCaseStats
      * @param lawfirmId lawfirmId
+     * @param includeExtendedCounts includeExtendedCounts
      */
-    getLawfirmCaseStatsUsingGET(lawfirmId, extraHttpRequestParams) {
+    getLawfirmCaseStatsUsingGET(lawfirmId, includeExtendedCounts, extraHttpRequestParams) {
         const localVarPath = this.basePath + '/api/v1/lawfirms/{lawfirmId}/cases/stats'
             .replace('{' + 'lawfirmId' + '}', encodeURIComponent(String(lawfirmId)));
         let queryParameters = {};
@@ -351,6 +352,9 @@ export class LawfirmControllerApi {
         // verify required parameter 'lawfirmId' is not null or undefined
         if (lawfirmId === null || lawfirmId === undefined) {
             throw new Error('Required parameter lawfirmId was null or undefined when calling getLawfirmCaseStatsUsingGET.');
+        }
+        if (includeExtendedCounts !== undefined) {
+            queryParameters['includeExtendedCounts'] = includeExtendedCounts;
         }
         let httpRequestParams = {
             method: 'GET',
