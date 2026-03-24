@@ -21,8 +21,10 @@ export declare class PushNotificationControllerApi {
      *
      * @summary getUnreadCounts
      * @param includeMessage includeMessage
+     * @param limit limit
+     * @param offset offset
      */
-    getUnreadCountsUsingGET(includeMessage?: boolean, extraHttpRequestParams?: any): ng.IHttpPromise<models.NotificationEvents>;
+    getUnreadCountsUsingGET(includeMessage?: boolean, limit?: number, offset?: number, extraHttpRequestParams?: any): ng.IHttpPromise<models.NotificationEvents>;
     /**
      *
      * @summary markAllReadForUser

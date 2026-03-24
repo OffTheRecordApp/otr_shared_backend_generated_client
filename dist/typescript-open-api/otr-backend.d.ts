@@ -33530,6 +33530,10 @@ export interface operations {
             query?: {
                 /** @description includeMessage */
                 includeMessage?: boolean;
+                /** @description limit */
+                limit?: number;
+                /** @description offset */
+                offset?: number;
             };
             header?: never;
             path?: never;

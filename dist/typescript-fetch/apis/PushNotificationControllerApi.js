@@ -35,6 +35,12 @@ export class PushNotificationControllerApi extends runtime.BaseAPI {
             if (requestParameters.includeMessage !== undefined) {
                 queryParameters['includeMessage'] = requestParameters.includeMessage;
             }
+            if (requestParameters.limit !== undefined) {
+                queryParameters['limit'] = requestParameters.limit;
+            }
+            if (requestParameters.offset !== undefined) {
+                queryParameters['offset'] = requestParameters.offset;
+            }
             const headerParameters = {};
             const response = yield this.request({
                 path: `/api/v1/notifications/unread`,

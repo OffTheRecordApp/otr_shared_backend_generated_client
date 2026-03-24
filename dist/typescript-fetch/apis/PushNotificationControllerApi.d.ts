@@ -13,6 +13,8 @@ import * as runtime from '../runtime';
 import { DeleteNotificationByPagesRequest, DeleteNotificationEventRequest, NotificationEvents, PushNotificationRegistrationRequest, PushNotificationRequest } from '../models';
 export interface GetUnreadCountsUsingGETRequest {
     includeMessage?: boolean;
+    limit?: number;
+    offset?: number;
 }
 export interface MarkAllReadForUserUsingDELETERequest {
     userId: string;

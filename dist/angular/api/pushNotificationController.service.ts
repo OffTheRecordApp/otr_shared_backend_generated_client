@@ -102,18 +102,28 @@ export class PushNotificationControllerService {
     /**
      * getUnreadCounts
      * @param includeMessage includeMessage
+     * @param limit limit
+     * @param offset offset
      * @param observe set whether or not to return the data Observable as the body, response or events. defaults to returning the body.
      * @param reportProgress flag to report request and response progress.
      */
-    public getUnreadCountsUsingGET(includeMessage?: boolean, observe?: 'body', reportProgress?: boolean, options?: {httpHeaderAccept?: '*/*', context?: HttpContext}): Observable<NotificationEvents>;
-    public getUnreadCountsUsingGET(includeMessage?: boolean, observe?: 'response', reportProgress?: boolean, options?: {httpHeaderAccept?: '*/*', context?: HttpContext}): Observable<HttpResponse<NotificationEvents>>;
-    public getUnreadCountsUsingGET(includeMessage?: boolean, observe?: 'events', reportProgress?: boolean, options?: {httpHeaderAccept?: '*/*', context?: HttpContext}): Observable<HttpEvent<NotificationEvents>>;
-    public getUnreadCountsUsingGET(includeMessage?: boolean, observe: any = 'body', reportProgress: boolean = false, options?: {httpHeaderAccept?: '*/*', context?: HttpContext}): Observable<any> {
+    public getUnreadCountsUsingGET(includeMessage?: boolean, limit?: number, offset?: number, observe?: 'body', reportProgress?: boolean, options?: {httpHeaderAccept?: '*/*', context?: HttpContext}): Observable<NotificationEvents>;
+    public getUnreadCountsUsingGET(includeMessage?: boolean, limit?: number, offset?: number, observe?: 'response', reportProgress?: boolean, options?: {httpHeaderAccept?: '*/*', context?: HttpContext}): Observable<HttpResponse<NotificationEvents>>;
+    public getUnreadCountsUsingGET(includeMessage?: boolean, limit?: number, offset?: number, observe?: 'events', reportProgress?: boolean, options?: {httpHeaderAccept?: '*/*', context?: HttpContext}): Observable<HttpEvent<NotificationEvents>>;
+    public getUnreadCountsUsingGET(includeMessage?: boolean, limit?: number, offset?: number, observe: any = 'body', reportProgress: boolean = false, options?: {httpHeaderAccept?: '*/*', context?: HttpContext}): Observable<any> {
 
         let localVarQueryParameters = new HttpParams({encoder: this.encoder});
         if (includeMessage !== undefined && includeMessage !== null) {
           localVarQueryParameters = this.addToHttpParams(localVarQueryParameters,
             <any>includeMessage, 'includeMessage');
+        }
+        if (limit !== undefined && limit !== null) {
+          localVarQueryParameters = this.addToHttpParams(localVarQueryParameters,
+            <any>limit, 'limit');
+        }
+        if (offset !== undefined && offset !== null) {
+          localVarQueryParameters = this.addToHttpParams(localVarQueryParameters,
+            <any>offset, 'offset');
         }
 
         let localVarHeaders = this.defaultHeaders;

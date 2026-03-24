@@ -12885,6 +12885,8 @@ angular.module('otrBackendService', [])
              * @name OtrService#getUnreadCountsUsingGET
              * @param {object} parameters - method options and parameters
              * @param {boolean} parameters.includeMessage - includeMessage
+             * @param {integer} parameters.limit - limit
+             * @param {integer} parameters.offset - offset
              */
             OtrService.prototype.getUnreadCountsUsingGET = function(parameters) {
                 if (parameters === undefined) {
@@ -12902,6 +12904,17 @@ angular.module('otrBackendService', [])
 
                 if (parameters['includeMessage'] !== undefined) {
                     queryParameters['includeMessage'] = parameters['includeMessage'];
+                }
+
+                /** set default value **/
+                queryParameters['limit'] = 20;
+
+                if (parameters['limit'] !== undefined) {
+                    queryParameters['limit'] = parameters['limit'];
+                }
+
+                if (parameters['offset'] !== undefined) {
+                    queryParameters['offset'] = parameters['offset'];
                 }
 
                 queryParameters = mergeQueryParams(parameters, queryParameters);

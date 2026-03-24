@@ -24,13 +24,21 @@ export class PushNotificationControllerApi {
      *
      * @summary getUnreadCounts
      * @param includeMessage includeMessage
+     * @param limit limit
+     * @param offset offset
      */
-    getUnreadCountsUsingGET(includeMessage, extraHttpRequestParams) {
+    getUnreadCountsUsingGET(includeMessage, limit, offset, extraHttpRequestParams) {
         const localVarPath = this.basePath + '/api/v1/notifications/unread';
         let queryParameters = {};
         let headerParams = Object.assign({}, this.defaultHeaders);
         if (includeMessage !== undefined) {
             queryParameters['includeMessage'] = includeMessage;
+        }
+        if (limit !== undefined) {
+            queryParameters['limit'] = limit;
+        }
+        if (offset !== undefined) {
+            queryParameters['offset'] = offset;
         }
         let httpRequestParams = {
             method: 'GET',
