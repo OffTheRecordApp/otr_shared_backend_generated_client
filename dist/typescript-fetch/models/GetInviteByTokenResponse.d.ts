@@ -24,6 +24,12 @@ export interface GetInviteByTokenResponse {
     emailAddress?: string;
     /**
      *
+     * @type {Date}
+     * @memberof GetInviteByTokenResponse
+     */
+    expiryDateUtc?: Date;
+    /**
+     *
      * @type {string}
      * @memberof GetInviteByTokenResponse
      */

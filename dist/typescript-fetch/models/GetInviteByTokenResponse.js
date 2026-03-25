@@ -22,6 +22,7 @@ export function GetInviteByTokenResponseFromJSONTyped(json, ignoreDiscriminator)
     }
     return {
         'emailAddress': !exists(json, 'emailAddress') ? undefined : json['emailAddress'],
+        'expiryDateUtc': !exists(json, 'expiryDateUtc') ? undefined : (new Date(json['expiryDateUtc'])),
         'fullName': !exists(json, 'fullName') ? undefined : json['fullName'],
         'hasAccount': !exists(json, 'hasAccount') ? undefined : json['hasAccount'],
         'inviteeEmailAddress': !exists(json, 'inviteeEmailAddress') ? undefined : json['inviteeEmailAddress'],
@@ -44,6 +45,7 @@ export function GetInviteByTokenResponseToJSON(value) {
     }
     return {
         'emailAddress': value.emailAddress,
+        'expiryDateUtc': value.expiryDateUtc === undefined ? undefined : (value.expiryDateUtc.toISOString()),
         'fullName': value.fullName,
         'hasAccount': value.hasAccount,
         'inviteeEmailAddress': value.inviteeEmailAddress,

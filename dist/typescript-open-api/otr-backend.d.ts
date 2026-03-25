@@ -11219,6 +11219,8 @@ export interface components {
         /** GetInviteByTokenResponse */
         GetInviteByTokenResponse: {
             emailAddress?: string;
+            /** Format: date-time */
+            expiryDateUtc?: string;
             fullName?: string;
             hasAccount?: boolean;
             inviteeEmailAddress?: string;

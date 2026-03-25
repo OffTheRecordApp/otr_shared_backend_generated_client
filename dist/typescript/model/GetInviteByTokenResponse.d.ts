@@ -12,6 +12,7 @@
 import * as models from './models';
 export interface GetInviteByTokenResponse {
     "emailAddress"?: string;
+    "expiryDateUtc"?: string;
     "fullName"?: string;
     "hasAccount"?: boolean;
     "inviteeEmailAddress"?: string;

@@ -14,6 +14,7 @@ import { LawyerInviteByTokenModel } from './lawyerInviteByTokenModel';
 
 export interface GetInviteByTokenResponse { 
     emailAddress?: string;
+    expiryDateUtc?: string;
     fullName?: string;
     hasAccount?: boolean;
     inviteeEmailAddress?: string;
