@@ -11262,6 +11262,8 @@ export interface components {
             /** Format: int32 */
             numResolvedCases?: number;
             /** Format: int32 */
+            numStarred?: number;
+            /** Format: int32 */
             numSupportedState?: number;
             /** Format: int32 */
             numUnread?: number;

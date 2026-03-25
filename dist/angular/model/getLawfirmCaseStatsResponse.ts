@@ -21,6 +21,7 @@ export interface GetLawfirmCaseStatsResponse {
     numNoCourtDate?: number;
     numPastCourtDate?: number;
     numResolvedCases?: number;
+    numStarred?: number;
     numSupportedState?: number;
     numUnread?: number;
     successRate?: number;

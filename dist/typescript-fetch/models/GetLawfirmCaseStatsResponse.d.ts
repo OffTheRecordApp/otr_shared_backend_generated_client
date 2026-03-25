@@ -65,6 +65,12 @@ export interface GetLawfirmCaseStatsResponse {
      * @type {number}
      * @memberof GetLawfirmCaseStatsResponse
      */
+    numStarred?: number;
+    /**
+     *
+     * @type {number}
+     * @memberof GetLawfirmCaseStatsResponse
+     */
     numSupportedState?: number;
     /**
      *
