@@ -8608,12 +8608,16 @@ export interface components {
             caseStatusDomain?: components["schemas"]["CaseStatusDomain"];
             citation?: components["schemas"]["CitationModel"];
             courtAppointmentDate?: components["schemas"]["Timestamp"];
+            /** Format: int64 */
+            defendantUserId?: number;
             hasLeftLawyerReview?: boolean;
             isPointSystemState?: boolean;
             lawfirmCaseDecision?: components["schemas"]["LawfirmCaseModel"];
             lawfirmCodeApplied?: boolean;
             letterOfEngagement?: components["schemas"]["LetterOfEngagement"];
             maxPenalties?: components["schemas"]["CaseViolationPenalty"][];
+            /** Format: int64 */
+            ownerUserId?: number;
             paymentPlanTypeModel?: components["schemas"]["PaymentPlanTypeModel"];
             referralCode?: string;
             /** @enum {string} */
@@ -8648,12 +8652,16 @@ export interface components {
             caseStatusDomain?: components["schemas"]["CaseStatusDomain"];
             citation?: components["schemas"]["CitationModelReq"];
             courtAppointmentDate?: components["schemas"]["TimestampReq"];
+            /** Format: int64 */
+            defendantUserId?: number;
             hasLeftLawyerReview?: boolean;
             isPointSystemState?: boolean;
             lawfirmCaseDecision?: components["schemas"]["LawfirmCaseModelReq"];
             lawfirmCodeApplied?: boolean;
             letterOfEngagement?: components["schemas"]["LetterOfEngagement"];
             maxPenalties?: components["schemas"]["CaseViolationPenalty"][];
+            /** Format: int64 */
+            ownerUserId?: number;
             paymentPlanTypeModel?: components["schemas"]["PaymentPlanTypeModelReq"];
             referralCode?: string;
             /** @enum {string} */
@@ -8688,12 +8696,16 @@ export interface components {
             caseStatusDomain?: components["schemas"]["CaseStatusDomain"];
             citation?: components["schemas"]["CitationModelRes"];
             courtAppointmentDate?: components["schemas"]["TimestampRes"];
+            /** Format: int64 */
+            defendantUserId?: number;
             hasLeftLawyerReview?: boolean;
             isPointSystemState?: boolean;
             lawfirmCaseDecision?: components["schemas"]["LawfirmCaseModelRes"];
             lawfirmCodeApplied?: boolean;
             letterOfEngagement?: components["schemas"]["LetterOfEngagement"];
             maxPenalties?: components["schemas"]["CaseViolationPenalty"][];
+            /** Format: int64 */
+            ownerUserId?: number;
             paymentPlanTypeModel?: components["schemas"]["PaymentPlanTypeModelRes"];
             referralCode?: string;
             /** @enum {string} */

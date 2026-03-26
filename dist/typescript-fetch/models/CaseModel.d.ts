@@ -120,6 +120,12 @@ export interface CaseModel {
     courtAppointmentDate?: Timestamp;
     /**
      *
+     * @type {number}
+     * @memberof CaseModel
+     */
+    defendantUserId?: number;
+    /**
+     *
      * @type {boolean}
      * @memberof CaseModel
      */
@@ -154,6 +160,12 @@ export interface CaseModel {
      * @memberof CaseModel
      */
     maxPenalties?: Array<CaseViolationPenalty>;
+    /**
+     *
+     * @type {number}
+     * @memberof CaseModel
+     */
+    ownerUserId?: number;
     /**
      *
      * @type {PaymentPlanTypeModel}

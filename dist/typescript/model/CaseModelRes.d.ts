@@ -28,12 +28,14 @@ export interface CaseModelRes {
     "caseStatusDomain"?: models.CaseStatusDomain;
     "citation"?: models.CitationModelRes;
     "courtAppointmentDate"?: models.TimestampRes;
+    "defendantUserId"?: number;
     "hasLeftLawyerReview"?: boolean;
     "isPointSystemState"?: boolean;
     "lawfirmCaseDecision"?: models.LawfirmCaseModelRes;
     "lawfirmCodeApplied"?: boolean;
     "letterOfEngagement"?: models.LetterOfEngagement;
     "maxPenalties"?: Array<models.CaseViolationPenalty>;
+    "ownerUserId"?: number;
     "paymentPlanTypeModel"?: models.PaymentPlanTypeModelRes;
     "referralCode"?: string;
     "refundEligibility"?: CaseModelRes.RefundEligibilityEnum;
