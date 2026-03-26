@@ -12902,7 +12902,7 @@ angular.module('otrBackendService', [])
                 }
 
                 /** set default value **/
-                queryParameters['limit'] = 100;
+                queryParameters['limit'] = 5000;
 
                 if (parameters['limit'] !== undefined) {
                     queryParameters['limit'] = parameters['limit'];
