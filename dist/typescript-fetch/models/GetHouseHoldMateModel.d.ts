@@ -47,6 +47,12 @@ export interface GetHouseHoldMateModel {
     inviteStatus?: GetHouseHoldMateModelInviteStatusEnum;
     /**
      *
+     * @type {Date}
+     * @memberof GetHouseHoldMateModel
+     */
+    joinDateUtc?: Date;
+    /**
+     *
      * @type {string}
      * @memberof GetHouseHoldMateModel
      */

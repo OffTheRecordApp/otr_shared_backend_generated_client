@@ -11212,6 +11212,8 @@ export interface components {
             fullName?: string;
             /** @enum {string} */
             inviteStatus?: DashboardCaseUserModelVerificationStatus;
+            /** Format: date-time */
+            joinDateUtc?: string;
             profilePictureUrl?: string;
             /** @enum {string} */
             relationshipType?: GetHouseHoldMateModelRelationshipType;
@@ -42114,6 +42116,9 @@ export declare enum ValidateDirectMailResponseOtrError {
     FRESHDESK_TICKET_NOT_FOUND = "FRESHDESK_TICKET_NOT_FOUND",
     FRESHDESK_UNEXPECTED_NUMBER_OF_RESULTS = "FRESHDESK_UNEXPECTED_NUMBER_OF_RESULTS",
     GHOST_USER_NOT_ALLOWED = "GHOST_USER_NOT_ALLOWED",
+    HOUSEHOLD_MATE_INVITE_FASTLANE_ACTIVE_MEMBER = "HOUSEHOLD_MATE_INVITE_FASTLANE_ACTIVE_MEMBER",
+    HOUSEHOLD_MATE_INVITE_FASTLANE_TEEN_MEMBER = "HOUSEHOLD_MATE_INVITE_FASTLANE_TEEN_MEMBER",
+    HOUSEHOLD_MATE_INVITE_FASTLANE_TRIAL_MEMBER = "HOUSEHOLD_MATE_INVITE_FASTLANE_TRIAL_MEMBER",
     HTTP_REQUEST_ERROR = "HTTP_REQUEST_ERROR",
     IMAGE_NOT_COMPRESSED_PROPERLY = "IMAGE_NOT_COMPRESSED_PROPERLY",
     INACTIVE_STOREFRONT = "INACTIVE_STOREFRONT",
