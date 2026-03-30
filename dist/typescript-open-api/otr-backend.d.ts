@@ -3862,6 +3862,23 @@ export interface paths {
         patch?: never;
         trace?: never;
     };
+    "/api/v1/lawfirms/{lawfirmId}/dashboard/earnings/top-courts": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        /** getTopCourtEarnings */
+        get: operations["getTopCourtEarningsUsingGET"];
+        put?: never;
+        post?: never;
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
     "/api/v1/lawfirms/{lawfirmId}/dashboard/gross-earnings": {
         parameters: {
             query?: never;
@@ -11717,6 +11734,12 @@ export interface components {
         GetTicketReviewResponse: {
             ticketReview?: components["schemas"]["TicketReviewRequestRes"];
         };
+        /** GetTopCourtEarningsResponse */
+        GetTopCourtEarningsResponse: {
+            data?: components["schemas"]["TopCourtEarningsModel"][];
+            /** Format: int64 */
+            totalGrossEarningsInCents?: number;
+        };
         /** GetTrafficViolationModel */
         GetTrafficViolationModel: {
             classDescription?: string;
@@ -15810,6 +15833,16 @@ export interface components {
             timezoneOffset?: number;
             /** Format: int32 */
             year?: number;
+        };
+        /** TopCourtEarningsModel */
+        TopCourtEarningsModel: {
+            /** Format: int32 */
+            caseCount?: number;
+            courtName?: string;
+            /** Format: int64 */
+            grossEarningsInCents?: number;
+            /** Format: double */
+            percentageOfTotal?: number;
         };
         /** Topic */
         Topic: {
@@ -29440,6 +29473,57 @@ export interface operations {
                     [name: string]: unknown;
                 };
                 content?: never;
+            };
+            /** @description Unauthorized */
+            401: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content?: never;
+            };
+            /** @description Forbidden */
+            403: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content?: never;
+            };
+            /** @description Not Found */
+            404: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content?: never;
+            };
+        };
+    };
+    getTopCourtEarningsUsingGET: {
+        parameters: {
+            query?: {
+                /** @description limit */
+                limit?: number;
+                /** @description startDate */
+                startDate?: string;
+                /** @description endDate */
+                endDate?: string;
+            };
+            header?: never;
+            path: {
+                /** @description lawfirmId */
+                lawfirmId: number;
+            };
+            cookie?: never;
+        };
+        requestBody?: never;
+        responses: {
+            /** @description OK */
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "*/*": components["schemas"]["GetTopCourtEarningsResponse"];
+                };
             };
             /** @description Unauthorized */
             401: {

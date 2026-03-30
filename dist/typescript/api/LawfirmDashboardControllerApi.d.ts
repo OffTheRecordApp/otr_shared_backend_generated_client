@@ -26,4 +26,13 @@ export declare class LawfirmDashboardControllerApi {
      * @param startDate startDate
      */
     getLawfirmGrossEarningsUsingGET(lawfirmId: number, period: 'DAILY' | 'HOURLY' | 'MONTHLY' | 'WEEKLY', endDate?: string, startDate?: string, extraHttpRequestParams?: any): ng.IHttpPromise<models.GetLawfirmGrossEarningsResponse>;
+    /**
+     *
+     * @summary getTopCourtEarnings
+     * @param lawfirmId lawfirmId
+     * @param endDate endDate
+     * @param limit limit
+     * @param startDate startDate
+     */
+    getTopCourtEarningsUsingGET(lawfirmId: number, endDate?: string, limit?: number, startDate?: string, extraHttpRequestParams?: any): ng.IHttpPromise<models.GetTopCourtEarningsResponse>;
 }

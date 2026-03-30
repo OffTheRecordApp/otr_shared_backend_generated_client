@@ -21,7 +21,7 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
     });
 };
 import * as runtime from '../runtime';
-import { GetLawfirmGrossEarningsResponseFromJSON, } from '../models';
+import { GetLawfirmGrossEarningsResponseFromJSON, GetTopCourtEarningsResponseFromJSON, } from '../models';
 /**
  *
  */
@@ -63,6 +63,43 @@ export class LawfirmDashboardControllerApi extends runtime.BaseAPI {
     getLawfirmGrossEarningsUsingGET(requestParameters) {
         return __awaiter(this, void 0, void 0, function* () {
             const response = yield this.getLawfirmGrossEarningsUsingGETRaw(requestParameters);
+            return yield response.value();
+        });
+    }
+    /**
+     * getTopCourtEarnings
+     */
+    getTopCourtEarningsUsingGETRaw(requestParameters) {
+        return __awaiter(this, void 0, void 0, function* () {
+            if (requestParameters.lawfirmId === null || requestParameters.lawfirmId === undefined) {
+                throw new runtime.RequiredError('lawfirmId', 'Required parameter requestParameters.lawfirmId was null or undefined when calling getTopCourtEarningsUsingGET.');
+            }
+            const queryParameters = {};
+            if (requestParameters.endDate !== undefined) {
+                queryParameters['endDate'] = requestParameters.endDate.toISOString().substr(0, 10);
+            }
+            if (requestParameters.limit !== undefined) {
+                queryParameters['limit'] = requestParameters.limit;
+            }
+            if (requestParameters.startDate !== undefined) {
+                queryParameters['startDate'] = requestParameters.startDate.toISOString().substr(0, 10);
+            }
+            const headerParameters = {};
+            const response = yield this.request({
+                path: `/api/v1/lawfirms/{lawfirmId}/dashboard/earnings/top-courts`.replace(`{${"lawfirmId"}}`, encodeURIComponent(String(requestParameters.lawfirmId))),
+                method: 'GET',
+                headers: headerParameters,
+                query: queryParameters,
+            });
+            return new runtime.JSONApiResponse(response, (jsonValue) => GetTopCourtEarningsResponseFromJSON(jsonValue));
+        });
+    }
+    /**
+     * getTopCourtEarnings
+     */
+    getTopCourtEarningsUsingGET(requestParameters) {
+        return __awaiter(this, void 0, void 0, function* () {
+            const response = yield this.getTopCourtEarningsUsingGETRaw(requestParameters);
             return yield response.value();
         });
     }

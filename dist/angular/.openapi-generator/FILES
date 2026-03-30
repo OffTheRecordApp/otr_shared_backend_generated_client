@@ -520,6 +520,7 @@ model/getStripeChargesResponse.ts
 model/getStripeConnectedAccountsResponse.ts
 model/getSupportTicketsResponse.ts
 model/getTicketReviewResponse.ts
+model/getTopCourtEarningsResponse.ts
 model/getTrafficViolationModel.ts
 model/getTrafficViolationTypesResponse.ts
 model/getUserAddressesResponse.ts
@@ -897,6 +898,7 @@ model/timelineItem.ts
 model/timestamp.ts
 model/timestampReq.ts
 model/timestampRes.ts
+model/topCourtEarningsModel.ts
 model/topic.ts
 model/topics.ts
 model/trafficViolationInputRequest.ts

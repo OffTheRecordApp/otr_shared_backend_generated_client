@@ -61,5 +61,42 @@ export class LawfirmDashboardControllerApi {
         }
         return this.$http(httpRequestParams);
     }
+    /**
+     *
+     * @summary getTopCourtEarnings
+     * @param lawfirmId lawfirmId
+     * @param endDate endDate
+     * @param limit limit
+     * @param startDate startDate
+     */
+    getTopCourtEarningsUsingGET(lawfirmId, endDate, limit, startDate, extraHttpRequestParams) {
+        const localVarPath = this.basePath + '/api/v1/lawfirms/{lawfirmId}/dashboard/earnings/top-courts'
+            .replace('{' + 'lawfirmId' + '}', encodeURIComponent(String(lawfirmId)));
+        let queryParameters = {};
+        let headerParams = Object.assign({}, this.defaultHeaders);
+        // verify required parameter 'lawfirmId' is not null or undefined
+        if (lawfirmId === null || lawfirmId === undefined) {
+            throw new Error('Required parameter lawfirmId was null or undefined when calling getTopCourtEarningsUsingGET.');
+        }
+        if (endDate !== undefined) {
+            queryParameters['endDate'] = endDate;
+        }
+        if (limit !== undefined) {
+            queryParameters['limit'] = limit;
+        }
+        if (startDate !== undefined) {
+            queryParameters['startDate'] = startDate;
+        }
+        let httpRequestParams = {
+            method: 'GET',
+            url: localVarPath,
+            params: queryParameters,
+            headers: headerParams
+        };
+        if (extraHttpRequestParams) {
+            httpRequestParams = Object.assign(httpRequestParams, extraHttpRequestParams);
+        }
+        return this.$http(httpRequestParams);
+    }
 }
 LawfirmDashboardControllerApi.$inject = ['$http', '$httpParamSerializer', 'basePath'];

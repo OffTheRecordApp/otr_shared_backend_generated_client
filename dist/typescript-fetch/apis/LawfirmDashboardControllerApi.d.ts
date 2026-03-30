@@ -10,11 +10,17 @@
  * Do not edit the class manually.
  */
 import * as runtime from '../runtime';
-import { GetLawfirmGrossEarningsResponse } from '../models';
+import { GetLawfirmGrossEarningsResponse, GetTopCourtEarningsResponse } from '../models';
 export interface GetLawfirmGrossEarningsUsingGETRequest {
     lawfirmId: number;
     period: GetLawfirmGrossEarningsUsingGETPeriodEnum;
     endDate?: Date;
+    startDate?: Date;
+}
+export interface GetTopCourtEarningsUsingGETRequest {
+    lawfirmId: number;
+    endDate?: Date;
+    limit?: number;
     startDate?: Date;
 }
 /**
@@ -29,6 +35,14 @@ export declare class LawfirmDashboardControllerApi extends runtime.BaseAPI {
      * getLawfirmGrossEarnings
      */
     getLawfirmGrossEarningsUsingGET(requestParameters: GetLawfirmGrossEarningsUsingGETRequest): Promise<GetLawfirmGrossEarningsResponse>;
+    /**
+     * getTopCourtEarnings
+     */
+    getTopCourtEarningsUsingGETRaw(requestParameters: GetTopCourtEarningsUsingGETRequest): Promise<runtime.ApiResponse<GetTopCourtEarningsResponse>>;
+    /**
+     * getTopCourtEarnings
+     */
+    getTopCourtEarningsUsingGET(requestParameters: GetTopCourtEarningsUsingGETRequest): Promise<GetTopCourtEarningsResponse>;
 }
 /**
     * @export
