@@ -22,6 +22,7 @@ export function GetCaseResponseFromJSONTyped(json, ignoreDiscriminator) {
     }
     return {
         'caseCounter': !exists(json, 'caseCounter') ? undefined : CaseCounterOfferModelFromJSON(json['caseCounter']),
+        'caseRating': !exists(json, 'caseRating') ? undefined : json['caseRating'],
         'chanceOfSuccess': !exists(json, 'chanceOfSuccess') ? undefined : json['chanceOfSuccess'],
         'hasUnreadNotifications': !exists(json, 'hasUnreadNotifications') ? undefined : json['hasUnreadNotifications'],
         'projectedInsuranceCostInCents': !exists(json, 'projectedInsuranceCostInCents') ? undefined : json['projectedInsuranceCostInCents'],
@@ -37,6 +38,7 @@ export function GetCaseResponseToJSON(value) {
     }
     return {
         'caseCounter': CaseCounterOfferModelToJSON(value.caseCounter),
+        'caseRating': value.caseRating,
         'chanceOfSuccess': value.chanceOfSuccess,
         'hasUnreadNotifications': value.hasUnreadNotifications,
         'projectedInsuranceCostInCents': value.projectedInsuranceCostInCents,

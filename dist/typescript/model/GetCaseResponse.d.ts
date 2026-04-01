@@ -12,6 +12,7 @@
 import * as models from './models';
 export interface GetCaseResponse {
     "caseCounter"?: models.CaseCounterOfferModel;
+    "caseRating"?: number;
     "chanceOfSuccess"?: number;
     "hasUnreadNotifications"?: boolean;
     "projectedInsuranceCostInCents"?: number;

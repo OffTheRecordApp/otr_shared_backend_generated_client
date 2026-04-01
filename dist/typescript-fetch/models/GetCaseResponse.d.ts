@@ -27,6 +27,12 @@ export interface GetCaseResponse {
      * @type {number}
      * @memberof GetCaseResponse
      */
+    caseRating?: number;
+    /**
+     *
+     * @type {number}
+     * @memberof GetCaseResponse
+     */
     chanceOfSuccess?: number;
     /**
      *

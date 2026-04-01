@@ -10940,6 +10940,8 @@ export interface components {
         /** GetCaseResponse */
         GetCaseResponse: {
             caseCounter?: components["schemas"]["CaseCounterOfferModel"];
+            /** Format: double */
+            caseRating?: number;
             /** Format: int32 */
             chanceOfSuccess?: number;
             hasUnreadNotifications?: boolean;
