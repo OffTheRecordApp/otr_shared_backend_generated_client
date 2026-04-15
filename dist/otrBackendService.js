@@ -19806,6 +19806,7 @@ angular.module('otrBackendService', [])
              * @param {boolean} parameters.includeAbandoned - includeAbandoned
              * @param {boolean} parameters.includeCitationsWithoutCase - includeCitationsWithoutCase
              * @param {boolean} parameters.includeDeleted - includeDeleted
+             * @param {integer} parameters.lastActivityAfterMillis - lastActivityAfterMillis
              * @param {integer} parameters.limit - limit
              * @param {boolean} parameters.needsAttention - needsAttention
              * @param {integer} parameters.page - page
@@ -19855,6 +19856,10 @@ angular.module('otrBackendService', [])
 
                 if (parameters['includeDeleted'] !== undefined) {
                     queryParameters['includeDeleted'] = parameters['includeDeleted'];
+                }
+
+                if (parameters['lastActivityAfterMillis'] !== undefined) {
+                    queryParameters['lastActivityAfterMillis'] = parameters['lastActivityAfterMillis'];
                 }
 
                 /** set default value **/

@@ -32636,6 +32636,8 @@ export interface operations {
                 includeAbandoned?: boolean;
                 /** @description includeCitationsWithoutCase */
                 includeCitationsWithoutCase?: boolean;
+                /** @description lastActivityAfterMillis */
+                lastActivityAfterMillis?: number;
             };
             header?: never;
             path: {

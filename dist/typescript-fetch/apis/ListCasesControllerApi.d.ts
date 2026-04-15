@@ -20,6 +20,7 @@ export interface ListDashboardCasesByPageUsingGETRequest {
     includeAbandoned?: boolean;
     includeCitationsWithoutCase?: boolean;
     includeDeleted?: boolean;
+    lastActivityAfterMillis?: number;
     limit?: number;
     needsAttention?: boolean;
     page?: number;
