@@ -118,6 +118,12 @@ export interface LawfirmSettingsDomainReq {
      * @memberof LawfirmSettingsDomainReq
      */
     vacationModeReason?: string;
+    /**
+     *
+     * @type {Date}
+     * @memberof LawfirmSettingsDomainReq
+     */
+    vacationModeStartDateUtc?: Date;
 }
 export declare function LawfirmSettingsDomainReqFromJSON(json: any): LawfirmSettingsDomainReq;
 export declare function LawfirmSettingsDomainReqFromJSONTyped(json: any, ignoreDiscriminator: boolean): LawfirmSettingsDomainReq;

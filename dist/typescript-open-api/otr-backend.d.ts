@@ -12711,6 +12711,8 @@ export interface components {
             /** Format: date-time */
             vacationModeEndDateUtc?: string;
             vacationModeReason?: string;
+            /** Format: date-time */
+            vacationModeStartDateUtc?: string;
         };
         /** LawfirmSettingsDomainReq */
         LawfirmSettingsDomainReq: {
@@ -12737,6 +12739,8 @@ export interface components {
             /** Format: date-time */
             vacationModeEndDateUtc?: string;
             vacationModeReason?: string;
+            /** Format: date-time */
+            vacationModeStartDateUtc?: string;
         };
         /** LawfirmSettingsDomainRes */
         LawfirmSettingsDomainRes: {
@@ -12763,6 +12767,8 @@ export interface components {
             /** Format: date-time */
             vacationModeEndDateUtc?: string;
             vacationModeReason?: string;
+            /** Format: date-time */
+            vacationModeStartDateUtc?: string;
         };
         /** LawfirmStatusModel */
         LawfirmStatusModel: {
@@ -12810,6 +12816,8 @@ export interface components {
             /** Format: date-time */
             vacationEndDateUtc?: string;
             vacationReason?: string;
+            /** Format: date-time */
+            vacationStartDateUtc?: string;
         };
         /** LawfirmsRatesResponse */
         LawfirmsRatesResponse: {

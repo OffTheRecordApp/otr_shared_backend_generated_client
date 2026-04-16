@@ -38,6 +38,7 @@ export function LawfirmSettingsDomainFromJSONTyped(json, ignoreDiscriminator) {
         'referralFeeType': !exists(json, 'referralFeeType') ? undefined : json['referralFeeType'],
         'vacationModeEndDateUtc': !exists(json, 'vacationModeEndDateUtc') ? undefined : (new Date(json['vacationModeEndDateUtc'])),
         'vacationModeReason': !exists(json, 'vacationModeReason') ? undefined : json['vacationModeReason'],
+        'vacationModeStartDateUtc': !exists(json, 'vacationModeStartDateUtc') ? undefined : (new Date(json['vacationModeStartDateUtc'])),
     };
 }
 export function LawfirmSettingsDomainToJSON(value) {
@@ -65,6 +66,7 @@ export function LawfirmSettingsDomainToJSON(value) {
         'referralFeeType': value.referralFeeType,
         'vacationModeEndDateUtc': value.vacationModeEndDateUtc === undefined ? undefined : (value.vacationModeEndDateUtc.toISOString()),
         'vacationModeReason': value.vacationModeReason,
+        'vacationModeStartDateUtc': value.vacationModeStartDateUtc === undefined ? undefined : (value.vacationModeStartDateUtc.toISOString()),
     };
 }
 /**

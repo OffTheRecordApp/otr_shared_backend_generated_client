@@ -14,4 +14,5 @@ export interface LawfirmVacationRequest {
     "localTimezoneOffsetInHours"?: number;
     "vacationEndDateUtc"?: string;
     "vacationReason"?: string;
+    "vacationStartDateUtc"?: string;
 }

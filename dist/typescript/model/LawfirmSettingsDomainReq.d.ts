@@ -28,6 +28,7 @@ export interface LawfirmSettingsDomainReq {
     "referralFeeType"?: LawfirmSettingsDomainReq.ReferralFeeTypeEnum;
     "vacationModeEndDateUtc"?: string;
     "vacationModeReason"?: string;
+    "vacationModeStartDateUtc"?: string;
 }
 export declare namespace LawfirmSettingsDomainReq {
     enum ReferralFeeTypeEnum {

@@ -30,6 +30,7 @@ export interface LawfirmSettingsDomain {
     referralFeeType?: LawfirmSettingsDomain.ReferralFeeTypeEnum;
     vacationModeEndDateUtc?: string;
     vacationModeReason?: string;
+    vacationModeStartDateUtc?: string;
 }
 export namespace LawfirmSettingsDomain {
     export type ReferralFeeTypeEnum = 'FLAT_FEE_IN_CENTS' | 'PERCENT';

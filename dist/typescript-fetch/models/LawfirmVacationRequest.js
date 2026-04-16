@@ -24,6 +24,7 @@ export function LawfirmVacationRequestFromJSONTyped(json, ignoreDiscriminator) {
         'localTimezoneOffsetInHours': !exists(json, 'localTimezoneOffsetInHours') ? undefined : json['localTimezoneOffsetInHours'],
         'vacationEndDateUtc': !exists(json, 'vacationEndDateUtc') ? undefined : (new Date(json['vacationEndDateUtc'])),
         'vacationReason': !exists(json, 'vacationReason') ? undefined : json['vacationReason'],
+        'vacationStartDateUtc': !exists(json, 'vacationStartDateUtc') ? undefined : (new Date(json['vacationStartDateUtc'])),
     };
 }
 export function LawfirmVacationRequestToJSON(value) {
@@ -38,5 +39,6 @@ export function LawfirmVacationRequestToJSON(value) {
         'localTimezoneOffsetInHours': value.localTimezoneOffsetInHours,
         'vacationEndDateUtc': value.vacationEndDateUtc === undefined ? undefined : (value.vacationEndDateUtc.toISOString()),
         'vacationReason': value.vacationReason,
+        'vacationStartDateUtc': value.vacationStartDateUtc === undefined ? undefined : (value.vacationStartDateUtc.toISOString()),
     };
 }

@@ -39,6 +39,12 @@ export interface LawfirmVacationRequest {
      * @memberof LawfirmVacationRequest
      */
     vacationReason?: string;
+    /**
+     *
+     * @type {Date}
+     * @memberof LawfirmVacationRequest
+     */
+    vacationStartDateUtc?: Date;
 }
 export declare function LawfirmVacationRequestFromJSON(json: any): LawfirmVacationRequest;
 export declare function LawfirmVacationRequestFromJSONTyped(json: any, ignoreDiscriminator: boolean): LawfirmVacationRequest;
