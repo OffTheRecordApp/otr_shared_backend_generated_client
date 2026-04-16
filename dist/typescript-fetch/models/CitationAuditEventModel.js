@@ -93,6 +93,7 @@ export var CitationAuditEventModelEventEnum;
     CitationAuditEventModelEventEnum["ACCOUNTMANAGERCHANGED"] = "ACCOUNT_MANAGER_CHANGED";
     CitationAuditEventModelEventEnum["ACCOUNTNOTIFICATIONSTATUSCHANGED"] = "ACCOUNT_NOTIFICATION_STATUS_CHANGED";
     CitationAuditEventModelEventEnum["ACCOUNTSTATUSCHANGED"] = "ACCOUNT_STATUS_CHANGED";
+    CitationAuditEventModelEventEnum["ARCHIVECASE"] = "ARCHIVE_CASE";
     CitationAuditEventModelEventEnum["CASEACCEPT"] = "CASE_ACCEPT";
     CitationAuditEventModelEventEnum["CASEBOOKING"] = "CASE_BOOKING";
     CitationAuditEventModelEventEnum["CASEBOOKINGFAILED"] = "CASE_BOOKING_FAILED";

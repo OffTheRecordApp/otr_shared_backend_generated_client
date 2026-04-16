@@ -53,6 +53,7 @@ export declare namespace CitationAuditEventModel {
         ACCOUNTMANAGERCHANGED,
         ACCOUNTNOTIFICATIONSTATUSCHANGED,
         ACCOUNTSTATUSCHANGED,
+        ARCHIVECASE,
         CASEACCEPT,
         CASEBOOKING,
         CASEBOOKINGFAILED,

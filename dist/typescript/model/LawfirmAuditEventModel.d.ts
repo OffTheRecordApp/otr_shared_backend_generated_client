@@ -53,6 +53,7 @@ export declare namespace LawfirmAuditEventModel {
         ACCOUNTMANAGERCHANGED,
         ACCOUNTNOTIFICATIONSTATUSCHANGED,
         ACCOUNTSTATUSCHANGED,
+        ARCHIVECASE,
         CASEACCEPT,
         CASEBOOKING,
         CASEBOOKINGFAILED,
