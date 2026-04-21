@@ -112,5 +112,6 @@ export * from './VerificationControllerApi';
 export * from './ViolationControllerApi';
 export * from './ViolationPenaltyControllerApi';
 export * from './WatchlistsControllerApi';
+export * from './WebSocketControllerApi';
 export * from './WebsocketMessageControllerApi';
 export * from './WorkflowStateControllerApi';

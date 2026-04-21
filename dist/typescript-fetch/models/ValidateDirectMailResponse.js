@@ -350,4 +350,5 @@ export var ValidateDirectMailResponseOtrErrorEnum;
     ValidateDirectMailResponseOtrErrorEnum["VERIFICATIONCODENOTNUMERIC"] = "VERIFICATION_CODE_NOT_NUMERIC";
     ValidateDirectMailResponseOtrErrorEnum["VERIFICATIONCODENOTVALID"] = "VERIFICATION_CODE_NOT_VALID";
     ValidateDirectMailResponseOtrErrorEnum["VERIFICATIONLINKNOTVALID"] = "VERIFICATION_LINK_NOT_VALID";
+    ValidateDirectMailResponseOtrErrorEnum["WEBSOCKETCONNECTIONNOTFOUND"] = "WEBSOCKET_CONNECTION_NOT_FOUND";
 })(ValidateDirectMailResponseOtrErrorEnum || (ValidateDirectMailResponseOtrErrorEnum = {}));

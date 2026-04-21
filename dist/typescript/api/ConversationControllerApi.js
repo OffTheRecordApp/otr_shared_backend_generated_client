@@ -237,5 +237,36 @@ export class ConversationControllerApi {
         }
         return this.$http(httpRequestParams);
     }
+    /**
+     *
+     * @summary setTyping
+     * @param caseId caseId
+     * @param connectionId connectionId
+     */
+    setTypingUsingPUT(caseId, connectionId, extraHttpRequestParams) {
+        const localVarPath = this.basePath + '/api/v1/cases/conversation/typing/{caseId}'
+            .replace('{' + 'caseId' + '}', encodeURIComponent(String(caseId)));
+        let queryParameters = {};
+        let headerParams = Object.assign({}, this.defaultHeaders);
+        // verify required parameter 'caseId' is not null or undefined
+        if (caseId === null || caseId === undefined) {
+            throw new Error('Required parameter caseId was null or undefined when calling setTypingUsingPUT.');
+        }
+        // verify required parameter 'connectionId' is not null or undefined
+        if (connectionId === null || connectionId === undefined) {
+            throw new Error('Required parameter connectionId was null or undefined when calling setTypingUsingPUT.');
+        }
+        headerParams['connectionId'] = connectionId;
+        let httpRequestParams = {
+            method: 'PUT',
+            url: localVarPath,
+            params: queryParameters,
+            headers: headerParams
+        };
+        if (extraHttpRequestParams) {
+            httpRequestParams = Object.assign(httpRequestParams, extraHttpRequestParams);
+        }
+        return this.$http(httpRequestParams);
+    }
 }
 ConversationControllerApi.$inject = ['$http', '$httpParamSerializer', 'basePath'];

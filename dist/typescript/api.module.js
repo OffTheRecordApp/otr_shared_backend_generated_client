@@ -115,6 +115,7 @@ const apiModule = angular.module('api', [])
     .service('ViolationControllerApi', api.ViolationControllerApi)
     .service('ViolationPenaltyControllerApi', api.ViolationPenaltyControllerApi)
     .service('WatchlistsControllerApi', api.WatchlistsControllerApi)
+    .service('WebSocketControllerApi', api.WebSocketControllerApi)
     .service('WebsocketMessageControllerApi', api.WebsocketMessageControllerApi)
     .service('WorkflowStateControllerApi', api.WorkflowStateControllerApi);
 export default apiModule;

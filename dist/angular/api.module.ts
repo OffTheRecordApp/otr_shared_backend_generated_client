@@ -116,6 +116,7 @@ import { VerificationControllerService } from './api/verificationController.serv
 import { ViolationControllerService } from './api/violationController.service';
 import { ViolationPenaltyControllerService } from './api/violationPenaltyController.service';
 import { WatchlistsControllerService } from './api/watchlistsController.service';
+import { WebSocketControllerService } from './api/webSocketController.service';
 import { WebsocketMessageControllerService } from './api/websocketMessageController.service';
 import { WorkflowStateControllerService } from './api/workflowStateController.service';
 

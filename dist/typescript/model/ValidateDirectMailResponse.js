@@ -323,5 +323,6 @@ export var ValidateDirectMailResponse;
         OtrErrorEnum[OtrErrorEnum["VERIFICATIONCODENOTNUMERIC"] = 'VERIFICATION_CODE_NOT_NUMERIC'] = "VERIFICATIONCODENOTNUMERIC";
         OtrErrorEnum[OtrErrorEnum["VERIFICATIONCODENOTVALID"] = 'VERIFICATION_CODE_NOT_VALID'] = "VERIFICATIONCODENOTVALID";
         OtrErrorEnum[OtrErrorEnum["VERIFICATIONLINKNOTVALID"] = 'VERIFICATION_LINK_NOT_VALID'] = "VERIFICATIONLINKNOTVALID";
+        OtrErrorEnum[OtrErrorEnum["WEBSOCKETCONNECTIONNOTFOUND"] = 'WEBSOCKET_CONNECTION_NOT_FOUND'] = "WEBSOCKETCONNECTIONNOTFOUND";
     })(OtrErrorEnum = ValidateDirectMailResponse.OtrErrorEnum || (ValidateDirectMailResponse.OtrErrorEnum = {}));
 })(ValidateDirectMailResponse || (ValidateDirectMailResponse = {}));

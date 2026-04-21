@@ -116,6 +116,7 @@ api/verificationController.service.ts
 api/violationController.service.ts
 api/violationPenaltyController.service.ts
 api/watchlistsController.service.ts
+api/webSocketController.service.ts
 api/websocketMessageController.service.ts
 api/workflowStateController.service.ts
 configuration.ts

@@ -66,4 +66,11 @@ export declare class ConversationControllerApi {
      * @param request request
      */
     setStarOnMessagesUsingPUT(request: models.SetStarOnMessagesRequest, extraHttpRequestParams?: any): ng.IHttpPromise<{}>;
+    /**
+     *
+     * @summary setTyping
+     * @param caseId caseId
+     * @param connectionId connectionId
+     */
+    setTypingUsingPUT(caseId: string, connectionId: string, extraHttpRequestParams?: any): ng.IHttpPromise<{}>;
 }

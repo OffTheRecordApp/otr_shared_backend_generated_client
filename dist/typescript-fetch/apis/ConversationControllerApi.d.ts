@@ -39,6 +39,10 @@ export interface SetFlagOnMessagesUsingPUTRequest {
 export interface SetStarOnMessagesUsingPUTRequest {
     request: SetStarOnMessagesRequest;
 }
+export interface SetTypingUsingPUTRequest {
+    caseId: string;
+    connectionId: string;
+}
 /**
  *
  */
@@ -99,4 +103,12 @@ export declare class ConversationControllerApi extends runtime.BaseAPI {
      * setStarOnMessages
      */
     setStarOnMessagesUsingPUT(requestParameters: SetStarOnMessagesUsingPUTRequest): Promise<void>;
+    /**
+     * setTyping
+     */
+    setTypingUsingPUTRaw(requestParameters: SetTypingUsingPUTRequest): Promise<runtime.ApiResponse<void>>;
+    /**
+     * setTyping
+     */
+    setTypingUsingPUT(requestParameters: SetTypingUsingPUTRequest): Promise<void>;
 }

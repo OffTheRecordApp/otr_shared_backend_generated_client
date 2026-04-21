@@ -252,4 +252,37 @@ export class ConversationControllerApi extends runtime.BaseAPI {
             yield this.setStarOnMessagesUsingPUTRaw(requestParameters);
         });
     }
+    /**
+     * setTyping
+     */
+    setTypingUsingPUTRaw(requestParameters) {
+        return __awaiter(this, void 0, void 0, function* () {
+            if (requestParameters.caseId === null || requestParameters.caseId === undefined) {
+                throw new runtime.RequiredError('caseId', 'Required parameter requestParameters.caseId was null or undefined when calling setTypingUsingPUT.');
+            }
+            if (requestParameters.connectionId === null || requestParameters.connectionId === undefined) {
+                throw new runtime.RequiredError('connectionId', 'Required parameter requestParameters.connectionId was null or undefined when calling setTypingUsingPUT.');
+            }
+            const queryParameters = {};
+            const headerParameters = {};
+            if (requestParameters.connectionId !== undefined && requestParameters.connectionId !== null) {
+                headerParameters['connectionId'] = String(requestParameters.connectionId);
+            }
+            const response = yield this.request({
+                path: `/api/v1/cases/conversation/typing/{caseId}`.replace(`{${"caseId"}}`, encodeURIComponent(String(requestParameters.caseId))),
+                method: 'PUT',
+                headers: headerParameters,
+                query: queryParameters,
+            });
+            return new runtime.VoidApiResponse(response);
+        });
+    }
+    /**
+     * setTyping
+     */
+    setTypingUsingPUT(requestParameters) {
+        return __awaiter(this, void 0, void 0, function* () {
+            yield this.setTypingUsingPUTRaw(requestParameters);
+        });
+    }
 }

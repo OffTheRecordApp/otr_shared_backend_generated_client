@@ -2112,6 +2112,23 @@ export interface paths {
         patch?: never;
         trace?: never;
     };
+    "/api/v1/cases/conversation/typing/{caseId}": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        get?: never;
+        /** setTyping */
+        put: operations["setTypingUsingPUT"];
+        post?: never;
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
     "/api/v1/cases/{caseId}/conversation": {
         parameters: {
             query?: never;
@@ -7272,6 +7289,57 @@ export interface paths {
         post?: never;
         /** removeItemFromWatchlist */
         delete: operations["removeItemFromWatchlistUsingDELETE"];
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
+    "/api/v1/websocket/connect": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        get?: never;
+        put?: never;
+        /** connect */
+        post: operations["connectUsingPOST"];
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
+    "/api/v1/websocket/default": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        get?: never;
+        put?: never;
+        /** defaultHandler */
+        post: operations["defaultHandlerUsingPOST"];
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
+    "/api/v1/websocket/disconnect": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        get?: never;
+        put?: never;
+        /** disconnect */
+        post: operations["disconnectUsingPOST"];
+        delete?: never;
         options?: never;
         head?: never;
         patch?: never;
@@ -23602,6 +23670,58 @@ export interface operations {
                 "application/json": components["schemas"]["SetStarOnMessagesRequest"];
             };
         };
+        responses: {
+            /** @description OK */
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content?: never;
+            };
+            /** @description Created */
+            201: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content?: never;
+            };
+            /** @description Unauthorized */
+            401: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content?: never;
+            };
+            /** @description Forbidden */
+            403: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content?: never;
+            };
+            /** @description Not Found */
+            404: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content?: never;
+            };
+        };
+    };
+    setTypingUsingPUT: {
+        parameters: {
+            query?: never;
+            header: {
+                /** @description connectionId */
+                connectionId: string;
+            };
+            path: {
+                /** @description caseId */
+                caseId: string;
+            };
+            cookie?: never;
+        };
+        requestBody?: never;
         responses: {
             /** @description OK */
             200: {
@@ -40794,6 +40914,153 @@ export interface operations {
             };
         };
     };
+    connectUsingPOST: {
+        parameters: {
+            query?: never;
+            header: {
+                /** @description connectionId */
+                connectionId: string;
+            };
+            path?: never;
+            cookie?: never;
+        };
+        requestBody?: never;
+        responses: {
+            /** @description OK */
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content?: never;
+            };
+            /** @description Created */
+            201: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content?: never;
+            };
+            /** @description Unauthorized */
+            401: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content?: never;
+            };
+            /** @description Forbidden */
+            403: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content?: never;
+            };
+            /** @description Not Found */
+            404: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content?: never;
+            };
+        };
+    };
+    defaultHandlerUsingPOST: {
+        parameters: {
+            query?: never;
+            header: {
+                /** @description connectionId */
+                connectionId: string;
+            };
+            path?: never;
+            cookie?: never;
+        };
+        requestBody?: never;
+        responses: {
+            /** @description OK */
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content?: never;
+            };
+            /** @description Created */
+            201: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content?: never;
+            };
+            /** @description Unauthorized */
+            401: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content?: never;
+            };
+            /** @description Forbidden */
+            403: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content?: never;
+            };
+            /** @description Not Found */
+            404: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content?: never;
+            };
+        };
+    };
+    disconnectUsingPOST: {
+        parameters: {
+            query?: never;
+            header: {
+                /** @description connectionId */
+                connectionId: string;
+            };
+            path?: never;
+            cookie?: never;
+        };
+        requestBody?: never;
+        responses: {
+            /** @description OK */
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content?: never;
+            };
+            /** @description Created */
+            201: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content?: never;
+            };
+            /** @description Unauthorized */
+            401: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content?: never;
+            };
+            /** @description Forbidden */
+            403: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content?: never;
+            };
+            /** @description Not Found */
+            404: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content?: never;
+            };
+        };
+    };
     forwardMessageUsingPOST: {
         parameters: {
             query?: never;
@@ -42439,7 +42706,8 @@ export declare enum ValidateDirectMailResponseOtrError {
     USER_NOT_FOUND_IN_LAWFIRM = "USER_NOT_FOUND_IN_LAWFIRM",
     VERIFICATION_CODE_NOT_NUMERIC = "VERIFICATION_CODE_NOT_NUMERIC",
     VERIFICATION_CODE_NOT_VALID = "VERIFICATION_CODE_NOT_VALID",
-    VERIFICATION_LINK_NOT_VALID = "VERIFICATION_LINK_NOT_VALID"
+    VERIFICATION_LINK_NOT_VALID = "VERIFICATION_LINK_NOT_VALID",
+    WEBSOCKET_CONNECTION_NOT_FOUND = "WEBSOCKET_CONNECTION_NOT_FOUND"
 }
 export declare enum ValidatePhoneNumberResponsePhoneType {
     CELLULAR = "CELLULAR",

@@ -1687,6 +1687,7 @@ export var ValidateDirectMailResponseOtrError;
     ValidateDirectMailResponseOtrError["VERIFICATION_CODE_NOT_NUMERIC"] = "VERIFICATION_CODE_NOT_NUMERIC";
     ValidateDirectMailResponseOtrError["VERIFICATION_CODE_NOT_VALID"] = "VERIFICATION_CODE_NOT_VALID";
     ValidateDirectMailResponseOtrError["VERIFICATION_LINK_NOT_VALID"] = "VERIFICATION_LINK_NOT_VALID";
+    ValidateDirectMailResponseOtrError["WEBSOCKET_CONNECTION_NOT_FOUND"] = "WEBSOCKET_CONNECTION_NOT_FOUND";
 })(ValidateDirectMailResponseOtrError || (ValidateDirectMailResponseOtrError = {}));
 export var ValidatePhoneNumberResponsePhoneType;
 (function (ValidatePhoneNumberResponsePhoneType) {
