@@ -33,7 +33,19 @@ export class WebSocketControllerApi extends runtime.BaseAPI {
             if (requestParameters.connectionId === null || requestParameters.connectionId === undefined) {
                 throw new runtime.RequiredError('connectionId', 'Required parameter requestParameters.connectionId was null or undefined when calling connectUsingPOST.');
             }
+            if (requestParameters.token === null || requestParameters.token === undefined) {
+                throw new runtime.RequiredError('token', 'Required parameter requestParameters.token was null or undefined when calling connectUsingPOST.');
+            }
+            if (requestParameters.userId === null || requestParameters.userId === undefined) {
+                throw new runtime.RequiredError('userId', 'Required parameter requestParameters.userId was null or undefined when calling connectUsingPOST.');
+            }
             const queryParameters = {};
+            if (requestParameters.token !== undefined) {
+                queryParameters['token'] = requestParameters.token;
+            }
+            if (requestParameters.userId !== undefined) {
+                queryParameters['userId'] = requestParameters.userId;
+            }
             const headerParameters = {};
             if (requestParameters.connectionId !== undefined && requestParameters.connectionId !== null) {
                 headerParameters['connectionId'] = String(requestParameters.connectionId);
@@ -44,7 +56,7 @@ export class WebSocketControllerApi extends runtime.BaseAPI {
                 headers: headerParameters,
                 query: queryParameters,
             });
-            return new runtime.VoidApiResponse(response);
+            return new runtime.JSONApiResponse(response);
         });
     }
     /**
@@ -52,7 +64,8 @@ export class WebSocketControllerApi extends runtime.BaseAPI {
      */
     connectUsingPOST(requestParameters) {
         return __awaiter(this, void 0, void 0, function* () {
-            yield this.connectUsingPOSTRaw(requestParameters);
+            const response = yield this.connectUsingPOSTRaw(requestParameters);
+            return yield response.value();
         });
     }
     /**

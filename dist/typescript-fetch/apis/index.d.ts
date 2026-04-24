@@ -89,6 +89,7 @@ export * from './RefundEligibilityControllerApi';
 export * from './RegistrationControllerApi';
 export * from './ReportingControllerApi';
 export * from './ScheduledTaskControllerApi';
+export * from './ShortLivedTokenControllerApi';
 export * from './SingleSignOnControllerApi';
 export * from './SnsListenerControllerApi';
 export * from './SocialLoginControllerApi';

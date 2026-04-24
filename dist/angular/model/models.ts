@@ -447,6 +447,7 @@ export * from './inviteLawyerToLawfirmRequest';
 export * from './invoiceLineItemModel';
 export * from './isRefundEligibleResponse';
 export * from './isUserLoggedInResponse';
+export * from './issueShortLivedTokenResponse';
 export * from './item';
 export * from './lastLoginAttributes';
 export * from './lastLoginDateByUserAccount';

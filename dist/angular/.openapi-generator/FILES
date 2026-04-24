@@ -93,6 +93,7 @@ api/refundEligibilityController.service.ts
 api/registrationController.service.ts
 api/reportingController.service.ts
 api/scheduledTaskController.service.ts
+api/shortLivedTokenController.service.ts
 api/singleSignOnController.service.ts
 api/snsListenerController.service.ts
 api/socialLoginController.service.ts
@@ -572,6 +573,7 @@ model/inviteLawyerToLawfirmRequest.ts
 model/invoiceLineItemModel.ts
 model/isRefundEligibleResponse.ts
 model/isUserLoggedInResponse.ts
+model/issueShortLivedTokenResponse.ts
 model/item.ts
 model/lastLoginAttributes.ts
 model/lastLoginDateByUserAccount.ts

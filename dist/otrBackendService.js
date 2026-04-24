@@ -17927,6 +17927,40 @@ angular.module('otrBackendService', [])
                 return deferred.promise;
             };
             /**
+             * issueShortLivedToken
+             * @method
+             * @name OtrService#issueShortLivedTokenUsingGET
+             * @param {object} parameters - method options and parameters
+             * @param {integer} parameters.userId - userId
+             */
+            OtrService.prototype.issueShortLivedTokenUsingGET = function(parameters) {
+                if (parameters === undefined) {
+                    parameters = {};
+                }
+                var deferred = $q.defer();
+                var domain = this.domain,
+                    path = '/api/v1/users/{userId}/short-lived-token';
+                var body = {},
+                    queryParameters = {},
+                    headers = {},
+                    form = {};
+
+                headers['Accept'] = ['*/*'];
+
+                path = path.replace('{userId}', parameters['userId']);
+
+                if (parameters['userId'] === undefined) {
+                    deferred.reject(new Error('Missing required  parameter: userId'));
+                    return deferred.promise;
+                }
+
+                queryParameters = mergeQueryParams(parameters, queryParameters);
+
+                this.request('GET', domain + path, parameters, body, headers, queryParameters, form, deferred);
+
+                return deferred.promise;
+            };
+            /**
              * saveUserSocialProfiles
              * @method
              * @name OtrService#saveUserSocialProfilesUsingPOST
@@ -19003,6 +19037,8 @@ angular.module('otrBackendService', [])
              * @name OtrService#connectUsingPOST
              * @param {object} parameters - method options and parameters
              * @param {string} parameters.connectionId - connectionId
+             * @param {string} parameters.token - token
+             * @param {integer} parameters.userId - userId
              */
             OtrService.prototype.connectUsingPOST = function(parameters) {
                 if (parameters === undefined) {
@@ -19025,6 +19061,24 @@ angular.module('otrBackendService', [])
 
                 if (parameters['connectionId'] === undefined) {
                     deferred.reject(new Error('Missing required  parameter: connectionId'));
+                    return deferred.promise;
+                }
+
+                if (parameters['token'] !== undefined) {
+                    queryParameters['token'] = parameters['token'];
+                }
+
+                if (parameters['token'] === undefined) {
+                    deferred.reject(new Error('Missing required  parameter: token'));
+                    return deferred.promise;
+                }
+
+                if (parameters['userId'] !== undefined) {
+                    queryParameters['userId'] = parameters['userId'];
+                }
+
+                if (parameters['userId'] === undefined) {
+                    deferred.reject(new Error('Missing required  parameter: userId'));
                     return deferred.promise;
                 }
 

@@ -20,8 +20,10 @@ export declare class WebSocketControllerApi {
      *
      * @summary connect
      * @param connectionId connectionId
+     * @param token token
+     * @param userId userId
      */
-    connectUsingPOST(connectionId: string, extraHttpRequestParams?: any): ng.IHttpPromise<{}>;
+    connectUsingPOST(connectionId: string, token: string, userId: number, extraHttpRequestParams?: any): ng.IHttpPromise<object>;
     /**
      *
      * @summary defaultHandler

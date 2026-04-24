@@ -12,6 +12,8 @@
 import * as runtime from '../runtime';
 export interface ConnectUsingPOSTRequest {
     connectionId: string;
+    token: string;
+    userId: number;
 }
 export interface DefaultHandlerUsingPOSTRequest {
     connectionId: string;
@@ -26,11 +28,11 @@ export declare class WebSocketControllerApi extends runtime.BaseAPI {
     /**
      * connect
      */
-    connectUsingPOSTRaw(requestParameters: ConnectUsingPOSTRequest): Promise<runtime.ApiResponse<void>>;
+    connectUsingPOSTRaw(requestParameters: ConnectUsingPOSTRequest): Promise<runtime.ApiResponse<object>>;
     /**
      * connect
      */
-    connectUsingPOST(requestParameters: ConnectUsingPOSTRequest): Promise<void>;
+    connectUsingPOST(requestParameters: ConnectUsingPOSTRequest): Promise<object>;
     /**
      * defaultHandler
      */

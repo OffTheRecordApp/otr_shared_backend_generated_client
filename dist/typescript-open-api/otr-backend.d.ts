@@ -5664,6 +5664,23 @@ export interface paths {
         patch?: never;
         trace?: never;
     };
+    "/api/v1/users/{userId}/short-lived-token": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        /** issueShortLivedToken */
+        get: operations["issueShortLivedTokenUsingGET"];
+        put?: never;
+        post?: never;
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
     "/api/v1/authentication/sso/login": {
         parameters: {
             query?: never;
@@ -12299,6 +12316,10 @@ export interface components {
             isUserLoggedIn?: boolean;
             /** Format: int64 */
             userId?: number;
+        };
+        /** IssueShortLivedTokenResponse */
+        IssueShortLivedTokenResponse: {
+            token?: string;
         };
         /** Item */
         Item: {
@@ -35585,6 +35606,50 @@ export interface operations {
             };
         };
     };
+    issueShortLivedTokenUsingGET: {
+        parameters: {
+            query?: never;
+            header?: never;
+            path: {
+                /** @description userId */
+                userId: number;
+            };
+            cookie?: never;
+        };
+        requestBody?: never;
+        responses: {
+            /** @description OK */
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "*/*": components["schemas"]["IssueShortLivedTokenResponse"];
+                };
+            };
+            /** @description Unauthorized */
+            401: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content?: never;
+            };
+            /** @description Forbidden */
+            403: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content?: never;
+            };
+            /** @description Not Found */
+            404: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content?: never;
+            };
+        };
+    };
     loginWithSSOUsingPOST: {
         parameters: {
             query: {
@@ -40995,7 +41060,12 @@ export interface operations {
     };
     connectUsingPOST: {
         parameters: {
-            query?: never;
+            query: {
+                /** @description token */
+                token: string;
+                /** @description userId */
+                userId: number;
+            };
             header: {
                 /** @description connectionId */
                 connectionId: string;
@@ -41010,7 +41080,9 @@ export interface operations {
                 headers: {
                     [name: string]: unknown;
                 };
-                content?: never;
+                content: {
+                    "*/*": Record<string, never>;
+                };
             };
             /** @description Created */
             201: {

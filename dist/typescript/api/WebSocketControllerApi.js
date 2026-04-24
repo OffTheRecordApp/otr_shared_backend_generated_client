@@ -24,14 +24,30 @@ export class WebSocketControllerApi {
      *
      * @summary connect
      * @param connectionId connectionId
+     * @param token token
+     * @param userId userId
      */
-    connectUsingPOST(connectionId, extraHttpRequestParams) {
+    connectUsingPOST(connectionId, token, userId, extraHttpRequestParams) {
         const localVarPath = this.basePath + '/api/v1/websocket/connect';
         let queryParameters = {};
         let headerParams = Object.assign({}, this.defaultHeaders);
         // verify required parameter 'connectionId' is not null or undefined
         if (connectionId === null || connectionId === undefined) {
             throw new Error('Required parameter connectionId was null or undefined when calling connectUsingPOST.');
+        }
+        // verify required parameter 'token' is not null or undefined
+        if (token === null || token === undefined) {
+            throw new Error('Required parameter token was null or undefined when calling connectUsingPOST.');
+        }
+        // verify required parameter 'userId' is not null or undefined
+        if (userId === null || userId === undefined) {
+            throw new Error('Required parameter userId was null or undefined when calling connectUsingPOST.');
+        }
+        if (token !== undefined) {
+            queryParameters['token'] = token;
+        }
+        if (userId !== undefined) {
+            queryParameters['userId'] = userId;
         }
         headerParams['connectionId'] = connectionId;
         let httpRequestParams = {

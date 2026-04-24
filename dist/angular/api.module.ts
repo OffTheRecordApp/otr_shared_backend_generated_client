@@ -93,6 +93,7 @@ import { RefundEligibilityControllerService } from './api/refundEligibilityContr
 import { RegistrationControllerService } from './api/registrationController.service';
 import { ReportingControllerService } from './api/reportingController.service';
 import { ScheduledTaskControllerService } from './api/scheduledTaskController.service';
+import { ShortLivedTokenControllerService } from './api/shortLivedTokenController.service';
 import { SingleSignOnControllerService } from './api/singleSignOnController.service';
 import { SnsListenerControllerService } from './api/snsListenerController.service';
 import { SocialLoginControllerService } from './api/socialLoginController.service';
