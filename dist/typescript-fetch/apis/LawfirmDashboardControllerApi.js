@@ -21,11 +21,39 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
     });
 };
 import * as runtime from '../runtime';
-import { GetLawfirmGrossEarningsResponseFromJSON, GetTopCourtEarningsResponseFromJSON, } from '../models';
+import { GetActiveCasesByAgeResponseFromJSON, GetLawfirmGrossEarningsResponseFromJSON, GetTopCourtEarningsResponseFromJSON, } from '../models';
 /**
  *
  */
 export class LawfirmDashboardControllerApi extends runtime.BaseAPI {
+    /**
+     * getActiveCasesByAge
+     */
+    getActiveCasesByAgeUsingGETRaw(requestParameters) {
+        return __awaiter(this, void 0, void 0, function* () {
+            if (requestParameters.lawfirmId === null || requestParameters.lawfirmId === undefined) {
+                throw new runtime.RequiredError('lawfirmId', 'Required parameter requestParameters.lawfirmId was null or undefined when calling getActiveCasesByAgeUsingGET.');
+            }
+            const queryParameters = {};
+            const headerParameters = {};
+            const response = yield this.request({
+                path: `/api/v1/lawfirms/{lawfirmId}/dashboard/active-cases-by-age`.replace(`{${"lawfirmId"}}`, encodeURIComponent(String(requestParameters.lawfirmId))),
+                method: 'GET',
+                headers: headerParameters,
+                query: queryParameters,
+            });
+            return new runtime.JSONApiResponse(response, (jsonValue) => GetActiveCasesByAgeResponseFromJSON(jsonValue));
+        });
+    }
+    /**
+     * getActiveCasesByAge
+     */
+    getActiveCasesByAgeUsingGET(requestParameters) {
+        return __awaiter(this, void 0, void 0, function* () {
+            const response = yield this.getActiveCasesByAgeUsingGETRaw(requestParameters);
+            return yield response.value();
+        });
+    }
     /**
      * getLawfirmGrossEarnings
      */

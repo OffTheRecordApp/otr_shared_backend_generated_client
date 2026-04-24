@@ -19,6 +19,12 @@ export declare class LawfirmDashboardControllerApi {
     constructor($http: ng.IHttpService, $httpParamSerializer?: (d: any) => any, basePath?: string);
     /**
      *
+     * @summary getActiveCasesByAge
+     * @param lawfirmId lawfirmId
+     */
+    getActiveCasesByAgeUsingGET(lawfirmId: number, extraHttpRequestParams?: any): ng.IHttpPromise<models.GetActiveCasesByAgeResponse>;
+    /**
+     *
      * @summary getLawfirmGrossEarnings
      * @param lawfirmId lawfirmId
      * @param period period

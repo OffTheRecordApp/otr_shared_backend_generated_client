@@ -10963,6 +10963,40 @@ angular.module('otrBackendService', [])
                 return deferred.promise;
             };
             /**
+             * getActiveCasesByAge
+             * @method
+             * @name OtrService#getActiveCasesByAgeUsingGET
+             * @param {object} parameters - method options and parameters
+             * @param {integer} parameters.lawfirmId - lawfirmId
+             */
+            OtrService.prototype.getActiveCasesByAgeUsingGET = function(parameters) {
+                if (parameters === undefined) {
+                    parameters = {};
+                }
+                var deferred = $q.defer();
+                var domain = this.domain,
+                    path = '/api/v1/lawfirms/{lawfirmId}/dashboard/active-cases-by-age';
+                var body = {},
+                    queryParameters = {},
+                    headers = {},
+                    form = {};
+
+                headers['Accept'] = ['*/*'];
+
+                path = path.replace('{lawfirmId}', parameters['lawfirmId']);
+
+                if (parameters['lawfirmId'] === undefined) {
+                    deferred.reject(new Error('Missing required  parameter: lawfirmId'));
+                    return deferred.promise;
+                }
+
+                queryParameters = mergeQueryParams(parameters, queryParameters);
+
+                this.request('GET', domain + path, parameters, body, headers, queryParameters, form, deferred);
+
+                return deferred.promise;
+            };
+            /**
              * getTopCourtEarnings
              * @method
              * @name OtrService#getTopCourtEarningsUsingGET

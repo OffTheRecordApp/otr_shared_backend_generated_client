@@ -22,6 +22,31 @@ export class LawfirmDashboardControllerApi {
     }
     /**
      *
+     * @summary getActiveCasesByAge
+     * @param lawfirmId lawfirmId
+     */
+    getActiveCasesByAgeUsingGET(lawfirmId, extraHttpRequestParams) {
+        const localVarPath = this.basePath + '/api/v1/lawfirms/{lawfirmId}/dashboard/active-cases-by-age'
+            .replace('{' + 'lawfirmId' + '}', encodeURIComponent(String(lawfirmId)));
+        let queryParameters = {};
+        let headerParams = Object.assign({}, this.defaultHeaders);
+        // verify required parameter 'lawfirmId' is not null or undefined
+        if (lawfirmId === null || lawfirmId === undefined) {
+            throw new Error('Required parameter lawfirmId was null or undefined when calling getActiveCasesByAgeUsingGET.');
+        }
+        let httpRequestParams = {
+            method: 'GET',
+            url: localVarPath,
+            params: queryParameters,
+            headers: headerParams
+        };
+        if (extraHttpRequestParams) {
+            httpRequestParams = Object.assign(httpRequestParams, extraHttpRequestParams);
+        }
+        return this.$http(httpRequestParams);
+    }
+    /**
+     *
      * @summary getLawfirmGrossEarnings
      * @param lawfirmId lawfirmId
      * @param period period

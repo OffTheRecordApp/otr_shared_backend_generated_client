@@ -159,6 +159,7 @@ model/addressDomainReq.ts
 model/addressDomainRes.ts
 model/addressEntity.ts
 model/admin.ts
+model/ageBracketModel.ts
 model/agentBookingStats.ts
 model/agentBookingsSummary.ts
 model/aggregateBySource.ts
@@ -400,6 +401,7 @@ model/genericAdminListRequest.ts
 model/geoRatesRequest.ts
 model/getAcceptedCaseBreakdownResponse.ts
 model/getAccountManagersResponse.ts
+model/getActiveCasesByAgeResponse.ts
 model/getActivityFeedResponse.ts
 model/getAddressInnerResponse.ts
 model/getAnonymousTicketUploads.ts

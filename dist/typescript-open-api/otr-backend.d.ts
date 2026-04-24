@@ -3879,6 +3879,23 @@ export interface paths {
         patch?: never;
         trace?: never;
     };
+    "/api/v1/lawfirms/{lawfirmId}/dashboard/active-cases-by-age": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        /** getActiveCasesByAge */
+        get: operations["getActiveCasesByAgeUsingGET"];
+        put?: never;
+        post?: never;
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
     "/api/v1/lawfirms/{lawfirmId}/dashboard/earnings/top-courts": {
         parameters: {
             query?: never;
@@ -7747,6 +7764,14 @@ export interface components {
             name?: string;
             type?: string;
         };
+        /** AgeBracketModel */
+        AgeBracketModel: {
+            bracket?: string;
+            /** Format: int32 */
+            count?: number;
+            /** Format: bigdecimal */
+            percentageOfTotal?: number;
+        };
         /** AgentBookingStats */
         AgentBookingStats: {
             /** Format: int32 */
@@ -10899,6 +10924,16 @@ export interface components {
         /** GetAccountManagersResponse */
         GetAccountManagersResponse: {
             accountManagers?: components["schemas"]["AccountManagerModel"][];
+        };
+        /** GetActiveCasesByAgeResponse */
+        GetActiveCasesByAgeResponse: {
+            ageBreakdown?: components["schemas"]["AgeBracketModel"][];
+            /** Format: int64 */
+            medianAgeInDays?: number;
+            /** Format: int64 */
+            networkMedianAgeInDays?: number;
+            /** Format: int32 */
+            totalActiveCases?: number;
         };
         /** GetActivityFeedResponse */
         GetActivityFeedResponse: {
@@ -29603,6 +29638,50 @@ export interface operations {
                     [name: string]: unknown;
                 };
                 content?: never;
+            };
+            /** @description Unauthorized */
+            401: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content?: never;
+            };
+            /** @description Forbidden */
+            403: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content?: never;
+            };
+            /** @description Not Found */
+            404: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content?: never;
+            };
+        };
+    };
+    getActiveCasesByAgeUsingGET: {
+        parameters: {
+            query?: never;
+            header?: never;
+            path: {
+                /** @description lawfirmId */
+                lawfirmId: number;
+            };
+            cookie?: never;
+        };
+        requestBody?: never;
+        responses: {
+            /** @description OK */
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "*/*": components["schemas"]["GetActiveCasesByAgeResponse"];
+                };
             };
             /** @description Unauthorized */
             401: {
