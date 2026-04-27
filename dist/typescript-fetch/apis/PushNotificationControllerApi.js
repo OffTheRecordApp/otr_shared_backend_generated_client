@@ -129,6 +129,9 @@ export class PushNotificationControllerApi extends runtime.BaseAPI {
                 throw new runtime.RequiredError('request', 'Required parameter requestParameters.request was null or undefined when calling markPageTypesAsReadUsingDELETE.');
             }
             const queryParameters = {};
+            if (requestParameters.userId !== undefined) {
+                queryParameters['userId'] = requestParameters.userId;
+            }
             const headerParameters = {};
             headerParameters['Content-Type'] = 'application/json';
             const response = yield this.request({

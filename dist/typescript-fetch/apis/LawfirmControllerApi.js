@@ -253,6 +253,9 @@ export class LawfirmControllerApi extends runtime.BaseAPI {
             if (requestParameters.statusCategories !== undefined) {
                 queryParameters['statusCategories'] = requestParameters.statusCategories;
             }
+            if (requestParameters.userId !== undefined) {
+                queryParameters['userId'] = requestParameters.userId;
+            }
             const headerParameters = {};
             const response = yield this.request({
                 path: `/api/v1/lawfirms/{lawfirmId}/inbox-messages`.replace(`{${"lawfirmId"}}`, encodeURIComponent(String(requestParameters.lawfirmId))),
@@ -370,6 +373,9 @@ export class LawfirmControllerApi extends runtime.BaseAPI {
             const queryParameters = {};
             if (requestParameters.includeExtendedCounts !== undefined) {
                 queryParameters['includeExtendedCounts'] = requestParameters.includeExtendedCounts;
+            }
+            if (requestParameters.userId !== undefined) {
+                queryParameters['userId'] = requestParameters.userId;
             }
             const headerParameters = {};
             const response = yield this.request({

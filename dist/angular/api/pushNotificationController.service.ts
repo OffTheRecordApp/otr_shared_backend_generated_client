@@ -293,18 +293,25 @@ export class PushNotificationControllerService {
      * markPageTypesAsRead
      * @param caseId caseId
      * @param request request
+     * @param userId userId
      * @param observe set whether or not to return the data Observable as the body, response or events. defaults to returning the body.
      * @param reportProgress flag to report request and response progress.
      */
-    public markPageTypesAsReadUsingDELETE(caseId: string, request: DeleteNotificationByPagesRequest, observe?: 'body', reportProgress?: boolean, options?: {httpHeaderAccept?: '*/*', context?: HttpContext}): Observable<NotificationEvents>;
-    public markPageTypesAsReadUsingDELETE(caseId: string, request: DeleteNotificationByPagesRequest, observe?: 'response', reportProgress?: boolean, options?: {httpHeaderAccept?: '*/*', context?: HttpContext}): Observable<HttpResponse<NotificationEvents>>;
-    public markPageTypesAsReadUsingDELETE(caseId: string, request: DeleteNotificationByPagesRequest, observe?: 'events', reportProgress?: boolean, options?: {httpHeaderAccept?: '*/*', context?: HttpContext}): Observable<HttpEvent<NotificationEvents>>;
-    public markPageTypesAsReadUsingDELETE(caseId: string, request: DeleteNotificationByPagesRequest, observe: any = 'body', reportProgress: boolean = false, options?: {httpHeaderAccept?: '*/*', context?: HttpContext}): Observable<any> {
+    public markPageTypesAsReadUsingDELETE(caseId: string, request: DeleteNotificationByPagesRequest, userId?: number, observe?: 'body', reportProgress?: boolean, options?: {httpHeaderAccept?: '*/*', context?: HttpContext}): Observable<NotificationEvents>;
+    public markPageTypesAsReadUsingDELETE(caseId: string, request: DeleteNotificationByPagesRequest, userId?: number, observe?: 'response', reportProgress?: boolean, options?: {httpHeaderAccept?: '*/*', context?: HttpContext}): Observable<HttpResponse<NotificationEvents>>;
+    public markPageTypesAsReadUsingDELETE(caseId: string, request: DeleteNotificationByPagesRequest, userId?: number, observe?: 'events', reportProgress?: boolean, options?: {httpHeaderAccept?: '*/*', context?: HttpContext}): Observable<HttpEvent<NotificationEvents>>;
+    public markPageTypesAsReadUsingDELETE(caseId: string, request: DeleteNotificationByPagesRequest, userId?: number, observe: any = 'body', reportProgress: boolean = false, options?: {httpHeaderAccept?: '*/*', context?: HttpContext}): Observable<any> {
         if (caseId === null || caseId === undefined) {
             throw new Error('Required parameter caseId was null or undefined when calling markPageTypesAsReadUsingDELETE.');
         }
         if (request === null || request === undefined) {
             throw new Error('Required parameter request was null or undefined when calling markPageTypesAsReadUsingDELETE.');
+        }
+
+        let localVarQueryParameters = new HttpParams({encoder: this.encoder});
+        if (userId !== undefined && userId !== null) {
+          localVarQueryParameters = this.addToHttpParams(localVarQueryParameters,
+            <any>userId, 'userId');
         }
 
         let localVarHeaders = this.defaultHeaders;
@@ -351,6 +358,7 @@ export class PushNotificationControllerService {
             {
                 context: localVarHttpContext,
                 body: request,
+                params: localVarQueryParameters,
                 responseType: <any>responseType_,
                 withCredentials: this.configuration.withCredentials,
                 headers: localVarHeaders,

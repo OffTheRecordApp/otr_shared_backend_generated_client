@@ -26,6 +26,7 @@ export interface MarkCaseNotificationsAsUnreadUsingPUTRequest {
 export interface MarkPageTypesAsReadUsingDELETERequest {
     caseId: string;
     request: DeleteNotificationByPagesRequest;
+    userId?: number;
 }
 export interface MarkReadUsingDELETERequest {
     caseId: string;

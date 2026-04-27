@@ -112,8 +112,9 @@ export class PushNotificationControllerApi {
      * @summary markPageTypesAsRead
      * @param caseId caseId
      * @param request request
+     * @param userId userId
      */
-    markPageTypesAsReadUsingDELETE(caseId, request, extraHttpRequestParams) {
+    markPageTypesAsReadUsingDELETE(caseId, request, userId, extraHttpRequestParams) {
         const localVarPath = this.basePath + '/api/v2/notifications/unread/{caseId}'
             .replace('{' + 'caseId' + '}', encodeURIComponent(String(caseId)));
         let queryParameters = {};
@@ -125,6 +126,9 @@ export class PushNotificationControllerApi {
         // verify required parameter 'request' is not null or undefined
         if (request === null || request === undefined) {
             throw new Error('Required parameter request was null or undefined when calling markPageTypesAsReadUsingDELETE.');
+        }
+        if (userId !== undefined) {
+            queryParameters['userId'] = userId;
         }
         let httpRequestParams = {
             method: 'DELETE',

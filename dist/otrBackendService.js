@@ -10760,6 +10760,7 @@ angular.module('otrBackendService', [])
              * @param {object} parameters - method options and parameters
              * @param {boolean} parameters.includeExtendedCounts - includeExtendedCounts
              * @param {integer} parameters.lawfirmId - lawfirmId
+             * @param {integer} parameters.userId - userId
              */
             OtrService.prototype.getLawfirmCaseStatsUsingGET = function(parameters) {
                 if (parameters === undefined) {
@@ -10784,6 +10785,10 @@ angular.module('otrBackendService', [])
                 if (parameters['lawfirmId'] === undefined) {
                     deferred.reject(new Error('Missing required  parameter: lawfirmId'));
                     return deferred.promise;
+                }
+
+                if (parameters['userId'] !== undefined) {
+                    queryParameters['userId'] = parameters['userId'];
                 }
 
                 queryParameters = mergeQueryParams(parameters, queryParameters);
@@ -11362,6 +11367,7 @@ angular.module('otrBackendService', [])
              * @param {string} parameters.query - query
              * @param {string} parameters.regionCodes - regionCodes
              * @param {string} parameters.statusCategories - statusCategories
+             * @param {integer} parameters.userId - userId
              */
             OtrService.prototype.getInboxMessagesUsingGET = function(parameters) {
                 if (parameters === undefined) {
@@ -11445,6 +11451,10 @@ angular.module('otrBackendService', [])
 
                 if (parameters['statusCategories'] !== undefined) {
                     queryParameters['statusCategories'] = parameters['statusCategories'];
+                }
+
+                if (parameters['userId'] !== undefined) {
+                    queryParameters['userId'] = parameters['userId'];
                 }
 
                 queryParameters = mergeQueryParams(parameters, queryParameters);
@@ -19873,6 +19883,7 @@ angular.module('otrBackendService', [])
              * @param {object} parameters - method options and parameters
              * @param {string} parameters.caseId - caseId
              * @param {} parameters.request - request
+             * @param {integer} parameters.userId - userId
              */
             OtrService.prototype.markPageTypesAsReadUsingDELETE = function(parameters) {
                 if (parameters === undefined) {
@@ -19902,6 +19913,10 @@ angular.module('otrBackendService', [])
                 if (parameters['request'] === undefined) {
                     deferred.reject(new Error('Missing required  parameter: request'));
                     return deferred.promise;
+                }
+
+                if (parameters['userId'] !== undefined) {
+                    queryParameters['userId'] = parameters['userId'];
                 }
 
                 queryParameters = mergeQueryParams(parameters, queryParameters);

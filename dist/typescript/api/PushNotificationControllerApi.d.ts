@@ -43,8 +43,9 @@ export declare class PushNotificationControllerApi {
      * @summary markPageTypesAsRead
      * @param caseId caseId
      * @param request request
+     * @param userId userId
      */
-    markPageTypesAsReadUsingDELETE(caseId: string, request: models.DeleteNotificationByPagesRequest, extraHttpRequestParams?: any): ng.IHttpPromise<models.NotificationEvents>;
+    markPageTypesAsReadUsingDELETE(caseId: string, request: models.DeleteNotificationByPagesRequest, userId?: number, extraHttpRequestParams?: any): ng.IHttpPromise<models.NotificationEvents>;
     /**
      *
      * @summary markRead

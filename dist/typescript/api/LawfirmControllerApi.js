@@ -195,8 +195,9 @@ export class LawfirmControllerApi {
      * @param query query
      * @param regionCodes regionCodes
      * @param statusCategories statusCategories
+     * @param userId userId
      */
-    getInboxMessagesUsingGET(lawfirmId, caseCounterOfferStatuses, caseStatuses, countyIds, courtDateFilter, courtIds, filter, hasUnread, isOverdue, latestMessageBy, lawfirmCaseDecisionStatus, length, page, query, regionCodes, statusCategories, extraHttpRequestParams) {
+    getInboxMessagesUsingGET(lawfirmId, caseCounterOfferStatuses, caseStatuses, countyIds, courtDateFilter, courtIds, filter, hasUnread, isOverdue, latestMessageBy, lawfirmCaseDecisionStatus, length, page, query, regionCodes, statusCategories, userId, extraHttpRequestParams) {
         const localVarPath = this.basePath + '/api/v1/lawfirms/{lawfirmId}/inbox-messages'
             .replace('{' + 'lawfirmId' + '}', encodeURIComponent(String(lawfirmId)));
         let queryParameters = {};
@@ -249,6 +250,9 @@ export class LawfirmControllerApi {
         }
         if (statusCategories !== undefined) {
             queryParameters['statusCategories'] = statusCategories;
+        }
+        if (userId !== undefined) {
+            queryParameters['userId'] = userId;
         }
         let httpRequestParams = {
             method: 'GET',
@@ -343,8 +347,9 @@ export class LawfirmControllerApi {
      * @summary getLawfirmCaseStats
      * @param lawfirmId lawfirmId
      * @param includeExtendedCounts includeExtendedCounts
+     * @param userId userId
      */
-    getLawfirmCaseStatsUsingGET(lawfirmId, includeExtendedCounts, extraHttpRequestParams) {
+    getLawfirmCaseStatsUsingGET(lawfirmId, includeExtendedCounts, userId, extraHttpRequestParams) {
         const localVarPath = this.basePath + '/api/v1/lawfirms/{lawfirmId}/cases/stats'
             .replace('{' + 'lawfirmId' + '}', encodeURIComponent(String(lawfirmId)));
         let queryParameters = {};
@@ -355,6 +360,9 @@ export class LawfirmControllerApi {
         }
         if (includeExtendedCounts !== undefined) {
             queryParameters['includeExtendedCounts'] = includeExtendedCounts;
+        }
+        if (userId !== undefined) {
+            queryParameters['userId'] = userId;
         }
         let httpRequestParams = {
             method: 'GET',

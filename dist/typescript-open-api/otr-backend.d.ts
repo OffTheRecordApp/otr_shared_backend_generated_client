@@ -29026,6 +29026,8 @@ export interface operations {
     getLawfirmCaseStatsUsingGET: {
         parameters: {
             query?: {
+                /** @description userId */
+                userId?: number;
                 /** @description includeExtendedCounts */
                 includeExtendedCounts?: boolean;
             };
@@ -29147,6 +29149,8 @@ export interface operations {
                 courtDateFilter?: PathsApiV2LawfirmLawfirmIdStringCasesPostParametersQueryCourtDateFilter;
                 /** @description latestMessageBy */
                 latestMessageBy?: PathsApiV1LawfirmsLawfirmIdInboxMessagesGetParametersQueryLatestMessageBy;
+                /** @description userId */
+                userId?: number;
             };
             header?: never;
             path: {
@@ -34132,7 +34136,10 @@ export interface operations {
     };
     markPageTypesAsReadUsingDELETE: {
         parameters: {
-            query?: never;
+            query?: {
+                /** @description userId */
+                userId?: number;
+            };
             header?: never;
             path: {
                 /** @description caseId */

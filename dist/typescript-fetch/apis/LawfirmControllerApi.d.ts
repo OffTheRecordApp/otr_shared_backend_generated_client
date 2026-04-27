@@ -45,6 +45,7 @@ export interface GetInboxMessagesUsingGETRequest {
     query?: string;
     regionCodes?: GetInboxMessagesUsingGETRegionCodesEnum;
     statusCategories?: GetInboxMessagesUsingGETStatusCategoriesEnum;
+    userId?: number;
 }
 export interface GetLawfirmAddressesUsingGETRequest {
     lawfirmId: number;
@@ -58,6 +59,7 @@ export interface GetLawfirmByUrlUsingGETRequest {
 export interface GetLawfirmCaseStatsUsingGETRequest {
     lawfirmId: number;
     includeExtendedCounts?: boolean;
+    userId?: number;
 }
 export interface GetLawfirmLawyersUsingGETRequest {
     lawfirmId: number;
