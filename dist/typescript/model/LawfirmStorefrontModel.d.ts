@@ -17,6 +17,7 @@ export interface LawfirmStorefrontModel {
     "lawfirmId"?: number;
     "lawfirmName"?: string;
     "lawfirmState"?: LawfirmStorefrontModel.LawfirmStateEnum;
+    "lawfirmStatusCategory"?: LawfirmStorefrontModel.LawfirmStatusCategoryEnum;
     "profilePictureUrl"?: string;
     "resolvedCaseCount"?: number;
     "reviewCount"?: number;
@@ -50,5 +51,13 @@ export declare namespace LawfirmStorefrontModel {
         TERMINATEDGENERIC,
         TERMINATEDPOORSERVICE,
         TERMINATEDPOORSUCCESS
+    }
+    enum LawfirmStatusCategoryEnum {
+        ACTIVE,
+        INACTIVE,
+        LEAD,
+        NOTINTERESTED,
+        REJECTED,
+        TERMINATED
     }
 }

@@ -19,6 +19,7 @@ export interface LawfirmStorefrontModel {
     lawfirmId?: number;
     lawfirmName?: string;
     lawfirmState?: LawfirmStorefrontModel.LawfirmStateEnum;
+    lawfirmStatusCategory?: LawfirmStorefrontModel.LawfirmStatusCategoryEnum;
     profilePictureUrl?: string;
     resolvedCaseCount?: number;
     reviewCount?: number;
@@ -53,6 +54,15 @@ export namespace LawfirmStorefrontModel {
         TerminatedGeneric: 'TERMINATED_GENERIC' as LawfirmStateEnum,
         TerminatedPoorService: 'TERMINATED_POOR_SERVICE' as LawfirmStateEnum,
         TerminatedPoorSuccess: 'TERMINATED_POOR_SUCCESS' as LawfirmStateEnum
+    };
+    export type LawfirmStatusCategoryEnum = 'ACTIVE' | 'INACTIVE' | 'LEAD' | 'NOT_INTERESTED' | 'REJECTED' | 'TERMINATED';
+    export const LawfirmStatusCategoryEnum = {
+        Active: 'ACTIVE' as LawfirmStatusCategoryEnum,
+        Inactive: 'INACTIVE' as LawfirmStatusCategoryEnum,
+        Lead: 'LEAD' as LawfirmStatusCategoryEnum,
+        NotInterested: 'NOT_INTERESTED' as LawfirmStatusCategoryEnum,
+        Rejected: 'REJECTED' as LawfirmStatusCategoryEnum,
+        Terminated: 'TERMINATED' as LawfirmStatusCategoryEnum
     };
 }
 

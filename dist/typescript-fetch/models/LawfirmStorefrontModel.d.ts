@@ -62,6 +62,12 @@ export interface LawfirmStorefrontModel {
      * @type {string}
      * @memberof LawfirmStorefrontModel
      */
+    lawfirmStatusCategory?: LawfirmStorefrontModelLawfirmStatusCategoryEnum;
+    /**
+     *
+     * @type {string}
+     * @memberof LawfirmStorefrontModel
+     */
     profilePictureUrl?: string;
     /**
      *
@@ -141,4 +147,16 @@ export declare enum LawfirmStorefrontModelLawfirmStateEnum {
     TERMINATEDGENERIC = "TERMINATED_GENERIC",
     TERMINATEDPOORSERVICE = "TERMINATED_POOR_SERVICE",
     TERMINATEDPOORSUCCESS = "TERMINATED_POOR_SUCCESS"
+}
+/**
+* @export
+* @enum {string}
+*/
+export declare enum LawfirmStorefrontModelLawfirmStatusCategoryEnum {
+    ACTIVE = "ACTIVE",
+    INACTIVE = "INACTIVE",
+    LEAD = "LEAD",
+    NOTINTERESTED = "NOT_INTERESTED",
+    REJECTED = "REJECTED",
+    TERMINATED = "TERMINATED"
 }

@@ -35,4 +35,13 @@ export var LawfirmStorefrontModel;
         LawfirmStateEnum[LawfirmStateEnum["TERMINATEDPOORSERVICE"] = 'TERMINATED_POOR_SERVICE'] = "TERMINATEDPOORSERVICE";
         LawfirmStateEnum[LawfirmStateEnum["TERMINATEDPOORSUCCESS"] = 'TERMINATED_POOR_SUCCESS'] = "TERMINATEDPOORSUCCESS";
     })(LawfirmStateEnum = LawfirmStorefrontModel.LawfirmStateEnum || (LawfirmStorefrontModel.LawfirmStateEnum = {}));
+    let LawfirmStatusCategoryEnum;
+    (function (LawfirmStatusCategoryEnum) {
+        LawfirmStatusCategoryEnum[LawfirmStatusCategoryEnum["ACTIVE"] = 'ACTIVE'] = "ACTIVE";
+        LawfirmStatusCategoryEnum[LawfirmStatusCategoryEnum["INACTIVE"] = 'INACTIVE'] = "INACTIVE";
+        LawfirmStatusCategoryEnum[LawfirmStatusCategoryEnum["LEAD"] = 'LEAD'] = "LEAD";
+        LawfirmStatusCategoryEnum[LawfirmStatusCategoryEnum["NOTINTERESTED"] = 'NOT_INTERESTED'] = "NOTINTERESTED";
+        LawfirmStatusCategoryEnum[LawfirmStatusCategoryEnum["REJECTED"] = 'REJECTED'] = "REJECTED";
+        LawfirmStatusCategoryEnum[LawfirmStatusCategoryEnum["TERMINATED"] = 'TERMINATED'] = "TERMINATED";
+    })(LawfirmStatusCategoryEnum = LawfirmStorefrontModel.LawfirmStatusCategoryEnum || (LawfirmStorefrontModel.LawfirmStatusCategoryEnum = {}));
 })(LawfirmStorefrontModel || (LawfirmStorefrontModel = {}));

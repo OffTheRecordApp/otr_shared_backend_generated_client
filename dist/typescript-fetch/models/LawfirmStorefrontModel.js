@@ -27,6 +27,7 @@ export function LawfirmStorefrontModelFromJSONTyped(json, ignoreDiscriminator) {
         'lawfirmId': !exists(json, 'lawfirmId') ? undefined : json['lawfirmId'],
         'lawfirmName': !exists(json, 'lawfirmName') ? undefined : json['lawfirmName'],
         'lawfirmState': !exists(json, 'lawfirmState') ? undefined : json['lawfirmState'],
+        'lawfirmStatusCategory': !exists(json, 'lawfirmStatusCategory') ? undefined : json['lawfirmStatusCategory'],
         'profilePictureUrl': !exists(json, 'profilePictureUrl') ? undefined : json['profilePictureUrl'],
         'resolvedCaseCount': !exists(json, 'resolvedCaseCount') ? undefined : json['resolvedCaseCount'],
         'reviewCount': !exists(json, 'reviewCount') ? undefined : json['reviewCount'],
@@ -53,6 +54,7 @@ export function LawfirmStorefrontModelToJSON(value) {
         'lawfirmId': value.lawfirmId,
         'lawfirmName': value.lawfirmName,
         'lawfirmState': value.lawfirmState,
+        'lawfirmStatusCategory': value.lawfirmStatusCategory,
         'profilePictureUrl': value.profilePictureUrl,
         'resolvedCaseCount': value.resolvedCaseCount,
         'reviewCount': value.reviewCount,
@@ -92,3 +94,16 @@ export var LawfirmStorefrontModelLawfirmStateEnum;
     LawfirmStorefrontModelLawfirmStateEnum["TERMINATEDPOORSERVICE"] = "TERMINATED_POOR_SERVICE";
     LawfirmStorefrontModelLawfirmStateEnum["TERMINATEDPOORSUCCESS"] = "TERMINATED_POOR_SUCCESS";
 })(LawfirmStorefrontModelLawfirmStateEnum || (LawfirmStorefrontModelLawfirmStateEnum = {}));
+/**
+* @export
+* @enum {string}
+*/
+export var LawfirmStorefrontModelLawfirmStatusCategoryEnum;
+(function (LawfirmStorefrontModelLawfirmStatusCategoryEnum) {
+    LawfirmStorefrontModelLawfirmStatusCategoryEnum["ACTIVE"] = "ACTIVE";
+    LawfirmStorefrontModelLawfirmStatusCategoryEnum["INACTIVE"] = "INACTIVE";
+    LawfirmStorefrontModelLawfirmStatusCategoryEnum["LEAD"] = "LEAD";
+    LawfirmStorefrontModelLawfirmStatusCategoryEnum["NOTINTERESTED"] = "NOT_INTERESTED";
+    LawfirmStorefrontModelLawfirmStatusCategoryEnum["REJECTED"] = "REJECTED";
+    LawfirmStorefrontModelLawfirmStatusCategoryEnum["TERMINATED"] = "TERMINATED";
+})(LawfirmStorefrontModelLawfirmStatusCategoryEnum || (LawfirmStorefrontModelLawfirmStatusCategoryEnum = {}));

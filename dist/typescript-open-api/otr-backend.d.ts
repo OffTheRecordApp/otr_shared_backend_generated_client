@@ -12914,6 +12914,8 @@ export interface components {
             lawfirmName?: string;
             /** @enum {string} */
             lawfirmState?: PathsApiV1LawfirmsGetParametersQueryStatuses;
+            /** @enum {string} */
+            lawfirmStatusCategory?: PathsApiV1LawfirmsGetParametersQueryStatusCategories;
             profilePictureUrl?: string;
             /** Format: int32 */
             resolvedCaseCount?: number;
