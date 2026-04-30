@@ -1393,6 +1393,7 @@ export var ValidateDirectMailResponseOtrError;
     ValidateDirectMailResponseOtrError["BLOCKED_DUE_TO_FIREWALL"] = "BLOCKED_DUE_TO_FIREWALL";
     ValidateDirectMailResponseOtrError["BLOCKED_FROM_BOOKING"] = "BLOCKED_FROM_BOOKING";
     ValidateDirectMailResponseOtrError["CANCELLATION_WINDOW_CLOSED"] = "CANCELLATION_WINDOW_CLOSED";
+    ValidateDirectMailResponseOtrError["CANNOT_PURCHASE_SUB_WITH_OTHER_COVERAGE"] = "CANNOT_PURCHASE_SUB_WITH_OTHER_COVERAGE";
     ValidateDirectMailResponseOtrError["CASE_ALREADY_EXISTS"] = "CASE_ALREADY_EXISTS";
     ValidateDirectMailResponseOtrError["CASE_ALREADY_PAID"] = "CASE_ALREADY_PAID";
     ValidateDirectMailResponseOtrError["CASE_ALREADY_RESOLVED"] = "CASE_ALREADY_RESOLVED";

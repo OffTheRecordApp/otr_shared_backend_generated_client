@@ -56,6 +56,7 @@ export var ValidateDirectMailResponseOtrErrorEnum;
     ValidateDirectMailResponseOtrErrorEnum["BLOCKEDDUETOFIREWALL"] = "BLOCKED_DUE_TO_FIREWALL";
     ValidateDirectMailResponseOtrErrorEnum["BLOCKEDFROMBOOKING"] = "BLOCKED_FROM_BOOKING";
     ValidateDirectMailResponseOtrErrorEnum["CANCELLATIONWINDOWCLOSED"] = "CANCELLATION_WINDOW_CLOSED";
+    ValidateDirectMailResponseOtrErrorEnum["CANNOTPURCHASESUBWITHOTHERCOVERAGE"] = "CANNOT_PURCHASE_SUB_WITH_OTHER_COVERAGE";
     ValidateDirectMailResponseOtrErrorEnum["CASEALREADYEXISTS"] = "CASE_ALREADY_EXISTS";
     ValidateDirectMailResponseOtrErrorEnum["CASEALREADYPAID"] = "CASE_ALREADY_PAID";
     ValidateDirectMailResponseOtrErrorEnum["CASEALREADYRESOLVED"] = "CASE_ALREADY_RESOLVED";
