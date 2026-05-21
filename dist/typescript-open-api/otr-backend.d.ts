@@ -12675,6 +12675,8 @@ export interface components {
             hasFlagMessage?: boolean;
             hasStarMessage?: boolean;
             hasUnreadMessages?: boolean;
+            /** Format: date-time */
+            lastActivityDateUtc?: string;
             /** @enum {string} */
             lawfirmCaseDecisionStatus?: PathsApiV1LawfirmsLawfirmIdInboxMessagesGetParametersQueryLawfirmCaseDecisionStatus;
             /** Format: date-time */
