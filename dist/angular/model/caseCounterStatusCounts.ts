@@ -15,5 +15,6 @@ export interface CaseCounterStatusCounts {
     numAccepted?: number;
     numDeclined?: number;
     numPending?: number;
+    numWithdrawn?: number;
 }
 

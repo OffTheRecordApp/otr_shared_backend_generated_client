@@ -4785,26 +4785,6 @@ export interface paths {
         patch?: never;
         trace?: never;
     };
-    "/api/v3/users/{userId}/cases": {
-        parameters: {
-            query?: never;
-            header?: never;
-            path?: never;
-            cookie?: never;
-        };
-        /**
-         * listDashboardCases
-         * @deprecated
-         */
-        get: operations["listDashboardCasesUsingGET"];
-        put?: never;
-        post?: never;
-        delete?: never;
-        options?: never;
-        head?: never;
-        patch?: never;
-        trace?: never;
-    };
     "/api/v4/users/{userId}/cases": {
         parameters: {
             query?: never;
@@ -8535,6 +8515,8 @@ export interface components {
             numDeclined?: number;
             /** Format: int32 */
             numPending?: number;
+            /** Format: int32 */
+            numWithdrawn?: number;
         };
         /** CaseCreationRequest */
         CaseCreationRequest: {
@@ -32774,73 +32756,6 @@ export interface operations {
             };
         };
     };
-    listDashboardCasesUsingGET: {
-        parameters: {
-            query?: {
-                /** @description defendantId */
-                defendantId?: number;
-                /** @description limit */
-                limit?: number;
-                /** @description previousPageToken */
-                previousPageToken?: string;
-                /** @description query */
-                query?: string;
-                /** @description sortBy */
-                sortBy?: PathsApiV3UsersUserIdCasesGetParametersQuerySortBy;
-                /** @description includeDeleted */
-                includeDeleted?: boolean;
-                /** @description needsAttention */
-                needsAttention?: boolean;
-                /** @description unreadMessagesOnly */
-                unreadMessagesOnly?: boolean;
-                /** @description statusCategories */
-                statusCategories?: PathsApiV1CaseStatusesGetParametersQueryCategories;
-                /** @description caseStatuses */
-                caseStatuses?: PathsApiV1LawfirmsLawfirmIdInboxMessagesGetParametersQueryCaseStatuses;
-                /** @description includeAbandoned */
-                includeAbandoned?: boolean;
-            };
-            header?: never;
-            path: {
-                /** @description userId */
-                userId: number;
-            };
-            cookie?: never;
-        };
-        requestBody?: never;
-        responses: {
-            /** @description OK */
-            200: {
-                headers: {
-                    [name: string]: unknown;
-                };
-                content: {
-                    "*/*": components["schemas"]["ListDashboardCasesResponse"];
-                };
-            };
-            /** @description Unauthorized */
-            401: {
-                headers: {
-                    [name: string]: unknown;
-                };
-                content?: never;
-            };
-            /** @description Forbidden */
-            403: {
-                headers: {
-                    [name: string]: unknown;
-                };
-                content?: never;
-            };
-            /** @description Not Found */
-            404: {
-                headers: {
-                    [name: string]: unknown;
-                };
-                content?: never;
-            };
-        };
-    };
     listDashboardCasesByPageUsingGET: {
         parameters: {
             query?: {
@@ -32857,7 +32772,7 @@ export interface operations {
                 /** @description query */
                 query?: string;
                 /** @description sortBy */
-                sortBy?: PathsApiV3UsersUserIdCasesGetParametersQuerySortBy;
+                sortBy?: PathsApiV4UsersUserIdCasesGetParametersQuerySortBy;
                 /** @description includeDeleted */
                 includeDeleted?: boolean;
                 /** @description needsAttention */
@@ -41747,7 +41662,7 @@ export declare enum PathsApiV1LawfirmsLawfirmIdSurchargesGetParametersQueryFeatu
     STATE_PAGE = "STATE_PAGE",
     STOREFRONT = "STOREFRONT"
 }
-export declare enum PathsApiV3UsersUserIdCasesGetParametersQuerySortBy {
+export declare enum PathsApiV4UsersUserIdCasesGetParametersQuerySortBy {
     BOOKING_CONFIRMED_DATE = "BOOKING_CONFIRMED_DATE",
     CITATION_CREATION_DATE = "CITATION_CREATION_DATE",
     CITATION_ISSUE_DATE = "CITATION_ISSUE_DATE",

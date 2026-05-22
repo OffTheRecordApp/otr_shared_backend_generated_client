@@ -450,15 +450,15 @@ export var PathsApiV1LawfirmsLawfirmIdSurchargesGetParametersQueryFeatureType;
     PathsApiV1LawfirmsLawfirmIdSurchargesGetParametersQueryFeatureType["STATE_PAGE"] = "STATE_PAGE";
     PathsApiV1LawfirmsLawfirmIdSurchargesGetParametersQueryFeatureType["STOREFRONT"] = "STOREFRONT";
 })(PathsApiV1LawfirmsLawfirmIdSurchargesGetParametersQueryFeatureType || (PathsApiV1LawfirmsLawfirmIdSurchargesGetParametersQueryFeatureType = {}));
-export var PathsApiV3UsersUserIdCasesGetParametersQuerySortBy;
-(function (PathsApiV3UsersUserIdCasesGetParametersQuerySortBy) {
-    PathsApiV3UsersUserIdCasesGetParametersQuerySortBy["BOOKING_CONFIRMED_DATE"] = "BOOKING_CONFIRMED_DATE";
-    PathsApiV3UsersUserIdCasesGetParametersQuerySortBy["CITATION_CREATION_DATE"] = "CITATION_CREATION_DATE";
-    PathsApiV3UsersUserIdCasesGetParametersQuerySortBy["CITATION_ISSUE_DATE"] = "CITATION_ISSUE_DATE";
-    PathsApiV3UsersUserIdCasesGetParametersQuerySortBy["COURT_DATE"] = "COURT_DATE";
-    PathsApiV3UsersUserIdCasesGetParametersQuerySortBy["LAST_ACTIVITY_DATE"] = "LAST_ACTIVITY_DATE";
-    PathsApiV3UsersUserIdCasesGetParametersQuerySortBy["LAST_CITATION_UPDATE_DATE"] = "LAST_CITATION_UPDATE_DATE";
-})(PathsApiV3UsersUserIdCasesGetParametersQuerySortBy || (PathsApiV3UsersUserIdCasesGetParametersQuerySortBy = {}));
+export var PathsApiV4UsersUserIdCasesGetParametersQuerySortBy;
+(function (PathsApiV4UsersUserIdCasesGetParametersQuerySortBy) {
+    PathsApiV4UsersUserIdCasesGetParametersQuerySortBy["BOOKING_CONFIRMED_DATE"] = "BOOKING_CONFIRMED_DATE";
+    PathsApiV4UsersUserIdCasesGetParametersQuerySortBy["CITATION_CREATION_DATE"] = "CITATION_CREATION_DATE";
+    PathsApiV4UsersUserIdCasesGetParametersQuerySortBy["CITATION_ISSUE_DATE"] = "CITATION_ISSUE_DATE";
+    PathsApiV4UsersUserIdCasesGetParametersQuerySortBy["COURT_DATE"] = "COURT_DATE";
+    PathsApiV4UsersUserIdCasesGetParametersQuerySortBy["LAST_ACTIVITY_DATE"] = "LAST_ACTIVITY_DATE";
+    PathsApiV4UsersUserIdCasesGetParametersQuerySortBy["LAST_CITATION_UPDATE_DATE"] = "LAST_CITATION_UPDATE_DATE";
+})(PathsApiV4UsersUserIdCasesGetParametersQuerySortBy || (PathsApiV4UsersUserIdCasesGetParametersQuerySortBy = {}));
 export var PathsApiV2NotesSearchGetParametersQueryNoteType;
 (function (PathsApiV2NotesSearchGetParametersQueryNoteType) {
     PathsApiV2NotesSearchGetParametersQueryNoteType["CASE"] = "CASE";
