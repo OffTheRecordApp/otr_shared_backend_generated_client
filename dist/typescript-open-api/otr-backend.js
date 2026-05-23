@@ -18,6 +18,7 @@ export var PathsApiV1ActivityFeedCaseOutcomesGetParametersQueryResolutionStatuse
     PathsApiV1ActivityFeedCaseOutcomesGetParametersQueryResolutionStatuses["CLIENT_FORCED_LOSS"] = "CLIENT_FORCED_LOSS";
     PathsApiV1ActivityFeedCaseOutcomesGetParametersQueryResolutionStatuses["CLIENT_PAID_FINE"] = "CLIENT_PAID_FINE";
     PathsApiV1ActivityFeedCaseOutcomesGetParametersQueryResolutionStatuses["CLIENT_UNRESPONSIVE"] = "CLIENT_UNRESPONSIVE";
+    PathsApiV1ActivityFeedCaseOutcomesGetParametersQueryResolutionStatuses["DEFENSIVE_DRIVING"] = "DEFENSIVE_DRIVING";
     PathsApiV1ActivityFeedCaseOutcomesGetParametersQueryResolutionStatuses["DEFERRED"] = "DEFERRED";
     PathsApiV1ActivityFeedCaseOutcomesGetParametersQueryResolutionStatuses["DIVERTED"] = "DIVERTED";
     PathsApiV1ActivityFeedCaseOutcomesGetParametersQueryResolutionStatuses["FEES_DISPUTED"] = "FEES_DISPUTED";
@@ -330,6 +331,7 @@ export var PathsApiV1LawfirmsLawfirmIdInboxMessagesGetParametersQueryCaseStatuse
     PathsApiV1LawfirmsLawfirmIdInboxMessagesGetParametersQueryCaseStatuses["CLIENT_FORCED_LOSS"] = "CLIENT_FORCED_LOSS";
     PathsApiV1LawfirmsLawfirmIdInboxMessagesGetParametersQueryCaseStatuses["CLIENT_PAID_FINE"] = "CLIENT_PAID_FINE";
     PathsApiV1LawfirmsLawfirmIdInboxMessagesGetParametersQueryCaseStatuses["CLIENT_UNRESPONSIVE"] = "CLIENT_UNRESPONSIVE";
+    PathsApiV1LawfirmsLawfirmIdInboxMessagesGetParametersQueryCaseStatuses["DEFENSIVE_DRIVING"] = "DEFENSIVE_DRIVING";
     PathsApiV1LawfirmsLawfirmIdInboxMessagesGetParametersQueryCaseStatuses["DEFERRED"] = "DEFERRED";
     PathsApiV1LawfirmsLawfirmIdInboxMessagesGetParametersQueryCaseStatuses["DISMISSED"] = "DISMISSED";
     PathsApiV1LawfirmsLawfirmIdInboxMessagesGetParametersQueryCaseStatuses["DIVERSION"] = "DIVERSION";

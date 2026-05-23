@@ -36,6 +36,7 @@ export var GetCitationsWithMissingFieldsRequest;
         CaseStatusesEnum[CaseStatusesEnum["CLIENTFORCEDLOSS"] = 'CLIENT_FORCED_LOSS'] = "CLIENTFORCEDLOSS";
         CaseStatusesEnum[CaseStatusesEnum["CLIENTPAIDFINE"] = 'CLIENT_PAID_FINE'] = "CLIENTPAIDFINE";
         CaseStatusesEnum[CaseStatusesEnum["CLIENTUNRESPONSIVE"] = 'CLIENT_UNRESPONSIVE'] = "CLIENTUNRESPONSIVE";
+        CaseStatusesEnum[CaseStatusesEnum["DEFENSIVEDRIVING"] = 'DEFENSIVE_DRIVING'] = "DEFENSIVEDRIVING";
         CaseStatusesEnum[CaseStatusesEnum["DEFERRED"] = 'DEFERRED'] = "DEFERRED";
         CaseStatusesEnum[CaseStatusesEnum["DISMISSED"] = 'DISMISSED'] = "DISMISSED";
         CaseStatusesEnum[CaseStatusesEnum["DIVERSION"] = 'DIVERSION'] = "DIVERSION";

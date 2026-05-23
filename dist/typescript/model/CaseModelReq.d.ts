@@ -70,6 +70,7 @@ export declare namespace CaseModelReq {
         CLIENTFORCEDLOSS,
         CLIENTPAIDFINE,
         CLIENTUNRESPONSIVE,
+        DEFENSIVEDRIVING,
         DEFERRED,
         DISMISSED,
         DIVERSION,

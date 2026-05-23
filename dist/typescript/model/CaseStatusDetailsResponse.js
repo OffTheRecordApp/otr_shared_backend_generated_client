@@ -43,6 +43,7 @@ export var CaseStatusDetailsResponse;
         StatusEnum[StatusEnum["CLIENTFORCEDLOSS"] = 'CLIENT_FORCED_LOSS'] = "CLIENTFORCEDLOSS";
         StatusEnum[StatusEnum["CLIENTPAIDFINE"] = 'CLIENT_PAID_FINE'] = "CLIENTPAIDFINE";
         StatusEnum[StatusEnum["CLIENTUNRESPONSIVE"] = 'CLIENT_UNRESPONSIVE'] = "CLIENTUNRESPONSIVE";
+        StatusEnum[StatusEnum["DEFENSIVEDRIVING"] = 'DEFENSIVE_DRIVING'] = "DEFENSIVEDRIVING";
         StatusEnum[StatusEnum["DEFERRED"] = 'DEFERRED'] = "DEFERRED";
         StatusEnum[StatusEnum["DISMISSED"] = 'DISMISSED'] = "DISMISSED";
         StatusEnum[StatusEnum["DIVERSION"] = 'DIVERSION'] = "DIVERSION";

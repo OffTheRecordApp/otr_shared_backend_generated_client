@@ -52,6 +52,7 @@ export declare namespace ListCaseBookingsRequest {
         CLIENTFORCEDLOSS,
         CLIENTPAIDFINE,
         CLIENTUNRESPONSIVE,
+        DEFENSIVEDRIVING,
         DEFERRED,
         DISMISSED,
         DIVERSION,

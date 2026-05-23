@@ -63,6 +63,7 @@ export declare namespace StripeDisputeDomain {
         CLIENTFORCEDLOSS,
         CLIENTPAIDFINE,
         CLIENTUNRESPONSIVE,
+        DEFENSIVEDRIVING,
         DEFERRED,
         DISMISSED,
         DIVERSION,

@@ -51,6 +51,7 @@ export declare namespace Booking {
         CLIENTFORCEDLOSS,
         CLIENTPAIDFINE,
         CLIENTUNRESPONSIVE,
+        DEFENSIVEDRIVING,
         DEFERRED,
         DISMISSED,
         DIVERSION,

@@ -71,6 +71,7 @@ export declare namespace LawfirmInboxMessageDomain {
         CLIENTFORCEDLOSS,
         CLIENTPAIDFINE,
         CLIENTUNRESPONSIVE,
+        DEFENSIVEDRIVING,
         DEFERRED,
         DISMISSED,
         DIVERSION,

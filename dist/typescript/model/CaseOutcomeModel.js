@@ -19,6 +19,7 @@ export var CaseOutcomeModel;
         ResolutionStatusEnum[ResolutionStatusEnum["CLIENTFORCEDLOSS"] = 'CLIENT_FORCED_LOSS'] = "CLIENTFORCEDLOSS";
         ResolutionStatusEnum[ResolutionStatusEnum["CLIENTPAIDFINE"] = 'CLIENT_PAID_FINE'] = "CLIENTPAIDFINE";
         ResolutionStatusEnum[ResolutionStatusEnum["CLIENTUNRESPONSIVE"] = 'CLIENT_UNRESPONSIVE'] = "CLIENTUNRESPONSIVE";
+        ResolutionStatusEnum[ResolutionStatusEnum["DEFENSIVEDRIVING"] = 'DEFENSIVE_DRIVING'] = "DEFENSIVEDRIVING";
         ResolutionStatusEnum[ResolutionStatusEnum["DEFERRED"] = 'DEFERRED'] = "DEFERRED";
         ResolutionStatusEnum[ResolutionStatusEnum["DIVERTED"] = 'DIVERTED'] = "DIVERTED";
         ResolutionStatusEnum[ResolutionStatusEnum["FEESDISPUTED"] = 'FEES_DISPUTED'] = "FEESDISPUTED";

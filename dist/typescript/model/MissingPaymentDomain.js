@@ -36,6 +36,7 @@ export var MissingPaymentDomain;
         CaseStatusEnum[CaseStatusEnum["CLIENTFORCEDLOSS"] = 'CLIENT_FORCED_LOSS'] = "CLIENTFORCEDLOSS";
         CaseStatusEnum[CaseStatusEnum["CLIENTPAIDFINE"] = 'CLIENT_PAID_FINE'] = "CLIENTPAIDFINE";
         CaseStatusEnum[CaseStatusEnum["CLIENTUNRESPONSIVE"] = 'CLIENT_UNRESPONSIVE'] = "CLIENTUNRESPONSIVE";
+        CaseStatusEnum[CaseStatusEnum["DEFENSIVEDRIVING"] = 'DEFENSIVE_DRIVING'] = "DEFENSIVEDRIVING";
         CaseStatusEnum[CaseStatusEnum["DEFERRED"] = 'DEFERRED'] = "DEFERRED";
         CaseStatusEnum[CaseStatusEnum["DISMISSED"] = 'DISMISSED'] = "DISMISSED";
         CaseStatusEnum[CaseStatusEnum["DIVERSION"] = 'DIVERSION'] = "DIVERSION";

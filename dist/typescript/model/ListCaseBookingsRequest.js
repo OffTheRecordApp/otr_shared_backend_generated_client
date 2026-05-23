@@ -36,6 +36,7 @@ export var ListCaseBookingsRequest;
         CaseStatusFilterEnum[CaseStatusFilterEnum["CLIENTFORCEDLOSS"] = 'CLIENT_FORCED_LOSS'] = "CLIENTFORCEDLOSS";
         CaseStatusFilterEnum[CaseStatusFilterEnum["CLIENTPAIDFINE"] = 'CLIENT_PAID_FINE'] = "CLIENTPAIDFINE";
         CaseStatusFilterEnum[CaseStatusFilterEnum["CLIENTUNRESPONSIVE"] = 'CLIENT_UNRESPONSIVE'] = "CLIENTUNRESPONSIVE";
+        CaseStatusFilterEnum[CaseStatusFilterEnum["DEFENSIVEDRIVING"] = 'DEFENSIVE_DRIVING'] = "DEFENSIVEDRIVING";
         CaseStatusFilterEnum[CaseStatusFilterEnum["DEFERRED"] = 'DEFERRED'] = "DEFERRED";
         CaseStatusFilterEnum[CaseStatusFilterEnum["DISMISSED"] = 'DISMISSED'] = "DISMISSED";
         CaseStatusFilterEnum[CaseStatusFilterEnum["DIVERSION"] = 'DIVERSION'] = "DIVERSION";

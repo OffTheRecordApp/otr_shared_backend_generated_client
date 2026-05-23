@@ -36,6 +36,7 @@ export var GraphRequest;
         CaseStatuesEnum[CaseStatuesEnum["CLIENTFORCEDLOSS"] = 'CLIENT_FORCED_LOSS'] = "CLIENTFORCEDLOSS";
         CaseStatuesEnum[CaseStatuesEnum["CLIENTPAIDFINE"] = 'CLIENT_PAID_FINE'] = "CLIENTPAIDFINE";
         CaseStatuesEnum[CaseStatuesEnum["CLIENTUNRESPONSIVE"] = 'CLIENT_UNRESPONSIVE'] = "CLIENTUNRESPONSIVE";
+        CaseStatuesEnum[CaseStatuesEnum["DEFENSIVEDRIVING"] = 'DEFENSIVE_DRIVING'] = "DEFENSIVEDRIVING";
         CaseStatuesEnum[CaseStatuesEnum["DEFERRED"] = 'DEFERRED'] = "DEFERRED";
         CaseStatuesEnum[CaseStatuesEnum["DISMISSED"] = 'DISMISSED'] = "DISMISSED";
         CaseStatuesEnum[CaseStatuesEnum["DIVERSION"] = 'DIVERSION'] = "DIVERSION";

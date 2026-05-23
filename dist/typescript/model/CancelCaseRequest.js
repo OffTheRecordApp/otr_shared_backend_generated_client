@@ -36,6 +36,7 @@ export var CancelCaseRequest;
         CancelationStatusEnum[CancelationStatusEnum["CLIENTFORCEDLOSS"] = 'CLIENT_FORCED_LOSS'] = "CLIENTFORCEDLOSS";
         CancelationStatusEnum[CancelationStatusEnum["CLIENTPAIDFINE"] = 'CLIENT_PAID_FINE'] = "CLIENTPAIDFINE";
         CancelationStatusEnum[CancelationStatusEnum["CLIENTUNRESPONSIVE"] = 'CLIENT_UNRESPONSIVE'] = "CLIENTUNRESPONSIVE";
+        CancelationStatusEnum[CancelationStatusEnum["DEFENSIVEDRIVING"] = 'DEFENSIVE_DRIVING'] = "DEFENSIVEDRIVING";
         CancelationStatusEnum[CancelationStatusEnum["DEFERRED"] = 'DEFERRED'] = "DEFERRED";
         CancelationStatusEnum[CancelationStatusEnum["DISMISSED"] = 'DISMISSED'] = "DISMISSED";
         CancelationStatusEnum[CancelationStatusEnum["DIVERSION"] = 'DIVERSION'] = "DIVERSION";

@@ -29,6 +29,7 @@ export declare namespace CaseOutcomeModel {
         CLIENTFORCEDLOSS,
         CLIENTPAIDFINE,
         CLIENTUNRESPONSIVE,
+        DEFENSIVEDRIVING,
         DEFERRED,
         DIVERTED,
         FEESDISPUTED,

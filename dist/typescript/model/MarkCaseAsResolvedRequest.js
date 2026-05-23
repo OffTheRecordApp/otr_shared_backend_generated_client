@@ -36,6 +36,7 @@ export var MarkCaseAsResolvedRequest;
         ResolutionStatusEnum[ResolutionStatusEnum["CLIENTFORCEDLOSS"] = 'CLIENT_FORCED_LOSS'] = "CLIENTFORCEDLOSS";
         ResolutionStatusEnum[ResolutionStatusEnum["CLIENTPAIDFINE"] = 'CLIENT_PAID_FINE'] = "CLIENTPAIDFINE";
         ResolutionStatusEnum[ResolutionStatusEnum["CLIENTUNRESPONSIVE"] = 'CLIENT_UNRESPONSIVE'] = "CLIENTUNRESPONSIVE";
+        ResolutionStatusEnum[ResolutionStatusEnum["DEFENSIVEDRIVING"] = 'DEFENSIVE_DRIVING'] = "DEFENSIVEDRIVING";
         ResolutionStatusEnum[ResolutionStatusEnum["DEFERRED"] = 'DEFERRED'] = "DEFERRED";
         ResolutionStatusEnum[ResolutionStatusEnum["DISMISSED"] = 'DISMISSED'] = "DISMISSED";
         ResolutionStatusEnum[ResolutionStatusEnum["DIVERSION"] = 'DIVERSION'] = "DIVERSION";

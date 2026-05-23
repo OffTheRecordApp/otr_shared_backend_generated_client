@@ -36,6 +36,7 @@ export var ListEligibleStatusResponse;
         StatusesEnum[StatusesEnum["CLIENTFORCEDLOSS"] = 'CLIENT_FORCED_LOSS'] = "CLIENTFORCEDLOSS";
         StatusesEnum[StatusesEnum["CLIENTPAIDFINE"] = 'CLIENT_PAID_FINE'] = "CLIENTPAIDFINE";
         StatusesEnum[StatusesEnum["CLIENTUNRESPONSIVE"] = 'CLIENT_UNRESPONSIVE'] = "CLIENTUNRESPONSIVE";
+        StatusesEnum[StatusesEnum["DEFENSIVEDRIVING"] = 'DEFENSIVE_DRIVING'] = "DEFENSIVEDRIVING";
         StatusesEnum[StatusesEnum["DEFERRED"] = 'DEFERRED'] = "DEFERRED";
         StatusesEnum[StatusesEnum["DISMISSED"] = 'DISMISSED'] = "DISMISSED";
         StatusesEnum[StatusesEnum["DIVERSION"] = 'DIVERSION'] = "DIVERSION";

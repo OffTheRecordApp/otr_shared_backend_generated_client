@@ -24,7 +24,7 @@ export interface CaseOutcomeModel {
     shortViolationName?: string;
 }
 export namespace CaseOutcomeModel {
-    export type ResolutionStatusEnum = 'AMENDED_DOWN_WITHIN_CLASS' | 'AMENDED_TO_INFRACTION' | 'CLIENT_FIRED_LAWFIRM' | 'CLIENT_FORCED_LOSS' | 'CLIENT_PAID_FINE' | 'CLIENT_UNRESPONSIVE' | 'DEFERRED' | 'DIVERTED' | 'FEES_DISPUTED' | 'FINE_REDUCTION_ONLY' | 'LAWFIRM_WITHDRAWN' | 'LOST' | 'POINTS_REDUCED' | 'REDUCED_TO_NON_MOVER' | 'RESOLVED_NON_PAYMENT' | 'TICKET_DISMISSED' | 'TRAFFIC_SCHOOL';
+    export type ResolutionStatusEnum = 'AMENDED_DOWN_WITHIN_CLASS' | 'AMENDED_TO_INFRACTION' | 'CLIENT_FIRED_LAWFIRM' | 'CLIENT_FORCED_LOSS' | 'CLIENT_PAID_FINE' | 'CLIENT_UNRESPONSIVE' | 'DEFENSIVE_DRIVING' | 'DEFERRED' | 'DIVERTED' | 'FEES_DISPUTED' | 'FINE_REDUCTION_ONLY' | 'LAWFIRM_WITHDRAWN' | 'LOST' | 'POINTS_REDUCED' | 'REDUCED_TO_NON_MOVER' | 'RESOLVED_NON_PAYMENT' | 'TICKET_DISMISSED' | 'TRAFFIC_SCHOOL';
     export const ResolutionStatusEnum = {
         AmendedDownWithinClass: 'AMENDED_DOWN_WITHIN_CLASS' as ResolutionStatusEnum,
         AmendedToInfraction: 'AMENDED_TO_INFRACTION' as ResolutionStatusEnum,
@@ -32,6 +32,7 @@ export namespace CaseOutcomeModel {
         ClientForcedLoss: 'CLIENT_FORCED_LOSS' as ResolutionStatusEnum,
         ClientPaidFine: 'CLIENT_PAID_FINE' as ResolutionStatusEnum,
         ClientUnresponsive: 'CLIENT_UNRESPONSIVE' as ResolutionStatusEnum,
+        DefensiveDriving: 'DEFENSIVE_DRIVING' as ResolutionStatusEnum,
         Deferred: 'DEFERRED' as ResolutionStatusEnum,
         Diverted: 'DIVERTED' as ResolutionStatusEnum,
         FeesDisputed: 'FEES_DISPUTED' as ResolutionStatusEnum,
