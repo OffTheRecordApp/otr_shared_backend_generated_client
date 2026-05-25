@@ -20,9 +20,7 @@ export declare namespace PushNotificationRequest {
         CASEACTION,
         CASEMESSAGES,
         CASESTATUS,
-        COURTDATESCHEDULED,
-        NEWTICKET,
-        PROFILE
+        COURTDATESCHEDULED
     }
     enum PlatformTypeEnum {
         ANDROID,

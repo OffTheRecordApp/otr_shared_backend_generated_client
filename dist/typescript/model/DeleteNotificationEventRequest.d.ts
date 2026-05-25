@@ -18,8 +18,6 @@ export declare namespace DeleteNotificationEventRequest {
         CASEACTION,
         CASEMESSAGES,
         CASESTATUS,
-        COURTDATESCHEDULED,
-        NEWTICKET,
-        PROFILE
+        COURTDATESCHEDULED
     }
 }

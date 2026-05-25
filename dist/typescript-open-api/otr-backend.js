@@ -877,8 +877,6 @@ export var DeleteNotificationByPagesRequestPageTypes;
     DeleteNotificationByPagesRequestPageTypes["CASE_MESSAGES"] = "CASE_MESSAGES";
     DeleteNotificationByPagesRequestPageTypes["CASE_STATUS"] = "CASE_STATUS";
     DeleteNotificationByPagesRequestPageTypes["COURT_DATE_SCHEDULED"] = "COURT_DATE_SCHEDULED";
-    DeleteNotificationByPagesRequestPageTypes["NEW_TICKET"] = "NEW_TICKET";
-    DeleteNotificationByPagesRequestPageTypes["PROFILE"] = "PROFILE";
 })(DeleteNotificationByPagesRequestPageTypes || (DeleteNotificationByPagesRequestPageTypes = {}));
 export var DirectMailContactMailType;
 (function (DirectMailContactMailType) {

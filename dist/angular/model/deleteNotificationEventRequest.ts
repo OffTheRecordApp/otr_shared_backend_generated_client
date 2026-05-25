@@ -16,14 +16,12 @@ export interface DeleteNotificationEventRequest {
     pageType?: DeleteNotificationEventRequest.PageTypeEnum;
 }
 export namespace DeleteNotificationEventRequest {
-    export type PageTypeEnum = 'CASE_ACTION' | 'CASE_MESSAGES' | 'CASE_STATUS' | 'COURT_DATE_SCHEDULED' | 'NEW_TICKET' | 'PROFILE';
+    export type PageTypeEnum = 'CASE_ACTION' | 'CASE_MESSAGES' | 'CASE_STATUS' | 'COURT_DATE_SCHEDULED';
     export const PageTypeEnum = {
         CaseAction: 'CASE_ACTION' as PageTypeEnum,
         CaseMessages: 'CASE_MESSAGES' as PageTypeEnum,
         CaseStatus: 'CASE_STATUS' as PageTypeEnum,
-        CourtDateScheduled: 'COURT_DATE_SCHEDULED' as PageTypeEnum,
-        NewTicket: 'NEW_TICKET' as PageTypeEnum,
-        Profile: 'PROFILE' as PageTypeEnum
+        CourtDateScheduled: 'COURT_DATE_SCHEDULED' as PageTypeEnum
     };
 }
 

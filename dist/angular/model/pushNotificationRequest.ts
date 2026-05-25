@@ -18,14 +18,12 @@ export interface PushNotificationRequest {
     recipientId?: string;
 }
 export namespace PushNotificationRequest {
-    export type PageTypeEnum = 'CASE_ACTION' | 'CASE_MESSAGES' | 'CASE_STATUS' | 'COURT_DATE_SCHEDULED' | 'NEW_TICKET' | 'PROFILE';
+    export type PageTypeEnum = 'CASE_ACTION' | 'CASE_MESSAGES' | 'CASE_STATUS' | 'COURT_DATE_SCHEDULED';
     export const PageTypeEnum = {
         CaseAction: 'CASE_ACTION' as PageTypeEnum,
         CaseMessages: 'CASE_MESSAGES' as PageTypeEnum,
         CaseStatus: 'CASE_STATUS' as PageTypeEnum,
-        CourtDateScheduled: 'COURT_DATE_SCHEDULED' as PageTypeEnum,
-        NewTicket: 'NEW_TICKET' as PageTypeEnum,
-        Profile: 'PROFILE' as PageTypeEnum
+        CourtDateScheduled: 'COURT_DATE_SCHEDULED' as PageTypeEnum
     };
     export type PlatformTypeEnum = 'ANDROID' | 'IOS' | 'WEBAPP';
     export const PlatformTypeEnum = {

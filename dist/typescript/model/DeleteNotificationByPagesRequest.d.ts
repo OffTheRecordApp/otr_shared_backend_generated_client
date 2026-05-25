@@ -17,8 +17,6 @@ export declare namespace DeleteNotificationByPagesRequest {
         CASEACTION,
         CASEMESSAGES,
         CASESTATUS,
-        COURTDATESCHEDULED,
-        NEWTICKET,
-        PROFILE
+        COURTDATESCHEDULED
     }
 }

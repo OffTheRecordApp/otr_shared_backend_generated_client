@@ -17,7 +17,5 @@ export var DeleteNotificationEventRequest;
         PageTypeEnum[PageTypeEnum["CASEMESSAGES"] = 'CASE_MESSAGES'] = "CASEMESSAGES";
         PageTypeEnum[PageTypeEnum["CASESTATUS"] = 'CASE_STATUS'] = "CASESTATUS";
         PageTypeEnum[PageTypeEnum["COURTDATESCHEDULED"] = 'COURT_DATE_SCHEDULED'] = "COURTDATESCHEDULED";
-        PageTypeEnum[PageTypeEnum["NEWTICKET"] = 'NEW_TICKET'] = "NEWTICKET";
-        PageTypeEnum[PageTypeEnum["PROFILE"] = 'PROFILE'] = "PROFILE";
     })(PageTypeEnum = DeleteNotificationEventRequest.PageTypeEnum || (DeleteNotificationEventRequest.PageTypeEnum = {}));
 })(DeleteNotificationEventRequest || (DeleteNotificationEventRequest = {}));

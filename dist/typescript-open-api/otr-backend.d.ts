@@ -42037,9 +42037,7 @@ export declare enum DeleteNotificationByPagesRequestPageTypes {
     CASE_ACTION = "CASE_ACTION",
     CASE_MESSAGES = "CASE_MESSAGES",
     CASE_STATUS = "CASE_STATUS",
-    COURT_DATE_SCHEDULED = "COURT_DATE_SCHEDULED",
-    NEW_TICKET = "NEW_TICKET",
-    PROFILE = "PROFILE"
+    COURT_DATE_SCHEDULED = "COURT_DATE_SCHEDULED"
 }
 export declare enum DirectMailContactMailType {
     CHECK = "CHECK",
