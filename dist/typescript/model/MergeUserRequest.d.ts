@@ -12,5 +12,4 @@
 export interface MergeUserRequest {
     "authCode"?: number;
     "formerUserId"?: string;
-    "rollback"?: boolean;
 }

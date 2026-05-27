@@ -13761,7 +13761,6 @@ export interface components {
             /** Format: int32 */
             authCode?: number;
             formerUserId?: string;
-            rollback?: boolean;
         };
         /** MergeUserResponse */
         MergeUserResponse: {
