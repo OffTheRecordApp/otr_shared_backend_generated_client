@@ -2182,6 +2182,23 @@ export interface paths {
         patch?: never;
         trace?: never;
     };
+    "/api/v1/cases/{caseId}/overdue-payment-reminder": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        get?: never;
+        put?: never;
+        /** sendOverduePaymentReminderIfStillOwed */
+        post: operations["sendOverduePaymentReminderIfStillOwedUsingPOST"];
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
     "/api/v1/counties": {
         parameters: {
             query?: never;
@@ -11606,6 +11623,8 @@ export interface components {
             percentCasesWithPaymentPlan?: number;
             /** Format: int64 */
             stateMedianPendingTimeSeconds?: number;
+            /** Format: int64 */
+            totalPendingFeeInCents?: number;
         };
         /** GetLawfirmSupportedStatesResponse */
         GetLawfirmSupportedStatesResponse: {
@@ -24031,6 +24050,59 @@ export interface operations {
                 content: {
                     "*/*": Record<string, never>;
                 };
+            };
+            /** @description Created */
+            201: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content?: never;
+            };
+            /** @description Unauthorized */
+            401: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content?: never;
+            };
+            /** @description Forbidden */
+            403: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content?: never;
+            };
+            /** @description Not Found */
+            404: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content?: never;
+            };
+        };
+    };
+    sendOverduePaymentReminderIfStillOwedUsingPOST: {
+        parameters: {
+            query?: never;
+            header?: never;
+            path: {
+                /** @description caseId */
+                caseId: string;
+            };
+            cookie?: never;
+        };
+        requestBody?: {
+            content: {
+                "application/json": components["schemas"]["AddNewCaseMessageRequest"];
+            };
+        };
+        responses: {
+            /** @description OK */
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content?: never;
             };
             /** @description Created */
             201: {
