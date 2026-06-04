@@ -1017,6 +1017,11 @@ export var GetSocialProfileRequestAccessType;
     GetSocialProfileRequestAccessType["classic"] = "classic";
     GetSocialProfileRequestAccessType["limited"] = "limited";
 })(GetSocialProfileRequestAccessType || (GetSocialProfileRequestAccessType = {}));
+export var GoogleLoginRequestAccessType;
+(function (GoogleLoginRequestAccessType) {
+    GoogleLoginRequestAccessType["authorization_code"] = "authorization_code";
+    GoogleLoginRequestAccessType["id_token"] = "id_token";
+})(GoogleLoginRequestAccessType || (GoogleLoginRequestAccessType = {}));
 export var HypotheticalPlanEligibilityModelHypotheticalEligibility;
 (function (HypotheticalPlanEligibilityModelHypotheticalEligibility) {
     HypotheticalPlanEligibilityModelHypotheticalEligibility["FULLY_ELIGIBLE"] = "FULLY_ELIGIBLE";

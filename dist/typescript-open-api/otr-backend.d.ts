@@ -11996,11 +11996,15 @@ export interface components {
         };
         /** GoogleLoginRequest */
         GoogleLoginRequest: {
+            /** @enum {string} */
+            accessType?: GoogleLoginRequestAccessType;
+            authCode?: string;
             /** Format: int64 */
             citationId?: number;
             firstName?: string;
             identityToken?: string;
             lastName?: string;
+            redirectUri?: string;
         };
         /** GptFunctionModel */
         GptFunctionModel: {
@@ -42233,6 +42237,10 @@ export declare enum GetReferralCodeResponseOwnerType {
 export declare enum GetSocialProfileRequestAccessType {
     classic = "classic",
     limited = "limited"
+}
+export declare enum GoogleLoginRequestAccessType {
+    authorization_code = "authorization_code",
+    id_token = "id_token"
 }
 export declare enum HypotheticalPlanEligibilityModelHypotheticalEligibility {
     FULLY_ELIGIBLE = "FULLY_ELIGIBLE",
