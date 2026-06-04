@@ -17,6 +17,18 @@
 export interface GoogleLoginRequest {
     /**
      *
+     * @type {string}
+     * @memberof GoogleLoginRequest
+     */
+    accessType?: GoogleLoginRequestAccessTypeEnum;
+    /**
+     *
+     * @type {string}
+     * @memberof GoogleLoginRequest
+     */
+    authCode?: string;
+    /**
+     *
      * @type {number}
      * @memberof GoogleLoginRequest
      */
@@ -39,7 +51,21 @@ export interface GoogleLoginRequest {
      * @memberof GoogleLoginRequest
      */
     lastName?: string;
+    /**
+     *
+     * @type {string}
+     * @memberof GoogleLoginRequest
+     */
+    redirectUri?: string;
 }
 export declare function GoogleLoginRequestFromJSON(json: any): GoogleLoginRequest;
 export declare function GoogleLoginRequestFromJSONTyped(json: any, ignoreDiscriminator: boolean): GoogleLoginRequest;
 export declare function GoogleLoginRequestToJSON(value?: GoogleLoginRequest | null): any;
+/**
+* @export
+* @enum {string}
+*/
+export declare enum GoogleLoginRequestAccessTypeEnum {
+    AuthorizationCode = "authorization_code",
+    IdToken = "id_token"
+}

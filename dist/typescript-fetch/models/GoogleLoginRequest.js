@@ -20,10 +20,13 @@ export function GoogleLoginRequestFromJSONTyped(json, ignoreDiscriminator) {
         return json;
     }
     return {
+        'accessType': !exists(json, 'accessType') ? undefined : json['accessType'],
+        'authCode': !exists(json, 'authCode') ? undefined : json['authCode'],
         'citationId': !exists(json, 'citationId') ? undefined : json['citationId'],
         'firstName': !exists(json, 'firstName') ? undefined : json['firstName'],
         'identityToken': !exists(json, 'identityToken') ? undefined : json['identityToken'],
         'lastName': !exists(json, 'lastName') ? undefined : json['lastName'],
+        'redirectUri': !exists(json, 'redirectUri') ? undefined : json['redirectUri'],
     };
 }
 export function GoogleLoginRequestToJSON(value) {
@@ -34,9 +37,21 @@ export function GoogleLoginRequestToJSON(value) {
         return null;
     }
     return {
+        'accessType': value.accessType,
+        'authCode': value.authCode,
         'citationId': value.citationId,
         'firstName': value.firstName,
         'identityToken': value.identityToken,
         'lastName': value.lastName,
+        'redirectUri': value.redirectUri,
     };
 }
+/**
+* @export
+* @enum {string}
+*/
+export var GoogleLoginRequestAccessTypeEnum;
+(function (GoogleLoginRequestAccessTypeEnum) {
+    GoogleLoginRequestAccessTypeEnum["AuthorizationCode"] = "authorization_code";
+    GoogleLoginRequestAccessTypeEnum["IdToken"] = "id_token";
+})(GoogleLoginRequestAccessTypeEnum || (GoogleLoginRequestAccessTypeEnum = {}));

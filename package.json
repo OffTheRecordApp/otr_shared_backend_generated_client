@@ -1,6 +1,6 @@
 {
   "name": "@otr-app/shared-backend-generated-client",
-  "version": "2.6.4",
+  "version": "2.6.5",
   "main": "dist/otrBackendService.min.js",
   "files": [
     "/dist"
@@ -55,5 +55,8 @@
   },
   "peerDependencies": {
     "axios": "^0.27.2"
+  },
+  "dependencies": {
+    "@openapitools/openapi-generator-cli": "^2.34.0"
   }
 }
